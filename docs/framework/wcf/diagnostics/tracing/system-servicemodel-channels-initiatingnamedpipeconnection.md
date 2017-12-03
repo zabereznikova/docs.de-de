@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 23bd5f35-4a9c-4ccb-a153-f3f6f6594199
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f8caa8c4744dc2c492785ca8796f8607ca95efc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 799927f4ce1a2c61a4739bbce729cd10f74c19a8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsinitiatingnamedpipeconnection"></a><span data-ttu-id="d2c8a-102">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span><span class="sxs-lookup"><span data-stu-id="d2c8a-102">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span></span>
-<span data-ttu-id="d2c8a-103">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span><span class="sxs-lookup"><span data-stu-id="d2c8a-103">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span></span>  
+# <a name="systemservicemodelchannelsinitiatingnamedpipeconnection"></a><span data-ttu-id="e8bc3-102">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span><span class="sxs-lookup"><span data-stu-id="e8bc3-102">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span></span>
+<span data-ttu-id="e8bc3-103">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span><span class="sxs-lookup"><span data-stu-id="e8bc3-103">System.ServiceModel.Channels.InitiatingNamedPipeConnection</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d2c8a-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d2c8a-104">Description</span></span>  
- <span data-ttu-id="d2c8a-105">Initiieren einer Named Pipe-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="d2c8a-105">Initiating a named pipe connection.</span></span>  
+## <a name="description"></a><span data-ttu-id="e8bc3-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e8bc3-104">Description</span></span>  
+ <span data-ttu-id="e8bc3-105">Initiieren einer Named Pipe-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="e8bc3-105">Initiating a named pipe connection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2c8a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2c8a-106">See Also</span></span>  
- [<span data-ttu-id="d2c8a-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="d2c8a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d2c8a-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="d2c8a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d2c8a-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="d2c8a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8bc3-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e8bc3-106">See Also</span></span>  
+ [<span data-ttu-id="e8bc3-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e8bc3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e8bc3-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="e8bc3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e8bc3-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e8bc3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

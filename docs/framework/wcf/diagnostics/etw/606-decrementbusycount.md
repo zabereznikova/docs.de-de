@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3dd6c6ae-1010-415c-82e4-51eaa897f1fa
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d5b25eeebde5968ea471e60c47c86df4205bcf95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d102952a7a76334f489b2307ae06cd1d70be5a84
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="606---decrementbusycount"></a><span data-ttu-id="01ba0-102">606 - DecrementBusyCount</span><span class="sxs-lookup"><span data-stu-id="01ba0-102">606 - DecrementBusyCount</span></span>
-## <a name="properties"></a><span data-ttu-id="01ba0-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="01ba0-103">Properties</span></span>  
+# <a name="606---decrementbusycount"></a><span data-ttu-id="b7ae6-102">606 - DecrementBusyCount</span><span class="sxs-lookup"><span data-stu-id="b7ae6-102">606 - DecrementBusyCount</span></span>
+## <a name="properties"></a><span data-ttu-id="b7ae6-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b7ae6-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="01ba0-104">ID</span><span class="sxs-lookup"><span data-stu-id="01ba0-104">ID</span></span>|<span data-ttu-id="01ba0-105">606</span><span class="sxs-lookup"><span data-stu-id="01ba0-105">606</span></span>|  
-|<span data-ttu-id="01ba0-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="01ba0-106">Keywords</span></span>|<span data-ttu-id="01ba0-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="01ba0-107">WebHost</span></span>|  
-|<span data-ttu-id="01ba0-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="01ba0-108">Level</span></span>|<span data-ttu-id="01ba0-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="01ba0-109">Verbose</span></span>|  
-|<span data-ttu-id="01ba0-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="01ba0-110">Channel</span></span>|<span data-ttu-id="01ba0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="01ba0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b7ae6-104">ID</span><span class="sxs-lookup"><span data-stu-id="b7ae6-104">ID</span></span>|<span data-ttu-id="b7ae6-105">606</span><span class="sxs-lookup"><span data-stu-id="b7ae6-105">606</span></span>|  
+|<span data-ttu-id="b7ae6-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="b7ae6-106">Keywords</span></span>|<span data-ttu-id="b7ae6-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="b7ae6-107">WebHost</span></span>|  
+|<span data-ttu-id="b7ae6-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="b7ae6-108">Level</span></span>|<span data-ttu-id="b7ae6-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="b7ae6-109">Verbose</span></span>|  
+|<span data-ttu-id="b7ae6-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="b7ae6-110">Channel</span></span>|<span data-ttu-id="b7ae6-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b7ae6-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="01ba0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="01ba0-112">Description</span></span>  
- <span data-ttu-id="01ba0-113">Dieses Ereignis wird ausgegeben, wenn DecrementBusyCount aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="01ba0-113">This event is emitted when DecrementBusyCount is called.</span></span>  
+## <a name="description"></a><span data-ttu-id="b7ae6-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b7ae6-112">Description</span></span>  
+ <span data-ttu-id="b7ae6-113">Dieses Ereignis wird ausgegeben, wenn DecrementBusyCount aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="b7ae6-113">This event is emitted when DecrementBusyCount is called.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="01ba0-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="01ba0-114">Message</span></span>  
- <span data-ttu-id="01ba0-115">DecrementBusyCount aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="01ba0-115">DecrementBusyCount called.</span></span> <span data-ttu-id="01ba0-116">Quelle: %1</span><span class="sxs-lookup"><span data-stu-id="01ba0-116">Source : %1</span></span>  
+## <a name="message"></a><span data-ttu-id="b7ae6-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="b7ae6-114">Message</span></span>  
+ <span data-ttu-id="b7ae6-115">DecrementBusyCount aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="b7ae6-115">DecrementBusyCount called.</span></span> <span data-ttu-id="b7ae6-116">Quelle: %1</span><span class="sxs-lookup"><span data-stu-id="b7ae6-116">Source : %1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="01ba0-117">Details</span><span class="sxs-lookup"><span data-stu-id="01ba0-117">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b7ae6-117">Details</span><span class="sxs-lookup"><span data-stu-id="b7ae6-117">Details</span></span>

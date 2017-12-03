@@ -10,28 +10,28 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d4de490107ed905b5acbda057f2cd53a306e6d75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5fbf38e3b8430811b9e26b1580f781da9049d036
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="6f30b-102">&lt;add&gt; von &lt;allowedAudienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="6f30b-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
-<span data-ttu-id="6f30b-103">Fügt einen Ziel-URI hinzu, für den das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass dieser von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft wird.</span><span class="sxs-lookup"><span data-stu-id="6f30b-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
+# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="2779f-102">&lt;add&gt; von &lt;allowedAudienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="2779f-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
+<span data-ttu-id="2779f-103">Fügt einen Ziel-URI hinzu, für den das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass dieser von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft wird.</span><span class="sxs-lookup"><span data-stu-id="2779f-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
   
- <span data-ttu-id="6f30b-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="6f30b-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6f30b-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="6f30b-105">\<behaviors></span></span>  
-<span data-ttu-id="6f30b-106">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="6f30b-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="6f30b-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="6f30b-107">\<behavior></span></span>  
-<span data-ttu-id="6f30b-108">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="6f30b-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="6f30b-109">\<IssuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="6f30b-109">\<issuedTokenAuthentication></span></span>  
-<span data-ttu-id="6f30b-110">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="6f30b-110">\<allowedAudienceUris></span></span>  
-<span data-ttu-id="6f30b-111">\<Hinzufügen >-Element für \<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="6f30b-111">\<add> element for \<allowedAudienceUris></span></span>  
+ <span data-ttu-id="2779f-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2779f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2779f-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="2779f-105">\<behaviors></span></span>  
+<span data-ttu-id="2779f-106">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="2779f-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="2779f-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="2779f-107">\<behavior></span></span>  
+<span data-ttu-id="2779f-108">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="2779f-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="2779f-109">\<IssuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="2779f-109">\<issuedTokenAuthentication></span></span>  
+<span data-ttu-id="2779f-110">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="2779f-110">\<allowedAudienceUris></span></span>  
+<span data-ttu-id="2779f-111">\<Hinzufügen >-Element für \<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="2779f-111">\<add> element for \<allowedAudienceUris></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f30b-112">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f30b-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2779f-112">Syntax</span><span class="sxs-lookup"><span data-stu-id="2779f-112">Syntax</span></span>  
   
 ```xml  
 <allowedAudienceUris>   
@@ -39,36 +39,36 @@ ms.lasthandoff: 11/21/2017
 </allowedAudienceUris>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6f30b-113">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="6f30b-113">Attributes and Elements</span></span>  
- <span data-ttu-id="6f30b-114">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="6f30b-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2779f-113">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="2779f-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="2779f-114">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2779f-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6f30b-115">Attribute</span><span class="sxs-lookup"><span data-stu-id="6f30b-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2779f-115">Attribute</span><span class="sxs-lookup"><span data-stu-id="2779f-115">Attributes</span></span>  
   
-|<span data-ttu-id="6f30b-116">Attribut</span><span class="sxs-lookup"><span data-stu-id="6f30b-116">Attribute</span></span>|<span data-ttu-id="6f30b-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6f30b-117">Description</span></span>|  
+|<span data-ttu-id="2779f-116">Attribut</span><span class="sxs-lookup"><span data-stu-id="2779f-116">Attribute</span></span>|<span data-ttu-id="2779f-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2779f-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6f30b-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="6f30b-118">allowedAudienceUri</span></span>|<span data-ttu-id="6f30b-119">Eine Zeichenfolge, die eine Ziel-URI enthält, für die das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass diese von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft wird.</span><span class="sxs-lookup"><span data-stu-id="6f30b-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|<span data-ttu-id="2779f-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="2779f-118">allowedAudienceUri</span></span>|<span data-ttu-id="2779f-119">Eine Zeichenfolge, die eine Ziel-URI enthält, für die das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass diese von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft wird.</span><span class="sxs-lookup"><span data-stu-id="2779f-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6f30b-120">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6f30b-120">Child Elements</span></span>  
- <span data-ttu-id="6f30b-121">Keine</span><span class="sxs-lookup"><span data-stu-id="6f30b-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2779f-120">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2779f-120">Child Elements</span></span>  
+ <span data-ttu-id="2779f-121">Keine</span><span class="sxs-lookup"><span data-stu-id="2779f-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6f30b-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6f30b-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2779f-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2779f-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="6f30b-123">Element</span><span class="sxs-lookup"><span data-stu-id="6f30b-123">Element</span></span>|<span data-ttu-id="6f30b-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6f30b-124">Description</span></span>|  
+|<span data-ttu-id="2779f-123">Element</span><span class="sxs-lookup"><span data-stu-id="2779f-123">Element</span></span>|<span data-ttu-id="2779f-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2779f-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6f30b-125">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="6f30b-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="6f30b-126">Stellt eine Auflistung von Ziel-URIs dar, für die das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass diese von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="6f30b-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|[<span data-ttu-id="2779f-125">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="2779f-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="2779f-126">Stellt eine Auflistung von Ziel-URIs dar, für die das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass diese von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="2779f-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6f30b-127">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6f30b-127">Remarks</span></span>  
- <span data-ttu-id="6f30b-128">Verwenden Sie diese Auflistung in einer Verbundanwendung, die einen Sicherheitstokendienst (Security Token Service, STS) nutzt, der <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken ausstellt.</span><span class="sxs-lookup"><span data-stu-id="6f30b-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="6f30b-129">Wenn der STS das Sicherheitstoken ausstellt, kann er den URI des Webdiensts angeben, für den das Sicherheitstoken verwendet werden soll, indem <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> dem Sicherheitstoken hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="6f30b-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="6f30b-130">Der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> für den Webdienst kann so überprüfen, ob das ausgestellte Sicherheitstoken für diesen Webdienst ausgelegt ist, indem diese Überprüfung durchgeführt wird. Führen Sie hierzu die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="6f30b-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2779f-127">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2779f-127">Remarks</span></span>  
+ <span data-ttu-id="2779f-128">Verwenden Sie diese Auflistung in einer Verbundanwendung, die einen Sicherheitstokendienst (Security Token Service, STS) nutzt, der <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken ausstellt.</span><span class="sxs-lookup"><span data-stu-id="2779f-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="2779f-129">Wenn der STS das Sicherheitstoken ausstellt, kann er den URI des Webdiensts angeben, für den das Sicherheitstoken verwendet werden soll, indem <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> dem Sicherheitstoken hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="2779f-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="2779f-130">Der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> für den Webdienst kann so überprüfen, ob das ausgestellte Sicherheitstoken für diesen Webdienst ausgelegt ist, indem diese Überprüfung durchgeführt wird. Führen Sie hierzu die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="2779f-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
   
--   <span data-ttu-id="6f30b-131">Legen Sie das `audienceUriMode`-Attribut für `<issuedTokenAuthentication>` auf <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> oder <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> fest.</span><span class="sxs-lookup"><span data-stu-id="6f30b-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
+-   <span data-ttu-id="2779f-131">Legen Sie das `audienceUriMode`-Attribut für `<issuedTokenAuthentication>` auf <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> oder <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> fest.</span><span class="sxs-lookup"><span data-stu-id="2779f-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
   
--   <span data-ttu-id="6f30b-132">Geben Sie den Satz gültiger URIs an, indem Sie die URIs dieser Auflistung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="6f30b-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
+-   <span data-ttu-id="2779f-132">Geben Sie den Satz gültiger URIs an, indem Sie die URIs dieser Auflistung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="2779f-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
   
- <span data-ttu-id="6f30b-133">Weitere Informationen finden Sie unter <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="6f30b-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
+ <span data-ttu-id="2779f-133">Weitere Informationen finden Sie unter <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="2779f-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
   
- <span data-ttu-id="6f30b-134">Weitere Informationen zur Verwendung dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span><span class="sxs-lookup"><span data-stu-id="6f30b-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
+ <span data-ttu-id="2779f-134">Weitere Informationen zur Verwendung dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span><span class="sxs-lookup"><span data-stu-id="2779f-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f30b-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6f30b-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2779f-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2779f-135">See Also</span></span>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
@@ -76,8 +76,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElementCollection>  
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElement>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowedAudienceUris%2A>  
- [<span data-ttu-id="6f30b-136">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="6f30b-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
- [<span data-ttu-id="6f30b-137">\<IssuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="6f30b-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
- [<span data-ttu-id="6f30b-138">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="6f30b-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="6f30b-139">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="6f30b-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="6f30b-140">Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst</span><span class="sxs-lookup"><span data-stu-id="6f30b-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [<span data-ttu-id="2779f-136">\<AllowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="2779f-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
+ [<span data-ttu-id="2779f-137">\<IssuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="2779f-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
+ [<span data-ttu-id="2779f-138">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="2779f-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="2779f-139">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="2779f-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="2779f-140">Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst</span><span class="sxs-lookup"><span data-stu-id="2779f-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

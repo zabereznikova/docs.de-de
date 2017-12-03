@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf9c39334289cb30d1a01917c0be37da02fcdc5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18740c4c87aaeafcd0a28991376e0c45fe688223
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="namedpipeconnectionpoolsettings"></a><span data-ttu-id="66cb8-102">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="66cb8-102">NamedPipeConnectionPoolSettings</span></span>
-<span data-ttu-id="66cb8-103">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="66cb8-103">NamedPipeConnectionPoolSettings</span></span>  
+# <a name="namedpipeconnectionpoolsettings"></a><span data-ttu-id="dbb0b-102">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="dbb0b-102">NamedPipeConnectionPoolSettings</span></span>
+<span data-ttu-id="dbb0b-103">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="dbb0b-103">NamedPipeConnectionPoolSettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66cb8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="66cb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbb0b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="dbb0b-104">Syntax</span></span>  
   
 ```  
 class NamedPipeConnectionPoolSettings  
@@ -33,38 +33,38 @@ class NamedPipeConnectionPoolSettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="66cb8-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="66cb8-105">Methods</span></span>  
- <span data-ttu-id="66cb8-106">Die NamedPipeConnectionPoolSettings-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="66cb8-106">The NamedPipeConnectionPoolSettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="dbb0b-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="dbb0b-105">Methods</span></span>  
+ <span data-ttu-id="dbb0b-106">Die NamedPipeConnectionPoolSettings-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="dbb0b-106">The NamedPipeConnectionPoolSettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="66cb8-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="66cb8-107">Properties</span></span>  
- <span data-ttu-id="66cb8-108">Die NamedPipeConnectionPoolSettings-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="66cb8-108">The NamedPipeConnectionPoolSettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="dbb0b-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="dbb0b-107">Properties</span></span>  
+ <span data-ttu-id="dbb0b-108">Die NamedPipeConnectionPoolSettings-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="dbb0b-108">The NamedPipeConnectionPoolSettings class has the following properties:</span></span>  
   
-### <a name="groupname"></a><span data-ttu-id="66cb8-109">GroupName</span><span class="sxs-lookup"><span data-stu-id="66cb8-109">GroupName</span></span>  
- <span data-ttu-id="66cb8-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="66cb8-110">Data type: string</span></span>  
+### <a name="groupname"></a><span data-ttu-id="dbb0b-109">GroupName</span><span class="sxs-lookup"><span data-stu-id="dbb0b-109">GroupName</span></span>  
+ <span data-ttu-id="dbb0b-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dbb0b-110">Data type: string</span></span>  
   
- <span data-ttu-id="66cb8-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="66cb8-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="dbb0b-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="dbb0b-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="66cb8-112">Der Gruppenname des vom Bindungselement verwendeten Verbindungspools.</span><span class="sxs-lookup"><span data-stu-id="66cb8-112">The group name of the connection pool used by the binding element.</span></span>  
+ <span data-ttu-id="dbb0b-112">Der Gruppenname des vom Bindungselement verwendeten Verbindungspools.</span><span class="sxs-lookup"><span data-stu-id="dbb0b-112">The group name of the connection pool used by the binding element.</span></span>  
   
-### <a name="idletimeout"></a><span data-ttu-id="66cb8-113">IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="66cb8-113">IdleTimeout</span></span>  
- <span data-ttu-id="66cb8-114">Datentyp: Zeitpunkt (Datum und Uhrzeit)</span><span class="sxs-lookup"><span data-stu-id="66cb8-114">Data type: datetime</span></span>  
+### <a name="idletimeout"></a><span data-ttu-id="dbb0b-113">IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="dbb0b-113">IdleTimeout</span></span>  
+ <span data-ttu-id="dbb0b-114">Datentyp: Zeitpunkt (Datum und Uhrzeit)</span><span class="sxs-lookup"><span data-stu-id="dbb0b-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="66cb8-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="66cb8-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="dbb0b-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="dbb0b-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="66cb8-116">Die maximale Zeit, während der sich die Verbindung im Leerlauf befinden darf, bevor sie getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="66cb8-116">The maximum time the connection can be idle before being disconnected.</span></span>  
+ <span data-ttu-id="dbb0b-116">Die maximale Zeit, während der sich die Verbindung im Leerlauf befinden darf, bevor sie getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="dbb0b-116">The maximum time the connection can be idle before being disconnected.</span></span>  
   
-### <a name="maxoutboundconnectionsperendpoint"></a><span data-ttu-id="66cb8-117">MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="66cb8-117">MaxOutboundConnectionsPerEndpoint</span></span>  
- <span data-ttu-id="66cb8-118">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="66cb8-118">Data type: sint32</span></span>  
+### <a name="maxoutboundconnectionsperendpoint"></a><span data-ttu-id="dbb0b-117">MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="dbb0b-117">MaxOutboundConnectionsPerEndpoint</span></span>  
+ <span data-ttu-id="dbb0b-118">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="dbb0b-118">Data type: sint32</span></span>  
   
- <span data-ttu-id="66cb8-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="66cb8-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="dbb0b-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="dbb0b-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="66cb8-120">Die maximale Anzahl von ausgehenden Verbindungen pro Endpunkt auf dem Client.</span><span class="sxs-lookup"><span data-stu-id="66cb8-120">The maximum number of outbound connections for each endpoint on the client.</span></span>  
+ <span data-ttu-id="dbb0b-120">Die maximale Anzahl von ausgehenden Verbindungen pro Endpunkt auf dem Client.</span><span class="sxs-lookup"><span data-stu-id="dbb0b-120">The maximum number of outbound connections for each endpoint on the client.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66cb8-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="66cb8-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbb0b-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dbb0b-121">Requirements</span></span>  
   
-|<span data-ttu-id="66cb8-122">MOF</span><span class="sxs-lookup"><span data-stu-id="66cb8-122">MOF</span></span>|<span data-ttu-id="66cb8-123">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="66cb8-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="dbb0b-122">MOF</span><span class="sxs-lookup"><span data-stu-id="dbb0b-122">MOF</span></span>|<span data-ttu-id="dbb0b-123">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="dbb0b-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="66cb8-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="66cb8-124">Namespace</span></span>|<span data-ttu-id="66cb8-125">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="66cb8-125">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="dbb0b-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="dbb0b-124">Namespace</span></span>|<span data-ttu-id="dbb0b-125">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dbb0b-125">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="66cb8-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="66cb8-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="dbb0b-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dbb0b-126">See Also</span></span>  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

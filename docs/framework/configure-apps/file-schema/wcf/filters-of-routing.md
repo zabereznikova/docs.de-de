@@ -10,24 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9dddd9f9ba5f4c2cea7e92c666e8d224ccf21cee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9dd9faf63ade725bb8bea12b40390fd30c91973
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltfiltersgt-of-ltroutinggt"></a><span data-ttu-id="846f2-102">&lt;filters&gt; von &lt;routing&gt;</span><span class="sxs-lookup"><span data-stu-id="846f2-102">&lt;filters&gt; of &lt;routing&gt;</span></span>
+# <a name="ltfiltersgt-of-ltroutinggt"></a><span data-ttu-id="3c697-102">&lt;filters&gt; von &lt;routing&gt;</span><span class="sxs-lookup"><span data-stu-id="3c697-102">&lt;filters&gt; of &lt;routing&gt;</span></span>
 
-<span data-ttu-id="846f2-103">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Routingfiltern dar, die den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der beim Auswerten eingehender Nachrichten verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="846f2-103">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span>
+<span data-ttu-id="3c697-103">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Routingfiltern dar, die den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der beim Auswerten eingehender Nachrichten verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3c697-103">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span>
 
-<span data-ttu-id="846f2-104">[**\<system.serviceModel >**](system-servicemodel.md) </span><span class="sxs-lookup"><span data-stu-id="846f2-104">[**\<system.serviceModel>**](system-servicemodel.md) </span></span>  
-<span data-ttu-id="846f2-105">&nbsp;&nbsp;[**\<Routing >**](routing.md) </span><span class="sxs-lookup"><span data-stu-id="846f2-105">&nbsp;&nbsp;[**\<routing>**](routing.md) </span></span>  
-<span data-ttu-id="846f2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Filter >**</span><span class="sxs-lookup"><span data-stu-id="846f2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**</span></span>
+<span data-ttu-id="3c697-104">[**\<system.serviceModel >**](system-servicemodel.md) </span><span class="sxs-lookup"><span data-stu-id="3c697-104">[**\<system.serviceModel>**](system-servicemodel.md) </span></span>  
+<span data-ttu-id="3c697-105">&nbsp;&nbsp;[**\<Routing >**](routing.md) </span><span class="sxs-lookup"><span data-stu-id="3c697-105">&nbsp;&nbsp;[**\<routing>**](routing.md) </span></span>  
+<span data-ttu-id="3c697-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Filter >**</span><span class="sxs-lookup"><span data-stu-id="3c697-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="846f2-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="846f2-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3c697-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="3c697-107">Syntax</span></span>
 
 ```xml
 <system.serviceModel>
@@ -42,26 +42,26 @@ ms.lasthandoff: 10/18/2017
 </system.serviceModel>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="846f2-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="846f2-108">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="3c697-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="3c697-108">Attributes and elements</span></span>
 
-<span data-ttu-id="846f2-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="846f2-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="3c697-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3c697-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="846f2-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="846f2-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="3c697-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="3c697-110">Attributes</span></span>
 
-<span data-ttu-id="846f2-111">Keine</span><span class="sxs-lookup"><span data-stu-id="846f2-111">None</span></span>
+<span data-ttu-id="3c697-111">Keine</span><span class="sxs-lookup"><span data-stu-id="3c697-111">None</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="846f2-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="846f2-112">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="3c697-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3c697-112">Child elements</span></span>
 
-|     | <span data-ttu-id="846f2-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="846f2-113">Description</span></span> |
+|     | <span data-ttu-id="3c697-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3c697-113">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="846f2-114">**\<Filter >**</span><span class="sxs-lookup"><span data-stu-id="846f2-114">**\<filter>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | <span data-ttu-id="846f2-115">Enthält einen Routingfilter, der den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmt, der zum Auswerten eingehender Nachrichten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="846f2-115">Contains a routing filter that determines the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> will be used when evaluating incoming messages.</span></span> |
+| [<span data-ttu-id="3c697-114">**\<Filter >**</span><span class="sxs-lookup"><span data-stu-id="3c697-114">**\<filter>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | <span data-ttu-id="3c697-115">Enthält einen Routingfilter, der den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmt, der zum Auswerten eingehender Nachrichten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="3c697-115">Contains a routing filter that determines the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> will be used when evaluating incoming messages.</span></span> |
 
-### <a name="parent-elements"></a><span data-ttu-id="846f2-116">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="846f2-116">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="3c697-116">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3c697-116">Parent elements</span></span>
 
-|     | <span data-ttu-id="846f2-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="846f2-117">Description</span></span> |
+|     | <span data-ttu-id="3c697-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3c697-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="846f2-118">**\<Routing >**</span><span class="sxs-lookup"><span data-stu-id="846f2-118">**\<routing>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="846f2-119">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Routingfiltern dar, die den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie zum Definieren von Routingtabellen mit den Zielendpunkten, an die Nachrichten bei Filterübereinstimmung gesendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="846f2-119">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span> |
+| [<span data-ttu-id="3c697-118">**\<Routing >**</span><span class="sxs-lookup"><span data-stu-id="3c697-118">**\<routing>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="3c697-119">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Routingfiltern dar, die den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie zum Definieren von Routingtabellen mit den Zielendpunkten, an die Nachrichten bei Filterübereinstimmung gesendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3c697-119">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span> |
 
-## <a name="see-also"></a><span data-ttu-id="846f2-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="846f2-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c697-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3c697-120">See also</span></span>
 
 <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

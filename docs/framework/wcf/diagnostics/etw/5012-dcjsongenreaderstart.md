@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6d2ad3c9-47ee-4e77-b1c6-259ab15b0cfb
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc7c4e9a3d3e1b5cb844c039d66abf7e33c9cedd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7b43d3170bc3ef417612ea5e2f67422836f74f0e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="5012---dcjsongenreaderstart"></a><span data-ttu-id="f1f13-102">5012 - DCJsonGenReaderStart</span><span class="sxs-lookup"><span data-stu-id="f1f13-102">5012 - DCJsonGenReaderStart</span></span>
-## <a name="properties"></a><span data-ttu-id="f1f13-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f1f13-103">Properties</span></span>  
+# <a name="5012---dcjsongenreaderstart"></a><span data-ttu-id="dc7f3-102">5012 - DCJsonGenReaderStart</span><span class="sxs-lookup"><span data-stu-id="dc7f3-102">5012 - DCJsonGenReaderStart</span></span>
+## <a name="properties"></a><span data-ttu-id="dc7f3-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="dc7f3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f1f13-104">ID</span><span class="sxs-lookup"><span data-stu-id="f1f13-104">ID</span></span>|<span data-ttu-id="f1f13-105">5012</span><span class="sxs-lookup"><span data-stu-id="f1f13-105">5012</span></span>|  
-|<span data-ttu-id="f1f13-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="f1f13-106">Keywords</span></span>|<span data-ttu-id="f1f13-107">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="f1f13-107">Serialization</span></span>|  
-|<span data-ttu-id="f1f13-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="f1f13-108">Level</span></span>|<span data-ttu-id="f1f13-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="f1f13-109">Verbose</span></span>|  
-|<span data-ttu-id="f1f13-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f1f13-110">Channel</span></span>|<span data-ttu-id="f1f13-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f1f13-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="dc7f3-104">ID</span><span class="sxs-lookup"><span data-stu-id="dc7f3-104">ID</span></span>|<span data-ttu-id="dc7f3-105">5012</span><span class="sxs-lookup"><span data-stu-id="dc7f3-105">5012</span></span>|  
+|<span data-ttu-id="dc7f3-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="dc7f3-106">Keywords</span></span>|<span data-ttu-id="dc7f3-107">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="dc7f3-107">Serialization</span></span>|  
+|<span data-ttu-id="dc7f3-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="dc7f3-108">Level</span></span>|<span data-ttu-id="dc7f3-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="dc7f3-109">Verbose</span></span>|  
+|<span data-ttu-id="dc7f3-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="dc7f3-110">Channel</span></span>|<span data-ttu-id="dc7f3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="dc7f3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f1f13-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f1f13-112">Description</span></span>  
- <span data-ttu-id="f1f13-113">Das Ereignis wird ausgegeben, wenn der Json-generierte Leser gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="f1f13-113">This event is emitted when the Json generated reader starts.</span></span>  
+## <a name="description"></a><span data-ttu-id="dc7f3-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dc7f3-112">Description</span></span>  
+ <span data-ttu-id="dc7f3-113">Das Ereignis wird ausgegeben, wenn der Json-generierte Leser gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="dc7f3-113">This event is emitted when the Json generated reader starts.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f1f13-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="f1f13-114">Message</span></span>  
- <span data-ttu-id="f1f13-115">Json-Generierung von %1 Reader für "%2" starten.</span><span class="sxs-lookup"><span data-stu-id="f1f13-115">Json generate %1 reader for %2 start.</span></span>  
+## <a name="message"></a><span data-ttu-id="dc7f3-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="dc7f3-114">Message</span></span>  
+ <span data-ttu-id="dc7f3-115">Json-Generierung von %1 Reader für "%2" starten.</span><span class="sxs-lookup"><span data-stu-id="dc7f3-115">Json generate %1 reader for %2 start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f1f13-116">Details</span><span class="sxs-lookup"><span data-stu-id="f1f13-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="dc7f3-116">Details</span><span class="sxs-lookup"><span data-stu-id="dc7f3-116">Details</span></span>

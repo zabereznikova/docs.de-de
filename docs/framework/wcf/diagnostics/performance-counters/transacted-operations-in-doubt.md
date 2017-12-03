@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83c7a86d-37de-4c6a-aa09-5d53fc4476b6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9be788495f69718cf317ea695e76874075e67e28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e7e0a8cfda1046087f8ec94f31a873eef552fb8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="69a1a-102">Transacted Operations In Doubt</span><span class="sxs-lookup"><span data-stu-id="69a1a-102">Transacted Operations In Doubt</span></span>
-<span data-ttu-id="69a1a-103">Indikatorname: Transacted Operations In Doubt.</span><span class="sxs-lookup"><span data-stu-id="69a1a-103">Counter Name: Transacted Operations In Doubt.</span></span>  
+# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="1f8ae-102">Transacted Operations In Doubt</span><span class="sxs-lookup"><span data-stu-id="1f8ae-102">Transacted Operations In Doubt</span></span>
+<span data-ttu-id="1f8ae-103">Indikatorname: Transacted Operations In Doubt.</span><span class="sxs-lookup"><span data-stu-id="1f8ae-103">Counter Name: Transacted Operations In Doubt.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="69a1a-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="69a1a-104">Description</span></span>  
- <span data-ttu-id="69a1a-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst.</span><span class="sxs-lookup"><span data-stu-id="69a1a-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="1f8ae-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1f8ae-104">Description</span></span>  
+ <span data-ttu-id="1f8ae-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst.</span><span class="sxs-lookup"><span data-stu-id="1f8ae-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>

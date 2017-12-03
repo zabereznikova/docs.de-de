@@ -10,38 +10,38 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c04817d5a13c85f739f17fe25dd3c48ec9941a79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ddb199ff1d83bef64735dd1425ec955dda83140d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="a7ccd-102">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="a7ccd-102">Using Tracing to Troubleshoot Your Application</span></span>
-<span data-ttu-id="a7ccd-103">Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Sie Anwendungsfehler mit der Ablaufverfolgung beheben.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  
+# <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="1df15-102">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="1df15-102">Using Tracing to Troubleshoot Your Application</span></span>
+<span data-ttu-id="1df15-103">Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Sie Anwendungsfehler mit der Ablaufverfolgung beheben.</span><span class="sxs-lookup"><span data-stu-id="1df15-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a7ccd-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a7ccd-104">In This Section</span></span>  
- [<span data-ttu-id="a7ccd-105">Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung</span><span class="sxs-lookup"><span data-stu-id="a7ccd-105">Recommended Settings for Tracing and Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
- <span data-ttu-id="a7ccd-106">Beschreibt vorgeschlagene Einstellungen für Produktions- und Debugumgebungen.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-106">Describes suggested settings for production and debugging environments.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1df15-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1df15-104">In This Section</span></span>  
+ [<span data-ttu-id="1df15-105">Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung</span><span class="sxs-lookup"><span data-stu-id="1df15-105">Recommended Settings for Tracing and Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
+ <span data-ttu-id="1df15-106">Beschreibt vorgeschlagene Einstellungen für Produktions- und Debugumgebungen.</span><span class="sxs-lookup"><span data-stu-id="1df15-106">Describes suggested settings for production and debugging environments.</span></span>  
   
- [<span data-ttu-id="a7ccd-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)</span><span class="sxs-lookup"><span data-stu-id="a7ccd-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- <span data-ttu-id="a7ccd-108">Beschreibt, wie Sie mit dem Service Trace Viewer-Tool Ablaufverfolgungsdaten anzeigen, korrelieren und analysieren können.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-108">Describes how you can use the Service Trace Viewer tool to view, correlate and analyze trace data.</span></span>  
+ [<span data-ttu-id="1df15-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)</span><span class="sxs-lookup"><span data-stu-id="1df15-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ <span data-ttu-id="1df15-108">Beschreibt, wie Sie mit dem Service Trace Viewer-Tool Ablaufverfolgungsdaten anzeigen, korrelieren und analysieren können.</span><span class="sxs-lookup"><span data-stu-id="1df15-108">Describes how you can use the Service Trace Viewer tool to view, correlate and analyze trace data.</span></span>  
   
- [<span data-ttu-id="a7ccd-109">Bedeutende Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="a7ccd-109">Significant Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- <span data-ttu-id="a7ccd-110">Eine Liste der wichtigsten Ablaufverfolgungen, die von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-110">A list of major traces emitted by [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="1df15-109">Bedeutende Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="1df15-109">Significant Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
+ <span data-ttu-id="1df15-110">Eine Liste der wichtigsten Ablaufverfolgungen, die von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="1df15-110">A list of major traces emitted by [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="a7ccd-111">Debuggen auf dem Client</span><span class="sxs-lookup"><span data-stu-id="a7ccd-111">Debugging on the Client</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
- <span data-ttu-id="a7ccd-112">Ermöglicht Clients, die Anwendung zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-112">Enables clients to debug your application.</span></span>  
+ [<span data-ttu-id="1df15-111">Debuggen auf dem Client</span><span class="sxs-lookup"><span data-stu-id="1df15-111">Debugging on the Client</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
+ <span data-ttu-id="1df15-112">Ermöglicht Clients, die Anwendung zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="1df15-112">Enables clients to debug your application.</span></span>  
   
- [<span data-ttu-id="a7ccd-113">End-To-End-Ablaufverfolgungsszenarien</span><span class="sxs-lookup"><span data-stu-id="a7ccd-113">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- <span data-ttu-id="a7ccd-114">Beschreibt für E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Szenarien verwendete Ablaufverfolgungen, z.&#160;B. synchrone wsHttp-Anforderungsantworten und asynchrone unidirektionale TCP-Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-114">Describes traces used for E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] scenarios, for example, synchronous wsHttp request-replies, and asynchronous TCP one-way requests.</span></span>  
+ [<span data-ttu-id="1df15-113">End-To-End-Ablaufverfolgungsszenarien</span><span class="sxs-lookup"><span data-stu-id="1df15-113">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ <span data-ttu-id="1df15-114">Beschreibt für E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Szenarien verwendete Ablaufverfolgungen, z.&#160;B. synchrone wsHttp-Anforderungsantworten und asynchrone unidirektionale TCP-Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="1df15-114">Describes traces used for E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] scenarios, for example, synchronous wsHttp request-replies, and asynchronous TCP one-way requests.</span></span>  
   
- [<span data-ttu-id="a7ccd-115">Ausgeben von Benutzercode-Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="a7ccd-115">Emitting User-Code Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
- <span data-ttu-id="a7ccd-116">Beschreibt die programmgesteuerte Ausgabe von Ablaufverfolgungen in Benutzercode, sodass Sie proaktiv Instrumentierungsdaten erstellen können, die später zur Diagnose und in Korrelation mit WCF-Ablaufverfolgungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7ccd-116">Describes how to emit traces programmatically in user code, so that you can proactively create instrumentation data to be used later for diagnostic purpose, and in correlation with WCF traces.</span></span>  
+ [<span data-ttu-id="1df15-115">Ausgeben von Benutzercode-Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="1df15-115">Emitting User-Code Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
+ <span data-ttu-id="1df15-116">Beschreibt die programmgesteuerte Ausgabe von Ablaufverfolgungen in Benutzercode, sodass Sie proaktiv Instrumentierungsdaten erstellen können, die später zur Diagnose und in Korrelation mit WCF-Ablaufverfolgungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1df15-116">Describes how to emit traces programmatically in user code, so that you can proactively create instrumentation data to be used later for diagnostic purpose, and in correlation with WCF traces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7ccd-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a7ccd-117">See Also</span></span>  
- [<span data-ttu-id="a7ccd-118">Service Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="a7ccd-118">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [<span data-ttu-id="a7ccd-119">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a7ccd-119">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a7ccd-120">End-to-End-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a7ccd-120">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a><span data-ttu-id="1df15-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1df15-117">See Also</span></span>  
+ [<span data-ttu-id="1df15-118">Service Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="1df15-118">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [<span data-ttu-id="1df15-119">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="1df15-119">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1df15-120">End-to-End-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="1df15-120">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

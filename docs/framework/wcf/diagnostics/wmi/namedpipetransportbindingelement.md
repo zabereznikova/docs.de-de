@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 65bb13575d770c3ecd3596094e42aac2620692e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ef6e6db874540d0776aaaae353d5084859313a65
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="namedpipetransportbindingelement"></a><span data-ttu-id="16aa5-102">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="16aa5-102">NamedPipeTransportBindingElement</span></span>
-<span data-ttu-id="16aa5-103">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="16aa5-103">NamedPipeTransportBindingElement</span></span>  
+# <a name="namedpipetransportbindingelement"></a><span data-ttu-id="ad346-102">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="ad346-102">NamedPipeTransportBindingElement</span></span>
+<span data-ttu-id="ad346-103">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="ad346-103">NamedPipeTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16aa5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="16aa5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad346-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ad346-104">Syntax</span></span>  
   
 ```  
 class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -31,24 +31,24 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="16aa5-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="16aa5-105">Methods</span></span>  
- <span data-ttu-id="16aa5-106">Die NamedPipeTransportBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="16aa5-106">The NamedPipeTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="ad346-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="ad346-105">Methods</span></span>  
+ <span data-ttu-id="ad346-106">Die NamedPipeTransportBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="ad346-106">The NamedPipeTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="16aa5-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="16aa5-107">Properties</span></span>  
- <span data-ttu-id="16aa5-108">Die NamedPipeTransportBindingElement-Klasse verfügt über die folgende Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="16aa5-108">The NamedPipeTransportBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="ad346-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="ad346-107">Properties</span></span>  
+ <span data-ttu-id="ad346-108">Die NamedPipeTransportBindingElement-Klasse verfügt über die folgende Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="ad346-108">The NamedPipeTransportBindingElement class has the following property:</span></span>  
   
-### <a name="connectionpoolsettings"></a><span data-ttu-id="16aa5-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="16aa5-109">ConnectionPoolSettings</span></span>  
- <span data-ttu-id="16aa5-110">Datentyp: NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="16aa5-110">Data type: NamedPipeConnectionPoolSettings</span></span>  
+### <a name="connectionpoolsettings"></a><span data-ttu-id="ad346-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="ad346-109">ConnectionPoolSettings</span></span>  
+ <span data-ttu-id="ad346-110">Datentyp: NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="ad346-110">Data type: NamedPipeConnectionPoolSettings</span></span>  
   
- <span data-ttu-id="16aa5-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="16aa5-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="ad346-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ad346-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="16aa5-112">Die Verbindungspooleinstellungen.</span><span class="sxs-lookup"><span data-stu-id="16aa5-112">The connection pool settings.</span></span>  
+ <span data-ttu-id="ad346-112">Die Verbindungspooleinstellungen.</span><span class="sxs-lookup"><span data-stu-id="ad346-112">The connection pool settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16aa5-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16aa5-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad346-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ad346-113">Requirements</span></span>  
   
-|<span data-ttu-id="16aa5-114">MOF</span><span class="sxs-lookup"><span data-stu-id="16aa5-114">MOF</span></span>|<span data-ttu-id="16aa5-115">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="16aa5-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="ad346-114">MOF</span><span class="sxs-lookup"><span data-stu-id="ad346-114">MOF</span></span>|<span data-ttu-id="ad346-115">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="ad346-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="16aa5-116">Namespace</span><span class="sxs-lookup"><span data-stu-id="16aa5-116">Namespace</span></span>|<span data-ttu-id="16aa5-117">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="16aa5-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="ad346-116">Namespace</span><span class="sxs-lookup"><span data-stu-id="ad346-116">Namespace</span></span>|<span data-ttu-id="ad346-117">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ad346-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="16aa5-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16aa5-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ad346-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ad346-118">See Also</span></span>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

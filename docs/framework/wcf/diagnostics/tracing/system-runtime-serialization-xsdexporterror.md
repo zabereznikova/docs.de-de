@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 393fa3d0-a4bb-4c00-947d-84c5e860c681
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 264b83627b261f2b30e7b7cf80d4553e0c1fed5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4c6ff8bae43b52ae63172654254eabf95db14fa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemruntimeserializationxsdexporterror"></a><span data-ttu-id="36bcd-102">System.Runtime.Serialization.XsdExportError</span><span class="sxs-lookup"><span data-stu-id="36bcd-102">System.Runtime.Serialization.XsdExportError</span></span>
-<span data-ttu-id="36bcd-103">System.Runtime.Serialization.XsdExportError</span><span class="sxs-lookup"><span data-stu-id="36bcd-103">System.Runtime.Serialization.XsdExportError</span></span>  
+# <a name="systemruntimeserializationxsdexporterror"></a><span data-ttu-id="61df4-102">System.Runtime.Serialization.XsdExportError</span><span class="sxs-lookup"><span data-stu-id="61df4-102">System.Runtime.Serialization.XsdExportError</span></span>
+<span data-ttu-id="61df4-103">System.Runtime.Serialization.XsdExportError</span><span class="sxs-lookup"><span data-stu-id="61df4-103">System.Runtime.Serialization.XsdExportError</span></span>  
   
-## <a name="description"></a><span data-ttu-id="36bcd-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36bcd-104">Description</span></span>  
- <span data-ttu-id="36bcd-105">Fehler beim Schemaexport.</span><span class="sxs-lookup"><span data-stu-id="36bcd-105">Error on schema export.</span></span>  
+## <a name="description"></a><span data-ttu-id="61df4-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="61df4-104">Description</span></span>  
+ <span data-ttu-id="61df4-105">Fehler beim Schemaexport.</span><span class="sxs-lookup"><span data-stu-id="61df4-105">Error on schema export.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36bcd-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36bcd-106">See Also</span></span>  
- [<span data-ttu-id="36bcd-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="36bcd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="36bcd-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="36bcd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="36bcd-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="36bcd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="61df4-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="61df4-106">See Also</span></span>  
+ [<span data-ttu-id="61df4-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="61df4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="61df4-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="61df4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="61df4-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="61df4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

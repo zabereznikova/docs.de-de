@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7d8b757f-e8d8-4c12-927e-ba3776c17983
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9cb632417146287d20f63e7363b5b3ff60ee9f38
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48f7376a483f5fae9784d059391dbd1cfa08803e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="601---cbaentryread"></a><span data-ttu-id="b1808-102">601 - CBAEntryRead</span><span class="sxs-lookup"><span data-stu-id="b1808-102">601 - CBAEntryRead</span></span>
-## <a name="properties"></a><span data-ttu-id="b1808-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b1808-103">Properties</span></span>  
+# <a name="601---cbaentryread"></a><span data-ttu-id="37ccc-102">601 - CBAEntryRead</span><span class="sxs-lookup"><span data-stu-id="37ccc-102">601 - CBAEntryRead</span></span>
+## <a name="properties"></a><span data-ttu-id="37ccc-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="37ccc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b1808-104">ID</span><span class="sxs-lookup"><span data-stu-id="b1808-104">ID</span></span>|<span data-ttu-id="b1808-105">601</span><span class="sxs-lookup"><span data-stu-id="b1808-105">601</span></span>|  
-|<span data-ttu-id="b1808-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="b1808-106">Keywords</span></span>||  
-|<span data-ttu-id="b1808-107">Ebene</span><span class="sxs-lookup"><span data-stu-id="b1808-107">Level</span></span>|<span data-ttu-id="b1808-108">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="b1808-108">Verbose</span></span>|  
-|<span data-ttu-id="b1808-109">Kanal</span><span class="sxs-lookup"><span data-stu-id="b1808-109">Channel</span></span>|<span data-ttu-id="b1808-110">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b1808-110">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="37ccc-104">ID</span><span class="sxs-lookup"><span data-stu-id="37ccc-104">ID</span></span>|<span data-ttu-id="37ccc-105">601</span><span class="sxs-lookup"><span data-stu-id="37ccc-105">601</span></span>|  
+|<span data-ttu-id="37ccc-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="37ccc-106">Keywords</span></span>||  
+|<span data-ttu-id="37ccc-107">Ebene</span><span class="sxs-lookup"><span data-stu-id="37ccc-107">Level</span></span>|<span data-ttu-id="37ccc-108">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="37ccc-108">Verbose</span></span>|  
+|<span data-ttu-id="37ccc-109">Kanal</span><span class="sxs-lookup"><span data-stu-id="37ccc-109">Channel</span></span>|<span data-ttu-id="37ccc-110">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="37ccc-110">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b1808-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b1808-111">Description</span></span>  
- <span data-ttu-id="b1808-112">Dieses Ereignis wird beim CBAEntry-Lesevorgang ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="b1808-112">This event is emitted with CBAEntry read.</span></span>  
+## <a name="description"></a><span data-ttu-id="37ccc-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37ccc-111">Description</span></span>  
+ <span data-ttu-id="37ccc-112">Dieses Ereignis wird beim CBAEntry-Lesevorgang ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="37ccc-112">This event is emitted with CBAEntry read.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b1808-113">Meldung</span><span class="sxs-lookup"><span data-stu-id="b1808-113">Message</span></span>  
- <span data-ttu-id="b1808-114">Das ServiceActivation-Element mit der relativen Adresse '%1' und der normalisierten relativen Adresse '%2' wurde verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="b1808-114">Processed ServiceActivation Element Relative Address:'%1', Normalized Relative Address '%2' .</span></span>  
+## <a name="message"></a><span data-ttu-id="37ccc-113">Meldung</span><span class="sxs-lookup"><span data-stu-id="37ccc-113">Message</span></span>  
+ <span data-ttu-id="37ccc-114">Das ServiceActivation-Element mit der relativen Adresse '%1' und der normalisierten relativen Adresse '%2' wurde verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="37ccc-114">Processed ServiceActivation Element Relative Address:'%1', Normalized Relative Address '%2' .</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b1808-115">Details</span><span class="sxs-lookup"><span data-stu-id="b1808-115">Details</span></span>
+## <a name="details"></a><span data-ttu-id="37ccc-115">Details</span><span class="sxs-lookup"><span data-stu-id="37ccc-115">Details</span></span>

@@ -11,33 +11,33 @@ ms.topic: article
 helpviewer_keywords: claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a553a33f4747e2e5ed51f675a8db2d90da65fb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8213931a7509378fde6df19eeb189abd8a81e96
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="8260b-102">Erstellen von Ansprüchen und Ressourcenwerte</span><span class="sxs-lookup"><span data-stu-id="8260b-102">Claim Creation and Resource Values</span></span>
-<span data-ttu-id="8260b-103">Die <xref:System.IdentityModel.Claims.Claim>-Klasse bietet mehrere Methoden zum Erstellen von Instanzen von integrierten Anspruchstypen.</span><span class="sxs-lookup"><span data-stu-id="8260b-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="8260b-104">Von diesen Methoden führen die folgenden keine semantische Prüfung oder Formatüberprüfung für die angegebene Ressource aus:</span><span class="sxs-lookup"><span data-stu-id="8260b-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
+# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="a6901-102">Erstellen von Ansprüchen und Ressourcenwerte</span><span class="sxs-lookup"><span data-stu-id="a6901-102">Claim Creation and Resource Values</span></span>
+<span data-ttu-id="a6901-103">Die <xref:System.IdentityModel.Claims.Claim>-Klasse bietet mehrere Methoden zum Erstellen von Instanzen von integrierten Anspruchstypen.</span><span class="sxs-lookup"><span data-stu-id="a6901-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="a6901-104">Von diesen Methoden führen die folgenden keine semantische Prüfung oder Formatüberprüfung für die angegebene Ressource aus:</span><span class="sxs-lookup"><span data-stu-id="a6901-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <span data-ttu-id="8260b-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)</span><span class="sxs-lookup"><span data-stu-id="8260b-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (does not check the length or content of the byte array)</span></span>  
+-   <span data-ttu-id="a6901-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)</span><span class="sxs-lookup"><span data-stu-id="a6901-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <span data-ttu-id="8260b-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)</span><span class="sxs-lookup"><span data-stu-id="8260b-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (does not check the length or content of the byte array)</span></span>  
+-   <span data-ttu-id="a6901-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)</span><span class="sxs-lookup"><span data-stu-id="a6901-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
- <span data-ttu-id="8260b-107">Gehen Sie beim Aufrufen der oben beschriebenen Methoden äußerst sorgfältig vor, um sicherzustellen, dass die übergebenen Ressourcenwerte das richtige Format aufweisen oder die richtigen Informationen enthalten (oder beides).</span><span class="sxs-lookup"><span data-stu-id="8260b-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
+ <span data-ttu-id="a6901-107">Gehen Sie beim Aufrufen der oben beschriebenen Methoden äußerst sorgfältig vor, um sicherzustellen, dass die übergebenen Ressourcenwerte das richtige Format aufweisen oder die richtigen Informationen enthalten (oder beides).</span><span class="sxs-lookup"><span data-stu-id="a6901-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
   
- <span data-ttu-id="8260b-108">Die folgenden Methoden werden mit bestimmten Typen verwendet:</span><span class="sxs-lookup"><span data-stu-id="8260b-108">The following methods take specific types:</span></span>  
+ <span data-ttu-id="a6901-108">Die folgenden Methoden werden mit bestimmten Typen verwendet:</span><span class="sxs-lookup"><span data-stu-id="a6901-108">The following methods take specific types:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a><span data-ttu-id="8260b-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8260b-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a6901-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6901-109">See Also</span></span>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
- [<span data-ttu-id="8260b-110">Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell</span><span class="sxs-lookup"><span data-stu-id="8260b-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [<span data-ttu-id="a6901-110">Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell</span><span class="sxs-lookup"><span data-stu-id="a6901-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

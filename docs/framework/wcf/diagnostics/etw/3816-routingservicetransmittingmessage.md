@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7ee6e3b-4a02-47bd-b004-46abb6dd820e
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01f54655c289394a7300b2d244d7180fda71bb59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da94c12ecc57382cac4e2ac8e8d5ddc3c2f71095
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3816---routingservicetransmittingmessage"></a><span data-ttu-id="15fcd-102">3816 - RoutingServiceTransmittingMessage</span><span class="sxs-lookup"><span data-stu-id="15fcd-102">3816 - RoutingServiceTransmittingMessage</span></span>
-## <a name="properties"></a><span data-ttu-id="15fcd-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="15fcd-103">Properties</span></span>  
+# <a name="3816---routingservicetransmittingmessage"></a><span data-ttu-id="e6ef3-102">3816 - RoutingServiceTransmittingMessage</span><span class="sxs-lookup"><span data-stu-id="e6ef3-102">3816 - RoutingServiceTransmittingMessage</span></span>
+## <a name="properties"></a><span data-ttu-id="e6ef3-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e6ef3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="15fcd-104">ID</span><span class="sxs-lookup"><span data-stu-id="15fcd-104">ID</span></span>|<span data-ttu-id="15fcd-105">3816</span><span class="sxs-lookup"><span data-stu-id="15fcd-105">3816</span></span>|  
-|<span data-ttu-id="15fcd-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="15fcd-106">Keywords</span></span>|<span data-ttu-id="15fcd-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="15fcd-107">RoutingServices</span></span>|  
-|<span data-ttu-id="15fcd-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="15fcd-108">Level</span></span>|<span data-ttu-id="15fcd-109">Information</span><span class="sxs-lookup"><span data-stu-id="15fcd-109">Information</span></span>|  
-|<span data-ttu-id="15fcd-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="15fcd-110">Channel</span></span>|<span data-ttu-id="15fcd-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="15fcd-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e6ef3-104">ID</span><span class="sxs-lookup"><span data-stu-id="e6ef3-104">ID</span></span>|<span data-ttu-id="e6ef3-105">3816</span><span class="sxs-lookup"><span data-stu-id="e6ef3-105">3816</span></span>|  
+|<span data-ttu-id="e6ef3-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="e6ef3-106">Keywords</span></span>|<span data-ttu-id="e6ef3-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="e6ef3-107">RoutingServices</span></span>|  
+|<span data-ttu-id="e6ef3-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="e6ef3-108">Level</span></span>|<span data-ttu-id="e6ef3-109">Information</span><span class="sxs-lookup"><span data-stu-id="e6ef3-109">Information</span></span>|  
+|<span data-ttu-id="e6ef3-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="e6ef3-110">Channel</span></span>|<span data-ttu-id="e6ef3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e6ef3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="15fcd-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="15fcd-112">Description</span></span>  
- <span data-ttu-id="15fcd-113">Dieses Ereignis wird ausgegeben, wenn der Routingdienst eine Nachricht überträgt.</span><span class="sxs-lookup"><span data-stu-id="15fcd-113">This event is emitted when the Routing Service is transmitting a message.</span></span>  
+## <a name="description"></a><span data-ttu-id="e6ef3-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e6ef3-112">Description</span></span>  
+ <span data-ttu-id="e6ef3-113">Dieses Ereignis wird ausgegeben, wenn der Routingdienst eine Nachricht überträgt.</span><span class="sxs-lookup"><span data-stu-id="e6ef3-113">This event is emitted when the Routing Service is transmitting a message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="15fcd-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="15fcd-114">Message</span></span>  
- <span data-ttu-id="15fcd-115">Der Routingdienst sendet die Nachricht mit der ID: "%1" [Vorgang %2] an "%3 ".</span><span class="sxs-lookup"><span data-stu-id="15fcd-115">The Routing Service is transmitting the message with ID: '%1' [operation %2] to '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="e6ef3-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="e6ef3-114">Message</span></span>  
+ <span data-ttu-id="e6ef3-115">Der Routingdienst sendet die Nachricht mit der ID: "%1" [Vorgang %2] an "%3 ".</span><span class="sxs-lookup"><span data-stu-id="e6ef3-115">The Routing Service is transmitting the message with ID: '%1' [operation %2] to '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="15fcd-116">Details</span><span class="sxs-lookup"><span data-stu-id="15fcd-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e6ef3-116">Details</span><span class="sxs-lookup"><span data-stu-id="e6ef3-116">Details</span></span>

@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e6b0716-c107-42e5-a21d-31d988e7a691
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d42046d2d636d507aa682c349f29dcecedca657
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cefe433bf7b2fb489483962b5f5358897b4cfa6f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="transacted-operations-in-doubt-per-second"></a><span data-ttu-id="89b20-102">Transacted Operations In Doubt Per Second</span><span class="sxs-lookup"><span data-stu-id="89b20-102">Transacted Operations In Doubt Per Second</span></span>
-<span data-ttu-id="89b20-103">Indikatorname: Transacted Operations In Doubt Per Second.</span><span class="sxs-lookup"><span data-stu-id="89b20-103">Counter Name: Transacted Operations In Doubt Per Second.</span></span>  
+# <a name="transacted-operations-in-doubt-per-second"></a><span data-ttu-id="3f5e5-102">Transacted Operations In Doubt Per Second</span><span class="sxs-lookup"><span data-stu-id="3f5e5-102">Transacted Operations In Doubt Per Second</span></span>
+<span data-ttu-id="3f5e5-103">Indikatorname: Transacted Operations In Doubt Per Second.</span><span class="sxs-lookup"><span data-stu-id="3f5e5-103">Counter Name: Transacted Operations In Doubt Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="89b20-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="89b20-104">Description</span></span>  
- <span data-ttu-id="89b20-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst in einer Sekunde.</span><span class="sxs-lookup"><span data-stu-id="89b20-105">Number of transactional operations with an in-doubt outcome in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="3f5e5-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3f5e5-104">Description</span></span>  
+ <span data-ttu-id="3f5e5-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst in einer Sekunde.</span><span class="sxs-lookup"><span data-stu-id="3f5e5-105">Number of transactional operations with an in-doubt outcome in this service in a second.</span></span>  
   
- <span data-ttu-id="89b20-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="89b20-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="3f5e5-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="3f5e5-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="89b20-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="89b20-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="3f5e5-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="3f5e5-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

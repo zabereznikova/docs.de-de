@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1716955748c481236a5d23c0592702855356e9e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6cca48cec486cfdbb9bca2eba48847c25c35abe9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltendpointdiscoverygt"></a><span data-ttu-id="3993e-102">&lt;endpointDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="3993e-102">&lt;endpointDiscovery&gt;</span></span>
-<span data-ttu-id="3993e-103">Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.</span><span class="sxs-lookup"><span data-stu-id="3993e-103">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
+# <a name="ltendpointdiscoverygt"></a><span data-ttu-id="39b4b-102">&lt;endpointDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="39b4b-102">&lt;endpointDiscovery&gt;</span></span>
+<span data-ttu-id="39b4b-103">Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.</span><span class="sxs-lookup"><span data-stu-id="39b4b-103">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
   
-<span data-ttu-id="3993e-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="3993e-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="3993e-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="3993e-105">\<behaviors></span></span>  
-<span data-ttu-id="3993e-106">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="3993e-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="3993e-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="3993e-107">\<behavior></span></span>  
-<span data-ttu-id="3993e-108">\<EndpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="3993e-108">\<endpointDiscovery></span></span>  
+<span data-ttu-id="39b4b-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="39b4b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="39b4b-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="39b4b-105">\<behaviors></span></span>  
+<span data-ttu-id="39b4b-106">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="39b4b-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="39b4b-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="39b4b-107">\<behavior></span></span>  
+<span data-ttu-id="39b4b-108">\<EndpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="39b4b-108">\<endpointDiscovery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3993e-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="3993e-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39b4b-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="39b4b-109">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -45,37 +45,37 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3993e-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="3993e-110">Attributes and Elements</span></span>  
- <span data-ttu-id="3993e-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3993e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39b4b-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="39b4b-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="39b4b-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="39b4b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3993e-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="3993e-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="39b4b-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="39b4b-112">Attributes</span></span>  
   
-|<span data-ttu-id="3993e-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="3993e-113">Attribute</span></span>|<span data-ttu-id="3993e-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3993e-114">Description</span></span>|  
+|<span data-ttu-id="39b4b-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="39b4b-113">Attribute</span></span>|<span data-ttu-id="39b4b-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39b4b-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="3993e-115">enabled</span><span class="sxs-lookup"><span data-stu-id="3993e-115">enabled</span></span>|<span data-ttu-id="3993e-116">Ein boolescher Wert, der angibt, ob die Ermittelbarkeit für diesen Endpunkt aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="3993e-116">A Boolean value that that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="3993e-117">Die Standardeinstellung ist `false`.</span><span class="sxs-lookup"><span data-stu-id="3993e-117">The default is `false`.</span></span>|  
+|<span data-ttu-id="39b4b-115">enabled</span><span class="sxs-lookup"><span data-stu-id="39b4b-115">enabled</span></span>|<span data-ttu-id="39b4b-116">Ein boolescher Wert, der angibt, ob die Ermittelbarkeit für diesen Endpunkt aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="39b4b-116">A Boolean value that that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="39b4b-117">Die Standardeinstellung ist `false`.</span><span class="sxs-lookup"><span data-stu-id="39b4b-117">The default is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3993e-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3993e-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="39b4b-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="39b4b-118">Child Elements</span></span>  
   
-|<span data-ttu-id="3993e-119">Element</span><span class="sxs-lookup"><span data-stu-id="3993e-119">Element</span></span>|<span data-ttu-id="3993e-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3993e-120">Description</span></span>|  
+|<span data-ttu-id="39b4b-119">Element</span><span class="sxs-lookup"><span data-stu-id="39b4b-119">Element</span></span>|<span data-ttu-id="39b4b-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39b4b-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3993e-121">\<Bereiche ></span><span class="sxs-lookup"><span data-stu-id="3993e-121">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="3993e-122">Eine Auflistung von Bereichs-URIs für den Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="3993e-122">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="3993e-123">Einem Endpunkt können mehrere Bereichs-URIs zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="3993e-123">More than one scope Uris can be associated with a single endpoint.</span></span>|  
-|<span data-ttu-id="3993e-124">[\<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [von \<EndpointDiscovery >]</span><span class="sxs-lookup"><span data-stu-id="3993e-124">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="3993e-125">Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3993e-125">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
-|<span data-ttu-id="3993e-126">\<Typen ></span><span class="sxs-lookup"><span data-stu-id="3993e-126">\<types></span></span>|<span data-ttu-id="3993e-127">Eine Auflistung von Schnittstellen, nach denen gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="3993e-127">A collection of interfaces to search for.</span></span>|  
+|[<span data-ttu-id="39b4b-121">\<Bereiche ></span><span class="sxs-lookup"><span data-stu-id="39b4b-121">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="39b4b-122">Eine Auflistung von Bereichs-URIs für den Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="39b4b-122">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="39b4b-123">Einem Endpunkt können mehrere Bereichs-URIs zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="39b4b-123">More than one scope Uris can be associated with a single endpoint.</span></span>|  
+|<span data-ttu-id="39b4b-124">[\<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [von \<EndpointDiscovery >]</span><span class="sxs-lookup"><span data-stu-id="39b4b-124">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="39b4b-125">Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="39b4b-125">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
+|<span data-ttu-id="39b4b-126">\<Typen ></span><span class="sxs-lookup"><span data-stu-id="39b4b-126">\<types></span></span>|<span data-ttu-id="39b4b-127">Eine Auflistung von Schnittstellen, nach denen gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="39b4b-127">A collection of interfaces to search for.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3993e-128">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3993e-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="39b4b-128">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="39b4b-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="3993e-129">Element</span><span class="sxs-lookup"><span data-stu-id="3993e-129">Element</span></span>|<span data-ttu-id="3993e-130">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3993e-130">Description</span></span>|  
+|<span data-ttu-id="39b4b-129">Element</span><span class="sxs-lookup"><span data-stu-id="39b4b-129">Element</span></span>|<span data-ttu-id="39b4b-130">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39b4b-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3993e-131">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="3993e-131">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="3993e-132">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="3993e-132">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="39b4b-131">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="39b4b-131">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="39b4b-132">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="39b4b-132">Specifies a behavior element.</span></span>|  
 |||  
   
-## <a name="remarks"></a><span data-ttu-id="3993e-133">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3993e-133">Remarks</span></span>  
- <span data-ttu-id="3993e-134">Bei Hinzufügung zur Verhaltenskonfiguration des Endpunkts und bei Festlegen des `enabled`-Attributs auf `true` aktiviert dieses Konfigurationselement seine Ermittelbarkeit.</span><span class="sxs-lookup"><span data-stu-id="3993e-134">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="3993e-135">Darüber hinaus können Sie die [ \<Bereiche >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)untergeordnetes Element angeben benutzerdefinierter Bereichs-Uris, die verwendet werden kann, um Dienstendpunkte während der Abfrage filtern als auch die [ \<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) untergeordnetes Element, um benutzerdefinierte Metadaten anzugeben, die zusammen mit den standardmäßigen sichtbaren Metadaten (EPR, ContractTypeName, BindingName, Bereich und ListenURI) veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3993e-135">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39b4b-133">Hinweise</span><span class="sxs-lookup"><span data-stu-id="39b4b-133">Remarks</span></span>  
+ <span data-ttu-id="39b4b-134">Bei Hinzufügung zur Verhaltenskonfiguration des Endpunkts und bei Festlegen des `enabled`-Attributs auf `true` aktiviert dieses Konfigurationselement seine Ermittelbarkeit.</span><span class="sxs-lookup"><span data-stu-id="39b4b-134">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="39b4b-135">Darüber hinaus können Sie die [ \<Bereiche >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)untergeordnetes Element angeben benutzerdefinierter Bereichs-Uris, die verwendet werden kann, um Dienstendpunkte während der Abfrage filtern als auch die [ \<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) untergeordnetes Element, um benutzerdefinierte Metadaten anzugeben, die zusammen mit den standardmäßigen sichtbaren Metadaten (EPR, ContractTypeName, BindingName, Bereich und ListenURI) veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="39b4b-135">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
   
- <span data-ttu-id="3993e-136">Dieses Konfigurationselement ist abhängig von der [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element, das die Service Level Control Steuerbarkeit der bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="3993e-136">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="3993e-137">Dies bedeutet, dass die Einstellungen für dieses Element ignoriert werden, wenn [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) nicht in der Konfiguration vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="3993e-137">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
+ <span data-ttu-id="39b4b-136">Dieses Konfigurationselement ist abhängig von der [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element, das die Service Level Control Steuerbarkeit der bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="39b4b-136">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="39b4b-137">Dies bedeutet, dass die Einstellungen für dieses Element ignoriert werden, wenn [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) nicht in der Konfiguration vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="39b4b-137">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3993e-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3993e-138">Example</span></span>  
- <span data-ttu-id="3993e-139">Im folgenden Konfigurationsbeispiel werden Filterbereiche und Erweiterungsmetadaten angegeben, die für einen Endpunkt veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3993e-139">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
+## <a name="example"></a><span data-ttu-id="39b4b-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="39b4b-138">Example</span></span>  
+ <span data-ttu-id="39b4b-139">Im folgenden Konfigurationsbeispiel werden Filterbereiche und Erweiterungsmetadaten angegeben, die für einen Endpunkt veröffentlicht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="39b4b-139">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
   
 ```xml  
 <services>  
@@ -114,5 +114,5 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3993e-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3993e-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="39b4b-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="39b4b-140">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

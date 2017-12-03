@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe40094f-6f2c-4dd8-b872-191c7812118e
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3c9396712c9957e938e7b3e0dd4e4bb8e3843934
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2842e5183e44a0472bb3f3d8e42a603c663ac38d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="4035---pendingsessionqueueratio"></a><span data-ttu-id="5e25c-102">4035 - PendingSessionQueueRatio</span><span class="sxs-lookup"><span data-stu-id="5e25c-102">4035 - PendingSessionQueueRatio</span></span>
-## <a name="properties"></a><span data-ttu-id="5e25c-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5e25c-103">Properties</span></span>  
+# <a name="4035---pendingsessionqueueratio"></a><span data-ttu-id="22e1b-102">4035 - PendingSessionQueueRatio</span><span class="sxs-lookup"><span data-stu-id="22e1b-102">4035 - PendingSessionQueueRatio</span></span>
+## <a name="properties"></a><span data-ttu-id="22e1b-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="22e1b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="5e25c-104">ID</span><span class="sxs-lookup"><span data-stu-id="5e25c-104">ID</span></span>|<span data-ttu-id="5e25c-105">4035</span><span class="sxs-lookup"><span data-stu-id="5e25c-105">4035</span></span>|  
-|<span data-ttu-id="5e25c-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="5e25c-106">Keywords</span></span>|<span data-ttu-id="5e25c-107">Kontingent</span><span class="sxs-lookup"><span data-stu-id="5e25c-107">Quota</span></span>|  
-|<span data-ttu-id="5e25c-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5e25c-108">Level</span></span>|<span data-ttu-id="5e25c-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="5e25c-109">Verbose</span></span>|  
-|<span data-ttu-id="5e25c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5e25c-110">Channel</span></span>|<span data-ttu-id="5e25c-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5e25c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="22e1b-104">ID</span><span class="sxs-lookup"><span data-stu-id="22e1b-104">ID</span></span>|<span data-ttu-id="22e1b-105">4035</span><span class="sxs-lookup"><span data-stu-id="22e1b-105">4035</span></span>|  
+|<span data-ttu-id="22e1b-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="22e1b-106">Keywords</span></span>|<span data-ttu-id="22e1b-107">Kontingent</span><span class="sxs-lookup"><span data-stu-id="22e1b-107">Quota</span></span>|  
+|<span data-ttu-id="22e1b-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="22e1b-108">Level</span></span>|<span data-ttu-id="22e1b-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="22e1b-109">Verbose</span></span>|  
+|<span data-ttu-id="22e1b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="22e1b-110">Channel</span></span>|<span data-ttu-id="22e1b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="22e1b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="5e25c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5e25c-112">Description</span></span>  
- <span data-ttu-id="5e25c-113">Dieses Ereignis wird ausgegeben, um Informationen zum Verhältnis der ausstehenden Sitzungswarteschlangen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="5e25c-113">This event is emitted to inform about the pending session queue ratio.</span></span>  
+## <a name="description"></a><span data-ttu-id="22e1b-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="22e1b-112">Description</span></span>  
+ <span data-ttu-id="22e1b-113">Dieses Ereignis wird ausgegeben, um Informationen zum Verhältnis der ausstehenden Sitzungswarteschlangen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="22e1b-113">This event is emitted to inform about the pending session queue ratio.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="5e25c-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5e25c-114">Message</span></span>  
- <span data-ttu-id="5e25c-115">Verhältnis Sitzungswarteschlange: %1%2</span><span class="sxs-lookup"><span data-stu-id="5e25c-115">Pending session queue ratio: %1/%2</span></span>  
+## <a name="message"></a><span data-ttu-id="22e1b-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="22e1b-114">Message</span></span>  
+ <span data-ttu-id="22e1b-115">Verhältnis Sitzungswarteschlange: %1%2</span><span class="sxs-lookup"><span data-stu-id="22e1b-115">Pending session queue ratio: %1/%2</span></span>  
   
-## <a name="details"></a><span data-ttu-id="5e25c-116">Details</span><span class="sxs-lookup"><span data-stu-id="5e25c-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="22e1b-116">Details</span><span class="sxs-lookup"><span data-stu-id="22e1b-116">Details</span></span>

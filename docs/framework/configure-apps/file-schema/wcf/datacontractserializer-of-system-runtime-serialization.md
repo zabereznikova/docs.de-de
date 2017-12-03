@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0c8d0e82696935a480935ebbb71530e052f8d8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 39d24f03bde729e99b629162aee86efe4b60fdd1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a><span data-ttu-id="a323d-102">&lt;dataContractSerializer&gt; von &lt;system.runtime.serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="a323d-102">&lt;dataContractSerializer&gt; of &lt;system.runtime.serialization&gt;</span></span>
-<span data-ttu-id="a323d-103">Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a323d-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a><span data-ttu-id="d53fa-102">&lt;dataContractSerializer&gt; von &lt;system.runtime.serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="d53fa-102">&lt;dataContractSerializer&gt; of &lt;system.runtime.serialization&gt;</span></span>
+<span data-ttu-id="d53fa-103">Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="d53fa-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
- <span data-ttu-id="a323d-104">\<System.Runtime.Serialization ></span><span class="sxs-lookup"><span data-stu-id="a323d-104">\<system.runtime.serialization></span></span>  
-<span data-ttu-id="a323d-105">\<"DataContractSerializer" ></span><span class="sxs-lookup"><span data-stu-id="a323d-105">\<dataContractSerializer></span></span>  
+ <span data-ttu-id="d53fa-104">\<System.Runtime.Serialization ></span><span class="sxs-lookup"><span data-stu-id="d53fa-104">\<system.runtime.serialization></span></span>  
+<span data-ttu-id="d53fa-105">\<"DataContractSerializer" ></span><span class="sxs-lookup"><span data-stu-id="d53fa-105">\<dataContractSerializer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a323d-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="a323d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d53fa-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d53fa-106">Syntax</span></span>  
   
 ```xml  
 <configuration>  
@@ -45,32 +45,32 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a323d-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="a323d-107">Attributes and Elements</span></span>  
- <span data-ttu-id="a323d-108">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a323d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d53fa-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="d53fa-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="d53fa-108">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d53fa-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a323d-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="a323d-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d53fa-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="d53fa-109">Attributes</span></span>  
   
-|<span data-ttu-id="a323d-110">Element</span><span class="sxs-lookup"><span data-stu-id="a323d-110">Element</span></span>|<span data-ttu-id="a323d-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a323d-111">Description</span></span>|  
+|<span data-ttu-id="d53fa-110">Element</span><span class="sxs-lookup"><span data-stu-id="d53fa-110">Element</span></span>|<span data-ttu-id="d53fa-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d53fa-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a323d-112">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="a323d-112">ignoreExtensionDataObject</span></span>|<span data-ttu-id="a323d-113">Ein boolescher Wert, der angibt, ob vom Endpunkt bereitgestellte Daten ignoriert werden sollen, wenn dieser serialisiert oder deserialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="a323d-113">A Boolean value that specifies whether to ignore data supplied by the endpoint when it is being serialized or deserialized.</span></span> <span data-ttu-id="a323d-114">Dieses Attribut kann nur im `<dataContractSerializer>` unter dem `<behavior>`-Element festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="a323d-114">This attribute is settable only on the `<dataContractSerializer>` under the `<behavior>` element.</span></span>|  
-|<span data-ttu-id="a323d-115">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="a323d-115">maxItemsInObjectGraph</span></span>|<span data-ttu-id="a323d-116">Eine ganze Zahl, die die maximale Anzahl der zu serialisierenden oder zu deserialisierenden Elemente angibt.</span><span class="sxs-lookup"><span data-stu-id="a323d-116">An integer that specifies the maximum number of items to serialize or deserialize.</span></span> <span data-ttu-id="a323d-117">Dieses Attribut hat den Wert 65536.</span><span class="sxs-lookup"><span data-stu-id="a323d-117">This attribute is 65536.</span></span>|  
+|<span data-ttu-id="d53fa-112">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="d53fa-112">ignoreExtensionDataObject</span></span>|<span data-ttu-id="d53fa-113">Ein boolescher Wert, der angibt, ob vom Endpunkt bereitgestellte Daten ignoriert werden sollen, wenn dieser serialisiert oder deserialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="d53fa-113">A Boolean value that specifies whether to ignore data supplied by the endpoint when it is being serialized or deserialized.</span></span> <span data-ttu-id="d53fa-114">Dieses Attribut kann nur im `<dataContractSerializer>` unter dem `<behavior>`-Element festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="d53fa-114">This attribute is settable only on the `<dataContractSerializer>` under the `<behavior>` element.</span></span>|  
+|<span data-ttu-id="d53fa-115">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="d53fa-115">maxItemsInObjectGraph</span></span>|<span data-ttu-id="d53fa-116">Eine ganze Zahl, die die maximale Anzahl der zu serialisierenden oder zu deserialisierenden Elemente angibt.</span><span class="sxs-lookup"><span data-stu-id="d53fa-116">An integer that specifies the maximum number of items to serialize or deserialize.</span></span> <span data-ttu-id="d53fa-117">Dieses Attribut hat den Wert 65536.</span><span class="sxs-lookup"><span data-stu-id="d53fa-117">This attribute is 65536.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a323d-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a323d-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d53fa-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d53fa-118">Child Elements</span></span>  
   
-|<span data-ttu-id="a323d-119">Element</span><span class="sxs-lookup"><span data-stu-id="a323d-119">Element</span></span>|<span data-ttu-id="a323d-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a323d-120">Description</span></span>|  
+|<span data-ttu-id="d53fa-119">Element</span><span class="sxs-lookup"><span data-stu-id="d53fa-119">Element</span></span>|<span data-ttu-id="d53fa-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d53fa-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a323d-121">\<DeclaredTypes ></span><span class="sxs-lookup"><span data-stu-id="a323d-121">\<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<span data-ttu-id="a323d-122">Enthält die bekannten Typen, die der <xref:System.Runtime.Serialization.DataContractSerializer> bei der Deserialisierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="a323d-122">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span><br /><br /> <span data-ttu-id="a323d-123">Weitere Informationen über Datenverträge und bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="a323d-123">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>|  
+|[<span data-ttu-id="d53fa-121">\<DeclaredTypes ></span><span class="sxs-lookup"><span data-stu-id="d53fa-121">\<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<span data-ttu-id="d53fa-122">Enthält die bekannten Typen, die der <xref:System.Runtime.Serialization.DataContractSerializer> bei der Deserialisierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="d53fa-122">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span><br /><br /> <span data-ttu-id="d53fa-123">Weitere Informationen über Datenverträge und bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="d53fa-123">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="a323d-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a323d-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d53fa-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d53fa-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="a323d-125">Element</span><span class="sxs-lookup"><span data-stu-id="a323d-125">Element</span></span>|<span data-ttu-id="a323d-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a323d-126">Description</span></span>|  
+|<span data-ttu-id="d53fa-125">Element</span><span class="sxs-lookup"><span data-stu-id="d53fa-125">Element</span></span>|<span data-ttu-id="d53fa-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d53fa-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a323d-127">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="a323d-127">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<span data-ttu-id="a323d-128">Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceabschnitt dar und enthält Elemente zum Festlegen von <xref:System.Runtime.Serialization.DataContractSerializer>-Optionen.</span><span class="sxs-lookup"><span data-stu-id="a323d-128">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="d53fa-127">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="d53fa-127">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<span data-ttu-id="d53fa-128">Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceabschnitt dar und enthält Elemente zum Festlegen von <xref:System.Runtime.Serialization.DataContractSerializer>-Optionen.</span><span class="sxs-lookup"><span data-stu-id="d53fa-128">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a323d-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a323d-129">Remarks</span></span>  
- <span data-ttu-id="a323d-130">Weitere Informationen über bekannte Typen finden Sie unter <xref:System.Runtime.Serialization.DataContractSerializer> und [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="a323d-130">For more information about known types, see <xref:System.Runtime.Serialization.DataContractSerializer> and [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d53fa-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d53fa-129">Remarks</span></span>  
+ <span data-ttu-id="d53fa-130">Weitere Informationen über bekannte Typen finden Sie unter <xref:System.Runtime.Serialization.DataContractSerializer> und [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="d53fa-130">For more information about known types, see <xref:System.Runtime.Serialization.DataContractSerializer> and [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a323d-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a323d-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d53fa-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d53fa-131">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- [<span data-ttu-id="a323d-132">Bekannte Typen in Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="a323d-132">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [<span data-ttu-id="d53fa-132">Bekannte Typen in Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="d53fa-132">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
