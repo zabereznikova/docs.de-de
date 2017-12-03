@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c00368f466e151466bdf30a89dffe6baa9b57a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird beim Importieren von Metadaten eine abstrakte Darstellung eines Diensts oder seiner Komponenten aus dessen Metadaten generiert. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann beispielsweise Instanzen von <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Channels.Binding> oder <xref:System.ServiceModel.Description.ContractDescription> aus einem WSDL-Dokument für einen Dienst importieren. Mit einer Implementierung der abstrakten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Klasse können Sie Metadaten von Diensten in <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> importieren. Die Unterstützung für das Importieren von Metadatenformaten, die die Importlogik der WS-Richtlinie in <xref:System.ServiceModel.Description.MetadataImporter> unterstützen, wird durch Typen implementiert, die von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Klasse abgeleitet sind.  

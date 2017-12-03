@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9aa50b8e9f29e5dd14f0ff18d253943a73ef3a0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 78f963f61c7ec67d6104a90c047ce78b0470568a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Konfigurieren der Serialisierung in einem Workflowdienst
 Workflowdienste sind [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste und können daher entweder <xref:System.Runtime.Serialization.DataContractSerializer> (Standard) oder <xref:System.Xml.Serialization.XmlSerializer> verwenden. Beim Schreiben von Nicht-Workflowdiensten wird der Typ des zu verwendenden Serialisierungsprogramms im Dienstvertrag oder Vorgangsvertrag angegeben. Beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Workflowdiensten geben Sie diese Verträge nicht im Code an, sie werden vielmehr zur Laufzeit durch Vertragsrückschluss generiert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mithilfe eines Rückschlusses Vertrag, finden Sie unter [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Das Serialisierungsprogramm wird mithilfe der <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>-Eigenschaft angegeben. Diese kann im Designer festgelegt werden, wie in der folgenden Abbildung dargestellt.  

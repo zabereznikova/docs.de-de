@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85f523b80e109e2c2c5333f5337444716cb67143
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client- oder Kanalobjekte erstellen, konfigurieren und verwenden. Die [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet einen Überblick über die Objekte und die Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  

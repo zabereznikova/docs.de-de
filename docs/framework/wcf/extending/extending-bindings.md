@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f51aea5451f4f74c6658e16c4aced6e76ecbb3b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 692e51fc6276fbee0c1764c0040a251fe32b2c9f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-bindings"></a>Erweitern von Bindungen
 Bindungen geben den Transport, die Codierung sowie das Protokoll an, die erforderlich sind, um eine Verbindung mit einem Endpunkt herzustellen. Bindungserweiterungen und benutzerdefinierte Bindungen implementieren die benutzerdefinierten Kommunikationsfunktionen, die erforderlich sind, um Anwendungsfunktionen zu unterstützen.  

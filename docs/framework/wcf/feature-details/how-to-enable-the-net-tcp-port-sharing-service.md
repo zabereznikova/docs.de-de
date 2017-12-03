@@ -13,14 +13,14 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e9934d198b8f3e30a4dc350c968263851ebeab1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet einen Windows-Dienst namens NET.TCP-Portfreigabedienst, der die gemeinsame Nutzung eines TCP-Anschlusses durch mehrere Prozesse vereinfacht. Dieser Dienst wird als Teil von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] installiert, ist jedoch aus Sicherheitsgründen nicht standardmäßig aktiviert. Daher muss er vor der ersten Verwendung manuell aktiviert werden. In diesem Thema wird beschrieben, wie Sie den NET.TCP-Portfreigabedienst mit dem Microsoft Management Console (MMC)-Snap-In konfigurieren können.  

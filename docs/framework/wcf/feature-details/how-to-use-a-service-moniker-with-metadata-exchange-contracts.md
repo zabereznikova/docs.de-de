@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen
 Nach dem Entwickeln neuer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste können Sie entscheiden, ob das Aufrufen dieser Dienste aus einem Skript oder einer Visual Basic 6.0-Anwendung möglich sein soll. Eine mögliche Methode ist das Generieren einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientassembly, das Registrieren der Assembly bei COM, das Installieren der Assembly im GAC und anschließend das Verweisen der COM-Typen aus dem Visual Basic-Code. Wenn Sie die Anwendung verteilen, müssen Sie auch die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientassembly verteilen. Der Benutzer muss dann die WCF-Clientassembly bei COM registrieren und im GAC platzieren. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-COM-Interop ermöglicht Ihnen die gleichen Dienstaufrufe ohne eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientassembly. Mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Monikers können Sie einen beliebigen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst aus jeder COM-kompatiblen Sprache (Visual Basic, VBScript, Visual Basic for Applications (VBA) usw.) aufrufen, indem Sie einen Metadatenaustausch (MEX)-Endpunkt-URI angeben, den der Dienstmoniker zum Extrahieren von Typinformationen über den Dienst verwendet. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unter Verwendung eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Monikers aufgerufen wird, der einen MEX-Endpunkt angibt.  

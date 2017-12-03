@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 95016b658a679a47b6b37d0c4130ef8e816165c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ca34f04fe4ffa53bcb9bd85e5a6f3aa69b96465
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>Vorgehensweise: Exportieren von benutzerdefinierter WSDL
 Dieses Thema erklärt, wie benutzerdefinierte WSDL-Informationen exportiert werden. Hierfür muss ein neues Codeattribut namens `WsdlDocumentationAttribute` definiert werden, dass der von diesem Dienst generierten WSDL benutzerdefinierte Informationen hinzufügen wird.  

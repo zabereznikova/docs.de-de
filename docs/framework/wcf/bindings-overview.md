@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, die die zum Herstellen einer Verbindung zum Endpunkt eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstes erforderlichen Kommunikationsdetails angeben. Jeder Endpunkt in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst erfordert eine korrekt angegebene Bindung. In diesem Thema werden die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, die in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltenen Bindungen und Methoden zum Angeben einer Bindung für einen Endpunkt aufgeführt.  
