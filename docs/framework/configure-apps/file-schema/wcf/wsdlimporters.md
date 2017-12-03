@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 270c7f93-eab7-47b6-8b94-ac3f5b7f17e4
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c791ac53afa868bed2daee11eb787ed27efb731f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08dce1244b59a1755afebeaed16f25f51a9480a8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltwsdlimportersgt"></a><span data-ttu-id="96b44-102">&lt;wsdlImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="96b44-102">&lt;wsdlImporters&gt;</span></span>
-<span data-ttu-id="96b44-103">Dieses Konfigurationselement gibt alle WSDL-Importer an, die WSDL 1.1-Metadaten (Web Services Description Language) mit WS-Richtlinienanhängen importieren.</span><span class="sxs-lookup"><span data-stu-id="96b44-103">This configuration element specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="96b44-104">Jedes untergeordnete Element ist ein <`wsdlImporter`>, der die Art und Weise des Imports von Metadaten und der Konvertierung der Informationen in verschiedene Klassen angibt, die Vertrags- und Endpunktinformationen darstellen.</span><span class="sxs-lookup"><span data-stu-id="96b44-104">Each child element is a <`wsdlImporter`> that specifies the way to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="96b44-105">Vertrags- und Endpunktinformationen sowie Eigenschaften, die Importfehler offenlegen und Typinformationen akzeptieren, die für den Import- und Konvertierungsvorgang relevant sind, können selektiv importiert werden.</span><span class="sxs-lookup"><span data-stu-id="96b44-105">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="96b44-106">Außerdem wird der Import von Bindungsinformationen und -eigenschaften unterstützt, die Zugriff auf Richtliniendokumente, WSDL-Dokumente, WSDL-Erweiterungen und XML-Schemadokumente bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="96b44-106">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
+# <a name="ltwsdlimportersgt"></a><span data-ttu-id="f4bb5-102">&lt;wsdlImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="f4bb5-102">&lt;wsdlImporters&gt;</span></span>
+<span data-ttu-id="f4bb5-103">Dieses Konfigurationselement gibt alle WSDL-Importer an, die WSDL 1.1-Metadaten (Web Services Description Language) mit WS-Richtlinienanhängen importieren.</span><span class="sxs-lookup"><span data-stu-id="f4bb5-103">This configuration element specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="f4bb5-104">Jedes untergeordnete Element ist ein <`wsdlImporter`>, der die Art und Weise des Imports von Metadaten und der Konvertierung der Informationen in verschiedene Klassen angibt, die Vertrags- und Endpunktinformationen darstellen.</span><span class="sxs-lookup"><span data-stu-id="f4bb5-104">Each child element is a <`wsdlImporter`> that specifies the way to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="f4bb5-105">Vertrags- und Endpunktinformationen sowie Eigenschaften, die Importfehler offenlegen und Typinformationen akzeptieren, die für den Import- und Konvertierungsvorgang relevant sind, können selektiv importiert werden.</span><span class="sxs-lookup"><span data-stu-id="f4bb5-105">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="f4bb5-106">Außerdem wird der Import von Bindungsinformationen und -eigenschaften unterstützt, die Zugriff auf Richtliniendokumente, WSDL-Dokumente, WSDL-Erweiterungen und XML-Schemadokumente bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="f4bb5-106">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96b44-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="96b44-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f4bb5-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f4bb5-107">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [<span data-ttu-id="96b44-108">WCF-Client-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="96b44-108">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [<span data-ttu-id="96b44-109">Clients</span><span class="sxs-lookup"><span data-stu-id="96b44-109">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+ [<span data-ttu-id="f4bb5-108">WCF-Client-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="f4bb5-108">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [<span data-ttu-id="f4bb5-109">Clients</span><span class="sxs-lookup"><span data-stu-id="f4bb5-109">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
