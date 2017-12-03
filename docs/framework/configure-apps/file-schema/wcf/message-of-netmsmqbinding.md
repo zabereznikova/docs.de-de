@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3b03fcce02c51563ed006e62a3f77f76bede777
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d91d97a27c06e8e6e3ab624c45c6853b1cc23e8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; von &lt;netMsmqBinding&gt;
 Definiert die SOAP-Nachrichtensicherheitseinstellungen für diese `netMsmqBinding`-Bindung.  
@@ -50,7 +50,7 @@ Definiert die SOAP-Nachrichtensicherheitseinstellungen für diese `netMsmqBindin
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest, die die nachrichtenbasierte Sicherheit für über den MSMQ-Transport gesendete Nachrichten sicherstellen.<br /><br /> Der Standardwert ist `Aes256`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Gibt den Anmeldeinformationstyp an, der bei der Clientauthentifizierung für über den MSMQ-Transport gesendete Nachrichten verwendet werden sollen. Folgende Werte sind gültig:<br /><br /> -None: Dies ermöglicht den Dienst, mit anonymen Clients zu interagieren. Weder der Dienst noch der Client erfordern Anmeldeinformationen.<br />-Windows: Dies ermöglicht SOAP-Austausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen werden. Dies führt immer zur Durchführung einer auf Kerberos basierenden Authentifizierung.<br />-UserName: Dies ermöglicht den Dienst zu fordern, die der Client mit benutzernamenanmeldeinformationen authentifiziert werden. In diesem Fall muss die Anmeldeinformationen angegeben werden mithilfe der `clientCredentials` Verhalten **Vorsicht:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Senden eines kennworthashwerts oder die Ableitung von Schlüsseln mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit nicht unterstützt.   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] setzt daher prinzipiell durch, dass der Austausch gesichert wird, wenn UserName-Anmeldeinformationen verwendet werden. Für diesen Modus ist es erforderlich, dass das Dienstzertifikat auf dem Client mithilfe des `clientCredential`-Verhaltens und `serviceCertificate` angegeben wird. <br /><br /> -Certificate: Dies ermöglicht den Dienst zu fordern, die der Client über ein Zertifikat authentifiziert werden. Die Clientanmeldeinformationen müssen in diesem Fall über das `clientCredentials`-Verhalten angegeben werden. In diesem Fall müssen die Dienstanmeldeinformationen mit dem `clientCredentials`-Verhalten durch Bereitstellen von `serviceCertificate` angegeben werden.<br />-CardSpace: Dies ermöglicht den Dienst zu fordern, die der Client mit einem CardSpace authentifiziert werden. `serviceCertiifcate` muss im `clientCredential`-Verhalten bereitgestellt werden.<br /><br /> Der Standardwert ist `Windows`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Gibt den Anmeldeinformationstyp an, der bei der Clientauthentifizierung für über den MSMQ-Transport gesendete Nachrichten verwendet werden sollen. Folgende Werte sind gültig:<br /><br /> -None: Dies ermöglicht den Dienst, mit anonymen Clients zu interagieren. Weder der Dienst noch der Client erfordern Anmeldeinformationen.<br />-Windows: Dies ermöglicht SOAP-Austausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen werden. Dies führt immer zur Durchführung einer auf Kerberos basierenden Authentifizierung.<br />-UserName: Dies ermöglicht den Dienst zu fordern, die der Client mit benutzernamenanmeldeinformationen authentifiziert werden. In diesem Fall muss die Anmeldeinformationen angegeben werden mithilfe der `clientCredentials` Verhalten **Vorsicht:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Senden eines kennworthashwerts oder die Ableitung von Schlüsseln mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit nicht unterstützt. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] setzt daher prinzipiell durch, dass der Austausch gesichert wird, wenn UserName-Anmeldeinformationen verwendet werden. Für diesen Modus ist es erforderlich, dass das Dienstzertifikat auf dem Client mithilfe des `clientCredential`-Verhaltens und `serviceCertificate` angegeben wird. <br /><br /> -Certificate: Dies ermöglicht den Dienst zu fordern, die der Client über ein Zertifikat authentifiziert werden. Die Clientanmeldeinformationen müssen in diesem Fall über das `clientCredentials`-Verhalten angegeben werden. In diesem Fall müssen die Dienstanmeldeinformationen mit dem `clientCredentials`-Verhalten durch Bereitstellen von `serviceCertificate` angegeben werden.<br />-CardSpace: Dies ermöglicht den Dienst zu fordern, die der Client mit einem CardSpace authentifiziert werden. `serviceCertiifcate` muss im `clientCredential`-Verhalten bereitgestellt werden.<br /><br /> Der Standardwert ist `Windows`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e83b85d970f36745bb1a0bcf04253c678764805e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a85e09e92ebea4cdc0c1de93f4e9a4a21ff4d7e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation-Konfigurationsschema
 [!INCLUDE[wf](../../../../../includes/wf-md.md)]-Konfigurationselemente ermöglichen Ihnen, Workflowanwendungen zu konfigurieren. Für eine Workflowanwendung können Sie unter anderem Nachverfolgung und Ablaufverfolgung konfigurieren. Weitere Informationen zur Nach- und Ablaufverfolgung finden Sie unter [Workflow Tracking and Tracing (Nachverfolgung und Ablaufverfolgung für Workflows)](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Für Workflowdienste können Sie auch [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Konfigurationselemente verwenden. Weitere Informationen zu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] finden Sie unter [WCF Configuration Schema (WCF-Konfigurationsschema)](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
