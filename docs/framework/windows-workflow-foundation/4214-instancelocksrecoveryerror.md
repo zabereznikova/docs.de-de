@@ -9,34 +9,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d28fb2d5-bf15-4648-8d20-8141ad16f04b
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a613afcf0f86b14fca55aa2a4df73e80dd60068a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 896592ff91d4878fb76dd28ecfb9b2ae7a73add5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="4214---instancelocksrecoveryerror"></a><span data-ttu-id="9b911-102">4214 - InstanceLocksRecoveryError</span><span class="sxs-lookup"><span data-stu-id="9b911-102">4214 - InstanceLocksRecoveryError</span></span>
-## <a name="properties"></a><span data-ttu-id="9b911-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9b911-103">Properties</span></span>  
+# <a name="4214---instancelocksrecoveryerror"></a><span data-ttu-id="7ade8-102">4214 - InstanceLocksRecoveryError</span><span class="sxs-lookup"><span data-stu-id="7ade8-102">4214 - InstanceLocksRecoveryError</span></span>
+## <a name="properties"></a><span data-ttu-id="7ade8-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="7ade8-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9b911-104">ID</span><span class="sxs-lookup"><span data-stu-id="9b911-104">ID</span></span>|<span data-ttu-id="9b911-105">4214</span><span class="sxs-lookup"><span data-stu-id="9b911-105">4214</span></span>|  
-|<span data-ttu-id="9b911-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="9b911-106">Keywords</span></span>|<span data-ttu-id="9b911-107">WFInstanceStore</span><span class="sxs-lookup"><span data-stu-id="9b911-107">WFInstanceStore</span></span>|  
-|<span data-ttu-id="9b911-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="9b911-108">Level</span></span>|<span data-ttu-id="9b911-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="9b911-109">Error</span></span>|  
-|<span data-ttu-id="9b911-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="9b911-110">Channel</span></span>|<span data-ttu-id="9b911-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9b911-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="7ade8-104">ID</span><span class="sxs-lookup"><span data-stu-id="7ade8-104">ID</span></span>|<span data-ttu-id="7ade8-105">4214</span><span class="sxs-lookup"><span data-stu-id="7ade8-105">4214</span></span>|  
+|<span data-ttu-id="7ade8-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="7ade8-106">Keywords</span></span>|<span data-ttu-id="7ade8-107">WFInstanceStore</span><span class="sxs-lookup"><span data-stu-id="7ade8-107">WFInstanceStore</span></span>|  
+|<span data-ttu-id="7ade8-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="7ade8-108">Level</span></span>|<span data-ttu-id="7ade8-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="7ade8-109">Error</span></span>|  
+|<span data-ttu-id="7ade8-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="7ade8-110">Channel</span></span>|<span data-ttu-id="7ade8-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="7ade8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9b911-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9b911-112">Description</span></span>  
- <span data-ttu-id="9b911-113">Fehler beim Wiederherstellen der Instanzsperren aufgrund einer Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="9b911-113">Recovering instance locks failed due to an exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="7ade8-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7ade8-112">Description</span></span>  
+ <span data-ttu-id="7ade8-113">Fehler beim Wiederherstellen der Instanzsperren aufgrund einer Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="7ade8-113">Recovering instance locks failed due to an exception.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9b911-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="9b911-114">Message</span></span>  
- <span data-ttu-id="9b911-115">Fehler beim Wiederherstellen der Instanzsperren aufgrund der folgenden Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="9b911-115">Recovering instance locks failed due to the following exception</span></span>  
+## <a name="message"></a><span data-ttu-id="7ade8-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="7ade8-114">Message</span></span>  
+ <span data-ttu-id="7ade8-115">Fehler beim Wiederherstellen der Instanzsperren aufgrund der folgenden Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="7ade8-115">Recovering instance locks failed due to the following exception</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9b911-116">Details</span><span class="sxs-lookup"><span data-stu-id="9b911-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="7ade8-116">Details</span><span class="sxs-lookup"><span data-stu-id="7ade8-116">Details</span></span>  
   
-|<span data-ttu-id="9b911-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="9b911-117">Data Item Name</span></span>|<span data-ttu-id="9b911-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="9b911-118">Data Item Type</span></span>|<span data-ttu-id="9b911-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9b911-119">Description</span></span>|  
+|<span data-ttu-id="7ade8-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="7ade8-117">Data Item Name</span></span>|<span data-ttu-id="7ade8-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="7ade8-118">Data Item Type</span></span>|<span data-ttu-id="7ade8-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7ade8-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="9b911-120">Ausnahme</span><span class="sxs-lookup"><span data-stu-id="9b911-120">Exception</span></span>|<span data-ttu-id="9b911-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b911-121">xs:string</span></span>|<span data-ttu-id="9b911-122">Die Ausnahmedetails der Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="9b911-122">The exception details for the exception</span></span>|  
-|<span data-ttu-id="9b911-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="9b911-123">AppDomain</span></span>|<span data-ttu-id="9b911-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b911-124">xs:string</span></span>|<span data-ttu-id="9b911-125">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="9b911-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="7ade8-120">Ausnahme</span><span class="sxs-lookup"><span data-stu-id="7ade8-120">Exception</span></span>|<span data-ttu-id="7ade8-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="7ade8-121">xs:string</span></span>|<span data-ttu-id="7ade8-122">Die Ausnahmedetails der Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="7ade8-122">The exception details for the exception</span></span>|  
+|<span data-ttu-id="7ade8-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="7ade8-123">AppDomain</span></span>|<span data-ttu-id="7ade8-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="7ade8-124">xs:string</span></span>|<span data-ttu-id="7ade8-125">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7ade8-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

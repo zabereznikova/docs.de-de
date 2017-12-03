@@ -9,103 +9,103 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d4f338f9ae5cc6967885d0518eb573d9f9535fc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bed850baca2d06dc0de173ab798da29fb3ec7cc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="support-for-queries"></a><span data-ttu-id="ad5ef-102">Unterstützung für Abfragen</span><span class="sxs-lookup"><span data-stu-id="ad5ef-102">Support for Queries</span></span>
-<span data-ttu-id="ad5ef-103">Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="ad5ef-104">Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="ad5ef-105">Die folgende Liste enthält einige dieser bekannten Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="ad5ef-105">The following list contains some of these well-known properties:</span></span>  
+# <a name="support-for-queries"></a><span data-ttu-id="6d5ae-102">Unterstützung für Abfragen</span><span class="sxs-lookup"><span data-stu-id="6d5ae-102">Support for Queries</span></span>
+<span data-ttu-id="6d5ae-103">Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="6d5ae-104">Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="6d5ae-105">Die folgende Liste enthält einige dieser bekannten Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="6d5ae-105">The following list contains some of these well-known properties:</span></span>  
   
--   <span data-ttu-id="ad5ef-106">**Name der Website.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-106">**Site Name.**</span></span> <span data-ttu-id="ad5ef-107">Der Name der Website, die den Dienst enthält.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-107">Name of the Web site that contains the service.</span></span>  
+-   <span data-ttu-id="6d5ae-106">**Name der Website.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-106">**Site Name.**</span></span> <span data-ttu-id="6d5ae-107">Der Name der Website, die den Dienst enthält.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-107">Name of the Web site that contains the service.</span></span>  
   
--   <span data-ttu-id="ad5ef-108">**Relativen Pfad.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-108">**Relative Application Path.**</span></span> <span data-ttu-id="ad5ef-109">Der Pfad der Anwendung relativ zur Website.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-109">Path of the application relative to the Web site.</span></span>  
+-   <span data-ttu-id="6d5ae-108">**Relativen Pfad.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-108">**Relative Application Path.**</span></span> <span data-ttu-id="6d5ae-109">Der Pfad der Anwendung relativ zur Website.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-109">Path of the application relative to the Web site.</span></span>  
   
--   <span data-ttu-id="ad5ef-110">**Relativen Pfad.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-110">**Relative Service Path.**</span></span> <span data-ttu-id="ad5ef-111">Der Pfad des Diensts relativ zur Anwendung.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-111">Path of the service relative to the application.</span></span>  
+-   <span data-ttu-id="6d5ae-110">**Relativen Pfad.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-110">**Relative Service Path.**</span></span> <span data-ttu-id="6d5ae-111">Der Pfad des Diensts relativ zur Anwendung.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-111">Path of the service relative to the application.</span></span>  
   
--   <span data-ttu-id="ad5ef-112">**Service Name.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-112">**Service Name.**</span></span> <span data-ttu-id="ad5ef-113">Name des Diensts.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-113">Name of the service.</span></span>  
+-   <span data-ttu-id="6d5ae-112">**Service Name.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-112">**Service Name.**</span></span> <span data-ttu-id="6d5ae-113">Name des Diensts.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-113">Name of the service.</span></span>  
   
--   <span data-ttu-id="ad5ef-114">**Dienst-Namespace.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-114">**Service Namespace.**</span></span> <span data-ttu-id="ad5ef-115">Der Name des vom Dienst verwendeten Namespaces.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-115">Name of the namespace that the service uses.</span></span>  
+-   <span data-ttu-id="6d5ae-114">**Dienst-Namespace.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-114">**Service Namespace.**</span></span> <span data-ttu-id="6d5ae-115">Der Name des vom Dienst verwendeten Namespaces.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-115">Name of the namespace that the service uses.</span></span>  
   
--   <span data-ttu-id="ad5ef-116">**Aktuellen Computer.**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-116">**Current Machine.**</span></span>  
+-   <span data-ttu-id="6d5ae-116">**Aktuellen Computer.**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-116">**Current Machine.**</span></span>  
   
--   <span data-ttu-id="ad5ef-117">**Letzte Computer**.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-117">**Last Machine**.</span></span> <span data-ttu-id="ad5ef-118">Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-118">The computer on which the workflow service instance ran the last time.</span></span>  
+-   <span data-ttu-id="6d5ae-117">**Letzte Computer**.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-117">**Last Machine**.</span></span> <span data-ttu-id="6d5ae-118">Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-118">The computer on which the workflow service instance ran the last time.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ad5ef-119">Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-119">For self-hosted scenarios using Workflow Service Host, only the last four properties are populated.</span></span> <span data-ttu-id="ad5ef-120">Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-120">For Workflow Application scenarios, only the last property is populated.</span></span>  
+>  <span data-ttu-id="6d5ae-119">Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-119">For self-hosted scenarios using Workflow Service Host, only the last four properties are populated.</span></span> <span data-ttu-id="6d5ae-120">Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-120">For Workflow Application scenarios, only the last property is populated.</span></span>  
   
- <span data-ttu-id="ad5ef-121">Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-121">The workflow runtime supplies values for the first three properties.</span></span> <span data-ttu-id="ad5ef-122">Der Workflowdiensthost gibt den Wert für die **Suspend Reason** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-122">The workflow service host supplies the value for the **Suspend Reason** property.</span></span> <span data-ttu-id="ad5ef-123">Der SQL-Workflowinstanzspeicher selbst gibt Werte für die **Last Updated Machine** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-123">The SQL Workflow Instance Store itself supplies values for the **Last Updated Machine** property.</span></span>  
+ <span data-ttu-id="6d5ae-121">Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-121">The workflow runtime supplies values for the first three properties.</span></span> <span data-ttu-id="6d5ae-122">Der Workflowdiensthost gibt den Wert für die **Suspend Reason** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-122">The workflow service host supplies the value for the **Suspend Reason** property.</span></span> <span data-ttu-id="6d5ae-123">Der SQL-Workflowinstanzspeicher selbst gibt Werte für die **Last Updated Machine** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-123">The SQL Workflow Instance Store itself supplies values for the **Last Updated Machine** property.</span></span>  
   
- <span data-ttu-id="ad5ef-124">Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-124">The SQL Workflow Instance Store feature also lets you specify the custom properties for which you want to store the values in the persistence database and that you want to use in queries.</span></span> <span data-ttu-id="ad5ef-125">Weitere Informationen zu benutzerdefinierten Werbeaktionen, finden Sie unter [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="ad5ef-125">For more information about custom promotions, see [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span></span>  
+ <span data-ttu-id="6d5ae-124">Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-124">The SQL Workflow Instance Store feature also lets you specify the custom properties for which you want to store the values in the persistence database and that you want to use in queries.</span></span> <span data-ttu-id="6d5ae-125">Weitere Informationen zu benutzerdefinierten Werbeaktionen, finden Sie unter [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="6d5ae-125">For more information about custom promotions, see [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span></span>  
   
-## <a name="views"></a><span data-ttu-id="ad5ef-126">Ansichten</span><span class="sxs-lookup"><span data-stu-id="ad5ef-126">Views</span></span>  
- <span data-ttu-id="ad5ef-127">Der Instanzspeicher enthält die folgenden Ansichten.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-127">The instance store contains the following views.</span></span> <span data-ttu-id="ad5ef-128">Finden Sie unter [Persistenzdatenbankschema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) Weitere Details.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-128">See [Persistence Database Schema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) for further details.</span></span>  
+## <a name="views"></a><span data-ttu-id="6d5ae-126">Ansichten</span><span class="sxs-lookup"><span data-stu-id="6d5ae-126">Views</span></span>  
+ <span data-ttu-id="6d5ae-127">Der Instanzspeicher enthält die folgenden Ansichten.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-127">The instance store contains the following views.</span></span> <span data-ttu-id="6d5ae-128">Finden Sie unter [Persistenzdatenbankschema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) Weitere Details.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-128">See [Persistence Database Schema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) for further details.</span></span>  
   
-### <a name="the-instances-view"></a><span data-ttu-id="ad5ef-129">Die Ansicht "Instances"</span><span class="sxs-lookup"><span data-stu-id="ad5ef-129">The Instances View</span></span>  
- <span data-ttu-id="ad5ef-130">Die Ansicht "Instances" enthält die folgenden Felder:</span><span class="sxs-lookup"><span data-stu-id="ad5ef-130">The Instances view contains the following fields:</span></span>  
+### <a name="the-instances-view"></a><span data-ttu-id="6d5ae-129">Die Ansicht "Instances"</span><span class="sxs-lookup"><span data-stu-id="6d5ae-129">The Instances View</span></span>  
+ <span data-ttu-id="6d5ae-130">Die Ansicht "Instances" enthält die folgenden Felder:</span><span class="sxs-lookup"><span data-stu-id="6d5ae-130">The Instances view contains the following fields:</span></span>  
   
-1.  <span data-ttu-id="ad5ef-131">**Id**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-131">**Id**</span></span>  
+1.  <span data-ttu-id="6d5ae-131">**Id**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-131">**Id**</span></span>  
   
-2.  <span data-ttu-id="ad5ef-132">**PendingTimer**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-132">**PendingTimer**</span></span>  
+2.  <span data-ttu-id="6d5ae-132">**PendingTimer**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-132">**PendingTimer**</span></span>  
   
-3.  <span data-ttu-id="ad5ef-133">**CreationTime**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-133">**CreationTime**</span></span>  
+3.  <span data-ttu-id="6d5ae-133">**CreationTime**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-133">**CreationTime**</span></span>  
   
-4.  <span data-ttu-id="ad5ef-134">**LastUpdatedTime**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-134">**LastUpdatedTime**</span></span>  
+4.  <span data-ttu-id="6d5ae-134">**LastUpdatedTime**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-134">**LastUpdatedTime**</span></span>  
   
-5.  <span data-ttu-id="ad5ef-135">**ServiceDeploymentId**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-135">**ServiceDeploymentId**</span></span>  
+5.  <span data-ttu-id="6d5ae-135">**ServiceDeploymentId**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-135">**ServiceDeploymentId**</span></span>  
   
-6.  <span data-ttu-id="ad5ef-136">**SuspensionExceptionName**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-136">**SuspensionExceptionName**</span></span>  
+6.  <span data-ttu-id="6d5ae-136">**SuspensionExceptionName**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-136">**SuspensionExceptionName**</span></span>  
   
-7.  <span data-ttu-id="ad5ef-137">**SuspensionReason**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-137">**SuspensionReason**</span></span>  
+7.  <span data-ttu-id="6d5ae-137">**SuspensionReason**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-137">**SuspensionReason**</span></span>  
   
-8.  <span data-ttu-id="ad5ef-138">**ActiveBookmarks**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-138">**ActiveBookmarks**</span></span>  
+8.  <span data-ttu-id="6d5ae-138">**ActiveBookmarks**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-138">**ActiveBookmarks**</span></span>  
   
-9. <span data-ttu-id="ad5ef-139">**CurrentMachine**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-139">**CurrentMachine**</span></span>  
+9. <span data-ttu-id="6d5ae-139">**CurrentMachine**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-139">**CurrentMachine**</span></span>  
   
-10. <span data-ttu-id="ad5ef-140">**LastMachine**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-140">**LastMachine**</span></span>  
+10. <span data-ttu-id="6d5ae-140">**LastMachine**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-140">**LastMachine**</span></span>  
   
-11. <span data-ttu-id="ad5ef-141">**ExecutionStatus**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-141">**ExecutionStatus**</span></span>  
+11. <span data-ttu-id="6d5ae-141">**ExecutionStatus**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-141">**ExecutionStatus**</span></span>  
   
-12. <span data-ttu-id="ad5ef-142">**IsInitialized**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-142">**IsInitialized**</span></span>  
+12. <span data-ttu-id="6d5ae-142">**IsInitialized**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-142">**IsInitialized**</span></span>  
   
-13. <span data-ttu-id="ad5ef-143">**IsSuspended**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-143">**IsSuspended**</span></span>  
+13. <span data-ttu-id="6d5ae-143">**IsSuspended**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-143">**IsSuspended**</span></span>  
   
-14. <span data-ttu-id="ad5ef-144">**IsCompleted**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-144">**IsCompleted**</span></span>  
+14. <span data-ttu-id="6d5ae-144">**IsCompleted**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-144">**IsCompleted**</span></span>  
   
-15. <span data-ttu-id="ad5ef-145">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-145">**EncodingOption**</span></span>  
+15. <span data-ttu-id="6d5ae-145">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-145">**EncodingOption**</span></span>  
   
-16. <span data-ttu-id="ad5ef-146">**"Readwriteprimitivedataproperties"-Spalte**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-146">**ReadWritePrimitiveDataProperties**</span></span>  
+16. <span data-ttu-id="6d5ae-146">**"Readwriteprimitivedataproperties"-Spalte**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-146">**ReadWritePrimitiveDataProperties**</span></span>  
   
-17. <span data-ttu-id="ad5ef-147">**WriteOnlyPrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-147">**WriteOnlyPrimitiveDataProperties**</span></span>  
+17. <span data-ttu-id="6d5ae-147">**WriteOnlyPrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-147">**WriteOnlyPrimitiveDataProperties**</span></span>  
   
-18. <span data-ttu-id="ad5ef-148">**ReadWriteComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-148">**ReadWriteComplexDataProperties**</span></span>  
+18. <span data-ttu-id="6d5ae-148">**ReadWriteComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-148">**ReadWriteComplexDataProperties**</span></span>  
   
-19. <span data-ttu-id="ad5ef-149">**WriteOnlyComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-149">**WriteOnlyComplexDataProperties**</span></span>  
+19. <span data-ttu-id="6d5ae-149">**WriteOnlyComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-149">**WriteOnlyComplexDataProperties**</span></span>  
   
-### <a name="the-servicedeployments-view"></a><span data-ttu-id="ad5ef-150">Die Ansicht "ServiceDeployments"</span><span class="sxs-lookup"><span data-stu-id="ad5ef-150">The ServiceDeployments view</span></span>  
- <span data-ttu-id="ad5ef-151">Die Ansicht "ServiceDeployments" enthält die folgenden Felder:</span><span class="sxs-lookup"><span data-stu-id="ad5ef-151">The ServiceDeployments view contains the following fields:</span></span>  
+### <a name="the-servicedeployments-view"></a><span data-ttu-id="6d5ae-150">Die Ansicht "ServiceDeployments"</span><span class="sxs-lookup"><span data-stu-id="6d5ae-150">The ServiceDeployments view</span></span>  
+ <span data-ttu-id="6d5ae-151">Die Ansicht "ServiceDeployments" enthält die folgenden Felder:</span><span class="sxs-lookup"><span data-stu-id="6d5ae-151">The ServiceDeployments view contains the following fields:</span></span>  
   
-1.  <span data-ttu-id="ad5ef-152">**SiteName**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-152">**SiteName**</span></span>  
+1.  <span data-ttu-id="6d5ae-152">**SiteName**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-152">**SiteName**</span></span>  
   
-2.  <span data-ttu-id="ad5ef-153">**RelativeServicePath**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-153">**RelativeServicePath**</span></span>  
+2.  <span data-ttu-id="6d5ae-153">**RelativeServicePath**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-153">**RelativeServicePath**</span></span>  
   
-3.  <span data-ttu-id="ad5ef-154">**RelativeApplicationPath**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-154">**RelativeApplicationPath**</span></span>  
+3.  <span data-ttu-id="6d5ae-154">**RelativeApplicationPath**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-154">**RelativeApplicationPath**</span></span>  
   
-4.  <span data-ttu-id="ad5ef-155">**Dienstname**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-155">**ServiceName**</span></span>  
+4.  <span data-ttu-id="6d5ae-155">**Dienstname**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-155">**ServiceName**</span></span>  
   
-5.  <span data-ttu-id="ad5ef-156">**ServiceNamespace**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-156">**ServiceNamespace**</span></span>  
+5.  <span data-ttu-id="6d5ae-156">**ServiceNamespace**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-156">**ServiceNamespace**</span></span>  
   
-### <a name="the-instancepromotedproperties-view"></a><span data-ttu-id="ad5ef-157">Die Ansicht "InstancePromotedProperties"</span><span class="sxs-lookup"><span data-stu-id="ad5ef-157">The InstancePromotedProperties view</span></span>  
- <span data-ttu-id="ad5ef-158">Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-158">The InstancePromotedProperties view contains the following fields.</span></span> <span data-ttu-id="ad5ef-159">Ausführliche Informationen zum höher gestuften Eigenschaften finden Sie unter der [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="ad5ef-159">For details on promoted properties, see the [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) topic.</span></span>  
+### <a name="the-instancepromotedproperties-view"></a><span data-ttu-id="6d5ae-157">Die Ansicht "InstancePromotedProperties"</span><span class="sxs-lookup"><span data-stu-id="6d5ae-157">The InstancePromotedProperties view</span></span>  
+ <span data-ttu-id="6d5ae-158">Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-158">The InstancePromotedProperties view contains the following fields.</span></span> <span data-ttu-id="6d5ae-159">Ausführliche Informationen zum höher gestuften Eigenschaften finden Sie unter der [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="6d5ae-159">For details on promoted properties, see the [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) topic.</span></span>  
   
-1.  <span data-ttu-id="ad5ef-160">**Instanz-ID**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-160">**InstanceId**</span></span>  
+1.  <span data-ttu-id="6d5ae-160">**Instanz-ID**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-160">**InstanceId**</span></span>  
   
-2.  <span data-ttu-id="ad5ef-161">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-161">**EncodingOption**</span></span>  
+2.  <span data-ttu-id="6d5ae-161">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-161">**EncodingOption**</span></span>  
   
-3.  <span data-ttu-id="ad5ef-162">**Mit dem PromotionName**</span><span class="sxs-lookup"><span data-stu-id="ad5ef-162">**PromotionName**</span></span>  
+3.  <span data-ttu-id="6d5ae-162">**Mit dem PromotionName**</span><span class="sxs-lookup"><span data-stu-id="6d5ae-162">**PromotionName**</span></span>  
   
-4.  <span data-ttu-id="ad5ef-163">**Value#** (ein Wertebereich von **Value1** auf **Value64**).</span><span class="sxs-lookup"><span data-stu-id="ad5ef-163">**Value#** (a range of fields from **Value1** to **Value64**).</span></span>
+4.  <span data-ttu-id="6d5ae-163">**Value#** (ein Wertebereich von **Value1** auf **Value64**).</span><span class="sxs-lookup"><span data-stu-id="6d5ae-163">**Value#** (a range of fields from **Value1** to **Value64**).</span></span>
