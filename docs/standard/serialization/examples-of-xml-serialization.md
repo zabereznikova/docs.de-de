@@ -20,14 +20,14 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 874836c83fbe681692260be03efed3aec85dcfe4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 550b1e8bf04bf7e2cec52ce26d647022688c4004
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 Die XML-Serialisierung kann verschiedenste Formen nehmen, von einfach bis zu komplex. Sie können beispielsweise, wie unter [Introducing XML Serialization (Einführung in die XML-Serialisierung)](../../../docs/standard/serialization/introducing-xml-serialization.md) beschrieben, eine Klasse serialisieren, die nur aus öffentlichen Feldern und Eigenschaften besteht. Die folgenden Codebeispiele beziehen sich auf verschiedene komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem bestimmten XSD-Dokument (XML Schema) entspricht.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrieren von WSE 3.0-Webdiensten zu WCF
 Die Vorteile des Migrierens von WSE 3.0-Webdiensten zu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfassen verbesserte Leistung und die Unterstützung zusätzlicher Transporte, zusätzlicher Sicherheitsszenarien und WS-*Spezifikationen. Bei einem Webdienst, der von WSE 3.0 zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] migriert wird, kann eine Leistungsverbesserung von bis zu 200 % bis 400 % auftreten. Weitere Informationen über die von unterstützten Transporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Eine Liste von unterstützten Szenarien [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Eine Liste der Spezifikationen, die von unterstützt werden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [Handbuch Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

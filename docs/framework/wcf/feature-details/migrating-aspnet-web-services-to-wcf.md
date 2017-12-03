@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e2051de2c0cef9a31337b320c347bb7d85dbadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrieren von ASP.NET-Webdiensten zu WCF
 ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von Webdiensten sowie Funktionen für Hostingdienste innerhalb von Internetinformationsdienste (IIS) bereit. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet .NET Framework-Klassenbibliotheken, Tools und Hostingfunktionen für die Kommunikation von Softwareentitäten mit beliebigen Protokollen, einschließlich Protokollen, die von Webdiensten verwendet werden.  Durch Migrieren von ASP.NET-Webdiensten zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Ihre Anwendungen neue Funktionen und Verbesserungen nutzen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eindeutig sind.  

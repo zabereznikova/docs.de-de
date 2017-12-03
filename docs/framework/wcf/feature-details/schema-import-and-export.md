@@ -17,14 +17,14 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0c6d4917cc34021381e30d45b50b225b6aa4d18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm umfasst [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zugeordnete Mechanismen zum Schemaimport und -export. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die die Serialisierung erstellt oder auf die das Deserialisierungsprogramm zugreifen kann. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die vom World Wide Web Consortium (W3C) definierte Sprache XML Schema Definition (XSD) zur Schemadarstellung. Diese Sprache ist mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel.  

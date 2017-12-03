@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5ef2d71496a5a1268492fa7c3cb55019e969b709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Description Language (WSDL) generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese Funktion als Schutz gegen *Phishing* indem verhindert, dass einen Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  

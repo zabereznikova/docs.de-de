@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2373d4d7bec73b6f517c7bd3dfeeb4c26edf7d5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11d1d0d3481fb575abd01894db631e24c50b6d56
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transacted-queues"></a>Transaktive Warteschlangen
 In diesem Beispiel wird veranschaulicht, wie Warteschlangen und Transaktionen in [!INCLUDE[wf](../../../../includes/wf-md.md)] integriert werden, um zuverlässige und skalierbare Dienste zu erstellen. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  

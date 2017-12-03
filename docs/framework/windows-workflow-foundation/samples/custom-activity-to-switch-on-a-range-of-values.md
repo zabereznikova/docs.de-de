@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ff6a55157e886b54d631d1ca5d2598785de7608d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4dcaf023960aab1989493475fe4e5306623adf8e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Benutzerdefinierte Aktivität zum Aktivieren eines Wertebereichs
 Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Aktivität, die die Verwendung eines <xref:System.Activities.Statements.Switch%601>-Elements erweitert, erstellt wird. Eine herkömmliche <xref:System.Activities.Statements.Switch%601>-Anweisung ermöglicht den auf einem einzelnen Wert basierenden Wechsel. In einigen Szenarios muss eine Aktivität jedoch basierend auf einem Wertebereich einen Wechsel ausführen. Beispiel: Eine Aktivität führt eine Aktion aus, wenn der Wert zwischen 1 und 5 liegt, eine andere Aktion, wenn der Wert zwischen 6 und 10 liegt, und eine Standardaktion für alle anderen Werte. Diese benutzerdefinierte Aktivität ermöglicht genau dieses Szenario.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f33920dbad701d803b9cb062cdd2b11aa1346df4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflowdienste
 Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basieren und mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die Messagingaktivitäten zum Senden und Empfangen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichten verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]messagingaktivitäten und wie sie verwendet werden können, zum Implementieren verschiedener Nachrichtenaustauschmuster finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

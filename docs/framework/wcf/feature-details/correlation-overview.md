@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3d4320c088c66abdc2c4ff226eb99d66fcbd3b38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="correlation-overview"></a>Übersicht über die Korrelation
 Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichten miteinander oder mit dem Anwendungsinstanzzustand. Dies kann z. B. eine Antwort auf eine ursprüngliche Anforderung oder eine bestimmte Bestell-ID mit dem beibehaltenen Zustand eines Workflows zur Bestellverarbeitung sein. Dieses Thema enthält eine Übersicht über die Korrelation: Die anderen Themen in diesem Abschnitt enthalten weitere Informationen zu den einzelnen Korrelationstypen.  

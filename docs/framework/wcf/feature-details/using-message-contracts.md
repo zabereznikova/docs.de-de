@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 caps.latest.revision: "46"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 521393aabb9d5674b00194926cb67071cc4566bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 Üblicherweise achten Entwickler bei der Erstellung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen streng auf die Datenstrukturen und Serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

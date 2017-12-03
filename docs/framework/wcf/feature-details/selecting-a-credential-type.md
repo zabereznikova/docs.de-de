@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c913896611ea4b336f7626b21f9fe959ef4fd09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Anmeldeinformationen viele Formate haben, zum Beispiel Benutzernamentoken und X.509-Zertifikate. In diesem Thema werden Anmeldeinformationen, ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und die richtige Auswahl von Anmeldeinformationen für Ihre Anwendung beschrieben.  

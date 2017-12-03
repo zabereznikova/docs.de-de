@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Das zweite ist ein anspruchsbasiertes Modell als bezeichnet den *Identitätsmodell*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Identitätsmodellklassen können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  

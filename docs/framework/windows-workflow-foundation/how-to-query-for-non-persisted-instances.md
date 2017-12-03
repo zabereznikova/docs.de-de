@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1957db5af18a571e209c62332e95d844fa866f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Vorgehensweise: Abfrage von nicht persistenten Instanzen
 Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL-Workflowinstanzspeicher-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher. Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL-Workflowinstanzspeicher-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.  

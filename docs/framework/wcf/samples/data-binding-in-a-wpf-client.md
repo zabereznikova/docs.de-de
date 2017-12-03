@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0fba3f83bbff42f570ce6da1544d2c0f1ea32393
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7306c58f04483d0e4230b39b05cbebc3de857736
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Datenbindung in einem Windows Presentation Foundation-Client
 In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Im Beispiel wird ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst verwendet, der zufällig ein Array von Alben generiert, die an den Client zurückgegeben werden. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die vom Dienst zurückgegebenen Informationen werden automatisch an die vom [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]-Client bereitgestellte Benutzeroberfläche gebunden.  

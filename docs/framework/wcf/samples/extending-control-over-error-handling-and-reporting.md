@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acd45c82983cb122844866b9db4a356b746a10eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4284f07a21a9bb176a78a8a2abefe7c7c7c6b66
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 Dieses Beispiel veranschaulicht, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle erweitert werden kann. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) mit zusätzlicher Code hinzugefügt, mit dem Dienst, um Fehler zu behandeln. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  

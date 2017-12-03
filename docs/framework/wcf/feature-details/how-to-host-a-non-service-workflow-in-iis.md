@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS
 Workflows, die keine Workflowdienste darstellen, können unter IIS/WAS gehostet werden. Dies ist hilfreich, wenn ein Workflow gehostet werden muss, der von einem anderen Benutzer geschrieben wurde. Beispiel: Der Workflow-Designer wird erneut gehostet, und Benutzer können eigene Workflows erstellen.  Durch das Hosten eines Workflows in IIS, bei dem es sich nicht um einen Dienstworkflow handelt, wird Unterstützung für Funktionen wie die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die meldungsbasierte Aktivierung bereitgestellt. Workflowdienste, die in IIS gehostet werden, enthalten <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und werden beim Empfang einer Meldung durch IIS aktiviert. Workflows, die keine Dienstworkflows sind, enthalten keine Messagingaktivitäten und können standardmäßig nicht durch Senden einer Meldung aktiviert werden.  Um eine Instanz des Workflows zu erstellen, müssen Sie eine Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ableiten und einen Dienstvertrag mit Vorgängen erstellen. Dieses Thema führt Sie durch das Erstellen eines einfachen Workflows, definieren einen Dienstvertrag, ein Client verwenden kann, um den Workflow zu aktivieren, und Ableiten einer Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> verwendet den Dienstvertrag für Workflow Erstellen von Anforderungen zu lauschen.  
