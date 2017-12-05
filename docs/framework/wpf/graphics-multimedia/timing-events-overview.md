@@ -35,7 +35,7 @@ Dieses Thema beschreibt, wie die fünf Ereignisse zu abfrageantwortzeiten verfü
   
 -   **Mit Storyboard-Objekten** (Markup und Code): Sie können <xref:System.Windows.Media.Animation.Storyboard> Objekte anordnen und Animationen auf ein oder mehrere Objekte zu verteilen. Ein Beispiel finden Sie unter [Animieren einer Eigenschaft eines Drehbuchs mit](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Mit lokalen Animationen** (nur code): Sie können anwenden <xref:System.Windows.Media.Animation.AnimationTimeline> Objekte direkt auf die Eigenschaften, die sie dem animiert werden soll. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard.](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+-   **Mit lokalen Animationen** (nur code): Sie können anwenden <xref:System.Windows.Media.Animation.AnimationTimeline> Objekte direkt auf die Eigenschaften, die sie dem animiert werden soll. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
 -   **Mit Uhren** (nur Code): Sie können die Uhrerstellung explizit verwalten und die Animationsuhren zu verteilen.  Ein Beispiel finden Sie unter [Animieren einer Eigenschaft mit AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).  
   
