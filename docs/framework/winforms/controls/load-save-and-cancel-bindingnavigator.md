@@ -44,7 +44,7 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
 5.  Wählen Sie das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement.  
   
-6.  Klicken Sie auf das Smarttag-Symbol (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) daher die **BindingNavigator Aufgaben** Dialogfeld wird angezeigt, und wählen Sie **ElementeBearbeiten**.  
+6.  Klicken Sie auf das Smarttag-Symbol (![Smart Tag-Glyphe](./../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) daher die **BindingNavigator Aufgaben** Dialogfeld wird angezeigt, und wählen Sie **ElementeBearbeiten**.  
   
      Die **-Elementauflistungs-Editor** angezeigt wird.  
   
@@ -52,7 +52,7 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
     1.  Hinzufügen einer <xref:System.Windows.Forms.ToolStripSeparator> und drei <xref:System.Windows.Forms.ToolStripButton> Elemente durch Auswählen des entsprechenden <xref:System.Windows.Forms.ToolStripItem> und klicken Sie auf die **hinzufügen** Schaltfläche.  
   
-    2.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft der Schaltflächen auf**LoadButton**,**SaveButton**, und**CancelButton**bzw..  
+    2.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft der Schaltflächen auf**LoadButton**,**SaveButton**, und**CancelButton**bzw.  
   
     3.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft der Schaltflächen auf**laden** `,` **speichern**, und**"Abbrechen"**.  
   
@@ -123,5 +123,5 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Übersicht über die BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+ [BindingNavigator-Steuerelement](./../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [Übersicht über die BindingSource-Komponente](./../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

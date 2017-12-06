@@ -31,7 +31,7 @@ Mit <xref:System.Data.DataView> können Datenzeilen in der zugrunde liegenden Ta
   
  Wenn eine vorhandene **DataRowView** bearbeitet wird, Ereignisse der zugrunde liegenden **DataTable** weiterhin mit den vorgeschlagenen Änderungen ausgelöst werden soll. Beachten Sie, dass beim Aufrufen **EndEdit** oder **CancelEdit** für den zugrunde liegenden **DataRow**, ausstehende Änderungen angewendet oder abgebrochen wird, unabhängig davon, ob  **EndEdit** oder **CancelEdit** aufgerufen wird, auf die **DataRowView**.  
   
- Wenn **AllowDelete** ist **"true"**, können Sie Zeilen aus Löschen der **"DataView"** mithilfe der **löschen** Methode der **"DataView"**  oder **DataRowView** Objekt und die Zeilen werden gelöscht, aus der zugrunde liegenden **DataTable**. Später bestätigen oder Ablehnen der Löschvorgänge über können **AcceptChanges** oder **RejectChanges** bzw.. Wenn **AllowDelete** ist **"false"**, eine Ausnahme wird ausgelöst, wenn Sie rufen die **löschen** Methode der **"DataView"** oder  **DataRowView**.  
+ Wenn **AllowDelete** ist **"true"**, können Sie Zeilen aus Löschen der **"DataView"** mithilfe der **löschen** Methode der **"DataView"**  oder **DataRowView** Objekt und die Zeilen werden gelöscht, aus der zugrunde liegenden **DataTable**. Später bestätigen oder Ablehnen der Löschvorgänge über können **AcceptChanges** oder **RejectChanges** bzw. Wenn **AllowDelete** ist **"false"**, eine Ausnahme wird ausgelöst, wenn Sie rufen die **löschen** Methode der **"DataView"** oder  **DataRowView**.  
   
  Deaktiviert im folgenden Codebeispiel wird die Verwendung der **"DataView"** zum Löschen von Zeilen und fügt eine neue Zeile der zugrunde liegenden Tabelle mithilfe der **"DataView"**.  
   
@@ -65,5 +65,5 @@ newDRV.EndEdit();
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [DataViews](./../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

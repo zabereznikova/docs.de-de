@@ -17,7 +17,7 @@ ms.author: erikre
 manager: erikre
 ms.openlocfilehash: d33e055e9d73e786d822df2659bc490bc8646b9a
 ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
@@ -45,7 +45,7 @@ Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöc
   
  Die **mit** Anweisung wird sichergestellt, dass die <xref:System.Transactions.TransactionScope.Dispose%2A> Methode der <xref:System.Transactions.TransactionScope> -Objekts aufgerufen wird, selbst wenn eine Ausnahme auftritt. Der Aufruf der <xref:System.Transactions.TransactionScope.Dispose%2A>-Methode kennzeichnet das Ende des Transaktionsbereichs. Ausnahmen, die nach dem Aufrufen dieser Methode eintreten, beeinflussen die Transaktion möglicherweise nicht. Diese Methode stellt auch den vorherigen Zustand der Ambient-Transaktion wieder her.  
   
- Eine <xref:System.Transactions.TransactionAbortedException> wird ausgelöst, wenn eine vom Transaktionsbereich erstellte Transaktion abgebrochen wird. Eine <xref:System.Transactions.TransactionInDoubtException> wird ausgelöst, wenn der Transaktions-Manager nicht entscheiden kann, ob ein Commit ausgeführt werden soll. Wenn ein Commit für die Transaktion ausgeführt wird, wird keine Ausnahme ausgelöst..  
+ Eine <xref:System.Transactions.TransactionAbortedException> wird ausgelöst, wenn eine vom Transaktionsbereich erstellte Transaktion abgebrochen wird. Eine <xref:System.Transactions.TransactionInDoubtException> wird ausgelöst, wenn der Transaktions-Manager nicht entscheiden kann, ob ein Commit ausgeführt werden soll. Wenn ein Commit für die Transaktion ausgeführt wird, wird keine Ausnahme ausgelöst.  
   
 ## <a name="rolling-back-a-transaction"></a>Rollback einer Transaktion  
  Wenn ein Rollback für eine Transaktion ausgeführt werden soll, dürfen Sie die <xref:System.Transactions.TransactionScope.Complete%2A>-Methode nicht im Transaktionsbereich aufrufen. Zum Beispiel können Sie eine Ausnahme im Bereich auslösen. Der Rollback wird für die Transaktion ausgeführt, die im Bereich liegt.  
@@ -175,7 +175,7 @@ using(TransactionScope scope1 = new TransactionScope())
  Beim Einsatz verschachtelter <xref:System.Transactions.TransactionScope>-Objekte muss für alle verschachtelten Bereiche die gleiche Isolationsstufe konfiguriert werden, wenn eine Verknüpfung mit der Ambient-Transaktion hergestellt werden soll Wenn verschachtelte <xref:System.Transactions.TransactionScope>-Objekte eine Verknüpfung mit der Ambient-Transaktion herzustellen versuchen und für diese eine andere Isolationsstufe festgelegt wurde, dann wird eine Ausnahme des Typs <xref:System.ArgumentException> ausgelöst.  
   
 ## <a name="interop-with-com"></a>Zusammenarbeit mit COM+  
- Wenn Sie eine neue <xref:System.Transactions.TransactionScope>-Instanz erstellen, können Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration in einem der Konstruktoren verwenden, um die Zusammenarbeit mit COM+ näher zu bestimmen. Weitere Informationen dazu finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Wenn Sie eine neue <xref:System.Transactions.TransactionScope>-Instanz erstellen, können Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration in einem der Konstruktoren verwenden, um die Zusammenarbeit mit COM+ näher zu bestimmen. Weitere Informationen dazu finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](./../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Transactions.Transaction.Clone%2A>  

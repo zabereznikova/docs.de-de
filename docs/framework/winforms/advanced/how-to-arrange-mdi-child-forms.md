@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="how-to-arrange-mdi-child-forms"></a>Gewusst wie: Anordnen von untergeordneten MDI-Formularen
 Anwendungen verfügen häufig über Menübefehle für Aktionen wie z. B. Nebeneinander anordnen, Überlappend anordnen und Anordnen, über die das Layout des geöffneten untergeordneten MDI-Formulars gesteuert wird. Sie können die <xref:System.Windows.Forms.Form.LayoutMdi%2A> -Methode mit einem der <xref:System.Windows.Forms.MdiLayout>-Enumerationswerte anwenden, um die untergeordneten Formulare in einem übergeordneten MDI-Enumerationswerteformular neu anzuordnen.  
   
- Mit <xref:System.Windows.Forms.MdiLayout>-Enumerationswerten werden untergeordnete Formulare als überlappend, nebeneinander oder untereinander bzw. in Form von untergeordneten Formularsymbolen im unteren Bereich des MDI-Formulars angeordnet. Diese Werte haben denselben Effekt wie die Windows-Befehle **überlappend**, **Fenster nebeneinander anzeigen**, **Fenster gestapelt anzeigen**, und **Desktop anzeigen** bzw..  
+ Mit <xref:System.Windows.Forms.MdiLayout>-Enumerationswerten werden untergeordnete Formulare als überlappend, nebeneinander oder untereinander bzw. in Form von untergeordneten Formularsymbolen im unteren Bereich des MDI-Formulars angeordnet. Diese Werte haben denselben Effekt wie die Windows-Befehle **überlappend**, **Fenster nebeneinander anzeigen**, **Fenster gestapelt anzeigen**, und **Desktop anzeigen** bzw.  
   
  Diese Methoden werden häufig als Ereignishandler aufgerufen, die vom <xref:System.Windows.Forms.Control.Click>-Ereignis eines Menüelements abgerufen werden. Auf diese Weise kann ein Menüelement mit dem Text "Fenster überlappend anzeigen" den gewünschten Effekt auf untergeordnete MDI-Fenster haben.  
   
@@ -58,8 +58,8 @@ Anwendungen verfügen häufig über Menübefehle für Aktionen wie z. B. Nebenei
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+ [MDI-Anwendungen (Multiple Document Interface)](./../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](./../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](./../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](./../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](./../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)

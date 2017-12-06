@@ -22,7 +22,7 @@ ms.lasthandoff: 11/21/2017
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]bietet ein klar definierten Modell zum Steuern des Verhaltens der Windows Forms-Anwendungen: den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anwendungsmodell. Dieses Modell enthält Ereignisse für der Anwendungsverzeichnis starten und Herunterfahren, sowie Ereignisse für das Abfangen von nicht behandelten Ausnahmen behandeln. Es bietet auch Unterstützung für die Entwicklung von Einzelinstanz-Anwendungen. Das Anwendungsmodell ist erweiterbar, damit Entwickler, die mehr Kontrolle benötigen die überschreibbaren Methoden anpassen können.  
   
 ## <a name="uses-for-the-application-model"></a>Verwendet für das Anwendungsmodell  
- Eine typische Anwendung muss Aufgaben ausführen, wenn er startet und beendet. Z. B. beim Starten, kann die Anwendung einen Begrüßungsbildschirm anzuzeigen, stellen Verbindungen mit der Datenbank, laden einen gespeicherten Zustand usw.. Wenn die Anwendung heruntergefahren wird, kann es Datenbankverbindungen zu schließen, Speichern des aktuellen Zustands, usw. Darüber hinaus kann die Anwendung bestimmten Code ausgeführt, wenn die Anwendung beendet wird unten unerwartet, etwa wie in der eine nicht behandelte Ausnahme.  
+ Eine typische Anwendung muss Aufgaben ausführen, wenn er startet und beendet. Z. B. beim Starten, kann die Anwendung einen Begrüßungsbildschirm anzuzeigen, stellen Verbindungen mit der Datenbank, laden einen gespeicherten Zustand usw. Wenn die Anwendung heruntergefahren wird, kann es Datenbankverbindungen zu schließen, Speichern des aktuellen Zustands, usw. Darüber hinaus kann die Anwendung bestimmten Code ausgeführt, wenn die Anwendung beendet wird unten unerwartet, etwa wie in der eine nicht behandelte Ausnahme.  
   
  Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anwendungsmodell erleichtert das Erstellen einer *Einzelinstanz-* Anwendung. Eine einzelinstanzanwendung unterscheidet sich von einer normalen Anwendung in, das nur eine Instanz der Anwendung zu einem Zeitpunkt ausgeführt werden kann. Versuch, eine andere Instanz einer einzelinstanzanwendung starten führt in der ursprünglichen Instanz benachrichtigt – mithilfe von der `StartupNextInstance` Ereignis –, die eine andere Launch-es wurde versucht. Die Benachrichtigung umfasst die nachfolgenden Instanz Befehlszeilenargumente. Die nachfolgende Instanz der Anwendung wird dann geschlossen, bevor eine Initialisierung erfolgen kann.  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
      Die folgende Abbildung zeigt, wie eine nachfolgende Instanz die erste Instanz signalisiert.  
   
-     ![Einzelne Instanz Anwendungsimage](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Einzelne Instanz Anwendungsimage](./../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
   
  Durch Verarbeiten der `StartupNextInstance` -Ereignis können Sie steuern, wie die Einzelinstanz-Anwendung verhält. Microsoft Outlook führt z. B. in der Regel als eine einzelinstanzanwendung; Wenn Outlook ausgeführt wird und Sie versuchen, starten Outlook erneut, wechselt der Fokus mit der ursprünglichen Instanz, jedoch eine andere Instanz wird nicht geöffnet.  
   
@@ -68,4 +68,4 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+ [Erweitern des Visual Basic-Anwendungsmodells](./../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
