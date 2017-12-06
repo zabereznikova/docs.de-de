@@ -1,53 +1,59 @@
 ---
-title: "Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheitsanmeldeinformationen, Hinzufügen zu SOAP-Nachrichten"
-  - "WCF, Sicherheit"
+title: 'Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security credentials, adding to SOAP messages
+- WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 35c3b5ee429f7c9337fa3c3e3eb0d0476e3f56d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen
-Nach dem Festlegen eines Sicherheitsmodus \(entweder Transport oder Nachricht\) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben.Diese Eigenschaft spezifiziert, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung angeben muss.[!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Festlegen des Sicherheitsmodus \(ein notwendiger Schritt vor dem Festlegen des Typs der Clientanmeldeinformationen\) finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-specify-the-client-credential-type"></a><span data-ttu-id="2a961-102">Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="2a961-102">How to: Specify the Client Credential Type</span></span>
+<span data-ttu-id="2a961-103">Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben.</span><span class="sxs-lookup"><span data-stu-id="2a961-103">After setting a security mode (either transport or message), you have the option of setting the client credential type.</span></span> <span data-ttu-id="2a961-104">Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss.</span><span class="sxs-lookup"><span data-stu-id="2a961-104">This property specifies what type of credential the client must provide to the service for authentication.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="2a961-105">Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Client-Anmeldeinformationstyp) finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md).</span><span class="sxs-lookup"><span data-stu-id="2a961-105"> setting the security mode (a necessary step before setting the client credential type), see [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md).</span></span>  
   
-### So legen Sie den Clientanmeldeinformationstyp in Code fest  
+### <a name="to-set-the-client-credential-type-in-code"></a><span data-ttu-id="2a961-106">So legen Sie den Clientanmeldeinformationstyp in Code fest</span><span class="sxs-lookup"><span data-stu-id="2a961-106">To set the client credential type in code</span></span>  
   
-1.  Erstellen Sie eine Instanz der Bindung, die der Dienst nutzt.In diesem Beispiel wird die <xref:System.ServiceModel.WSHttpBinding>\-Bindung verwendet.  
+1.  <span data-ttu-id="2a961-107">Erstellen Sie eine Instanz der Bindung, die der Dienst nutzt.</span><span class="sxs-lookup"><span data-stu-id="2a961-107">Create an instance of the binding that the service will use.</span></span> <span data-ttu-id="2a961-108">In diesem Beispiel wird die <xref:System.ServiceModel.WSHttpBinding>-Bindung verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a961-108">This example uses the <xref:System.ServiceModel.WSHttpBinding> binding.</span></span>  
   
-2.  Legen Sie die <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>\-Eigenschaft auf einen geeigneten Wert fest.In diesem Beispiel wird der Nachrichtenmodus verwendet.  
+2.  <span data-ttu-id="2a961-109">Legen Sie für die <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>-Eigenschaft einen geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="2a961-109">Set the <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> property to an appropriate value.</span></span> <span data-ttu-id="2a961-110">In diesem Beispiel wird der Nachrichtenmodus verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a961-110">This example uses the Message mode.</span></span>  
   
-3.  Legen Sie die <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>\-Eigenschaft auf einen geeigneten Wert fest.In diesem Beispiel wird die Verwendung der Windows\-Authentifizierung \(<xref:System.ServiceModel.MessageCredentialType>\) festgelegt.  
+3.  <span data-ttu-id="2a961-111">Legen Sie für die <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>-Eigenschaft einen geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="2a961-111">Set the <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> property to an appropriate value.</span></span> <span data-ttu-id="2a961-112">In diesem Beispiel wird die Verwendung der Windows-Authentifizierung (<xref:System.ServiceModel.MessageCredentialType.Windows>) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2a961-112">This example sets it to use Windows authentication (<xref:System.ServiceModel.MessageCredentialType.Windows>).</span></span>  
   
      [!code-csharp[c_ProgrammingSecurity#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#14)]
      [!code-vb[c_ProgrammingSecurity#14](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#14)]  
   
-### So legen Sie den Clientanmeldeinformationstyp in der Konfiguration fest  
+### <a name="to-set-the-client-credential-type-in-configuration"></a><span data-ttu-id="2a961-113">So legen Sie den Clientanmeldeinformationstyp in der Konfiguration fest</span><span class="sxs-lookup"><span data-stu-id="2a961-113">To set the client credential type in configuration</span></span>  
   
-1.  Fügen Sie ein [\<system.serviceModel\>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)\-Element zur Konfigurationsdatei hinzu.  
+1.  <span data-ttu-id="2a961-114">Hinzufügen einer [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="2a961-114">Add a [\<system.serviceModel>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element to the configuration file.</span></span>  
   
-2.  Fügen Sie als untergeordnetes Element ein [\<Bindungen\>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)\-Element hinzu.  
+2.  <span data-ttu-id="2a961-115">Als ein untergeordnetes Element: Hinzufügen einer [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element.</span><span class="sxs-lookup"><span data-stu-id="2a961-115">As a child element, add a [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element.</span></span>  
   
-3.  Fügen Sie eine entsprechende Bindung hinzu.In diesem Beispiel wird das [\<wsHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)\-Element verwendet.  
+3.  <span data-ttu-id="2a961-116">Fügen Sie eine entsprechende Bindung hinzu.</span><span class="sxs-lookup"><span data-stu-id="2a961-116">Add an appropriate binding.</span></span> <span data-ttu-id="2a961-117">Dieses Beispiel verwendet die [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element.</span><span class="sxs-lookup"><span data-stu-id="2a961-117">This example uses the [\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element.</span></span>  
   
-4.  Fügen Sie ein [\<Bindung\>](../../../docs/framework/misc/binding.md)\-Element hinzu, und legen Sie das `name`\-Attribut auf einen passenden Wert fest.In diesem Beispiel wird der Name "SecureBinding" verwendet.  
+4.  <span data-ttu-id="2a961-118">Hinzufügen einer [ \<Bindung >](../../../docs/framework/misc/binding.md) Element, und legen die `name` -Attribut auf einen geeigneten Wert.</span><span class="sxs-lookup"><span data-stu-id="2a961-118">Add a [\<binding>](../../../docs/framework/misc/binding.md) element and set the `name` attribute to an appropriate value.</span></span> <span data-ttu-id="2a961-119">In diesem Beispiel wird der Name "SecureBinding" verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a961-119">This example uses the name "SecureBinding".</span></span>  
   
-5.  Fügen Sie eine `<security>`\-Bindung hinzu.Legen Sie für das `mode`\-Attribut einen geeigneten Wert fest.Im folgenden Beispiel wird das Attribut auf `"Message"` festgelegt.  
+5.  <span data-ttu-id="2a961-120">Fügen Sie eine `<security>`-Bindung hinzu.</span><span class="sxs-lookup"><span data-stu-id="2a961-120">Add a `<security>` binding.</span></span> <span data-ttu-id="2a961-121">Legen Sie für das `mode`-Attribut einen geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="2a961-121">Set the `mode` attribute to an appropriate value.</span></span> <span data-ttu-id="2a961-122">Im folgenden Beispiel wird das Attribut auf `"Message"` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2a961-122">This example sets it to `"Message"`.</span></span>  
   
-6.  Fügen Sie entweder ein `<message>``<transport>-Element oder ein` \-Element hinzu, wie vom Sicherheitsmodus bestimmt.Legen Sie für das `clientCredentialType`\-Attribut einen geeigneten Wert fest.In diesem Beispiel wird der Wert `"Windows"` verwendet.  
+6.  <span data-ttu-id="2a961-123">Fügen Sie entweder ein `<message>`-Element oder ein `<transport>`-Element hinzu, wie vom Sicherheitsmodus bestimmt.</span><span class="sxs-lookup"><span data-stu-id="2a961-123">Add either a `<message>` or `<transport>` element, as determined by the security mode.</span></span> <span data-ttu-id="2a961-124">Legen Sie für das `clientCredentialType`-Attribut einen geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="2a961-124">Set the `clientCredentialType` attribute to an appropriate value.</span></span> <span data-ttu-id="2a961-125">In diesem Beispiel wird `"Windows"` verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a961-125">This example uses `"Windows"`.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <bindings>  
         <wsHttpBinding>  
@@ -61,6 +67,6 @@ Nach dem Festlegen eines Sicherheitsmodus \(entweder Transport oder Nachricht\) 
     </system.serviceModel>  
     ```  
   
-## Siehe auch  
- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)   
- [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+## <a name="see-also"></a><span data-ttu-id="2a961-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a961-126">See Also</span></span>  
+ [<span data-ttu-id="2a961-127">Sichern von Diensten</span><span class="sxs-lookup"><span data-stu-id="2a961-127">Securing Services</span></span>](../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="2a961-128">Vorgehensweise: Festlegen des Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="2a961-128">How to: Set the Security Mode</span></span>](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
