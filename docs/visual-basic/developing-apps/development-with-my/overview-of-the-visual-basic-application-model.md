@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
      Die folgende Abbildung zeigt, wie eine nachfolgende Instanz die erste Instanz signalisiert.  
   
-     ![Einzelne Instanz Anwendungsimage](./../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Einzelne Instanz Anwendungsimage](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
   
  Durch Verarbeiten der `StartupNextInstance` -Ereignis können Sie steuern, wie die Einzelinstanz-Anwendung verhält. Microsoft Outlook führt z. B. in der Regel als eine einzelinstanzanwendung; Wenn Outlook ausgeführt wird und Sie versuchen, starten Outlook erneut, wechselt der Fokus mit der ursprünglichen Instanz, jedoch eine andere Instanz wird nicht geöffnet.  
   
@@ -68,4 +68,4 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Erweitern des Visual Basic-Anwendungsmodells](./../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+ [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)

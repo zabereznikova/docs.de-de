@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8830f1c19b7a91d6c22d3b5955624c7d8a86f5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23cdd79d72f7cb40758fafb63ee4d0f725cbfc1c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
-In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Finden Sie unter der [grundlegenden Ressourcendiensts](./../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel eine selbst gehostete Version dieses Szenarios, die die dienstimplementierung ausführlich erläutert wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
+In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Finden Sie unter der [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel eine selbst gehostete Version dieses Szenarios, die die dienstimplementierung ausführlich erläutert wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  Integration in den ASP.NET-Ausgabecache  
@@ -30,16 +30,16 @@ In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HT
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](./../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](./../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
 ## <a name="discussion"></a>Diskussion  
- Im Beispiel wird das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> verwendet, um den ASP.NET-Ausgabecache mit dem [!INCLUDE[indigo1](./../../../includes/indigo1-md.md)]-Dienst nutzen zu können. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.  
+ Im Beispiel wird das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> verwendet, um den ASP.NET-Ausgabecache mit dem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst nutzen zu können. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.  
   
  In der Datei Service.cs des Beispielprojekts Dienst sowohl den `GetCustomer` und `GetCustomers` Vorgänge sind mit markierten der <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, stellt den cacheprofilnamen "CacheFor60Seconds". In der Datei "Web.config" des Dienstprojekts wird das Cacheprofil "CacheFor60Seconds" bereitgestellt, unter dem <`caching`> Element des <`system.web`>. Für dieses Cacheprofil wird der Wert der `duration` -Attribut ist "60", dieses Profil zugeordnete Antworten 60 Sekunden lang im ASP.NET-Ausgabecache zwischengespeichert werden. Für dieses Cacheprofil der `varmByParam` -Attribut festgelegt ist; bei Anforderungen mit anderen Werten für "formatieren" der `format` -Abfragezeichenfolgenparameter die Antworten getrennt zwischengespeichert. Abschließend wird des Cacheprofils des `varyByHeader` -Attribut auf "Akzeptieren" festgelegt ist, müssen Anforderungen mit anderen Accept-Headerwerten getrennt zwischengespeichert werden.  
   
- Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie der [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)]-Kanalfactory und <xref:System.Net.WebClient> auf den Dienst zuzugreifen. Weitere Beispiele im SDK (z. B. die [grundlegenden HTTP-Dienst](./../../../docs/framework/wcf/samples/basic-http-service.md) Beispiel und die [automatische Formatauswahl](./../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel) veranschaulicht, wie diese Klassen verwenden, um die Kommunikation mit einer [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] Dienst.  
+ Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalfactory und <xref:System.Net.WebClient> auf den Dienst zuzugreifen. Weitere Beispiele im SDK (z. B. die [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Beispiel und die [automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel) veranschaulicht, wie diese Klassen verwenden, um die Kommunikation mit einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst.  
   
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
  Das Beispiel umfasst drei Projekte:  

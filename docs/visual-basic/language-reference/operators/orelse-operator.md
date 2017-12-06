@@ -56,10 +56,10 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Datentypen  
- Die `OrElse` Operator definiert ist, nur für die [booleschen Datentyp](./../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert jeden Operanden nach Bedarf `Boolean` und führt den Vorgang, die vollständig in `Boolean`. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ. Dies kann zu unerwartetem Verhalten führen. Beispielsweise `5 OrElse 12` führt `–1` bei der Konvertierung in `Integer`.  
+ Die `OrElse` Operator definiert ist, nur für die [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert jeden Operanden nach Bedarf `Boolean` und führt den Vorgang, die vollständig in `Boolean`. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ. Dies kann zu unerwartetem Verhalten führen. Beispielsweise `5 OrElse 12` führt `–1` bei der Konvertierung in `Integer`.  
   
 ## <a name="overloading"></a>Überladen  
- Die [oder-Operator](./../../visual-basic/language-reference/operators/or-operator.md) und [IsTrue-Operator](./../../visual-basic/language-reference/operators/istrue-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur ihr Verhalten definieren kann, wenn ein Operand den Typ dieser Klasse hat oder Struktur. Überladen der `Or` und `IsTrue` Operatoren wirkt sich auf das Verhalten der `OrElse` Operator. Wenn im Code verwendet `OrElse` auf eine Klasse oder Struktur, die Überladungen `Or` und `IsTrue`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](./../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Die [oder-Operator](../../../visual-basic/language-reference/operators/or-operator.md) und [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur ihr Verhalten definieren kann, wenn ein Operand den Typ dieser Klasse hat oder Struktur. Überladen der `Or` und `IsTrue` Operatoren wirkt sich auf das Verhalten der `OrElse` Operator. Wenn im Code verwendet `OrElse` auf eine Klasse oder Struktur, die Überladungen `Or` und `IsTrue`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `OrElse` Operator, um eine logische Disjunktion zweier Ausdrücke ausgeführt. Das Ergebnis ist ein `Boolean` Wert, der darstellt, ob eine der beiden Ausdrücke zutrifft. Wenn der erste Ausdruck ist `True`, die zweite wird nicht ausgewertet.  
@@ -74,9 +74,9 @@ result = expression1 OrElse expression2
  [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Logische/bitweise Operatoren (Visual Basic)](./../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](./../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Nach Funktionalität sortierte Operatoren](./../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Or-Operator](./../../visual-basic/language-reference/operators/or-operator.md)  
- [IsTrue-Operator](./../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Logische und bitweise Operatoren in Visual Basic](./../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+ [Logische/bitweise Operatoren (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Or-Operator](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [Logische und bitweise Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

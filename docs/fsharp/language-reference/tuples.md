@@ -130,7 +130,7 @@ Tupel werden in Objekte eines von mehreren generischen Typen, die alle benannten
 
 ### <a name="compiled-form-of-struct-tuples"></a>Kompilierte Form der Tupel-Struktur
 
-Struct-Tupel (z. B. `struct (x, y)`), unterscheiden sich grundlegend von Verweis Tupel.  Sie werden in kompiliert die <xref:System.ValueTuple> Typ, durch Stelligkeit oder die Anzahl von Typparametern überlastet.  Gleichwertig zu [C#-7-Tupel](./../csharp/tuples.md) und [Visual Basic 2017 Tupel](./../visual-basic/programming-guide/language-features/data-types/tuples.md), und bietet Interoperabilität bidirektional.
+Struct-Tupel (z. B. `struct (x, y)`), unterscheiden sich grundlegend von Verweis Tupel.  Sie werden in kompiliert die <xref:System.ValueTuple> Typ, durch Stelligkeit oder die Anzahl von Typparametern überlastet.  Gleichwertig zu [C#-7-Tupel](../../csharp/tuples.md) und [Visual Basic 2017 Tupel](../../visual-basic/programming-guide/language-features/data-types/tuples.md), und bietet Interoperabilität bidirektional.
 
 ## <a name="see-also"></a>Siehe auch
 [F#-Sprachreferenz](index.md)

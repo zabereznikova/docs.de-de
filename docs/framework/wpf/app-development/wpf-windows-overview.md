@@ -46,21 +46,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
-Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendungen. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen ihre eigenen Windows bereitstellen, indem Sie mit der <xref:System.Windows.Window> Klasse. Dieses Thema enthält <xref:System.Windows.Window> vor die Grundlagen zum Erstellen und Verwalten von Windows in eigenständigen Anwendungen abdecken.  
+Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](./../../../includes/tlasharptla-wpf-md.md)]-Anwendungen. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)] Anwendungen ihre eigenen Windows bereitstellen, indem Sie mit der <xref:System.Windows.Window> Klasse. Dieses Thema enthält <xref:System.Windows.Window> vor die Grundlagen zum Erstellen und Verwalten von Windows in eigenständigen Anwendungen abdecken.  
   
 > [!NOTE]
->  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und Netzkabel ordnungsgemäß angeschlossen sind [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, nicht ihre eigenen Windows bereitgestellt. Stattdessen werden sie in Windows gebotenen gehostet [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](./../../../includes/tlasharptla-xbapsharpplural-md.md)] und Netzkabel ordnungsgemäß angeschlossen sind [!INCLUDE[TLA#tla_xaml](./../../../includes/tlasharptla-xaml-md.md)] Seiten, nicht ihre eigenen Windows bereitgestellt. Stattdessen werden sie in Windows gebotenen gehostet [!INCLUDE[TLA#tla_iegeneric](./../../../includes/tlasharptla-iegeneric-md.md)]. Finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](./../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
  In der folgenden Abbildung werden die Bestandteile eines Fensters dargestellt.  
   
- ![Fensterelemente](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Fensterelemente](./../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
  Ein Fenster wird in zwei Bereiche geteilt: der Nicht-Clientbereich und der Clientbereich.  
   
- Die *nicht-Clientbereichs* eines Fensters wird dadurch implementiert, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und enthält die Teile eines Fensters, die für die meisten Fenster, einschließlich der folgenden gelten:  
+ Die *nicht-Clientbereichs* eines Fensters wird dadurch implementiert, [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)] und enthält die Teile eines Fensters, die für die meisten Fenster, einschließlich der folgenden gelten:  
   
 -   Rahmen  
   
@@ -76,7 +76,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Die *Clientbereich* eines Fensters wird der nicht-Clientbereich eines Fensters und wird von Entwicklern verwendet, um anwendungsspezifische Inhalte wie Menüs, Symbolleisten und Steuerelemente hinzufügen.  
   
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], ein Fenster gekapselt, durch die <xref:System.Windows.Window> -Klasse, die Sie verwenden, um die folgenden Aktionen ausführen:  
+ In [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)], ein Fenster gekapselt, durch die <xref:System.Windows.Window> -Klasse, die Sie verwenden, um die folgenden Aktionen ausführen:  
   
 -   Anzeigen eines Fensters  
   
@@ -88,27 +88,27 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementieren eines Fensters  
- Die Implementierung eines typischen Fensters umfasst, Darstellung und Verhalten, in denen *Darstellung* definiert, wie ein Fenster Benutzern aussieht und *Verhalten* bestimmt, wie ein Fenster zu Funktionen, wie Benutzer interagieren mit ihm. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], können Sie implementieren, die Darstellung und Verhalten eines Fensters entweder mit code oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
+ Die Implementierung eines typischen Fensters umfasst, Darstellung und Verhalten, in denen *Darstellung* definiert, wie ein Fenster Benutzern aussieht und *Verhalten* bestimmt, wie ein Fenster zu Funktionen, wie Benutzer interagieren mit ihm. In [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)], können Sie implementieren, die Darstellung und Verhalten eines Fensters entweder mit code oder [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
- Im Allgemeinen jedoch die Darstellung eines Fensters wird mithilfe von implementiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und sein Verhalten ist implementiert mit Code-Behind, wie im folgenden Beispiel gezeigt.  
+ Im Allgemeinen jedoch die Darstellung eines Fensters wird mithilfe von implementiert [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup und sein Verhalten ist implementiert mit Code-Behind, wie im folgenden Beispiel gezeigt.  
   
  [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
  [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
- So aktivieren Sie eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind-Datei zusammenarbeiten sind Folgendes erforderlich:  
+ So aktivieren Sie eine [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind-Datei zusammenarbeiten sind Folgendes erforderlich:  
   
--   Im Markup der `Window` -Element muss enthalten die `x:Class` Attribut. Als die Anwendung erstellt wird, wird das Vorhandensein des `x:Class` im Markup Datei bewirkt, dass [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] zum Erstellen einer `partial` von abgeleitete Klasse <xref:System.Windows.Window> und hat den Namen, die von angegeben wird die `x:Class` Attribut. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacedeklaration für das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Die generierte `partial` -Klasse implementiert die `InitializeComponent` -Methode, die aufgerufen wird, um die Ereignisse zu registrieren, und legen Sie die Eigenschaften, die im Markup implementiert werden.  
+-   Im Markup der `Window` -Element muss enthalten die `x:Class` Attribut. Als die Anwendung erstellt wird, wird das Vorhandensein des `x:Class` im Markup Datei bewirkt, dass [!INCLUDE[TLA#tla_msbuild](./../../../includes/tlasharptla-msbuild-md.md)] zum Erstellen einer `partial` von abgeleitete Klasse <xref:System.Windows.Window> und hat den Namen, die von angegeben wird die `x:Class` Attribut. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](./../../../includes/tla2sharptla-xml-md.md)] Namespacedeklaration für das [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Schema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Die generierte `partial` -Klasse implementiert die `InitializeComponent` -Methode, die aufgerufen wird, um die Ereignisse zu registrieren, und legen Sie die Eigenschaften, die im Markup implementiert werden.  
   
--   In der CodeBehind-Klasse muss eine `partial` Klasse mit dem gleichen Namen, die von angegeben wird die `x:Class` Attribut in Markup aus, und leiten sich aus <xref:System.Windows.Window>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wurde (finden Sie unter [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   In der CodeBehind-Klasse muss eine `partial` Klasse mit dem gleichen Namen, die von angegeben wird die `x:Class` Attribut in Markup aus, und leiten sich aus <xref:System.Windows.Window>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wurde (finden Sie unter [Erstellen einer WPF-Anwendung](./../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
 -   Im Code-Behind die <xref:System.Windows.Window> Klasse muss einen Konstruktor, der Aufrufe implementieren die `InitializeComponent` Methode. `InitializeComponent`wird implementiert von Markup generierte `partial` Klasse, um Ereignisse zu registrieren, und legen Sie Eigenschaften, die im Markup definiert sind.  
   
 > [!NOTE]
->  Beim Hinzufügen einer neuen <xref:System.Windows.Window> zu Ihrem Projekt mithilfe von [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], die <xref:System.Windows.Window> wird mithilfe von Markup und CodeBehind implementiert sind, sowie die erforderliche Konfiguration zum Erstellen der Zuordnung zwischen dem Markup und Code-Behind-Dateien als Die hier beschriebenen.  
+>  Beim Hinzufügen einer neuen <xref:System.Windows.Window> zu Ihrem Projekt mithilfe von [!INCLUDE[TLA#tla_visualstu](./../../../includes/tlasharptla-visualstu-md.md)], die <xref:System.Windows.Window> wird mithilfe von Markup und CodeBehind implementiert sind, sowie die erforderliche Konfiguration zum Erstellen der Zuordnung zwischen dem Markup und Code-Behind-Dateien als Die hier beschriebenen.  
   
- Mit dieser Konfiguration vorhanden, Sie können den Fokus auf definieren die Darstellung des Fensters in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und dessen Verhalten zu implementieren, im Code-Behind. Das folgende Beispiel zeigt ein Fenster mit einer Schaltfläche, implementiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und einen Ereignishandler für der Schaltfläche <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis im Code-Behind implementiert.  
+ Mit dieser Konfiguration vorhanden, Sie können den Fokus auf definieren die Darstellung des Fensters in [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup und dessen Verhalten zu implementieren, im Code-Behind. Das folgende Beispiel zeigt ein Fenster mit einer Schaltfläche, implementiert [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup und einen Ereignishandler für der Schaltfläche <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis im Code-Behind implementiert.  
   
  [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
@@ -117,13 +117,13 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
- Bestimmt, wie Sie das Fenster implementieren Konfiguration für [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Für ein Fenster, das definiert ist, verwenden beide [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind:  
+ Bestimmt, wie Sie das Fenster implementieren Konfiguration für [!INCLUDE[TLA2#tla_msbuild](./../../../includes/tla2sharptla-msbuild-md.md)]. Für ein Fenster, das definiert ist, verwenden beide [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Markupdateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
+-   [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)]Markupdateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](./../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
   
--   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` Elemente.  
+-   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](./../../../includes/tla2sharptla-msbuild-md.md)] `Compile` Elemente.  
   
- Dies wird im folgenden gezeigt [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Projektdatei.  
+ Dies wird im folgenden gezeigt [!INCLUDE[TLA2#tla_msbuild](./../../../includes/tla2sharptla-msbuild-md.md)] Projektdatei.  
   
 ```xml  
 <Project ...  
@@ -135,7 +135,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 </Project>  
 ```  
   
- Informationen zum Erstellen von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Anwendungen finden Sie unter [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+ Informationen zum Erstellen von [!INCLUDE[TLA2#tla_wpf](./../../../includes/tla2sharptla-wpf-md.md)] -Anwendungen finden Sie unter [Erstellen einer WPF-Anwendung](./../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Fensterlebensdauer  
@@ -156,12 +156,12 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Öffnen des Fensters schließlich durch Aufrufen der <xref:System.Windows.Window.Show%2A> Methode wird das Ergebnis in der folgenden Abbildung dargestellt.  
   
- ![Ein durch Aufrufen von Show geöffnetes Fenster](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Ein durch Aufrufen von Show geöffnetes Fenster](./../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
  Ein Fenster, das durch Aufrufen von <xref:System.Windows.Window.Show%2A> ist ein nicht modales Fenster, was bedeutet, dass die Anwendung in einem Modus ausgeführt, die Benutzern ermöglicht wird, die andere Fenster in derselben Anwendung zu aktivieren.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>wird aufgerufen, um Windows, z. B. Dialogfelder modal zu öffnen. Finden Sie unter [Dialog Boxes Overview](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) für Weitere Informationen.  
+>  <xref:System.Windows.Window.ShowDialog%2A>wird aufgerufen, um Windows, z. B. Dialogfelder modal zu öffnen. Finden Sie unter [Dialog Boxes Overview](./../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) für Weitere Informationen.  
   
  Wenn <xref:System.Windows.Window.Show%2A> ist führt Initialisierungsarbeit aufgerufen wird, ein Fenster werden, bevor es angezeigt wird, um die Infrastruktur festzulegen, die eine Benutzereingabe empfangen kann. Wenn das Fenster initialisiert wird, die <xref:System.Windows.Window.SourceInitialized> Ereignis wird ausgelöst, und das Fenster wird angezeigt.  
   
@@ -179,7 +179,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 -   Es wird minimiert, maximiert und wiederhergestellt, ohne das andere zu beeinflussen.  
   
- Bei einigen Fenstern ist eine Beziehung zu dem Fenster erforderlich, durch das es geöffnet wird. Angenommen, ein [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] Anwendung möglicherweise öffnen, Eigenschaft und Toolfenster, deren typische Verhalten besteht darin, das Fenster zu behandeln, die sie erstellt. Darüber hinaus sollten solche Fenster stets mit den Fenstern geschlossen, minimiert, maximiert und wiederhergestellt werden, durch die sie erstellt wurden. Eine solche Beziehung hergestellt werden kann, indem Sie die Verfügbarkeit von einem Fenster *eigenen* einer anderen, und erreicht, indem die <xref:System.Windows.Window.Owner%2A> Eigenschaft von der *Fenster gehören* mit einem Verweis auf die *Besitzer Fenster*. Dies wird im folgenden Beispiel gezeigt.  
+ Bei einigen Fenstern ist eine Beziehung zu dem Fenster erforderlich, durch das es geöffnet wird. Angenommen, ein [!INCLUDE[TLA#tla_ide](./../../../includes/tlasharptla-ide-md.md)] Anwendung möglicherweise öffnen, Eigenschaft und Toolfenster, deren typische Verhalten besteht darin, das Fenster zu behandeln, die sie erstellt. Darüber hinaus sollten solche Fenster stets mit den Fenstern geschlossen, minimiert, maximiert und wiederhergestellt werden, durch die sie erstellt wurden. Eine solche Beziehung hergestellt werden kann, indem Sie die Verfügbarkeit von einem Fenster *eigenen* einer anderen, und erreicht, indem die <xref:System.Windows.Window.Owner%2A> Eigenschaft von der *Fenster gehören* mit einem Verweis auf die *Besitzer Fenster*. Dies wird im folgenden Beispiel gezeigt.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -277,9 +277,9 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 > [!NOTE]
 >  Eine Anwendung kann so konfiguriert werden, dass heruntergefahren, wenn entweder das Hauptanwendungsfenster automatisch schließt (finden Sie unter <xref:System.Windows.Application.MainWindow%2A>) oder den letzten Fenster geschlossen wird. Ausführliche Informationen finden Sie unter <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Während ein Fensters über Mechanismen, die in den Bereichen clientfremden und Client explizit geschlossen werden kann, ein Fenster kann implizit geschlossen werden als Ergebnis Verhalten in anderen Teilen der Anwendung oder [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], u. a. folgende:  
+ Während ein Fensters über Mechanismen, die in den Bereichen clientfremden und Client explizit geschlossen werden kann, ein Fenster kann implizit geschlossen werden als Ergebnis Verhalten in anderen Teilen der Anwendung oder [!INCLUDE[TLA#tla_mswin](./../../../includes/tlasharptla-mswin-md.md)], u. a. folgende:  
   
--   Ein Benutzer abmeldet oder heruntergefahren [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Ein Benutzer abmeldet oder heruntergefahren [!INCLUDE[TLA2#tla_mswin](./../../../includes/tla2sharptla-mswin-md.md)].  
   
 -   Der Besitzer eines Fensters geschlossen wird (siehe <xref:System.Windows.Window.Owner%2A>).  
   
@@ -294,15 +294,15 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 ### <a name="window-lifetime-events"></a>Ereignisse in der Lebensdauer eines Fensters  
  In der folgenden Darstellung wird die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters gezeigt.  
   
- ![Fensterlebensdauer](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Fensterlebensdauer](./../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
  Die folgende Abbildung veranschaulicht die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters, das ohne Aktivierung angezeigt wird (<xref:System.Windows.Window.ShowActivated%2A> festgelegt ist, um `false` , bevor das Fenster angezeigt wird).  
   
- ![Fensterlebensdauer &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Fensterlebensdauer &#40;Window.ShowActivated &#61; False&#41;](./../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Fensterposition  
- Solange ein Fenster geöffnet ist, befindet sich dessen Position in der x- und y-Dimension relativ zum Desktop. Dieser Speicherort kann bestimmt werden, durch Überprüfen der <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften bzw.. Sie können diese Eigenschaften festlegen, um die Position des Fensters zu ändern.  
+ Solange ein Fenster geöffnet ist, befindet sich dessen Position in der x- und y-Dimension relativ zum Desktop. Dieser Speicherort kann bestimmt werden, durch Überprüfen der <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften bzw. Sie können diese Eigenschaften festlegen, um die Position des Fensters zu ändern.  
   
  Sie können auch angeben, die ursprüngliche Position des eine <xref:System.Windows.Window> bei seinem ersten Auftreten durch Festlegen der <xref:System.Windows.Window.WindowStartupLocation%2A> Eigenschaft mit einem der folgenden <xref:System.Windows.WindowStartupLocation> Enumerationswerte:  
   
@@ -312,7 +312,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Wenn die Startposition, als angegeben wird <xref:System.Windows.WindowStartupLocation.Manual>, und die <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften wurden nicht festgelegt wurde, <xref:System.Windows.Window> fragt [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] für einen Standort in angezeigt werden.  
+ Wenn die Startposition, als angegeben wird <xref:System.Windows.WindowStartupLocation.Manual>, und die <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften wurden nicht festgelegt wurde, <xref:System.Windows.Window> fragt [!INCLUDE[TLA2#tla_mswin](./../../../includes/tla2sharptla-mswin-md.md)] für einen Standort in angezeigt werden.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Oberstes Fenster und Z-Reihenfolge  
@@ -432,7 +432,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
- Wie bei <xref:System.Windows.Window.WindowStyle%2A>, der Größenänderungsmodus eines Fensters ist es unwahrscheinlich, dass während seiner Lebensdauer zu ändern, was bedeutet, dass sie über sehr wahrscheinlich festgelegt werden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
+ Wie bei <xref:System.Windows.Window.WindowStyle%2A>, der Größenänderungsmodus eines Fensters ist es unwahrscheinlich, dass während seiner Lebensdauer zu ändern, was bedeutet, dass sie über sehr wahrscheinlich festgelegt werden [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
 [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
@@ -455,19 +455,19 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Die Auswirkung dieser Fensterstile wird in der folgenden Abbildung veranschaulicht.  
   
- ![Fensterstile](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Fensterstile](./../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
- Sie können festlegen, <xref:System.Windows.Window.WindowStyle%2A> entweder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup oder-Code; da es unwahrscheinlich ist, während der Lebensdauer eines Fensters zu ändern, wahrscheinlich konfigurieren Sie ihn mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
+ Sie können festlegen, <xref:System.Windows.Window.WindowStyle%2A> entweder [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup oder-Code; da es unwahrscheinlich ist, während der Lebensdauer eines Fensters zu ändern, wahrscheinlich konfigurieren Sie ihn mit [!INCLUDE[TLA2#tla_xaml](./../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
 [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>Nicht rechteckiger Fensterstil  
- Es gibt auch Situationen, in dem der Rahmen Formatvorlagen, <xref:System.Windows.Window.WindowStyle%2A> ermöglicht es Ihnen, sind nicht ausreichend. Sie möchten beispielsweise erstellen Sie eine Anwendung mit einem viereckig Rahmen wie [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] verwendet.  
+ Es gibt auch Situationen, in dem der Rahmen Formatvorlagen, <xref:System.Windows.Window.WindowStyle%2A> ermöglicht es Ihnen, sind nicht ausreichend. Sie möchten beispielsweise erstellen Sie eine Anwendung mit einem viereckig Rahmen wie [!INCLUDE[TLA#tla_wmp](./../../../includes/tlasharptla-wmp-md.md)] verwendet.  
   
  Betrachten Sie beispielsweise das Sprechblasenfenster in der folgenden Abbildung.  
   
- ![Nicht rechteckiges Fenster](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Nicht rechteckiges Fenster](./../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
  Diese Art von Fenster erstellt werden, indem Sie die Einstellung der <xref:System.Windows.Window.WindowStyle%2A> Eigenschaft <xref:System.Windows.WindowStyle.None>, und mit besonderen unterstützen, die <xref:System.Windows.Window> wurde für die Transparenz.  
   
@@ -480,9 +480,9 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 ### <a name="task-bar-presence"></a>Vorhandensein der Taskleiste  
  Die Standarddarstellung eines Fensters umfasst eine Taskleistenschaltfläche wie in der folgenden Abbildung.  
   
- ![Fenster mit einer Taskleistenschaltfläche](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+ ![Fenster mit einer Taskleistenschaltfläche](./../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- Bei einigen Typen von Windows keine Taskleistenschaltfläche wie Meldungsfelder und Dialogfelder sind (finden Sie unter [Dialog Boxes Overview](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Sie können steuern, ob die Taskleistenschaltfläche für ein Fenster, durch Festlegen angezeigt wird der <xref:System.Windows.Window.ShowInTaskbar%2A> Eigenschaft (`true` standardmäßig).  
+ Bei einigen Typen von Windows keine Taskleistenschaltfläche wie Meldungsfelder und Dialogfelder sind (finden Sie unter [Dialog Boxes Overview](./../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Sie können steuern, ob die Taskleistenschaltfläche für ein Fenster, durch Festlegen angezeigt wird der <xref:System.Windows.Window.ShowInTaskbar%2A> Eigenschaft (`true` standardmäßig).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
 [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
@@ -491,20 +491,20 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  <xref:System.Windows.Window>erfordert `UnmanagedCode` Sicherheitsberechtigung instanziiert werden. Bei Anwendungen, die auf dem lokalen Computer installiert und gestartet werden, wird dies durch die Berechtigungen abgedeckt, die der Anwendung gewährt werden.  
   
- Allerdings Dies liegt außerhalb des Satzes von Berechtigungen für Anwendungen, die aus dem Internet oder lokales Intranet-Zone mit gestartet werden [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Folglich erhalten Benutzer eine [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] sicherheitswarnung, und müssen den Berechtigungssatz für die Anwendung auf volle Vertrauenswürdigkeit zu erhöhen.  
+ Allerdings Dies liegt außerhalb des Satzes von Berechtigungen für Anwendungen, die aus dem Internet oder lokales Intranet-Zone mit gestartet werden [!INCLUDE[TLA#tla_clickonce](./../../../includes/tlasharptla-clickonce-md.md)]. Folglich erhalten Benutzer eine [!INCLUDE[TLA2#tla_clickonce](./../../../includes/tla2sharptla-clickonce-md.md)] sicherheitswarnung, und müssen den Berechtigungssatz für die Anwendung auf volle Vertrauenswürdigkeit zu erhöhen.  
   
- Darüber hinaus [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kann nicht in der Standardeinstellung Windows- oder Dialogfeldern angezeigt. Ausführliche Informationen zu sicherheitsüberlegungen für eigenständige Anwendung, finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Darüber hinaus [!INCLUDE[TLA2#tla_xbap#plural](./../../../includes/tla2sharptla-xbapsharpplural-md.md)] kann nicht in der Standardeinstellung Windows- oder Dialogfeldern angezeigt. Ausführliche Informationen zu sicherheitsüberlegungen für eigenständige Anwendung, finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](./../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Andere Fenstertypen  
- <xref:System.Windows.Navigation.NavigationWindow>ist ein Fenster, die zum Hosten von navigierbaren Inhalt vorgesehen ist. Weitere Informationen finden Sie unter [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow>ist ein Fenster, die zum Hosten von navigierbaren Inhalt vorgesehen ist. Weitere Informationen finden Sie unter [Navigation Overview](./../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
- Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Z. B. wenn ein Benutzer möchte zum Öffnen einer Datei, die **Datei öffnen** Dialogfeld wird in der Regel von einer Anwendung zum Abrufen des Dateinamens aus dem Benutzer angezeigt. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Z. B. wenn ein Benutzer möchte zum Öffnen einer Datei, die **Datei öffnen** Dialogfeld wird in der Regel von einer Anwendung zum Abrufen des Dateinamens aus dem Benutzer angezeigt. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](./../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Window>  
  <xref:System.Windows.MessageBox>  
  <xref:System.Windows.Navigation.NavigationWindow>  
  <xref:System.Windows.Application>  
- [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+ [Übersicht über Dialogfelder](./../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [Erstellen einer WPF-Anwendung](./../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)

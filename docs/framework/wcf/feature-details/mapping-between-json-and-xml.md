@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8bcc8f178f76c536b189058210a586d0d37a1834
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
-Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Die von dieser Factory erzeugten Reader und Writer werden auch verwendet, wenn JSON-Inhalte von einer [!INCLUDE[indigo1](./../../../includes/indigo1-md.md)]-Anwendung über ein <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder eine <xref:System.ServiceModel.WebHttpBinding> gesendet oder empfangen werden.  
+Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Die von dieser Factory erzeugten Reader und Writer werden auch verwendet, wenn JSON-Inhalte von einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung über ein <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder eine <xref:System.ServiceModel.WebHttpBinding> gesendet oder empfangen werden.  
   
  Wenn der JSON-Reader mit JSON-Inhalten initialisiert wird, verhält er sich so wie ein XML-Reader bei XML-Inhalten. Wenn dem JSON-Writer eine Aufruffolge übergeben wird, die bei einem textbasierten XML-Reader eine bestimmte XML-Instanz erzeugt, wird JSON-Inhalt ausgegeben. Die Zuordnung zwischen dieser XML-Instanz und dem JSON-Inhalt wird in diesem Thema für die Verwendung in fortgeschrittenen Szenarios beschrieben.  
   
- Bei der Verarbeitung durch [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] wird JSON intern als XML-Infoset dargestellt. Normalerweise müssen Sie sich nicht mit dieser internen Darstellung befassen, da es sich lediglich um eine logische Zuordnung handelt: JSON wird normalerweise nicht im physischen Speicher in XML konvertiert bzw. XML wird nicht physisch in JSON umgewandelt. Diese Zuordnung bedeutet, dass über XML-APIs auf JSON-Inhalte zugegriffen wird.  
+ Bei der Verarbeitung durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird JSON intern als XML-Infoset dargestellt. Normalerweise müssen Sie sich nicht mit dieser internen Darstellung befassen, da es sich lediglich um eine logische Zuordnung handelt: JSON wird normalerweise nicht im physischen Speicher in XML konvertiert bzw. XML wird nicht physisch in JSON umgewandelt. Diese Zuordnung bedeutet, dass über XML-APIs auf JSON-Inhalte zugegriffen wird.  
   
- Wenn JSON in [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] verwendet wird, wird im üblichen Szenario gegebenenfalls <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatisch vom <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>-Verhalten bzw. vom <xref:System.ServiceModel.Description.WebHttpBehavior>-Verhalten eingebunden. Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kennt die Zuordnung zwischen JSON und dem XML-Infoset und gibt vor, den JSON-Inhalt direkt zu verarbeiten. (Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kann mit jedem beliebigen XML-Reader oder -Writer verwendet werden, sofern der XML-Inhalt der folgenden Zuordnung entspricht.)  
+ Wenn JSON in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird, wird im üblichen Szenario gegebenenfalls <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatisch vom <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>-Verhalten bzw. vom <xref:System.ServiceModel.Description.WebHttpBehavior>-Verhalten eingebunden. Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kennt die Zuordnung zwischen JSON und dem XML-Infoset und gibt vor, den JSON-Inhalt direkt zu verarbeiten. (Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kann mit jedem beliebigen XML-Reader oder -Writer verwendet werden, sofern der XML-Inhalt der folgenden Zuordnung entspricht.)  
   
- In fortgeschrittenen Szenarios wird es möglicherweise notwendig, direkt auf die folgende Zuordnung zuzugreifen. Diese Szenarios sind gegeben, wenn Sie JSON mit einem benutzerdefinierten Verfahren serialisieren und deserialisieren möchten, ohne auf den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zurückzugreifen, oder wenn der <xref:System.ServiceModel.Channels.Message>-Typ bei Nachrichten, die JSON enthalten, direkt verarbeitet wird. Die JSON-XML-Zuordnung wird auch zur Nachrichtenprotokollierung verwendet. Bei Verwendung der Nachrichtenprotokollierungsfunktion von [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] werden JSON-Nachrichten entsprechend der im nächsten Abschnitt beschriebenen Zuordnung als XML protokolliert.  
+ In fortgeschrittenen Szenarios wird es möglicherweise notwendig, direkt auf die folgende Zuordnung zuzugreifen. Diese Szenarios sind gegeben, wenn Sie JSON mit einem benutzerdefinierten Verfahren serialisieren und deserialisieren möchten, ohne auf den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zurückzugreifen, oder wenn der <xref:System.ServiceModel.Channels.Message>-Typ bei Nachrichten, die JSON enthalten, direkt verarbeitet wird. Die JSON-XML-Zuordnung wird auch zur Nachrichtenprotokollierung verwendet. Bei Verwendung der Nachrichtenprotokollierungsfunktion von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden JSON-Nachrichten entsprechend der im nächsten Abschnitt beschriebenen Zuordnung als XML protokolliert.  
   
  Das folgende Beispiel eines JSON-Dokuments soll zur Klärung dessZuordnungskonzepts dienen:  
   
@@ -45,7 +45,7 @@ Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erz
 </root>  
 ```  
   
- Wenn die JSON-Nachricht aus dem Beispiel von [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] empfangen und protokolliert wird, würde das vorstehende Protokoll folgendes XML-Fragment enthalten.  
+ Wenn die JSON-Nachricht aus dem Beispiel von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] empfangen und protokolliert wird, würde das vorstehende Protokoll folgendes XML-Fragment enthalten.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Zuordnung zwischen JSON und dem XML-Infoset  
  Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (außer mit bestimmten Einschränkungen gelockerte und bestimmte andere Einschränkungen hinzugefügt) und die XML-Infoset (und nicht Text-XML) als in der beschriebenen [XML-Informationen Legen Sie](http://go.microsoft.com/fwlink/?LinkId=98809) . Finden Sie in diesem Thema für die Definitionen der *Informationselementen* und Feldern in [eckigen Klammern].  
@@ -208,7 +208,7 @@ Strahl "|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Ab
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  Die vorangehende Zuordnung umfasst keinen XML-Codierungsschritt. Daher unterstützt [!INCLUDE[indigo2](./../../../includes/indigo2-md.md)] nur JSON-Dokumente, in denen Schlüsselnamen nur Zeichen enthalten, die auch in XML-Elementnamen zulässig sind. Beispielsweise wird das JSON-Dokument {"<":"a"} nicht unterstützt, weil < kein gültiger Name für ein XML-Element ist.  
+>  Die vorangehende Zuordnung umfasst keinen XML-Codierungsschritt. Daher unterstützt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nur JSON-Dokumente, in denen Schlüsselnamen nur Zeichen enthalten, die auch in XML-Elementnamen zulässig sind. Beispielsweise wird das JSON-Dokument {"<":"a"} nicht unterstützt, weil < kein gültiger Name für ein XML-Element ist.  
   
  Der umgekehrte Fall (Zeichen, die in XML, aber nicht in JSON zulässig sind) stellt kein Problem dar, weil die vorangehende Zuordnung Schritte für das Voranstellen bzw. Entfernen von Escapezeichen in JSON beinhaltet.  
   
@@ -243,4 +243,4 @@ Strahl "|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Ab
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
- [Eigenständige JSON-Serialisierung](./../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+ [Eigenständige JSON-Serialisierung](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

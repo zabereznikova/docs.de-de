@@ -58,8 +58,8 @@ Anwendungen verfügen häufig über Menübefehle für Aktionen wie z. B. Nebenei
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDI-Anwendungen (Multiple Document Interface)](./../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](./../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](./../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](./../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](./../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+ [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)

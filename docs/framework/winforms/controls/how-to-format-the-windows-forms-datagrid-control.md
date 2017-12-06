@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](./../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Verschiedene Farben für verschiedene Teile des Anwenden einer <xref:System.Windows.Forms.DataGrid> bestimmen können, stellen die Informationen in diesem einfacher zu lesen und zu interpretieren. Farbe kann in Zeilen und Spalten angewendet werden. Zeilen und Spalten können auch ausgeblendet oder angezeigt, die in Ihrem eigenen Ermessen.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  Bedenken Sie, wenn die Farben der Steuerelemente anpassen, dass es möglich ist, das Steuerelement zugegriffen werden kann aufgrund einer schlechten Farbauswahl (z. B. "Rot" und "Grün") ist. Verwenden Sie die Farben auf die **Systemfarben** Palette, um dieses Problem zu vermeiden.  
   
-     Die folgenden Verfahren gelten für das Formular verfügt über eine <xref:System.Windows.Forms.DataGrid> -Steuerelements an eine Datentabelle gebunden. Weitere Informationen finden Sie unter [Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](./../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     Die folgenden Verfahren gelten für das Formular verfügt über eine <xref:System.Windows.Forms.DataGrid> -Steuerelements an eine Datentabelle gebunden. Weitere Informationen finden Sie unter [Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>So legen Sie den Stil für Tabellen und Spalten einer Datentabelle programmgesteuert fest  
   
@@ -167,5 +167,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.GridTableStylesCollection>  
  <xref:System.Windows.Forms.GridColumnStylesCollection>  
  <xref:System.Windows.Forms.DataGrid>  
- [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](./../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [DataGrid-Steuerelement](./../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+ [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
