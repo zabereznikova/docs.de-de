@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b311dc5b328a09bd301cc1d012ca4d13cfb70f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
+ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF und ASP.NET-Web-API
 WCF ist das einheitliche Programmiermodell von Microsoft, mit dem dienstorientierte Anwendungen erstellt werden können. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen. [ASP.NET Web API](http://www.asp.net/web-api) ist ein Framework, die erleichtert das Erstellen von HTTP-Diensten, die eine Breite Palette von Clients, einschließlich Browsern und mobilen Geräten erreichen. Die ASP.NET-Web-API ist eine ideale Plattform zum Erstellen von RESTful-Anwendungen in .NET Framework. Die Informationen in diesem Thema sollen Sie dabei unterstützen, die für Ihre Anforderungen optimal geeignete Technologie zu finden.  
@@ -29,7 +29,7 @@ WCF ist das einheitliche Programmiermodell von Microsoft, mit dem dienstorientie
 |---------|---------------------|  
 |Ermöglicht das Erstellen von Diensten, die mehrere Transportprotokolle (HTTP, TCP, UDP und benutzerdefinierte Transporte) und das Wechseln zwischen den Protokollen unterstützen.|nur HTTP Erstrangige Programmiermodell für HTTP. Für den Zugriff von verschiedenen Browsern, mobile Geräte aktivieren usw. breit erreichen besser geeignet.|  
 |Ermöglicht das Erstellen von Diensten, die mehrere Codierungen (textbasiert, MTOM und binär) desselben Nachrichtentyps sowie den Wechsel zwischen den Codierungen unterstützen.|Ermöglicht das Erstellen von Web-APIs, die eine Vielzahl von Medientypen einschließlich XML, JSON usw. unterstützen.|  
-|Unterstützt das Erstellen von Diensten mit WS-*-Standards, z. B. zuverlässigem Messaging, Transaktionen und Nachrichtensicherheit.|Verwendet Standardprotokolle und -formate wie HTTP, WebSockets, SSL, JQuery, JSON und XML. Höher entwickelte Protokolle wie zuverlässiges Messaging oder Transaktionen werden nicht unterstützt.|  
+|Unterstützt das Erstellen von Diensten mit WS-*-Standards, z. B. zuverlässigem Messaging, Transaktionen und Nachrichtensicherheit.|Verwendet Standardprotokolle und-Formate wie HTTP, WebSockets, SSL, JSON und XML. Höher entwickelte Protokolle wie zuverlässiges Messaging oder Transaktionen werden nicht unterstützt.|  
 |Unterstützt die Nachrichtenaustauschmuster "Anforderung-Antwort", "Unidirektional" und "Duplex".|Anforderung/Antwort "HTTP" ist jedoch zusätzliche Mustern können unterstützt werden, über [SignalR](https://github.com/SignalR/SignalR) und WebSockets-Integration.|  
 |WCF-SOAP-Dienste können in WSDL beschrieben werden und bieten automatisierten Tools die Möglichkeit, selbst für Dienste mit komplexen Schemas Clientproxys zu generieren.|Es gibt zahlreiche Methoden zur Beschreibung einer Web-API, von automatisch generierten HTML-Hilfeseiten mit Informationen zu Codeausschnitten bis hin zu strukturierten Metadaten für integrierte OData-APIs.|  
 |Im Lieferumfang von .NET Framework enthalten.|Im Lieferumfang von .NET Framework enthalten, steht jedoch auch als unabhängiges Out-of-Band-Download bereit, da es sich um eine Open Source-API handelt.|  
