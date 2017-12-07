@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
 
@@ -36,7 +35,7 @@ Anwendungen müssen in der Lage sein, Fehler zu behandeln, die während der Ausf
 
 Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verhalten beim Ausführen eines Programms. Ausnahmen können durch Fehler in Ihrem oder in aufgerufenem Code (z.B. bei freigegebenen Bibliotheken), nicht verfügbare Betriebssystemressourcen, unerwartete, von der Runtime festgestellte Fehlerzustände (z.B. durch nicht überprüfbaren Code) und andere Ereignisse ausgelöst werden. Anwendungen können in einigen, aber nicht allen Fällen wiederhergestellt werden. Obwohl bei den meisten Anwendungsausnahmen eine Wiederherstellung möglich ist, ist dies beim Großteil der Laufzeitausnahmen nicht der Fall.
 
-In .NET stellt eine Ausnahme ein Objekt dar, das von der [System.Exception](xref:System.Exception)-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
+In .NET ist eine Ausnahme ein Objekt, das von der <xref:System.Exception?displayProperty=nameWithType>-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden
 
@@ -58,13 +57,13 @@ In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgef
 
 | Ausnahmetyp | Basistyp | Beschreibung | Beispiel |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
-| @System.IndexOutOfRangeException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Bereichs: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn auf ein NULL-Objekt verwiesen wird. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Wird von Methoden ausgelöst, wenn ein ungültiger Status vorliegt. | Aufrufen von `Enumerator.GetNext()` nach Entfernen eines Elements aus der zugrunde liegenden Auflistung. |
-| @System.ArgumentException | @System.Exception | Die Basisklasse für alle Argumentausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
-| @System.ArgumentNullException | @System.Exception | Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Bereichs: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | Wird von der Runtime nur dann ausgelöst, wenn auf ein NULL-Objekt verwiesen wird. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | Wird von Methoden ausgelöst, wenn ein ungültiger Status vorliegt. | Aufrufen von `Enumerator.GetNext()` nach Entfernen eines Elements aus der zugrunde liegenden Auflistung. |
+| <xref:System.ArgumentException> | <xref:System.Exception> | Die Basisklasse für alle Argumentausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -79,4 +78,3 @@ In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgef
 * [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)
 
 Weitere Informationen zur Funktionsweise von Ausnahmen in .NET finden Sie in [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss).
-

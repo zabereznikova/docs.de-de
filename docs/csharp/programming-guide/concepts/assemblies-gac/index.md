@@ -1,30 +1,21 @@
 ---
 title: Assemblys und der globale Assemblycache (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys und der globale Assemblycache (C#)
 Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET-basierte Anwendung. Assemblys sind ausführbare Dateien (EXE-Dateien) oder DLL-Dateien und bilden die Bausteine von .NET Framework. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.  
@@ -68,13 +59,12 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
 >  Sie erstellen eine Assembly in Visual Studio, indem Sie im Menü **Build** die Option **Build** wählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Assemblys in der Common Language Runtime (CLR)](https://msdn.microsoft.com/library/k3677y81)   
- [Friend-Assemblys (C#)](friend-assemblies.md)   
- [How to: Share an Assembly with Other Applications (C#) (Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (C#))](how-to-share-an-assembly-with-other-applications.md)   
- [How to: Load and Unload Assemblies (C#) (Vorgehensweise: Laden und Entladen von Assemblys (C#))](how-to-load-and-unload-assemblies.md)   
- [How to: Determine If a File Is an Assembly (C#) (Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#))](how-to-determine-if-a-file-is-an-assembly.md)   
- [How to: Create and Use Assemblies Using the Command Line (C#) (Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#))](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Assemblys in der Common Language Runtime (CLR)](https://msdn.microsoft.com/library/k3677y81)  
+ [Friend-Assemblys (C#)](friend-assemblies.md)  
+ [Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (C#)](how-to-share-an-assembly-with-other-applications.md)  
+ [Vorgehensweise: Laden und Entladen von Assemblys (C#)](how-to-load-and-unload-assemblies.md)  
+ [Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (C#) (Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (C#))](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-

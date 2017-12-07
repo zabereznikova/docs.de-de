@@ -1,39 +1,21 @@
 ---
 title: Zeichenfolgen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6be0f4dcf3aa9c66335ab466d1c50a5714314b42
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e41a7b68d890aa7a96aeddd660e0dca90596d998
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -44,7 +26,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 ## <a name="declaring-and-initializing-strings"></a>Deklarieren und Initialisieren von Zeichenfolgen  
  Sie können Zeichenfolgen auf verschiedene Weise deklarieren und Initialisieren, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
   
  Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/keywords/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
   
@@ -53,22 +35,22 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 ## <a name="immutability-of-string-objects"></a>Unveränderlichkeit von Zeichenfolgenobjekten  
  Zeichenfolgenobjekte sind *unveränderlich*: sie können nicht geändert werden, nachdem sie erstellt wurden. Alle <xref:System.String>-Methoden und C#-Operatoren, die eine Zeichenfolge scheinbar verändern, geben in Wirklichkeit die Ergebnisse in einem neuen Zeichenfolgenobjekt zurück. Im folgenden Beispiel werden die beiden ursprünglichen Zeichenfolgen nicht geändert, wenn die Inhalte von `s1` und `s2` verkettet werden, um eine einzelne Zeichenfolge zu bilden. Der `+=`-Operator erstellt eine neue Zeichenfolge, die die kombinierten Inhalte enthält. Das neue Objekt wird der Variablen `s1` zugewiesen, und das ursprüngliche Objekt, das `s1` zugewiesen wurde, wird für die Garbage Collection freigegeben, da keine andere Variable einen Verweis darauf enthält.  
   
- [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
   
  Da eine „Zeichenfolgenänderung“ in Wirklichkeit eine neue Erstellung von Zeichenfolgen ist, müssen Sie vorsichtig sein, wenn Sie Verweise auf Zeichenfolgen erstellen. Wenn Sie einen Verweis auf eine Zeichenfolge erstellen und dann die ursprüngliche Zeichenfolge „ändern“, wird der Verweis weiterhin auf das ursprüngliche Objekt anstelle des neuen Objekts zeigen, das erstellt wurde, als die Zeichenfolge geändert wurde. Der folgende Code veranschaulicht dieses Verhalten:  
   
- [!code-cs[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
  Weitere Informationen zum Erstellen neuer Zeichenfolgen, die auf Änderungen wie Vorgänge zum Suchen und Ersetzen auf der ursprüngliche Zeichenfolge basieren, finden Sie unter [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Reguläre und ausführliche Zeichenfolgenliterale  
  Verwenden Sie reguläre Zeichenfolgenliterale, wenn Sie von C# bereitgestellte Escapezeichen einbetten müssen, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
   
  Verwenden Sie ausführliche Zeichenfolgen der Einfachheit und Lesbarkeit halber, wenn der Text der Zeichenfolge umgekehrte Schrägstriche enthält, z.B. in Dateipfaden. Da ausführliche Zeichenfolgen neue Zeilenzeichen als Teil des Texts der Zeichenfolge beibehalten, können sie verwendet werden, um mehrzeilige Zeichenfolgen zu initialisieren. Verwenden Sie doppelte Anführungszeichen, um ein Anführungszeichen in eine ausführliche Zeichenfolge einzubetten. Im folgenden Beispiel werden einige gängige Verwendungszwecke für allgemeine Zeichenfolgen dargestellt:  
   
- [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
 ## <a name="string-escape-sequences"></a>Zeichenfolgen-Escapesequenzen  
   
@@ -90,48 +72,48 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|\x0041 = "A"|  
   
 > [!NOTE]
->  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" erscheint z.B. im Überwachungsfenster als "C:\\\files.txt".  
+>  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
   
 ## <a name="format-strings"></a>Formatzeichenfolgen  
  Eine Formatzeichenfolge ist eine Zeichenfolge, deren Inhalt zur Laufzeit dynamisch bestimmt werden kann. Sie erstellen eine Zeichenfolge mithilfe der statischen <xref:System.String.Format%2A>-Methode und betten Platzhalter in geschweiften Klammern ein, die durch andere Werte zur Laufzeit ersetzt werden. Das folgende Beispiel verwendet eine Formatzeichenfolge, um das Ergebnis jeder Iteration einer Schleife auszugeben:  
   
- [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
  Eine Überladung der <xref:System.Console.WriteLine%2A>-Methode übernimmt eine Formatzeichenfolge als Parameter. Aus diesem Grund können Sie nur ein Formatzeichenfolgenliteral ohne den expliziten Aufruf der Methode einbetten. Wenn Sie jedoch die <xref:System.Diagnostics.Trace.WriteLine%2A>-Methode zum Anzeigen der Debugausgabe im **Ausgabefenster** von Visual Studio verwenden, müssen Sie explizit die <xref:System.String.Format%2A>-Methode aufrufen, da <xref:System.Diagnostics.Trace.WriteLine%2A> nur eine Zeichenfolge und keine Formatzeichenfolge akzeptiert. Weitere Informationen zu Formatzeichenfolgen finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md).  
   
 ## <a name="substrings"></a>Teilzeichenfolgen  
  Eine Teilzeichenfolge ist eine beliebige Sequenz von Zeichen, die in einer Zeichenfolge enthalten ist. Verwenden Sie die <xref:System.String.Substring%2A>-Methode, um eine neue Zeichenfolge aus einem Teil der ursprünglichen Zeichenfolge zu erstellen. Sie können nach einem oder mehreren Vorkommnissen einer Teilzeichenfolge suchen, indem Sie die <xref:System.String.IndexOf%2A>-Methode verwenden. Verwenden Sie die <xref:System.String.Replace%2A>-Methode, um alle Vorkommnisse einer angegebenen Teilzeichenfolge mit einer neuen Zeichenfolge zu ersetzen. Genauso wie die <xref:System.String.Substring%2A>-Methode gibt <xref:System.String.Replace%2A> tatsächlich eine neue Zeichenfolge zurück und ändert nicht die ursprüngliche Zeichenfolge. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) und [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
- [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
 ## <a name="accessing-individual-characters"></a>Zugreifen auf einzelne Zeichen  
  Sie können die Arraynotation mit einem Indexwert verwenden, um schreibgeschützten Zugriff auf einzelne Zeichen zu erhalten, so wie in folgendem Beispiel gezeigt:  
   
- [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
   
  Wenn die <xref:System.String>-Methoden nicht die Funktionen bieten, die Sie zum Bearbeiten einzelner Zeichen in einer Zeichenfolge benötigen, können Sie ein <xref:System.Text.StringBuilder>-Objekt verwenden, um die einzelnen Chars „direkt“ zu bearbeiten und anschließend eine neue Zeichenfolge zu <xref:System.Text.StringBuilder>-Methoden zu speichern. Im folgenden Beispiel wird davon ausgegangen, dass Sie die ursprüngliche Zeichenfolge auf eine bestimmte Weise ändern und die Ergebnisse für die zukünftige Verwendung speichern müssen:  
   
- [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
 ## <a name="null-strings-and-empty-strings"></a>NULL-Zeichenfolgen und leere Zeichenfolgen  
- Eine leere Zeichenfolge ist eine Instanz eines <xref:System.String?displayProperty=fullName>-Objekts, dass 0 Zeichen enthält. Leere Zeichenfolgen werden häufig in verschiedenen Programmierszenarios verwendet, um ein leeres Textfeld darzustellen. Sie können Methoden für leere Zeichenfolgen aufrufen, da sie gültige <xref:System.String?displayProperty=fullName>-Objekte sind. Leere Zeichenfolgen werden wie folgt initialisiert:  
+ Eine leere Zeichenfolge ist eine Instanz eines <xref:System.String?displayProperty=nameWithType>-Objekts, dass 0 Zeichen enthält. Leere Zeichenfolgen werden häufig in verschiedenen Programmierszenarios verwendet, um ein leeres Textfeld darzustellen. Sie können Methoden für leere Zeichenfolgen aufrufen, da sie gültige <xref:System.String?displayProperty=nameWithType>-Objekte sind. Leere Zeichenfolgen werden wie folgt initialisiert:  
   
 ```  
 string s = String.Empty;  
 ```  
   
- Im Gegensatz dazu, verweist eine NULL-Zeichenfolge nicht auf eine Instanz eines <xref:System.String?displayProperty=fullName>-Objekts und jeder Versuch, eine Methode für eine NULL-Zeichenfolge aufzurufen, löst eine <xref:System.NullReferenceException> aus. Allerdings können Sie NULL-Zeichenfolgen in Verkettungs- und Vergleichsoperationen mit anderen Zeichenfolgen verwenden. Die folgenden Beispiele veranschaulichen einige Fälle, in denen ein Verweis auf eine NULL-Zeichenfolge nicht dazu führt, dass eine Ausnahme ausgelöst wird:  
+ Im Gegensatz dazu, verweist eine NULL-Zeichenfolge nicht auf eine Instanz eines <xref:System.String?displayProperty=nameWithType>-Objekts und jeder Versuch, eine Methode für eine NULL-Zeichenfolge aufzurufen, löst eine <xref:System.NullReferenceException> aus. Allerdings können Sie NULL-Zeichenfolgen in Verkettungs- und Vergleichsoperationen mit anderen Zeichenfolgen verwenden. Die folgenden Beispiele veranschaulichen einige Fälle, in denen ein Verweis auf eine NULL-Zeichenfolge nicht dazu führt, dass eine Ausnahme ausgelöst wird:  
   
- [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Verwenden von StringBuilder für die schnelle Erstellung von Zeichenfolgen  
  Zeichenfolgenoperationen in .NET werden hochgradig optimiert und wirken sich in den meisten Fällen nicht erheblich auf die Leistung aus. In einigen Szenarios, z.B. in engen Schleifen, die Hunderttausende Male ausgeführt werden, können sich Zeichenfolgenoperationen auf die Leistung auswirken. Die <xref:System.Text.StringBuilder>-Klasse erstellt einen Zeichenfolgenpuffer, der eine verbesserte Leistung mit sich bringt, wenn Ihr Programm viele Zeichenfolgenbearbeitungen durchführt. Mit der <xref:System.Text.StringBuilder>-Zeichenfolge können Sie auch einzelne Zeichen erneut zuweisen, was der integrierte String-Datentyp nicht unterstützt. Dieser Code ändert z.B. den Inhalt einer Zeichenfolge ohne eine neue Zeichenfolge zu erstellen:  
   
- [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
   
  In diesem Beispiel wird ein <xref:System.Text.StringBuilder>-Objekt zum Erstellen einer Zeichenfolge aus einem Satz von numerischen Typen verwendet:  
   
- [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
 ## <a name="strings-extension-methods-and-linq"></a>Zeichenfolgen, Erweiterungsmethoden und LINQ  
  Da der <xref:System.String>-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die Erweiterungsmethode verwenden, die in der <xref:System.Linq.Enumerable>-Klasse auf Zeichenfolgen definiert ist. Um „visuelle Überfrachtung“ zu vermeiden, werden diese Methode für den <xref:System.String>-Typ aus IntelliSense ausgeschlossen, nichtsdestotrotz sind sie weiterhin verfügbar. Sie können auch [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke in Zeichenfolgen verwenden. Weitere Informationen finden Sie unter [LINQ und Zeichenfolgen](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
@@ -147,11 +129,10 @@ string s = String.Empty;
 |[Gewusst wie: Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Erläutert, wie bestimmte Methoden zum Suchen von Zeichenfolgen verwendet werden|  
 |[Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Erläutert, wie reguläre Ausdrücken zum Suchen von Zeichenfolgen verwendet werden|  
 |[Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
-|[Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Zeigt, wie eine Zeichenfolge wie "01/24/2008" in ein <xref:System.DateTime?displayProperty=fullName>-Objekt konvertiert wird|  
-|[Grundlegende Zeichenfolgenoperationen](https://msdn.microsoft.com/library/a292he7t)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=fullName>- und <xref:System.Text.StringBuilder?displayProperty=fullName>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
+|[Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Zeigt, wie eine Zeichenfolge wie "01/24/2008" in ein <xref:System.DateTime?displayProperty=nameWithType>-Objekt konvertiert wird|  
+|[Grundlegende Zeichenfolgenoperationen](https://msdn.microsoft.com/library/a292he7t)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
 |[Analysieren von Zeichenfolgen](https://msdn.microsoft.com/library/b4w53z0y)|Beschreibt, wie Zeichen oder Leerzeichen in eine Zeichenfolge eingefügt werden|  
 |[Vergleichen von Zeichenfolgen](https://msdn.microsoft.com/library/fbh501kz)|Enthält Informationen, wie Zeichenfolgen verglichen werden, und gibt Beispiele in C# und Visual Basic|  
 |[Verwenden der StringBuilder-Klasse](../../../standard/base-types/stringbuilder.md)|Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse|  
 |[LINQ und Zeichenfolgen](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Enthält Informationen zum Ausführen verschiedener Zeichenfolgenoperationen mithilfe von LINQ-Abfragen|  
 |[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)|Enthält Links zu Themen, in denen die Konstrukte der Programmierung in C# beschrieben werden|  
-

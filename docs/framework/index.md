@@ -1,36 +1,28 @@
 ---
 title: .NET Framework 4.7, 4.6 und 4.5
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-f1_keywords:
-- f61f02f2-2f20-483d-8f56-a9c8f3a54986
+ms.custom: updateeachrelease
+f1_keywords: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f22d51a0c4fd4419fe2e499c7b0e96827696bf6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-guide"></a>.NET Framework – Leitfaden
 
 > [!NOTE]
-> Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md). 
+> Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 und 4.7.1. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], den Nebenversionen und .NET Framework 4.7 und 4.7.1 finden Sie unter [Neuerungen in.NET Framework](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
 .NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Web, Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.
 
@@ -65,9 +57,8 @@ Enthält eine Richtlinie für alle wichtigen technologischen Bereiche und Aufgab
 [Extras](../../docs/framework/tools/index.md)  
 Beschreibt die Tools, die Sie beim Entwickeln, Konfigurieren und Bereitstellen von Anwendungen mithilfe der .NET Framework-Technologien unterstützen.  
   
-[.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7)   
+[.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7.1)   
 Stellt Syntax- und Codebeispiele sowie weitere Informationen zu jeder in den .NET Framework-Namespaces enthaltenen Klasse zur Verfügung.  
   
 [Zusätzliche Klassenbibliotheken und APIs](../../docs/framework/additional-apis/index.md)  
-Enthält Dokumentation für Klassen in OOB-Versionen (Out of Band) sowie für Klassen, die auf bestimmte Zielplattformen oder Implementierungen von .NET Framework ausgerichtet sind.
-
+Enthält Dokumentation für Klassen in OOB-Versionen (Out of Band) sowie für Klassen, die bestimmte Zielplattformen oder Implementierungen von .NET Framework als Ziel verwenden.

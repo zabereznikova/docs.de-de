@@ -1,14 +1,10 @@
 ---
 title: C#-Operatoren
-ms.date: 2017-03-09
+ms.date: 03/09/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.operators
-dev_langs:
-- CSharp
+f1_keywords: cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -24,29 +20,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-operators"></a>C#-Operatoren
 C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, welche Operationen (Mathematik, Indizierung, Funktionsaufruf usw.) in einem Ausdruck ausgeführt werden.  Sie können viele Operatoren [überladen](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md), um ihre Bedeutung zu ändern, wenn sie auf einen benutzerdefinierten Typ angewendet werden.  
@@ -221,7 +202,7 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
 ## <a name="arithmetic-overflow"></a>Arithmetischer Überlauf  
  Die arithmetischen Operatoren ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) können Ergebnisse erzeugen, die sich außerhalb des zulässigen Wertebereichs für den betreffenden numerischen Typ befinden. Einzelheiten zu bestimmten Operatoren finden Sie im entsprechenden Abschnitt, grundsätzlich gilt aber:  
   
-- Arithmetischer Überlauf bei ganzen Zahlen löst entweder eine <xref:System.OverflowException> aus oder verwirft die höchstwertigen Bits des Ergebnisses. Division ganzer Zahlen durch Null löst immer eine @System.DivideByZeroException aus.  
+- Arithmetischer Überlauf bei ganzen Zahlen löst entweder eine <xref:System.OverflowException> aus oder verwirft die höchstwertigen Bits des Ergebnisses. Division ganzer Zahlen durch Null löst immer eine <xref:System.DivideByZeroException> aus.  
 
    Wenn ein Überlauf bei ganzen Zahlen auftritt, hängen die Auswirkungen vom Ausführungskontext ab, bei dem es sich um [checked oder unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) handeln kann. In einem "checked"-Kontext wird eine <xref:System.OverflowException> ausgelöst. In einem "unchecked"-Kontext werden die höchstwertigen Bits verworfen, und die Ausführung wird fortgesetzt. Bei C# haben Sie die Wahl, einen Überlauf zu verarbeiten oder zu ignorieren. Standardmäßig erscheinen arithmetische Operationen in einem *unchecked*-Kontext. 
 
@@ -233,8 +214,7 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
   
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md): [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md): [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-

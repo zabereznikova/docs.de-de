@@ -2,13 +2,10 @@
 title: Klassen und Strukturen (C#-Programmierhandbuch)
 description: Beschreibt die Verwendung von Klassen und Strukturen (Strukturen) in C#.
 keywords: Klassen (C#), Strukturen (C#), Verweistypen (C#), Werttypen (C#)
-ms.date: 2016-01-17
+ms.date: 01/17/2016
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -17,29 +14,14 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  
@@ -57,7 +39,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel `CustomClass` in `ProgrammingGuide` weist der Namespace drei Member auf: einen Instanzkonstruktor, eine Eigenschaft mit der Bezeichnung `Number` und eine Methode mit der Bezeichnung `Multiply`. Die `Main`-Methode in der `Program`-Klasse erstellt eine Instanz (Objekt) von `CustomClass`. Auf die Methoden und Eigenschaften des Objekts wird mit der Punktnotation zugegriffen.
   
- [!code-cs[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
+ [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
 ## <a name="encapsulation"></a>Kapselung  
  *Kapselung* wird gelegentlich als erster Pfeiler oder als Prinzip der objektorientierten Programmierung bezeichnet. Dem Prinzip der Kapselung zufolge kann eine Klasse oder Struktur festlegen, inwieweit Code außerhalb der Klasse oder Struktur auf deren Member zugreifen kann. Nicht für die Verwendung von außerhalb der Klasse oder Assembly vorgesehene Methoden und Variablen können versteckt werden, um die Wahrscheinlichkeit von Programmierfehlern und böswilligen Angriffen zu verringern.  
@@ -88,7 +70,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
 -   [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Barrierefreiheit  
- Einige Methoden und Eigenschaften sind für den Aufruf oder Zugriff von als *Clientcode* bezeichnetem Code außerhalb der Klasse oder Struktur vorgesehen. Andere Methoden und Eigenschaften dienen nur der Verwendung in der Klasse oder Struktur selbst. Es ist wichtig, den Zugriff auf den Code einzuschränken, damit nur der Clientcode darauf zugreifen kann, der dafür vorgesehen ist. Inwieweit Clientcode auf die Typen und deren Member zugreifen kann, können Sie mit den Zugriffsmodifizierern [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) `protected internal` und [private](../../../csharp/language-reference/keywords/private.md) festlegen. Die Standardeinstellung für den Zugriff lautet `private`. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Einige Methoden und Eigenschaften sind für den Aufruf oder Zugriff von als *Clientcode* bezeichnetem Code außerhalb der Klasse oder Struktur vorgesehen. Andere Methoden und Eigenschaften dienen nur der Verwendung in der Klasse oder Struktur selbst. Es ist wichtig, den Zugriff auf den Code einzuschränken, damit nur der Clientcode darauf zugreifen kann, der dafür vorgesehen ist. Inwieweit Clientcode auf die Typen und deren Member zugreifen kann, können Sie mit den Zugriffsmodifizierern [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) und [private protected](../../../csharp/language-reference/keywords/private-protected.md) festlegen. Die Standardeinstellung für den Zugriff lautet `private`. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Vererbung  
  Klassen (jedoch nicht Strukturen) unterstützen das Konzept der Vererbung. Eine Klasse, die von einer anderen Klasse (der *Basisklasse*) abgeleitet ist, enthält automatisch alle öffentlichen, geschützten und internen Member der Basisklasse mit Ausnahme der Konstruktoren und Finalizer. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md) und [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -127,4 +109,3 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-

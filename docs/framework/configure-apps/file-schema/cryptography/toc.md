@@ -3,7 +3,7 @@
 ## [<cryptoClass>-Element](cryptoclass-element.md)
 ## [<cryptographySettings>-Element](cryptographysettings-element.md)
 ## [<cryptoNameMapping>-Element](cryptonamemapping-element.md)
-## [<mscorlib>Element für Kryptografieeinstellungen](mscorlib-element-for-cryptography-settings.md)
+## [<mscorlib>-Element für Kryptografieeinstellungen](mscorlib-element-for-cryptography-settings.md)
 ## [<nameEntry>-Element](nameentry-element.md)
 ## [<oidEntry>-Element](oidentry-element.md)
 ## [<oidMap>-Element](oidmap-element.md)

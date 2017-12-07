@@ -15,20 +15,18 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.author: wiwagn
+ms.openlocfilehash: 5ecc77970dbd32ca743bcd09fc63d49299a164a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="c-guide"></a>Leitfaden für C#
 
 Der Leitfaden für C# enthält zahlreiche Informationen über die C#-Sprache. Diese Site weist viele verschiedene Zielgruppen auf. Je nach Ihrer Erfahrung mit der Programmierung bzw. mit der Programmiersprache C# und .NET können Sie auch andere Abschnitte dieses Handbuchs erkunden.
 
 * Für gänzlich unerfahrene Entwickler:
-    - Beginnen Sie mit unserem Abschnitt [Tutorials](tutorials/index.md). Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Sie lernen die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen. Wenn Sie zunächst lieber die Informationen in der Übersicht lesen möchten, testen Sie unsere [Einführung in C#](tour-of-csharp/index.md). Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
+    - Beginnen Sie mit dem Abschnitt [Schnellstarts](quick-starts/index.md). Mit diesen Schnellstarts können Sie die C#-Sprache in Ihrem Browser interaktiv untersuchen. Anschließend können Sie mit dem Abschnitt [Tutorials](tutorials/index.md) fortfahren. Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Sie lernen die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen. Wenn Sie zunächst lieber die Informationen in der Übersicht lesen möchten, testen Sie unsere [Einführung in C#](tour-of-csharp/index.md). Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
 
 * Für neue C#-Entwickler: 
     - Wenn Sie vorher schon entwickelt haben, aber neu bei C# sind, lesen Sie einfach die [Einführung in C#](tour-of-csharp/index.md). Sie lernen die grundlegende Syntax und Struktur der Sprache kennen und können die Einführung verwenden, um die Unterschiede zwischen C# und anderen von Ihnen verwendeten Sprachen kennenzulernen. Sie können auch die [Tutorials](tutorials/index.md) durchsuchen, um grundlegende C#-Programme zu testen.
@@ -77,6 +75,5 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
     - Verknüpfung zur neuesten Version der C#-Spezifikationen im Microsoft Word-Format.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
  [.NET-Entwicklung](https://msdn.microsoft.com/library/ff361664)
-

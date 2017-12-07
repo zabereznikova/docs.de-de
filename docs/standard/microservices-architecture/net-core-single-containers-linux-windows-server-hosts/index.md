@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Bereitstellen von einzelnen auf Containern basierenden .NET Core-Webanwendungen auf Linux- oder Windows Nano Server-Hosts
 
@@ -45,7 +44,7 @@ Die [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/mas
 
 Die Anwendung verwendet eine SQL Server-Datenbank für den Katalogspeicher. In auf Containern basierten Bereitstellungen kann diese monolithische Anwendung auf denselben Datenspeicher wie die auf Microservices basierte Anwendung zugreifen. Die Anwendung wird dafür konfiguriert, SQL Server in einem Container neben der monolithischen Anwendung auszuführen. In einer Produktionsumgebung wird SQL Server auf einem Hochverfügbarkeitscomputer außerhalb des Docker-Hosts ausgeführt. Zur Vereinfachung wird empfohlen, SQL Server in einer Entwicklungs- oder Testumgebung in einem eigenen Container auszuführen.
 
-Die anfänglich festgelegten Features ermöglichen nur das Durchsuchen des Katalogs. Updates aktivieren die vollständige Featuregruppe der Containeranwendung. Eine erweiterte Architektur einer monolithischen Webanwendung wird im E-Book [ASP.NET Web Application architecture practices (Architekturmethoden für ASP.NET-Webanwendungen)](https://aka.ms/webappebook) und in der zugehörigen [eShopOnWeb-Beispielanwendung](http://aka.ms/WebAppArchitecture) beschrieben. In diesem Fall wird diese jedoch nicht in Docker-Containern ausgeführt, da das Szenario sich auf die reine Webentwicklung mit ASP.NET Core konzentriert.
+Die anfänglich festgelegten Features ermöglichen nur das Durchsuchen des Katalogs. Updates aktivieren die vollständige Featuregruppe der Containeranwendung. Eine erweiterte Architektur einer monolithischen Webanwendung wird im E-Book [Architekturmethoden für ASP.NET-Webanwendungen](https://aka.ms/webappebook) und in der zugehörigen [eShopOnWeb-Beispielanwendung](http://aka.ms/WebAppArchitecture) beschrieben. In diesem Fall wird diese jedoch nicht in Docker-Containern ausgeführt, da das Szenario sich auf die reine Webentwicklung mit ASP.NET Core konzentriert.
 
 Die vereinfachte Version, die in eShopOnContainers (eShopWeb) verfügbar ist, wird jedoch in einem Docker-Container ausgeführt.
 
@@ -119,6 +118,8 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**Hinweis**: Ab .NET Core 2.0 wird der Befehl „dotnet restore“ automatisch beim Ausführen von „dotnet publish“ ausgeführt.
+
 Beachten Sie, dass das Image ein ASP.NET Core-Buildimage ist. Dieses Image enthält das SDK und Buildtools, um Ihre Anwendung und die erforderlichen Images zu erstellen. Das Ausführen des **Docker-Compose**-Projekts mit dieser Datei startet den Buildcontainer aus dem Image und erstellt dann das Image der Anwendung in diesem Container. Sie geben die Docker-Compose-Datei als Teil der Befehlszeile an, um Ihre Anwendung in einem Docker-Container zu erstellen und diese anschließend zu starten.
 
 In Visual Studio können Sie Ihre Anwendung in Docker-Containern starten, indem Sie das **Docker-Compose**-Projekt als Startprojekt auswählen und dann wie bei jeder anderen Anwendung STRG+F5 (F5 zum Debuggen) drücken. Wenn Sie das **Docker-Compose**-Projekt starten, führt Visual Studio **Docker-Compose** mithilfe der Dateien „docker-compose.yml“ und „compose.override.yml“ sowie einer der docker-compose.vs.\*-Dateien aus. Nachdem die Anwendung gestartet wurde, startet Visual Studio den Browser für Sie.
@@ -145,4 +146,3 @@ Der Assistent, der die Docker-Unterstützung hinzufügt, kommuniziert mit dem au
 
 >[!div class="step-by-step"]
 [Zurück] (../docker-application-development-process/docker-app-development-workflow.md) [Weiter] (../containerize-net-framework-applications/index.md)
-

@@ -7,13 +7,11 @@ ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
+ms.openlocfilehash: e54cabe67558300b5c5fb9552d78397850d4c782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: e43f72ebd26c34636c239d8ac9f749d52d3f60a0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="whats-new-in-net-core"></a>Neuigkeiten in .NET Core
 
@@ -24,19 +22,21 @@ ms.lasthandoff: 08/14/2017
 - [Plattformverbesserungen](#platform-improvements)
 - [API-Änderungen](#api-changes-and-library-support)
 - [Integration von Visual Studio](#visual-studio-integration)
-- [Dokumentationsverbesserungen](#documentation-improvements) 
+- [Dokumentationsverbesserungen](#documentation-improvements)
 
 ## <a name="tooling"></a>Tools
 
 ### <a name="dotnet-restore-runs-implicitly"></a>„dotnet restore“ wird implizit ausgeführt.
 
-In früheren Versionen von .NET Core mussten Sie den [dotnet restore](../tools/dotnet-restore.md)-Befehl sowohl ausführen, um Abhängigkeiten sofort nach der Erstellung eines neuen Projekts mit dem [dotnet new](../tools/dotnet-new.md)-Befehl herunterzuladen, als auch immer dann, wenn Sie dem Projekt eine neue Abhängigkeit hinzugefügt hatten. In .NET Core 2.0 wird `dotnet restore` implizit immer dann ausgeführt, wenn der `dotnet new`-Befehl ausgeführt wird. Der Befehl wird auch dann implizit ausgeführt, wenn Abhängigkeiten aufgrund der Ausführung anderer Befehle wie `run`, `build` und `publish` aktualisiert werden müssen.
+In früheren Versionen von .NET Core mussten Sie den [dotnet restore](../tools/dotnet-restore.md)-Befehl sowohl ausführen, um Abhängigkeiten sofort nach der Erstellung eines neuen Projekts mit dem [dotnet new](../tools/dotnet-new.md)-Befehl herunterzuladen, als auch immer dann, wenn Sie dem Projekt eine neue Abhängigkeit hinzugefügt hatten.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Sie können den automatischen Aufruf von `dotnet restore` auch deaktivieren, indem Sie die Befehlszeilenoption `--no-restore` den Befehlen `new`, `run`, `build`, `publish`, `pack` und `test` übergeben. 
 
 ### <a name="retargeting-to-net-core-20"></a>Neuzuweisung zu .NET Core 2.0
 
-Wenn .NET Core 2.0 SDK installiert ist, können Projekte, die .NET Core 1.x zugewiesen sind, .NET Core 2.0 neu zugewiesen werden. 
+Wenn .NET Core 2.0 SDK installiert ist, können Projekte, die .NET Core 1.x zugewiesen sind, .NET Core 2.0 neu zugewiesen werden.
 
 Bearbeiten Sie Ihre Projektdatei für die Neuzuweisung zu .NET Core 2.0 durch Ändern des Werts des `<TargetFramework>`-Elements (oder `<TargetFrameworks>`-Elements, wenn Ihre Projektdatei mehrere Zuweisungen enthält) von 1.x in 2.0:
 
@@ -68,7 +68,7 @@ Mit Version 2.0 unterstützt .NET Core jetzt Visual Basic 2017. Sie können Visu
 - .NET Core-Klassenbibliotheken
 - .NET Standard-Klassenbibliotheken
 - .NET Core-Komponententestprojekte
-- .NET Core-xUnit-Testprojekte 
+- .NET Core-xUnit-Testprojekte
 
 Führen Sie z.B. zum Erstellen einer „Hello World“-Anwendung in Visual Basic die folgenden Schritte in der Befehlszeile aus:
 
@@ -77,7 +77,7 @@ Führen Sie z.B. zum Erstellen einer „Hello World“-Anwendung in Visual Basic
 1. Geben Sie den Befehl `dotnet new console -lang vb` ein.
 
    Der Befehl erstellt eine Projektdatei mit einer `.vbproj`-Erweiterung zusammen mit einer Visual Basic-Quellcodedatei mit dem Namen *Program.vb*. Diese Datei enthält den Quellcode, um die Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen.
-  
+
 1.  Geben Sie den Befehl `dotnet run` ein. Die [.NET Core-CLI-Tools](../tools/index.md) kompilieren die Anwendung automatisch und führen sie aus, um die Meldung „Hello World!“ im Konsolenfenster anzuzeigen.
 
 ### <a name="support-for-c-71"></a>Unterstützung für C# 7.1
@@ -98,11 +98,11 @@ Führen Sie z.B. zum Erstellen einer „Hello World“-Anwendung in Visual Basic
 
 .NET Core 2.0 bietet eine einzelne Linux-Implementierung, die für mehrere Linux-Distributionen verwendet werden kann. .NET Core 1.x setzte das Herunterladen einer distributionsspezifischen Linux-Implementierung voraus.
 
-Sie können auch Apps entwickeln, die für das Betriebssystem Linux im Allgemeinen vorgesehen sind. .NET Core 1.x setzte voraus, dass Sie für jede Linux-Distribution separat entwickeln. 
+Sie können auch Apps entwickeln, die für das Betriebssystem Linux im Allgemeinen vorgesehen sind. .NET Core 1.x setzte voraus, dass Sie für jede Linux-Distribution separat entwickeln.
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>Unterstützung der kryptografischen Apple-Bibliotheken
 
-.NET Core 1.x auf macOS setzte die kryptografische Bibliothek des OpenSSL-Toolkits voraus. .NET Core 2.0 verwendet die kryptografischen Apple-Bibliotheken und benötigt OpenSSL nicht, sodass Sie auf dessen Installation zukünftig verzichten können. 
+.NET Core 1.x auf macOS setzte die kryptografische Bibliothek des OpenSSL-Toolkits voraus. .NET Core 2.0 verwendet die kryptografischen Apple-Bibliotheken und benötigt OpenSSL nicht, sodass Sie auf dessen Installation zukünftig verzichten können.
 
 ## <a name="api-changes-and-library-support"></a>API-Änderungen und Bibliotheksunterstützung
 
@@ -118,7 +118,9 @@ Eine Liste der APIs, die .NET Standard seit der letzten Version, .NET Standard 1
 
 ### <a name="expanded-surface-area"></a>Erweiterte Oberfläche
 
-Die Gesamtanzahl der in .NET Core 2.0 verfügbaren APIs hat sich im Vergleich zu .NET Core 1.1 mehr als verdoppelt. 
+Die Gesamtanzahl der in .NET Core 2.0 verfügbaren APIs hat sich im Vergleich zu .NET Core 1.1 mehr als verdoppelt.
+
+Und mit dem [Windows Compatibility Pack](../porting/windows-compat-pack.md) ist die Portierung aus .NET Framework ebenfalls viel einfacher geworden.
 
 ### <a name="support-for-net-framework-libraries"></a>Unterstützung für .NET Framework-Bibliotheken
 
@@ -130,13 +132,13 @@ Visual Studio 2017 Version 15.3 und in einigen Fällen Visual Studio für Mac bi
 
 ### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>Neuzuweisung von .NET Core-Apps und .NET Standard-Bibliotheken
 
-Wenn das .NET Core 2.0 SDK installiert ist, können Sie Projekte von .NET Core 1.x zu .NET Core 2.0 und .NET Standard 1.x-Bibliotheken zu .NET-Standard 2.0 neu zuweisen. 
+Wenn das .NET Core 2.0 SDK installiert ist, können Sie Projekte von .NET Core 1.x zu .NET Core 2.0 und .NET Standard 1.x-Bibliotheken zu .NET-Standard 2.0 neu zuweisen.
 
 Um Ihr Projekt in Visual Studio neu zuzuweisen, öffnen Sie die Registerkarte **Anwendung** des Eigenschaftendialogfelds des Projekts und ändern den Wert **Zielframework** in **.NET Core 2.0** oder **.NET Standard 2.0**. Sie können es auch ändern, indem Sie mit der rechten Maustaste auf das Projekt klicken und die Option **\*.csproj-Datei bearbeiten** auswählen. Weitere Informationen finden Sie weiter oben in diesem Thema im Abschnitt [Tools](#tooling).
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Live Unit Testing-Unterstützung für .NET Core
 
-Wenn Sie Ihren Code ändern, führt Live Unit Testing automatisch alle betroffenen Komponententests im Hintergrund aus und zeigt die Ergebnisse und die Codeabdeckung in der Visual Studio-Umgebung live an. .NET Core 2.0 unterstützt jetzt Live Unit Testing. Bisher war Live Unit Testing nur für .NET Framework-Anwendungen verfügbar. 
+Wenn Sie Ihren Code ändern, führt Live Unit Testing automatisch alle betroffenen Komponententests im Hintergrund aus und zeigt die Ergebnisse und die Codeabdeckung in der Visual Studio-Umgebung live an. .NET Core 2.0 unterstützt jetzt Live Unit Testing. Bisher war Live Unit Testing nur für .NET Framework-Anwendungen verfügbar.
 
 Weitere Informationen finden Sie unter [Live Unit Testing mit Visual Studio 2017](/visualstudio/test/live-unit-testing) und [Live Unit Testing – häufig gestellte Fragen](/visualstudio/test/live-unit-testing-faq).
 
@@ -144,7 +146,7 @@ Weitere Informationen finden Sie unter [Live Unit Testing mit Visual Studio 2017
 
 Wenn Sie ein Projekt für mehrere Zielframeworks erstellen, können Sie nun die Zielplattform im Hauptebenenmenü auswählen. In der folgenden Abbildung ist ein Projekt namens SCD1 für 64-Bit-Mac OS X 10.11 (`osx.10.11-x64`) und 64-Bit-Windows 10/Windows Server 2016 (`win10-x64`) bestimmt. Sie können das Zielframework vor der Projektschaltfläche auswählen, in diesem Fall zum Ausführen eines Debugbuilds.
 
-![Auswahl des Zielframeworks beim Erstellen eines Projekts](media/multitarget.png) 
+![Auswahl des Zielframeworks beim Erstellen eines Projekts](media/multitarget.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Parallele Unterstützung für .NET Core-SDKs
 
@@ -154,7 +156,7 @@ Sie können das .NET Core-SDK jetzt unabhängig von Visual Studio installieren. 
 
 ### <a name="net-application-architecture"></a>.NET-Anwendungsarchitektur
 
-[.NET-Anwendungsarchitektur](https://www.microsoft.com/net/learn/architecture) ermöglicht Ihnen Zugriff auf einen Satz von eBooks, die Hilfestellung, bewährte Methoden und Beispielanwendungen zur Verwendung von .NET beim Erstellen folgender Software bieten:
+[.NET-Anwendungsarchitektur](https://www.microsoft.com/net/learn/architecture) ermöglicht Ihnen Zugriff auf eine Sammlung von E-Books, die Hilfestellung, bewährte Methoden und Beispielanwendungen zur Verwendung von .NET beim Erstellen folgender Software bieten:
 
 - Microservices und Docker-Container.
 - Webanwendungen mit ASP.NET.
@@ -163,4 +165,3 @@ Sie können das .NET Core-SDK jetzt unabhängig von Visual Studio installieren. 
 
 ## <a name="see-also"></a>Siehe auch
  [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Neuigkeiten in ASP.NET Core 2.0)
-

@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 246605b301f6bcea4cced2cb7d1c494e9f66aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 360b4745e768a751154f3f1445ffb0bf5b62c825
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Architekturcontainer und auf Microservice basierende Anwendungen
 
@@ -29,11 +28,10 @@ Im Containermodell stellt eine Instanz eines Containerimages einen einzelnen Pro
 
 Wenn Sie ein Containerimage entworfen haben, wird Ihnen die Definition [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/) in der Dockerfile angezeigt. Dadurch wird der Prozess definiert, dessen Lebensdauer die Lebensdauer des Containers steuert. Wenn der Prozess abgeschlossen ist, endet der Lebenszyklus des Containers. Container können langlebige Prozesse wie Webserver, aber auch kurzlebige Prozesse wie Batchaufträge (früher als Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources) implementiert) darstellen.
 
-Wenn der Prozess fehlschlägt, wird der Container angehalten und der Orchestrator übernimmt seinen Platz. Wenn der Orchestrator dafür konfiguriert wurde, fünf Instanzen auszuführen und eine davon fehlschlägt, erstellt der Orchestrator eine andere Containerinstanz, um den fehlgeschlagenen Prozess zu ersetzen. In einem Batchauftrag wird der Prozess mit Parametern gestartet. Wenn der Prozess abgeschlossen ist, ist die Arbeit abgeschlossen.
+Wenn der Prozess fehlschlägt, wird der Container angehalten und der Orchestrator übernimmt seinen Platz. Wenn der Orchestrator dafür konfiguriert wurde, fünf Instanzen auszuführen und eine davon fehlschlägt, erstellt der Orchestrator eine andere Containerinstanz, um den fehlgeschlagenen Prozess zu ersetzen. In einem Batchauftrag wird der Prozess mit Parametern gestartet. Wenn der Prozess abgeschlossen ist, ist die Arbeit abgeschlossen. Dieser Leitfaden geht zu einem späteren Zeitpunkt ausführlich auf Orchestratoren ein.
 
 Es gibt Szenarios, in denen mehrere Prozesse in einem einzigen Container ausgeführt werden sollen. Da es nur einen Einstiegspunkt pro Container geben kann, können Sie für dieses Szenario ein Skript innerhalb des Containers ausführen, das so viele Programme wie benötigt startet. Sie können beispielsweise [Supervisor](http://supervisord.org/) oder ein ähnliches Tool verwenden, um mehrere Prozesse innerhalb eines einzigen Containers zu starten. Obwohl es Architekturen gibt, die mehrere Prozesse pro Container enthalten können, ist dieser Ansatz nicht üblich.
 
 
 >[!div class="step-by-step"]
 [Zurück] (../net-core-net-framework-containers/official-net-docker-images.md) [Weiter] (containerize-monolithic-applications.md)
-

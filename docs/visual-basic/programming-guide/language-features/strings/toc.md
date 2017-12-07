@@ -4,6 +4,7 @@
 ### [Verschiedene Typen von Methoden zur Zeichenfolgenbearbeitung](types-of-string-manipulation-methods.md)
 ### [Nothing und Zeichenfolgen](nothing-and-strings.md)
 ### [Auswirkungen der Kultur auf Zeichenfolgen](how-culture-affects-strings.md)
+### [Interpolierte Zeichenfolgen](interpolated-strings.md)
 ### [Nullbasierter und 1-basierter Zeichenfolgenzugriff](zero-based-vs-one-based-string-access.md)
 ## [Gewusst wie: Erstellen von Zeichenfolgen mit StringBuilder](how-to-create-strings-using-a-stringbuilder.md)
 ## [Gewusst wie: Suchen innerhalb einer Zeichenfolge](how-to-search-within-a-string.md)

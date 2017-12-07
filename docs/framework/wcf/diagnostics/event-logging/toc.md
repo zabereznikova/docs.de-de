@@ -1,4 +1,4 @@
-# [Protokollierung von Komponentenereignissen](index.md)
+# [Ereignisprotokollierung](index.md)
 ## [Allgemeine Referenz zu Ereignissen](events-general-reference.md)
 ### [BindingError](bindingerror.md)
 ### [ComPlusDllHostInitializerStartingError](complusdllhostinitializerstartingerror.md)

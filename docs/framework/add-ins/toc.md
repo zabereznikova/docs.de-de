@@ -1,3 +1,3 @@
 # [Add-Ins und Erweiterbarkeit](index.md)
-## [Pipeline-Entwicklung](pipeline-development.md)
-## [Exemplarische Vorgehensweise: Erstellen einer erweiterbaren Anwendung](walkthrough-create-extensible-app.md)
+## [Pipelineentwicklung](pipeline-development.md)
+## [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](walkthrough-create-extensible-app.md)

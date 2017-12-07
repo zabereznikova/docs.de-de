@@ -1,7 +1,7 @@
 # [Muster für die asynchrone Programmierung](index.md)
 ## [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)
 ### [Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](implementing-the-task-based-asynchronous-pattern.md)
-### [Consuming the Task-based Asynchronous Pattern](consuming-the-task-based-asynchronous-pattern.md)
+### [Nutzen des aufgabenbasierten asynchronen Musters](consuming-the-task-based-asynchronous-pattern.md)
 ### [Interoperabilität mit anderen asynchronen Mustern und Typen](interop-with-other-asynchronous-patterns-and-types.md)
 ## [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md)
 ### [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
