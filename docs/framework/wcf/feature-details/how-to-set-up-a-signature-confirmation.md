@@ -1,56 +1,62 @@
 ---
-title: "Vorgehensweise: Einrichten einer Signaturbest&#228;tigung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Signaturbestätigung"
-  - "WCF, Sicherheit"
+title: "Vorgehensweise: Einrichten einer Signaturbestätigung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- signature confirmation
+- WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fced2ddd16ae244e2ea3d945082f48ffd23302e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/02/2017
 ---
-# Vorgehensweise: Einrichten einer Signaturbest&#228;tigung
-*Signaturbestätigung* ist ein Mechanismus für einen Nachrichteninitiator, um sicherzustellen, dass eine empfangene Antwort als Antwort auf die ursprüngliche Nachricht des Absenders generiert wurde.Die Signaturbestätigung wird in der WS\-Sicherheit 1.1\-Spezifikation definiert.Wenn ein Endpunkt WS\-Sicherheit 1.0 unterstützt, können Sie keine Signaturbestätigung verwenden.  
+# <a name="how-to-set-up-a-signature-confirmation"></a>Vorgehensweise: Einrichten einer Signaturbestätigung
+*Signaturbestätigung* ist ein Mechanismus für einen nachrichteninitiator, um sicherzustellen, dass eine empfangene Antwort als Antwort auf die ursprüngliche Nachricht des Absenders generiert wurde. Die Signaturbestätigung wird in der WS-Sicherheit 1.1-Spezifikation definiert. Wenn ein Endpunkt WS-Sicherheit 1.0 unterstützt, können Sie keine Signaturbestätigung verwenden.  
   
- In den folgenden Verfahren wird beschrieben, wie die Signaturbestätigung mit <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> aktiviert wird.Sie können das gleiche Verfahren mit <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwenden.Das Verfahren baut auf den grundlegenden Schritten auf, die in [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) beschrieben werden.  
+ In den folgenden Verfahren wird beschrieben, wie die Signaturbestätigung mit <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> aktiviert wird. Sie können das gleiche Verfahren mit <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwenden. Die Prozedur basiert, auf die grundlegenden Schritte, die im gefunden [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-### So aktivieren Sie die Signaturbestätigung in Code  
+### <a name="to-enable-signature-confirmation-in-code"></a>So aktivieren Sie die Signaturbestätigung in Code  
   
-1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>\-Klasse.  
+1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse.  
   
-2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>\-Klasse.  
+2.  Erstellen Sie eine Instanz von der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Klasse.  
   
 3.  Legen Sie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> auf `true` fest  
   
 4.  Fügen Sie der Bindungsauflistung das Sicherheitselement hinzu.  
   
-5.  Erstellen Sie eine benutzerdefinierte Bindung, wie in [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) angegeben.  
+5.  Erstellen Sie eine benutzerdefinierte Bindung gemäß [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-### So aktivieren Sie die Signaturbestätigung in der Konfiguration  
+### <a name="to-enable-signature-confirmation-in-configuration"></a>So aktivieren Sie die Signaturbestätigung in der Konfiguration  
   
-1.  Fügen Sie dem `<customBinding>`\-Abschnitt der Konfigurationsdatei ein `<bindings>`\-Element hinzu.  
+1.  Fügen Sie dem `<customBinding>``<bindings>`-Abschnitt der Konfigurationsdatei ein -Element hinzu.  
   
-2.  Fügen Sie ein `<binding>`\-Element hinzu, und legen Sie das Namensattribut auf einen passenden Wert fest.  
+2.  Fügen Sie ein `<binding>`-Element hinzu, und legen Sie das Namensattribut auf einen passenden Wert fest.  
   
-3.  Fügen Sie ein entsprechendes Codierungselement hinzu.Im folgenden Beispiel wird ein `<TextMessageEncoding>`\-Element hinzugefügt.  
+3.  Fügen Sie ein entsprechendes Codierungselement hinzu. Im folgenden Beispiel wird ein `<TextMessageEncoding>`-Element hinzugefügt.  
   
-4.  Fügen Sie ein untergeordnetes `<security>``requireSignatureConfirmation-Element hinzu, und legen Sie das` `true-Attribut auf`  fest.  
+4.  Hinzufügen einer `<security>` untergeordnete Element, und legen die `requireSignatureConfirmation` -Attribut `true`.  
   
-5.  Optional.Wenn Sie die Signaturbestätigung während des Bootstraps aktivieren möchten, fügen Sie ein untergeordnetes [\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)\-Element hinzu, und legen Sie das `equireSignatureConfirmation`\-Attribut auf `true` fest.  
+5.  Dies ist optional. Um während der Bootstrap-signaturbestätigung zu aktivieren, fügen einen [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) untergeordnete Element, und legen die `equireSignatureConfirmation` -Attribut auf `true`.  
   
-6.  Fügen Sie ein entsprechendes Transportelement hinzu.Im folgenden Beispiel wird ein [\<httpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) hinzugefügt:  
+6.  Fügen Sie ein entsprechendes Transportelement hinzu. Im folgenden Beispiel wird ein [ \<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
-    ```  
+    ```xml  
     <bindings>  
       <customBinding>  
         <binding name="SignatureConfirmationBinding">  
@@ -64,15 +70,15 @@ caps.handback.revision: 11
     </bindings>  
     ```  
   
-## Beispiel  
- Der folgende Code erstellt eine Instanz von <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und legt die <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>\-Eigenschaft auf `true` fest.Beachten Sie, dass in diesem Beispiel das im vorangehenden Beispiel gezeigte `<secureConversationBootstrap>`\-Element nicht verwendet wird.In diesem Beispiel wird die Signaturbestätigung veranschaulicht, wenn ein Windows\-\(Kerberos\-Protokoll\)\-Token verwendet wird.In diesem Fall wird die Signatur des Clients in allen Antworten vom Dienst zurückgegeben und vom Client bestätigt.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code erstellt eine Instanz von <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und legt die <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>-Eigenschaft auf `true` fest. Beachten Sie, dass in diesem Beispiel das im vorangehenden Beispiel gezeigte `<secureConversationBootstrap>`-Element nicht verwendet wird. In diesem Beispiel wird die Signaturbestätigung veranschaulicht, wenn ein Windows-(Kerberos-Protokoll)-Token verwendet wird. In diesem Fall wird die Signatur des Clients in allen Antworten vom Dienst zurückgegeben und vom Client bestätigt.  
   
  [!code-csharp[c_SignatureConfirmation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_signatureconfirmation/cs/source.cs#1)]
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
-## Siehe auch  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>   
- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>  
+ [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
