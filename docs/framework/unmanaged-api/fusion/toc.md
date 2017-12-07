@@ -36,7 +36,7 @@
 #### [GetReference-Methode](iinstallreferenceitem-getreference-method.md)
 ### [IReferenceAppId-Schnittstelle](ireferenceappid-interface.md)
 ### [IReferenceIdentity-Schnittstelle](ireferenceidentity-interface.md)
-## [Globale statische Fusionsfunktionen](fusion-global-static-functions.md)
+## [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
 ### [ClearDownloadCache-Funktion](cleardownloadcache-function.md)
 ### [CompareAssemblyIdentity-Funktion](compareassemblyidentity-function.md)
 ### [CreateApplicationContext-Funktion](createapplicationcontext-function.md)

@@ -17,66 +17,64 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-# <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
+# <a name="handling-and-throwing-exceptions-in-net"></a><span data-ttu-id="9f30c-102">Behandeln und Auslösen von Ausnahmen in .NET</span><span class="sxs-lookup"><span data-stu-id="9f30c-102">Handling and throwing exceptions in .NET</span></span>
 
-Anwendungen müssen in der Lage sein, Fehler zu behandeln, die während der Ausführung konsistent auftreten.  .NET bietet ein Modell, um Anwendungen auf einheitliche Weise über Fehler zu benachrichtigen: .NET-Vorgänge geben Fehler durch Auslösen von Ausnahmen an.
+<span data-ttu-id="9f30c-103">Anwendungen müssen in der Lage sein, Fehler zu behandeln, die während der Ausführung konsistent auftreten. </span><span class="sxs-lookup"><span data-stu-id="9f30c-103">Applications must be able to handle errors that occur during execution in a consistent manner.</span></span> <span data-ttu-id="9f30c-104">.NET bietet ein Modell, um Anwendungen auf einheitliche Weise über Fehler zu benachrichtigen: .NET-Vorgänge geben Fehler durch Auslösen von Ausnahmen an.</span><span class="sxs-lookup"><span data-stu-id="9f30c-104">.NET provides a model for notifying applications of errors in a uniform way: .NET operations indicate failure by throwing exceptions.</span></span>
 
-## <a name="exceptions"></a>Ausnahmen
+## <a name="exceptions"></a><span data-ttu-id="9f30c-105">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-105">Exceptions</span></span>
 
-Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verhalten beim Ausführen eines Programms. Ausnahmen können durch Fehler in Ihrem oder in aufgerufenem Code (z.B. bei freigegebenen Bibliotheken), nicht verfügbare Betriebssystemressourcen, unerwartete, von der Runtime festgestellte Fehlerzustände (z.B. durch nicht überprüfbaren Code) und andere Ereignisse ausgelöst werden. Anwendungen können in einigen, aber nicht allen Fällen wiederhergestellt werden. Obwohl bei den meisten Anwendungsausnahmen eine Wiederherstellung möglich ist, ist dies beim Großteil der Laufzeitausnahmen nicht der Fall.
+<span data-ttu-id="9f30c-106">Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verhalten beim Ausführen eines Programms.</span><span class="sxs-lookup"><span data-stu-id="9f30c-106">An exception is any error condition or unexpected behavior that is encountered by an executing program.</span></span> <span data-ttu-id="9f30c-107">Ausnahmen können durch Fehler in Ihrem oder in aufgerufenem Code (z.B. bei freigegebenen Bibliotheken), nicht verfügbare Betriebssystemressourcen, unerwartete, von der Runtime festgestellte Fehlerzustände (z.B. durch nicht überprüfbaren Code) und andere Ereignisse ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="9f30c-107">Exceptions can be thrown because of a fault in your code or in code that you call (such as a shared library), unavailable operating system resources, unexpected conditions that the runtime encounters (such as code that cannot be verified), and so on.</span></span> <span data-ttu-id="9f30c-108">Anwendungen können in einigen, aber nicht allen Fällen wiederhergestellt werden.</span><span class="sxs-lookup"><span data-stu-id="9f30c-108">Your application can recover from some of these conditions, but not from others.</span></span> <span data-ttu-id="9f30c-109">Obwohl bei den meisten Anwendungsausnahmen eine Wiederherstellung möglich ist, ist dies beim Großteil der Laufzeitausnahmen nicht der Fall.</span><span class="sxs-lookup"><span data-stu-id="9f30c-109">Although you can recover from most application exceptions, you cannot recover from most runtime exceptions.</span></span>
 
-In .NET stellt eine Ausnahme ein Objekt dar, das von der [System.Exception](xref:System.Exception)-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
+<span data-ttu-id="9f30c-110">In .NET ist eine Ausnahme ein Objekt, das von der <xref:System.Exception?displayProperty=nameWithType>-Klasse erbt.</span><span class="sxs-lookup"><span data-stu-id="9f30c-110">In .NET, an exception is an object that inherits from the <xref:System.Exception?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="9f30c-111">Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="9f30c-111">An exception is thrown from an area of code where a problem has occurred.</span></span> <span data-ttu-id="9f30c-112">Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.</span><span class="sxs-lookup"><span data-stu-id="9f30c-112">The exception is passed up the stack until the application handles it or the program terminates.</span></span>
 
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden
+## <a name="exceptions-vs-traditional-error-handling-methods"></a><span data-ttu-id="9f30c-113">Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden</span><span class="sxs-lookup"><span data-stu-id="9f30c-113">Exceptions vs. traditional error-handling methods</span></span>
 
-Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und -behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems. Die Art und Weise, in der die Ausnahmebehandlung in .NET implementiert ist, bietet folgende Vorteile:
+<span data-ttu-id="9f30c-114">Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und -behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems.</span><span class="sxs-lookup"><span data-stu-id="9f30c-114">Traditionally, a language's error-handling model relied on either the language's unique way of detecting errors and locating handlers for them, or on the error-handling mechanism provided by the operating system.</span></span> <span data-ttu-id="9f30c-115">Die Art und Weise, in der die Ausnahmebehandlung in .NET implementiert ist, bietet folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="9f30c-115">The way .NET implements exception handling provides the following advantages:</span></span>
 
-- Das Auslösen und Behandeln von Ausnahmen funktioniert für alle .NET-Programmiersprachen gleich.
+- <span data-ttu-id="9f30c-116">Das Auslösen und Behandeln von Ausnahmen funktioniert für alle .NET-Programmiersprachen gleich.</span><span class="sxs-lookup"><span data-stu-id="9f30c-116">Exception throwing and handling works the same for .NET programming languages.</span></span>
 
-- Eine besondere Sprachsyntax ist für die Ausnahmebehandlung nicht erforderlich, trotzdem kann jede Sprache ihre eigene Syntax definieren.
+- <span data-ttu-id="9f30c-117">Eine besondere Sprachsyntax ist für die Ausnahmebehandlung nicht erforderlich, trotzdem kann jede Sprache ihre eigene Syntax definieren.</span><span class="sxs-lookup"><span data-stu-id="9f30c-117">Does not require any particular language syntax for handling exceptions, but allows each language to define its own syntax.</span></span>
 
-- Ausnahmen können prozess- und sogar computerübergreifend ausgelöst werden.
+- <span data-ttu-id="9f30c-118">Ausnahmen können prozess- und sogar computerübergreifend ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="9f30c-118">Exceptions can be thrown across process and even machine boundaries.</span></span>
 
-- Einer Anwendung kann Ausnahmebehandlungscode hinzugefügt werden, um die Programmzuverlässigkeit zu erhöhen.
+- <span data-ttu-id="9f30c-119">Einer Anwendung kann Ausnahmebehandlungscode hinzugefügt werden, um die Programmzuverlässigkeit zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="9f30c-119">Exception-handling code can be added to an application to increase program reliability.</span></span>
 
-Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerbenachrichtigung, z.B. Rückgabecodes. Fehler bleiben nicht unerkannt, da die Runtime Ihre Anwendung beendet, wenn eine Ausnahme ausgelöst wurde und diese nicht behandelt wird. Ungültige Werte werden nicht weiter im System weitergegeben – was passieren kann, wenn im Code nicht geprüft wird, ob ein Fehlerrückgabecode vorhanden ist. 
+<span data-ttu-id="9f30c-120">Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerbenachrichtigung, z.B. Rückgabecodes.</span><span class="sxs-lookup"><span data-stu-id="9f30c-120">Exceptions offer advantages over other methods of error notification, such as return codes.</span></span> <span data-ttu-id="9f30c-121">Fehler bleiben nicht unerkannt, da die Runtime Ihre Anwendung beendet, wenn eine Ausnahme ausgelöst wurde und diese nicht behandelt wird.</span><span class="sxs-lookup"><span data-stu-id="9f30c-121">Failures do not go unnoticed because if an exception is thrown and you don't handle it, the runtime terminates your application.</span></span> <span data-ttu-id="9f30c-122">Ungültige Werte werden nicht weiter im System weitergegeben – was passieren kann, wenn im Code nicht geprüft wird, ob ein Fehlerrückgabecode vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="9f30c-122">Invalid values do not continue to propagate through the system as a result of code that fails to check for a failure return code.</span></span> 
 
-## <a name="common-exceptions"></a>Allgemeine Ausnahmen
+## <a name="common-exceptions"></a><span data-ttu-id="9f30c-123">Allgemeine Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-123">Common Exceptions</span></span>
 
-In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgeführt, die die Ausnahmen verursachen können.
+<span data-ttu-id="9f30c-124">In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgeführt, die die Ausnahmen verursachen können.</span><span class="sxs-lookup"><span data-stu-id="9f30c-124">The following table lists some common exceptions with examples of what can cause them.</span></span>
 
-| Ausnahmetyp | Basistyp | Beschreibung | Beispiel |
+| <span data-ttu-id="9f30c-125">Ausnahmetyp</span><span class="sxs-lookup"><span data-stu-id="9f30c-125">Exception type</span></span> | <span data-ttu-id="9f30c-126">Basistyp</span><span class="sxs-lookup"><span data-stu-id="9f30c-126">Base type</span></span> | <span data-ttu-id="9f30c-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9f30c-127">Description</span></span> | <span data-ttu-id="9f30c-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9f30c-128">Example</span></span> |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
-| @System.IndexOutOfRangeException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Bereichs: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn auf ein NULL-Objekt verwiesen wird. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Wird von Methoden ausgelöst, wenn ein ungültiger Status vorliegt. | Aufrufen von `Enumerator.GetNext()` nach Entfernen eines Elements aus der zugrunde liegenden Auflistung. |
-| @System.ArgumentException | @System.Exception | Die Basisklasse für alle Argumentausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
-| @System.ArgumentNullException | @System.Exception | Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | <span data-ttu-id="9f30c-129">Die Basisklasse für alle Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="9f30c-129">Base class for all exceptions.</span></span> | <span data-ttu-id="9f30c-130">Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme).</span><span class="sxs-lookup"><span data-stu-id="9f30c-130">None (use a derived class of this exception).</span></span> |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | <span data-ttu-id="9f30c-131">Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist.</span><span class="sxs-lookup"><span data-stu-id="9f30c-131">Thrown by the runtime only when an array is indexed improperly.</span></span> | <span data-ttu-id="9f30c-132">Indizieren eines Arrays außerhalb seines gültigen Bereichs: `arr[arr.Length+1]`</span><span class="sxs-lookup"><span data-stu-id="9f30c-132">Indexing an array outside its valid range: `arr[arr.Length+1]`</span></span> |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | <span data-ttu-id="9f30c-133">Wird von der Runtime nur dann ausgelöst, wenn auf ein NULL-Objekt verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="9f30c-133">Thrown by the runtime only when a null object is referenced.</span></span> | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | <span data-ttu-id="9f30c-134">Wird von Methoden ausgelöst, wenn ein ungültiger Status vorliegt.</span><span class="sxs-lookup"><span data-stu-id="9f30c-134">Thrown by methods when in an invalid state.</span></span> | <span data-ttu-id="9f30c-135">Aufrufen von `Enumerator.GetNext()` nach Entfernen eines Elements aus der zugrunde liegenden Auflistung.</span><span class="sxs-lookup"><span data-stu-id="9f30c-135">Calling `Enumerator.GetNext()` after removing an Item from the underlying collection.</span></span> |
+| <xref:System.ArgumentException> | <xref:System.Exception> | <span data-ttu-id="9f30c-136">Die Basisklasse für alle Argumentausnahmen.</span><span class="sxs-lookup"><span data-stu-id="9f30c-136">Base class for all argument exceptions.</span></span> | <span data-ttu-id="9f30c-137">Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme).</span><span class="sxs-lookup"><span data-stu-id="9f30c-137">None (use a derived class of this exception).</span></span> |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | <span data-ttu-id="9f30c-138">Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf.</span><span class="sxs-lookup"><span data-stu-id="9f30c-138">Thrown by methods that do not allow an argument to be null.</span></span> | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | <span data-ttu-id="9f30c-139">Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen.</span><span class="sxs-lookup"><span data-stu-id="9f30c-139">Thrown by methods that verify that arguments are in a given range.</span></span> | `String s = "string"; s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a><span data-ttu-id="9f30c-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9f30c-140">See Also</span></span>
 
-* [Exception-Klasse und Exception-Eigenschaften](exception-class-and-properties.md)
-* [Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Vorgehensweise: Explizites Auslösen von Ausnahmen](how-to-explicitly-throw-exceptions.md)
-* [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
-* [Verwenden benutzergefilterter Ausnahmehandler](using-user-filtered-exception-handlers.md)
-* [Gewusst wie: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)
-* [Behandeln von COM-Interop-Ausnahmen](handling-com-interop-exceptions.md)
-* [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)
+* [<span data-ttu-id="9f30c-141">Exception-Klasse und Exception-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9f30c-141">Exception Class and Properties</span></span>](exception-class-and-properties.md)
+* [<span data-ttu-id="9f30c-142">Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-142">How to: Use the Try-Catch Block to Catch Exceptions</span></span>](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [<span data-ttu-id="9f30c-143">Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block</span><span class="sxs-lookup"><span data-stu-id="9f30c-143">How to: Use Specific Exceptions in a Catch Block</span></span>](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [<span data-ttu-id="9f30c-144">Vorgehensweise: Explizites Auslösen von Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-144">How to: Explicitly Throw Exceptions</span></span>](how-to-explicitly-throw-exceptions.md)
+* [<span data-ttu-id="9f30c-145">Gewusst wie: Erstellen benutzerdefinierter Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-145">How to: Create User-Defined Exceptions</span></span>](how-to-create-user-defined-exceptions.md)
+* [<span data-ttu-id="9f30c-146">Verwenden benutzergefilterter Ausnahmehandler</span><span class="sxs-lookup"><span data-stu-id="9f30c-146">Using User-Filtered Exception Handlers</span></span>](using-user-filtered-exception-handlers.md)
+* [<span data-ttu-id="9f30c-147">Gewusst wie: Verwenden von Finally-Blöcken</span><span class="sxs-lookup"><span data-stu-id="9f30c-147">How to: Use Finally Blocks</span></span>](how-to-use-finally-blocks.md)
+* [<span data-ttu-id="9f30c-148">Behandeln von COM-Interop-Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-148">Handling COM Interop Exceptions</span></span>](handling-com-interop-exceptions.md)
+* [<span data-ttu-id="9f30c-149">Bewährte Methoden für Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="9f30c-149">Best Practices for Exceptions</span></span>](best-practices-for-exceptions.md)
 
-Weitere Informationen zur Funktionsweise von Ausnahmen in .NET finden Sie in [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss).
-
+<span data-ttu-id="9f30c-150">Weitere Informationen zur Funktionsweise von Ausnahmen in .NET finden Sie in [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss).</span><span class="sxs-lookup"><span data-stu-id="9f30c-150">To learn more about how exceptions work in .NET, see [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).</span></span>
