@@ -217,7 +217,7 @@ return result;
 
 <span data-ttu-id="d38df-251">Um diese Art von Würfel zu Ihrer Sammlung hinzuzufügen, müssen Sie zunächst einen Typ zur Darstellung des Prozentwürfels definieren:</span><span class="sxs-lookup"><span data-stu-id="d38df-251">To add this kind of die to your collection, first define a type to represent the percentile die:</span></span>
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 <span data-ttu-id="d38df-252">Fügen Sie dann einen `case`-Vergleichsausdruck für den neuen Typ hinzu:</span><span class="sxs-lookup"><span data-stu-id="d38df-252">Then, add a `case` match expression for the new type:</span></span>
 
