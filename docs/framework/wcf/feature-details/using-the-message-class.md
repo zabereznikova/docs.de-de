@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 18cb2162712ffac74972ba20a61cd84657685af0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 999b0105bf6ab97eb3ab38423efbc31f9b322254
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-message-class"></a>Verwenden der Message-Klasse
 Die <xref:System.ServiceModel.Channels.Message>-Klasse ist für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wesentlich. Die gesamte Kommunikation zwischen Clients und Diensten führt letztlich zu gesendeten und empfangenen <xref:System.ServiceModel.Channels.Message>-Instanzen.  
@@ -203,7 +203,7 @@ Die <xref:System.ServiceModel.Channels.Message>-Klasse ist für [!INCLUDE[indigo
  Beachten Sie, dass beim Erstellen der Kopie einer Nachricht die Kopie die Nachrichtenheader aus dem Original verwendet.  
   
 ### <a name="other-members-that-can-be-overridden"></a>Andere Member, die überschrieben werden können  
- Sie können die <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>-Methode, die <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A>-Methode und die <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A>-Methode überschreiben, um anzugeben, wie der SOAP-Umschlag, die SOAP-Header und die SOAP-Textelement-Starttags geschrieben werden. Diese entsprechen normalerweise `<soap:Envelope>`, `<soap:Header>` und `<soap:Body>`. Diese Methoden sollten normalerweise nichts schreiben, wenn die `Version`-Eigenschaft `MessageVersion.None` zurückgibt.  
+ Sie können die <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>-Methode, die <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A>-Methode und die <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A>-Methode überschreiben, um anzugeben, wie der SOAP-Umschlag, die SOAP-Header und die SOAP-Textelement-Starttags geschrieben werden. Diese entsprechen normalerweise `<soap:Envelope>`, `<soap:Header>`, und `<soap:Body>`. Diese Methoden sollten normalerweise nichts schreiben, wenn die `Version`-Eigenschaft `MessageVersion.None` zurückgibt.  
   
 > [!NOTE]
 >  Die Standardimplementierung von `OnGetReaderAtBodyContents` ruft `OnWriteStartEnvelope` und `OnWriteStartBody` auf, bevor `OnWriteBodyContents` aufgerufen wird und die Ergebnisse im Puffer gespeichert werden. Header werden nicht geschrieben.  
