@@ -3,18 +3,14 @@ title: Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windo
 description: Informationen zum Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8.
 author: rlander
 ms.author: mairaw
-keywords: .Net Framework, installieren
-ms.date: 05/26/2017
+ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
-ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 51c412733b76777a78c4a739ce9b077acc86f069
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
@@ -37,3 +33,9 @@ Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für d
    ![Installieren von .NET über die Systemsteuerung](./media/dotnet-control-panel.png)
 
    Sie müssen die untergeordneten Elemente für die **HTTP-Aktivierung von Windows Communication Foundation (WCF)** und die **Nicht-HTTP-Aktivierung von Windows Communication Foundation (WCF)** nicht auswählen, es sei denn, Sie sind ein Entwickler oder Serveradministrator und benötigen diese Funktionen.
+
+## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Problembehandlung bei der Installation von .NET Framework 3.5
+
+Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907, 0x800f081f oder 0x800F0922 auf. In diesem Fall finden Sie unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) Informationen zur Problemlösung.
+
+Wenn bei den im vorherigen Artikel beschriebenen Methoden ein Fehler auftritt oder keine Internetverbindung besteht, müssen Sie das Windows-Installationsmedium verwenden. Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework 3.5 mit der Abbildverwaltung für die Bereitstellung (DISM)](https://technet.microsoft.com/library/Dn482069.aspx). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Erstellen eines Installationsmediums für Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

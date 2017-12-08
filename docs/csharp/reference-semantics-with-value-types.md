@@ -1,6 +1,6 @@
 ---
 title: Verweissemantik mit Werttypen
-description: Verstehen der Sprachfunktionen, die kopieren-Strukturen problemlos minimieren
+description: Grundlegendes zu Sprachfeatures, die das Kopieren von Strukturen auf ein Minimum reduzieren
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,18 +9,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9eeaf201c1f5a58044db62e356199b609c4c035a
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="reference-semantics-with-value-types"></a>Verweissemantik mit Werttypen
 
-Ein Vorteil der Verwendung von Werttypen ist, dass sie häufig Heapzuordnungen vermeiden.
-Der entsprechende Nachteil ist, dass sie nach Wert kopiert werden. Dieser Nachteil erschwert die Algorithmen optimieren, die auf große Mengen an Daten ausgeführt werden. Neue Sprachfeatures in c# 7.2 Geben Mechanismen, mit denen Pass-Verweissemantik mit Werttypen. Bei Verwendung dieser Funktionen mit Bedacht können Sie minimieren beide Zuordnungen und Kopiervorgänge. In diesem Artikel wird erklärt, diese neuen Features.
+Das Verwenden von Werttypen hat den Vorteil, dass sie häufig Heapzuweisungen vermeiden.
+Ihr Nachteil ist, dass sie nach Wert kopiert werden. Dies macht es schwieriger, Algorithmen zu optimieren, die mit großen Datenmengen arbeiten. Neue Sprachfeatures in C# 7.2 bieten Mechanismen, die eine Semantik zur Übergabe als Verweis mit Werttypen ermöglichen. Wenn Sie diese Features geschickt einsetzen, können Sie sowohl Zuweisungen als auch Kopiervorgänge minimieren. In diesem Artikel werden diese neuen Features untersucht.
 
-Ein Großteil der Beispielcode in diesem Artikel werden die Funktionen, die in c# 7.2 hinzugefügt veranschaulicht. Um diese Funktionen verwenden zu können, müssen Sie das Projekt zur Verwendung von C#-7.2 oder höher in Ihrem Projekt zu konfigurieren. Sie können Visual Studio verwenden, um es auszuwählen. Wählen Sie für jedes Projekt **Projekt** aus dem Menü **Eigenschaften**. Wählen Sie die **erstellen** Registerkarte, und klicken Sie auf **erweitert**. Von dort aus können Sie die Sprachversion konfigurieren. Wählen Sie entweder "7.2" oder "Letzter".  Alternativ können Sie bearbeiten die *Csproj* Datei, und fügen Sie den folgenden Knoten:
+Viele der Codebeispiele in diesem Artikel veranschaulichen die neuen Features von C# 7.2. Um diese Features nutzen zu können, müssen Sie Ihr Projekt für die Verwendung von C# 7.2 oder höher konfigurieren. Sie können zur Auswahl Visual Studio verwenden. Klicken Sie für jedes Projekt im Menü **Projekt** auf **Eigenschaften**. Wählen Sie die Registerkarte **Build** aus, und klicken Sie auf **Erweitert**. Hier können Sie die Sprachversion konfigurieren. Wählen Sie entweder „7.2“ oder „Neueste“.  Alternativ können Sie die *CSPROJ*-Datei bearbeiten und den folgenden Knoten hinzufügen:
 
 ```XML
   <PropertyGroup>
@@ -28,89 +28,89 @@ Ein Großteil der Beispielcode in diesem Artikel werden die Funktionen, die in c
   </PropertyGroup>
 ```
 
-Sie können entweder "7,2" oder "Letzter" für den Wert verwenden.
+Sie können als Wert entweder „7.2“ oder „latest“ verwenden.
 
-## <a name="specifying-in-parameters"></a>Angeben von `in` Parameter
+## <a name="specifying-in-parameters"></a>Angeben von `in`-Parametern
 
-7.2 c# fügt der `in` Schlüsselwort, um die vorhandene ergänzen `ref` und `out` Schlüsselwörter, wenn Sie eine Methode schreiben, die Argumente als Verweis übergibt. Die `in` -Schlüsselwort Gibt an, dass den Parameter als Verweis übergeben und die aufgerufene Methode nicht den Wert übergeben wird ändert. 
+In C# 7.2 wird das Schlüsselwort `in` hinzugefügt, um die vorhandenen Schlüsselwörter `ref` und `out` beim Schreiben einer Methode zu ergänzen, die Argumente als Verweis übergibt. Das Schlüsselwort `in` gibt an, dass Sie den Parameter als Verweis übergeben und die aufgerufene Methode den an sie übergebenen Wert nicht ändert. 
 
-Diese Ergänzung enthält vollständige Vokabular um Ihre Entwurfsabsicht auszudrücken. Werttypen werden kopiert, wenn für eine aufgerufene Methode übergeben wird, wenn Sie keinen der folgenden Modifizierer angeben. Jedes dieser Modifizierer anzugeben, dass ein Werttyp als Verweis übergeben wird, vermeiden die Kopie. Jeder Modifizierer gibt eine andere Absicht:
+Dieser Zusatz bietet zahlreiche Möglichkeiten, Ihre Entwurfsabsicht auszudrücken. Werttypen werden bei der Übergabe an eine aufgerufene Methode kopiert, wenn Sie keinen der folgenden Modifizierer angeben. Jeder dieser Modifizierer gibt an, dass ein Werttyp als Verweis übergeben wird, um das Kopieren zu vermeiden. Jeder Modifizierer drückt eine andere Absicht aus:
 
-- `out`: Diese Methode wird der Wert des Arguments als dieser Parameter verwendet.
-- `ref`: Diese Methode kann den Wert des Arguments als dieser Parameter festgelegt.
-- `in`: Diese Methode ändert nicht den Wert des Arguments als dieser Parameter verwendet.
+- `out`: Diese Methode legt den Wert des Arguments fest, das als dieser Parameter verwendet wird.
+- `ref`: Diese Methode kann den Wert des Arguments festlegen, das als dieser Parameter verwendet wird.
+- `in`: Diese Methode ändert den Wert des Arguments nicht, das als dieser Parameter verwendet wird.
 
-Beim Hinzufügen der `in` Modifizierer, um ein Argument als Verweis übergeben werden, Argumente zu übergeben, als Verweis auf das vermeiden Sie unnötige Kopieren Ihrer Entwurfsabsicht deklarieren. Nicht führen Sie beabsichtigen, so ändern Sie das Objekt als Argument verwendet. Der folgende Code zeigt ein Beispiel für eine Methode, die den Abstand zwischen zwei Punkten in einem 3D-Bereich berechnet. 
+Wenn Sie den Modifizierer `in` zur Übergabe eines Arguments als Verweis hinzufügen, erklären Sie, dass Ihre Entwurfsabsicht darin besteht, Argumente als Verweis zu übergeben, um ein unnötiges Kopieren zu vermeiden. Sie beabsichtigen nicht, das als Argument verwendete Objekt zu ändern. Der folgende Code zeigt als Beispiel eine Methode, die den Abstand zwischen Punkten in einem 3D-Raum berechnet. 
 
 [!code-csharp[InArgument](../../samples/csharp/reference-semantics/Program.cs#InArgument "Specifying an In argument")]
 
-Die Argumente sind zwei Strukturen, die jeweils drei Doubles enthalten. Ein Double-Wert ist 8 Byte, sodass jedes Argument 24 Bytes ist. Durch Angabe der `in` Modifizierer, übergeben Sie 4-Byte- oder 8-Byte-Verweis auf diese Argumente, je nach Architektur des Computers. Der Unterschied in Größe ist klein, aber sie können schnell summieren, wenn diese Methode in einer dichten Schleife, die mit vielen unterschiedlichen Werten von Ihrer Anwendung aufgerufen.
+Die Argumente sind zwei Strukturen, die jeweils drei double-Werte enthalten. Ein double-Wert ist 8 Byte groß, also umfasst jedes Argument 24 Byte. Durch Angabe des Modifizierers `in` übergeben Sie – abhängig von der Architektur des Computers – einen 4-Byte- oder 8-Byte-Verweis an diese Argumente. Der Größenunterschied ist gering, kann sich aber schnell summieren, wenn Ihre Anwendung diese Methode in einer kurzen Schleife mit vielen unterschiedlichen Werten aufruft.
  
-Die `in` Modifizierer ergänzt `out` und `ref` auf andere Weise als auch. Sie können keine Überladungen einer Methode, die nur bei Vorhandensein der unterscheiden erstellen `in`, `out` oder `ref`. Diese neue Regeln erweitern dasselbe Verhalten, das immer für definiert worden `out` und `ref` Parameter.
+Der Modifizierer `in` ergänzt `out` und `ref` auch in anderer Weise. Sie können keine Überladungen einer Methode erstellen, die sich nur durch das Vorhandensein von `in`, `out` oder `ref` unterscheiden. Diese neuen Regeln erweitern dasselbe Verhalten, das stets für `out`- und `ref`-Parameter definiert wurde.
 
-Die `in` Modifizierer kann angewendet werden, um ein Element, das Parameter annimmt: Methoden, Delegaten, Lambda-Ausdrücke, lokale Funktionen, Indexer, Operatoren.
+Der Modifizierer `in` kann auf einen beliebigen Member angewendet werden, der Parameter akzeptiert: Methoden, Delegaten, Lambdas, lokale Funktionen, Indexer, Operatoren.
 
-Im Gegensatz zu `ref` und `out` Argumente, Sie können Literalwerte oder Konstanten für das Argument für eine `in` Parameter. Auch, im Gegensatz zu einer `ref` oder `out` Parameter verwenden, müssen Sie nicht anwenden der `in` Modifizierer an der Aufrufsite. Der folgende Code zeigt zwei Beispiele für den Aufruf der `CalculateDistance` Methode. Die erste Klasse verwendet zweier lokale Variablen als Verweis übergeben wird. Die zweite enthält eine temporäre Variable als Teil des Methodenaufrufs erstellt. 
+Im Gegensatz zu `ref`- und `out`-Argumenten können Sie Literalwerte oder Konstanten für die Argumente für einen `in`-Parameter verwenden. Außerdem müssen Sie im Gegensatz zu einem `ref`- oder `out`-Parameter den Modifizierer `in` nicht an der Aufrufsite anwenden. Der folgende Code zeigt zwei Beispiele zum Aufruf der `CalculateDistance`-Methode. Im ersten Beispiel werden zwei lokale Variablen als Verweis übergeben. Im zweiten Beispiel wird als Teil des Methodenaufrufs eine temporäre Variable erstellt. 
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#UseInArgument "Specifying an In argument")]
 
-Es gibt mehrere Möglichkeiten, die in der der Compiler stellt, dass den nur-Lese Charakter sicher ein `in` Argument wird erzwungen.  Erstens, die aufgerufene Methode kann nicht direkt zuweisen einer `in` Parameter. Es kann nicht direkt auf jedes Feld der Zuweisen einer `in` Parameter. Darüber hinaus können keine Sie übergeben ein `in` Parameter an eine beliebige Methode verlangen die `ref` oder `out` Modifizierer.
-Der Compiler erzwingt, die die `in` Argument ist eine schreibgeschützte Variable. Sie können Instanzmethode aufrufen, die Übergabe von Wertsemantik verwendet. In diesen Fällen eine Kopie der `in` wird erstellt. Da der Compiler eine temporäre Variable für eine beliebige erstellen kann `in` Parameter können auch das Angeben von Standardwerten für alle `in` Parameter. Der folgende Code verwendet, um den Ursprung (Punkt 0,0) als Standardwert für den zweiten Punkt angeben:
+Der Compiler kann auf verschiedene Weise sicherstellen, dass der Schreibschutz eines `in`-Arguments erzwungen wird.  Zunächst kann die aufgerufene Methode nicht direkt einem `in`-Parameter zugewiesen werden. Eine direkte Zuweisung zu einem Feld eines `in`-Parameters ist nicht möglich. Außerdem können Sie keinen `in`-Parameter an eine Methode übergeben, die den Modifizierer `ref` oder `out` erfordert.
+Der Compiler erzwingt, dass das Argument `in` eine schreibgeschützte Variable ist. Sie können eine beliebige Instanzmethode aufrufen, die eine Semantik zur Übergabe als Wert verwendet. In diesen Instanzen wird eine Kopie des `in`-Parameters erstellt. Da der Compiler eine temporäre Variable für jeden `in`-Parameter erstellen kann, können Sie auch Standardwerte für jeden `in`-Parameter angeben. Der folgende Code macht sich dies zunutze, um den Ursprung (Punkt 0,0) als Standardwert für den zweiten Punkt anzugeben:
 
 [!code-csharp[InArgumentDefault](../../samples/csharp/reference-semantics/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-Die `in` Parameter Bezeichnung kann auch bei Verweistypen verwendet oder in numerischen Werten erstellt. Allerdings sind die Vorteile in beiden Fällen minimal, sofern vorhanden.
+Der Parameter `in` kann auch mit Verweistypen oder integrierten numerischen Werten verwendet werden. Allerdings sind die Vorteile in beiden Fällen – wenn überhaupt – nur minimal.
 
-## <a name="ref-readonly-returns"></a>`ref readonly`Gibt zurück
+## <a name="ref-readonly-returns"></a>`ref readonly`-Rückgaben
 
-Sie sollten auch einen Werttyp als Verweis zurückgegeben, aber nicht zulassen Aufrufer aus diesen Wert ändern. Verwenden der `ref readonly` Modifizierer, um diese Entwurfsabsicht auszudrücken. Leser benachrichtigt, dass Sie einen Verweis auf die vorhandenen Daten zurückgeben, aber Änderung nicht zugelassen. 
+Sie möchten vielleicht auch einen Werttyp als Verweis zurückgeben, aber dem Aufrufer verbieten, diesen Wert zu ändern. Verwenden Sie den Modifizierer `ref readonly`, um diese Entwurfsabsicht auszudrücken. So werden Leser darüber informiert, dass Sie einen Verweis auf vorhandene Daten zurückgeben, aber keine Änderungen zulassen. 
 
-Der Compiler erzwingt, dass der Aufrufer die Referenz ändern kann. Versucht, auf den Wert direkt zuweisen generieren einen Fehler während der Kompilierung. Der Compiler wissen nicht allerdings, wenn jeder Member-Methode den Zustand der Struktur ändert.
-Um sicherzustellen, dass das Objekt nicht geändert wird, wird der Compiler erstellt eine Kopie und ruft Member verweisen, die mit dieser Kopie. Alle Änderungen werden mit dieser defensiven Kopie. 
+Der Compiler erzwingt, dass der Aufrufer den Verweis nicht ändern kann. Versuche einer direkten Zuweisung zum Wert führen zu einem Kompilierzeitfehler. Der Compiler kann jedoch nicht wissen, ob eine Membermethode den Zustand der Struktur ändert.
+Um sicherzustellen, dass das Objekt nicht geändert wird, erstellt der Compiler eine und ruft Memberverweise mit dieser Kopie auf. Alle Änderungen werden an der Defensivkopie vorgenommen. 
 
-Es ist wahrscheinlich, die die Bibliothek mit `Point3D` Ursprung im gesamten Code häufig verwenden. Jede Instanz erstellt ein neues Objekt auf dem Stapel an. Möglicherweise vorteilhaft sein, erstellen eine Konstante erstellt und als Verweis zurückgegeben. Wenn Sie einen Verweis auf die interne Speicherung zurückgeben, Sie möchten jedoch möglicherweise zu erzwingen, dass der Aufrufer den referenzierten Speicher ändern kann. Der folgende Code definiert eine schreibgeschützte Eigenschaft, die zurückgibt eine `readonly ref` auf eine `Point3D` , des Ursprungs angibt.
+Wahrscheinlich würde die Bibliothek, die `Point3D` verwendet, im Code oft den Ursprung verwenden. Jede Instanz erstellt ein neues Objekt im Stapel. Es kann vorteilhaft sein, eine Konstante zu erstellen und diese als Verweis zurückzugeben. Wenn Sie jedoch einen Verweis auf den internen Speicher zurückgeben, möchten Sie möglicherweise erzwingen, dass der Aufrufer den referenzierten Speicher nicht ändern kann. Der folgende Code definiert eine schreibgeschützte Eigenschaft zur Rückgabe von `readonly ref` an einen `Point3D`, der den Ursprung angibt.
 
 [!code-csharp[OriginReference](../../samples/csharp/reference-semantics/Point3D.cs#OriginReference "Creating a readonly Origin reference")]
 
-Erstellen eine Kopie des einen schreibgeschützten Ref return ist einfach: nur eine Variable nicht mit dem Zuweisen der `ref readonly` Modifizierer. Der Compiler generiert Code, um das Objekt als Teil der Zuordnung zu kopieren. 
+Das Kopieren einer ref readonly-Rückgabe ist einfach: Weisen Sie sie einfach einer Variablen zu, die nicht mit dem Modifizierer `ref readonly` deklariert wurde. Der Compiler generiert Code, um das Objekt im Rahmen der Zuweisung zu kopieren. 
 
-Wenn Sie eine Variable zum Zuweisen einer `ref readonly return`, geben Sie entweder eine `ref readonly` Variable oder ein per-Wert-Kopie des Verweises Readonly:
+Wenn Sie `ref readonly return` eine Variable zuweisen, können Sie entweder eine `ref readonly`-Variable oder eine wertweise Kopie des schreibgeschützten Verweises angeben:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/reference-semantics/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
-Die erste Zuweisung im vorangehenden Code wird eine Kopie der `Origin` Konstante und weist ihm, die kopiert werden. Die zweite weist einen Verweis. Beachten Sie, dass die `readonly` Modifizierer muss Teil der Deklaration der Variablen. Der Verweis auf dem es verweist, nicht geändert werden. Versuche, die dazu führen zu einem Fehler während der Kompilierung.
+Die erste Zuweisung im vorhergehenden Code erstellt eine Kopie der Konstanten `Origin` und weist diese Kopie zu. Die zweite weist einen Verweis zu. Beachten Sie, dass der Modifizierer `readonly` Teil der Variablendeklaration sein muss. Der referenzierte Verweis kann nicht geändert werden. Derartige Versuche führen zu einem Kompilierzeitfehler.
 
 ## <a name="readonly-struct-type"></a>`readonly struct`-Typ
 
-Anwenden von `ref readonly` beim hohem Datenverkehr mithilfe einer Struktur möglicherweise nicht ausreichend.
-In einigen Fällen können Sie eine unveränderliche Struktur erstellen möchten. Anschließend können Sie immer als Readonly-Verweis übergeben. Übung die Verteidigung entfernt kopiert, stattfinden beim Zugriff auf Methoden einer Struktur, die als verwendet ein `in` Parameter.
+Das Anwenden von `ref readonly` auf Strukturen mit hoher Auslastung kann ausreichend sein.
+In anderen Fällen möchten Sie vielleicht eine unveränderliche Struktur erstellen. Dann können Sie immer eine Übergabe als schreibgeschützter Verweis durchführen. Durch diese Vorgehensweise entfallen die Defensivkopien, die beim Zugriff auf Methoden einer Struktur erstellt werden, die als `in`-Parameter verwendet wird.
 
-Sie können dies vornehmen, indem erstellen eine `readonly struct` Typ. Sie können hinzufügen, die `readonly` Modifizierer, um eine Strukturdeklaration. Der Compiler erzwingt, dass alle Member der Struktur `readonly`; das `struct` müssen unveränderlich sein.
+Sie erreichen dies, indem Sie einen `readonly struct`-Typ erstellen. Sie können den Modifizierer `readonly` einer Strukturdeklaration hinzufügen. Der Compiler erzwingt, dass alle Instanzmember der Struktur als `readonly` festgelegt sind. `struct` muss unveränderlich sein.
 
-Es gibt weitere Optimierungen für eine `readonly struct`. Können Sie die `in` Modifizierer an jeder Stelle, wo ein `readonly struct` ist ein Argument. Sie können darüber hinaus Zurückgeben einer `readonly struct` als eine `ref return` Wenn Sie ein Objekt, dessen Lebensdauer überschreitet den Bereich der Methode zurückgeben des Objekts, zurückgegeben werden.
+Es gibt weitere Optimierungen für `readonly struct`. Sie können den Modifizierer `in` überall dort verwenden, wo `readonly struct` ein Argument ist. Zusätzlich können Sie `readonly struct` als `ref return` zurückgeben, wenn Sie ein Objekt zurückgeben, dessen Lebensdauer über den Bereich der Methode hinausgeht, die das Objekt zurückgibt.
 
-Schließlich generiert der Compiler effizienter Code beim Aufrufen von Membern der eine `readonly struct`: die `this` Verweis, anstatt eine Kopie der Empfänger ist immer ein `in` Parameter als Verweis auf die Membermethode übergeben. Diese Optimierung speichert Weitere kopieren bei der Verwendung einer `readonly struct`. Die `Point3D` prädestiniert für diese Änderung ist. Der folgende Code zeigt ein aktualisiertes `ReadonlyPoint3D` Struktur:
+Schließlich erzeugt der Compiler effizienteren Code, wenn Sie Member von `readonly struct` aufrufen: Der `this`-Verweis – anstelle einer Kopie des Empfängers – ist immer ein `in`-Parameter, der als Verweis an die Membermethode übergeben wird. Durch diese Optimierung entfallen weitere Kopiervorgänge, wenn Sie `readonly struct` verwenden. `Point3D` ist ein hervorragender Kandidat für diese Änderung. Der folgende Code zeigt eine aktualisierte `ReadonlyPoint3D`-Struktur:
 
 [!code-csharp[ReadonlyOnlyPoint3D](../../samples/csharp/reference-semantics/Point3D.cs#ReadonlyOnlyPoint3D "Defining an immutable structure")]
 
 ## <a name="ref-struct-type"></a>`ref struct`-Typ
 
-Eine andere verwandte Sprachfunktion ist die Möglichkeit, einen Werttyp deklarieren, der Stapel zugeordnet werden muss. Das heißt, können dieser Typen nie auf dem Heap als Mitglied einer anderen Klasse erstellt werden. Die primäre Motivation für dieses Feature wurde <xref:System.Span%601> und zugehörigen Strukturen. <xref:System.Span%601>einen verwalteten Zeiger enthalten als eines seiner Elemente, die andere wird die Länge der Spanne. Er ist tatsächlich ein wenig anders implementiert, da C#-Zeiger in den verwalteten Speicher außerhalb von einem unsicheren Kontext nicht unterstützt. Alle Schreibvorgänge, die ändert sich der Zeiger und die Länge ist nicht unteilbar. Das bedeutet, dass eine <xref:System.Span%601> wäre unterliegen außerhalb des gültigen Bereichsfehler oder andere Verletzungen der typsicherheit wurden sie nicht auf einen einzelnen Stapelrahmen eingeschränkt. Darüber hinaus stürzt ab, in der Regel einen verwalteten Zeiger auf den GC-Heap ablegen zur JIT-Zeit.
+Ein weiteres zugehöriges Sprachfeature ist die Möglichkeit, einen Werttyp zu deklarieren, der im Stapel zugeordnet werden muss. Anders ausgedrückt: Diese Typen können nie im Heap als Member einer anderen Klasse erstellt werden. Der primäre Beweggrund für dieses Feature waren <xref:System.Span%601> und zugehörige Strukturen. <xref:System.Span%601> kann einen verwalteten Zeiger als einen seiner Member enthalten, wobei der andere die span-Länge angibt. Die Implementierung erfolgt tatsächlich etwas anders, weil C# keine Zeiger auf verwalteten Speicher außerhalb eines unsicheren Kontexts unterstützt. Jeder Schreibvorgang, der den Zeiger und die Länge ändert, ist nicht unteilbar. Das bedeutet, dass ein <xref:System.Span%601> Bereichsfehlern oder anderen Sicherheitsverletzungen unterliegen würde, wenn es nicht auf einen einzelnen Stapelrahmen beschränkt wäre. Zusätzlich führt das Platzieren eines verwalteten Zeigers im GC-Heap typischerweise zu einem Absturz zur JIT-Zeit.
 
-Möglicherweise ähnliche Anforderungen arbeiten mit Speicher mit erstellt [ `stackalloc` ](language-reference/keywords/stackalloc.md) oder bei der Verwendung von Arbeitsspeicher von Interop-APIs. Können eigene definieren `ref struct` -Typen für diese Anforderungen. In diesem Artikel finden Sie Beispiele für die Verwendung `Span<T>` aus Gründen der Einfachheit.
+Möglicherweise haben Sie ähnliche Anforderungen, wenn Sie mit Speicher arbeiten, der mit [`stackalloc`](language-reference/keywords/stackalloc.md) erstellt wurde, oder wenn Sie Speicher aus Interop-APIs verwenden. Sie können für diese Anforderungen eigene `ref struct`-Typen definieren. In diesem Artikel wird aus Gründen der Einfachheit `Span<T>` in den Beispielen verwendet.
 
-Die `ref struct` Deklaration deklariert, dass eine Struktur dieses Typs auf dem Stapel sein muss. Gemäß den Sprachregeln Sicherstellen der sichere Verwendung dieser Typen. Andere Typen deklariert wird, als `ref struct` enthalten <xref:System.ReadOnlySpan%601>. 
+Über die `ref struct`-Deklaration wird deklariert, dass eine solche Struktur sich im Stapel befinden muss. Die Sprache stellt die sichere Verwendung dieser Typen sicher. Zu den weiteren als `ref struct` deklarierten Typen gehört <xref:System.ReadOnlySpan%601>. 
 
-Das Ziel des durch die Beibehaltung einer `ref struct` geben, wie eine Stapel zugeordneten Variablen mehrere Regeln eingeführt, die für alle der Compiler erzwingt `ref struct` Typen.
+Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten, führt zu verschiedenen Regeln, die der Compiler für alle `ref struct`-Typen erzwingt.
 
-- Sie können keine Feld eine `ref struct`. Kann nicht zugewiesen werden eine `ref struct` Typ einer Variablen des Typs `object`, `dynamic`, oder einen beliebigen anderen Schnittstellentyp.
-- Sie können nicht deklariert eine `ref struct` als Member einer Klasse oder eine normale Struktur.
-- Lokale Variablen, die nicht deklariert werden `ref struct` Typen in Async-Methoden. Sie deklarieren Sie diese im synchronen Methoden, mit denen `Task`, `Task<T>` oder Task-ähnlichen Typen.
-- Sie können nicht deklariert werden `ref struct` lokalen Variablen in Iteratoren.
-- Sie können keine erfassen `ref struct` Variablen in Lambda-Ausdrücken oder Funktionen.
+- Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
+- Sie können `ref struct` nicht als Member einer Klasse oder einer normalen Struktur deklarieren.
+- Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die `Task`, `Task<T>` oder taskähnliche Typen zurückgeben.
+- Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
+- Sie können `ref struct`-Variablen nicht in Lambda-Ausdrücken oder lokalen Funktionen erfassen.
 
-Diese Einschränkungen stellen Sie sicher, dass Sie nicht versehentlich verwenden eine `ref struct` in einer Weise, die sie auf dem verwalteten Heap heraufzustufen konnte.
+Diese Einschränkungen stellen sicher, dass Sie `ref struct` nicht versehentlich in einer Weise verwenden, die zu einer Höherstufung in den verwalteten Heap führt.
 
 ## <a name="conclusions"></a>Zusammenfassung
 
-Diese Verbesserungen an der C#-Sprache sind für Leistung kritisch Algorithmen vorgesehen, in denen speicherbelegungen für die benötigte Leistung erreichen von entscheidender Bedeutung sein können. Möglicherweise, dass Sie häufig dieser Features im Code nicht verwenden, den Sie schreiben. Allerdings haben diese Verbesserungen an zahlreichen Speicherorten in .NET Framework übernommen wurde. Als weitere und weitere APIs stellen diese Funktionen nutzen möchten, sehen Sie die Leistung Ihrer eigenen Anwendungen zu verbessern.
+Diese Erweiterungen der Sprache C# wurden für leistungskritische Algorithmen entwickelt, bei denen Speicherbelegungen entscheidend sein können, um die erforderliche Leistung zu erzielen. Sie werden feststellen, dass Sie diese Features möglicherweise nicht oft in dem Code verwenden, den Sie schreiben. Diese Verbesserungen wurden jedoch an vielen Stellen im .NET Framework übernommen. Da immer mehr APIs diese Features nutzen, werden Sie feststellen, dass sich die Leistung Ihrer eigenen Anwendungen verbessert.

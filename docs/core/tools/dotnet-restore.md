@@ -4,15 +4,15 @@ description: "Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten u
 keywords: dotnet-restore, CLI, CLI-Befehl, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 887f562803226d99901a6ee13175c1a43956b0cd
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -53,6 +53,21 @@ Für Abhängigkeiten geben Sie mithilfe des Arguments `--packages` an, wo die wi
 Für projektspezifische Tools stellt `dotnet restore` zunächst das Paket wieder her, in dem sich das Tool befindet, und danach die Abhängigkeiten des Tools gemäß seiner Projektdatei.
 
 Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in der *NuGet.Config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *NuGet.Config* platziert z.B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie im [NuGet.Config-Referenzthema](/nuget/schema/nuget-config-file).
+
+## <a name="implicit-dotnet-restore"></a>Impliziter `dotnet restore`
+
+Ab .NET Core 2.0 wird `dotnet restore` bei Bedarf implizit ausgeführt, wenn Sie die folgenden Befehle ausführen:
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+In den meisten Fällen müssen Sie den `dotnet restore`-Befehl nicht länger explizit verwenden. 
+
+In einigen Fällen ist eine implizite Ausführung von `dotnet restore` unpraktisch. Zum Beispiel müssen einige automatisierte Systeme, wie etwa Buildsysteme, `dotnet restore` explizit aufrufen, um zu kontrollieren, wann die Wiederherstellung stattfindet, damit sie die Netzwerknutzung steuern können. Um eine implizite Ausführung von `dotnet restore` zu verhindern, können Sie die Option `--no-restore` mit einem beliebigen dieser Befehle verwenden, um die implizite Wiederherstellung zu deaktivieren.
 
 ## <a name="arguments"></a>Argumente
 

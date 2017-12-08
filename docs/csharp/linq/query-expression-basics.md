@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
 
@@ -173,10 +173,10 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
   
- Weitere Informationen finden Sie unter [How to: perform a subquery on a grouping operation (Vorgehensweise: Ausführen einer Unterabfrage für einen Gruppierungsvorgang)](perform-a-subquery-on-a-grouping-operation.md).  
+ Weitere Informationen finden Sie unter [Gewusst wie: Ausführen einer Unterabfrage für eine Gruppierungsoperation (C#-Programmierhandbuch)](perform-a-subquery-on-a-grouping-operation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../programming-guide/index.md)  
  [LINQ-Abfrageausdrücke](index.md)  
  [Abfrageschlüsselwörter (LINQ)](../language-reference/keywords/query-keywords.md)  
- [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)
+ [Übersicht über die Standardabfrageoperatoren](../programming-guide/concepts/linq/standard-query-operators-overview.md)
