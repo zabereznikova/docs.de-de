@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="b5540-215">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="b5540-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="b5540-216"><a name="Static"></a>Gemeinsam genutzten Klassen und Member</span><span class="sxs-lookup"><span data-stu-id="b5540-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="b5540-216">Gemeinsam genutzten Klassen und Member</span><span class="sxs-lookup"><span data-stu-id="b5540-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="b5540-217">Ein freigegebener Member der Klasse ist eine Eigenschaft, eine Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b5540-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="b5540-218">So definieren Sie einen gemeinsam genutzten Member:</span><span class="sxs-lookup"><span data-stu-id="b5540-218">To define a shared member:</span></span>  
