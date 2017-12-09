@@ -52,7 +52,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="b53cf-102">Das Objektmodell für reguläre Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="b53cf-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="b53cf-103"><a name="introduction"></a>Dieses Thema beschreibt das Objektmodell, das bei der Arbeit mit regulären Ausdrücken von .NET verwendet.</span><span class="sxs-lookup"><span data-stu-id="b53cf-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="b53cf-104">Es enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="b53cf-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="b53cf-103">Dieses Thema beschreibt das Objektmodell, das bei der Arbeit mit regulären Ausdrücken von .NET verwendet.</span><span class="sxs-lookup"><span data-stu-id="b53cf-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="b53cf-104">Es enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="b53cf-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="b53cf-105">Das Modul für reguläre Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="b53cf-105">The Regular Expression Engine</span></span>](#Engine)  
   

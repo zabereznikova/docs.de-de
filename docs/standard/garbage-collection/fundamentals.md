@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="ba384-102">Grundlagen der Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="ba384-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="ba384-103"><a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager.</span><span class="sxs-lookup"><span data-stu-id="ba384-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="ba384-104">Der Garbage Collector bietet folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="ba384-104">It provides the following benefits:</span></span>  
+<a name="top"></a> <span data-ttu-id="ba384-103">In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager.</span><span class="sxs-lookup"><span data-stu-id="ba384-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="ba384-104">Der Garbage Collector bietet folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="ba384-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="ba384-105">Ermöglicht es Ihnen, eine Anwendung zu entwickeln, ohne den Speicher freigeben zu müssen.</span><span class="sxs-lookup"><span data-stu-id="ba384-105">Enables you to develop your application without having to free memory.</span></span>  
   
