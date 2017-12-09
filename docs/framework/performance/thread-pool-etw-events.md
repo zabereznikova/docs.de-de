@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="e6d19-102">ETW-Threadpoolereignisse</span><span class="sxs-lookup"><span data-stu-id="e6d19-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="e6d19-103"><a name="top"></a> Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.</span><span class="sxs-lookup"><span data-stu-id="e6d19-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="e6d19-103">Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.</span><span class="sxs-lookup"><span data-stu-id="e6d19-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="e6d19-104">Es gibt zwei Gruppen von Threadpoolereignissen:</span><span class="sxs-lookup"><span data-stu-id="e6d19-104">There are two groups of thread pool events:</span></span>  
   

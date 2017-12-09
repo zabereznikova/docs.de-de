@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-etw-events"></a><span data-ttu-id="382eb-102">Interop-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="382eb-102">Interop ETW Events</span></span>
-<span data-ttu-id="382eb-103"><a name="top"></a> Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="382eb-103"><a name="top"></a> Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
+<a name="top"></a> <span data-ttu-id="382eb-103">Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="382eb-103">Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
   
  <span data-ttu-id="382eb-104">Diese Kategorie umfasst die folgenden Ereignisse:</span><span class="sxs-lookup"><span data-stu-id="382eb-104">This category consists of the following events:</span></span>  
   
