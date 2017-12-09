@@ -7,11 +7,11 @@ ms.date: 08/30/2017
 ms.topic: article
 dev_langs: fsharp
 ms.prod: .net-core
-ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ad869d6b66ad5d966037a3ef38154fadcfa5978b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und MSTest
 
@@ -106,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-with-fsharp* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der xUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-with-fsharp* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Diese zwei Tests geben jeweils den grundlegendsten bestandenen und fehlerhaften Test an. `My test` wurde erfolgreich und `Fail every time` fehlerhaft abgeschlossen. Erstellen Sie jetzt einen Test für die `sumOfSquares`-Methode. Die `sumOfSquares`-Methode gibt die Summe der Quadrate aller ungeraden ganzzahligen Werte zurück, die Teil der Eingabesequenz sind. Anstatt zu versuchen, alle diese Funktionen gleichzeitig zu schreiben, können Sie iterativ Tests zum Überprüfen der Funktionalität erstellen. Damit jeder Test erfolgreich abgeschlossen wird, muss die erforderliche Funktionalität für die Methode erstellt werden.
 
@@ -114,13 +114,13 @@ Der einfachste Test, den wir schreiben können, ist das Aufrufen von `sumOfSquar
 
 ```fsharp
 [<TestMethod>]
-member this.TestEvenSequence() = 
+member this.TestEvenSequence() =
     let expected = Seq.empty<int> |> Seq.toList
     let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
     Assert.AreEqual(expected, actual)
 ```
 
-Beachten Sie, dass die Sequenz `expected` zu einer Liste konvertiert wurde. Die MSTest-Bibliothek basiert auf einer Vielzahl von .NET-Standardtypen. Diese Abhängigkeit bedeutet, dass Ihre öffentliche Schnittstelle und erwarteten Ergebnisse eher <xref:System.Collections.ICollection> statt <xref:System.Collections.IEnumerable> unterstützen. 
+Beachten Sie, dass die Sequenz `expected` zu einer Liste konvertiert wurde. Die MSTest-Bibliothek basiert auf einer Vielzahl von .NET-Standardtypen. Diese Abhängigkeit bedeutet, dass Ihre öffentliche Schnittstelle und erwarteten Ergebnisse eher <xref:System.Collections.ICollection> statt <xref:System.Collections.IEnumerable> unterstützen.
 
 Bei der Ausführung des Tests stellen Sie fest, dass der Test fehlerhaft ist. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `Mathservice`-Klasse:
 
@@ -171,9 +171,9 @@ Sie können den Test beheben, indem Sie für die gefilterte Sequenz einen Zuordn
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
-    xs 
-    |> Seq.filter isOdd 
+let sumOfSquares xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
     |> Seq.toList
 ```

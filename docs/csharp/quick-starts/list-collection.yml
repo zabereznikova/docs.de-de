@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Sammlungen in C#
 metadata:
@@ -8,14 +9,14 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Dieser Schnellstart erfahren Sie C#-interaktiv mithilfe Ihres Browsers C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen zum Erstellen, Ändern und Untersuchen von Sammlungen und Arrays.\n"
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: de-DE
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "Dieser Schnellstart erfahren Sie C#-interaktiv mithilfe Ihres Browsers C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen zum Erstellen, Ändern und Untersuchen von Sammlungen und Arrays.\n"
 - title: Erstellen von Listen
   durationInMinutes: 2
   content: "Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein (ersetzen Sie „<name>“ mit Ihrem Namen), und klicken Sie auf die Schaltfläche **Ausführen**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nSie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Schnellstarts gelernt haben, um die Liste zu durchlaufen.\n\nDer Code zum Anzeigen von Namen nutzt **interpolierte Zeichenfolgen**.  Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A>-Methode aufgerufen haben.\n\nSetzen wir nun unsere Forschungen fort.\n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"

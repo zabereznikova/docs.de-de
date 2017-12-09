@@ -13,11 +13,11 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage (C#-Compileroptionen)
 Diese Option gibt an, welche Codepage beim Kompilieren verwendet werden soll, wenn die erforderliche Seite nicht die aktuelle Standardcodepage für das System ist.  
@@ -37,7 +37,7 @@ Diese Option gibt an, welche Codepage beim Kompilieren verwendet werden soll, we
   
  Wenn die Quellcodedateien mit der auf dem Computer aktivierten Codepage oder mit UNICODE bzw. UTF-8 erstellt wurden, müssen Sie **/codepage** nicht verwenden.  
   
- Weitere Informationen darüber, wie ermittelt wird, welche Codeseiten auf dem System unterstützt werden, finden Sie unter [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).  
+ Weitere Informationen darüber, wie ermittelt wird, welche Codeseiten auf dem System unterstützt werden, finden Sie unter [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx).  
   
  Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
   

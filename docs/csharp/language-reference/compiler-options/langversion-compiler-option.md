@@ -13,11 +13,11 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d034958b14c54540aa175a23067d47bd5d850bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="langversion-c-compiler-options"></a>/langversion (C#-Compileroptionen)
 Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C#-Sprachspezifikation enthalten ist.  
@@ -80,7 +80,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
  [C#-Sprachspezifikationsreferenz](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation  
  C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog  
  C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog  
- C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006 im PDF-Format: Frei verfügbare ISO-Standards  
+ C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) ISO/IEC 23270:2006 im PDF-Format: Frei verfügbare ISO-Standards  
  C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C#-Sprachspezifikation Version 3.0 : Microsoft Corporation  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) Standard ECMA-334 4. Edition    
  C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C#-Sprachspezifikation Version 5.0 : Microsoft Corporation  

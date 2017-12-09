@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Zahlen in C#
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: Verzweigungen und Schleifen in c#
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Dieser Schnellstart erfahren Sie, über die Number-Typen in c# interaktiv mithilfe Ihres Browsers zum Schreiben von C#- und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: de-DE
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "Dieser Schnellstart erfahren Sie, über die Number-Typen in c# interaktiv mithilfe Ihres Browsers zum Schreiben von C#- und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.\n"
 - title: Erkunden von arithmetischen Operationen mit ganzen Zahlen
   durationInMinutes: 4
   content: "Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein, und klicken Sie auf die Schaltfläche **Ausführen**:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nSie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:\n\n- `-` zur Subtraktion\n- `*` zur Multiplikation\n- `/` zur Division\n\n> [!TIP]\n> In diesem Schnellstart können Sie selbst untersuchen, durch Ändern des Codes, den Sie im interactive-Fenster geschrieben haben. Dieser Schnellstart enthält Beispiele, die Sie bei jedem Schritt ausprobieren können.\n\nErkunden Sie zunächst die anderen Operationen. Ändern Sie die dritte Zeile, um die einzelnen Operationen zu testen. Klicken Sie nach jeder Änderung auf die Schaltfläche **Ausführen**.\n\nSubtraktion:\n\n```csharp\nint c = a - b;\n```\n\nMultiplikation:\n\n```csharp\nint c = a * b;\n```\n\nDivision: \n\n```csharp\nint c = a / b;\n```\n\nWenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen.\n\n> [!TIP]\n> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code im interaktiven Fenster an, um festzustellen, was behoben werden muss.\n> Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.     \n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"

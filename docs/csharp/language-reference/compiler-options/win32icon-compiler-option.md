@@ -13,11 +13,11 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (C#-Compileroptionen)
 Die Option **/win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der Ausgabedatei im Datei-Explorer das gewünschte Aussehen verleiht.  
@@ -33,7 +33,7 @@ Die Option **/win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der A
  Die ICO-Datei, die Sie Ihrer Ausgabedatei hinzufügen möchten  
   
 ## <a name="remarks"></a>Hinweise  
- Eine ICO-Datei kann mit dem [Ressourcencompiler](http://go.microsoft.com/fwlink/?LinkId=148370) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine ICO-Datei erstellt.  
+ Eine ICO-Datei kann mit dem [Ressourcencompiler](https://msdn.microsoft.com/library/aa381042.aspx) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine ICO-Datei erstellt.  
   
  Schauen Sie sich [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) zum Verweisen oder [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) zum Anfügen einer .NET Framework-Ressourcendatei an Schauen Sie sich [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) an, um eine RES-Datei zu importieren.  
   
