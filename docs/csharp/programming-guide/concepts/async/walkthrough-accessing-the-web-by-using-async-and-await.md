@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="prerequisites"></a><span data-ttu-id="57bd2-122">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="57bd2-122">Prerequisites</span></span>  
  <span data-ttu-id="57bd2-123">Visual Studio 2012 oder höher muss auf dem Computer installiert sein.</span><span class="sxs-lookup"><span data-stu-id="57bd2-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="57bd2-124">Weitere Informationen finden Sie auf der [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkId=235233).</span><span class="sxs-lookup"><span data-stu-id="57bd2-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <span data-ttu-id="57bd2-125"><a name="CreateWPFApp"></a> So erstellen Sie eine WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="57bd2-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
+###  <a name="CreateWPFApp"></a> <span data-ttu-id="57bd2-125">So erstellen Sie eine WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="57bd2-125">To create a WPF application</span></span>  
   
 1.  <span data-ttu-id="57bd2-126">Starten Sie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="57bd2-126">Start Visual Studio.</span></span>  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-131">Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="57bd2-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <span data-ttu-id="57bd2-132"><a name="MainWindow"></a> So entwerfen Sie ein einfaches WPF-MainWindow</span><span class="sxs-lookup"><span data-stu-id="57bd2-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
+###  <a name="MainWindow"></a> <span data-ttu-id="57bd2-132">So entwerfen Sie ein einfaches WPF-MainWindow</span><span class="sxs-lookup"><span data-stu-id="57bd2-132">To design a simple WPF MainWindow</span></span>  
   
 1.  <span data-ttu-id="57bd2-133">Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.</span><span class="sxs-lookup"><span data-stu-id="57bd2-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-145">Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="57bd2-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <span data-ttu-id="57bd2-146"><a name="AddRef"></a> So fügen Sie einen Verweis hinzu</span><span class="sxs-lookup"><span data-stu-id="57bd2-146"><a name="AddRef"></a> To add a reference</span></span>  
+###  <a name="AddRef"></a> <span data-ttu-id="57bd2-146">So fügen Sie einen Verweis hinzu</span><span class="sxs-lookup"><span data-stu-id="57bd2-146">To add a reference</span></span>  
   
 1.  <span data-ttu-id="57bd2-147">Markieren Sie im **Projektmappen-Explorer** den Namen des Projekts.</span><span class="sxs-lookup"><span data-stu-id="57bd2-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
 6.  <span data-ttu-id="57bd2-153">Wählen Sie die Schaltfläche **OK** aus, um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <span data-ttu-id="57bd2-154"><a name="usingDir"></a> So fügen Sie erforderliche using-Anweisungen hinzu</span><span class="sxs-lookup"><span data-stu-id="57bd2-154"><a name="usingDir"></a> To add necessary using directives</span></span>  
+###  <a name="usingDir"></a> <span data-ttu-id="57bd2-154">So fügen Sie erforderliche using-Anweisungen hinzu</span><span class="sxs-lookup"><span data-stu-id="57bd2-154">To add necessary using directives</span></span>  
   
 1.  <span data-ttu-id="57bd2-155">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für „MainWindow.xaml.cs“, und wählen Sie dann **Code anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="57bd2-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <span data-ttu-id="57bd2-157"><a name="synchronous"></a> So erstellen Sie eine synchrone Anwendung</span><span class="sxs-lookup"><span data-stu-id="57bd2-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
+###  <a name="synchronous"></a> <span data-ttu-id="57bd2-157">So erstellen Sie eine synchrone Anwendung</span><span class="sxs-lookup"><span data-stu-id="57bd2-157">To create a synchronous application</span></span>  
   
 1.  <span data-ttu-id="57bd2-158">Doppelklicken Sie im Entwurfsfenster „MainWindow.xaml“ auf die Schaltfläche **Start**, um den `startButton_Click`-Ereignishandler in „MainWindow.xaml.cs“ zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <span data-ttu-id="57bd2-167"><a name="testSynch"></a> So testen Sie die synchrone Lösung</span><span class="sxs-lookup"><span data-stu-id="57bd2-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
+###  <a name="testSynch"></a> <span data-ttu-id="57bd2-167">So testen Sie die synchrone Lösung</span><span class="sxs-lookup"><span data-stu-id="57bd2-167">To test the synchronous solution</span></span>  
   
 1.  <span data-ttu-id="57bd2-168">Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .</span><span class="sxs-lookup"><span data-stu-id="57bd2-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-170">Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="57bd2-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="57bd2-171">Während dieser Zeit ist der Benutzeroberflächenthread blockiert, während auf das Herunterladen von angeforderten Ressourcen gewartet wird.</span><span class="sxs-lookup"><span data-stu-id="57bd2-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="57bd2-172">Daher können Sie das Anzeigefenster weder verschieben, maximieren, minimieren noch schließen, nachdem Sie die Schaltfläche **Start** ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="57bd2-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="57bd2-173">Diese Bemühungen sind nicht erfolgreich, bis der Bytezähler angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="57bd2-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="57bd2-174">Wenn eine Website nicht antwortet, erhalten Sie keinen Hinweis darüber, welche Site fehlerhaft ist.</span><span class="sxs-lookup"><span data-stu-id="57bd2-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="57bd2-175">Es ist sogar schwierig, mit dem Warten aufzuhören und das Programm zu schließen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <span data-ttu-id="57bd2-176"><a name="GetURLContents"></a> So konvertieren Sie „GetURLContents“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
+###  <a name="GetURLContents"></a> <span data-ttu-id="57bd2-176">So konvertieren Sie „GetURLContents“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-176">To convert GetURLContents to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="57bd2-177">Für das Konvertieren der synchronen Projektmappe in eine asynchrone Projektmappe empfiehlt es sich, in `GetURLContents` zu beginnen, da die Aufrufe der <xref:System.Net.HttpWebRequest>-Methode <xref:System.Net.HttpWebRequest.GetResponse%2A> und der <xref:System.IO.Stream>-Methode <xref:System.IO.Stream.CopyTo%2A> dort erfolgen, wo die Anwendung auf das Web zugreift.</span><span class="sxs-lookup"><span data-stu-id="57bd2-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="57bd2-178">.NET Framework erleichtert die Konvertierung, indem asynchrone Versionen beider Methoden bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="57bd2-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
@@ -342,7 +342,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-220">Mit diesen wenigen Änderungen ist die Konvertierung von `GetURLContents` zu einer asynchronen Methode abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <span data-ttu-id="57bd2-221"><a name="SumPageSizes"></a> So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
+###  <a name="SumPageSizes"></a> <span data-ttu-id="57bd2-221">So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-221">To convert SumPageSizes to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="57bd2-222">Wiederholen Sie die Schritte des vorherigen Verfahrens für `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="57bd2-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="57bd2-223">Ändern Sie zunächst den Aufruf von `GetURLContents` zu einem asynchronen Aufruf.</span><span class="sxs-lookup"><span data-stu-id="57bd2-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
@@ -382,7 +382,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-234">Die Konvertierung von `SumPageSizes` zu `SumPageSizesAsync` ist abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-234">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <span data-ttu-id="57bd2-235"><a name="startButton"></a> So konvertieren Sie „startButton_Click“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-235"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
+###  <a name="startButton"></a> <span data-ttu-id="57bd2-235">So konvertieren Sie „startButton_Click“ in eine asynchrone Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-235">To convert startButton_Click to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="57bd2-236">Ändern Sie im Ereignishandler den Namen der aufgerufenen Methode von `SumPageSizes` zu `SumPageSizesAsync`, sofern Sie dies nicht bereits vorgenommen haben.</span><span class="sxs-lookup"><span data-stu-id="57bd2-236">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
@@ -428,7 +428,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="57bd2-248">Die Konvertierung des Projekts von der synchronen zu asynchronen Verarbeitung ist abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-248">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <span data-ttu-id="57bd2-249"><a name="testAsynch"></a> So testen Sie die asynchrone Lösung</span><span class="sxs-lookup"><span data-stu-id="57bd2-249"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
+###  <a name="testAsynch"></a> <span data-ttu-id="57bd2-249">So testen Sie die asynchrone Lösung</span><span class="sxs-lookup"><span data-stu-id="57bd2-249">To test the asynchronous solution</span></span>  
   
 1.  <span data-ttu-id="57bd2-250">Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .</span><span class="sxs-lookup"><span data-stu-id="57bd2-250">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -439,7 +439,7 @@ ms.lasthandoff: 11/21/2017
     -   <span data-ttu-id="57bd2-258">Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="57bd2-258">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="57bd2-259">Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="57bd2-259">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="57bd2-260">Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.</span><span class="sxs-lookup"><span data-stu-id="57bd2-260">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <span data-ttu-id="57bd2-261"><a name="GetURLContentsAsync"></a> So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-261"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
+###  <a name="GetURLContentsAsync"></a> <span data-ttu-id="57bd2-261">So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode</span><span class="sxs-lookup"><span data-stu-id="57bd2-261">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
 1.  <span data-ttu-id="57bd2-262">.NET Framework 4.5 bietet viele asynchrone Methoden, die Sie verwenden können.</span><span class="sxs-lookup"><span data-stu-id="57bd2-262">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="57bd2-263">Eine davon, die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> erfüllt genau das, was in dieser exemplarischen Vorgehensweise nötig ist.</span><span class="sxs-lookup"><span data-stu-id="57bd2-263">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="57bd2-264">Sie können sie anstelle der `GetURLContentsAsync`-Methode verwenden, die Sie in einer vorherigen Vorgehensweise erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="57bd2-264">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
@@ -464,7 +464,7 @@ ms.lasthandoff: 11/21/2017
   
      <span data-ttu-id="57bd2-270">Das Verhalten dieser Version des Projekts sollte mit dem Verhalten übereinstimmen, das in der Vorgehensweise „So testen Sie die asynchrone Lösung“ beschrieben wird, es sollte aber weniger Aufwand Ihrerseits nötig sein.</span><span class="sxs-lookup"><span data-stu-id="57bd2-270">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <span data-ttu-id="57bd2-271"><a name="BKMK_CompleteCodeExamples"></a> Beispiel</span><span class="sxs-lookup"><span data-stu-id="57bd2-271"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+##  <a name="BKMK_CompleteCodeExamples"></a> <span data-ttu-id="57bd2-271">Beispiel</span><span class="sxs-lookup"><span data-stu-id="57bd2-271">Example</span></span>  
  <span data-ttu-id="57bd2-272">Der folgende Code enthält das vollständige Beispiel der Konvertierung von einer synchronen zu einer asynchronen Lösung mithilfe der von Ihnen geschriebenen asynchronen `GetURLContentsAsync`-Methode.</span><span class="sxs-lookup"><span data-stu-id="57bd2-272">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="57bd2-273">Beachten Sie, dass sie der ursprünglichen synchronen Lösung sehr stark ähnelt.</span><span class="sxs-lookup"><span data-stu-id="57bd2-273">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```csharp  

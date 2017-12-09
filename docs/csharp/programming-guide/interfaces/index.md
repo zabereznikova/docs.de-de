@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  [<span data-ttu-id="2a9c2-155">Gewusst wie: Explizites Implementieren von Membern zweier Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  <span data-ttu-id="2a9c2-156">Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <span data-ttu-id="2a9c2-157"><a name="BKMK_RelatedSections"></a> Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="2a9c2-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="2a9c2-157">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="2a9c2-157">Related Sections</span></span>  
   
 -   [<span data-ttu-id="2a9c2-158">Schnittstelleneigenschaften</span><span class="sxs-lookup"><span data-stu-id="2a9c2-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
