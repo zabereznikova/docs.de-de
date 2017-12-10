@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Lernprogramm: Erstellen eines Typanbieters
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 Als Alternative öffnen Sie Visual Studio, öffnen Sie im Menü Debuggen, wählen Sie `Debug/Attach to process…`, und fügen Sie zu einem anderen `devenv` Prozess, in dem Sie das Skript bearbeiten. Mit dieser Methode können Sie leichter eine ganz bestimmte Logik im Typanbieter überprüfen, da Sie in der zweiten Instanz interaktiv Ausdrücke eingeben können (mit vollständiger IntelliSense-Unterstützung und anderen Funktionen).
 
-Sie können die Debugging-Option Nur eigenen Code deaktivieren, um Fehler in generiertem Code besser identifizieren zu können. Informationen zum Aktivieren oder Deaktivieren dieses Feature finden Sie unter [Navigieren im Code mit dem Debugger](https://msdn.microsoft.com/library/y740d9d3.aspx). Darüber hinaus können Sie auch nicht abgefangene Ausnahme abfangen, indem Sie öffnen Festlegen der `Debug` Menü, und drücken Sie dann die `Exceptions` oder indem Sie die Tasten Strg + Alt + E öffnen auswählen der `Exceptions` (Dialogfeld). In diesem Dialogfeld unter `Common Language Runtime Exceptions`, wählen die `Thrown` Kontrollkästchen.
+Sie können die Debugging-Option Nur eigenen Code deaktivieren, um Fehler in generiertem Code besser identifizieren zu können. Informationen zum Aktivieren oder Deaktivieren dieses Feature finden Sie unter [Navigieren im Code mit dem Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Darüber hinaus können Sie auch nicht abgefangene Ausnahme abfangen, indem Sie öffnen Festlegen der `Debug` Menü, und drücken Sie dann die `Exceptions` oder indem Sie die Tasten Strg + Alt + E öffnen auswählen der `Exceptions` (Dialogfeld). In diesem Dialogfeld unter `Common Language Runtime Exceptions`, wählen die `Thrown` Kontrollkästchen.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementierung des Typanbieters

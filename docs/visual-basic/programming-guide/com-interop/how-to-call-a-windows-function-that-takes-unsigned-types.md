@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d1d59c29a83ede97d90926c8e499788676e2c235
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)
 Wenn Sie eine Klasse, Modul oder Struktur, die Mitglieder der Ganzzahltypen ohne Vorzeichen in Anspruch genommen, können Sie diese Elemente zugreifen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -77,7 +77,7 @@ Wenn Sie eine Klasse, Modul oder Struktur, die Mitglieder der Ganzzahltypen ohne
     ```  
   
     > [!CAUTION]
-    >  Die `UInteger`, `ULong`, `UShort`, und `SByte` Datentypen sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, werden diese verwendet.  
+    >  Die `UInteger`, `ULong`, `UShort`, und `SByte` Datentypen sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, werden diese verwendet.  
   
     > [!IMPORTANT]
     >  Aufruf von nicht verwaltetem Code, z. B. die Windows-Anwendungsprogrammierschnittstelle (API), macht den Code auf potenzielle Sicherheitsrisiken.  

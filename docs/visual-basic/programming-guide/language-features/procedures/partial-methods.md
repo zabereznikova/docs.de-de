@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Partielle Methoden (Visual Basic)
 Partielle Methoden können Entwickler benutzerdefinierten Logik in Code einzufügen. In der Regel ist der Code Teil einer vom Designer generierte Klasse. Partielle Methoden werden in einer partiellen Klasse, die von einem Codegenerator erstellt wird definiert, und sie werden häufig verwendet, um die Benachrichtigung angeben, dass etwas geändert wurde. Sie ermöglichen es den Entwickler, die benutzerdefiniertes Verhalten als Reaktion auf die Änderung angeben.  
@@ -83,5 +83,5 @@ End Sub
  [Sub-Prozeduren](./sub-procedures.md)  
  [Optionale Parameter](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Codegenerierung in LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
- [Hinzufügen von Geschäftslogik durch verwenden partieller Methoden](https://msdn.microsoft.com/library/bb546176)
+ [Codegenerierung in LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Hinzufügen von Geschäftslogik durch Verwenden partieller Methoden](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

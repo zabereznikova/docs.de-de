@@ -18,18 +18,18 @@ ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9949b5f6f670c66463c42a71434c0cdd941c995b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e59c440e5553366d27fed6e5c53c5c463172906b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Gewusst wie: Abfragen einer Datenbank mit LINQ (Visual Basic)
 Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreifen und Ausführen von Abfragen.  
   
  Im folgende Beispiel wird gezeigt, wie eine neue Anwendung zu erstellen, die Abfragen für eine SQL Server-Datenbank ausführt.  
   
- In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](https://msdn.microsoft.com/library/bb399411).  
+ In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -87,5 +87,5 @@ Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreife
 ## <a name="see-also"></a>Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

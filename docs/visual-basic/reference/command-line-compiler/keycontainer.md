@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
@@ -44,7 +44,7 @@ Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembl
   
  Außerdem können Sie Ihre Verschlüsselungsinformationen mit [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) an den Compiler übergeben. Verwenden Sie [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), wenn die Assembly teilweise signiert werden soll.  
   
- Finden Sie unter [erstellen und Verwenden von Assemblys](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.  
+ Finden Sie unter [erstellen und Verwenden von Assemblys](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) für Weitere Informationen zum Signieren einer Assemblys.  
   
 > [!NOTE]
 >  Die `/keycontainer` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  

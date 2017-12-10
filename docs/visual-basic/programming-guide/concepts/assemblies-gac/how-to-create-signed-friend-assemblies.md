@@ -12,11 +12,11 @@ ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f87f816992bdfa9ed347c35ba651c59187551772
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e549eeb67c41b3172dd5a5885d59aa6069716a0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys (Visual Basic)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
@@ -100,5 +100,5 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
  [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Erstellen und Verwenden von Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617)  
+ [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)

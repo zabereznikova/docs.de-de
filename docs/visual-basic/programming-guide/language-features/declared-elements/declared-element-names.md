@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 691b65280b958edcf8e856ee6df793e0b7b05184
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
 Jedem deklariertes Element hat einen Namen, so genannte ein *Bezeichner*, wird der Code dazu verwendet wird, um darauf zu verweisen.  
@@ -71,7 +71,7 @@ Jedem deklariertes Element hat einen Namen, so genannte ein *Bezeichner*, wird d
  `xyz$wv`  
   
 > [!CAUTION]
->  Elementnamen, die mit einem Unterstrich beginnen (`_`) sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), damit eine Komponente nicht CLS-kompatiblem Code verwenden kann, die solche Namen definiert. Allerdings ist ein Unterstrich in einer beliebigen anderen Position im Namen eines Elements CLS-kompatibel.  
+>  Elementnamen, die mit einem Unterstrich beginnen (`_`) sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), damit eine Komponente nicht CLS-kompatiblem Code verwenden kann, die solche Namen definiert. Allerdings ist ein Unterstrich in einer beliebigen anderen Position im Namen eines Elements CLS-kompatibel.  
   
 ### <a name="name-length-guidelines"></a>Richtlinien zur Länge von Namen  
  Ihren Namen sollten aus praktischen Gründen so kurz wie möglich werden immer noch eindeutig identifiziert die Art des Elements. Dies verbessert die Lesbarkeit des Codes und reduziert die Größe des Zeile Länge und Quelldatei.  

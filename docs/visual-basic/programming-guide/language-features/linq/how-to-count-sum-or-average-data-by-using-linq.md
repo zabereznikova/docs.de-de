@@ -24,18 +24,18 @@ ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 48708af82ec4cc874d9ca3b8e6b231d5a862e004
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a8c77804a9813d6127edcf4bd8371e0de2b36074
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Gewusst wie: Bestimmen von Zahlen, Summen oder Durchschnittswerten von Daten mithilfe von LINQ (Visual Basic)
 Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreifen und Ausführen von Abfragen.  
   
  Im folgende Beispiel wird gezeigt, wie eine neue Anwendung zu erstellen, die Abfragen für eine SQL Server-Datenbank ausführt. Im Beispiel zählt, summiert und Durchschnittswerte der Ergebnisse mithilfe der `Aggregate` und `Group By` Klauseln. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](https://msdn.microsoft.com/library/bb399411).  
+ In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,7 +88,7 @@ Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreife
 ## <a name="see-also"></a>Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md)

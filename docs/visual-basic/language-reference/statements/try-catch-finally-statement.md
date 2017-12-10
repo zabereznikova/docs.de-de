@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08de4939960d8297269c82b1b040537dd43f3038
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally-Anweisung (Visual Basic)
 Bietet eine Möglichkeit, einige oder alle möglichen Fehler zu behandeln, die beim Ausführen von Code in einem bestimmten Codeblock auftreten können.  
@@ -194,5 +194,5 @@ End Try
  [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error-Anweisung](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Empfohlene Vorgehensweisen für die Verwendung von Codeausschnitten](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Ausnahmebehandlung](https://msdn.microsoft.com/library/dd997415)  
+ [Ausnahmebehandlung](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw-Anweisung](../../../visual-basic/language-reference/statements/throw-statement.md)

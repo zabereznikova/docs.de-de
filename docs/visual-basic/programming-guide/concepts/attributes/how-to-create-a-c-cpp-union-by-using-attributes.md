@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Vorgehensweise: erstellen eine C/C++-Union mit Attributen (Visual Basic)
 Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher angeordnet werden. Sie können z.B. das erstellen, was als eine Union in C/C++ bekannt ist, indem Sie die mit `StructLayout(LayoutKind.Explicit)`- und `FieldOffset`-Attribute verwenden.  
@@ -79,7 +79,7 @@ Structure TestExplicit
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
- [Attribute](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Attribute](../../../../../docs/standard/attributes/index.md)  
  [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Attribute (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Erstellen benutzerdefinierter Attribute (Visual Basic))  

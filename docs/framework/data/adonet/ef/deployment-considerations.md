@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Überlegungen zur Bereitstellung (Entity Framework)
 Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die das ADO.NET Entity Framework für den Datenzugriff verwenden. Weitere Informationen über das Entity Framework finden Sie unter [Einstieg](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
   
  Das Entity Framework stellt einen Satz von Tools zur Verfügung, die zur Verwendung in Visual Studio geeignet sind und die Entwicklung in Visual Studio vereinfachen. Weitere Informationen finden Sie unter [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527). In diesem Thema wird nicht beschrieben, wie spezielle Technologien verwendet werden, um eine Entity Framework-basierte Anwendung bereitzustellen.  
   
- Visual Studio stellt Funktionen zum Verteilen und Bereitstellen von Anwendungen bereit, z. B. die ClickOnce-Bereitstellung. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen und Komponenten](https://msdn.microsoft.com/library/wtzawcsz) in der Visual Studio-Dokumentation.  
+ Visual Studio stellt Funktionen zum Verteilen und Bereitstellen von Anwendungen bereit, z. B. die ClickOnce-Bereitstellung. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen und Komponenten](/visualstudio/deployment/deploying-applications-services-and-components) in der Visual Studio-Dokumentation.  
   
  Die folgenden Überlegungen gelten, wenn Sie eine Anwendung bereitstellen, die das Entity Framework verwendet:  
   
@@ -40,4 +40,4 @@ Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Entwicklungs- und Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+ [Überlegungen zur Entwicklung und Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

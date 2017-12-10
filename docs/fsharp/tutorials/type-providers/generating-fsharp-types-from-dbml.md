@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Exemplarische Vorgehensweise: Generieren von F#-Typen aus einer DBML-Datei
 
@@ -24,7 +24,7 @@ Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSh
 > [!NOTE]
 Die API-Referenz Links gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Diese exemplarische Vorgehensweise für f# 3.0 wird beschrieben, wie Typen für Daten aus einer Datenbank erstellen, wenn Sie Schemainformationen in einer DBML-Datei codiert haben wird. LINQ to SQL verwendet Dateiformat zur Darstellung des Datenbankschemas. Sie können eine LINQ to SQL-Schema-Datei in Visual Studio mithilfe des objektrelationalen (O/R)-Designers generieren. Weitere Informationen finden Sie unter [O/R-Designer (Übersicht)](https://msdn.microsoft.com/library/bb384511.aspx) und [Codegenerierung in LINQ to SQL](https://msdn.microsoft.com/library/bb386976).
+Diese exemplarische Vorgehensweise für f# 3.0 wird beschrieben, wie Typen für Daten aus einer Datenbank erstellen, wenn Sie Schemainformationen in einer DBML-Datei codiert haben wird. LINQ to SQL verwendet Dateiformat zur Darstellung des Datenbankschemas. Sie können eine LINQ to SQL-Schema-Datei in Visual Studio mithilfe des objektrelationalen (O/R)-Designers generieren. Weitere Informationen finden Sie unter [O/R-Designer (Übersicht)](https://msdn.microsoft.com/library/bb384511.aspx) und [Codegenerierung in LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 Die Database Markup Language (DBML)-Typanbieter ermöglicht Ihnen, Code zu schreiben, die Typen auf Grundlage eines Datenbankschemas, ohne dass Ihnen die Angabe eine statischen Verbindungszeichenfolge zum Zeitpunkt der Kompilierung verwendet. Das ist hilfreich, wenn müssen Sie die Möglichkeit zu ermöglichen, dass der endgültige Anwendung verwendet werden, eine andere Datenbank, unterschiedliche Anmeldeinformationen oder eine andere Verbindungszeichenfolge als an denjenigen, die Sie verwenden, um die Anwendung zu entwickeln. Wenn Sie eine direkte datenbankverbindung, die Sie zum Zeitpunkt der Kompilierung verwenden können und dies ist die Datenbank und die Anmeldeinformationen, die Sie in der integrierten Anwendung verwendet werden, können Sie auch SQLDataConnection-Typanbieter verwenden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf eine SQL-Datenbank von mithilfe von Typanbietern](accessing-a-sql-database.md).
 

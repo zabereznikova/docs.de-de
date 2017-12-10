@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
 Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als eine Reihe von Prozeduren vorstellen, die nacheinander ausgeführt werden, doch sind die meisten Programme tatsächlich ereignisgesteuert. Das bedeutet, dass der Ausführungsablauf von externen Vorkommnissen bestimmt wird, die als *Ereignisse* bezeichnet werden.  
@@ -113,5 +113,5 @@ Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als ein
 |[Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das nur bei der Behandlung des Ereignisses Arbeitsspeicher nutzt.|  
 |[Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Führt häufige Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten können.|  
 |[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Erstellen von Ereignishandlern in Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
+|[Erstellen von Ereignishandlern in Windows Forms](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
 |[Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Stellt eine Übersicht über Delegaten in Visual Basic bereit.|

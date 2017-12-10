@@ -14,11 +14,11 @@ ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa9fca7f0590846f60577787aa476539a2c872a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cdbd8edaefba4554e8de92cb600f045dc39f780
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da sie überlädt &lt;proceduresignature2&gt; die unterscheidet sich jedoch nur durch Array von Arrayparametertypen oder durch den Rang der Array-Parametertypen
 Eine Prozedur oder Eigenschaft wird als gekennzeichnet `<CLSCompliant(True)>` Wenn sie eine andere Prozedur oder Eigenschaft überschreibt und des einzigen Unterschied zwischen ihren Parameterlisten der Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.  
@@ -31,7 +31,7 @@ Eine Prozedur oder Eigenschaft wird als gekennzeichnet `<CLSCompliant(True)>` We
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- Die zweite Deklaration ändert der ursprünglichen eindimensionalen Parameter `arrayParam` auf ein Array von Arrays. Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2). Wenn Sie Visual Basic Überladungen auf, um nur eine dieser Änderungen unterscheiden können, solche überladen ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS).  
+ Die zweite Deklaration ändert der ursprünglichen eindimensionalen Parameter `arrayParam` auf ein Array von Arrays. Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2). Wenn Sie Visual Basic Überladungen auf, um nur eine dieser Änderungen unterscheiden können, solche überladen ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Wenn Sie das <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant` -Parameter des Attributs auf `True` oder `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben. Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   

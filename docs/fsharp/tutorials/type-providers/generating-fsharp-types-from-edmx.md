@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 5c59911f5f880493080ef1838bc015045ce4336a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Exemplarische Vorgehensweise: Generieren von F#-Typen aus einer EDMX-Schemadatei
 
@@ -99,7 +99,7 @@ Die Verbindungszeichenfolge für das Entity Data Model (EDMX-Verbindungszeichenf
 let edmConnectionString = "metadata=res://*/;provider=System.Data.SqlClient;Provider Connection String='Server=SERVER\Instance;Initial Catalog=DatabaseName;Integrated Security=SSPI;'"
 ```
 
-Weitere Informationen zu EDMX-Verbindungszeichenfolgen finden Sie unter [Verbindungszeichenfolgen](https://msdn.microsoft.com/library/ms254494.aspx).
+Weitere Informationen zu EDMX-Verbindungszeichenfolgen finden Sie unter [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).
 
 
 #### <a name="to-find-or-create-the-connection-string-for-the-entity-data-model"></a>Suchen oder Erstellen der Verbindungszeichenfolge für das Entity Data Model

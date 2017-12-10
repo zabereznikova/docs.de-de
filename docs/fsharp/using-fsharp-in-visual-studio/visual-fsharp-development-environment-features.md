@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Funktionen der Visual F#-Entwicklungsumgebung
 
@@ -50,7 +50,7 @@ In der folgenden Tabelle werden die Projekteigenschaften Funktionen unterstützt
 |Sicherheit (Ändern von Vertrauensebenen)|Nein||
 
 ## <a name="code-and-text-editor-features"></a>Code und Text-Editor-Funktionen
-Die folgenden Funktionen von Visual Studiocode und Text-Editoren werden in f# unterstützt. Allgemeine Informationen zum Bearbeiten von Code in Visual Studio und der Text-Editor-Funktionen finden Sie unter [Schreiben von Code im Code- und Text-Editor](https://msdn.microsoft.com/library/efc4xwkb.aspx).
+Die folgenden Funktionen von Visual Studiocode und Text-Editoren werden in f# unterstützt. Allgemeine Informationen zum Bearbeiten von Code in Visual Studio und der Text-Editor-Funktionen finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
 |Funktion|Beschreibung|In f# unterstützt?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ Die folgenden Funktionen von Visual Studiocode und Text-Editoren werden in f# un
 |Automatisch formatieren|Formatiert den Code mit Standardeinzug und Stil.|Nein|
 |Lesezeichen|Ermöglicht Ihnen, stellen im Editor zu speichern.|Ja|
 |Einzug ändern|Rückt hinzu oder entfernt Einzüge ausgewählte Zeilen.|Ja|
-|[Suchen und Ersetzen von Text](https://msdn.microsoft.com/library/139eef4h.aspx)|Ermöglicht Ihnen das Suchen in einer Datei, einem Projekt oder einer Projektmappe und Text zu ändern.|Ja|
+|[Suchen und Ersetzen von Text](/visualstudio/ide/finding-and-replacing-text)|Ermöglicht Ihnen das Suchen in einer Datei, einem Projekt oder einer Projektmappe und Text zu ändern.|Ja|
 |Gehe zu Definition für .NET Framework-API|Wenn der Cursor in eine .NET Framework-API positioniert ist, zeigt Code aus .NET Framework-Metadaten generiert.|Nein|
 |Gehe zu Definition für eine benutzerdefinierte API|Wann ist der Cursor auf eine Anwendung-Entität, die Sie Bewegen des Cursors an der Stelle im Code definiert, in dem die Entität definiert ist, ein.|Ja|
 |Gehe zu Zeile|Ermöglicht es Ihnen, um zu einer bestimmten Zeile in einer Datei, durch die Nummer der Zeile zu wechseln.|Ja|
 |Navigationsleisten am Anfang der Datei|Ermöglicht das Springen zu Positionen im Code durch, z. B. Funktionsnamen.|Ja|
-|Gliederung Finden Sie unter [Gliederung](https://msdn.microsoft.com/library/td6a5x4s.aspx).|Ermöglicht es Ihnen, Abschnitte des Codes erstellen Sie eine kompaktere Ansicht reduzieren.|Ja|
+|Gliederung Finden Sie unter [Gliederung](/visualstudio/ide/outlining).|Ermöglicht es Ihnen, Abschnitte des Codes erstellen Sie eine kompaktere Ansicht reduzieren.|Ja|
 |Mit Tabstopps versehen|Leerzeichen konvertiert in Tabstopps.|Ja|
 |Farbliche Kennzeichnung von Typen|Zeigt definierte Typnamen in einer speziellen Farbe.|Ja|
 |Schnellsuche. Schnellsuche: Suchen und Ersetzen im Fenster angezeigt wird|Ermöglicht es Ihnen, in eine Datei oder ein Projekt gesucht werden soll.|Ja|
 
 ## <a name="intellisense-features"></a>IntelliSense-Funktionen
-In der folgenden Tabelle werden die IntelliSense-Funktionen unterstützt und nicht in f# unterstützt zusammengefasst. Allgemeine Informationen zu IntelliSense finden Sie unter [Verwenden von IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+In der folgenden Tabelle werden die IntelliSense-Funktionen unterstützt und nicht in f# unterstützt zusammengefasst. Allgemeine Informationen zu IntelliSense finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense).
 
 |Funktion|Beschreibung|In f# unterstützt?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ In der folgenden Tabelle werden die Unterstützung für f# in Visual Studio-Tool
 |Aufrufhierarchie|Zeigt Aufrufe die geschachtelte Struktur der Funktion im Code.|Nein|
 |Codemetrik|Sammelt Informationen zu Ihrem Code, z. B. Zeilenanzahl an.|Nein|
 |Klassenansicht|Stellt eine basierende Ansicht des Codes in einem Projekt.|Nein|
-|[Fenster „Fehlerliste“](https://msdn.microsoft.com/library/33df3b7a.aspx)|Zeigt eine Liste von Fehlern im Code.|Ja|
+|[Fenster „Fehlerliste“](/visualstudio/ide/reference/error-list-window)|Zeigt eine Liste von Fehlern im Code.|Ja|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|Ermöglicht es, Ihnen (oder kopieren und Einfügen) F#-code und führen Sie es sofort, unabhängig von der Erstellung des Projekts. F# Interactive-Fenster wird eine Read, Evaluate, Print Loop (REPL).|Ja|
 |Objektkatalog|Ermöglicht es Ihnen so zeigen Sie die Typen in einer Assembly an.|F#-Typen erscheinen in kompilierten Assemblys erscheinen nicht genau so, wie Sie sie erstellen. Durchsuchen Sie die kompilierte Darstellung eines f#-Typen, aber Sie können nicht die Typen anzeigen, wie sie von f# angezeigt werden.|
-|[Ausgabefenster](https://msdn.microsoft.com/library/3hk6fby3.aspx)|Zeigt die Buildausgabe an.|Ja|
+|[Ausgabefenster](/visualstudio/ide/reference/output-window)|Zeigt die Buildausgabe an.|Ja|
 |Leistungsanalyse|Stellt Tools zum Messen der Leistung des Codes bereit.|Ja|
 |Eigenschaftenfenster|Zeigt an, und ermöglicht die Bearbeitung der Eigenschaften des Objekts in der Entwicklungsumgebung, die Fokus besitzt.|Ja|
 |[Server-Explorer](https://msdn.microsoft.com/library/x603htbk.aspx)|Bietet Methoden zum interagieren mit einer Vielzahl von Serverressourcen.|Ja|

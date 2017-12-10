@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>/delaysign
 Gibt an, ob die Assembly vollständig oder teilweise signiert wird.  
@@ -40,7 +40,7 @@ Gibt an, ob die Assembly vollständig oder teilweise signiert wird.
   
  Z. B. durch Verwendung `/delaysign+`, ein Entwickler in einer Organisation kann verteilen, ohne Vorzeichen Testversionen einer Assembly, die Tester mit dem globalen Assemblycache zu registrieren und verwenden können. Bei der Arbeit für die Assembly abgeschlossen ist, kann für private Schlüssel der Organisation verantwortliche Person die Assembly vollständig signieren. Diese Aufgliederung schützt private Schlüssel der Organisation vor Offenlegung, während alle es Entwicklern ermöglicht, auf die Assemblys zu arbeiten.  
   
- Finden Sie unter [erstellen und Verwenden von Assemblys](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.  
+ Finden Sie unter [erstellen und Verwenden von Assemblys](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) für Weitere Informationen zum Signieren einer Assemblys.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Zum Festlegen von/delaysign / in Visual Studio integrierte Entwicklungsumgebung  
   

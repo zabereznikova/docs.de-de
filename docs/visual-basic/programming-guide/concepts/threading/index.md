@@ -12,11 +12,11 @@ ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb942047278fec7c6446190a98666532c2769c17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: acf9e15aa03b177533f87417278842735c1d6318
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-visual-basic"></a>Threading (Visual Basic)
 Mit Threading kann Ihr Visual Basic-Programm parallele Verarbeitungsaufgaben durchführen, damit Sie mehr als einen Vorgang gleichzeitig durchführen können. Sie können z.B. Threading verwenden, um Benutzereingaben zu überwachen, Aufgaben im Hintergrund auszuführen und parallele Eingabestreams zu behandeln.  
@@ -27,7 +27,7 @@ Mit Threading kann Ihr Visual Basic-Programm parallele Verarbeitungsaufgaben dur
   
 -   Der <xref:System.Threading>-Namespace von .NET Framework erleichtert das Verwenden von Threads.  
   
--   Threads verwenden die gleichen Ressourcen wie die Anwendung. Weitere Informationen finden Sie unter [Using Threads and Threading (Verwenden von Threads und Threading)](https://msdn.microsoft.com/library/e1dx6b2h).  
+-   Threads verwenden die gleichen Ressourcen wie die Anwendung. Weitere Informationen finden Sie unter [Using Threads and Threading (Verwenden von Threads und Threading)](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
  Standardmäßig verfügt ein Visual Basic-Programm über einen Thread. Sie können aber Hilfsthreads erstellen und diese parallel zum primären Thread zur Ausführung von Code verwenden. Diese Threads werden auch als *Arbeitsthreads* bezeichnet.  
   
@@ -40,7 +40,7 @@ Mit Threading kann Ihr Visual Basic-Programm parallele Verarbeitungsaufgaben dur
  Sie können einige oder alle diese Klassen zum Synchronisieren der Aktivitäten mehrerer Threads verwenden. Allerdings wird der Support für das Threading teilweise von Visual Basic unterstützt. Die [SyncLock-Anweisung](../../../../visual-basic/language-reference/statements/synclock-statement.md) stellt z.B. Synchronisierungsfunktionen durch das implizit Verwenden von <xref:System.Threading.Monitor> bereit.  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung erheblich vereinfacht, und zwar durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](https://msdn.microsoft.com/library/dd460693).  
+>  Ab [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung erheblich vereinfacht, und zwar durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -53,4 +53,4 @@ Mit Threading kann Ihr Visual Basic-Programm parallele Verarbeitungsaufgaben dur
 |[Threadtimer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|Beschreibt, wie die Prozeduren auf separaten Threads in regelmäßigen Abständen ausführen können|  
 |[Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Beschreibt, wie Sie einen Pool von Arbeitsthreads verwenden können, die vom System verwaltet werden|  
 |[Vorgehensweise: Verwenden eines Threadpools (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Veranschaulicht das synchronisierte Verwenden von mehreren Threads im Threadpool|  
-|[Threading](https://msdn.microsoft.com/library/3e8s7xdd)|Beschreibt, wie Sie Threading in .NET Framework implementieren|
+|[Threading](../../../../../docs/standard/threading/index.md)|Beschreibt, wie Sie Threading in .NET Framework implementieren|

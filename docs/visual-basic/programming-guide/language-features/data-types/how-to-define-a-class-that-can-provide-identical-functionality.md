@@ -35,11 +35,11 @@ ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7cc2563f193fba9f9e30fcdfd5ea2766be16ba63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c81d1f795b0c27f2eaf07832f2c1276b626f5ce1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann (Visual Basic)
 Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse*bezeichnet.  
@@ -85,7 +85,7 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Generische Typen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Sprachunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3)  
+ [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Typliste](../../../../visual-basic/language-reference/statements/type-list.md)  
  [Gewusst wie: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  

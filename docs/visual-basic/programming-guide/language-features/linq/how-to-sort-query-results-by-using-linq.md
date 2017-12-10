@@ -20,18 +20,18 @@ ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
 caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c880924b8091d3af28f5353fec2083d635bb4078
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 956eb92ca802b478fac9452cc98b5dd2e2fbcd4a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Gewusst wie: Sortieren von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)
 Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreifen und Ausführen von Abfragen.  
   
  Im folgende Beispiel wird gezeigt, wie eine neue Anwendung erstellen, führt Abfragen in einer SQL Server-Datenbank, und sortiert die Ergebnisse nach mehreren Feldern mithilfe, der `Order By` Klausel. Die Sortierreihenfolge für jedes Feld kann aufsteigend oder absteigend werden. Weitere Informationen finden Sie unter [Order By-Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](https://msdn.microsoft.com/library/bb399411).  
+ In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie die Beispieldatenbank Northwind nicht auf Ihrem Computer verfügen, können Sie laden Sie es der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Website. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -84,5 +84,5 @@ Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreife
 ## <a name="see-also"></a>Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

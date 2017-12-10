@@ -14,16 +14,16 @@ ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c495a21603f1977bd0f0630104f75ab02728928
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5fc981f5de5c4baa9a47e04af16966ea06fa10ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Der Typ des Parameters &#39; &lt;Parametername&gt;&#39; ist nicht CLS-kompatibel.
 Eine Prozedur ist als gekennzeichnet `<CLSCompliant(True)>` deklariert jedoch einen Parameter mit einem Typ mit der Kennzeichnung `<CLSCompliant(False)>`, nicht markiert ist oder nicht geeignet ist, da es sich um einen nicht kompatiblen Typ handelt.  
   
- Damit eine Prozedur mit [Sprachunabhängigkeit und sprachunabhängigen Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS) kompatibel ist, darf sie ausschließlich CLS-kompatible Typen verwenden. Dies gilt für die Parametertypen, den Rückgabetyp und die Typen all ihrer lokalen Variablen.  
+ Damit eine Prozedur mit [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf sie ausschließlich CLS-kompatible Typen verwenden. Dies gilt für die Parametertypen, den Rückgabetyp und die Typen all ihrer lokalen Variablen.  
   
  Die folgenden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Datentypen sind nicht CLS-kompatibel:  
   

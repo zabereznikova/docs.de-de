@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 64e01fdfc4951dc23cd7ce92941a367882b3b6bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
 Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Abfragefunktionen hinzu und stellt einfache und leistungsstarke Funktionen zum Arbeiten mit allen Arten von Daten bereit. Statt eine Abfrage zum Verarbeiten an eine Datenbank zu senden oder für jede Art von zu suchenden Daten mit unterschiedlichen Abfragesyntaxarten zu arbeiten, werden von LINQ Abfragen als Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
@@ -71,7 +71,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
 |Anbieter|Beschreibung|  
 |---|---|  
 |LINQ to Objects|Mit dem Anbieter LINQ to Objects können Sie speicherinterne Auflistungen und Arrays abfragen. Wenn ein Objekt die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle unterstützt, können Sie es mit dem Anbieter LINQ to Objects abfragen.<br /><br /> Sie können den Anbieter LINQ to Objects aktivieren, indem Sie den <xref:System.Linq>-Namespace importieren, der standardmäßig in allen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Projekten importiert wird.<br /><br /> Weitere Informationen zu dem Anbieter LINQ to Objects, finden Sie unter [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ to SQL|Mit dem Anbieter LINQ to SQL können Sie Daten einer SQL Server-Datenbank abfragen und ändern. Dies erleichtert das Zuordnen des Objektmodells einer Anwendung zu den Tabellen und Objekten in einer Datenbank.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert die Arbeit mit LINQ to SQL durch den Object Relational Designer (O/R-Designer). Der Designer wird verwendet, um in einer Anwendung ein Objektmodell zu erstellen, das den Objekten in einer Datenbank entspricht. Der O/R-Designer auch bietet Funktionen zum Zuordnen gespeicherter Prozeduren und Funktionen der <xref:System.Data.Linq.DataContext> -Objekt, das Kommunikation mit der Datenbank verwaltet und Zustand für optimistische parallelitätsprüfungen speichert.<br /><br /> Weitere Informationen zu LINQ to SQL-Anbieter finden Sie unter [LINQ to SQL](https://msdn.microsoft.com/library/bb386976). Weitere Informationen zu den Object Relational Designer finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to SQL|Mit dem Anbieter LINQ to SQL können Sie Daten einer SQL Server-Datenbank abfragen und ändern. Dies erleichtert das Zuordnen des Objektmodells einer Anwendung zu den Tabellen und Objekten in einer Datenbank.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert die Arbeit mit LINQ to SQL durch den Object Relational Designer (O/R-Designer). Der Designer wird verwendet, um in einer Anwendung ein Objektmodell zu erstellen, das den Objekten in einer Datenbank entspricht. Der O/R-Designer auch bietet Funktionen zum Zuordnen gespeicherter Prozeduren und Funktionen der <xref:System.Data.Linq.DataContext> -Objekt, das Kommunikation mit der Datenbank verwaltet und Zustand für optimistische parallelitätsprüfungen speichert.<br /><br /> Weitere Informationen zu LINQ to SQL-Anbieter finden Sie unter [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md). Weitere Informationen zu den Object Relational Designer finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Mit dem Anbieter LINQ to XML können Sie XML abfragen und ändern. Sie können speicherinternes XML ändern, oder Sie können XML aus einer Datei laden und in einer Datei speichern.<br /><br /> Darüber hinaus ermöglicht der Anbieter LINQ to XML XML-Literale und XML-Achseneigenschaften, mit denen Sie XML direkt im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Code schreiben können. Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ to DataSet|Der Anbieter LINQ to DataSet können Sie Abfragen und Aktualisieren von Daten in eine [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Dataset. Sie können Anwendungen, die DataSets verwenden, die Leistungsfähigkeit von LINQ hinzufügen und so die Funktionen zum Abfragen, Aggregieren und Aktualisieren der Daten in Ihrem DataSet vereinfachen und erweitern.<br /><br /> Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
@@ -82,7 +82,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- Dieses Beispiel ist bereits eine gültige Abfrage, sie wird jedoch weitaus leistungsstärker, wenn Sie weitere Abfrageklauseln hinzufügen, um die Abfrage zu verfeinern. Beispielsweise können Sie eine `Where`-Klausel hinzufügen, um das Ergebnis nach einem oder mehreren Werten zu filtern. Abfrageausdrücke bestehen aus einer einzelnen Codezeile, an das Ende der Abfrage können Sie einfach zusätzliche Abfrageklauseln anfügen. Um die Lesbarkeit zu verbessern, können Sie eine Abfrage mit dem Zeilenfortsetzungszeichen Unterstrich (_) auf mehrere Textzeilen aufteilen. Das folgende Codebeispiel enthält eine Abfrage mit einer `Where`-Klausel.  
+ Dieses Beispiel ist bereits eine gültige Abfrage, sie wird jedoch weitaus leistungsstärker, wenn Sie weitere Abfrageklauseln hinzufügen, um die Abfrage zu verfeinern. Beispielsweise können Sie eine `Where`-Klausel hinzufügen, um das Ergebnis nach einem oder mehreren Werten zu filtern. Abfrageausdrücke bestehen aus einer einzelnen Codezeile, an das Ende der Abfrage können Sie einfach zusätzliche Abfrageklauseln anfügen. Sie können eine Abfrage über mehrere Textzeilen Lesbarkeit zu verbessern, indem Sie den Unterstrich zusammensetzen (\_) (Zeilenfortsetzungszeichen). Das folgende Codebeispiel enthält eine Abfrage mit einer `Where`-Klausel.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Beschreibt die XML-Features in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die abgefragt werden können und die Ihnen ermöglichen, XML in Ihrem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Code als Datenobjekte erster Klasse anzugeben.|  
 |[Abfragen](../../../../visual-basic/language-reference/queries/queries.md)|Stellt Referenzinformationen zu den in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbaren Abfrageklauseln bereit.|  
 |[LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ.|  
-|[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to SQL.|  
+|[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to SQL.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to Objects.|  
 |[LINQ to ADO.NET (Portalseite)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Enthält Links zu allgemeinen Informationen, Programmieranleitungen und Beispiele zu LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to XML.|  
@@ -203,7 +203,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
 ## <a name="see-also"></a>Siehe auch  
  [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ to DataSet-Übersicht](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [Übersicht über LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

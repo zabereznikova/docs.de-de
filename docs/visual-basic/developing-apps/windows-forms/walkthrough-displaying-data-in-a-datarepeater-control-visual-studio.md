@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39c3b56404c981e674766354463e23aa349994cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Exemplarische Vorgehensweise: Anzeigen von Daten in einem DataRepeater-Steuerelement (Visual Studio)
 Diese exemplarische Vorgehensweise enthält ein grundlegendes Szenario von Anfang bis zum Ende der Anzeige von gebundenen Daten in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement.  
@@ -25,7 +25,7 @@ Diese exemplarische Vorgehensweise enthält ein grundlegendes Szenario von Anfan
 ## <a name="prerequisite"></a>Vorbereitungsmaßnahme  
  Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt.  
   
- Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie sie aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088)herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](https://msdn.microsoft.com/library/bb399411).  
+ Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie sie aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088)herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Übersicht  
  Der erste Teil dieser exemplarischen Vorgehensweise besteht aus vier Hauptaufgaben:  
