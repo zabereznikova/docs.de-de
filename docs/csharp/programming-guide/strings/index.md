@@ -11,11 +11,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6be0f4dcf3aa9c66335ab466d1c50a5714314b42
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -130,9 +130,9 @@ string s = String.Empty;
 |[Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Erläutert, wie reguläre Ausdrücken zum Suchen von Zeichenfolgen verwendet werden|  
 |[Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
 |[Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Zeigt, wie eine Zeichenfolge wie "01/24/2008" in ein <xref:System.DateTime?displayProperty=nameWithType>-Objekt konvertiert wird|  
-|[Grundlegende Zeichenfolgenoperationen](https://msdn.microsoft.com/library/a292he7t)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
-|[Analysieren von Zeichenfolgen](https://msdn.microsoft.com/library/b4w53z0y)|Beschreibt, wie Zeichen oder Leerzeichen in eine Zeichenfolge eingefügt werden|  
-|[Vergleichen von Zeichenfolgen](https://msdn.microsoft.com/library/fbh501kz)|Enthält Informationen, wie Zeichenfolgen verglichen werden, und gibt Beispiele in C# und Visual Basic|  
+|[Grundlegende Zeichenfolgenoperationen](../../../../docs/standard/base-types/basic-string-operations.md)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
+|[Analysieren von Zeichenfolgen](../../../../docs/standard/base-types/parsing-strings.md)|Beschreibt, wie Zeichen oder Leerzeichen in eine Zeichenfolge eingefügt werden|  
+|[Vergleichen von Zeichenfolgen](../../../../docs/standard/base-types/comparing.md)|Enthält Informationen, wie Zeichenfolgen verglichen werden, und gibt Beispiele in C# und Visual Basic|  
 |[Verwenden der StringBuilder-Klasse](../../../standard/base-types/stringbuilder.md)|Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse|  
 |[LINQ und Zeichenfolgen](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Enthält Informationen zum Ausführen verschiedener Zeichenfolgenoperationen mithilfe von LINQ-Abfragen|  
 |[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)|Enthält Links zu Themen, in denen die Konstrukte der Programmierung in C# beschrieben werden|  

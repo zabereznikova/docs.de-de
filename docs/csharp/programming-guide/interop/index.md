@@ -13,11 +13,11 @@ ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilität (C#-Programmierhandbuch)
 Interoperabilität ermöglicht es Ihnen, vorhandene Investitionen in nicht verwalteten Code zu schützen und weiter zu nutzen. Code, der unter der Steuerung der Common Language Runtime (CLR) ausgeführt wird, wird als *verwalteter Code* bezeichnet. Code, der außerhalb der CLR ausgeführt wird, wird als *nicht verwalteter Code* bezeichnet. COM, COM+, C++-Komponenten, ActiveX-Komponenten und die Microsoft Win32-API sind Beispiele für nicht verwalteten Code.  
@@ -49,5 +49,5 @@ Interoperabilität ermöglicht es Ihnen, vorhandene Investitionen in nicht verwa
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
+ [Interoperabilität mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md)  
  [Exemplarische Vorgehensweise: Office-Programmierung](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
