@@ -80,7 +80,7 @@ Durch Hinzufügen einer <xref:System.Windows.Ink.IncrementalLassoHitTester> an d
  [!code-csharp[HowToSelectInk#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#10)]
  [!code-vb[HowToSelectInk#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#10)]  
   
- Behandeln der <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged?displayProperty=nameWithType> Ereignis reagiert, wenn der Benutzer wählt aus, und hebt die Auswahl Striche.  Die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs> -Klasse verfügt über die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.SelectedStrokes%2A> und <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.DeselectedStrokes%2A> Eigenschaften, die die Striche abgerufen werden, die ausgewählt wurden, und bzw..  
+ Behandeln der <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged?displayProperty=nameWithType> Ereignis reagiert, wenn der Benutzer wählt aus, und hebt die Auswahl Striche.  Die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs> -Klasse verfügt über die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.SelectedStrokes%2A> und <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.DeselectedStrokes%2A> Eigenschaften, die die Striche abgerufen werden, die ausgewählt wurden, und bzw.  
   
  [!code-csharp[HowToSelectInk#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#11)]
  [!code-vb[HowToSelectInk#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#11)]  

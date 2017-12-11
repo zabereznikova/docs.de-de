@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
     |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Die Hintergrundfarbe von Zeilen- und Spaltenüberschriften.|  
     |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Die für die Spaltenüberschriften verwendete Schriftart.|  
     |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Die Vordergrundfarbe der Spaltenköpfe des Datenblatts, einschließlich der Spaltenkopftexte und das Pluszeichen (+) und Minuszeichen (-) Symbole zum Erweitern und Reduzieren von Zeilen, wenn mehrere Tabellen zusammengehörige werden angezeigt.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Die Farbe des Texts für alle Verknüpfungen im Datenraster, einschließlich Links zu untergeordneten Tabellen, die Namen der Geschäftsbeziehung usw..|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Die Farbe des Texts für alle Verknüpfungen im Datenraster, einschließlich Links zu untergeordneten Tabellen, die Namen der Geschäftsbeziehung usw.|  
     |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|In einer untergeordneten Tabelle ist dies die Hintergrundfarbe der übergeordneten Zeilen.|  
     |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|In einer untergeordneten Tabelle ist dies die Vordergrundfarbe der übergeordneten Zeilen.|  
     |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Bestimmt, ob die Tabellen- und Spaltennamen in der übergeordneten Zeile, von der angezeigt werden die <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> Enumeration.|  

@@ -11,11 +11,11 @@ ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5535334514afb0b9891dfce2e0cc0a0e95526069
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6fdd32fb41c3bda83e848952f70cbd736a0fc60
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Generische Typen und Attribute (C#-Programmierhandbuch)
 Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen. Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -51,4 +51,4 @@ Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie 
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Generika](../../../csharp/programming-guide/generics/index.md)  
- [Attribute](https://msdn.microsoft.com/library/5x6cd29c)
+ [Attribute](../../../../docs/standard/attributes/index.md)

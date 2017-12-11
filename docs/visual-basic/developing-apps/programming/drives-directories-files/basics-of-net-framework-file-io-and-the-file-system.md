@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
@@ -46,7 +46,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 -   **Suchen**. Sie können Ihre Position im Stream abfragen und ändern.  
   
- Weitere Informationen finden Sie unter [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
+ Weitere Informationen finden Sie unter [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Arten von Streams  
  In [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wird ein Stream von der <xref:System.IO.Stream>-Klasse dargestellt, die die abstrakte Klasse für alle anderen Streams bildet. Sie können nicht direkt eine Instanz der <xref:System.IO.Stream>-Klasse erstellen, doch Sie müssen eine der Klassen verwenden, die diese implementiert.  
@@ -65,13 +65,13 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Aktion|Informationen|
 |---|---|   
-|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Verschlüsseln von Daten|[Verschlüsseln von Daten](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Entschlüsseln von Daten|[Entschlüsseln von Daten](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|Verschlüsseln von Daten|[Verschlüsseln von Daten](../../../../../docs/standard/security/encrypting-data.md)|  
+|Entschlüsseln von Daten|[Entschlüsseln von Daten](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Dateizugriff und Dateiattribute  
  Sie können steuern, wie Dateien erstellt, geöffnet und mit den Enumerationen <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> und <xref:System.IO.FileShare> freigegeben werden, die die von den Konstruktoren der <xref:System.IO.FileStream>-Klasse verwendeten Flags enthalten. Wenn Sie z.B. einen neuen <xref:System.IO.FileStream> öffnen oder erstellen, lässt die <xref:System.IO.FileMode>-Enumeration zu, dass Sie angeben, ob die Datei zum Anfügen geöffnet ist, ob eine neue Datei erstellt wird, falls die angegebene Datei nicht vorhanden ist, ob die Datei überschrieben wird usw.  
@@ -82,7 +82,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Beschreibung|Siehe|  
 |---|---|
-|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dateiberechtigungen  
@@ -95,19 +95,19 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Aktion|Informationen|
 |---|---|  
-|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Dateiereignisse  
  Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Streams](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Erstellen von Streams](../../../../../docs/standard/io/composing-streams.md)  
  [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)  
  [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)  
  [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

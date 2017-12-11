@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Enthält Links zu Themen, in denen die Verwendung von LINQ mit Visual Basic beschrieben wird.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  Enthält Informationen über [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Enthält Programmierbeispiele.  
   
  [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Enthält Links zu Themen, in denen das Erstellen eines [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)-Objektmodells in Anwendungen erläutert wird.  
+ Enthält Links zu Themen, in denen das Erstellen eines [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)-Objektmodells in Anwendungen erläutert wird.  
   
  [Arbeiten mit Datasets in N-Tier-Anwendungen](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Enthält Links zu Themen über die Erstellung mehrschichtiger Datenanwendungen.  

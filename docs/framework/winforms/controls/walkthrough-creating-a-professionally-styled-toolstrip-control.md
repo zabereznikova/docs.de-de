@@ -103,7 +103,7 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
   
 5.  Wiederholen Sie Schritt 7 für drei weitere <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
   
-     Benennen Sie die Steuerelemente `calendarStackButton`, `contactsStackButton`, und `tasksStackButton`. Legen Sie den Wert von der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Kalender**, **Kontakte**, und **Aufgaben**bzw..  
+     Benennen Sie die Steuerelemente `calendarStackButton`, `contactsStackButton`, und `tasksStackButton`. Legen Sie den Wert von der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Kalender**, **Kontakte**, und **Aufgaben**bzw.  
   
 ## <a name="handling-events"></a>Behandeln von Ereignissen  
  Zwei Ereignisse sind wichtig, damit die `StackView` -Steuerelement ordnungsgemäß verhält. Behandeln der <xref:System.Windows.Forms.UserControl.Load> Ereignis, um das Steuerelement ordnungsgemäß zu positionieren. Behandeln der <xref:System.Windows.Forms.ToolStripItem.Click> Ereignis für jedes <xref:System.Windows.Forms.ToolStripButton> so erteilen Sie die `StackView` Zustand Verhalten ähnelt steuern die <xref:System.Windows.Forms.RadioButton> Steuerelement.  
