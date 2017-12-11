@@ -276,7 +276,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.6.2 hinzugefügt wurden, finden 
 
 2.  die Ressourcendatei im Ordner „App_LocalResources“ gespeichert ist.
 
-3.  Der Name der lokalisierten Ressourcendatei ist folgendermaßen aufgebaut: `DataAnnotation.Localization.{`*Name*`}.resx`, wobei *Name *einen Kulturnamen im Format* Sprachcode*`-`*Länder-/Regionscode* oder *Sprachcode* darstellt.
+3.  Der Name der lokalisierten Ressourcendatei ist folgendermaßen aufgebaut: `DataAnnotation.Localization.{`*Name*`}.resx`, wobei *Name* einen Kulturnamen im Format *Sprachcode*`-`*Länder-/Regionscode* oder *Sprachcode* darstellt.
 
 4.  Der Schlüsselname der Ressource ist die Zeichenfolge, die dem Attribut <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> zugewiesen ist, und deren Wert ist die lokalisierte Fehlermeldung.
 
