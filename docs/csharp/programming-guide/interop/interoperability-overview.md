@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -63,9 +63,9 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
  Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) und [COM-Beispielklasse](../../../csharp/programming-guide/interop/example-com-class.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbessern der Interop-Leistung](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [Improving Interop Performance (Optimieren der Interopleistung)](http://go.microsoft.com/fwlink/?LinkId=99564)  
  [Einführung in COM-Interop](http://go.microsoft.com/fwlink/?LinkId=112406)  
- [Datenmarshalling zwischen verwaltetem und nicht verwaltetem Code](http://go.microsoft.com/fwlink/?LinkId=112398)  
- [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
+ [Marshaling between Managed and Unmanaged Code (Marshalling zwischen verwaltetem und nicht verwaltetem Code)](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [Interoperabilität mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md)  
  [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   Erweiterungsmethoden werden auf Namespace-Ebene eingebunden. Wenn Sie z. B. mehrere statische Klassen haben, die Erweiterungsmethoden in einem einzelnen Namespace mit dem Namen `Extensions` enthalten, werden sie alle mit der `using Extensions;`-Direktive eingebunden.  
   
- Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](https://msdn.microsoft.com/library/51ket42z).  
+ Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Parallele Programmierbeispiele (dazu gehören viele Beispiele für Erweiterungsmethoden)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Übersicht über Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Konvertierung Regeln z. B. Parameter und ihre Auswirkung](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Erweiterungsmethoden Interoperabilität von Sprachen](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Erweiterungsmethoden [c#] und Delegaten mit Currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [Extension methods and Curried Delegates (Erweiterungsmethoden und Curry-Delegaten)](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [Extension method Binding and Error reporting (Binden von Erweiterungsmethoden und Problemberichten)](http://go.microsoft.com/fwlink/?LinkId=112388)

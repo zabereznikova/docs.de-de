@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4052971746086061cb2ed091bd13c962318b2d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanalstapel wendet Codierungs- und Transportkanäle an, um eine interne Nachrichtendarstellung in ihr Kabelformat umzuwandeln und sie über einen bestimmten Transport zu versenden. Der am häufigsten verwendete Transport, der für die Interoperabilität bei Webdiensten verwendet wird, ist HTTP, und die am häufigsten von Webdiensten verwendeten Codierungen sind das XML-basierte SOAP 1.1, SOAP 1.2 und der Message Transmission Optimization Mechanism (MTOM).  
@@ -323,11 +323,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Verwenden des Endpunktverweises im WSDL-Anschluss  
  Abschnitt 4.1 von WS-ADDR10-WSDL erweitert das `wsdl:port`-Element durch das untergeordnete `<wsa10:EndpointReference…/>`-Element, um den Endpunkt in WS-Adressierungsbegriffen zu beschreiben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erweitert dieses Hilfsprogramm in der WS-Adressierung 2004/08, wodurch ermöglicht wird, dass `<wsa:EndpointReference…/>` als untergeordnetes Element von `wsdl:port` angezeigt wird.  
   
--   R3531: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsaw10:UsingAddressing/>`-Richtlinienassertion angehängt ist, kann das entsprechende `wsdl:port`-Element ein untergeordnetes Element `<wsa10:EndpointReference …/>` enthalten.  
+-   R3531: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsaw10:UsingAddressing/>`-Richtlinienassertion angehängt ist, kann das entsprechende`wsdl:port`-Element ein untergeordnetes Element`<wsa10:EndpointReference …/>` enthalten.  
   
 -   R3532: Wenn ein `wsdl:port` enthält ein untergeordnetes Element `<wsa10:EndpointReference …/>`, die `wsa10:EndpointReference/wsa10:Address` untergeordnete Elementwert entsprechen muss von der `@address` Attribut des nebengeordneten Elements `wsdl:port` / `wsdl:location` Element.  
   
--   R3533: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsap:UsingAddressing/>`-Richtlinienassertion angehängt ist, kann das entsprechende `wsdl:port`-Element ein untergeordnetes Element `<wsa:EndpointReference …/>` enthalten.  
+-   R3533: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsap:UsingAddressing/>`-Richtlinienassertion angehängt ist, kann das entsprechende`wsdl:port`-Element ein untergeordnetes Element`<wsa:EndpointReference …/>` enthalten.  
   
 -   R3534: Wenn ein `wsdl:port` enthält ein untergeordnetes Element `<wsa:EndpointReference …/>`, die `wsa:EndpointReference/wsa:Address` untergeordnete Elementwert entsprechen muss von der `@address` Attribut des nebengeordneten Elements `wsdl:port` / `wsdl:location` Element.  
   

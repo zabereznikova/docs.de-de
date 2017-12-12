@@ -11,11 +11,11 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
@@ -99,9 +99,9 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend-Assemblys (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [How to: Create Unsigned Friend Assemblies (C#) (Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Erstellen und Verwenden von Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617)  
+ [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
