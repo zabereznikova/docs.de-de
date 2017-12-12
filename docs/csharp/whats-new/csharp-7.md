@@ -1,5 +1,5 @@
 ---
-title: Was ist neu in C#-7 - C#-Handbuch
+title: "Neues in C# 7 – Leitfaden für C#"
 description: "Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache."
 keywords: C#, .NET, .NET Core, neueste Funktionen, Neues
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>Neues in C# 7
 
@@ -24,7 +24,7 @@ C# 7 bietet eine Reihe von neuen Funktionen für die C#-Sprache:
 * [Tupel](#tuples)
     - Sie können einfache, unbenannte Typen erstellen, die mehrere öffentliche Felder enthalten. Compiler und IDE-Tools kennen die Semantik dieser Typen.
 * [Verwerfen](#discards)
-    - Verwirft handelt es sich um temporäre, nur-schreiben Variablen in Zuweisungen verwendet werden, wenn Sie über den zugewiesenen Wert nicht relevant ist. Sie sind besonders nützlich, wenn Tupel und benutzerdefinierte Typen zu zerlegen, als auch beim Aufrufen von Methoden mit `out` Parameter.
+    - Ausschussvariablen (discards) sind temporäre, lesegeschützte Variablen, die in Zuweisungen verwendet werden, wenn der zugewiesene Wert nicht weiter interessiert. Sie sind besonders zum Dekonstruieren von Tupeln und benutzerdefinierten Typen sowie beim Aufrufen von Methoden mit `out`-Parametern nützlich.
 * [Mustervergleich](#pattern-matching)
     - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
 * [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
@@ -82,30 +82,30 @@ return result;
 > Die neuen Tupeleigenschaften benötigen die <xref:System.ValueTuple>-Typen.
 > Sie müssen das NuGet-Paket [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, um es auf Plattformen zu verwenden, die keine Typen enthalten.
 >
-> Dies ist ähnlich wie bei anderen Sprachfunktionen, die auf im Framework übermittelten Typen basieren. Beispiel `async` und `await` der vertrauenden Seite auf die `INotifyCompletion` Schnittstelle, und der vertrauenden Seite auf LINQ `IEnumerable<T>`. Allerdings ändert sich der Übermittlungsmechanismus, da .NET plattformunabhängiger wird. .NET Framework wird möglicherweise nicht immer im gleichen Rhythmus wie der Sprachcompiler ausgeliefert. Wenn neue Sprachfunktionen auf neuen Typen basieren, sind diese Typen als NuGet-Pakete bei der Auslieferung der Sprachfunktionen verfügbar. Da diese neuen Typen dem standardmäßigen .NET API hinzugefügt und als Teil des Frameworks bereitgestellt werden, wird die Anforderung des NuGet-Pakets entfernt.
+> Dies ist ähnlich wie bei anderen Sprachfunktionen, die auf im Framework übermittelten Typen basieren. Beispiele hierfür sind `async` und `await`, die auf der `INotifyCompletion`-Schnittstelle basieren, und LINQ, das auf `IEnumerable<T>` basiert. Allerdings ändert sich der Übermittlungsmechanismus, da .NET plattformunabhängiger wird. .NET Framework wird möglicherweise nicht immer im gleichen Rhythmus wie der Sprachcompiler ausgeliefert. Wenn neue Sprachfunktionen auf neuen Typen basieren, sind diese Typen als NuGet-Pakete bei der Auslieferung der Sprachfunktionen verfügbar. Da diese neuen Typen dem standardmäßigen .NET API hinzugefügt und als Teil des Frameworks bereitgestellt werden, wird die Anforderung des NuGet-Pakets entfernt.
 
 C# bietet eine umfangreiche Syntax für Klassen und Strukturen, die verwendet wird, um Ihre Entwurfsabsicht zu erläutern. Aber manchmal erfordert diese umfangreiche Syntax zusätzliche Arbeit mit minimalem Nutzen. Möglicherweise schreiben Sie häufig Methoden, die eine einfache Struktur erfordern, die mehr als ein Datenelement enthält. Zur Unterstützung dieser Szenarios wurden C# *Tupel* hinzugefügt. Tupel sind einfache Datenstrukturen, die mehrere Felder zur Darstellung der Datenmember enthalten.
 Die Felder werden nicht überprüft, und Sie können keine eigenen Methoden definieren
 
 > [!NOTE]
-> Tupel vor 7 c# verfügbar waren, aber ineffizient wurden und keine sprachunterstützung hatte.
-> Dies bedeutet, dass die Tupelelemente nur verwiesen werden können, können Sie als `Item1`, `Item2` und so weiter. C#-7 wird die sprachunterstützung für Tupel, wodurch semantische Namen für die Felder eines Tupels, neue, effizientere Tupeltypen mit eingeführt.
+> Tupel waren schon vor C# 7 verfügbar, sie waren jedoch ineffizient und hatten keine Sprachunterstützung.
+> Das brachte mit sich, dass auf Tupelelemente nur als `Item1`, `Item2` usw. verwiesen werden konnte. Mit C# 7 wird Sprachunterstützung für Tupel eingeführt, wodurch semantische Namen für die Felder eines Tupels mit Einsatz neuer, effizienterer Tupeltypen möglich werden.
 
 Sie können ein Tupel erstellen, indem Sie jeden Member einem Wert zuweisen:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-Zuweisung ein Tupels erstellt, deren Mitglieder sind `Item1` und `Item2`, dem Sie auf die gleiche Weise wie können <xref:System.Tuple> können, ändern Sie die Syntax zum Erstellen eines Tupels, die auf jedes Element des Tupels semantische bereitstellt:
+Durch diese Zuweisung wird ein Tupel erstellt, dessen Elemente `Item1` und `Item2` sind, die Sie in der gleichen Weise wie <xref:System.Tuple> verwenden können. Sie können die Syntax ändern, um ein Tupel zu erstellen, das jedem der Elemente des Tupels einen semantischen Namen verleiht:
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-Das `namedLetters`-Tupel enthält Felder, die als `Alpha` und `Beta` bezeichnet werden. Diese Namen nur zum Zeitpunkt der Kompilierung vorhanden und werden nicht angenommen beibehalten, wenn das Tupel mit Reflektion zur Laufzeit zu überprüfen.
+Das `namedLetters`-Tupel enthält Felder, die als `Alpha` und `Beta` bezeichnet werden. Diese Namen bestehen nur zur Kompilierzeit und werden nicht beibehalten, wenn das Tupel beispielsweise zur Laufzeit mithilfe von Reflektion untersucht wird.
 
 In einer Tupelzuweisung können Sie auch die Namen der Felder auf der rechten Seite der Zuweisung angeben:
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-Sie können den Namen für die Felder auf der linken und rechten Seite der Zuweisung angeben:
+Sie können Namen für die Felder auf der linken und rechten Seite der Zuweisung angeben:
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -149,25 +149,25 @@ Sie sind nicht an die Namen gebunden, die in der `Deconstruct`-Methode definiert
 
 Ausführliche Informationen zu Tupeln erhalten Sie unter [tuples topic (Thema „Tupel“)](../tuples.md).
 
-## <a name="discards"></a>Verwirft
+## <a name="discards"></a>Ausschuss
 
-Häufig, wenn ein Tupel Zerlegen oder zum Aufrufen einer Methode mit `out` Parameter, Sie sind gezwungen, eine Variable definieren, deren Wert nicht von Interesse und nicht verwenden möchten. C# bietet Unterstützung für *verwirft* , dieses Szenario zu behandeln. Eine verwerfen ist eine nur-schreiben Variable, die mit dem Namen `_` (Unterstrich); Sie können alle Werte, die Sie in den einzelnen Variable verwerfen möchten zuweisen. Eine verwerfen ist wie eine nicht zugewiesene Variable. Abgesehen von der zuweisungsanweisung nicht dem verwerfen im Code vorgesehen.
+Beim Dekonstruieren eines Tupels oder dem Aufrufen einer Methode mit `out`-Parametern sind Sie gezwungen, eine Variable zu definieren, deren Wert Sie nicht interessiert und die Sie nicht zu verwenden beabsichtigen. C# verfügt jetzt über Unterstützung für *Ausschussvariablen* (discards), um diesem Szenario Rechnung zu tragen. Eine Ausschussvariable ist eine lesegeschützte Variable mit dem Namen `_` (dem Unterstrichzeichen); Sie können der einzelnen Variablen alle Werte zuweisen, die Sie verwerfen möchten. Eine Ausschussvariable ist wie eine nicht zugewiesene Variable; abgesehen von der Zuweisungsanweisung kann die Ausschussvariable nicht in Code verwendet werden.
 
-Verwirft werden in den folgenden Szenarien unterstützt:
+Ausschussvariablen werden in den folgenden Szenarien unterstützt:
 
-* Wenn die Tupel oder benutzerdefinierte Typen zu zerlegen.
+* Beim Dekonstruieren von Tupeln oder benutzerdefinierten Typen.
 
-* Beim Aufrufen von Methoden mit [out](../language-reference/keywords/out.md) Parameter.
+* Beim Aufrufen von Methoden mit [out](../language-reference/keywords/out.md)-Parametern.
 
-* In einem Mustervergleichsausdruck-Vorgang mit der [ist](../language-reference/keywords/is.md) und [wechseln](../language-reference/keywords/switch.md) Anweisungen.
+* In einem Musterabgleichsvorgang mit den Anweisungen [is](../language-reference/keywords/is.md) und [switch](../language-reference/keywords/switch.md).
 
-* Als eigenständige Bezeichner Situationen explizit der Wert einer Zuweisung als eine verwerfen identifiziert.
+* Als eigenständiger Bezeichner, wenn Sie den Wert einer Zuweisung explizit als Ausschuss kennzeichnen möchten.
 
-Das folgende Beispiel definiert eine `QueryCityDataForYears` Methode, die ein 6-Tupel zurückgibt, die Daten für eine Stadt für zwei verschiedene Jahre enthält. Aufruf der Methode im Beispiel hat nur mit den zwei Auffüllung-Werten, die von der Methode zurückgegebenen Bedenken und daher die verbleibenden Werte im Tupel als verwirft, wenn es sich um das Tupel Zerlegung behandelt.
+Das folgende Beispiel definiert eine `QueryCityDataForYears`-Methode, die ein 6-Tupel zurückgibt, das ein Datum für eine Stadt für zwei verschiedene Jahre enthält. Der Methodenaufruf im Beispiel befasst sich nur mit den zwei Bevölkerungswerten, die von der Methode zurückgegeben werden und behandelt so die verbleibenden Werte im Tupel beim Dekonstruieren des Tupels als Ausschuss.
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Weitere Informationen finden Sie unter [verwirft](../discards.md).
+Weitere Informationen finden Sie unter [Ausschuss](../discards.md).
  
 ## <a name="pattern-matching"></a>Musterabgleich
 
@@ -175,15 +175,15 @@ Weitere Informationen finden Sie unter [verwirft](../discards.md).
 
 Mustervergleich unterstützt `is`-Ausdrücke und `switch`-Ausdrücke. Jeder davon ermöglicht das Überprüfen eines Objekts und dessen Eigenschaften, um zu bestimmen, ob das Objekt dem gesuchten Muster entspricht. Sie verwenden das `when`-Schlüsselwort, um zusätzliche Regeln für das Muster anzugeben.
 
-### <a name="is-expression"></a>`is`Ausdruck
+### <a name="is-expression"></a>`is`-Ausdruck
 
-Die `is` Muster Ausdrucks erweitert der vertrauten `is` Operator, um ein Objekt über den Typ abzufragen.
+Der Musterausdruck `is` erweitert den vertrauten `is`-Operator auf das Abfragen eines Objekts über den Typ hinaus.
 
 Beginnen wir mit einem einfachen Szenario. Wir fügen Funktionen für dieses Szenario hinzu, die veranschaulichen, wie Mustervergleichsausdrücke Algorithmen erstellen, die mit nicht verknüpften Typen einfach funktionieren. Wir beginnen mit einer Methode, die die Summe aller gewürfelten Augen bei mehreren Würfelvorgängen berechnet:
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-Sie werden möglicherweise schnell feststellen, dass Sie die Summe von gewürfelten Augen ermitteln müssen, wenn einige Würfelvorgänge mit mehr als einem Würfel ausgeführt werden. Ein Teil der Eingabesequenz kann aus mehreren Ergebnissen anstatt einer einzelnen Zahl bestehen:
+Sie werden möglicherweise schnell feststellen, dass Sie die Summe von gewürfelten Augen ermitteln müssen, wenn einige Würfelvorgänge mit mehreren Würfeln ausgeführt werden. Ein Teil der Eingabesequenz kann aus mehreren Ergebnissen anstatt einer einzelnen Zahl bestehen:
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -203,7 +203,7 @@ Die Vergleichsausdrücke unterstützen auch Konstanten. Dies kann durch das Ausk
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-Der obige Code fügt Fälle für `0` als Sonderfall von `int` hinzu und `null` als besonderen Fall, wenn keine Eingabe vorhanden ist. Hierdurch wird eine wichtige neue Funktion in switch-Musterausdrücken veranschaulicht: Die Reihenfolge der `case`-Ausdrücke ist nun von Bedeutung. Der `0`-Fall muss vor dem allgemeinen `int`-Fall erscheinen. Andernfalls wäre das erste zu vergleichende Muster der `int`-Fall, auch wenn der Wert `0` ist. Wenn Sie versehentlich übereinstimmungsausdrücken bestellen Sie, dass ein Fall bereits behandelt wurde, wird der Compiler kennzeichnen, und ein Fehler generiert.
+Der obige Code fügt Fälle für `0` als Sonderfall von `int` hinzu und `null` als besonderen Fall, wenn keine Eingabe vorhanden ist. Hierdurch wird eine wichtige neue Funktion in switch-Musterausdrücken veranschaulicht: Die Reihenfolge der `case`-Ausdrücke ist nun von Bedeutung. Der `0`-Fall muss vor dem allgemeinen `int`-Fall erscheinen. Andernfalls wäre das erste zu vergleichende Muster der `int`-Fall, auch wenn der Wert `0` ist. Wenn Sie Vergleichsausdrücke aus Versehen so sortieren, dass ein späterer Fall bereits behandelt wurde, wird der Compiler dies kennzeichnen und einen Fehler generieren.
 
 Dieses Verhalten aktiviert den Sonderfall für eine leere Eingabesequenz.
 Sie sehen, dass der Fall für ein `IEnumerable`-Element mit Elementen vor dem allgemeinen `IEnumerable`-Fall erscheinen muss.
@@ -215,9 +215,9 @@ Abschließend fügen wir einen letzten `case` für eine neue Art von Würfel hin
 > [!NOTE]
 > Zwei 10-seitige Prozentwürfel können jede Zahl von 0 bis 99 darstellen. Die Seiten des einen Würfels haben die Bezeichnungen `00`, `10`, `20`,... `90`. Die Seiten des anderen Würfels haben die Bezeichnungen `0`, `1`, `2`,... `9`. Wenn Sie die Werte der beiden Würfel addieren, können Sie jede Zahl von 0 bis 99 erhalten.
 
-Um diese Art von Würfel zu Ihrer Sammlung hinzuzufügen, müssen Sie zunächst einen Typ zur Darstellung des Prozentwürfels definieren:
+Um Ihrer Sammlung diese Art von Würfel hinzuzufügen, müssen Sie zunächst einen Typ zur Darstellung des Prozentwürfels definieren. Die `TensDigit` Eigenschaft speichert die Werte `0`, `10`, `20` bis zu `90`:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 Fügen Sie dann einen `case`-Vergleichsausdruck für den neuen Typ hinzu:
 
@@ -277,14 +277,14 @@ Um das gewünschte Ergebnis zu erhalten, müssen Sie den `ref`-Modifizierer der 
 
 Nun gibt die zweite `WriteLine`-Anweisung im obigen Beispiel den Wert `24` aus, der angibt, dass der Speicher in der Matrix geändert wurde. Die lokale Variable wurde mit dem `ref`-Modifizierer deklariert und nimmt eine `ref`-Rückgabe an. Sie müssen eine `ref`-Variable initialisieren, wenn sie deklariert wird, und können Deklaration und Initialisierung nicht trennen.
 
-Die C#-Sprache verfügt über drei Regeln, die Sie aus missbraucht Schützen der `ref` "lokal" und gibt:
+Die C#-Sprache verfügt über drei weitere Regeln, die Sie vor der falschen Verwendung der lokalen `ref`-Variablen und Rückgaben schützen:
 
-* Sie können nicht zugewiesen werden einen Standardmethode Rückgabewert in einer `ref` lokale Variable.
+* Sie können einer lokalen `ref`-Variablen keinen Standard-Methodenrückgabewert zuweisen.
     - Dadurch werden Aussagen wie `ref int i = sequence.Count();` nicht zugelassen.
 * Sie können eine `ref` nicht an eine Variable zurückgeben, deren Lebensdauer sich nicht über die Ausführung der Methode hinaus erstreckt.
-    - Das bedeutet, dass Sie einen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
-* `ref`"lokal" und gibt, können nicht mit Async-Methoden verwendet werden.
-    - Der Compiler wissen nicht, wenn die Variable verwiesen wird beim Beenden der Async-Methode auf den endgültigen Wert festgelegt wurde.
+    - Das bedeutet, dass Sie keinen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
+* Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
+    - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
 
 Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert und dereferenzierende Vorgänge nicht mehrmals ausgeführt werden. 
 
@@ -366,7 +366,7 @@ Die neue Sprachfunktion bedeutet, dass asynchrone Methoden zusätzlich zu `Task`
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Sie müssen das NuGet-Paket hinzufügen [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) um verwenden die <xref:System.Threading.Tasks.ValueTask%601> Typ.
+> Sie müssen das NuGet-Paket hinzufügen [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/), um den Typ <xref:System.Threading.Tasks.ValueTask%601> verwenden zu können.
 
 Eine einfache Optimierung wäre es, `ValueTask` da zu verwenden, wo zuvor `Task` verwendet wurde. Wenn Sie jedoch zusätzliche Optimierungen manuell ausführen möchten, können Sie Ergebnisse asynchroner Arbeit zwischenspeichern und bei späteren Aufrufen wiederverwenden. Die `ValueTask`-Struktur verfügt über einen Konstruktor mit einem `Task`-Parameter, sodass Sie einen `ValueTask` aus dem Rückgabewert einer beliebigen vorhandenen asynchronen Methode konstruieren können:
 

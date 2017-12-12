@@ -7,25 +7,25 @@ ms.date: 09/01/2017
 ms.topic: article
 dev_langs: vb
 ms.prod: .net-core
-ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b5078a78ea7dae3465680797531e0ff81b9b5845
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 
-Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-vb-mstest/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts
 
-Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-dotnet-test*, um die Projektmappe zu speichern.
+Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-vb-mstest*, um die Projektmappe zu speichern.
 Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappe zu erstellen. Diese Übung vereinfacht die Verwaltung des Klassenbibliotheks- und Komponententestprojekts.
 Erstellen Sie im Projektmappenverzeichnis ein *PrimeService*-Verzeichnis. Soweit verfügen Sie über die bisherige Verzeichnis- und Dateistruktur:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
 ```
 
@@ -50,21 +50,21 @@ End Namespace
 Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und erstellen Sie ein neues Projekt mit [`dotnet new mstest -lang VB`](../tools/dotnet-new.md). Dieser Befehl erstellt ein Testprojekt, das xUnit als Testbibliothek verwendet. Die generierte Vorlage konfiguriert Test Runner in *PrimeServiceTests.vbproj*:
+Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und erstellen Sie ein neues Projekt mit [`dotnet new mstest -lang VB`](../tools/dotnet-new.md). Dieser Befehl erstellt ein Testprojekt, das NUnit als Testbibliothek verwendet. Die generierte Vorlage konfiguriert Test Runner in *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
-<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
-<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+  <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
 </ItemGroup>
 ```
 
@@ -74,13 +74,13 @@ Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unitte
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) auf GitHub.
+Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) auf GitHub.
 
 Sie verfügen über das folgende endgültige Projektmappenlayout:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-vb-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
@@ -89,7 +89,7 @@ Sie verfügen über das folgende endgültige Projektmappenlayout:
         PrimeServiceTests.vbproj
 ```
 
-Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-vb-using-mstest* aus. 
+Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-vb-mstest* aus.
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
@@ -114,7 +114,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Das `<TestClass>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<TestMethod>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-using-mstest* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der xUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `<TestClass>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<TestMethod>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-mstest* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `PrimeService`-Klasse:
 
@@ -127,11 +127,11 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Führen Sie im Verzeichnis *unit-testing-vb-using-mstest* erneut `dotnet test` aus. Der `dotnet test`-Befehl führt einen Build für das `PrimeService`-Projekt und anschließend für das `PrimeService.Tests`-Projekt aus. Nachdem beide Projekte erstellt wurden, wird dieser einzelne Test ausgeführt. Er ist erfolgreich.
+Führen Sie im Verzeichnis *unit-testing-vb-mstest* erneut `dotnet test` aus. Der `dotnet test`-Befehl führt einen Build für das `PrimeService`-Projekt und anschließend für das `PrimeService.Tests`-Projekt aus. Nachdem beide Projekte erstellt wurden, wird dieser einzelne Test ausgeführt. Er ist erfolgreich.
 
 ## <a name="adding-more-features"></a>Hinzufügen weiterer Features
 
-Nachdem Sie dafür gesorgt haben, dass ein Test erfolgreich verläuft, schreiben Sie weiter. Es gibt einige weitere einfache Fälle für Primzahlen: 0, -1. Sie könnten diese neuen Fälle als neue Tests mit dem Attribut `<TestMethod>` hinzufügen, aber das wird schnell recht mühsam. Es gibt andere xUnit-Attribute, mit deren Hilfe Sie eine Reihe ähnlicher Tests schreiben können.  Ein `<DataTestMethod>`-Attribut stellt eine Reihe von Tests dar, die zwar denselben Code ausführen, jedoch unterschiedliche Eingabeargumente verwenden. Sie können das Attribut `<DataRow>` verwenden, um Werte für diese Eingaben anzugeben.
+Nachdem Sie dafür gesorgt haben, dass ein Test erfolgreich verläuft, schreiben Sie weiter. Es gibt einige weitere einfache Fälle für Primzahlen: 0, -1. Sie könnten diese neuen Fälle als neue Tests mit dem Attribut `<TestMethod>` hinzufügen, aber das wird schnell recht mühsam. Es gibt andere MSTest-Attribute, mit deren Hilfe Sie eine Reihe ähnlicher Tests schreiben können.  Ein `<DataTestMethod>`-Attribut stellt eine Reihe von Tests dar, die zwar denselben Code ausführen, jedoch unterschiedliche Eingabeargumente verwenden. Sie können das Attribut `<DataRow>` verwenden, um Werte für diese Eingaben anzugeben.
 
 Statt neue Tests zu erstellen, wenden Sie diese beiden Attribute zum Erstellen einer einzelnen Theorie an. Bei der Theorie handelt es sich um eine Methode, die mehrere Werte unter zwei als niedrigste Primzahl testet:
 
@@ -143,6 +143,6 @@ Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Sie müssen d
 if candidate < 2
 ```
 
-Wiederholen Sie den Vorgang, indem Sie weitere Tests, Theorien und Code in der Hauptbibliothek hinzufügen. Sie verfügen über die [endgültige Version der Tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) und die [vollständige Implementierung der Bibliothek](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).
+Wiederholen Sie den Vorgang, indem Sie weitere Tests, Theorien und Code in der Hauptbibliothek hinzufügen. Sie verfügen über die [endgültige Version der Tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) und die [vollständige Implementierung der Bibliothek](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb).
 
 Sie haben eine kleine Bibliothek und eine Reihe von Unittests für diese Bibliothek erstellt. Sie haben die Projektmappe so strukturiert, dass das Hinzufügen neuer Pakete und Tests Teil des normalen Workflows ist. Sie haben den Großteil Ihrer Zeit und Ihres Aufwands mit der Erreichung der Anwendungsziele verbracht.
