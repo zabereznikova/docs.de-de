@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>C#-Schnellstarts #
 
@@ -30,19 +30,19 @@ Im Schnellstart [Hello World](hello-world.yml) erstellen Sie das grundlegendste 
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Zahlen in C#](numbers-in-csharp.yml)
 
-Im Schnellstart [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer Zahlen speichern und Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](numbers-in-csharp-local.md) verfügbar.
+Im Schnellstart [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer Zahlen speichern und wie Sie Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](numbers-in-csharp-local.md) verfügbar.
 
 Dieser Schnellstart setzt voraus, dass Sie das Tutorial [Hello World](hello-world.yml) abgeschlossen haben.
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Verzweigungen und Schleifen](branches-and-loops.yml)
 
-Der Schnellstart [Branches und Schleifen](branches-and-loops.yml) erläutert die Grundlagen der Auswahl verschiedener Codepfade auf Basis der in Variablen gespeicherten Werte. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](branches-and-loops-local.md) verfügbar.
+Der Schnellstart [Branches und Schleifen](branches-and-loops.yml) erläutert die Grundlagen der Auswahl verschiedener Codepfadausführungen auf Basis der in Variablen gespeicherten Werte. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](branches-and-loops-local.md) verfügbar.
 
 In dieser ersten Lektion wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml) und [Zahlen in C#](numbers-in-csharp.yml) abgeschlossen haben.
 
 ## <a name="list-collectionlist-collectionyml"></a>[Listensammlung](list-collection.yml)
 
-Die Lektion [Listensammlung](list-collection.yml) bietet Ihnen einen Überblick über den Listensammlungstyp, in dem Datensequenzen speichert werden. Sie erfahren, wie Sie Elemente hinzufügen und entfernen, nach Elementen suchen, Elemente entfernen und die Listen sortieren. Sie werden verschiedene Arten von Listen erforschen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](arrays-and-collections.md) verfügbar.
+Die Lektion [Listensammlung](list-collection.yml) bietet Ihnen einen Überblick über den Listensammlungstyp, in dem Datensequenzen speichert werden. Sie erfahren, wie Sie Elemente hinzufügen und entfernen, nach Elementen suchen und die Listen sortieren. Sie werden verschiedene Arten von Listen erforschen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](arrays-and-collections.md) verfügbar.
 
 In diesem ersten Schnellstart wird vorausgesetzt, dass Sie die oben aufgeführten Schnellstarts abgeschlossen haben.
 
