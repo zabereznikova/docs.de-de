@@ -59,7 +59,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
 -   Schnittstellen enthalten keine Implementierung von Methoden.  
   
--   Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann keine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.  
+-   Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann eine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
