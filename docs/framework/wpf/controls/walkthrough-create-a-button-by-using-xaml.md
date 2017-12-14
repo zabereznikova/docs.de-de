@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen einer animierten Schaltfläche für die Verwendung in einer [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Anwendung. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von Schaltfläche Logik aus der Schaltflächendeklaration ermöglicht. Diese exemplarische Vorgehensweise ist vollständig in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen e
     </Application>  
     ```  
   
-     Ressourcenbereich richtet sich nach, wo Sie die Ressource zu definieren. Definieren von Ressourcen in `Application.Resoureses` in der app.xaml Datei die Ressource aus an einer beliebigen Stelle in der Anwendung verwendet werden kann. Weitere Informationen zum Definieren des Bereichs Ihrer Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Ressourcenbereich richtet sich nach, wo Sie die Ressource zu definieren. Definieren von Ressourcen in `Application.Resources` in der app.xaml Datei die Ressource aus an einer beliebigen Stelle in der Anwendung verwendet werden kann. Weitere Informationen zum Definieren des Bereichs Ihrer Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Erstellen Sie eine Formatvorlage, und definieren Sie grundlegende Eigenschaftswerte:** fügen Sie das folgende Markup zum Rendern der `Application.Resources` Block. Dieses Markup erstellt einen <xref:System.Windows.Style> , die für alle Schaltflächen in der Anwendung, die Einstellung gilt die <xref:System.Windows.FrameworkElement.Width%2A> der Schaltflächen auf 90 und die <xref:System.Windows.FrameworkElement.Margin%2A> auf 10:  
   
@@ -328,7 +328,7 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen e
   
      Drücken Sie F5, um die Anwendung auszuführen, und klicken auf eine der Schaltflächen. Beachten Sie, dass die Schaltfläche "" markierten bleibt, nachdem Sie darauf klicken, da er weiterhin den Fokus besitzt. Wenn Sie eine weitere Schaltfläche klicken, im die Schaltfläche "Neu" den Fokus erhält, während das letzte Lesezeichen geht verloren.  
   
-4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** als Nächstes fügen wir einige Animationen, die Trigger hinzu.   Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
+4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** als Nächstes fügen wir einige Animationen, die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
