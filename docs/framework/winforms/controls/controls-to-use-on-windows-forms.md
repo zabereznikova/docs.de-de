@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Steuerelemente für Windows Forms
 Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Komponenten, die in Windows Forms verwendet werden können. Zusätzlich zu den in diesem Abschnitt behandelten Windows Forms-Steuerelementen können Windows Forms auch ActiveX- und benutzerdefinierte Steuerelemente hinzugefügt werden. Wenn Sie die von Ihnen benötigten Steuerelemente hier nicht finden, können Sie auch eigene erstellen. Ausführliche Informationen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Weitere Informationen zum Auswählen des benötigten Steuerelements finden Sie unter [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -83,9 +83,8 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [ErrorProvider-Komponente](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  Zeigt Benutzern Fehlerinformationen auf diskrete Weise an.  
   
- „FileDialog“-Klasse  
- Stellt die Basisklassenfunktionalität für Dateidialogfelder bereit.  
-  
+ [FileDialog-Klasse](../../../../docs/framework/winforms/controls/filedialog-class.md) bietet Funktionen der Basisklasse für Dateidialogfelder.
+
  [FlowLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  Stellt einen Bereich dar, dessen Inhalt auf dynamische Weise horizontal oder vertikal angeordnet wird.  
   
@@ -173,8 +172,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [SaveFileDialog-Komponente](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  Wählt zu speichernde Dateien und deren Speicherort aus.  
   
- „SoundPlayer“-Klasse  
- Ermöglicht Ihnen, Sounds problemlos in Ihre Anwendungen zu integrieren.  
+ [SoundPlayer-Klasse](../../../../docs/framework/winforms/controls/soundplayer-class.md) ermöglicht es Ihnen, Sounds problemlos in Ihre Anwendungen integrieren.
   
  [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  Ermöglicht Benutzern, die Größe eines angedockten Steuerelements zu ändern.  

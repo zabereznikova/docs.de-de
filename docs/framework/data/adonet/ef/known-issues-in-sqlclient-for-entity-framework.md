@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Bestimmte Datenbankverhaltensweisen hängen vom festgelegten Kompatibilitätsgrad der Datenbank ab. Wenn das `ProviderManifestToken`-Attribut auf 2005 festgelegt ist und Sie über die SQL Server-Version 2005 verfügen, der Kompatibilitätsgrad einer Datenbank jedoch auf "80" (SQL Server 2000) festgelegt ist, zielt das erzeugte [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] zwar auf SQL Server 2005 ab, wird aber aufgrund der Einstellung für den Kompatibilitätsgrad möglicherweise nicht wie erwartet ausgeführt. Zum Beispiel geht möglicherweise die Sortierung verloren, wenn ein Spaltenname in der ORDER BY-Liste einem Spaltennamen im Selektor entspricht.  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
- Geschachtelte Abfragen in einer Projektionsklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Auf einigen Back-End-Servern, einschließlich SQL Server, kann dies zu einer sehr großen TempDB-Tabelle führen. Dies kann die Serverleistung beeinträchtigen.  
+ Geschachtelte Abfragen in einer Projektionsklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Auf einigen Back-End-Servern, einschließlich SQL Server kann dies dazu führen, dass sehr großen TempDB-Tabelle. Dies kann die Serverleistung beeinträchtigen.  
   
  Im Folgenden sehen Sie ein Beispiel für eine geschachtelte Abfrage in einer Projektionsklausel:  
   
@@ -71,4 +71,4 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
   
 ## <a name="see-also"></a>Siehe auch  
  [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [Bekannte Probleme und Überlegungen zu LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+ [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

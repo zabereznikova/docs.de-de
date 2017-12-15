@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms hinzufügen Konfigurationselement
 
@@ -48,15 +48,15 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 | `key`-Name | Werte | Beschreibung |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true" & #124;" "false"" | Gibt an, ob es sich bei gebundenen Steuerelementen in einem Durchgang skaliert werden. "true", um einzelne deaktivieren übergeben Skalierung. andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
-| "DpiAwareness" | "PerMonitorV2" & #124;" "false"" | Gibt an, ob eine Anwendung DPI-fähig ist. Legen Sie den Schlüssel auf "PerMonitorV2" zur Unterstützung der Dpi-Ausführung; Legen Sie sie andernfalls auf "False". DPI-Ausführung ist eine opt-in-Funktion. um Windows Forms Unterstützung für hohe DPI nutzen zu können, sollten Sie dessen Wert auf "PerMonitorV2" festlegen. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true" & #124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.CheckedListBox> Steuerelement nutzt die Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" Caling und Layout Verbesserungen Betaphase; andernfalls "False". |
-| "DataGridView.DisableHighDpiImprovements" | "true" & #124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.DataGridView> steuern, Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" DPI-Ausführung Betaphase; "false" andernfalls. |
-| "DisableDpiChangedMessageHandling" | "true" & #124;" "false"" | "true" zum Empfangen von Nachrichten, die im Zusammenhang mit der DPI-Skalierung Änderungen abwählen; "false" andernfalls. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true" & #124;" "false"" | Gibt an, ob eine Windows Forms-Anwendung aufgrund von Änderungen der DPI-Skalierung automatisch angepasst wird. "true" zum Aktivieren der automatischen Größenänderung; andernfalls "false". |
-| "Form.DisableSinglePassControlScaling" | "true" & #124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.Form> in einem Durchgang skaliert wird. So deaktivieren Sie "Wahr" einzelnen Durchläufen Skalierung; andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true" & #124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.MonthCalendar> in einem Durchgang Steuerelement skaliert wird. So deaktivieren Sie "Wahr" einzelnen Durchläufen Skalierung; andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
-| "Toolstrip.DisableHighDpiImprovements" | "true" & #124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.ToolStrip> Steuerelement nutzt die Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" DPI-Ausführung Betaphase; "false" andernfalls. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true" &#124;" "false"" | Gibt an, ob es sich bei gebundenen Steuerelementen in einem Durchgang skaliert werden. "true", um einzelne deaktivieren übergeben Skalierung. andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
+| "DpiAwareness" | "PerMonitorV2" &#124;" "false"" | Gibt an, ob eine Anwendung DPI-fähig ist. Legen Sie den Schlüssel auf "PerMonitorV2" zur Unterstützung der Dpi-Ausführung; Legen Sie sie andernfalls auf "False". DPI-Ausführung ist eine opt-in-Funktion. um Windows Forms Unterstützung für hohe DPI nutzen zu können, sollten Sie dessen Wert auf "PerMonitorV2" festlegen. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true" &#124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.CheckedListBox> Steuerelement nutzt die Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" Caling und Layout Verbesserungen Betaphase; andernfalls "False". |
+| "DataGridView.DisableHighDpiImprovements" | "true" &#124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.DataGridView> steuern, Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" DPI-Ausführung Betaphase; "false" andernfalls. |
+| "DisableDpiChangedMessageHandling" | "true" &#124;" "false"" | "true" zum Empfangen von Nachrichten, die im Zusammenhang mit der DPI-Skalierung Änderungen abwählen; "false" andernfalls. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true" &#124;" "false"" | Gibt an, ob eine Windows Forms-Anwendung aufgrund von Änderungen der DPI-Skalierung automatisch angepasst wird. "true" zum Aktivieren der automatischen Größenänderung; andernfalls "false". |
+| "Form.DisableSinglePassControlScaling" | "true" &#124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.Form> in einem Durchgang skaliert wird. So deaktivieren Sie "Wahr" einzelnen Durchläufen Skalierung; andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true" &#124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.MonthCalendar> in einem Durchgang Steuerelement skaliert wird. So deaktivieren Sie "Wahr" einzelnen Durchläufen Skalierung; andernfalls "false". Finden Sie im Abschnitt "Single übergeben Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
+| "Toolstrip.DisableHighDpiImprovements" | "true" &#124;" "false"" | Gibt an, ob die <xref:System.Windows.Forms.ToolStrip> Steuerelement nutzt die Skalierung und das Layout Verbesserungen, die in der .NET Framework-4.7 eingeführt. "true" DPI-Ausführung Betaphase; "false" andernfalls. |
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -113,7 +113,7 @@ Beginnend mit der .NET Framework-4.7, löst Windows Forms-Steuerelemente eine An
 
 ### <a name="single-pass-scaling"></a>Single-Pass-Skalierung
 
-Einzelne "oder" mit mehreren Pass Skalierung wirkt sich auf die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung des Benutzers-Schnittstelle Elemente, wie sie skaliert werden. Beginnend mit der .NET Framework-4.7, verwendet Windows Forms Durchgang zu skalieren. In früheren Versionen von .NET Framework wurde Skalierung über mehrere Durchläufe ausgeführt verursacht einige Steuerelemente skaliert werden mehr als notwendig war. Skalierung der einzelnen Durchläufen sollte nur deaktiviert werden, wenn Ihre app auf dem alten Verhalten abhängig ist.  
+Einzelne "oder" mit mehreren Pass Skalierung wirkt sich auf die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung von Benutzeroberflächenelementen wie sie skaliert werden. Beginnend mit der .NET Framework-4.7, verwendet Windows Forms Durchgang zu skalieren. In früheren Versionen von .NET Framework wurde Skalierung über mehrere Durchläufe ausgeführt verursacht einige Steuerelemente skaliert werden mehr als notwendig war. Skalierung der einzelnen Durchläufen sollte nur deaktiviert werden, wenn Ihre app auf dem alten Verhalten abhängig ist.  
 
 ## <a name="see-also"></a>Siehe auch
  

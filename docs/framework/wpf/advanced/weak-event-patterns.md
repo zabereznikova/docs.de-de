@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass ein Handler, die auf Ereignisquellen angefügt sind nicht in Abstimmung mit dem Listenerobjekt zerstört werden, die die Quelle den Handler angefügt. Diese Situation kann zu Speicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, stellen Sie eine dedizierte Managerklasse für bestimmte Ereignisse bereit, und Implementieren einer Schnittstelle zum Listener für dieses Ereignis an. Dieses Entwurfsmusters heißt die *schwacher Ereignismuster*.  
@@ -45,7 +45,7 @@ Bei Anwendungen ist es möglich, dass ein Handler, die auf Ereignisquellen angef
 |--------------|-----------------------|  
 |Verwenden einer vorhandenen schwache Ereignis-Manager-Klasse|Wenn das Ereignis, die Sie abonnieren möchten ein entsprechendes hat <xref:System.Windows.WeakEventManager>, verwenden Sie den vorhandenen schwache Ereignis-Manager. Eine Liste der schwache Ereignis-Manager, die in WPF enthalten sind, finden Sie in die Vererbungshierarchie der <xref:System.Windows.WeakEventManager> Klasse. Beachten Sie jedoch, dass es relativ wenige schwache Ereignis-Manager, die mit WPF, enthalten sind gibt, so Sie wahrscheinlich eine der anderen Methoden auswählen müssen.|  
 |Verwenden einer generischen schwachen Ereignis-Manager-Klasse|Verwenden Sie eine generische <xref:System.Windows.WeakEventManager%602> bei einem vorhandenen <xref:System.Windows.WeakEventManager> ist nicht verfügbar ist, Sie möchten eine einfache Möglichkeit zum Implementieren und Sie sind nicht besorgt Effizienz. Die generische <xref:System.Windows.WeakEventManager%602> ist weniger effizient als eine vorhandene oder benutzerdefinierte schwache Ereignis-Manager. Beispielsweise ist die generische Klasse mehrere Reflektion, um das Ereignis angegebenen Ereignisnamens zu ermitteln. Außerdem wird im Code auf das Ereignis zu registrieren, indem Sie mithilfe der allgemeinen <xref:System.Windows.WeakEventManager%602> ist mehr als die Verwendung einer vorhandenen ausführliche oder benutzerdefinierte <xref:System.Windows.WeakEventManager>.|  
-|Erstellen Sie eine benutzerdefinierte schwache Ereignis-Manager-Klasse|Erstellen eines benutzerdefinierten <xref:System.Windows.WeakEventManager> Wenn Sie eine vorhandene <xref:System.Windows.WeakEventManager> ist nicht verfügbar, und Sie möchten die optimale Effizienz. Mithilfe einer benutzerdefinierten <xref:System.Windows.WeakEventManager> zum Abonnieren ein Ereignisses wird effizienter sein, aber führen Sie die Kosten für das Schreiben von weiteren Code am Anfang anfallen.|  
+|Erstellen Sie eine benutzerdefinierte schwache Ereignis-Manager-Klasse|Erstellen eines benutzerdefinierten <xref:System.Windows.WeakEventManager> bei einem vorhandenen <xref:System.Windows.WeakEventManager> ist nicht verfügbar, und Sie möchten die optimale Effizienz. Mithilfe einer benutzerdefinierten <xref:System.Windows.WeakEventManager> zum Abonnieren ein Ereignisses wird effizienter sein, aber führen Sie die Kosten für das Schreiben von weiteren Code am Anfang anfallen.|  
   
  In den folgenden Abschnitten wird beschrieben, wie das schwacher Ereignismuster implementieren.  Für den Rahmen dieser Erläuterung weist folgende Merkmale auf das Ereignis abonnieren.  
   

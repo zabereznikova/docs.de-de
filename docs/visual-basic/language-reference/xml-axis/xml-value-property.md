@@ -16,11 +16,11 @@ ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c52ac09e209d6e3f0cfd877a071cbbe3ab96f18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d9294c2d1d83dce3bca2abc22ee9c70296fc8014
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="xml-value-property-visual-basic"></a>XML-Value-Eigenschaft (Visual Basic)
 Bietet Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte.  
@@ -63,7 +63,7 @@ object.Value
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie der Wert für ein XML-Attribut aus einer Auflistung von abgerufen <xref:System.Xml.Linq.XAttribute> Objekte. Im Beispiel wird die Attribute Axis-Eigenschaft den Wert der anzuzeigenden der `type` Attribut für alle von der die `phone` Elemente.  
+ Im folgende Beispiel wird gezeigt, wie der Wert für ein XML-Attribut aus einer Auflistung von abgerufen <xref:System.Xml.Linq.XAttribute> Objekte. Im Beispiel wird die Attribute Axis-Eigenschaft den Wert der anzuzeigenden der `type` Attribut für alle von der `phone` Elemente.  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   

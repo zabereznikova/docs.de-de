@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Windows Workflow Foundation eine Reihe von Funktionen hinzugefügt. In diesem Dokument wird eine Reihe neuer Funktionen beschrieben. Darüber hinaus enthält das Dokument detaillierte Informationen zu den Szenarien, in denen sie möglicherweise nützlich sind.  
@@ -82,7 +82,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 -   Ein Beispiel für die Verwendung einer Korrelation zum Gruppieren von Nachrichten ist eine Anforderung/Antwort-Korrelation, die Nachrichten zusammen gruppiert.  
   
-    -   Klicken Sie für eine <xref:System.ServiceModel.Activities.Receive>-Aktivität auf die <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>-Eigenschaft, und fügen Sie mithilfe der oben im ersten Schritt erstellten CorrelationHandle-Variablen ein <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>-Element hinzu.  
+    -   Auf einem <xref:System.ServiceModel.Activities.Receive> Aktivität, klicken Sie auf die <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> Eigenschaft und Hinzufügen einer <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> mithilfe der CorrelationHandle in den ersten Schritt weiter oben erstellt wurde.  
   
     -   Erstellen einer <xref:System.ServiceModel.Activities.SendReply> Aktivität mit der rechten Maustaste auf die <xref:System.ServiceModel.Activities.Receive> und klicken Sie auf "SendReply erstellen". Fügen Sie die Aktivität hinter der <xref:System.ServiceModel.Activities.Receive>-Aktivität in den Workflow ein.  
   
