@@ -23,7 +23,7 @@ C#-7.1 fügt die [Version Sprachauswahl](#language-version-selection) Konfigurat
 Die neuen Sprachfeatures in dieser Version sind:
 
 * [`async``Main` Methode](#async-main)
-  - Der `async` Modifizierer kann am Einstiegspunkt einer Anwendung verwendet werden.
+  - Der `async`-Modifizierer kann am Einstiegspunkt einer Anwendung verwendet werden.
 * [`default`Literale Ausdrücke](#default-literal-expressions)
   - Sie können Literale Standardausdrücken in Default-Wert-Ausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
 * [Abgeleitete Tupel Elementnamen](#inferred-tuple-element-names)
