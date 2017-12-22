@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="internal-c-reference"></a>internal (C#-Referenz)
 Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md) für Typen und Typmember. 
   
- > Auf dieser Seite deckt `internal` Zugriff. Die `internal` -Schlüsselwort ist auch Teil der [ `protected internal` ](./protected-internal.md) Zugriffsmodifizierer.
+ > Diese Seite behandelt `internal`-Zugriff. Das `internal` -Schlüsselwort ist auch Teil des [ `protected internal` ](./protected-internal.md) Zugriffsmodifizierers.
   
 Auf interne Typen oder Member kann nur innerhalb einer Datei in derselben Assembly zugegriffen werden, so wie in diesem Beispiel:  
   
