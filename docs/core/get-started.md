@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
@@ -25,9 +25,9 @@ Installieren Sie .NET Core auf [Windows](https://www.microsoft.com/net/core#wind
 
 Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
 
-* [Erstellen einer C#-Hallo-Welt-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit C# und Visual Studio 2017 erstellen, debuggen und veröffentlichen.
+* [Erstellen einer C#-Hello World-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit C# und Visual Studio 2017 erstellen, debuggen und veröffentlichen.
 * [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md): Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
-* [Erstellen einer Visual Basic-Hallo-Welt-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit Visual Basic und Visual Studio 2017 erstellen, debuggen und veröffentlichen. 
+* [Erstellen einer Visual Basic-Hello World-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit Visual Basic und Visual Studio 2017 erstellen, debuggen und veröffentlichen. 
 * [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md): Erfahren Sie, wie Sie eine in Visual Basic geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
 * [Erste Schritte mit Visual Studio Code mithilfe von C# und .NET Core auf Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://www.visualstudio.com/products/code-vs), Microsofts einfachen, plattformübergreifenden Code-Editor, installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core zu erstellen.
 * [Get Started with .NET Core and Visual Studio 2017 (Erste Schritte mit .NET Core and Visual Studio 2017)](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio 2017](https://www.visualstudio.com/), Microsofts vollausgestattete IDE, installieren und nutzen können, um Ihre erste plattformübergreifende Konsolenanwendung in .NET Core zu erstellen.
@@ -37,14 +37,14 @@ Finden Sie unter dem Thema [Prerequisites for Windows development (erforderliche
 
 ## <a name="linux"></a>Linux
 
-Installieren Sie .NET Core auf [Linux](https://www.microsoft.com/net/core#linuxredhat).
+Installieren Sie .NET Core unter [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
 
 * [Erste Schritte mit .NET Core mit Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md) ‒ Verwenden Sie irgendeinen Code-Editor mit der [ plattformübergreifenden .NET Core-Befehlszeilenschnittstelle (CLI)](tools/index.md).
 * [Erste Schritte mit Visual Studio Code unter Verwendung von C# und .NET Core auf Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://code.visualstudio.com/) – den einfachen, plattformübergreifenden Code-Editor von Microsoft – installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core auf Ubuntu 14.04 zu erstellen.
 
-Finden Sie unter der [Voraussetzungen für die Linux-Entwicklung](linux-prerequisites.md) Thema eine Liste der unterstützten Linux-Distributionen und Versionen.
+Im Thema [Voraussetzungen für .NET Core unter Linux](linux-prerequisites.md) finden Sie eine Liste der unterstützten Linux-Distributionen und -Versionen.
 
 ## <a name="os-x--macos"></a>OS X/Mac OS
 

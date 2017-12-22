@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C#-Schnellstart: Sammlungen #
 
-Dieser Schnellstart bietet eine Einführung in die C#-Sprache und die Grundlagen der <xref:System.Collections.Generic.List%601> Klasse.
+Dieser Schnellstart bietet eine Einführung zur C#-Sprache und den Grundlagen der <xref:System.Collections.Generic.List%601>-Klasse.
 
-Dieser Schnellstart erwartet, dass Sie einen Computer verfügen, den Sie für die Entwicklung verwenden können. Das Thema .NET [Einstieg in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten der lokalen Entwicklungsumgebung auf Mac, PC oder Linux.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
-## <a name="a-basic-list-example"></a>Ein Beispiel für einfache Liste.
+## <a name="a-basic-list-example"></a>Beispiel für eine einfache Liste
 
 Erstellen Sie ein Verzeichnis mit dem Namen **list-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console` aus.
 
 > [!NOTE]
-> Wenn Sie soeben [erste Schritte mit .NET in 10 Minuten](https://www.microsoft.com/net), Sie können behalten mithilfe der "MyApp"-Anwendung, die Sie gerade erstellt haben.
+> Wenn Sie gerade [Erste Schritte mit .NET in 10 Minuten](https://www.microsoft.com/net) abgeschlossen haben, können Sie die gerade erstellte myApp-Anwendung weiterhin verwenden.
  
 Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie den vorhandenen Code durch Folgendes:
 
@@ -210,14 +210,14 @@ Speichern Sie die Datei, und geben Sie `dotnet run` ein, um die Ergebnisse anzuz
 > Um sich genau auf diesen Abschnitt zu konzentrieren, können Sie den Code auskommentieren, der `WorkingWithStrings();` aufruft. Setzen Sie einfach zwei `/`-Zeichen wie folgt vor den Aufruf: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>Herausforderung
-Versuchen Sie, einige dieser Lektionen und frühere Lektionen in einen Zusammenhang zu bringen. Erweitern Sie das, was Sie bisher bezüglich Fibonacci-Zahlen erstellt haben. Versuchen Sie, den Code zum Generieren der ersten 20 Zahlen der Sequenz zu schreiben.
+Versuchen Sie, einige dieser Konzepte aus dieser Lektion und früheren Lektionen in einen Zusammenhang zu bringen. Erweitern Sie das, was Sie bisher bezüglich Fibonacci-Zahlen erstellt haben. Schreiben Sie den Code zum Generieren der ersten 20 Zahlen der Sequenz. (Hinweis: Die 20. Fibonacci-Zahl lautet 6765.)
 
-## <a name="complete-challenge"></a>Herausforderung erfüllen
+## <a name="complete-challenge"></a>Übung abgeschlossen
 
 Als Beispiel für eine Lösung finden Sie [fertig gestellten Code auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23).
 
 Mit jeder Iteration der Schleife werden die letzten beiden Ganzzahlen in der Liste summiert, und dieser Wert wird der Liste hinzugefügt. Die Schleife wird wiederholt, bis der Liste 20 Elemente hinzugefügt worden sind.
 
-Herzlichen Glückwunsch, Sie den Schnellstart der Liste abgeschlossen haben. Sie können weiterhin mit der [Einführung in Klassen](introduction-to-classes.md) schnellen Einstieg in die Entwicklungsumgebung vorbereiten.
+Herzlichen Glückwunsch, Sie haben den Listenschnellstart abgeschlossen. Sie können mit dem Schnellstart [Einführung in Klassen](introduction-to-classes.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im [Leitfaden für .NET](../../standard/index.md) im Thema [Sammlungen](../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.

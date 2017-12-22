@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -62,7 +62,7 @@ Während alle anderen Member einer Basisklasse von abgeleiteten Klassen geerbt w
 
 - [Interne](../language-reference/keywords/internal.md) Member sind nur in abgeleiteten Klassen sichtbar, die sich in der gleichen Assembly wie die Basisklasse befinden. Sie sind nicht in abgeleiteten Klassen sichtbar, die sich in einer anderen Assembly als die Basisklasse befinden.
 
-- [Öffentliche](../language-reference/keywords/public.md) Datenmember in abgeleiteten Klassen angezeigt werden, und sind Teil der öffentlichen Schnittstelle der abgeleiteten Klasse. Öffentlich geerbte Member können so aufgerufen werden, als ob sie in der abgeleiteten Klasse definiert wurden. Im folgenden Beispiel definiert Klasse `A` eine Methode namens `Method1`, und Klasse `B` erbt von Klasse `A`. Das Beispiel ruft dann `Method1` auf, als wäre sie eine Instanzmethode von `B`.
+- [Öffentliche](../language-reference/keywords/public.md) Member sind in abgeleiteten Klassen sichtbar und Teil der öffentlichen Schnittstelle der abgeleiteten Klasse. Öffentlich geerbte Member können so aufgerufen werden, als ob sie in der abgeleiteten Klasse definiert wurden. Im folgenden Beispiel definiert Klasse `A` eine Methode namens `Method1`, und Klasse `B` erbt von Klasse `A`. Das Beispiel ruft dann `Method1` auf, als wäre sie eine Instanzmethode von `B`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 

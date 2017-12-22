@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
 .NET ist integraler Bestandteil vieler Apps unter Windows und stellt allgemeine Funktionen für diese Apps bereit. Für Entwickler stellt .NET Framework ein umfassendes und konsistentes Programmiermodell zum Erstellen von Apps bereit, die eine visuell beeindruckende Benutzeroberfläche und eine nahtlose und sichere Kommunikation bieten.  
 
-Dieser Artikel enthält Links zur Installation aller .NET Framework-Versionen von .NET Framework 4.5 bis [!INCLUDE[net_current](../../../includes/net-current-version.md)] auf Ihrem Computer. Als Entwickler können Sie außerdem .NET Framework über diese Links herunterladen und mit den Apps verteilen.
+Dieser Artikel enthält Links zur Installation aller .NET Framework-Versionen von .NET Framework 4.5 bis [!INCLUDE[net_current](../../../includes/net-current-version.md)] auf Ihrem Computer. Als Entwickler können Sie außerdem .NET Framework über diese Links herunterladen und mit den Apps verteilen. Ausführliche Informationen zum Bereitstellen von .NET Framework mit der App finden Sie im [Handbuch für die Bereitstellung von .NET Framework für Entwickler](../deployment/deployment-guide-for-developers.md).
 
 > [!NOTE]
 > Dieses Thema richtet sich an Entwickler, die das .NET Framework entweder auf ihrem eigenen System oder mit ihren Anwendungen installieren möchten. Benutzer, die an der Installation von .NET Framework interessiert sind, können die einzelnen Themen zur Installation von .NET Framework auf spezifischen Betriebssystemen lesen, wie z.B. [Installieren von .NET Framework unter Windows 10 und Windows Server 2016](on-windows-10.md).  

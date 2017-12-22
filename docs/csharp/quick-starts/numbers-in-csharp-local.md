@@ -1,6 +1,6 @@
 ---
-title: Schnellstart - Zahlen in c# - C#-Handbuch
-description: Erlernen von c# durch das Durchsuchen von numerischen Typen, deren Eigenschaften und Methoden.
+title: "Schnellstart – Zahlen in C# – C#-Leitfaden"
+description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,23 +9,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 821cca4ea6d6148410e9b179f05d5b74c4844628
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: f275f157d9a9e41407be0beac83c337c7706a95d
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
-# <a name="numbers-in-c-quick-start"></a>Zahlen in C#-Schnellstart #
+# <a name="numbers-in-c-quick-start"></a>Schnellstart „Zahlen in C#“ #
 
-Dieser Schnellstart erfahren Sie, über die Number-Typen in c# interaktiv. Schreiben Sie kleine Mengen von Code, und Sie kompilieren und Ausführen dieses Codes. Der Schnellstart enthält eine Reihe von Lektionen, in denen Zahlen und mathematische Operationen in c# zu untersuchen. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
+Dieser Schnellstart vermittelt Ihnen auf interaktive Weise die Zahlentypen in C#. Sie schreiben einen Teil des Codes, kompilieren diesen und führen ihn aus. Der Schnellstart enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 
-Dieser Schnellstart erwartet, dass Sie einen Computer verfügen, den Sie für die Entwicklung verwenden können. Das Thema .NET [Einstieg in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten der lokalen Entwicklungsumgebung auf Mac, PC oder Linux.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
 ## <a name="explore-integer-math"></a>Erkunden von arithmetischen Operationen mit ganzen Zahlen
 
-Erstellen Sie ein Verzeichnis mit dem Namen **Zahlen Schnellstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n NumbersInCSharp -o .` aus.
+Erstellen Sie ein Verzeichnis mit dem Namen **numbers-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n NumbersInCSharp -o .` aus.
 
-Open **"Program.cs"** in Ihrem bevorzugten Editor, und Ersetzen Sie die Zeile `Console.Writeline("Hello World!");` durch Folgendes:
+Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.Writeline("Hello World!");` durch Folgendes:
 
 ```csharp
 int a = 18;
@@ -34,7 +34,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Führen Sie diesen Code durch Eingabe `dotnet run` in das Befehlsfenster. 
+Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben. 
 
 Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:
 
@@ -42,7 +42,7 @@ Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Za
 - `*` zur Multiplikation
 - `/` zur Division
 
-Erkunden Sie zunächst die anderen Operationen. Fügen Sie nach der Zeile, die den Wert der schreibt diese Zeilen `c`:
+Erkunden Sie zunächst die anderen Operationen. Fügen Sie diese Zeilen nach der Zeile hinzu, die den Wert von `c` schreibt:
 
 ```csharp
 c = a - b;
@@ -53,15 +53,15 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Führen Sie diesen Code durch Eingabe `dotnet run` in das Befehlsfenster. 
+Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben. 
     
-Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen. Wiederholen Sie den `c = a + b - 12 * 17;` beispielsweise. Das Mischen von Variablen und Konstanten Zahlen ist zulässig.
+Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen. Testen Sie zum Beispiel `c = a + b - 12 * 17;`. Das Kombinieren von Variablen und konstanten Zahlen ist erlaubt.
 
 > [!TIP]
-> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Wenn die Ausgabe Fehlermeldungen enthält, sehen Sie sich den Beispielcode und den Code in das Fenster zu sehen, zu beheben.
+> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code in Ihrem Fenster an, um festzustellen, was behoben werden muss.
 > Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.     
 
-Der erste Schritt ist abgeschlossen. Bevor Sie mit dem nächsten Abschnitt beginnen, verschieben wir den aktuellen Code in eine separate Methode. Dies erleichtert das Arbeiten mit einem neuen Beispiel. Benennen Sie Ihre `Main` -Methode in `WorkingWithIntegers` um, und schreiben Sie eine neue `Main`-Methode, die `WorkingWithIntegers` aufruft. Anschließend sollte der Code wie folgt aussehen:
+Sie haben den ersten Schritt abgeschlossen. Bevor Sie mit dem nächsten Abschnitt beginnen, verschieben wir den aktuellen Code in eine separate Methode. Dies erleichtert das Arbeiten mit einem neuen Beispiel. Benennen Sie Ihre `Main` -Methode in `WorkingWithIntegers` um, und schreiben Sie eine neue `Main`-Methode, die `WorkingWithIntegers` aufruft. Anschließend sollte der Code wie folgt aussehen:
 
 ```csharp
 using System;
@@ -94,17 +94,17 @@ namespace NumbersInCSharp
 
 ## <a name="explore-order-of-operations"></a>Erkunden der Reihenfolge der Operationen
 
-Kommentieren Sie den Aufruf von `WorkingWithIntegers()`. Die Ausgabe werden vorgenommen, die weniger überladen, wenn Sie in diesem Abschnitt arbeiten:
+Kommentieren Sie den Aufruf von `WorkingWithIntegers()` aus. Dadurch wird die Ausgabe weniger überladen, wenn Sie in diesem Abschnitt arbeiten:
 
 ```csharp
 //WorkingWithIntegers();
 ```
 
-Die `//` startet eine **Kommentar** in C# geschrieben. Kommentare sind Text, die Sie in Ihrem Quellcode beibehalten, aber nicht als Code ausführen möchten. Der Compiler löst keine ausführbaren Code von den Kommentaren.
+Mit `//` wird ein **Kommentar** in C# begonnen. Kommentare sind Texte, die Sie in Ihrem Quellcode beibehalten, jedoch nicht als Code ausführen möchten. Der Compiler generiert keinen ausführbaren Code über die Kommentare.
 
 Die Programmiersprache C# definiert anhand von Regeln, die Sie aus der Mathematik kennen, die Rangfolge verschiedener arithmetischer Operationen.
 Multiplikation und Division haben gegenüber der Addition und Subtraktion Vorrang.
-Prüfen Sie, indem Sie den folgenden Code Hinzufügen Ihrer `Main` -Methode und Execuing `dotnet run`:
+Führen Sie dies näher aus, indem Sie den folgenden Code zu Ihrer `Main`-Methode hinzufügen und `dotnet run` ausführen:
 
 ```csharp
 int a = 5;
@@ -116,23 +116,23 @@ Console.WriteLine(d);
 
 Die Ausgabe zeigt, dass vor der Addition die Multiplikation ausgeführt wurde.
 
-Eine andere Reihenfolge des Vorgangs können Sie erzwingen, durch Hinzufügen von Klammern um den Vorgang, oder Vorgänge, die gewünschten zuerst ausgeführt. Fügen Sie die folgenden Zeilen hinzu, und führen Sie erneut aus:
+Sie können eine andere Operationsreihenfolge erzwingen, indem Sie die Operation bzw. die Operationen, die zuerst ausgeführt werden soll bzw. sollen, mit Klammern umschließen. Fügen Sie die folgenden Zeilen hinzu, und führen Sie sie aus:
 
 ```csharp
 d = (a  + b) * c;
 Console.WriteLine(d);
 ```
 
-Machen Sie sich damit vertraut, indem Sie viele verschiedene Operationen kombinieren. Fügen Sie etwa die folgenden Zeilen am unteren Rand der `Main` Methode. Wiederholen Sie den `dotnet run` erneut aus.
+Machen Sie sich damit vertraut, indem Sie viele verschiedene Operationen kombinieren. Fügen Sie eine Zeile hinzu, die ungefähr den folgenden Zeilen am Ende Ihrer `Main`-Methode entspricht. Testen Sie erneut `dotnet run`.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
 Console.WriteLine(d);
 ```
 
-Vielleicht haben Sie bereits ein interessantes Verhalten bei den ganzen Zahlen bemerkt. Ganzzahldivision immer erzeugt ein Ganzzahlergebnis, selbst wenn Sie das Ergebnis ein Teils Dezimalstellen oder Bruchzahlen enthalten erwarten würden.
+Vielleicht haben Sie bereits ein interessantes Verhalten bei den ganzen Zahlen bemerkt. Bei der Division ganzer Zahlen kommt immer ein ganzzahliges Ergebnis heraus, selbst wenn Sie als Ergebnis einen Dezimal- oder Bruchteil erwarten würden.
 
-Wenn Sie dieses Verhalten gesehen haben, wiederholen Sie den folgenden Code am Ende Ihrer `Main` Methode:
+Wenn Sie dieses Verhalten noch nicht beobachtet haben, testen Sie den folgenden Code am Ende Ihrer `Main`-Methode:
 
 ```csharp
 int e = 7;
@@ -142,10 +142,10 @@ int h = (e  + f) / g;
 Console.WriteLine(h);
 ```
 
-Typ `dotnet run` erneut aus, um die Ergebnisse anzuzeigen.
+Geben Sie erneut `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
-Bevor Sie fortfahren, werfen wir den Code, den Sie in diesem Abschnitt selbst geschrieben haben, und fügen Sie ihn in eine neue Methode. Diese neue Methode aufzurufen `OrderPrecedence`.
-Sie sollte etwa wie folgt zum Schluss:
+Bevor Sie fortfahren, kopieren Sie den gesamten Code, den Sie in diesem Abschnitt geschrieben haben, und fügen ihn in eine neue Methode ein. Rufen Sie die neue Methode `OrderPrecedence` auf.
+Das Ergebnis sollte ungefähr wie im folgenden Code aussehen:
 
 ```csharp
 using System;
@@ -202,7 +202,7 @@ namespace NumbersInCSharp
 
 ## <a name="explore-integer-precision-and-limits"></a>Erkunden der Genauigkeit und Grenzwerte ganzer Zahlen
 Im vorherigen Beispiel haben Sie gesehen, dass das Ergebnis bei der Division ganzer Zahlen abgeschnitten wird.
-Erhalten Sie die **Rest** mithilfe der **modulo** -Operator, der `%` Zeichen. Wiederholen Sie den folgenden Code in Ihrem `Main` Methode:
+Sie erhalten den Restwert **remainder** mithilfe des **Modulo**-Operators, dem `%`-Zeichen. Testen Sie den folgenden Code in Ihrer `Main`-Methode:
 
 ```csharp
 int a = 7;
@@ -214,7 +214,7 @@ Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
 ```
 
-Der integer-C#-Typ unterscheidet sich noch in einem weiteren Punkt von einer mathematischen ganzen Zahl: Der `int`-Typ ist mit minimalen und maximalen Grenzwerten versehen. Fügen Sie diesen Code auf Ihre `Main` Methode, um diese Grenzen finden Sie unter:
+Der integer-C#-Typ unterscheidet sich noch in einem weiteren Punkt von einer mathematischen ganzen Zahl: Der `int`-Typ ist mit minimalen und maximalen Grenzwerten versehen. Fügen Sie diesen Code zu Ihrer `Main`-Methode hinzu, um die jeweiligen Grenzwerte zu sehen:
     
 ```csharp
 int max = int.MaxValue;
@@ -222,7 +222,7 @@ int min = int.MinValue;
 Console.WriteLine($"The range of integers is {min} to {max}");
 ```
 
-Wenn bei einer Berechnung ein Wert herauskommt, der diese Grenzwerte überschreitet, liegt eine **Unterlauf-** oder **Überlaufbedingung** vor. Die Antwort gibt dann den Bereich der Grenzwerte an. Fügen Sie diese zwei Zeilen auf Ihre `Main` Methode, um ein Beispiel finden Sie unter:
+Wenn bei einer Berechnung ein Wert herauskommt, der diese Grenzwerte überschreitet, liegt eine **Unterlauf-** oder **Überlaufbedingung** vor. Die Antwort gibt dann den Bereich der Grenzwerte an. Fügen Sie die folgenden zwei Zeilen zu Ihrer `Main`-Methode hinzu, um ein Beispiel zu sehen:
 
 ```csharp
 int what = max + 3;
@@ -234,12 +234,12 @@ Die Antwort enthält eine sehr große negative Zahl, da ein Überlauf den größ
 
 Wenn der `int`-Typ nicht Ihren Anforderungen entspricht, so gibt es verschiedene numerische Typen mit anderen Grenzwerten und Genauigkeitsgraden, die Sie verwenden können. Werfen wir im Folgenden einmal einen Blick auf diese.
 
-Fahren wir noch einmal: des Codes, den Sie in diesem Abschnitt in eine separate Methode geschrieben haben. Nennen Sie es `TestLimits`. 
+Fügen Sie den Code, den Sie in diesem Abschnitt geschrieben haben, wieder in eine separate Methode ein. Nennen Sie es `TestLimits`. 
 
 ## <a name="work-with-the-double-type"></a>Arbeiten mit dem Double-Typ
 
-Der numerische Typ `double` stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Falls Ihnen diese Benennungen nichts sagen, beachten Sie die folgenden Erläuterungen: Ein **Gleitkomma** Anzahl eignet sich zur Darstellung von nicht ganzzahligen Ziffern, die möglicherweise sehr große oder kleine Wert ohne Vorzeichen. **Doppelte Genauigkeit** bedeutet, dass diese Zahlen mit einer höheren Genauigkeit gespeichert werden als mit **einfacher Genauigkeit**. Bei modernen Computern werden häufiger Zahlen mit doppelter Genauigkeit verwendet statt mit einfacher Genauigkeit.
-Sehen wir uns dies einmal genauer an. Fügen Sie den folgenden Code hinzu, und anzuzeigen Sie das Ergebnis:
+Der numerische Typ `double` stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Falls Ihnen diese Benennungen nichts sagen, beachten Sie die folgenden Erläuterungen: Eine **Gleitkommazahl** wird verwendet, um sehr große oder sehr kleine Zahlen, die keine ganzen Zahlen sind, darzustellen. **Doppelte Genauigkeit** bedeutet, dass diese Zahlen mit einer höheren Genauigkeit gespeichert werden als mit **einfacher Genauigkeit**. Bei modernen Computern werden häufiger Zahlen mit doppelter Genauigkeit verwendet statt mit einfacher Genauigkeit.
+Sehen wir uns dies einmal genauer an. Fügen Sie den folgenden Code hinzu, und zeigen Sie das Ergebnis an:
 
 ```csharp
 double a = 5;
@@ -259,7 +259,7 @@ double h = (e  + f) / g;
 Console.WriteLine(h);
 ```
 
-Der Bereich eines Werts vom Typ „double“ ist weitaus größer als bei ganzzahligen Werten. Wiederholen Sie den folgenden Code unter Sie bisher geschrieben haben:
+Der Bereich eines Werts vom Typ „double“ ist weitaus größer als bei ganzzahligen Werten. Fügen Sie den folgenden Code unter dem Code hinzu, den Sie bereits geschrieben haben:
 
 ```csharp
 double max = double.MaxValue;
@@ -267,7 +267,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Diese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Anzahl auf der linken Seite des der `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10. 
+Diese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10. 
 
 Wie bei Dezimalzahlen in der Mathematik können double-Werte in C# Rundungsfehler aufweisen. Testen Sie den folgenden Code:
 
@@ -282,11 +282,11 @@ Denken Sie daran, dass `0.3` nicht exakt `1/3` entspricht.
 
 Testen Sie für den `double`-Typ andere Berechnungen mit großen und kleinen Zahlen sowie mit Multiplikation und Division.  Testen Sie kompliziertere Berechnungen.
 
-Nachdem Sie einige Zeit mit der Aufforderung gearbeitet haben, nehmen Sie den Code, den Sie selbst geschrieben haben, und fügen Sie ihn in eine neue Methode. Nennen Sie diese neue Methode `WorkWithDoubles`.
+Nachdem Sie sich nun einige Zeit lang mit der Übung auseinander gesetzt haben, kopieren Sie den von Ihnen geschriebenen Code, und fügen Sie ihn in eine neue Methode ein. Vergeben Sie einen Namen für die neue Methode `WorkWithDoubles`.
 
 ## <a name="work-with-fixed-point-types"></a>Arbeiten mit Festkommatypen
 
-Sie haben die grundlegenden numerischen Typen in C# – „integer“ und „double“ – kennengelernt.  Es gibt einen weiteren Typ, den Sie kennen sollten: den `decimal`-Typ. Die `decimal` Typ hat einen kleineren Bereich aber größere Genauigkeit als `double`. Die Benennung **Festkomma** bedeutet, dass die Position des Dezimalkommas (hier Dezimalpunkts bzw. Binärpunkts) unveränderlich ist. Sehen wir uns das einmal genauer an:
+Sie haben die grundlegenden numerischen Typen in C# – „integer“ und „double“ – kennengelernt.  Es gibt einen weiteren Typ, den Sie kennen sollten: den `decimal`-Typ. Der `decimal`-Typ weist einen kleineren Bereich als `double` auf, aber eine höhere Genauigkeit. Die Benennung **Festkomma** bedeutet, dass die Position des Dezimalkommas (hier Dezimalpunkts bzw. Binärpunkts) unveränderlich ist. Sehen wir uns das einmal genauer an:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -312,13 +312,14 @@ Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vo
 
 ***Übung***
 
-Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie einen Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 Zoll berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Einen Hinweis: c# enthält eine Konstante PI, <xref:System.Math.PI?displayProperty=nameWithType> , die Sie für diesen Wert verwenden können. 
+Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie einen Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 Zoll berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Hinweis: .NET bietet eine Konstante für Pi (<xref:System.Math.PI?displayProperty=nameWithType>), die Sie für die Berechnung dieses Werts verwenden können. 
 
-Sehen Sie sich Ihre Antwort von [Betrachtung der fertig gestellten Beispiel-Codes auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+Sie sollten eine Antwort zwischen 19 und 20 erhalten.
+Sie können Ihre Antwort anhand des [fertig gestellten Beispielcodes auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106) prüfen.
 
-Wenn Sie möchten, versuchen Sie es von einigen anderen Formeln. 
+Wenn Sie möchten, testen Sie andere Formeln. 
 
-Sie haben die "Zahlen in c#" Schnellstart abgeschlossen. Sie können weiterhin mit der [Verzweigungen und Schleifen](branches-and-loops-local.md) schnellen Einstieg in die Entwicklungsumgebung vorbereiten.
+Sie haben den Schnellstart-Leitfaden „Zahlen in C#“ abgeschlossen. Sie können mit dem Schnellstart [Verzweigungen und Schleifen](branches-and-loops-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 
