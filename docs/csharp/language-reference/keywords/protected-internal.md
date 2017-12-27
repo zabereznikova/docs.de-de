@@ -16,7 +16,7 @@ ms.lasthandoff: 11/18/2017
 Die `protected internal`-Schlüsselwortkombination ist ein Zugriffsmodifizierer für Member. Auf einen geschützten internen Member kann aus der aktuellen Assembly oder aus Typen, die von der enthaltenden Klasse abgeleitet sind, zugegriffen werden. Einen Vergleich von `protected internal` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). 
    
 ## <a name="example"></a>Beispiel  
- Auf einen internen geschützten Member einer Basisklasse kann von jedem Typ innerhalb der enthaltenden Assembly zugegriffen werden. Er ist auch von einer abgeleiteten Klasse, die sich in einer anderen Assembly befindet, zugreifbar, aber nur, wenn der Zugriff über eine Variable des Typs der abgeleiteten Klasse erfolgt. Sehen Sie sich z.B. folgenden Codeabschnitt an:  
+ Auf einen internen geschützten Member einer Basisklasse kann von jedem Typ innerhalb der enthaltenden Assembly zugegriffen werden. Der Zugriff ist auch in einer abgeleiteten Klasse möglich, die sich in einer anderen Assembly befindet, dies allerdings nur, wenn er über eine Variable des Typs der abgeleiteten Klasse erfolgt. Betrachten Sie beispielsweise den folgenden Codeausschnitt:
 
 ```
 // Assembly1.cs  
