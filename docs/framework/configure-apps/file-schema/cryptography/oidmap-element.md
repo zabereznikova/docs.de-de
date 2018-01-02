@@ -19,49 +19,50 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08f7eb8e4531d27586bede11bacf598e472b158f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltoidmapgt-element"></a><span data-ttu-id="86fcb-102">&lt;OidMap&gt; Element</span><span class="sxs-lookup"><span data-stu-id="86fcb-102">&lt;oidMap&gt; Element</span></span>
-<span data-ttu-id="86fcb-103">Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.</span><span class="sxs-lookup"><span data-stu-id="86fcb-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  
+# <a name="ltoidmapgt-element"></a><span data-ttu-id="c13e3-102">&lt;OidMap&gt; Element</span><span class="sxs-lookup"><span data-stu-id="c13e3-102">&lt;oidMap&gt; Element</span></span>
+<span data-ttu-id="c13e3-103">Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.</span><span class="sxs-lookup"><span data-stu-id="c13e3-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  
   
- <span data-ttu-id="86fcb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="86fcb-104">\<configuration></span></span>  
-<span data-ttu-id="86fcb-105">\<"mscorlib" ></span><span class="sxs-lookup"><span data-stu-id="86fcb-105">\<mscorlib></span></span>  
-<span data-ttu-id="86fcb-106">\<CryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="86fcb-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="86fcb-107">\<OidMap ></span><span class="sxs-lookup"><span data-stu-id="86fcb-107">\<oidMap></span></span>  
+ <span data-ttu-id="c13e3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c13e3-104">\<configuration></span></span>  
+<span data-ttu-id="c13e3-105">\<"mscorlib" ></span><span class="sxs-lookup"><span data-stu-id="c13e3-105">\<mscorlib></span></span>  
+<span data-ttu-id="c13e3-106">\<CryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="c13e3-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="c13e3-107">\<OidMap ></span><span class="sxs-lookup"><span data-stu-id="c13e3-107">\<oidMap></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86fcb-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="86fcb-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c13e3-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="c13e3-108">Syntax</span></span>  
   
 ```xml  
 <oidMap>   
 </oidMap>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="86fcb-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="86fcb-109">Attributes and Elements</span></span>  
- <span data-ttu-id="86fcb-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="86fcb-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c13e3-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="c13e3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c13e3-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c13e3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="86fcb-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="86fcb-111">Attributes</span></span>  
- <span data-ttu-id="86fcb-112">Keine.</span><span class="sxs-lookup"><span data-stu-id="86fcb-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c13e3-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="c13e3-111">Attributes</span></span>  
+ <span data-ttu-id="c13e3-112">Keine</span><span class="sxs-lookup"><span data-stu-id="c13e3-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="86fcb-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="86fcb-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c13e3-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c13e3-113">Child Elements</span></span>  
   
-|<span data-ttu-id="86fcb-114">Element</span><span class="sxs-lookup"><span data-stu-id="86fcb-114">Element</span></span>|<span data-ttu-id="86fcb-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="86fcb-115">Description</span></span>|  
+|<span data-ttu-id="c13e3-114">Element</span><span class="sxs-lookup"><span data-stu-id="c13e3-114">Element</span></span>|<span data-ttu-id="c13e3-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c13e3-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="86fcb-116">\<OidEntry ></span><span class="sxs-lookup"><span data-stu-id="86fcb-116">\<oidEntry></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|<span data-ttu-id="86fcb-117">Ordnet eine ASN. 1-OID einen Anzeigenamen ein.</span><span class="sxs-lookup"><span data-stu-id="86fcb-117">Maps an ASN.1 OID to a friendly name.</span></span>|  
+|[<span data-ttu-id="c13e3-116">\<OidEntry ></span><span class="sxs-lookup"><span data-stu-id="c13e3-116">\<oidEntry></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|<span data-ttu-id="c13e3-117">Ordnet eine ASN. 1-OID einen Anzeigenamen ein.</span><span class="sxs-lookup"><span data-stu-id="c13e3-117">Maps an ASN.1 OID to a friendly name.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="86fcb-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="86fcb-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c13e3-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c13e3-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="86fcb-119">Element</span><span class="sxs-lookup"><span data-stu-id="86fcb-119">Element</span></span>|<span data-ttu-id="86fcb-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="86fcb-120">Description</span></span>|  
+|<span data-ttu-id="c13e3-119">Element</span><span class="sxs-lookup"><span data-stu-id="c13e3-119">Element</span></span>|<span data-ttu-id="c13e3-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c13e3-120">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="86fcb-121">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="86fcb-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="86fcb-122">Enthält Kryptografieeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="86fcb-122">Contains cryptography settings.</span></span>|  
-|`mscorlib`|<span data-ttu-id="86fcb-123">Enthält die `cryptographySettings` Element.</span><span class="sxs-lookup"><span data-stu-id="86fcb-123">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="c13e3-121">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="c13e3-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="c13e3-122">Enthält Kryptografieeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="c13e3-122">Contains cryptography settings.</span></span>|  
+|`mscorlib`|<span data-ttu-id="c13e3-123">Enthält die `cryptographySettings` Element.</span><span class="sxs-lookup"><span data-stu-id="c13e3-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="86fcb-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="86fcb-124">Example</span></span>  
- <span data-ttu-id="86fcb-125">Das folgende Beispiel zeigt, wie Sie die  **\<OidMap >** Element enthält eine Zuordnung von OID für RIPEMD-160-Hashalgorithmus, der eine Implementierung dieser Hashalgorithmus.</span><span class="sxs-lookup"><span data-stu-id="86fcb-125">The following example shows how to use the **\<oidMap>** element to contain a mapping of an OID for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
+## <a name="example"></a><span data-ttu-id="c13e3-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c13e3-124">Example</span></span>  
+ <span data-ttu-id="c13e3-125">Das folgende Beispiel zeigt, wie Sie die  **\<OidMap >** Element enthält eine Zuordnung von OID für RIPEMD-160-Hashalgorithmus, der eine Implementierung dieser Hashalgorithmus.</span><span class="sxs-lookup"><span data-stu-id="c13e3-125">The following example shows how to use the **\<oidMap>** element to contain a mapping of an OID for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,9 +84,9 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="86fcb-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="86fcb-126">See Also</span></span>  
- [<span data-ttu-id="86fcb-127">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="86fcb-127">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="86fcb-128">Cryptography Settings Schema (Schema für Kryptografieeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="86fcb-128">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="86fcb-129">Kryptografische Dienste</span><span class="sxs-lookup"><span data-stu-id="86fcb-129">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="86fcb-130">Konfigurieren kryptografischer Klassen</span><span class="sxs-lookup"><span data-stu-id="86fcb-130">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [<span data-ttu-id="86fcb-131">Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen</span><span class="sxs-lookup"><span data-stu-id="86fcb-131">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+## <a name="see-also"></a><span data-ttu-id="c13e3-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c13e3-126">See Also</span></span>  
+ [<span data-ttu-id="c13e3-127">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="c13e3-127">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="c13e3-128">Cryptography Settings Schema (Schema für Kryptografieeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="c13e3-128">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="c13e3-129">Kryptografische Dienste</span><span class="sxs-lookup"><span data-stu-id="c13e3-129">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="c13e3-130">Konfigurieren kryptografischer Klassen</span><span class="sxs-lookup"><span data-stu-id="c13e3-130">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [<span data-ttu-id="c13e3-131">Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen</span><span class="sxs-lookup"><span data-stu-id="c13e3-131">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

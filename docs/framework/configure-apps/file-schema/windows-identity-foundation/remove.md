@@ -13,21 +13,22 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c8fd5a9a5c4d6007ff0f67132b97b0aa5d98256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 15c2561487eecb44cf3542768de0a77d1dd6713d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltremovegt"></a><span data-ttu-id="3636c-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="3636c-102">&lt;remove&gt;</span></span>
-<span data-ttu-id="3636c-103">Entfernt die angegebene Sicherheitsschlüssel-Tokenhandler aus der Auflistung Tokenhandler an.</span><span class="sxs-lookup"><span data-stu-id="3636c-103">Removes the specified security token handler from the token handler collection.</span></span>  
+# <a name="ltremovegt"></a><span data-ttu-id="2bec7-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="2bec7-102">&lt;remove&gt;</span></span>
+<span data-ttu-id="2bec7-103">Entfernt die angegebene Sicherheitsschlüssel-Tokenhandler aus der Auflistung Tokenhandler an.</span><span class="sxs-lookup"><span data-stu-id="2bec7-103">Removes the specified security token handler from the token handler collection.</span></span>  
   
- <span data-ttu-id="3636c-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="3636c-104">\<system.identityModel></span></span>  
-<span data-ttu-id="3636c-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="3636c-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="3636c-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="3636c-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="3636c-107">\<Entfernen ></span><span class="sxs-lookup"><span data-stu-id="3636c-107">\<remove></span></span>  
+ <span data-ttu-id="2bec7-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="2bec7-104">\<system.identityModel></span></span>  
+<span data-ttu-id="2bec7-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="2bec7-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="2bec7-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="2bec7-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="2bec7-107">\<Entfernen ></span><span class="sxs-lookup"><span data-stu-id="2bec7-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3636c-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="3636c-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bec7-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="2bec7-108">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -40,26 +41,26 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3636c-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="3636c-109">Attributes and Elements</span></span>  
- <span data-ttu-id="3636c-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3636c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2bec7-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="2bec7-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2bec7-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2bec7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3636c-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="3636c-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2bec7-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="2bec7-111">Attributes</span></span>  
   
-|<span data-ttu-id="3636c-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="3636c-112">Attribute</span></span>|<span data-ttu-id="3636c-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3636c-113">Description</span></span>|  
+|<span data-ttu-id="2bec7-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="2bec7-112">Attribute</span></span>|<span data-ttu-id="2bec7-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2bec7-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="3636c-114">Typ</span><span class="sxs-lookup"><span data-stu-id="3636c-114">type</span></span>|<span data-ttu-id="3636c-115">Der CLR-Typname der der Tokenhandler entfernt werden soll.</span><span class="sxs-lookup"><span data-stu-id="3636c-115">The CLR type name of the token handler to be removed.</span></span> <span data-ttu-id="3636c-116">Weitere Informationen zum Angeben der `type` -Attribut angegeben wird, finden Sie unter [benutzerdefinierte Typverweise](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span><span class="sxs-lookup"><span data-stu-id="3636c-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span> <span data-ttu-id="3636c-117">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="3636c-117">Required.</span></span>|  
+|<span data-ttu-id="2bec7-114">Typ</span><span class="sxs-lookup"><span data-stu-id="2bec7-114">type</span></span>|<span data-ttu-id="2bec7-115">Der CLR-Typname der der Tokenhandler entfernt werden soll.</span><span class="sxs-lookup"><span data-stu-id="2bec7-115">The CLR type name of the token handler to be removed.</span></span> <span data-ttu-id="2bec7-116">Weitere Informationen zum Angeben der `type` -Attribut angegeben wird, finden Sie unter [benutzerdefinierte Typverweise](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span><span class="sxs-lookup"><span data-stu-id="2bec7-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span> <span data-ttu-id="2bec7-117">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="2bec7-117">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3636c-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3636c-118">Child Elements</span></span>  
- <span data-ttu-id="3636c-119">Keine</span><span class="sxs-lookup"><span data-stu-id="3636c-119">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2bec7-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2bec7-118">Child Elements</span></span>  
+ <span data-ttu-id="2bec7-119">Keiner</span><span class="sxs-lookup"><span data-stu-id="2bec7-119">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="3636c-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3636c-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2bec7-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2bec7-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="3636c-121">Element</span><span class="sxs-lookup"><span data-stu-id="3636c-121">Element</span></span>|<span data-ttu-id="3636c-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3636c-122">Description</span></span>|  
+|<span data-ttu-id="2bec7-121">Element</span><span class="sxs-lookup"><span data-stu-id="2bec7-121">Element</span></span>|<span data-ttu-id="2bec7-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2bec7-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3636c-123">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="3636c-123">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="3636c-124">Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.</span><span class="sxs-lookup"><span data-stu-id="3636c-124">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
+|[<span data-ttu-id="2bec7-123">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="2bec7-123">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="2bec7-124">Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.</span><span class="sxs-lookup"><span data-stu-id="2bec7-124">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3636c-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3636c-125">Example</span></span>  
- <span data-ttu-id="3636c-126">Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elemente der Standardhandler für Sitzung token mit einer benutzerdefinierten-Sitzung Tokenhandler ersetzen.</span><span class="sxs-lookup"><span data-stu-id="3636c-126">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="3636c-127">Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.</span><span class="sxs-lookup"><span data-stu-id="3636c-127">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="2bec7-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2bec7-125">Example</span></span>  
+ <span data-ttu-id="2bec7-126">Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elemente der Standardhandler für Sitzung token mit einer benutzerdefinierten-Sitzung Tokenhandler ersetzen.</span><span class="sxs-lookup"><span data-stu-id="2bec7-126">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="2bec7-127">Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.</span><span class="sxs-lookup"><span data-stu-id="2bec7-127">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
   
 ```xml  
 <securityTokenHandlers>  

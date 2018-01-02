@@ -13,21 +13,22 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f9680fe1b4c1bbd62cec1d40b86c0cba55b416
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f7d600369a1aedf6b946b8c5b1a5bb8195c4e54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcleargt"></a><span data-ttu-id="756e7-102">&lt;clear&gt;</span><span class="sxs-lookup"><span data-stu-id="756e7-102">&lt;clear&gt;</span></span>
-<span data-ttu-id="756e7-103">Löscht alle Sicherheitstokenhandler aus der aktuellen Tokenhandler-Auflistung.</span><span class="sxs-lookup"><span data-stu-id="756e7-103">Clears all security token handlers from the current token handler collection.</span></span>  
+# <a name="ltcleargt"></a><span data-ttu-id="68735-102">&lt;clear&gt;</span><span class="sxs-lookup"><span data-stu-id="68735-102">&lt;clear&gt;</span></span>
+<span data-ttu-id="68735-103">Löscht alle Sicherheitstokenhandler aus der aktuellen Tokenhandler-Auflistung.</span><span class="sxs-lookup"><span data-stu-id="68735-103">Clears all security token handlers from the current token handler collection.</span></span>  
   
- <span data-ttu-id="756e7-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="756e7-104">\<system.identityModel></span></span>  
-<span data-ttu-id="756e7-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="756e7-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="756e7-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="756e7-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="756e7-107">\<Deaktivieren Sie ></span><span class="sxs-lookup"><span data-stu-id="756e7-107">\<clear></span></span>  
+ <span data-ttu-id="68735-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="68735-104">\<system.identityModel></span></span>  
+<span data-ttu-id="68735-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="68735-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="68735-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="68735-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="68735-107">\<Deaktivieren Sie ></span><span class="sxs-lookup"><span data-stu-id="68735-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="756e7-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="756e7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68735-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="68735-108">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -40,17 +41,17 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="756e7-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="756e7-109">Attributes and Elements</span></span>  
- <span data-ttu-id="756e7-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="756e7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="68735-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="68735-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="68735-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="68735-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="756e7-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="756e7-111">Attributes</span></span>  
- <span data-ttu-id="756e7-112">Keine</span><span class="sxs-lookup"><span data-stu-id="756e7-112">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="68735-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="68735-111">Attributes</span></span>  
+ <span data-ttu-id="68735-112">Keiner</span><span class="sxs-lookup"><span data-stu-id="68735-112">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="756e7-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="756e7-113">Child Elements</span></span>  
- <span data-ttu-id="756e7-114">Keine</span><span class="sxs-lookup"><span data-stu-id="756e7-114">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="68735-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="68735-113">Child Elements</span></span>  
+ <span data-ttu-id="68735-114">Keiner</span><span class="sxs-lookup"><span data-stu-id="68735-114">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="756e7-115">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="756e7-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="68735-115">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="68735-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="756e7-116">Element</span><span class="sxs-lookup"><span data-stu-id="756e7-116">Element</span></span>|<span data-ttu-id="756e7-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="756e7-117">Description</span></span>|  
+|<span data-ttu-id="68735-116">Element</span><span class="sxs-lookup"><span data-stu-id="68735-116">Element</span></span>|<span data-ttu-id="68735-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="68735-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="756e7-118">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="756e7-118">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="756e7-119">Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.</span><span class="sxs-lookup"><span data-stu-id="756e7-119">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|
+|[<span data-ttu-id="68735-118">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="68735-118">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="68735-119">Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.</span><span class="sxs-lookup"><span data-stu-id="68735-119">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|

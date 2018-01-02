@@ -13,32 +13,33 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 928934070cfb428f467ddf9ee89e01af1f605328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9907876c92a815df7b1a3b449076823465745de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="entity-framework-resources"></a><span data-ttu-id="e7d98-102">Entity Framework-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="e7d98-102">Entity Framework Resources</span></span>
-<span data-ttu-id="e7d98-103">Die folgenden externen Ressourcen bieten Informationen und Unterstützung zum Erstellen von Entity Framework-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="e7d98-103">The following external resources provide information and support for creating Entity Framework applications.</span></span>  
+# <a name="entity-framework-resources"></a><span data-ttu-id="a34ff-102">Entity Framework-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="a34ff-102">Entity Framework Resources</span></span>
+<span data-ttu-id="a34ff-103">Die folgenden externen Ressourcen bieten Informationen und Unterstützung zum Erstellen von Entity Framework-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="a34ff-103">The following external resources provide information and support for creating Entity Framework applications.</span></span>  
   
- [<span data-ttu-id="e7d98-104">Data Developer Center</span><span class="sxs-lookup"><span data-stu-id="e7d98-104">Data Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=213876)  
- <span data-ttu-id="e7d98-105">Zentraler Ort für Datenentwicklung mit Microsoft-Technologien.</span><span class="sxs-lookup"><span data-stu-id="e7d98-105">Central location for data development with Microsoft technologies.</span></span>  
+ [<span data-ttu-id="a34ff-104">Data Developer Center</span><span class="sxs-lookup"><span data-stu-id="a34ff-104">Data Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=213876)  
+ <span data-ttu-id="a34ff-105">Zentraler Ort für Datenentwicklung mit Microsoft-Technologien.</span><span class="sxs-lookup"><span data-stu-id="a34ff-105">Central location for data development with Microsoft technologies.</span></span>  
   
- [<span data-ttu-id="e7d98-106">ADO.NET-Teamblog</span><span class="sxs-lookup"><span data-stu-id="e7d98-106">ADO.NET Team Blog</span></span>](http://go.microsoft.com/fwlink/?LinkId=91905)  
- <span data-ttu-id="e7d98-107">Blog, das Updates für ADO.NET-Funktionen und Diskussionen über dessen Funktionen und Funktionalitäten enthält.</span><span class="sxs-lookup"><span data-stu-id="e7d98-107">Blog containing updates and discussion of ADO.NET features and functionality.</span></span>  
+ [<span data-ttu-id="a34ff-106">ADO.NET-Teamblog</span><span class="sxs-lookup"><span data-stu-id="a34ff-106">ADO.NET Team Blog</span></span>](http://go.microsoft.com/fwlink/?LinkId=91905)  
+ <span data-ttu-id="a34ff-107">Blog, das Updates für ADO.NET-Funktionen und Diskussionen über dessen Funktionen und Funktionalitäten enthält.</span><span class="sxs-lookup"><span data-stu-id="a34ff-107">Blog containing updates and discussion of ADO.NET features and functionality.</span></span>  
   
- [<span data-ttu-id="e7d98-108">Entwurfsblog für Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e7d98-108">Entity Framework Design Blog</span></span>](http://go.microsoft.com/fwlink/?LinkId=186888)  
- <span data-ttu-id="e7d98-109">Entwurfsdiskussionen und Vorschau auf Funktionen für zukünftige Entity Framework-Versionen.</span><span class="sxs-lookup"><span data-stu-id="e7d98-109">Design discussions and feature previews for future Entity Framework versions.</span></span>  
+ [<span data-ttu-id="a34ff-108">Entwurfsblog für Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a34ff-108">Entity Framework Design Blog</span></span>](http://go.microsoft.com/fwlink/?LinkId=186888)  
+ <span data-ttu-id="a34ff-109">Entwurfsdiskussionen und Vorschau auf Funktionen für zukünftige Entity Framework-Versionen.</span><span class="sxs-lookup"><span data-stu-id="a34ff-109">Design discussions and feature previews for future Entity Framework versions.</span></span>  
   
- [<span data-ttu-id="e7d98-110">Datenplattform wie kann ich? Videos: Entity Framework-Reihe</span><span class="sxs-lookup"><span data-stu-id="e7d98-110">Data Platform How Do I? Videos: Entity Framework Series</span></span>](http://go.microsoft.com/fwlink/?LinkId=124600)  
- <span data-ttu-id="e7d98-111">Enthält eine Reihe von Videos, die die Erstellung von Anwendungen unter Verwendung verschiedener Entity Framework-Komponenten veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="e7d98-111">Contains a set of video screen casts that demonstrate how to build applications by using various components of the Entity Framework.</span></span>  
+ [<span data-ttu-id="a34ff-110">Datenplattform wie kann ich? Videos: Entity Framework-Reihe</span><span class="sxs-lookup"><span data-stu-id="a34ff-110">Data Platform How Do I? Videos: Entity Framework Series</span></span>](http://go.microsoft.com/fwlink/?LinkId=124600)  
+ <span data-ttu-id="a34ff-111">Enthält eine Reihe von Videos, die die Erstellung von Anwendungen unter Verwendung verschiedener Entity Framework-Komponenten veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="a34ff-111">Contains a set of video screen casts that demonstrate how to build applications by using various components of the Entity Framework.</span></span>  
   
- [<span data-ttu-id="e7d98-112">Entity Framework häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="e7d98-112">Entity Framework FAQ</span></span>](http://go.microsoft.com/fwlink/?LinkID=213877)  
- <span data-ttu-id="e7d98-113">Blog, das häufig gestellte Fragen über das Entity Framework enthält.</span><span class="sxs-lookup"><span data-stu-id="e7d98-113">Blog containing frequently asked questions about the Entity Framework.</span></span>  
+ [<span data-ttu-id="a34ff-112">Entity Framework häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="a34ff-112">Entity Framework FAQ</span></span>](http://go.microsoft.com/fwlink/?LinkID=213877)  
+ <span data-ttu-id="a34ff-113">Blog, das häufig gestellte Fragen über das Entity Framework enthält.</span><span class="sxs-lookup"><span data-stu-id="a34ff-113">Blog containing frequently asked questions about the Entity Framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7d98-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7d98-114">See Also</span></span>  
- [<span data-ttu-id="e7d98-115">Übersicht über Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e7d98-115">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [<span data-ttu-id="e7d98-116">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="e7d98-116">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [<span data-ttu-id="e7d98-117">Entity Framework-Terminologie</span><span class="sxs-lookup"><span data-stu-id="e7d98-117">Entity Framework Terminology</span></span>](../../../../../docs/framework/data/adonet/ef/terminology.md)  
- [<span data-ttu-id="e7d98-118">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="e7d98-118">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="a34ff-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a34ff-114">See Also</span></span>  
+ [<span data-ttu-id="a34ff-115">Übersicht über Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a34ff-115">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [<span data-ttu-id="a34ff-116">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="a34ff-116">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [<span data-ttu-id="a34ff-117">Entity Framework-Terminologie</span><span class="sxs-lookup"><span data-stu-id="a34ff-117">Entity Framework Terminology</span></span>](../../../../../docs/framework/data/adonet/ef/terminology.md)  
+ [<span data-ttu-id="a34ff-118">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="a34ff-118">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

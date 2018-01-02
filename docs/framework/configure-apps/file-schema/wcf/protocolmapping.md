@@ -13,44 +13,45 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88eb76a5657bd4a83bebb32ce30f73d32693be9b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2d932e8a7fbe9c1457b5cea5106b69317227a21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltprotocolmappinggt"></a><span data-ttu-id="1467f-102">&lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="1467f-102">&lt;protocolMapping&gt;</span></span>
-<span data-ttu-id="1467f-103">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von standardprotokollzuordnungen zwischen transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen dar.</span><span class="sxs-lookup"><span data-stu-id="1467f-103">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="1467f-104">Beim Erstellen von Standardendpunkten zur Laufzeit prüft [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] die konfigurierten Zuordnungen und wählt die für eine bestimmte Basisadresse zu verwendende Bindung.</span><span class="sxs-lookup"><span data-stu-id="1467f-104">When creating default endpoints at runtime, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
+# <a name="ltprotocolmappinggt"></a><span data-ttu-id="56553-102">&lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="56553-102">&lt;protocolMapping&gt;</span></span>
+<span data-ttu-id="56553-103">Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von standardprotokollzuordnungen zwischen transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen dar.</span><span class="sxs-lookup"><span data-stu-id="56553-103">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="56553-104">Beim Erstellen von Standardendpunkten zur Laufzeit prüft [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] die konfigurierten Zuordnungen und wählt die für eine bestimmte Basisadresse zu verwendende Bindung.</span><span class="sxs-lookup"><span data-stu-id="56553-104">When creating default endpoints at runtime, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
   
- <span data-ttu-id="1467f-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="1467f-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="1467f-106">\<ProtocolMapping ></span><span class="sxs-lookup"><span data-stu-id="1467f-106">\<protocolMapping></span></span>  
+ <span data-ttu-id="56553-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="56553-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="56553-106">\<ProtocolMapping ></span><span class="sxs-lookup"><span data-stu-id="56553-106">\<protocolMapping></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1467f-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="1467f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56553-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="56553-107">Syntax</span></span>  
   
 ```xml
    <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="1467f-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="1467f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="1467f-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="1467f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="56553-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="56553-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="56553-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="56553-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1467f-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="1467f-110">Attributes</span></span>  
- <span data-ttu-id="1467f-111">Keine.</span><span class="sxs-lookup"><span data-stu-id="1467f-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="56553-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="56553-110">Attributes</span></span>  
+ <span data-ttu-id="56553-111">Keine</span><span class="sxs-lookup"><span data-stu-id="56553-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1467f-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1467f-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="56553-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="56553-112">Child Elements</span></span>  
   
-|<span data-ttu-id="1467f-113">Element</span><span class="sxs-lookup"><span data-stu-id="1467f-113">Element</span></span>|<span data-ttu-id="1467f-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1467f-114">Description</span></span>|  
+|<span data-ttu-id="56553-113">Element</span><span class="sxs-lookup"><span data-stu-id="56553-113">Element</span></span>|<span data-ttu-id="56553-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56553-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="1467f-115">\<Filter ></span><span class="sxs-lookup"><span data-stu-id="1467f-115">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="1467f-116">Enthält eine standardprotokollzuordnung zwischen einem transportprotokollschema (z. B. http, net.tcp, net.pipe usw.) und einer WCF-Bindung an.</span><span class="sxs-lookup"><span data-stu-id="1467f-116">Contains a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a WCF binding.</span></span>|  
+|[<span data-ttu-id="56553-115">\<Filter ></span><span class="sxs-lookup"><span data-stu-id="56553-115">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="56553-116">Enthält eine standardprotokollzuordnung zwischen einem transportprotokollschema (z. B. http, net.tcp, net.pipe usw.) und einer WCF-Bindung an.</span><span class="sxs-lookup"><span data-stu-id="56553-116">Contains a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a WCF binding.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1467f-117">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1467f-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="56553-117">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="56553-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="1467f-118">Element</span><span class="sxs-lookup"><span data-stu-id="1467f-118">Element</span></span>|<span data-ttu-id="1467f-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1467f-119">Description</span></span>|  
+|<span data-ttu-id="56553-118">Element</span><span class="sxs-lookup"><span data-stu-id="56553-118">Element</span></span>|<span data-ttu-id="56553-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56553-119">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1467f-120">system.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1467f-120">system.ServiceModel</span></span>|<span data-ttu-id="1467f-121">Das Stammelement aller WCF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="1467f-121">The root element of all WCF configuration elements.</span></span>|  
+|<span data-ttu-id="56553-120">system.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="56553-120">system.ServiceModel</span></span>|<span data-ttu-id="56553-121">Das Stammelement aller WCF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="56553-121">The root element of all WCF configuration elements.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="1467f-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1467f-122">Example</span></span>  
- <span data-ttu-id="1467f-123">Im folgenden Konfigurationsbeispiel wird die Standardprotokollzuordnung in der Datei machine.config veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="1467f-123">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="1467f-124">Sie können diese Standardzuordnung auf Computerebene überschreiben, indem Sie die Datei machine.config ändern.</span><span class="sxs-lookup"><span data-stu-id="1467f-124">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="1467f-125">Wenn Sie sie lediglich innerhalb des Bereichs einer Anwendung überschreiben möchten, können Sie diesen Abschnitt innerhalb der Anwendungskonfigurationsdatei überschreiben und die Zuordnung für einzelne Protokollschemas ändern.</span><span class="sxs-lookup"><span data-stu-id="1467f-125">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
+## <a name="example"></a><span data-ttu-id="56553-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="56553-122">Example</span></span>  
+ <span data-ttu-id="56553-123">Im folgenden Konfigurationsbeispiel wird die Standardprotokollzuordnung in der Datei machine.config veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="56553-123">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="56553-124">Sie können diese Standardzuordnung auf Computerebene überschreiben, indem Sie die Datei machine.config ändern.</span><span class="sxs-lookup"><span data-stu-id="56553-124">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="56553-125">Wenn Sie sie lediglich innerhalb des Bereichs einer Anwendung überschreiben möchten, können Sie diesen Abschnitt innerhalb der Anwendungskonfigurationsdatei überschreiben und die Zuordnung für einzelne Protokollschemas ändern.</span><span class="sxs-lookup"><span data-stu-id="56553-125">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
   
 ```xml  
 <protocolMapping>  
@@ -61,6 +62,6 @@ ms.lasthandoff: 12/02/2017
 </protocolMapping>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1467f-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1467f-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="56553-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56553-126">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

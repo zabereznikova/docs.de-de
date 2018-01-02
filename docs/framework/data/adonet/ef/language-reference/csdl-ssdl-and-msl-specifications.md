@@ -13,13 +13,14 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d4a11afef526d013e5674b172377ecb9db9b0e1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b78ebfef10897769e78b3dc34d6f8b75ab750b32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="csdl-ssdl-and-msl-specifications"></a><span data-ttu-id="7c499-102">CSDL-, SSDL- und MSL-Spezifikationen</span><span class="sxs-lookup"><span data-stu-id="7c499-102">CSDL, SSDL, and MSL Specifications</span></span>
-<span data-ttu-id="7c499-103">Die [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Standort wurde am Hauptstandort für den Inhalt des Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="7c499-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="csdl-ssdl-and-msl-specifications"></a><span data-ttu-id="795e3-102">CSDL-, SSDL- und MSL-Spezifikationen</span><span class="sxs-lookup"><span data-stu-id="795e3-102">CSDL, SSDL, and MSL Specifications</span></span>
+<span data-ttu-id="795e3-103">Die [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Standort wurde am Hauptstandort für den Inhalt des Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="795e3-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="7c499-104">Der Inhalt für dieses Thema ist nun auf der folgenden Seite verfügbar: [EDMX-Datei](http://msdn.microsoft.com/data/jj650889).</span><span class="sxs-lookup"><span data-stu-id="7c499-104">The content for this topic is now available on the following page: [EDMX file](http://msdn.microsoft.com/data/jj650889).</span></span>
+ <span data-ttu-id="795e3-104">Der Inhalt für dieses Thema ist nun auf der folgenden Seite verfügbar: [EDMX-Datei](http://msdn.microsoft.com/data/jj650889).</span><span class="sxs-lookup"><span data-stu-id="795e3-104">The content for this topic is now available on the following page: [EDMX file](http://msdn.microsoft.com/data/jj650889).</span></span>

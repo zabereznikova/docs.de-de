@@ -13,19 +13,20 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6923017f661cf463b4186e77e825195c6a9124d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e5ac3a4af54d9f470a1cbd50096731b23d28b0c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcontracttypenamesgt"></a><span data-ttu-id="4a793-102">&lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="4a793-102">&lt;contractTypeNames&gt;</span></span>
-<span data-ttu-id="4a793-103">Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei denen es sich um die Vertragsnamen der gesuchten Dienste handelt, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4a793-103">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="4a793-104">Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="4a793-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="4a793-105">Beachten Sie, dass ein Endpunkt unter [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] nur einen Vertrag unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="4a793-105">Note that in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], an endpoint can only support one contract.</span></span>  
+# <a name="ltcontracttypenamesgt"></a><span data-ttu-id="0d7a2-102">&lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="0d7a2-102">&lt;contractTypeNames&gt;</span></span>
+<span data-ttu-id="0d7a2-103">Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei denen es sich um die Vertragsnamen der gesuchten Dienste handelt, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-103">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="0d7a2-104">Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="0d7a2-105">Beachten Sie, dass ein Endpunkt unter [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] nur einen Vertrag unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-105">Note that in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], an endpoint can only support one contract.</span></span>  
   
- <span data-ttu-id="4a793-106">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4a793-106">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4a793-107">\<StandardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="4a793-107">\<standardEndpoints></span></span>  
+ <span data-ttu-id="0d7a2-106">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0d7a2-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0d7a2-107">\<StandardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="0d7a2-107">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a793-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="4a793-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d7a2-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="0d7a2-108">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -51,25 +52,25 @@ ms.lasthandoff: 12/02/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4a793-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="4a793-109">Attributes and Elements</span></span>  
- <span data-ttu-id="4a793-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4a793-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0d7a2-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="0d7a2-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0d7a2-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4a793-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="4a793-111">Attributes</span></span>  
- <span data-ttu-id="4a793-112">Keine.</span><span class="sxs-lookup"><span data-stu-id="4a793-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0d7a2-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="0d7a2-111">Attributes</span></span>  
+ <span data-ttu-id="0d7a2-112">Keine</span><span class="sxs-lookup"><span data-stu-id="0d7a2-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4a793-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4a793-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0d7a2-113">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0d7a2-113">Child Elements</span></span>  
   
-|<span data-ttu-id="4a793-114">Element</span><span class="sxs-lookup"><span data-stu-id="4a793-114">Element</span></span>|<span data-ttu-id="4a793-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a793-115">Description</span></span>|  
+|<span data-ttu-id="0d7a2-114">Element</span><span class="sxs-lookup"><span data-stu-id="0d7a2-114">Element</span></span>|<span data-ttu-id="0d7a2-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0d7a2-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4a793-116">\<add></span><span class="sxs-lookup"><span data-stu-id="4a793-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|<span data-ttu-id="4a793-117">Ein Vertragstypname ist eine Eigenschaft, die auf den Kriteriensatz verweist, der in der Regel beim Suchen nach einem Dienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4a793-117">A contract type name is a property that refers to the set of criteria typically used when searching for a service.</span></span>|  
+|[<span data-ttu-id="0d7a2-116">\<add></span><span class="sxs-lookup"><span data-stu-id="0d7a2-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|<span data-ttu-id="0d7a2-117">Ein Vertragstypname ist eine Eigenschaft, die auf den Kriteriensatz verweist, der in der Regel beim Suchen nach einem Dienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-117">A contract type name is a property that refers to the set of criteria typically used when searching for a service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4a793-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4a793-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0d7a2-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0d7a2-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="4a793-119">Element</span><span class="sxs-lookup"><span data-stu-id="4a793-119">Element</span></span>|<span data-ttu-id="4a793-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a793-120">Description</span></span>|  
+|<span data-ttu-id="0d7a2-119">Element</span><span class="sxs-lookup"><span data-stu-id="0d7a2-119">Element</span></span>|<span data-ttu-id="0d7a2-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0d7a2-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4a793-121">\<FindCriteria ></span><span class="sxs-lookup"><span data-stu-id="4a793-121">\<findCriteria></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|<span data-ttu-id="4a793-122">Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4a793-122">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="4a793-123">Kriterien können in Suchkriterien (was Sie suchen Dienste) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).</span><span class="sxs-lookup"><span data-stu-id="4a793-123">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
+|[<span data-ttu-id="0d7a2-121">\<FindCriteria ></span><span class="sxs-lookup"><span data-stu-id="0d7a2-121">\<findCriteria></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|<span data-ttu-id="0d7a2-122">Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0d7a2-122">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="0d7a2-123">Kriterien können in Suchkriterien (was Sie suchen Dienste) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).</span><span class="sxs-lookup"><span data-stu-id="0d7a2-123">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4a793-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4a793-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0d7a2-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d7a2-124">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.FindCriteria>  
  <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>  
  <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection>

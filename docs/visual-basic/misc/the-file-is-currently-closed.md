@@ -8,21 +8,21 @@ ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a484488193e8eaf0f80d461d866de0beba05514
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c3726c3c048f5d9310d8761164dceb3a4441de
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="the-file-is-currently-closed"></a><span data-ttu-id="60c26-102">Die Datei ist derzeit geschlossen</span><span class="sxs-lookup"><span data-stu-id="60c26-102">The file is currently closed</span></span>
-<span data-ttu-id="60c26-103">Es wurde versucht, einen Vorgang auszuführen, der nur mit einer geöffneten Datei ausgeführt werden kann, doch die Datei ist gegenwärtig geschlossen.</span><span class="sxs-lookup"><span data-stu-id="60c26-103">An attempt has been made to perform an operation that can only be performed on an open file, but the file is currently closed.</span></span>  
+# <a name="the-file-is-currently-closed"></a><span data-ttu-id="df3dd-102">Die Datei ist derzeit geschlossen</span><span class="sxs-lookup"><span data-stu-id="df3dd-102">The file is currently closed</span></span>
+<span data-ttu-id="df3dd-103">Es wurde versucht, einen Vorgang auszuführen, der nur mit einer geöffneten Datei ausgeführt werden kann, doch die Datei ist gegenwärtig geschlossen.</span><span class="sxs-lookup"><span data-stu-id="df3dd-103">An attempt has been made to perform an operation that can only be performed on an open file, but the file is currently closed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="60c26-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="60c26-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="df3dd-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="df3dd-104">To correct this error</span></span>  
   
--   <span data-ttu-id="60c26-105">Öffnen Sie die Datei, und wiederholen Sie den Vorgang.</span><span class="sxs-lookup"><span data-stu-id="60c26-105">Open the file and attempt the operation again.</span></span>  
+-   <span data-ttu-id="df3dd-105">Öffnen Sie die Datei, und wiederholen Sie den Vorgang.</span><span class="sxs-lookup"><span data-stu-id="df3dd-105">Open the file and attempt the operation again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60c26-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60c26-106">See Also</span></span>  
- [<span data-ttu-id="60c26-107">NICHT im BUILD: FileOpen-Funktion</span><span class="sxs-lookup"><span data-stu-id="60c26-107">NOT IN BUILD: FileOpen Function</span></span>](http://msdn.microsoft.com/en-us/0f07e1df-d4ea-44a9-a21c-76aa2e242f81)  
- [<span data-ttu-id="60c26-108">NICHT im BUILD: FileClose-Funktion</span><span class="sxs-lookup"><span data-stu-id="60c26-108">NOT IN BUILD: FileClose Function</span></span>](http://msdn.microsoft.com/en-us/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)  
- [<span data-ttu-id="60c26-109">My.Computer.FileSystem-Objekt</span><span class="sxs-lookup"><span data-stu-id="60c26-109">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
- [<span data-ttu-id="60c26-110">Dateizugriff mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="60c26-110">File Access with Visual Basic</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+## <a name="see-also"></a><span data-ttu-id="df3dd-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="df3dd-106">See Also</span></span>  
+   
+   
+ [<span data-ttu-id="df3dd-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="df3dd-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
+ [<span data-ttu-id="df3dd-108">Dateizugriff mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="df3dd-108">File Access with Visual Basic</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
