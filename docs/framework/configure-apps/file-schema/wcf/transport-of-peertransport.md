@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69b62699f5db0ab11fac3cc4d1ba4e2aa022934d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bb0fbce0d7b45fd051db187cd6d7e920b08cab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; von &lt;peerTransport&gt;
 Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.  
@@ -55,7 +56,7 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 |Kennwort|Zur Authentifizierung des Peerkanaltransports ist ein korrektes Kennwort erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -72,8 +73,8 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
  <xref:System.ServiceModel.PeerTransportSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Transporte](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

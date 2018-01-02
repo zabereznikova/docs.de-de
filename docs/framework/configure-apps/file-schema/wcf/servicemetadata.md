@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e88c6e5f03cef83e640fbca7434d10f82653f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informationen an.  
@@ -62,7 +63,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 |policyVersion|Eine Zeichenfolge, die angibt, welche Version der WS-Policy-Spezifikation verwendet wird. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

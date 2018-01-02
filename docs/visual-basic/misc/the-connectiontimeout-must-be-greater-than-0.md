@@ -9,22 +9,22 @@ ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4cb1d68a0277ecb1a0dbf5fca46fab5960dd863b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f454b77fa0752f0149037046ba79654dcdfab977
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>Der Verbindungstimeout-Wert muss größer als 0 sein.
-Wenn Dateien mit dem [My.Computer.Network Object](../../visual-basic/language-reference/objects/my-computer-network-object.md)hochgeladen und heruntergeladen werden, müssen Sie einen `connectionTimeout` -Wert angeben, der größer ist als `0`.  
+Beim hoch- und Herunterladen von Dateien mit der [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), geben Sie einen `connectionTimeout` größer als `0`.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Geben Sie einen `connectionTimeout` -Wert an, der größer ist als `0`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [My.Computer.Network.UploadFile-Methode](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [My.Computer.Network.DownloadFile-Methode](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [Gewusst wie: Hochladen einer Datei](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [Gewusst wie: Herunterladen einer Datei](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  [Netzwerkoperationen in .NET Framework mit Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

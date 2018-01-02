@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 260408bd168246b67830637ca53e78b78758b849
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7d52d74c36ea1b1d722d781f554f8cc6691d53e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientgt"></a>&lt;Client&gt;
 Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client eine Verbindung herstellen kann.  
@@ -45,7 +46,7 @@ Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client ei
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -83,5 +84,5 @@ Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client ei
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ClientSection>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
- [WCF-Client-Konfiguration](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [WCF-Clientkonfiguration](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)

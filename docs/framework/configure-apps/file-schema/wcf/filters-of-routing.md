@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9dd9faf63ade725bb8bea12b40390fd30c91973
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2687101aa868ae77ce0ae818afd9df906f8525c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;filters&gt; von &lt;routing&gt;
 
@@ -48,19 +49,19 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-Keine
+Keiner
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<Filter >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Enthält einen Routingfilter, der den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmt, der zum Auswerten eingehender Nachrichten verwendet wird. |
+| [**\<Filter >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Enthält einen Routingfilter, der bestimmt, welche [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> werden beim Auswerten eingehender Nachrichten verwendet. |
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<Routing >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Routingfiltern dar, die den Typ von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie zum Definieren von Routingtabellen mit den Zielendpunkten, an die Nachrichten bei Filterübereinstimmung gesendet werden sollen. |
+| [**\<Routing >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die bestimmen, welche [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing Tabellen, die definieren, die Zielendpunkte zum Senden von Nachrichten, wenn ein Filter übereinstimmt. |
 
 ## <a name="see-also"></a>Siehe auch
 

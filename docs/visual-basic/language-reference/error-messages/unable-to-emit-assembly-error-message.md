@@ -14,11 +14,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9dcf3d4bec379faa5783ca17847b91f9739df598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b19b6439d85822c69adac0b3e0e04b2f31299836
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Assembly kann nicht ausgegeben: &lt;Fehlermeldung&gt;
 Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf, um eine Assembly mit einem Manifest zu erstellen. Dabei meldet der Linker einen Fehler in der Ausgabephase der Assemblyerstellung.  
@@ -27,15 +27,15 @@ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler ruft den Assemblylinker
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die angegebene Fehlermeldung, und gehen Sie zum Thema [Fehler und Warnungen des Al.exe-Tools](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) , um weitere Erläuterungen und Hinweise zu erhalten.  
+1.  Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). für weitere erläuterungen und Hinweise zu erhalten.  
   
-2.  Wiederholen Sie die Assembly manuell zu signieren, entweder die [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) oder [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Wiederholen Sie die Assembly manuell zu signieren, entweder die [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) oder [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
 3.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   
 ### <a name="to-sign-the-assembly-manually"></a>So signieren Sie die Assembly manuell  
   
-1.  Verwenden der [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23) So erstellen Sie eine öffentliches/privates Schlüsselpaar-Datei.  
+1.  Verwenden Sie [Sn.exe (Strong Name-Tool)][Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) um ein öffentliches/privates Schlüsselpaar-Datei zu erstellen.  
   
      Die Dateierweiterung dieser Datei lautet .snk.  
   
@@ -62,8 +62,8 @@ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler ruft den Assemblylinker
 6.  Fügen Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen .NET Assembly-Verweis auf die gerade von Ihnen erstellte Datei hinzu.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Al.exe (Assembly Linker-Tool)](https://msdn.microsoft.com/library/c405shex)  
- [Fehler und Warnungen Al.exe-Tools](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)  
- [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)  
+ 
+ [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+ [Sn.exe (Strong Name-Tool)] [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))  
+ [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)  
  [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

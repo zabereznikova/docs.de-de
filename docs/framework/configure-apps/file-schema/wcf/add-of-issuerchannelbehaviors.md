@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ea76a96597796b10c97ea57ca38c3bda453468c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf66b3d3b531ae41329aade6a416c330957d83c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; von &lt;issuerChannelBehaviors&gt;
 Fügt ein zu verwendendes Endpunktverhalten bei der Kommunikation mit einem STS hinzu.  

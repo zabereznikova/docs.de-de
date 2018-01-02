@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd0d4742a162000d438851cef9c00e21368b7ba1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
 Gibt die Einstellungen, die zum finden und überprüfen ein x. 509-Zertifikat in keinem Zertifikatspeicher verwendet werden.  
@@ -59,7 +60,7 @@ Gibt die Einstellungen, die zum finden und überprüfen ein x. 509-Zertifikat in
 |isChainIncluded|Gibt an, ob die Überprüfung der Zertifikatkette mit ausgeführt werden soll. Der Standardwert ist "true" Überprüfung erfolgt über die Zertifikatkette. Dies ist optional.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

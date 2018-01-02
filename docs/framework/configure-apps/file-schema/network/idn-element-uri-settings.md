@@ -13,17 +13,18 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1f631f41c256e74e9b7bf7dc2d771ee156538820
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44e2db95ec354fff4356a3619fa8230faf67544d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; Element (Uri-Einstellungen)
 Gibt an, ob Internationalized Domain Name (IDN) Analyse an den Domänennamen angewendet wird.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<configuration>-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI >-Element (Uri-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -47,7 +48,7 @@ Gibt an, ob Internationalized Domain Name (IDN) Analyse an den Domänennamen ang
 |`enabled`|Gibt bei Anwendung auf einen Domänennamen Internationalized Domain Name (IDN) Analyse der Standardwert none ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
 Gibt an, dass eine Funktion oder `Get` Accessor, der ein Iterator.  
@@ -33,9 +33,7 @@ Gibt an, dass eine Funktion oder `Get` Accessor, der ein Iterator.
   
  Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Destruktor vorkommen.  
   
- Ein Iterator kann mit einer anonymen Funktion sein. Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
-  
- Weitere Informationen zu Iteratoren finden Sie unter [Iterators (Iteratoren)](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Ein Iterator kann mit einer anonymen Funktion sein. Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Verwendung  
  Der `Iterator`-Modifizierer kann in folgenden Kontexten verwendet werden:  
@@ -54,9 +52,9 @@ Gibt an, dass eine Funktion oder `Get` Accessor, der ein Iterator.
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Weitere Beispiele finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Weitere Beispiele finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [Iteratoren](../../programming-guide/concepts/iterators.md)  
  [Yield-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md)

@@ -9,11 +9,11 @@ ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6095a1bebf2a4ea9450051c48b268ed009e08d63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47829eed150f2437ee7a06e9715730876e97a9bf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Das System unterstützt das angegebene Gebietsschema nicht
 Sie versuchen, die `VbStrConv` -Enumeration zu verwenden, Ihr System unterstützt das angegebene Gebietsschema aber nicht.  
@@ -24,5 +24,5 @@ Sie versuchen, die `VbStrConv` -Enumeration zu verwenden, Ihr System unterstütz
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Globalization>  
- [NICHT IM BUILD: VbStrConv-Enumeration](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
+   
  [Einführung in internationale Anwendungen basierend auf .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

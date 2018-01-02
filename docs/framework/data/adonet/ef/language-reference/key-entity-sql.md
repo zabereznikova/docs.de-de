@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ccc13599889eb91755c775600f2386d1812880b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3be9c51e48e21d76c4425401000cbfdd55f5f538
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 Extrahiert den Schlüssel eines Verweises oder eines Entitätsausdrucks.  
@@ -51,4 +52,4 @@ from LOB.Orders as o
  [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
  [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
- [DEREF-](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+ [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)

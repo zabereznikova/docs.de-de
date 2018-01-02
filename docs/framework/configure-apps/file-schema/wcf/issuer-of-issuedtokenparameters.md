@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82e73a571ce7179518d380c0c63c9161b2ad5c55
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b31214f5552283c40cdc93e6e72a374bbfef9997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;issuer&gt; von &lt;issuedTokenParameters&gt;
 Gibt den Sicherheitstokendienst an, der Sicherheitstoken ausstellt.  

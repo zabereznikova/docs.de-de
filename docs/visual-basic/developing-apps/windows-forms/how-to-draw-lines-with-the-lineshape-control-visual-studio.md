@@ -15,16 +15,16 @@ ms.assetid: 83e71b4e-aa76-4f9b-b547-8704309fd1e5
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f170250dde2f6db31ed68908936c0e9714a7e846
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 42e7f01a57a514ad1dc64e3d4451ce38ea199f93
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-draw-lines-with-the-lineshape-control-visual-studio"></a>Gewusst wie: Zeichnen von Linien mit dem LineShape-Steuerelement (Visual Studio)
 Sie können die <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Steuerelement horizontale, vertikale oder diagonale Linien in einem Formular oder Container zu zeichnen, sowohl zur Entwurfszeit und zur Laufzeit.  
   
- **Hinweis** Computers möglicherweise andere Namen oder Speicherorte für die Benutzeroberflächenelemente von Visual Studio Schnittstellenelemente anzeigen in den folgenden Anweisungen. Diese Elemente sind von der jeweiligen Visual Studio-Version und den verwendeten Einstellungen abhängig. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ **Hinweis** Computers möglicherweise andere Namen oder Speicherorte für die Benutzeroberflächenelemente von Visual Studio Schnittstellenelemente anzeigen in den folgenden Anweisungen. Diese Elemente sind von der jeweiligen Visual Studio-Version und den verwendeten Einstellungen abhängig. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-draw-a-line-at-design-time"></a>Zum Zeichnen einer Linie zur Entwurfszeit  
   

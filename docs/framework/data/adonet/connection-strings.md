@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>Verbindungszeichenfolgen in ADO.NET
 .NET Framework 2.0 führte neue Funktionen zum Arbeiten mit Verbindungszeichenfolgen ein. So wurden z. B. die Klassen des Verbindungszeichenfolgen-Generators um neue Schlüsselwörter erweitert, sodass gültige Verbindungszeichenfolgen zur Laufzeit erstellt werden können.  
@@ -35,13 +36,13 @@ ms.lasthandoff: 11/21/2017
  Zur Beseitigung dieser Probleme gibt es in ADO.NET 2.0 neue Verbindungszeichenfolgen-Generatoren für die einzelnen .NET Framework-Datenanbieter. Schlüsselwörter werden als Eigenschaften verfügbar gemacht, wodurch die Syntax der Verbindungszeichenfolge validiert werden kann, bevor sie an die Datenquelle übermittelt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Zeigt, wie mit den `ConnectionStringBuilder`-Klassen gültige Verbindungszeichenfolgen zur Laufzeit erstellt werden können.  
   
  [Verbindungszeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
  Zeigt, wie Verbindungszeichenfolgen in Konfigurationsdateien gespeichert und abgerufen werden können.  
   
- [Syntax für Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ [Verbindungszeichenfolgensyntax](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
  Beschreibt das Konfigurieren anbieterspezifischer Verbindungszeichenfolgen für `SqlClient`, `OracleClient`, `OleDb` und `Odbc`.  
   
  [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)  

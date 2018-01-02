@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>"DataViews"
 Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in einer <xref:System.Data.DataTable> gespeicherten Daten erstellen. Diese Funktion wird oft in Datenbindungsanwendungen verwendet. Mit einem **"DataView"**, können Sie die Daten in einer Tabelle mit verschiedenen Sortierreihenfolgen verfügbar machen, und Sie können die Daten nach Zeilenstatus oder basierend auf einem Filterausdruck filtern.  
@@ -29,28 +30,28 @@ Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in 
  Können Sie eine <xref:System.Data.DataView.DataViewManager%2A> zum Verwalten von ansichtseinstellungen für alle Tabellen in einem **DataSet**. Die **DataViewManager** bietet Ihnen eine bequeme Möglichkeit zum Verwalten von standardansichtseinstellungen für jede Tabelle. Beim Binden ein Steuerelement an mehr als eine Tabelle mit einer **DataSet**, binden an einen **DataViewManager** die optimale Möglichkeit dar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen einer "DataView"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ [Erstellen einer DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Enthält Informationen zum Erstellen einer **"DataView"** für eine **DataTable**.  
   
  [Sortieren und Filtern von Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  Beschreibt, wie zum Festlegen der Eigenschaften von einer **"DataView"** zum Zurückgeben von Teilmengen von Datenzeilen bestimmte Filterkriterien erfüllen, oder um Daten in einer bestimmten Sortierreihenfolge zurückzugeben.  
   
- ["DataRows" und "DataRowViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [DataRows und DataRowViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  Beschreibt, wie für den Datenzugriff verfügbar gemacht werden, indem Sie die **"DataView"**.  
   
  [Suchen nach Zeilen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  Beschreibt das Suchen einer bestimmten Zeile in einer **"DataView"**.  
   
- ["Childviews" und Beziehungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ [ChildViews und Beziehungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  Enthält Informationen zum Erstellen von Ansichten von Daten aus einer hierarchischen Beziehung mit einer **"DataView"**.  
   
- [Ändern von "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [Ändern von DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  Beschreibt, wie die Daten in der zugrunde liegenden ändern **DataTable** über die **"DataView"**, einschließlich aktivieren oder Deaktivieren von Updates.  
   
  [Behandeln von DataView-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  Beschreibt, wie die **ListChanged** Ereignis benachrichtigt werden soll bei den Inhalt oder die Sortierung einer **"DataView"** wird aktualisiert.  
   
- [Verwalten von "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [Verwalten von DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  Beschreibt, wie eine **DataViewManager** verwalten **"DataView"** Einstellungen für jede Tabelle in einer **DataSet**.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

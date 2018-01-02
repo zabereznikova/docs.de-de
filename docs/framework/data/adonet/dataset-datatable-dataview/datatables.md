@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>"DataTables"
 Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Beziehungen und Einschränkungen. In ADO.NET <xref:System.Data.DataTable> Objekte dienen zum Darstellen von Tabellen in einem **DataSet**. Ein **DataTable** stellt eine Tabelle mit relationalen Daten im Arbeitsspeicher; die Daten sind lokal auf dem. NET-basierte Anwendung, in dem sich befindet, aber ausgefüllt werden, die aus einer Datenquelle, z. B. Microsoft SQL Server mit, einem **"DataAdapter"** Weitere Informationen finden Sie unter [Auffüllen eines Datasets mit "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -31,13 +32,13 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über- und untergeordnete Tabellen in Beziehung zueinander setzen. Sie erstellen eine Beziehung zwischen **DataTable** -Objekte mit einer <xref:System.Data.DataRelation>. **DataRelation** Objekte können dann verwendet werden, um die zugehörigen untergeordneten oder übergeordneten Zeilen für eine bestimmte Zeile zurückzugeben. Weitere Informationen finden Sie unter [Hinzufügen von "DataRelations"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Erstellen einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Erläutert das Erstellen einer **DataTable** und Hinzufügen zu einer **DataSet**.  
   
  [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Enthält Informationen zum Erstellen und Verwenden von **DataColumn** Objekte und Einschränkungen.  
   
- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Erläutert, wie Daten in einer Tabelle hinzugefügt, bearbeitet oder gelöscht werden. Erklärt, wie **DataTable** Ereignisse, um Änderungen an Daten in der Tabelle zu untersuchen.  
   
  [Behandeln von DataTable-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  

@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally-Anweisung (Visual Basic)
 Bietet eine Möglichkeit, einige oder alle möglichen Fehler zu behandeln, die beim Ausführen von Code in einem bestimmten Codeblock auftreten können.  
@@ -134,10 +134,10 @@ End Try
   
  Ein `Await` Ausdruck nicht innerhalb einer `Catch` Block oder `Finally` Block.  
   
-## <a name="iterators"></a>Iteratoren  
+## <a name="iterators"></a>Iterators  
  Ein Iteratorfunktion oder `Get` Accessor führt eine benutzerdefinierte Iteration durch eine Auflistung. Ein Iterator verwendet eine [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben. Sie rufen eine Iteratorfunktion mithilfe einer [für jede... Nächste Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- Ein `Yield` Anweisung kann innerhalb einer `Try` Block. Ein `Try` Block mit einer `Yield` -Anweisung kann verfügen `Catch` blockiert und können eine `Finally` Block. Finden Sie im Abschnitt "versuchen Blöcke in Visual Basic" [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) ein Beispiel.  
+ Ein `Yield` Anweisung kann innerhalb einer `Try` Block. Ein `Try` Block mit einer `Yield` -Anweisung kann verfügen `Catch` blockiert und können eine `Finally` Block. Finden Sie im Abschnitt "versuchen Blöcke in Visual Basic" [Iteratoren](../../programming-guide/concepts/iterators.md) ein Beispiel.  
   
  Ein `Yield` Anweisung kann nicht innerhalb einer `Catch` Block oder ein `Finally` Block.  
   
@@ -194,5 +194,5 @@ End Try
  [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error-Anweisung](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Empfohlene Vorgehensweisen für die Verwendung von Codeausschnitten](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Ausnahmebehandlung](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [Ausnahmebehandlung](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw-Anweisung](../../../visual-basic/language-reference/statements/throw-statement.md)

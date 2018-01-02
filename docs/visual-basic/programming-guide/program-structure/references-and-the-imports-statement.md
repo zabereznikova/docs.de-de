@@ -18,11 +18,11 @@ ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 739934b65241a7846b5323d5e75446832d83e5d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60c62eae57ae127fcbb860fe72853604802cccd9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Verweise und die Imports-Anweisung (Visual Basic)
 Sie können externe Objekte verfügbar machen zu Ihrem Projekt durch Auswahl der **Verweis hinzufügen** Befehl der **Projekt** im Menü. Verweise in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können zeigen auf Assemblys, die wie Typbibliotheken jedoch mehr Informationen enthalten sind.  
@@ -59,7 +59,7 @@ Sie können externe Objekte verfügbar machen zu Ihrem Projekt durch Auswahl der
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.ControlChars>  
  <xref:Microsoft.VisualBasic>  
- [NIB: Gewusst wie: Hinzufügen oder Entfernen von Verweisen mithilfe des Dialogfelds "Verweis hinzufügen"](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  

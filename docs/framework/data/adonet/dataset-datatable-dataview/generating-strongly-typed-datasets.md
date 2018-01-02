@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 61836196d9e11d3c87c43d4faaaeff54125bf706
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 867c6f5fa918b0886d8d618e89c62201cd92b213
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generieren von stark typisierten "DataSets"
 Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit dem Tool <legacyBold>XSD.exe</legacyBold>, das zusammen mit dem <xref:System.Data.DataSet> ausgeliefert wird, ein stark typisiertes [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)] generieren.  
@@ -53,7 +54,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- Im folgenden Codebeispiel wird ein typisiertes **DataSet** mit dem Namen **CustomerDataSet** beim Laden der einer Liste von Kunden aus der **Northwind** Datenbank. Sobald die Daten geladen werden mithilfe der **füllen** -Methode, im Beispiel in einer Schleife durchlaufen alle Kunden in der **Kunden** Tabelle mithilfe des typisierten **CustomersRow** (** DataRow**) Objekt. Dies bietet direkten Zugriff auf die **CustomerID** Spalte, als durch die **DataColumnCollection**.  
+ Im folgenden Codebeispiel wird ein typisiertes **DataSet** mit dem Namen **CustomerDataSet** beim Laden der einer Liste von Kunden aus der **Northwind** Datenbank. Sobald die Daten geladen werden mithilfe der **füllen** -Methode, im Beispiel in einer Schleife durchlaufen alle Kunden in der **Kunden** Tabelle mithilfe des typisierten **CustomersRow** ( **DataRow**) Objekt. Dies bietet direkten Zugriff auf die **CustomerID** Spalte, als durch die **DataColumnCollection**.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  

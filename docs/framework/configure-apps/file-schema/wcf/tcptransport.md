@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cbc0fc790ce6ed9de2a920c851ee6656fa3abaa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f534bab962e83f76dab7e411cc3c2ca14779df9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachrichten für eine benutzerdefinierte Bindung verwendet werden kann.  
@@ -78,7 +79,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
 |connectionPoolSettings|Gibt zusätzliche Verbindungspooleinstellungen für eine Named Pipe-Bindung an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -96,8 +97,8 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transporte](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

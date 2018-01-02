@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>Übersicht über ADO.NET
 ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden. Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  
@@ -36,7 +37,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
  [ADO.NET-Architektur](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Stellt eine Übersicht der Architektur und der Komponenten von ADO.NET bereit.  
   
- [Optionen und Richtlinien](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ [Optionen und Richtlinien der ADO.NET-Technologie](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Beschreibt die in Entity Data Platform enthaltenen Produkte und Technologien.  
   
  [LINQ und ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
@@ -45,10 +46,10 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
  [.NET Framework-Datenanbieter](../../../../docs/framework/data/adonet/data-providers.md)  
  Stellt eine Übersicht über den Entwurf der .NET Framework-Datenanbieter und der .NET Framework-Datenanbieter bereit, die in ADO.NET eingeschlossen sind.  
   
- [ADO.NET-Datasets](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [ADO.NET-DataSets](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Stellt eine Übersicht zum `DataSet`-Entwurf und den Komponenten bereit.  
   
- [Seite-an-Seite-Ausführung in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [Parallele Ausführung in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  Erläutert die Unterschiede zwischen den einzelnen ADO.NET-Versionen und deren Auswirkung auf die parallele Ausführung und die Anwendungskompatibilität.  
   
  [ADO.NET-Codebeispiele](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  

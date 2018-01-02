@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e3380ce1e8e798740214feee0e76d9949caa6bc9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 700d06d22c76762c80ea877006a8ac3789052b14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;ConnectionManagement&gt; -Element (Netzwerkeinstellungen)
 Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.  
@@ -43,7 +44,7 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine.  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

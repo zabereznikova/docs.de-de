@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34a814c14cc482bdf5deafceebae253da921736b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Deaktivieren Sie&gt; WebRequestModules (Network Settings)-Element
 Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.  
@@ -45,7 +46,7 @@ Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine.  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

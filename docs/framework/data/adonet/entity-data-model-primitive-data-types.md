@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: Primitive Datentypen
 Das Entity Data Model (EDM) unterstützt eine Reihe abstrakter primitiver Datentypen (z. B. eine Zeichenfolge, boolescher Wert, Int32, usw.), mit denen definieren [Eigenschaften](../../../../docs/framework/data/adonet/property.md) in einem konzeptionellen Modell. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen wie das Entity Framework primitive Datentypen im EDM in SQL Server-Datentypen zugeordnet werden, finden Sie unter [SqlClient für Entity Framework-Typen](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
@@ -49,5 +50,5 @@ Das Entity Data Model (EDM) unterstützt eine Reihe abstrakter primitiver Datent
 |zeit|Enthält eine Uhrzeit.|Precision, Nullable, Default|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte von Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

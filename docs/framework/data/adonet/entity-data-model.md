@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur unabhängig von der gespeicherten Form beschreiben. Das EDM ist aus dem 1976 von Peter Chen beschriebenen Entitätsbeziehungsmodell ausgeliehen, baut aber auch auf dem Entitätsbeziehungsmodell auf und erweitert seine herkömmliche Verwendung.  
@@ -29,7 +30,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In den Themen dieses Abschnitts werden die Konzepte des Entity Data Model erläutert. Jede DSL, die das EDM implementiert, sollte die hier beschriebenen Konzepte enthalten. Beachten Sie, dass die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) mithilfe von CSDL um konzeptionelle Modelle zu definieren. Weitere Informationen finden Sie unter [CSDL-Spezifikation](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Schlüsselkonzepte von Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
  [Entity Data Model: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
@@ -39,15 +40,15 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Zuordnungsende](../../../../docs/framework/data/adonet/association-end.md)  
   
- [zuordnungsendes](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [Multiplizität des Zuordnungsendes](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [Zuordnungssatz](../../../../docs/framework/data/adonet/association-set.md)  
   
- [zuordnungssatzende](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [Ende des Zuordnungssatzes](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [Zuordnungstyp](../../../../docs/framework/data/adonet/association-type.md)  
   
- [komplexer Typ](../../../../docs/framework/data/adonet/complex-type.md)  
+ [Komplexer Typ](../../../../docs/framework/data/adonet/complex-type.md)  
   
  [Entitätscontainer](../../../../docs/framework/data/adonet/entity-container.md)  
   
@@ -61,9 +62,9 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [im Modell deklarierte Funktion](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [Im Modell deklarierte Funktion](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [modelldefinierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [Im Modell definierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [Navigationseigenschaft](../../../../docs/framework/data/adonet/navigation-property.md)  
   

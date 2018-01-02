@@ -19,14 +19,14 @@ ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dfdb403519d7e29602fc87445ce32aeb0e55250e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 97f02fd85d4796d6799a8a5b40a9137eeb79a93f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-naming-conventions"></a>Benennungskonventionen in Visual Basic
-Wenn Sie ein Element in Visual Basic-Anwendung benennen, muss das erste Zeichen des Namens ein alphabetisches Zeichen oder ein Unterstrich sein. Beachten Sie jedoch, dass Namen, die mit einem Unterstrich beginnen nicht mit kompatibel sind die [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
+Wenn Sie ein Element in Visual Basic-Anwendung benennen, muss das erste Zeichen des Namens ein alphabetisches Zeichen oder ein Unterstrich sein. Beachten Sie jedoch, dass Namen, die mit einem Unterstrich beginnen nicht mit kompatibel sind die [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Die folgenden Vorschläge gelten für die Benennung.  
   

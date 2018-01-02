@@ -23,11 +23,12 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>Add-Ins und Erweiterbarkeit
 <a name="top"></a> Add-Ins stellen erweiterte Funktionen oder Dienste für eine Hostanwendung bereit. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ein Programmiermodell bereit, mit dem Entwickler Add-Ins entwickeln und in ihrer Hostanwendung aktivieren können. Zu diesem Zweck erstellt das Modell eine Kommunikationspipeline zwischen dem Host und dem Add-In. Das Modell wird implementiert, indem die Typen in den Namespaces <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>und <xref:System.AddIn.Contract> verwendet werden.  
@@ -100,13 +101,13 @@ Add-In-Pipeline
 ### <a name="lifetime-management"></a>Verwaltung der Lebensdauer  
  Da das Add-In-Modell Anwendungsdomänen- und Prozessgrenzen überschreitet, reicht die Garbage Collection nicht aus, um Objekte freizugeben. Das Add-In-Modell bietet einen Mechanismus zur Verwaltung der Lebensdauer, der Token und Referenzzähler verwendet und in der Regel keine zusätzliche Programmierung erfordert. Weitere Informationen finden Sie unter [Verwaltung der Lebensdauer](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Unterscheiden zwischen Add-Ins und Hosts  
  Der Unterschied zwischen einem Add-In und einem Host besteht darin, dass der Host die Komponente ist, die das Add-In aktiviert. Der Host kann die größere der beiden Komponenten, beispielsweise eine Textverarbeitungsanwendung mit ihren Rechtschreibprüfungen, oder die kleinere der beiden Komponenten sein, beispielsweise ein Instant Messaging-Client mit einem eingebetteten Media Player. Das Add-In-Modell unterstützt Add-Ins sowohl in Client- als auch in Serverszenarien. Beispiele für Server-Add-Ins sind Add-Ins, die Virenüberprüfung, Spamfilter und IP-Schutz für Mailserver bieten. Beispiele für Client-Add-Ins sind Referenz-Add-Ins für Textverarbeitungsprogramme, spezielle Funktionen für Grafikprogramme und Spiele sowie Virenüberprüfung für lokale E-Mail-Clients.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
@@ -116,7 +117,7 @@ Add-In-Pipeline
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Beschreibt die Kommunikationspipeline von Segmenten von der Hostanwendung zum Add-In. Enthält Codebeispiele in exemplarischen Vorgehensweisen. Darin wird beschrieben, wie Sie die Pipeline erstellen und Segmente für die Pipeline in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]bereitstellen.|  
 |[Anwendungsdomänen und Assemblys](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Beschreibt die Beziehung zwischen Anwendungsdomänen, die eine Isolationsgrenze zwecks Sicherheit, Zuverlässigkeit und Versionsverwaltung bereitstellen, und Assemblys.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Verweis  
@@ -128,4 +129,4 @@ Add-In-Pipeline
   
  <xref:System.AddIn.Pipeline?displayProperty=nameWithType>  
   
- [Zurück nach oben](#top)
+ [Zurück zum Anfang](#top)

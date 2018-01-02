@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen Ankündigungsvertrag. Die Verfügbarkeit eines Diensts kann optional angekündigt werden, indem beim Öffnen bzw. Schließen des Diensts eine Online- bzw. Offline-Ankündigungsnachricht gesendet wird. Ein [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Dienst gibt an, die ankündigungsendpunkte in der [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element- und verwendet die AnnouncementClient die Ankündigungen ausführen. Ein Client möchte, überwacht die Ankündigung aus anderen Dienst tatsächlich als dient eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienst; daher müssen Sie konfigurieren, die ankündigungsendpunkte für den Client in der [ \<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) Abschnitt.  

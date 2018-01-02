@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47799c5eb10a3274b8b5f10d4ccec96a575da949
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports"></a>Transportprotokolle
 Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Die in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] hauptsächlich verwendeten Transportprotokolle sind HTTP, HTTPS, TCP und benannte Pipes. In diesem Abschnitt werden alle Konfigurationselemente aufgelistet, mit denen Sie verschiedene Transporttypen konfigurieren können.  
@@ -26,8 +27,8 @@ Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. D
  <xref:System.ServiceModel.Configuration.TransportElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transporte](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programmierhandbuch (LINQ to DataSet)
 Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -32,7 +33,7 @@ Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmi
  [Vergleichen von DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
  Beschreibt die Vorgehensweise bei der Verwendung des <xref:System.Data.DataRowComparer>-Objekts zum Vergleichen von Datenzeilen.  
   
- [Erstellen einer "DataTable" aus einer Abfrage](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ [Erstellen einer DataTable aus einer Abfrage](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Enthält Informationen zum Erstellen einer <xref:System.Data.DataTable> aus einem [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Methode.  
   
  [Vorgehensweise: Implementieren von CopyToDataTable\<T >, in dem der generische Typ T ist keiner DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
@@ -50,7 +51,7 @@ Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmi
  [Sicherheit](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
  Beschreibt Sicherheitsprobleme in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
- [LINQ to DataSet-Beispiele](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  Enthält Abfragebeispiele, in denen die [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatoren verwendet werden.  
   
 ## <a name="reference"></a>Verweis  

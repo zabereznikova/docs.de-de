@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1677ab1be071eeabd72b29c7ce61d01aaf6164a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc980a2c61be736e2c1d8e52d8f13d0ea5ed09f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-property"></a>Navigationseigenschaft
 Ein *Navigationseigenschaft* ist eine optionale Eigenschaft für ein [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) , mit dessen Hilfe für die Navigation von einem [End](../../../../docs/framework/data/adonet/association-end.md) des ein [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) an das andere Ende. Im Gegensatz zu anderen [Eigenschaften](../../../../docs/framework/data/adonet/property.md), keine Navigationseigenschaften Daten.  
@@ -46,5 +47,5 @@ Ein *Navigationseigenschaft* ist eine optionale Eigenschaft für ein [Entitätst
  Beachten Sie, dass XML-Attribute verwendet werden, um die zum Definieren einer Navigationseigenschaft erforderlichen Informationen zu übermitteln: Das Attribut `Name` enthält den Namen der Eigenschaft, `Relationship` enthält den Namen der Zuordnung, in der sie navigiert, und `FromRole` sowie `ToRole` enthalten die Enden der Zuordnung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte von Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b27994cae77ec012e0b432e702c9c2ccb1933b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b52345ae30ab56a6f34d2aa46f9836d67555b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; von &lt;transportConfigurationType&gt;
 Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transports identifiziert.  
@@ -49,7 +50,7 @@ Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transp
 |transportConfigurationType|Eine Zeichenfolge, die den Typ enthält, mit dem der Transport implementiert wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 223a66dd21305a4cbb6bb434f553e821037e7cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0152dfaa498b84b6e8cfa277abe858cc24ad34cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver verwendet werden soll. Dieses Element ist optional, da das PNRP der Standardresolver ist.  
@@ -44,7 +45,7 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 |resolverType|Eine Zeichenfolge, die den zu verwendenden Resolver angibt. Dieses Attribut ist optional. Wenn es nicht festgelegt wurde oder eine leere Zeichenfolge angegeben wurde, wird das PNRP verwendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -66,4 +67,4 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
  [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<CustomBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [PeerResolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+ [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

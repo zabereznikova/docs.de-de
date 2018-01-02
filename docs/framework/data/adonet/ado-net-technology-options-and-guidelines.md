@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Optionen und Richtlinien der ADO.NET-Technologie
 Die ADO.NET-Datenplattform ist eine Multireleasestrategie, die die Menge an erforderlichem Code und den Verwaltungsaufwand reduziert, da Entwickler bei der Programmierung auf konzeptionelle EDMs zurückgreifen können. Diese Plattform enthält das ADO.NET Entity Framework und verwandte Technologien.  
@@ -29,7 +30,7 @@ Die ADO.NET-Datenplattform ist eine Multireleasestrategie, die die Menge an erfo
  Ein EDM ist eine Entwurfsspezifikation, die Anwendungsdaten als Sätze von Entitäten und Beziehungen definiert. Die Daten dieses Modells unterstützen objektrelationales Mapping und Datenprogrammierbarkeit über Anwendungsgrenzen hinweg.  
   
 ### <a name="object-services"></a>Objektdienste  
- Object Services ermöglicht den Programmierern die Interaktion mit einem konzeptionellen Modell mithilfe eines Satzes von CLR-Klassen. Diese Klassen können automatisch aus dem konzeptionellen Modell generiert oder unabhängig entwickelt werden, um die Struktur des konzeptionellen Modells widerzuspiegeln. Object Services bietet darüber hinaus Infrastrukturunterstützung für das Entity Framework, indem es verschiedene Dienste wie Zustandsverwaltung, Änderungsnachverfolgung, Identitätsauflösung, Laden von und Navigieren in Beziehungen, Weitergeben von Objektänderungen an Datenbankmodifikationen und Abfrageerstellungsunterstützung für Entity SQL bereitstellt. Weitere Informationen finden Sie unter [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
+ Object Services ermöglicht den Programmierern die Interaktion mit einem konzeptionellen Modell mithilfe eines Satzes von CLR-Klassen. Diese Klassen können automatisch aus dem konzeptionellen Modell generiert oder unabhängig entwickelt werden, um die Struktur des konzeptionellen Modells widerzuspiegeln. Object Services bietet darüber hinaus Infrastrukturunterstützung für das Entity Framework, indem es verschiedene Dienste wie Zustandsverwaltung, Änderungsnachverfolgung, Identitätsauflösung, Laden von und Navigieren in Beziehungen, Weitergeben von Objektänderungen an Datenbankmodifikationen und Abfrageerstellungsunterstützung für Entity SQL bereitstellt. Weitere Informationen finden Sie unter [Übersicht über Object Services (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
  LINQ to Entities ist eine LINQ-Implementierung (Language-Integrated Query), die Entwicklern ermöglicht, stark typisierte Abfragen zu erstellen, die mithilfe von LINQ-Ausdrücken und LINQ-Abfrageoperatoren auf den Objektkontext des Entity Framework angewendet werden. LINQ to Entities ermöglicht Entwicklern den Zugriff auf ein konzeptionelles Modell mit einer sehr flexiblen objektrelationalen Zuordnung über Microsoft SQL Server und Datenbanken von Drittanbietern. Weitere Informationen finden Sie unter [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  

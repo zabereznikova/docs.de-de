@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a5f0b6b207fbd51504149fd5c245f41ef89f17f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03c2fa7fe65650b760937ef06b848152893e023b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
 Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protokoll.  
@@ -37,7 +38,7 @@ Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protok
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -46,7 +47,7 @@ Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protok
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Enthält die Einstellungen zur Konfiguration der <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP-Module.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
- Keine  
+ Keiner  
   
 ## <a name="remarks"></a>Hinweise  
  Hinzufügen einer `<system.identityModel.services>` Abschnitt aus, um Sie in der Konfigurationsdatei Ihrer Anwendung das SAM und WSFAM Einstellungen bereit.  

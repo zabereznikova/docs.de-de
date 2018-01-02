@@ -12,22 +12,22 @@ ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ef4306da5c093b8302e377cc3b68d5700b8dfa8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 893d869b1abaf9caa6f4705f40750912081d7df2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assemblys und der globale Assemblycache (Visual Basic)
 Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET-basierte Anwendung. Assemblys sind ausführbare Dateien (EXE-Dateien) oder DLL-Dateien und bilden die Bausteine von .NET Framework. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.  
   
- Assemblys können mindestens ein Modul enthalten. Beispiel: Größere Projekte können so geplant werden, dass verschiedene unabhängige Entwickler an verschiedenen Modulen arbeiten, die schließlich alle zusammen eine einzelne Assembly erstellen. Weitere Informationen zu Modulen finden Sie im Thema [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Assemblys können mindestens ein Modul enthalten. Beispiel: Größere Projekte können so geplant werden, dass verschiedene unabhängige Entwickler an verschiedenen Modulen arbeiten, die schließlich alle zusammen eine einzelne Assembly erstellen. Weitere Informationen zu Modulen finden Sie im Thema [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Assemblys verfügen über folgende Eigenschaften:  
   
 -   Assemblys werden als EXE- oder DLL-Dateien implementiert.  
   
--   Sie können eine Assembly zwischen Anwendungen teilen, indem Sie sie im globalen Assemblycache ablegen. Assemblys müssen über einen starken Namen verfügen, bevor sie dem globalen Assemblycache hinzugefügt werden können. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
+-   Sie können eine Assembly zwischen Anwendungen teilen, indem Sie sie im globalen Assemblycache ablegen. Assemblys müssen über einen starken Namen verfügen, bevor sie dem globalen Assemblycache hinzugefügt werden können. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../../../framework/app-domains/strong-named-assemblies.md).  
   
 -   Assemblys werden nur in den Arbeitsspeicher geladen, wenn sie erforderlich sind. Wenn sie nicht verwendet werden, werden sie nicht geladen. Dies bedeutet, dass Assemblys eine effiziente Möglichkeit zur Verwaltung von Ressourcen in größeren Projekten sein können.  
   
@@ -46,7 +46,7 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
   
  Da Assemblys Informationen zu Inhalt, Versionsverwaltung und Abhängigkeiten enthalten, sind die Anwendungen, die Sie mit Visual Basic erstellen, nicht von Windows-Registrierungswerten abhängig, damit sie ordnungsgemäß funktionieren. Assemblys reduzieren DLL-Konflikte, verbessern die Zuverlässigkeit und vereinfachen die Bereitstellung Ihrer Anwendungen. In vielen Fällen können Sie eine .NET-basierte Anwendung einfach durch Kopieren der Dateien auf den Zielcomputer installieren.  
   
- Weitere Informationen dazu finden Sie unter [Assemblymanifest](../../../../../docs/framework/app-domains/assembly-manifest.md).  
+ Weitere Informationen dazu finden Sie unter [Assemblymanifest](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Hinzufügen eines Verweises auf eine Assembly  
  Um eine Assembly zu verwenden, müssen Sie einen Verweis darauf hinzufügen. Als Nächstes verwenden Sie die [Imports-Anweisung](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md), um den Namespace der Elemente zu wählen, die Sie verwenden möchten. Sobald auf eine Assembly verwiesen wird und sie importiert wird, sind alle zugänglichen Klassen, Eigenschaften, Methoden und anderen Member ihrer Namespaces für Ihre Anwendung verfügbar, als wäre ihr Code Teil der Quelldatei.  
@@ -58,7 +58,7 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
 >  Sie erstellen eine Assembly in Visual Studio, indem Sie im Menü **Build** die Option **Build** wählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys in der Common Language Runtime (CLR)](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assemblys in der Common Language Runtime (CLR)](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Friend-Assemblys (Visual Basic)](friend-assemblies.md)  
  [Vorgehensweise: Freigeben einer Assembly mit anderen Anwendungen (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
  [Vorgehensweise: Laden und Entladen von Assemblys (Visual Basic)](how-to-load-and-unload-assemblies.md)  

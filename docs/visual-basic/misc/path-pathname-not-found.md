@@ -9,11 +9,11 @@ ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 392a1177b7b2841dfbcf1b5a029d960a72f879f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4cca19f60a495c5f108b0e5674f69780ad6c79b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>Pfad &#39; &lt;Pathname&gt;&#39; wurde nicht gefunden.
 Das Betriebssystem kann den angegebenen Pfad w채hrend eines Datei- oder Datentr채gerzugriffs nicht finden. Der Pfad zu einer Datei muss die Laufwerksangabe sowie die Verzeichnisse und Unterverzeichnisse enthalten, die durchlaufen werden m체ssen, um zu der Datei zu gelangen. Ein Pfad kann relativ oder absolut sein.  
@@ -23,5 +23,5 @@ Das Betriebssystem kann den angegebenen Pfad w채hrend eines Datei- oder Datentr�
 1.  Vergewissern Sie sich, dass der Pfad die erforderlichen Elemente enth채lt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [My.Computer.FileSystem-Objekt](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
  [Gewusst wie: Analysieren von Dateipfaden](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

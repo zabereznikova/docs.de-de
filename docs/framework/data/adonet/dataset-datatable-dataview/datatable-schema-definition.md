@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: be5969bf8653512da27785479ac7feae1f6c09a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e848a0fac5d41628d4d39f1771019eb870e6395b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-schema-definition"></a>DataTable-Schemadefinition
 Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkungen dargestellt. Das Schema einer <xref:System.Data.DataTable> wird mit <xref:System.Data.DataColumn>-Objekten sowie <xref:System.Data.ForeignKeyConstraint>-Objekten und <xref:System.Data.UniqueConstraint>-Objekten definiert. Die Spalten einer Tabelle können Spalten in einer Datenquelle zugeordnet sein, berechnete Werte aus Ausdrücken enthalten, Werte automatisch erhöhen oder primäre Schlüsselwerte enthalten.  
@@ -30,7 +31,7 @@ Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkung
 >  Die <xref:System.Data.DataTable.CaseSensitive%2A> Eigenschaft von der **DataTable** wirkt sich nicht auf dieses Verhalten. Die **CaseSensitive** Eigenschaft angewendet wird, die Daten in einer Tabelle und wirkt sich auf Sortieren, suchen, filtern, erzwingen von Einschränkungen usw., jedoch keine Verweise auf die Spalten, Beziehungen und Einschränkungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Hinzufügen von Spalten zu einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Hinzufügen von Spalten zu einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Beschreibt, wie Sie definieren die Spalten einer Tabelle mit **DataColumn** Objekte.  
   
  [Erstellen von Ausdrucksspalten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  

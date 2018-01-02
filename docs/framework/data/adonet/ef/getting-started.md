@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 74752600dc5d673bd18715232ee4f6cda01ca1ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 32b994c7ccf09377973d78f6f198fd1aea322889
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-entity-framework"></a>Erste Schritte (Entity Framework)
 Die [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenorientierte Anwendungen und Dienste, und bietet eine Plattform für das Programmieren für Daten, die die Ebene der Abstraktion, die von der logischen relationalen Ebene auf die konzeptionelle Ebene auslöst. Da Entwickler nun auf einer höheren Abstraktionsebene mit Daten arbeiten können, unterstützt das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeichermodulen oder relationalen Schemas unabhängig ist. Weitere Informationen finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  

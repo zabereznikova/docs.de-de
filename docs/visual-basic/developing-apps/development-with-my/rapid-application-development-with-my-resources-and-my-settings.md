@@ -14,11 +14,11 @@ ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1657febf935560ff4c8dd2f54b10fdcb2254891f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7339afdc35341739b592b2a327094754031c346c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Schnelle Anwendungsentwicklung mit My.Resources und My.Settings (Visual Basic)
 Die `My.Resources` -Objekt ermöglicht den Zugriff auf die Ressourcen der Anwendung und ermöglicht Ihnen, Ressourcen für Ihre Anwendung dynamisch abzurufen.  
@@ -28,7 +28,7 @@ Die `My.Resources` -Objekt ermöglicht den Zugriff auf die Ressourcen der Anwend
   
  [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
- Die `My.Resources` Objekt macht nur globale Ressourcen verfügbar. Es stellt nicht den Zugriff auf Formularen zugeordnete Ressourcendateien bereit. Sie müssen die Formularressourcen aus dem Formular zugreifen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ Die `My.Resources` Objekt macht nur globale Ressourcen verfügbar. Es stellt nicht den Zugriff auf Formularen zugeordnete Ressourcendateien bereit. Sie müssen die Formularressourcen aus dem Formular zugreifen.  
   
  Auf ähnliche Weise die `My.Settings` Objekt ermöglicht den Zugriff auf die Einstellungen der Anwendung, und lassen sich dynamisch speichern und Abrufen von Einstellungen und andere Informationen für Ihre Anwendung. Weitere Informationen finden Sie unter [My.Resources-Objekt](../../../visual-basic/language-reference/objects/my-resources-object.md) und [My.Settings-Objekt](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   

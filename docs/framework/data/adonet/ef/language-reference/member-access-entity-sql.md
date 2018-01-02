@@ -1,5 +1,5 @@
 ---
-title: . (Memberzugriff) (Entity SQL)
+title: sein. (Memberzugriff) (Entity SQL)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,13 +13,14 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6c9d5d8f2c90273b316379d3c2803835bab3faef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 36699b403241e9a5496e722e81c833be0ed63101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="-member-access-entity-sql"></a>. (Memberzugriff) (Entity SQL)
+# <a name="-member-access-entity-sql"></a>sein. (Memberzugriff) (Entity SQL)
 Der Punktoperator (.) wird die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Memberzugriffsoperator. Mit dem Operator für den Memberzugriff kann auf den Wert einer Eigenschaft oder eines Felds der Instanz eines strukturellen konzeptionellen Modelltyps zugegriffen werden.  
   
 ## <a name="syntax"></a>Syntax  

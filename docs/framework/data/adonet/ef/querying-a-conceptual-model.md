@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bf289605d305317d4663954a034269c4a432bd80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 640f0cf8d1ee33a0645be4f26c8ac258d1930720
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-a-conceptual-model"></a>Abfragen eines konzeptionellen Modells
 Die [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ermöglicht es Ihnen, Abfragen eines konzeptionelles Modells. Um das konzeptionelle Modell anhand der neuesten Version von Entity Framework abzufragen, finden Sie unter [Abfragen von Daten](http://go.microsoft.com/fwlink/?LinkId=235282).

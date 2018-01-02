@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc04552b9b2ecd85a520ed16ae9a6ee0dfc98a46
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9572cea14b7c15893459133aa75e9fa62b10d4f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt;-Element
 Gibt Einstellungen an, die den Zugriff auf Dienstvorgänge autorisieren.  

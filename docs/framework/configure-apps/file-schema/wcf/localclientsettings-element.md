@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cabde7eb9dd122c2f7060b2f2e2c16f5949dc1f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e906564eb86a2fcd7a82c194bac65416bbeab518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt;-Element
 Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest.  
@@ -66,7 +67,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
 |`timestampValidityDuration`|Eine positive <xref:System.TimeSpan>, die die Dauer angibt, in der ein Zeitstempel gültig ist. Der Standardwert ist "00:15:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

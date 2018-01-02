@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2558423b412333a4d6ac9f650ad8ff3dab449d74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; Element
 Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden, indem Sie explizite Stack-Größe angeben, wenn es bestimmte Threads, die sie intern verwendet erstellt, anstatt die Standardgröße des Stapel für diese Threads.  
@@ -49,7 +50,7 @@ Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Anforderungsgrößen Sie explizite Stapel.|  
-|false|Verwenden Sie die Standardgröße des Stapel an. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|False|Verwenden Sie die Standardgröße des Stapel an. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

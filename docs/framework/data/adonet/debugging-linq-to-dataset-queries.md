@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 964a4d051600621d581e05dcf6b518b2766e2750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debuggen von LINQ to DataSet-Abfragen
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] unterstützt das Debugging von [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Code. Zwischen dem Debuggen von [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Code und nicht von [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwaltetem Code gibt es aber einige Unterschiede. Die meisten Debugfunktionen arbeiten mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Anweisungen, z. B. für das schrittweise Ausführen, das Festlegen von Haltepunkten und das Anzeigen von Ergebnissen in Debuggerfenstern. Allerdings verzögerte abfrageauswertung hat einige Nebenwirkungen, die Sie während des Debuggens berücksichtigen sollten [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] code ein, und es gibt einige Einschränkungen bei der Verwendung von bearbeiten und fortfahren. In diesem Thema erläutert Aspekte des Debuggens, die nur für die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] im Vergleich zu nicht -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] von verwaltetem Code.  
