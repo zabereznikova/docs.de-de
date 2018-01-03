@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e48bc47945bc6c77758eeaa8597ad0ce57b72689
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4ffabcc97a4af33fc859cd096e671f98d52e89e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="d5782-102">ICorDebug::EnumerateProcesses-Methode</span><span class="sxs-lookup"><span data-stu-id="d5782-102">ICorDebug::EnumerateProcesses Method</span></span>
-<span data-ttu-id="d5782-103">Ruft einen Enumerator für die Prozesse, die gedebuggt werden.</span><span class="sxs-lookup"><span data-stu-id="d5782-103">Gets an enumerator for the processes that are being debugged.</span></span>  
+# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="aaa61-102">ICorDebug::EnumerateProcesses-Methode</span><span class="sxs-lookup"><span data-stu-id="aaa61-102">ICorDebug::EnumerateProcesses Method</span></span>
+<span data-ttu-id="aaa61-103">Ruft einen Enumerator für die Prozesse, die gedebuggt werden.</span><span class="sxs-lookup"><span data-stu-id="aaa61-103">Gets an enumerator for the processes that are being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5782-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d5782-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aaa61-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="aaa61-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateProcesses (  
@@ -38,18 +39,18 @@ HRESULT EnumerateProcesses (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5782-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d5782-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="aaa61-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="aaa61-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="d5782-106">Ein Zeiger auf die Adresse eines ICorDebugProcessEnum-Objekts, das den Enumerator für die zu debuggenden Prozesse darstellt.</span><span class="sxs-lookup"><span data-stu-id="d5782-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
+ <span data-ttu-id="aaa61-106">Ein Zeiger auf die Adresse eines ICorDebugProcessEnum-Objekts, das den Enumerator für die zu debuggenden Prozesse darstellt.</span><span class="sxs-lookup"><span data-stu-id="aaa61-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5782-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d5782-107">Requirements</span></span>  
- <span data-ttu-id="d5782-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5782-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aaa61-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="aaa61-107">Requirements</span></span>  
+ <span data-ttu-id="aaa61-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aaa61-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5782-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5782-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aaa61-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aaa61-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5782-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5782-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aaa61-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaa61-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5782-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5782-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="aaa61-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaa61-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5782-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d5782-112">See Also</span></span>  
- [<span data-ttu-id="d5782-113">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d5782-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aaa61-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aaa61-112">See Also</span></span>  
+ [<span data-ttu-id="aaa61-113">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="aaa61-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 52842d40895a658ec9dbb1263f18c48ec999a0ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1f67ed6ad886c137eddaa42840f3f0edda88bd4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="e7fe1-102">CorDebugPlatform-Enumeration</span><span class="sxs-lookup"><span data-stu-id="e7fe1-102">CorDebugPlatform Enumeration</span></span>
-<span data-ttu-id="e7fe1-103">Stellt Zielplattformwerte, mit denen, die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
+# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="00e04-102">CorDebugPlatform-Enumeration</span><span class="sxs-lookup"><span data-stu-id="00e04-102">CorDebugPlatform Enumeration</span></span>
+<span data-ttu-id="00e04-103">Stellt Zielplattformwerte, mit denen, die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="00e04-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7fe1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7fe1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00e04-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="00e04-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugPlatform  
@@ -43,28 +44,28 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e7fe1-105">Member</span><span class="sxs-lookup"><span data-stu-id="e7fe1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="00e04-105">Member</span><span class="sxs-lookup"><span data-stu-id="00e04-105">Members</span></span>  
   
-|<span data-ttu-id="e7fe1-106">Member</span><span class="sxs-lookup"><span data-stu-id="e7fe1-106">Member</span></span>|<span data-ttu-id="e7fe1-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e7fe1-107">Description</span></span>|  
+|<span data-ttu-id="00e04-106">Member</span><span class="sxs-lookup"><span data-stu-id="00e04-106">Member</span></span>|<span data-ttu-id="00e04-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="00e04-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="e7fe1-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="e7fe1-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="e7fe1-109">Die Zielplattform ist Windows auf Intel-x86-Hardware.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="e7fe1-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="e7fe1-111">Die Zielplattform ist 64-Bit-Windows auf AMD64-Hardware oder Intel EM64T-Hardware.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="e7fe1-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="e7fe1-113">Die Zielplattform ist 32-Bit-Windows auf Intel IA-64-Hardware.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="e7fe1-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="e7fe1-115">Die Zielplattform ist Macintosh-Betriebssystem auf PowerPC-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="e7fe1-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="e7fe1-117">Die Zielplattform ist Macintosh-Betriebssystem auf Intel X86 Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="e7fe1-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="e7fe1-119">Die Zielplattform ist Macintosh-Betriebssystem auf Windows-ARM-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
-|<span data-ttu-id="e7fe1-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="e7fe1-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="e7fe1-121">Die Zielplattform ist Macintosh-Betriebssystem auf AMD64-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
+|<span data-ttu-id="00e04-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="00e04-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="00e04-109">Die Zielplattform ist Windows auf Intel-x86-Hardware.</span><span class="sxs-lookup"><span data-stu-id="00e04-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="00e04-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="00e04-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="00e04-111">Die Zielplattform ist 64-Bit-Windows auf AMD64-Hardware oder Intel EM64T-Hardware.</span><span class="sxs-lookup"><span data-stu-id="00e04-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
+|<span data-ttu-id="00e04-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="00e04-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="00e04-113">Die Zielplattform ist 32-Bit-Windows auf Intel IA-64-Hardware.</span><span class="sxs-lookup"><span data-stu-id="00e04-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
+|<span data-ttu-id="00e04-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="00e04-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="00e04-115">Die Zielplattform ist Macintosh-Betriebssystem auf PowerPC-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="00e04-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
+|<span data-ttu-id="00e04-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="00e04-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="00e04-117">Die Zielplattform ist Macintosh-Betriebssystem auf Intel X86 Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="00e04-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="00e04-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="00e04-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="00e04-119">Die Zielplattform ist Macintosh-Betriebssystem auf Windows-ARM-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="00e04-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
+|<span data-ttu-id="00e04-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="00e04-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="00e04-121">Die Zielplattform ist Macintosh-Betriebssystem auf AMD64-Hardware ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="00e04-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e7fe1-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e7fe1-122">Requirements</span></span>  
- <span data-ttu-id="e7fe1-123">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7fe1-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00e04-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="00e04-122">Requirements</span></span>  
+ <span data-ttu-id="00e04-123">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00e04-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7fe1-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7fe1-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="00e04-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00e04-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7fe1-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7fe1-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00e04-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00e04-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7fe1-126">**.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7fe1-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="00e04-126">**.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00e04-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
- <span data-ttu-id="e7fe1-127">Die `CORDB_PLATFORM_WINDOWS_ARM`- und `CORDB_PLATFORM_MAC_AMD64`-Member sind in .NET Framework 4.5.2 und höheren Versionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="e7fe1-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
+ <span data-ttu-id="00e04-127">Die `CORDB_PLATFORM_WINDOWS_ARM`- und `CORDB_PLATFORM_MAC_AMD64`-Member sind in .NET Framework 4.5.2 und höheren Versionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="00e04-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7fe1-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7fe1-128">See Also</span></span>  
- [<span data-ttu-id="e7fe1-129">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="e7fe1-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="00e04-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00e04-128">See Also</span></span>  
+ [<span data-ttu-id="00e04-129">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="00e04-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

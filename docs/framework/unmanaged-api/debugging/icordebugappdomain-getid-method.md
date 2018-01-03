@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a8dcbc1fd710513b2b27e92f4d2e1e1b5c72092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8b151d5b0774576e98da5845e5c7afc24ada0001
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="0b294-102">ICorDebugAppDomain::GetId-Methode</span><span class="sxs-lookup"><span data-stu-id="0b294-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="0b294-103">Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.</span><span class="sxs-lookup"><span data-stu-id="0b294-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="e6591-102">ICorDebugAppDomain::GetId-Methode</span><span class="sxs-lookup"><span data-stu-id="e6591-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="e6591-103">Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.</span><span class="sxs-lookup"><span data-stu-id="e6591-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b294-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0b294-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6591-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e6591-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -38,18 +39,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0b294-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0b294-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e6591-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e6591-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="0b294-106">[out] Der eindeutige Bezeichner der Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="0b294-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="e6591-106">[out] Der eindeutige Bezeichner der Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="e6591-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0b294-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0b294-107">Remarks</span></span>  
- <span data-ttu-id="0b294-108">Der Bezeichner für die Anwendungsdomäne ist eindeutig innerhalb des enthaltenden Prozesses.</span><span class="sxs-lookup"><span data-stu-id="0b294-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6591-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e6591-107">Remarks</span></span>  
+ <span data-ttu-id="e6591-108">Der Bezeichner für die Anwendungsdomäne ist eindeutig innerhalb des enthaltenden Prozesses.</span><span class="sxs-lookup"><span data-stu-id="e6591-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b294-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0b294-109">Requirements</span></span>  
- <span data-ttu-id="0b294-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b294-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6591-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e6591-109">Requirements</span></span>  
+ <span data-ttu-id="e6591-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6591-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b294-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0b294-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e6591-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6591-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0b294-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b294-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6591-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6591-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0b294-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b294-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e6591-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6591-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

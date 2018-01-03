@@ -17,16 +17,17 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5aeb6085671e645e12713944d6456b9581a3886f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 90cd2b8d02cb1d16e4932ffdcc3c9b02dc71541a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cordebugdebugeventkind-enumeration"></a><span data-ttu-id="28ab4-102">CorDebugDebugEventKind-Aufzählung</span><span class="sxs-lookup"><span data-stu-id="28ab4-102">CorDebugDebugEventKind Enumeration</span></span>
-<span data-ttu-id="28ab4-103">Gibt den Typ des Ereignisses, dessen Informationen mit der [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="28ab4-103">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
+# <a name="cordebugdebugeventkind-enumeration"></a><span data-ttu-id="c36ae-102">CorDebugDebugEventKind-Aufzählung</span><span class="sxs-lookup"><span data-stu-id="c36ae-102">CorDebugDebugEventKind Enumeration</span></span>
+<span data-ttu-id="c36ae-103">Gibt den Typ des Ereignisses, dessen Informationen mit der [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="c36ae-103">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28ab4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="28ab4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c36ae-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c36ae-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugDebugEventKind {  
@@ -39,31 +40,31 @@ typedef enum CorDebugDebugEventKind {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="28ab4-105">Member</span><span class="sxs-lookup"><span data-stu-id="28ab4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c36ae-105">Member</span><span class="sxs-lookup"><span data-stu-id="c36ae-105">Members</span></span>  
   
-|<span data-ttu-id="28ab4-106">Member</span><span class="sxs-lookup"><span data-stu-id="28ab4-106">Member</span></span>|<span data-ttu-id="28ab4-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="28ab4-107">Description</span></span>|  
+|<span data-ttu-id="c36ae-106">Member</span><span class="sxs-lookup"><span data-stu-id="c36ae-106">Member</span></span>|<span data-ttu-id="c36ae-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c36ae-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EVENT_KIND_MODULE_LOADED`|<span data-ttu-id="28ab4-108">Ein Modullade-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="28ab4-108">A module load event.</span></span>|  
-|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|<span data-ttu-id="28ab4-109">Ein Modulentlade-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="28ab4-109">A module unload event.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="28ab4-110">Eine Ausnahme der ersten Chance.</span><span class="sxs-lookup"><span data-stu-id="28ab4-110">A first-chance exception.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="28ab4-111">Eine Benutzerausnahme der ersten Chance.</span><span class="sxs-lookup"><span data-stu-id="28ab4-111">A first-chance user exception.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="28ab4-112">Eine Ausnahme, für die ein `catch`-Handler vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="28ab4-112">An exception for which a `catch` handler exists.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|<span data-ttu-id="28ab4-113">Eine nicht behandelte Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="28ab4-113">An unhandled exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MODULE_LOADED`|<span data-ttu-id="c36ae-108">Ein Modullade-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="c36ae-108">A module load event.</span></span>|  
+|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|<span data-ttu-id="c36ae-109">Ein Modulentlade-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="c36ae-109">A module unload event.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="c36ae-110">Eine Ausnahme der ersten Chance.</span><span class="sxs-lookup"><span data-stu-id="c36ae-110">A first-chance exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="c36ae-111">Eine Benutzerausnahme der ersten Chance.</span><span class="sxs-lookup"><span data-stu-id="c36ae-111">A first-chance user exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="c36ae-112">Eine Ausnahme, für die ein `catch`-Handler vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="c36ae-112">An exception for which a `catch` handler exists.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|<span data-ttu-id="c36ae-113">Eine nicht behandelte Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="c36ae-113">An unhandled exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="28ab4-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="28ab4-114">Remarks</span></span>  
- <span data-ttu-id="28ab4-115">Ein Mitglied der `CorDebugDebugEventKind` Enumeration wird zurückgegeben, indem die [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="28ab4-115">A member of the `CorDebugDebugEventKind` enumeration is returned by calling the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c36ae-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c36ae-114">Remarks</span></span>  
+ <span data-ttu-id="c36ae-115">Ein Mitglied der `CorDebugDebugEventKind` Enumeration wird zurückgegeben, indem die [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="c36ae-115">A member of the `CorDebugDebugEventKind` enumeration is returned by calling the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="28ab4-116">Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarios vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="28ab4-116">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="c36ae-116">Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarios vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="c36ae-116">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28ab4-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="28ab4-117">Requirements</span></span>  
- <span data-ttu-id="28ab4-118">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28ab4-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c36ae-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c36ae-117">Requirements</span></span>  
+ <span data-ttu-id="c36ae-118">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c36ae-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28ab4-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="28ab4-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c36ae-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c36ae-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="28ab4-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28ab4-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c36ae-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c36ae-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="28ab4-121">**.NET Framework-Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28ab4-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="c36ae-121">**.NET Framework-Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c36ae-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28ab4-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28ab4-122">See Also</span></span>  
- [<span data-ttu-id="28ab4-123">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="28ab4-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="c36ae-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c36ae-122">See Also</span></span>  
+ [<span data-ttu-id="c36ae-123">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="c36ae-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
