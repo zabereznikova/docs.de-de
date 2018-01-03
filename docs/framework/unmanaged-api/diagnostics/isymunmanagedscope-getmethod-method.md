@@ -21,31 +21,32 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb062ad7ab485a1631a9cbe15f904b21226cb502
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4756ff1f373f09a96daa64c1fb01875274a6d0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="07ceb-102">ISymUnmanagedScope::GetMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="07ceb-102">ISymUnmanagedScope::GetMethod Method</span></span>
-<span data-ttu-id="07ceb-103">Ruft die Methode ab, die dieser Bereich enthält.</span><span class="sxs-lookup"><span data-stu-id="07ceb-103">Gets the method that contains this scope.</span></span>  
+# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="690c3-102">ISymUnmanagedScope::GetMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="690c3-102">ISymUnmanagedScope::GetMethod Method</span></span>
+<span data-ttu-id="690c3-103">Ruft die Methode ab, die dieser Bereich enthält.</span><span class="sxs-lookup"><span data-stu-id="690c3-103">Gets the method that contains this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07ceb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="07ceb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="690c3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="690c3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethod(  
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="07ceb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="07ceb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="690c3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="690c3-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="07ceb-106">[out] Ein Zeiger auf das zurückgegebene [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="07ceb-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
+ <span data-ttu-id="690c3-106">[out] Ein Zeiger auf das zurückgegebene [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="690c3-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="07ceb-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="07ceb-107">Return Value</span></span>  
- <span data-ttu-id="07ceb-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="07ceb-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="690c3-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="690c3-107">Return Value</span></span>  
+ <span data-ttu-id="690c3-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="690c3-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="07ceb-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="07ceb-109">Requirements</span></span>  
- <span data-ttu-id="07ceb-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="07ceb-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="690c3-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="690c3-109">Requirements</span></span>  
+ <span data-ttu-id="690c3-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="690c3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07ceb-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07ceb-111">See Also</span></span>  
- [<span data-ttu-id="07ceb-112">ISymUnmanagedScope-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="07ceb-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="690c3-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="690c3-111">See Also</span></span>  
+ [<span data-ttu-id="690c3-112">ISymUnmanagedScope-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="690c3-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

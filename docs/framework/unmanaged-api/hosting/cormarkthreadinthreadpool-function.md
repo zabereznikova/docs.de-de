@@ -19,29 +19,30 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3396bc9b3151babe5f1caf32cb2abc90f22189dc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 167220c563f8a3e051f7a3af8a486ea2d63bceb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="f3549-102">CorMarkThreadInThreadPool-Funktion</span><span class="sxs-lookup"><span data-stu-id="f3549-102">CorMarkThreadInThreadPool Function</span></span>
-<span data-ttu-id="f3549-103">Markiert den aktuell ausgeführten Thread aus dem Threadpool für die Ausführung von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="f3549-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="f3549-104">Ab .NET Framework Version 2.0 besitzt diese Funktion keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="f3549-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="f3549-105">Es ist nicht erforderlich und kann aus dem Code entfernt werden. Diese Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f3549-105">It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="4fc63-102">CorMarkThreadInThreadPool-Funktion</span><span class="sxs-lookup"><span data-stu-id="4fc63-102">CorMarkThreadInThreadPool Function</span></span>
+<span data-ttu-id="4fc63-103">Markiert den aktuell ausgeführten Thread aus dem Threadpool für die Ausführung von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="4fc63-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="4fc63-104">Ab .NET Framework Version 2.0 besitzt diese Funktion keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="4fc63-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="4fc63-105">Es ist nicht erforderlich und kann aus dem Code entfernt werden. Diese Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4fc63-105">It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3549-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="f3549-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fc63-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="4fc63-106">Syntax</span></span>  
   
 ```  
 void CorMarkThreadInThreadPool ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f3549-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f3549-107">Requirements</span></span>  
- <span data-ttu-id="f3549-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3549-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fc63-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4fc63-107">Requirements</span></span>  
+ <span data-ttu-id="4fc63-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fc63-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3549-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f3549-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4fc63-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4fc63-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f3549-110">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="f3549-110">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="4fc63-110">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="4fc63-110">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f3549-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3549-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4fc63-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fc63-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3549-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3549-112">See Also</span></span>  
- [<span data-ttu-id="f3549-113">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="f3549-113">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4fc63-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4fc63-112">See Also</span></span>  
+ [<span data-ttu-id="4fc63-113">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="4fc63-113">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -13,32 +13,33 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6b2431662caa41c67746da7e21591c743896c161
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 62b6202949432590a87545f3ae243fd828da31ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedasyncmethodgetasyncstepinfocount-method"></a><span data-ttu-id="347ea-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount-Methode</span><span class="sxs-lookup"><span data-stu-id="347ea-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount Method</span></span>
-<span data-ttu-id="347ea-103">Finden Sie unter [DefineAsyncStepInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span><span class="sxs-lookup"><span data-stu-id="347ea-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
+# <a name="isymunmanagedasyncmethodgetasyncstepinfocount-method"></a><span data-ttu-id="2afbb-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount-Methode</span><span class="sxs-lookup"><span data-stu-id="2afbb-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount Method</span></span>
+<span data-ttu-id="2afbb-103">Finden Sie unter [DefineAsyncStepInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span><span class="sxs-lookup"><span data-stu-id="2afbb-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="347ea-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="347ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2afbb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2afbb-104">Syntax</span></span>  
   
 ```idl  
 HRESULT GetAsyncStepInfoCount(    [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="347ea-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="347ea-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2afbb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2afbb-105">Parameters</span></span>  
   
-|<span data-ttu-id="347ea-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="347ea-106">Parameter</span></span>|<span data-ttu-id="347ea-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="347ea-107">Description</span></span>|  
+|<span data-ttu-id="2afbb-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="2afbb-106">Parameter</span></span>|<span data-ttu-id="2afbb-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2afbb-107">Description</span></span>|  
 |---------------|-----------------|  
 |`pRetVal`||  
   
-## <a name="return-value"></a><span data-ttu-id="347ea-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="347ea-108">Return Value</span></span>  
- <span data-ttu-id="347ea-109">Gibt `HRESULT`zurück.</span><span class="sxs-lookup"><span data-stu-id="347ea-109">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2afbb-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2afbb-108">Return Value</span></span>  
+ <span data-ttu-id="2afbb-109">Gibt `HRESULT`zurück.</span><span class="sxs-lookup"><span data-stu-id="2afbb-109">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="347ea-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="347ea-110">Requirements</span></span>  
- <span data-ttu-id="347ea-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="347ea-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2afbb-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2afbb-110">Requirements</span></span>  
+ <span data-ttu-id="2afbb-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2afbb-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="347ea-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="347ea-112">See Also</span></span>  
- [<span data-ttu-id="347ea-113">ISymUnmanagedAsyncMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="347ea-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2afbb-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2afbb-112">See Also</span></span>  
+ [<span data-ttu-id="2afbb-113">ISymUnmanagedAsyncMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2afbb-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

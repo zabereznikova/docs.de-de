@@ -19,37 +19,38 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7de0bdddd20dd073adfd38565bb1e94e8f2806e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54cada8e8211b3837e30f3d058d54af1eaf96a83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcode2-interface1"></a><span data-ttu-id="dc5b4-102">ICorDebugCode2 Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="dc5b4-102">ICorDebugCode2 Interface1</span></span>
-<span data-ttu-id="dc5b4-103">Enthält Methoden, die die Funktionen "ICorDebugCode" erweitern.</span><span class="sxs-lookup"><span data-stu-id="dc5b4-103">Provides methods that extend the capabilities of "ICorDebugCode".</span></span>  
+# <a name="icordebugcode2-interface1"></a><span data-ttu-id="bf67d-102">ICorDebugCode2 Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="bf67d-102">ICorDebugCode2 Interface1</span></span>
+<span data-ttu-id="bf67d-103">Enthält Methoden, die die Funktionen "ICorDebugCode" erweitern.</span><span class="sxs-lookup"><span data-stu-id="bf67d-103">Provides methods that extend the capabilities of "ICorDebugCode".</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="dc5b4-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="dc5b4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bf67d-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="bf67d-104">Methods</span></span>  
   
-|<span data-ttu-id="dc5b4-105">Methode</span><span class="sxs-lookup"><span data-stu-id="dc5b4-105">Method</span></span>|<span data-ttu-id="dc5b4-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dc5b4-106">Description</span></span>|  
+|<span data-ttu-id="bf67d-105">Methode</span><span class="sxs-lookup"><span data-stu-id="bf67d-105">Method</span></span>|<span data-ttu-id="bf67d-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bf67d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="dc5b4-107">GetCodeChunks-Methode</span><span class="sxs-lookup"><span data-stu-id="dc5b4-107">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|<span data-ttu-id="dc5b4-108">Ruft die Codeabschnitte ab, aus denen dieses Codeobjekt besteht.</span><span class="sxs-lookup"><span data-stu-id="dc5b4-108">Gets the chunks of code that this code object is composed of.</span></span>|  
-|[<span data-ttu-id="dc5b4-109">GetCompilerFlags-Methode</span><span class="sxs-lookup"><span data-stu-id="dc5b4-109">GetCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|<span data-ttu-id="dc5b4-110">Ruft die Flags ab, die die Bedingungen angeben, unter denen dieses Codeobjekt JIT-kompiliert (Just-In-Time) oder unter Verwendung des Native Image Generator (Ngen.exe) generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="dc5b4-110">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>|  
+|[<span data-ttu-id="bf67d-107">GetCodeChunks-Methode</span><span class="sxs-lookup"><span data-stu-id="bf67d-107">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|<span data-ttu-id="bf67d-108">Ruft die Codeabschnitte ab, aus denen dieses Codeobjekt besteht.</span><span class="sxs-lookup"><span data-stu-id="bf67d-108">Gets the chunks of code that this code object is composed of.</span></span>|  
+|[<span data-ttu-id="bf67d-109">GetCompilerFlags-Methode</span><span class="sxs-lookup"><span data-stu-id="bf67d-109">GetCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|<span data-ttu-id="bf67d-110">Ruft die Flags ab, die die Bedingungen angeben, unter denen dieses Codeobjekt JIT-kompiliert (Just-In-Time) oder unter Verwendung des Native Image Generator (Ngen.exe) generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="bf67d-110">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dc5b4-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dc5b4-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bf67d-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="bf67d-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dc5b4-112">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="dc5b4-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="bf67d-112">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="bf67d-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dc5b4-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dc5b4-113">Requirements</span></span>  
- <span data-ttu-id="dc5b4-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dc5b4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf67d-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="bf67d-113">Requirements</span></span>  
+ <span data-ttu-id="bf67d-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf67d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dc5b4-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dc5b4-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bf67d-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bf67d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dc5b4-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dc5b4-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bf67d-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf67d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dc5b4-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc5b4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bf67d-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf67d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc5b4-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dc5b4-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bf67d-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf67d-118">See Also</span></span>  
     
- [<span data-ttu-id="dc5b4-119">ICorDebugCode3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="dc5b4-119">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [<span data-ttu-id="dc5b4-120">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="dc5b4-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [<span data-ttu-id="bf67d-119">ICorDebugCode3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="bf67d-119">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
+ [<span data-ttu-id="bf67d-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="bf67d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

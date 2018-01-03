@@ -21,30 +21,31 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 74f388c381576ef69352965877df9f07f0e33281
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d09888434048c312bd78dddf29d39a45f023695e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocessgetid-method"></a><span data-ttu-id="b6605-102">ICorDebugProcess::GetID-Methode</span><span class="sxs-lookup"><span data-stu-id="b6605-102">ICorDebugProcess::GetID Method</span></span>
-<span data-ttu-id="b6605-103">Ruft die ID (BS) des Prozesses ab.</span><span class="sxs-lookup"><span data-stu-id="b6605-103">Gets the operating system (OS) ID of the process.</span></span>  
+# <a name="icordebugprocessgetid-method"></a><span data-ttu-id="39814-102">ICorDebugProcess::GetID-Methode</span><span class="sxs-lookup"><span data-stu-id="39814-102">ICorDebugProcess::GetID Method</span></span>
+<span data-ttu-id="39814-103">Ruft die ID (BS) des Prozesses ab.</span><span class="sxs-lookup"><span data-stu-id="39814-103">Gets the operating system (OS) ID of the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6605-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6605-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39814-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="39814-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b6605-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b6605-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="39814-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="39814-105">Parameters</span></span>  
  `pdwProcessId`  
- <span data-ttu-id="b6605-106">[out] Die eindeutige ID des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b6605-106">[out] The unique ID of the process.</span></span>  
+ <span data-ttu-id="39814-106">[out] Die eindeutige ID des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="39814-106">[out] The unique ID of the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6605-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b6605-107">Requirements</span></span>  
- <span data-ttu-id="b6605-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6605-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39814-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="39814-107">Requirements</span></span>  
+ <span data-ttu-id="39814-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39814-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6605-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b6605-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="39814-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39814-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b6605-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6605-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="39814-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39814-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6605-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6605-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="39814-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39814-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

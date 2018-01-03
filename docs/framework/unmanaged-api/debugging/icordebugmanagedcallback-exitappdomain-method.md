@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 07f76d8add6c8b0e44eba241b7787b8e8a2de570
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 352ea9b93059237526edad41ec56f200d399a60f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="994aa-102">ICorDebugManagedCallback::ExitAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="994aa-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
-<span data-ttu-id="994aa-103">Benachrichtigt den Debugger an, eine Anwendungsdomäne beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="994aa-103">Notifies the debugger that an application domain has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="7cefd-102">ICorDebugManagedCallback::ExitAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="7cefd-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
+<span data-ttu-id="7cefd-103">Benachrichtigt den Debugger an, eine Anwendungsdomäne beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="7cefd-103">Notifies the debugger that an application domain has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="994aa-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="994aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cefd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7cefd-104">Syntax</span></span>  
   
 ```  
 HRESULT ExitAppDomain (  
@@ -39,21 +40,21 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="994aa-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="994aa-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7cefd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7cefd-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="994aa-106">[in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der die angegebene Anwendungsdomäne enthält.</span><span class="sxs-lookup"><span data-stu-id="994aa-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
+ <span data-ttu-id="7cefd-106">[in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der die angegebene Anwendungsdomäne enthält.</span><span class="sxs-lookup"><span data-stu-id="7cefd-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="994aa-107">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="994aa-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
+ <span data-ttu-id="7cefd-107">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="7cefd-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="994aa-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="994aa-108">Requirements</span></span>  
- <span data-ttu-id="994aa-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="994aa-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cefd-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7cefd-108">Requirements</span></span>  
+ <span data-ttu-id="7cefd-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cefd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="994aa-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="994aa-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7cefd-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cefd-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="994aa-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="994aa-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7cefd-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cefd-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="994aa-112">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="994aa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7cefd-112">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cefd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="994aa-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="994aa-113">See Also</span></span>  
- [<span data-ttu-id="994aa-114">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="994aa-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7cefd-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7cefd-113">See Also</span></span>  
+ [<span data-ttu-id="7cefd-114">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7cefd-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

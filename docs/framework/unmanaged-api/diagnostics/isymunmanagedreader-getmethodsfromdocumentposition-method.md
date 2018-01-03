@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f82cf213e9bcc83055cfaa42b9acab9d395d405
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf3762c40e5ec4da84a27ed7abcb15981b81379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="a926a-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition-Methode</span><span class="sxs-lookup"><span data-stu-id="a926a-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="a926a-103">Gibt ein Array der Methoden, von denen jede den Haltepunkt an der angegebenen Position in einem Dokument enthält.</span><span class="sxs-lookup"><span data-stu-id="a926a-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="0ec25-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition-Methode</span><span class="sxs-lookup"><span data-stu-id="0ec25-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="0ec25-103">Gibt ein Array der Methoden, von denen jede den Haltepunkt an der angegebenen Position in einem Dokument enthält.</span><span class="sxs-lookup"><span data-stu-id="0ec25-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a926a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a926a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ec25-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0ec25-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -43,30 +44,30 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a926a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a926a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0ec25-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0ec25-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="a926a-106">[in] Das angegebene Dokument.</span><span class="sxs-lookup"><span data-stu-id="a926a-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="0ec25-106">[in] Das angegebene Dokument.</span><span class="sxs-lookup"><span data-stu-id="0ec25-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="a926a-107">[in] Die Zeile des angegebenen Dokuments.</span><span class="sxs-lookup"><span data-stu-id="a926a-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="0ec25-107">[in] Die Zeile des angegebenen Dokuments.</span><span class="sxs-lookup"><span data-stu-id="0ec25-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="a926a-108">[in] Die Spalte des angegebenen Dokuments.</span><span class="sxs-lookup"><span data-stu-id="a926a-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="0ec25-108">[in] Die Spalte des angegebenen Dokuments.</span><span class="sxs-lookup"><span data-stu-id="0ec25-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="a926a-109">[in] Die Größe des `pRetVal`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="a926a-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="0ec25-109">[in] Die Größe des `pRetVal`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="0ec25-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="a926a-110">[out] Ein Zeiger auf eine Variable, die Anzahl der Elemente im zurückgegebenen empfängt, die `pRetVal` Array.</span><span class="sxs-lookup"><span data-stu-id="a926a-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="0ec25-110">[out] Ein Zeiger auf eine Variable, die Anzahl der Elemente im zurückgegebenen empfängt, die `pRetVal` Array.</span><span class="sxs-lookup"><span data-stu-id="0ec25-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="a926a-111">[out] Ein Array von Zeigern, die jeweils auf ein [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) Objekt zur Darstellung einer Methode, die den Breakpoint enthält.</span><span class="sxs-lookup"><span data-stu-id="a926a-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="0ec25-111">[out] Ein Array von Zeigern, die jeweils auf ein [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) Objekt zur Darstellung einer Methode, die den Breakpoint enthält.</span><span class="sxs-lookup"><span data-stu-id="0ec25-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a926a-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a926a-112">Return Value</span></span>  
- <span data-ttu-id="a926a-113">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="a926a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0ec25-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0ec25-112">Return Value</span></span>  
+ <span data-ttu-id="0ec25-113">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="0ec25-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a926a-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a926a-114">Requirements</span></span>  
- <span data-ttu-id="a926a-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a926a-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ec25-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0ec25-114">Requirements</span></span>  
+ <span data-ttu-id="0ec25-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0ec25-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a926a-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a926a-116">See Also</span></span>  
- [<span data-ttu-id="a926a-117">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a926a-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0ec25-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0ec25-116">See Also</span></span>  
+ [<span data-ttu-id="0ec25-117">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0ec25-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

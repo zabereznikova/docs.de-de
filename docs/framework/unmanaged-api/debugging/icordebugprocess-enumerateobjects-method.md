@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 30293246e72f3811117e93dafec9e24c5dc4ca69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3613e3873ba7de3e3f7e866bfdf860867ce89324
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="ef3cf-102">ICorDebugProcess::EnumerateObjects-Methode</span><span class="sxs-lookup"><span data-stu-id="ef3cf-102">ICorDebugProcess::EnumerateObjects Method</span></span>
-<span data-ttu-id="ef3cf-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="ef3cf-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="04a6a-102">ICorDebugProcess::EnumerateObjects-Methode</span><span class="sxs-lookup"><span data-stu-id="04a6a-102">ICorDebugProcess::EnumerateObjects Method</span></span>
+<span data-ttu-id="04a6a-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="04a6a-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef3cf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ef3cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04a6a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="04a6a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateObjects (  

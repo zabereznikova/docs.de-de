@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 84db785d47f97fe058b8a66070bcf4757fa11517
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae9c80a65908d6ec1514ce64845217bd7b5c7805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocess2getversion-method"></a><span data-ttu-id="cb577-102">ICorDebugProcess2::GetVersion-Methode</span><span class="sxs-lookup"><span data-stu-id="cb577-102">ICorDebugProcess2::GetVersion Method</span></span>
-<span data-ttu-id="cb577-103">Ruft die Versionsnummer der common Language Runtime (CLR), die in diesem Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="cb577-103">Gets the version number of the common language runtime (CLR) that is running in this process.</span></span>  
+# <a name="icordebugprocess2getversion-method"></a><span data-ttu-id="c3a6a-102">ICorDebugProcess2::GetVersion-Methode</span><span class="sxs-lookup"><span data-stu-id="c3a6a-102">ICorDebugProcess2::GetVersion Method</span></span>
+<span data-ttu-id="c3a6a-103">Ruft die Versionsnummer der common Language Runtime (CLR), die in diesem Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c3a6a-103">Gets the version number of the common language runtime (CLR) that is running in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb577-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cb577-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3a6a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3a6a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVersion (  
@@ -38,18 +39,18 @@ HRESULT GetVersion (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb577-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="cb577-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c3a6a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c3a6a-105">Parameters</span></span>  
  `version`  
- <span data-ttu-id="cb577-106">[out] Ein Zeiger auf eine COR_VERSION-Struktur, die die Versionsnummer der Runtime gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb577-106">[out] A pointer to a COR_VERSION structure that stores the version number of the runtime.</span></span>  
+ <span data-ttu-id="c3a6a-106">[out] Ein Zeiger auf eine COR_VERSION-Struktur, die die Versionsnummer der Runtime gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c3a6a-106">[out] A pointer to a COR_VERSION structure that stores the version number of the runtime.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb577-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cb577-107">Remarks</span></span>  
- <span data-ttu-id="cb577-108">Die `GetVersion` Methode wird ein Fehlercode zurückgegeben, wenn keine Common Language Runtime im Prozess geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="cb577-108">The `GetVersion` method returns an error code if no runtime has been loaded in the process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3a6a-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c3a6a-107">Remarks</span></span>  
+ <span data-ttu-id="c3a6a-108">Die `GetVersion` Methode wird ein Fehlercode zurückgegeben, wenn keine Common Language Runtime im Prozess geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="c3a6a-108">The `GetVersion` method returns an error code if no runtime has been loaded in the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb577-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cb577-109">Requirements</span></span>  
- <span data-ttu-id="cb577-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb577-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3a6a-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c3a6a-109">Requirements</span></span>  
+ <span data-ttu-id="c3a6a-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3a6a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb577-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb577-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c3a6a-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3a6a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cb577-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb577-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3a6a-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3a6a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb577-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb577-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c3a6a-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3a6a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

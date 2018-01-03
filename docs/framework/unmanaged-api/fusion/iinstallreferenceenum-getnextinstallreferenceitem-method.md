@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db7e8bfaf396293f89f4b2e2bb20b5f6f532db19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f3a1b745c3ee28c126e328b1a3fa9e283f98d99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="169cb-102">IInstallReferenceEnum::GetNextInstallReferenceItem-Methode</span><span class="sxs-lookup"><span data-stu-id="169cb-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
-<span data-ttu-id="169cb-103">Ruft einen Zeiger auf dem nächsten [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) enthalten, die in diesem Objekt [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="169cb-103">Gets a pointer to the next [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) object.</span></span>  
+# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="09bb7-102">IInstallReferenceEnum::GetNextInstallReferenceItem-Methode</span><span class="sxs-lookup"><span data-stu-id="09bb7-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
+<span data-ttu-id="09bb7-103">Ruft einen Zeiger auf dem nächsten [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) enthalten, die in diesem Objekt [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="09bb7-103">Gets a pointer to the next [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="169cb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="169cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09bb7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="09bb7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextInstallReferenceItem (  
@@ -40,23 +41,23 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="169cb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="169cb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="09bb7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="09bb7-105">Parameters</span></span>  
  `ppRefItem`  
- <span data-ttu-id="169cb-106">[out] Das zurückgegebene `IInstallReferenceItem` Zeiger.</span><span class="sxs-lookup"><span data-stu-id="169cb-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
+ <span data-ttu-id="09bb7-106">[out] Das zurückgegebene `IInstallReferenceItem` Zeiger.</span><span class="sxs-lookup"><span data-stu-id="09bb7-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="169cb-107">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="169cb-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="169cb-108">`dwFlags`0 (null) muss sein.</span><span class="sxs-lookup"><span data-stu-id="169cb-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="09bb7-107">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="09bb7-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="09bb7-108">`dwFlags`0 (null) muss sein.</span><span class="sxs-lookup"><span data-stu-id="09bb7-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="169cb-109">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="169cb-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="169cb-110">`pvReserved`ein null-Verweis muss sein.</span><span class="sxs-lookup"><span data-stu-id="169cb-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="09bb7-109">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="09bb7-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="09bb7-110">`pvReserved`ein null-Verweis muss sein.</span><span class="sxs-lookup"><span data-stu-id="09bb7-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="169cb-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="169cb-111">Requirements</span></span>  
- <span data-ttu-id="169cb-112">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="169cb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09bb7-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="09bb7-111">Requirements</span></span>  
+ <span data-ttu-id="09bb7-112">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09bb7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="169cb-113">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="169cb-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="09bb7-113">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="09bb7-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="169cb-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="169cb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="09bb7-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09bb7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="169cb-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="169cb-115">See Also</span></span>  
- [<span data-ttu-id="169cb-116">IInstallReferenceItem-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="169cb-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [<span data-ttu-id="169cb-117">IInstallReferenceEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="169cb-117">IInstallReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="09bb7-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="09bb7-115">See Also</span></span>  
+ [<span data-ttu-id="09bb7-116">IInstallReferenceItem-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="09bb7-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
+ [<span data-ttu-id="09bb7-117">IInstallReferenceEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="09bb7-117">IInstallReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)

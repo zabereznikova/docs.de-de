@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 48a86317774a3ebba4ed600b880110a7adaa02a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9af89f355916f01fad118a4b63b57b23b2671f54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugthreadgetuserstate-method"></a><span data-ttu-id="5a8d2-102">ICorDebugThread::GetUserState-Methode</span><span class="sxs-lookup"><span data-stu-id="5a8d2-102">ICorDebugThread::GetUserState Method</span></span>
-<span data-ttu-id="5a8d2-103">Ruft den aktuellen Benutzerzustand dieses ICorDebugThread ab.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-103">Gets the current user state of this ICorDebugThread.</span></span>  
+# <a name="icordebugthreadgetuserstate-method"></a><span data-ttu-id="b877b-102">ICorDebugThread::GetUserState-Methode</span><span class="sxs-lookup"><span data-stu-id="b877b-102">ICorDebugThread::GetUserState Method</span></span>
+<span data-ttu-id="b877b-103">Ruft den aktuellen Benutzerzustand dieses ICorDebugThread ab.</span><span class="sxs-lookup"><span data-stu-id="b877b-103">Gets the current user state of this ICorDebugThread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5a8d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5a8d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b877b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b877b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetUserState (  
@@ -38,18 +39,18 @@ HRESULT GetUserState (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5a8d2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5a8d2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b877b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b877b-105">Parameters</span></span>  
  `pState`  
- <span data-ttu-id="5a8d2-106">[out] Ein Zeiger auf eine bitweise Kombination von CorDebugUserState-Enumerationswerten, die den aktuellen Benutzerzustand dieses Threads zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-106">[out] A pointer to a bitwise combination of CorDebugUserState enumeration values that describe the current user state of this thread.</span></span>  
+ <span data-ttu-id="b877b-106">[out] Ein Zeiger auf eine bitweise Kombination von CorDebugUserState-Enumerationswerten, die den aktuellen Benutzerzustand dieses Threads zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="b877b-106">[out] A pointer to a bitwise combination of CorDebugUserState enumeration values that describe the current user state of this thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5a8d2-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5a8d2-107">Remarks</span></span>  
- <span data-ttu-id="5a8d2-108">Der Benutzerzustand des Threads ist der Zustand des Threads an, wenn er von der Anwendung überprüft wird, der debuggt wird.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-108">The user state of the thread is the state of the thread when it is examined by the program that is being debugged.</span></span> <span data-ttu-id="5a8d2-109">Ein Thread möglicherweise mehrere Statusbits festgelegt.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-109">A thread may have multiple state bits set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b877b-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b877b-107">Remarks</span></span>  
+ <span data-ttu-id="b877b-108">Der Benutzerzustand des Threads ist der Zustand des Threads an, wenn er von der Anwendung überprüft wird, der debuggt wird.</span><span class="sxs-lookup"><span data-stu-id="b877b-108">The user state of the thread is the state of the thread when it is examined by the program that is being debugged.</span></span> <span data-ttu-id="b877b-109">Ein Thread möglicherweise mehrere Statusbits festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b877b-109">A thread may have multiple state bits set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5a8d2-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5a8d2-110">Requirements</span></span>  
- <span data-ttu-id="5a8d2-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5a8d2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b877b-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b877b-110">Requirements</span></span>  
+ <span data-ttu-id="b877b-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b877b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5a8d2-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5a8d2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b877b-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b877b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5a8d2-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5a8d2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b877b-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b877b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5a8d2-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a8d2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b877b-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b877b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 077f8488419cee434a8dc8266b0814dfd4196b03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ff6472db835a1a535efc5e78b3a3274443fc669
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="84072-102">ICorDebugStringValue::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="84072-102">ICorDebugStringValue::GetString Method</span></span>
-<span data-ttu-id="84072-103">Ruft die Zeichenfolge, die durch ICorDebugStringValue verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="84072-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="a1e34-102">ICorDebugStringValue::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="a1e34-102">ICorDebugStringValue::GetString Method</span></span>
+<span data-ttu-id="a1e34-103">Ruft die Zeichenfolge, die durch ICorDebugStringValue verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="a1e34-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84072-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="84072-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1e34-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a1e34-104">Syntax</span></span>  
   
 ```  
 HRESULT GetString (  
@@ -41,21 +42,21 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="84072-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="84072-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a1e34-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a1e34-105">Parameters</span></span>  
  `cchString`  
- <span data-ttu-id="84072-106">[in] Die Größe des `szString`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="84072-106">[in] The size of the `szString` array.</span></span>  
+ <span data-ttu-id="a1e34-106">[in] Die Größe des `szString`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="a1e34-106">[in] The size of the `szString` array.</span></span>  
   
  `pcchString`  
- <span data-ttu-id="84072-107">[out] Ein Zeiger auf die Anzahl der Zeichen zurückgegeben, die der `szString` Array.</span><span class="sxs-lookup"><span data-stu-id="84072-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
+ <span data-ttu-id="a1e34-107">[out] Ein Zeiger auf die Anzahl der Zeichen zurückgegeben, die der `szString` Array.</span><span class="sxs-lookup"><span data-stu-id="a1e34-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
   
  `szString`  
- <span data-ttu-id="84072-108">[out] Ein Array, das die abgerufene Zeichenfolge speichert.</span><span class="sxs-lookup"><span data-stu-id="84072-108">[out] An array that stores the retrieved string.</span></span>  
+ <span data-ttu-id="a1e34-108">[out] Ein Array, das die abgerufene Zeichenfolge speichert.</span><span class="sxs-lookup"><span data-stu-id="a1e34-108">[out] An array that stores the retrieved string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84072-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="84072-109">Requirements</span></span>  
- <span data-ttu-id="84072-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84072-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1e34-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a1e34-109">Requirements</span></span>  
+ <span data-ttu-id="a1e34-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1e34-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84072-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="84072-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a1e34-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1e34-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="84072-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84072-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a1e34-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1e34-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="84072-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84072-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a1e34-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1e34-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

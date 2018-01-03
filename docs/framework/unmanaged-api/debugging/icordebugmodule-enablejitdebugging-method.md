@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 31fc3b7c2b977dbfd6f10cc767f81748243dfce4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a699f32d8ec4b2418c6af815c22f35470bede3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="7a3d8-102">ICorDebugModule::EnableJITDebugging-Methode</span><span class="sxs-lookup"><span data-stu-id="7a3d8-102">ICorDebugModule::EnableJITDebugging Method</span></span>
-<span data-ttu-id="7a3d8-103">Steuert, ob der Just-in-Time (JIT)-Compiler Debuginformationen für Methoden innerhalb dieses Moduls beibehält.</span><span class="sxs-lookup"><span data-stu-id="7a3d8-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
+# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="defa0-102">ICorDebugModule::EnableJITDebugging-Methode</span><span class="sxs-lookup"><span data-stu-id="defa0-102">ICorDebugModule::EnableJITDebugging Method</span></span>
+<span data-ttu-id="defa0-103">Steuert, ob der Just-in-Time (JIT)-Compiler Debuginformationen für Methoden innerhalb dieses Moduls beibehält.</span><span class="sxs-lookup"><span data-stu-id="defa0-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a3d8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7a3d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="defa0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="defa0-104">Syntax</span></span>  
   
 ```  
 HRESULT EnableJITDebugging(  
@@ -39,21 +40,21 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7a3d8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7a3d8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="defa0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="defa0-105">Parameters</span></span>  
  `bTrackJITInfo`  
- <span data-ttu-id="7a3d8-106">[in] Legen Sie diesen Wert auf `true` zum Aktivieren des JIT-Compilers, um Informationen über die Zuordnung zwischen der Microsoft intermediate Language (MSIL)-Version und der JIT-kompilierten Version der einzelnen Methoden in diesem Modul zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="7a3d8-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
+ <span data-ttu-id="defa0-106">[in] Legen Sie diesen Wert auf `true` zum Aktivieren des JIT-Compilers, um Informationen über die Zuordnung zwischen der Microsoft intermediate Language (MSIL)-Version und der JIT-kompilierten Version der einzelnen Methoden in diesem Modul zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="defa0-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
   
  `bAllowJitOpts`  
- <span data-ttu-id="7a3d8-107">[in] Legen Sie diesen Wert auf `true` den JIT-Compiler generiert Code mit bestimmten JIT-spezifischen Optimierungen für das Debuggen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="7a3d8-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
+ <span data-ttu-id="defa0-107">[in] Legen Sie diesen Wert auf `true` den JIT-Compiler generiert Code mit bestimmten JIT-spezifischen Optimierungen für das Debuggen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="defa0-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7a3d8-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7a3d8-108">Remarks</span></span>  
- <span data-ttu-id="7a3d8-109">JIT-Debuggen ist standardmäßig für alle Module aktiviert, die geladen werden, wenn der Debugger aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="7a3d8-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="7a3d8-110">Programmgesteuertes aktivieren oder deaktivieren die Einstellungen überschreibt globale Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="7a3d8-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="defa0-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="defa0-108">Remarks</span></span>  
+ <span data-ttu-id="defa0-109">JIT-Debuggen ist standardmäßig für alle Module aktiviert, die geladen werden, wenn der Debugger aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="defa0-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="defa0-110">Programmgesteuertes aktivieren oder deaktivieren die Einstellungen überschreibt globale Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="defa0-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7a3d8-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7a3d8-111">Requirements</span></span>  
- <span data-ttu-id="7a3d8-112">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a3d8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="defa0-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="defa0-111">Requirements</span></span>  
+ <span data-ttu-id="defa0-112">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="defa0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a3d8-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7a3d8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="defa0-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="defa0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7a3d8-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7a3d8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="defa0-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="defa0-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7a3d8-115">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a3d8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="defa0-115">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="defa0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

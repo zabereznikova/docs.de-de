@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13b950545c2c8c8b54d24b932351d80280e1dac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: faf1ace6c65f38e9a1d5b958b633c95dbcd3dcf8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugdebugeventgetthread-method"></a><span data-ttu-id="f3dff-102">ICorDebugDebugEvent::GetThread-Methode</span><span class="sxs-lookup"><span data-stu-id="f3dff-102">ICorDebugDebugEvent::GetThread Method</span></span>
-<span data-ttu-id="f3dff-103">Ruft den Thread auf, auf dem das Ereignis aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="f3dff-103">Gets the thread on which the event occurred.</span></span>  
+# <a name="icordebugdebugeventgetthread-method"></a><span data-ttu-id="da40b-102">ICorDebugDebugEvent::GetThread-Methode</span><span class="sxs-lookup"><span data-stu-id="da40b-102">ICorDebugDebugEvent::GetThread Method</span></span>
+<span data-ttu-id="da40b-103">Ruft den Thread auf, auf dem das Ereignis aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="da40b-103">Gets the thread on which the event occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3dff-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f3dff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da40b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="da40b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread(  
@@ -30,24 +31,24 @@ HRESULT GetThread(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f3dff-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f3dff-105">Parameters</span></span>  
- <span data-ttu-id="f3dff-106">ppThread</span><span class="sxs-lookup"><span data-stu-id="f3dff-106">ppThread</span></span>  
- <span data-ttu-id="f3dff-107">[out] Ein Zeiger auf die Adresse des ein ICorDebugThread-Objekt, das den Thread darstellt, auf dem das Ereignis aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="f3dff-107">[out] A pointer to the address of an ICorDebugThread object that represents the thread on which the event occurred.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="da40b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="da40b-105">Parameters</span></span>  
+ <span data-ttu-id="da40b-106">ppThread</span><span class="sxs-lookup"><span data-stu-id="da40b-106">ppThread</span></span>  
+ <span data-ttu-id="da40b-107">[out] Ein Zeiger auf die Adresse des ein ICorDebugThread-Objekt, das den Thread darstellt, auf dem das Ereignis aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="da40b-107">[out] A pointer to the address of an ICorDebugThread object that represents the thread on which the event occurred.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f3dff-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f3dff-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da40b-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="da40b-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f3dff-109">Diese Methode ist nur in Verbindung mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="f3dff-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="da40b-109">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="da40b-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3dff-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f3dff-110">Requirements</span></span>  
- <span data-ttu-id="f3dff-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3dff-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da40b-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="da40b-110">Requirements</span></span>  
+ <span data-ttu-id="da40b-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da40b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3dff-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3dff-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="da40b-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da40b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3dff-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3dff-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da40b-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da40b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3dff-114">**.NET Framework-Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3dff-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="da40b-114">**.NET Framework-Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da40b-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3dff-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3dff-115">See Also</span></span>  
- [<span data-ttu-id="f3dff-116">ICorDebugDebugEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f3dff-116">ICorDebugDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
- [<span data-ttu-id="f3dff-117">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="f3dff-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="da40b-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da40b-115">See Also</span></span>  
+ [<span data-ttu-id="da40b-116">ICorDebugDebugEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="da40b-116">ICorDebugDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
+ [<span data-ttu-id="da40b-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="da40b-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6051a4c28117a96fd154c874f6bd8081530c982a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0074607188ba55572e469491841ddcfa328c57bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="fa996-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode-Methode</span><span class="sxs-lookup"><span data-stu-id="fa996-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="fa996-103">`GetErrorCode` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="fa996-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="fa996-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="fa996-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="c3170-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode-Methode</span><span class="sxs-lookup"><span data-stu-id="c3170-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="c3170-103">`GetErrorCode` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="c3170-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="c3170-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="c3170-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa996-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa996-105">See Also</span></span>  
- [<span data-ttu-id="fa996-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="fa996-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c3170-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3170-105">See Also</span></span>  
+ [<span data-ttu-id="c3170-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="c3170-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
