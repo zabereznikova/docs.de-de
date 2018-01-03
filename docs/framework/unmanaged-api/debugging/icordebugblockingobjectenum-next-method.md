@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c05420a54d7a79198e235a39e578bedf296b4fe9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f2e2168ea1b03e5a2339baf019da59f1e83a71a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next-Methode
 Ruft die angegebene Anzahl von [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) Objekte aus der Enumeration, die an der aktuellen Position ab.  
@@ -35,7 +36,7 @@ Ruft die angegebene Anzahl von [CorDebugBlockingObject](../../../../docs/framewo
 ```  
 HRESULT Next([in] ULONG  celt,  
              [out, size_is(celt), length_is(*pceltFetched)]  
-                           CorDebugBlockingOjbect values[],  
+                           CorDebugBlockingObject values[],  
              [out] ULONG *pceltFetched;  
 ```  
   
@@ -78,5 +79,5 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

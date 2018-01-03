@@ -45,7 +45,7 @@ typedef struct _COR_GC_REFERENCE {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`domain`|Ein Zeiger auf die Anwendungsdomäne, zu der das Handle oder das Objekt gehört. Der Wert möglicherweise `null`.|  
-|`location`|ICorDebugValue oder ein ICorDebugReferenceValue-Schnittstelle, die das Objekt, das speicherbereinigt werden soll entspricht.|  
+|`location`|ICorDebugValue oder ein [ICorDebugReferenceValue-Schnittstelle, die das Objekt, das speicherbereinigt werden soll entspricht.|  
 |`type`|Ein [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, in dem Stammverzeichnis stammt. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
 |`extraData`|Zusätzliche Daten über das Objekt, das speicherbereinigt werden soll. Diese Informationen hängt von der Quelle des Objekts, die durch die `type` Feld. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
   

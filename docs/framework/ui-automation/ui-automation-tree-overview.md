@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 6cb90d456165442935b3988fdac23ceb334f5cb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a1ddb113916563c234eefb8cdc0746b04f3e66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="uiautomation_content_view"></a>   
 ### <a name="content-view"></a>Inhaltsansicht  
- Die Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur ist eine Teilmenge der Steuerelementansicht. Er enthält [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente, die die tatsächlichen Informationen in einer Benutzeroberfläche vermitteln einschließlich [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Tastaturfokus Elemente, die empfangen kann, und etwas Text ein, die keine Bezeichnung auf eine [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Element. Beispielsweise werden die Werte aus einem Dropdown-Kombinationsfeld in der Inhaltsansicht angezeigt, da sie die vom Endbenutzer verwendeten Informationen darstellen. In der Inhaltsansicht ein Kombinationsfeld und Listenfeld sind beide dargestellt als eine Auflistung von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente, in denen eine oder ggf. mehr als ein Element ausgewählt werden kann. Die Tatsache, dass ein Feld ständig geöffnet ist und ein Feld erweitert und reduziert werden kann, spielt in der Inhaltsansicht keine Rolle, da sie dafür vorgesehen ist, die Daten bzw. den Inhalt anzuzeigen, der dem Benutzer angezeigt wird.  
+ Die Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur ist eine Teilmenge der Steuerelementansicht. Er enthält [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente, die die tatsächlichen Informationen in einer Benutzeroberfläche vermitteln einschließlich [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Tastaturfokus Elemente, die empfangen kann, und etwas Text ein, die keine Bezeichnung auf eine [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Element. Beispielsweise werden die Werte aus einem Dropdown-Kombinationsfeld in der Inhaltsansicht angezeigt, da sie die vom Endbenutzer verwendeten Informationen darstellen. In der Inhaltsansicht ein Kombinationsfeld und Listenfeld sind beide dargestellt als eine Auflistung von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente, in denen eine oder ggf. mehr als ein Element ausgewählt werden kann. Die Tatsache, dass ein Feld ständig geöffnet ist, und ein Feld erweitert und reduziert werden kann, spielt in der Inhaltsansicht keine Rolle, da sie dafür vorgesehen ist, die Daten bzw. den Inhalt anzuzeigen, der dem Benutzer angezeigt wird.  
   
  Erhalten die Inhaltsansicht durch Suchen nach Elementen, die über die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> -Eigenschaftensatz auf `true`, oder indem Sie die <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> in der Struktur navigieren.  
   

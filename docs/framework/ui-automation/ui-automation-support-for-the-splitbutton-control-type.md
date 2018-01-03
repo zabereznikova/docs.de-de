@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9f482c47ddfe434ac7ddd2f31437761932c6f714
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d06765112bdd95b0819fac85398f7706d885f49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Steuerelemente für unterteilte Schaltflächen besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|"Zurück"|Der Name des Steuerelements für eine unterteilte Schaltfläche wird auf der Schaltfläche angezeigt.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Null|Steuerelemente für unterteilte Schaltflächen verfügen nicht über eine statische Textbezeichnung.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Dieser Wert ist für alle Benutzeroberflächenframeworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Unterteilte Schaltfläche“|Lokalisierte Zeichenfolge für den Steuerelementtyp „SplitButton“.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Siehe Hinweise.|Der Hilfetext kann das Ergebnis der Aktivierung der unterteilten Schaltfläche angeben. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Steuerelement für eine unterteilte Schaltfläche enthält Informationen für den Endbenutzer.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-control-patterns"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementmuster, die von Steuerelementen für unterteilte Schaltflächen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|Steuerelementmuster|Unterstützung|Notizen|  
+|Steuerelementmuster|Unterstützung|Hinweise|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Erforderlich|Steuerelemente für unterteilte Schaltflächen verfügen immer über eine Standardaktion, die Invoke zugeordnet ist.|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Erforderlich|Steuerelemente für unterteilte Schaltflächen verfügen immer über die Fähigkeit, eine Liste von Optionen zu erweitern.|  
@@ -72,15 +73,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Steuerelementen für unterteilte Schaltflächen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keine|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
   
 <a name="Split_Button_Control_Example"></a>   
 ## <a name="splitbutton-control-example"></a>Beispiel für ein SplitButton-Steuerelement  

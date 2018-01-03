@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ac3e061b95faafeec3c3d233ab54f128a23c3264
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 325f6adf8fe3a357f903f0cb047a2255ef80e264
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging-Schnittstelle
 Stellt Methoden bereit, die das Laden und Entladen von Modulen für Debuggingzwecke behandeln.  
@@ -48,5 +49,5 @@ Stellt Methoden bereit, die das Laden und Entladen von Modulen für Debuggingzwe
  **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

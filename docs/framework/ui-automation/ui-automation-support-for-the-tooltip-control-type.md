@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2040020ba32aed97c613260948f0772355c1287f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2a152c9c753262cc82995746f474b0c3dcde2b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ToolTip-Steuerelementtyp
 > [!NOTE]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften aufgelistet, deren Wert oder Definition für QuickInfo-Steuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-control-patterns"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster  
  In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementmuster aufgelistet, die von allen QuickInfo-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|Steuerelementmuster|Unterstützung|Notizen|  
+|Steuerelementmuster|Unterstützung|Hinweise|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|Variabel|QuickInfos, die durch Klicken auf ein Benutzeroberflächenelement geschlossen werden können, müssen WindowPattern unterstützen, damit sie automatisch geschlossen werden können.|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|Variabel|Für eine verbesserte Barrierefreiheit kann ein QuickInfo-Steuerelement das Text-Steuerelementmuster unterstützen, dies ist jedoch nicht erforderlich. Das Text-Steuerelementmuster ist nützlich, wenn der Text viele Formate und Attribute hat (z. B., Farbe, Fettdruck und Kursivdruck).|  
@@ -77,21 +78,21 @@ ms.lasthandoff: 11/21/2017
   
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen QuickInfo-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Variabel|Keine|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Variabel|Keine|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Variabel|Keine|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Variabel|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keine|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Variabel|Keiner|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Variabel|Keiner|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Variabel|Keiner|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Variabel|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Automation.ControlType.ToolTip>  

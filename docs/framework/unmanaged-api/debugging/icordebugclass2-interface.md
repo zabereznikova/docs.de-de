@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c4f96f084a96ccdc9857a64217284b485aa73a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5053ea14ac7a8af33319bbbb289db01dbbc86169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugclass2-interface1"></a>ICorDebugClass2 Schnittstelle1
 Stellt eine generische Klasse oder eine Klasse mit einem Methodenparameter des Typs <xref:System.Type> dar. Diese Schnittstelle erweitert [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
@@ -50,5 +51,5 @@ Stellt eine generische Klasse oder eine Klasse mit einem Methodenparameter des T
  **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [ICorDebugClass Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugClass-Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -22,7 +22,7 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
 ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
@@ -33,11 +33,11 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Was ist ein Flussdokument?  
- Ein Flussdokument wurde konzipiert, um abhängig von der Fenstergröße, der Geräteauflösung und anderen Umgebungsvariablen den „Inhalt dynamisch umzubrechen“. Zudem verfügen Flussdokumente über eine Vielzahl integrierter Funktionen, inklusive der Suche, Anzeigemodi zur Optimierung der Lesbarkeit und der Möglichkeit zum Ändern der Größe und Darstellung von Schriftarten. Flussdokumente werden am besten verwendet, wenn das erleichterte Lesen das Hauptgebrauchsszenario des Dokuments darstellt. Im Gegensatz dazu sind fixierte Dokumente für eine statische Darstellung entworfen. Fixierte Dokumente sind hilfreich, wenn die Originaltreue des Quellinhalts wichtig ist. Finden Sie unter [Dokumente in WPF](./../../../docs/framework/wpf/advanced/documents-in-wpf.md) für Weitere Informationen zu anderen Typen von Dokumenten.  
+ Ein Flussdokument wurde konzipiert, um abhängig von der Fenstergröße, der Geräteauflösung und anderen Umgebungsvariablen den „Inhalt dynamisch umzubrechen“. Zudem verfügen Flussdokumente über eine Vielzahl integrierter Funktionen, inklusive der Suche, Anzeigemodi zur Optimierung der Lesbarkeit und der Möglichkeit zum Ändern der Größe und Darstellung von Schriftarten. Flussdokumente werden am besten verwendet, wenn das erleichterte Lesen das Hauptgebrauchsszenario des Dokuments darstellt. Im Gegensatz dazu sind fixierte Dokumente für eine statische Darstellung entworfen. Fixierte Dokumente sind hilfreich, wenn die Originaltreue des Quellinhalts wichtig ist. Finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md) für Weitere Informationen zu anderen Typen von Dokumenten.  
   
  Die folgende Abbildung zeigt ein Beispielflussdokument in mehreren Fenstern von verschiedener Größe. Wenn sich der Bildschirmbereich ändert, bricht der Inhalt dynamisch um, um den verfügbaren Platz bestmöglich auszunutzen.  
   
- ![Flussdokumentinhalt dynamisch umgebrochen](./../../../docs/framework/wpf/advanced/media/edocs-flowdocument.png "eDocs_FlowDocument")  
+ ![Flussdokumentinhalt dynamisch umgebrochen](../../../../docs/framework/wpf/advanced/media/edocs-flowdocument.png "eDocs_FlowDocument")  
   
  Wie in dem Bild oben dargestellt, kann fortlaufender Inhalt viele Komponenten umfassen, einschließlich Absätzen, Listen, Bilder usw. Diese Komponenten entsprechen Elementen im Markup und Objekten in prozeduralem Code. Wir werden uns diese Klassen werden ausführlich weiter unten in der [verwandten Klassen Flow](#flow_related_classes) Abschnitt dieser Übersicht. Jetzt müssen Sie hier ein einfaches Codebeispiel, das ein Flussdokument bestehend aus einem Absatz mit fett formatierten Text und eine Liste erstellt wird.
   
@@ -48,7 +48,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  In der folgenden Abbildung wird gezeigt, wie dieser Codeausschnitt aussieht.  
   
- ![Screenshot: Gerendertes FlowDocument-Beispiel](./../../../docs/framework/wpf/advanced/media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
+ ![Screenshot: Gerendertes FlowDocument-Beispiel](../../../../docs/framework/wpf/advanced/media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
   
  In diesem Beispiel wird die <xref:System.Windows.Controls.FlowDocumentReader> Steuerelement wird zum Hosten des fortlaufenden Inhalts verwendet. Finden Sie unter [Flussdokumenttypen](#flow_document_types) für Weitere Informationen zum Hosten von Steuerelementen Flussinhalt. <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, und <xref:System.Windows.Documents.Bold> Elemente werden basierend auf ihrer Reihenfolge im Markup zum Steuern der Formatierung des Inhalts verwendet. Z. B. die <xref:System.Windows.Documents.Bold> Element erstreckt sich auf nur einen Teil des Texts im Absatz; folglich nur dieser Teil des Texts fett formatiert ist. Wenn Sie HTML verwendet haben, wird Ihnen dies vertraut sein.  
   
@@ -79,7 +79,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
  Eine vertikale Scrollleiste wird standardmäßig immer angezeigt, eine horizontale Scrollleiste nur nach Bedarf. Die Standardeinstellung Benutzeroberfläche für <xref:System.Windows.Controls.FlowDocumentScrollViewer> enthält keine Symbolleiste, aber die <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Eigenschaft kann verwendet werden, um eine integrierte Symbolleiste aktivieren.  
   
 ### <a name="richtextbox"></a>RichTextBox  
- Sie verwenden eine <xref:System.Windows.Controls.RichTextBox> sollen die Benutzer fortlaufendem Inhalt bearbeiten können. Z. B. Wenn Sie beim Erstellen eines Editors, die einen Benutzer bearbeiten dürfen Gegenstände wie Tabellen, kursive und fett formatieren, usw., verwenden Sie eine <xref:System.Windows.Controls.RichTextBox>. Finden Sie unter [RichTextBox Overview](./../../../docs/framework/wpf/controls/richtextbox-overview.md) für Weitere Informationen.  
+ Sie verwenden eine <xref:System.Windows.Controls.RichTextBox> sollen die Benutzer fortlaufendem Inhalt bearbeiten können. Z. B. Wenn Sie beim Erstellen eines Editors, die einen Benutzer bearbeiten dürfen Gegenstände wie Tabellen, kursive und fett formatieren, usw., verwenden Sie eine <xref:System.Windows.Controls.RichTextBox>. Finden Sie unter [RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) für Weitere Informationen.  
   
  **Hinweis:** fortlaufende Inhalte innerhalb einer <xref:System.Windows.Controls.RichTextBox> verhält sich nicht genau wie bei anderen Steuerelementen enthaltener Flow-Inhalt. Beispielsweise, sind keine Spalten in einem <xref:System.Windows.Controls.RichTextBox> und daher keine automatische Größenanpassungsverhalten. In der Regel Intergrierte Funktionen fließenden Inhalts wie suchen, Anzeigen von Modus, Seitennavigation und Zoom sind außerdem nicht verfügbar innerhalb einer <xref:System.Windows.Controls.RichTextBox>.  
   
@@ -97,7 +97,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 ## <a name="flow-related-classes"></a>Flussbezogene Klassen  
  Das folgende Diagramm zeigt die am häufigsten bei fortlaufendem Inhalt verwendeten Objekte:  
   
- ![Diagramm: Flussinhaltselement-Klassenhierarchie](./../../../docs/framework/wpf/advanced/media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
+ ![Diagramm: Flussinhaltselement-Klassenhierarchie](../../../../docs/framework/wpf/advanced/media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
   
  Für die Zwecke des fortlaufenden Inhalts gibt es zwei wichtige Kategorien:  
   
@@ -140,7 +140,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: UIElement eingebettet in fortlaufenden Inhalt](./../../../docs/framework/wpf/advanced/media/blockuicontainer.png "BlockUIContainer")  
+ ![Screenshot: UIElement eingebettet in fortlaufenden Inhalt](../../../../docs/framework/wpf/advanced/media/blockuicontainer.png "BlockUIContainer")  
   
  **List**  
   
@@ -155,7 +155,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **Table**  
   
- <xref:System.Windows.Documents.Table>Dient zum Erstellen einer Tabelle. <xref:System.Windows.Documents.Table>ähnelt der <xref:System.Windows.Controls.Grid> sondern Element verfügt über weitere Funktionen und benötigt deshalb das Ressourcenaufwand größer. Da <xref:System.Windows.Controls.Grid> ist ein <xref:System.Windows.UIElement>, es kann nicht in fortlaufendem Inhalt verwendet werden, es sei denn, in dem sie enthalten ist ein <xref:System.Windows.Documents.BlockUIContainer> oder <xref:System.Windows.Documents.InlineUIContainer>. Weitere Informationen zu <xref:System.Windows.Documents.Table>, finden Sie unter [Table Overview](./../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table>Dient zum Erstellen einer Tabelle. <xref:System.Windows.Documents.Table>ähnelt der <xref:System.Windows.Controls.Grid> sondern Element verfügt über weitere Funktionen und benötigt deshalb das Ressourcenaufwand größer. Da <xref:System.Windows.Controls.Grid> ist ein <xref:System.Windows.UIElement>, es kann nicht in fortlaufendem Inhalt verwendet werden, es sei denn, in dem sie enthalten ist ein <xref:System.Windows.Documents.BlockUIContainer> oder <xref:System.Windows.Documents.InlineUIContainer>. Weitere Informationen zu <xref:System.Windows.Documents.Table>, finden Sie unter [Table Overview](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Inlineabgeleitete Klassen  
  **Run**  
@@ -164,7 +164,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **Hinweis:** ab der [!INCLUDE[net_v40_short](./../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft von der <xref:System.Windows.Documents.Run> Objekt ist eine Abhängigkeitseigenschaft. Sie binden die <xref:System.Windows.Documents.Run.Text%2A> -Eigenschaft an eine Datenquelle, z. B. eine <xref:System.Windows.Controls.TextBlock>. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt die unidirektionale Bindung. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt auch bidirektionale Bindung, mit Ausnahme von <xref:System.Windows.Controls.RichTextBox>. Ein Beispiel finden Sie unter <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
+ **Hinweis:** ab der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft von der <xref:System.Windows.Documents.Run> Objekt ist eine Abhängigkeitseigenschaft. Sie binden die <xref:System.Windows.Documents.Run.Text%2A> -Eigenschaft an eine Datenquelle, z. B. eine <xref:System.Windows.Controls.TextBlock>. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt die unidirektionale Bindung. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt auch bidirektionale Bindung, mit Ausnahme von <xref:System.Windows.Controls.RichTextBox>. Ein Beispiel finden Sie unter <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
  **Span**  
   
@@ -176,7 +176,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Der folgende Screenshot zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: Gerendertes Span-Beispiel](./../../../docs/framework/wpf/advanced/media/flow-spanexample.gif "Flow_SpanExample")  
+ ![Screenshot: Gerendertes Span-Beispiel](../../../../docs/framework/wpf/advanced/media/flow-spanexample.gif "Flow_SpanExample")  
   
  **InlineUIContainer**  
   
@@ -202,7 +202,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: Figure-Beispiel](./../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
+ ![Screenshot: Figure-Beispiel](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
  <xref:System.Windows.Documents.Figure>und <xref:System.Windows.Documents.Floater> unterscheiden sich auf verschiedene Weise und für verschiedene Szenarien verwendet werden.  
   
@@ -232,7 +232,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Der folgende Screenshot zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: LineBreak-Beispiel](./../../../docs/framework/wpf/advanced/media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
+ ![Screenshot: LineBreak-Beispiel](../../../../docs/framework/wpf/advanced/media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
   
 ### <a name="flow-collection-elements"></a>Flussauflistungselemente  
  In vielen der Beispiele oben die <xref:System.Windows.Documents.BlockCollection> und <xref:System.Windows.Documents.InlineCollection> werden verwendet, um fortlaufenden Inhalt programmgesteuert zu erstellen. Um beispielsweise zum Hinzufügen von Elementen einer <xref:System.Windows.Documents.Paragraph>, können Sie die Syntax verwenden:  
@@ -274,19 +274,19 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Gibt an, ob ein Element für fortlaufenden verwendet ein <xref:System.Windows.Documents.InlineCollection> (Inlines) oder <xref:System.Windows.Documents.BlockCollection> (Blöcke) enthalten den untergeordneten Elementen hängt vom Typ der untergeordneten Elemente (<xref:System.Windows.Documents.Block> oder <xref:System.Windows.Documents.Inline>) vom übergeordneten Element enthalten sein können. Einschlussregeln für Flussinhaltselemente sind im Inhaltsschema im nächsten Abschnitt zusammengefasst.  
   
- **Hinweis:** besteht ein dritter Typ der Auflistung mit fortlaufendem Inhalt verwendet die <xref:System.Windows.Documents.ListItemCollection>, aber diese Auflistung wird nur verwendet, mit einer <xref:System.Windows.Documents.List>. Darüber hinaus stehen einige Sammlungen bereits mit verwendet <xref:System.Windows.Documents.Table>. Finden Sie unter [Übersicht über die Tabelle](./../../../docs/framework/wpf/advanced/table-overview.md) für Weitere Informationen.  
+ **Hinweis:** besteht ein dritter Typ der Auflistung mit fortlaufendem Inhalt verwendet die <xref:System.Windows.Documents.ListItemCollection>, aber diese Auflistung wird nur verwendet, mit einer <xref:System.Windows.Documents.List>. Darüber hinaus stehen einige Sammlungen bereits mit verwendet <xref:System.Windows.Documents.Table>. Finden Sie unter [Übersicht über die Tabelle](../../../../docs/framework/wpf/advanced/table-overview.md) für Weitere Informationen.  
   
 <a name="content_schema"></a>   
 ## <a name="content-schema"></a>Inhaltsschema  
  In Anbetracht der Anzahl verschiedener Flussinhaltselemente kann es überwältigend sein, den Überblick darüber zu behalten, welchen Typ von untergeordnetem Element ein Element einschließen kann. Das folgende Diagramm fasst die Einschlussregeln für Inhaltselemente zusammen. Die Pfeile stellen die möglichen Übergeordnet/Untergeordnet-Beziehungen dar.  
   
- ![Diagramm: Flussinhalt-Einschlussschema](./../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
+ ![Diagramm: Flussinhalt-Einschlussschema](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
   
  Wie aus der Abbildung oben dargestellt, die untergeordneten Elemente für ein Element zulässig sind nicht unbedingt bestimmt, ob es sich handelt eine <xref:System.Windows.Documents.Block> Element oder ein <xref:System.Windows.Documents.Inline> Element. Z. B. eine <xref:System.Windows.Documents.Span> (ein <xref:System.Windows.Documents.Inline> Element) ist nur zulässig <xref:System.Windows.Documents.Inline> untergeordnete Elemente beim eine <xref:System.Windows.Documents.Figure> (auch eine <xref:System.Windows.Documents.Inline> Element) ist nur zulässig <xref:System.Windows.Documents.Block> untergeordnete Elemente. Aus diesem Grund ist ein Diagramm nützlich, um schnell zu bestimmen, welches Element in einem anderen eingeschlossen sein kann. Beispielsweise ermöglicht die Verwendung des Diagramms bestimmen, wie zum Erstellen von fortlaufenden Inhalt von einem <xref:System.Windows.Controls.RichTextBox>.  
   
  **1.** Ein <xref:System.Windows.Controls.RichTextBox> darf eine <xref:System.Windows.Documents.FlowDocument> enthalten wiederum müssen eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im Folgenden finden Sie das entsprechende Segment aus dem Diagramm oben.  
   
- ![Diagramm: RichTextBox-Einschlussregeln](./../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
+ ![Diagramm: RichTextBox-Einschlussregeln](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
  Bis jetzt könnte das Markup wie folgt aussehen.  
   
@@ -294,7 +294,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **2.** Gemäß dem Diagramm stehen verschiedene <xref:System.Windows.Documents.Block> Elemente einschließlich auswählbarer <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, und <xref:System.Windows.Documents.BlockUIContainer> (Siehe Block abgeleitete Klassen, die weiter oben). Angenommen, wir möchten einen <xref:System.Windows.Documents.Table>. Gemäß der Abbildung oben eine <xref:System.Windows.Documents.Table> enthält eine <xref:System.Windows.Documents.TableRowGroup> mit <xref:System.Windows.Documents.TableRow> Elemente, die enthalten <xref:System.Windows.Documents.TableCell> -Elemente enthalten eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im folgenden finden Sie die entsprechende Segment für <xref:System.Windows.Documents.Table> aus dem oben stehenden Diagramm übernommen.  
   
- ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Table](./../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+ ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Table](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
  Im Folgenden finden Sie das entsprechende Markup.  
   
@@ -302,9 +302,9 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **3.** Erneut, eine oder mehrere <xref:System.Windows.Documents.Block> Elemente sind erforderlich, darunter eine <xref:System.Windows.Documents.TableCell>. Um es einfach zu gestalten, fügen wir Text in die Zelle ein. Wir können dazu eine <xref:System.Windows.Documents.Paragraph> mit einem <xref:System.Windows.Documents.Run> Element. Im folgenden finden Sie die entsprechenden Segmente aus dem Diagramm anzeigen, die eine <xref:System.Windows.Documents.Paragraph> dauert ein <xref:System.Windows.Documents.Inline> -Element und einem <xref:System.Windows.Documents.Run> (ein <xref:System.Windows.Documents.Inline> Element) dauert nur nur-Text.  
   
- ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Paragraph](./../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
+ ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Paragraph](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
- ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Run](./../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
+ ![Diagramm: Übergeordnet&#47;Untergeordnet-Schema für Run](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  Nachstehend finden Sie das gesamte Beispiel im Markup.  
   
@@ -326,15 +326,15 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: Text mit Standardeffekt „Durchstreichen“](./../../../docs/framework/wpf/advanced/media/inline-textdec-strike.png "Inline_TextDec_Strike")  
+ ![Screenshot: Text mit Standardeffekt „Durchstreichen“](../../../../docs/framework/wpf/advanced/media/inline-textdec-strike.png "Inline_TextDec_Strike")  
   
  Der folgenden Abbildung wird wie die **überlagernde Linie**, **Baseline**, und **Unterstreichen** Ergänzungen zu rendern, bzw.  
   
- ![Screenshot: Überstrich-TextDecorator](./../../../docs/framework/wpf/advanced/media/inline-textdec-over.png "Inline_TextDec_Over")  
+ ![Screenshot: Überstrich-TextDecorator](../../../../docs/framework/wpf/advanced/media/inline-textdec-over.png "Inline_TextDec_Over")  
   
- ![Screenshot: Standardgrundlinieneffekt auf Text](./../../../docs/framework/wpf/advanced/media/inline-textdec-base.png "Inline_TextDec_Base")  
+ ![Screenshot: Standardgrundlinieneffekt auf Text](../../../../docs/framework/wpf/advanced/media/inline-textdec-base.png "Inline_TextDec_Base")  
   
- ![Screenshot: Text mit Standardunterstricheffekt](./../../../docs/framework/wpf/advanced/media/inline-textdec-under.png "Inline_TextDec_Under")  
+ ![Screenshot: Text mit Standardunterstricheffekt](../../../../docs/framework/wpf/advanced/media/inline-textdec-under.png "Inline_TextDec_Under")  
   
 ### <a name="typography"></a>Typografie  
  Die <xref:System.Windows.Documents.TextElement.Typography%2A> -Eigenschaft verfügbar gemacht wird, von den meisten Flow-bezogenen Inhalte einschließlich <xref:System.Windows.Documents.TextElement>, <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Controls.TextBlock>, und <xref:System.Windows.Controls.TextBox>. Diese Eigenschaft wird verwendet, um typografische Eigenschaften/Variationen von Text (d.h. Kapitälchen oder Großbuchstaben, hoch- und tiefgestellter Text usw.) zu steuern.  
@@ -345,25 +345,25 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: Text mit geänderter Typografie](./../../../docs/framework/wpf/advanced/media/textelement-typog.png "TextElement_Typog")  
+ ![Screenshot: Text mit geänderter Typografie](../../../../docs/framework/wpf/advanced/media/textelement-typog.png "TextElement_Typog")  
   
  Im Gegensatz dazu zeigt die folgende Abbildung, wie ein ähnliches Beispiel mit typografischen Standardeigenschaften gerendert wird.  
   
- ![Screenshot: Text mit geänderter Typografie](./../../../docs/framework/wpf/advanced/media/textelement-typog-default.png "TextElement_Typog_Default")  
+ ![Screenshot: Text mit geänderter Typografie](../../../../docs/framework/wpf/advanced/media/textelement-typog-default.png "TextElement_Typog_Default")  
   
  Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.TextBox.Typography%2A> Eigenschaft programmgesteuert.  
   
  [!code-csharp[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_typog)]
  [!code-vb[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
- Finden Sie unter [Typografie in WPF](./../../../docs/framework/wpf/advanced/typography-in-wpf.md) für Weitere Informationen zu Typografie.  
+ Finden Sie unter [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md) für Weitere Informationen zu Typografie.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Text](./../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Typografie in WPF](./../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Themen zur Vorgehensweise](./../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Übersicht über das TextElement-Inhaltsmodell](./../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [Übersicht über RichTextBox](./../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Dokumente in WPF](./../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Übersicht über Tabellen](./../../../docs/framework/wpf/advanced/table-overview.md)  
- [Übersicht über Anmerkungen](./../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Übersicht über das TextElement-Inhaltsmodell](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
+ [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [Übersicht über Anmerkungen](../../../../docs/framework/wpf/advanced/annotations-overview.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0293a20f5f735dd38b1d167ebc5057f645fa011a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c20bb8a9841b5ebc7a4ca9b5463fe4c541c0a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-structures"></a>Debuggen von Strukturen
 In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die Debug-API verwendet.  
@@ -30,7 +31,7 @@ In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die
  [CLR_DEBUGGING_VERSION-Struktur](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
  Definiert die Produktversion der Common Language Runtime (CLR) zu Debugzwecken.  
   
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
+ [CodeChunkInfo-Struktur1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
  Stellt einen einzelnen Codeabschnitt im Speicher dar.  
   
  [CorDebugBlockingObject-Struktur](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
@@ -90,7 +91,7 @@ In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Debuggen von Co-Klassen](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
  [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a05bb8d8486f5ae12910d51e3717c4c91ef09cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess-Methode
 Startet einen Prozess und seine primäre Thread unter der Kontrolle des Debuggers.  
@@ -89,7 +90,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Hinweise  
  Die Parameter dieser Methode sind identisch mit denen der Win32- `CreateProcess` Methode.  
   
- Legen Sie zum Aktivieren von nicht verwaltetem Debuggen im gemischten Modus `dwCreationFlags` DEBUG_PROCESS &#124; NUR DIESEN PROZESS ZU DEBUGGEN. Wenn Sie nur das verwaltete Debuggen verwenden möchten, sollten Sie diese Flags festlegen.  
+ Legen Sie zum Aktivieren von nicht verwaltetem Debuggen im gemischten Modus `dwCreationFlags` DEBUG_PROCESS & #124; NUR DIESEN PROZESS ZU DEBUGGEN. Wenn Sie nur das verwaltete Debuggen verwenden möchten, sollten Sie diese Flags festlegen.  
   
  Wenn der Debugger als auch den Prozess erforderlich (den angefügten Prozess) debuggt Freigeben einer einzelnen Konsole aus, und wenn Interop-Debuggen verwendet wird, ist es möglich, dass der angefügte Prozess Konsole sperren, und beenden Sie ein Debug-Ereignis. Der Debugger wird dann jeder Versuch, verwenden die Konsole blockiert. Um dieses Problem zu vermeiden, legen Sie die CREATE_NEW_CONSOLE-Flag in der `dwCreationFlags` Parameter.  
   
