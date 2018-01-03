@@ -13,10 +13,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/18/2017
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C#-Referenz)
-Die `protected internal`-Schlüsselwortkombination ist ein Zugriffsmodifizierer für Member. Auf einen geschützten internen Member kann aus der aktuellen Assembly oder aus Typen, die von der enthaltenden Klasse abgeleitet sind, zugegriffen werden. Einen Vergleich von `protected internal` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+Die `protected internal` -Schlüsselwortkombination ist ein Zugriffsmodifizierer für Member. Auf einen geschützten internen Member kann aus der aktuellen Assembly oder aus Typen, die von der enthaltenden Klasse abgeleitet sind, zugegriffen werden.  Einen Vergleich von `protected internal` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). 
    
 ## <a name="example"></a>Beispiel  
- Auf einen internen geschützten Member einer Basisklasse kann von jedem Typ innerhalb der enthaltenden Assembly zugegriffen werden. Der Zugriff ist auch in einer abgeleiteten Klasse möglich, die sich in einer anderen Assembly befindet, dies allerdings nur, wenn er über eine Variable des Typs der abgeleiteten Klasse erfolgt. Betrachten Sie beispielsweise den folgenden Codeausschnitt:
+ Auf einen internen geschützten Member einer Basisklasse kann von jedem Typ innerhalb der enthaltenden Assembly zugegriffen werden. Der Zugriff ist auch in einer abgeleiteten Klasse möglich, die sich in einer anderen Assembly befindet, dies allerdings nur, wenn er über eine Variable des Typs der abgeleiteten Klasse erfolgt. Betrachten Sie beispielsweise den folgenden Codeausschnitt:  
 
 ```
 // Assembly1.cs  
@@ -55,7 +55,7 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly2.cs`. Die erste Datei enthält eine öffentliche Basisklasse `BaseClass`, und eine weitere Klasse `TestAccess`. `BaseClass` besitzt einen internen geschützten Member `myValue`, auf den aus dem `TestAccess` Typ heraus zugegriffen wird. In der zweiten Datei erzeugt der Versuch, Zugriff auf `myValue` durch eine Instanz von `BaseClass` zu nehmen, einen Fehler, wobei der Zugriff auf diesen Member über eine Instanz der abgeleiteten Klasse `DerivedClass` erfolgreich ausgeführt wird. 
+ Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly2.cs`. Die erste Datei enthält eine öffentliche Basisklasse `BaseClass`, und eine weitere Klasse `TestAccess`. `BaseClass`einen geschützte interne Member besitzt `myValue`, die erfolgt durch die `TestAccess` Typ. In der zweiten Datei, einem versuchten Zugriff auf `myValue` durch eine Instanz von `BaseClass` erzeugt einen Fehler beim Zugriff auf diesen Member über eine Instanz einer abgeleiteten Klasse `DerivedClass` wird erfolgreich ausgeführt. 
 
  Member eines Struct können nicht `protected internal` sein, da von Structs nicht geerbt werden kann.  
   
