@@ -20,10 +20,10 @@ C#-7.1 ist der erste Punkt Version der C#-Sprache. Eine erhöhte-versionsrhythmu
 
 C#-7.1 fügt die [Version Sprachauswahl](#language-version-selection) Konfigurationselement, drei neue Sprachfunktionen zu nutzen und neue Compilerverhalten.
 
-Die neuen Sprachfeatures in dieser Version sind:
+Die neuen Sprachfeatures in diesem Release umfassen:
 
 * [`async``Main` Methode](#async-main)
-  - Der `async`-Modifizierer kann am Einstiegspunkt einer Anwendung verwendet werden.
+  - Der `async` -Modifizierer kann am Einstiegspunkt einer Anwendung verwendet werden.
 * [`default`Literale Ausdrücke](#default-literal-expressions)
   - Sie können Literale Standardausdrücken in Default-Wert-Ausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
 * [Abgeleitete Tupel Elementnamen](#inferred-tuple-element-names)
