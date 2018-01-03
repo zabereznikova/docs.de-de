@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1e55222c16d223a86e1e11ce2b985ec0f4d8eaa3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfed0124c33c90427c9b888f5aa7bb191aea0400
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-stored-procedures"></a>Gespeicherte CLR-Prozeduren
 Gespeicherte Prozeduren sind Routinen, die nicht in skalaren Ausdrücken verwendet werden können. Sie können tabellarische Ergebnisse und Meldungen an den Client zurückgeben, DDL-Anweisungen (Data Definition Language – Datendefinitionssprache) und DML-Anweisungen (Data Manipulation Language – Datenbearbeitungssprache) aufrufen und Ausgabeparameter zurückgeben.  
@@ -33,7 +34,7 @@ Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [CLR-gespeicherte Prozeduren](http://go.microsoft.com/fwlink/?LinkId=115400)  
+1.  [Gespeicherte CLR-Prozeduren](http://go.microsoft.com/fwlink/?LinkId=115400)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von SQL Server 2005-Objekte In verwaltetem Code](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  

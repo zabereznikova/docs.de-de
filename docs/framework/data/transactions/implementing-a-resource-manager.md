@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Implementieren eines Ressourcen-Managers
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. RMs arbeiten mit dem TM zusammen, um der Anwendung die Unteilbarkeit und Isolation zu garantieren. Microsoft SQL Server, dauerhafte Meldungswarteschlangen und speicherinterne Hashtabellen sind Beispiele für Ressourcen-Manager.  
@@ -44,22 +45,22 @@ Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die gewöhnlich von einem Ressourcen-Manager ausgeführten Schritte werden in den folgenden Themen umrissen.  
   
- [Eintragen von Ressourcen als Teilnehmer in einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Beschreibt, wie eine dauerhafte oder flüchtige Ressource sich in eine Transaktion eintragen kann.  
   
- [Ausführen eines Commits für eine Transaktion in der Phase hat und mehreren Phasen bestehender](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Beschreibt, wie ein Ressourcen-Manager auf eine Commitbenachrichtigung reagiert und den Commit vorbereitet.  
   
- [Ausführen der Wiederherstellung](../../../../docs/framework/data/transactions/performing-recovery.md)  
+ [Ausführen einer Wiederherstellung](../../../../docs/framework/data/transactions/performing-recovery.md)  
   
  Beschreibt, wie ein dauerhafter Ressourcen-Manager nach einem Fehler die Wiederherstellung durchführt.  
   
- [Sicherheit Vertrauensebenen in den Zugriff auf Ressourcen](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  Beschreibt, wie die drei Vertrauensebenen für System.Transactions den Zugriff auf die Typen von Ressourcen einschränkt, die <xref:System.Transactions> verfügbar macht.  
   
- [Optimierung mit einzelnen Phase Commit und heraufstufbare einzelnen Phase-Benachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Beschreibt Optimierungsvorgehensweisen für die Implementierung von Ressourcen-Managern.

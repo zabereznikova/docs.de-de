@@ -9,11 +9,11 @@ ms.assetid: b6ac8043-b939-441c-822f-de6f16f45525
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5e7a114af67de0c1f93587c49e62d20eab36240c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9891925798d610995d006bb8103ee5c7465d17be
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>Der an TextFieldParser übergebene Stream kann nicht gelesen werden.
 Das [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md) kann den Stream nicht lesen, der an es übergeben wurde. Dies kann das Ergebnis des Versuchs sein, eine Datei zu lesen, bei der es sich nicht um eine Textdatei handelt.  
@@ -24,6 +24,6 @@ Das [TextFieldParser Object](../../visual-basic/language-reference/objects/textf
   
 ## <a name="see-also"></a>Siehe auch  
  [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- [My.Computer.FileSystem.OpenTextFieldParser-Methode](http://msdn.microsoft.com/en-us/e5869f85-c078-485f-8323-8dc716494546)  
+ [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
  [Analysieren von Textdateien mit dem TextFieldParser-Objekt](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  [TextFieldParser-Objekt](../../visual-basic/language-reference/objects/textfieldparser-object.md)

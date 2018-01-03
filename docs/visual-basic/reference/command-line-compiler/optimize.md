@@ -15,11 +15,11 @@ ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dead17435cd147bdcdf91bdc5b8e0aa651e9e9fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e157fb0e1fcdb3899440eed02a42b16f75541989
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize"></a>/optimize
 Aktiviert oder deaktiviert compileroptimierungen.  
@@ -45,7 +45,7 @@ Aktiviert oder deaktiviert compileroptimierungen.
   
 |So legen Sie / zu optimieren, in der integrierten Entwicklungsumgebung von Visual Studio|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />     Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern der **Optimierungen aktivieren** Kontrollkästchen.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />     <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern der **Optimierungen aktivieren** Kontrollkästchen.|  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `T2.vb` und compileroptimierungen aktiviert.  

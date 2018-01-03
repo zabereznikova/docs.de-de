@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7c0f93a5c4e515db937945d374ee7cbe8d9b3cf8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfe6a2137b3f3c9b5bcde6de0f0c692904bd7529
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-triggers"></a>CLR-Auslöser
 Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die während der Ausführung eines Sprachereignisses automatisch ausgeführt wird. Aufgrund der Integration der .NET Framework-CLR (Common Language Runtime) in Microsoft SQL Server können Sie mit allen .NET Framework-Sprachen CLR-Trigger erstellen.  
@@ -26,7 +27,7 @@ Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die während de
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [CLR-Trigger](http://go.microsoft.com/fwlink/?LinkId=115397)  
+1.  [CLR-Auslöser](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von SQL Server 2005-Objekte In verwaltetem Code](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  

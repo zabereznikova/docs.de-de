@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e7d7a0a1f641603887675ed0c1faebd5c06b273
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-examples"></a>Abfragebeispiele
 Dieser Abschnitt enthält [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Beispiele und C#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen. Entwickler, die [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, finden viele weitere Beispiele in einer Beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -38,13 +39,13 @@ Dieser Abschnitt enthält [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md
  [Sortieren von Elementen in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.OrderBy%2A>.  
   
- [Gruppieren Sie Elemente in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
+ [Gruppieren von Elementen in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.GroupBy%2A>.  
   
  [Entfernen von doppelten Elementen aus einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.Distinct%2A>.  
   
- [Bestimmen Sie, ob einige oder alle Elemente in einer Sequenz eine Bedingung erfüllen.](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
+ [Bestimmen, ob ein Element oder alle Elemente einer Sequenz eine Bedingung erfüllen](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.All%2A> und <xref:System.Linq.Enumerable.Any%2A>.  
   
  [Verketten von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
@@ -65,7 +66,7 @@ Dieser Abschnitt enthält [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md
  [Konvertieren einer Sequenz in eine generische Liste](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.ToList%2A>.  
   
- [Konvertieren eines Typs in eine generische "IEnumerable"](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
+ [Konvertieren eines Typs in ein generisches „IEnumerable“](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
  Bietet Beispiele für die Verwendung von <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
  [Formulieren von Joins und produktübergreifenden Abfragen](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  

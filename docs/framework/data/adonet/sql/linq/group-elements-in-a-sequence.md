@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9a398bb7b951fcf2dd2449b6468a19d39a134a4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 09617f147d1afc2d9f2ca76624b54f94e5164188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-elements-in-a-sequence"></a>Gruppieren von Elementen in einer Sequenz
 Der <xref:System.Linq.Enumerable.GroupBy%2A>-Operator gruppiert die Elemente einer Sequenz. In den folgenden Beispielen wird die Datenbank Northwind verwendet.  
@@ -83,5 +84,5 @@ Der <xref:System.Linq.Enumerable.GroupBy%2A>-Operator gruppiert die Elemente ein
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiele für Abfragen](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
  [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

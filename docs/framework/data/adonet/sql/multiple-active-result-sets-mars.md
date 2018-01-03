@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 MARS ist eine Funktion, die das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. In früheren Versionen konnte jeweils nur ein Batch pro einzelne Verbindung ausgeführt werden. Das Ausführen mehrerer Batches mit MARS bedeutet nicht das gleichzeitige Ausführen von Vorgängen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Aktivieren von Multiple Active Resultsets](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+ [Aktivieren von Multiple Active Result Sets](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  Enthält eine Erläuterung zur Verwendung von MARS mit SQL Server.  
   
  [Bearbeiten von Daten](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  

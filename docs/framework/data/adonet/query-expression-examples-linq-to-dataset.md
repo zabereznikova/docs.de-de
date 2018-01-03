@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1967575aa7a287064d6da54d929ce095e89ee24f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d959d28f50cef7820702ae535dcc3307e59cf080
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Beispiele für Abfrageausdrücke (LINQ to DataSet)
 Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Programmierbeispiele in der Abfrageausdruckssyntax, bei denen die Standardabfrageoperatoren verwendet werden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendet werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -32,13 +33,13 @@ Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-data
  [Partitionierung](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.Skip%2A>-Methode und der <xref:System.Linq.Enumerable.Take%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse partitionieren können.  
   
- [Reihenfolge](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+ [Sortierung](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der <xref:System.Linq.Enumerable.OrderBy%2A>-Methode, der <xref:System.Linq.Enumerable.OrderByDescending%2A>-Methode, der <xref:System.Linq.Enumerable.Reverse%2A>-Methode und der <xref:System.Linq.Enumerable.ThenByDescending%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse sortieren können.  
   
  [Elementoperatoren](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
- In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.First%2A>-Methode und der <xref:System.Linq.Enumerable.ElementAt%2A>-Methode aus einem <xref:System.Data.DataRow> <xref:System.Data.DataSet>-Elemente abrufen können.  
+ In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.First%2A>-Methode und der <xref:System.Linq.Enumerable.ElementAt%2A>-Methode aus einem <xref:System.Data.DataRow><xref:System.Data.DataSet>-Elemente abrufen können.  
   
- [Aggregate-Operatoren](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+ [Aggregierungsoperatoren](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.Average%2A>-Methode, der <xref:System.Linq.Enumerable.Count%2A>-Methode, der <xref:System.Linq.Enumerable.Max%2A>-Methode, der <xref:System.Linq.Enumerable.Min%2A>-Methode und der <xref:System.Linq.Enumerable.Sum%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse aggregieren können.  
   
  [Joinoperatoren](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
@@ -47,4 +48,4 @@ Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-data
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele für die methodenbasierte Abfrage](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  [Beispiele für DataSet-spezifische Operatoren](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- [LINQ to DataSet-Beispiele](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+ [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

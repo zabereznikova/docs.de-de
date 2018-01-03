@@ -16,11 +16,11 @@ ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-procedure-in-visual-basic"></a>Main-Prozedur in Visual Basic
 Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Prozedur dient, wie die Start- und gesamtsteuerung für Ihre Anwendung. Die .NET Framework Aufrufe der `Main` -Prozedur, wenn die Anwendung geladen hat und bereit für die Steuerung an sie übergeben wird. Wenn Sie eine Windows Forms-Anwendung erstellen, müssen Sie schreiben die `Main` Verfahren für Anwendungen, die auf ihre eigenen ausgeführt.  
@@ -30,7 +30,7 @@ Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Pr
 ## <a name="requirements-for-the-main-procedure"></a>Anforderungen für die Main-Prozedur  
  Eine Datei, die einen eigenen (normalerweise mit der Erweiterung .exe) wird ausgeführt auf darf eine `Main` Prozedur. Eine Bibliothek (z. B. mit der Erweiterung .dll) wird nicht eigenständig ausgeführt und erfordert keine `Main` Prozedur. Die Anforderungen für die verschiedenen Typen von Projekten, die Sie erstellen können, lauten folgendermaßen:  
   
--   Konsolenanwendungen führen Sie auf ihre eigenen, und geben Sie an mindestens eine `Main` Prozedur. .  
+-   Konsolenanwendungen führen Sie auf ihre eigenen, und geben Sie an mindestens eine `Main` Prozedur. sein.  
   
 -   Führen Sie auf ihren eigenen Windows Forms-Anwendungen. Visual Basic-Compiler automatisch generiert jedoch eine `Main` Prozedur z. B. eine Anwendung, und Sie müssen nicht schreiben.  
   
@@ -120,7 +120,6 @@ Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Pr
  <xref:System.Array.Length%2A>  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
  [Struktur eines Visual Basic-Programms](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [NIB: Visual Basic-Version von Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  

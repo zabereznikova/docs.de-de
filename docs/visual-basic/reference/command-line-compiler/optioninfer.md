@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
@@ -44,7 +44,7 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Festlegen von / Optioninfer in der Visual Studio-IDE  
   
-1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
 2.  Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer** Feld.  
   

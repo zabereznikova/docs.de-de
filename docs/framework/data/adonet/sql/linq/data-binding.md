@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7405cf37aaa21f8773952c9e7ed941bc8ae3150b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99aa438c64fdb8f2d14207e6afb06afa8e5f014a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding"></a>Datenbindung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt das Binden an allgemeine Steuerelemente, z. B. an Rastersteuerelemente. Insbesondere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert das Grundmuster für die Bindung an ein Datenraster und Behandeln von Master / Detail-Bindung, die im Hinblick auf Anzeige und Aktualisierung.  

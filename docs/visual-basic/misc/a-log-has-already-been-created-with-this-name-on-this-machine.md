@@ -8,11 +8,11 @@ ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c6c0b29660d222c4499a90ac6a5095f509cde6e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2052fd81fa5856914a676aa6985eeb51c892788
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Ein Protokoll mit diesem Namen wurde bereits auf diesem Computer erstellt
 Es wurde versucht, ein Protokoll mit einem Namen zu erstellen, der bereits verwendet wird.  
@@ -24,7 +24,7 @@ Es wurde versucht, ein Protokoll mit einem Namen zu erstellen, der bereits verwe
 -   Verwenden Sie einen anderen Namen für das Protokoll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [My.Application.Log-Objekt](../../visual-basic/language-reference/objects/my-application-log-object.md)  
+ [Wohin "My.Application.log"](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
  [Gewusst wie: Schreiben von Protokollmeldungen](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Gewusst wie: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
  [Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  

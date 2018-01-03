@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Datenverlust führen. Um die Datenintegrität beizubehalten, stellt der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) typisierte Accessormethoden zum Arbeiten mit SQL Server-Daten bereit. Sie können mit den Enumerationen in den <xref:System.Data.SqlDbType>-Klassen <xref:System.Data.SqlClient.SqlParameter>-Datentypen angeben.  
@@ -33,13 +34,13 @@ SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Dat
 1.  [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- ["SqlTypes" und das DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlTypes und DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  Beschreibt die Typunterstützung für `SqlTypes` im `DataSet`.  
   
- [Behandlung von Null-Werte](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Behandeln von NULL-Werten](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Beschreibt die Arbeit mit NULL-Werten und dreiwertiger Logik.  
   
- [Vergleichen von GUID- und Uniqueidentifier-Werten](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [Vergleichen von GUID- und uniqueidentifier-Werten](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  Beschreibt die Arbeit mit GUID-Werten und uniqueidentifier-Werten in SQL Server und .NET Framework.  
   
  [Datums- und Zeitdaten](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
@@ -48,7 +49,7 @@ SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Dat
  [Große UDTs](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  Beschreibt die Vorgehensweise beim Abrufen von Daten aus den neu eingeführten UDTs mit hohen Werten in SQL Server 2008.  
   
- [XML-Daten in SQLServer](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [XML-Daten in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  Beschreibt das Arbeiten mit XML-Daten, die aus SQL Server abgerufen wurden.  
   
 ## <a name="reference"></a>Verweis  

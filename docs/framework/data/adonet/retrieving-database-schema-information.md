@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 71493eb91415b5f4695e771c7a549244629bb654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19fee0f90c1f460d253cfdc865035a6b8aa3db48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-database-schema-information"></a>Abrufen von Datenbankschemainformationen
 Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abgerufen. Schemasuche können Anwendungen anfordern, dass verwaltete Anbieter suchen und Zurückgeben von Informationen über das Datenbankschema, auch bekannt als *Metadaten*, einer bestimmten Datenbank. Verschiedene Schemaelemente von Datenbanken (z. B. Tabellen, Spalten und gespeicherte Prozeduren) werden über Schemaauflistungen verfügbar gemacht. Jede Schemaauflistung enthält eine Vielzahl von Schemainformationen, die für den verwendeten Anbieter spezifisch sind.  
@@ -29,25 +30,25 @@ Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abge
  Der .NET Framework-Datenanbieter für OLE DB stellt außerdem Schemainformationen mithilfe der <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A>-Methode des <xref:System.Data.OleDb.OleDbConnection>-Objekts zur Verfügung. Als Argumente **GetOleDbSchemaTable** nimmt eine <xref:System.Data.OleDb.OleDbSchemaGuid> , die die zurückzugebenden Schemainformationen identifiziert, und ein Array von Einschränkungen in diesen zurückgegebenen Spalten. **GetOleDbSchemaTable** gibt eine <xref:System.Data.DataTable> mit den abgefragten Schemainformationen aufgefüllt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- ["GetSchema" und Schemaauflistungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  Beschreibt die **GetSchema** -Methode und wie es zum Abrufen und Einschränken von Schemainformationen aus einer Datenbank verwendet werden kann.  
   
  Schemaeinschränkungen  
  Beschreibt schemaeinschränkungen, die mit verwendet werden können **GetSchema**.  
   
- [Allgemeine Schemaauflistungen](../../../../docs/framework/data/adonet/common-schema-collections.md)  
+ [Allgemeine Schemasammlungen](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  Beschreibt alle allgemeinen Schemaauflistungen, die von allen in .NET Framework verwalteten Anbietern unterstützt werden.  
   
- [SQL Server-Schemaauflistungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
+ [SQL Server-Schemasammlungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
  Beschreibt die Schemaauflistung, die vom .NET Framework-Anbieter für SQL Server unterstützt wird.  
   
- [Oracle-Schemaauflistungen](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
+ [Oracle-Schemasammlungen](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
  Beschreibt die Schemaauflistung, die vom .NET Framework-Anbieter für Oracle unterstützt wird.  
   
- [ODBC-Schemaauflistungen](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
+ [ODBC-Schemasammlungen](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
  Beschreibt die Schemaauflistungen für ODBC-Treiber.  
   
- [OLE DB-Schemaauflistungen](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
+ [OLE DB-Schemasammlungen](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
  Beschreibt die Schemaauflistungen für OLE DB-Anbieter.  
   
 ## <a name="reference"></a>Verweis  

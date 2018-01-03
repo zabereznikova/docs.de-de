@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>Schlüsselwörter (Visual Basic)
 In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache aufgeführt.  
@@ -107,7 +107,6 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/in
 |-----------|-----------------|  
 |[Arrays: Zusammenfassung](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Führt Sprachelemente auf, die zum Erstellen, Definieren und Verwenden von Arrays verwendet werden.|  
 |[Auflistungsobjekt: Zusammenfassung](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Führt Sprachelemente auf, die für Auflistungen verwendet werden.|  
-|[Compilerdirektive: Zusammenfassung (Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|Führt Anweisungen auf, die das Compilerverhalten steuern.|  
 |[Ablaufsteuerung: Zusammenfassung](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Führt Anweisungen auf, die für Schleifen und Steuerung des Verfahrensfluss verwendet werden.|  
 |[Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Führt Funktionen auf, die zum Konvertieren von Zahlen, Datumsangaben, Uhrzeiten und Zeichenfolgen verwendet werden.|  
 |[Datentypen: Zusammenfassung](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Führt Datentypen auf. Führt außerdem Funktionen auf, die zum Konvertieren zwischen Datentypen und zum Überprüfen von Datentypen verwendet werden.|  

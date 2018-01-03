@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-restrictions"></a>Schemaeinschränkungen
 Den optionalen zweiten Parameter von der **GetSchema** Methode ist die Einschränkungen, die verwendet werden, um die Begrenzung des Umfangs der Schemainformationen zurückgegeben und erfolgt eine Übergabe an die **GetSchema** -Methode ein Array von Zeichenfolgen . Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
@@ -153,7 +154,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Name|@Name|Name|1|  
+|name|@Name|name|1|  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -205,7 +206,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |Parameter|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Verfahren  
@@ -214,7 +215,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |Typ|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -249,7 +250,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Besitzer|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
-|Name|@Name|CONSTRAINT_NAME|4|  
+|name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008-Schemabeschränkungen  
  In den folgenden Tabellen sind die Beschränkungen für SQL Server 2008-Schemaauflistungen aufgeführt. Diese Beschränkungen gelten ab Version 3.5 SP1 von .NET Framework und SQL Server 2008. Sie werden in früheren Versionen von .NET Framework und SQL Server nicht unterstützt.  

@@ -12,11 +12,11 @@ ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa30bc7cbe96b49c5d3f5703001e6a3ac379027f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: de34f27bc520c4e814738e0ba22620ed80f7f23e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Einführung in LINQ (Visual Basic)
 Language Integrated Query (LINQ) ist eine in .NET Framework-Version 3.5 eingeführte Innovation, die die Lücke zwischen der Welt der Objekte und der Welt der Daten überbrückt.  
@@ -34,7 +34,7 @@ Language Integrated Query (LINQ) ist eine in .NET Framework-Version 3.5 eingefü
 ## <a name="next-steps"></a>Nächste Schritte  
  Weitere Informationen über LINQ finden zu starten, indem Sie vertraut mit einigen grundlegenden Konzepten im Abschnitt Erste Schritte [erste Schritte mit LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), und Lesen Sie die Dokumentation für die LINQ-Technologie, die in der Sie sind "interested":  
   
--   SQL Server-Datenbanken: [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+-   SQL Server-Datenbanken: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
 -   XML-Dokumente: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21189ffd5fc8b113cc746fd855bd5c325aad78c6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service-Clienthilfsprogramm ("DataSvcUtil.exe")
 DataSvcUtil.exe ist ein Befehlszeilentool, das von bereitgestellten [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nutzt, die eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed und generiert die Client-Datendienstklassen, die erforderlich sind, um von einer .NET Framework-Clientanwendung einen Datendienst zugreift. Dieses Hilfsprogramm kann Datenklassen mit den folgenden Metadaten-Quellen generieren:  
@@ -57,4 +58,4 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
   
 ## <a name="see-also"></a>Siehe auch  
  [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+ [Vorgehensweise: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

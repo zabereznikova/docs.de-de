@@ -8,11 +8,11 @@ ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3aeca6ef75c8527c7779eb54df7ad119bd908072
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c7c20f9b624059fa8161923f754cd2a89485499
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Datei &#39; s Öffnungsmodus Einzelbasis &#39; t in einen gültigen Wert festgelegt
 Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folgenden Tabelle sind gültige Werte für die <xref:Microsoft.VisualBasic.OpenMode> -Enumeration aufgeführt:  
@@ -30,7 +30,7 @@ Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folg
 -   Überprüfen Sie den für den Öffnungsmodus der Datei angegebenen Wert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [NOTINBUILD OpenMode-Enumeration](http://msdn.microsoft.com/en-us/e995bd42-d11f-455c-88c4-308345172633)  
- [My.Computer.FileSystem-Objekt](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+   
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
  [Lesen aus Dateien](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  [Schreiben in Dateien](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

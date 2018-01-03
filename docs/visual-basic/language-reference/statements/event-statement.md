@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  
@@ -122,7 +122,7 @@ End Event
  Drücken Sie F5, um das vorherige Beispiel auszuführen, und klicken Sie auf die Schaltfläche "mit der Bezeichnung" **starten**. Im ersten Textfeld werden die Sekunden heruntergezählt. Nach Ablauf der vollständigen Zeitspanne (10 Sekunden) wird im ersten Textfeld „Fertig“ angezeigt.  
   
 > [!NOTE]
->  Die `My.Application.DoEvents`-Methode verarbeitet Ereignisse nicht in der gleichen Weise wie das Formular. Damit das Formular die Ereignisse direkt verarbeiten kann, können Sie Multithreading verwenden. Weitere Informationen finden Sie unter [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  Die `My.Application.DoEvents`-Methode verarbeitet Ereignisse nicht in der gleichen Weise wie das Formular. Damit das Formular die Ereignisse direkt verarbeiten kann, können Sie Multithreading verwenden. Weitere Informationen finden Sie unter [Threading](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

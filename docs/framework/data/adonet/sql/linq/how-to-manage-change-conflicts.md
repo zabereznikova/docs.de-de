@@ -13,23 +13,24 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87d895c8d5531d091d773e9f2d51b89408169022
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3059adbc9cd2c67035d5f6579e292df80cd87ef3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-change-conflicts"></a>Gewusst wie: Verwalten von Änderungskonflikten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Stellt eine Auflistung von APIs können Sie ermitteln, auswerten und Beheben von Parallelitätskonflikten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: erkennen und Auflösen von Übergabekonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+ [Vorgehensweise: Erkennen und Auflösen von Übergabekonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
  Beschreibt die Erkennung und Behebung von Parallelitätskonflikten.  
   
- [Vorgehensweise: angeben, wann Parallelitätsausnahmen ausgelöst werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ [Vorgehensweise: Angeben, wann Parallelitätsausnahmen ausgelöst werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
  Beschreibt das Festlegen des Zeitpunkts für Informationen zu Parallelitätskonflikten.  
   
- [Vorgehensweise: angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ [Vorgehensweise: Angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
  Beschreibt, wie Sie festlegen, dass Attributmember auf Parallelitätskonflikte überprüft werden.  
   
  [Vorgehensweise: Abrufen von Entitätskonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
  [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
  Beschreibt, wie aktuelle Werte mit Datenbankwerten überschrieben werden.  
   
- [Vorgehensweise: Lösen von Konflikten durch Überschreiben von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
+ [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Überschreiben von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
  Beschreibt, wie aktuelle Werte durch Überschreiben von Datenbankwerten erhalten bleiben.  
   
  [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Zusammenführen von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  

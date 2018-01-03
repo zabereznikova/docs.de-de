@@ -12,11 +12,11 @@ ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: efdfa297099fb5538e7b92514c8440c2722f3fe1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 2b78eb3e5ac52ec89e810fde682249c689ba304a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
 Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -154,4 +154,4 @@ Module: CLSCompliant(True)>
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
  [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Attribute](../../../../../docs/standard/attributes/index.md)
+ [Attribute](../../../../standard/attributes/index.md)

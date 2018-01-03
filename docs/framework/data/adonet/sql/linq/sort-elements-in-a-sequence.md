@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2f4f89c1391b6582d77acccb8b256bef617ecff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a0dd445254d0434fe0825a5da0134084fbddbab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sort-elements-in-a-sequence"></a>Sortieren von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Enumerable.OrderBy%2A>-Operator, um eine Sequenz nach einem oder mehreren Schlüsseln zu sortieren.  
@@ -99,5 +100,5 @@ Verwenden Sie den <xref:System.Linq.Enumerable.OrderBy%2A>-Operator, um eine Seq
  `Carnarvon Tigers`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiele für Abfragen](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
  [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

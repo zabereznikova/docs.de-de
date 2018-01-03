@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>SQL Server-Sicherheit
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwendungen unterstützen.  
@@ -33,10 +34,10 @@ ms.lasthandoff: 11/21/2017
  In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kurz umrissen. Außerdem finden Sie hier Links zu entsprechenden Themen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation und anderen Ressourcen mit ausführlicheren Informationen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  Beschreibt die Architektur und Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
- [Anwendungssicherheitsszenarios in SQLServer](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarien für ADO.NET- und [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Anwendungen erläutert werden.  
   
  [SQL Server Express-Sicherheit](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  

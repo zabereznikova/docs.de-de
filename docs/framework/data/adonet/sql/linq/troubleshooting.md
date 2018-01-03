@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c4674acd6d097eb1cb03d5dd07b0c686404d1145
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aba9aca61497b9b3efd1419d0565bdcfcd7ee7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting"></a>Problembehandlung
 Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen auftreten können, und enthalten Vorschläge dazu, wie diese Probleme vermieden bzw. deren Auswirkungen auf andere Weise verringert werden können.  
@@ -80,5 +81,5 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
  Die generierte `OnCreated()`-Methode wird jedes Mal aufgerufen, sobald der Objektkonstruktor aufgerufen wird, beispielsweise auch dann, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] den Konstruktor aufruft, um eine Kopie für ursprüngliche Werte zu erstellen. Sie sollten dieses Verhalten berücksichtigen, wenn Sie die `OnCreated()`-Methode in einer eigenen partiellen Klasse implementieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debugging-Unterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
+ [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
  [Häufig gestellte Fragen](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

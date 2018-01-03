@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ac35edc458e370f2b7b9b116d2872d0db2da71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Eintragen von Ressourcen als Teilnehmer an einer Transaktion
 Jede an einer Transaktion teilnehmende Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Die Koordination erfolgt anhand von Benachrichtigungen, die Abonnenten übermittelt werden, die sich über den TM in eine Transaktion eingetragen haben.  
@@ -58,5 +59,5 @@ Jede an einer Transaktion teilnehmende Ressource wird von einem Ressourcen-Manag
  Die <xref:System.Transactions.Transaction>-Klasse stellt die <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>-Methode auch bereit, um eine Erweiterbare Einphaseneintragung (PSPE) vorzunehmen. Dadurch wird es einem dauerhaften RM ermöglicht, eine Transaktion zu hosten und zu "besitzen", die später bei Bedarf eskaliert werden kann, um von MSDTC verwaltet zu werden. Weitere Informationen dazu finden Sie unter [Optimierung mit einzelnen Phase Commit und heraufstufbare Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Optimierung mit einzelnen Phase Commit und heraufstufbare einzelnen Phase-Benachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Ausführen eines Commits für eine Transaktion in der Phase hat und mehreren Phasen bestehender](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

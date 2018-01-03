@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Zuordnen von CLR-Methoden zu kanonischen Funktionen
 Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine auf vielen Datenbanksystemen verbreitete Funktionalität implementieren, z. B. Zeichenfolgenbearbeitung und mathematische Funktionen. Dadurch können Entwickler für einen großen Bereich von Datenbanksystemen entwickeln. Beim Aufrufen aus einer Abfragetechnologie wie LINQ to Entities werden diese kanonischen Funktionen in die entsprechenden Speicherfunktionen des verwendeten Anbieters übersetzt. Dadurch können Funktionsaufrufe für verschiedene Datenquellen in einer allgemeinen Form ausgedrückt werden, und es werden konsistente datenquellenübergreifende Abfragemöglichkeiten bereitgestellt. Weiterhin werden die bitweisen Operatoren AND, OR, NOT und XOR kanonischen Funktionen zugeordnet, wenn der Operand ein numerischer Typ ist. Bei booleschen Operanden werden durch die bitweisen Operatoren AND, OR, NOT und XOR die logischen Operationen AND, OR, NOT und XOR ihrer Operanden berechnet. Weitere Informationen finden Sie unter [kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent-Anweisung
 Trigger deklariert ein Ereignis auf Modulebene innerhalb einer Klasse, eine Form oder ein Dokument an.  
@@ -80,7 +80,7 @@ RaiseEvent eventname[( argumentlist )]
  Drücken Sie F5, um das vorherige Beispiel auszuführen, und klicken Sie auf die Schaltfläche "mit der Bezeichnung" **starten**. Im ersten Textfeld werden die Sekunden heruntergezählt. Nach Ablauf der vollständigen Zeitspanne (10 Sekunden) wird im ersten Textfeld „Fertig“ angezeigt.  
   
 > [!NOTE]
->  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht auf genau die gleiche Weise wie das Formular. Damit wird das Formular, um die Ereignisse direkt verarbeiten, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht auf genau die gleiche Weise wie das Formular. Damit wird das Formular, um die Ereignisse direkt verarbeiten, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)  

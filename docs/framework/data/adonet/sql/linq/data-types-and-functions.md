@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af102a0d6ca8ec1092c8b0909a7817cb053ab6c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-types-and-functions"></a>Datentypen und Funktionen
 In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime (CLR) beschrieben. Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL-Abfragen zur Verfügung.  
@@ -26,16 +27,16 @@ In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstüt
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Stellt eine detaillierte Übersicht über die Zuordnungen zwischen CLR-Typen und SQL Server-Typen bereit.|  
-|[Standarddatentypen](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[Boolean-Datentypen](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
+|[SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Stellt eine detaillierte Übersicht über die Zuordnungen zwischen CLR-Typen und SQL Server-Typen bereit.|  
+|[Visual Basic-Datentypen](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
+|[Boolesche Datentypen](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[NULL-Semantik](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Stellt Links zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Themen bereit, in denen Fragen zu NULL-Werten und deren Zulässigkeit erläutert werden.|  
 |[Numerische Operatoren und Vergleichsoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[Sequenzoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[System.Convert-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[System.DateTime-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.DateTime?displayProperty=nameWithType>-Struktur.|  
 |[System.DateTimeOffset-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.DateTimeOffset?displayProperty=nameWithType>-Struktur.|  
-|["System.Math"-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
+|[System.Math-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[System.Object-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[System.String-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
 |[System.TimeSpan-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.TimeSpan?displayProperty=nameWithType>-Struktur.|  

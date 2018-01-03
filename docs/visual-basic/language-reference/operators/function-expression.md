@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
 Deklariert die Parameter und den Code, der einen Lambda-Ausdruck von Funktion definieren.  
@@ -92,7 +92,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Weitere Informationen zu Abfragemethoden, finden Sie unter [Abfragen](../../../visual-basic/language-reference/queries/queries.md). Weitere Informationen zu den Standardabfrageoperatoren, finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Weitere Informationen zu Abfragemethoden, finden Sie unter [Abfragen](../../../visual-basic/language-reference/queries/queries.md). Weitere Informationen zu den Standardabfrageoperatoren, finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  

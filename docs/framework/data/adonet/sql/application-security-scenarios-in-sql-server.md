@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Anwendungssicherheitsszenarios in SQL Server
 Für das Erstellen einer sicheren SQL Server-Clientanwendung gibt es kein Patentrezept. Jede Anwendung hat spezifische Anforderungen, eine spezielle Bereitstellungsumgebung und einen eigenen Benutzerkreis. Eine Anwendung, die zum Zeitpunkt ihrer Bereitstellung angemessen sicher ist, kann im Laufe der Zeit weniger sicher werden. Es ist unmöglich, genau vorherzusagen, welche Bedrohungen zukünftig entstehen können.  
@@ -45,29 +46,29 @@ Für das Erstellen einer sicheren SQL Server-Clientanwendung gibt es kein Patent
  Weisen Sie dem `sa`-Konto immer, auch bei Verwendung der Windows-Authentifizierung, ein starkes Kennwort zu.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQLServer](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Beschreibt, wie gespeicherte Prozeduren zur Verwaltung von Berechtigungen und zum Steuern des Datenzugriffs verwendet werden können. Die Verwendung gespeicherter Prozeduren bietet einen effektiven Schutz vor einer ganzen Reihe von Sicherheitsbedrohungen.  
   
- [Schreiben von sicherem dynamisches SQL in SQLServer](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Beschreibt Verfahren zum Schreiben von sicherem dynamischen SQL-Code unter Verwendung gespeicherter Prozeduren.  
   
- [Signieren von gespeicherten Prozeduren in SQLServer](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  Beschreibt die Vorgehensweise zum Signieren gespeicherter Prozeduren mit einem Zertifikat, sodass die Benutzer mit Daten arbeiten können, auf die sie keinen direkten Zugriff haben. Auf diese Weise können gespeicherte Prozeduren Vorgänge ausführen, die der Aufrufer seinen Berechtigungen zufolge nicht direkt ausführen darf.  
   
- [Anpassen von Berechtigungen durch Identitätswechsel in SQLServer](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  Beschreibt, wie mithilfe der EXECUTE AS-Klausel die Identität eines anderen Benutzers angenommen werden kann. Beim Identitätswechsel wechselt der Ausführungskontext vom Aufrufer zum angegebenen Benutzer.  
   
- [Erteilen von Berechtigungen auf Zeilenebene, in SQLServer](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [Gewähren zeilenspezifischer Berechtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  Beschreibt die Implementierung von zeilenspezifischen Berechtigungen zur Einschränkung des Datenzugriffs.  
   
- [Erstellen von Anwendungsrollen in SQLServer](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [Erstellen von Anwendungsrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Beschreibt die Funktionen und die Funktionalität von Anwendungsrollen.  
   
- [Aktivieren des datenbankübergreifenden Zugriffs in SQLServer](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Aktivieren des datenbankübergreifenden Zugriffs in SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Beschreibt, wie der Zugriff auf mehrere Datenbanken bereitgestellt werden kann, ohne dabei die Sicherheit zu gefährden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Security (SQL Server-Sicherheit)](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Übersicht über SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Aufgaben der Entwickler beim Überschreiben von Standardverhalten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Erzwingt die folgenden Anforderungen, nicht aber das Verhalten nicht definiert ist, diese Anforderungen nicht erfüllt sind.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Schließlich wird von der überschreibenden Methode erwartet, dass die festgestellte Operation ausgeführt wird. Die Semantik von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Operationen (direktes Laden, verzögertes Laden und <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) setzt voraus, dass der angegebene Dienst bereitgestellt wird. Wird beispielsweise beim Überschreiben eines Ladevorgangs nur eine leere Auflistung zurückgegeben, ohne den Inhalt der Datenbank zu prüfen, kann dies zu inkonsistenten Daten führen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anpassen von INSERT-, Update- und Löschvorgänge](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Anpassen von Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

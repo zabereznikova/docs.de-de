@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31da2fbc7dca4c0c2c077991ddec39e8979b08b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fadb149e92b65988b8f9f322752bc63e1ee65f19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Massenkopiervorgänge in SQL Server
 Microsoft SQL Server enthält ein beliebtes Befehlszeilentools-Hilfsprogramm, die mit dem Namen **Bcp** für schnellen Massenkopieren großer Dateiumfänge in Tabellen oder Sichten in SQL Server-Datenbanken. Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Sie verwaltete Codelösungen schreiben, durch die ähnliche Funktionen bereitgestellt werden. Es stehen auch andere Möglichkeiten zum Laden von Daten in eine SQL Server-Tabelle zur Verfügung (z. B. INSERT-Anweisungen), <xref:System.Data.SqlClient.SqlBulkCopy> weist diesen gegenüber jedoch einen deutlichen Leistungsvorteil auf.  
@@ -36,7 +37,7 @@ Microsoft SQL Server enthält ein beliebtes Befehlszeilentools-Hilfsprogramm, di
 >  Bei Verwendung von .NET Framework, Version 1.1 oder früher (nicht unterstützt die <xref:System.Data.SqlClient.SqlBulkCopy> Klasse), können Sie die SQL Server Transact-SQL ausführen **BULK INSERT** Anweisung mithilfe der <xref:System.Data.SqlClient.SqlCommand> Objekt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einrichten des massenkopierbeispiels](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
+ [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
  Beschreibt die in den Beispielen für Massenkopiervorgänge verwendeten Tabellen und stellt SQL-Skripts zum Erstellen der Tabellen in der AdventureWorks-Datenbank bereit.  
   
  [Einzelne Massenkopiervorgänge](../../../../../docs/framework/data/adonet/sql/single-bulk-copy-operations.md)  

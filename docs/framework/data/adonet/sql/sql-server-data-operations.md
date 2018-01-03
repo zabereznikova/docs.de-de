@@ -13,20 +13,21 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f40fa8a29ea1c4204c6c3c9aa10507bd0a8a4789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee19f9816650f544552a19c6b80f38d7b0ff46e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>SQL Server-Datenvorgänge in ADO.NET
 In diesem Abschnitt werden SQL Server-Funktionen und -verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Massenkopiervorgänge in SQLServer](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  Beschreibt die Massenkopierfunktionen für den .NET-Datenanbieter für SQL Server.  
   
- [Multiple Active Resultsets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  Beschreibt, wie eingerichtet werden kann, dass für eine Verbindung mehr als ein <xref:System.Data.SqlClient.SqlDataReader> geöffnet ist, wenn jede Instanz von <xref:System.Data.SqlClient.SqlDataReader> über einen separaten Befehl gestartet wird.  
   
  [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  

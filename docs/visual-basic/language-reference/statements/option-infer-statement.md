@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -68,7 +68,7 @@ IntelliSense, wenn Option Infer deaktiviert ist
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Festlegen der Option Infer in der IDE  
   
-1.  Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
 2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
   

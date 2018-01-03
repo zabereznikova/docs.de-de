@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c504d86a44437c81aa7ff556947b6ddaff6f9de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="background-information"></a>Hintergrundinformationen
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
@@ -37,7 +38,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Analysieren von LINQ to SQL-Quellcode](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Beschreibt, wie eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Zuordnung analysiert wird, indem Quellcode aus der Beispieldatenbank Northwind erzeugt und angezeigt wird.  
   
- [Anpassen von INSERT-, Update- und Löschvorgänge](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Anpassen von Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
  Beschreibt, wie Validierungscode und andere Anpassungen hinzugefügt werden.  
   
  [Datenbindung](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
@@ -49,13 +50,13 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Lokale Methodenaufrufe](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
  Beschreibt die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung für Aufrufe von lokalen Methoden.  
   
- [N-schichtige und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  Stellt ausführliche Informationen für Anwendungen mit mehreren Ebenen bereit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden.  
   
  [Objektidentität](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Beschreibt die Objektidentität im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodell und erläutert, wie sich diese Funktion von der Objektidentität in einer Datenbank unterscheidet.  
   
- [Die LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  Beschreibt das Objektmodell und seine Beziehung zum relationalen Datenmodell.  
   
  [Objektzustände und Änderungsverfolgung](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
@@ -67,7 +68,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Beschreibt Aspekte von Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die sich von Abfragen in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] unterscheiden.  
   
- [Abrufen von Objekten aus dem Identitäts-Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ [Abrufen von Objekten aus dem Identitätscache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
  Beschreibt die Typen von Abfragen, die Objekte aus dem Identitäts-Cache abrufen.  
   
  [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  

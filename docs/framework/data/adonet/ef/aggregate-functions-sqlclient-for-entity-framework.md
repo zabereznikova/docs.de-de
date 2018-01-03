@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b60cffd357022454de001986a48ef06bdd1fe3f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804acd77887c1cf05caa2004e75ef01110909490
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Aggregatfunktionen (SqlClient für Entity Framework)
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunktionen zur Verfügung. Aggregatfunktionen führen Berechnungen für eine Reihe von Eingabewerten aus und geben einen einzelnen Wert zurück. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.  
@@ -36,7 +37,7 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunk
  [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
 |`MAX(` `expression` `)`|Gibt den Maximalwert der Auflistung zurück.<br /><br /> **Argumente**<br /><br /> Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.<br /><br /> **Rückgabewert**<br /><br /> Der `expression`-Typ.<br /><br /> **Beispiel**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  
-|`MIN(` `expression` `)`|Gibt den Minimalwert in einer Auflistung zurück.<br /><br /> **Argumente**<br /><br /> Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,<br /><br /> `Binary`.<br /><br /> **Rückgabewert**<br /><br /> Der `expression`-Typ.<br /><br /> **Beispiel**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
+|`MIN(` `expression` `)`|Gibt den Minimalwert in einer Auflistung zurück.<br /><br /> **Argumente**<br /><br /> Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,<br /><br /> `Binary`<br /><br /> **Rückgabewert**<br /><br /> Der `expression`-Typ.<br /><br /> **Beispiel**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]|  
 |`STDEV(` `expression` `)`|Gibt die statistische Standardabweichung aller Werte im angegebenen Ausdruck zurück.<br /><br /> **Argumente**<br /><br /> Eine Auflistung (`Double`).<br /><br /> **Rückgabewert**<br /><br /> Ein `Double`.<br /><br /> **Beispiel**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]|  
@@ -57,4 +58,4 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunk
   
 ## <a name="see-also"></a>Siehe auch  
  [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Aggregieren von kanonischen Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+ [Aggregieren kanonischer Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

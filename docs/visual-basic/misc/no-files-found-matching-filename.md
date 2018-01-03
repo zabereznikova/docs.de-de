@@ -9,11 +9,11 @@ ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e47e8b75173a431c2b2948c8eae9de9497d4b70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3be65a875215cfc46ef5d0b4f9518574fe541350
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="no-files-found-matching-39ltfilenamegt39"></a>Es wurden keine Dateien gefunden, übereinstimmende &#39; &lt;Filename&gt;&#39;
 Der Dateiname ist falsch, oder die Datei ist nicht vorhanden.  
@@ -23,4 +23,4 @@ Der Dateiname ist falsch, oder die Datei ist nicht vorhanden.
 1.  Stellen Sie sicher, dass der Dateiname richtig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [My.Computer.FileSystem-Objekt](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

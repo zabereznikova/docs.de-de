@@ -15,11 +15,11 @@ ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1cfdb94ebafa7d6a14253aeb59ab98b3a953fe4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e701addb31b361e55f2761f441c23deaef7c10d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optionexplicit"></a>/optionexplicit
 Bewirkt, dass der Compiler gemeldet, wenn keine Variablen deklariert werden, bevor sie verwendet werden.  
@@ -39,7 +39,7 @@ Bewirkt, dass der Compiler gemeldet, wenn keine Variablen deklariert werden, bev
   
 ### <a name="to-set-optionexplicit-in-the-visual-studio-ide"></a>/ Optionexplicit in der Visual Studio-IDE festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
 2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
   

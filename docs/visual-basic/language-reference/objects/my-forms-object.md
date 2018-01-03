@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms-Objekt
 Stellt Eigenschaften für den Zugriff auf eine Instanz jedes Windows Form, die im aktuellen Projekt deklariert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `My.Forms` Objekt enthält eine Instanz von jeder Form im aktuellen Projekt. Der Name der Eigenschaft ist identisch mit den Namen des Formulars, das die Eigenschaft zugreift. Informationen zum Hinzufügen von Formen zu einem Projekt finden Sie unter [wie: Hinzufügen von Windows Forms zu einem Projekt](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Die `My.Forms` Objekt enthält eine Instanz von jeder Form im aktuellen Projekt. Der Name der Eigenschaft ist identisch mit den Namen des Formulars, das die Eigenschaft zugreift.   
   
  Sie können die bereitgestellten Formulare zugreifen, die `My.Forms` Objekt mit dem Namen des Formulars, ohne Qualifizierung. Da der Eigenschaftsname des Formulars Typnamen identisch ist, können Sie diese auf einem Formular zugreifen, als ob es sich um eine Standardinstanz hatte. `My.Forms.Form1.Show` entspricht beispielsweise `Form1.Show`.  
   
@@ -53,7 +53,7 @@ Stellt Eigenschaften für den Zugriff auf eine Instanz jedes Windows Form, die i
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- Für dieses Beispiel funktioniert, muss das Projekt ein Formular mit dem Namen verfügen `SidebarMenu`. Weitere Informationen finden Sie unter [wie: Hinzufügen von Windows Forms zu einem Projekt](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Für dieses Beispiel funktioniert, muss das Projekt ein Formular mit dem Namen verfügen `SidebarMenu`.  
   
  Dieser Code funktioniert nur in einem Windows-Anwendungsprojekt.  
   
@@ -76,7 +76,6 @@ Stellt Eigenschaften für den Zugriff auf eine Instanz jedes Windows Form, die i
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [Objekte](../../../visual-basic/language-reference/objects/index.md)  
- [Vorgehensweise: Hinzufügen von Windows Forms zu einem Projekt](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [Zugreifen auf Anwendungsformulare](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

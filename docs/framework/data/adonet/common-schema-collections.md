@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
 Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbietern für .NET Framework implementierten Schemaauflistungen. Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben. In diesen Auflistungen werden alle erforderlichen Spalten beschrieben. Anbieter können ggf. zusätzliche Spalten hinzufügen. So fügen beispielsweise `SqlClient` und `OracleClient` der Auflistung der Einschränkungen "ParameterName" hinzu.  
@@ -31,7 +32,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|Der Name der Auflistung Übergabe an die **GetSchema** Methode zum Zurückgeben der Auflistung.|  
+|CollectionName|Zeichenfolge|Der Name der Auflistung Übergabe an die **GetSchema** Methode zum Zurückgeben der Auflistung.|  
 |NumberOfRestrictions|int|Die Anzahl der Einschränkungen, die für die Auflistung angegeben werden können.|  
 |NumberOfIdentifierParts|int|Die Anzahl der Bestandteile im zusammengesetzten Bezeichner/Datenbank-Objektnamen. In SQL Server entspricht dies beispielsweise 3 für Tabellen und 4 für Spalten. In Oracle entspricht dies 2 für Tabellen und 3 für Spalten.|  
   
@@ -84,7 +85,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 |IsConcurrencyType|bool|true – Der Datentyp wird immer dann von der Datenbank aktualisiert, wenn die Zeile geändert wird und sich der Wert der Spalte von allen vorherigen Werten unterscheidet.<br /><br /> false – Der Datentyp wird von der Datenbank nicht bei jeder Änderung der Zeile aktualisiert.<br /><br /> DBNull.Value – Die Datenbank unterstützt diese Art von Datentyp nicht.|  
 |IsLiteralSupported|bool|true – Der Datentyp kann als Literal ausgedrückt werden.<br /><br /> true – Der Datentyp kann nicht als Literal ausgedrückt werden.|  
 |LiteralPrefix|string|Das auf ein angegebenes Literal angewendete Präfix.|  
-|LiteralSuffix|string|Das auf ein angegebenes Literal angewendete Suffix.|  
+|LiteralSuffix|Zeichenfolge|Das auf ein angegebenes Literal angewendete Suffix.|  
 |NativeDataType|Zeichenfolge|Bei "NativeDataType" handelt es sich um eine OLE DB-spezifische Spalte zum Verfügbarmachen des OLE DB-Typs des Datentyps.|  
   
 ## <a name="restrictions"></a>Beschränkungen  
@@ -102,9 +103,9 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
-|ReservedWord|string|Anbieterspezifische reservierte Wort.|  
+|ReservedWord|Zeichenfolge|Anbieterspezifische reservierte Wort.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- ["GetSchema" und Schemaauflistungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

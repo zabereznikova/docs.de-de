@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1f29cbd51c036ecc15306f67fdd32dee6a4f1b68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -128,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Vergleichen von NULL-Werten mit "SqlTypes" und CLR-Typen  
- Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle <xref:System.Data.SqlTypes>`Equals`-Methoden verwenden für die Auswertung von NULL-Werten die Datenbanksemantik: Wenn mindestens einer der Werte NULL ist, ergibt der Vergleich NULL. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
+ Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle von der <xref:System.Data.SqlTypes> `Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
   
  Das folgende Beispiel zeigt den Unterschied in den Ergebnissen zwischen der `SqlString.Equals`-Methode und der `String.Equals`-Methode, wenn beiden Methoden ein Paar von NULL-Werten und dann ein Paar leerer Zeichenfolgen übergeben wird.  
   

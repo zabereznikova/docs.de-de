@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>Sicherer Datenzugriff
 Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsmechanismen kennen, die im zugrunde liegenden Datenspeicher oder der zugrundeliegenden Datenbank verfügbar sind. Außerdem müssen Sie die Auswirkungen anderer in Ihrer Anwendung enthaltenen Funktionen oder Komponenten auf die Sicherheit berücksichtigen.  
@@ -35,8 +36,8 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 |--------------|-----------------|  
 |[Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Beschreibt bewährte Methoden und Techniken zum Schützen von Verbindungsinformationen, z. B. das Verwenden der geschützten Konfiguration zur Verschlüsselung von Verbindungszeichenfolgen.|  
 |[Empfehlungen für die Daten für Zugriffsmethoden](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
-|[Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
-|[Übersicht über SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Beschreibt die SQL Server-Sicherheitsarchitektur.|  
+|[Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
+|[Übersicht über die SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Beschreibt die SQL Server-Sicherheitsarchitektur.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Parametrisierte Befehle und SQL Injection  
  Die Verwendung parametrisierter Befehle hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl in eine SQL-Anweisung einschleust, der die Sicherheit auf dem Server gefährdet. Parametrisierte Befehle schützen vor solchen Angriffen, indem sie dafür sorgen, dass Werte aus einer externen Quelle lediglich als Werte und nicht als Bestandteil einer Transact-SQL-Anweisung weitergeleitet werden. In einen Wert eingefügte Transact-SQL-Befehle werden daher nicht in der Datenquelle ausgeführt. Stattdessen werden sie nur als Parameterwert ausgewertet. Parametrisierte Befehle sind aber nicht nur aus Sicherheitsgründen vorteilhaft, sondern sie stellen auch eine bequeme Methode zum Organisieren von Werten dar, die mit einer Transact-SQL-Anweisung weitergeleitet bzw. an eine gespeicherte Prozedur übergeben werden.  
@@ -47,7 +48,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 |--------------|-----------------|  
 |[DataAdapter-Parameter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Beschreibt die Verwendung von Parametern mit einem `DataAdapter`.|  
 |[Ändern von Daten mit gespeicherten Prozeduren](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Beschreibt das Angeben von Parametern und das Abrufen von Rückgabewerten.|  
-|[Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQLServer](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Beschreibt die Verwendung gespeicherter SQL Server-Prozeduren zum Kapseln des Datenzugriffs.|  
+|[Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Beschreibt die Verwendung gespeicherter SQL Server-Prozeduren zum Kapseln des Datenzugriffs.|  
   
 ## <a name="script-exploits"></a>Skriptexploits  
  Ein Skriptexploit ist eine andere Form der Einschleusung, bei der in eine Webseite schädliche Zeichen eingeschleust werden. Der Browser überprüft die eingefügten Zeichen nicht und verarbeitet sie als Teil der Seite.  
@@ -105,5 +106,5 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
  [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Empfehlungen für die Daten für Zugriffsmethoden](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

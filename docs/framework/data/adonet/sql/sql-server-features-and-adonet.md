@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
 In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entwicklung von Datenbankanwendungen mit ADO.NET beschrieben.  
@@ -29,28 +30,28 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
 1.  [Entwicklung (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Beim Aufzählen der Instanzen von SQLServer (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [Aufzählen von SQL Server-Instanzen (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Beschreibt das Auflisten aktiver Instanzen von SQL Server.  
   
- [Anbieterstatistiken für SQLServer](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [Anbieterstatistiken für SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Beschreibt Unterstützung für das Abrufen von SQL Server-Laufzeitstatistik.  
   
  [SQL Server Express-Benutzerinstanzen](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Beschreibt die Unterstützung für SQL Server Express-Benutzerinstanzen.  
   
- [Datenbankspiegelung in SQLServer](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [Datenbankspiegelungen in SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  Beschreibt die Funktionen zum Spiegeln von Datenbanken.  
   
- [SQL Server Common Language Runtime-Integration](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [Common Language Runtime-Integration in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  Beschreibt, wie von einem CLR-Datenbankobjekt (Common Language Runtime) in SQL Server aus auf Daten zugegriffen werden kann.  
   
- [Abfragebenachrichtigungen in SQLServer](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  Beschreibt, wie .NET Framework-Anwendungen Benachrichtigungen vom SQL Server anfordern können, wenn Daten geändert wurden.  
   
- [Snapshot-Isolation in SQLServer](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ [Momentaufnahmenisolation in SQL Server](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  Beschreibt die Unterstützung für Momentaufnahmenisolation, einem Zeilenversionsmechanismus, der entworfen wurde, um das Blockieren in Transaktionsanwendungen zu reduzieren.  
   
- [SqlClient-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Beschreibt die SqlClient-Unterstützung für AlwaysOn-Verfügbarkeitsgruppen mit hoher Verfügbarkeit und Notfallwiederherstellung.  
   
  [SqlClient-Unterstützung für LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  

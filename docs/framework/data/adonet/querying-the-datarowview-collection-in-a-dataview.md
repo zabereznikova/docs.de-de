@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b17a489552e7b2bcb6044fce99e5f526b8293a25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 02b32157fe88bddfd9a777042f6da87aa48ca551
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>Abfragen der DataRowView-Auflistung in einer DataView
 Das <xref:System.Data.DataView>-Objekt macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. <xref:System.Data.DataRowView> stellt eine angepasste Ansicht eines <xref:System.Data.DataRow>-Objekts dar und zeigt eine spezielle Version dieses <xref:System.Data.DataRow>-Objekts in einem Steuerelement an. Nur eine Version einer <xref:System.Data.DataRow> kann durch ein Steuerelement, wie z. B. <xref:System.Windows.Forms.DataGridView>, angezeigt werden. Sie können auf die <xref:System.Data.DataRow> zugreifen, die von der <xref:System.Data.DataRowView> durch die <xref:System.Data.DataRowView.Row%2A>-Eigenschaft der <xref:System.Data.DataRowView> bereitgestellt wird. Beim Anzeigen von Werten mit einer <xref:System.Data.DataRowView> legt die <xref:System.Data.DataView.RowStateFilter%2A>-Eigenschaft fest, welche Zeilenversion der zugrunde liegenden <xref:System.Data.DataRow> verfügbar gemacht wird. Informationen zum Zugreifen auf unterschiedliche Zeilenversionen, die mit einem <xref:System.Data.DataRow>, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Da die Auflistung der <xref:System.Data.DataRowView> von verfügbar gemachten Objekten der <xref:System.Data.DataView> ist aufzählbar ist, können Sie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] für das sie Abfragen.  

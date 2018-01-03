@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>Sichern von ADO.NET-Anwendungen
 Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fallstricke bei der Codierung zu umgehen, wie die Nichtvalidierung von Benutzereingaben. Eine Anwendung, die auf Daten zugreift, verfügt über viele mögliche Schwachstellen, über die ein Hacker vertrauliche Daten abrufen, manipulieren oder vernichten kann. Es ist daher unerlässlich, alle Sicherheitsaspekte zu verstehen, und zwar beginnend bei der Erstellung von Gefahrenmodellen während des Anwendungsentwurfs bis hin zur eigentlichen Bereitstellung der Anwendung und ihrem laufenden Betrieb.  
@@ -27,7 +28,7 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  Das Schreiben von sicherem Code schützt jedoch nicht vor selbst zu verantwortenden Sicherheitslücken beim Arbeiten mit nicht verwalteten Ressourcen, wie Datenbanken. Die meisten Serverdatenbanken, wie SQL Server, verfügen über eigene Sicherheitssysteme, die bei korrekter Implementierung für mehr Sicherheit sorgen. Aber auch Datenquellen mit einem robusten Sicherheitssystem können zum Angriffsopfer werden, wenn sie nicht ordnungsgemäß konfiguriert werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Sicherheit (Übersicht)](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/data/adonet/security-overview.md)  
  Enthält Empfehlungen für das Entwerfen sicherer ADO.NET-Anwendungen.  
   
  [Sicherer Datenzugriff](../../../../docs/framework/data/adonet/secure-data-access.md)  
@@ -39,14 +40,14 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  [Codezugriffssicherheit und ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Beschreibt, wie CAS zum Schutz von ADO.NET-Code beitragen kann. Erläutert außerdem das Arbeiten mit teilweiser Vertrauenswürdigkeit.  
   
- [Datenschutz und-Sicherheit](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Datenschutz und -sicherheit](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  Beschreibt Verschlüsselungsmöglichkeiten für ADO.NET-Anwendungen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Beschreibt SQL Server-Sicherheitsfunktionen aus Entwicklersicht.  
   
- [Überlegungen zur Sicherheit](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Sicherheitsüberlegungen](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Beschreibt Sicherheitsfunktionen für Entity Framework-Anwendungen.  
   
  [Sicherheit](../../../../docs/standard/security/index.md)  

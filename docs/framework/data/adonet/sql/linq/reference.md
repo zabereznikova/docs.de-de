@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>Verweis
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
@@ -28,7 +29,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Beschreibt, wie common Language Runtime (CLR)-Konstrukte haben die entsprechenden Ausdrücke in SQL nur, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Konvertierung im Übersetzungsmodul explizit bereitgestellt wurde.  
   
- [Attributbasiertes zuordnen](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  Beschreibt die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] attributbasierten Ansatz für die Zuordnung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell mit einer SQL Server-Datenbank.  
   
  [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
@@ -43,7 +44,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  [SQL Server Compact und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  Beschreibt, wie sich [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] von [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] unterscheidet (in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen).  
   
- [Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standardabfrageoperatoren zu SQL-Befehlen übersetzt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

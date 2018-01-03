@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next-Anweisung (Visual Basic)
 Wird eine Gruppe von Anweisungen für jedes Element in einer Auflistung wiederholt.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Weitere Beispiele finden Sie unter [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) und [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Weitere Beispiele finden Sie unter [Sammlungen](../../../standard/collections/index.md) und [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Nested Loops  
  Sie können schachteln `For Each` Schleifen, indem Sie eine Schleife in eine andere einfügen.  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   Es gibt eine Endlosschleife, also eine Schleife, die eine große oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie diese Situation erkennen, können Sie `Exit For` um die Schleife zu verlassen. Weitere Informationen finden Sie unter [werden... Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="iterators"></a>Iteratoren  
+## <a name="iterators"></a>Iterators  
  Sie verwenden eine *Iterator* auf eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Funktion oder ein `Get` Accessor. Er verwendet eine `Yield` Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
   
  Sie rufen den Iterator mithilfe einer `For Each...Next` Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield` -Anweisung erreicht wird, in der Iterator, der Ausdruck in der `Yield` Anweisung zurückgegeben wird, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [Yield-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md), und [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md), [Yield-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md), und [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Technische Implementierung  
  Wenn eine `For Each`...`Next` Anweisung wird ausgeführt, Visual Basic wertet die Auflistung nur einmal, bevor die Schleife gestartet wird. Wenn der Anweisungsblock ändert `element` oder `group`, diese Änderungen wirken sich nicht auf die Iteration der Schleife.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Sammlungen](../../../standard/collections/index.md)  
  [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Schleifenstruktur](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

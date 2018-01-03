@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05b87dfbb54de87ce7591dd6363d56ab69ebb8a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist ein Satz von Technologien in ADO.NET, der die Entwicklung datenorientierter Softwareanwendungen unterstützt. Architekten und Entwickler datenorientierter Anwendungen mussten zwei sehr verschiedene Ziele erreichen. Sie mussten die Entitäten, die Beziehungen und die Logik der zu lösenden Geschäftsprobleme modellieren und mit den zum Speichern und Abrufen von Daten verwendeten Datenmodulen arbeiten. Die Daten können auf mehrere Speichersysteme verteilt sein, die jeweils über eigene Protokolle verfügen. Selbst Anwendungen, die mit nur einem Speichersystem arbeiten, müssen ein ausgewogenes Verhältnis zwischen den Anforderungen des Speichersystems und den Anforderungen beim Schreiben von effizientem und verwaltbarem Anwendungscode finden.  
@@ -70,9 +71,9 @@ ms.lasthandoff: 10/18/2017
 ## <a name="accessing-and-changing-entity-data"></a>Zugreifen auf und Ändern von Entitätsdaten  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist mehr als nur eine weitere objektrelationale Mappinglösung. Es dient im Wesentlichen dazu, Anwendungen den Zugriff auf und die Änderung von Daten zu ermöglichen, die als Entitäten und Beziehungen im konzeptionellen Modell dargestellt werden. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet die Informationen in den Modell- und Zuordnungsdateien, um Objektabfragen von Entitätstypen, die im konzeptionellen Modell dargestellt werden, in datenquellenspezifische Abfragen zu übersetzen. Abfrageergebnisse in Objekte materialisiert werden, die die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet. Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bietet die folgenden Möglichkeiten, ein konzeptionelles Modell abzufragen und Objekte zurückzugeben:  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Bietet Language-Integrated Query (LINQ)-Unterstützung für Abfragen von Entitätstypen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] Bietet Language-Integrated Query (LINQ)-Unterstützung für Abfragen von Entitätstypen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Ein speicherunabhängiger Dialekt von SQL Server, die direkt mit Entitäten im konzeptionellen Modell arbeitet und unterstützt [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Konzepte. [!INCLUDE[esql](../../../../../includes/esql-md.md)]wird verwendet, mit Objektabfragen und Abfragen, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Übersicht über Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] Ein speicherunabhängiger Dialekt von SQL Server, die direkt mit Entitäten im konzeptionellen Modell arbeitet und unterstützt [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Konzepte. [!INCLUDE[esql](../../../../../includes/esql-md.md)]wird verwendet, mit Objektabfragen und Abfragen, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Übersicht über Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitätsabfragen in datenquellenspezifische Abfragen und gibt einen Datenleser zurück, mit dem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Entitätsdaten in Objekte umsetzt. Bei der Objektmaterialisierung nicht erforderlich ist, der EntityClient-Anbieter kann auch verwendet werden wie ein [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Datenanbieter, indem er Anwendungen das Ausführen [!INCLUDE[esql](../../../../../includes/esql-md.md)] abgefragt und den Reader zurückgegebene schreibgeschützte Daten nutzen. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   

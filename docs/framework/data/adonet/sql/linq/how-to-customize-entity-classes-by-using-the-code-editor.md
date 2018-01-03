@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d5586e28e784c43488245db814abf32d863232fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68a28e25cf07ec3d84cc7bb12734594ca55e7e0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Gewusst wie: Anpassen von Entitätsklassen mit dem Code-Editor
 Entwickler, die mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] arbeiten, können den [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] verwenden, um Entitätsklassen zu erstellen oder anzupassen.  
@@ -32,7 +33,7 @@ Entwickler, die mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-cu
  [Vorgehensweise: Darstellen von Tabellen als Klassen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  Beschreibt die Verwendung von <xref:System.Data.Linq.Mapping.TableAttribute>.  
   
- [Vorgehensweise: Darstellen von Spalten als Klassenmember](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [: Darstellen von Spalten als Klassenmember](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  Beschreibt die Verwendung von <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
  [Vorgehensweise: Darstellen von Primärschlüsseln](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
@@ -56,13 +57,13 @@ Entwickler, die mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-cu
  [Vorgehensweise: Angeben von privaten Speicherfeldern](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  Beschreibt die Verwendung von <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
- [Vorgehensweise: Darstellen von Spalten als Null-Werte zulassen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [Vorgehensweise: Darstellen von Spalten für die Zulassung von NULL-Werten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  Beschreibt die Verwendung von <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
  [Vorgehensweise: Zuordnen von Vererbungshierarchien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
  Beschreibt die erforderlichen Zuordnungen für das Definieren einer Vererbungshierarchie.  
   
- [Vorgehensweise: Angeben von Parallelitätskonfliktüberprüfungen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [: Angeben von Parallelitätskonfliktüberprüfungen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
  Beschreibt die Verwendung von <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  

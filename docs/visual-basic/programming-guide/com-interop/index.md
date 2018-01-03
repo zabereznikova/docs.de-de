@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
 Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.  
@@ -55,7 +55,7 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  Beschreibt die Verwendung vorhandener COM-Objekte als Grundlage für neue Objekte.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Interoperabilität mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md)  
+ [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md)  
  Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.  
   
  [Verfügbarmachen von COM-Komponenten für .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Beschreibt die Vorbereitung und Verwendung von verwalteten Typen von COM.  
   
- [Anwenden von Interop-Attributen](../../../../docs/framework/interop/applying-interop-attributes.md)  
+ [Anwenden von Interop-Attributen](../../../framework/interop/applying-interop-attributes.md)  
  Behandelt Attribute, die Sie verwenden können, wenn Sie mit nicht verwaltetem Code arbeiten.
