@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 19058308876f80afdbaec73583242aa8ad3c33cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d155a12a8b281e427f00706cbc6e10a80804c7c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugassembly2isfullytrusted-method"></a><span data-ttu-id="6d50c-102">ICorDebugAssembly2::IsFullyTrusted-Methode</span><span class="sxs-lookup"><span data-stu-id="6d50c-102">ICorDebugAssembly2::IsFullyTrusted Method</span></span>
-<span data-ttu-id="6d50c-103">Ruft einen Wert, der angibt, ob die Assembly volle Vertrauenswürdigkeit von der Laufzeit-Sicherheitssystem erteilt wurde.</span><span class="sxs-lookup"><span data-stu-id="6d50c-103">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>  
+# <a name="icordebugassembly2isfullytrusted-method"></a><span data-ttu-id="6135d-102">ICorDebugAssembly2::IsFullyTrusted-Methode</span><span class="sxs-lookup"><span data-stu-id="6135d-102">ICorDebugAssembly2::IsFullyTrusted Method</span></span>
+<span data-ttu-id="6135d-103">Ruft einen Wert, der angibt, ob die Assembly volle Vertrauenswürdigkeit von der Laufzeit-Sicherheitssystem erteilt wurde.</span><span class="sxs-lookup"><span data-stu-id="6135d-103">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d50c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6d50c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6135d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6135d-104">Syntax</span></span>  
   
 ```  
 HRESULT IsFullyTrusted(  
@@ -38,18 +39,18 @@ HRESULT IsFullyTrusted(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6d50c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6d50c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6135d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6135d-105">Parameters</span></span>  
  `pbFullyTrusted`  
- <span data-ttu-id="6d50c-106">[out] `true` Wenn die Assembly volle Vertrauenswürdigkeit von der Laufzeit-Sicherheitssystem; erteilt wurde, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="6d50c-106">[out] `true` if the assembly has been granted full trust by the runtime security system; otherwise, `false`.</span></span>  
+ <span data-ttu-id="6135d-106">[out] `true` Wenn die Assembly volle Vertrauenswürdigkeit von der Laufzeit-Sicherheitssystem; erteilt wurde, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="6135d-106">[out] `true` if the assembly has been granted full trust by the runtime security system; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6d50c-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6d50c-107">Remarks</span></span>  
- <span data-ttu-id="6d50c-108">Diese Methode gibt, dass ein CORDBG_E_NOTREADY-HRESULT zurück, wenn die Sicherheitsrichtlinie für die Assembly noch nicht aufgelöst, d. h., wenn kein Code in der Assembly wurde noch ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="6d50c-108">This method returns an HRESULT of CORDBG_E_NOTREADY if the security policy for the assembly has not yet been resolved, that is, if no code in the assembly has been run yet.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6135d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6135d-107">Remarks</span></span>  
+ <span data-ttu-id="6135d-108">Diese Methode gibt, dass ein CORDBG_E_NOTREADY-HRESULT zurück, wenn die Sicherheitsrichtlinie für die Assembly noch nicht aufgelöst, d. h., wenn kein Code in der Assembly wurde noch ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="6135d-108">This method returns an HRESULT of CORDBG_E_NOTREADY if the security policy for the assembly has not yet been resolved, that is, if no code in the assembly has been run yet.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d50c-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6d50c-109">Requirements</span></span>  
- <span data-ttu-id="6d50c-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d50c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6135d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6135d-109">Requirements</span></span>  
+ <span data-ttu-id="6135d-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6135d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d50c-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6d50c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6135d-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6135d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6d50c-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d50c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6135d-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6135d-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6d50c-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d50c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6135d-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6135d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

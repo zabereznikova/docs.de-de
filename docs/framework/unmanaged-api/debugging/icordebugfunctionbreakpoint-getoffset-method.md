@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c7a93781a4ef2eaa89372c5efd6e311ac211c313
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ca890b20451b0fab6145d8b8577f705bf3fa3202
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="e7716-102">ICorDebugFunctionBreakpoint::GetOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="e7716-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
-<span data-ttu-id="e7716-103">Ruft den Offset des Haltepunkts innerhalb der Funktion ab.</span><span class="sxs-lookup"><span data-stu-id="e7716-103">Gets the offset of the breakpoint within the function.</span></span>  
+# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="fe9ec-102">ICorDebugFunctionBreakpoint::GetOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="fe9ec-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
+<span data-ttu-id="fe9ec-103">Ruft den Offset des Haltepunkts innerhalb der Funktion ab.</span><span class="sxs-lookup"><span data-stu-id="fe9ec-103">Gets the offset of the breakpoint within the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7716-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7716-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe9ec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fe9ec-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOffset (  
@@ -38,15 +39,15 @@ HRESULT GetOffset (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e7716-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e7716-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fe9ec-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="fe9ec-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="e7716-106">[out] Ein Zeiger auf den Offset des Haltepunkts.</span><span class="sxs-lookup"><span data-stu-id="e7716-106">[out] A pointer to the offset of the breakpoint.</span></span>  
+ <span data-ttu-id="fe9ec-106">[out] Ein Zeiger auf den Offset des Haltepunkts.</span><span class="sxs-lookup"><span data-stu-id="fe9ec-106">[out] A pointer to the offset of the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7716-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e7716-107">Requirements</span></span>  
- <span data-ttu-id="e7716-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7716-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe9ec-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe9ec-107">Requirements</span></span>  
+ <span data-ttu-id="fe9ec-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe9ec-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7716-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7716-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fe9ec-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe9ec-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7716-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7716-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fe9ec-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe9ec-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7716-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7716-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fe9ec-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe9ec-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
