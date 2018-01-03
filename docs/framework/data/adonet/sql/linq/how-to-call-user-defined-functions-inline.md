@@ -16,28 +16,29 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b39d71cd0f9aee855133c646fbec6a7f4f6f3c40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ff5d344c5c6f8c580dd521ffc97274f00935b434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="835fd-102">Gewusst wie: Inline-Aufrufen von benutzerdefinierten Funktionen</span><span class="sxs-lookup"><span data-stu-id="835fd-102">How to: Call User-Defined Functions Inline</span></span>
-<span data-ttu-id="835fd-103">Obwohl Sie benutzerdefinierte Funktionen inline aufrufen können, werden in einer Abfrage enthaltene Funktionen, deren Ausführung umgeleitet wird, bis zur Ausführung der Abfrage verzögert.</span><span class="sxs-lookup"><span data-stu-id="835fd-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="835fd-104">Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="835fd-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
+# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="b7aae-102">Gewusst wie: Inline-Aufrufen von benutzerdefinierten Funktionen</span><span class="sxs-lookup"><span data-stu-id="b7aae-102">How to: Call User-Defined Functions Inline</span></span>
+<span data-ttu-id="b7aae-103">Obwohl Sie benutzerdefinierte Funktionen inline aufrufen können, werden in einer Abfrage enthaltene Funktionen, deren Ausführung umgeleitet wird, bis zur Ausführung der Abfrage verzögert.</span><span class="sxs-lookup"><span data-stu-id="b7aae-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="b7aae-104">Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="b7aae-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- <span data-ttu-id="835fd-105">Wenn Sie die gleiche Funktion außerhalb einer Abfrage ausführen, erstellt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine einfache Abfrage aus der call expression-Methode.</span><span class="sxs-lookup"><span data-stu-id="835fd-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="835fd-106">Folgendes befindet sich in der SQL-Syntax (der `@p0`-Parameter ist an die übergebene Konstante gebunden):</span><span class="sxs-lookup"><span data-stu-id="835fd-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
+ <span data-ttu-id="b7aae-105">Wenn Sie die gleiche Funktion außerhalb einer Abfrage ausführen, erstellt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine einfache Abfrage aus der call expression-Methode.</span><span class="sxs-lookup"><span data-stu-id="b7aae-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="b7aae-106">Folgendes befindet sich in der SQL-Syntax (der `@p0`-Parameter ist an die übergebene Konstante gebunden):</span><span class="sxs-lookup"><span data-stu-id="b7aae-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
   
 ```  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="835fd-107"> erstellt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="835fd-107"> creates the following:</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b7aae-107"> erstellt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="b7aae-107"> creates the following:</span></span>  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="835fd-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="835fd-108">Example</span></span>  
- <span data-ttu-id="835fd-109">Im folgenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfrage, sehen Sie eine Inline aufrufen, an die Methode generierten User-defined Function, `ReverseCustName`.</span><span class="sxs-lookup"><span data-stu-id="835fd-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="835fd-110">Die Funktion wird nicht sofort ausgeführt, da die Abfrageausführung verzögert wird.</span><span class="sxs-lookup"><span data-stu-id="835fd-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="835fd-111">Die für diese Abfrage erstellte SQL-Anweisung wird in einen Aufruf der benutzerdefinierten Funktion in der Datenbank übersetzt (siehe SQL-Code nach der Abfrage).</span><span class="sxs-lookup"><span data-stu-id="835fd-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
+## <a name="example"></a><span data-ttu-id="b7aae-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b7aae-108">Example</span></span>  
+ <span data-ttu-id="b7aae-109">Im folgenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfrage, sehen Sie eine Inline aufrufen, an die Methode generierten User-defined Function, `ReverseCustName`.</span><span class="sxs-lookup"><span data-stu-id="b7aae-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="b7aae-110">Die Funktion wird nicht sofort ausgeführt, da die Abfrageausführung verzögert wird.</span><span class="sxs-lookup"><span data-stu-id="b7aae-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="b7aae-111">Die für diese Abfrage erstellte SQL-Anweisung wird in einen Aufruf der benutzerdefinierten Funktion in der Datenbank übersetzt (siehe SQL-Code nach der Abfrage).</span><span class="sxs-lookup"><span data-stu-id="b7aae-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -48,5 +49,5 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="835fd-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="835fd-112">See Also</span></span>  
- [<span data-ttu-id="835fd-113">Benutzerdefinierte Funktionen</span><span class="sxs-lookup"><span data-stu-id="835fd-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="b7aae-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7aae-112">See Also</span></span>  
+ [<span data-ttu-id="b7aae-113">Benutzerdefinierte Funktionen</span><span class="sxs-lookup"><span data-stu-id="b7aae-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

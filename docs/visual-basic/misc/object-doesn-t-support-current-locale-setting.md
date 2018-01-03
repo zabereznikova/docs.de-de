@@ -9,19 +9,19 @@ ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d0ebd93efeebc46481eba7619182796a01cf28fc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72dc333cc6bf767238a114a68cd3f2018724b75
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a><span data-ttu-id="ee524-102">Objekt ist nicht &#39; t Support aktuellen Gebietsschema festlegen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee524-102">Object doesn&#39;t support current locale setting (Visual Basic)</span></span>
-<span data-ttu-id="ee524-103">Sie haben versucht, auf ein Objekt zuzugreifen, das die Gebietsschemaeinstellung für das aktuelle Projekt nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ee524-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
+# <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a><span data-ttu-id="29e1a-102">Objekt ist nicht &#39; t Support aktuellen Gebietsschema festlegen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29e1a-102">Object doesn&#39;t support current locale setting (Visual Basic)</span></span>
+<span data-ttu-id="29e1a-103">Sie haben versucht, auf ein Objekt zuzugreifen, das die Gebietsschemaeinstellung für das aktuelle Projekt nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="29e1a-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ee524-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="ee524-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="29e1a-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="29e1a-104">To correct this error</span></span>  
   
--   <span data-ttu-id="ee524-105">Überprüfen Sie, welche Gebietsschemaeinstellungen das Objekt unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ee524-105">Check which locale settings the object supports.</span></span>  
+-   <span data-ttu-id="29e1a-105">Überprüfen Sie, welche Gebietsschemaeinstellungen das Objekt unterstützt.</span><span class="sxs-lookup"><span data-stu-id="29e1a-105">Check which locale settings the object supports.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee524-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ee524-106">See Also</span></span>  
- [<span data-ttu-id="ee524-107">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="ee524-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
- [<span data-ttu-id="ee524-108">PAVEOVER Produktsupport und Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="ee524-108">PAVEOVER Product Support and Accessibility</span></span>](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="29e1a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="29e1a-106">See Also</span></span>  
+ [<span data-ttu-id="29e1a-107">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="29e1a-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+

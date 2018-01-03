@@ -16,27 +16,28 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d524daab97be56bc0b6b428b41dc1f3db2350f95
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27e3d21e42dbf841768e2a68ccbfff62368500bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-represent-tables-as-classes"></a><span data-ttu-id="47cb3-102">Gewusst wie: Darstellen von Tabellen als Klassen</span><span class="sxs-lookup"><span data-stu-id="47cb3-102">How to: Represent Tables as Classes</span></span>
-<span data-ttu-id="47cb3-103">Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> Attribut um eine Klasse als Entitätsklasse, die einer Datenbanktabelle zugeordnet zu kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="47cb3-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attribute to designate a class as an entity class associated with a database table.</span></span>  
+# <a name="how-to-represent-tables-as-classes"></a><span data-ttu-id="7d44d-102">Gewusst wie: Darstellen von Tabellen als Klassen</span><span class="sxs-lookup"><span data-stu-id="7d44d-102">How to: Represent Tables as Classes</span></span>
+<span data-ttu-id="7d44d-103">Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> Attribut um eine Klasse als Entitätsklasse, die einer Datenbanktabelle zugeordnet zu kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="7d44d-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attribute to designate a class as an entity class associated with a database table.</span></span>  
   
-### <a name="to-map-a-class-to-a-database-table"></a><span data-ttu-id="47cb3-104">So ordnen Sie einer Datenbanktabelle eine Klasse zu</span><span class="sxs-lookup"><span data-stu-id="47cb3-104">To map a class to a database table</span></span>  
+### <a name="to-map-a-class-to-a-database-table"></a><span data-ttu-id="7d44d-104">So ordnen Sie einer Datenbanktabelle eine Klasse zu</span><span class="sxs-lookup"><span data-stu-id="7d44d-104">To map a class to a database table</span></span>  
   
--   <span data-ttu-id="47cb3-105">Fügen Sie das <xref:System.Data.Linq.Mapping.TableAttribute>-Attribut der Klassendeklaration hinzu.</span><span class="sxs-lookup"><span data-stu-id="47cb3-105">Add the <xref:System.Data.Linq.Mapping.TableAttribute> attribute to the class declaration.</span></span>  
+-   <span data-ttu-id="7d44d-105">Fügen Sie das <xref:System.Data.Linq.Mapping.TableAttribute>-Attribut der Klassendeklaration hinzu.</span><span class="sxs-lookup"><span data-stu-id="7d44d-105">Add the <xref:System.Data.Linq.Mapping.TableAttribute> attribute to the class declaration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="47cb3-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="47cb3-106">Example</span></span>  
- <span data-ttu-id="47cb3-107">Der folgende Code etabliert die `Customer`-Klasse als eine Entitätsklasse, die der `Customers`-Datenbanktabelle zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="47cb3-107">The following code establishes the `Customer` class as an entity class that is associated with the `Customers` database table.</span></span>  
+## <a name="example"></a><span data-ttu-id="7d44d-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7d44d-106">Example</span></span>  
+ <span data-ttu-id="7d44d-107">Der folgende Code etabliert die `Customer`-Klasse als eine Entitätsklasse, die der `Customers`-Datenbanktabelle zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="7d44d-107">The following code establishes the `Customer` class as an entity class that is associated with the `Customers` database table.</span></span>  
   
  [!code-csharp[DLinqCustomize#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#1)]
  [!code-vb[DLinqCustomize#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#1)]  
   
- <span data-ttu-id="47cb3-108">Sie müssen die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft nicht angeben, wenn der Name abgeleitet werden kann.</span><span class="sxs-lookup"><span data-stu-id="47cb3-108">You do not have to specify the <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property if the name can be inferred.</span></span> <span data-ttu-id="47cb3-109">Wenn Sie keinen Namen angeben, wird für diesen der Name der Eigenschaft oder des Felds angenommen.</span><span class="sxs-lookup"><span data-stu-id="47cb3-109">If you do not specify a name, the name is presumed to be the same name as that of the property or field.</span></span>  
+ <span data-ttu-id="7d44d-108">Sie müssen die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft nicht angeben, wenn der Name abgeleitet werden kann.</span><span class="sxs-lookup"><span data-stu-id="7d44d-108">You do not have to specify the <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property if the name can be inferred.</span></span> <span data-ttu-id="7d44d-109">Wenn Sie keinen Namen angeben, wird für diesen der Name der Eigenschaft oder des Felds angenommen.</span><span class="sxs-lookup"><span data-stu-id="7d44d-109">If you do not specify a name, the name is presumed to be the same name as that of the property or field.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47cb3-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="47cb3-110">See Also</span></span>  
- [<span data-ttu-id="47cb3-111">Die LINQ to SQL-Objektmodell</span><span class="sxs-lookup"><span data-stu-id="47cb3-111">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [<span data-ttu-id="47cb3-112">Vorgehensweise: Anpassen von Entitätsklassen mithilfe des Code-Editors</span><span class="sxs-lookup"><span data-stu-id="47cb3-112">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="7d44d-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d44d-110">See Also</span></span>  
+ [<span data-ttu-id="7d44d-111">Das LINQ to SQL-Objektmodell</span><span class="sxs-lookup"><span data-stu-id="7d44d-111">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [<span data-ttu-id="7d44d-112">Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor</span><span class="sxs-lookup"><span data-stu-id="7d44d-112">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
