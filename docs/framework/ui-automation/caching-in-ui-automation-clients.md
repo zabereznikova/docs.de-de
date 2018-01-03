@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3cdbf82997d76def39f05ebf06b448e8e75001ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be07dc3ec6aac48382fab12285ee08bcb5fe7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -113,5 +114,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Verwenden der Zwischenspeicherung in der UI-Automatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Für FetchTimer](http://msdn.microsoft.com/en-us/5b7d3294-de22-4f24-b2d6-d4785a304b90)

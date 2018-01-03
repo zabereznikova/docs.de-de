@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ac2363ce7c2affcc0b56f7ce8b9d41180b4c3a1f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df4a7711f3968616315af757e5f2c48650f9e0f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-code-examples"></a>Socketcodebeispiele
 Die folgenden Codebeispiele veranschaulichen, wie die <xref:System.Net.Sockets.Socket>-Klasse als Client für die Verbindung zu einem Remotenetzwerkdienst und als Server zum Überwachen von Verbindungen von Remoteclients verwendet werden kann.  
@@ -50,5 +51,5 @@ Die folgenden Codebeispiele veranschaulichen, wie die <xref:System.Net.Sockets.S
  [Sockets](../../../docs/framework/network-programming/sockets.md)  
  Enthält grundlegende Informationen über den <xref:System.Net.Sockets>-Namespace und die <xref:System.Net.Sockets.Socket>-Klasse.  
   
- [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Beschreibt, wie die standardmäßigen Internetsicherheits- und Authentifizierungstechniken verwendet werden.

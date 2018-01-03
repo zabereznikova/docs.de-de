@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind. Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich. Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/18/2017
 |MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Codemethode (andernfalls systemeigener NGEN-Imagecode).<br /><br /> 0x8: Hilfsmethode.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="clr_method_marker_events"></a>   
 ## <a name="clr-method-marker-events"></a>CLR-Methodenmarkerereignisse  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/18/2017
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="clr_method_verbose_events"></a>   
 ## <a name="clr-method-verbose-events"></a>Ausführliche CLR-Methodenereignisse  
@@ -137,7 +138,7 @@ ms.lasthandoff: 10/18/2017
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="methodjittingstarted_event"></a>   
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted-Ereignis  

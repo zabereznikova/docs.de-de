@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die angibt, ob bestimmte Programmelemente für die Reflektion verfügbar sind. Im Folgenden ist ein Beispiel einer Laufzeitdirektivendatei angegeben:  
@@ -51,24 +52,24 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
  [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [O:1]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
@@ -81,9 +82,9 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
@@ -95,24 +96,24 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
  [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [O:1]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
@@ -122,9 +123,9 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .  
+ sein. . sein.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]  
- . . .  
+ sein. . sein.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
@@ -157,43 +158,43 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Festlegen von Richtlinien für Assemblys, Namespaces und Typen  
  Die Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) und [Type](../../../docs/framework/net-native/type-element-net-native.md) unterstützen folgende Richtlinientypen:  
   
--   `Activate`. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
+-   `Activate` Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
   
--   `Browse`. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.  
+-   `Browse` Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.  
   
--   `Dynamic`. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.  
+-   `Dynamic` Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.  
   
--   `Serialize`. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.  
+-   `Serialize` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.  
   
--   `DataContractSerializer`. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `DataContractSerializer` Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `DataContractJsonSerializer`. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `DataContractJsonSerializer` Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `XmlSerializer`. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `XmlSerializer` Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `MarshalObject`. Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.  
+-   `MarshalObject` Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.  
   
--   `MarshalDelegate`. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.  
+-   `MarshalDelegate` Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.  
   
 -   `MarshalStructure` . Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.  
   
  Die Einstellungen für diese Richtlinientypen sind:  
   
--   `All`. Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.  
+-   `All` Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.  
   
--   `Auto`. Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)  
+-   `Auto` Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)  
   
--   `Excluded`. Deaktiviert die Richtlinie für das Programmelement.  
+-   `Excluded` Deaktiviert die Richtlinie für das Programmelement.  
   
--   `Public`. Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)  
+-   `Public` Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)  
   
--   `PublicAndInternal`. Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.  
+-   `PublicAndInternal` Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.  
   
--   `Required Public`. Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required Public` Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
--   `Required PublicAndInternal`. Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required PublicAndInternal` Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
--   `Required All`. Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required All` Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
  Die folgende Laufzeitdirektivendatei definiert z. B. die Richtlinie für alle Typen und Member in der Assembly DataClasses.dll. Sie aktiviert die Reflektion für die Serialisierung aller öffentlichen Eigenschaften, ermöglicht das Durchsuchen nach allen Typen und Typmembern (aufgrund des `Dynamic`-Attributs) und aktiviert die Reflektion für alle öffentlichen Typen und Member.  
   

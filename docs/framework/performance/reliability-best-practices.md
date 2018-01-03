@@ -49,11 +49,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 Die folgenden Zuverlässigkeitsregeln sind auf SQL Server ausgerichtet, jedoch gelten sie auch für jede hostbasierte Serveranwendung. Es ist äußerst wichtig, dass es bei Servern wie SQL Server zu keinem Ressourcenverlust kommt und dass diese nicht zum Absturz gebracht werden.  Dies kann jedoch nicht erreicht werden, indem Zurücksetzungscode für jede Methode geschrieben wird, die den Zustand eines Objekts ändert.  Das Ziel ist nicht, 100 Prozent zuverlässigen verwalteten Code zu schreiben, der mit Zurücksetzungscode nach Fehlern an einer beliebigen Stelle wiederhergestellt wird.  Das wäre eine schwierige Aufgabe mit wenig Aussicht auf Erfolg.  Die Common Language Runtime (CLR) kann keine ausreichend starken Garantien für verwalteten Code bereitstellen, um das Schreiben von perfektem Code möglich zu machen.  Beachten Sie, dass SQL Server im Gegensatz zu ASP.NET nur einen Prozess verwendet, der nicht wiederverwendet werden kann, ohne dass eine Datenbank für eine unzumutbar lange Zeit außer Betrieb genommen wird.  

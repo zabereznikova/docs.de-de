@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Hilfethemen zu Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
 > [!NOTE]
@@ -31,10 +32,10 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navigieren Sie zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
  [Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Verwenden der Zwischenspeicherung in der UI-Automatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignisse](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
+ [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
  [Registrieren einer clientseitigen Anbieterassembly](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
  [Verwenden der AutomationID-Eigenschaft](../../../docs/framework/ui-automation/use-the-automationid-property.md)

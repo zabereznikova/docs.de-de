@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
@@ -30,7 +31,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Einführung in austauschbare Protokolle](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Beschreibt, wie auf eine Internetressource ohne Berücksichtigung des benötigten Zugriffsprotokolls zugegriffen werden kann.  
   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)  
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)  
  Erläutert, wie austauschbare Protokolle verwendet werden, um Daten von Internetressourcen herunterzuladen oder um Daten hochzuladen.  
   
  [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
@@ -51,7 +52,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  Beschreibt, wie das Zwischenspeichern für Anwendungen verwendet wird, die die Klassen <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType> und <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> verwenden.  
   
- [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Beschreibt, wie die standardmäßigen Internetsicherheits- und Authentifizierungstechniken verwendet werden.  
   
  [Bewährte Methoden für System.Net-Klassen](../../../docs/framework/network-programming/best-practices-for-system-net-classes.md)  
@@ -143,7 +144,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  Stellt Unterstützung für die Konfiguration der Authentifizierung mit erweitertem Schutz für Anwendungen zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Themen zur netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Netzwerkbeispiele für .NET in der MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [HttpClient Sample (HttpClient-Beispiel)](http://go.microsoft.com/fwlink/?LinkId=242550)

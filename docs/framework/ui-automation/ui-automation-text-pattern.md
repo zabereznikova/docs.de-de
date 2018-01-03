@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca710fcd4d5ded93bdc1f47b3c8a523f3afa05f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c374281af80d4546368d33b09a63b4fdb654f16c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern"></a>Textmuster zur Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -31,9 +32,9 @@ ms.lasthandoff: 11/21/2017
  Dieses Thema enthält Übersichten und Gewusst-wie-Themen helfen Ihnen beim Einstieg in die Programmierung für Textelemente in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über TextPattern für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern und eingebettete Objekte (Übersicht)](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Themen zur Vorgehensweise](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Übersicht über TextPattern für die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [Übersicht über TextPattern und eingebettete Objekte](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
+ [Themen zu Vorgehensweisen](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.Automation.Text>  

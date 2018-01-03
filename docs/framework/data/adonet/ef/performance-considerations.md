@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: dd42175234418ebd260a85c87bfeae6cf59ceb4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b12703343480c58024d91ee87f001373552f66a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations-entity-framework"></a>Überlegungen zur Leistung (Entity Framework)
 In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschrieben. Außerdem sind einige Vorschläge enthalten, die Sie zur Verbesserung der Leistung von Entity Framework-Anwendungen verwenden können.  
@@ -164,4 +165,4 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 -   [ADO.NET Entity Framework-Leistungsvergleich](http://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwicklungs- und Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+ [Überlegungen zur Entwicklung und Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

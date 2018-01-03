@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876635cfe0349c734a61dcc827a6f9594bb2a5d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
@@ -75,4 +76,4 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Gibt die Formel zum Berechnen der `NextValue` -Methode für eine `PerformanceCounter`an.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)
+ [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md)

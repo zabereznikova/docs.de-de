@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>ETW-Ereignisse in der Task Parallel Library und PLINQ
 Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablaufverfolgung für Windows (ETW), die Sie zur Profilerstellung und Problembehebung für Anwendungen verwenden können, indem Sie Tools wie den Windows Performance Analyzer verwenden. In den meisten Szenarios ist der beste Weg der Profilerstellung für parallelen Anwendungscode jedoch das Verwenden der [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer) in [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  
@@ -37,7 +38,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  
@@ -53,7 +54,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  
@@ -67,7 +68,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  
@@ -83,7 +84,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  
@@ -103,7 +104,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  
@@ -116,7 +117,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
   
 #### <a name="user-data"></a>Benutzerdaten  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|  

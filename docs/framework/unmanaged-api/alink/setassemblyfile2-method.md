@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7363a8f633d5f447f72e27ba03055f589564bdd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 671fb857015a5babd388366066d282cb87462c18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2-Methode
 Legt den Namen und die Optionen für eine neue Assembly. Rufen Sie diese Methode nicht, wenn Sie ungebundene Modulen erzeugen.  
@@ -61,4 +62,4 @@ HRESULT SetAssemblyFile2(
 ## <a name="see-also"></a>Siehe auch  
  [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8142ef17bdfb78226e7a65376e132bad18bc258e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68ff7e03fe30ff61a35b20517ebaea73144ff621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
 > [!NOTE]
@@ -30,16 +31,16 @@ ms.lasthandoff: 10/18/2017
  Dieser Abschnitt enthält Übersichten und Gewusst wie-Themen über das Entwickeln von Benutzeroberflächenautomatisierungs-Clients.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [UI Automation and Screen Scaling](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+ [Benutzeroberflächenautomatisierung und Bildschirmskalierung](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
  [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
  [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Threadingprobleme UI-Automatisierung](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Themen zur Vorgehensweise](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [Threadingprobleme bei der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
+ [Themen zu Vorgehensweisen](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.Automation>

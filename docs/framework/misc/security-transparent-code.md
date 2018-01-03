@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 996da59640281c8584774fa9e66b42619753afb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 <a name="top"></a>
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="level"></a>   
 ## <a name="specifying-the-transparency-level"></a>Angeben der Transparenzebene  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Es besteht die Möglichkeit, dass durch transparenten Code schädliche Vorgänge ausgeführt werden, wenn er mit voller Vertrauenswürdigkeit ausgeführt wird.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="enforcement"></a>   
 ## <a name="transparency-enforcement"></a>Transparenzerzwingung  

@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrieren der Windows Store-App auf .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] stellt eine statische Kompilierung von Anwendungen im Windows Store oder auf dem Computer des Entwicklers bereit. Dies unterscheidet sich von der dynamischen Kompilierung für Windows Store-Apps durch den JIT-Compiler (Just-in-Time) oder den [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) auf dem Gerät. Trotz der Unterschiede versucht [!INCLUDE[net_native](../../../includes/net-native-md.md)] , die Kompatibilität mit den [.NET für Windows Store-Apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)beizubehalten. Zum größten Teil funktioniert das, was für die .NET für Windows Store-Apps funktioniert, auch für [!INCLUDE[net_native](../../../includes/net-native-md.md)].  In einigen Fällen können jedoch Verhaltensänderungen auftreten. Dieses Dokument erläutert die Unterschiede zwischen den standardmäßigen .NET für Windows Store-Apps und [!INCLUDE[net_native](../../../includes/net-native-md.md)] in den folgenden Bereichen:  
@@ -37,13 +38,13 @@ ms.lasthandoff: 11/21/2017
   
 -   Ausnahmen wie <xref:System.TypeLoadException>, die vom JIT-Compiler ausgelöst werden, wenn eine Anwendung auf der Common Language Runtime (CLR) ausgeführt wird, resultieren in der Regel in Fehlern während der Kompilierung, wenn die Verarbeitung durch [!INCLUDE[net_native](../../../includes/net-native-md.md)]erfolgt.  
   
--   Rufen Sie die <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>-Methode nicht vom UI-Thread einer Anwendung auf. Dies kann zu einem Deadlock für [!INCLUDE[net_native](../../../includes/net-native-md.md)]führen.  
+-   Rufen Sie die <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>-Methode nicht vom UI-Thread einer Anwendung auf. Dies kann zu einem Deadlock für [!INCLUDE[net_native](../../../includes/net-native-md.md)] führen.  
   
 -   Verlassen Sie sich nicht auf die Aufrufreihenfolge des statischen Klassenkonstruktors. In [!INCLUDE[net_native](../../../includes/net-native-md.md)]unterscheidet sich die Aufrufreihenfolge von der Reihenfolge in der Standardlaufzeit. (Auch mit der Standardlaufzeit sollten Sie sich nicht auf die Reihenfolge der Ausführung der statischen Klassenkonstruktoren verlassen.)  
   
 -   Endlosschleifen ohne einen Anruf (z. B. `while(true);`) auf einem beliebigen Thread kann die App zum Stillstand bringen. Auf ähnliche Weise können lange oder unendliche Wartezeiten die Anwendung zum Stillstand bringen.  
   
--   Bestimmte generische Initialisierungszyklen lösen in [!INCLUDE[net_native](../../../includes/net-native-md.md)]keine Ausnahmen aus. Das folgende Codebeispiel löst eine <xref:System.TypeLoadException> -Ausnahme auf der Standard-CLR aus. In [!INCLUDE[net_native](../../../includes/net-native-md.md)]ist dies nicht der Fall.  
+-   Bestimmte generische Initialisierungszyklen lösen in [!INCLUDE[net_native](../../../includes/net-native-md.md)] keine Ausnahmen aus. Das folgende Codebeispiel löst eine <xref:System.TypeLoadException> -Ausnahme auf der Standard-CLR aus. In [!INCLUDE[net_native](../../../includes/net-native-md.md)]ist dies nicht der Fall.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   

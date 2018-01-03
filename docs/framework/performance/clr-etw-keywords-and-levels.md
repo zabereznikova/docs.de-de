@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
 <a name="top"></a> ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#levels) werden durch Flags gekennzeichnet.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleLoad` - und `ModuleRange` -Ereignissen.|  
 |`StackKeyword`|0x40000000|Ermöglicht das Sammeln von CLR- [Stapelüberwachungsereignissen](../../../docs/framework/performance/stack-etw-event.md).|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="rundown"></a>   
 ### <a name="clr-etw-rundown-keywords"></a>CLR-ETW-Rundownschlüsselwörter  
@@ -82,35 +83,35 @@ ms.lasthandoff: 11/21/2017
 |`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenRundownKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sollten Profilerstellungstools `OverrideAndSuppressNGenEventsRundownKeyword` und `NGenRundownKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsRundownKeyword` und verarbeitet `NGenRundownKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleDCStart`-, `ModuleDCEnd`-, `ModuleRangeDCStart`- und `ModuleRangeDCEnd` -Ereignissen.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="runtime_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Laufzeitanbieter  
   
 |Schlüsselwörter und Flags|Anwendungsdomäne, Assembly, modulbezogene Lade-/Entladeereignisse|Methodenbezogene Lade-/Entladeereignisse (außer dynamische Ereignisse)|Dynamische methodenbezogene Lade-/Zerstörungsereignisse|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|Lade- und Entaldeereignisse|Keine.|Keine.|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` fügt nichts hinzu)|Keine.|Ladeereignisse|Lade- und Entaldeereignisse|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine.|Lade- und Entaldeereignisse|Lade- und Entaldeereignisse|  
-|`NGenKeyword`|Keine.|Keine.|Nicht zutreffend.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Keine.|Ladeereignisse|Nicht zutreffend.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine.|Entladeereignisse|Nicht zutreffend.|  
+|`LoaderKeyword`|Lade- und Entaldeereignisse|Keine|Keine|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` fügt nichts hinzu)|Keine|Ladeereignisse|Lade- und Entaldeereignisse|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine|Lade- und Entaldeereignisse|Lade- und Entaldeereignisse|  
+|`NGenKeyword`|Keine|Keine|Nicht zutreffend.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Keine|Ladeereignisse|Nicht zutreffend.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine|Entladeereignisse|Nicht zutreffend.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter  
   
 |Schlüsselwörter und Flags|Anwendungsdomäne, Assembly, modulbezogene DCStart-/DCEnd-Ereignisse|Methodenbezogene DCStart-/DCEnd-Ereignisse (einschließlich dynamischer Methodenereignisse)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` -Ereignisse|Keine.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` -Ereignisse|Keine.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine.|`DCStart` -Ereignisse|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Keine.|`DCEnd` -Ereignisse|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine.|`DCStart` -Ereignisse|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine.|`DCEnd` -Ereignisse|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` -Ereignisse|Keine|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` -Ereignisse|Keine|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="levels"></a>   
 ## <a name="etw-event-levels"></a>ETW-Ereignisebenen  

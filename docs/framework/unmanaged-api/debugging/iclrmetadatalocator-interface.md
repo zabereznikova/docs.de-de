@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 955bd6bffe56a166b4c9c313fcb730ce714bf24b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a06997c47a85ced56dc579759192f7256def4f5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator-Schnittstelle
 Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Suche verwendet.  
@@ -32,7 +33,7 @@ Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Su
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetMetadata-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Ruft die Metadaten eines Bilds aus dem Zielprozess ab.|  
+|[GetMetaData-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Ruft die Metadaten eines Bilds aus dem Zielprozess ab.|  
   
 ## <a name="remarks"></a>Hinweise  
  Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. Beispielsweise würde die Implementierung für ein Liveprozess aus einem Speicherabbild unterscheiden.  
@@ -47,4 +48,4 @@ Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Su
  **.** **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

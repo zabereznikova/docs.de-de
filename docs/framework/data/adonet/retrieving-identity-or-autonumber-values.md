@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1a689bb22fc5bb553084b9d1b1dc60e74e47970c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87da4a20430373d15e433ffa21c1e29bf560ebd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Abrufen von Identity- oder Autonumber-Werten
 Ein Primärschlüssel in einer relationalen Datenbank ist eine Spalte oder eine Kombination aus Spalten, die stets eindeutige Werte enthält. Wenn Sie den Primärschlüsselwert kennen, können Sie die Zeile lokalisieren, die den Wert enthält. Relationale Datenbankmodule, wie SQL Server, Oracle und Microsoft Access/Jet, unterstützen das Erstellen automatisch inkrementierender Spalten, die als Primärschlüssel verwendet werden können. Diese Werte werden vom Server generiert, wenn einer Tabelle Zeilen hinzugefügt werden. In SQL Server legen Sie die Identität einer Spalte fest, in Oracle erstellen Sie eine Sequenz, und in Microsoft Access erstellen Sie eine AutoWert-Spalte.  
@@ -78,7 +79,7 @@ SET @Identity = SCOPE_IDENTITY()
   
 |Membername|Beschreibung|  
 |-----------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` wird aufgerufen, und die Ausgabeparameterwerte und/oder die Werte der ersten Zeile aller zurückgegebenen Resultsets werden in der zu aktualisierenden `DataRow` platziert. Wenn es keine zu übernehmenden Werte gibt, lautet der `RowState`<xref:System.Data.DataRowState.Unchanged>.|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` wird aufgerufen, und die Ausgabeparameterwerte und/oder die Werte der ersten Zeile aller zurückgegebenen Resultsets werden in der zu aktualisierenden `DataRow` platziert. Wenn es keine zu übernehmenden Werte gibt, lautet der `RowState` <xref:System.Data.DataRowState.Unchanged>.|  
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Wenn eine Zeile zurückgegeben wurde, wird `AcceptChanges` aufgerufen und die Zeile wird der geänderten Zeile in der `DataTable` zugeordnet, wobei der `RowState` auf `Modified` gesetzt wird. Wenn keine Zeile zurückgegeben wird, wird `AcceptChanges` nicht aufgerufen, und der `RowState` bleibt `Added`.|  
 |<xref:System.Data.UpdateRowSource.None>|Alle zurückgegebenen Parameter oder Zeilen werden ignoriert. `AcceptChanges` wird nicht aufgerufen, und der `RowState` bleibt `Added`.|  
 |<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` wird aufgerufen, und alle Ausgabeparameter werden der geänderten Zeile in der `DataTable` zugeordnet, wobei der `RowState` auf `Modified` gesetzt wird. Wenn keine Ausgabeparameter vorhanden sind, lautet der `RowState` `Unchanged`.|  
@@ -541,9 +542,9 @@ class Program {
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Zeilenstatus und Zeilenversionen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [AcceptChanges und "RejectChanges"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [AcceptChanges und RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [Merging DataSet Contents (Zusammenführen von DataSet-Inhalten)](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

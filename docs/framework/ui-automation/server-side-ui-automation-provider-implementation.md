@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 079a778a3518e6632f429a261ee229db0b46d9b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="provider-interfaces"></a>Anbieterschnittstellen  
  Jeder [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter muss eine der folgenden Schnittstellen implementieren.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Stellt Funktionen für ein einfaches in einem Fenster gehostetes Steuerelement bereit, einschließlich der Unterstützung für Steuerelementmuster und Eigenschaften.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Erbt von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Fügt Funktionen für ein Element in einem komplexen Steuerelement hinzu, einschließlich Navigation im Fragment, Festlegen des Fokus und Zurückgeben des umschließenden Rechtecks des Elements.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  Die folgenden Schnittstellen stellen weitere Funktionen bereit, müssen jedoch nicht implementiert werden.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Ermöglicht dem Anbieter, Anforderungen für Ereignisse zu verfolgen.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Ermöglicht das Neupositionieren von fensterbasierten Elementen innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur eines Fragments.|  

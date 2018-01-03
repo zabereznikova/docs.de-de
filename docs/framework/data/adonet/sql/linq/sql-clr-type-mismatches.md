@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cc1458996e70e8af05c4e2bc9e6c61a5d8a9f87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20031092f5109fef1bf7167eccab949e2e7c5b39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR-Typenkonflikte
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatisiert einen Großteil des Übersetzungsprozesses zwischen dem Objektmodell und SQL Server. Trotzdem verhindern einige Situationen die genaue Übersetzung. In den folgenden Abschnitten werden diese wichtigen Konflikte zwischen den CLR (Common Language Runtime)-Typen und den SQL Server-Datenbanktypen zusammengefasst. Finden Sie ausführliche Informationen zu spezifischer Typmappings und die zur funktionsübersetzung [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) und [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -196,7 +197,7 @@ Where Col1 = Col2
   
 -   SQL führt eine symmetrische arithmetische Rundung aus, während [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] unverzerrte Rundung (Banker's Rounding) verwendet. Weitere Informationen finden Sie im Knowledge Base-Artikel 196652.  
   
--   Standardmäßig wird in SQL die Groß- und Kleinschreibung bei Zeichenfolgenvergleichen für allgemeine Gebietsschemas nicht beachtet. In Visual Basic und C# wird die Groß-/Kleinschreibung beachtet. Beispiel: `s == "Food"` (`s = "Food"` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und `s == "Food"` können zu verschiedenen Ergebnissen führen, wenn `s``food` lautet.  
+-   Standardmäßig wird in SQL die Groß- und Kleinschreibung bei Zeichenfolgenvergleichen für allgemeine Gebietsschemas nicht beachtet. In Visual Basic und C# wird die Groß-/Kleinschreibung beachtet. Beispiel: `s == "Food"` (`s = "Food"` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und `s == "Food"` können zu verschiedenen Ergebnissen führen, wenn `s` `food` lautet.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

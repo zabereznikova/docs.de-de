@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler.  
@@ -285,7 +286,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Diese einfache Zwischenspeicherstrategie entspricht einem guten Cachedesign, da sie über eine Größenbeschränkung verfügt.  Jetzt ist jedoch mehr Code als im Original vorhanden, was höhere Wartungskosten bedeutet.  Sie sollten die Zwischenspeicherstrategie nur übernehmen, wenn Sie ein Leistungsproblem gefunden haben und PerfView gezeigt hat, dass <xref:System.Text.StringBuilder>-Zuordnungen einen signifikanten Beitrag dazu leisten.  
   
 ### <a name="linq-and-lambdas"></a>LINQ und Lambdas  
- Die Verwendung von LINQ- (Language-Integrated Query) und Lambda-Ausdrücken ist ein hervorragendes Beispiel für die Verwendung produktiver Funktionen, die Sie später möglicherweise umschreiben müssen, wenn sich der Code deutlich auf die Leistung auswirkt.  
+ Die Verwendung von LINQ- (Language-Integrated Query) und Lambdaausdrücken ist ein hervorragendes Beispiel für die Verwendung produktiver Funktionen, die Sie später möglicherweise umschreiben müssen, wenn sich der Code deutlich auf die Leistung auswirkt.  
   
  **Example 5: Lambdas, List\<T> und IEnumerable\<T>**  
   

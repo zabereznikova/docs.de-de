@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>Objektmaterialisierung (WCF Data Services)
 Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld nutzen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in einer .NET Framework-basierten Clientanwendung für jeden Entitätstyp im Datenmodell verfügbar gemacht werden, durch den Feed entsprechende Datenklassen generiert werden. Weitere Informationen finden Sie unter [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Entitätsdaten, die von einer Abfrage zurückgegeben werden, werden in eine Instanz einer dieser generierten Client-Datendienstklassen materialisiert. Informationen zu Zusammenführungsoptionen und identitätsauflösung für nachverfolgte Objekte finden Sie unter [Verwalten des Datendienstkontextes](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

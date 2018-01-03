@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8d940cbdeddc7030c679fae8c8694bb3542123b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5a4d1f2eed036552ab17b6768b7b2d84f4a52c9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly-Methode
 Schließt die Assemblydatei an. Rufen Sie diese Methode aus, schließen Sie alle anderen Dateien, jedoch vor dem Schließen der Assemblydatei. Rufen Sie diese Methode nicht für ungebundenen Modulen.  
@@ -49,4 +50,4 @@ HRESULT PreCloseAssembly(
 ## <a name="see-also"></a>Siehe auch  
  [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

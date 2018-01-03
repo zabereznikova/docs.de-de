@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f62475e8b44d9cdda13322dc223509572c4ae541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Datagram Protocol (UDP) mit den <xref:System.Net.Sockets.TcpClient>-, <xref:System.Net.Sockets.TcpListener>- und <xref:System.Net.Sockets.UdpClient>-Klassen verwenden. Diese Protokollklassen bauen auf der <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse auf und kümmern sich um die Details der Datenübertragung.  
@@ -42,9 +43,9 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
  Die **UdpClient**-Klasse verwendet ein Array von Bytes zum Speichern des UDP-Datagramms. Verwenden Sie die <xref:System.Net.Sockets.UdpClient.Send%2A>-Methode, um die Daten an das Netzwerk zu senden, und die <xref:System.Net.Sockets.UdpClient.Receive%2A>-Methode, um ein eingehendes Datagramm zu empfangen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mithilfe von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)  
- [Mithilfe von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)  
- [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Verwenden von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [Verwenden von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)  
+ [Verwenden von Datenströmen im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers sein, ein anderer eine E-Mail-Adresse. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
@@ -44,7 +45,7 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
 ## <a name="introduction-to-claims-based-identity"></a>Einführung in die anspruchsbasierte Identität  
  Die folgende Terminologie und Konzepte können Ihnen helfen, diese neue Architektur zur Identifizierung zu verstehen.  
   
-### <a name="identity"></a>Identity  
+### <a name="identity"></a>Identität  
  Für die Beschreibung des Programmiermodells in Windows Identity Foundation (WIF) verwenden wir den Begriff „Identität“ um einen Satz von Attributen darzustellen, die einen Benutzer oder eine andere Entität in einem System beschreiben, das Sie sicher machen möchten.  
   
 ### <a name="claim"></a>Anspruch  

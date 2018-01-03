@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f163223842acd4539872ad1a0ff228a76e33870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server-Programmierung und Hostschutzattribute
 Die Möglichkeit zum Laden und Ausführen von verwaltetem Code in einem SQL Server-Host erfordert, dass die Hostanforderungen für die Codezugriffssicherheit und den Hostressourcenschutz erfüllt werden.  Die Anforderungen für die Codezugriffssicherheit werden durch einen von drei SQL Server-Berechtigungssätzen angegeben: SICHER, EXTERNER ZUGRIFF oder UNSICHER. Code, der innerhalb der Berechtigungssätze SICHER oder EXTERNER ZUGRIFF ausgeführt wird, muss bestimmte Typen oder Member vermeiden, bei denen das <xref:System.Security.Permissions.HostProtectionAttribute>-Attribut angewendet wird. Die <xref:System.Security.Permissions.HostProtectionAttribute> ist keine Sicherheitsberechtigung, sondern eine Zuverlässigkeitsgarantie, da sie bestimmte Codekonstrukte, entweder Typen oder Methoden, identifiziert, die der Host möglicherweise nicht zulässt.  Die Verwendung der <xref:System.Security.Permissions.HostProtectionAttribute> erzwingt ein Programmiermodell, das die Stabilität des Hosts schützt.  

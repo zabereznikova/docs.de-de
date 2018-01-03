@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-wcf-data-services"></a>Definieren von WCF Data Services
 In diesem Abschnitt wird beschrieben, wie zum Erstellen und konfigurieren [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum Verfügbarmachen von Daten als ein [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die grundlegenden Schritte zum Erstellen eines Datendiensts finden Sie unter [Verfügbarmachen von Daten als Dienst](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
@@ -45,13 +46,13 @@ In diesem Abschnitt wird beschrieben, wie zum Erstellen und konfigurieren [!INCL
  [Sichern von WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  Beschreibt die Authentifizierung und Autorisierung für den Datendienst sowie weitere Sicherheitsüberlegungen.  
   
- [Hosting des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
+ [Hosten des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
  Beschreibt, wie ein Host für den Datendienst ausgewählt wird.  
   
  [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)  
  Beschreibt die Verwendung unterschiedlicher Versionen von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [WCF Data Services-Protokoll-Implementierungsdetails](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)  
+ [Details der WCF Data Services-Protokollimplementierung](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)  
  Beschreibt optionale Funktionen des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls, die aktuell nicht von WCF Data Services implementiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  

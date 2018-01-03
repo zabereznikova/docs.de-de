@@ -17,11 +17,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 10af8087eb72577dfabef261544cb2363ba17a0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9960c55e5a47271c0d7091deb61a29daa9ae3433
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Hilfethemen zum Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -30,8 +31,8 @@ ms.lasthandoff: 10/18/2017
  Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Steuerelementmustern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Abrufen von unterstützten Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
  [Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [Verschieben eines Benutzeroberflächenautomatisierungs-Elements](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

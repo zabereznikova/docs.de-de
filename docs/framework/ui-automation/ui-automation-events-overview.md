@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9634c686d23503dcb4deae171f0023055c41ce2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-events-overview"></a>Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
 > [!NOTE]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="types-of-events"></a>Ereignistypen  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse werden in die folgenden Kategorien eingeteilt:  
   
-|Ereignis|Beschreibung|  
+|event|Beschreibung|  
 |-----------|-----------------|  
 |Eigenschaftenänderung|Wird ausgelöst, wenn sich eine Eigenschaft eines [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elements oder -Steuerelementmusters ändert. Wenn ein Client beispielsweise das Kontrollkästchen-Steuerelement einer Anwendung überwachen muss, kann er sich mithilfe der <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> -Eigenschaft registrieren, um auf ein Eigenschaftenänderungsereignis zu warten. Wenn das Kontrollkästchen-Steuerelement aktiviert oder deaktiviert wird, löst der Anbieter das Ereignis aus, und der Client kann entsprechend reagieren.|  
 |Elementaktion|Wird ausgelöst, wenn eine Änderung in der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] durch einen Endbenutzer oder eine programmgesteuerte Aktivität erfolgt, beispielsweise, wenn auf eine Schaltfläche geklickt oder diese durch <xref:System.Windows.Automation.InvokePattern>aktiviert wird.|  
@@ -94,4 +95,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Siehe auch  
  [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)  
- [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignisse](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+ [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

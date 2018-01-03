@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
 In diesem Thema wird der Mechanismus beschrieben, der von der <xref:System.Transactions>-Infrastruktur zur Leistungsoptimierung bereitgestellt wird.  
@@ -70,5 +71,5 @@ In diesem Thema wird der Mechanismus beschrieben, der von der <xref:System.Trans
  Wenn es nur eine flüchtige Eintragung und keine dauerhafte Eintragung gibt, empfängt die flüchtige Eintragung eine Einphasencommit-Benachrichtigung.  Wenn flüchtige Eintragungen vorhanden sind, aber nur eine dauerhafte Eintragung, empfangen die flüchtigen Eintragungen ein Zweiphasencommit. Nach Beendigung empfängt die dauerhafte Eintragung ein Einphasencommit.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Eintragen von Ressourcen als Teilnehmer in einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [Ausführen eines Commits für eine Transaktion in der Phase hat und mehreren Phasen bestehender](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

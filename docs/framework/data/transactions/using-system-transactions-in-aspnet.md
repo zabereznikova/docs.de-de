@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 321489a2b32bafe4a73f56e0a5dba20f5661bdc2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Verwenden von System.Transactions in ASP.NET
 In diesem Thema wird beschrieben, wie Sie <xref:System.Transactions> erfolgreich in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung verwenden können.  
@@ -52,7 +53,7 @@ In diesem Thema wird beschrieben, wie Sie <xref:System.Transactions> erfolgreich
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sicherheitsrichtline finden Sie unter [securityPolicy-Element (ASP.NET-Einstellungsschema)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)erteilt wird.  
   
 ## <a name="dynamic-compilation"></a>Dynamische Kompilierung  
- Wenn Sie <xref:System.Transactions> in eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung, die bei Zugriff dynamisch kompiliert wird, importieren und dort verwenden möchten, sollten Sie einen Verweis auf die <xref:System.Transactions> -Assembly in die Konfigurationsdatei einfügen. Der Verweis sollte unterhalb des Abschnitts **compilation**/**assemblies** der **Web.config** -Konfigurationsdatei des Standardstammverzeichnisses oder der Konfigurationsdatei einer spezifischen Webanwendung hinzugefügt werden. Das folgende Beispiel veranschaulicht das.  
+ Wenn Sie <xref:System.Transactions> in eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung, die bei Zugriff dynamisch kompiliert wird, importieren und dort verwenden möchten, sollten Sie einen Verweis auf die <xref:System.Transactions> -Assembly in die Konfigurationsdatei einfügen. Der Verweis sollte unterhalb des Abschnitts **compilation**/**assemblies** der **Web.config** -Konfigurationsdatei des Standardstammverzeichnisses oder der Konfigurationsdatei einer spezifischen Webanwendung hinzugefügt werden. Dies wird im folgenden Beispiel veranschaulicht:  
   
 ```xml  
 <configuration>  
@@ -71,4 +72,4 @@ In diesem Thema wird beschrieben, wie Sie <xref:System.Transactions> erfolgreich
 ## <a name="see-also"></a>Siehe auch  
  [ASP.NET Vertrauensebenen und Richtliniendateien](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
  [SecurityPolicy-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
- [Transaktionseskalation-Management](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+ [Eskalation der Transaktionsverwaltung](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

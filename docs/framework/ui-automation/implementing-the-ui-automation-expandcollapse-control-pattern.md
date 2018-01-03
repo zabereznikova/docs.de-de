@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 877fac575255159c82d1c1e3c3c4b3dbb803198e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e956008c6b80e0b2184adcf0a45b70efa21d752
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -52,18 +53,18 @@ ms.lasthandoff: 11/21/2017
   
     -   Durch das Aufrufen von <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> oder <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> in einem Steuerelement wird der Status der entsprechenden Nachfolger beibehalten, es sollte ein Sichtbarkeitsänderungsereignis gesendet werden und kein Statusänderungsereignis. Wenn das übergeordnete Steuerelement den Status seiner Nachfolger nicht beibehalten kann, wenn es reduziert ist, zerstört das Steuerelement möglicherweise alle Nachfolger, die nicht mehr sichtbar sind und löst ein Ereignis über eine Zerstörung aus oder es ändert <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> für jeden Nachfolger und löst ein Sichtbarkeitsänderungsereignis aus.  
   
--   Zum Garantieren der Navigation ist es für ein Objekt wünschenswert, wenn es sich in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Gesamtstruktur (mit dem entsprechenden Sichtbarkeitsstatus) befindet, und zwar unabhängig von seinen übergeordneten <xref:System.Windows.Automation.ExpandCollapseState>. Wenn Nachfolger bedarfsgesteuert generiert werden, werden sie möglicherweise nur dann in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Gesamtstruktur angezeigt, nachdem sie das erste Mal angezeigt wurden, oder nur während sie sichtbar sind.  
+-   Zum Garantieren der Navigation ist es für ein Objekt wünschenswert, wenn es sich in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Gesamtstruktur (mit dem entsprechenden Sichtbarkeitsstatus) befindet, und zwar unabhängig von seinen übergeordneten <xref:System.Windows.Automation.ExpandCollapseState>. Wenn Nachfolger bedarfsgesteuert generiert werden, werden sie möglicherweise nur dann in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Gesamtstruktur angezeigt, nachdem sie das erste Mal angezeigt wurden, oder nur während sie sichtbar sind.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>Erforderliche Member für „IExpandCollapseProvider“  
  Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>erforderlich.  
   
-|Erforderliche Member|Memberart|Notizen|  
+|Erforderliche Member|Memberart|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Ereignis|Dieses Steuerelement verfügt über keine zugeordneten Ereignisse. Verwenden Sie diesen generischen Delegaten.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|Dieses Steuerelement verfügt über keine zugeordneten Ereignisse. Verwenden Sie diesen generischen Delegaten.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/21/2017
  [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Navigieren Sie zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Verwenden der Zwischenspeicherung in der UI-Automatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

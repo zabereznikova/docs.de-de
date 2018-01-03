@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 06fc335e4b8011afd92e698b20e4b84572b153c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen. Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/18/2017
 |Typ|win:UInt32|0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.<br /><br /> 0x1 – Garbage Collection im Hintergrund.<br /><br /> 0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcend_v1_event"></a>   
 ## <a name="gcendv1-event"></a>GCEnd_V1-Ereignis  
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/18/2017
 |Tiefe|win:UInt32|Die Generation, die erfasst wurde.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
 ## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1-Ereignis  
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/18/2017
 |GCHandleCount|win:UInt32|Die Anzahl der verwendeten Garbage Collection-Handles.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
 ## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1-Ereignis  
@@ -166,7 +167,7 @@ ms.lasthandoff: 10/18/2017
   
  Beachten Sie, dass die Größe der Segmente, die vom Garbage Collector zugeordnet werden, implementierungsspezifisch ist und jederzeit, auch in regelmäßigen Updates, geändert werden kann. Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
 ## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1-Ereignis  
@@ -189,7 +190,7 @@ ms.lasthandoff: 10/18/2017
 |Adresse|win:UInt64|Die Adresse des Segments.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
 ## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1-Ereignis  
@@ -207,7 +208,7 @@ ms.lasthandoff: 10/18/2017
   
  Keine Ereignisdaten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
 ## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1-Ereignis  
@@ -225,7 +226,7 @@ ms.lasthandoff: 10/18/2017
   
  Keine Ereignisdaten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
 ## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1-Ereignis  
@@ -249,7 +250,7 @@ ms.lasthandoff: 10/18/2017
 |Anzahl|win:UInt32|Die Anzahl der GCs zu diesem Zeitpunkt. Normalerweise würde Ihnen danach ein nachfolgender GC-Start angezeigt werden. Diese Anzahl würde dabei um 1 erhöht werden, da der GC-Index während der Garbage Collection erhöht wird.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
 ## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1-Ereignis  
@@ -267,7 +268,7 @@ ms.lasthandoff: 10/18/2017
   
  Keine Ereignisdaten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
 ## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2-Ereignis  
@@ -295,7 +296,7 @@ ms.lasthandoff: 10/18/2017
 |TypeName|win:UnicodeString|Der Name des zugeordneten Typs. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).|  
 |HeapIndex|win:UInt32|Der Heap, auf dem das Objekt zugeordnet wurde. Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
 ## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1-Ereignis  
@@ -313,7 +314,7 @@ ms.lasthandoff: 10/18/2017
   
  Keine Ereignisdaten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
 ## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1-Ereignis  
@@ -336,7 +337,7 @@ ms.lasthandoff: 10/18/2017
 |Anzahl|win:UInt32|Die Anzahl der ausgeführten Finalizer.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
 ## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1-Ereignis  
@@ -355,7 +356,7 @@ ms.lasthandoff: 10/18/2017
   
  Keine Ereignisdaten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
 ## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1-Ereignis  

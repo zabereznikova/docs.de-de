@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: faff06d4ca3ffc48f6a7fca7ee13aac6c47d6d6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa642b8f4a2e80a61f04cb060544b374230d78d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4-Schnittstelle
 Erweitert logisch die ICorDebugAppDomain-Schnittstelle, um ein verwaltetes Objekt aus einen aufrufbaren COM-Wrapper abzurufen.  
@@ -40,5 +41,5 @@ Erweitert logisch die ICorDebugAppDomain-Schnittstelle, um ein verwaltetes Objek
  **.NET Framework-Versionen:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

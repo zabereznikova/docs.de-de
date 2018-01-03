@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>Transaktionen und Parallelität
 Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehlen, die als Paket ausgeführt werden. Mit Transaktionen können Sie mehrere Operationen in einem Arbeitsschritt zusammenfassen. Wenn an einer Stelle in der Transaktion ein Fehler auftritt, kann für alle Updates ein Rollback zum Zustand vor der Transaktion ausgeführt werden.  
@@ -38,7 +39,7 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  [Verteilte Transaktionen](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  Beschreibt die Ausführung von verteilten Transaktionen in ADO.NET.  
   
- [System.Transactions-Integration in SQLServer](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  Beschreibt die <xref:System.Transactions>-Integration in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] zum Arbeiten mit verteilten Transaktionen.  
   
  [Vollständige Parallelität](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
@@ -48,6 +49,6 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

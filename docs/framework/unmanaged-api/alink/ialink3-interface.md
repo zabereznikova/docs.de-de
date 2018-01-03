@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b2f38283e4944c4f24668fa243d628e80daeac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4c4e8222acaf290ea9298a59d2ae77b81d2c913
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink3-interface"></a>IALink3-Schnittstelle
 Stellt eine einzelne Methode `SetManifestFile`, können Sie angeben oder Zurücksetzen der Manifestdatei der Linker verwendet, wenn es sich um eine Assembly erstellt.  
@@ -29,7 +30,7 @@ Stellt eine einzelne Methode `SetManifestFile`, können Sie angeben oder Zurück
  Ermöglicht das angeben oder Zurücksetzen der Manifestdatei, die der Linker beim Erstellen der Assembly verwendet werden soll.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
  Unterstützt das Erstellen von .NET Framework-Assemblys und ungebundenen Modulen.  
   
  [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  

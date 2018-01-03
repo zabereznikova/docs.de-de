@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b0e507e44fd9ce50269081c39eabc953e5b56dfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-samples"></a>Beispiele zur Netzwerkprogrammierung
 Dieser Abschnitt enthält Beschreibungen und Links zu herunterladbaren Netzwerkprogrammierungs-Beispielen, die Klassen in <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> und in den verwandten Namespaces verwenden.  
@@ -75,5 +76,5 @@ Dieser Abschnitt enthält Beschreibungen und Links zu herunterladbaren Netzwerkp
   
 ## <a name="see-also"></a>Siehe auch  
  [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Themen zur netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Netzwerkbeispiele für .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

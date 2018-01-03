@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 94c7b2fe5cf586c0f8a58d1698cdf3870b5b5c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee88d7692abb1f640b6e50d845691adf8938f841
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttypeparametergt-element-net-native"></a>&lt;TypeParameter&gt; Element (.NET Native)
 Wendet eine Richtlinie auf den Typ an, der durch ein an eine Methode übergebenes Type-Argument dargestellt wird.  
@@ -81,7 +82,7 @@ Wendet eine Richtlinie auf den Typ an, der durch ein an eine Methode übergebene
 ## <a name="remarks"></a>Hinweise  
  Das `<TypeParameter>`-Element ähnelt dem [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)-Element, mit dem Unterschied, dass es nur auf Parameter vom Typ <xref:System.Type> angewendet werden kann. Es wendet die Richtlinie auf den Typ an, der zur Laufzeit durch das vom `Name`-Attribut angegebenen Typargument dargestellt wird.  
   
- Das NewtonSoft JSON-Serialisierungsprogramm enthält z. B. eine statische `JsonConvert.DeserializeObject(String value, Type type)`-Methode. Die folgenden Reflektionsdirektiven:  
+ Das NewtonSoft JSON-Serialisierungsprogramm enthält z. B. eine statische `JsonConvert.DeserializeObject(String value, Type type)`-Methode. Die folgenden Reflektionsanweisungen:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -93,7 +94,7 @@ Wendet eine Richtlinie auf den Typ an, der durch ein an eine Methode übergebene
 </Directives>  
 ```  
   
- geben an, dass Metadaten für den Laufzeittyp, der durch das `type`-Argument dargestellt wird, für die Serialisierung verfügbar gemacht werden sollen. Wenn diese Laufzeitdirektiven für ein Projekt, das den folgenden Quellcode enthält, gelten:  
+ geben an, dass Metadaten für den Laufzeittyp, der durch das `type`-Argument dargestellt wird, für die Serialisierung verfügbar gemacht werden sollen. Wenn diese Laufzeitanweisungen für ein Projekt, das den folgenden Quellcode enthält, gelten:  
   
 ```csharp  
 Type t = typeof(StockQuote);  

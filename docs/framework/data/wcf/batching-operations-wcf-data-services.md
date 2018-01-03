@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>Batchvorgänge (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] unterstützt die Batchverarbeitung von Anforderungen an eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst. Weitere Informationen finden Sie unter [OData: Batchverarbeitung](http://go.microsoft.com/fwlink/?LinkId=186075). In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], jeder Vorgang, der mithilfe der <xref:System.Data.Services.Client.DataServiceContext>, z. B. Ausführen einer Abfrage oder Speichern von Änderungen, die Ergebnisse in eine separate Anforderung an den Datendienst gesendet werden. Sie können Vorgangsbatches explizit definieren, um einen logischen Bereich für mehrere Vorgänge beizubehalten. Dadurch wird sichergestellt, dass alle Vorgänge im Batch an den Datendienst in einer einzelnen HTTP-Anforderung gesendet werden, kann der Server der Vorgang atomar zu verarbeiten und reduziert die Anzahl der Roundtrips an den Datendienst.  

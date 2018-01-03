@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 <a name="top"></a> In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="application-domain-events"></a>Anwendungsdomänenereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Information (4)|  
@@ -68,13 +69,13 @@ ms.lasthandoff: 10/18/2017
 |AppDomainIndex|win:UInt32|Der Index dieser Anwendungsdomäne.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
 ## <a name="clr-loader-assembly-events"></a>CLR-Ladeprogramm-Assemblyereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Information (4)|  
@@ -100,13 +101,13 @@ ms.lasthandoff: 10/18/2017
 |AssemblyName|win:UnicodeString|Vollqualifizierter Assemblyname.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="module_events"></a>   
 ## <a name="module-events"></a>Modulereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Information (4)|  
@@ -148,13 +149,13 @@ ms.lasthandoff: 10/18/2017
   
 -   Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="clr_domain_module_events"></a>   
 ## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`DomainModuleLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Information (4)|  
@@ -181,13 +182,13 @@ ms.lasthandoff: 10/18/2017
 |ModuleNativePath|win:UnicodeString|Pfad des systemeigenen Images für das Modul, sofern vorhanden (auf null endend).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="module_range_events"></a>   
 ## <a name="module-range-events"></a>Modulbereichereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Information (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Information (4)|  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a93e8cc1ab0b7488f920b556d2073d2813c3b7a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6384700c7039cb705f2db759ebd3d733bf8954ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung (Application Domain Resource Monitoring, ARM)
 <a name="top"></a> Diese Ereignisse bieten detaillierte Diagnoseinformationen zum Status einer Anwendungsdomäne. Sie können diese Ereignisse oder die Funktion zur Überwachung von Anwendungsdomänenressourcen (ARM) verwenden, um dieselben Informationen zu erhalten.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/18/2017
 |OSThreadID|win:UInt32|Die Betriebssystem-ID des Threads, der erstellt wurde.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="appdomainmemallocated_event"></a>   
 ## <a name="appdomainmemallocated-event"></a>AppDomainMemAllocated-Ereignis  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/18/2017
 |Zugeordnet|win:UInt64|Die Gesamtzahl von Bytes, die in dieser Anwendungsdomäne seit ihrer Erstellung zugeordnet wurden (die Menge des freigegebenen Speichers wird nicht abgezogen).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="appdomainmemsurvived_event"></a>   
 ## <a name="appdomainmemsurvived-event"></a>AppDomainMemSurvived-Ereignis  
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/18/2017
 |ProcessSurvived|win:UInt64|Die Gesamtanzahl der Bytes, die seit der letzten Auflistung noch vorhanden sind. Nach einer vollständigen Auflistung stellt diese Anzahl die Anzahl der Bytes dar, die in verwalteten Heaps live gespeichert werden. Nach einer kurzlebigen Auflistung stellt diese Anzahl die Anzahl der Bytes dar, die in kurzlebigen Generationen live gespeichert werden.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="threadappdomainenter_event"></a>   
 ## <a name="threadappdomainenter-event"></a>ThreadAppDomainEnter-Ereignis  
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/18/2017
 |AppDomainID|win:UInt64|Der Bezeichner der Anwendungsdomäne.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="threadterminated_event"></a>   
 ## <a name="threadterminated-event"></a>ThreadTerminated-Ereignis  

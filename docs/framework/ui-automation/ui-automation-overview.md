@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4dde3e44778511606a2dcd2ce32cb479788c0478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d86c70ec4421bc716b12044bac30f8f925c375f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -51,9 +52,9 @@ ms.lasthandoff: 11/21/2017
 |UiAutomationCore.dll|Der zugrunde liegende Code (gelegentlich als [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Code bezeichnet), der die Kommunikation zwischen Anbietern und Clients verwaltet.|  
 |UIAutomationClientsideProviders.dll|Ein Satz von Benutzeroberflächenautomatisierungs-Anbietern für Standard-Legacysteuerelemente. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente verfügen über systemeigene Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Diese Unterstützung steht Clientanwendungen automatisch zur Verfügung.|  
   
- Aus Sicht des Softwareentwicklers gibt es zwei Möglichkeiten zum Verwenden von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: entweder kann eine Unterstützung für benutzerdefinierte Steuerelemente mithilfe der Anbieter-API erstellt werden oder Anwendungen, die den [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Kern verwenden, um mit [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elementen mithilfe der Client-API zu kommunizieren. Abhängig von Ihren Schwerpunkten sollten Sie auf verschiedene Teile der Dokumentation zugreifen. In den folgenden Abschnitten können Sie mehr über die Konzepte erfahren und sich praktisches Wissen aneignen.  
+ Aus Sicht des Softwareentwicklers gibt es zwei Möglichkeiten zum Verwenden von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: entweder kann eine Unterstützung für benutzerdefinierte Steuerelemente mithilfe der Anbieter-API erstellt werden oder Anwendungen, die den [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern verwenden, um mit [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elementen mithilfe der Client-API zu kommunizieren. Abhängig von Ihren Schwerpunkten sollten Sie auf verschiedene Teile der Dokumentation zugreifen. In den folgenden Abschnitten können Sie mehr über die Konzepte erfahren und sich praktisches Wissen aneignen.  
   
-|Abschnitt|Inhalt|Zielgruppe|  
+|Bereich|Inhalt|Zielgruppe|  
 |-------------|--------------------|--------------|  
 |[Grundlagen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/index.md) (Dieser Abschnitt)|Allgemeine Übersichten über die Konzepte.|Alle|  
 |[Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Übersichten und Hilfethemen zum Verwenden der Anbieter-API.|Entwickler von Steuerelementen.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="ui-automation-model"></a>Benutzeroberflächenautomatisierungs-Modell  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] macht [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente für Clientanwendungen vollständig als <xref:System.Windows.Automation.AutomationElement>verfügbar. Elemente sind in einer Baumstruktur, mit dem Desktop als Stammelement, enthalten. Clients können die „Rohdatenansicht“ der Struktur als „Steuerelementansicht“ oder „Inhaltsansicht“ filtern. Anwendungen können auch benutzerdefinierte Ansichten erstellen.  
   
- <xref:System.Windows.Automation.AutomationElement> -Objekte machen allgemeine Eigenschaften der von ihnen dargestellten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente verfügbar. Eine dieser Eigenschaften ist der „Steuerelementtyp“, der die grundlegende Darstellung und Funktionalität als einzelne Entität definiert, z. B. als Schaltfläche oder Kontrollkästchen.  
+ <xref:System.Windows.Automation.AutomationElement> -Objekte machen allgemeine Eigenschaften der von ihnen dargestellten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente verfügbar. Eine dieser Eigenschaften ist der „Steuerelementtyp“, der die grundlegende Darstellung und Funktionalität als einzelne Entität definiert, z. B. als Schaltfläche oder Kontrollkästchen.  
   
  Darüber hinaus machen Elemente Steuerelementmuster verfügbar, die ihren Steuerelementtypen entsprechende Eigenschaften bereitstellen. Steuerelementmuster machen gleichzeitig Methoden verfügbar, die es Clients ermöglichen, weitere Informationen über das Element zu erlangen und Eingaben bereitzustellen.  
   
@@ -88,5 +89,5 @@ ms.lasthandoff: 11/21/2017
  [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [Übersicht über die Benutzeroberflächenautomatisierungs-Ereignisse](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
+ [Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

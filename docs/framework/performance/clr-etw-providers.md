@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18353939108d58eb2aaffee97e059e4430b25e3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b76b3a1d4969a5ed81e5fa90afb06050b780804
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
@@ -95,7 +96,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
     xperf -merge -d clr1.etl clr2.etl merged.etl  
     ```  
   
-     Die Datei "merged.etl" enthält die Ereignisse von den Laufzeit- und Rundownanbietersitzungen.  
+     Die Datei „merged.etl“ enthält die Ereignisse von den Laufzeit- und Rundownanbietersitzungen.  
   
  Ein Tool kann die Schritte 2 und 3 ausführen (dabei wird eine Rundownsitzung gestartet und anschließend die Profilerstellung beendet), anstatt sofort die Profilerstellung zu deaktivieren, wenn ein Benutzer das Beenden der Profilerstellung anfordert. Schritt 4 kann auch mit einem Tool ausgeführt werden.  
   

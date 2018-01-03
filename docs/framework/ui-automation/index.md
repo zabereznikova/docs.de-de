@@ -1,5 +1,5 @@
 ---
-title: Barrierefreiheit
+title: Zugriff
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,13 +15,14 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="accessibility"></a>Barrierefreiheit
+# <a name="accessibility"></a>Zugriff
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
  [Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
  [Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [Textmuster zur Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [Steuerelementtypen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
  [Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

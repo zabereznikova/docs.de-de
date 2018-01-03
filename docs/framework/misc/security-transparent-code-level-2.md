@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0bd4ee6c43b5089c45789b4f22326e17ec2218c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-transparent-code-level-2"></a>Sicherheitstransparenter Code, Ebene 2
 <a name="top"></a>
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `SecuritySafeCritical`: Der Typ oder Member ist sicherheitsgeschützt. Allerdings kann der Typ oder Member von transparentem (teilweise vertrauenswürdigem) Code aufgerufen werden und ist so leistungsfähig wie jeder andere wichtige Code. Der Code muss hinsichtlich der Sicherheit überwacht werden.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="override"></a>   
 ## <a name="override-patterns"></a>Überschreibungsmuster  
@@ -121,7 +122,7 @@ ms.lasthandoff: 11/21/2017
 |`SafeCritical`|`SafeCritical`|  
 |`Critical`|`Critical`|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="inheritance"></a>   
 ## <a name="inheritance-rules"></a>Vererbungsregeln  
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Diese Vererbungsregeln gelten für Typen und Member der Ebene 2. Typen in Assemblys der Ebene 1 können von sicherheitskritischen Typen und Membern der Ebene 2 erben. Daher müssen Typen und Member der Ebene 2 separate  Vererbungsanforderungen für Erben der Ebene 1 aufweisen.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="additional"></a>   
 ## <a name="additional-information-and-rules"></a>Zusätzliche Informationen und Regeln  

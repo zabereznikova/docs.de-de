@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-data-service"></a>Erstellen des Datendiensts
 In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar machen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Feed, die auf die Beispieldatenbank Northwind basiert. Die Aufgabe umfasst die folgenden grundlegenden Schritte:  
@@ -110,7 +111,7 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
 ## <a name="next-steps"></a>Nächste Schritte  
  Einen neuer Datendienst, die verfügbar gemacht wurde erfolgreich erstellt ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feed, die auf die Beispieldatenbank Northwind, und Sie basiert aktiviert haben Zugriff auf den Feed für Clients, die über Berechtigungen verfügen, auf die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung. Als Nächstes starten Sie den Datendienst aus [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] und greifen Sie auf die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed von einer HTTP-GET-Anforderungen über einen Webbrowser senden:  
   
- [Zugriff auf den Dienst über einen Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Zugreifen auf den Dienst mit einem Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

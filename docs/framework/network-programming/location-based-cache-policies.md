@@ -25,11 +25,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="location-based-cache-policies"></a>Speicherortbasierte Cacherichtlinien
 Eine speicherortbasierte Cacherichtlinie definiert die Aktualität gültiger zwischengespeicherter Einträge basierend darauf, woher die angeforderte Ressource stammen kann. Eine zwischengespeicherte Ressource ist gültig, wenn ihre Verwendung keinen Verstoß gegen vom Server angegebene Anforderungen an die erneute Überprüfung darstellt. Eine speicherortbasierte Cacherichtlinie wird programmgesteuert erstellt, indem ein <xref:System.Net.Cache.RequestCachePolicy>- oder <xref:System.Net.Cache.HttpRequestCachePolicy>-Klassenkonstruktor verwendet wird. Der Typ der speicherortbasierten Richtlinie wird mithilfe eines <xref:System.Net.Cache.RequestCacheLevel>- oder <xref:System.Net.Cache.HttpRequestCacheLevel>-Enumerationswerts an den Konstruktor übergeben. Codebeispiele, die speicherortbasierte Cacherichtlinien erstellen, finden Sie unter [Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Im folgenden Abschnitt wird jeder Typ der speicherortbasierten Cacherichtlinie für Hypertext Transfer-Protokollressourcen (http und https) erklärt.  

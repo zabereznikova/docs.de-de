@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c2f03065ee6f1292f72a33a72b1d43b1fed0c8f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten schemaauflistungen zu ermitteln, rufen Sie die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
@@ -57,7 +58,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |index_name|Zeichenfolge|Name des Indexes.|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
- Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurden der Indexes-Schemaauflistung die folgenden Spalten hinzugefügt, um neue räumliche Typen, Dateistream und Sparsespalten unterstützen zu können. Diese Spalten werden in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
+ Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurden der Indexes-Schemaauflistung die folgenden Spalten hinzugefügt, um neue räumliche Typen, Dateistream und Spalten mit geringer Dichte unterstützen zu können. Diese Spalten werden in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
@@ -153,16 +154,16 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |COLLATION_CATALOG|Zeichenfolge|Gibt master zurück, wodurch die Datenbank angegeben wird, in der die Sortierung definiert ist, wenn die Spalte den Typ Zeichendaten oder Textdaten aufweist. Andernfalls ist diese Spalte NULL.|  
   
 ### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
- Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurden der Columns-Schemaauflistung die folgenden Spalten hinzugefügt, um neue räumliche Typen, Dateistream und Sparsespalten unterstützen zu können. Diese Spalten werden in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
+ Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurden der Columns-Schemaauflistung die folgenden Spalten hinzugefügt, um neue räumliche Typen, Dateistream und Spalten mit geringer Dichte unterstützen zu können. Diese Spalten werden in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |IS_FILESTREAM|Zeichenfolge|YES, wenn die Spalte über das FILESTREAM-Attribut verfügt.<br /><br /> NO, wenn die Spalte nicht über das FILESTREAM-Attribut verfügt.|  
-|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Sparsespalte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
+|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Spalte mit geringer Dichte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
 |IS_COLUMN_SET|Zeichenfolge|YES, wenn die Spalte eine Spaltensatzspalte ist.<br /><br /> NO, wenn die Spalte keine Spaltensatzspalte ist.|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
- Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurde die AllColumns-Schemaauflistung hinzugefügt, um Sparsespalten unterstützen zu können. AllColumns wird in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
+ Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurde die AllColumns-Schemaauflistung hinzugefügt, um Spalten mit geringer Dichte unterstützen zu können. AllColumns wird in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
   
  AllColumns hat die gleichen Einschränkungen und das resultierende DataTable-Schema wie die Columns-Schemaauflistung. Der einzige Unterschied besteht darin, dass AllColumns Spaltensatzspalten einschließt, die nicht in der Columns-Schemaauflistung enthalten sind. In der folgenden Liste werden diese Spalten beschrieben.  
   
@@ -187,11 +188,11 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |CHARACTER_SET_NAME|Zeichenfolge|Gibt den eindeutigen Namen für den Zeichensatz zurück, wenn diese Spalte den Typ Zeichendaten oder Textdaten aufweist. Andernfalls wird NULL zurückgegeben.|  
 |COLLATION_CATALOG|Zeichenfolge|Gibt master zurück, wodurch die Datenbank angegeben wird, in der die Sortierung definiert ist, wenn die Spalte den Typ Zeichendaten oder Textdaten aufweist. Andernfalls ist diese Spalte NULL.|  
 |IS_FILESTREAM|Zeichenfolge|YES, wenn die Spalte über das FILESTREAM-Attribut verfügt.<br /><br /> NO, wenn die Spalte nicht über das FILESTREAM-Attribut verfügt.|  
-|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Sparsespalte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
+|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Spalte mit geringer Dichte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
 |IS_COLUMN_SET|Zeichenfolge|YES, wenn die Spalte eine Spaltensatzspalte ist.<br /><br /> NO, wenn die Spalte keine Spaltensatzspalte ist.|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
- Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurde die ColumnSetColumns-Schemaauflistung hinzugefügt, um Sparsespalten unterstützen zu können. ColumnSetColumns wird in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt. Die ColumnSetColumns-Schemaauflistung gibt das Schema für alle Spalten in einem Spaltensatz zurück. In der folgenden Liste werden diese Spalten beschrieben.  
+ Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurde die ColumnSetColumns-Schemaauflistung hinzugefügt, um Spalten mit geringer Dichte unterstützen zu können. ColumnSetColumns wird in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt. Die ColumnSetColumns-Schemaauflistung gibt das Schema für alle Spalten in einem Spaltensatz zurück. In der folgenden Liste werden diese Spalten beschrieben.  
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
@@ -214,7 +215,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |CHARACTER_SET_NAME|Zeichenfolge|Gibt den eindeutigen Namen für den Zeichensatz zurück, wenn diese Spalte den Typ Zeichendaten oder Textdaten aufweist. Andernfalls wird NULL zurückgegeben.|  
 |COLLATION_CATALOG|Zeichenfolge|Gibt master zurück, wodurch die Datenbank angegeben wird, in der die Sortierung definiert ist, wenn die Spalte den Typ Zeichendaten oder Textdaten aufweist. Andernfalls ist diese Spalte NULL.|  
 |IS_FILESTREAM|Zeichenfolge|YES, wenn die Spalte über das FILESTREAM-Attribut verfügt.<br /><br /> NO, wenn die Spalte nicht über das FILESTREAM-Attribut verfügt.|  
-|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Sparsespalte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
+|IS_SPARSE|Zeichenfolge|YES, wenn die Spalte eine Spalte mit geringer Dichte ist.<br /><br /> NO, wenn die Spalte keine Sparsespalte ist.|  
 |IS_COLUMN_SET|Zeichenfolge|YES, wenn die Spalte eine Spaltensatzspalte ist.<br /><br /> NO, wenn die Spalte keine Spaltensatzspalte ist.|  
   
 ## <a name="users"></a>Benutzer  
@@ -258,8 +259,8 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |version_minor|Objekt|Nummer der Nebenversion.|  
 |version_build|Objekt|Buildnummer.|  
 |version_revision|Objekt|Revisionsnummer.|  
-|culture_info|Objekt|Die diesem UDT zugeordneten Kulturinformationen.|  
-|public_key|Objekt|Der von dieser Assembly verwendete öffentliche Schlüssel.|  
+|culture_info|Object|Die diesem UDT zugeordneten Kulturinformationen.|  
+|public_key|Object|Der von dieser Assembly verwendete öffentliche Schlüssel.|  
 |is_fixed_length|Boolesch|Gibt an, ob die Länge des Typs immer mit max_length übereinstimmt.|  
 |max_length|Int16|Maximale Länge des Typs in Byte.|  
 |Create_Date|DateTime|Datum, an dem die Assembly erstellt/registriert wurde.|  
