@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c24882f2bd9819043bbc786bd2e5f35129a92744
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5e294275da45575a3aed457fb2428c4768e78d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-enumerations"></a>Debugenumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die die Debug-API verwendet.  
@@ -42,10 +43,10 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  CorDebugChainReason  
  Gibt den Grund oder die Gründe für die Initiierung einer Aufrufkette an.  
   
- [CorDebugCodeInvokeKind-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
+ [CorDebugCodeInvokeKind-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
  Beschreibt, wie durch eine exportierte Funktion verwalteter Code aufgerufen wird.  
   
- [CorDebugCodeInvokePurpose-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
+ [CorDebugCodeInvokePurpose-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
  Beschreibt, warum durch eine exportierte Funktion verwalteter Code aufgerufen wird.  
   
  CorDebugCreateProcessFlags  
@@ -54,7 +55,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  [CorDebugDebugEventKind-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
  Gibt den Typ des Ereignisses, dessen Informationen mit der [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.  
   
- [CorDebugDecodeEventFlagsWindows-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
+ [CorDebugDecodeEventFlagsWindows-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Weitere Informationen zu Debug-Ereignissen auf der Windows-Plattform.  
   
  CorDebugExceptionCallbackType  
@@ -105,7 +106,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  [CorDebugPlatform-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
  Stellt Zielplattformwerte, mit denen, die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode.  
   
- [CorDebugRecordFormat-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+ [CorDebugRecordFormat-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  Beschreibt das Format der Daten in einem Byte-Array, das Informationen über ein systemeigenes Ausnahme-Debug-Ereignis enthält.  
   
  CorDebugRegister  
@@ -114,7 +115,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  [CorDebugSetContextFlag-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
  Gibt an, ob der Kontext aus dem aktiven Frame (oder Endframe) auf dem Stapel stammt oder durch das Entladen aus einem anderen Frame berechnet wurde.  
   
- [CorDebugStateChange-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
+ [CorDebugStateChange-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
  Beschreibt die Menge der zwischengespeicherten Daten, die auf der Grundlage von Änderungen am Prozess verworfen werden müssen.  
   
  CorDebugStepReason  
@@ -150,7 +151,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Debuggen von Co-Klassen](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
  [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   

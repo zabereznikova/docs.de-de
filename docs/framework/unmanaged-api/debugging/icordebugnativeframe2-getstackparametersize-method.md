@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c265cb564718b362b1354189e59dc217b2866b36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa7e67c252f2ece16c072e22d0333e085fbc4f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize-Methode
 Gibt die kumulierte Größe der Parameter auf dem Stapel von Betriebssystemen X86 zurück.  
@@ -47,7 +48,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |-------------|-----------------|  
 |S_OK|Die Größe des Stapels wurde erfolgreich zurückgegeben.|  
 |S_FALSE|`GetStackParameterSize`auf einer Plattform nicht X86 aufgerufen wurde.|  
-|E_FAIL|`The size of the parameters could not be returned`.|  
+|E_FAIL|`The size of the parameters could not be returned`|  
 |E_INVALIDARG|`pSize`Ist `null`.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -66,5 +67,5 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

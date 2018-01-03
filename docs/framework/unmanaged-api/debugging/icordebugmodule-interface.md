@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ced01c9c01a32468f371a8e172c878337fb79757
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 59c24d8305e71aac01843155b86fb54fb1e1263d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodule-interface1"></a>ICorDebugModule Schnittstelle1
 Stellt ein common Language Runtime (CLR) Modul, das eine ausführbare Datei oder eine Dynamic Link Library (DLL) ist.  
@@ -66,4 +67,4 @@ Stellt ein common Language Runtime (CLR) Modul, das eine ausführbare Datei oder
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

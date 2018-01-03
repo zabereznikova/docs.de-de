@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6e1f459636f1bb2b3844eebdb98bebd1deb73cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34a2c2571ba7f3560d861d0a5271cc3a955253a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
@@ -38,7 +39,7 @@ HRESULT EnableVirtualModuleSplitting(
  Virtueller Module [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , Module, die während des Erstellungsvorgangs zusammengeführt wurden verarbeitet und stellt sie als eine Gruppe von separaten Modulen und nicht als ein einziges großes Modul zu erkennen. Hierdurch ändert sich das Verhalten der verschiedenen [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) unten beschriebenen Methoden.  
   
 > [!NOTE]
->  Diese Methode ist nur in Verbindung mit .NET Native verfügbar.  
+>  Diese Methode ist nur mit .NET Native verfügbar.  
   
  Diese Methode ist aufrufbar, und der `enableSplitting`-Wert kann jederzeit geändert werden. Bewirkt keine zustandsbehafteten funktionalen Änderungen in einer [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt, abgesehen von der Änderung des Verhaltens der aufgeführten Methoden der [aufteilen virtueller Module und der nicht verwalteten Debug-APIs](#APIs) Der Abschnitt zu dem Zeitpunkt, die sie aufgerufen werden. Die Verwendung virtueller Module führt beim Aufrufen dieser Methoden durchaus zu Leistungseinbußen. Darüber hinaus erhebliche im Arbeitsspeicher Zwischenspeichern die virtualisierten Metadaten gegebenenfalls korrekt implementieren die [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -APIs und die speicherungen möglicherweise beibehalten, auch nachdem Teilen virtueller Module deaktiviert wurde.  
   
@@ -122,4 +123,4 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebugProcess6-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

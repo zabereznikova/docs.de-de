@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10a3dc67cb1edffb01671d34c8671f8228146bf3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9860b90ad61dcd53a990235acb3924c08168782b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (Referenz zur nicht verwalteten API)
 Fusion-API ermöglicht es einen Laufzeithost auf die Eigenschaften der Ressourcen einer Anwendung zugegriffen werden, um die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  
@@ -30,7 +31,7 @@ Fusion-API ermöglicht es einen Laufzeithost auf die Eigenschaften der Ressource
  [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  Beschreibt die nicht verwalteten Schnittstellen, die die Fusion-API verwendet.  
   
- [Globale statische Fusionsfunktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
  Beschreibt die nicht verwalteten globalen statischen Funktionen, die die Fusion-API verwendet.  
   
  [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  

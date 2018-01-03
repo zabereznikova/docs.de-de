@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 427e62ad62f2d6a7ef2add5bfc77ac28eacfbb46
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0d531aad148eb060261bc1c2a703e1a003307910
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-coclasses"></a>Debuggen von Co-Klassen
 In diesem Abschnitt werden die nicht verwalteten Co-Klassen beschrieben, die von der Debug-API verwendet werden.  
@@ -31,7 +32,7 @@ In diesem Abschnitt werden die nicht verwalteten Co-Klassen beschrieben, die von
  Stellt Schnittstellen für die Veröffentlichung von Informationen über Anwendungsdomänen und Prozesse bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
  [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   

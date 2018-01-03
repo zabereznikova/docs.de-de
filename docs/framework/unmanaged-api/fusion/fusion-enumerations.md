@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53c346418234fd0be45242f3e7aa0212dcef477a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f136f98758dc7162ec26323391e0c1295a8444f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-enumerations"></a>Fusionsenumerationen
 In diesem Abschnitt wird beschrieben, die nicht verwalteten Enumerationen, die die Fusion-API verwendet wird.  
@@ -48,6 +49,6 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Enumerationen, die d
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
   
- [Globale statische Fusionsfunktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
   
  [Fusion-Strukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

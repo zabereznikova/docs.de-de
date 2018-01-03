@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b740f378b4fd15fe6bf4a9832348869878e2a4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0499813bc2192d419dc21d9dbb84aff17894544f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -52,7 +53,7 @@ HRESULT GetInstrumentedILMap(
 ## <a name="remarks"></a>Hinweise  
  Wenn bei der Profiler die Zuordnung durch Aufrufen der [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) -Methode, der Debugger kann diese Methode zum Abrufen der Zuordnung und die Zuordnung verwendet intern beim Berechnen des IL-für die Stack Offsets aufrufen ablaufverfolgungen und Variable Lebensdauer.  
   
- Wenn `cMap` ist 0 und `pcMap` nicht**null**, `pcMap` auf die Anzahl der verfügbaren COR_IL_MAP-Werte festgelegt ist. Wenn `cMap` nicht NULL ist, stellt es die Speicherkapazität des `map`-Arrays dar. Wenn die Methode zurückkehrt, `map` höchstens `cMap` Elemente und `pcMap` festgelegt ist, um die Anzahl der tatsächlich geschriebenen COR_IL_MAP-Werte der `map` Array.  
+ Wenn `cMap` ist 0 und `pcMap` nicht**null**, `pcMap` auf die Anzahl der verfügbaren COR_IL_MAP-Werte festgelegt ist. Wenn `cMap` ungleich null ist, stellt es die Speicherkapazität des `map`-Arrays dar. Wenn die Methode zurückkehrt, `map` höchstens `cMap` Elemente und `pcMap` festgelegt ist, um die Anzahl der tatsächlich geschriebenen COR_IL_MAP-Werte der `map` Array.  
   
  Wenn das IL instrumentiert oder die Zuordnung nicht von einem Profiler bereitgestellt wurde, gibt diese Methode `S_OK` aus und legt `pcMap` auf 0 fest.  
   
@@ -68,4 +69,4 @@ HRESULT GetInstrumentedILMap(
 ## <a name="see-also"></a>Siehe auch  
  [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)  
  [ICorDebugILCode2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

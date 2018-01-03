@@ -21,11 +21,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6ebfa1af4b824f4fcd4247cd7d0a667488f3e3ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 849668f10eba81ba1667ac6518ab699e4bca3bcb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime-Methode
 Ruft die [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle, die eine bestimmte Version der common Language Runtime (CLR) entspricht. Diese Methode hat Vorrang vor den [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Funktion, mit der [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) Flag.  
@@ -64,7 +65,7 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` oder `ppRuntime` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode interagiert konsistent mit älteren Schnittstellen wie z. B. die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) Schnittstelle und Legacy-Funktionen wie z. B. die als veraltet markierten `CorBindTo*` Funktionen (finden Sie unter [veraltet CLR Hosting-Funktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in .NET Framework 2.0 hosting-API). D. h. Laufzeiten, die geladen werden, mit dem legacy-API für die neue API sichtbar sind, und Laufzeiten, die mit der neuen API geladen werden, die für die legacy-API sichtbar sind. .  
+ Diese Methode interagiert konsistent mit älteren Schnittstellen wie z. B. die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) Schnittstelle und Legacy-Funktionen wie z. B. die als veraltet markierten `CorBindTo*` Funktionen (finden Sie unter [veraltet CLR Hosting-Funktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in .NET Framework 2.0 hosting-API). D. h. Laufzeiten, die geladen werden, mit dem legacy-API für die neue API sichtbar sind, und Laufzeiten, die mit der neuen API geladen werden, die für die legacy-API sichtbar sind. sein.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
