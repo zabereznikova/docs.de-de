@@ -19,14 +19,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7d49c4263517830f46b1416684c7d9b874cda4db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parameter-design"></a>Parameterentwurf
-Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschließlich Abschnitte mit Richtlinien für die Überprüfung der Argumente. Sie sollten darüber hinaus finden Sie in der beschriebenen Richtlinien [Benennung von Parametern](./../../docs/standard/design-guidelines/naming-parameters.md).  
+Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschließlich Abschnitte mit Richtlinien für die Überprüfung der Argumente. Sie sollten darüber hinaus finden Sie in der beschriebenen Richtlinien [Benennung von Parametern](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **Führen Sie ✓** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
   
@@ -40,7 +43,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschl
   
  Zeiger und mehrdimensionale Arrays sind relativ schwer, ordnungsgemäß zu verwenden. In fast allen Fällen können APIs neu gestaltet werden, um zu vermeiden, diese Typen als Parameter übernimmt.  
   
- **✓ FÜHREN** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](./../../docs/standard/design-guidelines/member-overloading.md)).  
+ **✓ FÜHREN** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
  Die `out` Parameter können als zusätzliche Werte angezeigt werden, und gruppieren sie macht die Signatur der Methode leichter zu verstehen.  
   
@@ -53,7 +56,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschl
   
  **X nicht** boolesche Werte verwenden, es sei denn, Sie absolut sicher, dass es werden nie mehr als zwei Werte erforderlich sind.  
   
- Enumerationen bieten Ihnen einige Platz für zukünftige Werte hinzufügen, aber Sie sollten alle verbundenen Auswirkungen auf den zum Hinzufügen von Werten für Enumerationen, die in beschrieben werden [Enum-Entwurf](./../../docs/standard/design-guidelines/enum.md).  
+ Enumerationen bieten Ihnen einige Platz für zukünftige Werte hinzufügen, aber Sie sollten alle verbundenen Auswirkungen auf den zum Hinzufügen von Werten für Enumerationen, die in beschrieben werden [Enum-Entwurf](../../../docs/standard/design-guidelines/enum.md).  
   
  **✓ GGF.** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
   
@@ -164,5 +167,5 @@ public class String {
  *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwurfsrichtlinien für Member](./../../docs/standard/design-guidelines/member.md)  
- [Frameworkentwurfsrichtlinien](./../../docs/standard/design-guidelines/index.md)
+ [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

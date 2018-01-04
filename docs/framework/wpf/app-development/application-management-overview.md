@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
 Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen in der <xref:System.Windows.Application> Klasse zum Erstellen und Verwalten von Anwendungen.  
@@ -60,7 +61,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 |Anwendungsspezifische Eigenschaften abrufen und festlegen.|Verwenden Sie die <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>-Eigenschaft.|  
 |Den Zustand einer Anwendung abrufen und speichern.|Finden Sie unter [persistent speichern und Wiederherstellen von anwendungsspezifische Eigenschaften sitzungsübergreifend Anwendung](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
 |Datendateien ohne Code verwalten, einschließlich Ressourcendateien, Inhalts- und Ursprungssitedateien.|Finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Fenster in eigenständigen Anwendungen verwalten.|Finden Sie unter [Übersicht über WPF-Windows](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Fenster in eigenständigen Anwendungen verwalten.|Weitere Informationen finden Sie unter [Übersicht über WPF-Fenster](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
 |Navigation überwachen und verwalten.|Finden Sie unter [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   

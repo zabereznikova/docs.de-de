@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d7d9610c6c507ebdebdb5690dcb7aec19599ee80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b33e3a61b91c2f9e2362a270216038d61770b815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-compositecollection"></a>Gewusst wie: Implementieren von CompositeCollection
 ## <a name="example"></a>Beispiel  
@@ -32,4 +33,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Data.XmlDataProvider>  
  <xref:System.Windows.DataTemplate>  
  [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

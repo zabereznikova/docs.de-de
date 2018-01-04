@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush>-Objekte ermöglichen den steuern, wie ein Bereich mit einem Bild gezeichnet wird mit einer hohen <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. Dieses Thema beschreibt, wie <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie besser steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  
@@ -137,7 +138,7 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
  [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [ImageBrush-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160049)

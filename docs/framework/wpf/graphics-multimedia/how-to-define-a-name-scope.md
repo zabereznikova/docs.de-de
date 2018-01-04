@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d3199de53f93f07e36e7a6e0a02ed9e80b4d591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3007088f849f40e4e9b4f1846c19c98c33e95c17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-name-scope"></a>Gewusst wie: Definieren eines Namensbereichs
 Animieren mit <xref:System.Windows.Media.Animation.Storyboard> in Code, erstellen Sie eine <xref:System.Windows.NameScope> und registrieren Sie die Zielobjekte Namen mit dem Element, diese Namensbereich besitzt. Im folgenden Beispiel ein <xref:System.Windows.NameScope> wird erstellt für `myMainPanel`. Zwei Schaltflächen `button1` und `button2`, Bereich und ihre registrierten Namen hinzugefügt werden. Mehrere Animationen und ein <xref:System.Windows.Media.Animation.Storyboard> erstellt werden. Des Storyboards <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode wird verwendet, um die Animationen zu starten.  

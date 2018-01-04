@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9560e9d0a2809ae8f55a060eaec3b271539d5f94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e8d15a1b8432b3dae5bee73396bdec9fc9d50f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Gewusst wie: Festlegen der Dauer einer Animation
 Ein <xref:System.Windows.Media.Animation.Timeline> stellt ein Segment der Zeit und die Länge des Abschnitts sich nach der Zeitachse richtet <xref:System.Windows.Duration>. Wenn eine <xref:System.Windows.Media.Animation.Timeline> Erreichen des Endes des seine Dauer Wiedergabe beendet. Wenn die <xref:System.Windows.Media.Animation.Timeline> untergeordnete Zeitachsen, hat sie Wiedergabe ebenfalls beendet. Im Fall einer Animation die <xref:System.Windows.Duration> gibt an, wie lange die Animation für den Übergang vom Startwert zum Endwert benötigt.  

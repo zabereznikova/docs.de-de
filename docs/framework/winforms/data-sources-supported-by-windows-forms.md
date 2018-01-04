@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenbanken gespeicherten Daten nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  
@@ -57,15 +58,15 @@ Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenba
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]Datenobjekte  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]bietet eine Reihe von Datenstrukturen geeignet, für die Bindung an. Jede variiert in ihren Wissensstand und Komplexität.  
   
--   <xref:System.Data.DataColumn>. Ein <xref:System.Data.DataColumn> ist der wesentliche Baustein von einem <xref:System.Data.DataTable>, insofern, dass eine Anzahl von Spalten eine Tabelle bilden. Jede <xref:System.Data.DataColumn> verfügt über eine <xref:System.Data.DataColumn.DataType%2A> Eigenschaft, die die Art der Daten in der Spalte enthalten sind (z. B. die Marke der in einer Tabelle zur Beschreibung von Autos) bestimmt. Können Sie einfache-binden ein Steuerelements (z. B. eine <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft) auf eine Spalte in einer Datentabelle.  
+-   <xref:System.Data.DataColumn> Ein <xref:System.Data.DataColumn> ist der wesentliche Baustein von einem <xref:System.Data.DataTable>, insofern, dass eine Anzahl von Spalten eine Tabelle bilden. Jede <xref:System.Data.DataColumn> verfügt über eine <xref:System.Data.DataColumn.DataType%2A> Eigenschaft, die die Art der Daten in der Spalte enthalten sind (z. B. die Marke der in einer Tabelle zur Beschreibung von Autos) bestimmt. Können Sie einfache-binden ein Steuerelements (z. B. eine <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft) auf eine Spalte in einer Datentabelle.  
   
--   <xref:System.Data.DataTable>. Ein <xref:System.Data.DataTable> ist die Darstellung einer Tabelle mit Zeilen und Spalten [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Eine Datentabelle enthält zwei Auflistungen: <xref:System.Data.DataColumn>, für die Spalten der Daten in einer Tabelle (die bestimmen, letztlich die Arten von Daten, die in dieser Tabelle eingegeben werden können), und <xref:System.Data.DataRow>, die Datenzeilen in einer angegebenen Tabelle darstellt. Sie können komplexe binden ein Steuerelements in einer Tabelle enthaltenen Informationen (z. B. die Bindung der <xref:System.Windows.Forms.DataGridView> Steuerelement an eine Datentabelle). Allerdings beim Binden an eine <xref:System.Data.DataTable>, Sie tatsächlich eine Bindung an die Tabelle standardmäßig angezeigt werden.  
+-   <xref:System.Data.DataTable> Ein <xref:System.Data.DataTable> ist die Darstellung einer Tabelle mit Zeilen und Spalten [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Eine Datentabelle enthält zwei Auflistungen: <xref:System.Data.DataColumn>, für die Spalten der Daten in einer Tabelle (die bestimmen, letztlich die Arten von Daten, die in dieser Tabelle eingegeben werden können), und <xref:System.Data.DataRow>, die Datenzeilen in einer angegebenen Tabelle darstellt. Sie können komplexe binden ein Steuerelements in einer Tabelle enthaltenen Informationen (z. B. die Bindung der <xref:System.Windows.Forms.DataGridView> Steuerelement an eine Datentabelle). Allerdings beim Binden an eine <xref:System.Data.DataTable>, Sie tatsächlich eine Bindung an die Tabelle standardmäßig angezeigt werden.  
   
--   <xref:System.Data.DataView>. Ein <xref:System.Data.DataView> ist eine angepasste Ansicht einer einzelnen Datentabelle, die gefiltert oder sortiert werden kann. Eine Data source View sind, die Daten "Momentaufnahme" von komplexen datengebundenen Steuerelementen verwendet wird. Sie können einfache Bindung oder komplexe Binden der Daten in eine Data source View, jedoch beachten Sie, dass Sie mit einem festen "Bild" Daten statt einer sauberen und Update-Datenquelle binden.  
+-   <xref:System.Data.DataView> Ein <xref:System.Data.DataView> ist eine angepasste Ansicht einer einzelnen Datentabelle, die gefiltert oder sortiert werden kann. Eine Data source View sind, die Daten "Momentaufnahme" von komplexen datengebundenen Steuerelementen verwendet wird. Sie können einfache Bindung oder komplexe Binden der Daten in eine Data source View, jedoch beachten Sie, dass Sie mit einem festen "Bild" Daten statt einer sauberen und Update-Datenquelle binden.  
   
--   <xref:System.Data.DataSet>. Ein <xref:System.Data.DataSet> ist eine Auflistung von Tabellen, Beziehungen und Einschränkungen der Daten in einer Datenbank. Sie können einfache Bindung oder komplexe Binden der Daten innerhalb eines Datasets, aber beachten Sie, dass Sie eine an Standardeinstellung Bindung <xref:System.Data.DataViewManager> für die <xref:System.Data.DataSet> (siehe die nächste Aufzählungszeichen zeigen).  
+-   <xref:System.Data.DataSet> Ein <xref:System.Data.DataSet> ist eine Auflistung von Tabellen, Beziehungen und Einschränkungen der Daten in einer Datenbank. Sie können einfache Bindung oder komplexe Binden der Daten innerhalb eines Datasets, aber beachten Sie, dass Sie eine an Standardeinstellung Bindung <xref:System.Data.DataViewManager> für die <xref:System.Data.DataSet> (siehe die nächste Aufzählungszeichen zeigen).  
   
--   <xref:System.Data.DataViewManager>. Ein <xref:System.Data.DataViewManager> ist eine angepasste Ansicht des gesamten <xref:System.Data.DataSet>, analog zu einem <xref:System.Data.DataView>, jedoch mit Beziehungen enthalten. Mit einem <xref:System.Data.DataViewManager.DataViewSettings%2A> , Sie können Sammlungssatz Standardfilter und Sortierungsoptionen für Sichten, die die <xref:System.Data.DataViewManager> für eine bestimmte Tabelle hat.  
+-   <xref:System.Data.DataViewManager> Ein <xref:System.Data.DataViewManager> ist eine angepasste Ansicht des gesamten <xref:System.Data.DataSet>, analog zu einem <xref:System.Data.DataView>, jedoch mit Beziehungen enthalten. Mit einem <xref:System.Data.DataViewManager.DataViewSettings%2A> , Sie können Sammlungssatz Standardfilter und Sortierungsoptionen für Sichten, die die <xref:System.Data.DataViewManager> für eine bestimmte Tabelle hat.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6df7c6e8f7670648405400cf48e4a1d54cdd7e34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-for-xaml-overview"></a>Übersicht über Typkonverter für XAML
 Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konvertierung von einer Zeichenfolge im XAML-Markup in bestimmte Objekte in einem Objektdiagramm vornimmt. In .NET Framework XAML Services muss der Typkonverter eine Klasse sein, die aus <xref:System.ComponentModel.TypeConverter>abgeleitet wird. Einige Konverter unterstützen zudem den XAML-Speicherpfad und können zum Serialisieren eines Objekts in ein Zeichenfolgenformular im Serialisierungsmarkup verwendet werden. In diesem Thema wird beschrieben, wie und wann Typkonverter in XAML aufgerufen werden. Zudem enthält es Implementierungsratschläge für die Methodenüberschreibungen von <xref:System.ComponentModel.TypeConverter>.  
@@ -87,13 +88,13 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
 ### <a name="implementing-convertto"></a>Implementieren von ConvertTo  
  <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> wird möglicherweise für die Serialisierungsunterstützung verwendet. Die Serialisierungsunterstützung durch <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> für Ihren benutzerdefinierten Typ und dessen Typkonverter ist nicht unbedingt erforderlich. Wenn Sie jedoch ein Steuerelement implementieren oder die Serialisierung als Bestandteil der Features oder zum Entwerfen Ihrer Klasse verwenden, sollten Sie <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>implementieren.  
   
- Damit die Verwendung als eine <xref:System.ComponentModel.TypeConverter> -Implementierung erfolgen kann, die XAML unterstützt, muss die <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> -Methode für diesen Konverter eine Instanz des Typs (oder eines Werts) akzeptieren, die als der `value` -Parameter unterstützt wird. Wenn der Parameter `destinationType` vom Typ <xref:System.String>ist, muss das zurückgegebene Objekt in der Lage sein, als <xref:System.String>umgewandelt zu werden. Die zurückgegebene Zeichenfolge muss einen serialisierten Wert von `value`darstellen. Im Idealfall sollte das von Ihnen ausgewählte Serialisierungsformat in der Lage sein, den gleichen Wert zu generieren, als wenn die Zeichenfolge an die <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> -Implementierung desselben Konverters weitergegeben werden würde, und zwar ohne erhebliche Informationsverluste.  
+ Damit die Verwendung als eine <xref:System.ComponentModel.TypeConverter> -Implementierung erfolgen kann, die XAML unterstützt, muss die <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> -Methode für diesen Konverter eine Instanz des Typs (oder eines Werts) akzeptieren, die als der `value` -Parameter unterstützt wird. Wenn der Parameter `destinationType` vom Typ <xref:System.String>ist, muss das zurückgegebene Objekt in der Lage sein, als <xref:System.String>umgewandelt zu werden. Die zurückgegebene Zeichenfolge muss einen serialisierten Wert von `value` darstellen. Im Idealfall sollte das von Ihnen ausgewählte Serialisierungsformat in der Lage sein, den gleichen Wert zu generieren, als wenn die Zeichenfolge an die <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> -Implementierung desselben Konverters weitergegeben werden würde, und zwar ohne erhebliche Informationsverluste.  
   
  Wenn der Wert weder serialisiert werden kann noch der Konverter die Serialisierung unterstützt, muss die <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> -Implementierung `null` zurückgeben und kann eine Ausnahme auslösen. Wenn Sie jedoch Ausnahmen auslösen, sollten Sie die Unfähigkeit in Bezug auf die Verwendung dieser Konvertierung als Bestandteil Ihrer <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> -Implementierung melden, sodass die bewährte Vorgehensweise in Bezug auf die Überprüfung mit <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> zunächst darin besteht, dass die Vermeidung von Ausnahmen unterstützt wird.  
   
  Wenn der Parameter `destinationType` nicht vom Typ <xref:System.String>ist, können Sie Ihre eigene Konverterverarbeitung auswählen. Für gewöhnlich nehmen Sie eine Zurücksetzung auf die grundlegende Implementierungsverarbeitung vor, wodurch in der Basis <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> eine bestimmte Ausnahme ausgelöst wird.  
   
- Es ist angemessen, eine Ausnahme auszulösen, wenn Ihr Typkonverter über Zugriff auf einen XAML-Dienst vom .NET Framework XAML Services-Objekt-Writer verfügen muss, der <xref:System.IServiceProvider.GetService%2A> -Aufruf, der für den Kontext ausgeführt wird, jedoch keinen Kontext für diesen Dienst zurückgibt.  
+ Es ist angemessen, eine Ausnahme auszulösen, wenn Ihr Typkonverter über Zugriff auf einen XAML-Dienst vom .NET Framework XAML Services-Objekt-Writer verfügen muss, der <xref:System.IServiceProvider.GetService%2A>-Aufruf, der für den Kontext ausgeführt wird, jedoch keinen Kontext für diesen Dienst zurückgibt.  
   
 ### <a name="implementing-canconvertfrom"></a>Implementieren von CanConvertFrom  
  Ihre Implementierung <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sollte `true` für `sourceType` vom Typ <xref:System.String> zurückgeben und andernfalls die grundlegende Implementierung ableiten. Lösen Sie keine Ausnahmen aus <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>aus.  

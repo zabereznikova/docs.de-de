@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8925b9b6cd6cea1a29592f591f9c1c89d32d49e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 562531f75d6a800ff93a02709a053b790de52ea2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Gewusst wie: Erstellen und Verwenden eines Canvas
 In diesem Beispiel wird gezeigt, wie zum Erstellen und Verwenden einer Instanz von <xref:System.Windows.Controls.Canvas>.  
@@ -46,4 +47,4 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen und Verwenden einer Instanz v
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Canvas.Left%2A>  
  [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)

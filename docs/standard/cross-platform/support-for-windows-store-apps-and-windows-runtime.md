@@ -19,11 +19,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8ee68c53173f0919a9200ed5ac82fed3e27affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] unterstützt mehrere Softwareentwicklungsszenarien mit [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Diese Szenarien werden in drei Kategorien eingeteilt:  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="primitive-types"></a>Primitive Typen  
  Im Code werden primitive Typen von .NET Framework statt von [!INCLUDE[wrt](../../../includes/wrt-md.md)] angezeigt, damit [!INCLUDE[wrt](../../../includes/wrt-md.md)] in verwaltetem Code einfacher zu verwenden ist. In .NET Framework haben primitive Typen wie die `Int32`-Struktur viele nützliche Eigenschaften und Methoden, beispielsweise die `Int32.TryParse`-Methode. Im Gegensatz dazu verfügen primitive Typen und Strukturen in [!INCLUDE[wrt](../../../includes/wrt-md.md)] nur über Felder. Wenn Sie primitive Typen in verwaltetem Code verwenden, verhalten sie sich wie .NET Framework-Typen, und Sie können deren Eigenschaften und Methoden wie gewohnt verwenden. Die folgende Liste enthält eine Zusammenfassung:  
   
--   Verwenden Sie für die primitiven [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Typen `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (eine unveränderliche Auflistung von Unicode-Zeichen), `Enum`, `UInt32`, `UInt64` und `Guid` den Typ mit demselben Namen im `System`-Namespace.  
+-   Für die primitiven [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Typen `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (eine unveränderliche Auflistung von Unicode-Zeichen), `Enum`, `UInt32`, `UInt64` und `Guid` sollte der Typ desselben Namens im `System`-Namespace verwendet werden.  
   
 -   Verwenden Sie für `UInt8` den Typ `System.Byte`.  
   

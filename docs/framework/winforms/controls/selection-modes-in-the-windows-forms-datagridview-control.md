@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Auswahlmodi im DataGridView-Steuerelement von Windows Forms
 In einigen Fällen soll Ihre Anwendung für Aktionen, die basierend auf der Auswahl des Benutzers innerhalb einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Abhängig von der Aktionen empfiehlt es sich um die Arten der Auswahl zu beschränken, die möglich sind. Nehmen Sie beispielsweise an, dass Ihre Anwendung für den aktuell ausgewählten Datensatz einen Bericht drucken kann. In diesem Fall sollten Sie so konfigurieren Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement, damit an einer beliebigen Stelle innerhalb einer Zeile immer auf die gesamte Zeile ausgewählt, und so, dass nur eine Zeile zu einem Zeitpunkt ausgewählt werden kann.  

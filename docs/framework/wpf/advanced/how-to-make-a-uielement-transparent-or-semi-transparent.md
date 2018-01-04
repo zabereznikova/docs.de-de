@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec35ae2e064acf78d1165f64ce8c9e34b153299d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 25245319c02ae376410d71afb7a1e56eda259e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Gewusst wie: Formatieren von "UIElement" als transparent oder halbtransparent
 Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.UIElement> transparenten oder halb transparent. Um ein Element transparenten oder halb transparent zu gestalten, legen Sie dessen <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft. Der Wert `0.0` Blendet das Element vollständig transparent, während ein Wert von `1.0` vollständig deckend das Element. Der Wert `0.5` Blendet das Element 50 % undurchsichtig usw. Ein Element <xref:System.Windows.UIElement.Opacity%2A> festgelegt ist, um `1.0` standardmäßig.  
@@ -48,4 +49,4 @@ Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.UIElement> transparente
   
  [!code-csharp[brushsamples_procedural_snip#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#4)]  
   
- Sie können auch die Deckkraft einzelner Farben innerhalb eines Pinsels steuern. Weitere Informationen zu Farben und Pinsel, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](./../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Ein Beispiel zum Animieren der Deckkraft eines Elements finden Sie unter [Animieren der Deckkraft eines Elements oder Pinsel](./../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md).
+ Sie können auch die Deckkraft einzelner Farben innerhalb eines Pinsels steuern. Weitere Informationen zu Farben und Pinsel, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Ein Beispiel zum Animieren der Deckkraft eines Elements finden Sie unter [Animieren der Deckkraft eines Elements oder Pinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md).

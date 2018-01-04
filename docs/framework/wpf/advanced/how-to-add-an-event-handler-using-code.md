@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 348136a1feaf6e0a0824cf183a2eeec4e10b77fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Gewusst wie: Hinzufügen eines Ereignishandlers mithilfe von Code
 Dieses Beispiel zeigt, wie einen Ereignishandler mithilfe von Code ein Element hinzugefügt wird.  
@@ -49,4 +50,4 @@ Dieses Beispiel zeigt, wie einen Ereignishandler mithilfe von Code ein Element h
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

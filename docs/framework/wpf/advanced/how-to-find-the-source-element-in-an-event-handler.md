@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9746683ec5b7ad142591c2b419f9af21be8d69c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d62d657b886b867481088e32fe1dd0614377e146
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>Gewusst wie: Suchen des Quellelements in einem Ereignishandler
 Dieses Beispiel zeigt, wie Sie die Source-Element in einem Ereignishandler zu ermitteln.  
@@ -39,4 +40,4 @@ Dieses Beispiel zeigt, wie Sie die Source-Element in einem Ereignishandler zu er
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.RoutedEventArgs>  
  [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
 Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Zudem bieten Flussdokumente erweiterte Dokumentfunktionen, z.B. Paginierung und Spalten. Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
@@ -68,7 +69,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 ## <a name="flow-document-types"></a>Flussdokumenttypen  
  Die Anzeige und Darstellung von Flussdokumentinhalt hängt davon ab, welches Objekt zum Hosten des fortlaufenden Inhalts verwendet wird. Es gibt vier Steuerelemente, Anzeigen von Flussinhalt unterstützen: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Diese Steuerelemente werden nachstehend kurz beschrieben.  
   
- **Hinweis:** <xref:System.Windows.Documents.FlowDocument> ist erforderlich, um direkt Host Flussinhalt, damit alle der folgenden Steuerelemente anzeigen nutzen einen <xref:System.Windows.Documents.FlowDocument> So aktivieren Sie den Datenfluss Inhalt hosten.  
+ **Hinweis:** <xref:System.Windows.Documents.FlowDocument> ist erforderlich, um direkt Host Flussinhalt, damit alle der folgenden Steuerelemente anzeigen nutzen einen <xref:System.Windows.Documents.FlowDocument> So aktivieren Sie den Datenfluss Inhalt hosten.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>enthält Funktionen, mit die den Benutzer dynamisch auswählen verschiedener Anzeigemodi, einschließlich eines Einzelseiten (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buchformat lesen) anzeigen, Modus und einem fortlaufenden Bildlaufmodus (Unbeschränkte) anzeigen können. Weitere Informationen zu diesen Anzeigemodi, finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Wenn Sie nicht benötigen, können dynamisch Wechseln zwischen unterschiedlichen Anzeigemodi <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> bieten helleren fortlaufenden Inhalt-Viewer, die in einem bestimmten Anzeigemodus behoben werden.  
@@ -361,7 +362,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 ## <a name="see-also"></a>Siehe auch  
  [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [Übersicht über das TextElement-Inhaltsmodell](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

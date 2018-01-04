@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code möglich effektiver Erweitern Ihrer vorhandenen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] eine Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] statt sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie eine einbetten möchten oder weitere Steuerelemente implementiert, mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] innerhalb Ihrer [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Anwendung. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Steuerelement Anpassung](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implementieren des zusammengesetzten WPF-Steuerelements  
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement verwendet, die in diesem Beispiel ist eine einfache Dateneingabe-Form, die Namen und die Adresse des Benutzers annimmt. Klickt der Benutzer eine der zwei Schaltflächen, um anzugeben, dass die Aufgabe abgeschlossen ist, löst das Steuerelement ein benutzerdefiniertes Ereignis aus, um diese Informationen an den Host zurückzugeben. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
@@ -238,7 +239,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 4.  Fügen Sie die folgenden <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente im Formular.  
   
-    |Name|Text|  
+    |name|Text|  
     |----------|----------|  
     |groupBox1|Hintergrundfarbe|  
     |groupBox2|Vordergrundfarbe|  
@@ -250,7 +251,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 5.  Fügen Sie die folgenden <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> -Steuerelementen an die <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente.  
   
-    |GroupBox|Name|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Ursprünglich|  
     |groupBox1|radioBackgroundLightGreen|Hellgrün|  
@@ -271,7 +272,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 6.  Fügen Sie die folgenden <xref:System.Windows.Forms.Label?displayProperty=nameWithType> bis zum letzten steuert <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Diese Steuerelemente zeigen die Daten, die zurückgegeben werden, indem die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
   
-    |GroupBox|Name|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Name:|  
     |groupBox7|lblAddress|Straße und Hausnummer:|  

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077b98eb63559a0a4bb691b4b35949aa98d0592c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-and-print-system-management"></a>Druck- und Drucksystemverwaltung
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]und [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] einführen einer neuen Druckpfad – eine Alternative zum [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] drucken – und eine völlig erweiterter Satz von Drucksystem Management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
  [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  Eine Erläuterung zu den neuen Druckpfad und [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  Eine Gruppe von Artikeln, die zum Verwenden der neuen Druckpfad und [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  

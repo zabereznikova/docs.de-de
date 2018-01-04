@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78e5faf7aab684f2a8760204079a26a61b9c3fda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea6e7d26ad70eef3aae4678b922ef01bccc9450b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView-Format und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.TreeView> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -58,7 +59,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Befindet sich der Mauszeiger über dem <xref:System.Windows.Controls.TreeViewItem>.|  
 |Deaktiviert|CommonStates|Die <xref:System.Windows.Controls.TreeViewItem> ist deaktiviert.|  
-|Mit Fokus|FocusStates|Die <xref:System.Windows.Controls.TreeViewItem> den Fokus hat.|  
+|Focused|FocusStates|Die <xref:System.Windows.Controls.TreeViewItem> den Fokus hat.|  
 |Ohne Fokus|FocusStates|Die <xref:System.Windows.Controls.TreeViewItem> verfügt nicht über den Fokus.|  
 |Erweitert|ExpansionStates|Die <xref:System.Windows.Controls.TreeViewItem> Steuerelement erweitert ist.|  
 |Reduziert|ExpansionStates|Die <xref:System.Windows.Controls.TreeViewItem> Steuerelement reduziert wird.|  

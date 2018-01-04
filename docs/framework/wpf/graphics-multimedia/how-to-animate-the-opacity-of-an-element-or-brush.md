@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Gewusst wie: Animieren der Durchlässigkeit eines Elements oder eines Pinsels
 Um ein FrameworkElement ein-und auszublenden, können Sie animieren seine <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft oder Sie können dem animiert werden soll die <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft von der <xref:System.Windows.Media.Brush> (oder Pinsel) verwendet, um es zu zeichnen. Animieren das Element Deckkraft vereinfacht und seine untergeordneten Elemente einblenden und ausblenden, aber Animieren des Pinsels, der zum Zeichnen des Elements verwendet wird, können Sie präziser ausgeblendet, welcher Teil des Elements wird. Sie können z. B. die Deckkraft eines Pinsels zum Zeichnen des Hintergrunds einer Schaltfläche verwendet animieren. Dies würde dazu führen, dass der Hintergrund der Schaltfläche zum ein-und Ausblenden der Ansicht, lassen Sie den Text vollständig deckend.  

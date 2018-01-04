@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a10e74342141f8ef6664cc424552dc173d9b0f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometry-overview"></a>Übersicht über die Geometrie
 In dieser Übersicht wird beschrieben, wie mithilfe der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> Klassen, die Formen zu beschreiben. In diesem Thema sind auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry> Objekte und <xref:System.Windows.Shapes.Shape> Elemente.  
@@ -125,12 +126,12 @@ Eine EllipseGeometry zum Beschneiden eines Image-Steuerelements
 |Segmenttyp|Beschreibung|Beispiel|  
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|Erstellt einen elliptischen Bogen zwischen zwei Punkten.|[Erstellen eines elliptischen Bogens](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md).|  
-|<xref:System.Windows.Media.BezierSegment>|Erstellt eine kubische Bézierkurve zwischen zwei Punkten.|[Erstellen einer kubischen Bézierkurve](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
+|<xref:System.Windows.Media.BezierSegment>|Erstellt eine kubische Bézier-Kurve zwischen zwei Punkten.|[Erstellen Sie eine kubische Bézier-Kurve](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
 |<xref:System.Windows.Media.LineSegment>|Erstellt eine Linie zwischen zwei Punkten.|[Erstellen eines LineSegment in einer PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)|  
-|<xref:System.Windows.Media.PolyBezierSegment>|Erstellt eine Reihe von kubischen Bézierkurven.|Finden Sie unter der <xref:System.Windows.Media.PolyBezierSegment> Seite ".|  
+|<xref:System.Windows.Media.PolyBezierSegment>|Erstellt eine Reihe von kubische Bézier-Kurven.|Finden Sie unter der <xref:System.Windows.Media.PolyBezierSegment> Seite ".|  
 |<xref:System.Windows.Media.PolyLineSegment>|Erstellt eine Reihe von Zeilen.|Finden Sie unter der <xref:System.Windows.Media.PolyLineSegment> Seite ".|  
-|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Erstellt eine Reihe von quadratischen Bézierkurven.|Finden Sie unter der <xref:System.Windows.Media.PolyQuadraticBezierSegment> Seite.|  
-|<xref:System.Windows.Media.QuadraticBezierSegment>|Erstellt eine quadratische Bézierkurve.|[Erstellen einer quadratischen Bézierkurve](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md).|  
+|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Erstellt eine Reihe von quadratische Bézier-Kurven.|Finden Sie unter der <xref:System.Windows.Media.PolyQuadraticBezierSegment> Seite.|  
+|<xref:System.Windows.Media.QuadraticBezierSegment>|Erstellt eine quadratische Bézier-Kurve an.|[Erstellen Sie eine quadratische Bézier-Kurve](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md).|  
   
  Die Segmente innerhalb einer <xref:System.Windows.Media.PathFigure> eine einzelne geometrische Form, die mit dem Endpunkt der einzelnen Segmente, die den Anfangspunkt des nächsten Segments wird zusammengefasst werden. Die <xref:System.Windows.Media.PathFigure.StartPoint%2A> Eigenschaft von einem <xref:System.Windows.Media.PathFigure> gibt den Punkt, von dem das erste Segment gezeichnet wird. Jedes nachfolgende Segment beginnt am Endpunkt des vorherigen Segments. Z. B. eine vertikale Linie von `10,50` auf `10,150` können definiert werden, indem die <xref:System.Windows.Media.PathFigure.StartPoint%2A> Eigenschaft, um `10,50` und erstellen eine <xref:System.Windows.Media.LineSegment> mit einer <xref:System.Windows.Media.LineSegment.Point%2A> eigenschaftseinstellung `10,150`.  
   
@@ -148,7 +149,7 @@ Eine PathGeometry, die ein einzelnes LineSegment enthält
   
  Komplexere Geometrien können erstellt werden, mithilfe einer Kombination von <xref:System.Windows.Media.PathSegment> Objekte.  
   
- Im nächste Beispiel wird eine <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.LineSegment>, und ein <xref:System.Windows.Media.ArcSegment> um Form zu erstellen. Das Beispiel erstellt zuerst eine kubische Bézierkurve durch vier Punkte definiert: einen Startpunkt, also der Endpunkt des vorherigen Abschnitts, einen Endpunkt (<xref:System.Windows.Media.BezierSegment.Point3%2A>), und die beiden Steuerpunkte (<xref:System.Windows.Media.BezierSegment.Point1%2A> und <xref:System.Windows.Media.BezierSegment.Point2%2A>).  Die beiden Kontrollpunkte einer kubischen Bézierkurve verhalten sich wie Magnete, die Abschnitte einer Geraden anziehen, sodass sich eine Krümmung ergibt. Der erste Kontrollpunkt, <xref:System.Windows.Media.BezierSegment.Point1%2A>, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt <xref:System.Windows.Media.BezierSegment.Point2%2A>, wirkt sich auf den Endabschnitt der Kurve.  
+ Im nächste Beispiel wird eine <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.LineSegment>, und ein <xref:System.Windows.Media.ArcSegment> um Form zu erstellen. Das Beispiel erstellt zuerst eine kubische Bézierkurve durch vier Punkte definiert: einen Startpunkt, also der Endpunkt des vorherigen Abschnitts, einen Endpunkt (<xref:System.Windows.Media.BezierSegment.Point3%2A>), und die beiden Steuerpunkte (<xref:System.Windows.Media.BezierSegment.Point1%2A> und <xref:System.Windows.Media.BezierSegment.Point2%2A>).  Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie für sich selbst, der eine Kurve erzeugt. Der erste Kontrollpunkt, <xref:System.Windows.Media.BezierSegment.Point1%2A>, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt <xref:System.Windows.Media.BezierSegment.Point2%2A>, wirkt sich auf den Endabschnitt der Kurve.  
   
  Im Beispiel fügt dann ein <xref:System.Windows.Media.LineSegment>, die zwischen dem Endpunkt der vorangehenden gezeichnet wird <xref:System.Windows.Media.BezierSegment> , die auf den vom angegebenen Punkt voranstehen seine <xref:System.Windows.Media.LineSegment> Eigenschaft.  
   
@@ -233,7 +234,7 @@ Eine PathGeometry mit mehreren Figuren
  <xref:System.Windows.Media.GeometryDrawing>  
  [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
  [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

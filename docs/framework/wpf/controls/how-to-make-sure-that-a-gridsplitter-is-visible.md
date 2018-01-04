@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8692d356b1b20c7405b4478cef1d16c173389ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b7587a093b2b43856a05693bb785a0465211782
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Gewusst wie: Sicherstellen, dass ein GridSplitter sichtbar ist
 Dieses Beispiel zeigt, wie Sie sicherstellen, eine <xref:System.Windows.Controls.GridSplitter> -Steuerelement nicht ausgeblendet ist, durch den andere Steuerelemente in einem <xref:System.Windows.Controls.Grid>.  
@@ -42,4 +43,4 @@ Dieses Beispiel zeigt, wie Sie sicherstellen, eine <xref:System.Windows.Controls
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.GridSplitter>  
- [Gewusst wie-Themen](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

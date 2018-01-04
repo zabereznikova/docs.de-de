@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 Diese exemplarische Vorgehensweise führt Sie schrittweise durch den Prozess zum Erstellen einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] benutzerdefinierte Schaltfläche mit Microsoft Expression Blend.  
@@ -232,7 +233,7 @@ Diese exemplarische Vorgehensweise führt Sie schrittweise durch den Prozess zum
   
     1.  Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltfläche. Beachten Sie, dass die Glasebene dreht.  
   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie haben eine benutzerdefinierte Schaltfläche abgeschlossen. Sie haben diese mit einer Schaltflächenvorlage, die auf alle Schaltflächen in der Anwendung angewendet wurde. Wenn Sie den Vorlagenbearbeitungsmodus lassen (siehe folgende Abbildung) und weitere Schaltflächen erstellen, sehen Sie, dass sie Aussehen und Verhalten sich wie Ihre benutzerdefinierte Schaltfläche anstatt wie die Standardschaltfläche.  
   
  ![Die benutzerdefinierte Schaltflächenvorlage](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "Custom_button_blend_ScopeUp")  

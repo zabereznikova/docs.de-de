@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 149f293616cfc2aa7b68377964c14a7cfa9e3edf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typkonverter und Markuperweiterungen für XAML
 Typkonverter und Markuperweiterung sind zwei Techniken, mit denen XAML-Typsysteme und XAML-Writer Objektdiagrammkomponenten generieren. Obwohl sie einige gemeinsame Eigenschaften aufweisen, werden Typkonverter und Markuperweiterungen in einem XAML-Knotenstream unterschiedlich dargestellt. In dieser Dokumentation werden Typkonverter, Markuperweiterungen und ähnliche Konstrukte manchmal zusammenfassend als Wertkonverter bezeichnet.  
@@ -59,7 +60,7 @@ Typkonverter und Markuperweiterung sind zwei Techniken, mit denen XAML-Typsystem
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Werte-Serialisierungsprogramme  
- Ein <xref:System.Windows.Markup.ValueSerializer> ist ein spezialisierter Typkonverter, der zum Konvertieren eines Objekts in eine Zeichenfolge optimiert ist. Ein <xref:System.Windows.Markup.ValueSerializer> für XAML implementiert die `ConvertFrom` -Methode möglicherweise überhaupt nicht. Eine <xref:System.Windows.Markup.ValueSerializer> -Implementierung ruft Dienste auf eine Weise auf, die einer <xref:System.ComponentModel.TypeConverter> -Implementierung gleicht. Die virtuellen Methoden bieten einen Eingabe- `context` -Parameter. Der `context` -Parameter ist vom Typ <xref:System.Windows.Markup.IValueSerializerContext>, der von der <xref:System.IServiceProvider> -Schnittstelle erbt und über eine <xref:System.IServiceProvider.GetService%2A> -Methode verfügt.  
+ Ein <xref:System.Windows.Markup.ValueSerializer> ist ein spezialisierter Typkonverter, der zum Konvertieren eines Objekts in eine Zeichenfolge optimiert ist. Ein <xref:System.Windows.Markup.ValueSerializer> für XAML implementiert die `ConvertFrom` -Methode möglicherweise überhaupt nicht. Eine <xref:System.Windows.Markup.ValueSerializer> -Implementierung ruft Dienste auf eine Weise auf, die einer <xref:System.ComponentModel.TypeConverter> -Implementierung gleicht. Die virtuellen Methoden bieten einen Eingabe-`context`-Parameter. Der `context` -Parameter ist vom Typ <xref:System.Windows.Markup.IValueSerializerContext>, der von der <xref:System.IServiceProvider> -Schnittstelle erbt und über eine <xref:System.IServiceProvider.GetService%2A> -Methode verfügt.  
   
  Im XAML-Typsystem und für XAML-Writer-Implementierungen, die die Verarbeitung von XAML-Knotenschleifen für die Serialisierung verwenden, wird ein Wertkonverter, der einem Typ oder Member zugeordnet ist, durch seine eigene <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>-Eigenschaft gemeldet. Die Bedeutung für XAML-Writer, die Serialisierungen durchführen, ist, dass wenn ein <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> und <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> vorhanden sind, der Typkonverter für den Pfad zum Laden verwendet werden sollte und das Werte-Serialisierungsprogramm für den Pfad zum Speichern. Wenn <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> vorhanden ist, aber <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> `null` ist, wird der Typkonverter auch für den Pfad zum Speichern verwendet.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f0623ed4c84247cc1759a203e3b95dd895cee2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expander-overview"></a>Übersicht über Expander-Steuerelemente
 Ein <xref:System.Windows.Controls.Expander> Steuerelement bietet eine Möglichkeit zum Bereitstellen von Inhalt in einem erweiterbaren Bereich, der einem Fenster ähnelt und einen Header enthält.  
@@ -72,4 +73,4 @@ Ein <xref:System.Windows.Controls.Expander> Steuerelement bietet eine Möglichke
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.Expander>  
  <xref:System.Windows.Controls.ExpandDirection>  
- [Gewusst wie-Themen](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

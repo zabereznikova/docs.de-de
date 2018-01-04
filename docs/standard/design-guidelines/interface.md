@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d04011622321638e1f3b0c5f4d270f840c7070e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc7185f9541952d528de38b627052239f5d8b4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interface-design"></a>Schnittstellenentwurf
 Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert werden, stehen die Fälle, in denen Schnittstellen sind besser geeignet oder die einzige Option.  
@@ -57,5 +60,5 @@ Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert
  *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
- [Typ-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)  
+ [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

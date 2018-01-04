@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5fd9b374f9e2c367daa9869862ab717828049887
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.DataGrid> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -61,7 +62,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger über der Zelle.|  
-|Mit Fokus|FocusStates|Die Zelle hat den Fokus.|  
+|Focused|FocusStates|Die Zelle hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Zelle den Fokus verfügt nicht über werden.|  
 |Aktuell|CurrentStates|Die Zelle ist die aktive Zelle.|  
 |Regulär|CurrentStates|Die Zelle ist nicht die aktive Zelle.|  

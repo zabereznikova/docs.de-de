@@ -15,11 +15,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b393ca5048d9b96c6803cd536110ea2261daae
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 89c2e2fb12a91e06b3c4347b6f65c6fa91636911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements"></a>Basiselemente
 Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>--beträchtlichen Anteil in WPF-Programmierung verfügbaren allgemeinen Elementfunktionen implementiert. Diese vier Klassen werden in diesem SDK als Basis Elementklassen bezeichnet.  
@@ -28,7 +29,7 @@ Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.Conte
  [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Übersicht über Alignment, Margin und Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.UIElement>  

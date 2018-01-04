@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a812207fb58e6c87c263966081060d02f8038963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="framework-design-guidelines"></a>Frameworkentwurfsrichtlinien
 Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die erweitert und interagieren mit .NET Framework. Ziel ist es, Hilfe Bibliotheksentwickler sicherzustellen API Konsistenz und einfache Verwendung durch die Bereitstellung eines einheitlichen Programmiermodell, das unabhängig von der Programmiersprache ab, die für die Entwicklung verwendet wird. Es wird empfohlen, dass Sie diese Entwurfsrichtlinien befolgen, bei der Entwicklung von Klassen und Komponenten, die .NET Framework zu erweitern. Inkonsistente Bibliotheksentwurf wirkt sich auf die Produktivität der Entwickler negativ und ungern.  
@@ -31,10 +34,10 @@ Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die erweit
  Diese Richtlinien sind ein Auszug aus dem Buch *Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition*, indem Sie Krzysztof Cwalina und Brad Abrams.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)  
+ [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)  
  Enthält Richtlinien zum Benennen von Assemblys, Namespaces, Typen und Member in Klassenbibliotheken.  
   
- [Typ-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)  
+ [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
  Enthält Richtlinien für die Verwendung von statischen und abstrakten Klassen, Schnittstellen, Enumerationen, Strukturen und andere Typen.  
   
  [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
@@ -49,7 +52,7 @@ Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die erweit
  [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)  
  Enthält Richtlinien für allgemeine Typen wie z. B. Arrays, Attribute und Sammlungen verwenden, unterstützen die Serialisierung und Überladen von Gleichheitsoperatoren.  
   
- [Allgemeiner Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Allgemeine Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  Enthält Richtlinien zum auswählen und Implementieren von Abhängigkeitseigenschaften und das Dispose-Muster.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  

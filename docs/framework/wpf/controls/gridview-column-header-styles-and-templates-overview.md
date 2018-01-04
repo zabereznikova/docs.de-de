@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen
 In dieser Übersicht wird erläutert, die Reihenfolge der Rangfolge für Eigenschaften, mit denen Sie eine Spaltenüberschrift im Anpassen der <xref:System.Windows.Controls.GridView> Ansichtsmodus des ein <xref:System.Windows.Controls.ListView> Steuerelement.  
@@ -46,6 +47,6 @@ In dieser Übersicht wird erläutert, die Reihenfolge der Rangfolge für Eigensc
  <sup>1</sup>für **Vorlage Headereigenschaften**, wenn Sie, die Vorlage und den Selektor Vorlageneigenschaften, die Vorlage Eigenschaft hat Vorrang festlegen. Angenommen, wenn Sie beide Optionen festlegen der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> und <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> Eigenschaften, die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> -Eigenschaft Vorrang.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

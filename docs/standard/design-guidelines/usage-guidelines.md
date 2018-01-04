@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>Verwendungsrichtlinien
 Dieser Abschnitt enthält Richtlinien für die Verwendung von gemeinsamer Typen in öffentlich zugängliche-APIs. Er behandelt die Nutzung des integrierten Framework-Typen (z. B. Serialisierungsattribute) und allgemeine Operatoren überladen.  
@@ -33,7 +36,7 @@ Dieser Abschnitt enthält Richtlinien für die Verwendung von gemeinsamer Typen 
  [Attribute](../../../docs/standard/design-guidelines/attributes.md)  
  [Sammlungen](/cpp/mfc/collections)  
  [Serialisierung](../../../docs/standard/design-guidelines/serialization.md)  
- [Verwendung von "System.xml"](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [Verwendung von System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [Gleichheitsoperatoren](../../../docs/standard/design-guidelines/equality-operators.md)  
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

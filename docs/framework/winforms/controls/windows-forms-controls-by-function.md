@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>Windows Forms-Steuerelemente nach Funktion
 Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktionen ausführen. Die folgende Tabelle enthält die Windows Forms-Steuerelemente und Komponenten gemäß allgemeine Funktion. Darüber hinaus mehrere Steuerelemente vorhanden sind, die die gleiche Funktion dienen, ist das empfohlene Steuerelement mit einem Hinweis auf das Steuerelement aufgelistet, ersetzte. In einer separaten nachfolgenden Tabelle sind die Abgelöste Steuerelemente mit ihren empfohlene Ersatz aufgeführt.  

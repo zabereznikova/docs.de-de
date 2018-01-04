@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42f208d10b1c111f98af3c803148590466baddf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-drawn-controls"></a>Benutzerdefinierte Steuerelemente
 .NET Framework bietet die Möglichkeit, eigene Steuerelemente entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz von Standardsteuerelementen zusammen in Code vorgesehen ist, erstellen, oder Sie können ein eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können sogar Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und dessen implementierte Funktionalität hinzufügen. Welchen Ansatz Sie verwenden, stellt .NET Framework die Funktionalität, um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement gezeichnet werden soll, die Sie erstellen.  

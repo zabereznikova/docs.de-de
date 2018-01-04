@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
@@ -85,14 +88,14 @@ ms.lasthandoff: 10/18/2017
   
  Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen und Vorgehensweisen, die als kryptografische Grundelemente bezeichnet werden, ein kryptografisches Schema erstellen. In der nachstehenden Tabelle sind die kryptografischen Grundelemente und deren Verwendungszweck aufgeführt.  
   
-|Kryptografisches Grundelement|Verwendung|  
+|Kryptografisches Grundelement|Mit|  
 |-----------------------------|---------|  
 |Verschlüsselung mit geheimem Schlüssel (symmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem einzigen, gemeinsam genutzten, geheimen Schlüssel ver- und entschlüsselt.|  
 |Verschlüsselung mit öffentlichem Schlüssel (asymmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem Paar aus öffentlichem und privatem Schlüssel ver- und entschlüsselt.|  
 |Kryptografische Signatur|Stellt sicher, dass die Daten von einem bestimmten Teilnehmer stammen. Dazu wird eine digitale Signatur erstellt, die diesen Teilnehmer eindeutig bezeichnet. Bei diesem Prozess werden auch Hashfunktionen verwendet.|  
 |Kryptografische Hashs|Ordnet Daten beliebiger Länge einer Bytefolge fester Länge zu. Hashs sind statistisch eindeutig; eine unterschiedliche 2-Byte-Sequenz erzielt nicht denselben Hashwert.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="secret_key"></a>   
 ## <a name="secret-key-encryption"></a>Verschlüsselung mit geheimem Schlüssel  
@@ -128,7 +131,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="public_key"></a>   
 ## <a name="public-key-encryption"></a>Verschlüsselung mit öffentlichem Schlüssel  
@@ -172,7 +175,7 @@ ms.lasthandoff: 10/18/2017
   
  RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur. DSA kann dagegen nur für die Signatur und Diffie-Hellman nur für die Erzeugung von Schlüsseln verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="digital_signatures"></a>   
 ## <a name="digital-signatures"></a>Digitale Signaturen  
@@ -193,7 +196,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="hash_values"></a>   
 ## <a name="hash-values"></a>Hashwerte  
@@ -237,7 +240,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.SHA512Managed>.  
   
--   HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.  
+-   HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.  
   
 -   CryptoServiceProvider-Implementierungen (Wrapper für verwalteten Code) aller SHA-Algorithmen.  
   
@@ -246,7 +249,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  Fehler im Design von MD5 wurden 1996 erkannt und stattdessen SHA-1 empfohlen. 2004 wurden weitere Fehler festgestellt, und der MD5-Algorithmus galt nicht mehr als sicher. Der SHA-1-Algorithmus wurde ebenfalls als unsicher eingestuft, und nun wird stattdessen SHA-2 empfohlen.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="random_numbers"></a>   
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung  
@@ -254,7 +257,7 @@ ms.lasthandoff: 10/18/2017
   
  Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="clickonce"></a>   
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste  
@@ -276,7 +279,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Liefert eine einfache Möglichkeit, um zu überprüfen, ob eine Authenticode-Signatur vertrauenswürdig ist.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B-Unterstützung  
@@ -294,11 +297,11 @@ ms.lasthandoff: 10/18/2017
   
  Wrapper für verwalteten Code für die FIPS-zertifizierten (Federal Information Processing Standard) Implementierungen von AES, SHA-256, SHA-384 und SHA-512 sind in den neuen Klassen <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>und <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> verfügbar.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="cng"></a>   
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG-Klassen (Cryptography Next Generation)  
- Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) "Cng" ist Teil des Namens dieser Klassen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey>-Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.  
+ Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) "Cng" ist Teil des Namens dieser Klassen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.  
   
  Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl zusätzlicher Operationen verwendet, einschließlich dem Öffnen, Erstellen, Löschen und Exportieren von Schlüsseln. Sie stellt auch den Zugriff auf das zugrunde liegende Schlüsselhandle bereit, das für den direkten Aufruf systemeigener Funktionen verwendet wird.  
   
@@ -310,7 +313,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  

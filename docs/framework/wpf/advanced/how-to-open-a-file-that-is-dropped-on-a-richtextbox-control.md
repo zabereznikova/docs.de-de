@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7dfb5f0f442b18159c18a6e5345f6757674fbb90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Gewusst wie: Öffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, und <xref:System.Windows.Documents.FlowDocument> steuert den gesamten über integrierte Drag-and-Drop-Funktionalität verfügen. Die integrierte Funktion ermöglicht die Drag & Drop von Text innerhalb und zwischen den Steuerelementen. Es wird jedoch nicht aktiviert das Öffnen einer Datei durch das Löschen der Datei auf das Steuerelement. Diese Steuerelemente werden auch die Drag & Drop-Ereignisse als behandelt markiert. Standardmäßig können nicht Sie daher Ihren eigenen--Ereignishandler, um die Funktionalität zum Öffnen von abgelegten Dateien hinzufügen.  

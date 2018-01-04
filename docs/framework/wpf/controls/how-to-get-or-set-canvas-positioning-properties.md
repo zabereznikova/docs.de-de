@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Gewusst wie: Abrufen und Festlegen von Canvas-Positionierungseigenschaften
 Dieses Beispiel zeigt, wie die Positionierung Methoden die <xref:System.Windows.Controls.Canvas> Element des untergeordneten Inhalts zu positionieren. In diesem Beispiel verwendet den Inhalt in einen <xref:System.Windows.Controls.ListBoxItem> zur Darstellung Werte positionieren und konvertiert die Werte in Instanzen von <xref:System.Double>, dies ist ein erforderliches Argument für die Positionierung. Die Werte sind dann wieder in Zeichenfolgen konvertiert und als Text im angezeigt ein <xref:System.Windows.Controls.TextBlock> -Element mithilfe der <xref:System.Windows.Controls.Canvas.GetLeft%2A> Methode.  

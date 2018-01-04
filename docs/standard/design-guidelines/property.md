@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 477b3b69ce1b8a3bb160e8e120885239e3d99e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f9c65dc6265daa793656177f066b97373f48ab8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
 Obwohl die Eigenschaften, Methoden technisch sehr ähnlich sind, sind sie sehr unterschiedliche im Hinblick auf ihre Szenarien für die Verwendung. Sie sollte als intelligente Felder angezeigt werden. Sie verfügen über die Funktionsaufrufsyntax von Feldern und die Flexibilität der Methoden.  

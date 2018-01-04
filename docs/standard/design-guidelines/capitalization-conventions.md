@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
 Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, dass beim stellen-IDs für Typen, Member und Parameter, die leicht zu lesen konsistent angewendet.  
@@ -60,10 +63,10 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 |----------------|------------|-------------|  
 |Namespace|Pascal-Schreibweise|`namespace System.Security { ... }`|  
 |Typ|Pascal-Schreibweise|`public class StreamReader { ... }`|  
-|Schnittstelle|Pascal-Schreibweise|`public interface IEnumerable { ... }`|  
+|Interface|Pascal-Schreibweise|`public interface IEnumerable { ... }`|  
 |Methode|Pascal-Schreibweise|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |Eigenschaft|Pascal-Schreibweise|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Ereignis|Pascal-Schreibweise|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|event|Pascal-Schreibweise|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Feld|Pascal-Schreibweise|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Enum-Wert|Pascal-Schreibweise|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parameter|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
@@ -114,4 +117,4 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

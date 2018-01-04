@@ -35,11 +35,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73bb3a2f43c5bd91d7a107a0a053381ca7bc0559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Navigation im Webbrowserstil, die verwendet werden kann in zwei Arten von Anwendungen unterstützt: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Der Paketinhalt für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in eine andere deklarativ durch die Verwendung einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.  
@@ -299,19 +300,19 @@ ms.lasthandoff: 11/21/2017
 ### <a name="navigation-lifetime"></a>Navigationslebensdauer  
  Wie Sie sehen, gibt es viele Möglichkeiten zum Einleiten der Navigation. Bei der Navigation wird initiiert, und während der Navigation ausgeführt wird, können Sie verfolgen und beeinflussen die Navigation mit den folgenden Ereignissen, die von implementiert werden <xref:System.Windows.Navigation.NavigationService>:  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigating>. Tritt ein, wenn eine neue Navigation angefordert wird. Kann zum Abbrechen der Navigation verwendet werden.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigating> Tritt ein, wenn eine neue Navigation angefordert wird. Kann zum Abbrechen der Navigation verwendet werden.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>. Tritt regelmäßig während eines Downloadvorgangs auf, um Informationen zum Navigationsstatus bereitzustellen.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationProgress> Tritt regelmäßig während eines Downloadvorgangs auf, um Informationen zum Navigationsstatus bereitzustellen.  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigated>. Tritt ein, nachdem die Seite gefunden und heruntergeladen wurde.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigated> Tritt ein, nachdem die Seite gefunden und heruntergeladen wurde.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>. Tritt auf, wenn die Navigation beendet wird (durch Aufrufen von <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), oder wenn eine neue Navigation angefordert wird, während eine aktuelle Navigation ausgeführt wird.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationStopped> Tritt auf, wenn die Navigation beendet wird (durch Aufrufen von <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), oder wenn eine neue Navigation angefordert wird, während eine aktuelle Navigation ausgeführt wird.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>. Tritt ein, wenn ein Fehler ausgelöst wird, während zum angeforderten Inhalt navigiert wird.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed> Tritt ein, wenn ein Fehler ausgelöst wird, während zum angeforderten Inhalt navigiert wird.  
   
--   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>. Tritt ein, wenn der Inhalt, zu dem navigiert wurde, geladen und analysiert wird und mit dem Rendering begonnen wurde.  
+-   <xref:System.Windows.Navigation.NavigationService.LoadCompleted> Tritt ein, wenn der Inhalt, zu dem navigiert wurde, geladen und analysiert wird und mit dem Rendering begonnen wurde.  
   
--   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>. Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:  
+-   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:  
   
     -   Sofort, falls sich das gewünschte Fragment im aktuellen Inhalt befindet.  
   
@@ -746,5 +747,5 @@ ms.lasthandoff: 11/21/2017
  [Paket-URI in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [Übersicht über die strukturierte Navigation](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
  [Übersicht über Navigationstopologien](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
  [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

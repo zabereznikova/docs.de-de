@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979cc7580471f616d39056f541b8374b372e8e88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-graphics-overview"></a>Übersicht über 3D-Grafiken
 <a name="introduction"></a> Mit der [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Funktionalität in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] können Entwickler 3D-Grafiken jeweils in Markup- und prozeduralem Code zeichnen, umwandeln und animieren. Entwickler können [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]- und [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Grafiken kombinieren, um umfassende Steuerelemente zu erstellen, komplexe Illustrationen von Daten bereitstellen oder die Benutzererfahrung einer Anwendungsschnittstelle erweitern. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Unterstützung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist nicht dazu da, um eine vollständige Plattform zur Spieleentwicklung bereitzustellen. Dieses Thema bietet eine Übersicht über [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]-Funktionen im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Grafiksystem.  
@@ -186,6 +187,6 @@ Perspektivische und orthografische Projektionen
  <xref:System.Windows.Media.Media3D.Material>  
  [Übersicht über 3D-Transformationen](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
  [Maximieren der 3D-Leistung von WPF](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
  [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

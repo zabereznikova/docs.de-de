@@ -1,5 +1,5 @@
 ---
-title: x:Arguments-Direktive
+title: x:Arguments-Anweisung
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,13 +17,14 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="xarguments-directive"></a>x:Arguments-Direktive
+# <a name="xarguments-directive"></a>x:Arguments-Anweisung
 Pakete Konstruktionsargumente für einen nicht standardmäßigen Konstruktor Element Objektdeklaration in XAML oder eine Objektdeklaration der Factory-Methode.  
   
 ## <a name="xaml-element-usage-nondefault-constructor"></a>XAML-Elementverwendung (nicht standardmäßigen Konstruktor)  

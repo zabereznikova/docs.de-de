@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>Geschachtelte Typen
 Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeitsbereichs eines anderen Typs, der aufgerufen wird, den einschließenden Typ definiert. Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs. Beispielsweise verfügt es über Zugriff auf private Felder, die in der einschließende Typ und zu schützende in alle vorausgehenden Elemente des einschließenden Typs definierten öffentlichen Felder definiert.  
@@ -54,5 +57,5 @@ Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeitsbereichs eines
  *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
- [Typ-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)  
+ [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

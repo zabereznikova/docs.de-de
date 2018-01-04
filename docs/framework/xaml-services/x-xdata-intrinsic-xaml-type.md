@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Systeminterner x:XData-XAML-Typ
 Ermöglicht die Platzierung von XML-Dateninseln in einer XAML-Produktion. XML-Elemente im `x:XData` nicht durch Verwendung von XAML-Prozessoren behandelt werden soll, als wären sie Teil des agierenden standardmäßigen XAML-Namespace oder irgendeinen anderen XAML-Namespace. `x:XData`Dies können beliebiges wohlgeformtes XML enthalten.  

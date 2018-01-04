@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 237dbe83fa52bb967d2f2429fb2beb021c084f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10f2e27a2f68dd784c6fce66ae63873436923d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animations-overview"></a>Übersicht über Pfadanimationen
 <a name="introduction"></a> In diesem Thema werden Pfadanimationen beschrieben, die Ihnen ermöglichen, mithilfe eines geometrischen Pfads Ausgabewerte zu generieren. Pfadanimationen eignen sich zum Verschieben und Drehen von Objekten auf komplexen Pfaden.  
@@ -84,12 +85,12 @@ ms.lasthandoff: 11/21/2017
 |Segmenttyp|Beschreibung|  
 |------------------|-----------------|  
 |<xref:System.Windows.Media.ArcSegment>|Erstellt einen elliptischen Bogen zwischen zwei Punkten.|  
-|<xref:System.Windows.Media.BezierSegment>|Erstellt eine kubische Bézierkurve zwischen zwei Punkten.|  
+|<xref:System.Windows.Media.BezierSegment>|Erstellt eine kubische Bézier-Kurve zwischen zwei Punkten.|  
 |<xref:System.Windows.Media.LineSegment>|Erstellt eine Linie zwischen zwei Punkten.|  
-|<xref:System.Windows.Media.PolyBezierSegment>|Erstellt eine Reihe von kubischen Bézierkurven.|  
+|<xref:System.Windows.Media.PolyBezierSegment>|Erstellt eine Reihe von kubische Bézier-Kurven.|  
 |<xref:System.Windows.Media.PolyLineSegment>|Erstellt eine Reihe von Zeilen.|  
-|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Erstellt eine Reihe von quadratischen Bézierkurven.|  
-|<xref:System.Windows.Media.QuadraticBezierSegment>|Erstellt eine quadratische Bézierkurve.|  
+|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Erstellt eine Reihe von quadratische Bézier-Kurven.|  
+|<xref:System.Windows.Media.QuadraticBezierSegment>|Erstellt eine quadratische Bézier-Kurve an.|  
   
  Die Segmente in einem <xref:System.Windows.Media.PathFigure> eine einzelne geometrische Form, das den Ausgangspunkt des nächsten Segments am Ende eines Segments verwendet zusammengefasst werden. Die <xref:System.Windows.Media.PathFigure.StartPoint%2A> Eigenschaft von einem <xref:System.Windows.Media.PathFigure> gibt den Punkt, von dem das erste Segment gezeichnet wird. Jedes nachfolgende Segment beginnt am Endpunkt des vorherigen Segments. Z. B. eine vertikale Linie von `10,50` auf `10,150` können definiert werden, indem die <xref:System.Windows.Media.PathFigure.StartPoint%2A> Eigenschaft, um `10,50` und erstellen eine <xref:System.Windows.Media.LineSegment> mit einer <xref:System.Windows.Media.LineSegment.Point%2A> eigenschaftseinstellung `10,150`.  
   

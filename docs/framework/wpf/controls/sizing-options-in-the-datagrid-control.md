@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eee894b536b19ec38a9809ab5dc49f5682c1df9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Größenänderungsoptionen im DataGrid-Steuerelement
 Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Controls.DataGrid> passt sich. Die <xref:System.Windows.Controls.DataGrid>, und einzelne Zeilen und Spalten in der <xref:System.Windows.Controls.DataGrid>, kann festgelegt werden, automatisch auf ihren Inhalt angepasst, oder auf bestimmte Werte festgelegt werden. Wird standardmäßig die <xref:System.Windows.Controls.DataGrid> vergrößern und verkleinern Sie die Größe seines Inhalts angepasst wird.  
@@ -66,7 +67,7 @@ Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Contr
   
  Die folgende Tabelle zeigt die Werte gemäß der <xref:System.Windows.Controls.DataGridLengthUnitType> Struktur.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Die Standardeinstellung automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den Inhalt von Zellen und Spaltenheader.|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Die Zelle-basierte automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den Inhalt der Zellen in der Spalte, z. B. nicht die Spaltenheader.|  

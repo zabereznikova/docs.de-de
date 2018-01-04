@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ec6bd76b6254b44dfacfd7f3d29341ece0a78f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren. Das Behandeln des Ereignisses verkürzt die Route. Die Klassenbehandlung ist ein Programmierkonzept, das von Routingereignissen unterstützt wird. Ein Klassenhandler hat die Möglichkeit, ein bestimmtes Routingereignis auf Klassenebene mit einem Ereignishandler zu verarbeiten, der vor jedem Instanzenhandler auf jeder Instanz der Klasse aufgerufen wird.  

@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fdc93063bbc8c9428f2f01c6cd5c0578e77ab01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffe09cc07b3eb36184a7242d418fd6782219806e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Gewusst wie: Ermitteln der gedrückten Modifizierertaste
 Wenn Sie eine Anwendung, die Tastatureingaben des Benutzers annimmt erstellen, können Sie auch für Zusatztasten z. B. die Tasten UMSCHALT, ALT und STRG überwachen möchten. Wenn eine Taste in Kombination mit anderen Schlüsseln oder Mausklicks gedrückt wird, kann Ihre Anwendung entsprechend reagieren. Z. B. wenn die Buchstaben S gedrückt wird, einfach dadurch möglicherweise eines "s" auf dem Bildschirm angezeigt werden, aber wenn Sie die Tasten STRG + S gedrückt werden, kann das aktuelle Dokument gespeichert werden. Wenn Sie behandeln die <xref:System.Windows.Forms.Control.KeyDown> -Ereignis der <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Eigenschaft von der <xref:System.Windows.Forms.KeyEventArgs> empfangen vom Ereignis Handler gibt an, welche Modifizierertasten. Alternativ können Sie die <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> Eigenschaft <xref:System.Windows.Forms.KeyEventArgs> gibt das Zeichen an, die auch alle mit einem bitweisen OR kombinierten Zusatztasten gedrückt wurde. Jedoch, wenn Sie behandeln die <xref:System.Windows.Forms.Control.KeyPress> Ereignis oder ein Mausereignis der Ereignishandler empfängt diese Informationen nicht. In diesem Fall müssen Sie verwenden die <xref:System.Windows.Forms.Control.ModifierKeys%2A> Eigenschaft von der <xref:System.Windows.Forms.Control> Klasse. In beiden Fällen müssen Sie eine bitweise AND-Operation der entsprechenden ausführen <xref:System.Windows.Forms.Keys> Wert und der zu überprüfende Wert. Die <xref:System.Windows.Forms.Keys> Enumeration bietet Variationen des jeweiligen Schlüssels Modifizierer, daher ist es wichtig, dass Sie den bitweisen ausführen und mit dem richtigen Wert. Beispielsweise wird durch die UMSCHALTTASTE gedrückt dargestellt <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> und <xref:System.Windows.Forms.Keys.LShiftKey> den richtigen Wert UMSCHALT zu testen, wie eine Modifizierertaste ist <xref:System.Windows.Forms.Keys.Shift>. Auf ähnliche Weise, STRG und ALT als Modifizierer Sie testen, die zu verwendende der <xref:System.Windows.Forms.Keys.Control> und <xref:System.Windows.Forms.Keys.Alt> bzw. die Werte.  

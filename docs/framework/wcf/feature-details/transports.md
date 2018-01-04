@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transporte in Windows Communication Foundation
 Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendeten Haupttransporte sind HTTP, HTTPS, TCP und Named Pipes. Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.  
@@ -29,19 +30,19 @@ Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. D
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] schließt zusätzliche Transporte ein. Weitere Informationen zu Message Queuing (auch bekannt als MSMQ)-Transport, finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Informationen zu Peer-zu-Peer-Transport, finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Auswählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  Beschreibt die drei Haupttransporte und die Überlegungen für die Auswahl.  
   
  [Auswählen eines Nachrichtenencoders](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
  Beschreibt Faktoren, die bei der Auswahl eines Nachrichtencodierung-Bindungselements zu berücksichtigen sind.  
   
- [Nachrichtenübertragung per Stream](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
+ [Streamen der Nachrichtenübertragung](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
  Beschreibt, wie die Transportschicht konfiguriert wird, um Streaming zu ermöglichen.  
   
  [Konfigurieren von HTTP und HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Beschreibt, wie HTTP- und HTTPS-Transportbindungselemente konfiguriert werden.  
   
- [Vorgehensweise: Ersetzen Sie die WCF URL-Reservierung durch eine eingeschränkte Reservierung](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Beschreibt, wie Reservierungen mit eingeschränkter URL in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]verwendet werden.  
   
  [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c62bcb14f444490991b36dc21eb7676a67007906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e67777b5568214dff889088708db166efc6ae4dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Gewusst wie: Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView
 In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Controls.ListView.View%2A> Modus für eine <xref:System.Windows.Controls.ListView> Steuerelement.  
@@ -54,6 +55,6 @@ In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Window
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

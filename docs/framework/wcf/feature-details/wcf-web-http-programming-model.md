@@ -17,20 +17,21 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF-Web-HTTP-Programmiermodell
 Mit dem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Web-HTTP-Programmiermodell können Entwickler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstvorgänge für Nicht-SOAP-Endpunkte verfügbar machen. In den Themen in diesem Abschnitt wird diese Funktion ausführlich behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  Enthält eine Übersicht über das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Web-HTTP-Programmiermodell.  
   
- [WCF Web-HTTP-Programmiermodell Objekt](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  Erläutert das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Web-HTTP-Programmiermodell und seine Funktionsweise.  
   
  [Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
@@ -45,11 +46,11 @@ Mit dem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Web-HTTP-Program
  [Cacheunterstützung für WCF-Web-HTTP-Dienste](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
  Beschreibt, wie Sie das Cacheverhalten für einen WCF-Web-HTTP-Dienst angeben.  
   
- [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ [WCF-Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
  Beschreibt, wie Sie das Format der Antwort eines WCF-Web-HTTP-Diensts angeben.  
   
  [WCF-Web-HTTP-Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
  Beschreibt, wie Sie Fehler an WCF-Webclients zurückgeben, einschließlich HTTP-Statuscodes und zusätzliche benutzerdefinierte Fehlerdaten.  
   
- [Aufrufen eines Rest Diensts aus einem WCF-Dienst](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
+ [Aufrufen eines REST-Diensts aus einem WCF-Dienst](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
  Beschreibt, wie ein REST-Dienst aus einem WCF-Dienst aufgerufen wird.

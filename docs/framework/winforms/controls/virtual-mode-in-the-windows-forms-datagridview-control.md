@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Virtueller Modus im DataGridView-Steuerelement in Windows Forms
 Mit dem virtuellen Modus können Sie verwalten die Interaktion zwischen der <xref:System.Windows.Forms.DataGridView> -Steuerelement und einen benutzerdefinierten Datencache. Zum Implementieren des virtuellen Modus legen die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und eine oder mehrere der in diesem Thema beschriebenen Ereignisse zu behandeln. Behandeln Sie in der Regel mindestens die `CellValueNeeded` Ereignis, das Werte im Datencache Steuerelement suchen kann.  
@@ -49,7 +50,7 @@ Mit dem virtuellen Modus können Sie verwalten die Interaktion zwischen der <xre
   
  Die folgenden Ereignisse treten nur bei der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> -Eigenschaftensatz auf `true`.  
   
-|Ereignis|Beschreibung|  
+|event|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Vom Steuerelement verwendeten, um einen Zellenwert aus dem Datencache für die Anzeige abzurufen. Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Vom Steuerelement verwendeten, um Benutzereingaben für eine Zelle für den Datencache zu übernehmen. Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten.<br /><br /> Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> Methode, wenn einen zwischengespeicherten Wert außerhalb des ändern eine <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignishandler, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird und alle aktuell aktiven Größenänderung Modi anzuwenden.|  

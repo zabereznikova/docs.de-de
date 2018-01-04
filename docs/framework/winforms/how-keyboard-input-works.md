@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-keyboard-input-works"></a>Funktionsweise von Tastatureingaben
 Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldungen Tastaturereignisse ausgelöst werden. Die meisten Windows Forms-Anwendungen verarbeiten Tastatureingaben ausschließlich durch Bearbeiten der Tastaturereignisse. Sie müssen jedoch die Funktionsweise von Tastaturnachrichten verstehen, damit Sie erweiterte Tastatureingabeszenarios implementieren können, wie z.B. das Abfangen von Schlüssel, bevor diese ein Steuerelement erreichen. Dieses Thema beschreibt die Typen von Schlüsseldaten, die Windows Forms erkennt, und bietet eine Übersicht darüber, wie Tastaturnachrichten weitergeleitet werden. Informationen zu Tastaturereignissen finden Sie unter [Verwenden von Tastaturereignissen](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -45,7 +46,7 @@ Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldu
   
 ### <a name="preprocessing-for-a-keydown-event"></a>Vorverarbeiten eines KeyDown-Ereignisses  
   
-|Aktion|Verknüpfte Methode|Notizen|  
+|Aktion|Verknüpfte Methode|Hinweise|  
 |------------|--------------------|-----------|  
 |Überprüfen Sie, ob eine Befehlstaste vorhanden ist, z.B. eine Zugriffstaste oder eine Menü-Tastenkombination.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Diese Methode verarbeitet eine Befehlstaste, die Vorrang gegenüber regulären Tasten hat. Wenn diese Methode `true` zurückgibt, wird die Schlüsselmeldung nicht weitergeleitet, und es tritt kein Schlüsselereignis auf. Wenn zurückgegeben `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> wird aufgerufen`.`|  
 |Überprüfen Sie für eine spezielle Taste, die vorverarbeitung erforderlich ist oder ein normales Zeichen-Schlüssel, der auslösen soll eine <xref:System.Windows.Forms.Control.KeyDown> Ereignis und an ein Steuerelement verteilt werden.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Wenn die-Methode zurückgibt `true`, es bedeutet, dass das Steuerelement ist ein reguläres Zeichen und ein <xref:System.Windows.Forms.Control.KeyDown> Ereignis wird ausgelöst. Wenn `false`, <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> aufgerufen wird. **Hinweis:** um sicherzustellen, dass ein Steuerelement ruft einen Schlüssel oder eine Tastenkombination, behandeln Sie die <xref:System.Windows.Forms.Control.PreviewKeyDown> Ereignis, und legen <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> von der <xref:System.Windows.Forms.PreviewKeyDownEventArgs> zu `true` für die Tasten werden sollen.|  
@@ -53,7 +54,7 @@ Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldu
   
 ### <a name="preprocessing-for-a-keypress-event"></a>Vorverarbeiten eines KeyPress-Ereignisses  
   
-|Aktion|Verknüpfte Methode|Notizen|  
+|Aktion|Verknüpfte Methode|Hinweise|  
 |------------|--------------------|-----------|  
 |Überprüfen Sie, ob die Taste ein normales Zeichen darstellt, das vom Steuerelement verarbeitet werden sollte|<xref:System.Windows.Forms.Control.IsInputChar%2A>|Wenn das Zeichen ein normales Zeichen ist, gibt diese Methode `true`die <xref:System.Windows.Forms.Control.KeyPress> Ereignis wird ausgelöst, und keine weiteren vorverarbeitung auftritt. Andernfalls <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> aufgerufen wird.|  
 |Überprüfen Sie, ob es sich bei dem Zeichen um ein mnemonisches Zeichen handelt (z.B. &OK auf einer Schaltfläche)|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|Diese Methode ähnelt <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>, wird der Steuerelementhierarchie nach oben aufgerufen werden. Wenn das Steuerelement ein Container-Steuerelement ist, er überprüft Mnemonik durch Aufrufen von <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> auf sich selbst und seine untergeordneten Steuerelemente. Wenn <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> gibt `true`ein <xref:System.Windows.Forms.Control.KeyPress> Ereignis tritt nicht auf.|  

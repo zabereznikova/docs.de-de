@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Namen von Assemblys und DLLs
 Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten Code Programme. Obwohl Assemblys eine oder mehrere Dateien umfassen können, in der Regel ordnet eine Assembly eine DLL eins zu eins. Dieser Abschnitt beschreibt daher nur DLL Benennungskonventionen, der dann Benennungskonventionen Assembly zugeordnet werden können.  
@@ -37,7 +40,7 @@ Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten
   
  wobei `<Component>` enthält eine oder mehrere Punkte getrennte Klauseln. Zum Beispiel:  
   
- `Litware.Controls.dll`.  
+ `Litware.Controls.dll`  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
@@ -45,4 +48,4 @@ Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

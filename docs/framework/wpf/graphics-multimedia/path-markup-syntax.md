@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen in WPF Übersicht](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird detailliert beschrieben, die leistungsfähigere und komplexere Mini Sprache Sie den Pfad angeben können Geometrien kürzer mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -79,7 +80,7 @@ Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen
   
 |Syntax|  
 |------------|  
-|`M` *startPoint*<br /><br /> - oder -<br /><br /> `m` *startPoint*|  
+|`M` *startPoint*<br /><br /> - oder -<br /><br /> `m` *startPoint*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -98,7 +99,7 @@ Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen
   
 |Syntax|  
 |------------|  
-|`L` *endPoint*<br /><br /> - oder -<br /><br /> `l` *endPoint*|  
+|`L` *endPoint*<br /><br /> - oder -<br /><br /> `l` *endPoint*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -112,11 +113,11 @@ Großbuchstabe `L` gibt an, dass `endPoint` ist ein absoluter Wert; einen Kleinb
   
 |Syntax|  
 |------------|  
-|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
+|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Die x-Koordinate des Endpunkts der Linie.|  
+|*w*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Die x-Koordinate des Endpunkts der Linie.|  
   
 Großbuchstabe `H` gibt an, dass `x` ist ein absoluter Wert; einen Kleinbuchstaben `h` gibt an, dass `x` ist ein Offset in den früheren Zustand, oder falls keiner vorhanden ist (0,0).
   
@@ -134,12 +135,12 @@ Großbuchstabe `H` gibt an, dass `x` ist ein absoluter Wert; einen Kleinbuchstab
 
 Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstaben `v` gibt an, dass `y` ist ein Offset in den früheren Zustand, oder falls keiner vorhanden ist (0,0).  
     
-### <a name="cubic-bezier-curve-command"></a>Befehl für kubische Bézierkurve  
+### <a name="cubic-bezier-curve-command"></a>Kubische Bezier-Kurve-Befehl  
  Erstellt eine kubische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt mithilfe von zwei angegebenen Kontrollpunkten (`controlPoint`1 und `controlPoint`2). `C 100,200 200,400 300,200` ist ein Beispiel für einen gültigen Kurvenbefehl.  
   
 |Syntax|  
 |------------|  
-|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
+|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -147,36 +148,36 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der zweite Kontrollpunkt der Kurve, der die endende Tangente der Kurve bestimmt.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Punkt, bis zu dem die Kurve gezeichnet wird.|  
   
-### <a name="quadratic-bezier-curve-command"></a>Befehl für quadratische Bézierkurve  
- Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt mit dem angegebenen Kontrollpunkt (`controlPoint`). `q 100,200 300,200` ist ein Beispiel für einen gültigen Befehl für eine quadratische Bézierkurve.  
+### <a name="quadratic-bezier-curve-command"></a>Quadratische Bézier-Kurve-Befehl  
+ Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt mit dem angegebenen Kontrollpunkt (`controlPoint`). `q 100,200 300,200`ist ein Beispiel für einen gültigen quadratische Bézier-Kurve-Befehl.  
   
 |Syntax|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `q` `controlPoint` `endPoint`|  
+|`Q` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `q` `controlPoint` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Kontrollpunkt der Kurve, der die beginnende und endende Tangente der Kurve bestimmt.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Punkt, bis zu dem die Kurve gezeichnet wird.|  
   
-### <a name="smooth-cubic-bezier-curve-command"></a>Befehl für glatte kubische Bézierkurve  
- Erstellt eine kubische Bézierkurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt. Der erste Kontrollpunkt soll die Reflektion des zweiten Kontrollpunkts des vorherigen Befehls relativ zum aktuellen Punkt sein. Wenn kein vorheriger Befehl vorhanden ist oder der vorherige Befehl kein Befehl für eine kubische Bézierkurve und kein Befehl für eine glatte kubische Bézierkurve war, wird angenommen, dass der erste Kontrollpunkt mit dem aktuellen Punkt zusammenfällt. Der zweite Kontrollpunkt, der Kontrollpunkt für das Ende der Kurve, wird angegeben, indem `controlPoint`2. Beispielsweise `S 100,200 200,300` ist ein gültiger smooth kubische Bézier-Kurve Befehl.  
+### <a name="smooth-cubic-bezier-curve-command"></a>Smooth quadratische Bézier-Kurve Befehl  
+ Erstellt eine kubische Bézierkurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt. Der erste Kontrollpunkt soll die Reflektion des zweiten Kontrollpunkts des vorherigen Befehls relativ zum aktuellen Punkt sein. Ausgegangen Sie Wenn kein vorherigen Befehl oder der vorherige Befehl keine kubische Bézier-Kurve-Befehl oder ein smooth kubische Bézier-Kurve-Befehl wurde, wird davon, dass der erste Kontrollpunkt mit den aktuellen Stand ist. Der zweite Kontrollpunkt, der Kontrollpunkt für das Ende der Kurve, wird angegeben, indem `controlPoint`2. Beispielsweise `S 100,200 200,300` ist ein gültiger smooth kubische Bézier-Kurve Befehl.  
   
 |Syntax|  
 |------------|  
-|`S` `controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `s` `controlPoint`2`endPoint`|  
+|`S` `controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `s` `controlPoint`2`endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Kontrollpunkt der Kurve, der die endende Tangente der Kurve bestimmt.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Punkt, bis zu dem die Kurve gezeichnet wird.|  
   
-### <a name="smooth-quadratic-bezier-curve-command"></a>Befehl für glatte quadratische Bézierkurve  
- Erstellt eine quadratische Bézierkurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt. Der Kontrollpunkt soll die Reflektion des Kontrollpunkts des vorherigen Befehls relativ zum aktuellen Punkt sein. Wenn kein vorheriger Befehl vorhanden ist oder der vorherige Befehl kein Befehl für eine quadratische Bézierkurve und kein Befehl für eine glatte quadratische Bézierkurve war, fällt der Kontrollpunkt mit dem aktuellen Punkt zusammen.  
+### <a name="smooth-quadratic-bezier-curve-command"></a>Smooth quadratische Bézier-Kurve Befehl  
+ Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt. Der Kontrollpunkt soll die Reflektion des Kontrollpunkts des vorherigen Befehls relativ zum aktuellen Punkt sein. Wenn kein vorheriger Befehl vorhanden ist oder der vorherige Befehl kein Befehl für eine quadratische Bézierkurve und kein Befehl für eine glatte quadratische Bézierkurve war, fällt der Kontrollpunkt mit dem aktuellen Punkt zusammen.  
   
 |Syntax|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `t` `controlPoint` `endPoint`|  
+|`T` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `t` `controlPoint` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -188,7 +189,7 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
   
 |Syntax|  
 |------------|  
-|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> - oder -<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
+|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> - oder -<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -204,7 +205,7 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
   
 |Syntax|  
 |------------|  
-|`Z`<br /><br /> - oder -<br /><br /> `z`|  
+|`Z`<br /><br /> - oder -<br /><br /> `z`|  
 
 <a name="pointsyntax"></a>   
 ## <a name="point-syntax"></a>Punkt-Syntax  
@@ -212,7 +213,7 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
   
 |Syntax|  
 |------------|  
-|`x` `,` `y`<br /><br /> - oder -<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> - oder -<br /><br /> `x` `y`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -241,4 +242,4 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
  <xref:System.Windows.Media.PathFigureCollection>  
  [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

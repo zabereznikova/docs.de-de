@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6925e9322063d68d0d7f8c8e048eed254cd14ed7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9fe22e49ee28de60bc76d7a4f543462bbcfac48c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Gewusst wie: Erstellen einer überschreibbaren Kopie eines schreibgeschützten Freezable-Objekts
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Freezable.Clone%2A> Methode, um eine schreibbare Kopie ein schreibgeschütztes erstellen <xref:System.Windows.Freezable>.  
@@ -42,4 +43,4 @@ Dieses Beispiel zeigt, wie die <xref:System.Windows.Freezable.Clone%2A> Methode,
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CloneCurrentValue%2A>  
  [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

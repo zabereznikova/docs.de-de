@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> -Architektur bietet einen Mechanismus zum Implementieren von systemnahe Steuerung über <xref:System.Windows.Input.Stylus> Eingabe und die Erstellung von Freihandeingaben <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasse bietet einen Mechanismus für benutzerdefinierte Verhalten implementieren, und wenden Sie es in den Stream der Daten aus der Tablettstiftgerät, um eine optimale Leistung zu erzielen.  
@@ -77,7 +78,7 @@ Die <xref:System.Windows.Input.StylusPlugIns> -Architektur bietet einen Mechanis
  [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Durch Ableiten von Ihren eigenen <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klassen und Einfügen in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> Auflistungen, Sie können das Verhalten von Ihrem Freihandeingaben erheblich verbessern. Haben Sie Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, wie er generiert, mit dem Sie die Möglichkeit zum Anpassen der <xref:System.Windows.Input.Stylus> Eingabe. Schreibberechtigung für diesen Low-Level-Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, können Sie Freihandeingaben und das Rendering mit optimaler Leistung für Ihre Anwendung implementieren.  
   
 ## <a name="see-also"></a>Siehe auch  

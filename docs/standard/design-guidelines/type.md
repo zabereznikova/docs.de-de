@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Richtlinien für den Entwurf von Typen
 Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen und Werttypen, aber für eine Erläuterung zu Framework-Designs, teilen wir Typen in mehr logische Gruppen, jeweils einen eigenen bestimmten Regeln.  
@@ -42,11 +45,11 @@ Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen un
  **Führen Sie ✓** stellen Sie sicher, dass jeder Typ einen genau definierten Satz verwandter Elemente, nicht nur eine zufällige Sammlung von unabhängigen Funktionalität ist.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Auswählen zwischen Klassen und Strukturen](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [Abstrakte Klassenentwurf](../../../docs/standard/design-guidelines/abstract-class.md)  
- [Static-Klassenentwurf](../../../docs/standard/design-guidelines/static-class.md)  
- [Entwurf der Benutzeroberfläche](../../../docs/standard/design-guidelines/interface.md)  
- [Struct-Entwurf](../../../docs/standard/design-guidelines/struct.md)  
+ [Auswählen zwischen Klasse und Struktur](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [Entwurf abstrakter Klassen](../../../docs/standard/design-guidelines/abstract-class.md)  
+ [Entwurf statischer Klassen](../../../docs/standard/design-guidelines/static-class.md)  
+ [Schnittstellenentwurf](../../../docs/standard/design-guidelines/interface.md)  
+ [Strukturentwurf](../../../docs/standard/design-guidelines/struct.md)  
  [Enum-Entwurf](../../../docs/standard/design-guidelines/enum.md)  
  [Geschachtelte Typen](../../../docs/standard/design-guidelines/nested-types.md)  
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  

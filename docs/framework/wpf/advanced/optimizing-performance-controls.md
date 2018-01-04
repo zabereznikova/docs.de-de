@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Optimieren der Leistung: Steuerelemente
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen viele gängige Benutzeroberflächenkomponenten zur Verfügung, die in den meisten Windows Anwendungen verwendet werden. In diesem Thema werden Techniken dargestellt, mit denen Sie die Leistung Ihrer Benutzeroberfläche (UI) optimieren können.  
@@ -42,7 +43,7 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
   
 -   Festlegen von <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> auf `false`.  
   
--   Festlegen von <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` auf `false`.    
+-   Festlegen von <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` auf `false`.  
   
  Bei der Virtualisierung von Elementcontainern ist es maßgeblich, zu wissen, ob Ihnen Informationen bezüglich des zusätzlichen Zustands des Elementcontainers vorliegen, der zu dem Element gehört. Falls dem so ist, müssen Sie den zusätzlichen Zustand speichern. Angenommen, Sie müssen möglicherweise Elements in ein <xref:System.Windows.Controls.Expander> Steuerelement und dem <xref:System.Windows.Controls.Expander.IsExpanded%2A> Status gebunden ist, auf das Element Container, und nicht auf das Element selbst. Wenn der Container wiederverwendet wird, für das neue Element, den aktuellen Wert der <xref:System.Windows.Controls.Expander.IsExpanded%2A> für das neue Element verwendet wird. Außerdem verliert das alte Element den richtigen <xref:System.Windows.Controls.Expander.IsExpanded%2A> Wert.  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f0315bbd1d1a5ab2ae08d8bc1810e240cb6a5a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Gewusst wie: Hinzufügen einer Klassenbehandlung für ein Routingereignis
 Routingereignisse können entweder durch die Klasse oder Instanzhandler auf einen beliebigen Knoten in der Route behandelt werden. Klassenhandler werden zuerst aufgerufen und können von Klasse-Implementierungen verwendet werden, um Ereignisse aus der Instanz Behandlung zu unterdrücken, oder dass Sie andere Ereignis spezifische Verhalten auf Ereignisse, die im Besitz von Basisklassen eingeführt. Dieses Beispiel veranschaulicht zwei eng verwandte Techniken zum Implementieren von Klassenhandler.  

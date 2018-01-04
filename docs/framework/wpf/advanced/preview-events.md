@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>Vorschauereignisse
 Vorschauereignisse, auch bekannt als Tunneling-Ereignisse, sind Routingereignisse übertragen werden, in denen die Richtung der Route aus den Anwendungsstamm für das Element, das das Ereignis ausgelöst hat, und wird als Quelle in den Ereignisdaten gemeldet. Nicht alle Ereignisszenarien unterstützen oder erfordern Vorschauereignisse; Dieses Thema beschreibt die Situationen, in denen Vorschauereignisse vorhanden wie Anwendungen oder Komponenten, die sie behandeln soll, sowie die Fälle, die, in dem Vorschauereignisse in benutzerdefinierten Komponenten oder Klassen erstellen geeignet sein könnte.  

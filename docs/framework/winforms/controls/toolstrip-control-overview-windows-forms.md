@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten ein allgemeines Framework zum Zusammenfassen von Benutzeroberflächenelementen in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip>Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, umfasst also die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Abstand gemeinsam verwenden.  
@@ -55,7 +56,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugeh
   
 ### <a name="important-toolstrip-members"></a>Wichtige ToolStrip-Elemente  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Ruft ab oder legt fest, welche Rand des übergeordneten Containers ein <xref:System.Windows.Forms.ToolStrip> angedockt ist.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob Drag & Drop und die Neuanordnung von Elementen von der <xref:System.Windows.Forms.ToolStrip>-Klasse privat behandelt werden.|  
@@ -71,7 +72,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugeh
   
 ### <a name="important-toolstrip-companion-classes"></a>Wichtige ToolStrip-Assistentenklassen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.MainMenu> Klasse.|  
 |<xref:System.Windows.Forms.StatusStrip>|Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.StatusBar> Klasse.|  

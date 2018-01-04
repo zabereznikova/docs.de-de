@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e58e49ecc852b87d03d4112208354e608248984
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses
 In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.ScaleTransform> bei Auftreten eines Ereignisses. Mithilfe des hier dargestellten Konzepts können Sie auch andere Transformationstypen anwenden. Weitere Informationen zu den verfügbaren Typen von Transformationen finden Sie unter der <xref:System.Windows.Media.Transform> Klasse oder [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
@@ -49,5 +50,5 @@ In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Med
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.ScaleTransform>  
  [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

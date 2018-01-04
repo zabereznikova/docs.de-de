@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Gewusst wie: Gruppieren, Sortieren und Filtern von Daten in einem DataGrid-Steuerelement
 Es ist häufig hilfreich zum Anzeigen von Daten in einem <xref:System.Windows.Controls.DataGrid> auf unterschiedliche Weise durch Gruppieren, Sortieren und Filtern der Daten. Zum Gruppieren, Sortieren und Filtern der Daten in einem <xref:System.Windows.Controls.DataGrid>, binden Sie es an eine <xref:System.Windows.Data.CollectionView> , die diese Funktionen unterstützt. Anschließend können Sie arbeiten mit den Daten in der <xref:System.Windows.Data.CollectionView> ohne Auswirkung auf den zugrunde liegenden Quelldaten. Die Änderungen in der Auflistungsansicht werden angezeigt, der <xref:System.Windows.Controls.DataGrid> -Benutzeroberfläche (UI).  

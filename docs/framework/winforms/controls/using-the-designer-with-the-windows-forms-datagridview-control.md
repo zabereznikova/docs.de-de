@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b29904954a593607a7872c0b59265bbf241dce98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Verwenden des Designers mit dem DataGridView-Steuerelement in Windows Forms
 Visual Studio stellt Designer-Unterstützung für die `DataGridView` Steuerelement, das Ihnen ermöglicht, viele Aufgaben zur methodeneinrichtung auszuführen, ohne Code zu schreiben. Diesen Aufgaben zählt das Steuerelement mit einer Datenquelle, und Ändern von Spalten zum Anzeigen von Daten verwendete Bindung und das Anpassen der Darstellung und das grundlegende Verhalten des Steuerelements.  

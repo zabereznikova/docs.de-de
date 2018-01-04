@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30808e8ee0223c31085a65ff025fb188c0132057
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8a97a6c85036a6daf4e8c908186953f9a75f952a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Gewusst wie: Gruppieren von Elementen in einem ListView, in dem ein GridView implementiert ist
 Dieses Beispiel zeigt die Vorgehensweise beim Anzeigen von Gruppen von Elementen in der <xref:System.Windows.Controls.GridView> Ansichtsmodus des ein <xref:System.Windows.Controls.ListView> Steuerelement.  
@@ -39,6 +40,6 @@ Dieses Beispiel zeigt die Vorgehensweise beim Anzeigen von Gruppen von Elementen
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

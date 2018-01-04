@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcodes, die vom Entwickler verfügbar gemacht werden um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
 |Kategorie|Bedeutung|  
 |--------------|-------------|  
-|Keine|Der Zielwert besitzt keine definierte Kategorie.|  
+|Keiner|Der Zielwert besitzt keine definierte Kategorie.|  
 |Inherit|Der Zielwert erbt seine Kategorie von seinem übergeordneten Element.|  
 |Ignorieren|Der Zielwert wird im Lokalisierungsprozess ignoriert. Ignore wirkt sich nur auf den aktuellen Wert aus. Untergeordnete Knoten werden nicht beeinflusst.|  
 |NeverLocalize|Der aktuelle Wert kann nicht lokalisiert werden. Diese Kategorie wird von den untergeordneten Elementen eines Elements geerbt.|  

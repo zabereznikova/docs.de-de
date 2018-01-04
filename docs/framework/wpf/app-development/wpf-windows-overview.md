@@ -39,11 +39,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3323efa3306fd55d7c1d43cbc6eeaaf846e373ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendungen. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen ihre eigenen Windows bereitstellen, indem Sie mit der <xref:System.Windows.Window> Klasse. Dieses Thema enthält <xref:System.Windows.Window> vor die Grundlagen zum Erstellen und Verwalten von Windows in eigenständigen Anwendungen abdecken.  
@@ -341,13 +342,13 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Wenn Sie die Breite und Höhe des Fensters möchten den Inhalt eine Größe aufweisen, die auf die Größe des Fensters entspricht, können Sie mithilfe der <xref:System.Windows.Window.SizeToContent%2A> -Eigenschaft, die den folgenden Werten:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
+-   <xref:System.Windows.SizeToContent.Manual> Keine Auswirkung (Standard).  
   
--   <xref:System.Windows.SizeToContent.Width>. An Inhalt Breite dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Width> An Inhalt Breite dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.Height>. An Inhalt Höhe dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> an die Höhe des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Height> An Inhalt Höhe dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> an die Höhe des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. An Inhalt Breite und Höhe dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> die Höhe der Inhalte und Einstellung beide <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight> An Inhalt Breite und Höhe dieselbe Wirkung hat wie das Festlegen von sowohl anpassen <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> die Höhe der Inhalte und Einstellung beide <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   

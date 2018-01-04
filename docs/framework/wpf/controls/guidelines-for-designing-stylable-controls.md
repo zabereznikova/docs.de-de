@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80edbd452be52e77a464ab29347dbe5d4067d0e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
 Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksichtigen sind, wenn Sie ein Steuerelement erstellen, das einfach zu formatieren ist und damit bequem Vorlagen damit erstellt werden können. Wir kamen durch Experimentieren zu dieser Reihe bewährter Methoden, während wir an Steuerelementstilen für Designs für die integrierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente gearbeitet haben. Wir haben gelernt, dass die erfolgreiche Formatierung genau so eine Funktion eines gut strukturierten Objektmodells ist wie für den Stil selbst. Die Zielgruppe für dieses Dokument sind die Autoren des Steuerelements und nicht der Autoren der Stile.  

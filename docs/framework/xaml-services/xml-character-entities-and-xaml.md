@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
 XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem Thema werden einige bestimmte Zeichenentitäten und allgemeine Überlegungen für andere XML-Konzepte in XAML beschrieben.  
@@ -54,13 +55,13 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
 ## <a name="xml-character-entities"></a>XML-Zeichenentitäten  
  Wie bereits erwähnt, werden die meisten Zeichenentitäten und Escape-Sequenzen, die beim Schreiben von XAML-Markup normalerweise verwendet werden, von XML definiert. Dieses Thema enthält keine vollständige Liste dieser Entitäten. Eine ausführlichere Referenz der Entitäten finden Sie in externer Dokumentation wie in XML-Spezifikationen. Aus praktischen Gründen enthält dieses Thema eine Liste der XML-Zeichenentitäten, die häufig für XAML-Markup verwendet werden.  
   
-|Zeichen|Entität|Notizen|  
+|Zeichen|Entität|Hinweise|  
 |---------------|------------|-----------|  
-|& (Und)|&amp;|Muss sowohl in Attributwerten als auch in Elementinhalten verwendet werden.|  
-|> (Größer als-Zeichen)|&gt;|Muss in Attributwerten verwendet werden, ist in Elementinhalten zulässig, wenn dem nicht < vorausgeht.|  
-|< (Kleiner als-Zeichen)|&lt;|Muss ein Wert des Attributs verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements solange > stimmt nicht überein.|  
-|" (gerades Anführungszeichen)|&quot;|Muss in Attributwerten verwendet werden. Jedoch ist ein gerades Anführungszeichen (") in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
-|' (einfaches gerades Anführungszeichen)|&apos;|Muss in Attributwerten verwendet werden. Jedoch ist ein einzelnes gerades Anführungszeichen (') in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
+|& (Und)|\&amp;|Muss sowohl in Attributwerten als auch in Elementinhalten verwendet werden.|  
+|> (Größer als-Zeichen)|\&gt;|Muss in Attributwerten verwendet werden, ist in Elementinhalten zulässig, wenn dem nicht < vorausgeht.|  
+|< (Kleiner als-Zeichen)|\&lt;|Muss ein Wert des Attributs verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements solange > stimmt nicht überein.|  
+|" (gerades Anführungszeichen)|\&quot;|Muss in Attributwerten verwendet werden. Jedoch ist ein gerades Anführungszeichen (") in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
+|' (einfaches gerades Anführungszeichen)|\&apos;|Muss in Attributwerten verwendet werden. Jedoch ist ein einzelnes gerades Anführungszeichen (') in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
 |(Zuordnungen numerischer Zeichen)|&#*[Ganzzahl]* ; oder & #x*[Hexadezimalzahl]*;|XAML unterstützt die Zuordnung numerischer Zeichen in der aktiven Codierung.|  
 |(geschütztes Leerzeichen)|&\#160; (vorausgesetzt, UTF-8-Codierung)|Bei Flussdokumentelementen oder Elementen für die Aufnahme von Text wie <xref:System.Windows.Controls.TextBox> von WPF werden geschützte Leerzeichen nicht außerhalb des Markups normalisiert, auch nicht für  `xml:space="default"`. (Weitere Informationen finden Sie unter [Leerstellenverarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   

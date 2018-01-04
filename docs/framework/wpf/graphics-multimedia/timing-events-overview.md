@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Übersicht über Zeitsteuerungsereignisse
 Dieses Thema beschreibt, wie die fünf Ereignisse zu abfrageantwortzeiten verfügbar <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekte.  
@@ -64,7 +65,7 @@ Dieses Thema beschreibt, wie die fünf Ereignisse zu abfrageantwortzeiten verfü
 ## <a name="public-events"></a>Öffentliche Ereignisse  
  Die <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> beide Klassen bieten fünf Ereignisse zu abfrageantwortzeiten. Die folgende Tabelle enthält diese Ereignisse und die Umstände, die sie auslösen.  
   
-|Ereignis|Auslösen von interaktiven Vorgängen|Andere Trigger|  
+|event|Auslösen von interaktiven Vorgängen|Andere Trigger|  
 |-----------|--------------------------------------|--------------------|  
 |**Abgeschlossen**|Zur Füllung überspringen|Die Uhr wird beendet.|  
 |**CurrentGlobalSpeedInvalidated**|Anhalten, Fortsetzen, Suchen, Geschwindigkeitsverhältnis festlegen, Zur Füllung überspringen, Stoppen|Die Uhr kehrt um, beschleunigt, startet oder stoppt.|  

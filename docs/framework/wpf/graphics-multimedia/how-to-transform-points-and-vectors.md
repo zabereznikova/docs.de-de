@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c3443855f32b89c3f6cb34647a47cf50a34cee
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5f2dd78fdb12ed975f5463c4e3320d113e9a69dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-transform-points-and-vectors"></a>Gewusst wie: Transformieren von Punkten und Vektoren
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Matrix> transformieren <xref:System.Windows.Point> und <xref:System.Windows.Vector> Objekte.  

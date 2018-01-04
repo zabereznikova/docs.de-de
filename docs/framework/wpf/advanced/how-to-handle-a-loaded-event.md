@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35376d3a759e326ae7de77657529c4bed5e38c37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 794de0e64e2f4d974091b92f211d7472d04ecd26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-a-loaded-event"></a>Gewusst wie: Behandeln eines geladenen Ereignisses
 In diesem Beispiel wird gezeigt, wie behandelt die <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> Ereignisses, und ein entsprechendes Szenario für die Behandlung dieses Ereignisses. Der Ereignishandler erstellt ein <xref:System.Windows.Controls.Button> beim Laden der Seite.  
@@ -41,4 +42,4 @@ In diesem Beispiel wird gezeigt, wie behandelt die <xref:System.Windows.Framewor
  <xref:System.Windows.FrameworkElement>  
  [Objektlebensdauer-Ereignisse](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
  [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

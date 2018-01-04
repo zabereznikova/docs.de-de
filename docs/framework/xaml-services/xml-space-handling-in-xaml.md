@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a5048cbad1d2ea914d041ac3c87a43223b208c3a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b8356cdb47b6b834e8d9a6bb84b26445af6d865
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space-Behandlung in XAML
 Die `xml:space` -Attribut ist ein in XML definierten-Attribut, das Verarbeitungsverhalten für signifikante Leerräume innerhalb einer Object-Element deklariert. Dieses Verhalten ist relevant für den gesamten Inhalt (inneren Text), die im Element enthalten sind, in denen `xml:space` deklariert ist, und auch Bereiche untergeordneten Elementen.  

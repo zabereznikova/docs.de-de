@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
@@ -167,7 +168,7 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- Eine kubische Bézierkurve wird durch einen Anfangspunkt, einen Endpunkt und zwei Kontrollpunkte definiert. Die <xref:System.Windows.Media.Animation.KeySpline> Eigenschaft von einem Spline-Keyframe definiert, den zwei Kontrollpunkt eine Bézier-Kurve, die von (0,0) bis (1,1) reicht. Der erste Kontrollpunkt kontrolliert den Kurvenfaktor der ersten Hälfte der Bézierkurve, und der zweite Kontrollpunkt kontrolliert den Kurvenfaktor der zweiten Hälfte des Béziersegments. Die resultierende Kurve beschreibt die Änderungsrate für diesen Spline-Keyframe. Je steiler die Kurve, desto schneller ändert der Keyframe seine Werte. Wenn die Kurve flacher wird, ändert der Keyframe seine Werte langsamer.  
+ Eine kubische Bézier-Kurve wird durch einen Startpunkt, Endpunkt und zwei Steuerpunkte definiert. Die <xref:System.Windows.Media.Animation.KeySpline> Eigenschaft von einem Spline-Keyframe definiert, den zwei Kontrollpunkt eine Bézier-Kurve, die von (0,0) bis (1,1) reicht. Steuert, der erste Kontrollpunkt den Kurvenfaktor von der ersten Hälfte der Bézier-Kurve, und steuert, der zweite Kontrollpunkt den Kurvenfaktor der zweiten Hälfte des Segments Bézier. Die resultierende Kurve beschreibt die Änderungsrate für diesen Spline-Keyframe. Je steiler die Kurve, desto schneller ändert der Keyframe seine Werte. Wenn die Kurve flacher wird, ändert der Keyframe seine Werte langsamer.  
   
  Sie können <xref:System.Windows.Media.Animation.KeySpline> physischen Leitkurven wie fallen Wasser oder springenden Balls simulieren, oder andere "Beschleunigung" und "Abbremsen" Auswirkungen auf Animationen anwenden. Um Effekte für die Benutzerinteraktion wie Hintergrundausblendungen oder zurückfedernde Steuerelementschaltflächen zu erzielen, können Sie mit der Spline-Interpolation die Änderungsgeschwindigkeit einer Animation auf besondere Weise beschleunigen oder verzögern.  
   
@@ -187,7 +188,7 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
- Da sich die Krümmung der Bézierkurve nur wenig ändert, animiert der Keyframe mit fast konstanter Geschwindigkeit. Sie wird ganz am Ende etwas verlangsamt.  
+ Da die Krümmung der Bézier-Kurve nur geringfügig geändert wird, eine dieses Keyframes mit fast konstanter Geschwindigkeit Animation; er verlangsamt in einem gewissen gegen seine ganz unten.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> die Position des Rechtecks animiert. Da die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> verwendet <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> Objekte aufweist, der Übergang zwischen jedem Wert des Keyframes verwendet Spline-Interpolation.  
   

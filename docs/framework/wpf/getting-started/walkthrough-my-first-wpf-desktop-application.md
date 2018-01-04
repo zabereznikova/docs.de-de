@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 In dieser exemplarischen Vorgehensweise bietet eine Einführung in die Entwicklung einer [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Anwendung, die die Elemente enthält, die für die meisten gelten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Markup, CodeBehind, Anwendungsdefinitionen, Steuerelemente, Layout, die Datenbindung und Stile. 
@@ -457,7 +458,7 @@ Weitere Informationen zum Installieren der neuesten Version von Visual Studio fi
   
 -   [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
   
--   [Grafik und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+-   [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
 -   [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   

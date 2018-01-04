@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Steuerelemente in Windows Forms zum Auflisten von Optionen
 Sie können eine Vielzahl von Steuerelementen zu einem Windows Form hinzufügen, wenn Sie Benutzern eine Liste mit Optionen zur Auswahl zur Verfügung stellen möchten. Je nach Umfang Ihrer Benutzer zu beschränken möchten, geben Sie, Sie hinzufügen, können eine <xref:System.Windows.Forms.ListBox> -Steuerelement, ein <xref:System.Windows.Forms.ComboBox> -Steuerelement, oder ein <xref:System.Windows.Forms.CheckedListBox> Steuerelement. Verwenden Sie die folgenden Links, um zu bestimmen, welches Steuerelement besten Ihren Bedürfnissen entspricht.  

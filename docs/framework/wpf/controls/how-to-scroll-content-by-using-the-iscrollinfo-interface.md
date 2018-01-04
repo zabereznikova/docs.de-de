@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1895507c30ad5267d4c2b1afff3acf004e872d40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae6d9439ad76258105d615960bd05ecf458eb613
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Gewusst wie: Durchführen eines Bildlaufs von Inhalten mithilfe der IScrollInfo-Schnittstelle
 In diesem Beispiel wird gezeigt, wie einen Bildlauf im Inhalt mithilfe der <xref:System.Windows.Controls.Primitives.IScrollInfo> Schnittstelle.  
@@ -44,5 +45,5 @@ In diesem Beispiel wird gezeigt, wie einen Bildlauf im Inhalt mithilfe der <xref
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
  <xref:System.Windows.Controls.StackPanel>  
  [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
  [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)

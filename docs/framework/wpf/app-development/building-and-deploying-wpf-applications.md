@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Erstellen und Bereitstellen von WPF-Anwendungen
 Die Build- und Bereitstellungsprozess-Modell bietet die Möglichkeit zum Erstellen und Bereitstellen von Anwendungen, lokal und Remote, u. a. folgende:  
@@ -36,7 +37,7 @@ Die Build- und Bereitstellungsprozess-Modell bietet die Möglichkeit zum Erstell
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  MSBuild  

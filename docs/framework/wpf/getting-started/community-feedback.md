@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>WPF-Communityfeedback
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] stellt eine Vielzahl von Communityressourcen für Sie bereit, mit denen Sie sich über [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] informieren, austauschen und Feedback senden können. Zu diesen Ressourcen gehören die von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Teammitgliedern und Communitysprechern veröffentlichten Blogs, Foren und das [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] Produktfeedbackcenter. Die einzelnen Communityressourcen bieten unterschiedliche Vorteile. Diese Vorteile werden hier erläutert. Außerdem werden bewährte Vorgehensweisen für die Verwendung der einzelnen Ressourcen beschrieben, die sicherstellen, dass Sie eine optimale Reaktion von der Community insgesamt und [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] im Besonderen erhalten.  

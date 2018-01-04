@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbe8a3935da2d9aa928467b4c64da455f3b53c5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4683ebd66afb2d4ac5bfa615336787c4006b4335
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker-Stile und Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.DatePicker> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -67,7 +68,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Deaktiviert|CommonStates|Die <xref:System.Windows.Controls.Primitives.DatePickerTextBox> ist deaktiviert.|  
 |MouseOver|CommonStates|Befindet sich der Mauszeiger über dem <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
 |ReadOnly|CommonStates|Der Benutzer kann nicht geändert werden den Text in der <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
-|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Mit einem Wasserzeichen versehen|WatermarkStates|Das Steuerelement wird der ursprünglichen Text.  Die <xref:System.Windows.Controls.Primitives.DatePickerTextBox> ist in den Zustand, wenn der Benutzer nicht eingegebenen Text oder ein Datum ausgewählt hat.|  
 |Unwatermarked|WatermarkStates|Der Benutzer hat eingegebene Text in die <xref:System.Windows.Controls.Primitives.DatePickerTextBox> oder ein Datum im ausgewählten der <xref:System.Windows.Controls.DatePicker>.|  

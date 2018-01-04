@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-rendering-ink"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Eigenschaft eines Strichs ermöglicht Ihnen das Festlegen der Darstellung des Strichs, z. B. seine Größe, Farbe und Form ", aber möglicherweise gibt es Zeiten, die zum Anpassen der Darstellung hinausgehen sollen <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> zulassen. Sie können beispielsweise die Darstellung von Freihandeingaben so anpassen, dass sie wie ein Airbrush- oder Ölgemälde aussieht oder mit vielen weiteren Effekten gerendert wird. Die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ermöglicht es Ihnen, benutzerdefinierte Ink durch Implementierung eines benutzerdefinierten Rendern <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und <xref:System.Windows.Ink.Stroke> Objekt.  
@@ -98,7 +99,7 @@ Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Eigenschaft eines Stri
  Ein <xref:System.Windows.Controls.InkCanvas> kann mehr als einen haben <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Sie können mehrere hinzufügen <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> -Objekte und die <xref:System.Windows.Controls.InkCanvas> durch Hinzufügen der <xref:System.Windows.UIElement.StylusPlugIns%2A> Eigenschaft.  
   
 <a name="Conclusion"></a>   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie können die Darstellung anpassen, indem Sie eine eigene abgeleitete <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, und <xref:System.Windows.Controls.InkCanvas> Klassen. Zusammen stellen diese Klassen sicher, dass die Darstellung des Strichs während des Zeichnens durch den Benutzer mit der Darstellung nach seiner Erfassung konsistent ist.  
   
 ## <a name="see-also"></a>Siehe auch  

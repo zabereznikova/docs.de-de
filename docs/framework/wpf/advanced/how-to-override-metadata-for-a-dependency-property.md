@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78d90414d86d06040065ad8ae18a037412723ce0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Gewusst wie: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft
 In diesem Beispiel wird gezeigt, wie Metadaten für Abhängigkeitseigenschaften Standard zu überschreiben, die stammen von einer geerbten Klasse durch Aufrufen der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode und typspezifische Metadaten bereitgestellt.  
@@ -45,4 +46,4 @@ In diesem Beispiel wird gezeigt, wie Metadaten für Abhängigkeitseigenschaften 
  <xref:System.Windows.DependencyProperty>  
  [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

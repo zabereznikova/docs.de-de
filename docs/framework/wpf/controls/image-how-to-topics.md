@@ -17,11 +17,12 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Gewusst-wie-Themen zu Image
 Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Image> Element.  
@@ -41,4 +42,4 @@ Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.W
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

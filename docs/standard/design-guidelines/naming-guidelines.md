@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40da7449c88eaaba92e34374c002c7e175b2ef16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 713a11f822dd30e77e6442c0bb082a40755b1832
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-guidelines"></a>Richtlinien für die Benennung
 Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framework kann einen wesentlichen Beitrag das Framework verwendbarkeits-sein. Es kann das Framework weit getrennte Projekte für viele Entwickler verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelemente leicht verstanden werden müssen und müssen die Funktion der einzelnen Elemente zu vermitteln.  
@@ -35,7 +38,7 @@ Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framewo
  Obwohl diese Benennungskonventionen einführen, da mit Richtlinien für die allgemeine Entwicklung konsistenter Benennung im gesamten Code führen würde, Sie sind nur erforderlich, um deren Anwendung auf APIs an, die öffentlich verfügbar gemacht werden (öffentliche oder geschützte Typen und Member, und explizit implementierte Schnittstellen).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Großschreibung Konventionen](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
+ [Konventionen für die Groß-/Kleinschreibung](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
  [Allgemeine Benennungskonventionen](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
  [Namen von Assemblys und DLLs](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
  [Namen von Namespaces](../../../docs/standard/design-guidelines/names-of-namespaces.md)  

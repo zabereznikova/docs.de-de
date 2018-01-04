@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14226a549aaef8ea4c5a98fa6bc6249db824b35a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f084819c3a5c39ea9d94a5741f8fb4a005d6040c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Vorgehensweise: Bearbeiten einer Tabelle &#39; s Zeilengruppen mit der RowGroups-Eigenschaft
 Dieses Beispiel zeigt einige der häufigeren Vorgänge, die für eine Tabelle Zeilengruppen über ausgeführt werden können die <xref:System.Windows.Documents.Table.RowGroups%2A> Eigenschaft.  

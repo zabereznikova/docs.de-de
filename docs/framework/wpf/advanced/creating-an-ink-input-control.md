@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-ink-input-control"></a>Erstellen eines Freihandeingabesteuerelements
 Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und statisch Freihandeingabe gerendert. Freihandeingaben gerendert wird, wenn ein Benutzer ein Strichs zeichnet, verursacht die Freihandeingabe "Datenfluss" aus der Tablettstift, Freihandeingaben nach der er angezeigt wird hinzugefügt und an das Steuerelement entweder über den Tablettstift aus der Zwischenablage eingefügten oder aus einer Datei geladen werden. Um Freihandeingaben dynamisch zu rendern, das Steuerelement verwenden, muss ein <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Um Freihandeingaben statisch zu rendern, müssen Sie den Tablettstiftereignismethoden überschreiben (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, und <xref:System.Windows.UIElement.OnStylusUp%2A>) sammeln <xref:System.Windows.Input.StylusPoint> , Striche zu erstellen und Hinzufügen einer <xref:System.Windows.Controls.InkPresenter> (so wird die Freihandeingabe auf das Steuerelement gerendert wird).  
@@ -105,7 +106,7 @@ Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und s
  Wie InkCanvas kann das benutzerdefinierte Steuerelement benutzerdefinierte haben <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> und zusätzliche <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Objekte. Hinzufügen der <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung. Die Reihenfolge der der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> wirkt sich auf die Darstellung der, wenn er gerendert wird. Angenommen, Sie haben eine <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> aufgerufen `dynamicRenderer` und eine benutzerdefinierte <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> aufgerufen `translatePlugin` , die vom Tablettstift Freihandeingaben offsets. Wenn `translatePlugin` ist die erste <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, und `dynamicRenderer` ist die zweite Freihandeingaben, die "übertragen" wird versetzt werden, wenn der Benutzer den Stift bewegt. Wenn `dynamicRenderer` erster und `translatePlugin` ist die zweite Freihandeingaben werden nicht angezeigt, bis der Benutzer den Stift anhebt.  
   
 <a name="AdvancedInkHandling_Conclusion"></a>   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie können ein Steuerelement erstellen, die gesammelt und durch Überschreiben der Tablettstiftereignismethoden Freihandeingabe gerendert. Erstellen Sie ein eigenes Steuerelement ableiten eigene <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klassen und eingefügt werden die in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, können Sie praktisch jeder erdenklichen mit Freihandeingaben Verhalten implementieren. Haben Sie Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, wie er generiert, mit dem Sie die Möglichkeit zum Anpassen <xref:System.Windows.Input.Stylus> Eingabe- und auf dem Bildschirm nach Bedarf für Ihre Anwendung zu rendern. Schreibberechtigung für diesen Low-Level-Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, können Sie Freihandeingaben implementieren und mit optimaler Leistung für Ihre Anwendung darstellen.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2129ea06e8c92b3912d2abdd3d1a63e651ac59e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ba6cb3483c983ddbcd3fac2281fe40aef31301b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Gewusst wie: Animieren einer Eigenschaft unter Verwendung eines Storyboards
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren von Eigenschaften. Zum Animieren einer Eigenschaft mithilfe einer <xref:System.Windows.Media.Animation.Storyboard>, erstellen Sie eine Animation für jede Eigenschaft, die Sie verwenden möchten, dem animiert werden soll, und erstellen außerdem eine <xref:System.Windows.Media.Animation.Storyboard> Animationen enthalten.  

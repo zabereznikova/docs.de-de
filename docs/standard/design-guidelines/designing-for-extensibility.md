@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dbee2fb24b9acf9bc2512b399e3a74e66720cc3c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f21e9239199ecd36432ed8f14adb896f1799506b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-for-extensibility"></a>Entwerfen für Erweiterbarkeit
 Ein wichtiger Aspekt beim Entwerfen einer Framework wird sichergestellt, dass die Erweiterbarkeit des Frameworks sorgfältig berücksichtigt wurde. Dies erfordert, dass Sie verstehen, die Kosten und Vorteile, die verschiedene Mechanismen für Erweiterbarkeit zugeordnet. In diesem Kapitel können Sie entscheiden, welche die Mechanismen für Erweiterbarkeit – Unterklassen, Ereignisse, virtuelle Member, Rückrufe und usw. – können am besten erfüllt die Anforderungen von Ihrem Framework.  
@@ -32,10 +35,10 @@ Ein wichtiger Aspekt beim Entwerfen einer Framework wird sichergestellt, dass di
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md)  
  [Geschützte Member](../../../docs/standard/design-guidelines/protected-members.md)  
- [Rückrufe und Ereignisse](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
+ [Ereignisse und Rückrufe](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
  [Virtuelle Member](../../../docs/standard/design-guidelines/virtual-members.md)  
  [Abstraktionen (abstrakte Typen und Schnittstellen)](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
- [Basisklassen für die Implementierung von Abstraktionen](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
+ [Basisklassen zum Implementieren von Abstraktionen](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
  [Versiegeln](../../../docs/standard/design-guidelines/sealing.md)  
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

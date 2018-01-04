@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d1ababcb7a00496b59005b5e90f875511fefc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebb74e1db2e63269f70a13ef8520ab1383ecae08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Gewusst wie: Abrufen der Standardansicht einer Datenauflistung
 Ansichten können die gleichen Datensammlung unterschiedlich, je nach sortieren, filtern oder Gruppierungskriterien angezeigt werden. Jede Auflistung verfügt über eine freigegebene Standardansicht, die als tatsächliche Bindungsquelle verwendet wird, wenn eine Bindung eine Auflistung als Updatequelle angibt. In diesem Beispiel wird gezeigt, wie die Standardansicht einer Auflistung abgerufen werden.  
@@ -44,4 +45,4 @@ Ansichten können die gleichen Datensammlung unterschiedlich, je nach sortieren,
   
 ## <a name="see-also"></a>Siehe auch  
  [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

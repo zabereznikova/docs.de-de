@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 Wenn Sie definieren benutzerdefinierter Typen, die Geschäftsobjekte oder Typen, die keine Abhängigkeit auf bestimmten Frameworks sind, stehen bestimmte bewährten Methoden für XAML, die Sie befolgen können. Wenn Sie diese Methoden befolgen, können .NET Framework-XAML-Dienste und die XAML-Readern und XAML-Writern die Verwendung von XAML-Eigenschaften des Typs ermitteln und geben sie entsprechende Darstellung in einem XAML-Knotenstream mit XAML-Typsystem. Dieses Thema beschreibt bewährte Methoden für Typdefinitionen, Memberdefinitionen und CLR-Typen oder Member Attributierung.  

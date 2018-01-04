@@ -18,11 +18,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>Ereignisse (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt Routingereignisse zum Aufrufen von Handlern ein, die auf verschiedenen Listenern in der Elementstruktur einer Anwendung vorhanden sind.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/22/2017
  [Eigenschaftenänderungsereignisse](../../../../docs/framework/wpf/advanced/property-change-events.md)  
  [Visual Basic- und WPF-Ereignisbehandlung](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
  [Schwache Ereignismuster](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.RoutedEvent>  

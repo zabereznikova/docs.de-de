@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche
 Wie der Name andeutet, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] eignet sich hervorragend für umfangreiche Erfahrungen Kunden zu stellen. In diesen exemplarischen Vorgehensweisen zeigen, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) anpassen. Diese Anpassung erfolgt über einen Stil und eine Vorlage, damit Sie diese benutzerdefinierte Schaltfläche leicht auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  

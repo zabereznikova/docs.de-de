@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering von Steuerelementen mit visuellen Stilen
 Mithilfe visueller Stile in Betriebssystemen, die diese unterstützen, bietet das [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Unterstützung für das Rendern von Steuerelementen und anderen Elementen der Windows-Benutzeroberfläche (UI). In diesem Thema werden die verschiedenen Unterstützungsebenen im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für das Rendern von Steuerelementen und anderen UI-Elementen mit dem aktuellen visuellen Stil des Betriebssystems diskutiert.  
@@ -76,7 +77,7 @@ Mithilfe visueller Stile in Betriebssystemen, die diese unterstützen, bietet da
 ## <a name="checking-for-visual-styles-support"></a>Überprüfen der Unterstützung für visuelle Stile  
  Die <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> -Eigenschaft der <xref:System.Windows.Forms.Application> -Klasse gibt an, ob die aktuelle Anwendung Steuerelemente mit visuellen Stilen zeichnet. Wenn Sie ein benutzerdefiniertes Steuerelement zeichnen, können Sie den Wert von <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> anzeigen, um zu festzulegen, ob das Steuerelement mit oder ohne visuelle Stile gerendert werden soll. In der folgenden Tabelle werden die vier Faktoren aufgelistet, die gegeben sein müssen, damit <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> `true`zurückgibt.  
   
-|Bedingung|Notizen|  
+|Bedingung|Hinweise|  
 |---------------|-----------|  
 |Das Betriebssystem unterstützt visuelle Stile.|Verwenden Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> -Eigenschaft der <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> -Klasse, um diese Bedingung separat zu überprüfen.|  
 |Der Benutzer hat visuelle Stile auf seinem Betriebssystem aktiviert.|Verwenden Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> -Eigenschaft der <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> -Klasse, um diese Bedingung separat zu überprüfen.|  

@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34b517366a5f143a86388abff5ae13022bc710c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] bietet eine leistungsfähige Umgebung zum Erstellen und Anzeigen qualitativ hochwertiger Dokumente.  Erweiterte Funktionen zur Unterstützung von sowohl fixierten als auch Flussdokumenten sowie erweiterte Anzeigesteuerelemente in Kombination mit leistungsstarken 2D- und 3D-Grafikfunktionen führen [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]-Anwendungen auf ein neues Level in Bezug auf Qualität und Benutzerfreundlichkeit.  Eine der wichtigsten Funktionen von [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] ist die flexible Verwaltung der speicherinternen Darstellung eines Dokuments. Die Möglichkeit, Dokumente effizient zu speichern und aus einem Datenspeicher zu laden, ist eine Anforderung, die an nahezu jede Anwendung gestellt wird.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als Serialisierung bezeichnet.  Der umgekehrte Vorgang des Lesens eines Datenspeichers und Neuerstellens der ursprünglichen Instanz im Speicher wird Deserialisierung genannt.  

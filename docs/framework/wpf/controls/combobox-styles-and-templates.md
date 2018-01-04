@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd89d2150b2623a749614ab01aa767997dc4bdf3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c1a649597dd2b7e0d20f4b8dbc45adcd66eafa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ComboBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -47,7 +48,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.|  
-|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |FocusedDropDown|FocusStates|Die Dropdownliste für die <xref:System.Windows.Controls.ComboBox> den Fokus hat.|  
 |Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
@@ -67,7 +68,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.|  
-|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Ausgewählt|SelectionStates|Das Element ist derzeit ausgewählt.|  
 |Nicht markiert|SelectionStates|Das Element ist nicht ausgewählt.|  

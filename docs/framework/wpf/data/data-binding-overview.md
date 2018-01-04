@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>Übersicht über die Datenbindung
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden. <xref:System.Windows.Controls.ContentControl>s wie z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.ItemsControl>s wie z. B. <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ListView> haben integrierte Funktionalität zum Aktivieren des flexiblen Formatieren der einzelnen Datenelemente oder Auflistungen von Datenelementen. Sortier-, Filter- und Gruppenansichten können übergreifend für die Daten generiert werden.  
@@ -154,7 +155,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
   
- Außer Festlegen der <xref:System.Windows.FrameworkElement.DataContext%2A> Eigenschaft für ein Element direkt, erben die <xref:System.Windows.FrameworkElement.DataContext%2A> -Wert aus einem Vorgänger (z. B. die Schaltfläche im ersten Beispiel), und explizite Angabe die Quelle der Bindung durch Festlegen der <xref:System.Windows.Data.Binding.Source%2A> Eigenschaft auf die <xref:System.Windows.Data.Binding> (z. B. die Schaltfläche im letzten Beispiel), können Sie auch die <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft oder die <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft die Bindungsquelle angeben. Die <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft ist nützlich, wenn bei der Bindung auf andere Elemente in der Anwendung, z. B. Wenn Sie einen Schieberegler zum Anpassen der Breite einer Schaltfläche verwenden. Die <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft ist nützlich, wenn die Bindung, in festgelegt wird einem <xref:System.Windows.Controls.ControlTemplate> oder ein <xref:System.Windows.Style>. Weitere Informationen finden Sie unter [Angeben der Bindungsquelle.](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+ Außer Festlegen der <xref:System.Windows.FrameworkElement.DataContext%2A> Eigenschaft für ein Element direkt, erben die <xref:System.Windows.FrameworkElement.DataContext%2A> -Wert aus einem Vorgänger (z. B. die Schaltfläche im ersten Beispiel), und explizite Angabe die Quelle der Bindung durch Festlegen der <xref:System.Windows.Data.Binding.Source%2A> Eigenschaft auf die <xref:System.Windows.Data.Binding> (z. B. die Schaltfläche im letzten Beispiel), können Sie auch die <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft oder die <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft die Bindungsquelle angeben. Die <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft ist nützlich, wenn bei der Bindung auf andere Elemente in der Anwendung, z. B. Wenn Sie einen Schieberegler zum Anpassen der Breite einer Schaltfläche verwenden. Die <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft ist nützlich, wenn die Bindung, in festgelegt wird einem <xref:System.Windows.Controls.ControlTemplate> oder ein <xref:System.Windows.Style>. Weitere Informationen finden Sie unter [Angeben der Bindungsquelle](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
   
 <a name="specifying_the_path_to_the_value"></a>   
 ### <a name="specifying-the-path-to-the-value"></a>Angeben des Pfads zum Wert  
@@ -445,5 +446,5 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
  [Binden an die Ergebnisse einer LINQ-Abfrage](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
  [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [Binden an eine ADO.NET-Datenquelle](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

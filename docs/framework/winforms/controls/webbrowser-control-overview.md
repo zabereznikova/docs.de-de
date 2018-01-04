@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>Übersicht über das WebBrowser-Steuerelement
 Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwalteten Wrapper für das WebBrowser ActiveX-Steuerelement. Der verwaltete Wrapper können Sie die Anzeige von Webseiten in Windows Forms-Clientanwendungen. Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement in Internet Explorer Webbrowserfunktionalität in Ihre Anwendung oder an Sie duplizieren Standardfunktionalität von Internet Explorer deaktivieren und das Steuerelement als einfache HTML-Dokument-Viewer verwenden kann. Sie können auch das Steuerelement dem Formular DHTML-basierter Elemente der Benutzeroberfläche hinzu, und blenden die Tatsache, dass die in dem sie gehostet werden die <xref:System.Windows.Forms.WebBrowser> Steuerelement. Dieser Ansatz können Sie nahtlos Websteuerelemente mit Windows Forms-Steuerelemente in einer einzigen Anwendung kombiniert.  
@@ -33,7 +34,7 @@ Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwaltete
   
  Die `Document` Eigenschaft auch, können Sie in der Webseite Skriptcode aus Ihrem Clientanwendungscode implementierte Methoden aufrufen. Legen Sie den Zugriff auf Ihrem Clientanwendungscode aus Ihrem Skriptcode, den `ObjectForScripting` Eigenschaft. Das Objekt, das Sie angeben, kann zugegriffen werden, durch den Skriptcode als das `window.external` Objekt.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A>-Eigenschaft|Ruft ein Objekt, das bietet verwalteten Zugriff auf das HTML-Dokumentobjektmodell (DOM) der aktuellen Webseite ab.|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>-Ereignis|Tritt auf, wenn das Laden eine Webseite abgeschlossen ist.|  

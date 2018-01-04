@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>Stile und Vorlagen
 Windows Presentation Foundation (WPF) Erstellen von Formaten und Vorlagen finden Sie in einer Sammlung von Funktionen (Stile, Vorlagen, Trigger und Storyboards), die eine Anwendung, ein Dokument oder eine Designer Benutzeroberfläche (UI) zum Erstellen von visuell überzeugende Anwendungen zu ermöglichen und Standardisierung auf ein bestimmtes Erscheinungsbild ihres Produkts.  

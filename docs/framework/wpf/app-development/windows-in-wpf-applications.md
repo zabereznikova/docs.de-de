@@ -17,11 +17,12 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>Fenster in WPF-Anwendungen
 Benutzer interagieren mit Anwendungen durch Windows. Grundlegende dient eines Fensters zum Hosten und Anzeigen von Inhalt. Der Typ des Inhalts, dass ein Fenster hostet hängt vom Typ der Daten, dass eine Anwendung über, funktioniert die Medien, Extensible Application Markup Language (XAML)-Seiten, Webseiten, Dokumente, die Datenbanktabellen und Datensätze und Systeminformationen enthalten kann.  
@@ -29,7 +30,7 @@ Benutzer interagieren mit Anwendungen durch Windows. Grundlegende dient eines Fe
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über WPF-Fenster](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.Window>  

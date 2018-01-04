@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  
@@ -29,7 +30,7 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>XAML-definierte Markuperweiterungen  
- Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:` -Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
+ Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:`-Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
   
 > [!NOTE]
 >  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] -Projekt- und -Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei mithilfe dieser `x:` -Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
@@ -132,7 +133,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Attributierung für eine benutzerdefinierte Markuperweiterung  
  Zum Unterstützen von Entwurfsumgebungen und bestimmten XAML-Objekt-Writer-Szenarien sollten Sie einen Markup-Erweiterungsunterstützungstyp mit verschiedenen CLR-Attributen mit Attributen versehen. Diese Attribute melden die vorgesehene Markuperweiterungsverwendung.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen. Dies umfasst Folgendes:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen.  Dies umfasst Folgendes:  
   
 -   Designer und IDEs, die möglicherweise in der Lage sind, eine typenkompatible Unterstützung für Markuperweiterungsverwendungen bereitzustellen.  
   

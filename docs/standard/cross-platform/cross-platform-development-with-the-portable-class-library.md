@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  
@@ -124,7 +127,7 @@ Dialogfeld "Zielplattformen ändern" in Visual Studio 2012
   
 <a name="features"></a>   
 ## <a name="supported-features"></a>Unterstützte Funktionen  
- Die folgende Tabelle zeigt, welche Funktionen auf den verfügbaren Plattformen und in ihren Versionen unterstützt werden. In einigen Fällen hat Microsoft zur Veröffentlichung eines NuGet-Pakets Unterstützung hinzugefügt und dies vermerkt. Weitere Informationen zu NuGet-Paketen für .NET Framework finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
+ Die folgende Tabelle zeigt, welche Funktionen auf den verfügbaren Plattformen und in ihren Versionen unterstützt werden. In einigen Fällen hat Microsoft zum Release eines NuGet-Pakets Unterstützung hinzugefügt und dies vermerkt. Weitere Informationen zu NuGet-Paketen für .NET Framework finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
 |Funktion|.NET Framework|.NET Framework|.NET Framework|Windows Store|Windows Store|Windows Phone Store|Windows Phone Silverlight|Windows Phone Silverlight|Windows Phone Silverlight|Silverlight|Silverlight|Xbox 360|  
 |-------------|--------------------|--------------------|--------------------|-------------------|-------------------|-------------------------|-------------------------------|-------------------------------|-------------------------------|-----------------|-----------------|--------------|  
@@ -228,7 +231,7 @@ Beispiel für Versionsinformationen
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden der portablen Klassenbibliothek mit MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [App-Ressourcen für Bibliotheken, die mehrere Zielplattformen](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Bereitstellung](../../../docs/framework/deployment/net-framework-applications.md)
