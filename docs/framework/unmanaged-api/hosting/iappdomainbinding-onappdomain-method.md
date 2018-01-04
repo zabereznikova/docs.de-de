@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f5350b9c44c04a4faee3b5026bc2b97ff549d4b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 131e4af5d8c410f625d2c119097f07f5facd4300
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="c3de1-102">IAppDomainBinding::OnAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="c3de1-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="c3de1-103">Wird aufgerufen, von der common Language Runtime (CLR), um den Host zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="c3de1-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="74b5e-102">IAppDomainBinding::OnAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="74b5e-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="74b5e-103">Wird aufgerufen, von der common Language Runtime (CLR), um den Host zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="74b5e-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3de1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3de1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74b5e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="74b5e-104">Syntax</span></span>  
   
 ```  
 HRESULT OnAppDomain (  
@@ -38,18 +39,18 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c3de1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c3de1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="74b5e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="74b5e-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="c3de1-106">[in] Ein Zeiger auf ein [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) Schnittstellenobjekts, das die neuen Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="c3de1-106">[in] A pointer to an [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="74b5e-106">[in] Ein Zeiger auf ein [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) Schnittstellenobjekts, das die neuen Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="74b5e-106">[in] A pointer to an [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3de1-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c3de1-107">Requirements</span></span>  
- <span data-ttu-id="c3de1-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3de1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74b5e-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="74b5e-107">Requirements</span></span>  
+ <span data-ttu-id="74b5e-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="74b5e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3de1-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c3de1-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="74b5e-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="74b5e-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c3de1-110">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c3de1-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="74b5e-110">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="74b5e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c3de1-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3de1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="74b5e-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74b5e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3de1-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3de1-112">See Also</span></span>  
- [<span data-ttu-id="c3de1-113">IAppDomainBinding-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c3de1-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+## <a name="see-also"></a><span data-ttu-id="74b5e-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="74b5e-112">See Also</span></span>  
+ [<span data-ttu-id="74b5e-113">IAppDomainBinding-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="74b5e-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

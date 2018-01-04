@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b8da034590bc5e0b2cbd9456d9d5b4ef4970f259
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f19a4366958249881c1f4c33919f239f33c21b21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="767e4-102">CorNativeLinkType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="767e4-102">CorNativeLinkType Enumeration</span></span>
-<span data-ttu-id="767e4-103">Stellt Werte bereit, die den im nativen Code verknüpften Typ angeben.</span><span class="sxs-lookup"><span data-stu-id="767e4-103">Provides values that indicate the type linked in native code.</span></span>  
+# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="9f099-102">CorNativeLinkType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="9f099-102">CorNativeLinkType Enumeration</span></span>
+<span data-ttu-id="9f099-103">Stellt Werte bereit, die den im nativen Code verknüpften Typ angeben.</span><span class="sxs-lookup"><span data-stu-id="9f099-103">Provides values that indicate the type linked in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="767e4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="767e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f099-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9f099-104">Syntax</span></span>  
   
 ```  
 typedef enum   
@@ -42,25 +43,25 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="767e4-105">Member</span><span class="sxs-lookup"><span data-stu-id="767e4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9f099-105">Member</span><span class="sxs-lookup"><span data-stu-id="9f099-105">Members</span></span>  
   
-|<span data-ttu-id="767e4-106">Member</span><span class="sxs-lookup"><span data-stu-id="767e4-106">Member</span></span>|<span data-ttu-id="767e4-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="767e4-107">Description</span></span>|  
+|<span data-ttu-id="9f099-106">Member</span><span class="sxs-lookup"><span data-stu-id="9f099-106">Member</span></span>|<span data-ttu-id="9f099-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9f099-107">Description</span></span>|  
 |------------|-----------------|  
-|`nltNone`|<span data-ttu-id="767e4-108">Gibt an, dass keines der Schlüsselwörter angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="767e4-108">Indicates that none of the keywords are specified.</span></span>|  
-|`nltAnsi`|<span data-ttu-id="767e4-109">Gibt an, dass ein ANSI-Schlüsselwort angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="767e4-109">Indicates that an ANSI keyword is specified.</span></span>|  
-|`nltUnicode`|<span data-ttu-id="767e4-110">Gibt an, dass ein Unicode-Schlüsselwort angegeben wird</span><span class="sxs-lookup"><span data-stu-id="767e4-110">Indicates that a Unicode keyword is specified</span></span>|  
-|`nltAuto`|<span data-ttu-id="767e4-111">Gibt an, dass ein Schlüsselwort "Auto" angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="767e4-111">Indicates that an auto keyword is specified.</span></span>|  
-|`nltOle`|<span data-ttu-id="767e4-112">Gibt an, dass ein OLE-Schlüsselwort angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="767e4-112">Indicates that an OLE keyword is specified.</span></span>|  
-|`nltMaxValue`|<span data-ttu-id="767e4-113">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="767e4-113">Not used.</span></span>|  
+|`nltNone`|<span data-ttu-id="9f099-108">Gibt an, dass keines der Schlüsselwörter angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="9f099-108">Indicates that none of the keywords are specified.</span></span>|  
+|`nltAnsi`|<span data-ttu-id="9f099-109">Gibt an, dass ein ANSI-Schlüsselwort angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="9f099-109">Indicates that an ANSI keyword is specified.</span></span>|  
+|`nltUnicode`|<span data-ttu-id="9f099-110">Gibt an, dass ein Unicode-Schlüsselwort angegeben wird</span><span class="sxs-lookup"><span data-stu-id="9f099-110">Indicates that a Unicode keyword is specified</span></span>|  
+|`nltAuto`|<span data-ttu-id="9f099-111">Gibt an, dass ein Schlüsselwort "Auto" angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="9f099-111">Indicates that an auto keyword is specified.</span></span>|  
+|`nltOle`|<span data-ttu-id="9f099-112">Gibt an, dass ein OLE-Schlüsselwort angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="9f099-112">Indicates that an OLE keyword is specified.</span></span>|  
+|`nltMaxValue`|<span data-ttu-id="9f099-113">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="9f099-113">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="767e4-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="767e4-114">Requirements</span></span>  
- <span data-ttu-id="767e4-115">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="767e4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f099-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9f099-114">Requirements</span></span>  
+ <span data-ttu-id="9f099-115">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f099-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="767e4-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="767e4-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9f099-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9f099-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="767e4-117">**Bibliothek:** als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="767e4-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9f099-117">**Bibliothek:** als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="9f099-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="767e4-118">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="767e4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9f099-118">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f099-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="767e4-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="767e4-119">See Also</span></span>  
- [<span data-ttu-id="767e4-120">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="767e4-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="9f099-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9f099-119">See Also</span></span>  
+ [<span data-ttu-id="9f099-120">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="9f099-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
