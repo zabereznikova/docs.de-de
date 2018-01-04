@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cd6dd5800531755eb907f5210fbbddc0e582613d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 487c849e765bd8f0bc51eee3032845f19258a952
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionrequestoroperationfailure"></a><span data-ttu-id="a97ed-102">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span><span class="sxs-lookup"><span data-stu-id="a97ed-102">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span></span>
-<span data-ttu-id="a97ed-103">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span><span class="sxs-lookup"><span data-stu-id="a97ed-103">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionrequestoroperationfailure"></a><span data-ttu-id="2cb7c-102">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span><span class="sxs-lookup"><span data-stu-id="2cb7c-102">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span></span>
+<span data-ttu-id="2cb7c-103">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span><span class="sxs-lookup"><span data-stu-id="2cb7c-103">System.ServiceModel.Security.SecuritySessionRequestorOperationFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a97ed-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a97ed-104">Description</span></span>  
- <span data-ttu-id="a97ed-105">Fehler beim Client-Sicherheitssitzungsvorgang.</span><span class="sxs-lookup"><span data-stu-id="a97ed-105">The client security session operation failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="2cb7c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2cb7c-104">Description</span></span>  
+ <span data-ttu-id="2cb7c-105">Fehler beim Client-Sicherheitssitzungsvorgang.</span><span class="sxs-lookup"><span data-stu-id="2cb7c-105">The client security session operation failed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a97ed-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a97ed-106">See Also</span></span>  
- [<span data-ttu-id="a97ed-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a97ed-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a97ed-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="a97ed-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a97ed-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="a97ed-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="2cb7c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2cb7c-106">See Also</span></span>  
+ [<span data-ttu-id="2cb7c-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="2cb7c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="2cb7c-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="2cb7c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="2cb7c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="2cb7c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

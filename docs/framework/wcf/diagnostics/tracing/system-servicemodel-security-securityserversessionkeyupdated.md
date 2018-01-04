@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d34ef9c88cb3db6afc0a01fa5bda3580c529ef9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b05d1c898fe3a0292eb667e2269008aac0451280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a><span data-ttu-id="90d28-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="90d28-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>
-<span data-ttu-id="90d28-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="90d28-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a><span data-ttu-id="a9aee-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="a9aee-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>
+<span data-ttu-id="a9aee-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="a9aee-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="90d28-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="90d28-104">Description</span></span>  
- <span data-ttu-id="90d28-105">Der Sicherheitssitzungsschlüssel wurde vom Server aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="90d28-105">The security session key was updated by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9aee-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a9aee-104">Description</span></span>  
+ <span data-ttu-id="a9aee-105">Der Sicherheitssitzungsschlüssel wurde vom Server aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="a9aee-105">The security session key was updated by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90d28-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="90d28-106">See Also</span></span>  
- [<span data-ttu-id="90d28-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="90d28-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="90d28-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="90d28-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="90d28-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="90d28-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9aee-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9aee-106">See Also</span></span>  
+ [<span data-ttu-id="a9aee-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a9aee-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a9aee-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="a9aee-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a9aee-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="a9aee-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

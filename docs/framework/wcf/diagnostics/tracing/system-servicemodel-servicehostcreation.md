@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20deffe53c677e01a7bff1a5e2fd3e2a4f0637af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4169cb730f36ded3894f79966c3e3e4fa85f094c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicehostcreation"></a><span data-ttu-id="e3ced-102">System.ServiceModel.ServiceHostCreation</span><span class="sxs-lookup"><span data-stu-id="e3ced-102">System.ServiceModel.ServiceHostCreation</span></span>
-<span data-ttu-id="e3ced-103">System.ServiceModel.ServiceHostCreation</span><span class="sxs-lookup"><span data-stu-id="e3ced-103">System.ServiceModel.ServiceHostCreation</span></span>  
+# <a name="systemservicemodelservicehostcreation"></a><span data-ttu-id="ad0e9-102">System.ServiceModel.ServiceHostCreation</span><span class="sxs-lookup"><span data-stu-id="ad0e9-102">System.ServiceModel.ServiceHostCreation</span></span>
+<span data-ttu-id="ad0e9-103">System.ServiceModel.ServiceHostCreation</span><span class="sxs-lookup"><span data-stu-id="ad0e9-103">System.ServiceModel.ServiceHostCreation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e3ced-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e3ced-104">Description</span></span>  
- <span data-ttu-id="e3ced-105">Erstellt den ServiceHost.</span><span class="sxs-lookup"><span data-stu-id="e3ced-105">Creates the ServiceHost.</span></span>  
+## <a name="description"></a><span data-ttu-id="ad0e9-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ad0e9-104">Description</span></span>  
+ <span data-ttu-id="ad0e9-105">Erstellt den ServiceHost.</span><span class="sxs-lookup"><span data-stu-id="ad0e9-105">Creates the ServiceHost.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3ced-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3ced-106">See Also</span></span>  
- [<span data-ttu-id="e3ced-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e3ced-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e3ced-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="e3ced-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e3ced-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e3ced-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ad0e9-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ad0e9-106">See Also</span></span>  
+ [<span data-ttu-id="ad0e9-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="ad0e9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ad0e9-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="ad0e9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ad0e9-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="ad0e9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

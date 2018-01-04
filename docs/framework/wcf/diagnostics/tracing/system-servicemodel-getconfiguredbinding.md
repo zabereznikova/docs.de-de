@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09b372a4e8412b7ea6608e99d69a8f9f5d94bc16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961bfc3a862a5af96264fa0b13c86e24c16f71d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="7beaf-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="7beaf-102">System.ServiceModel.GetConfiguredBinding</span></span>
-<span data-ttu-id="7beaf-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="7beaf-103">System.ServiceModel.GetConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="c7996-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="c7996-102">System.ServiceModel.GetConfiguredBinding</span></span>
+<span data-ttu-id="c7996-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="c7996-103">System.ServiceModel.GetConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7beaf-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7beaf-104">Description</span></span>  
- <span data-ttu-id="7beaf-105">Die konfigurierte Bindung abrufen.</span><span class="sxs-lookup"><span data-stu-id="7beaf-105">Get the configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="c7996-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c7996-104">Description</span></span>  
+ <span data-ttu-id="c7996-105">Die konfigurierte Bindung abrufen.</span><span class="sxs-lookup"><span data-stu-id="c7996-105">Get the configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7beaf-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7beaf-106">See Also</span></span>  
- [<span data-ttu-id="7beaf-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="7beaf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7beaf-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="7beaf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7beaf-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="7beaf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c7996-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c7996-106">See Also</span></span>  
+ [<span data-ttu-id="c7996-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="c7996-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c7996-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="c7996-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c7996-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="c7996-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55f7ef12f67bd719f72f158a1fca6f120b4f448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6fba00dc98f6b5525e1cb9588ed52bc483a665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="clientcredentials"></a><span data-ttu-id="f977f-102">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="f977f-102">ClientCredentials</span></span>
-<span data-ttu-id="f977f-103">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="f977f-103">ClientCredentials</span></span>  
+# <a name="clientcredentials"></a><span data-ttu-id="ce263-102">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="ce263-102">ClientCredentials</span></span>
+<span data-ttu-id="ce263-103">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="ce263-103">ClientCredentials</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f977f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f977f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce263-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ce263-104">Syntax</span></span>  
   
 ```  
 class ClientCredentials : Behavior  
@@ -38,73 +39,73 @@ class ClientCredentials : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="f977f-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="f977f-105">Methods</span></span>  
- <span data-ttu-id="f977f-106">Die Klasse ClientCredentials definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="f977f-106">The ClientCredentials class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="ce263-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="ce263-105">Methods</span></span>  
+ <span data-ttu-id="ce263-106">Die Klasse ClientCredentials definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="ce263-106">The ClientCredentials class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="f977f-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f977f-107">Properties</span></span>  
- <span data-ttu-id="f977f-108">Die Klasse ClientCredentials verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="f977f-108">The ClientCredentials class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="ce263-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="ce263-107">Properties</span></span>  
+ <span data-ttu-id="ce263-108">Die Klasse ClientCredentials verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="ce263-108">The ClientCredentials class has the following properties:</span></span>  
   
-### <a name="clientcertificate"></a><span data-ttu-id="f977f-109">ClientCertificate</span><span class="sxs-lookup"><span data-stu-id="f977f-109">ClientCertificate</span></span>  
- <span data-ttu-id="f977f-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-110">Data type: string</span></span>  
+### <a name="clientcertificate"></a><span data-ttu-id="ce263-109">ClientCertificate</span><span class="sxs-lookup"><span data-stu-id="ce263-109">ClientCertificate</span></span>  
+ <span data-ttu-id="ce263-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-110">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-112">Das X.509-Zertifikat, das der Client benutzt, um den Dienst zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="f977f-112">The X.509 certificate the client uses to authenticate to the service.</span></span>  
+ <span data-ttu-id="ce263-112">Das X.509-Zertifikat, das der Client benutzt, um den Dienst zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="ce263-112">The X.509 certificate the client uses to authenticate to the service.</span></span>  
   
-### <a name="httpdigest"></a><span data-ttu-id="f977f-113">HttpDigest</span><span class="sxs-lookup"><span data-stu-id="f977f-113">HttpDigest</span></span>  
- <span data-ttu-id="f977f-114">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-114">Data type: string</span></span>  
+### <a name="httpdigest"></a><span data-ttu-id="ce263-113">HttpDigest</span><span class="sxs-lookup"><span data-stu-id="ce263-113">HttpDigest</span></span>  
+ <span data-ttu-id="ce263-114">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-114">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-116">Die aktuellen Http-Digestanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="f977f-116">The current Http Digest credential.</span></span>  
+ <span data-ttu-id="ce263-116">Die aktuellen Http-Digestanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="ce263-116">The current Http Digest credential.</span></span>  
   
-### <a name="issuedtoken"></a><span data-ttu-id="f977f-117">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="f977f-117">IssuedToken</span></span>  
- <span data-ttu-id="f977f-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-118">Data type: string</span></span>  
+### <a name="issuedtoken"></a><span data-ttu-id="ce263-117">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="ce263-117">IssuedToken</span></span>  
+ <span data-ttu-id="ce263-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-118">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-120">Die Endpunktadresse und die Bindung, die verwendet werden, um den lokalen Sicherheitstokendienst anzusprechen.</span><span class="sxs-lookup"><span data-stu-id="f977f-120">The endpoint address and binding used to contact the local security token service.</span></span>  
+ <span data-ttu-id="ce263-120">Die Endpunktadresse und die Bindung, die verwendet werden, um den lokalen Sicherheitstokendienst anzusprechen.</span><span class="sxs-lookup"><span data-stu-id="ce263-120">The endpoint address and binding used to contact the local security token service.</span></span>  
   
-### <a name="peer"></a><span data-ttu-id="f977f-121">Peer</span><span class="sxs-lookup"><span data-stu-id="f977f-121">Peer</span></span>  
- <span data-ttu-id="f977f-122">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-122">Data type: string</span></span>  
+### <a name="peer"></a><span data-ttu-id="ce263-121">Peer</span><span class="sxs-lookup"><span data-stu-id="ce263-121">Peer</span></span>  
+ <span data-ttu-id="ce263-122">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-122">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-124">Die Anmeldeinformationen, die der Peerknoten verwendet, um sich anderen Knoten im Netz gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="f977f-124">The credentials that the peer node uses to authenticate itself to other nodes in the mesh.</span></span>  
+ <span data-ttu-id="ce263-124">Die Anmeldeinformationen, die der Peerknoten verwendet, um sich anderen Knoten im Netz gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="ce263-124">The credentials that the peer node uses to authenticate itself to other nodes in the mesh.</span></span>  
   
-### <a name="servicecertificate"></a><span data-ttu-id="f977f-125">ServiceCertificate</span><span class="sxs-lookup"><span data-stu-id="f977f-125">ServiceCertificate</span></span>  
- <span data-ttu-id="f977f-126">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-126">Data type: string</span></span>  
+### <a name="servicecertificate"></a><span data-ttu-id="ce263-125">ServiceCertificate</span><span class="sxs-lookup"><span data-stu-id="ce263-125">ServiceCertificate</span></span>  
+ <span data-ttu-id="ce263-126">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-126">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-128">Das X.509-Zertifikat des Diensts.</span><span class="sxs-lookup"><span data-stu-id="f977f-128">The service's X.509 certificate.</span></span>  
+ <span data-ttu-id="ce263-128">Das X.509-Zertifikat des Diensts.</span><span class="sxs-lookup"><span data-stu-id="ce263-128">The service's X.509 certificate.</span></span>  
   
-### <a name="supportinteractive"></a><span data-ttu-id="f977f-129">SupportInteractive</span><span class="sxs-lookup"><span data-stu-id="f977f-129">SupportInteractive</span></span>  
- <span data-ttu-id="f977f-130">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="f977f-130">Data type: boolean</span></span>  
+### <a name="supportinteractive"></a><span data-ttu-id="ce263-129">SupportInteractive</span><span class="sxs-lookup"><span data-stu-id="ce263-129">SupportInteractive</span></span>  
+ <span data-ttu-id="ce263-130">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="ce263-130">Data type: boolean</span></span>  
   
- <span data-ttu-id="f977f-131">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-131">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-132">Ein boolescher Wert, der festlegt, ob die Anmeldeinformationen interaktive Verhandlung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="f977f-132">A Boolean value that specifies whether the credential supports interactive negotiation.</span></span>  
+ <span data-ttu-id="ce263-132">Ein boolescher Wert, der festlegt, ob die Anmeldeinformationen interaktive Verhandlung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ce263-132">A Boolean value that specifies whether the credential supports interactive negotiation.</span></span>  
   
-### <a name="username"></a><span data-ttu-id="f977f-133">UserName</span><span class="sxs-lookup"><span data-stu-id="f977f-133">UserName</span></span>  
- <span data-ttu-id="f977f-134">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-134">Data type: string</span></span>  
+### <a name="username"></a><span data-ttu-id="ce263-133">UserName</span><span class="sxs-lookup"><span data-stu-id="ce263-133">UserName</span></span>  
+ <span data-ttu-id="ce263-134">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-134">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-135">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-135">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-136">Der Benutzername und das Kennwort, die der Client verwendet, um sich dem Dienst gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="f977f-136">The username and password the client uses to authenticate itself to the service.</span></span>  
+ <span data-ttu-id="ce263-136">Der Benutzername und das Kennwort, die der Client verwendet, um sich dem Dienst gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="ce263-136">The username and password the client uses to authenticate itself to the service.</span></span>  
   
-### <a name="windows"></a><span data-ttu-id="f977f-137">Windows</span><span class="sxs-lookup"><span data-stu-id="f977f-137">Windows</span></span>  
- <span data-ttu-id="f977f-138">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="f977f-138">Data type: string</span></span>  
+### <a name="windows"></a><span data-ttu-id="ce263-137">Windows</span><span class="sxs-lookup"><span data-stu-id="ce263-137">Windows</span></span>  
+ <span data-ttu-id="ce263-138">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="ce263-138">Data type: string</span></span>  
   
- <span data-ttu-id="f977f-139">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f977f-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="ce263-139">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="ce263-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f977f-140">Die Windows-Anmeldeinformationen, die der Client verwendet, um sich dem Dienst gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="f977f-140">The windows credentials the client uses to authenticate itself to the service.</span></span>  
+ <span data-ttu-id="ce263-140">Die Windows-Anmeldeinformationen, die der Client verwendet, um sich dem Dienst gegenüber zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="ce263-140">The windows credentials the client uses to authenticate itself to the service.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f977f-141">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f977f-141">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce263-141">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ce263-141">Requirements</span></span>  
   
-|<span data-ttu-id="f977f-142">MOF</span><span class="sxs-lookup"><span data-stu-id="f977f-142">MOF</span></span>|<span data-ttu-id="f977f-143">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="f977f-143">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="ce263-142">MOF</span><span class="sxs-lookup"><span data-stu-id="ce263-142">MOF</span></span>|<span data-ttu-id="ce263-143">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="ce263-143">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="f977f-144">Namespace</span><span class="sxs-lookup"><span data-stu-id="f977f-144">Namespace</span></span>|<span data-ttu-id="f977f-145">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f977f-145">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="ce263-144">Namespace</span><span class="sxs-lookup"><span data-stu-id="ce263-144">Namespace</span></span>|<span data-ttu-id="ce263-145">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ce263-145">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f977f-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f977f-146">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ce263-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce263-146">See Also</span></span>  
  <xref:System.ServiceModel.Description.ClientCredentials>

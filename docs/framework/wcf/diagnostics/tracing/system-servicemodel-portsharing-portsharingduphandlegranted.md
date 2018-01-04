@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3068d88e4f99f53c5fe8052d6ee375b5b6368003
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82d54726b816a013bed233c21cb3c8436fae9014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="4d536-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="4d536-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
-<span data-ttu-id="4d536-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="4d536-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
+# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="9f74f-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="9f74f-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
+<span data-ttu-id="9f74f-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="9f74f-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4d536-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4d536-104">Description</span></span>  
- <span data-ttu-id="4d536-105">Das PROCESS_DUP_HANDLE-Zugriffsrecht wurde dem angegebenen Dienstkonto mit der angegebenen SID erteilt.</span><span class="sxs-lookup"><span data-stu-id="4d536-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
+## <a name="description"></a><span data-ttu-id="9f74f-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9f74f-104">Description</span></span>  
+ <span data-ttu-id="9f74f-105">Das PROCESS_DUP_HANDLE-Zugriffsrecht wurde dem angegebenen Dienstkonto mit der angegebenen SID erteilt.</span><span class="sxs-lookup"><span data-stu-id="9f74f-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d536-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4d536-106">See Also</span></span>  
- [<span data-ttu-id="4d536-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="4d536-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4d536-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="4d536-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4d536-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="4d536-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9f74f-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9f74f-106">See Also</span></span>  
+ [<span data-ttu-id="9f74f-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="9f74f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9f74f-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="9f74f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9f74f-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="9f74f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

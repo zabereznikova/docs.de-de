@@ -13,21 +13,22 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b356fd413ab61990b685d3104b9f1bc00dfbd71c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="syndication-extensibility-samples"></a><span data-ttu-id="2c10e-102">Beispiele zu Syndication-Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="2c10e-102">Syndication Extensibility Samples</span></span>
-<span data-ttu-id="2c10e-103">Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Syndication in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erläutert wird.</span><span class="sxs-lookup"><span data-stu-id="2c10e-103">This section contains samples that demonstrate custom syndication in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
+# <a name="syndication-extensibility-samples"></a><span data-ttu-id="16151-102">Beispiele zu Syndication-Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="16151-102">Syndication Extensibility Samples</span></span>
+<span data-ttu-id="16151-103">Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Syndication in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erläutert wird.</span><span class="sxs-lookup"><span data-stu-id="16151-103">This section contains samples that demonstrate custom syndication in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c10e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2c10e-104">In This Section</span></span>  
- [<span data-ttu-id="2c10e-105">Stark typisierte Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="2c10e-105">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- <span data-ttu-id="2c10e-106">Erläutert, wie ein im vorgeschlagenen RFC zu Atom-Threading-Erweiterungen definiertes Erweiterungselement implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="2c10e-106">Demonstrates how to implement an extension element defined in the proposed Atom Threading Extensions RFC.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="16151-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="16151-104">In This Section</span></span>  
+ [<span data-ttu-id="16151-105">Stark typisierte Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="16151-105">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
+ <span data-ttu-id="16151-106">Erläutert, wie ein im vorgeschlagenen RFC zu Atom-Threading-Erweiterungen definiertes Erweiterungselement implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="16151-106">Demonstrates how to implement an extension element defined in the proposed Atom Threading Extensions RFC.</span></span>  
   
- [<span data-ttu-id="2c10e-107">Feedformatierung (JSON)</span><span class="sxs-lookup"><span data-stu-id="2c10e-107">Feed Formatter (JSON)</span></span>](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
- <span data-ttu-id="2c10e-108">Veranschaulicht, wie eine Instanz einer <xref:System.ServiceModel.Syndication.SyndicationFeed>-Klasse im JSON-Format (JavaScript Object Notation) unter Verwendung eines benutzerdefinierten <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> und des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="2c10e-108">Demonstrates how to serialize an instance of a <xref:System.ServiceModel.Syndication.SyndicationFeed> class in JavaScript Object Notation (JSON) format by using a custom <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> and the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
+ [<span data-ttu-id="16151-107">Feedformatierung (JSON)</span><span class="sxs-lookup"><span data-stu-id="16151-107">Feed Formatter (JSON)</span></span>](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
+ <span data-ttu-id="16151-108">Veranschaulicht, wie eine Instanz einer <xref:System.ServiceModel.Syndication.SyndicationFeed>-Klasse im JSON-Format (JavaScript Object Notation) unter Verwendung eines benutzerdefinierten <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> und des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="16151-108">Demonstrates how to serialize an instance of a <xref:System.ServiceModel.Syndication.SyndicationFeed> class in JavaScript Object Notation (JSON) format by using a custom <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> and the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
   
- [<span data-ttu-id="2c10e-109">Streaming von Feeds</span><span class="sxs-lookup"><span data-stu-id="2c10e-109">Streaming Feeds</span></span>](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
- <span data-ttu-id="2c10e-110">Veranschaulicht, wie Syndication-Feeds mit einer großen Anzahl von Elementen verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="2c10e-110">Demonstrates how to manage syndication feeds that contain large numbers of items.</span></span>
+ [<span data-ttu-id="16151-109">Streamen von Feeds</span><span class="sxs-lookup"><span data-stu-id="16151-109">Streaming Feeds</span></span>](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
+ <span data-ttu-id="16151-110">Veranschaulicht, wie Syndication-Feeds mit einer großen Anzahl von Elementen verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="16151-110">Demonstrates how to manage syndication feeds that contain large numbers of items.</span></span>

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3ef62df1f5913997e635a329d3d77c9197d682b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbfd539d9852a43558b93f18d2a554d26df13943
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a><span data-ttu-id="8bf3b-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="8bf3b-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>
-<span data-ttu-id="8bf3b-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="8bf3b-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a><span data-ttu-id="98ef5-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="98ef5-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>
+<span data-ttu-id="98ef5-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="98ef5-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8bf3b-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8bf3b-104">Description</span></span>  
- <span data-ttu-id="8bf3b-105">Identitätsüberprüfung war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="8bf3b-105">Identity verification succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="98ef5-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="98ef5-104">Description</span></span>  
+ <span data-ttu-id="98ef5-105">Identitätsüberprüfung war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="98ef5-105">Identity verification succeeded.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bf3b-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bf3b-106">See Also</span></span>  
- [<span data-ttu-id="8bf3b-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="8bf3b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8bf3b-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="8bf3b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8bf3b-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="8bf3b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="98ef5-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="98ef5-106">See Also</span></span>  
+ [<span data-ttu-id="98ef5-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="98ef5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="98ef5-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="98ef5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="98ef5-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="98ef5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

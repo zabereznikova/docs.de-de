@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c633953747b34573d4dba68da55a764bd2ccb7e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71baadeae73c2cbaf203fc141e6f002c5ae9902d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicehosttimeoutonclose"></a><span data-ttu-id="c09cc-102">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="c09cc-102">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>
-<span data-ttu-id="c09cc-103">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="c09cc-103">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>  
+# <a name="systemservicemodelservicehosttimeoutonclose"></a><span data-ttu-id="48b5d-102">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="48b5d-102">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>
+<span data-ttu-id="48b5d-103">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="48b5d-103">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c09cc-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c09cc-104">Description</span></span>  
- <span data-ttu-id="c09cc-105">Das Zeitlimit des Vorgangs "Schließen" wurde von einem ServiceHost überschritten. Dies gibt an, dass einige sitzungsbasierte Kanäle nicht ordnungsgemäß durch den Client heruntergefahren und möglicherweise abgebrochen wurden.</span><span class="sxs-lookup"><span data-stu-id="c09cc-105">The close operation of a ServiceHost is timed out. This indicates that some sessionful channels were not properly shutdown by the client and could have been aborted.</span></span> <span data-ttu-id="c09cc-106">Ändern Sie die Standardzeit, um das Zeitlimit für das Schließen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="c09cc-106">Modify the default time to adjust close timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="48b5d-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="48b5d-104">Description</span></span>  
+ <span data-ttu-id="48b5d-105">Das Zeitlimit des Vorgangs "Schließen" wurde von einem ServiceHost überschritten. Dies gibt an, dass einige sitzungsbasierte Kanäle nicht ordnungsgemäß durch den Client heruntergefahren und möglicherweise abgebrochen wurden.</span><span class="sxs-lookup"><span data-stu-id="48b5d-105">The close operation of a ServiceHost is timed out. This indicates that some sessionful channels were not properly shutdown by the client and could have been aborted.</span></span> <span data-ttu-id="48b5d-106">Ändern Sie die Standardzeit, um das Zeitlimit für das Schließen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="48b5d-106">Modify the default time to adjust close timeout.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c09cc-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c09cc-107">See Also</span></span>  
- [<span data-ttu-id="c09cc-108">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="c09cc-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c09cc-109">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="c09cc-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c09cc-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="c09cc-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="48b5d-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48b5d-107">See Also</span></span>  
+ [<span data-ttu-id="48b5d-108">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="48b5d-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="48b5d-109">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="48b5d-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="48b5d-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="48b5d-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

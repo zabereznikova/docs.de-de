@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66296cc3248cfcab1c73328d4ad0980af180a1d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fda921cb60f25fea0cdf411fcd0904d7bb848cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeltransportlisten"></a><span data-ttu-id="d496a-102">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="d496a-102">System.ServiceModel.TransportListen</span></span>
-<span data-ttu-id="d496a-103">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="d496a-103">System.ServiceModel.TransportListen</span></span>  
+# <a name="systemservicemodeltransportlisten"></a><span data-ttu-id="d49b8-102">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="d49b8-102">System.ServiceModel.TransportListen</span></span>
+<span data-ttu-id="d49b8-103">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="d49b8-103">System.ServiceModel.TransportListen</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d496a-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d496a-104">Description</span></span>  
- <span data-ttu-id="d496a-105">Die angegebene Adresse wird abgehört.</span><span class="sxs-lookup"><span data-stu-id="d496a-105">Listen at the specified address.</span></span>  
+## <a name="description"></a><span data-ttu-id="d49b8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d49b8-104">Description</span></span>  
+ <span data-ttu-id="d49b8-105">Die angegebene Adresse wird abgehört.</span><span class="sxs-lookup"><span data-stu-id="d49b8-105">Listen at the specified address.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d496a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d496a-106">See Also</span></span>  
- [<span data-ttu-id="d496a-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="d496a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d496a-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="d496a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d496a-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="d496a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d49b8-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d49b8-106">See Also</span></span>  
+ [<span data-ttu-id="d49b8-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="d49b8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d49b8-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="d49b8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d49b8-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="d49b8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

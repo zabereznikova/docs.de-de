@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db9c01b941da5836f022e438e1e989c7e5b26697
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24e691e2c46fdc23eb1df304ab07a23d070b7aec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelextensioncollectionisempty"></a><span data-ttu-id="e0ef7-102">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="e0ef7-102">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>
-<span data-ttu-id="e0ef7-103">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="e0ef7-103">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>  
+# <a name="systemservicemodelextensioncollectionisempty"></a><span data-ttu-id="3ad18-102">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="3ad18-102">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>
+<span data-ttu-id="3ad18-103">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="3ad18-103">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e0ef7-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e0ef7-104">Description</span></span>  
- <span data-ttu-id="e0ef7-105">Die Erweiterungsauflistung ist leer.</span><span class="sxs-lookup"><span data-stu-id="e0ef7-105">The extension collection is empty.</span></span>  
+## <a name="description"></a><span data-ttu-id="3ad18-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3ad18-104">Description</span></span>  
+ <span data-ttu-id="3ad18-105">Die Erweiterungsauflistung ist leer.</span><span class="sxs-lookup"><span data-stu-id="3ad18-105">The extension collection is empty.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0ef7-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0ef7-106">See Also</span></span>  
- [<span data-ttu-id="e0ef7-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e0ef7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e0ef7-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="e0ef7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e0ef7-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e0ef7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3ad18-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ad18-106">See Also</span></span>  
+ [<span data-ttu-id="3ad18-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="3ad18-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3ad18-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="3ad18-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3ad18-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="3ad18-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Anwendung
+title: Application
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -12,27 +12,28 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3122119c84b747f74f753bb10a066aaa0cd0bf21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b3037f6229c16ef6a5164cb0e7053f5993d2a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="application"></a><span data-ttu-id="3f266-102">Application</span><span class="sxs-lookup"><span data-stu-id="3f266-102">Application</span></span>
-<span data-ttu-id="3f266-103">Dieser Abschnitt enthält Beispiele zu Workflowanwendungen in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3f266-103">This section contains samples related to workflow applications in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
+# <a name="application"></a><span data-ttu-id="5b873-102">Application</span><span class="sxs-lookup"><span data-stu-id="5b873-102">Application</span></span>
+<span data-ttu-id="5b873-103">Dieser Abschnitt enthält Beispiele zu Workflowanwendungen in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5b873-103">This section contains samples related to workflow applications in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3f266-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3f266-104">In This Section</span></span>  
- [<span data-ttu-id="3f266-105">Dokumentgenehmigungsprozess</span><span class="sxs-lookup"><span data-stu-id="3f266-105">Document Approval Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
- <span data-ttu-id="3f266-106">Veranschaulicht die Verwendung eines Workflows in einer Branchenanwendung.</span><span class="sxs-lookup"><span data-stu-id="3f266-106">Demonstrates using a workflow in a line-of-business application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5b873-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5b873-104">In This Section</span></span>  
+ [<span data-ttu-id="5b873-105">Dokumentgenehmigungsprozess</span><span class="sxs-lookup"><span data-stu-id="5b873-105">Document Approval Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
+ <span data-ttu-id="5b873-106">Veranschaulicht die Verwendung eines Workflows in einer Branchenanwendung.</span><span class="sxs-lookup"><span data-stu-id="5b873-106">Demonstrates using a workflow in a line-of-business application.</span></span>  
   
- [<span data-ttu-id="3f266-107">Unternehmenseinkaufsprozess</span><span class="sxs-lookup"><span data-stu-id="3f266-107">Corporate Purchase Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
- <span data-ttu-id="3f266-108">Veranschaulicht die Verwendung eines Workflows in einer Windows-Anwendung und in einer im Internet gehosteten Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3f266-108">Demonstrates using a workflow in a window- and Web-hosted application.</span></span>  
+ [<span data-ttu-id="5b873-107">Unternehmenseinkaufsprozess</span><span class="sxs-lookup"><span data-stu-id="5b873-107">Corporate Purchase Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
+ <span data-ttu-id="5b873-108">Veranschaulicht die Verwendung eines Workflows in einer Windows-Anwendung und in einer im Internet gehosteten Anwendung.</span><span class="sxs-lookup"><span data-stu-id="5b873-108">Demonstrates using a workflow in a window- and Web-hosted application.</span></span>  
   
- [<span data-ttu-id="3f266-109">Einstellungsprozess</span><span class="sxs-lookup"><span data-stu-id="3f266-109">Hiring Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
- <span data-ttu-id="3f266-110">Veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten und zwei als Workflowdienste gehosteten Workflows implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="3f266-110">Demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span>  
+ [<span data-ttu-id="5b873-109">Einstellungsprozess</span><span class="sxs-lookup"><span data-stu-id="5b873-109">Hiring Process</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+ <span data-ttu-id="5b873-110">Veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten und zwei als Workflowdienste gehosteten Workflows implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="5b873-110">Demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span>  
   
- [<span data-ttu-id="3f266-111">Visuelle Workflownachverfolgung</span><span class="sxs-lookup"><span data-stu-id="3f266-111">Visual Workflow Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
- <span data-ttu-id="3f266-112">Veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten und zwei als Workflowdienste gehosteten Workflows implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="3f266-112">Demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span>  
+ [<span data-ttu-id="5b873-111">Visuelle Workflownachverfolgung</span><span class="sxs-lookup"><span data-stu-id="5b873-111">Visual Workflow Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
+ <span data-ttu-id="5b873-112">Veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten und zwei als Workflowdienste gehosteten Workflows implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="5b873-112">Demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span>  
   
- [<span data-ttu-id="3f266-113">Angehaltene Instanzverwaltung</span><span class="sxs-lookup"><span data-stu-id="3f266-113">Suspended Instance Management</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
- <span data-ttu-id="3f266-114">Veranschaulicht, wie angehaltene Workflowinstanzen verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="3f266-114">Demonstrates how to manage workflow instances that have been suspended.</span></span>
+ [<span data-ttu-id="5b873-113">Angehaltene Instanzverwaltung</span><span class="sxs-lookup"><span data-stu-id="5b873-113">Suspended Instance Management</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
+ <span data-ttu-id="5b873-114">Veranschaulicht, wie angehaltene Workflowinstanzen verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="5b873-114">Demonstrates how to manage workflow instances that have been suspended.</span></span>

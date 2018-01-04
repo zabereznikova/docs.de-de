@@ -12,31 +12,32 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e1674dc7d242a89498360c3e285fa77a08a9004
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b7772bcd8d637b14e3f91feceaccc9f045f390c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="440---startsignpostevent1"></a><span data-ttu-id="de018-102">440 - StartSignpostEvent1</span><span class="sxs-lookup"><span data-stu-id="de018-102">440 - StartSignpostEvent1</span></span>
-## <a name="properties"></a><span data-ttu-id="de018-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="de018-103">Properties</span></span>  
+# <a name="440---startsignpostevent1"></a><span data-ttu-id="de892-102">440 - StartSignpostEvent1</span><span class="sxs-lookup"><span data-stu-id="de892-102">440 - StartSignpostEvent1</span></span>
+## <a name="properties"></a><span data-ttu-id="de892-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="de892-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="de018-104">ID</span><span class="sxs-lookup"><span data-stu-id="de018-104">ID</span></span>|<span data-ttu-id="de018-105">440</span><span class="sxs-lookup"><span data-stu-id="de018-105">440</span></span>|  
-|<span data-ttu-id="de018-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="de018-106">Keywords</span></span>|<span data-ttu-id="de018-107">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="de018-107">Troubleshooting</span></span>|  
-|<span data-ttu-id="de018-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="de018-108">Level</span></span>|<span data-ttu-id="de018-109">Information</span><span class="sxs-lookup"><span data-stu-id="de018-109">Information</span></span>|  
-|<span data-ttu-id="de018-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="de018-110">Channel</span></span>|<span data-ttu-id="de018-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="de018-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="de892-104">ID</span><span class="sxs-lookup"><span data-stu-id="de892-104">ID</span></span>|<span data-ttu-id="de892-105">440</span><span class="sxs-lookup"><span data-stu-id="de892-105">440</span></span>|  
+|<span data-ttu-id="de892-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="de892-106">Keywords</span></span>|<span data-ttu-id="de892-107">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="de892-107">Troubleshooting</span></span>|  
+|<span data-ttu-id="de892-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="de892-108">Level</span></span>|<span data-ttu-id="de892-109">Information</span><span class="sxs-lookup"><span data-stu-id="de892-109">Information</span></span>|  
+|<span data-ttu-id="de892-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="de892-110">Channel</span></span>|<span data-ttu-id="de892-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="de892-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="de018-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="de018-112">Description</span></span>  
- <span data-ttu-id="de018-113">Gibt in der Aktivitätsablaufverfolgung eine Nachricht an, die das Überschreiten einer Aktivitätsgrenze beim Senden oder Empfangen gestartet hat.</span><span class="sxs-lookup"><span data-stu-id="de018-113">In activity tracing, indicates a message has started crossing an activity boundary in send or receive.</span></span>  
+## <a name="description"></a><span data-ttu-id="de892-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="de892-112">Description</span></span>  
+ <span data-ttu-id="de892-113">Gibt in der Aktivitätsablaufverfolgung eine Nachricht an, die das Überschreiten einer Aktivitätsgrenze beim Senden oder Empfangen gestartet hat.</span><span class="sxs-lookup"><span data-stu-id="de892-113">In activity tracing, indicates a message has started crossing an activity boundary in send or receive.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="de018-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="de018-114">Message</span></span>  
- <span data-ttu-id="de018-115">Aktivitätsgrenze.</span><span class="sxs-lookup"><span data-stu-id="de018-115">Activity boundary.</span></span>  
+## <a name="message"></a><span data-ttu-id="de892-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="de892-114">Message</span></span>  
+ <span data-ttu-id="de892-115">Aktivitätsgrenze.</span><span class="sxs-lookup"><span data-stu-id="de892-115">Activity boundary.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="de018-116">Details</span><span class="sxs-lookup"><span data-stu-id="de018-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="de892-116">Details</span><span class="sxs-lookup"><span data-stu-id="de892-116">Details</span></span>  
   
-|<span data-ttu-id="de018-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="de018-117">Data Item Name</span></span>|<span data-ttu-id="de018-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="de018-118">Data Item Type</span></span>|<span data-ttu-id="de018-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="de018-119">Description</span></span>|  
+|<span data-ttu-id="de892-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="de892-117">Data Item Name</span></span>|<span data-ttu-id="de892-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="de892-118">Data Item Type</span></span>|<span data-ttu-id="de892-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="de892-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="de018-120">ExtendedData</span><span class="sxs-lookup"><span data-stu-id="de018-120">ExtendedData</span></span>|`xs:string`|<span data-ttu-id="de018-121">Der Name der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="de018-121">The name of the activity.</span></span>|  
-|<span data-ttu-id="de018-122">AppDomain</span><span class="sxs-lookup"><span data-stu-id="de018-122">AppDomain</span></span>|`xs:string`|<span data-ttu-id="de018-123">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="de018-123">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="de892-120">ExtendedData</span><span class="sxs-lookup"><span data-stu-id="de892-120">ExtendedData</span></span>|`xs:string`|<span data-ttu-id="de892-121">Der Name der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="de892-121">The name of the activity.</span></span>|  
+|<span data-ttu-id="de892-122">AppDomain</span><span class="sxs-lookup"><span data-stu-id="de892-122">AppDomain</span></span>|`xs:string`|<span data-ttu-id="de892-123">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="de892-123">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

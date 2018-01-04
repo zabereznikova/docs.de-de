@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20dbd0c86f012b6f29b752c4ad9195ce453f78b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 04a5cb87b9ed61fd278ce0f2e05e5f1c954de5b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="contract"></a><span data-ttu-id="625f0-102">Vertrag</span><span class="sxs-lookup"><span data-stu-id="625f0-102">Contract</span></span>
-<span data-ttu-id="625f0-103">Vertrag</span><span class="sxs-lookup"><span data-stu-id="625f0-103">Contract</span></span>  
+# <a name="contract"></a><span data-ttu-id="5ca79-102">Vertrag</span><span class="sxs-lookup"><span data-stu-id="5ca79-102">Contract</span></span>
+<span data-ttu-id="5ca79-103">Vertrag</span><span class="sxs-lookup"><span data-stu-id="5ca79-103">Contract</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="625f0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="625f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ca79-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5ca79-104">Syntax</span></span>  
   
 ```  
 class Contract  
@@ -39,80 +40,80 @@ class Contract
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="625f0-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="625f0-105">Methods</span></span>  
- <span data-ttu-id="625f0-106">Die Contract-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="625f0-106">The Contract class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="5ca79-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="5ca79-105">Methods</span></span>  
+ <span data-ttu-id="5ca79-106">Die Contract-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="5ca79-106">The Contract class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="625f0-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="625f0-107">Properties</span></span>  
- <span data-ttu-id="625f0-108">Die Contract-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="625f0-108">The Contract class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="5ca79-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5ca79-107">Properties</span></span>  
+ <span data-ttu-id="5ca79-108">Die Contract-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="5ca79-108">The Contract class has the following properties:</span></span>  
   
-### <a name="appdomainid"></a><span data-ttu-id="625f0-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="625f0-109">AppDomainId</span></span>  
- <span data-ttu-id="625f0-110">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="625f0-110">Data type: sint32</span></span>  
+### <a name="appdomainid"></a><span data-ttu-id="5ca79-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="5ca79-109">AppDomainId</span></span>  
+ <span data-ttu-id="5ca79-110">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="5ca79-110">Data type: sint32</span></span>  
   
- <span data-ttu-id="625f0-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-112">Die Anwendungsdomänen-ID der Anwendungsdomäne, die den Vertrag hostet.</span><span class="sxs-lookup"><span data-stu-id="625f0-112">The appdomain id of the appdomain that hosts the contract.</span></span>  
+ <span data-ttu-id="5ca79-112">Die Anwendungsdomänen-ID der Anwendungsdomäne, die den Vertrag hostet.</span><span class="sxs-lookup"><span data-stu-id="5ca79-112">The appdomain id of the appdomain that hosts the contract.</span></span>  
   
-### <a name="behaviors"></a><span data-ttu-id="625f0-113">Verhalten</span><span class="sxs-lookup"><span data-stu-id="625f0-113">Behaviors</span></span>  
- <span data-ttu-id="625f0-114">Datentyp: Behavior-Array</span><span class="sxs-lookup"><span data-stu-id="625f0-114">Data type: Behavior array</span></span>  
+### <a name="behaviors"></a><span data-ttu-id="5ca79-113">Verhalten</span><span class="sxs-lookup"><span data-stu-id="5ca79-113">Behaviors</span></span>  
+ <span data-ttu-id="5ca79-114">Datentyp: Behavior-Array</span><span class="sxs-lookup"><span data-stu-id="5ca79-114">Data type: Behavior array</span></span>  
   
- <span data-ttu-id="625f0-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-116">Die mit diesem Vertrag verknüpften Verhalten.</span><span class="sxs-lookup"><span data-stu-id="625f0-116">The behaviors associated with this contract.</span></span>  
+ <span data-ttu-id="5ca79-116">Die mit diesem Vertrag verknüpften Verhalten.</span><span class="sxs-lookup"><span data-stu-id="5ca79-116">The behaviors associated with this contract.</span></span>  
   
-### <a name="name"></a><span data-ttu-id="625f0-117">Name</span><span class="sxs-lookup"><span data-stu-id="625f0-117">Name</span></span>  
- <span data-ttu-id="625f0-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="625f0-118">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="5ca79-117">name</span><span class="sxs-lookup"><span data-stu-id="5ca79-117">Name</span></span>  
+ <span data-ttu-id="5ca79-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="5ca79-118">Data type: string</span></span>  
   
- <span data-ttu-id="625f0-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-120">Der Name des Vertrags in WSDL.</span><span class="sxs-lookup"><span data-stu-id="625f0-120">The name of the contract in WSDL.</span></span>  
+ <span data-ttu-id="5ca79-120">Der Name des Vertrags in WSDL.</span><span class="sxs-lookup"><span data-stu-id="5ca79-120">The name of the contract in WSDL.</span></span>  
   
-### <a name="namespace"></a><span data-ttu-id="625f0-121">Namespace</span><span class="sxs-lookup"><span data-stu-id="625f0-121">Namespace</span></span>  
- <span data-ttu-id="625f0-122">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="625f0-122">Data type: string</span></span>  
+### <a name="namespace"></a><span data-ttu-id="5ca79-121">Namespace</span><span class="sxs-lookup"><span data-stu-id="5ca79-121">Namespace</span></span>  
+ <span data-ttu-id="5ca79-122">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="5ca79-122">Data type: string</span></span>  
   
- <span data-ttu-id="625f0-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-124">Der Namespace des `portType`-Elements in WSDL.</span><span class="sxs-lookup"><span data-stu-id="625f0-124">The namespace of the `portType` element in WSDL.</span></span>  
+ <span data-ttu-id="5ca79-124">Der Namespace des `portType`-Elements in WSDL.</span><span class="sxs-lookup"><span data-stu-id="5ca79-124">The namespace of the `portType` element in WSDL.</span></span>  
   
-### <a name="operations"></a><span data-ttu-id="625f0-125">Vorgänge</span><span class="sxs-lookup"><span data-stu-id="625f0-125">Operations</span></span>  
- <span data-ttu-id="625f0-126">Datentyp: Operation-Array</span><span class="sxs-lookup"><span data-stu-id="625f0-126">Data type: Operation array</span></span>  
+### <a name="operations"></a><span data-ttu-id="5ca79-125">Vorgänge</span><span class="sxs-lookup"><span data-stu-id="5ca79-125">Operations</span></span>  
+ <span data-ttu-id="5ca79-126">Datentyp: Operation-Array</span><span class="sxs-lookup"><span data-stu-id="5ca79-126">Data type: Operation array</span></span>  
   
- <span data-ttu-id="625f0-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-128">Der Vorgang dieses Vertrags.</span><span class="sxs-lookup"><span data-stu-id="625f0-128">The operations of this contract.</span></span>  
+ <span data-ttu-id="5ca79-128">Der Vorgang dieses Vertrags.</span><span class="sxs-lookup"><span data-stu-id="5ca79-128">The operations of this contract.</span></span>  
   
-### <a name="processid"></a><span data-ttu-id="625f0-129">ProcessId</span><span class="sxs-lookup"><span data-stu-id="625f0-129">ProcessId</span></span>  
- <span data-ttu-id="625f0-130">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="625f0-130">Data type: sint32</span></span>  
+### <a name="processid"></a><span data-ttu-id="5ca79-129">ProcessId</span><span class="sxs-lookup"><span data-stu-id="5ca79-129">ProcessId</span></span>  
+ <span data-ttu-id="5ca79-130">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="5ca79-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="625f0-131">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-131">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-132">Die Porzess-ID des Prozesses, der den Vertrag hostet.</span><span class="sxs-lookup"><span data-stu-id="625f0-132">The process Id of the process that hosts the contract.</span></span>  
+ <span data-ttu-id="5ca79-132">Die Porzess-ID des Prozesses, der den Vertrag hostet.</span><span class="sxs-lookup"><span data-stu-id="5ca79-132">The process Id of the process that hosts the contract.</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="625f0-133">ref</span><span class="sxs-lookup"><span data-stu-id="625f0-133">ref</span></span>  
- <span data-ttu-id="625f0-134">Datentyp: Contract</span><span class="sxs-lookup"><span data-stu-id="625f0-134">Data type: Contract</span></span>  
+### <a name="ref"></a><span data-ttu-id="5ca79-133">ref</span><span class="sxs-lookup"><span data-stu-id="5ca79-133">ref</span></span>  
+ <span data-ttu-id="5ca79-134">Datentyp: Contract</span><span class="sxs-lookup"><span data-stu-id="5ca79-134">Data type: Contract</span></span>  
   
- <span data-ttu-id="625f0-135">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-135">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-136">Der Typ des Rückrufs, wenn es sich beim Vertrag um einen Duplexvertrag handelt.</span><span class="sxs-lookup"><span data-stu-id="625f0-136">The type of callback when the contract is a duplex contract.</span></span>  
+ <span data-ttu-id="5ca79-136">Der Typ des Rückrufs, wenn es sich beim Vertrag um einen Duplexvertrag handelt.</span><span class="sxs-lookup"><span data-stu-id="5ca79-136">The type of callback when the contract is a duplex contract.</span></span>  
   
-### <a name="sessionmode"></a><span data-ttu-id="625f0-137">SessionMode</span><span class="sxs-lookup"><span data-stu-id="625f0-137">SessionMode</span></span>  
- <span data-ttu-id="625f0-138">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="625f0-138">Data type: string</span></span>  
+### <a name="sessionmode"></a><span data-ttu-id="5ca79-137">SessionMode</span><span class="sxs-lookup"><span data-stu-id="5ca79-137">SessionMode</span></span>  
+ <span data-ttu-id="5ca79-138">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="5ca79-138">Data type: string</span></span>  
   
- <span data-ttu-id="625f0-139">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-139">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-140">Gibt an, ob der Vertrag die ihm zugeordnete Bindung für die Verwendung der Kanalsitzung benötigt.</span><span class="sxs-lookup"><span data-stu-id="625f0-140">Indicates whether the contract requires the binding associated with this contract to use channel sessions.</span></span>  
+ <span data-ttu-id="5ca79-140">Gibt an, ob der Vertrag die ihm zugeordnete Bindung für die Verwendung der Kanalsitzung benötigt.</span><span class="sxs-lookup"><span data-stu-id="5ca79-140">Indicates whether the contract requires the binding associated with this contract to use channel sessions.</span></span>  
   
-### <a name="type"></a><span data-ttu-id="625f0-141">Typ</span><span class="sxs-lookup"><span data-stu-id="625f0-141">Type</span></span>  
- <span data-ttu-id="625f0-142">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="625f0-142">Data type: string</span></span>  
+### <a name="type"></a><span data-ttu-id="5ca79-141">Typ</span><span class="sxs-lookup"><span data-stu-id="5ca79-141">Type</span></span>  
+ <span data-ttu-id="5ca79-142">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="5ca79-142">Data type: string</span></span>  
   
- <span data-ttu-id="625f0-143">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="625f0-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="5ca79-143">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="5ca79-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="625f0-144">Der Typ des Vertrags.</span><span class="sxs-lookup"><span data-stu-id="625f0-144">The type of the contract.</span></span>  
+ <span data-ttu-id="5ca79-144">Der Typ des Vertrags.</span><span class="sxs-lookup"><span data-stu-id="5ca79-144">The type of the contract.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="625f0-145">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="625f0-145">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ca79-145">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5ca79-145">Requirements</span></span>  
   
-|<span data-ttu-id="625f0-146">MOF</span><span class="sxs-lookup"><span data-stu-id="625f0-146">MOF</span></span>|<span data-ttu-id="625f0-147">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="625f0-147">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="5ca79-146">MOF</span><span class="sxs-lookup"><span data-stu-id="5ca79-146">MOF</span></span>|<span data-ttu-id="5ca79-147">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="5ca79-147">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="625f0-148">Namespace</span><span class="sxs-lookup"><span data-stu-id="625f0-148">Namespace</span></span>|<span data-ttu-id="625f0-149">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="625f0-149">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="5ca79-148">Namespace</span><span class="sxs-lookup"><span data-stu-id="5ca79-148">Namespace</span></span>|<span data-ttu-id="5ca79-149">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="5ca79-149">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="625f0-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="625f0-150">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5ca79-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5ca79-150">See Also</span></span>  
  <xref:System.ServiceModel.Description.ContractDescription>

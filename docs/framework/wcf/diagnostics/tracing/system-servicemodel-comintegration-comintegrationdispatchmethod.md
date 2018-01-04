@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63a97002cbfabedf68dc323575582bb71f455926
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6f1b315b8e0181422109021f06aa3b5a3e394bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdispatchmethod"></a><span data-ttu-id="84415-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="84415-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>
-<span data-ttu-id="84415-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="84415-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdispatchmethod"></a><span data-ttu-id="e3dfa-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="e3dfa-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>
+<span data-ttu-id="e3dfa-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="e3dfa-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>  
   
-## <a name="description"></a><span data-ttu-id="84415-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="84415-104">Description</span></span>  
- <span data-ttu-id="84415-105">ComPlus: Leiten Sie Methodendetails weiter.</span><span class="sxs-lookup"><span data-stu-id="84415-105">ComPlus: Dispatch method details.</span></span>  
+## <a name="description"></a><span data-ttu-id="e3dfa-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e3dfa-104">Description</span></span>  
+ <span data-ttu-id="e3dfa-105">ComPlus: Leiten Sie Methodendetails weiter.</span><span class="sxs-lookup"><span data-stu-id="e3dfa-105">ComPlus: Dispatch method details.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84415-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="84415-106">See Also</span></span>  
- [<span data-ttu-id="84415-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="84415-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="84415-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="84415-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="84415-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="84415-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e3dfa-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3dfa-106">See Also</span></span>  
+ [<span data-ttu-id="e3dfa-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e3dfa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e3dfa-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="e3dfa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e3dfa-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e3dfa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

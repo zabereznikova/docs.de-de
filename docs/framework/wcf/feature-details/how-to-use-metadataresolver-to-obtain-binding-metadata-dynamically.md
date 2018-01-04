@@ -13,31 +13,32 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8f3d8245b9d5bf05297b4d1edfba1926d2104ce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 640d053e0186766e5acdbef692f4e7fae59337b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a><span data-ttu-id="b9fa9-102">Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten</span><span class="sxs-lookup"><span data-stu-id="b9fa9-102">How to: Use MetadataResolver to Obtain Binding Metadata Dynamically</span></span>
-<span data-ttu-id="b9fa9-103">Dieses Thema zeigt Ihnen, wie man die Klasse <xref:System.ServiceModel.Description.MetadataResolver> einsetzt, um Bindungsmetadaten dynamisch zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-103">This topic shows you how to use the <xref:System.ServiceModel.Description.MetadataResolver> class to dynamically obtain binding metadata.</span></span>  
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a><span data-ttu-id="18789-102">Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten</span><span class="sxs-lookup"><span data-stu-id="18789-102">How to: Use MetadataResolver to Obtain Binding Metadata Dynamically</span></span>
+<span data-ttu-id="18789-103">Dieses Thema zeigt Ihnen, wie man die Klasse <xref:System.ServiceModel.Description.MetadataResolver> einsetzt, um Bindungsmetadaten dynamisch zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="18789-103">This topic shows you how to use the <xref:System.ServiceModel.Description.MetadataResolver> class to dynamically obtain binding metadata.</span></span>  
   
-### <a name="to-dynamically-obtain-binding-metadata"></a><span data-ttu-id="b9fa9-104">So erhalten Sie dynamisch Bindungsmetadaten</span><span class="sxs-lookup"><span data-stu-id="b9fa9-104">To dynamically obtain binding metadata</span></span>  
+### <a name="to-dynamically-obtain-binding-metadata"></a><span data-ttu-id="18789-104">So erhalten Sie dynamisch Bindungsmetadaten</span><span class="sxs-lookup"><span data-stu-id="18789-104">To dynamically obtain binding metadata</span></span>  
   
-1.  <span data-ttu-id="b9fa9-105">Erstellen Sie ein <xref:System.ServiceModel.EndpointAddress>-Objekt mit der Adresse des Metadatenendpunkts.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-105">Create an <xref:System.ServiceModel.EndpointAddress> object with the address of the metadata endpoint.</span></span>  
+1.  <span data-ttu-id="18789-105">Erstellen Sie ein <xref:System.ServiceModel.EndpointAddress>-Objekt mit der Adresse des Metadatenendpunkts.</span><span class="sxs-lookup"><span data-stu-id="18789-105">Create an <xref:System.ServiceModel.EndpointAddress> object with the address of the metadata endpoint.</span></span>  
   
     ```  
     EndpointAddress metaAddress  
       = new EndpointAddress(new   Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
-2.  <span data-ttu-id="b9fa9-106">Rufen Sie <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> auf, der im Diensttyp und der Metadatenendpunktadresse übergibt.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-106">Call <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>, which passes in the service type and the metadata endpoint address.</span></span> <span data-ttu-id="b9fa9-107">Es gibt eine Auflistung von Endpunkten zurück, die den angegebenen Vertrag implementieren.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-107">This returns a collection of endpoints that implement the specified contract.</span></span> <span data-ttu-id="b9fa9-108">Die Metadaten implementieren nur Bindungsinformationen; Vertragsinformationen werden nicht importiert.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-108">Only binding information is imported from the metadata; contract information is not imported.</span></span> <span data-ttu-id="b9fa9-109">Stattdessen wird der angegebene Vertrag verwendet.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-109">The supplied contract is used instead.</span></span>  
+2.  <span data-ttu-id="18789-106">Rufen Sie <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> auf, der im Diensttyp und der Metadatenendpunktadresse übergibt.</span><span class="sxs-lookup"><span data-stu-id="18789-106">Call <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>, which passes in the service type and the metadata endpoint address.</span></span> <span data-ttu-id="18789-107">Es gibt eine Auflistung von Endpunkten zurück, die den angegebenen Vertrag implementieren.</span><span class="sxs-lookup"><span data-stu-id="18789-107">This returns a collection of endpoints that implement the specified contract.</span></span> <span data-ttu-id="18789-108">Die Metadaten implementieren nur Bindungsinformationen; Vertragsinformationen werden nicht importiert.</span><span class="sxs-lookup"><span data-stu-id="18789-108">Only binding information is imported from the metadata; contract information is not imported.</span></span> <span data-ttu-id="18789-109">Stattdessen wird der angegebene Vertrag verwendet.</span><span class="sxs-lookup"><span data-stu-id="18789-109">The supplied contract is used instead.</span></span>  
   
     ```  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
     ```  
   
-3.  <span data-ttu-id="b9fa9-110">Sie können dann die Auflistung von Dienstendpunkten durchlaufen, um die Bindungsinformationen zu extrahieren, die Sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-110">You can then iterate through the collection of service endpoints to extract the binding information you need.</span></span> <span data-ttu-id="b9fa9-111">Der folgende Code durchläuft die Endpunkte, erstellt ein Dienstclientobjekt, das in der Bindung und der Adresse übergeben wird, die mit dem aktuellen Endpunkt verbunden sind, und ruft dann im Dienst eine Methode auf.</span><span class="sxs-lookup"><span data-stu-id="b9fa9-111">The following code iterates through the endpoints, creates a service client object that passes in the binding and address associated with the current endpoint, and then calls a method on the service.</span></span>  
+3.  <span data-ttu-id="18789-110">Sie können dann die Auflistung von Dienstendpunkten durchlaufen, um die Bindungsinformationen zu extrahieren, die Sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="18789-110">You can then iterate through the collection of service endpoints to extract the binding information you need.</span></span> <span data-ttu-id="18789-111">Der folgende Code durchläuft die Endpunkte, erstellt ein Dienstclientobjekt, das in der Bindung und der Adresse übergeben wird, die mit dem aktuellen Endpunkt verbunden sind, und ruft dann im Dienst eine Methode auf.</span><span class="sxs-lookup"><span data-stu-id="18789-111">The following code iterates through the endpoints, creates a service client object that passes in the binding and address associated with the current endpoint, and then calls a method on the service.</span></span>  
   
     ```  
     foreach (ServiceEndpoint point in endpoints)  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b9fa9-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b9fa9-112">See Also</span></span>  
- [<span data-ttu-id="b9fa9-113">Metadaten</span><span class="sxs-lookup"><span data-stu-id="b9fa9-113">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a><span data-ttu-id="18789-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="18789-112">See Also</span></span>  
+ [<span data-ttu-id="18789-113">Metadaten</span><span class="sxs-lookup"><span data-stu-id="18789-113">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)

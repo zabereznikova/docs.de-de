@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284e0851f08d8d06faaea1b6bd98d4b0b0af5130
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f6c34c02067c3cf6788dd98512941da5182b50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a><span data-ttu-id="77eb4-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span><span class="sxs-lookup"><span data-stu-id="77eb4-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span></span>
-<span data-ttu-id="77eb4-103">Die angegebene Transaktion wurde für den angegebenen Vorgang von einer InstanceContext-Transaktion empfangen.</span><span class="sxs-lookup"><span data-stu-id="77eb4-103">The specified transaction was received for the specified operation from an InstanceContext transaction.</span></span>  
+# <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a><span data-ttu-id="34f9d-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span><span class="sxs-lookup"><span data-stu-id="34f9d-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span></span>
+<span data-ttu-id="34f9d-103">Die angegebene Transaktion wurde für den angegebenen Vorgang von einer InstanceContext-Transaktion empfangen.</span><span class="sxs-lookup"><span data-stu-id="34f9d-103">The specified transaction was received for the specified operation from an InstanceContext transaction.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="77eb4-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="77eb4-104">Description</span></span>  
- <span data-ttu-id="77eb4-105">Verfolgte nach, ob die dem Benutzercode verfügbar gemachte Transaktion durch eine AutoComplete=false-Methode zurückgelassen wurde, die vor diesem Aufruf abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="77eb4-105">Traced if the transaction made available to user code was left behind by an AutoComplete=false method called prior to this invocation.</span></span>  
+## <a name="description"></a><span data-ttu-id="34f9d-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="34f9d-104">Description</span></span>  
+ <span data-ttu-id="34f9d-105">Verfolgte nach, ob die dem Benutzercode verfügbar gemachte Transaktion durch eine AutoComplete=false-Methode zurückgelassen wurde, die vor diesem Aufruf abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="34f9d-105">Traced if the transaction made available to user code was left behind by an AutoComplete=false method called prior to this invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77eb4-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="77eb4-106">See Also</span></span>  
- [<span data-ttu-id="77eb4-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="77eb4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="77eb4-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="77eb4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="77eb4-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="77eb4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="34f9d-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34f9d-106">See Also</span></span>  
+ [<span data-ttu-id="34f9d-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="34f9d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="34f9d-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="34f9d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="34f9d-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="34f9d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bcc5838ee30183fb61fa4b7e0273069b99b47cd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f3fdffa1cb412159f3c98fd45c120378623d5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityspnegoclientnegotiationcompleted"></a><span data-ttu-id="ac858-102">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="ac858-102">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span></span>
-<span data-ttu-id="ac858-103">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="ac858-103">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span></span>  
+# <a name="systemservicemodelsecurityspnegoclientnegotiationcompleted"></a><span data-ttu-id="62411-102">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="62411-102">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span></span>
+<span data-ttu-id="62411-103">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="62411-103">System.ServiceModel.Security.SpnegoClientNegotiationCompleted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ac858-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ac858-104">Description</span></span>  
- <span data-ttu-id="ac858-105">Die SSPI-Aushandlung wurde von SpnegoTokenProvider abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="ac858-105">The SpnegoTokenProvider completed SSPI negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="62411-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="62411-104">Description</span></span>  
+ <span data-ttu-id="62411-105">Die SSPI-Aushandlung wurde von SpnegoTokenProvider abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="62411-105">The SpnegoTokenProvider completed SSPI negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac858-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac858-106">See Also</span></span>  
- [<span data-ttu-id="ac858-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="ac858-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ac858-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="ac858-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ac858-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="ac858-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="62411-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62411-106">See Also</span></span>  
+ [<span data-ttu-id="62411-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="62411-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="62411-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="62411-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="62411-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="62411-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e61dffd6ad3823aa74be3f1e104ba5408de02192
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea5a52ef89230fd9d06540b1cc63013bd73021ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmessageread"></a><span data-ttu-id="a48b9-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="a48b9-102">System.ServiceModel.MessageRead</span></span>
-<span data-ttu-id="a48b9-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="a48b9-103">System.ServiceModel.MessageRead</span></span>  
+# <a name="systemservicemodelmessageread"></a><span data-ttu-id="48601-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="48601-102">System.ServiceModel.MessageRead</span></span>
+<span data-ttu-id="48601-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="48601-103">System.ServiceModel.MessageRead</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a48b9-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a48b9-104">Description</span></span>  
- <span data-ttu-id="a48b9-105">Eine Nachricht wurde gelesen.</span><span class="sxs-lookup"><span data-stu-id="a48b9-105">A message was read.</span></span>  
+## <a name="description"></a><span data-ttu-id="48601-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="48601-104">Description</span></span>  
+ <span data-ttu-id="48601-105">Eine Nachricht wurde gelesen.</span><span class="sxs-lookup"><span data-stu-id="48601-105">A message was read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a48b9-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a48b9-106">See Also</span></span>  
- [<span data-ttu-id="a48b9-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a48b9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a48b9-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="a48b9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a48b9-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="a48b9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="48601-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48601-106">See Also</span></span>  
+ [<span data-ttu-id="48601-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="48601-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="48601-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="48601-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="48601-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="48601-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

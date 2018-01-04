@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 293efd9291c803800ed411c14da3a12412e13cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f70cebad6c21c76b9d0c6e83a41c4d2ba95ac4ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="ea61c-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="ea61c-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
-<span data-ttu-id="ea61c-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="ea61c-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
+# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="95dfe-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="95dfe-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
+<span data-ttu-id="95dfe-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="95dfe-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ea61c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ea61c-104">Description</span></span>  
- <span data-ttu-id="ea61c-105">Beim Aufruf von ReleasePerformanceCounters sind Fehler auf dem ServiceHost aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="ea61c-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="ea61c-106">Diese Ablaufverfolgung kann zur Ermittlung von Fehlern bei der Freigabe von Leistungsindikatoren verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea61c-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
+## <a name="description"></a><span data-ttu-id="95dfe-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="95dfe-104">Description</span></span>  
+ <span data-ttu-id="95dfe-105">Beim Aufruf von ReleasePerformanceCounters sind Fehler auf dem ServiceHost aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="95dfe-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="95dfe-106">Diese Ablaufverfolgung kann zur Ermittlung von Fehlern bei der Freigabe von Leistungsindikatoren verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="95dfe-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea61c-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea61c-107">See Also</span></span>  
- [<span data-ttu-id="ea61c-108">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="ea61c-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ea61c-109">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="ea61c-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ea61c-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="ea61c-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="95dfe-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95dfe-107">See Also</span></span>  
+ [<span data-ttu-id="95dfe-108">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="95dfe-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="95dfe-109">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="95dfe-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="95dfe-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="95dfe-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

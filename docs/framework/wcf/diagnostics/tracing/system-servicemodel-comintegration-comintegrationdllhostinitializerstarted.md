@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 531fe6a26bd97f30484c89f812eb26fb8e1ff582
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a229b69c5c0957278ec9d8d65f591119b91e5914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstarted"></a><span data-ttu-id="82a1a-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span><span class="sxs-lookup"><span data-stu-id="82a1a-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span></span>
-<span data-ttu-id="82a1a-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span><span class="sxs-lookup"><span data-stu-id="82a1a-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstarted"></a><span data-ttu-id="c3d6d-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span><span class="sxs-lookup"><span data-stu-id="c3d6d-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span></span>
+<span data-ttu-id="c3d6d-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span><span class="sxs-lookup"><span data-stu-id="c3d6d-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="82a1a-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="82a1a-104">Description</span></span>  
- <span data-ttu-id="82a1a-105">Der ServiceModelInitializer ist mit konfigurierten Diensten gestartet.</span><span class="sxs-lookup"><span data-stu-id="82a1a-105">The ServiceModelInitializer has started with configured services.</span></span>  
+## <a name="description"></a><span data-ttu-id="c3d6d-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c3d6d-104">Description</span></span>  
+ <span data-ttu-id="c3d6d-105">Der ServiceModelInitializer ist mit konfigurierten Diensten gestartet.</span><span class="sxs-lookup"><span data-stu-id="c3d6d-105">The ServiceModelInitializer has started with configured services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82a1a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="82a1a-106">See Also</span></span>  
- [<span data-ttu-id="82a1a-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="82a1a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="82a1a-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="82a1a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="82a1a-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="82a1a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c3d6d-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3d6d-106">See Also</span></span>  
+ [<span data-ttu-id="c3d6d-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="c3d6d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c3d6d-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="c3d6d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c3d6d-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="c3d6d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

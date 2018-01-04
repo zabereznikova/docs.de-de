@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 677550d147921bfe69ecac53039691e5d5e0e284
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 60ef0261465c2264e67b6a25401dddf31ddeabea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcommunicationobjectcreated"></a><span data-ttu-id="7aff0-102">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="7aff0-102">System.ServiceModel.CommunicationObjectCreated</span></span>
-<span data-ttu-id="7aff0-103">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="7aff0-103">System.ServiceModel.CommunicationObjectCreated</span></span>  
+# <a name="systemservicemodelcommunicationobjectcreated"></a><span data-ttu-id="d82a0-102">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="d82a0-102">System.ServiceModel.CommunicationObjectCreated</span></span>
+<span data-ttu-id="d82a0-103">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="d82a0-103">System.ServiceModel.CommunicationObjectCreated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7aff0-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7aff0-104">Description</span></span>  
- <span data-ttu-id="7aff0-105">Ein Kommunikationsobjekt wurde erstellt.</span><span class="sxs-lookup"><span data-stu-id="7aff0-105">A communication object was created.</span></span>  
+## <a name="description"></a><span data-ttu-id="d82a0-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d82a0-104">Description</span></span>  
+ <span data-ttu-id="d82a0-105">Ein Kommunikationsobjekt wurde erstellt.</span><span class="sxs-lookup"><span data-stu-id="d82a0-105">A communication object was created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7aff0-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7aff0-106">See Also</span></span>  
- [<span data-ttu-id="7aff0-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="7aff0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7aff0-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="7aff0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7aff0-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="7aff0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d82a0-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d82a0-106">See Also</span></span>  
+ [<span data-ttu-id="d82a0-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="d82a0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d82a0-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="d82a0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d82a0-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="d82a0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

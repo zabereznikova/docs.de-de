@@ -16,20 +16,21 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dff90e499ce421f372137903daf34c09c21d5c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c00e61001d9c8877b1fcaa0e938c92249c7915e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="89701-102">Gewusst wie: Ändern des Werts einer Einstellung zwischen Anwendungssitzungen</span><span class="sxs-lookup"><span data-stu-id="89701-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
-<span data-ttu-id="89701-103">In einigen Fällen empfiehlt es sich, ändern Sie den Wert einer Einstellung zwischen anwendungssitzungen, nachdem die Anwendung kompiliert und bereitgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="89701-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="89701-104">Beispielsweise empfiehlt es sich um eine Verbindungszeichenfolge, zeigen Sie auf den richtigen Speicherort zu ändern.</span><span class="sxs-lookup"><span data-stu-id="89701-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="89701-105">Da Entwurfszeittools nicht verfügbar sind, nachdem die Anwendung kompiliert und bereitgestellt wurde, müssen Sie den Einstellungswert in die Datei manuell ändern.</span><span class="sxs-lookup"><span data-stu-id="89701-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
+# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="6008b-102">Gewusst wie: Ändern des Werts einer Einstellung zwischen Anwendungssitzungen</span><span class="sxs-lookup"><span data-stu-id="6008b-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
+<span data-ttu-id="6008b-103">In einigen Fällen empfiehlt es sich, ändern Sie den Wert einer Einstellung zwischen anwendungssitzungen, nachdem die Anwendung kompiliert und bereitgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="6008b-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="6008b-104">Beispielsweise empfiehlt es sich um eine Verbindungszeichenfolge, zeigen Sie auf den richtigen Speicherort zu ändern.</span><span class="sxs-lookup"><span data-stu-id="6008b-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="6008b-105">Da Entwurfszeittools nicht verfügbar sind, nachdem die Anwendung kompiliert und bereitgestellt wurde, müssen Sie den Einstellungswert in die Datei manuell ändern.</span><span class="sxs-lookup"><span data-stu-id="6008b-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
   
-### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="89701-106">So ändern Sie den Wert einer Einstellung zwischen Anwendungssitzungen</span><span class="sxs-lookup"><span data-stu-id="89701-106">To Change the Value of a Setting Between Application Sessions</span></span>  
+### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="6008b-106">So ändern Sie den Wert einer Einstellung zwischen Anwendungssitzungen</span><span class="sxs-lookup"><span data-stu-id="6008b-106">To Change the Value of a Setting Between Application Sessions</span></span>  
   
-1.  <span data-ttu-id="89701-107">Öffnen Sie mit Microsoft Notepad oder ein anderer Text oder XML-Editor die config-Datei Ihrer Anwendung zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="89701-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
+1.  <span data-ttu-id="6008b-107">Öffnen Sie mit Microsoft Notepad oder ein anderer Text oder XML-Editor die config-Datei Ihrer Anwendung zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6008b-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
   
-2.  <span data-ttu-id="89701-108">Suchen Sie den Eintrag für die Einstellung, die Sie ändern möchten.</span><span class="sxs-lookup"><span data-stu-id="89701-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="89701-109">Es sollte ähnlich wie im folgenden Beispiel aussehen.</span><span class="sxs-lookup"><span data-stu-id="89701-109">It should look similar to the example presented below.</span></span>  
+2.  <span data-ttu-id="6008b-108">Suchen Sie den Eintrag für die Einstellung, die Sie ändern möchten.</span><span class="sxs-lookup"><span data-stu-id="6008b-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="6008b-109">Es sollte ähnlich wie im folgenden Beispiel aussehen.</span><span class="sxs-lookup"><span data-stu-id="6008b-109">It should look similar to the example presented below.</span></span>  
   
     ```xml  
     <setting name="Setting1" serializeAs="String" >  
@@ -37,8 +38,8 @@ ms.lasthandoff: 11/21/2017
     </setting>  
     ```  
   
-3.  <span data-ttu-id="89701-110">Geben Sie einen neuen Wert für die Einstellung aus, und speichern Sie die Datei.</span><span class="sxs-lookup"><span data-stu-id="89701-110">Type a new value for your setting and save the file.</span></span>  
+3.  <span data-ttu-id="6008b-110">Geben Sie einen neuen Wert für die Einstellung aus, und speichern Sie die Datei.</span><span class="sxs-lookup"><span data-stu-id="6008b-110">Type a new value for your setting and save the file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89701-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89701-111">See Also</span></span>  
- [<span data-ttu-id="89701-112">Verwenden von Anwendungseinstellungen und Benutzereinstellungen</span><span class="sxs-lookup"><span data-stu-id="89701-112">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [<span data-ttu-id="89701-113">Übersicht über Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="89701-113">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6008b-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6008b-111">See Also</span></span>  
+ [<span data-ttu-id="6008b-112">Verwenden von Anwendungseinstellungen und Benutzereinstellungen</span><span class="sxs-lookup"><span data-stu-id="6008b-112">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [<span data-ttu-id="6008b-113">Übersicht über Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="6008b-113">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

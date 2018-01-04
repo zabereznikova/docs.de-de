@@ -24,18 +24,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 400e367581ea773d88320e593aa525d812ea0238
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="44f8a-102">Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="44f8a-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="44f8a-103">Zugreifen auf bestimmte Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="44f8a-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="44f8a-104">Er ermöglicht es Ihnen, programmgesteuert festzustellen, was in der Liste, an einer beliebigen angegebenen Position befindet.</span><span class="sxs-lookup"><span data-stu-id="44f8a-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="52e58-102">Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="52e58-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="52e58-103">Zugreifen auf bestimmte Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="52e58-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="52e58-104">Er ermöglicht es Ihnen, programmgesteuert festzustellen, was in der Liste, an einer beliebigen angegebenen Position befindet.</span><span class="sxs-lookup"><span data-stu-id="52e58-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="44f8a-105">Auf ein bestimmtes Element zugreifen.</span><span class="sxs-lookup"><span data-stu-id="44f8a-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="52e58-105">Auf ein bestimmtes Element zugreifen.</span><span class="sxs-lookup"><span data-stu-id="52e58-105">To access a specific item</span></span>  
   
-1.  <span data-ttu-id="44f8a-106">Abfrage der `Items` Auflistung über den Index eines bestimmten Elements:</span><span class="sxs-lookup"><span data-stu-id="44f8a-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1.  <span data-ttu-id="52e58-106">Abfrage der `Items` Auflistung über den Index eines bestimmten Elements:</span><span class="sxs-lookup"><span data-stu-id="52e58-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -61,8 +62,8 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="44f8a-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="44f8a-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="52e58-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="52e58-107">See Also</span></span>  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  
- [<span data-ttu-id="44f8a-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="44f8a-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [<span data-ttu-id="52e58-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="52e58-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf74b38c15cf8dc68218c39246c8999c4ec44493
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="91974-102">Verwenden von mehreren Authentifizierungsschemen mit WCF</span><span class="sxs-lookup"><span data-stu-id="91974-102">Using Multiple Authentication Schemes with WCF</span></span>
-<span data-ttu-id="91974-103">Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen Endpunkt angeben.</span><span class="sxs-lookup"><span data-stu-id="91974-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="91974-104">Darüber hinaus können webgehostete Dienste ihre Authentifizierungseinstellungen direkt von IIS erben.</span><span class="sxs-lookup"><span data-stu-id="91974-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="91974-105">Selbst gehostete Dienste können angeben, welche Authentifizierungsschemas verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="91974-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="91974-106">Weitere Informationen zum Einrichten der Authentifizierungseinstellungen in IIS finden Sie unter [IIS-Authentifizierung](http://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="91974-106">For more information about setting authentication settings in IIS, see [IIS Authentication](http://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
+# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="ff645-102">Verwenden von mehreren Authentifizierungsschemen mit WCF</span><span class="sxs-lookup"><span data-stu-id="ff645-102">Using Multiple Authentication Schemes with WCF</span></span>
+<span data-ttu-id="ff645-103">Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen Endpunkt angeben.</span><span class="sxs-lookup"><span data-stu-id="ff645-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="ff645-104">Darüber hinaus können webgehostete Dienste ihre Authentifizierungseinstellungen direkt von IIS erben.</span><span class="sxs-lookup"><span data-stu-id="ff645-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="ff645-105">Selbst gehostete Dienste können angeben, welche Authentifizierungsschemas verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="ff645-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="ff645-106">Weitere Informationen zum Einrichten der Authentifizierungseinstellungen in IIS finden Sie unter [IIS-Authentifizierung](http://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="ff645-106">For more information about setting authentication settings in IIS, see [IIS Authentication](http://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
   
-## <a name="iis-hosted-services"></a><span data-ttu-id="91974-107">IIS-gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="91974-107">IIS-Hosted Services</span></span>  
- <span data-ttu-id="91974-108">Legen Sie für IIS-gehostete Dienste die Authentifizierungsschemas fest, die Sie in IIS verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="91974-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="91974-109">Geben Sie dann in der Datei "Web.config" des Diensts, in der Bindungskonfiguration ClientCredential-Typ als "InheritedFromHost" wie im folgenden XML-Ausschnitt gezeigt:</span><span class="sxs-lookup"><span data-stu-id="91974-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
+## <a name="iis-hosted-services"></a><span data-ttu-id="ff645-107">IIS-gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="ff645-107">IIS-Hosted Services</span></span>  
+ <span data-ttu-id="ff645-108">Legen Sie für IIS-gehostete Dienste die Authentifizierungsschemas fest, die Sie in IIS verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="ff645-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="ff645-109">Geben Sie dann in der Datei "Web.config" des Diensts, in der Bindungskonfiguration ClientCredential-Typ als "InheritedFromHost" wie im folgenden XML-Ausschnitt gezeigt:</span><span class="sxs-lookup"><span data-stu-id="ff645-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
   
 ```xml  
 <bindings>  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
     </bindings>  
 ```  
   
- <span data-ttu-id="91974-110">Sie können angeben, dass nur eine Teilmenge der Authentifizierungsschemas mit Ihrem Dienst mithilfe von "serviceauthenticationbehavior" verwendet werden soll oder die \<ServiceAuthenticationManager >-Element.</span><span class="sxs-lookup"><span data-stu-id="91974-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="91974-111">Beim Konfigurieren im Code verwenden Sie ServiceAuthenticationBehavior wie im folgenden Codeausschnitt dargestellt.</span><span class="sxs-lookup"><span data-stu-id="91974-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
+ <span data-ttu-id="ff645-110">Sie können angeben, dass nur eine Teilmenge der Authentifizierungsschemas mit Ihrem Dienst mithilfe von "serviceauthenticationbehavior" verwendet werden soll oder die \<ServiceAuthenticationManager >-Element.</span><span class="sxs-lookup"><span data-stu-id="ff645-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="ff645-111">Beim Konfigurieren im Code verwenden Sie ServiceAuthenticationBehavior wie im folgenden Codeausschnitt dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ff645-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
   
 ```csharp  
 // ...  
@@ -57,7 +58,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="91974-112">Wenn Sie dies in einer Konfigurationsdatei konfigurieren, verwenden die \<ServiceAuthenticationManager >-Element wie im folgenden XML-Ausschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="91974-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="ff645-112">Wenn Sie dies in einer Konfigurationsdatei konfigurieren, verwenden die \<ServiceAuthenticationManager >-Element wie im folgenden XML-Ausschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="ff645-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -70,10 +71,10 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="91974-113">Dadurch wird sichergestellt, dass nur eine Teilmenge der hier aufgeführten Authentifizierungsschemas für den Dienstendpunkt infrage kommt, je nachdem, was in IIS ausgewählt wurde.</span><span class="sxs-lookup"><span data-stu-id="91974-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="91974-114">Dies bedeutet, dass ein Entwickler z. B. die Standardauthentifizierung aus der Liste ausschließen kann, indem er sie in der serviceAuthenticationManager-Liste auslässt. Sie wird auch nicht auf den Dienstendpunkt angewendet, wenn sie in IIS aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="91974-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
+ <span data-ttu-id="ff645-113">Dadurch wird sichergestellt, dass nur eine Teilmenge der hier aufgeführten Authentifizierungsschemas für den Dienstendpunkt infrage kommt, je nachdem, was in IIS ausgewählt wurde.</span><span class="sxs-lookup"><span data-stu-id="ff645-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="ff645-114">Dies bedeutet, dass ein Entwickler z. B. die Standardauthentifizierung aus der Liste ausschließen kann, indem er sie in der serviceAuthenticationManager-Liste auslässt. Sie wird auch nicht auf den Dienstendpunkt angewendet, wenn sie in IIS aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="ff645-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
   
-## <a name="self-hosted-services"></a><span data-ttu-id="91974-115">Selbst gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="91974-115">Self-Hosted Services</span></span>  
- <span data-ttu-id="91974-116">Selbst gehostete Dienste werden geringfügig anders konfiguriert, da keine Einstellungen von IIS geerbt werden können.</span><span class="sxs-lookup"><span data-stu-id="91974-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="91974-117">Hier verwenden Sie die \<ServiceAuthenticationManager >-Element oder "serviceauthenticationbehavior", um die Authentifizierungseinstellungen anzugeben, die vererbt werden.</span><span class="sxs-lookup"><span data-stu-id="91974-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="91974-118">Der Code sieht folgendermaßen aus:</span><span class="sxs-lookup"><span data-stu-id="91974-118">In code it looks like this:</span></span>  
+## <a name="self-hosted-services"></a><span data-ttu-id="ff645-115">Selbst gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="ff645-115">Self-Hosted Services</span></span>  
+ <span data-ttu-id="ff645-116">Selbst gehostete Dienste werden geringfügig anders konfiguriert, da keine Einstellungen von IIS geerbt werden können.</span><span class="sxs-lookup"><span data-stu-id="ff645-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="ff645-117">Hier verwenden Sie die \<ServiceAuthenticationManager >-Element oder "serviceauthenticationbehavior", um die Authentifizierungseinstellungen anzugeben, die vererbt werden.</span><span class="sxs-lookup"><span data-stu-id="ff645-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="ff645-118">Der Code sieht folgendermaßen aus:</span><span class="sxs-lookup"><span data-stu-id="ff645-118">In code it looks like this:</span></span>  
   
 ```csharp  
 // ...  
@@ -93,7 +94,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="91974-119">In der config-Datei sieht das wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="91974-119">In config, it looks like this:</span></span>  
+ <span data-ttu-id="ff645-119">In der config-Datei sieht das wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="ff645-119">In config, it looks like this:</span></span>  
   
 ```xml  
 <behaviors>  
@@ -106,7 +107,7 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="91974-120">Außerdem können Sie InheritFromHost in den Bindungseinstellungen angeben, wie im folgenden XML-Ausschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="91974-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="ff645-120">Außerdem können Sie InheritFromHost in den Bindungseinstellungen angeben, wie im folgenden XML-Ausschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="ff645-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <bindings>  
@@ -120,7 +121,7 @@ else
     </bindings>  
 ```  
   
- <span data-ttu-id="91974-121">Alternativ können Sie die Authentifizierungsschemas in einer benutzerdefinierten Bindung angeben, indem Sie die Authentifizierungsschemas für das HTTP-Transportbindungselement festlegen, wie im folgenden Konfigurationsausschnitt dargestellt.</span><span class="sxs-lookup"><span data-stu-id="91974-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
+ <span data-ttu-id="ff645-121">Alternativ können Sie die Authentifizierungsschemas in einer benutzerdefinierten Bindung angeben, indem Sie die Authentifizierungsschemas für das HTTP-Transportbindungselement festlegen, wie im folgenden Konfigurationsausschnitt dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ff645-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -129,11 +130,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91974-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="91974-122">See Also</span></span>  
- [<span data-ttu-id="91974-123">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="91974-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [<span data-ttu-id="91974-124">Endpunkte: Adressen, Bindungen und Verträge</span><span class="sxs-lookup"><span data-stu-id="91974-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [<span data-ttu-id="91974-125">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="91974-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="91974-126">Sicherheitsfunktionen mit benutzerdefinierten Bindungen</span><span class="sxs-lookup"><span data-stu-id="91974-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="91974-127">Bindungen</span><span class="sxs-lookup"><span data-stu-id="91974-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="91974-128">Bindungen</span><span class="sxs-lookup"><span data-stu-id="91974-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="91974-129">Benutzerdefinierte Bindungen</span><span class="sxs-lookup"><span data-stu-id="91974-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="ff645-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ff645-122">See Also</span></span>  
+ [<span data-ttu-id="ff645-123">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="ff645-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="ff645-124">Endpunkte: Adressen, Bindungen und Verträge</span><span class="sxs-lookup"><span data-stu-id="ff645-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [<span data-ttu-id="ff645-125">Konfigurieren der vom System bereitgestellten Bindungen</span><span class="sxs-lookup"><span data-stu-id="ff645-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="ff645-126">Sicherheitsfunktionen mit benutzerdefinierten Bindungen</span><span class="sxs-lookup"><span data-stu-id="ff645-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="ff645-127">Bindungen</span><span class="sxs-lookup"><span data-stu-id="ff645-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="ff645-128">Bindungen</span><span class="sxs-lookup"><span data-stu-id="ff645-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="ff645-129">Benutzerdefinierte Bindungen</span><span class="sxs-lookup"><span data-stu-id="ff645-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)

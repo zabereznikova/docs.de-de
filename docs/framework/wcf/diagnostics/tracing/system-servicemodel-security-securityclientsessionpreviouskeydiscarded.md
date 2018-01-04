@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d9f96d04443dc4c81a1d9672ddff85cf8a02a50c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be12e85a93d893ad1e37ff84d00cbd65e76d41d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityclientsessionpreviouskeydiscarded"></a><span data-ttu-id="e9f63-102">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span><span class="sxs-lookup"><span data-stu-id="e9f63-102">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span></span>
-<span data-ttu-id="e9f63-103">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span><span class="sxs-lookup"><span data-stu-id="e9f63-103">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span></span>  
+# <a name="systemservicemodelsecuritysecurityclientsessionpreviouskeydiscarded"></a><span data-ttu-id="24a83-102">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span><span class="sxs-lookup"><span data-stu-id="24a83-102">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span></span>
+<span data-ttu-id="24a83-103">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span><span class="sxs-lookup"><span data-stu-id="24a83-103">System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e9f63-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e9f63-104">Description</span></span>  
- <span data-ttu-id="e9f63-105">Die Clientsicherheitssitzung hat den vorherigen Sitzungsschlüssel verworfen.</span><span class="sxs-lookup"><span data-stu-id="e9f63-105">The client security session discarded the previous session key.</span></span>  
+## <a name="description"></a><span data-ttu-id="24a83-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="24a83-104">Description</span></span>  
+ <span data-ttu-id="24a83-105">Die Clientsicherheitssitzung hat den vorherigen Sitzungsschlüssel verworfen.</span><span class="sxs-lookup"><span data-stu-id="24a83-105">The client security session discarded the previous session key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9f63-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e9f63-106">See Also</span></span>  
- [<span data-ttu-id="e9f63-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e9f63-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e9f63-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="e9f63-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e9f63-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e9f63-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="24a83-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24a83-106">See Also</span></span>  
+ [<span data-ttu-id="24a83-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="24a83-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="24a83-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="24a83-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="24a83-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="24a83-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

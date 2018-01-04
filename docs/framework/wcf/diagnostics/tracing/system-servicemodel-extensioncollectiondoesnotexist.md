@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c8baaa0b91eb3c13b825c8d2daa95c9b4ed00ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71c7fe649f4e3151b593a7f8925c7435756bd8e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelextensioncollectiondoesnotexist"></a><span data-ttu-id="976f6-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="976f6-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>
-<span data-ttu-id="976f6-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="976f6-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>  
+# <a name="systemservicemodelextensioncollectiondoesnotexist"></a><span data-ttu-id="3a3e5-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="3a3e5-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>
+<span data-ttu-id="3a3e5-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="3a3e5-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>  
   
-## <a name="description"></a><span data-ttu-id="976f6-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="976f6-104">Description</span></span>  
- <span data-ttu-id="976f6-105">Die Erweiterungsauflistung ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="976f6-105">The extension collection does not exist.</span></span>  
+## <a name="description"></a><span data-ttu-id="3a3e5-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3a3e5-104">Description</span></span>  
+ <span data-ttu-id="3a3e5-105">Die Erweiterungsauflistung ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="3a3e5-105">The extension collection does not exist.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="976f6-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="976f6-106">See Also</span></span>  
- [<span data-ttu-id="976f6-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="976f6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="976f6-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="976f6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="976f6-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="976f6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3a3e5-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3a3e5-106">See Also</span></span>  
+ [<span data-ttu-id="3a3e5-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="3a3e5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3a3e5-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="3a3e5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3a3e5-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="3a3e5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

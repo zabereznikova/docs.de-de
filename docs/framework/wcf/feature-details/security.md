@@ -17,67 +17,68 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-communication-foundation-security"></a><span data-ttu-id="9eafb-102">Windows Communication Foundation-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-102">Windows Communication Foundation Security</span></span>
-<span data-ttu-id="9eafb-103">In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.</span><span class="sxs-lookup"><span data-stu-id="9eafb-103">The topics in this section describe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security features and how to use them to help secure messages.</span></span>  
+# <a name="windows-communication-foundation-security"></a><span data-ttu-id="af95c-102">Windows Communication Foundation-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="af95c-102">Windows Communication Foundation Security</span></span>
+<span data-ttu-id="af95c-103">In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.</span><span class="sxs-lookup"><span data-stu-id="af95c-103">The topics in this section describe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security features and how to use them to help secure messages.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9eafb-104">Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="9eafb-104"> Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="af95c-104">Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="af95c-104"> Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9eafb-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9eafb-105">In This Section</span></span>  
- [<span data-ttu-id="9eafb-106">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="9eafb-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- <span data-ttu-id="9eafb-107">Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9eafb-107">Describes the security features in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="af95c-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="af95c-105">In This Section</span></span>  
+ [<span data-ttu-id="af95c-106">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="af95c-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ <span data-ttu-id="af95c-107">Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="af95c-107">Describes the security features in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="9eafb-108">Schlüsselbegriffe der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- <span data-ttu-id="9eafb-109">Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-109">Describes the basic terminology and concepts used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security.</span></span>  
+ [<span data-ttu-id="af95c-108">Begriffe der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="af95c-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ <span data-ttu-id="af95c-109">Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-109">Describes the basic terminology and concepts used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security.</span></span>  
   
- [<span data-ttu-id="9eafb-110">Häufige Sicherheitsszenarien</span><span class="sxs-lookup"><span data-stu-id="9eafb-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- <span data-ttu-id="9eafb-111">Beschreibt Szenarien und Topologien, die Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfigurieren können.</span><span class="sxs-lookup"><span data-stu-id="9eafb-111">Describes scenarios and topologies you can configure with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="af95c-110">Häufige Sicherheitsszenarien</span><span class="sxs-lookup"><span data-stu-id="af95c-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ <span data-ttu-id="af95c-111">Beschreibt Szenarien und Topologien, die Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfigurieren können.</span><span class="sxs-lookup"><span data-stu-id="af95c-111">Describes scenarios and topologies you can configure with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="9eafb-112">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="9eafb-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- <span data-ttu-id="9eafb-113">Bietet eine Übersicht über WCF-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
+ [<span data-ttu-id="af95c-112">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="af95c-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ <span data-ttu-id="af95c-113">Bietet eine Übersicht über WCF-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="af95c-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
   
- [<span data-ttu-id="9eafb-114">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- <span data-ttu-id="9eafb-115">Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
+ [<span data-ttu-id="af95c-114">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="af95c-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ <span data-ttu-id="af95c-115">Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
   
- [<span data-ttu-id="9eafb-116">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="9eafb-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- <span data-ttu-id="9eafb-117">Beschreibt, wie Nachrichten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsfunktionen gesichert werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-117">Describes how to secure messages using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security features.</span></span>  
+ [<span data-ttu-id="af95c-116">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="af95c-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ <span data-ttu-id="af95c-117">Beschreibt, wie Nachrichten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsfunktionen gesichert werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-117">Describes how to secure messages using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security features.</span></span>  
   
- [<span data-ttu-id="9eafb-118">Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- <span data-ttu-id="9eafb-119">Veranschaulicht allgemeine Authentifizierungsaufgaben.</span><span class="sxs-lookup"><span data-stu-id="9eafb-119">Demonstrates common authentication tasks.</span></span>  
+ [<span data-ttu-id="af95c-118">Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="af95c-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ <span data-ttu-id="af95c-119">Veranschaulicht allgemeine Authentifizierungsaufgaben.</span><span class="sxs-lookup"><span data-stu-id="af95c-119">Demonstrates common authentication tasks.</span></span>  
   
- [<span data-ttu-id="9eafb-120">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- <span data-ttu-id="9eafb-121">Beschreibt allgemeine Autorisierungsszenarien mit Sicherheitsimplementierungen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-121">Describes common authorization scenarios with security implementations.</span></span>  
+ [<span data-ttu-id="af95c-120">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="af95c-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ <span data-ttu-id="af95c-121">Beschreibt allgemeine Autorisierungsszenarien mit Sicherheitsimplementierungen.</span><span class="sxs-lookup"><span data-stu-id="af95c-121">Describes common authorization scenarios with security implementations.</span></span>  
   
- [<span data-ttu-id="9eafb-122">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="9eafb-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- <span data-ttu-id="9eafb-123">Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
+ [<span data-ttu-id="af95c-122">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="af95c-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ <span data-ttu-id="af95c-123">Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
   
- [<span data-ttu-id="9eafb-124">Teilweise Vertrauenswürdigkeit</span><span class="sxs-lookup"><span data-stu-id="9eafb-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- <span data-ttu-id="9eafb-125">Beschreibt, wie teilweise vertrauenswürdige Szenarien und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Einschränkungen ausgeführt werden, wenn sie als teilweise vertrauenswürdig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-125">Describes how to run partially-trusted scenarios and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limitations when running partially trusted.</span></span>  
+ [<span data-ttu-id="af95c-124">Teilweise Vertrauenswürdigkeit</span><span class="sxs-lookup"><span data-stu-id="af95c-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ <span data-ttu-id="af95c-125">Beschreibt, wie teilweise vertrauenswürdige Szenarien und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Einschränkungen ausgeführt werden, wenn sie als teilweise vertrauenswürdig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-125">Describes how to run partially-trusted scenarios and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limitations when running partially trusted.</span></span>  
   
- [<span data-ttu-id="9eafb-126">Überwachung</span><span class="sxs-lookup"><span data-stu-id="9eafb-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- <span data-ttu-id="9eafb-127">Beschreibt, wie Sicherheitsereignisse überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-127">Describes how to audit security events.</span></span>  
+ [<span data-ttu-id="af95c-126">Überwachung</span><span class="sxs-lookup"><span data-stu-id="af95c-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ <span data-ttu-id="af95c-127">Beschreibt, wie Sicherheitsereignisse überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="af95c-127">Describes how to audit security events.</span></span>  
   
- [<span data-ttu-id="9eafb-128">Sicherheitsleitfaden und bewährte Methoden</span><span class="sxs-lookup"><span data-stu-id="9eafb-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- <span data-ttu-id="9eafb-129">Richtlinien zum Erstellen von sicheren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-129">Guidelines for creating secure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span>  
+ [<span data-ttu-id="af95c-128">Sicherheitsleitfaden und bewährte Methoden</span><span class="sxs-lookup"><span data-stu-id="af95c-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ <span data-ttu-id="af95c-129">Richtlinien zum Erstellen von sicheren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="af95c-129">Guidelines for creating secure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="9eafb-130">Verweis</span><span class="sxs-lookup"><span data-stu-id="9eafb-130">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="af95c-130">Verweis</span><span class="sxs-lookup"><span data-stu-id="af95c-130">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="9eafb-131">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9eafb-131">Related Sections</span></span>  
- [<span data-ttu-id="9eafb-132">Details zur WCF-Funktion</span><span class="sxs-lookup"><span data-stu-id="9eafb-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="af95c-131">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="af95c-131">Related Sections</span></span>  
+ [<span data-ttu-id="af95c-132">Details zur WCF-Funktion</span><span class="sxs-lookup"><span data-stu-id="af95c-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [<span data-ttu-id="9eafb-133">Einfache WCF-Programmierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="af95c-133">Einfache WCF-Programmierung</span><span class="sxs-lookup"><span data-stu-id="af95c-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [<span data-ttu-id="9eafb-134">Tutorial mit ersten Schritten</span><span class="sxs-lookup"><span data-stu-id="9eafb-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="af95c-134">Tutorial mit ersten Schritten</span><span class="sxs-lookup"><span data-stu-id="af95c-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [<span data-ttu-id="9eafb-135">Konzeptionelle Übersicht</span><span class="sxs-lookup"><span data-stu-id="9eafb-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="af95c-135">Konzeptionelle Übersicht</span><span class="sxs-lookup"><span data-stu-id="af95c-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9eafb-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9eafb-136">See Also</span></span>  
- [<span data-ttu-id="9eafb-137">Konfigurieren der Anwendung</span><span class="sxs-lookup"><span data-stu-id="9eafb-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+## <a name="see-also"></a><span data-ttu-id="af95c-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af95c-136">See Also</span></span>  
+ [<span data-ttu-id="af95c-137">Konfigurieren der Anwendung</span><span class="sxs-lookup"><span data-stu-id="af95c-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

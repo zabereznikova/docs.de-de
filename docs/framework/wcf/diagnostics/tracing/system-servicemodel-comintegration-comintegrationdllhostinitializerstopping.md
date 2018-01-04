@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74173fdd14f2258306ea044f865f47f0561c1818
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a223ec13088a7dde1ad24363453967433824777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopping"></a><span data-ttu-id="96623-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="96623-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>
-<span data-ttu-id="96623-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="96623-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopping"></a><span data-ttu-id="3061c-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="3061c-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>
+<span data-ttu-id="3061c-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="3061c-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>  
   
-## <a name="description"></a><span data-ttu-id="96623-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="96623-104">Description</span></span>  
- <span data-ttu-id="96623-105">ComPlus: Beenden des DllHost-Initialisierers.</span><span class="sxs-lookup"><span data-stu-id="96623-105">ComPlus: Stopping the DllHost initializer.</span></span>  
+## <a name="description"></a><span data-ttu-id="3061c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3061c-104">Description</span></span>  
+ <span data-ttu-id="3061c-105">ComPlus: Beenden des DllHost-Initialisierers.</span><span class="sxs-lookup"><span data-stu-id="3061c-105">ComPlus: Stopping the DllHost initializer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96623-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="96623-106">See Also</span></span>  
- [<span data-ttu-id="96623-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="96623-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="96623-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="96623-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="96623-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="96623-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3061c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3061c-106">See Also</span></span>  
+ [<span data-ttu-id="3061c-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="3061c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3061c-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="3061c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3061c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="3061c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

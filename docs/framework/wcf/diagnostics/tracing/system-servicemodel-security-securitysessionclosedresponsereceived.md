@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 45ae69df850c3a81b1d9b3b2925633c1dbfc7fce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 496555662f0b1c24ebb84dc07b0664078fa66751
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionclosedresponsereceived"></a><span data-ttu-id="44d1b-102">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span><span class="sxs-lookup"><span data-stu-id="44d1b-102">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span></span>
-<span data-ttu-id="44d1b-103">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span><span class="sxs-lookup"><span data-stu-id="44d1b-103">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionclosedresponsereceived"></a><span data-ttu-id="b3535-102">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span><span class="sxs-lookup"><span data-stu-id="b3535-102">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span></span>
+<span data-ttu-id="b3535-103">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span><span class="sxs-lookup"><span data-stu-id="b3535-103">System.ServiceModel.Security.SecuritySessionClosedResponseReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="44d1b-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="44d1b-104">Description</span></span>  
- <span data-ttu-id="44d1b-105">Die Clientsicherheitssitzung hat eine "Geschlossen"-Antwort vom Server empfangen.</span><span class="sxs-lookup"><span data-stu-id="44d1b-105">The client security session received a closed response from the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="b3535-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b3535-104">Description</span></span>  
+ <span data-ttu-id="b3535-105">Die Clientsicherheitssitzung hat eine "Geschlossen"-Antwort vom Server empfangen.</span><span class="sxs-lookup"><span data-stu-id="b3535-105">The client security session received a closed response from the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44d1b-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="44d1b-106">See Also</span></span>  
- [<span data-ttu-id="44d1b-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="44d1b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="44d1b-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="44d1b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="44d1b-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="44d1b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3535-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b3535-106">See Also</span></span>  
+ [<span data-ttu-id="b3535-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="b3535-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b3535-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="b3535-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b3535-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="b3535-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

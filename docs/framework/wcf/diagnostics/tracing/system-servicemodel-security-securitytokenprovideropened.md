@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 356900a86d7362816cd16e4ed5341cfa11d6f8f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5161e9522a3d0ee04df8e6a1c336ed6e1d65cd8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="a44d8-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="a44d8-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
-<span data-ttu-id="a44d8-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="a44d8-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
+# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="26062-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="26062-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
+<span data-ttu-id="26062-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="26062-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a44d8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a44d8-104">Description</span></span>  
- <span data-ttu-id="a44d8-105">Ein Sicherheitstokenanbieter wurde geöffnet.</span><span class="sxs-lookup"><span data-stu-id="a44d8-105">A security token provider was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="26062-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="26062-104">Description</span></span>  
+ <span data-ttu-id="26062-105">Ein Sicherheitstokenanbieter wurde geöffnet.</span><span class="sxs-lookup"><span data-stu-id="26062-105">A security token provider was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a44d8-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a44d8-106">See Also</span></span>  
- [<span data-ttu-id="a44d8-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a44d8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a44d8-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="a44d8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a44d8-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="a44d8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="26062-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="26062-106">See Also</span></span>  
+ [<span data-ttu-id="26062-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="26062-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="26062-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="26062-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="26062-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="26062-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 436c2b9c5bf2cc0e87326b9f0d791942e1289801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a43c3263e9ba8dc2dd4a3f9c6afc09d1a673d76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentityverificationfailure"></a><span data-ttu-id="04a48-102">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span><span class="sxs-lookup"><span data-stu-id="04a48-102">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span></span>
-<span data-ttu-id="04a48-103">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span><span class="sxs-lookup"><span data-stu-id="04a48-103">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentityverificationfailure"></a><span data-ttu-id="0e985-102">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span><span class="sxs-lookup"><span data-stu-id="0e985-102">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span></span>
+<span data-ttu-id="0e985-103">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span><span class="sxs-lookup"><span data-stu-id="0e985-103">System.ServiceModel.Security.SecurityIdentityVerificationFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="04a48-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="04a48-104">Description</span></span>  
- <span data-ttu-id="04a48-105">Die Identitätsüberprüfung ist fehlgeschlagen.</span><span class="sxs-lookup"><span data-stu-id="04a48-105">The identity verification failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="0e985-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e985-104">Description</span></span>  
+ <span data-ttu-id="0e985-105">Die Identitätsüberprüfung ist fehlgeschlagen.</span><span class="sxs-lookup"><span data-stu-id="0e985-105">The identity verification failed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04a48-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04a48-106">See Also</span></span>  
- [<span data-ttu-id="04a48-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="04a48-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="04a48-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="04a48-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="04a48-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="04a48-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0e985-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0e985-106">See Also</span></span>  
+ [<span data-ttu-id="0e985-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="0e985-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0e985-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="0e985-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0e985-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="0e985-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

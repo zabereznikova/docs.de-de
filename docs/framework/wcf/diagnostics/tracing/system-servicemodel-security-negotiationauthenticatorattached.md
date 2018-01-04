@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a86dfc65882826e23d2b5e3e5b627cb7622efbbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86f7076ba4c66a4b31004faaacb281078ee27091
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a><span data-ttu-id="46dad-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="46dad-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>
-<span data-ttu-id="46dad-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="46dad-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>  
+# <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a><span data-ttu-id="53163-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="53163-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>
+<span data-ttu-id="53163-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="53163-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="46dad-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="46dad-104">Description</span></span>  
- <span data-ttu-id="46dad-105">Der NegotiationTokenAuthenticator wurde angefügt.</span><span class="sxs-lookup"><span data-stu-id="46dad-105">The NegotiationTokenAuthenticator was attached.</span></span>  
+## <a name="description"></a><span data-ttu-id="53163-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="53163-104">Description</span></span>  
+ <span data-ttu-id="53163-105">Der NegotiationTokenAuthenticator wurde angefügt.</span><span class="sxs-lookup"><span data-stu-id="53163-105">The NegotiationTokenAuthenticator was attached.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46dad-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="46dad-106">See Also</span></span>  
- [<span data-ttu-id="46dad-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="46dad-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="46dad-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="46dad-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="46dad-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="46dad-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="53163-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53163-106">See Also</span></span>  
+ [<span data-ttu-id="53163-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="53163-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="53163-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="53163-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="53163-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="53163-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

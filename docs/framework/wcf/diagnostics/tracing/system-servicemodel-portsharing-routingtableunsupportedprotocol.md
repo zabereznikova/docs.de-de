@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 885ca7407f009d379686ee59ff2d3cd86d0ff354
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bc2b46623164755cedb8870d7b3f8a03072de09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtableunsupportedprotocol"></a><span data-ttu-id="2cc77-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="2cc77-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>
-<span data-ttu-id="2cc77-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="2cc77-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>  
+# <a name="systemservicemodelportsharingroutingtableunsupportedprotocol"></a><span data-ttu-id="6be58-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="6be58-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>
+<span data-ttu-id="6be58-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="6be58-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2cc77-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2cc77-104">Description</span></span>  
- <span data-ttu-id="2cc77-105">Das Protokoll wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="2cc77-105">The protocol is not supported.</span></span>  
+## <a name="description"></a><span data-ttu-id="6be58-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6be58-104">Description</span></span>  
+ <span data-ttu-id="6be58-105">Das Protokoll wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6be58-105">The protocol is not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cc77-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2cc77-106">See Also</span></span>  
- [<span data-ttu-id="2cc77-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="2cc77-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2cc77-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="2cc77-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2cc77-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="2cc77-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6be58-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6be58-106">See Also</span></span>  
+ [<span data-ttu-id="6be58-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="6be58-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6be58-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="6be58-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6be58-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="6be58-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
