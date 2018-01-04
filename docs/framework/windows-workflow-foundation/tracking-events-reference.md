@@ -12,18 +12,19 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9eaf7f8bd4d477b08cda16ca544f240a417f6b21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-events-reference"></a>Referenz zu Nachverfolgungsereignissen
 Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] während der verschiedenen Stadien des Lebenszyklus Überwachungsereignisse aus. Der Host kann diese Ereignisse abonnieren und den aktuellen Status des Workflows in den verschiedenen Stadien des Lebenszyklus nachverfolgen. Die ausgelösten Überwachungsereignisse werden in diesem Abschnitt erläutert.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
-|Ereignis-ID|Ereignisgrad|Ereignismeldung|Schlüsselwörter|  
+|Ereignis-ID|Ereignisgrad|Ereignismeldung|Stichwörter|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 - WorkflowInstanceRecord](../../../docs/framework/windows-workflow-foundation/100-workflowinstancerecord.md)|Information|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  
 |[101 - WorkflowInstanceUnhandledExceptionRecord](../../../docs/framework/windows-workflow-foundation/101-workflowinstanceunhandledexceptionrecord.md)|Fehler|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  

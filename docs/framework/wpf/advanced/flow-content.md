@@ -17,11 +17,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>Fortlaufender Inhalt
 Inhaltselemente bieten die Bausteine zum Erstellen von fortlaufendem Inhalt geeignet für das hosting in einer <xref:System.Windows.Documents.FlowDocument>.  
@@ -30,7 +31,7 @@ Inhaltselemente bieten die Bausteine zum Erstellen von fortlaufendem Inhalt geei
  [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [Übersicht über das TextElement-Inhaltsmodell](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Windows.Documents.FlowDocument>  

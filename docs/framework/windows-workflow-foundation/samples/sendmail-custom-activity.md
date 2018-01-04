@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb8454d3e1e679154bc016e37b83c3ac4ff6768
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet die Funktionen des <xref:System.Net.Mail.SmtpClient>, um E-Mail-Nachrichten asynchron und mit Authentifizierung zu senden. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
@@ -31,7 +32,7 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |UserName|Zeichenfolge|Der Benutzername zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Kennwort|Zeichenfolge|Das Kennwort zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Betreff|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Betreff der Nachricht.|  
-|Body|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Nachrichtentext.|  
+|Text|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Nachrichtentext.|  
 |Anlagen|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Die Anlagenauflistung, die zum Speichern der an diese E-Mail-Nachricht angefügten Daten verwendet wird.|  
 |Von|<xref:System.Net.Mail.MailAddress>|Die Absenderadresse für die E-Mail-Nachricht.|  
 |Beschreibung|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die Adressenauflistung, die die Empfänger dieser E-Mail-Nachricht enthält.|  

@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3f827e9052260c1b836246d38c55e2cb2a9e5cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Gewusst wie: Anzeigen von Dialogfeldern für Windows Forms
 Ein Dialogfeld wird angezeigt, auf die gleiche Weise, die Sie in einer Anwendung eine andere Art anzeigen. Die Startformular lädt automatisch auf, wenn die Anwendung ausgeführt wird. Stellen Sie ein zweites Formular oder Dialogfeld in der Anwendung angezeigt, Schreiben Sie Code geladen und angezeigt wird. Auf ähnliche Weise, um das Formular oder Dialogfeld auszublenden, Schreiben Sie Code zum Entfernen oder ausblenden.  

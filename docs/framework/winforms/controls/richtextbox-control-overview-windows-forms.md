@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Übersicht über das RichTextBox-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird. Die <xref:System.Windows.Forms.RichTextBox> Steuerelement ist alles, was die <xref:System.Windows.Forms.TextBox> Steuerelement bewirkt, kann jedoch auch anzeigen, Schriftarten, Farben und Links; Text und eingebettete Bilder aus einer Datei laden und angegebene Zeichen gefunden. Die <xref:System.Windows.Forms.RichTextBox> Steuerelement wird normalerweise verwendet, geben Sie die Bearbeitung von Text und Anzeigen von Funktionen, wie Textverarbeitungsprogramm erstellten Anwendungen wie Microsoft Word. Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, das <xref:System.Windows.Forms.RichTextBox> Steuerelement Bildlaufleisten anzeigen kann jedoch im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, die Standardeinstellung ist horizontale und vertikale Bildlaufleisten angezeigt, nach Bedarf, und er verfügt über zusätzliche Scrollbar-Einstellungen.  

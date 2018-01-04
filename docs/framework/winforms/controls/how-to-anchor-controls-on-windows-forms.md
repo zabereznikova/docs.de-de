@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Gewusst wie: Verankern von Steuerelementen in Windows Forms
 Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sollten die Steuerelemente im Formular Größe und ordnungsgemäß neu zu positionieren. Zum Ändern der Größe von Steuerelementen dynamisch mit dem Formular können Sie die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft von Windows Forms-Steuerelementen. Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft definiert ein Ankerposition für das Steuerelement. Wenn ein Steuerelement einem Formular verankert ist und der Größe des Formulars, behält das Steuerelement den Abstand zwischen dem Steuerelement und dem Anker Positionen an. Angenommen, Sie haben eine <xref:System.Windows.Forms.TextBox> Steuerelement, das den linken, rechten und unteren Rand des Formulars verbunden ist wie die Größe des Formulars die <xref:System.Windows.Forms.TextBox> ändert die Größe horizontal steuern, sodass er die gleiche Distanz vom die rechten und linken Rand des Formulars verwaltet. Darüber hinaus wird das Steuerelement vertikal positioniert, sodass am Speicherort stets die gleiche Distanz vom unteren Rand des Formulars. Wenn ein Steuerelement verankert ist, und der Größe des Formulars, wird die Position des Steuerelements relativ zu den Rändern des Formulars geändert.  

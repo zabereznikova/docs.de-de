@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5efe73f9d8ae2621cca075f77051cb9c7402e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5be65fc562d5b4d80a57ab068d97d66ccb17b6e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Gewusst wie: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers
 Die Verwendung von Windows Forms <xref:System.Windows.Forms.TabControl> besteht darin, andere Steuerelemente in einer strukturierten Weise anzuzeigen. Sie können diese Anweisungen verwenden, ein Bild auf den Hauptteil einer Registerkarte angezeigt. Informationen zum Hinzufügen eines Symbols auf der Bezeichnungsteil einer Registerkartenseite finden Sie unter [Vorgehensweise: Ändern der Darstellung der TabControl in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

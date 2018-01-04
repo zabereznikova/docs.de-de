@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e716dc74946ac6f18ab82c6834518f0bd6bbea76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6ff3452a60d9cb80a71dacd5841b120b5efbf82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Datenformatierung im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ermöglicht die automatische Konvertierung zwischen Zellenwerten und die Datentypen, die den übergeordneten Spalten angezeigt. Feld Textspalten, z. B. zeichenfolgenentsprechungen von Date, Time, Anzahl und Enumerationswerte anzuzeigen, und konvertieren Benutzereingaben Zeichenfolgenwerte in der Typen, die erforderlich sind, durch den Datenspeicher.  

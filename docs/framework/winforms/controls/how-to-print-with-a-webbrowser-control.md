@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7a0f80785ee923874379a206b344db6a8c80055
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Gewusst wie: Drucken mit einem WebBrowser-Steuerelement
 Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.WebBrowser> Steuerelement auf eine Webseite zu drucken, ohne diese anzuzeigen.  
@@ -39,7 +40,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.For
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die `System`-Assembly und die `System.Windows.Forms`-Assembly.  
+-   Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.WebBrowser>  

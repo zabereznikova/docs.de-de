@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c64715fbc976af5c765da2efe563acdc3d2ae13c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f62b4538b5f91c2f57cab52fa7563680016903a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog-Komponente (Windows Forms)
 Die `PrintDialog`-Komponente in Windows Forms ist ein vorkonfiguriertes Dialogfeld zum Auswählen eines Druckers, zum Auswählen der zu druckenden Seiten sowie zum Bestimmen weiterer druckbezogener Einstellungen in Windows-basierten Anwendungen. Verwenden Sie sie als einfache Lösung für die Auswahl von Druckern und druckbezogenen Einstellungen, anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können Benutzern ermöglichen, diverse Teile ihrer Dokumente zu drucken: Alles drucken, Drucken eines bestimmten Seitenbereichs oder Drucken einer Auswahl. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  

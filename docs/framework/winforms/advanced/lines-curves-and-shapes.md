@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2caa77285ebe327adc690b26baeb58aa800627fb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 04d93203f98c91b0d5bbed5f833745a9bb9ab1d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lines-curves-and-shapes"></a>Linien, Kurven und Formen
 Der Vektorgrafiken [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dient zum Zeichnen von Linien und Kurven zeichnen und zum Zeichnen von Formen und füllen.  
@@ -44,7 +45,7 @@ Der Vektorgrafiken [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-m
  [Kardinale Splines in GDI+](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
  Kardinale Splines definiert und die Klassen, die zum Zeichnen benötigten identifiziert.  
   
- [Bézier-Splines in GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [Bézier-Splines in GDI +](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
  Bézier-Splines definiert und die Klassen, die zum Zeichnen benötigten identifiziert.  
   
  [Grafikpfade in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen
 Bei Verwendung von Multithreading zur Verbesserung der Leistung von Windows Forms-Anwendungen müssen Sie sicherstellen, dass Sie die Steuerelemente auf threadsichere Weise aufrufen.  
@@ -103,7 +104,7 @@ private:
   
  Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] können Sie feststellen, wann Sie auf die Steuerelemente auf nicht threadsichere Weise zugreifen. Wenn Sie die Anwendung im Debugger ausführen und ein anderer Thread als der, der ein Steuerelement erstellt hat, versucht, das Steuerelement aufzurufen, löst der Debugger eine <xref:System.InvalidOperationException> mit einer Meldung wie "Zugriff auf Steuerelement *Steuerelementname* von einem anderen Thread als dem Erstellungsthread" aus.  
   
- Diese Ausnahme tritt zuverlässig beim Debuggen und unter bestimmten Bedingungen zur Laufzeit auf. Diese Ausnahme wird möglicherweise angezeigt, wenn Sie Anwendungen debuggen, die Sie mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vor [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]geschrieben haben. Es wird dringend empfohlen, dieses Problem ggf. zu beheben. Sie können es aber deaktivieren, indem Sie die <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> -Eigenschaft auf `false`festlegen. Dies bewirkt, dass das Steuerelement wie unter Visual Studio .NET 2003 und [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]ausgeführt wird.  
+ Diese Ausnahme tritt zuverlässig beim Debuggen und unter bestimmten Bedingungen zur Laufzeit auf. Diese Ausnahme wird möglicherweise angezeigt, wenn Sie Anwendungen debuggen, die Sie mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vor [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] geschrieben haben. Es wird dringend empfohlen, dieses Problem ggf. zu beheben. Sie können es aber deaktivieren, indem Sie die <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> -Eigenschaft auf `false`festlegen. Dies bewirkt, dass das Steuerelement wie unter Visual Studio .NET 2003 und [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]ausgeführt wird.  
   
 > [!NOTE]
 >  Wenn Sie ActiveX-Steuerelemente in einem Formular verwenden, erhalten Sie möglicherweise die threadübergreifende <xref:System.InvalidOperationException> beim Ausführen im Debugger. In diesem Fall unterstützt das ActiveX-Steuerelement kein Multithreading. Weitere Informationen zum Verwenden von ActiveX-Steuerelementen mit Windows Forms finden Sie unter [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md). Wenn Sie Visual Studio verwenden, können Sie diese Ausnahme verhindern, indem Sie den Visual Studio-Hostprozess deaktivieren. Informationen hierzu finden Sie unter [How to: Disable the Hosting Process](/visualstudio/ide/how-to-disable-the-hosting-process).  

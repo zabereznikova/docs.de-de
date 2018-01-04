@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aee4c6b99572ca5fa82036ed817c95c02d447a11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel-Steuerelement
 Das `ToolStripPanel`-Steuerelement ermöglicht im angedockten Zustand die gemeinsame Nutzung des horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs sowie das Anordnen von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen, wenn Sie die vier Bereiche und den Hauptbereich eines <xref:System.Windows.Forms.ToolStripContainer> nicht benötigen.  

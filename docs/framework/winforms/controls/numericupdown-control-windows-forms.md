@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown-Steuerelement (Windows Forms)
 Das `NumericUpDown`-Steuerelement in Windows Forms sieht wie eine Kombination aus einem Textfeld und einem Paar Pfeilen aus, auf die der Benutzer klicken kann, um einen Wert anzupassen. Das Steuerelement zeigt einen einzelnen numerischen Wert aus einer Liste mit Auswahlmöglichkeiten an und legt ihn fest. Die Zahl kann durch Klicken auf die Schaltflächen Nach oben bzw. Nach unten oder durch Drücken der NACH-OBEN- bzw. der NACH-UNTEN-TASTE und Eingabe einer Zahl vergrößert oder verkleinert werden. Durch Drücken der NACH-OBEN-TASTE wird der Wert in Richtung Maximalwert geändert. Durch Drücken der NACH-UNTEN-TASTE wird der Wert in Richtung Minimum geändert. Diese Art des Steuerelements ist z. B. zur Lautstärkeregelung bei der Musikwiedergabe sinnvoll. Numerische Auf-Ab-Steuerelemente werden in einigen Anwendungen der Windows-Systemsteuerung verwendet.  

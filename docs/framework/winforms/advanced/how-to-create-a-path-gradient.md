@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 47a70e55d0f5b6197dc7c77b9e95f2279b814737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-path-gradient"></a>Gewusst wie: Erstellen eines linearen Pfadfarbverlaufs
 Die <xref:System.Drawing.Drawing2D.PathGradientBrush> -Klasse ermöglicht es Ihnen die Möglichkeit, die Sie ausfüllen einer Form mit allmählich Ändern der Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt eines Pfads und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für jede mehrere Punkte entlang der Grenze eines Pfads angeben.  

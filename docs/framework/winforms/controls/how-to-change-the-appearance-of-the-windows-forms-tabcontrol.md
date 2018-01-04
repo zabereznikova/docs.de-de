@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Gewusst wie: Ändern der Darstellung der TabControl-Komponente in Windows Forms
 Sie können die Darstellung der Registerkarten in Windows Forms mithilfe von Eigenschaften ändern die <xref:System.Windows.Forms.TabControl> und <xref:System.Windows.Forms.TabPage> Objekte, die die einzelnen Registerkarten des Steuerelements bilden. Durch Festlegen dieser Eigenschaften, können Sie Bilder auf Registerkarten anzeigen, Registerkarten vertikal anstatt horizontal anzuzeigen, mehrere Zeilen mit Registerkarten anzeigen und aktivieren oder deaktivieren Registerkarten programmgesteuert.  

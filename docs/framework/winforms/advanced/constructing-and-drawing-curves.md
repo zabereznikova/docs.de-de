@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 801af10f7b9e5e7998fc061537977c5bced6bdb3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 62e9b9e0e1aa432578b7173cd58f88dd44957f84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-curves"></a>Erstellen und Zeichnen von Kurven
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]unterstützt mehrere Typen von Kurven: Ellipsen, Bögen, kardinale Splines und Bézier-Splines. Durch das umschließende Rechteck wird eine Ellipse definiert. ein Bogen ist ein Teil einer Ellipse, die durch einen Anfangswinkel und bei einem mittelpunktswinkel definiert. Eine cardinal-Splinekurve durch ein Array aus Punkten und Spannungsparameter definiert ist – die Kurve durchläuft reibungslos jedem Punkt im Array, und die Spannungsparameter beeinflusst die Möglichkeit, Steuerpunkte. Eine Béziersplinekurve wird durch zwei Endpunkte und die beiden Steuerpunkte, die die Kurve nicht über die Steuerpunkte übergibt definiert, aber die Steuerpunkte beeinflussen die Richtung und biegen wie die Kurve wird von einem Endpunkt zum anderen wechselt.  

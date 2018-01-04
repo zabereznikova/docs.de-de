@@ -26,11 +26,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0e2aec42fa3656b64140134efa27fe8e940e1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Gewusst wie: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms
 Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kann eine Nur-Text-, Unicode-Nur-Text- oder Rich-Text-Format-Datei (RTF) anzeigen. Rufen Sie dazu die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auf. Sie können die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auch zum Laden von Daten aus einem Stream verwenden. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
@@ -41,7 +42,7 @@ Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kan
   
 2.  Rufen Sie die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf und geben Sie dabei die zu ladende Datei und optional einen Dateityp an. Im folgenden Beispiel stammt die zu ladende Datei aus der <xref:System.Windows.Forms.OpenFileDialog> -Eigenschaft der <xref:System.Windows.Forms.FileDialog.FileName%2A> Komponente. Wenn Sie die Methode mit einem Dateinamen als einziges Argument aufrufen, wird RTF als Dateityp angenommen. Rufen Sie zum Angeben eines anderen Dateityps die Methode mit dem Wert der <xref:System.Windows.Forms.RichTextBoxStreamType> -Enumeration als zweites Argument auf.  
   
-     Im folgenden Beispiel wird die <xref:System.Windows.Forms.OpenFileDialog> -Komponente angezeigt, wenn auf eine Schaltfläche geklickt wird. Die ausgewählte Datei wird anschließend geöffnet und im <xref:System.Windows.Forms.RichTextBox> -Steuerelement angezeigt. In diesem Beispiel wird angenommen, dass eine Form eine Schaltfläche`btnOpenFile`enthält.  
+     Im folgenden Beispiel wird die <xref:System.Windows.Forms.OpenFileDialog> -Komponente angezeigt, wenn auf eine Schaltfläche geklickt wird. Die ausgewählte Datei wird anschließend geöffnet und im <xref:System.Windows.Forms.RichTextBox> -Steuerelement angezeigt. In diesem Beispiel wird angenommen, dass eine Form eine Schaltfläche `btnOpenFile` enthält.  
   
     ```vb  
     Private Sub btnOpenFile_Click(ByVal sender As System.Object, _  

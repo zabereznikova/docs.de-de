@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9a8bdc54f3f321b37bda897aac1f340f7a46aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3a19bdd7007a7e47fa1a8ad975112e53c1b6eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Gewusst wie: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.ListView> Steuerelement kann Symbole aus drei Bildlisten angezeigt. Die Liste, Details und SmallIcon Ansichten zeigen Bilder aus der Bildliste, angegeben der <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaft. Die LargeIcon zeigt Bilder aus der Bildliste, angegeben der <xref:System.Windows.Forms.ListView.LargeImageList%2A> Eigenschaft. Eine Listenansicht kann auch einen zusätzlichen Satz von Symbolen, legen Sie im Anzeigen der <xref:System.Windows.Forms.ListView.StateImageList%2A> neben den großen oder kleinen Symbolen-Eigenschaft. Weitere Informationen zu Bildlisten, finden Sie unter [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) und [wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

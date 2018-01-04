@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Gewusst wie: Festlegen von Rasteroptionen für alle Windows Forms
 Wie Sie werden, verwendet um die Arbeiten in der [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Entwicklungsumgebung vornehmen, können Sie Voreinstellungen für alle Formulare und Projekten arbeiten Sie mit in Windows Forms-Designer festlegen.  

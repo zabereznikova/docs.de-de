@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Übersicht über das ToolStripProgressBar-Steuerelement
 Die <xref:System.Windows.Forms.ToolStripProgressBar> kombiniert die rafting und Funktionen für das Rendern von allen <xref:System.Windows.Forms.ToolStrip> Steuerelemente mit seinen normalen Prozess Tracking-Funktionen. Ein <xref:System.Windows.Forms.ToolStripProgressBar> wird von den meisten Fällen gehostet <xref:System.Windows.Forms.StatusStrip>, und weniger häufig durch eine <xref:System.Windows.Forms.ToolStrip>.  
@@ -31,7 +32,7 @@ Die <xref:System.Windows.Forms.ToolStripProgressBar> kombiniert die rafting und 
   
 ### <a name="important-toolstripprogressbar-members"></a>Wichtige ToolStripProgressBar-Member  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Ruft ab oder legt einen Wert, der die Verzögerung zwischen den einzelnen darstellt <xref:System.Windows.Forms.ProgressBarStyle.Marquee> Update in Millisekunden angezeigt.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Ruft ab oder legt die obere Grenze des Bereichs, der für diesen definiert ist <xref:System.Windows.Forms.ToolStripProgressBar>.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35f89bb5d87ef58c5ecda7be4cb9fb41da08e8a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-shear-colors"></a>Gewusst wie: Scheren von Farben
 Scheren erhöht oder verringert eine Farbe Komponente durch einen Betrag proportional zu einer anderen Farbe-Komponente. Betrachten Sie beispielsweise die Transformation, in dem die Hälfte der Wert des Blauanteils Rotanteils gestiegen ist. Unter solchen eine Transformation werden die Farbe (0,2, 0,5, 1), (0,7, 0,5, 1). Neuen Rotanteils ist 0,2 + ((1/2)(1) = 0,7.  
@@ -48,7 +49,7 @@ Scheren erhöht oder verringert eine Farbe Komponente durch einen Betrag proport
  [!code-vb[System.Drawing.Misc3#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie `ColorBars.bmp` mit einem Image-Name und Pfad auf Ihrem System ungültig.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie `ColorBars.bmp` mit einem Image-Name und Pfad auf Ihrem System ungültig.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Drawing.Imaging.ColorMatrix>  

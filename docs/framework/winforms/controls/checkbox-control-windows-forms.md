@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f635ecbce5095ff70ae66a78d24310bfb8249a51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox-Steuerelement (Windows Forms)
 Das Windows Forms-Steuerelement `CheckBox` zeigt an, ob eine bestimmte Bedingung aktiviert oder deaktiviert ist. Es wird häufig verwendet, um dem Benutzer eine Ja/Nein- oder Wahr/Falsch-Auswahl zu präsentieren. Sie können Kontrollkästchen-Steuerelemente in Gruppen verwenden, um mehrere Optionen anzuzeigen, unter denen der Benutzer eine oder mehrere auswählen kann. Es ähnelt dem <xref:System.Windows.Forms.RadioButton>-Steuerelement, jedoch kann eine beliebige Anzahl von gruppierten `CheckBox`-Steuerelementen ausgewählt werden.  

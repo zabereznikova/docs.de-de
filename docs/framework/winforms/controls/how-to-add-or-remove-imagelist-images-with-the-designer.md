@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71fa29fc36292bb6620ab458785abaabc749c38d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05dd1e06c2cba31bca1282e8d409ab1b5610d1dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Gewusst wie: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers
 Sie können Bilder, Hinzufügen einer <xref:System.Windows.Forms.ImageList> Komponente auf verschiedene Weise. Sie können Bilder sehr schnell hinzufügen, indem mithilfe des Smarttags zugeordnet der <xref:System.Windows.Forms.ImageList>, oder wenn Sie mehrere andere Eigenschaften festlegen der <xref:System.Windows.Forms.ImageList>, Sie könnten praktischerweise mehr Hinzufügen von Bildern mit dem Eigenschaftenfenster. Sie können auch Bilder hinzufügen, mithilfe von Code. Weitere Informationen zum Hinzufügen von Bildern mit Code finden Sie unter [wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Füllen Sie in der Regel die <xref:System.Windows.Forms.ImageList> -Komponente mit Bildern, bevor Sie mit einem Steuerelement verknüpft ist, aber dies ist nicht erforderlich.  

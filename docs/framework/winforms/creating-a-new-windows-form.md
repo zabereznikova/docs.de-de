@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.workload: dotnet
+ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Erstellen neuer Windows Forms
 Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. Um den Lerneffekt zu Windows Forms-Anwendung finden Sie der zugehörigen Themenliste unter den Steuerelementen in diese, Ereignisse und Behandlung von Ereignissen und zum Behandeln der Eingaben des Benutzers verwendet werden können.  
