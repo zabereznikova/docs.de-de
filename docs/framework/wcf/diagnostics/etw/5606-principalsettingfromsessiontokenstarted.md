@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba3d6e9fae1f6f0201275d8398a998215d9b8ea7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9be43acff1df3969e81c4cd649fcb4508fa6980
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5606---principalsettingfromsessiontokenstarted"></a><span data-ttu-id="80a84-102">5606 - PrincipalSettingFromSessionTokenStarted</span><span class="sxs-lookup"><span data-stu-id="80a84-102">5606 - PrincipalSettingFromSessionTokenStarted</span></span>
-## <a name="properties"></a><span data-ttu-id="80a84-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="80a84-103">Properties</span></span>  
+# <a name="5606---principalsettingfromsessiontokenstarted"></a><span data-ttu-id="86d8a-102">5606 - PrincipalSettingFromSessionTokenStarted</span><span class="sxs-lookup"><span data-stu-id="86d8a-102">5606 - PrincipalSettingFromSessionTokenStarted</span></span>
+## <a name="properties"></a><span data-ttu-id="86d8a-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="86d8a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="80a84-104">ID</span><span class="sxs-lookup"><span data-stu-id="80a84-104">ID</span></span>|<span data-ttu-id="80a84-105">5606</span><span class="sxs-lookup"><span data-stu-id="80a84-105">5606</span></span>|  
-|<span data-ttu-id="80a84-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="80a84-106">Keywords</span></span>|<span data-ttu-id="80a84-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="80a84-107">Security</span></span>|  
-|<span data-ttu-id="80a84-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="80a84-108">Level</span></span>|<span data-ttu-id="80a84-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="80a84-109">Verbose</span></span>|  
-|<span data-ttu-id="80a84-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="80a84-110">Channel</span></span>|<span data-ttu-id="80a84-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="80a84-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="86d8a-104">ID</span><span class="sxs-lookup"><span data-stu-id="86d8a-104">ID</span></span>|<span data-ttu-id="86d8a-105">5606</span><span class="sxs-lookup"><span data-stu-id="86d8a-105">5606</span></span>|  
+|<span data-ttu-id="86d8a-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="86d8a-106">Keywords</span></span>|<span data-ttu-id="86d8a-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="86d8a-107">Security</span></span>|  
+|<span data-ttu-id="86d8a-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="86d8a-108">Level</span></span>|<span data-ttu-id="86d8a-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="86d8a-109">Verbose</span></span>|  
+|<span data-ttu-id="86d8a-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="86d8a-110">Channel</span></span>|<span data-ttu-id="86d8a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="86d8a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="80a84-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="80a84-112">Description</span></span>  
- <span data-ttu-id="80a84-113">Dieses Ereignis wird ausgegeben, wenn die Prinzipaleinstellung vom Sitzungstoken gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="80a84-113">This event is emitted when the principal setting from session token started.</span></span>  
+## <a name="description"></a><span data-ttu-id="86d8a-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="86d8a-112">Description</span></span>  
+ <span data-ttu-id="86d8a-113">Dieses Ereignis wird ausgegeben, wenn die Prinzipaleinstellung vom Sitzungstoken gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="86d8a-113">This event is emitted when the principal setting from session token started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="80a84-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="80a84-114">Message</span></span>  
- <span data-ttu-id="80a84-115">Prinzipaleinstellung aus dem Sitzungstoken gestartet.</span><span class="sxs-lookup"><span data-stu-id="80a84-115">Principal setting from session token started.</span></span>  
+## <a name="message"></a><span data-ttu-id="86d8a-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="86d8a-114">Message</span></span>  
+ <span data-ttu-id="86d8a-115">Prinzipaleinstellung aus dem Sitzungstoken gestartet.</span><span class="sxs-lookup"><span data-stu-id="86d8a-115">Principal setting from session token started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="80a84-116">Details</span><span class="sxs-lookup"><span data-stu-id="80a84-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="86d8a-116">Details</span><span class="sxs-lookup"><span data-stu-id="86d8a-116">Details</span></span>

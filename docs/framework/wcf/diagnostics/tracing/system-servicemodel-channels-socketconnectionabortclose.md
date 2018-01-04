@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f8d9c0180440417868e4dc4817f739ecf4cc2e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 113253e49ce6d993e9b543f30f4d6a4a5887587d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="8206b-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="8206b-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
-<span data-ttu-id="8206b-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="8206b-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="e6d2c-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="e6d2c-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
+<span data-ttu-id="e6d2c-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="e6d2c-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8206b-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8206b-104">Description</span></span>  
- <span data-ttu-id="8206b-105">SocketConnection wurde durch "Schließen" abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="8206b-105">SocketConnection aborted under Close.</span></span>  
+## <a name="description"></a><span data-ttu-id="e6d2c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e6d2c-104">Description</span></span>  
+ <span data-ttu-id="e6d2c-105">SocketConnection wurde durch "Schließen" abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="e6d2c-105">SocketConnection aborted under Close.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8206b-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8206b-106">See Also</span></span>  
- [<span data-ttu-id="8206b-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="8206b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8206b-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="8206b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8206b-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="8206b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e6d2c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6d2c-106">See Also</span></span>  
+ [<span data-ttu-id="e6d2c-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="e6d2c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e6d2c-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="e6d2c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e6d2c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="e6d2c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccecad0c19c423bfdbd5d7de71a7b6a746c699d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b004e66e0954422e5d1a1e2035f2833982daea9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3300---receivecontextcompletefailed"></a><span data-ttu-id="3b645-102">3300 - ReceiveContextCompleteFailed</span><span class="sxs-lookup"><span data-stu-id="3b645-102">3300 - ReceiveContextCompleteFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="3b645-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="3b645-103">Properties</span></span>  
+# <a name="3300---receivecontextcompletefailed"></a><span data-ttu-id="a621b-102">3300 - ReceiveContextCompleteFailed</span><span class="sxs-lookup"><span data-stu-id="a621b-102">3300 - ReceiveContextCompleteFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="a621b-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a621b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3b645-104">ID</span><span class="sxs-lookup"><span data-stu-id="3b645-104">ID</span></span>|<span data-ttu-id="3b645-105">3300</span><span class="sxs-lookup"><span data-stu-id="3b645-105">3300</span></span>|  
-|<span data-ttu-id="3b645-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="3b645-106">Keywords</span></span>|<span data-ttu-id="3b645-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="3b645-107">Channel</span></span>|  
-|<span data-ttu-id="3b645-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="3b645-108">Level</span></span>|<span data-ttu-id="3b645-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="3b645-109">Warning</span></span>|  
-|<span data-ttu-id="3b645-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="3b645-110">Channel</span></span>|<span data-ttu-id="3b645-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="3b645-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="a621b-104">ID</span><span class="sxs-lookup"><span data-stu-id="a621b-104">ID</span></span>|<span data-ttu-id="a621b-105">3300</span><span class="sxs-lookup"><span data-stu-id="a621b-105">3300</span></span>|  
+|<span data-ttu-id="a621b-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="a621b-106">Keywords</span></span>|<span data-ttu-id="a621b-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="a621b-107">Channel</span></span>|  
+|<span data-ttu-id="a621b-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="a621b-108">Level</span></span>|<span data-ttu-id="a621b-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="a621b-109">Warning</span></span>|  
+|<span data-ttu-id="a621b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a621b-110">Channel</span></span>|<span data-ttu-id="a621b-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="a621b-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3b645-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3b645-112">Description</span></span>  
- <span data-ttu-id="3b645-113">Dieses Ereignis wird ausgegeben, wenn der Empfangskontext nicht abgeschlossen werden kann.</span><span class="sxs-lookup"><span data-stu-id="3b645-113">This event is emitted when the receive context fails to complete.</span></span>  
+## <a name="description"></a><span data-ttu-id="a621b-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a621b-112">Description</span></span>  
+ <span data-ttu-id="a621b-113">Dieses Ereignis wird ausgegeben, wenn der Empfangskontext nicht abgeschlossen werden kann.</span><span class="sxs-lookup"><span data-stu-id="a621b-113">This event is emitted when the receive context fails to complete.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3b645-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="3b645-114">Message</span></span>  
- <span data-ttu-id="3b645-115">%1 konnte nicht abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="3b645-115">Failed to Complete %1.</span></span>  
+## <a name="message"></a><span data-ttu-id="a621b-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="a621b-114">Message</span></span>  
+ <span data-ttu-id="a621b-115">%1 konnte nicht abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="a621b-115">Failed to Complete %1.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3b645-116">Details</span><span class="sxs-lookup"><span data-stu-id="3b645-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a621b-116">Details</span><span class="sxs-lookup"><span data-stu-id="a621b-116">Details</span></span>

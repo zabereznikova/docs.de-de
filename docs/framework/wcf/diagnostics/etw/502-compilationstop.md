@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c6a15424758ea90623afb37258827a8766a90aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a6ca13864d703e905cc77409ba12fc8883798d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="502---compilationstop"></a><span data-ttu-id="089a2-102">502 - CompilationStop</span><span class="sxs-lookup"><span data-stu-id="089a2-102">502 - CompilationStop</span></span>
-## <a name="properties"></a><span data-ttu-id="089a2-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="089a2-103">Properties</span></span>  
+# <a name="502---compilationstop"></a><span data-ttu-id="4e963-102">502 - CompilationStop</span><span class="sxs-lookup"><span data-stu-id="4e963-102">502 - CompilationStop</span></span>
+## <a name="properties"></a><span data-ttu-id="4e963-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4e963-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="089a2-104">ID</span><span class="sxs-lookup"><span data-stu-id="089a2-104">ID</span></span>|<span data-ttu-id="089a2-105">502</span><span class="sxs-lookup"><span data-stu-id="089a2-105">502</span></span>|  
-|<span data-ttu-id="089a2-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="089a2-106">Keywords</span></span>|<span data-ttu-id="089a2-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="089a2-107">WebHost</span></span>|  
-|<span data-ttu-id="089a2-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="089a2-108">Level</span></span>|<span data-ttu-id="089a2-109">Information</span><span class="sxs-lookup"><span data-stu-id="089a2-109">Information</span></span>|  
-|<span data-ttu-id="089a2-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="089a2-110">Channel</span></span>|<span data-ttu-id="089a2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="089a2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="4e963-104">ID</span><span class="sxs-lookup"><span data-stu-id="4e963-104">ID</span></span>|<span data-ttu-id="4e963-105">502</span><span class="sxs-lookup"><span data-stu-id="4e963-105">502</span></span>|  
+|<span data-ttu-id="4e963-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="4e963-106">Keywords</span></span>|<span data-ttu-id="4e963-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="4e963-107">WebHost</span></span>|  
+|<span data-ttu-id="4e963-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="4e963-108">Level</span></span>|<span data-ttu-id="4e963-109">Information</span><span class="sxs-lookup"><span data-stu-id="4e963-109">Information</span></span>|  
+|<span data-ttu-id="4e963-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="4e963-110">Channel</span></span>|<span data-ttu-id="4e963-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="4e963-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="089a2-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="089a2-112">Description</span></span>  
- <span data-ttu-id="089a2-113">Dieses Ereignis wird ausgegeben, wenn die ServiceHost-Kompilierung beendet wird.</span><span class="sxs-lookup"><span data-stu-id="089a2-113">This event is emitted when the servicehost compilation ends.</span></span>  
+## <a name="description"></a><span data-ttu-id="4e963-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4e963-112">Description</span></span>  
+ <span data-ttu-id="4e963-113">Dieses Ereignis wird ausgegeben, wenn die ServiceHost-Kompilierung beendet wird.</span><span class="sxs-lookup"><span data-stu-id="4e963-113">This event is emitted when the servicehost compilation ends.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="089a2-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="089a2-114">Message</span></span>  
- <span data-ttu-id="089a2-115">Kompilierung beenden.</span><span class="sxs-lookup"><span data-stu-id="089a2-115">End compilation.</span></span>  
+## <a name="message"></a><span data-ttu-id="4e963-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="4e963-114">Message</span></span>  
+ <span data-ttu-id="4e963-115">Kompilierung beenden.</span><span class="sxs-lookup"><span data-stu-id="4e963-115">End compilation.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="089a2-116">Details</span><span class="sxs-lookup"><span data-stu-id="089a2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="4e963-116">Details</span><span class="sxs-lookup"><span data-stu-id="4e963-116">Details</span></span>

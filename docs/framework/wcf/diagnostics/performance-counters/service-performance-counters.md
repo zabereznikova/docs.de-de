@@ -13,21 +13,22 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2bc29ace454c6c41d3ad6ec11f98a9e6fb3e7d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8145ff12f5a9befdef3cbf5edf69e5162c4d7014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-performance-counters"></a><span data-ttu-id="c0bca-102">Dienst-Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="c0bca-102">Service Performance Counters</span></span>
-<span data-ttu-id="c0bca-103">Mit Dienst-Leistungsindikatoren wird das Dienstverhalten insgesamt gemessen und die Leistung des gesamten Diensts geprüft.</span><span class="sxs-lookup"><span data-stu-id="c0bca-103">Service performance counters measure the service behavior as a whole and can be used to diagnose the performance of the whole service.</span></span> <span data-ttu-id="c0bca-104">Die Dienst-Leistungsindikatoren sind unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden, wenn sie im Leistungsmonitor (Perfmon.exe) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="c0bca-104">They can be found under the `ServiceModelService 4.0.0.0` performance object when viewing with Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="c0bca-105">Die Instanzen werden nach dem folgenden Schema benannt:</span><span class="sxs-lookup"><span data-stu-id="c0bca-105">The instances are named using the following pattern:</span></span>  
+# <a name="service-performance-counters"></a><span data-ttu-id="575fe-102">Dienst-Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="575fe-102">Service Performance Counters</span></span>
+<span data-ttu-id="575fe-103">Mit Dienst-Leistungsindikatoren wird das Dienstverhalten insgesamt gemessen und die Leistung des gesamten Diensts geprüft.</span><span class="sxs-lookup"><span data-stu-id="575fe-103">Service performance counters measure the service behavior as a whole and can be used to diagnose the performance of the whole service.</span></span> <span data-ttu-id="575fe-104">Die Dienst-Leistungsindikatoren sind unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden, wenn sie im Leistungsmonitor (Perfmon.exe) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="575fe-104">They can be found under the `ServiceModelService 4.0.0.0` performance object when viewing with Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="575fe-105">Die Instanzen werden nach dem folgenden Schema benannt:</span><span class="sxs-lookup"><span data-stu-id="575fe-105">The instances are named using the following pattern:</span></span>  
   
 ```  
 ServiceName@ServiceBaseAddress  
 ```  
   
 > [!CAUTION]
->  <span data-ttu-id="c0bca-106">Es gibt eine Längenbeschränkung des Namens einer Leistungsindikatorinstanz.</span><span class="sxs-lookup"><span data-stu-id="c0bca-106">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="c0bca-107">Wenn ein [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Instanzname des Indikators die maximale Länge überschreitet, ersetzt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] einen Teil des Instanznamens durch einen Hashwert.</span><span class="sxs-lookup"><span data-stu-id="c0bca-107">When a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] counter instance name exceeds the maximum length, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] replaces a portion of the instance name with a hash value.</span></span>  
+>  <span data-ttu-id="575fe-106">Es gibt eine Längenbeschränkung des Namens einer Leistungsindikatorinstanz.</span><span class="sxs-lookup"><span data-stu-id="575fe-106">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="575fe-107">Wenn ein [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Instanzname des Indikators die maximale Länge überschreitet, ersetzt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] einen Teil des Instanznamens durch einen Hashwert.</span><span class="sxs-lookup"><span data-stu-id="575fe-107">When a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] counter instance name exceeds the maximum length, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] replaces a portion of the instance name with a hash value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0bca-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0bca-108">See Also</span></span>  
- [<span data-ttu-id="c0bca-109">Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="c0bca-109">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+## <a name="see-also"></a><span data-ttu-id="575fe-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="575fe-108">See Also</span></span>  
+ [<span data-ttu-id="575fe-109">Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="575fe-109">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

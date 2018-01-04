@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 838a9095f64ca9825ebea997200dd97aca1849ab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 83986f52f629d68014ee27ae27d50614894435c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls-outstanding"></a><span data-ttu-id="d2d23-102">Dienst: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="d2d23-102">Service: Calls Outstanding</span></span>
-<span data-ttu-id="d2d23-103">Indikatorname: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="d2d23-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="service-calls-outstanding"></a><span data-ttu-id="a1829-102">Dienst: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="a1829-102">Service: Calls Outstanding</span></span>
+<span data-ttu-id="a1829-103">Indikatorname: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="a1829-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d2d23-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d2d23-104">Description</span></span>  
- <span data-ttu-id="d2d23-105">Anzahl von aktuell verarbeiteten Aufrufen dieses Diensts.</span><span class="sxs-lookup"><span data-stu-id="d2d23-105">Number of in-progress calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="a1829-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1829-104">Description</span></span>  
+ <span data-ttu-id="a1829-105">Anzahl von aktuell verarbeiteten Aufrufen dieses Diensts.</span><span class="sxs-lookup"><span data-stu-id="a1829-105">Number of in-progress calls to this service.</span></span>

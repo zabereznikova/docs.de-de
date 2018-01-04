@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72bf6791017a3da2525351dea6ed7ead131390b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f495ac2a5dc5ee329ad0a36ce8584d6354d4f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a><span data-ttu-id="695f8-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="695f8-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>
-<span data-ttu-id="695f8-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="695f8-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>  
+# <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a><span data-ttu-id="08b35-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="08b35-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>
+<span data-ttu-id="08b35-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="08b35-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>  
   
-## <a name="description"></a><span data-ttu-id="695f8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="695f8-104">Description</span></span>  
- <span data-ttu-id="695f8-105">Die Signatur der Datei ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="695f8-105">The signature of the file is invalid.</span></span>  
+## <a name="description"></a><span data-ttu-id="08b35-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="08b35-104">Description</span></span>  
+ <span data-ttu-id="08b35-105">Die Signatur der Datei ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="08b35-105">The signature of the file is invalid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="695f8-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="695f8-106">See Also</span></span>  
- [<span data-ttu-id="695f8-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="695f8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="695f8-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="695f8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="695f8-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="695f8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="08b35-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="08b35-106">See Also</span></span>  
+ [<span data-ttu-id="08b35-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="08b35-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="08b35-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="08b35-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="08b35-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="08b35-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

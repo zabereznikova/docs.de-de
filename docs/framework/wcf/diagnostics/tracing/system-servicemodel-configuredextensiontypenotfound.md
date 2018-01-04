@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf9648988adff6085623d53c07fa6d7c9833741f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 227543e265d1975664f9989c303c2b349e481362
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelconfiguredextensiontypenotfound"></a><span data-ttu-id="1fd49-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="1fd49-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>
-<span data-ttu-id="1fd49-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="1fd49-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>  
+# <a name="systemservicemodelconfiguredextensiontypenotfound"></a><span data-ttu-id="9299c-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="9299c-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>
+<span data-ttu-id="9299c-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="9299c-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1fd49-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1fd49-104">Description</span></span>  
- <span data-ttu-id="1fd49-105">Der Erweiterungstyp wurde nicht konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="1fd49-105">The extension type is not configured.</span></span>  
+## <a name="description"></a><span data-ttu-id="9299c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9299c-104">Description</span></span>  
+ <span data-ttu-id="9299c-105">Der Erweiterungstyp wurde nicht konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="9299c-105">The extension type is not configured.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fd49-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1fd49-106">See Also</span></span>  
- [<span data-ttu-id="1fd49-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="1fd49-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1fd49-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="1fd49-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1fd49-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="1fd49-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9299c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9299c-106">See Also</span></span>  
+ [<span data-ttu-id="9299c-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="9299c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9299c-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="9299c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9299c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="9299c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

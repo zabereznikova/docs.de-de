@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0442365991c1278bb71dbf9b4c881ef9e78908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be86215f0cc52f04f21666854a5e7955e016b48e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemidentitymodelselectorsstorefailedtoopenstore"></a><span data-ttu-id="3b4ab-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="3b4ab-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>
-<span data-ttu-id="3b4ab-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="3b4ab-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>  
+# <a name="systemidentitymodelselectorsstorefailedtoopenstore"></a><span data-ttu-id="76dfe-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="76dfe-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>
+<span data-ttu-id="76dfe-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="76dfe-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3b4ab-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3b4ab-104">Description</span></span>  
- <span data-ttu-id="3b4ab-105">Fehler beim Öffnen des Speichers.</span><span class="sxs-lookup"><span data-stu-id="3b4ab-105">The store failed to open.</span></span>  
+## <a name="description"></a><span data-ttu-id="76dfe-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="76dfe-104">Description</span></span>  
+ <span data-ttu-id="76dfe-105">Fehler beim Öffnen des Speichers.</span><span class="sxs-lookup"><span data-stu-id="76dfe-105">The store failed to open.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b4ab-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b4ab-106">See Also</span></span>  
- [<span data-ttu-id="3b4ab-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="3b4ab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3b4ab-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="3b4ab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3b4ab-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="3b4ab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="76dfe-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="76dfe-106">See Also</span></span>  
+ [<span data-ttu-id="76dfe-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="76dfe-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="76dfe-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="76dfe-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="76dfe-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="76dfe-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

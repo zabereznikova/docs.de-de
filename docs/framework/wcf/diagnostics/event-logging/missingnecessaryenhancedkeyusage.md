@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1e1b57a1b5a4dfc29a1c6ee4eee7fb1ffc8f72f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40fbc768f060dc7f3d602ab625d3e71808868346
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="missingnecessaryenhancedkeyusage"></a><span data-ttu-id="4614e-102">MissingNecessaryEnhancedKeyUsage</span><span class="sxs-lookup"><span data-stu-id="4614e-102">MissingNecessaryEnhancedKeyUsage</span></span>
-<span data-ttu-id="4614e-103">ID: 157</span><span class="sxs-lookup"><span data-stu-id="4614e-103">Id: 157</span></span>  
+# <a name="missingnecessaryenhancedkeyusage"></a><span data-ttu-id="0e194-102">MissingNecessaryEnhancedKeyUsage</span><span class="sxs-lookup"><span data-stu-id="0e194-102">MissingNecessaryEnhancedKeyUsage</span></span>
+<span data-ttu-id="0e194-103">ID: 157</span><span class="sxs-lookup"><span data-stu-id="0e194-103">Id: 157</span></span>  
   
- <span data-ttu-id="4614e-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="4614e-104">Severity: Error</span></span>  
+ <span data-ttu-id="0e194-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="0e194-104">Severity: Error</span></span>  
   
- <span data-ttu-id="4614e-105">Kategorie: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="4614e-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="0e194-105">Kategorie: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="0e194-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4614e-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4614e-106">Description</span></span>  
- <span data-ttu-id="4614e-107">Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck nicht die spezifischen Daten unter seinen erweiterten Schlüsselverwendungen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="4614e-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not provide the specific data among its EnhancedKeyUsages.</span></span> <span data-ttu-id="4614e-108">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="4614e-108">The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="0e194-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e194-106">Description</span></span>  
+ <span data-ttu-id="0e194-107">Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck nicht die spezifischen Daten unter seinen erweiterten Schlüsselverwendungen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="0e194-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not provide the specific data among its EnhancedKeyUsages.</span></span> <span data-ttu-id="0e194-108">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="0e194-108">The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4614e-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4614e-109">See Also</span></span>  
- [<span data-ttu-id="4614e-110">Protokollierung von Komponentenereignissen</span><span class="sxs-lookup"><span data-stu-id="4614e-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="4614e-111">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="4614e-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="0e194-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0e194-109">See Also</span></span>  
+ [<span data-ttu-id="0e194-110">Ereignisprotokollierung</span><span class="sxs-lookup"><span data-stu-id="0e194-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="0e194-111">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="0e194-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

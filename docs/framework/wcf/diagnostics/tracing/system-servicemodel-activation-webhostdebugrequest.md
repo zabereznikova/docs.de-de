@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbcedfed20c66c156afb605a22efaf10c61be52
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 74277b04237cfcbe5de9e36cb9d98c4476a5a765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationwebhostdebugrequest"></a><span data-ttu-id="bd153-102">System.ServiceModel.Activation.WebHostDebugRequest</span><span class="sxs-lookup"><span data-stu-id="bd153-102">System.ServiceModel.Activation.WebHostDebugRequest</span></span>
-<span data-ttu-id="bd153-103">System.ServiceModel.Activation.WebHostDebugRequest</span><span class="sxs-lookup"><span data-stu-id="bd153-103">System.ServiceModel.Activation.WebHostDebugRequest</span></span>  
+# <a name="systemservicemodelactivationwebhostdebugrequest"></a><span data-ttu-id="8057c-102">System.ServiceModel.Activation.WebHostDebugRequest</span><span class="sxs-lookup"><span data-stu-id="8057c-102">System.ServiceModel.Activation.WebHostDebugRequest</span></span>
+<span data-ttu-id="8057c-103">System.ServiceModel.Activation.WebHostDebugRequest</span><span class="sxs-lookup"><span data-stu-id="8057c-103">System.ServiceModel.Activation.WebHostDebugRequest</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bd153-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bd153-104">Description</span></span>  
- <span data-ttu-id="bd153-105">Diese Anforderung ist für das DEBUG-Verb.</span><span class="sxs-lookup"><span data-stu-id="bd153-105">The request is for DEBUG verb.</span></span>  
+## <a name="description"></a><span data-ttu-id="8057c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8057c-104">Description</span></span>  
+ <span data-ttu-id="8057c-105">Diese Anforderung ist für das DEBUG-Verb.</span><span class="sxs-lookup"><span data-stu-id="8057c-105">The request is for DEBUG verb.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd153-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bd153-106">See Also</span></span>  
- [<span data-ttu-id="bd153-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="bd153-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bd153-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="bd153-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bd153-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="bd153-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8057c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8057c-106">See Also</span></span>  
+ [<span data-ttu-id="8057c-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="8057c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8057c-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="8057c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8057c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="8057c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

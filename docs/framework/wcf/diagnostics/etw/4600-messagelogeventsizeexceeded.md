@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1909584127c30cc752655dd611452adb348d38ff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 429d38e4674f760d31c4717f1aacf62fab0bb182
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4600---messagelogeventsizeexceeded"></a><span data-ttu-id="0721d-102">4600 - MessageLogEventSizeExceeded</span><span class="sxs-lookup"><span data-stu-id="0721d-102">4600 - MessageLogEventSizeExceeded</span></span>
-## <a name="properties"></a><span data-ttu-id="0721d-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="0721d-103">Properties</span></span>  
+# <a name="4600---messagelogeventsizeexceeded"></a><span data-ttu-id="400a3-102">4600 - MessageLogEventSizeExceeded</span><span class="sxs-lookup"><span data-stu-id="400a3-102">4600 - MessageLogEventSizeExceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="400a3-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="400a3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="0721d-104">ID</span><span class="sxs-lookup"><span data-stu-id="0721d-104">ID</span></span>|<span data-ttu-id="0721d-105">4600</span><span class="sxs-lookup"><span data-stu-id="0721d-105">4600</span></span>|  
-|<span data-ttu-id="0721d-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="0721d-106">Keywords</span></span>|<span data-ttu-id="0721d-107">WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="0721d-107">WCFMessageLogging</span></span>|  
-|<span data-ttu-id="0721d-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="0721d-108">Level</span></span>|<span data-ttu-id="0721d-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="0721d-109">Warning</span></span>|  
-|<span data-ttu-id="0721d-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="0721d-110">Channel</span></span>|<span data-ttu-id="0721d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="0721d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="400a3-104">ID</span><span class="sxs-lookup"><span data-stu-id="400a3-104">ID</span></span>|<span data-ttu-id="400a3-105">4600</span><span class="sxs-lookup"><span data-stu-id="400a3-105">4600</span></span>|  
+|<span data-ttu-id="400a3-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="400a3-106">Keywords</span></span>|<span data-ttu-id="400a3-107">WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="400a3-107">WCFMessageLogging</span></span>|  
+|<span data-ttu-id="400a3-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="400a3-108">Level</span></span>|<span data-ttu-id="400a3-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="400a3-109">Warning</span></span>|  
+|<span data-ttu-id="400a3-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="400a3-110">Channel</span></span>|<span data-ttu-id="400a3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="400a3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="0721d-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0721d-112">Description</span></span>  
- <span data-ttu-id="0721d-113">Dieses Ereignis wird ausgegeben, wenn die Nachricht nicht protokolliert werden konnte, da sie die ETW-Ereignisgröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="0721d-113">This event is emitted when the message could not be logged because it exceeds the ETW event size.</span></span>  
+## <a name="description"></a><span data-ttu-id="400a3-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="400a3-112">Description</span></span>  
+ <span data-ttu-id="400a3-113">Dieses Ereignis wird ausgegeben, wenn die Nachricht nicht protokolliert werden konnte, da sie die ETW-Ereignisgröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="400a3-113">This event is emitted when the message could not be logged because it exceeds the ETW event size.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="0721d-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="0721d-114">Message</span></span>  
- <span data-ttu-id="0721d-115">Nachricht konnte nicht protokolliert werden, da sie die zulässige ETW-Ereignisgröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="0721d-115">Message could not be logged as it exceeds the ETW event size</span></span>  
+## <a name="message"></a><span data-ttu-id="400a3-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="400a3-114">Message</span></span>  
+ <span data-ttu-id="400a3-115">Nachricht konnte nicht protokolliert werden, da sie die zulässige ETW-Ereignisgröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="400a3-115">Message could not be logged as it exceeds the ETW event size</span></span>  
   
-## <a name="details"></a><span data-ttu-id="0721d-116">Details</span><span class="sxs-lookup"><span data-stu-id="0721d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="400a3-116">Details</span><span class="sxs-lookup"><span data-stu-id="400a3-116">Details</span></span>

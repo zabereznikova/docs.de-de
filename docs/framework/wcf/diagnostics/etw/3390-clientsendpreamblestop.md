@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccb93199797bdc4a68f3270233741a9c3f620f9e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 413e075f2cd391cba3bf0cc15be2a664aa8a7eb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="366c0-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="366c0-102">3390 - ClientSendPreambleStop</span></span>
-## <a name="properties"></a><span data-ttu-id="366c0-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="366c0-103">Properties</span></span>  
+# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="c5d79-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="c5d79-102">3390 - ClientSendPreambleStop</span></span>
+## <a name="properties"></a><span data-ttu-id="c5d79-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="c5d79-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="366c0-104">ID</span><span class="sxs-lookup"><span data-stu-id="366c0-104">ID</span></span>|<span data-ttu-id="366c0-105">3390</span><span class="sxs-lookup"><span data-stu-id="366c0-105">3390</span></span>|  
-|<span data-ttu-id="366c0-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="366c0-106">Keywords</span></span>|<span data-ttu-id="366c0-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="366c0-107">Channel</span></span>|  
-|<span data-ttu-id="366c0-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="366c0-108">Level</span></span>|<span data-ttu-id="366c0-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="366c0-109">Verbose</span></span>|  
-|<span data-ttu-id="366c0-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="366c0-110">Channel</span></span>|<span data-ttu-id="366c0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="366c0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c5d79-104">ID</span><span class="sxs-lookup"><span data-stu-id="c5d79-104">ID</span></span>|<span data-ttu-id="c5d79-105">3390</span><span class="sxs-lookup"><span data-stu-id="c5d79-105">3390</span></span>|  
+|<span data-ttu-id="c5d79-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="c5d79-106">Keywords</span></span>|<span data-ttu-id="c5d79-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="c5d79-107">Channel</span></span>|  
+|<span data-ttu-id="c5d79-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="c5d79-108">Level</span></span>|<span data-ttu-id="c5d79-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="c5d79-109">Verbose</span></span>|  
+|<span data-ttu-id="c5d79-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="c5d79-110">Channel</span></span>|<span data-ttu-id="c5d79-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c5d79-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="366c0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="366c0-112">Description</span></span>  
- <span data-ttu-id="366c0-113">Dieses Ereignis wird ausgegeben, wenn der Client das Senden der Präambel beendet hat.</span><span class="sxs-lookup"><span data-stu-id="366c0-113">This event is emitted on the client sending preamble stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="c5d79-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c5d79-112">Description</span></span>  
+ <span data-ttu-id="c5d79-113">Dieses Ereignis wird ausgegeben, wenn der Client das Senden der Präambel beendet hat.</span><span class="sxs-lookup"><span data-stu-id="c5d79-113">This event is emitted on the client sending preamble stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="366c0-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="366c0-114">Message</span></span>  
- <span data-ttu-id="366c0-115">Senden der Präambel durch den Client wird beendet.</span><span class="sxs-lookup"><span data-stu-id="366c0-115">Client sending preamble stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="c5d79-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="c5d79-114">Message</span></span>  
+ <span data-ttu-id="c5d79-115">Senden der Präambel durch den Client wird beendet.</span><span class="sxs-lookup"><span data-stu-id="c5d79-115">Client sending preamble stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="366c0-116">Details</span><span class="sxs-lookup"><span data-stu-id="366c0-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c5d79-116">Details</span><span class="sxs-lookup"><span data-stu-id="c5d79-116">Details</span></span>

@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f31ccc6c0a85bf27821ff00ed08cde91b378aba2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f4bf30d87065679d5222a92628cc6007a673ce5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemidentitymodelauthorizationpolicyevaluated"></a><span data-ttu-id="f36c8-102">System.IdentityModel.AuthorizationPolicyEvaluated</span><span class="sxs-lookup"><span data-stu-id="f36c8-102">System.IdentityModel.AuthorizationPolicyEvaluated</span></span>
-<span data-ttu-id="f36c8-103">System.IdentityModel.AuthorizationPolicyEvaluated</span><span class="sxs-lookup"><span data-stu-id="f36c8-103">System.IdentityModel.AuthorizationPolicyEvaluated</span></span>  
+# <a name="systemidentitymodelauthorizationpolicyevaluated"></a><span data-ttu-id="d9bce-102">System.IdentityModel.AuthorizationPolicyEvaluated</span><span class="sxs-lookup"><span data-stu-id="d9bce-102">System.IdentityModel.AuthorizationPolicyEvaluated</span></span>
+<span data-ttu-id="d9bce-103">System.IdentityModel.AuthorizationPolicyEvaluated</span><span class="sxs-lookup"><span data-stu-id="d9bce-103">System.IdentityModel.AuthorizationPolicyEvaluated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f36c8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f36c8-104">Description</span></span>  
- <span data-ttu-id="f36c8-105">Richtlinie mit der angegebenen ID wird ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="f36c8-105">Policy with the specified id is evaluated.</span></span>  
+## <a name="description"></a><span data-ttu-id="d9bce-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d9bce-104">Description</span></span>  
+ <span data-ttu-id="d9bce-105">Richtlinie mit der angegebenen ID wird ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="d9bce-105">Policy with the specified id is evaluated.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f36c8-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f36c8-106">See Also</span></span>  
- [<span data-ttu-id="f36c8-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="f36c8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f36c8-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="f36c8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f36c8-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="f36c8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d9bce-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9bce-106">See Also</span></span>  
+ [<span data-ttu-id="d9bce-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="d9bce-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d9bce-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="d9bce-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d9bce-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="d9bce-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

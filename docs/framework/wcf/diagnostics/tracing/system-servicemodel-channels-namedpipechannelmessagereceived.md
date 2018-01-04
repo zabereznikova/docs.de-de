@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1878c9083ed215918f4c539bf54b9bf5833ba33d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 965ba6d732c498c58c0071c01cfe333f85874379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="bab27-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="bab27-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
-<span data-ttu-id="bab27-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="bab27-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
+# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="423e3-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="423e3-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
+<span data-ttu-id="423e3-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="423e3-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bab27-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bab27-104">Description</span></span>  
- <span data-ttu-id="bab27-105">Es wurde eine Nachricht über einen Named Pipe-Kanal empfangen.</span><span class="sxs-lookup"><span data-stu-id="bab27-105">Received a message over a named pipe channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="423e3-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="423e3-104">Description</span></span>  
+ <span data-ttu-id="423e3-105">Es wurde eine Nachricht über einen Named Pipe-Kanal empfangen.</span><span class="sxs-lookup"><span data-stu-id="423e3-105">Received a message over a named pipe channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bab27-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bab27-106">See Also</span></span>  
- [<span data-ttu-id="bab27-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="bab27-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bab27-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="bab27-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bab27-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="bab27-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="423e3-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="423e3-106">See Also</span></span>  
+ [<span data-ttu-id="423e3-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="423e3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="423e3-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="423e3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="423e3-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="423e3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

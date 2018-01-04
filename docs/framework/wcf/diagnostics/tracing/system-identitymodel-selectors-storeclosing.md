@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df1a3ba6d5f714f36638268443df05e8e686ddc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc221f5776899f3ada3f1cde25532121731261a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemidentitymodelselectorsstoreclosing"></a><span data-ttu-id="95b41-102">System.IdentityModel.Selectors.StoreClosing</span><span class="sxs-lookup"><span data-stu-id="95b41-102">System.IdentityModel.Selectors.StoreClosing</span></span>
-<span data-ttu-id="95b41-103">System.IdentityModel.Selectors.StoreClosing</span><span class="sxs-lookup"><span data-stu-id="95b41-103">System.IdentityModel.Selectors.StoreClosing</span></span>  
+# <a name="systemidentitymodelselectorsstoreclosing"></a><span data-ttu-id="13ba5-102">System.IdentityModel.Selectors.StoreClosing</span><span class="sxs-lookup"><span data-stu-id="13ba5-102">System.IdentityModel.Selectors.StoreClosing</span></span>
+<span data-ttu-id="13ba5-103">System.IdentityModel.Selectors.StoreClosing</span><span class="sxs-lookup"><span data-stu-id="13ba5-103">System.IdentityModel.Selectors.StoreClosing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="95b41-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="95b41-104">Description</span></span>  
- <span data-ttu-id="95b41-105">Der angegebene Speicher wird geschlossen.</span><span class="sxs-lookup"><span data-stu-id="95b41-105">Closing the specified store.</span></span>  
+## <a name="description"></a><span data-ttu-id="13ba5-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="13ba5-104">Description</span></span>  
+ <span data-ttu-id="13ba5-105">Der angegebene Speicher wird geschlossen.</span><span class="sxs-lookup"><span data-stu-id="13ba5-105">Closing the specified store.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95b41-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95b41-106">See Also</span></span>  
- [<span data-ttu-id="95b41-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="95b41-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="95b41-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="95b41-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="95b41-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="95b41-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="13ba5-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="13ba5-106">See Also</span></span>  
+ [<span data-ttu-id="13ba5-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="13ba5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="13ba5-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="13ba5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="13ba5-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="13ba5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

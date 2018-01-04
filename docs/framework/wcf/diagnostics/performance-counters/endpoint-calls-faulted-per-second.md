@@ -13,23 +13,24 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8809b4285beadcf512cb71337b6f973782efa4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 842270d6e570767c25c414307be941f24b01dd07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="0aef9-102">Endpunkt: Fehlerhafte Aufrufe pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="0aef9-102">Endpoint: Calls Faulted Per Second</span></span>
-<span data-ttu-id="0aef9-103">Zählername: Calls Faulted Per Second.</span><span class="sxs-lookup"><span data-stu-id="0aef9-103">Counter Name: Calls Faulted Per Second.</span></span>  
+# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="b38fb-102">Endpunkt: Fehlerhafte Aufrufe pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="b38fb-102">Endpoint: Calls Faulted Per Second</span></span>
+<span data-ttu-id="b38fb-103">Zählername: Calls Faulted Per Second.</span><span class="sxs-lookup"><span data-stu-id="b38fb-103">Counter Name: Calls Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0aef9-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0aef9-104">Description</span></span>  
- <span data-ttu-id="0aef9-105">Die Anzahl der Aufrufe, die in einer Sekunde an diesem Endpunkt Fehler zurückgegeben haben.</span><span class="sxs-lookup"><span data-stu-id="0aef9-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="b38fb-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b38fb-104">Description</span></span>  
+ <span data-ttu-id="b38fb-105">Die Anzahl der Aufrufe, die in einer Sekunde an diesem Endpunkt Fehler zurückgegeben haben.</span><span class="sxs-lookup"><span data-stu-id="b38fb-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="0aef9-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="0aef9-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="b38fb-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="b38fb-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="0aef9-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="0aef9-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="b38fb-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="b38fb-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="0aef9-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Anwendungen übermitteln Dienstmethoden Informationen zu Verarbeitungsfehlern mithilfe von SOAP-Fehlermeldungen.</span><span class="sxs-lookup"><span data-stu-id="0aef9-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="0aef9-109">SOAP-Fehler sind Meldungstypen, die in den Metadaten für einen Dienstvorgang enthalten sind und daher einen Fehlervertrag erstellen, den Clients nutzen können, um ihre Ausführung robuster oder interaktiver zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="0aef9-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="0aef9-110">Da SOAP-Fehler gegenüber Clients in XML-Form ausgedrückt werden, sind sie sehr interoperabel.</span><span class="sxs-lookup"><span data-stu-id="0aef9-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
+ <span data-ttu-id="b38fb-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Anwendungen übermitteln Dienstmethoden Informationen zu Verarbeitungsfehlern mithilfe von SOAP-Fehlermeldungen.</span><span class="sxs-lookup"><span data-stu-id="b38fb-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="b38fb-109">SOAP-Fehler sind Meldungstypen, die in den Metadaten für einen Dienstvorgang enthalten sind und daher einen Fehlervertrag erstellen, den Clients nutzen können, um ihre Ausführung robuster oder interaktiver zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="b38fb-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="b38fb-110">Da SOAP-Fehler gegenüber Clients in XML-Form ausgedrückt werden, sind sie sehr interoperabel.</span><span class="sxs-lookup"><span data-stu-id="b38fb-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0aef9-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0aef9-111">See Also</span></span>  
- [<span data-ttu-id="0aef9-112">Angeben und Behandeln von Fehlern in Verträgen und Diensten</span><span class="sxs-lookup"><span data-stu-id="0aef9-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="b38fb-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b38fb-111">See Also</span></span>  
+ [<span data-ttu-id="b38fb-112">Angeben und Behandeln von Fehlern in Verträgen und Diensten</span><span class="sxs-lookup"><span data-stu-id="b38fb-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
