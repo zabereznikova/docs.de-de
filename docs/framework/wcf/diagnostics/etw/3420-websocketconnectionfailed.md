@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 207a61677cf0b0230e2f9a4f403da83b8ea61518
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02822159fdca07908f5e6b20fd14b891f18a6eba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3420---websocketconnectionfailed"></a><span data-ttu-id="74fbf-102">3420 - WebSocketConnectionFailed</span><span class="sxs-lookup"><span data-stu-id="74fbf-102">3420 - WebSocketConnectionFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="74fbf-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="74fbf-103">Properties</span></span>  
+# <a name="3420---websocketconnectionfailed"></a><span data-ttu-id="abf5b-102">3420 - WebSocketConnectionFailed</span><span class="sxs-lookup"><span data-stu-id="abf5b-102">3420 - WebSocketConnectionFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="abf5b-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="abf5b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="74fbf-104">ID</span><span class="sxs-lookup"><span data-stu-id="74fbf-104">ID</span></span>|<span data-ttu-id="74fbf-105">3420</span><span class="sxs-lookup"><span data-stu-id="74fbf-105">3420</span></span>|  
-|<span data-ttu-id="74fbf-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="74fbf-106">Keywords</span></span>|<span data-ttu-id="74fbf-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="74fbf-107">HTTP</span></span>|  
-|<span data-ttu-id="74fbf-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="74fbf-108">Level</span></span>|<span data-ttu-id="74fbf-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="74fbf-109">Error</span></span>|  
-|<span data-ttu-id="74fbf-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="74fbf-110">Channel</span></span>|<span data-ttu-id="74fbf-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="74fbf-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="abf5b-104">ID</span><span class="sxs-lookup"><span data-stu-id="abf5b-104">ID</span></span>|<span data-ttu-id="abf5b-105">3420</span><span class="sxs-lookup"><span data-stu-id="abf5b-105">3420</span></span>|  
+|<span data-ttu-id="abf5b-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="abf5b-106">Keywords</span></span>|<span data-ttu-id="abf5b-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="abf5b-107">HTTP</span></span>|  
+|<span data-ttu-id="abf5b-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="abf5b-108">Level</span></span>|<span data-ttu-id="abf5b-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="abf5b-109">Error</span></span>|  
+|<span data-ttu-id="abf5b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="abf5b-110">Channel</span></span>|<span data-ttu-id="abf5b-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="abf5b-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="74fbf-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="74fbf-112">Description</span></span>  
- <span data-ttu-id="74fbf-113">Dieses Ereignis wird ausgegeben, wenn die WebSocket-Verbindungsanforderung fehlgeschlagen ist.</span><span class="sxs-lookup"><span data-stu-id="74fbf-113">This event is emitted when WebSocket connection request has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="abf5b-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="abf5b-112">Description</span></span>  
+ <span data-ttu-id="abf5b-113">Dieses Ereignis wird ausgegeben, wenn die WebSocket-Verbindungsanforderung fehlgeschlagen ist.</span><span class="sxs-lookup"><span data-stu-id="abf5b-113">This event is emitted when WebSocket connection request has failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="74fbf-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="74fbf-114">Message</span></span>  
- <span data-ttu-id="74fbf-115">Fehler bei der WebSocket-Verbindungsanforderung: '%1'</span><span class="sxs-lookup"><span data-stu-id="74fbf-115">WebSocket connection request failed: '%1'</span></span>  
+## <a name="message"></a><span data-ttu-id="abf5b-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="abf5b-114">Message</span></span>  
+ <span data-ttu-id="abf5b-115">Fehler bei der WebSocket-Verbindungsanforderung: '%1'</span><span class="sxs-lookup"><span data-stu-id="abf5b-115">WebSocket connection request failed: '%1'</span></span>  
   
-## <a name="details"></a><span data-ttu-id="74fbf-116">Details</span><span class="sxs-lookup"><span data-stu-id="74fbf-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="abf5b-116">Details</span><span class="sxs-lookup"><span data-stu-id="abf5b-116">Details</span></span>

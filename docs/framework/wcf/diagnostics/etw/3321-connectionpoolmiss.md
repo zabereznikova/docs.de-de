@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19a79ddf7fa0ca445d402f95d36c05a802ed17e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40a48987d6addac2d7ff2a1727348eeff39db587
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3321---connectionpoolmiss"></a><span data-ttu-id="24359-102">3321 - ConnectionPoolMiss</span><span class="sxs-lookup"><span data-stu-id="24359-102">3321 - ConnectionPoolMiss</span></span>
-## <a name="properties"></a><span data-ttu-id="24359-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="24359-103">Properties</span></span>  
+# <a name="3321---connectionpoolmiss"></a><span data-ttu-id="4a096-102">3321 - ConnectionPoolMiss</span><span class="sxs-lookup"><span data-stu-id="4a096-102">3321 - ConnectionPoolMiss</span></span>
+## <a name="properties"></a><span data-ttu-id="4a096-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4a096-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="24359-104">ID</span><span class="sxs-lookup"><span data-stu-id="24359-104">ID</span></span>|<span data-ttu-id="24359-105">3321</span><span class="sxs-lookup"><span data-stu-id="24359-105">3321</span></span>|  
-|<span data-ttu-id="24359-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="24359-106">Keywords</span></span>|<span data-ttu-id="24359-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="24359-107">Channel</span></span>|  
-|<span data-ttu-id="24359-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="24359-108">Level</span></span>|<span data-ttu-id="24359-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="24359-109">Verbose</span></span>|  
-|<span data-ttu-id="24359-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="24359-110">Channel</span></span>|<span data-ttu-id="24359-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="24359-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="4a096-104">ID</span><span class="sxs-lookup"><span data-stu-id="4a096-104">ID</span></span>|<span data-ttu-id="4a096-105">3321</span><span class="sxs-lookup"><span data-stu-id="4a096-105">3321</span></span>|  
+|<span data-ttu-id="4a096-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="4a096-106">Keywords</span></span>|<span data-ttu-id="4a096-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="4a096-107">Channel</span></span>|  
+|<span data-ttu-id="4a096-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="4a096-108">Level</span></span>|<span data-ttu-id="4a096-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="4a096-109">Verbose</span></span>|  
+|<span data-ttu-id="4a096-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="4a096-110">Channel</span></span>|<span data-ttu-id="4a096-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="4a096-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="24359-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="24359-112">Description</span></span>  
- <span data-ttu-id="24359-113">Dieses Ereignis wird ausgegeben, wenn der Pool über keine verfügbaren Verbindungen verfügt.</span><span class="sxs-lookup"><span data-stu-id="24359-113">This event is emitted when the pool has no available connections.</span></span>  
+## <a name="description"></a><span data-ttu-id="4a096-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a096-112">Description</span></span>  
+ <span data-ttu-id="4a096-113">Dieses Ereignis wird ausgegeben, wenn der Pool über keine verfügbaren Verbindungen verfügt.</span><span class="sxs-lookup"><span data-stu-id="4a096-113">This event is emitted when the pool has no available connections.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="24359-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="24359-114">Message</span></span>  
- <span data-ttu-id="24359-115">Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.</span><span class="sxs-lookup"><span data-stu-id="24359-115">Pool for %1 has no available connection and %2 busy connections.</span></span>  
+## <a name="message"></a><span data-ttu-id="4a096-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="4a096-114">Message</span></span>  
+ <span data-ttu-id="4a096-115">Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.</span><span class="sxs-lookup"><span data-stu-id="4a096-115">Pool for %1 has no available connection and %2 busy connections.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="24359-116">Details</span><span class="sxs-lookup"><span data-stu-id="24359-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="4a096-116">Details</span><span class="sxs-lookup"><span data-stu-id="4a096-116">Details</span></span>

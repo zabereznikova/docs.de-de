@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ebc1001e15d80728f6154017952ee316cdda185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f1cc3dc275e634ccfd1c9c9020d9fdfe039677f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="f2683-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="f2683-102">1439 - PendingAcceptsAtZero</span></span>
-## <a name="properties"></a><span data-ttu-id="f2683-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f2683-103">Properties</span></span>  
+# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="0eb11-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="0eb11-102">1439 - PendingAcceptsAtZero</span></span>
+## <a name="properties"></a><span data-ttu-id="0eb11-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="0eb11-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f2683-104">ID</span><span class="sxs-lookup"><span data-stu-id="f2683-104">ID</span></span>|<span data-ttu-id="f2683-105">1439</span><span class="sxs-lookup"><span data-stu-id="f2683-105">1439</span></span>|  
-|<span data-ttu-id="f2683-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="f2683-106">Keywords</span></span>|<span data-ttu-id="f2683-107">Kontingent</span><span class="sxs-lookup"><span data-stu-id="f2683-107">Quota</span></span>|  
-|<span data-ttu-id="f2683-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="f2683-108">Level</span></span>|<span data-ttu-id="f2683-109">Information</span><span class="sxs-lookup"><span data-stu-id="f2683-109">Information</span></span>|  
-|<span data-ttu-id="f2683-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f2683-110">Channel</span></span>|<span data-ttu-id="f2683-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f2683-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="0eb11-104">ID</span><span class="sxs-lookup"><span data-stu-id="0eb11-104">ID</span></span>|<span data-ttu-id="0eb11-105">1439</span><span class="sxs-lookup"><span data-stu-id="0eb11-105">1439</span></span>|  
+|<span data-ttu-id="0eb11-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="0eb11-106">Keywords</span></span>|<span data-ttu-id="0eb11-107">Kontingent</span><span class="sxs-lookup"><span data-stu-id="0eb11-107">Quota</span></span>|  
+|<span data-ttu-id="0eb11-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="0eb11-108">Level</span></span>|<span data-ttu-id="0eb11-109">Information</span><span class="sxs-lookup"><span data-stu-id="0eb11-109">Information</span></span>|  
+|<span data-ttu-id="0eb11-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="0eb11-110">Channel</span></span>|<span data-ttu-id="0eb11-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="0eb11-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f2683-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f2683-112">Description</span></span>  
- <span data-ttu-id="f2683-113">Dieses Ereignis wird ausgegeben, wenn keine ausstehenden Annahmevorgänge verblieben sind.</span><span class="sxs-lookup"><span data-stu-id="f2683-113">This event is emitted with pending accepts at zero.</span></span>  
+## <a name="description"></a><span data-ttu-id="0eb11-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0eb11-112">Description</span></span>  
+ <span data-ttu-id="0eb11-113">Dieses Ereignis wird ausgegeben, wenn keine ausstehenden Annahmevorgänge verblieben sind.</span><span class="sxs-lookup"><span data-stu-id="0eb11-113">This event is emitted with pending accepts at zero.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f2683-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="f2683-114">Message</span></span>  
- <span data-ttu-id="f2683-115">Null ausstehende Annahmevorgänge übrig</span><span class="sxs-lookup"><span data-stu-id="f2683-115">Zero pending accepts left</span></span>  
+## <a name="message"></a><span data-ttu-id="0eb11-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="0eb11-114">Message</span></span>  
+ <span data-ttu-id="0eb11-115">Null ausstehende Annahmevorgänge übrig</span><span class="sxs-lookup"><span data-stu-id="0eb11-115">Zero pending accepts left</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f2683-116">Details</span><span class="sxs-lookup"><span data-stu-id="f2683-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="0eb11-116">Details</span><span class="sxs-lookup"><span data-stu-id="0eb11-116">Details</span></span>

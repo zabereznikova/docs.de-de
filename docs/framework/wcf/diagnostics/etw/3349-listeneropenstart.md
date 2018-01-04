@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c07f4c6b8c29e4e2d2b670a520d220d325059e3e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: beea37f74f911032763cf3460ef2c740c1e21a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3349---listeneropenstart"></a><span data-ttu-id="9b251-102">3349 - ListenerOpenStart</span><span class="sxs-lookup"><span data-stu-id="9b251-102">3349 - ListenerOpenStart</span></span>
-## <a name="properties"></a><span data-ttu-id="9b251-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9b251-103">Properties</span></span>  
+# <a name="3349---listeneropenstart"></a><span data-ttu-id="5d479-102">3349 - ListenerOpenStart</span><span class="sxs-lookup"><span data-stu-id="5d479-102">3349 - ListenerOpenStart</span></span>
+## <a name="properties"></a><span data-ttu-id="5d479-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5d479-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9b251-104">ID</span><span class="sxs-lookup"><span data-stu-id="9b251-104">ID</span></span>|<span data-ttu-id="9b251-105">3349</span><span class="sxs-lookup"><span data-stu-id="9b251-105">3349</span></span>|  
-|<span data-ttu-id="9b251-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="9b251-106">Keywords</span></span>|<span data-ttu-id="9b251-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="9b251-107">Channel</span></span>|  
-|<span data-ttu-id="9b251-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="9b251-108">Level</span></span>|<span data-ttu-id="9b251-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="9b251-109">Verbose</span></span>|  
-|<span data-ttu-id="9b251-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="9b251-110">Channel</span></span>|<span data-ttu-id="9b251-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9b251-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="5d479-104">ID</span><span class="sxs-lookup"><span data-stu-id="5d479-104">ID</span></span>|<span data-ttu-id="5d479-105">3349</span><span class="sxs-lookup"><span data-stu-id="5d479-105">3349</span></span>|  
+|<span data-ttu-id="5d479-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="5d479-106">Keywords</span></span>|<span data-ttu-id="5d479-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="5d479-107">Channel</span></span>|  
+|<span data-ttu-id="5d479-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5d479-108">Level</span></span>|<span data-ttu-id="5d479-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="5d479-109">Verbose</span></span>|  
+|<span data-ttu-id="5d479-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5d479-110">Channel</span></span>|<span data-ttu-id="5d479-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5d479-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9b251-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9b251-112">Description</span></span>  
- <span data-ttu-id="9b251-113">Dieses Ereignis wird ausgegeben, wenn ListenerOpen gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="9b251-113">This event is emitted with ListenerOpen start.</span></span>  
+## <a name="description"></a><span data-ttu-id="5d479-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d479-112">Description</span></span>  
+ <span data-ttu-id="5d479-113">Dieses Ereignis wird ausgegeben, wenn ListenerOpen gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="5d479-113">This event is emitted with ListenerOpen start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9b251-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="9b251-114">Message</span></span>  
- <span data-ttu-id="9b251-115">Der Listener für "%1" wird geöffnet.</span><span class="sxs-lookup"><span data-stu-id="9b251-115">Listener opening for '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="5d479-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5d479-114">Message</span></span>  
+ <span data-ttu-id="5d479-115">Der Listener für "%1" wird geöffnet.</span><span class="sxs-lookup"><span data-stu-id="5d479-115">Listener opening for '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9b251-116">Details</span><span class="sxs-lookup"><span data-stu-id="9b251-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="5d479-116">Details</span><span class="sxs-lookup"><span data-stu-id="5d479-116">Details</span></span>

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 944de7cb079779359a594710e895619b3a788f50
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce18b979a52b1ebde907e90d540d172e272794aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3401---signatureverificationstart"></a><span data-ttu-id="52925-102">3401 - SignatureVerificationStart</span><span class="sxs-lookup"><span data-stu-id="52925-102">3401 - SignatureVerificationStart</span></span>
-## <a name="properties"></a><span data-ttu-id="52925-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="52925-103">Properties</span></span>  
+# <a name="3401---signatureverificationstart"></a><span data-ttu-id="68212-102">3401 - SignatureVerificationStart</span><span class="sxs-lookup"><span data-stu-id="68212-102">3401 - SignatureVerificationStart</span></span>
+## <a name="properties"></a><span data-ttu-id="68212-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="68212-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="52925-104">ID</span><span class="sxs-lookup"><span data-stu-id="52925-104">ID</span></span>|<span data-ttu-id="52925-105">3401</span><span class="sxs-lookup"><span data-stu-id="52925-105">3401</span></span>|  
-|<span data-ttu-id="52925-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="52925-106">Keywords</span></span>|<span data-ttu-id="52925-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="52925-107">Security</span></span>|  
-|<span data-ttu-id="52925-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="52925-108">Level</span></span>|<span data-ttu-id="52925-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="52925-109">Verbose</span></span>|  
-|<span data-ttu-id="52925-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="52925-110">Channel</span></span>|<span data-ttu-id="52925-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="52925-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="68212-104">ID</span><span class="sxs-lookup"><span data-stu-id="68212-104">ID</span></span>|<span data-ttu-id="68212-105">3401</span><span class="sxs-lookup"><span data-stu-id="68212-105">3401</span></span>|  
+|<span data-ttu-id="68212-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="68212-106">Keywords</span></span>|<span data-ttu-id="68212-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="68212-107">Security</span></span>|  
+|<span data-ttu-id="68212-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="68212-108">Level</span></span>|<span data-ttu-id="68212-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="68212-109">Verbose</span></span>|  
+|<span data-ttu-id="68212-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="68212-110">Channel</span></span>|<span data-ttu-id="68212-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="68212-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="52925-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="52925-112">Description</span></span>  
- <span data-ttu-id="52925-113">Dieses Ereignis wird ausgegeben, wenn die Signaturprüfung gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="52925-113">This event is emitted when the signature verification has started.</span></span>  
+## <a name="description"></a><span data-ttu-id="68212-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="68212-112">Description</span></span>  
+ <span data-ttu-id="68212-113">Dieses Ereignis wird ausgegeben, wenn die Signaturprüfung gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="68212-113">This event is emitted when the signature verification has started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="52925-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="52925-114">Message</span></span>  
- <span data-ttu-id="52925-115">Signaturüberprüfung gestartet.</span><span class="sxs-lookup"><span data-stu-id="52925-115">Signature verification started.</span></span>  
+## <a name="message"></a><span data-ttu-id="68212-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="68212-114">Message</span></span>  
+ <span data-ttu-id="68212-115">Signaturüberprüfung gestartet.</span><span class="sxs-lookup"><span data-stu-id="68212-115">Signature verification started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="52925-116">Details</span><span class="sxs-lookup"><span data-stu-id="52925-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="68212-116">Details</span><span class="sxs-lookup"><span data-stu-id="68212-116">Details</span></span>

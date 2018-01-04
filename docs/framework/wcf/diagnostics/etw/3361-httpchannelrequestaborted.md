@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b04cb843398a9169a27a3a195c4db6eaedcd2b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d414902812573807e9c7c9c4eb82edab9e4aba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3361---httpchannelrequestaborted"></a><span data-ttu-id="8a50c-102">3361 - HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="8a50c-102">3361 - HttpChannelRequestAborted</span></span>
-## <a name="properties"></a><span data-ttu-id="8a50c-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="8a50c-103">Properties</span></span>  
+# <a name="3361---httpchannelrequestaborted"></a><span data-ttu-id="b45ae-102">3361 - HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="b45ae-102">3361 - HttpChannelRequestAborted</span></span>
+## <a name="properties"></a><span data-ttu-id="b45ae-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b45ae-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8a50c-104">ID</span><span class="sxs-lookup"><span data-stu-id="8a50c-104">ID</span></span>|<span data-ttu-id="8a50c-105">3361</span><span class="sxs-lookup"><span data-stu-id="8a50c-105">3361</span></span>|  
-|<span data-ttu-id="8a50c-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="8a50c-106">Keywords</span></span>|<span data-ttu-id="8a50c-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="8a50c-107">HTTP</span></span>|  
-|<span data-ttu-id="8a50c-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="8a50c-108">Level</span></span>|<span data-ttu-id="8a50c-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="8a50c-109">Warning</span></span>|  
-|<span data-ttu-id="8a50c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="8a50c-110">Channel</span></span>|<span data-ttu-id="8a50c-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="8a50c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="b45ae-104">ID</span><span class="sxs-lookup"><span data-stu-id="b45ae-104">ID</span></span>|<span data-ttu-id="b45ae-105">3361</span><span class="sxs-lookup"><span data-stu-id="b45ae-105">3361</span></span>|  
+|<span data-ttu-id="b45ae-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="b45ae-106">Keywords</span></span>|<span data-ttu-id="b45ae-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="b45ae-107">HTTP</span></span>|  
+|<span data-ttu-id="b45ae-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="b45ae-108">Level</span></span>|<span data-ttu-id="b45ae-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="b45ae-109">Warning</span></span>|  
+|<span data-ttu-id="b45ae-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="b45ae-110">Channel</span></span>|<span data-ttu-id="b45ae-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="b45ae-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8a50c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8a50c-112">Description</span></span>  
- <span data-ttu-id="8a50c-113">Dieses Ereignis wird ausgegeben, wenn die HTTP-Kanalanforderung abgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="8a50c-113">This event is emitted when the Http channel request is aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="b45ae-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b45ae-112">Description</span></span>  
+ <span data-ttu-id="b45ae-113">Dieses Ereignis wird ausgegeben, wenn die HTTP-Kanalanforderung abgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="b45ae-113">This event is emitted when the Http channel request is aborted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8a50c-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="8a50c-114">Message</span></span>  
- <span data-ttu-id="8a50c-115">Die HTTP-Kanalanforderung wurde abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="8a50c-115">Http channel request aborted.</span></span>  
+## <a name="message"></a><span data-ttu-id="b45ae-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="b45ae-114">Message</span></span>  
+ <span data-ttu-id="b45ae-115">Die HTTP-Kanalanforderung wurde abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="b45ae-115">Http channel request aborted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8a50c-116">Details</span><span class="sxs-lookup"><span data-stu-id="8a50c-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b45ae-116">Details</span><span class="sxs-lookup"><span data-stu-id="b45ae-116">Details</span></span>

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3e3c690dd35b0cab9139f8f6b0fc4b5ce38d962
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfe731345a070f6563ed8247d93e0157b644e048
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3379---socketwritestart"></a><span data-ttu-id="72f74-102">3379 - SocketWriteStart</span><span class="sxs-lookup"><span data-stu-id="72f74-102">3379 - SocketWriteStart</span></span>
-## <a name="properties"></a><span data-ttu-id="72f74-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="72f74-103">Properties</span></span>  
+# <a name="3379---socketwritestart"></a><span data-ttu-id="5ce9c-102">3379 - SocketWriteStart</span><span class="sxs-lookup"><span data-stu-id="5ce9c-102">3379 - SocketWriteStart</span></span>
+## <a name="properties"></a><span data-ttu-id="5ce9c-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5ce9c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="72f74-104">ID</span><span class="sxs-lookup"><span data-stu-id="72f74-104">ID</span></span>|<span data-ttu-id="72f74-105">3379</span><span class="sxs-lookup"><span data-stu-id="72f74-105">3379</span></span>|  
-|<span data-ttu-id="72f74-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="72f74-106">Keywords</span></span>|<span data-ttu-id="72f74-107">TCP</span><span class="sxs-lookup"><span data-stu-id="72f74-107">TCP</span></span>|  
-|<span data-ttu-id="72f74-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="72f74-108">Level</span></span>|<span data-ttu-id="72f74-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="72f74-109">Verbose</span></span>|  
-|<span data-ttu-id="72f74-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="72f74-110">Channel</span></span>|<span data-ttu-id="72f74-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="72f74-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="5ce9c-104">ID</span><span class="sxs-lookup"><span data-stu-id="5ce9c-104">ID</span></span>|<span data-ttu-id="5ce9c-105">3379</span><span class="sxs-lookup"><span data-stu-id="5ce9c-105">3379</span></span>|  
+|<span data-ttu-id="5ce9c-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="5ce9c-106">Keywords</span></span>|<span data-ttu-id="5ce9c-107">TCP</span><span class="sxs-lookup"><span data-stu-id="5ce9c-107">TCP</span></span>|  
+|<span data-ttu-id="5ce9c-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5ce9c-108">Level</span></span>|<span data-ttu-id="5ce9c-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="5ce9c-109">Verbose</span></span>|  
+|<span data-ttu-id="5ce9c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5ce9c-110">Channel</span></span>|<span data-ttu-id="5ce9c-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5ce9c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="72f74-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72f74-112">Description</span></span>  
- <span data-ttu-id="72f74-113">Dieses Ereignis wird mit dem SocketWrite-Start ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="72f74-113">This event is emitted with the SocketWrite start.</span></span>  
+## <a name="description"></a><span data-ttu-id="5ce9c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5ce9c-112">Description</span></span>  
+ <span data-ttu-id="5ce9c-113">Dieses Ereignis wird mit dem SocketWrite-Start ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="5ce9c-113">This event is emitted with the SocketWrite start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="72f74-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="72f74-114">Message</span></span>  
- <span data-ttu-id="72f74-115">SocketId:%1 schreibt %2 Bytes in "%3".</span><span class="sxs-lookup"><span data-stu-id="72f74-115">SocketId:%1 writing '%2' bytes to '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="5ce9c-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5ce9c-114">Message</span></span>  
+ <span data-ttu-id="5ce9c-115">SocketId:%1 schreibt %2 Bytes in "%3".</span><span class="sxs-lookup"><span data-stu-id="5ce9c-115">SocketId:%1 writing '%2' bytes to '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="72f74-116">Details</span><span class="sxs-lookup"><span data-stu-id="72f74-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="5ce9c-116">Details</span><span class="sxs-lookup"><span data-stu-id="5ce9c-116">Details</span></span>

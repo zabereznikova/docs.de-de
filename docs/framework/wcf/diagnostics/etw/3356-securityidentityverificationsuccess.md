@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11875161f14239c4bcc4f2f31c2473a23e0ec8b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c6c6eb56a1b60078c1200527ad8463b194791601
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3356---securityidentityverificationsuccess"></a><span data-ttu-id="28655-102">3356 - SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="28655-102">3356 - SecurityIdentityVerificationSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="28655-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="28655-103">Properties</span></span>  
+# <a name="3356---securityidentityverificationsuccess"></a><span data-ttu-id="5371a-102">3356 - SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="5371a-102">3356 - SecurityIdentityVerificationSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="5371a-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5371a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="28655-104">ID</span><span class="sxs-lookup"><span data-stu-id="28655-104">ID</span></span>|<span data-ttu-id="28655-105">3356</span><span class="sxs-lookup"><span data-stu-id="28655-105">3356</span></span>|  
-|<span data-ttu-id="28655-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="28655-106">Keywords</span></span>|<span data-ttu-id="28655-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="28655-107">Security</span></span>|  
-|<span data-ttu-id="28655-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="28655-108">Level</span></span>|<span data-ttu-id="28655-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="28655-109">Verbose</span></span>|  
-|<span data-ttu-id="28655-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="28655-110">Channel</span></span>|<span data-ttu-id="28655-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="28655-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="5371a-104">ID</span><span class="sxs-lookup"><span data-stu-id="5371a-104">ID</span></span>|<span data-ttu-id="5371a-105">3356</span><span class="sxs-lookup"><span data-stu-id="5371a-105">3356</span></span>|  
+|<span data-ttu-id="5371a-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="5371a-106">Keywords</span></span>|<span data-ttu-id="5371a-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="5371a-107">Security</span></span>|  
+|<span data-ttu-id="5371a-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5371a-108">Level</span></span>|<span data-ttu-id="5371a-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="5371a-109">Verbose</span></span>|  
+|<span data-ttu-id="5371a-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5371a-110">Channel</span></span>|<span data-ttu-id="5371a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5371a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="28655-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="28655-112">Description</span></span>  
- <span data-ttu-id="28655-113">Dieses Ereignis wird ausgegeben, wenn die Sicherheitsüberprüfung erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="28655-113">This event is emitted when the security verification succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="5371a-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5371a-112">Description</span></span>  
+ <span data-ttu-id="5371a-113">Dieses Ereignis wird ausgegeben, wenn die Sicherheitsüberprüfung erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="5371a-113">This event is emitted when the security verification succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="28655-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="28655-114">Message</span></span>  
- <span data-ttu-id="28655-115">Die Sicherheitsüberprüfung war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="28655-115">Security verification succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="5371a-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5371a-114">Message</span></span>  
+ <span data-ttu-id="5371a-115">Die Sicherheitsüberprüfung war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="5371a-115">Security verification succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="28655-116">Details</span><span class="sxs-lookup"><span data-stu-id="28655-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="5371a-116">Details</span><span class="sxs-lookup"><span data-stu-id="5371a-116">Details</span></span>

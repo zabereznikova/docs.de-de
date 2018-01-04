@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40a4ffe04dea27e2fc54f6360d02a3d3e667a95e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81cf3c538adfbebcef98df7be9335289aa0b9531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1406---receivetimeout"></a><span data-ttu-id="e76eb-102">1406 - ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="e76eb-102">1406 - ReceiveTimeout</span></span>
-## <a name="properties"></a><span data-ttu-id="e76eb-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e76eb-103">Properties</span></span>  
+# <a name="1406---receivetimeout"></a><span data-ttu-id="8b664-102">1406 - ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="8b664-102">1406 - ReceiveTimeout</span></span>
+## <a name="properties"></a><span data-ttu-id="8b664-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="8b664-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="e76eb-104">ID</span><span class="sxs-lookup"><span data-stu-id="e76eb-104">ID</span></span>|<span data-ttu-id="e76eb-105">1406</span><span class="sxs-lookup"><span data-stu-id="e76eb-105">1406</span></span>|  
-|<span data-ttu-id="e76eb-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="e76eb-106">Keywords</span></span>|<span data-ttu-id="e76eb-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e76eb-107">ServiceModel</span></span>|  
-|<span data-ttu-id="e76eb-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="e76eb-108">Level</span></span>|<span data-ttu-id="e76eb-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="e76eb-109">Error</span></span>|  
-|<span data-ttu-id="e76eb-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="e76eb-110">Channel</span></span>|<span data-ttu-id="e76eb-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="e76eb-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="8b664-104">ID</span><span class="sxs-lookup"><span data-stu-id="8b664-104">ID</span></span>|<span data-ttu-id="8b664-105">1406</span><span class="sxs-lookup"><span data-stu-id="8b664-105">1406</span></span>|  
+|<span data-ttu-id="8b664-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="8b664-106">Keywords</span></span>|<span data-ttu-id="8b664-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8b664-107">ServiceModel</span></span>|  
+|<span data-ttu-id="8b664-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="8b664-108">Level</span></span>|<span data-ttu-id="8b664-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="8b664-109">Error</span></span>|  
+|<span data-ttu-id="8b664-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="8b664-110">Channel</span></span>|<span data-ttu-id="8b664-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="8b664-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="e76eb-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e76eb-112">Description</span></span>  
- <span data-ttu-id="e76eb-113">Das Ereignis wird bei einem Empfangstimeout ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="e76eb-113">This event is emitted on receive timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="8b664-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8b664-112">Description</span></span>  
+ <span data-ttu-id="8b664-113">Das Ereignis wird bei einem Empfangstimeout ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="8b664-113">This event is emitted on receive timeout.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="e76eb-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="e76eb-114">Message</span></span>  
- <span data-ttu-id="e76eb-115">1%</span><span class="sxs-lookup"><span data-stu-id="e76eb-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="8b664-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="8b664-114">Message</span></span>  
+ <span data-ttu-id="8b664-115">1%</span><span class="sxs-lookup"><span data-stu-id="8b664-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="e76eb-116">Details</span><span class="sxs-lookup"><span data-stu-id="e76eb-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="8b664-116">Details</span><span class="sxs-lookup"><span data-stu-id="8b664-116">Details</span></span>

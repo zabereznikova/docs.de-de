@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fc8930c86454807cf1df17a09c58588357c6a3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 990211aea04b71e4ad5b7d7f982475d79d7a4ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3424---websocketasyncreadstart"></a><span data-ttu-id="a0b7e-102">3424 - WebSocketAsyncReadStart</span><span class="sxs-lookup"><span data-stu-id="a0b7e-102">3424 - WebSocketAsyncReadStart</span></span>
-## <a name="properties"></a><span data-ttu-id="a0b7e-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a0b7e-103">Properties</span></span>  
+# <a name="3424---websocketasyncreadstart"></a><span data-ttu-id="dbf9d-102">3424 - WebSocketAsyncReadStart</span><span class="sxs-lookup"><span data-stu-id="dbf9d-102">3424 - WebSocketAsyncReadStart</span></span>
+## <a name="properties"></a><span data-ttu-id="dbf9d-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="dbf9d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a0b7e-104">ID</span><span class="sxs-lookup"><span data-stu-id="a0b7e-104">ID</span></span>|<span data-ttu-id="a0b7e-105">3424</span><span class="sxs-lookup"><span data-stu-id="a0b7e-105">3424</span></span>|  
-|<span data-ttu-id="a0b7e-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="a0b7e-106">Keywords</span></span>|<span data-ttu-id="a0b7e-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="a0b7e-107">HTTP</span></span>|  
-|<span data-ttu-id="a0b7e-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="a0b7e-108">Level</span></span>|<span data-ttu-id="a0b7e-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="a0b7e-109">Verbose</span></span>|  
-|<span data-ttu-id="a0b7e-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a0b7e-110">Channel</span></span>|<span data-ttu-id="a0b7e-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a0b7e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="dbf9d-104">ID</span><span class="sxs-lookup"><span data-stu-id="dbf9d-104">ID</span></span>|<span data-ttu-id="dbf9d-105">3424</span><span class="sxs-lookup"><span data-stu-id="dbf9d-105">3424</span></span>|  
+|<span data-ttu-id="dbf9d-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="dbf9d-106">Keywords</span></span>|<span data-ttu-id="dbf9d-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="dbf9d-107">HTTP</span></span>|  
+|<span data-ttu-id="dbf9d-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="dbf9d-108">Level</span></span>|<span data-ttu-id="dbf9d-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="dbf9d-109">Verbose</span></span>|  
+|<span data-ttu-id="dbf9d-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="dbf9d-110">Channel</span></span>|<span data-ttu-id="dbf9d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="dbf9d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a0b7e-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a0b7e-112">Description</span></span>  
- <span data-ttu-id="a0b7e-113">Dieses Ereignis wird ausgegeben, wenn WebSocket den asynchronen Lesevorgang startet.</span><span class="sxs-lookup"><span data-stu-id="a0b7e-113">This event is emitted when WebSocket asynchronous read has started.</span></span>  
+## <a name="description"></a><span data-ttu-id="dbf9d-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dbf9d-112">Description</span></span>  
+ <span data-ttu-id="dbf9d-113">Dieses Ereignis wird ausgegeben, wenn WebSocket den asynchronen Lesevorgang startet.</span><span class="sxs-lookup"><span data-stu-id="dbf9d-113">This event is emitted when WebSocket asynchronous read has started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a0b7e-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="a0b7e-114">Message</span></span>  
- <span data-ttu-id="a0b7e-115">WebSocketId: %1 hat den Lesevorgang gestartet.</span><span class="sxs-lookup"><span data-stu-id="a0b7e-115">WebSocketId:%1 read start.</span></span>  
+## <a name="message"></a><span data-ttu-id="dbf9d-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="dbf9d-114">Message</span></span>  
+ <span data-ttu-id="dbf9d-115">WebSocketId: %1 hat den Lesevorgang gestartet.</span><span class="sxs-lookup"><span data-stu-id="dbf9d-115">WebSocketId:%1 read start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a0b7e-116">Details</span><span class="sxs-lookup"><span data-stu-id="a0b7e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="dbf9d-116">Details</span><span class="sxs-lookup"><span data-stu-id="dbf9d-116">Details</span></span>

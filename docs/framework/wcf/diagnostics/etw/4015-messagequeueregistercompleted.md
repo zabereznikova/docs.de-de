@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f858a65b06409f297afd1a3bbdba33428e6f7d44
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a92f20a63a936d2494708ed2db6e6b6fb1362b30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4015---messagequeueregistercompleted"></a><span data-ttu-id="7b503-102">4015 - MessageQueueRegisterCompleted</span><span class="sxs-lookup"><span data-stu-id="7b503-102">4015 - MessageQueueRegisterCompleted</span></span>
-## <a name="properties"></a><span data-ttu-id="7b503-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="7b503-103">Properties</span></span>  
+# <a name="4015---messagequeueregistercompleted"></a><span data-ttu-id="4c011-102">4015 - MessageQueueRegisterCompleted</span><span class="sxs-lookup"><span data-stu-id="4c011-102">4015 - MessageQueueRegisterCompleted</span></span>
+## <a name="properties"></a><span data-ttu-id="4c011-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4c011-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7b503-104">ID</span><span class="sxs-lookup"><span data-stu-id="7b503-104">ID</span></span>|<span data-ttu-id="7b503-105">4015</span><span class="sxs-lookup"><span data-stu-id="7b503-105">4015</span></span>|  
-|<span data-ttu-id="7b503-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="7b503-106">Keywords</span></span>|<span data-ttu-id="7b503-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="7b503-107">ActivationServices</span></span>|  
-|<span data-ttu-id="7b503-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="7b503-108">Level</span></span>|<span data-ttu-id="7b503-109">Information</span><span class="sxs-lookup"><span data-stu-id="7b503-109">Information</span></span>|  
-|<span data-ttu-id="7b503-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="7b503-110">Channel</span></span>|<span data-ttu-id="7b503-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="7b503-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="4c011-104">ID</span><span class="sxs-lookup"><span data-stu-id="4c011-104">ID</span></span>|<span data-ttu-id="4c011-105">4015</span><span class="sxs-lookup"><span data-stu-id="4c011-105">4015</span></span>|  
+|<span data-ttu-id="4c011-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="4c011-106">Keywords</span></span>|<span data-ttu-id="4c011-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="4c011-107">ActivationServices</span></span>|  
+|<span data-ttu-id="4c011-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="4c011-108">Level</span></span>|<span data-ttu-id="4c011-109">Information</span><span class="sxs-lookup"><span data-stu-id="4c011-109">Information</span></span>|  
+|<span data-ttu-id="4c011-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="4c011-110">Channel</span></span>|<span data-ttu-id="4c011-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="4c011-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7b503-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7b503-112">Description</span></span>  
- <span data-ttu-id="7b503-113">Dieses Ereignis wird ausgegeben, wenn die Registrierung der Nachrichtenwarteschlange abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="7b503-113">This event is emitted when the message queue registration is completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="4c011-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4c011-112">Description</span></span>  
+ <span data-ttu-id="4c011-113">Dieses Ereignis wird ausgegeben, wenn die Registrierung der Nachrichtenwarteschlange abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="4c011-113">This event is emitted when the message queue registration is completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7b503-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="7b503-114">Message</span></span>  
- <span data-ttu-id="7b503-115">Die Registrierung der Nachrichtenwarteschlange für URI "%1" wurde abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="7b503-115">Message queue registration completed for uri '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="4c011-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="4c011-114">Message</span></span>  
+ <span data-ttu-id="4c011-115">Die Registrierung der Nachrichtenwarteschlange für URI "%1" wurde abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="4c011-115">Message queue registration completed for uri '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7b503-116">Details</span><span class="sxs-lookup"><span data-stu-id="7b503-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="4c011-116">Details</span><span class="sxs-lookup"><span data-stu-id="4c011-116">Details</span></span>

@@ -13,32 +13,33 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 461c9e423abb7b34edec4135f05f8fcf66244cfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6d737a7334098961cccb73a114be9be5bb71727
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="202---clientmessageinspectorbeforesendinvoked"></a><span data-ttu-id="808b2-102">202 - ClientMessageInspectorBeforeSendInvoked</span><span class="sxs-lookup"><span data-stu-id="808b2-102">202 - ClientMessageInspectorBeforeSendInvoked</span></span>
-## <a name="properties"></a><span data-ttu-id="808b2-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="808b2-103">Properties</span></span>  
+# <a name="202---clientmessageinspectorbeforesendinvoked"></a><span data-ttu-id="43d86-102">202 - ClientMessageInspectorBeforeSendInvoked</span><span class="sxs-lookup"><span data-stu-id="43d86-102">202 - ClientMessageInspectorBeforeSendInvoked</span></span>
+## <a name="properties"></a><span data-ttu-id="43d86-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="43d86-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="808b2-104">ID</span><span class="sxs-lookup"><span data-stu-id="808b2-104">ID</span></span>|<span data-ttu-id="808b2-105">202</span><span class="sxs-lookup"><span data-stu-id="808b2-105">202</span></span>|  
-|<span data-ttu-id="808b2-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="808b2-106">Keywords</span></span>|<span data-ttu-id="808b2-107">Troubleshooting, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="808b2-107">Troubleshooting, ServiceModel</span></span>|  
-|<span data-ttu-id="808b2-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="808b2-108">Level</span></span>|<span data-ttu-id="808b2-109">Information</span><span class="sxs-lookup"><span data-stu-id="808b2-109">Information</span></span>|  
-|<span data-ttu-id="808b2-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="808b2-110">Channel</span></span>|<span data-ttu-id="808b2-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="808b2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="43d86-104">Id</span><span class="sxs-lookup"><span data-stu-id="43d86-104">ID</span></span>|<span data-ttu-id="43d86-105">202</span><span class="sxs-lookup"><span data-stu-id="43d86-105">202</span></span>|  
+|<span data-ttu-id="43d86-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="43d86-106">Keywords</span></span>|<span data-ttu-id="43d86-107">Troubleshooting, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="43d86-107">Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="43d86-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="43d86-108">Level</span></span>|<span data-ttu-id="43d86-109">Information</span><span class="sxs-lookup"><span data-stu-id="43d86-109">Information</span></span>|  
+|<span data-ttu-id="43d86-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="43d86-110">Channel</span></span>|<span data-ttu-id="43d86-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="43d86-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="808b2-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="808b2-112">Description</span></span>  
- <span data-ttu-id="808b2-113">Dieses Ereignis wird ausgegeben, nachdem das Dienstmodell die `BeforeSendRequest`-Methode auf einem Clientmeldungsinspektor aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="808b2-113">This event is emitted after the Service Model has invoked the `BeforeSendRequest` method on a client message inspector.</span></span>  
+## <a name="description"></a><span data-ttu-id="43d86-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43d86-112">Description</span></span>  
+ <span data-ttu-id="43d86-113">Dieses Ereignis wird ausgegeben, nachdem das Dienstmodell die `BeforeSendRequest`-Methode auf einem Clientmeldungsinspektor aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="43d86-113">This event is emitted after the Service Model has invoked the `BeforeSendRequest` method on a client message inspector.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="808b2-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="808b2-114">Message</span></span>  
- <span data-ttu-id="808b2-115">Der Verteiler hat 'BeforeSendRequest' auf einem ClientMessageInspector des Typs '%1' aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="808b2-115">The Dispatcher invoked 'BeforeSendRequest' on a ClientMessageInspector of type  '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="43d86-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="43d86-114">Message</span></span>  
+ <span data-ttu-id="43d86-115">Der Verteiler hat 'BeforeSendRequest' auf einem ClientMessageInspector des Typs '%1' aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="43d86-115">The Dispatcher invoked 'BeforeSendRequest' on a ClientMessageInspector of type  '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="808b2-116">Details</span><span class="sxs-lookup"><span data-stu-id="808b2-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="43d86-116">Details</span><span class="sxs-lookup"><span data-stu-id="43d86-116">Details</span></span>  
   
-|<span data-ttu-id="808b2-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="808b2-117">Data Item Name</span></span>|<span data-ttu-id="808b2-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="808b2-118">Data Item Type</span></span>|<span data-ttu-id="808b2-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="808b2-119">Description</span></span>|  
+|<span data-ttu-id="43d86-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="43d86-117">Data Item Name</span></span>|<span data-ttu-id="43d86-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="43d86-118">Data Item Type</span></span>|<span data-ttu-id="43d86-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43d86-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="808b2-120">TypeName</span><span class="sxs-lookup"><span data-stu-id="808b2-120">TypeName</span></span>|`xs:string`|<span data-ttu-id="808b2-121">Der CLR-FullName für den Typ des aufgerufenen Inspektors.</span><span class="sxs-lookup"><span data-stu-id="808b2-121">The CLR FullName of the invoked inspector's type.</span></span>|  
-|<span data-ttu-id="808b2-122">HostReference</span><span class="sxs-lookup"><span data-stu-id="808b2-122">HostReference</span></span>|`xs:string`|<span data-ttu-id="808b2-123">Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.</span><span class="sxs-lookup"><span data-stu-id="808b2-123">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="808b2-124">Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ".</span><span class="sxs-lookup"><span data-stu-id="808b2-124">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="808b2-125">Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="808b2-125">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
-|<span data-ttu-id="808b2-126">AppDomain</span><span class="sxs-lookup"><span data-stu-id="808b2-126">AppDomain</span></span>|`xs:string`|<span data-ttu-id="808b2-127">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="808b2-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="43d86-120">TypeName</span><span class="sxs-lookup"><span data-stu-id="43d86-120">TypeName</span></span>|`xs:string`|<span data-ttu-id="43d86-121">Der CLR-FullName für den Typ des aufgerufenen Inspektors.</span><span class="sxs-lookup"><span data-stu-id="43d86-121">The CLR FullName of the invoked inspector's type.</span></span>|  
+|<span data-ttu-id="43d86-122">HostReference</span><span class="sxs-lookup"><span data-stu-id="43d86-122">HostReference</span></span>|`xs:string`|<span data-ttu-id="43d86-123">Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.</span><span class="sxs-lookup"><span data-stu-id="43d86-123">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="43d86-124">Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ".</span><span class="sxs-lookup"><span data-stu-id="43d86-124">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="43d86-125">Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="43d86-125">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="43d86-126">AppDomain</span><span class="sxs-lookup"><span data-stu-id="43d86-126">AppDomain</span></span>|`xs:string`|<span data-ttu-id="43d86-127">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="43d86-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

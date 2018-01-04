@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6d5ba90253e1f9c2bd7ff998acd45382318fadf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87a4c3bb61be2a2a6461b25ab4ff32e5b100ec84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3309---querycompositionexecuted"></a><span data-ttu-id="35ccf-102">3309 - QueryCompositionExecuted</span><span class="sxs-lookup"><span data-stu-id="35ccf-102">3309 - QueryCompositionExecuted</span></span>
-## <a name="properties"></a><span data-ttu-id="35ccf-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="35ccf-103">Properties</span></span>  
+# <a name="3309---querycompositionexecuted"></a><span data-ttu-id="6376a-102">3309 - QueryCompositionExecuted</span><span class="sxs-lookup"><span data-stu-id="6376a-102">3309 - QueryCompositionExecuted</span></span>
+## <a name="properties"></a><span data-ttu-id="6376a-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="6376a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="35ccf-104">ID</span><span class="sxs-lookup"><span data-stu-id="35ccf-104">ID</span></span>|<span data-ttu-id="35ccf-105">3309</span><span class="sxs-lookup"><span data-stu-id="35ccf-105">3309</span></span>|  
-|<span data-ttu-id="35ccf-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="35ccf-106">Keywords</span></span>|<span data-ttu-id="35ccf-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="35ccf-107">ServiceModel</span></span>|  
-|<span data-ttu-id="35ccf-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="35ccf-108">Level</span></span>|<span data-ttu-id="35ccf-109">Information</span><span class="sxs-lookup"><span data-stu-id="35ccf-109">Information</span></span>|  
-|<span data-ttu-id="35ccf-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="35ccf-110">Channel</span></span>|<span data-ttu-id="35ccf-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="35ccf-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="6376a-104">ID</span><span class="sxs-lookup"><span data-stu-id="6376a-104">ID</span></span>|<span data-ttu-id="6376a-105">3309</span><span class="sxs-lookup"><span data-stu-id="6376a-105">3309</span></span>|  
+|<span data-ttu-id="6376a-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="6376a-106">Keywords</span></span>|<span data-ttu-id="6376a-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6376a-107">ServiceModel</span></span>|  
+|<span data-ttu-id="6376a-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="6376a-108">Level</span></span>|<span data-ttu-id="6376a-109">Information</span><span class="sxs-lookup"><span data-stu-id="6376a-109">Information</span></span>|  
+|<span data-ttu-id="6376a-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="6376a-110">Channel</span></span>|<span data-ttu-id="6376a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="6376a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="35ccf-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35ccf-112">Description</span></span>  
- <span data-ttu-id="35ccf-113">Dieses Ereignis wird ausgegeben, wenn die Abfragekomposition ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="35ccf-113">This event is emitted when the query composition is executed.</span></span>  
+## <a name="description"></a><span data-ttu-id="6376a-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6376a-112">Description</span></span>  
+ <span data-ttu-id="6376a-113">Dieses Ereignis wird ausgegeben, wenn die Abfragekomposition ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="6376a-113">This event is emitted when the query composition is executed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="35ccf-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="35ccf-114">Message</span></span>  
- <span data-ttu-id="35ccf-115">Abfragekomposition mit "%1" wurde für den Anforderungs-URI "%2" ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="35ccf-115">Query composition using '%1' was executed on the Request Uri: '%2'.</span></span>  
+## <a name="message"></a><span data-ttu-id="6376a-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="6376a-114">Message</span></span>  
+ <span data-ttu-id="6376a-115">Abfragekomposition mit "%1" wurde für den Anforderungs-URI "%2" ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6376a-115">Query composition using '%1' was executed on the Request Uri: '%2'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="35ccf-116">Details</span><span class="sxs-lookup"><span data-stu-id="35ccf-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="6376a-116">Details</span><span class="sxs-lookup"><span data-stu-id="6376a-116">Details</span></span>

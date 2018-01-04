@@ -21,32 +21,33 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3a3389c6675e992c362e3e0a77dfbc97e142ef8a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89e0e9534b5e074e5a22ceaec4e04467f752281e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="6a915-102">ICorProfilerInfo::ForceGC-Methode</span><span class="sxs-lookup"><span data-stu-id="6a915-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="6a915-103">Erzwingt eine Garbagecollection in der common Language Runtime (CLR) ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6a915-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="b93e7-102">ICorProfilerInfo::ForceGC-Methode</span><span class="sxs-lookup"><span data-stu-id="b93e7-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="b93e7-103">Erzwingt eine Garbagecollection in der common Language Runtime (CLR) ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b93e7-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a915-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6a915-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b93e7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b93e7-104">Syntax</span></span>  
   
 ```  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="6a915-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6a915-105">Remarks</span></span>  
- <span data-ttu-id="6a915-106">Die `ForceGC` -Methode muss nur von einem Thread, die verwalteten Code wurde nie ausgeführt und verfügt nicht über die Profilerrückrufe für einen Stapel aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="6a915-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="6a915-107">Die einfachste Implementierung ist auf einen separaten Thread innerhalb des Profilers zu erstellen, die aufruft `ForceGC` signalisiert.</span><span class="sxs-lookup"><span data-stu-id="6a915-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b93e7-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b93e7-105">Remarks</span></span>  
+ <span data-ttu-id="b93e7-106">Die `ForceGC` -Methode muss nur von einem Thread, die verwalteten Code wurde nie ausgeführt und verfügt nicht über die Profilerrückrufe für einen Stapel aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="b93e7-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="b93e7-107">Die einfachste Implementierung ist auf einen separaten Thread innerhalb des Profilers zu erstellen, die aufruft `ForceGC` signalisiert.</span><span class="sxs-lookup"><span data-stu-id="b93e7-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a915-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6a915-108">Requirements</span></span>  
- <span data-ttu-id="6a915-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a915-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b93e7-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b93e7-108">Requirements</span></span>  
+ <span data-ttu-id="b93e7-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b93e7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a915-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a915-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b93e7-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b93e7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6a915-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a915-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b93e7-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b93e7-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a915-112">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a915-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b93e7-112">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b93e7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a915-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6a915-113">See Also</span></span>  
- [<span data-ttu-id="6a915-114">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a915-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b93e7-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b93e7-113">See Also</span></span>  
+ [<span data-ttu-id="b93e7-114">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b93e7-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

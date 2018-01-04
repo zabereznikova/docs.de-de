@@ -13,31 +13,32 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd509ad0bc8e6f3bcd407cfc01b4c4d920733d1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28ca619fe629358084bc2b1c388fc0cd8167354e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="452---messagelogwarning"></a><span data-ttu-id="cc7bb-102">452 - MessageLogWarning</span><span class="sxs-lookup"><span data-stu-id="cc7bb-102">452 - MessageLogWarning</span></span>
-## <a name="properties"></a><span data-ttu-id="cc7bb-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="cc7bb-103">Properties</span></span>  
+# <a name="452---messagelogwarning"></a><span data-ttu-id="92787-102">452 - MessageLogWarning</span><span class="sxs-lookup"><span data-stu-id="92787-102">452 - MessageLogWarning</span></span>
+## <a name="properties"></a><span data-ttu-id="92787-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="92787-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="cc7bb-104">ID</span><span class="sxs-lookup"><span data-stu-id="cc7bb-104">ID</span></span>|<span data-ttu-id="cc7bb-105">452</span><span class="sxs-lookup"><span data-stu-id="cc7bb-105">452</span></span>|  
-|<span data-ttu-id="cc7bb-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="cc7bb-106">Keywords</span></span>|<span data-ttu-id="cc7bb-107">Troubleshooting, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="cc7bb-107">Troubleshooting, WCFMessageLogging</span></span>|  
-|<span data-ttu-id="cc7bb-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="cc7bb-108">Level</span></span>|<span data-ttu-id="cc7bb-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="cc7bb-109">Warning</span></span>|  
-|<span data-ttu-id="cc7bb-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="cc7bb-110">Channel</span></span>|<span data-ttu-id="cc7bb-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="cc7bb-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="92787-104">Id</span><span class="sxs-lookup"><span data-stu-id="92787-104">ID</span></span>|<span data-ttu-id="92787-105">452</span><span class="sxs-lookup"><span data-stu-id="92787-105">452</span></span>|  
+|<span data-ttu-id="92787-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="92787-106">Keywords</span></span>|<span data-ttu-id="92787-107">Troubleshooting, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="92787-107">Troubleshooting, WCFMessageLogging</span></span>|  
+|<span data-ttu-id="92787-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="92787-108">Level</span></span>|<span data-ttu-id="92787-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="92787-109">Warning</span></span>|  
+|<span data-ttu-id="92787-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="92787-110">Channel</span></span>|<span data-ttu-id="92787-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="92787-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="cc7bb-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cc7bb-112">Description</span></span>  
- <span data-ttu-id="cc7bb-113">Dieses Ereignis wird ausgegeben, wenn die Nachrichtenprotokollwarnung gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="cc7bb-113">This event is emitted when the message log warning is sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="92787-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="92787-112">Description</span></span>  
+ <span data-ttu-id="92787-113">Dieses Ereignis wird ausgegeben, wenn die Nachrichtenprotokollwarnung gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="92787-113">This event is emitted when the message log warning is sent.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="cc7bb-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="cc7bb-114">Message</span></span>  
- <span data-ttu-id="cc7bb-115">%1</span><span class="sxs-lookup"><span data-stu-id="cc7bb-115">%1</span></span>  
+## <a name="message"></a><span data-ttu-id="92787-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="92787-114">Message</span></span>  
+ <span data-ttu-id="92787-115">%1</span><span class="sxs-lookup"><span data-stu-id="92787-115">%1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="cc7bb-116">Details</span><span class="sxs-lookup"><span data-stu-id="cc7bb-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="92787-116">Details</span><span class="sxs-lookup"><span data-stu-id="92787-116">Details</span></span>  
   
-|<span data-ttu-id="cc7bb-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="cc7bb-117">Data Item Name</span></span>|<span data-ttu-id="cc7bb-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="cc7bb-118">Data Item Type</span></span>|<span data-ttu-id="cc7bb-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cc7bb-119">Description</span></span>|  
+|<span data-ttu-id="92787-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="92787-117">Data Item Name</span></span>|<span data-ttu-id="92787-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="92787-118">Data Item Type</span></span>|<span data-ttu-id="92787-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="92787-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="cc7bb-120">data1</span><span class="sxs-lookup"><span data-stu-id="cc7bb-120">data1</span></span>|`xs:string`||  
-|<span data-ttu-id="cc7bb-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="cc7bb-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="cc7bb-122">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="cc7bb-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="92787-120">data1</span><span class="sxs-lookup"><span data-stu-id="92787-120">data1</span></span>|`xs:string`||  
+|<span data-ttu-id="92787-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="92787-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="92787-122">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="92787-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

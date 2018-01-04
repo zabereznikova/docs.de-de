@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3527863f22c27fda5485e0df7c1e0617e29952dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40261faf317e67d58eba20644da3c1a69c2fa76c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="039e3-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="039e3-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
-## <a name="properties"></a><span data-ttu-id="039e3-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="039e3-103">Properties</span></span>  
+# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="db8e0-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="db8e0-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
+## <a name="properties"></a><span data-ttu-id="db8e0-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="db8e0-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="039e3-104">ID</span><span class="sxs-lookup"><span data-stu-id="039e3-104">ID</span></span>|<span data-ttu-id="039e3-105">3325</span><span class="sxs-lookup"><span data-stu-id="039e3-105">3325</span></span>|  
-|<span data-ttu-id="039e3-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="039e3-106">Keywords</span></span>|<span data-ttu-id="039e3-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="039e3-107">ServiceModel</span></span>|  
-|<span data-ttu-id="039e3-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="039e3-108">Level</span></span>|<span data-ttu-id="039e3-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="039e3-109">Verbose</span></span>|  
-|<span data-ttu-id="039e3-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="039e3-110">Channel</span></span>|<span data-ttu-id="039e3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="039e3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="db8e0-104">ID</span><span class="sxs-lookup"><span data-stu-id="db8e0-104">ID</span></span>|<span data-ttu-id="db8e0-105">3325</span><span class="sxs-lookup"><span data-stu-id="db8e0-105">3325</span></span>|  
+|<span data-ttu-id="db8e0-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="db8e0-106">Keywords</span></span>|<span data-ttu-id="db8e0-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="db8e0-107">ServiceModel</span></span>|  
+|<span data-ttu-id="db8e0-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="db8e0-108">Level</span></span>|<span data-ttu-id="db8e0-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="db8e0-109">Verbose</span></span>|  
+|<span data-ttu-id="db8e0-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="db8e0-110">Channel</span></span>|<span data-ttu-id="db8e0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="db8e0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="039e3-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="039e3-112">Description</span></span>  
- <span data-ttu-id="039e3-113">Dieses Ereignis wird ausgegeben, wenn die Serialisierung der Antwortnachricht vom Verteiler abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="039e3-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
+## <a name="description"></a><span data-ttu-id="db8e0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="db8e0-112">Description</span></span>  
+ <span data-ttu-id="db8e0-113">Dieses Ereignis wird ausgegeben, wenn die Serialisierung der Antwortnachricht vom Verteiler abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="db8e0-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="039e3-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="039e3-114">Message</span></span>  
- <span data-ttu-id="039e3-115">Die Serialisierung der Antwortnachricht wurde vom Verteiler abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="039e3-115">Dispatcher completed serialization of the reply message.</span></span>  
+## <a name="message"></a><span data-ttu-id="db8e0-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="db8e0-114">Message</span></span>  
+ <span data-ttu-id="db8e0-115">Die Serialisierung der Antwortnachricht wurde vom Verteiler abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="db8e0-115">Dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="039e3-116">Details</span><span class="sxs-lookup"><span data-stu-id="039e3-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="db8e0-116">Details</span><span class="sxs-lookup"><span data-stu-id="db8e0-116">Details</span></span>
