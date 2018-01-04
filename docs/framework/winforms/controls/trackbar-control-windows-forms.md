@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 761a3217aa78f33cd781b9a4581eb6e409a5ff85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar-Steuerelement (Windows Forms)
 Windows Forms `TrackBar` -Steuerelement (manchmal auch "Schiebereglersteuerung" genannt) wird verwendet, zum Navigieren durch eine große Menge an Informationen oder für eine numerische Einstellung visuell anpassen. Die `TrackBar` Steuerelement besteht aus zwei Teilen: dem Ziehpunkt, auch bekannt als ein Schieberegler, und die Teilstriche. Der Ziehpunkt ist der Teil, das angepasst werden kann. Entspricht die Position der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Die Teilstriche sind visuelle Indikatoren, die in regelmäßigen Abständen angeordnet sind. Die Trackleiste verschiebt, die Sie angeben, und horizontal oder vertikal ausgerichtet werden können. Eine Beispiel für die Verwendung einer Trackleiste wäre für Cursor Blink Rate oder mit dem Mauszeiger Geschwindigkeit festlegen.  

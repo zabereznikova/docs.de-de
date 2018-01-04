@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24d9e4435362f5f87185d04f911caf76517a0de9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdff97fdb48126f3a7b970c677cf96f9c2ddaf8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-recognize-application-gestures"></a>Gewusst wie: Erkennen von Bewegungen in Anwendungen
 Im folgenden Beispiel wird veranschaulicht, wie Freihandeingaben gelöscht, wenn ein Benutzer sendet eine <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> Gestenhandler auf einem <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel geht davon aus einer <xref:System.Windows.Controls.InkCanvas>namens `inkCanvas1`, der in der XAML-Datei deklariert ist.  

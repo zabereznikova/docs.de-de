@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a22667e4227067dfbf0baaad1838ab520e0ac7e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Übersicht über das MonthCalendar-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement verfügt über eine intuitive grafische Oberfläche für Benutzer anzeigen und Festlegen von Datumsinformationen. Das Steuerelement zeigt einen Kalender: ein Raster mit die nummerierten Tage des Monats, in den Spalten unterhalb der Tage der Woche, mit dem ausgewählten Bereich der Datumsangaben hervorgehoben angeordnet sind. Sie können einen anderen Monat auswählen, durch Klicken auf die Pfeilschaltflächen auf beiden Seiten der Überschrift für den Monat. Im Gegensatz zu ähnlichen <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, Sie können mehr als ein Datum mit diesem Steuerelement auswählen. Weitere Informationen zu den <xref:System.Windows.Forms.DateTimePicker> steuern, finden Sie unter [DateTimePicker-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).  

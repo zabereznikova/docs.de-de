@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Übersicht über das TabControl-Steuerelement (Windows Forms)
 Mit <xref:System.Windows.Forms.TabControl> in Windows Forms werden mehrere Registerkarten wie Karteireiter in einem Notizbuch oder Reiter in einem Satz von Ordnern in einem Aktenschrank angezeigt. Die Registerkarten können Bilder und weitere Steuerelemente enthalten. Das Registerkarten-Steuerelement können Sie um die Art des Dialogfelds auf mehreren Seiten zu erstellen, die viele Stellen in Windows-Betriebssystems, z. B. die Anzeigeeigenschaften für Control Panel wird angezeigt. Darüber hinaus die <xref:System.Windows.Forms.TabControl> können verwendet werden, um Eigenschaftenseiten zu erstellen, die verwendet werden, um eine Gruppe verwandter Eigenschaften festzulegen.  

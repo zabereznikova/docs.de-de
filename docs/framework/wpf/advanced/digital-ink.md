@@ -17,18 +17,19 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0c283c58f2c39087c3d08b235b9056040971330
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 395d1a8d0536445cc1bcbc33b13d40c2bfc27fc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink"></a>Freihandeingaben
 In diesem Abschnitt erläutert die Verwendung von Freihandeingaben in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bisher nur in den Tablet PC-SDK gefunden, ist Freihandeingaben jetzt im Windows Presentation Foundation-Kern verfügbar. Dies bedeutet, dass Sie jetzt vollwertige Tablet PC-Anwendungen entwickeln können, indem Sie die Leistungsfähigkeit von Windows Presentation Foundation.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersichten](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)

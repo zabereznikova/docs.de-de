@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1c5b0447895b0ca5c67fff054d88da0d0107c5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a8571209ea0a80a64c1f30336c9a52b1bc79622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms
 In der <xref:System.Windows.Forms.DataGridView> Steuerung, verwenden die im Feld Textspalten automatische Sortierung in der Standardeinstellung, während andere Spaltentypen nicht automatisch sortiert werden. In einigen Fällen möchten diese Standardeinstellungen überschreiben. Beispielsweise können Sie Bilder anstelle von Text, Zahlen oder Zelle Enumerationswerte anzeigen. Während die Bilder nicht sortiert werden, können die zugrunde liegenden Werte, die sie darstellen sortiert werden.  
@@ -45,7 +46,7 @@ In der <xref:System.Windows.Forms.DataGridView> Steuerung, verwenden die im Feld
   
 -   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte namens `Priority` enthält.  
   
--   Verweise auf die <xref:System?displayProperty=nameWithType>-Assembly und die <xref:System.Windows.Forms?displayProperty=nameWithType>-Assembly.  
+-   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.DataGridView>  
