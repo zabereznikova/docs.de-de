@@ -17,11 +17,12 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
@@ -34,7 +35,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  Beschreibt die ALink-API, die die Erstellung von .NET Framework-Assemblys und ungebundenen Modulen unterstützt.  
   
  [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
- Unterstützt das Authenticode-Modul zu XrML-Lizenzerstellung und Verifizierung.  
+ Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.  
   
  [Konstanten](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Beschreibt die Konstanten, die in CorSym.idl definiert werden.  
@@ -63,7 +64,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  [Starke Namen](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
  Beschreibt die API für starke Namen, die einem Client ermöglicht, die starke Namenssignierung für Assemblys zu verwalten.  
 
- [Leistungsindikatoren und WMI](wmi/index.md)  
+ [WMI und Leistungsindikatoren](wmi/index.md)  
  Beschreibt die APIs, die Aufrufe von Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Bibliotheken zu umschließen.
   
  [Tlbexp-Hilfsfunktionen](../../../docs/framework/unmanaged-api/tlbexp/index.md)  

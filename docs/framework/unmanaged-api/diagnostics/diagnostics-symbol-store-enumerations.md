@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: db7b05c8819fea6554d23d20d88561cac1566a87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d638bd101aad1992f39e73ac6b2eb9fa53c8c7bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Diagnosesymbolspeicher-Enumerationen
 In diesem Thema wird beschrieben, die nicht verwalteten Enumerationen, die Diagnosesymbolspeicher-API verwendet, wird.  

@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cca74a1ff66392608802eacedcd74bb673919e8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49459001d3764988eff7b7a4381a843c44e596cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo-Funktion
 Ruft Version und Verzeichnisinformationen über die common Language Runtime (CLR), das von einer Anwendung angefordert ab.  
@@ -90,7 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|ERROR_INSUFFICIENT_BUFFER|Der Verzeichnis-Puffer ist nicht groß genug ist, um den Verzeichnispfad zu speichern.<br /><br /> - oder -<br /><br /> Die Version Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
+|ERROR_INSUFFICIENT_BUFFER|Der Verzeichnis-Puffer ist nicht groß genug ist, um den Verzeichnispfad zu speichern.<br /><br /> - oder -<br /><br /> Die Version Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `GetRequestedRuntimeInfo` Methodenrückgabe Laufzeitinformationen über die Version geladenen des Prozesses, der nicht unbedingt die neueste Version auf dem Computer installiert ist.  

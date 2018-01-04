@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: da6e9b52c0ea6f2935aad70779e159db91a4f501
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a8c540c9618655e6df30ad253e0c4cccdf6624e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain-Methode
 Gibt an, die <xref:System.AppDomain> in dem den angegebenen verwalteten Code ausgeführt.  
@@ -62,7 +63,7 @@ HRESULT ExecuteInAppDomain(
 |E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExecuteInAppDomain`ermöglicht es dem Host, um die Steuerung zu in welchem <xref:System.AppDomain> die angegebene verwaltete Methode ausgeführt werden soll. Sie erhalten eine Anwendungsdomäne-Bezeichner, der auf den Wert der entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft durch den Aufruf [GetCurrentAppDomainId-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain`ermöglicht es dem Host, um die Steuerung zu in welchem <xref:System.AppDomain> die angegebene verwaltete Methode ausgeführt werden soll. Sie erhalten eine Anwendungsdomäne-Bezeichner, der auf den Wert der entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft durch den Aufruf [[GetCurrentAppDomainId-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
