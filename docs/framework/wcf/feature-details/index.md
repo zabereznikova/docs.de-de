@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Details zur WCF-Funktion
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] lässt eine umfangreiche Kontrolle über die Messagingfunktionen einer Anwendung zu. Die Themen in diesem Abschnitt erläutern die verfügbaren Funktionen im Detail. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]grundlegende Programmierung, finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -33,13 +34,13 @@ ms.lasthandoff: 12/02/2017
  [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Beschreibt, wie mehrere Aspekte des Diensts kontrolliert werden können.  
   
- [Die Datenübertragung und Serialisierung](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Datenübertragung und Serialisierung](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Beschreibt, wie die Serialisierung der Daten für die Interoperation oder zukünftige Kompatibilität angepasst werden kann.  
   
- [Sitzungen, Instanziierung und Parallelität](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [Sitzungen, Instanzerstellung und Parallelität](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  Beschreibt die Instanziierungs- und Sitzungsmodi von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und erläutert, wie der richtige Modus für Ihre Anwendung ausgewählt werden kann.  
   
- [Transporte](../../../../docs/framework/wcf/feature-details/transports.md)  
+ [Transportprotokolle](../../../../docs/framework/wcf/feature-details/transports.md)  
  Beschreibt, wie die Transportebene, die niedrigste Ebene des Kanalstapels, konfiguriert werden kann.  
   
  [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
  [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)  
  Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit Ihnen hilft, Anwendungen zu erstellen, die Vertraulichkeit und Integrität aufweisen. Authentifizierung und Autorisierung sind auch verfügbar, ebenso wie Überwachungsfunktionen.  
   
- [Peer-zu-Peer-Netzwerken](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Peer-to-Peer-Netzwerke](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Beschreibt im Detail, wie Peerdienste und Clients erstellt werden können.  
   
  [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)  

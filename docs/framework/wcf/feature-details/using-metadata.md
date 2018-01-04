@@ -13,17 +13,18 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa545e812de8c87191d6bba7df5cc5a5a494af3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-metadata"></a>Verwenden von Metadaten
 Dienstmetadaten enthalten eine maschinell lesbare Beschreibung des Diensts. Dienstmetadaten schließen Beschreibungen der Dienstendpunkte, Bindungen, Verträge, Vorgänge und Nachrichten ein. Sie können Dienstmetadaten für verschiedene Zwecke verwenden, z. B. automatisches Generieren eines Clients zur Verwendung des Diensts, Implementieren der Dienstbeschreibung und dynamische Aktualisierung der Bindung für einen Client.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlagen des generierten Clientcode](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Grundlagen des generierten Clientcodes](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Beschreibt die verschiedenen Klassen und Schnittstellen, die das Tool Svcutil.exe generiert.  
   
  [Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  

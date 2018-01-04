@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Windows Communication Foundation-Glossar für .NET Framework 4.5
 Im Folgenden finden Sie Definitionen für die Begriffe in der Windows Communication Foundation-Dokumentation.  
@@ -49,7 +50,7 @@ Im Folgenden finden Sie Definitionen für die Begriffe in der Windows Communicat
 |Initiierungsvorgang (initiating operation)|Ein Vorgang, der als erster Vorgang einer neuen Sitzung aufgerufen wird. Nicht-Initiierungsvorgänge können nur aufgerufen werden, nachdem mindestens ein Initiierungsvorgang aufgerufen wurde.|  
 |Instanziierungsmodell (instancing model)|Ein Dienst verfügt über ein Instanziierungsmodell. Es gibt drei instanziierungsmodelle: &quot;einzelne&quot; in dem ein einzelnes CLR-Objekt alle Clients bedient; &quot;pro Anruf&quot; bei dem ein neues CLR-Objekt erstellt wird, um jede clientanruf abzuarbeiten; und &quot;pro Sitzung&quot; bei dem ein Satz von CLR-erstellt wird Objekten – einer für jede einzelne Sitzung. Die Wahl des Instanziierungsmodells hängt von den Anwendungsanforderungen und dem erwarteten Nutzungsmuster des Diensts ab.|  
 |message|Eine Nachricht ist eine eigenständige Dateneinheit, die aus mehreren Teilen bestehen kann, unter anderem einem Text und Headern.|  
-|Nachrichtenvertrag|Ein Nachrichtenvertrag beschreibt das Format einer Nachricht. Er erklärt beispielsweise, ob Nachrichtenelemente in Header oder in den Text gehören, welches Sicherheitsniveau auf welche Elemente der Nachricht angewendet werden soll usw.|  
+|Nachrichtenvertrag|Ein Nachrichtenvertrag, der das Format einer Nachricht beschreibt. Er erklärt beispielsweise, ob Nachrichtenelemente in Header oder in den Text gehören, welches Sicherheitsniveau auf welche Elemente der Nachricht angewendet werden soll usw.|  
 |Nachrichtensicherheitsmodus|Der Nachrichtensicherheitsmodus gibt an, dass Sicherheit bereitgestellt wird, indem sicherheitstechnische Daten implementiert werden. Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht werden, ist es außerdem möglich, mehrere Arten von Anmeldeinformationen in die Nachricht aufzunehmen (diese werden als Ansprüche bezeichnet). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.|  
 |Metadaten|Die Metadaten eines Diensts beschreiben die Merkmale des Diensts, die eine externe Entität zur Kommunikation mit dem Dienst verstehen muss. Metadaten können über das ServiceModel Metadata Utility Tool (Svcutil.exe) verarbeitet werden, um einen WCF-Client und eine dazugehörige Konfiguration zu erstellen, die eine Clientanwendung zur Interaktion mit dem Dienst nutzen kann.  Zu den vom Dienst verfügbar gemachten Metadaten gehören XML-Schemadokumente, die den Datenvertrag des Diensts definieren, und WSDL-Dokumente, die die Methoden des Diensts beschreiben.  Bei Aktivierung werden die Metadaten für den Dienst automatisch von WCF erstellt, indem der Dienst und seine Endpunkte überprüft werden. Zum Veröffentlichen von Metadaten von einem Dienst aus müssen Sie das Metadatenverhalten explizit aktivieren.|  
 |Vorgangsvertrag (operation contract)|Ein Vorgangsvertrag definiert die Parameter und den Rückgabetyp eines Vorgangs. Beim Erstellen einer Schnittstelle, die den Dienstvertrag definiert, wird ein Vorgangsvertrag angegeben, indem das T:System.ServiceModel.OperationContractAttribute-Attribut auf jede Methodendefinition angewendet wird, die Teil des Vertrags ist. Die Vorgänge können so gestaltet werden, dass sie eine einzelne Nachricht annehmen und eine einzelne Nachricht zurückgeben oder dass sie einen Typensatz annehmen und einen Typ zurückgeben. Im letzteren Fall bestimmt das System das Format der Nachrichten, die für diesen Vorgang ausgetauscht werden müssen.|  

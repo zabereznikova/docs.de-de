@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist für die Interoperation mit Webdiensten konzipiert, die eine Reihe von Spezifikationen, die Webdienstspezifikationen, unterstützen. Um die Dienstkonfiguration für die empfohlene Vorgehensweise für Interoperabilität zu vereinfachen, führt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] drei interoperable, vom System bereitgestellte Bindungen ein: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> und <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Für Interoperabilität mit OASIS (Organization for the Advancement of Structured Information Standards)-Standards enthält [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine interoperable, vom System bereitgestellte Bindung: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Für die Veröffentlichung von Metadaten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält zwei interoperable, vom System bereitgestellte Bindungen: [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) und [ \<MexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Dieses Thema listet Spezifikationen auf, die von interoperablen, vom System bereitgestellten Bindungen unterstützt werden.  

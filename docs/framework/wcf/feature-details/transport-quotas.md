@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
@@ -39,7 +40,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
   
  Jede Kontingenteinstellung verfügt über einen Typ, einen minimalen Wert und einen Standardwert. Der Maximalwert eines Kontingents wird von seinem Typ beschränkt. Aufgrund von Computereinschränkungen ist es nicht immer möglich, ein Kontingent auf seinen Maximalwert festzulegen.  
   
-|Name|Typ|Min.-<br /><br /> Wert|Standard<br /><br /> Wert|Beschreibung|  
+|name|Typ|Min.-<br /><br /> Wert|Standard<br /><br /> Wert|Beschreibung|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 Teilstrich|5 Sek.|Maximale Zeit für das Warten darauf, dass eine Verbindung die Präambel während des anfänglichen Lesens sendet. Diese Daten werden empfangen, bevor die Authentifizierung eintritt. Diese Einstellung ist im Allgemeinen viel kleiner als der `ReceiveTimeout`-Kontingentwert.|  
 |`CloseTimeout`|TimeSpan|0|1 Min.|Maximale Zeit für das Warten darauf, dass eine Verbindung geschlossen wird, bevor der Transport eine Ausnahme auslöst.|  
@@ -68,7 +69,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Kontrolle von Transportkontingenten vom Bindungselement  
  Das Festlegen von Transportkontingenten durch das Bindungselement bietet die größte Flexibilität in der Kontrolle des Transportverhaltens. Die Standardtimeouts für Schließen-, Öffnen-, Empfangs- und Sendevorgänge werden von der Bindung übernommen, wenn ein Kanal erstellt wird.  
   
-|Name|HTTP|TCP/IP|Named Pipe|  
+|name|HTTP|TCP/IP|Named Pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -90,7 +91,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Kontrolle von Transportkontingenten von der Bindung  
  Die Einrichtung von Transportkontingenten durch die Bindung bietet einen vereinfachten Satz an Kontingenten, aus dem ausgesucht werden kann, während gleichzeitig der Zugriff auf die üblichsten Kontingentwerte aufrechterhalten bleibt.  
   
-|Name|HTTP|TCP/IP|Named Pipe|  
+|name|HTTP|TCP/IP|Named Pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

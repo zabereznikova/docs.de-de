@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Gewusst wie: Festlegen der JPEG-Komprimierungsebene
 Möglicherweise möchten Sie die Parameter eines Bilds ändern, wenn Sie das Bild auf einem Datenträger speichern, um dadurch die Dateigröße zu minimieren oder die Qualität zu verbessern. Sie können die Qualität eines JPEG-Bilds anpassen, indem Sie seine Komprimierungsebene ändern. Um die Komprimierungsebene anzugeben, wenn ein JPEG-Bild zu speichern, müssen Sie erstellen eine <xref:System.Drawing.Imaging.EncoderParameters> Objekt, und übergeben Sie sie an der <xref:System.Drawing.Image.Save%2A> Methode der <xref:System.Drawing.Image> Klasse. Initialisieren der <xref:System.Drawing.Imaging.EncoderParameters> Objekt, sodass ein Array aufweist, die von einem besteht <xref:System.Drawing.Imaging.EncoderParameter>. Beim Erstellen der <xref:System.Drawing.Imaging.EncoderParameter>, geben Sie die <xref:System.Drawing.Imaging.Encoder.Quality> Encoder und die gewünschte Komprimierungsebene.  

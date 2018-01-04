@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
 In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Suchfunktion in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], finden Sie unter [Überblick über WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).
@@ -329,7 +330,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. [!INCLU
     }  
     ```  
   
- Die OnBegin/ / OnEnd.. -Methoden stellen die Logik für die nachfolgenden Suchvorgänge bereit. Die Methoden <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> und <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementieren z. B. die Suchlogik für den Suchproxy. Wenn der Suchproxy eine Überprüfungsmeldung empfängt, werden diese Methoden ausgeführt, um eine Antwort an den Client zurückzusenden. Sie können die Suchlogik nach Belieben ändern. Beispielsweise können Sie als Teil des Suchvorgangs eine benutzerdefinierte Bereichsübereinstimmung integrieren, die auf Algorithmen oder einer anwendungsspezifischen Analyse der XML-Metadaten basiert.  
+ Die OnBegin/ / OnEnd. -Methoden stellen die Logik für die nachfolgenden Suchvorgänge bereit. Die Methoden <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> und <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementieren z. B. die Suchlogik für den Suchproxy. Wenn der Suchproxy eine Überprüfungsmeldung empfängt, werden diese Methoden ausgeführt, um eine Antwort an den Client zurückzusenden. Sie können die Suchlogik nach Belieben ändern. Beispielsweise können Sie als Teil des Suchvorgangs eine benutzerdefinierte Bereichsübereinstimmung integrieren, die auf Algorithmen oder einer anwendungsspezifischen Analyse der XML-Metadaten basiert.  
   
 ### <a name="to-implement-the-asyncresult-class"></a>So implementieren Sie die AsyncResult-Klasse  
   
@@ -988,7 +989,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über den WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
  [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
  [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70f913acb2620b5c01e1aec1f1eb98b041b82a59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec3ce7d2d933226162664826764c818eacf97afc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-list-installed-encoders"></a>Gewusst wie: Auflisten installierter Encoder
 Möglicherweise möchten die Liste der auf einem Computer verfügbaren Bildencodern, um festzustellen, ob Ihre Anwendung auf einem bestimmten Image File Format speichern kann. Die <xref:System.Drawing.Imaging.ImageCodecInfo> -Klasse stellt die <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statische Methoden, damit Sie bestimmen können, welche Encodern verfügbar sind. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>Gibt ein Array von <xref:System.Drawing.Imaging.ImageCodecInfo> Objekte.  

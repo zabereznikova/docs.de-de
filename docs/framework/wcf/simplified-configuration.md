@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-configuration"></a>Vereinfachte Konfiguration
 Das Konfigurieren der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste kann aufwändig sein. Es gibt viele verschiedene Optionen, und es ist nicht immer einfach zu bestimmen, welche Einstellungen erforderlich sind. Konfigurationsdateien erhöhen zwar die Flexibilität von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensten, sind jedoch auch die Quelle für viele Probleme, die nur schwer zu ermitteln sind. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] behandelt diese Probleme und gibt Benutzern die Möglichkeit, den Umfang und die Komplexität der Dienstkonfiguration zu reduzieren.  
@@ -123,7 +124,7 @@ Das Konfigurieren der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Diens
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Konfigurieren der vom System bereitgestellten Bindungen](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md)  
  [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [Konfigurieren von WCF-Diensten in Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

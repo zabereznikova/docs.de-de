@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen bereit. Wenn Sie bereits komponentenbasierte Anwendungslogik verwenden, die in COM+ gehostet wird, können Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zum Erweitern der vorhandenen Logik verwenden, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  Die COM+-Funktionen zur Prozesswiederverwendung können für integrierte Anwendungen nicht verwendet werden. Wenn die Anwendung für die Verwendung der Prozesswiederverwendung konfiguriert ist und die Komponenten in einem COM+-gehosteten Prozess ausgeführt werden, tritt beim Start des Dienstes ein Fehler auf. Diese Anforderung schließt Dienste nicht ein, die den Modus „Prozessintern im Internet gehostet“ verwenden, da die Einstellungen für die Prozesswiederverwendung nicht angewendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrieren von COM-Anwendungen (Übersicht)](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Übersicht über die Integration von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

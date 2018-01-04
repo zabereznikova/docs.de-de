@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
 In diesem Thema werden Implementierungsdetails für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy und WS-PolicyAttachment sowie zusätzliche durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eingeführte WS-Policy-Assertionen und WSDL 1.1-Erweiterungen beschrieben.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06fb93e30467ce890be11826329f678e1d720b39
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fa1fb42ba09b1c4e855e3c05e80418d7e278614
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="management"></a>Verwaltung
 Dieser Abschnitt enthält Beispiele, in denen die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Verwaltung veranschaulicht wird.  
@@ -38,7 +39,7 @@ Dieser Abschnitt enthält Beispiele, in denen die [!INCLUDE[indigo1](../../../..
  [Erweitern der Ablaufverfolgung](../../../../docs/framework/wcf/samples/extending-tracing.md)  
  Veranschaulicht das Erweitern der Ablaufverfolgungsfunktion von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durch das Schreiben von benutzerdefinierten Aktivitätsablaufverfolgungen im Client- und Dienstcode.  
   
- [PII Sicherheitssperre](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
+ [Sperre der PII-Sicherheit](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
  Zeigt, wie mehrere sicherheitsbezogene Funktionen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts gesteuert werden.  
   
  [Verwenden von Leistungsindikatoren](../../../../docs/framework/wcf/samples/using-performance-counters.md)  

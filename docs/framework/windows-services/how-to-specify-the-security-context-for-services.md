@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Gewusst wie: Angeben des Sicherheitskontexts für Dienste
 Standardmäßig werden Dienste in einem anderen Sicherheitskontext als dem des angemeldeten Benutzers ausgeführt. Wird aufgerufen, der Dienst ausgeführt wird, im Rahmen des Standardkontos System `LocalSystem`, die erhalten sie unterschiedliche Zugriffsrechte auf Systemressourcen, als der vom Benutzer. Sie können dieses Verhalten, um ein anderes Benutzerkonto angeben, unter dem der Dienst ausgeführt werden soll, ändern.  
@@ -56,4 +57,4 @@ Standardmäßig werden Dienste in einem anderen Sicherheitskontext als dem des a
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Vorgehensweise: Erstellen von Windows-Dienste](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+ [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)

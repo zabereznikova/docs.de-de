@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
 Bindungen und Bindungselemente (Objekte, die <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> bzw. <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> erweitern) sind die Orte, an denen das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungsmodell mit Kanalfactorys und Kanallistenern verknüpft wird. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die Entwicklung einer <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -62,18 +63,18 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="transport-binding-elements"></a>Transportbindungselemente  
  Um ein neues Transportbindungselement zu erstellen, erweitern Sie die <xref:System.ServiceModel.Channels.TransportBindingElement>-Schnittstelle. Anschließend müssen Sie mindestens die <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>-Methode und die <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType>-Eigenschaft implementieren.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Sollte eine neue Kopie dieses Bindungselements zurückgeben.  Es wird empfohlen, dass Autoren von Bindungsemelenten einen Klon implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Sollte eine neue Kopie dieses Bindungselements zurückgeben.  Es wird empfohlen, dass Autoren von Bindungselementen einen Klon implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
   
  <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – Die <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> get-Eigenschaft gibt das URI-Schema für das Transportprotokoll zurück, das vom Bindungselement dargestellt wird. Z. B. die <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> Zurückgeben von "http" und "net.tcp" von ihren jeweiligen <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Eigenschaften.  
   
 #### <a name="encoding-binding-elements"></a>Codierungsbindungselemente  
  Um neue Codierungsbindungselemente zu erstellen, erweitern Sie zunächst die <xref:System.ServiceModel.Channels.BindingElement>-Klasse und implementieren die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>-Klasse. Anschließend müssen Sie mindestens die <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>-Methode, die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType>-Methode und die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>-Eigenschaft implementieren.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Gibt eine neue Kopie dieses Bindungselements zurück. Es wird empfohlen, dass Autoren von Bindungselementen <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> Gibt eine neue Kopie dieses Bindungselements zurück. Es wird empfohlen, dass Autoren von Bindungselementen <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Gibt <xref:System.ServiceModel.Channels.MessageEncoderFactory> zurück, die ein Handle für eine tatsächliche Klasse bereitstellt, die den neuen Encoder implementiert und <xref:System.ServiceModel.Channels.MessageEncoder> erweitern sollte. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncoderFactory> und <xref:System.ServiceModel.Channels.MessageEncoder>.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> Gibt <xref:System.ServiceModel.Channels.MessageEncoderFactory> zurück, die ein Handle für eine tatsächliche Klasse bereitstellt, die den neuen Encoder implementiert und <xref:System.ServiceModel.Channels.MessageEncoder> erweitern sollte. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncoderFactory> und <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Gibt die in dieser Codierung verwendete <xref:System.ServiceModel.Channels.MessageVersion> zurück, die die verwendeten Versionen von SOAP und WS-Adressierung darstellt.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A> Gibt die in dieser Codierung verwendete <xref:System.ServiceModel.Channels.MessageVersion> zurück, die die verwendeten Versionen von SOAP und WS-Adressierung darstellt.  
   
  Eine vollständige Liste optionaler Methoden und Eigenschaften zu benutzerdefinierten Codierungsbindungselementen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

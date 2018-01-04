@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5bcab65eb98684820a84968f15ba80de3c5b60de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5b0fe57bb6a4604c86e63a154e3af5542672912
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-error-handling"></a>Vorgehensweise: Fehlerbehandlung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit Fehlerbehandlung zu erstellen. In diesem Beispiel werden Nachrichten an einen Zielendpunkt weitergeleitet. Falls eine Nachricht aufgrund eines Netzwerkfehlers oder kommunikationsbezogenen Fehlers (<xref:System.ServiceModel.CommunicationException>) nicht übermittelt werden kann, wird die Nachricht neu an einen anderen Endpunkt gesendet.  

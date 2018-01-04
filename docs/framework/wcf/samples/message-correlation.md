@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef105626d2427f0ea6dd49f696b78ffac4834f92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
 Dieses Beispiel zeigt, wie eine MSMQ-Anwendung (Message Queuing) eine MSMQ-Nachricht an einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst senden kann und wie Nachrichten zwischen Sender- und Empfängeranwendungen in einem Anforderungs/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. c  
@@ -323,5 +324,5 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968)

@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ddfb7b343bf4eb551b5029c538d29f104698adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse
 Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren gehört zu den grundlegenden Sicherheitsaufgaben. So sollten zum Beispiel nur bestimmte Benutzer vertrauliche Daten wie Lohnlisten anzeigen können. In diesem Thema wird erklärt, wie Sie den Zugriff auf eine Methode beschränken können, indem Sie es zur Voraussetzung machen, dass die entsprechenden Benutzer einer vordefinierten Gruppe angehören. Ein funktionierendes Beispiel finden Sie unter [Zugriff auf Dienstvorgänge autorisieren](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -100,5 +101,5 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
  <xref:System.Security.Permissions.SecurityAction.Demand>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
  [Zugriffsautorisierung für Dienstvorgänge](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Sicherheit (Übersicht)](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

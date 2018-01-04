@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrieren von Enterprise Services-Transaktionskomponenten
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Stellt einen automatischen Mechanismus zum Integrieren von Enterprise Services (siehe [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden. Da die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Transaktionsfunktion basiert auf der <xref:System.Transactions> -Infrastruktur, um den Prozess zum Integrieren von Enterprise Services mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist identisch mit dem für die Interoperabilität zwischen Angabe <xref:System.Transactions> und Enterprise Dienste, wie im [Interoperabilität mit Enterprise Services und COM+-Transaktionen](http://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -104,4 +105,4 @@ static void Main()
   
 ## <a name="see-also"></a>Siehe auch  
  [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+ [Integrieren von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

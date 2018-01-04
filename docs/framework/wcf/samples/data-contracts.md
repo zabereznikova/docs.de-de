@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99c7c0e02d82b9c7d05ab04cd8896449f8a7de89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contracts"></a>Datenverträge
 Dieser Abschnitt enthält Beispiele, in denen Datenverträge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dargestellt werden.  
@@ -35,7 +36,7 @@ Dieser Abschnitt enthält Beispiele, in denen Datenverträge in [!INCLUDE[indigo
  [Objektverweise](../../../../docs/framework/wcf/samples/object-references.md)  
  Veranschaulicht, wie Objekte als Verweise zwischen Server und Client übergeben werden.  
   
- [POCO Unterstützung](../../../../docs/framework/wcf/samples/poco-support.md)  
+ [POCO-Unterstützung](../../../../docs/framework/wcf/samples/poco-support.md)  
  Veranschaulicht die Serialisierungsunterstützung für makellose Typen, d. h. Typen, auf die Serialisierungsattribute nicht angewendet wurden (diese werden auch als POCO-Typen (Plain Old CLR Object) bezeichnet).  
   
  [Verwendung des Serialisierungsbinders](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>Verwalteter Code in GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist der Teil von Windows, der zweidimensionale Vektorgrafik, Bildverarbeitung und Typografie bereitstellt. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verbessert [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (das Graphics Device Interface (Schnittstelle für Grafikgeräte) in früheren Versionen von Windows) durch Hinzufügen neuer Features und Optimieren von vorhandenen Features.  

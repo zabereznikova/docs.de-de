@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fd742e7fa2b7870b8988e889a0df2b18a240bd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Gewusst wie: Manuelles Rendern von gepufferten Grafiken
 Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer erstellen und rendern können. Sie können Instanzen der <xref:System.Drawing.BufferedGraphics>-Klasse erstellen, die mit Zeichenflächen auf dem Bildschirm verknüpft ist. Dazu rufen Sie die <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>-Methode auf. Diese Methode erstellt eine <xref:System.Drawing.BufferedGraphics>-Instanz, die mit einer bestimmten Darstellungsoberfläche verknüpft ist, beispielsweise mit einem Formular oder Steuerelement. Nachdem Sie eine <xref:System.Drawing.BufferedGraphics>-Instanz erstellt haben, können Sie mit der<xref:System.Drawing.BufferedGraphics.Graphics%2A>-Eigenschaft Grafiken in den Puffer schreiben, dem die Instanz entspricht. Nachdem Sie alle Grafikvorgänge ausgeführt haben, können Sie den Inhalt des Puffers auf den Bildschirm kopieren, indem Sie die <xref:System.Drawing.BufferedGraphics.Render%2A>-Methode aufrufen.  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>Erweiterbarkeit von Kanälen
 Die Beispiele in diesem Abschnitt veranschaulichen benutzerdefinierte Kanäle.  
@@ -26,7 +27,7 @@ Die Beispiele in diesem Abschnitt veranschaulichen benutzerdefinierte Kanäle.
  [Lokaler Kanal](../../../../docs/framework/wcf/samples/local-channel.md)  
  Veranschaulicht den lokalen Kanal, einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transportkanal, der für die Kommunikation innerhalb derselben Anwendungsdomäne verwendet wird.  
   
- [Zuverlässige, sichere Profil](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
+ [Reliable Secure Profile](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
  Veranschaulicht, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Reliable Secure Profile (RSP) verfasst werden.  
   
  [Benutzerdefinierter Kanalverteiler](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  

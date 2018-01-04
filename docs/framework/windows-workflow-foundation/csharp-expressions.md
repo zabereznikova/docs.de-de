@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f220ffdf04102a110124e7331a53ae5ee70316a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fffceba415bbdfdb15647ab67b01031b99e48b2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-expressions"></a>C#-Ausdrücke
 Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden C#-Ausdrücke in [!INCLUDE[wf](../../../includes/wf-md.md)] unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, und Visual Basic-Workflowprojeke verwenden Visual Basic-Ausdrücke. Vorhandene [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, können unabhängig von der Projektsprache zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migieren und werden unterstützt. Dieses Thema bietet eine Übersicht über C#-Ausdrücke in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

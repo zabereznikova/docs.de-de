@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms
 Die `DataGridView` Steuerelement ganz einfach die grundlegende Darstellung von Zellen sowie das Anzeigeformat von Zellwerten definieren. Sie können die Darstellung definieren und Formatierung für einzelne Zellen, für Zellen in bestimmte Spalten und Zeilen oder für alle Zellen im Steuerelement durch Festlegen der Eigenschaften von der `DataGridViewCellStyle` erfolgt über verschiedene Objekte `DataGridView` Eigenschaften zu steuern. Darüber hinaus können Sie diese Faktoren wie z. B. der Wert der Zelle durch Behandeln dynamisch anhand Stile modifizieren die `CellFormatting` Ereignis.  

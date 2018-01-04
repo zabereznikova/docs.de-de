@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f2a9f2f44f5dfd44f00ae580423b1d2781ae5bd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-windows-client"></a>Nachrichtensicherheit über einen Windows-Client
 Das folgende Szenario zeigt einen im Nachrichtensicherheitsmodus gesicherten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und Server. Client und Dienst werden mit Windows-Anmeldeinformationen authentifiziert.  
@@ -127,5 +128,5 @@ Das folgende Szenario zeigt einen im Nachrichtensicherheitsmodus gesicherten [!I
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

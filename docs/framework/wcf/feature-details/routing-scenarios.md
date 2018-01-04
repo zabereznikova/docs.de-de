@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -67,7 +68,7 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
 ### <a name="protocol-bridging"></a>Protokollüberbrückung  
  Beim Weiterleiten von Nachrichten zwischen unterschiedlichen SOAP-Protokollen verwendet der Routingdienst WCF-APIs zum Konvertieren der Nachricht von einem Protokoll zum anderen. Dies tritt automatisch ein, wenn die vom Routingdienst verfügbar gemachten Dienstendpunkte ein anderes Protokoll verwenden als die Clientendpunkte, an die Nachrichten weitergeleitet werden. Es ist möglich, dieses Verhalten zu deaktivieren, falls keine standardmäßigen Protokolle verwendet sind. Sie müssen dann jedoch einen eigenen Überbrückungscode bereitstellen.  
   
- . Ein Beispiel über den Routingdienst, um Nachrichten zwischen Protokollen zu übersetzen, finden Sie unter der [Bridging und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) Beispiel.  
+ sein. Ein Beispiel über den Routingdienst, um Nachrichten zwischen Protokollen zu übersetzen, finden Sie unter der [Bridging und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) Beispiel.  
   
 ### <a name="error-handling"></a>Fehlerbehandlung  
  In einer verteilten Umgebung ist es nicht ungewöhnlich, dass vorübergehende Netzwerkfehler oder Kommunikationsfehler auftreten. Ohne einen Vermittlerdienst wie den Routingdienst ist die Clientanwendung für die Behandlung dieser Art von Fehlern zuständig. Falls die Clientanwendung keine spezielle Logik für wiederholte Versuche bei Netzwerk- oder Kommunikationsfehlern aufweist und keine alternativen Zielorte kennt, kann es zu Szenarios kommen, in denen eine Nachricht mehrere Male gesendet werden muss, bevor sie vom Zieldienst erfolgreich verarbeitet wird. Dies kann bei Kunden zu Unzufriedenheit mit der Anwendung führen, weil diese ggf. als unzuverlässig wahrgenommen wird.  
@@ -77,13 +78,13 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
  Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet, finden Sie unter [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Ein Beispiel für die Fehlerbehandlung implementieren, finden Sie unter der [Bridging und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) und [erweiterte Fehlerbehandlung](../../../../docs/framework/wcf/samples/advanced-error-handling.md) Beispiele.  
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Vorgehensweise: Dienstversionskontrolle](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Gewusst wie: Der Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Vorgehensweise: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Gewusst wie: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Vorgehensweise: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
  [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in das Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+ [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

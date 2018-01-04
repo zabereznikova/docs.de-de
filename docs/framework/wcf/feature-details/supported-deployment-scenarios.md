@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Unterstützte Bereitstellungsszenarien
 Die Teilmenge der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Funktionen, die für die Verwendung in teilweise vertrauenswürdigen Anwendungen vorgesehen sind, sollen die Anforderungen einiger, aber nicht sämtlicher Szenarien für den Einsatz von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]erfüllen. Auf dem Server erfüllt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Anforderungen von gemeinsamen Hostanbietern auf Internetebene, die aus Sicherheitsgründen Anwendungen von Drittanbietern mit dem [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Berechtigungssatz für mittlere Vertrauenswürdigkeit ausführen. Auf dem Client soll die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Unterstützung für teilweise Vertrauenswürdigkeit die Anforderungen von Bereitstellungstechnologien erfüllen, wie etwa der [ClickOnce-Bereitstellung](http://go.microsoft.com/fwlink/?LinkId=83712) oder der XAML Browser Application-Technologie von [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], die eine reibungslose und sichere Bereitstellung von Desktopanwendungen von nicht vertrauenswürdigen Sites ermöglichen.  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>XML- und ADO.NET-Typen in Datenverträgen
 Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenvertragsmodell unterstützt bestimmte Typen, die XML direkt darstellen. Wenn diese Typen in XML serialisiert werden, schreibt das Serialisierungsprogramm den XML-Inhalt dieser Typen ohne weitere Verarbeitung. Unterstützte Typen sind <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlNode>-Arrays (jedoch nicht der `XmlNode`-Typ selbst) sowie Typen, die <xref:System.Xml.Serialization.IXmlSerializable> implementieren. Der <xref:System.Data.DataSet>- und <xref:System.Data.DataTable>-Typ sowie typisierte Datasets werden häufig bei der Datenbankprogrammierung verwendet. Diese Typen implementieren die `IXmlSerializable`-Schnittstelle und sind deshalb im Datenvertragsmodell serialisierbar. Einige besondere Überlegungen zu diesen Typen sind am Ende dieses Themas aufgeführt.  
@@ -190,7 +191,7 @@ Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenvertragsmodell 
   
 -   Bei dem generierten Schema kann es sich auch um ein nicht gültiges Datenvertragsschema handeln. Ihre Schemaanbietermethode kann zum Beispiel Schemas mit XML-Attributen generieren, die im Datenvertragsmodell nicht unterstützt werden. In diesem Fall können Sie das Schema als `IXmlSerializable`-Typen importieren. Dieser Modus "Import" ist nicht standardmäßig aktiviert, jedoch kann problemlos mit aktiviert werden – z. B. die `/importXmlTypes` Befehlszeilenoption, um die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Dies wird ausführlich beschrieben unter der [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Beachten Sie, dass Sie für die Typinstanzen direkt mit den XML-Daten arbeiten müssen. Sie können auch erwägen, eine andere Serialisierungstechnologie zu verwenden, die einen größeren Schemabereich unterstützt. Weitere Informationen finden Sie im Thema zur Verwendung von `XmlSerializer`.  
   
--   Es ist ratsam, Ihre vorhandenen `IXmlSerializable`-Typen im Proxy wiederzuverwenden, anstatt neue zu generieren. In diesem Fall können Sie das Feature mit den referenzierten Typen verwenden, die im Thema zum Importieren von Schemas zum Generieren von Typen beschrieben ist, um den wiederzuverwendenden Typ anzugeben. Dies entspricht dem Verwenden der `/reference` Schalters von svcutil.exe, der die Assembly angibt, die die wiederzuverwendenden Typen enthält.  
+-   Es ist ratsam, Ihre vorhandenen `IXmlSerializable`-Typen im Proxy wiederzuverwenden, anstatt neue zu generieren. In diesem Fall können Sie die Funktion mit den referenzierten Typen verwenden, die im Thema zum Importieren von Schemas zum Generieren von Typen beschrieben ist, um den wiederzuverwendenden Typ anzugeben. Dies entspricht dem Verwenden der `/reference` Schalters von svcutil.exe, der die Assembly angibt, die die wiederzuverwendenden Typen enthält.  
   
 ## <a name="representing-arbitrary-xml-in-data-contracts"></a>Darstellen von beliebigen XML-Daten in Datenverträgen  
  Mithilfe der Typen `XmlElement`, `XmlNode`-Array und `IXmlSerializable` können Sie beliebige XML-Daten in das Datenvertragsmodell einfügen. `DataContractSerializer` und `NetDataContractSerializer` übergeben diesen XML-Inhalt an den verwendeten XML-Writer, ohne dabei den Prozess zu beeinträchtigen. Die XML-Writer können jedoch bestimmte Einschränkungen für die XML-Daten erzwingen, die sie schreiben. Unten sind einige wichtige Beispiele aufgeführt:  

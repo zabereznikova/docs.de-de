@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Das zweite ist ein anspruchsbasiertes Modell als bezeichnet den *Identitätsmodell*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Identitätsmodellklassen können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
@@ -74,7 +75,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  Eine Reihe von Informationen, die mit einem Evaluierungskontext oder einem Autorisierungskontext verbunden sind.  
   
  Geschützte Ressource  
- Ein Element im System, dessen Verwendung, Zugriff oder anderweitige Bearbeitung nur erfolgen kann, wenn bestimmte Voraussetzungen erfüllt sind.  
+ Ein Element im System, dessen Verwendung, Zugriff oder anderweitige Bearbeitung nur erfolgen kann, wenn bestimmte Anforderungen erfüllt sind.  
   
  Rechts  
  Eine Berechtigung für eine Ressource. Rechte, die von der Identitätsmodell-API definiert werden, sind Eigenschaften der <xref:System.IdentityModel.Claims.Rights>-Klasse. Beispiele für vom System bereitgestellte Rechte sind <xref:System.IdentityModel.Claims.Rights.Identity%2A> und <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
@@ -130,7 +131,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  Wenn ein Autorisierungskontext (ein Satz von Ansprüchen) ein Schlüssel ist, dann bilden die Anforderungen, die zur Erteilung des Zugriffs auf eine bestimmte geschützte Ressource erfüllt werden müssen, das Schloss, in das der Schlüssel passen muss. Das Identitätsmodell legt nicht fest, wie diese Anforderungen ausgedrückt werden. Es beinhaltet jedoch angesichts der anspruchsbasierten Beschaffenheit des Systems den Vergleich der Ansprüche im Autorisierungskontext mit einem Satz von erforderlichen Ansprüchen.  
   
 ### <a name="a-recap"></a>Zusammenfassung  
- Das Identitätsmodell basiert auf dem Konzept von Ansprüchen. Ansprüche werden zu Sätzen zusammengefasst und in einem Autorisierungskontext aggregiert. Ein Autorisierungskontext enthält einen Satz von Ansprüchen und ist das Ergebnis der Evaluierung von einer oder mehreren Autorisierungsrichtlinien, die mit einem Autorisierungs-Manager verbunden sind. Anhand dieser Ansprüche kann bestimmt werden, ob die Zugriffsvoraussetzungen erfüllt werden. In der folgenden Abbildung ist die Beziehung zwischen verschiedenen Identitätsmodellkonzepten dargestellt.  
+ Das Identitätsmodell basiert auf dem Konzept von Ansprüchen. Ansprüche werden zu Sätzen zusammengefasst und in einem Autorisierungskontext aggregiert. Ein Autorisierungskontext enthält einen Satz von Ansprüchen und ist das Ergebnis der Evaluierung von einer oder mehreren Autorisierungsrichtlinien, die mit einem Autorisierungs-Manager verbunden sind. Anhand dieser Ansprüche kann bestimmt werden, ob die Zugriffsanforderungen erfüllt werden. In der folgenden Abbildung ist die Beziehung zwischen verschiedenen Identitätsmodellkonzepten dargestellt.  
   
  ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "Xsi_recap")  
   
@@ -165,7 +166,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> `true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore` `false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>`true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore` `false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Gibt den <xref:System.ServiceModel.ServiceAuthorizationManager> für den Dienst zurück. Der <xref:System.ServiceModel.ServiceAuthorizationManager> ist für Autorisierungsentscheidungen verantwortlich.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Die Sammlung benutzerdefinierter Autorisierungsrichtlinien, die für den Dienst angegeben sind. Diese Richtlinien werden zusätzlich zu den Richtlinien evaluiert, die mit den Anmeldeinformationen in eingehenden Nachrichten verbunden sind.|  
   
@@ -181,11 +182,11 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
  [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Ansprüche und Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
  [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Vorgehensweise: erstellen eine benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

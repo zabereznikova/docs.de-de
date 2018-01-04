@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c712b0cbb7b561c849dbdcea8797c83b155f6744
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47c716ddf0bb629fabefc4f42b3b114fbfaf781e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-scenarios"></a>Datenbindungsszenarien
 Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenbindungsszenarien veranschaulicht werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbindung in einer Windows Forms-Client](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)  
+ [Datenbindung in einem Windows Forms-Client](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)  
  Veranschaulicht das Binden an Daten, die von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zurückgegeben werden, in einer Windows Forms-Anwendung.  
   
  [Datenbindung in einem ASP.NET-Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  

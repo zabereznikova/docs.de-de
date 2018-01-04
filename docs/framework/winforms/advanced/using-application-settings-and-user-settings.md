@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>Verwenden von Anwendungseinstellungen und Benutzereinstellungen
 Beginnend mit .NET Framework 2.0, können Sie erstellen und Zugriff auf Werte, die zwischen anwendungssitzungen-Ausführung beibehalten werden. Diese Werte werden als bezeichnet *Einstellungen*. Einstellungen können benutzereinstellungen darstellen, oder wertvoller Informationen, die Anwendung verwenden muss. Sie können z. B. eine Reihe von Einstellungen erstellen, die benutzereinstellungen für das Farbschema für eine Anwendung zu speichern. Oder Sie können die Verbindungszeichenfolge, die eine Datenbank an, die von der Anwendung verwendeten gespeichert werden. Einstellungen zulassen, dass Sie sowohl Informationen beibehalten, die für die Anwendung außerhalb des Codes und zum Erstellen von Profilen, die Einstellungen für die einzelnen Benutzern Speichern von entscheidender Bedeutung ist.  

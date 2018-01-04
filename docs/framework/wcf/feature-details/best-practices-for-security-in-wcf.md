@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Best Practices für Sicherheit in WCF
 In den folgenden Abschnitten werden die Best Practices aufgeführt, die beim Erstellen sicherer Anwendungen mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zu berücksichtigen sind. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sicherheit, finden Sie unter [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), und [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -44,7 +45,7 @@ In den folgenden Abschnitten werden die Best Practices aufgeführt, die beim Ers
  Eine Übersicht über NTLM Angriffe weiterleiten, finden Sie unter [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571).  
   
 ## <a name="always-revert-after-impersonation"></a>Stellen Sie nach Identitätswechseln immer die ursprüngliche Identität wieder her  
- Wenn Sie APIs verwenden, die den Identitätswechsel eines Clients ermöglichen, stellen Sie sicher, dass die ursprüngliche Identität wiederhergestellt wird. Beim Einsatz von <xref:System.Security.Principal.WindowsIdentity> und <xref:System.Security.Principal.WindowsImpersonationContext> verwenden Sie beispielsweise in C# die `using`-Anweisung oder die [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using`-Anweisung, wie im folgenden Code gezeigt. Die <xref:System.Security.Principal.WindowsImpersonationContext>-Klasse implementiert die <xref:System.IDisposable>-Schnittstelle, und daher stellt die CLR (Common Language Runtime) automatisch die ursprüngliche Identität wieder her, sobald die Ausführung des `using`-Blocks abgeschlossen ist.  
+ Wenn Sie APIs verwenden, die den Identitätswechsel eines Clients ermöglichen, stellen Sie sicher, dass die ursprüngliche Identität wiederhergestellt wird. Z. B. bei Verwendung der <xref:System.Security.Principal.WindowsIdentity> und <xref:System.Security.Principal.WindowsImpersonationContext>, verwenden Sie die C#- `using` Anweisung oder der [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` Anweisung, wie im folgenden Code gezeigt. Die <xref:System.Security.Principal.WindowsImpersonationContext>-Klasse implementiert die <xref:System.IDisposable>-Schnittstelle, und daher stellt die CLR (Common Language Runtime) automatisch die ursprüngliche Identität wieder her, sobald die Ausführung des `using`-Blocks abgeschlossen ist.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -68,6 +69,6 @@ In den folgenden Abschnitten werden die Best Practices aufgeführt, die beim Ers
  Wenn Sie eine benutzerdefinierte Bindung erstellen, müssen Sie <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> auf `true` festlegen. Wenn <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> auf `false` festgelegt ist und der Client ein auf einem asymmetrischen Schlüssel basierendes Token verwendet, z. B. ein X.509-Zertifikat, wird die Nachricht nicht signiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

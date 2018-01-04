@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d52512ef98596e1e3d5f0acb3b1bbc0eebffe867
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Gewusst wie: Installieren und Deinstallieren von Diensten
 Wenn Sie einen Windows-Dienst mit dem.NET Framework entwickeln, können Sie die Dienstanwendung schnell installieren, indem Sie ein Befehlszeilen-Dienstprogramm InstallUtil.exe aufrufen. Wenn Sie ein Entwickler sind, der einen Windows-Dienst freigeben möchte, die Benutzer installieren und deinstallieren können, sollten Sie InstallShield verwenden. Finden Sie unter [Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -73,6 +74,6 @@ Wenn Sie einen Windows-Dienst mit dem.NET Framework entwickeln, können Sie die 
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Erstellen von Windows-Dienste](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Installutil.exe (Installer-Tool)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

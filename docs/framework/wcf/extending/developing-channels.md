@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 231948af1a0bfe7840ffbde2ab162ceea33698ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-channels"></a>Entwickeln von Kanälen
 Wenn Sie ein Protokoll oder einen Transportkanal erstellen möchten, der mit der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungsebene verwendet werden kann, müssen Sie mehrere Schritte befolgen. In diesem Thema werden diese Schritte beschrieben, und Sie werden auf bestimmte Themen verwiesen, in denen Sie weitere Informationen erhalten. Um zu verstehen, Kanal-Modells und die verschiedenen Typen, die in diesem Thema erwähnt wurden, finden Sie unter [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md). Eine vollständige Transport-Kanal-Beispiel finden Sie unter [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

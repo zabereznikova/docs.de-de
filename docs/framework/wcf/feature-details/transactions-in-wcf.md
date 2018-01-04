@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84b2a869b8a10a45c195cb64e95b82492e2d18c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-in-wcf"></a>Transaktionen in WCF
 Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transaktionsfunktion ermöglicht es mehreren Komponenten, gleichzeitig an einem Datenvorgang teilzunehmen. In den Themen in diesem Abschnitt wird diese Funktion ausführlich behandelt.  

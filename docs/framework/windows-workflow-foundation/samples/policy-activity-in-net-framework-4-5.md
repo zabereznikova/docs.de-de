@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68c81b81ac8070cff539b52c75e1cd7ffb3e54b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 66968503d2f481647d999854358a246b4d963475
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Richtlinienaktivität in .NET Framework 4.5
 Die Policy4-Aktivität ermöglicht die Verwendung von [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet>-Objekten direkt in [!INCLUDE[wf2](../../../../includes/wf2-md.md)]in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5), indem das zu WF 3.5 gehörende Regelmodul verwendet wird. Mit dieser Aktivität können Sie <xref:System.Workflow.Activities.Rules.RuleSet> für WF 3.5 erstellen und ausführen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum WF 3.5-Regelmodul als Bestandteil von Windows Workflow Foundation finden Sie in der Einführung in das Windows Workflow Foundation-Regelmodul. Weitere Informationen zum Migrieren von Regeln für WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lesen Sie [Migrationsanleitung](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

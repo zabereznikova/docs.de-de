@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e44d0ecf6afb81928d83ea925f836f8b6927d97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
 *Ausweitung von Berechtigungen* ergibt, wenn eine Autorisierung Angreifer Berechtigungen über die ihm ursprünglich gewährten hinaus erteilen. Dies ist zum Beispiel der Fall, wenn einem Angreifer mit einem Berechtigungssatz von "Nur-Lesen"-Berechtigungen es irgendwie gelingt, "Lesen-und-Schreiben"-Berechtigungen in seinen Berechtigungssatz aufzunehmen.  
@@ -93,9 +94,9 @@ ms.lasthandoff: 12/02/2017
  Um dieses Problem zu entschärfen, verweisen Sie auf eine andere Art auf das X.509-Zertifikat, z.&#160;B. mithilfe von <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Offenlegung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Replay-Angriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

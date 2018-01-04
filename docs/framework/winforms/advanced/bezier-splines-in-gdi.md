@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>B &#233; Zier Splines in GDI +
 Ein Bézier-Spline ist eine von vier Punkte angegebene Kurve: zwei Endpunkte (p1 und p2) und die beiden Steuerpunkte (c1 und c2). Die Kurve beginnt bei p1 und p2 endet. Leitet die Kurve nicht über die Steuerpunkte, aber die Steuerpunkte als Magnete, bestimmte erfahren Sie, wie die Kurve herausziehen und Schätzung vor bzw. beeinflusst die Möglichkeit Steuerpunkte fungieren. Die folgende Abbildung zeigt eine Bézier-Kurve zusammen mit den End- und Steuerpunkte.  

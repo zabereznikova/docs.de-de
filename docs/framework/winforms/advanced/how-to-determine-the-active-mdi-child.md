@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements
 In manchen Fällen sollten Sie einen Befehl, der ausgeführt wird auf das Steuerelement bereitstellen, auf dem derzeit aktiven untergeordneten Formular den Fokus besitzt. Nehmen Sie z. B. an, dass Sie den ausgewählten Text aus dem Textfeld des untergeordneten Formulars in die Zwischenablage kopieren möchten. Erstellen Sie eine Prozedur, die ausgewählten Text in die Zwischenablage verwenden kopiert die <xref:System.Windows.Forms.Control.Click> -Ereignis des Menüelements kopieren im Standardmenü bearbeiten.  

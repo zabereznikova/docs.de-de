@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalten das Laufzeitverhalten auf Dienstebene bzw. auf Endpunktebene. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verhalten im Allgemeinen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Sicherheitsverhalten* Ihnen die Kontrolle über die Anmeldeinformationen, Authentifizierung und Autorisierung und über Überwachungsprotokolle. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
@@ -92,7 +93,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
   
 -   Geben Sie den Satz gültiger URIs an, indem Sie die URIs dieser Auflistung hinzufügen. Fügen Sie zu diesem Zweck ein [ \<hinzufügen >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) für jeden URI  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Das Beispiel zum UDB-Transport veranschaulicht, wie UDP-Unicast und -Multicast als benutzerdefinierter [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transport implementiert werden können. In dem Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] anhand des Kanalframeworks und der empfohlenen Vorgehensweisen für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
@@ -309,7 +310,7 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Allgemein beinhaltet die Implementierung eines benutzerdefinierten Standardbindungsimportprogramms die Überprüfung der Eigenschaften der importierten Bindungen, um zu bestätigen, dass sich nur Eigenschaften geändert haben, die von der Standardbindung hätten festgelegt werden können, und es sich bei allen anderen Eigenschaften um die Standardwerte handelt. Eine grundlegende Strategie für die Implementierung eines Standardbindungsimportprogramms ist die Erstellung einer Standardbindung, die Weitergabe der Eigenschaften von den Bindungselementen an die von der Standardbindung unterstützte Standardbindungsinstanz und der Vergleich der Bindungselemente der Standardbindung mit den importierten Bindungselementen.  
+ Allgemein beinhaltet die Implementierung eines benutzerdefinierten Importprogramms für Standardbindungen die Überprüfung der Eigenschaften der importierten Bindungen, um zu bestätigen, dass sich nur Eigenschaften geändert haben, die von der Standardbindung hätten festgelegt werden können, und es sich bei allen anderen Eigenschaften um die Standardwerte handelt. Eine grundlegende Strategie für die Implementierung eines Standardbindungsimportprogramms ist die Erstellung einer Standardbindung, die Weitergabe der Eigenschaften von den Bindungselementen an die von der Standardbindung unterstützte Standardbindungsinstanz und der Vergleich der Bindungselemente der Standardbindung mit den importierten Bindungselementen.  
   
 <a name="AddingConfigurationSupport"></a>   
 ## <a name="adding-configuration-support"></a>Hinzufügen von Konfigurationsunterstützung  

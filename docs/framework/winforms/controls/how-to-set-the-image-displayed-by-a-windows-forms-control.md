@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bf42fc90e19cbac0f165b59c0c6d3dfb7456b5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes
 Einige Windows Forms-Steuerelemente können Bilder anzuzeigen. Diese Bilder können Symbole, die Erläuterung des Zwecks des Steuerelements, wie z. B. ein Diskettensymbol auf eine Schaltfläche, werden die **speichern** Befehl. Alternativ kann die Symbole Hintergrundbilder zum Steuern der Darstellung und das gewünschte Verhalten.  

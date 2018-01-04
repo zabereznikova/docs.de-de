@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
 Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten. Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste fordern vom Client die Angabe von Anmeldeinformationen für Authentifizierung und Autorisierung. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client können diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angegeben werden. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einer COM-Anwendung kann die <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle zum Angeben von Anmeldeinformationen verwendet werden. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
@@ -149,7 +150,7 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthält diverse, vom System bereitgestellte und konfigurierbare Bindungen, die jedoch in Bezug auf die Konfiguration aller Optionen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt, nicht die volle Flexibilität aufweisen. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellung benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Das im Vertrag angegebene Nachrichtenaustauschmuster (MEP)  
   
- Die folgende Tabelle enthält die gültigen Konfigurationen von Bindungselementstapeln für jede Kombination der oben genannten Faktoren. Beachten Sie, dass es sich herbei um Mindestanforderungen handelt. Sie können der Bindung weitere Bindungselemente (beispielsweise Elemente zur Nachrichtencodierung, Transaktionsbindungselemente usw.) hinzufügen.  
+ Die folgende Tabelle enthält die gültigen Konfigurationen von Bindungselementstapeln für jede Kombination der oben genannten Faktoren. Beachten Sie, dass es sich herbei um Mindestanforderungen handelt. Sie können der Bindung weitere Bindungselemente hinzufügen (beispielsweise Elemente zur Nachrichtencodierung, Transaktionsbindungselemente usw.).  
   
 |Sicherheitsmodus|Transport|Nachrichtenaustauschmuster des Vertrags|Nachrichtenaustauschmuster des Vertrags|Nachrichtenaustauschmuster des Vertrags|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  

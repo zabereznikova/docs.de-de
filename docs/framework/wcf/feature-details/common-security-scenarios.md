@@ -14,20 +14,21 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9428c5d7c8c6cf0f571b05a8b9c33b96d073d7a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-security-scenarios"></a>Häufige Sicherheitsszenarien
 Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und Dienstsicherheitskonfigurationen. Die Konfigurationen ändern sich aufgrund verschiedenster Faktoren. Zum Beispiel ob sich ein Dienst oder Client im Intranet befindet oder ob die Sicherheit von Windows oder vom Transport (wie HTTPS) gewährleistet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Internet: ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
+ [Internet: Ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  Ein Beispiel eines öffentlichen, ungesicherten Clients und Diensts.  
   
- [Intranet: ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ [Intranet: Ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  Ein einfacher [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst, mit dem einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung Informationen in einem sicheren privaten Netzwerk zur Verfügung gestellt werden.  
   
  [Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
@@ -45,19 +46,19 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  [Nachrichtensicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
  Zeigt einen von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensicherheit gesicherten Client und Dienst.  
   
- [Nachrichtensicherheit über einen Benutzernamenclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
+ [Nachrichtensicherheit mit einem Benutzernamenclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Der Client ist eine Windows Forms-Anwendung, mit der sich die Clients mithilfe eines Domänenbenutzernamens und -Kennworts anmelden können.  
   
- [Nachrichtensicherheit durch einem Zertifikatclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
+ [Nachrichtensicherheit mit einem Zertifikatclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
  Server haben Zertifikate, und jeder Client hat ein Zertifikat. Ein Sicherheitskontext wird durch eine TLS-Aushandlung erstellt.  
   
  [Nachrichtensicherheit mit einem Windows-Client](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
  Eine Variante des Zertifikatsclients. Server haben Zertifikate, und jeder Client hat ein Zertifikat. Ein Sicherheitskontext wird durch eine TLS-Aushandlung erstellt.  
   
- [Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
+ [Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationenaushandlung](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Zeigt einen von einer Kerberos-Domäne gesicherten Client und Dienst.  
   
- [Nachrichtensicherheit durch gegenseitige Zertifikate](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
+ [Nachrichtensicherheit mit gegenseitigen Zertifikaten](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  Server haben Zertifikate, und jeder Client hat ein Zertifikat. Das Serverzertifikat wird mit der Anwendung verteilt und steht außerhalb des Bereichs zur Verfügung.  
   
  [Nachrichtensicherheit durch ausgestellte Token](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
@@ -72,7 +73,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
  [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)  
   

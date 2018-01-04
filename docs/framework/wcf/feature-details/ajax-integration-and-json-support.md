@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98efc62a133b86ab71e34671bc6385a5a94897ea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX-Integration und JSON-Unterstützung
 Da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET AJAX (Asynchronous JavaScript and XML) und das Datenformat JSON (JavaScript Object Notation) unterstützt, können [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste Vorgänge für AJAX-Clients verfügbar zu machen. AJAX-Clients sind Webseiten, die JavaScript-Code ausführen und über HTTP-Anforderungen auf diese [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste zugreifen. Die Themen in diesem Abschnitt enthalten Informationen über diese Unterstützung und ihre Implementierung.  
@@ -26,7 +27,7 @@ Da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET AJAX (Asynchr
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET AJAX und die Integration in ASP.NET 2.0 finden Sie unter [Übersicht über ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen von WCF-Diensten für ASP.NET-AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [Erstellen von WCF-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
  Beschreibt, wie ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst für AJAX-Clients verfügbar gemacht werden kann, indem entweder über die Konfiguration oder mithilfe einer Diensthostfactory zur Erzeugung eines Dienstshosts, der den AJAX-Endpunkt automatisch konfiguriert, der entsprechende AJAX-Endpunkt hinzugefügt wird.  
   
  [Erstellen von WCF AJAX-Diensten ohne ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
@@ -35,7 +36,7 @@ Da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET AJAX (Asynchr
  [Unterstützung für JSON und andere Datenübertragungsformate](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  Beschreibt die Unterstützung des JSON-Formats, das in der Regel (statt XML) für den Nachrichtenaustausch mit ASP.NET AJAX-Diensten verwendet wird.  
   
- [Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ [Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste zu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
  Beschreibt, wie ein AJAX-fähiger ASP.NET-Webdienst zu einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Webdienst migriert wird.  
   
 ## <a name="see-also"></a>Siehe auch  

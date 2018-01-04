@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6b73565409e26456ad09067066455ef2459b2e3c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89a6d5c2e485699a55c77797c34eaca2c9848c40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 In diesem Beispiel wird veranschaulicht, wie zum Verfassen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Dieses Beispiel veranschaulicht die Implementierung einer [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) Kanal, der zusammen mit zuverlässigem Messaging und optional zusammengesetzt werden kann ein sicherer Kanal zum Erstellen einer zuverlässigen sichere Bindung auf Basis der RSP Spezifikation.  

@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acbe1fc52cec011863dea8f3ae81492e3661cd97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-data-contracts"></a>Verwenden von Datenverträgen
 Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und einem Client, in dem die auszutauschenden Daten abstrakt beschrieben werden. Das heißt, der Client und der Dienst müssen, um kommunizieren zu können, nicht denselben Typ verwenden, sondern nur dieselben Datenverträge. Ein Datenvertrag definiert für jeden Parameter oder Rückgabetyp genau, welche Daten für einen Austausch serialisiert (in XML umgewandelt) werden.  
@@ -45,7 +46,7 @@ Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
-### <a name="notes"></a>Notizen  
+### <a name="notes"></a>Hinweise  
  Berücksichtigen Sie beim Erstellen von Datenverträgen die folgenden Hinweise:  
   
 -   Das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> -Attribut wird nur berücksichtigt, wenn es zusammen mit nicht markierten Typen verwendet wird. Dazu zählen Typen, die weder mit einem <xref:System.Runtime.Serialization.DataContractAttribute>-, <xref:System.SerializableAttribute>-, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>- oder <xref:System.Runtime.Serialization.EnumMemberAttribute> -Attribut noch auf andere Weise als serialisierbar markiert sind (beispielsweise mithilfe von <xref:System.Xml.Serialization.IXmlSerializable>).  
@@ -82,11 +83,11 @@ Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und
  [Serialisierbare Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
  [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
  [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
+ [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
  [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [Datenvertrags-Versionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
  [Standardwerte der Datenelemente](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
  [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Vorgehensweise: erstellen ein grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

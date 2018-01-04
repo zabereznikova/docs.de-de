@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
 Das folgende Szenario zeigt, wie ein Client und ein Dienst mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichtensicherheit gesichert werden. Ein Entwurfsziel ist die Verwendung von Nachrichtensicherheit statt Transportsicherheit, sodass zu einem späteren Zeitpunkt ein komplexeres anspruchsbasierter Modell unterstützt werden kann. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]umfangreiche Ansprüche für die Autorisierung, finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -142,7 +143,7 @@ Das folgende Szenario zeigt, wie ein Client und ein Dienst mit [!INCLUDE[indigo1
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Sicherheit bei verteilten Anwendungen](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Nachrichtensicherheit – anonym](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  

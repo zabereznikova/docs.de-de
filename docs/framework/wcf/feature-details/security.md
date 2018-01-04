@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
 In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.  
@@ -29,10 +30,10 @@ In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/i
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit verwendet werden.  
   
  [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82fab5b5d7c702bc9f5e595572b8eba821159cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft eine *Sitzung* eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
@@ -41,7 +42,7 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
   
  Falls Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>-Klasse und den von ihr bereitgestellten Funktionen in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendungen vertraut sind, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Sitzung auf:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Sitzungen werden immer vom Server initiiert.  
   
 -   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
   

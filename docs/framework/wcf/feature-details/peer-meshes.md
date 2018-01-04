@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d747b2916f544294bb69f01aadc1321370878689
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-meshes"></a>Peer-Meshs
 Ein *mesh* ist eine benannte Auflistung (ein verbundenes Diagramm) von Peerknoten, die untereinander kommunizieren können und durch eine eindeutige Mesh-ID gekennzeichnet sind, Jeder Knoten ist mit mehreren anderen Knoten verbunden. In einer gut organisierten Netzstruktur besteht zwischen zwei Knoten immer eine Verbindung, und zwischen den am weitesten außen liegenden Knoten liegen immer nur wenige Hops. Darüber hinaus bleibt die Verbindung des Netzes auch dann bestehen, wenn einige Knoten oder Verbindungen ausfallen. Aktive Knoten im Mesh veröffentlichen ihre Endpunktinformationen mit einer entsprechenden Mesh-ID, sodass andere Peers sie finden können.  

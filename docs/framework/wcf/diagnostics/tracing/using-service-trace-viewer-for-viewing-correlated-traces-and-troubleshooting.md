@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 048ef839db0656340827a5928056a3c063f5aa3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
@@ -199,7 +200,7 @@ Auswählen einer roten oder gelben Aktivität zur Ermittlung der Ursache eines P
  Wenn diese Ablaufverfolgungen nicht auf die Ursache des Fehlers schließen lassen, können Sie auf die ausgewählte Aktivität im linken Bereich doppelklicken (hier Process Action). Das Diagramm mit den zugehörigen Aktivitäten wird dann angezeigt. Sie können die verknüpften Aktivitäten dann erweitern, (durch Klicken auf die Symbole "+") auf der ersten ausgegebenen Ablaufverfolgung in Rot oder Gelb in einer verknüpften Aktivität zu suchen. Erweitern Sie nach und nach die Aktivitäten, die direkt vor der betreffenden roten oder gelben Ablaufverfolgung ausgeführt wurden, und verfolgen Sie die Übertragungen zu verknüpften Aktivitäten oder Nachrichtenflüsse über Endpunkte hinweg, bis Sie die Ursache des Problems gefunden haben.  
   
  ![Verwenden von Trace Viewer](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
-Erweitern von Aktivitäten zur Ermittlung der Ursache eines Problems  
+Erweitern von Aktivitäten zur Ermittlung der Grundursache eines Problems  
   
  Wenn die ServiceModel `ActivityTracing` deaktiviert, aber die ServiceModel-Ablaufverfolgung aktiviert ist, werden ServiceModel-Ablaufverfolgungen in der Aktivität 0000 ausgegeben. In diesem Fall ist es jedoch aufwändiger, die Korrelation dieser Ablaufverfolgungen zu verstehen.  
   
@@ -209,6 +210,6 @@ Erweitern von Aktivitäten zur Ermittlung der Ursache eines Problems
 Um mit der Problembehandlung zu beginnen, können Sie auch eine rote oder gelbe Nachrichtenablaufverfolgung auswählen und darauf doppelklicken, um die Grundursache zu ermitteln.  
   
 ## <a name="see-also"></a>Siehe auch  
- [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+ [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

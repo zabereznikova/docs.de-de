@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74b1bd42472da61497124a04620aa02af25b32bd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 817f7aeeb7adece1c375bb8b0cc455a17fb54185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-best-practices"></a>Empfehlungen für eine teilweise vertrauenswürdige Umgebung
 In diesem Thema werden empfohlene Vorgehensweisen für die Ausführung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in einer teilweise vertrauenswürdigen Umgebung beschrieben.  
@@ -45,7 +46,7 @@ In diesem Thema werden empfohlene Vorgehensweisen für die Ausführung von [!INC
   
 -   Einschränken des Zugriffs auf den Typ durch Hinzufügen von `[LinkDemand]` zum Konstruktor des Typs  
   
--   Da das Objekt erfolgreich instanziiert wurde, wird davon ausgegangen, dass eventuelle vom Konstruktor erzwungene Validierungsprüfungen erfolgreich bestanden wurden.  
+-   Da das Objekt erfolgreich instanziiert wurde, wird davon ausgegangen, dass eventuelle vom Konstruktor erzwungene Validierungsüberprüfungen erfolgreich bestanden wurden.  
   
 ### <a name="using-ixmlserializable"></a>Verwenden von IXmlSerializable  
  Die folgenden empfohlenen Vorgehensweisen gelten für Typen, die <xref:System.Xml.Serialization.IXmlSerializable> implementieren und mit <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert werden:  

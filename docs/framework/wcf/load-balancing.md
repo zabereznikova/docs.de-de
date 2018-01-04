@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>Lastenausgleich
 Eine Möglichkeit zur Steigerung der Kapazität von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen besteht darin, sie dezentral zu skalieren und in einer Serverfarm mit Lastenausgleich bereitzustellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen können mit Standardverfahren zum Lastenausgleich entsprechend ausgeglichen werden. Dazu gehören Softwarelastenausgleichsmodule wie Windows Network Load Balancing sowie hardwarebasierte Anwendungen zum Lastenausgleich.  
@@ -101,4 +102,4 @@ Eine Möglichkeit zur Steigerung der Kapazität von [!INCLUDE[indigo1](../../../
  Erwägen Sie, für die optimale Leistung in Lastenausgleichsszenarien <xref:System.ServiceModel.NetTcpSecurity> ( <xref:System.ServiceModel.SecurityMode.Transport> oder <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>) zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Internetinformation Services Hosting bewährte Methoden](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+ [Bewährte Methoden für das Hosten in IIS (Internetinformationsdienste)](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

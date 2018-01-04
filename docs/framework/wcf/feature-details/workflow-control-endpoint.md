@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5894a8b5d4d0873a231927498a8d1e2c4e18afd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-control-endpoint"></a>Workflowsteuerungsendpunkt
 Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerungsvorgängen, um mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowinstanzen remote zu steuern. Diese Funktion kann verwendet werden, um Steuerungsvorgänge wie das Anhalten, Fortsetzen und Beenden programmgesteuert auszuführen.  
@@ -46,14 +47,14 @@ Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerun
 |-----------------------|-----------------|  
 |Abbrechen|Erzwingt, dass Ausführung der Workflowinstanz beendet wird.|  
 |Abbrechen|Bewirkt, dass eine Workflowinstanz aus dem Zustand "Aktiv" oder "Angehalten" in den Zustand "Abgeschlossen" wechselt.|  
-|Ausführen|Ermöglicht, dass eine Workflowinstanz ausgeführt wird.|  
+|Run|Ermöglicht, dass eine Workflowinstanz ausgeführt wird.|  
 |Suspend (Anhalten)|Bewirkt, dass eine Workflowinstanz aus dem Zustand "Aktiv" in den Zustand "Angehalten" wechselt.|  
 |Beenden|Bewirkt, dass eine Workflowinstanz aus dem Zustand "Aktiv" oder "Angehalten" in den Zustand "Abgeschlossen" wechselt.|  
 |Unsuspend (Fortsetzen)|Bewirkt, dass eine Workflowinstanz aus dem Zustand "Angehalten" in den Zustand "Aktiv" wechselt.|  
-|TransactedCancel|Führt den Vorgang "Abbrechen" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
-|TransactedRun|Führt den Vorgang "Ausführen" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
+|TransactedCancel|Führt den Vorgang „Abbrechen“ im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
+|TransactedRun|Führt den Vorgang „Ausführen“ im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
 |TransactedSuspend|Führt den Vorgang "Anhalten" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
-|TransactedTerminate|Führt den Vorgang "Beenden" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
+|TransactedTerminate|Führt den Vorgang „Beenden“ im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
 |TransactedUnsuspend|Führt den Vorgang "Fortsetzen" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
   
  Mit dem <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>-Vertrag können Sie keine neue Workflowinstanz erstellen, sondern nur vorhandene Workflowinstanzen verwalten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen eine neue Workflowinstanz Remote finden Sie unter [Erweiterbarkeit des Workflowdiensthosts](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  

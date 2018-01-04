@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17cbdebfa6cbb0cacacd923de4bd22125c812938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7993345a39a24c770fdd717580d428968dae836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-list-installed-decoders"></a>Gewusst wie: Auflisten installierter Decoder
 Möglicherweise möchten die Liste der auf einem Computer verfügbaren Bilddecoder, um festzustellen, ob Ihre Anwendung auf einem bestimmten Image File Format lesen kann. Die <xref:System.Drawing.Imaging.ImageCodecInfo> -Klasse stellt die <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> statische Methoden, damit Sie bestimmen können, welche Bilddecoder verfügbar sind. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>Gibt ein Array von <xref:System.Drawing.Imaging.ImageCodecInfo> Objekte.  

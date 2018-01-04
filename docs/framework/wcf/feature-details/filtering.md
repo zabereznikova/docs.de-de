@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>Filtern
 Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Filtersystem kann mithilfe von deklarativen Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
@@ -94,4 +95,4 @@ Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Filtersystem kann mi
 -   den übrigen Endpunktparametern in der `EndpointAddress`, wie in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> angegeben  
   
 ## <a name="see-also"></a>Siehe auch  
- [Die Datenübertragung und Serialisierung](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+ [Datenübertragung und Serialisierung](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

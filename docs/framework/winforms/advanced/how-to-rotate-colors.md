@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-colors"></a>Gewusst wie: Drehen von Farben
 Drehungswinkel in einem vierdimensionalen Farbraum ist schwer zu visualisieren. Wir können Drehung zu visualisieren, indem Sie einverstanden sind, behalten Sie eine der festen Farbe Komponenten vereinfachen. Angenommen Sie, wir akzeptieren Sie den Alphaanteil auf 1 festgesetzt (vollständig deckend) beibehalten. Dann können wir einen dreidimensionale Farbraum mit Rot-, Grün- und Blau-Achsen darstellen, in der folgenden Abbildung dargestellt.  
@@ -55,7 +56,7 @@ Drehungswinkel in einem vierdimensionalen Farbraum ist schwer zu visualisieren. 
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie `RotationInput.bmp` mit einem Dateinamen und Pfad auf Ihrem System gültig.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie `RotationInput.bmp` mit einem Dateinamen und Pfad auf Ihrem System gültig.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Drawing.Imaging.ColorMatrix>  

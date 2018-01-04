@@ -17,32 +17,33 @@ caps.latest.revision: "49"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c0af5a5d96f20b2ba5118909a3f0c5ba405bdb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f35bd56bdc69f8c57a7e46984778051b57b7a06a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-in-wcf"></a>Überlegungen zur Sicherheit in WCF
 Die Themen in diesem Abschnitt verweisen auf verschiedene sicherheitsrelevante Punkte, die beim Entwurf einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung in Betracht gezogen werden sollten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Offenlegung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  Erläutert, wie Informationen offengelegt und attackiert werden können und wie man diesen Gefahren begegnen kann.  
   
- [Ausweitung von Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  Erläutert die Konsequenzen, mit denen zu rechnen ist, wenn einem Angreifer Autorisierungsberechtigungen erteilt werden, die über die ursprünglichen Berechtigungen hinausgehen, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  Erläutert, was geschieht, wenn ein System Nachrichten nicht angemessen verarbeiten kann, und stellt mögliche Gegenmaßnahmen vor.  
   
  [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
  Erläutert die Manipulation von Nachrichten bzw. des Sendens von Nachrichten und stellt mögliche Gegenmaßnahmen vor.  
   
- [Replay-Angriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  Erläutert, was geschieht, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ [Sicherheitsüberlegungen für sichere Sitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
  Erläutert die folgenden Punkte, die sich bei der Implementierung von Sicherheitssitzungen auf die Sicherheit auswirken.  
   
  [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>Transaktionsunterstützung in System.ServiceModel
 In den Themen dieses Abschnitts werden die von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bereitgestellten Transaktionsfunktionen beschrieben.  
@@ -29,13 +30,13 @@ In den Themen dieses Abschnitts werden die von [!INCLUDE[indigo1](../../../../in
  [ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
  Beschreibt die verschiedenen Konfigurationseinstellungen, die zum Aktivieren von Transaktionen für einen Dienst verwendet werden können.  
   
- [Aktivieren des Transaktionsflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
+ [Aktivieren des Transaktionsdatenflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
  Beschreibt das Aktivieren des Transaktionsflusses.  
   
  [Vorgehensweise: Erstellen eines Transaktionsdiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
  Veranschaulicht das Erstellen eines Transaktionsdiensts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Erkennen einer Transaktionsanwendung](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
+ [Diagnose von Transaktionsanwendungen](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
  Beschreibt die Verwendung der Verwaltungs- und Diagnosefunktion in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zum Beheben von Fehlern in der Transaktionsanwendung.  
   
  [Vergleichen von Transaktionen in COM+ und ServiceModel](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  

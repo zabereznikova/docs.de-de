@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Dienste
 Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste veranschaulicht werden.  
@@ -26,7 +27,7 @@ Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../inc
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
  Veranschaulicht das Hosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten.  
   
- [Dienst-Interoperabilität](../../../../docs/framework/wcf/samples/service-interoperability.md)  
+ [Dienstinteroperabilität](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Veranschaulicht die Interaktion zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]- und anderen Diensttechnologien.  
   
  [Verhalten](../../../../docs/framework/wcf/samples/behaviors.md)  
@@ -53,7 +54,7 @@ Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../inc
  [Adressierung](../../../../docs/framework/wcf/samples/addressing.md)  
  Zeigt verschiedene Aspekte und Funktionen von Endpunktadressen.  
   
- [Imperative](../../../../docs/framework/wcf/samples/imperative.md)  
+ [Imperativ](../../../../docs/framework/wcf/samples/imperative.md)  
  Veranschaulicht das Definieren einer <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> für einen Dienst mithilfe von Code, anstatt die `wsHttpBinding` -Bindung in der Konfiguration.  
   
  [Mehrere Verträge](../../../../docs/framework/wcf/samples/multiple-contracts.md)  

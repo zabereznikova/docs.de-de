@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Zuverlässiges Messaging-Protokoll, Version 1.0
 In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Implementierungsdetails für das WS-Reliable Messaging-Protokoll in der Version 1.0 vom Februar 2005 beschrieben, die für die Interoperation mithilfe des HTTP-Transports erforderlich sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] orientiert sich an der WS-Reliable Messaging-Spezifikation mit den in diesem Thema erläuterten Einschränkungen und Klarstellungen. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&#160;1.0 ab [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] implementiert ist.  
@@ -47,7 +48,7 @@ In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-I
   
 -   B1101: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator generiert nicht das optionale Expires-Element in der `CreateSequence`-Nachricht oder, in den Fällen, in denen die `CreateSequence`-Nachricht ein `Offer`-Element enthält, das optionale `Expires`-Element im `Offer`-Element.  
   
--   B1102: Beim Zugreifen auf die `CreateSequence`-Nachricht sendet und empfängt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Responder` beide `Expires`-Elemente, wenn sie vorhanden sind, verwendet ihre Werte jedoch nicht.  
+-   B1102: Beim Zugriff auf die `CreateSequence` Nachricht, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder` sendet und empfängt sowohl `Expires` Elemente, wenn vorhanden, aber ihre Werte nicht verwendet.  
   
  Zuverlässiges WS-Messaging führt den `Offer`-Mechanismus ein, um zwei umgekehrt korrelierende Sequenzen einzurichten, die eine Sitzung bilden.  
   
@@ -284,7 +285,7 @@ In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-I
   
 -   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fügt die `wsrm:RMAssertion`-WS-Richtlinienassertion an `wsdl:binding`-Elemente an. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt sowohl das Anfügen an `wsdl:binding`-Elemente als auch an `wsdl:port`-Elemente.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die folgenden optionalen Eigenschaften der zuverlässigen WS-Messaging-Assertion und ermöglicht ihre Steuerung über das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] von `ReliableMessagingBindingElement`:  
+-   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die folgenden optionalen Eigenschaften des WS-Reliable Messaging-Assertion und ermöglicht die Steuerung sie auf die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

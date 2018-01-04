@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.  
@@ -343,8 +344,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 >  Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI-Pfads oder eines <xref:System.UriTemplate>-Pfadsegmentliterals verwendet werden. (Die Zeichen "a" und "A" gelten hingegen als gleich.) Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen (a und A gelten ebenfalls als gleiche Zeichen).  
   
 ## <a name="see-also"></a>Siehe auch  
- [WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web-HTTP-Programmiermodell Objekt](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [URI-Vorlage](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  [UriTemplate-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

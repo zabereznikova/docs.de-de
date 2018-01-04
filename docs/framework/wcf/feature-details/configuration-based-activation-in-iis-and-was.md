@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0938b98a3f079d03653df55f10c26a4a62db5bf3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst unter Internetinformationsdienste (IIS) oder Windows-Prozessaktivierungsdienst (WAS) hosten, müssen Sie normalerweise eine SVC-Datei bereitstellen. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.  
@@ -50,6 +51,6 @@ Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst un
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>  
  [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)  
- [Übersicht über Hosting Workflowdienste](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [Übersicht über das Hosten von Workflowdiensten](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [\<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
  [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)

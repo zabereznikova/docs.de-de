@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e9c16f2e603a3ce9bbc59be4e01aa492239d2c63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-dienstanwendungen basieren auf einer Klasse, die von erben die <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> Klasse. Sie überschreiben die Methoden, die von dieser Klasse und Funktionen sind, um zu bestimmen, wie das Verhalten des Diensts definiert.  
@@ -77,4 +78,4 @@ Windows-dienstanwendungen basieren auf einer Klasse, die von erben die <xref:Sys
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Erstellen von Windows-Dienste](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+ [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 386e58c5b04ed82f9ee42c7f04eacd4610c2a598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
@@ -61,7 +62,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Authentifizierte Anmeldedaten, die von einem Sicherheitsprinzipal verwendet werden, um die eigene Identität festzustellen, beispielsweise ein Kennwort oder ein Kerberos-Protokollticket. Mit den Anmeldeinformationen wird der Zugriff auf Ressourcen gesteuert.  
   
  digestedData  
- Ein Dateninhaltstyp, der durch den Public Key Cryptographic Standard (PKCS) #7 definiert wird und aus einem beliebigen Datentyp sowie einem Nachrichtenhash (Prüfsumme) des Inhalts besteht.  
+ Ein Dateninhaltstyp, der durch den Public Key Cryptographic Standard (PKCS) #7 definiert wird und aus einem beliebigen Datentyp sowie einem Nachrichtenhash (Hashwert) des Inhalts besteht.  
   
  Digitale Signatur  
  Daten, durch die die Identität eines Absenders an die gesendeten Informationen gebunden wird. Digitale Signaturen können zusammen mit jeder Nachricht, Datei oder allen anderen digitalen Informationen sowie separat gesendet werden. Digitale Signaturen werden in Umgebungen für öffentliche Schlüssel verwendet und stellen Authentifizierungs- und Integritätsdienste bereit.  
@@ -108,7 +109,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Private Schlüssel  
  Der geheime Teil eines Schlüsselpaars, das in einem Algorithmus für öffentliche Schlüssel verwendet wird. Private Schlüssel werden normalerweise zur Verschlüsselung von symmetrischen Sitzungsschlüsseln, zur digitalen Signierung von Nachrichten oder zur Entschlüsselung von Nachrichten, die mit dem entsprechenden öffentlichen Schlüssel verschlüsselt wurden, verwendet. Siehe auch "Öffentlicher Schlüssel".  
   
- Prozess  
+ process  
  Der Sicherheitskontext, in dem eine Anwendung ausgeführt wird. Der Sicherheitskontext ist normalerweise einem Benutzer zugeordnet, sodass alle Anwendungen, die unter einem bestimmten Prozess ausgeführt werden, die Rechte und Berechtigungen des entsprechenden Benutzers übernehmen.  
   
  Paar aus privatem und öffentlichem Schlüssel  
@@ -193,5 +194,5 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
   
 ## <a name="see-also"></a>Siehe auch  
  [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)  
- [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Was &#39; s neu in Windows Communication Foundation 4.5
 In diesem Thema werden die neuen Funktionen von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] erläutert.  
@@ -29,7 +30,7 @@ In diesem Thema werden die neuen Funktionen von [!INCLUDE[indigo1](../../../incl
  Es wurde viel unternommen, um die Entwicklung und Verwaltung von WCF 4.5-Anwendungen zu vereinfachen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF-Vereinfachungsfunktionen](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="task-based-async-support"></a>Aufgabenbasierte asynchrone Unterstützung  
- Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen taskbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe abgeschlossen wird, wenn der Vorgang abgeschlossen ist.  Beim Implementieren eines asynchronen Vorgangs als taskbasierten asynchronen Vorgang zu implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Aufgabenobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe abgeschlossen wird, wenn der Vorgang abgeschlossen ist.  Beim Implementieren eines asynchronen Vorgangs als taskbasierten asynchronen Vorgang zu implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ### <a name="simplified-generated-configuration-files"></a>Vereinfachte generierte Konfigurationsdateien  
  Wenn Sie einen Dienstverweis in Visual Studio hinzufügen oder das SvcUtil.exe-Tool verwenden, wird eine Clientkonfigurationsdatei generiert. In früheren Versionen von WCF enthielten diese Konfigurationsdateien den Wert jeder Bindungseigenschaft, auch wenn deren Wert dem Standardwert entsprach. In WCF 4.5 enthalten die generierten Konfigurationsdateien nur die Bindungseigenschaften, die auf einen nicht standardmäßigen Wert festgelegt sind.  

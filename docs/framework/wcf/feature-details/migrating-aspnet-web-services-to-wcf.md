@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrieren von ASP.NET-Webdiensten zu WCF
 ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von Webdiensten sowie Funktionen für Hostingdienste innerhalb von Internetinformationsdienste (IIS) bereit. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet .NET Framework-Klassenbibliotheken, Tools und Hostingfunktionen für die Kommunikation von Softwareentitäten mit beliebigen Protokollen, einschließlich Protokollen, die von Webdiensten verwendet werden.  Durch Migrieren von ASP.NET-Webdiensten zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Ihre Anwendungen neue Funktionen und Verbesserungen nutzen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eindeutig sind.  
@@ -47,7 +48,7 @@ ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von We
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorbereitungen für Windows Communication Foundation: Einfachere Migration in der Zukunft](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
- [Vorbereitungen für Windows Communication Foundation: einfachere Integration in der Zukunft](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
- [Windows Communication Foundation eingeführt](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
+ [Vorbereitungen für Windows Communication Foundation: Einfachere Integration in der Zukunft](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
+ [Übernehmen von Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
  [Vergleichen von ASP.NET-Webdiensten mit WCF nach Zweck und verwendeten Standards](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
  [Vergleichen von ASP.NET-Webdiensten mit WCF auf Grundlage der Entwicklung](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

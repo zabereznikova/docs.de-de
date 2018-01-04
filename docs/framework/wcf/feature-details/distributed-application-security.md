@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in drei funktionelle Hauptbereiche unterteilt: Übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
@@ -50,7 +51,7 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
   
 |Modus|Beschreibung|  
 |----------|-----------------|  
-|Keine|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keiner der vordefinierten Bindungen verwenden Sie diesen Modus standardmäßig mit Ausnahme der [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element oder, bei der Verwendung von Code, der <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
+|Keiner|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keiner der vordefinierten Bindungen verwenden Sie diesen Modus standardmäßig mit Ausnahme der [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element oder, bei der Verwendung von Code, der <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
 |Transport|Es wird ein sicherer Transport wie HTTPS zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet.|  
 |Meldung|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
 |Gemischt|Es wird die Transportsicherheit zur Gewährleistung von Integrität und Vertraulichkeit sowie für die Serverauthentifizierung verwendet. Für die Clientauthentifizierung wird die Nachrichtensicherheit (WS-Sicherheit und andere Standards) eingesetzt.<br /><br /> (Der Enumerationswert für diesen Modus ist `TransportWithMessageCredential`.)|  
@@ -86,7 +87,7 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
+|Keiner|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
 |Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine kryptografischen Vorgänge mit dem Benutzernamen wie das Erzeugen einer Signatur oder das Verschlüsseln von Daten zulässig sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
@@ -107,5 +108,5 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

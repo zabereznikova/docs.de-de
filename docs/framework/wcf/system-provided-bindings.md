@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Eine Bindung enthält die folgenden Elemente:  
@@ -64,21 +65,21 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
   
 |Bindung|Interoperabilität|Sicherheit (Standard)|Sitzung<br /><br /> (Standard)|Transaktionen|Duplex|Codierung (Standard)|Streaming<br /><br /> (Standard)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Keine), Transport, Nachricht, Gemischt|(Keine)|(Keine)|nicht verfügbar|Text, (MTOM)|Ja<br /><br /> (gepuffert)|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|nicht verfügbar|(Text), MTOM|Nein|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Keine), Transport, Nachricht, Gemischt|(Keine)|(Keine)|n/v|Text, (MTOM)|Ja<br /><br /> (gepuffert)|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|n/v|(Text), MTOM|Nein|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Nachricht), Keine|(Zuverlässige Sitzung), Sicherheitssitzung|(Keine), Ja|Ja|(Text), MTOM|Nein|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Nachricht), Gemischt, Keine|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Nein|(Text), MTOM|Nein|  
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|  
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|  
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|  
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), Nachricht, Keine, Gemischt|(Transport), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Ja|Binär|Ja<br /><br /> (gepuffert)|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), Keine|Keine, (Transport)|(Keine), Ja|Ja|Binär|Ja<br /><br /> (gepuffert)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Nachricht, (Transport), Keine|Keine, (Transport)|Keine, (Ja)|Nein|Binär|Nein|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Keine)|(Keine)|Ja||Nein|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Keine)|Keine, (Ja)|nicht verfügbar|nicht verfügbar|Nein|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Keine), Transport, Nachricht, Gemischt|(Keine)|(Keine)|nicht verfügbar|Text, (MTOM)|Ja<br /><br /> (gepuffert)|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Keine)|Keine, (Ja)|n/v|n/v|Nein|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Keine), Transport, Nachricht, Gemischt|(Keine)|(Keine)|n/v|Text, (MTOM)|Ja<br /><br /> (gepuffert)|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Nachricht, Keine, Gemischt|(Transport), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Ja|Binär|Ja<br /><br /> (gepuffert)|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|nicht verfügbar|Text, (MTOM)|Nein|  
-|<xref:System.ServiceModel.UdpBinding>|.NET **Hinweis:** Interoperabilität lässt Sie durch Implementieren der SOAP-über-UDP-Standardspezifikation die von dieser Bindung implementiert.|(Keine)|(Keine)|(Keine)|nicht verfügbar|(Text)|Nein|  
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|n/v|Text, (MTOM)|Nein|  
+|<xref:System.ServiceModel.UdpBinding>|.NET **Hinweis:** Interoperabilität lässt Sie durch Implementieren der SOAP-über-UDP-Standardspezifikation die von dieser Bindung implementiert.|(Keine)|(Keine)|(Keine)|n/v|(Text)|Nein|  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.NetHttpBinding> ist eine für die Nutzung von HTTP- oder WebSocket-Diensten entwickelte Bindung, die standardmäßig die binäre Codierung verwendet. Die <xref:System.ServiceModel.NetHttpBinding> erkennt, ob sie mit einem Anforderung-Antwort-Vertrag oder einem Duplexvertrag verwendet wird, und ändert das Verhalten entsprechend, indem HTTP für Anforderung-Antwort und WebSockets für Duplex verwendet werden. Dieses Verhalten kann überschrieben werden, mithilfe der <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` binden Einstellung: zulässiges: Dies ist der Standardwert und verhält sich wie oben beschrieben. NotAllowed - verhindert dies WebSockets verwendet wird. Versucht, einen Duplexvertrag mit dieser Einstellung zu verwenden, führt zu einer Ausnahme. Erforderliche: Erzwingt die Verwendung von WebSockets sogar für Anforderung-Antwort-Verträge. NetHttpBinding unterstützt zuverlässige Sitzungen im HTTP-Modus und WebSocket-Modus. Im WebSocket-Modus werden Sitzungen vom Transport bereitgestellt.  

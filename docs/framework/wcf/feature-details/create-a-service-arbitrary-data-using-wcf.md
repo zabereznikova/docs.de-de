@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang Daten in einem Format zurückgeben muss, das von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützt wird. In diesem Thema wird die Verwendung des REST-Programmiermodells von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zum Erstellen eines Diensts erläutert, von dem beliebige Daten empfangen werden.  
@@ -206,4 +207,4 @@ namespace ReceiveRawData
 ## <a name="see-also"></a>Siehe auch  
  [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+ [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

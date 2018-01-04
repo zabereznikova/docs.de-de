@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Erweiterungen
 Dieser Abschnitt enthält Beispiele, die sich mit benutzerdefinierten Erweiterungen und anderen Funktionen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beschäftigen.  
@@ -29,7 +30,7 @@ Dieser Abschnitt enthält Beispiele, die sich mit benutzerdefinierten Erweiterun
  [Erweiterbarkeit der Suche](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
  Zeigt die benutzerdefinierte Suche.  
   
- [Instanziierungserweiterbarkeit](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
+ [Instanzerstellungserweiterbarkeit](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
  Zeigt benutzerdefinierte Erweiterungen.  
   
  [Erweiterbarkeit der Interoperabilität](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
@@ -65,10 +66,10 @@ Dieser Abschnitt enthält Beispiele, die sich mit benutzerdefinierten Erweiterun
  [DataContract-Ersatzzeichen](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Zeigt, wie Prozesse wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können.  
   
- [Erweitern der Kontrolle über Fehlerbehandlung und-Meldung](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Erweitern der Kontrolle über Fehlerbehandlung und -meldung](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Zeigt, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle erweitert werden kann.  
   
- [Nachrichten-Inspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md)  
+ [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Zeigt, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  

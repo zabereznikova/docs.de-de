@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>Einfacher Ressourcendienst
 In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter Dienst mithilfe des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST-Programmiermodells implementiert wird, das eine Auflistung von Kunden verfügbar macht, die die Vorgänge zum Abrufen, Hinzufügen, Löschen und Ersetzen unterstützt. Dieses Beispiel besteht aus zwei Komponenten – einem selbst gehosteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-HTTP-Dienst (Service.cs) und einer Konsolenanwendung (program.cs), die den Dienst erstellt und Aufrufe an den Dienst durchführt.  
@@ -49,5 +50,5 @@ In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter Dienst mithilfe 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegende HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Einfacher HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  [Automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

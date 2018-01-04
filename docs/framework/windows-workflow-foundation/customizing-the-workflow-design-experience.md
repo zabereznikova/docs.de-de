@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60e8d01ad32e10f06191f7e0b38dcb648780ba29
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ca6e23febf14b2db28bad950d2cd012fdce30fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Anpassen des Workflowentwurfsvorgangs
 Die Szenarien zum Entwerfen von benutzerdefinierten Aktivitäten und zum erneuten Hosten von [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] wurden in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] deutlich vereinfacht. Die Entwicklung und Bereitstellung sind jetzt einfacher sowie flexibler. Die wichtigste Änderung besteht darin, dass das neue Aktivitätsdesigner-Programmiermodell auf [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] aufbaut. Dies ermöglicht Ihnen, Aktivitätsdesigner deklarativ zu definieren und den [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in anderen Anwendungen vergleichsweise einfach erneut zu hosten. Beim erneuten Hosten kann ein benutzerdefinierter Ausdrucks-Editor entwickelt werden, um IntelliSense oder eine vereinfachte Ausdrucksdomäne zu unterstützen. Die Integration in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist durch die Verwendung von Workflowdiensten nahtloser geworden. Benutzerdefinierte Aktivitätsdesigner und die Modellelementstruktur können verwendet werden, um die Entwurfszeiterfahrung in neu gehosteten Workflowdesignern zu verbessern.  
@@ -39,4 +40,4 @@ Die Szenarien zum Entwerfen von benutzerdefinierten Aktivitäten und zum erneute
  [Erweitern der Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)  
  [Designer](../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
  [Benutzerdefinierte Aktivitätsdesigner](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
- [Hosten von Designern](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+ [Erneutes Hosten von Designern](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)

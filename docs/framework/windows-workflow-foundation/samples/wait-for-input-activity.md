@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>Warten auf Eingabeaktivität
 Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erstellt werden. [!INCLUDE[wf](../../../../includes/wf-md.md)] stellt keine Aktivität zur deklarativen Erstellung von Lesezeichen bereit. Wenn Sie daher in Ihrem Workflow ein Lesezeichen erstellen möchten, müssen Sie eine benutzerdefinierte Aktivität schreiben, die eines erstellt. Die in diesem Beispiel definierte `WaitForInput`-Aktivität stellt diese Funktionalität bereit, damit Benutzer Lesezeichen deklarativ innerhalb eines Workflows erstellen können.  
@@ -38,7 +39,7 @@ Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erst
   
  Auf die Aktivität können zur Bindung an einen Designer, zum Hinzufügen der generischen Argumentfunktion, die aktualisiert werden kann, und zum Festlegen der standardmäßigen generischen Typs auf "Zeichenfolge" drei Attribute angewendet werden. Die Aktivität weist auch die in der folgenden Tabelle aufgeführten Argumente auf.  
   
-|**Name**|**Typ**|**Beschreibung**|  
+|**Name**|**Type**|**Beschreibung**|  
 |-|-|-|  
 |TResult|Generisches Argument (TResult)|Der Typ des Lesezeichens. Dies ist der Typ der Daten, der beim Wiederaufnehmen des Lesezeichens an das Lesezeichen übergeben werden soll.|  
 |BookmarkName|InArgument\<Zeichenfolge >|Der Name des Lesezeichens.|  

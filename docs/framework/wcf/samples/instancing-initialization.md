@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5345816295b9de54426aef3da697b99b4f0ce10e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instancing-initialization"></a>Initialisierung der Instanziierung
 Dieses Beispiel erweitert die [Pooling](../../../../docs/framework/wcf/samples/pooling.md) durch Definieren einer Schnittstelle Sample `IObjectControl`, die passt die Initialisierung eines Objekts durch das Aktivieren und deaktivieren es an. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  

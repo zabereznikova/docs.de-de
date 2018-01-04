@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>Warteschlangen in WCF
 In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommunikation in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.  
@@ -117,21 +118,21 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
   
 -   [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Vorgehensweise: Exchange in der Warteschlange Nachrichten mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Ein vollständiges Codebeispiel, das die Verwendung von MSMQ in WCF veranschaulicht, finden Sie in den folgenden Themen:  
   
 -   [Abgewickelte MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [Volatile-Warteschlangenkommunikation](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+-   [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Warteschlangen für unzustellbare](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
 -   [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
 -   [Bidirektionale Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
--   [Transaktive Batchverarbeitung:](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [Transaktive Batchverarbeitung](../../../../docs/framework/wcf/samples/transacted-batching.md)  
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76a0ab96f40c1b8d9db6f61d19ece82066b63eb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5bdd9ae29dcbb8397d2fe645e240572aad32a19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a>Vorgehensweise: Zeichnen einer Folge von B &#233; Zier Splines
 Können Sie die <xref:System.Drawing.Graphics.DrawBeziers%2A> Methode der <xref:System.Drawing.Graphics> Bézier-Splines zum Zeichnen einer Folge von verbunden ist.  
@@ -43,5 +44,5 @@ Können Sie die <xref:System.Drawing.Graphics.DrawBeziers%2A> Methode der <xref:
   
 ## <a name="see-also"></a>Siehe auch  
  [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Bézier-Splines in GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [Bézier-Splines in GDI +](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
  [Erstellen und Zeichnen von Kurven](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

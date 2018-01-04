@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ed37992b5488d33b9292bdd54eef47f9eb12f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52e07a83f5a1b84abc46f00e6fd6e80e4b9a2622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services-and-clients"></a>Sichern von Diensten und Clients
 Im Mittelpunkt dieses Abschnitts stehen Informationen zur Programmiersicherheit in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Hierzu zählt im Allgemeinen das Auswählen einer geeigneten vom System bereitgestellten Bindung, das Festlegen der Eigenschaften des Sicherheitselements sowie das anschließende Festlegen von Eigenschaften für das Dienstverhalten, mit denen gesteuert wird, wie Anmeldeinformationen für die Verwendung durch den Dienst oder den Client abgerufen werden. Diese Techniken die sicherheitsanforderungen der meisten Benutzer in den meisten Szenarien abzudecken, wie gezeigt in [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Wenn Ihr Szenario mehr Funktionen erfordert, zuerst finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); ist eine Lösung nicht offensichtlich, finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md). Wenn Sie erstellen (oder Interoperabilität mit) ein Systems, die umfangreiche Ansprüche verwendet, finden Sie unter den Themen in [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -27,7 +28,7 @@ Im Mittelpunkt dieses Abschnitts stehen Informationen zur Programmiersicherheit 
  [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Eine Übersicht über das Programmiermodell, das zum Sichern von Nachrichten verwendet wird.  
   
- [Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  Eine Übersicht über das Sichern von Nachrichten mithilfe der Transportschicht.  
   
  [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
@@ -36,7 +37,7 @@ Im Mittelpunkt dieses Abschnitts stehen Informationen zur Programmiersicherheit 
  [Sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
  Eine Diskussion der erforderlichen Überlegungen für das Sichern einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzung.  
   
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Eine Erläuterung einiger der allgemeinen Aufgaben, die bei Verwendung von X.509-Zertifikaten erforderlich sind.  
   
 ## <a name="reference"></a>Verweis  
@@ -47,7 +48,7 @@ Im Mittelpunkt dieses Abschnitts stehen Informationen zur Programmiersicherheit 
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md)  
   

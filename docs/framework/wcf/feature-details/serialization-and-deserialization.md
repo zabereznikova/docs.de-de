@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekte in XML (und umgekehrt). In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
@@ -213,7 +214,7 @@ ms.lasthandoff: 12/02/2017
 >  Die Verwendung der schrittweisen Serialisierung kann in XML resultieren, das keinem gültigen Schema entspricht.  
   
 ## <a name="deserialization"></a>Deserialisierung  
- Die folgenden Ausführungen gelten für alle von <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleiteten Klassen, einschließlich der <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse und der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse.  
+ Die folgenden Ausführungen gelten für alle von <xref:System.Runtime.Serialization.XmlObjectSerializer> abgeleiteten Klassen, einschließlich der <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse und der <xref:System.Runtime.Serialization.NetDataContractSerializer>-Klasse.  
   
  Die grundlegendste Möglichkeit, ein Objekt zu deserialisieren, besteht im Aufruf einer der Überladungen der <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methode. Es sind drei Überladungen verfügbar, jeweils eine zum Lesen mit einem <xref:System.Xml.XmlDictionaryReader>-Objekt, einem `XmlReader`-Objekt oder einem `Stream`-Objekt. Beachten Sie, dass die `Stream` -Überladung einen textbasierten <xref:System.Xml.XmlDictionaryReader> erstellt, der nicht durch Kontingente geschützt wird und nur zum Lesen vertrauenswürdiger Daten verwendet werden sollte.  
   

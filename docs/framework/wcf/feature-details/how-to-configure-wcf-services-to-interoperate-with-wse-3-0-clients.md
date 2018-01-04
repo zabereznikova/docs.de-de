@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5589ad8e4193416738da98676551bbf82c128a79
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste sind auf niedriger Ebene mit Diensten von Web Services Enhancements (3.0) WSE für Microsoft .NET-Clients kompatibel, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste für die Verwendung der Version der WS-Adressierungsspezifikation vom August 2004 konfiguriert sind.  
@@ -101,4 +102,4 @@ ms.lasthandoff: 12/02/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Anpassen einer vom System bereitgestellte Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+ [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

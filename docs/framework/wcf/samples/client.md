@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def4536fb40820372bf473d1752bb73d525db2e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11a02fc857fa3c03b11b549013550e557933820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client"></a>Client
 Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientanwendungen gezeigt werden.  
@@ -35,10 +36,10 @@ Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../inc
  [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
  Veranschaulicht, wie erwartete Ausnahmen mit einem typisierten Client abgefangen werden können.  
   
- [Abrufen von Metadaten](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Metadaten abrufen](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  Veranschaulicht, wie ein Client implementiert werden kann, der Metadaten dynamisch von einem Dienst abruft, um einen Endpunkt für die Kommunikation auszuwählen.  
   
- [Vermeiden von Problemen mit der Using-Anweisung](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+ [Vermeiden von Problemen mit der using-Anweisung](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
  Veranschaulicht, wie die "using"-Anweisung in C# beim Verwenden eines typisierten Clients nicht zum automatischen Bereinigen von Ressourcen verwendet werden sollte.  
   
  [Typisierter Client](../../../../docs/framework/wcf/samples/typed-client.md)  

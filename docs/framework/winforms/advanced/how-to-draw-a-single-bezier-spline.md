@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ebdba9e01824cc764a6ab759da049add180ba83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d2eaf570190f85ca084e5a5ab5d1bee1be56871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Vorgehensweise: Zeichnen einer einzigen B &#233; Zier Spline
 Eine Béziersplinekurve wird durch vier Punkte definiert: einem Startpunkt, die beiden Steuerpunkte und einen Endpunkt.  
@@ -43,5 +44,5 @@ Eine Béziersplinekurve wird durch vier Punkte definiert: einem Startpunkt, die 
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Drawing.Graphics.DrawBezier%2A>  
- [Bézier-Splines in GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [Bézier-Splines in GDI +](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
  [Gewusst wie: Zeichnen einer Folge von Bézier-Splines](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)

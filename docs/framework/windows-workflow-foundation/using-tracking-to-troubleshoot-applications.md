@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
 [!INCLUDE[wf](../../../includes/wf-md.md)] ermöglicht es Ihnen, workflowbezogene Informationen zu verfolgen, um Details zur Ausführung einer [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Anwendung oder eines WF-Diensts zu erhalten. [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Hosts können Workflowereignisse während der Ausführung einer Workflowinstanz erfassen. Wenn der Workflow Fehler oder Ausnahmen generiert, können Sie mithilfe der Details aus der [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Überwachung Probleme bei der Verarbeitung behandeln.  

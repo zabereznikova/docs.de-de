@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen
 Sie können vorhandene Message Queuing (MSMQ)- Anwendungen mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen integrieren, indem Sie mithilfe der Bindung für die MSMQ-Integration MSMQ-Nachrichten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichten und WCF-Nachrichten in MSMQ-Nachrichten konvertieren. So können Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients MSMQ-Empfängeranwendungen und mit MSMQ-Sendeanwendungen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste aufrufen.  
@@ -73,8 +74,8 @@ Sie können vorhandene Message Queuing (MSMQ)- Anwendungen mit [!INCLUDE[indigo1
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Vorgehensweise: Exchange in der Warteschlange Nachrichten mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  

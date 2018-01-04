@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 082dbff66c8a0f06635936011f802c99b88e41df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd2162cd2b538b5c6277991fab0ce40762f6c07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>Übersicht über die PageSetupDialog-Komponente (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Komponente ist ein vorkonfiguriertes Dialogfeld zum Festlegen der Seite Details für das Drucken in Windows-basierten Anwendungen verwendet. Verwenden Sie es in Ihrer Windows basierenden Anwendung als einfache Lösung, die für Benutzer zum Festlegen der Einstellungen für anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können Benutzer zum Festlegen von Rahmen und Rand Korrekturen, Kopf- und Fußzeilen sowie hoch-oder Querformat aktivieren. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  

@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72d6dcef2ac59fd63706d8d8c843f739575cf5cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten und ASMX-Clients oder zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und ASMX-Diensten.  

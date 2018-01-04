@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b0a29b59b6b2f7b8dd3a430b2395b18c1e4f83fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Unterschiede bei der Zertifikatsvalidierung zwischen HTTPS, SSL über TCP und SOAP-Sicherheit
 Sie können in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Zertifikate mit Sicherheit (SOAP) auf Nachrichtenebene neben der Transport Layer Security (TLS) über HTTP (HTTPS) oder TCP verwenden. In diesem Thema werden die Unterschiede bei der Überprüfung solcher Zertifikate beschrieben.  
   
-## <a name="validation-of-https-client-certificates"></a>Überprüfung der HTTPS-Clientzertifikate  
+## <a name="validation-of-https-client-certificates"></a>Validierung der HTTPS-Clientzertifikate  
  Wenn Sie HTTPS zur Kommunikation zwischen einem Client und einem Dienst verwenden, muss das Zertifikat, das der Client zur Authentifizierung für den Dienst verwendet, Vertrauensketten unterstützen. Es muss eine Verkettung zu einer vertrauenswerten Stammzertifizierungsstelle herstellen, anderenfalls gibt die HTTP-Ebene eine <xref:System.Net.WebException> mit der Meldung "Der Remoteserver hat einen Fehler zurückgegeben: (403) Unzulässig" aus. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gibt diese Ausnahme als <xref:System.ServiceModel.Security.MessageSecurityException> aus.  
   
 ## <a name="validation-of-https-service-certificates"></a>Validierung der HTTPS-Dienstzertifikate  
@@ -58,4 +59,4 @@ Sie können in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Zertifika
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

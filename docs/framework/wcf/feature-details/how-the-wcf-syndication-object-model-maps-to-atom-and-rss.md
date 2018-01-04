@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird
 Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Syndication-Dienst entwickeln, erstellen Sie Feeds und Elemente anhand der folgenden Klassen:  
@@ -410,6 +411,6 @@ Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Syndicati
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Vorgehensweise: erstellen ein einfachen RSS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Vorgehensweise: Erstellen eines grundlegenden RS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
  [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Vorgehensweise: Verfügbarmachen ein Feeds als beide Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [Vorgehensweise: Bereitstellen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

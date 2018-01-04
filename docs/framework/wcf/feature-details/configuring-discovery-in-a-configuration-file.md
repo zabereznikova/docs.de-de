@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42f86762bf40f5c8358b8772548c082844eae1ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurieren der Suche in einer Konfigurationsdatei
 Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche verwendet wurden. In diesem Thema werden die Gruppen beschrieben und jeweils Beispiele für deren Konfiguration angegeben. Nach jedem Abschnitt folgt ein Link zu einer ausführlicheren Dokumentation der einzelnen Bereiche.  

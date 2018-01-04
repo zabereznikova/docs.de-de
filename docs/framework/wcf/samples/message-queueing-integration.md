@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2e4771ac7ed2c9dce94bc4e9da62bb0017daa30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e27134c9a18d5125566b582ac17cf6a95b3b83f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-queueing-integration"></a>Message Queueing-Integration
 Dieser Abschnitt enthält Beispiele, in denen die Integration zwischen Message Queuing und [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] veranschaulicht wird.  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
 Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für die von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste kanalentwicklung in beschriebenen [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -103,4 +104,4 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
 -   Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über das kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+ [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md)

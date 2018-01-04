@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 2912568e967c8c6096842b1b4f24eac88318dffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-service-applications"></a>Entwickeln von Windows-Dienstanwendungen
 Mithilfe von Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder der Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist. Diese Art von Anwendung wird einen Windows-Dienst aufgerufen. Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.  
@@ -43,7 +44,7 @@ Mithilfe von Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder d
  [Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Erläutert die Sprachelemente in der Programmierung verwendet.  
   
- [Vorgehensweise: Erstellen von Windows-Dienste](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  Beschreibt den Prozess zum Erstellen und Konfigurieren von Windows-Diensten, die mit der Projektvorlage für Windows-Dienst.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

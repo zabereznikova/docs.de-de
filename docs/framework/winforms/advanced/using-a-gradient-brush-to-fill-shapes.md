@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen
 Sie können einen Pinsel mit Farbverlauf verwenden, zum Ausfüllen einer Form mit einem Farbverlauf. Beispielsweise können Sie einen horizontalen Farbverlauf, eine Form Farbe gefüllt, die allmählich ändert, wie Sie vom linken Rand der Form an den rechten Rand verschieben. Stellen Sie sich vor einem Rechteck, mit einer linken Kante, die Schwarz ist (dargestellt durch Rot-, Grün- und Blau-Komponenten, 0, 0, 0) und einer rechten Rand, d. h. Rot (dargestellt durch 255, 0, 0). Wenn das Rechteck 256 Pixel breit ist, wird die rote Komponente eines bestimmten Pixels eins größer als die rote Komponente des Pixels auf der linken Seite. Das ganz linke Pixel in einer Zeile hat Farbkomponenten (0, 0, 0), das zweite Pixel hat (1, 0, 0), das dritte Pixel (2, 0, 0), und So weiter, bis zum äußersten rechten Pixel gelangen Farbkomponenten (255, 0, 0) besitzt. Diese interpolierten Farbwerte machen den Farbverlauf aus.  

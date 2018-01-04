@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 Wenn Workflowdienste mit Clients und anderen Diensten kommunizieren, sind in den ausgetauschten Nachrichten häufig Daten enthalten, die eine Nachricht eindeutig mit einer bestimmten Instanz verknüpfen. Die inhaltsbasierte Korrelation verwendet diese Daten in der Nachricht, z. B. eine Kundennummer oder Bestellt-ID, um Nachrichten an die richtige Workflowinstanz weiterzuleiten. In diesem Thema wird erklärt, wie Sie die inhaltsbasierte Korrelation in Workflows verwenden.  

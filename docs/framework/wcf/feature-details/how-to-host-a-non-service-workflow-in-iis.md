@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS
 Workflows, die keine Workflowdienste darstellen, können unter IIS/WAS gehostet werden. Dies ist hilfreich, wenn ein Workflow gehostet werden muss, der von einem anderen Benutzer geschrieben wurde. Beispiel: Der Workflow-Designer wird erneut gehostet, und Benutzer können eigene Workflows erstellen.  Durch das Hosten eines Workflows in IIS, bei dem es sich nicht um einen Dienstworkflow handelt, wird Unterstützung für Funktionen wie die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die meldungsbasierte Aktivierung bereitgestellt. Workflowdienste, die in IIS gehostet werden, enthalten <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und werden beim Empfang einer Meldung durch IIS aktiviert. Workflows, die keine Dienstworkflows sind, enthalten keine Messagingaktivitäten und können standardmäßig nicht durch Senden einer Meldung aktiviert werden.  Um eine Instanz des Workflows zu erstellen, müssen Sie eine Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ableiten und einen Dienstvertrag mit Vorgängen erstellen. Dieses Thema führt Sie durch das Erstellen eines einfachen Workflows, definieren einen Dienstvertrag, ein Client verwenden kann, um den Workflow zu aktivieren, und Ableiten einer Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> verwendet den Dienstvertrag für Workflow Erstellen von Anforderungen zu lauschen.  
@@ -684,10 +685,10 @@ namespace CreationClient
   
 ## <a name="see-also"></a>Siehe auch  
  [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Hosten in Internetinformationsdienste (IIS)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internetinformation Services Hosting bewährte Methoden](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Hosten in IIS (Internetinformationsdienste)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Bewährte Methoden für das Hosten in IIS (Internetinformationsdienste)](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  [Architektur von Windows-Workflows](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [Lesezeichen-Wiederaufnahme WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [WorkflowHostingEndpoint: Lesezeichenwiederaufnahme](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
  [Erneutes Hosten des Workflow-Designers](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [Übersicht über Windows-Workflow](../../../../docs/framework/windows-workflow-foundation/overview.md)

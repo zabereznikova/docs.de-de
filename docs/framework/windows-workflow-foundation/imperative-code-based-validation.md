@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92cb1d88ff74dd685f10330b914b857258c05860
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79e50c9cc756915ffc1a2f376d6b46469c85dbf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imperative-code-based-validation"></a>Imperative codebasierte Validierung
 Die imperative codebasierte Validierung stellt eine einfache Möglichkeit für eine Aktivität dar, eine Eigenvalidierung bereitzustellen. Dies ist für Aktivitäten verfügbar, die von <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.NativeActivity> abgeleitet werden. Der Validierungscode, der sämtliche Validierungsfehler und -warnungen bestimmt, wird der Aktivität hinzugefügt.  
@@ -62,4 +63,4 @@ public sealed class CreateProduct : CodeActivity
   
  Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
   
- Codebasierte Validierung ist nützlich beim Überprüfen der Aktivität, die den Code enthält. Es besteht jedoch keine Sichtbarkeit für die anderen Aktivitäten im Workflow. Deklarative Einschränkungen Überprüfung bietet die Möglichkeit, die Beziehungen zwischen einer Aktivität und andere Aktivitäten im Workflow zu überprüfen, und wird ausführlicher im die [deklarative Einschränkungen](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md) Thema.
+ Codebasierte Validierung ist nützlich beim Validieren der Aktivität, die den Code enthält. Es besteht jedoch keine Sichtbarkeit für die anderen Aktivitäten im Workflow. Deklarative Einschränkungen Überprüfung bietet die Möglichkeit, die Beziehungen zwischen einer Aktivität und andere Aktivitäten im Workflow zu überprüfen, und wird ausführlicher im die [deklarative Einschränkungen](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md) Thema.

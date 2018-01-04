@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39615c7a74d30ebd5f316988704992b49982c4a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bindungselementen*, werden ausgewertet, von der Service-Laufzeit, wenn ein Client oder ein Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  
@@ -47,7 +48,7 @@ Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bin
   
  Es gibt zwei allgemeine Arten von Kanälen: Protokollkanäle und Transportkanäle. Transportkanäle sind verantwortlich für die eigentliche Übertragung einer Nachricht von einem Netzwerkendpunkt zum nächsten. Transportkanäle benötigen einen Standardnachrichtenencoder und sollten auch den durch das Nachrichtenencoder-Bindungselement bereitgestellten alternativen Nachrichtenencoder verwenden können. Mit einen Nachrichtenencoder verwandeln Sie eine <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> in eine Übertragungsdarstellung und umgekehrt. Mit Protokollkanälen werden Protokolle auf SOAP-Ebene (z. B. WS-Sicherheit oder WS-ReliableMessaging) implementiert.  
   
- Die grundlegende Aufgabe von Transportkanälen und Protokollkanälen besteht darin, die erforderlichen Kanalschnittstellen zu implementieren. Um eine funktionsfähige Kanalschicht zu erstellen, müssen ihnen Factorys und Listeners usw. zugewiesen sein. Um die Kanalimplementierungen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, muss ein zugewiesenes Bindungselement für jeden Kanal vom <xref:System.ServiceModel.Channels.BindingElement> abgeleitet werden. Darüber hinaus sollte auch ein entsprechendes Bindungserweiterungselement vorliegen, das in die Konfigurationsdateien, die vom <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> abgeleitet werden, eingeschlossen wird.  
+ Die grundlegende Anforderung an Transportkanäle und Protokollkanäle besteht darin, die erforderlichen Kanalschnittstellen zu implementieren. Um eine funktionsfähige Kanalschicht zu erstellen, müssen ihnen Factorys und Listeners usw. zugewiesen sein. Um die Kanalimplementierungen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, muss ein zugewiesenes Bindungselement für jeden Kanal vom <xref:System.ServiceModel.Channels.BindingElement> abgeleitet werden. Darüber hinaus sollte auch ein entsprechendes Bindungserweiterungselement vorliegen, das in die Konfigurationsdateien, die vom <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> abgeleitet werden, eingeschlossen wird.  
   
  Wie zuvor erwähnt können Bindungselemente für Nachrichtenencoder, Protokollkanalimplementierungen und Transportkanalimplementierungen zu einem Kanalstapel zusammengefasst werden. Zum Aufreihen in einem geordneten Satz wird die Bindung verwendet. Bindungen und Bindungselemente verbinden das Anwendungsprogrammiermodell mit dem Kanalmodell. Sie können die Kanalimplementierungen direkt aus dem Code verwenden, aber erst nachdem Encoder, Transporte und Protokolle als Bindungselemente implementiert wurden, können sie aus dem Dienstschichtprogrammiermodell heraus verwendet werden.  
   

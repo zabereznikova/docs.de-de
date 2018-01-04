@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d5b00113f9b44d1d77d00dd541bc602afcb405
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
 In diesem Thema wird erläutert, wie Sie erreichen, dass ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst erkennbar ist und danach gesucht werden kann. Es basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
@@ -351,5 +352,5 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über den WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Objektmodell für WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+ [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Objektmodell der WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73b16a5e5834f7279ae551d4e7efd26cc86c1d07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Gewusst wie: Fortsetzen eines Windows-Diensts (Visual Basic)
 Dieses Beispiel verwendet die <xref:System.ServiceProcess.ServiceController> Komponente, für die IIS-Verwaltungsdienst auf dem lokalen Computer zu fortfahren.  
@@ -59,4 +60,4 @@ Dieses Beispiel verwendet die <xref:System.ServiceProcess.ServiceController> Kom
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
- [Vorgehensweise: Anhalten von Windows-Dienst (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+ [Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

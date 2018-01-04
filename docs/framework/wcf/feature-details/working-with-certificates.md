@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheit werden digitale X.509-Zertifikate häufig zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieses Thema bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Zertifikaten erläutert werden.  

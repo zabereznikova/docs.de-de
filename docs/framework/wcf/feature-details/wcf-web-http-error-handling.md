@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung
 Die Web-HTTP-Fehlerbehandlung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Fehler von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Diensten zurückzugeben, die einen HTTP-Statuscode angeben, sowie Fehlerdetails im gleichen Format wie der Vorgang (z. B. XML oder JSON) zurückzugeben.  
@@ -61,7 +62,7 @@ Public string Operation2()
   
 ## <a name="see-also"></a>Siehe auch  
  [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ [WCF-Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
  [Definieren und Angeben von Fehlern](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
  [Behandeln von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
  [Senden und Empfangen von Fehlern](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

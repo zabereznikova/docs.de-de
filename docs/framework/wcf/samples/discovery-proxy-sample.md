@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 515f91baf48f68ba0c1cb32e00152bf025fe7323
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-proxy-sample"></a>Suchproxybeispiel
 In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können. Dieses Beispiel umfasst drei Projekte:  

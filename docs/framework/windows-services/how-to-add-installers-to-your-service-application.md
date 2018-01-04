@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Gewusst wie: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio geliefert Installationskomponenten, die Ihre dienstanwendungen zugeordnete Ressourcen installieren können. Installationskomponenten registrieren Sie einen einzelnen Dienst auf dem System, das installiert wird, und lassen Sie den Dienststeuerungs-Manager wissen, dass der Dienst vorhanden ist. Bei der Arbeit mit einer dienstanwendung können Sie einen Link im Fenster Eigenschaften die entsprechenden Installationsprogramme automatisch zu Ihrem Projekt hinzufügen auswählen.  

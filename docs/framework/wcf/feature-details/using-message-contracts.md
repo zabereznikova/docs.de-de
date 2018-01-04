@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 Üblicherweise achten Entwickler bei der Erstellung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen streng auf die Datenstrukturen und Serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

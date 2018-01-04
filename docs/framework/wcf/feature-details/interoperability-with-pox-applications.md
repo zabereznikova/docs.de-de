@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 "Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einen SOAP-Umschlag eingeschlossen ist. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann Dienste und Clients bereitstellen, die POX-Nachrichten verwenden. Beim Dienst kann [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für die Implementierung von Diensten verwendet werden, die Endpunkte wie Webbrowser und Skriptsprachen, mit denen POX-Nachrichten gesendet und empfangen werden können, für Clients verfügbar machen. Auf dem Client kann das Programmiermodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Implementierung von Clients, die mit POX-basierten Diensten kommunizieren, herangezogen werden.  

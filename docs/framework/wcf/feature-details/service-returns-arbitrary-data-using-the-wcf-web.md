@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang Daten in einem Format, die von nicht unterstützten zurückgeben muss [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In diesem Thema wird erläutert, wie ein solcher Dienst mithilfe des WEB-HTTP-Webprogrammiermodells von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erstellt werden kann. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  

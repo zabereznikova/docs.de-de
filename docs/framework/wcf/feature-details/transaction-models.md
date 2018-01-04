@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c74b1826ca280ba05420449758cdbb84dac3e93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-models"></a>Transaktionsmodelle
 In diesem Thema wird die Beziehung zwischen den Transaktionsprogrammiermodellen und den von Microsoft gebotenen Infrastrukturkomponenten beschrieben.  
@@ -26,7 +27,7 @@ In diesem Thema wird die Beziehung zwischen den Transaktionsprogrammiermodellen 
   
  In den folgenden Abschnitten werden die drei primären Transaktionskomponenten beschrieben.  
   
-## <a name="windows-communication-foundation-transactions"></a>Windows Communication Foundation-Transaktionen  
+## <a name="windows-communication-foundation-transactions"></a>Windows-Kommunikationfoundation-Transaktionen  
  Die Transaktionsunterstützung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht das Schreiben von Transaktionsdiensten. Zusätzlich können Anwendungen durch die Unterstützung des WS-AtomicTransaction (WS-AT)-Protokolls Transaktionen an Webdienste übertragen, die entweder über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oder die Technologie von Fremdanbietern erstellt wurden.  
   
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten oder -Anwendungen bieten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transaktionsfunktionen Attribute und die Konfiguration für eine deklarative Angabe, wie und wann die Infrastruktur Transaktionen erstellen, übermitteln oder synchronisieren sollte.  

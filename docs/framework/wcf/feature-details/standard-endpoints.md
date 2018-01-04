@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 869861ce1e2ba4456c8e8fbd06f9ff590fb3576a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-endpoints"></a>Standardendpunkte
 Endpunkte werden definiert, indem eine Adresse, eine Bindung und ein Vertrag angegeben wird. Andere Parameter, die für einen Endpunkt festgelegt werden können, sind beispielsweise Verhaltenskonfigurationen, Header und Abhör-URIs.  Für bestimmte Typen von Endpunkten ändern sich diese Werte nicht. Beispielsweise verwenden Metadatenaustausch-Endpunkte immer den <xref:System.ServiceModel.Description.IMetadataExchange>-Vertrag. Andere Endpunkte, z. B. <xref:System.ServiceModel.Description.WebHttpEndpoint>, erfordern immer ein angegebenes Endpunktverhalten. Die Verwendbarkeit eines Endpunkts kann verbessert werden, indem für häufig verwendete Endpunkteigenschaften Endpunkte mit Standardwerten verwendet werden. Mithilfe von Standardendpunkten können Entwickler einen Endpunkt definieren, der über Standardwerte verfügt oder für den sich eine oder mehrere Endpunkteigenschaften nicht ändern.  Mit diesen Endpunkten können Sie einen solchen Endpunkt verwenden, ohne Informationen statischer Natur angeben zu müssen. Standardendpunkte können für Infrastruktur- und Anwendungsendpunkte verwendet werden.  

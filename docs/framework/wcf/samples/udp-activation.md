@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32c452042ffee0a09143042900d24b7429234bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bbc7d8b6b4cb74be12e9460b173e73e1873765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="udp-activation"></a>UDP-Aktivierung
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. Es erweitert die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Stichprobe, die prozessaktivierung mit dem Windows Process Activation Service (WAS) unterstützen.  
@@ -93,7 +94,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
   
 2.  Erstellen Sie das Projekt unter Windows Vista. Nach dem Kompilieren führt es in der Postbuildphase auch die folgenden Vorgänge aus:  
   
-    -   Es installiert die UDP-Bindung für die Site "Default Web Site".  
+    -   Es installiert die UDP-Bindung für die Site „Default Web Site“.  
   
     -   Es erstellt den "ServiceModelSamples" der virtuellen Anwendung so, dass er auf den physischen Pfad zeigt: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
@@ -108,7 +109,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
 4.  Klicken Sie auf die **Aktivierung** Registerkarte Benutzeroberflächenanwendung "WasNetActivator.exe". Klicken Sie auf die **starten** Schaltfläche, um den Listeneradapter zu starten. Nun können Sie das Programm ausführen.  
   
     > [!NOTE]
-    >  Wenn Sie die Arbeit mit diesem Beispiel abgeschlossen haben, müssen Sie Cleanup.bat ausführen, um die net.udp-Bindung aus der "Default Web Site" zu entfernen.  
+    >  Wenn Sie die Arbeit mit diesem Beispiel abgeschlossen haben, müssen Sie Cleanup.bat ausführen, um die net.udp-Bindung aus der „Default Web Site“ zu entfernen.  
   
 ## <a name="sample-usage"></a>Verwendung des Beispiels  
  Nach dem Kompilieren liegen vier verschiedene Binärdateien vor:  

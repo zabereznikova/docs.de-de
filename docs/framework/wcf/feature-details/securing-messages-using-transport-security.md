@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f36351c04b3849b5364e00cec55769628d89af11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  
@@ -108,5 +109,5 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
   
 ## <a name="see-also"></a>Siehe auch  
  [Message Queuing](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
- [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

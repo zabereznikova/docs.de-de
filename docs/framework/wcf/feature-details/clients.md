@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70e38e3fe1a07613b0e5b219922c95cdc3bcda41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37125ed8211578e221b24e6aed1fc57b2fc0f518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clients"></a>Clients
 In den Themen dieses Abschnitts werden die Clientarchitektur, der Zugriff auf einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst, das Konfigurieren eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und einige Sicherheitsüberlegungen für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients behandelt.  
@@ -29,7 +30,7 @@ In den Themen dieses Abschnitts werden die Clientarchitektur, der Zugriff auf ei
  [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
  Beschreibt das Zugreifen auf einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.  
   
- [WCF-Client-Konfiguration](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [WCF-Clientkonfiguration](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  Beschreibt, wie Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client konfigurieren.  
   
  [Sichern von Clients](../../../../docs/framework/wcf/securing-clients.md)  

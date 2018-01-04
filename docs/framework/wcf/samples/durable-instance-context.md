@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4a1dfb2f517496cab1dcc2a57be3082c7c6f1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Laufzeit angepasst wird, um permanente Instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -428,7 +429,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 </bindings>  
 ```  
   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  In diesem Beispiel wurde gezeigt, wie ein benutzerdefinierter Protokollkanal erstellt wird und wie das Dienstverhalten angepasst werden muss, um diesen Protokollkanal zu aktivieren.  
   
  Die Erweiterung kann weiter verbessert werden, wenn Benutzer die `IStorageManager`-Implementierung mit einem Konfigurationsabschnitt angeben können. Dadurch kann der Sicherungsspeicher geändert werden, ohne den Dienstcode neu zu kompilieren.  

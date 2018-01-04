@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
 Verhalten ermöglichen es, das Standardverhalten zu ändern und benutzerdefinierte Erweiterungen hinzuzufügen, die die Dienstkonfiguration überprüfen, oder das Laufzeitverhalten in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client- und Dienstanwendungen zu ändern. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zum Verwenden von vom System bereitgestellte Verhalten, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Angabe zur Laufzeit Clientverhalten](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  

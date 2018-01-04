@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 684d9bcf2e4787457a6ef3251e0202e1559561b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten
 In diesem Thema wird erklärt, wie Sie Metadaten aus Dienstendpunkten exportieren.  
@@ -67,5 +68,5 @@ In diesem Thema wird erklärt, wie Sie Metadaten aus Dienstendpunkten exportiere
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

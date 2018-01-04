@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbb86ef98befda8a246bdded4f30cf93f02e727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a733327145dd36fc36ab00bb58ca495b991e61fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Bei der Anzeige von Daten in einer Windows Forms <xref:System.Windows.Forms.DataGridView> -Steuerelement, Benutzer manchmal die Werte in bestimmte Spalten vergleichen möchten. Dies kann unpraktisch, wenn die Spalten im Steuerelement weit voneinander getrennt sind, insbesondere dann, wenn Benutzer hin-und horizontalen Bildlauf durchführen müssen, um alle Spalten, denen sie interessiert sind, finden Sie unter. Sie können die Aufgabe der Vergleich von Spaltenwerten einfacher aktivieren Ihrer Benutzer für die Spalten neu anordnen vornehmen. Wenn Sie die neuanordnung von Spalten aktivieren, können Benutzer eine Spalte an eine neue Position verschieben, indem Sie den Spaltenüberschrift mit der Maus ziehen.  

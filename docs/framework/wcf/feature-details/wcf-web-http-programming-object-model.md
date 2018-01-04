@@ -13,11 +13,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
 Das WCF-Web-HTTP-Programmiermodell ermöglicht Entwicklern, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Webdienste durch grundlegende HTTP-Anforderungen ohne SOAP verfügbar zu machen. Das WCF-Web-HTTP-Programmiermodell wird zusätzlich zum vorhandenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell erstellt. Mit diesem Modell werden folgende Klassen definiert:  
@@ -115,4 +116,4 @@ Das WCF-Web-HTTP-Programmiermodell ermöglicht Entwicklern, [!INCLUDE[indigo1](.
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+ [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

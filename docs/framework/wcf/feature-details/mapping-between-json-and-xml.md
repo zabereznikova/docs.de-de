@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
 Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Die von dieser Factory erzeugten Reader und Writer werden auch verwendet, wenn JSON-Inhalte von einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung über ein <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder eine <xref:System.ServiceModel.WebHttpBinding> gesendet oder empfangen werden.  
@@ -104,7 +105,7 @@ Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erz
   
 -   Das Datenvertrags-Namensattribut ("__type"), das an späterer Stelle näher beschrieben wird. Dieses Attribut kann nur angegeben werden, wenn auch das JSON-Typattribut angegeben wurde und dessen [normalized value] gleich "object" ist. Dieses Attribut wird vom `DataContractJsonSerializer` verwendet, um die Typinformationen des Datenvertrags beizubehalten, beispielsweise in polymorphen Fällen, in denen ein abgeleiteter Typ serialisiert und ein Basistyp erwartet wird. Wenn Sie nicht mit dem `DataContractJsonSerializer` arbeiten, wird dieses Attribut wird meist ignoriert.  
   
--   [in-scope namespaces] enthält die Bindung zwischen "XML" und "http://www.w3.org/XML/1998/namespace" entsprechend der Infosetspezifikation.  
+-   [in-scope namespaces] enthält die Bindung zwischen XML und „http://www.w3.org/XML/1998/namespace“ entsprechend der Infosetspezifikation.  
   
 -   [children], [attributes] und [in-scope namespaces] dürfen keine anderen Elemente als die oben genannten enthalten, und [namespace attributes] darf keine Member enthalten. Sie dürfen sich beim Lesen von XML, das aus einer Zuordnung von JSON erzeugt wurde, aber nicht darauf verlassen, dass dies zutrifft.  
   
@@ -243,4 +244,4 @@ Strahl "|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Ab
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
- [Eigenständige JSON-Serialisierung](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+ [Eigenständige JSON-Serialisierung.](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

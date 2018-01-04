@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaebbb7fa2e6e0420243c32cb70c64092ea86fa7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 85ae459a8e79beba9ecffb16476b37468aeb632e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-rollback"></a>Transaktionsrollback
 Dieses Beispiel veranschaulicht, wie eine benutzerdefinierte <xref:System.Activities.NativeActivity> erstellt wird, die auf den Ambient-<xref:System.Activities.RuntimeTransactionHandle> zugreift, um die Ambient-Transaktion abzurufen und sie explizit zurückzusetzen.  

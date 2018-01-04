@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>Verwenden der XmlSerializer-Klasse
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann zwei verschiedene Serialisierungstechnologien verwenden, um die Daten in der Anwendung in XML für die Übertragung zwischen Clients und Diensten umzuwandeln; dieser Vorgang wird als Serialisierung bezeichnet.  
@@ -172,7 +173,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Bei dem generierten Schema kann es sich auch um ein nicht gültiges Datenvertragsschema handeln. Ihre Schemaanbietermethode kann zum Beispiel Schemas mit XML-Attributen generieren, die im Datenvertragsmodell nicht unterstützt werden. In diesem Fall können Sie das Schema als `IXmlSerializable`-Typen importieren. Dieser Modus "Import" ist nicht standardmäßig aktiviert, jedoch kann problemlos mit aktiviert werden – z. B. die `/importXmlTypes` Befehlszeilenoption, um die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Dies wird ausführlich beschrieben unter der [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Beachten Sie, dass Sie für die Typinstanzen direkt mit den XML-Daten arbeiten müssen. Sie können auch erwägen, eine andere Serialisierungstechnologie zu verwenden, die einen größeren Schemabereich unterstützt. Weitere Informationen finden Sie im Thema zur Verwendung von `XmlSerializer`.  
   
--   Es ist ratsam, Ihre vorhandenen `IXmlSerializable`-Typen im Proxy wiederzuverwenden, anstatt neue zu generieren. In diesem Fall können Sie das Feature mit den referenzierten Typen verwenden, die im Thema zum Importieren von Schemas zum Generieren von Typen beschrieben ist, um den wiederzuverwendenden Typ anzugeben. Dies entspricht dem Verwenden der `/reference` Schalters von svcutil.exe, der die Assembly angibt, die die wiederzuverwendenden Typen enthält.  
+-   Es ist ratsam, Ihre vorhandenen `IXmlSerializable`-Typen im Proxy wiederzuverwenden, anstatt neue zu generieren. In diesem Fall können Sie die Funktion mit den referenzierten Typen verwenden, die im Thema zum Importieren von Schemas zum Generieren von Typen beschrieben ist, um den wiederzuverwendenden Typ anzugeben. Dies entspricht dem Verwenden der `/reference` Schalters von svcutil.exe, der die Assembly angibt, die die wiederzuverwendenden Typen enthält.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer-Legacyverhalten  
  In .NET Framework 4.0 und früher wurden von XmlSerializer temporäre Serialisierungsassemblys generiert, indem C#-Code in eine Datei geschrieben wurde. Die Datei wurde anschließend in eine Assembly kompiliert.  Dieses Verhalten hatte einige unerwünschte Folgen, z. B. das Verzögern der Startzeit für die Serialisierung. In .NET Framework 4.5 wurde das Verhalten geändert, um die Assemblys zu generieren, ohne den Compiler verwenden zu müssen. Einige Entwickler möchten den generierten C#-Code jedoch anzeigen. Sie können mit der folgenden Konfiguration festlegen, dass dieses Legacyverhalten verwendet wird:  
@@ -219,6 +220,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Vorgehensweise: Verbessern der Start Time des WCF-Clientanwendungen mit dem XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

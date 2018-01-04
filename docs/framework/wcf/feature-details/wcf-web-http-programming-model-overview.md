@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das WEB-HTTP-Programmiermodell in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt die grundlegenden Elemente zur Erstellung von WEB-HTTP-Diensten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereit. WEB-HTTP-Dienste in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wurden für den Zugriff von vielen möglichen Clients aus entwickelt, einschließlich Webbrowsern, und weisen folgende eindeutige Anforderungen auf:  
@@ -155,5 +156,5 @@ interface ICustomer
   
 ## <a name="see-also"></a>Siehe auch  
  [WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [WCF Web-HTTP-Programmiermodell Objekt](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Web
 Dieser Abschnitt enthält im Internet gehostete Beispiele.  
@@ -29,7 +30,7 @@ Dieser Abschnitt enthält im Internet gehostete Beispiele.
  [Automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  Veranschaulicht, wie die automatische Formatauswahl (XML oder JSON) mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell aktiviert wird und wie das Format im Vorgangscode explizit festgelegt wird.  
   
- [Grundlegende HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Einfacher HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  Veranschaulicht, wie einen HTTP-basierter, RPC-basierter Dienst,-Allgemein als "POX" (Plain Old XML)-Dienst bezeichnet mithilfe der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web-HTTP-Programmiermodell.  
   
  [Einfacher Ressourcendienst](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
@@ -38,16 +39,16 @@ Dieser Abschnitt enthält im Internet gehostete Beispiele.
  [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
  Veranschaulicht, wie ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Dienst mit ASP.NET-Routen gehostet wird.  
   
- [Bedingtes Get und Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
+ [Bedingtes GET und PUT](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  Zeigt, wie die neuen bedingten Abruf- und Aktualisierungs-APIs für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell verwendet werden.  
   
  [SOAP- und HTTP-Endpunkte](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
  Veranschaulicht, wie ein RPC-basierter Dienst implementiert und ihn in das SOAP-Format und die "Plain Old XML" (POX)-Format mit Aussetzen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web-HTTP-Programmiermodell.  
   
- [ASP.NET-zwischenspeicherungsintegration](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
+ [ASP.NET-Zwischenspeicherungsintegration](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
  Veranschaulicht, wie der ASP.NET-Ausgabecache mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell verwendet wird.  
   
- [URI-Vorlage](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Veranschaulicht die Hauptkonzepte zu <xref:System.UriTemplate>.  
   
  [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  

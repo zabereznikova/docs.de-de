@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05a110318bbe92f18d0bc6becb453a5d7851821c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-issued-tokens"></a>Verbund und ausgestellte Token
 Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die den WS-Verbund und die WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
@@ -36,16 +37,16 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients 
  [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  Beschreibt die Grundlagen der Erstellung eines Verbundclients mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Beschreibt die Schritte beim Erstellen eines Verbunddiensts.  
   
  [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  Beschreibt, wie man Clients und Dienste konfiguriert, die `WSFederationHttpBinding` verwenden.  
   
- [Vorgehensweise: erstellen ein Sicherheitstokendiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Vorgehensweise: Erstellen eines Sicherheitstokendiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  Beschreibt die Schritte beim Erstellen eines Sicherheitstokendiensts.  
   
- [Security Assertions Markup Language (SAML) Token und Ansprüche](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ [SAML-Token (Security Assertions Markup Language) und Ansprüche.](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Beschreibt Security Assertions Markup Language (SAML)-Token, die erweiterbar sind und es ermöglichen, Rich Claim-Typen zu erstellen.  
   
  [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
@@ -73,5 +74,5 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients 
   
 ## <a name="see-also"></a>Siehe auch  
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Benutzerdefinierte Token](../../../../docs/framework/wcf/extending/custom-tokens.md)  
+ [ Benutzerdefinierte Token](../../../../docs/framework/wcf/extending/custom-tokens.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

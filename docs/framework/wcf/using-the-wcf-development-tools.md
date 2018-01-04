@@ -13,21 +13,22 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Verwenden der WCF-Entwicklungstools
-In diesem Abschnitt werden die [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Entwicklungstools beschrieben, mit denen Sie den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst entwickeln können.  
+In diesem Abschnitt wird beschrieben, die [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Entwicklungstools, die Ihnen, bei der Entwicklung helfen können Ihrer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Dienst.  
   
- Sie können die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Vorlagen als Grundlage beim Erstellen Ihres eigenen Diensts verwenden und dann mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst-Auto-Host und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient den Dienst debuggen und testen. Diese Tools ermöglichen Ihnen die Durchführung eines schnellen und problemlosen Test- und Debugzyklus, ohne sich bereits in einem frühen Stadium auf ein Host-Modell festlegen zu müssen.  
+ Sie können die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Vorlagen als Grundlage verwenden, um schnell einen eigenen Dienst zu erstellen, verwenden Sie dann [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst-Auto-Host und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client testen, Debuggen und Testen des Diensts. Diese Tools ermöglichen Ihnen die Durchführung eines schnellen und problemlosen Test- und Debugzyklus, ohne sich bereits in einem frühen Stadium auf ein Host-Modell festlegen zu müssen.  
   
 ## <a name="the-wcf-developer-tools"></a>Die WCF-Entwicklungstools  
  [WCF Visual Studio-Vorlagen](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- Mithilfe der vordefinierten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Projektvorlagen und -Elementvorlagen in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] können Sie mühelos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste und entsprechende Anwendungen erstellen.  
+ Sie können die vordefinierten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Projekt- und Elementvorlagen in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] schnell erstellen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste und entsprechende Anwendungen.  
   
  [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

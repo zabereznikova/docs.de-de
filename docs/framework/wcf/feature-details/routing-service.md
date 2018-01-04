@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a4f58c5124e229f1692dabbb0abded0e21a346f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-service"></a>Routingdienst
 Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter fungiert. Die Kernfunktion des Routingdiensts ist die Fähigkeit, Nachrichten basierend auf Nachrichteninhalt weiterzuleiten. So können Nachrichten anhand eines Werts innerhalb der Nachricht selbst (im Header oder im Text) an einen Clientendpunkt weitergeleitet werden.  
@@ -116,6 +117,6 @@ Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter
 -   Dynamische Konfiguration  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in das Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
+ [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
  [Routingverträge](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)

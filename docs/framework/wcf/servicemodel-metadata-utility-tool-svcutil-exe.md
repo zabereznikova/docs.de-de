@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata Utility-Tool (Svcutil.exe)
 Das ServiceModel Metadata Utility Tool wird zum Generieren von Service Model-Code aus Metadatendokumenten und zum Generieren von Metadatendokumenten aus Service Model-Code verwendet.  
@@ -36,10 +37,10 @@ Das ServiceModel Metadata Utility Tool wird zum Generieren von Service Model-Cod
 |Aufgabe|Thema|  
 |----------|-----------|  
 |Generiert Code von ausführenden Diensten oder statischen Metadatendokumenten.|[Generieren eines WCF-Clients aus Dienstmetadaten](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|Exportiert Metadatendokumente aus kompiliertem Code.|[Vorgehensweise: Verwenden von Svcutil.exe zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|Überprüft kompilierten Dienstcode.|[Vorgehensweise: Verwenden von Svcutil.exe zum Überprüfen von kompiliertem Dienstcode](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|Lädt Metadatendokumente aus Diensten herunter, die zurzeit ausgeführt werden.|[Vorgehensweise: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|Generiert Serialisierungscode.|[Vorgehensweise: Verbessern der Start Time des WCF-Clientanwendungen mit dem XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|Exportiert Metadatendokumente aus kompiliertem Code.|[Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|Überprüft kompilierten Dienstcode.|[Vorgehensweise: Verwenden von „Svcutil.exe“ zum Überprüfen von kompiliertem Dienstcode](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|Lädt Metadatendokumente aus Diensten herunter, die zurzeit ausgeführt werden.|[Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|Generiert Serialisierungscode.|[Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Svcutil überschreibt vorhandene Dateien auf einem Datenträger, wenn die als Parameter angegebenen Namen identisch sind. Dazu zählen Codedateien, Konfigurationsdateien oder Metadatendateien. Um dies beim Generieren von Code- und Konfigurationsdateien zu vermeiden, verwenden Sie den `/mergeConfig`-Schalter.  
@@ -50,7 +51,7 @@ Das ServiceModel Metadata Utility Tool wird zum Generieren von Service Model-Cod
  Für das Tool gilt ein 5-Minuten-Timeout beim Abrufen von Metadaten.  Dieses Timeout gilt nur beim Abrufen von Metadaten über das Netzwerk. Es gilt nicht für die Verarbeitung dieser Metadaten.  
   
 ### <a name="multi-targetting"></a>Festlegung von Zielversionen  
- Das Tool unterstützt die Festlegung von Zielversionen nicht. Wenn Sie mithilfe von "svcutil.exe" ein .NET 4-Artefakt generieren möchten, müssen Sie "svcutil.exe" aus dem .NET 4-SDK verwenden. Verwenden Sie die ausführbare Datei aus dem .NET 3.5-SDK, um ein .NET 3.5-Artefakt zu generieren.  
+ Das Tool unterstützt die Festlegung von Zielversionen nicht. Wenn Sie mithilfe von „svcutil.exe“ ein .NET 4-Artefakt generieren möchten, müssen Sie „svcutil.exe“ aus dem .NET 4-SDK verwenden. Verwenden Sie die ausführbare Datei aus dem .NET 3.5-SDK, um ein .NET 3.5-Artefakt zu generieren.  
   
 ### <a name="accessing-wsdl-documents"></a>Zugreifen auf WSDL-Dokumente  
  Wenn Sie mit Svcutil auf ein WSDL-Dokument zugreifen, das einen Verweis auf einen Sicherheitstokendienst (STS) enthält, führt Svcutil einen WS-MetadataExchange-Aufruf zu STS aus. Der Dienst kann jedoch seine WSDL-Dokumente entweder mithilfe von WS-MetadataExchange oder mithilfe von HTTP GET verfügbar machen. Hat der STS das WSDL-Dokument nur mithilfe von HTTP GET verfügbar gemacht, schlägt daher ein in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] geschriebener Client fehl. Für in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] geschriebene Clients versucht Svcutil, den STS WSDL sowohl mithilfe von WS-MetadataExchange als auch mit HTTP GET abzurufen.  

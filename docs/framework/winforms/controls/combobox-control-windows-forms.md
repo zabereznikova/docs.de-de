@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox-Steuerelement (Windows Forms)
 Windows Forms `ComboBox` Steuerelement wird verwendet, um Daten aus einem Dropdown-Kombinationsfeld angezeigt. Wird standardmäßig die `ComboBox` Steuerelement wird in zwei Teilen: der obere Bereich ist ein Textfeld, das dem Benutzer ermöglicht, geben Sie ein Listenelement. Der zweite Teil ist ein Listenfeld, in dem eine Liste von Elementen angezeigt, in dem der Benutzer eine auswählen kann.  

@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags
 Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
@@ -88,11 +89,11 @@ Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!I
      Dieser Vertrag definiert einen Onlinerechner. Beachten Sie, dass die `ICalculator`-Schnittstelle mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut markiert ist. Dieses Attribut definiert einen Namespace, anhand dessen der Vertragsname eindeutig angegeben wird. Jeder Rechnervorgang wird mit dem <xref:System.ServiceModel.OperationContractAttribute>-Attribut markiert.  
   
     > [!NOTE]
-    >  Wenn eine Schnittstelle, ein Member oder eine Klasse mithilfe von Attributen mit Anmerkungen versehen wird, können Sie auf die Angabe "Attribute" im Namen des Attributs verzichten. Deshalb wird <xref:System.ServiceModel.ServiceContractAttribute> in C# zu `[ServiceContract]` oder in Visual Basic zu `<ServiceContract>`.  
+    >  Wenn eine Schnittstelle, ein Member oder eine Klasse mithilfe von Attributen mit Anmerkungen versehen wird, können Sie auf die Angabe „Attribute“ im Namen des Attributs verzichten. Deshalb wird <xref:System.ServiceModel.ServiceContractAttribute> in C# zu `[ServiceContract]` oder in Visual Basic zu `<ServiceContract>`.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [Vorgehensweise: Implementieren eines WCF-Dienstvertrags](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Selbsthosting](../../../docs/framework/wcf/samples/self-host.md)
+ [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)

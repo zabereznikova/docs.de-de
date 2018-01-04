@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten erläutert, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthalten sind: HTTP, TCP und Named Pipes. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält außerdem einen Message Queuing-Transport (wird auch als MSMQ bezeichnet), jedoch wird Message Queuing nicht in diesem Dokument behandelt.  
@@ -61,7 +62,7 @@ In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten e
   
 |Attribut|Beschreibung|Häufig verwendete Transporte|  
 |---------------|-----------------|------------------------|  
-|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keine|  
+|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keiner|  
 |Hosting|Alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur Hostanwendungen, die den HTTP-Transport verwenden. [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt das Hosten von allen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporten, auch von TCP und Named Pipes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][In Internetinformationsdienste (IIS) hosten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspektion|Die Inspektion ist die Fähigkeit, während der Übertragung Informationen aus Nachrichten zu extrahieren und zu verarbeiten. Das HTTP-Protokoll trennt Routing- und Steuerungsinformationen von den Daten, um das Erstellen von Tools zu vereinfachen, die Nachrichten untersuchen und analysieren. Transporte, die leicht zu überprüfen sind, erfordern ggf. auch weniger Verarbeitungsleistung in Netzwerkeinrichtungen. Die verwendete Sicherheitsebene wirkt sich darauf aus, ob Nachrichten überprüft werden können.|HTTP|  
 |Wartezeit|Die Wartezeit ist die Mindestmenge an Zeit, die erforderlich ist, um einen Austausch von Nachrichten durchzuführen. Alle Netzwerkvorgänge weisen je nach gewähltem Transport mehr oder weniger Wartezeit (Latenz) auf. Das Verwenden der Duplexkommunikation oder unidirektionalen Kommunikation mit einem Transport, der das systemeigene Nachrichtenaustauschmuster Anforderung/Antwort verwendet, zum Beispiel HTTP, kann zu einer längeren Wartezeit führen, da die Korrelation von Nachrichten erforderlich ist. Erwägen Sie in dieser Situation, einen Transport zu verwenden, der als systemeigenes Nachrichtenaustauschmuster Duplex verwendet, zum Beispiel TCP.|TCP, Named<br /><br /> Pipe|  
@@ -81,4 +82,4 @@ In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten e
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
  [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)  
  [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Erstellen von benutzerdefinierten Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+ [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

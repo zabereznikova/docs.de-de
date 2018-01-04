@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b36910f9448fadc6ffb5efc86a091fbac58c35f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fdb016cac94f9a77ae05445ea05ed263e3df1f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-tokens"></a>Benutzerdefinierte Token
 Obwohl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine systemeigene Unterstützung für X.509-Zertifikate, Sicherheitskontexttoken, Kerberos-Tickets und Benutzernamentoken als Anmeldeinformationen unterstützt, ist es so flexibel, dass Sie auch benutzerdefinierte Anmeldeinformationen verwenden können.  

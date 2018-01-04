@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>Nachrichtenübertragung per Stream
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  

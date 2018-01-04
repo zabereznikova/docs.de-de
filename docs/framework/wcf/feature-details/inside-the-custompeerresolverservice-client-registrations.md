@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Einblicke in den CustomPeerResolverService: Clientregistrierungen
 Jeder Knoten im Netz veröffentlicht seine Endpunktinformationen für den Resolverdienst durch die `Register`-Funktion. Der Resolverdienst speichert diese Informationen als Registrierungsdatensatz. Dieser Datensatz enthält einen eindeutigen Bezeichner (RegistrationID) sowie Endpunktinformationen (PeerNodeAddress) für den Knoten.  
@@ -44,4 +45,4 @@ Jeder Knoten im Netz veröffentlicht seine Endpunktinformationen für den Resolv
  Wenn sich ein Knoten bei einem Resolverdienst registriert, erhält er vom Dienst ein <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo>-Objekt. Dieses Objekt besitzt eine `RegistrationLifetime`-Eigenschaft, mit der dem Knoten die verbleibende Zeit bis zum Ablauf der Registrierung und damit bis zur Entfernung durch den Resolverdienst angegeben wird. Beispiel: Beträgt die `RegistrationLifetime` zwei Minuten, muss durch den Knoten in weniger als zwei Minuten ein Aufruf von `Refresh` erfolgen, damit der Datensatz nicht als veraltet gilt und gelöscht wird. Erhält der Resolverdienst eine `Refresh`-Anforderung, sucht er den Datensatz und setzt die Ablaufzeit zurück. Durch die Refresh-Anforderung wird ein <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo>-Objekt mit einer `RegistrationLifetime`-Eigenschaft zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [PeerResolver](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+ [Peerresolver](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

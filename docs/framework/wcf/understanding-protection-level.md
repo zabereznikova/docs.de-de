@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. Dieses Thema erklärt die [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Funktion und wie diese funktioniert.  
@@ -38,11 +39,11 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
   
 -   Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:  
   
-    -   `None`.  
+    -   `None`  
   
-    -   `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
+    -   `Sign` Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
   
-    -   `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
+    -   `EncryptAndSign` Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
   
 -   Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit dieser Funktion. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.  
   
@@ -115,4 +116,4 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
  [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)  
  [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Verwendung von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Verwenden von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

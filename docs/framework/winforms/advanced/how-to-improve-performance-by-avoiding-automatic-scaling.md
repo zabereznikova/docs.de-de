@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]ein Bild kann automatisch skaliert werden, wie Sie es zeichnen. Alternativ können Sie steuern, die Skalierung des Bilds durch Übergeben der Dimensionen des Zielrechtecks an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  

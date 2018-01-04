@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Datenvertragsnamen
 Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrag und Datenmembernamen und aus diesem Grund wird ein Mechanismus bereitgestellt, um die Typen und Member dieser Namen zuordnen. In diesem Thema werden die Regeln für die Namensgebung von Datenverträgen sowie das Standardverhalten der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Infrastruktur bei der Namenserstellung erläutert.  
@@ -87,4 +88,4 @@ Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können je
  [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+ [Datenvertrags-Versionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

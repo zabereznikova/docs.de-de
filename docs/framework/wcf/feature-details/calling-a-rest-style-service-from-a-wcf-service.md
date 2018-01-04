@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efb04f36ad83755edd2e7d49c7cdec3cce77273b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b056e2c4dad46429462b377994919b46109cb9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Aufrufen eines REST-Diensts aus einem WCF-Dienst
 Beim Aufrufen eines REST-Diensts in einem regulären (SOAP-basierten) WCF-Dienst überschreibt der Vorgangskontext in der Dienstmethode (die Informationen über die eingehende Anforderung enthält) den Kontext, der von der ausgehenden Anforderung verwendet werden soll. Dies bewirkt, dass HTTP GET-Anforderungen in HTTP POST-Anforderungen geändert werden. Um zu erzwingen, dass der WCF-Dienst den richtigen Kontext zum Aufrufen des REST-Diensts verwendet, erstellen Sie einen neuen <xref:System.ServiceModel.OperationContextScope>, und rufen Sie den REST-Dienst aus dem Vorgangskontextbereich auf. In diesem Thema wird das Erstellen eines einfachen Beispiels beschrieben, das dieses Verfahren veranschaulicht.  
@@ -245,4 +246,4 @@ public class CallingRESTSample
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [WCF Web-HTTP-Programmiermodell Objekt](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+ [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

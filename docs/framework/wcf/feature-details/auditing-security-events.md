@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellte Anwendungen können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -110,7 +111,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellte Anwendunge
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  

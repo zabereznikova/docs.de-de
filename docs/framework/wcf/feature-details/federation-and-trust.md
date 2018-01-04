@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-trust"></a>Verbund und Vertrauenswürdigkeit
 Dieses Thema deckt verschiedene Aspekte ab, die in Verbindung mit Verbundanwendungen, Vertrauensgrenzen und Konfiguration sowie dem Einsatz von ausgestellten Token in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stehen.  
@@ -49,5 +50,5 @@ Dieses Thema deckt verschiedene Aspekte ab, die in Verbindung mit Verbundanwendu
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>  
  [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

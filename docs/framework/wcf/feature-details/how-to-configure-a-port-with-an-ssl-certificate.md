@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 Beim Erstellen eines selbst gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstes mit der <xref:System.ServiceModel.WSHttpBinding>-Klasse, die die Transportsicherheit verwendet, müssen Sie auch einen Anschluss mit einem X.509-Zertifikat konfigurieren. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

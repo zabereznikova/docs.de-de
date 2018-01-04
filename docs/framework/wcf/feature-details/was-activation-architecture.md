@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cfbda764984305c141fd416baea8efa6aef4591
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
@@ -42,7 +43,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ### <a name="listener-adapters"></a>Listeneradapter  
  Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aufgeführt.  
   
-|Dienstname des Listeneradapters|Protokoll|Notizen|  
+|Dienstname des Listeneradapters|Protokoll|Hinweise|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Allgemeine Komponente, die sowohl für IIS&#160;7.0 als auch für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die HTTP-Aktivierung bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
@@ -96,5 +97,5 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von WAS zur Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [Konfigurieren von WAS für die Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)

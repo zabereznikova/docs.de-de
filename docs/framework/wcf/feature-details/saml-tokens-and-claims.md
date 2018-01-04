@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
 Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. Standardmäßig werden von SAML-Token [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet in verbundsicherheitsszenarien werden *ausgestellte Token*.  
@@ -58,7 +59,7 @@ Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von An
  <xref:System.IdentityModel.Claims.ClaimSet>  
  [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)  
  [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  

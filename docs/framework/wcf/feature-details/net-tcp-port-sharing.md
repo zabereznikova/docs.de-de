@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet ein neues, TCP-basiertes Netzwerkprotokoll (net.tcp://) für Hochleistungskommunikation. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] führt außerdem eine neue Systemkomponente ein, den TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -61,5 +62,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Vorgehensweise: konfigurieren ein WCF-Diensts zur Anschlussfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Vorgehensweise: Konfigurieren eines WCF-Diensts für die Portfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
  [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unterstützt Sie auf Ihrem Weg von der frühen Entwicklungsumgebung, die vom [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensthost und dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient gebildet wird, zur eigentlichen Bereitstellung der Anwendung in einer Produktionsumgebung zu Testzwecken. Bevor Sie sich auf einen finalen Bereitstellungsplan festlegen, können Sie mithilfe des [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishings sicherstellen, dass der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst ordnungsgemäß funktioniert und für die Veröffentlichung bereit ist. Auch können Sie Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheken zu Testzwecken an einer Reihe von Orten bereitstellen.  
@@ -48,7 +49,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unters
   
 3.  Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf der **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie Ihre Website auswählen und erstellen Sie Ihre Webanwendung, indem Sie auf die **neue Webanwendung erstellen** Symbol auf der oberen rechten Ecke.  
   
-4.  Nachdem Sie auf **veröffentlichen** im Hauptfenster von Visual Studio stellt die Anwendung am angegebenen Zielort bereit, und die Dateien "Web.config", SVC-Datei und Assembly in das Zielverzeichnis kopiert. . Der Name der SVC werden die "Datei lautet ProjectName.ServiceName.svc". Nachdem der Dienst erfolgreich veröffentlicht wurde, finden Sie in der Visual Studio-Ausgabefenster einen Hotlink, die "Verbinden mit http://localhost/WebApplicationFolderName zu HYPERLINK"http://localhost/WebApplicationFolderName"" ähnelt. Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.  
+4.  Nachdem Sie auf **veröffentlichen** im Hauptfenster von Visual Studio stellt die Anwendung am angegebenen Zielort bereit, und die Dateien "Web.config", SVC-Datei und Assembly in das Zielverzeichnis kopiert. sein. Der Name der SVC werden die "Datei lautet ProjectName.ServiceName.svc". Nachdem der Dienst erfolgreich veröffentlicht wurde, finden Sie in der Visual Studio-Ausgabefenster einen Hotlink, die "Verbinden mit http://localhost/WebApplicationFolderName zu HYPERLINK"http://localhost/WebApplicationFolderName"" ähnelt. Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.  
   
      Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben"HYPERLINK"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" um die Dienstseite anzuzeigen.  
   

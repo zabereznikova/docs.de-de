@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann Nachrichten entweder unter Verwendung des gepufferten Übertragungsmodus oder des Streamingmodus senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
   
      Die `BasicHttpBinding`-Bindung macht die `TransferMode`-Eigenschaft für die Bindung verfügbar. Dies gilt ebenso für `NetTcpBinding` und `NetNamedPipeBinding`. Die `TransferMode`-Eigenschaft kann auch für das Transportbindungselement festgelegt und in einer benutzerdefinierten Bindung verwendet werden.  
   
-     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
+     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&amp;#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
   
     1.  Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   

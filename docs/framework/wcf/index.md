@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184a5b8eeafd68907c76655cfed82634de106185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Entwickeln von dienstorientierten Anwendungen mit WCF
 Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communication Foundation (WCF), einem einheitlichen Programmiermodell zum Erstellen von serviceorientierten Anwendungen. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen.

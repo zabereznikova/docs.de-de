@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>Setupanweisungen
 In diesen Themen wird das Einrichten von Diensten beschrieben, die zum Ausführen eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind.  
@@ -32,19 +33,19 @@ In diesen Themen wird das Einrichten von Diensten beschrieben, die zum Ausführe
  [Firewall-Anweisungen](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
  Erläutert die erforderlichen Schritte zum Einrichten der Windows-Firewall, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste ausgeführt werden können.  
   
- [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  Erläutert die erforderlichen Schritte zum Einrichten von IIS.  
   
- [Internetinformation Services (IIS)-Server-Zertifikat-Installationsanweisungen](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  Erläutert das Verfahren zum Installieren von Serverzertifikaten für IIS.  
   
- [Virtuelles Verzeichnis Setupanweisungen](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
+ [Anleitung zum Einrichten eines virtuellen Verzeichnisses](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
  Erläutert die erforderlichen Schritte zum Erstellen eines virtuellen Verzeichnisses.  
   
  [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  Erläutert die Schritte zum Erstellen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele.  
   
- [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Durchführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Erläutert die Schritte zum Ausführen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele auf dem gleichen Computer und computerübergreifend.  
   
  [Aktivieren von Peer-zu-Peer-Diensten](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b5d0b90ed28928e734089265cb8c58839b6d0cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-transaction-flow"></a>Aktivieren des Transaktionsflusses
 Der Transaktionsfluss kann in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mit sehr flexiblen Optionen gesteuert werden. Die Transaktionsflusseinstellungen eines Dienstes können durch eine Kombination aus Attributen und Konfigurationen ausgedrückt werden.  
@@ -44,10 +45,10 @@ Der Transaktionsfluss kann in [!INCLUDE[indigo1](../../../../includes/indigo1-md
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |Erforderlich|true|WS-AT|Der Transaktionsfluss muss im interoperablen WS-AT-Format erfolgen.|  
 |Erforderlich|true|OleTransactions|Der Transaktionsfluss muss im OleTransactions-Format von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgen.|  
-|Erforderlich|false|Nicht zutreffend|Nicht zutreffend, da es sich um eine ungültige Konfiguration handelt.|  
+|Erforderlich|False|Nicht zutreffend|Nicht zutreffend, da es sich um eine ungültige Konfiguration handelt.|  
 |Allowed|true|WS-AT|Der Transaktionsfluss kann im interoperablen WS-AT-Format erfolgen.|  
 |Allowed|true|OleTransactions|Der Transaktionsfluss kann im OleTransactions-Format von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgen.|  
-|Allowed|false|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
+|Allowed|False|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
 |NotAllowed|Beliebiger Wert|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
   
  In der folgenden Tabelle wird das Ergebnis der Nachrichtenverarbeitung zusammengefasst.  

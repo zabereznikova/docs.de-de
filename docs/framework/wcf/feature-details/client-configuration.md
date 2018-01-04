@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
 Mit der Clientkonfiguration von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie die Adressen, Bindungen, Verhaltensweisen sowie Verträge angeben, die von Clients zum Herstellen einer Verbindung mit Dienstendpunkten verwendet werden. Die [ \<Client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) Element verfügt über eine [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element, dessen Attribute verwendet werden, um den Endpunkt ABC konfigurieren. Diese Attribute werden im Abschnitt "Konfigurieren von Endpunkten" dieses Themas erläutert.  

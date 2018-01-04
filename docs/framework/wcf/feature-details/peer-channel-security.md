@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>Peerkanalsicherheit
 Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendungstypen, die von Mehrparteienmessaging abhängen. Beispielsweise gehört hierzu eine Inhaltsverteilung auf Internetebene, wobei eine vertrauenswürdige Quelle Inhalte (wie beispielsweise Medien- oder Softwareupdates) verteilt, eine Gruppe von Freunden Musik oder Fotos austauscht oder ein Team von Kollegen zusammen ein Dokument bearbeitet. Jedes dieser Szenarien erfordert ein individuelles Sicherheitsmodell. Das Peerkanal-Sicherheitsmodell ist auf die Adressierung dieser Szenarien ausgelegt und bietet ein umfangreiches Sicherheitsmodell für die entsprechenden Anforderungen an unterschiedliche Identitäten, Authentifizierung und Autorisierungsmodelle.  

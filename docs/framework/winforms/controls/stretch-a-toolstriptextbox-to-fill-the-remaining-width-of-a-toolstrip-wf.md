@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 213929e52f08fff19eb7641092789501c31648e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ddf17a9e96389abd23c860380613ac492b9ab134
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Gewusst wie: Strecken einer ToolStripTextBox zum Ausfüllen der verbleibenden Breite eines ToolStrip (Windows Forms)
 Beim Festlegen der <xref:System.Windows.Forms.ToolStrip.Stretch%2A> Eigenschaft von einem <xref:System.Windows.Forms.ToolStrip> die Steuerung an `true`, das Steuerelement füllt den Container von einem Ende zum anderen Ende und ändert, wenn die Größe des Containers ändert. In dieser Konfiguration können Sie finden es vielleicht hilfreich, ein Element im Steuerelement, z. B. Strecken einer <xref:System.Windows.Forms.ToolStripTextBox>, um den verfügbaren Platz ausfüllen und Größe ändern, wenn die Größe des Steuerelements ändert. Dieses Strecken ist nützlich, z. B. Wenn Sie Darstellung und das Verhalten ähnlich wie die Adresszeile in Microsoft® Internet Explorer erzielen möchten.  

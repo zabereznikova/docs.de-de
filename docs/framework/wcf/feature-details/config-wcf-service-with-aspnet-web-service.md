@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ed4bf8e86e727505d48e85bb55a88452217c76b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET Webdienstclients
 Verwenden Sie den Typ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] als Bindungstyp für Ihren Dienstendpunkt, um einen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Dienstendpunkt so zu konfigurieren, dass er mit <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>-Webdienstclients zusammenarbeitet.  
@@ -58,9 +59,9 @@ Verwenden Sie den Typ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)

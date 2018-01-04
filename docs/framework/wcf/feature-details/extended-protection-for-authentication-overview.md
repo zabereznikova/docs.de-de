@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d8dadf09434778bc32bb75c5eff5ff4cb0494373
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b061f9395c3917c196030678ede007071e681027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
@@ -34,7 +35,7 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Der Server kann folgende Sicherheitsstufen aufweisen:  
   
--   Keine. Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
+-   Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
   
 -   Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
   

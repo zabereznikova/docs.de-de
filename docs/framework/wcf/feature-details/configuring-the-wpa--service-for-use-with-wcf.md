@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a63f9a4e982e4065f55b15ec28be5afbf2d89fcc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 12df9e3760774b4dc8d4e8f73a09df5e79c2453e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Konfigurieren des Windows-Prozessaktivierungsdiensts zur Verwendung mit Windows Communication Foundation
 In diesem Thema werden die Schritte vorgestellt, mit denen der Windows-Prozessaktivierungsdienst (auch WAS für Windows Process Activation Service genannt) in [!INCLUDE[wv](../../../../includes/wv-md.md)] als Host für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste, die nicht über HTTP-Netzwerkprotokolle kommunizieren, konfiguriert wird. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
@@ -35,13 +36,13 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows-Prozessak
   
  Bei der Datei applicationHost.config handelt es sich um eine XML-Textdatei, die mit jedem Standardtexteditor (wie Editor) geöffnet werden kann. Das Befehlszeilenkonfigurationsprogramm von [!INCLUDE[iisver](../../../../includes/iisver-md.md)] (appcmd.exe) wird jedoch zum Hinzufügen von Nicht-HTTP-Sitebindungen bevorzugt.  
   
- Mit dem folgenden Befehl wird mit appcmd.exe eine net.tcp-Sitebindung der Standardwebsite hinzugefügt (der gesamte Befehl wird in eine Zeile eingegeben).  
+ Mit dem folgenden Befehl wird mit „appcmd.exe“ eine net.tcp-Sitebindung der Standardwebsite hinzugefügt (der gesamte Befehl wird in eine Zeile eingegeben).  
   
 ```  
 appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
 ```  
   
- Mit dem folgenden Befehl wird die neue net.tcp-Sitebindung der Standardwebsite hinzugefügt, indem die unten dargestellte Zeile in die Datei applicationHost.config eingefügt wird.  
+ Mit dem folgenden Befehl wird die neue net.tcp-Sitebindung der Standardwebsite hinzugefügt, indem die unten dargestellte Zeile in die Datei „applicationHost.config“ eingefügt wird.  
   
 ```xml  
 <sites>  

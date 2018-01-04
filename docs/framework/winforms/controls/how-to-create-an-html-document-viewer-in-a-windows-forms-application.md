@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e06fbfde68c0d02a94f8c7e4657e2907cd3fa7eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00be8ca2e4e227b6e4593b0a9e32172ecb9457f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
 Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne Angabe der vollständigen Funktionalität von einem Browser Internet. Dies ist hilfreich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber nicht möchten, Ihre Benutzer, beliebige Webseiten zu laden, die möglicherweise nicht vertrauenswürdige Websteuerelemente oder potenziell bösartige Skriptcode enthalten. Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise z. B. auf, um ihn als eine HTML-e-Mail-Viewer verwenden oder HTML-Hilfe in der Anwendung bereitzustellen.  
@@ -46,7 +47,7 @@ Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeige
   
 -   Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.  
   
--   Verweise auf die `System`-Assembly und die `System.Windows.Forms`-Assembly.  
+-   Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.WebBrowser>  

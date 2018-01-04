@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.  
@@ -72,7 +73,7 @@ PrefixEndpointAddressMessageFilter prefix1 = new PrefixEndpointAddressMessageFil
   
  Dieser Filter sollte verwendet werden, wenn eingehende Nachrichten weitergeleitet werden, die über ein gemeinsames Adresspräfix verfügen.  
   
-### <a name="and"></a>AND  
+### <a name="and"></a>UND  
  Der AND-Filter filtert nicht direkt nach einem Wert innerhalb einer Nachricht, sondern ermöglicht Ihnen die Kombination von zwei anderen Filtern, um eine `AND`-Bedingung zu erstellen. Dabei müssen beide Filter eine Übereinstimmung mit der Nachricht ergeben, bevor für den AND-Filter `true` ausgewertet wird. Auf diese Weise können Sie komplexe Filter erstellen, die nur dann Übereinstimmungen ergeben, wenn alle Unterfilter zu Übereinstimmungen führen. Im folgenden Beispiel werden ein Adressfilter und ein Aktionsfilter definiert. Anschließend wird ein AND-Filter definiert, der eine Nachricht sowohl für den Adressfilter als auch für den Aktionsfilter auswertet. Falls der Adressfilter und der Aktionsfilter zu Übereinstimmungen führen, gibt der AND-Filter `true` zurück.  
   
 ```xml  
@@ -147,4 +148,4 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Gewusst wie: Verwenden Sie Filter](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [Vorgehensweise: Verwenden von Filtern](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

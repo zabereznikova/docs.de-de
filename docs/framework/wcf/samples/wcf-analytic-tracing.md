@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen Ablaufverfolgungen hinzufügen können, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] in ETW schreibt. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. In diesem Beispiel wird gezeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs verwendet werden, um Ereignisse zu schreiben, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste integriert werden.  
@@ -45,7 +46,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
 ## <a name="custom-event-details"></a>Details der benutzerdefinierten Ereignisse  
  Der ETW-Ereignisanbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definiert drei Ereignisse, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstautoren aus dem Dienstcode ausgegeben werden sollen. In der folgenden Tabelle werden die drei Ereignisse aufgelistet.  
   
-|Ereignis|Beschreibung|Ereignis-ID|  
+|event|Beschreibung|Ereignis-ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Geben Sie dieses Ereignis bei einem Vorfall im Dienst aus, bei dem es sich nicht um ein Problem handelt. Sie könnten z. B. ein Ereignis nach dem erfolgreichen Aufruf einer Datenbank ausgeben.|301|  
 |UserDefinedWarningOccurred|Geben Sie dieses Ereignis aus, wenn ein Problem auftritt, das möglicherweise in der Zukunft einen Fehler verursacht. Wenn beispielsweise der Aufruf einer Datenbank fehlschlägt, Sie jedoch auf einen redundanten Datenspeicher zurückgreifen können, können Sie ein Warnereignis ausgeben.|302|  

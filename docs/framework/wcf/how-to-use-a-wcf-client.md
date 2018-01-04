@@ -14,11 +14,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Gewusst wie: Verwenden eines Windows Communication Foundation-Clients
 Dies ist die letzte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
@@ -155,4 +156,4 @@ Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divi
  [Vorgehensweise: Erstellen eines Duplexvertrags](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Selbsthosting](../../../docs/framework/wcf/samples/self-host.md)
+ [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)

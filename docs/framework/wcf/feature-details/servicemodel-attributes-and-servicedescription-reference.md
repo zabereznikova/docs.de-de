@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel-Attribute und ServiceDescription-Referenz
 Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Klasse), die zusammen jeden Aspekt eines Diensts beschreiben. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet eine Beschreibungsstruktur zum Erstellen einer gültigen Dienstlaufzeit, zum Veröffentlichen von WSDL (Web Services Description Language)- und XSD (XML Schema Definition)-Daten sowie Richtlinienassertionen (Metadaten) über den Dienst, anhand derer Clients eine Verbindung mit dem Dienst herstellen und den Dienst nutzen können, und zum Generieren verschiedener Code- und Konfigurationsdateidarstellungen der Beschreibungsstrukturwerte.  
@@ -33,7 +34,7 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
   
 |ServiceBehaviorAttribute-Eigenschaft|Beschreibungsstrukturwert beeinflusst|  
 |---------------------------------------|-------------------------------------|  
-|Name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|Legt die Eigenschaft <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> für alle Vorgänge fest.|  
@@ -57,7 +58,7 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |IsOneWay|Wird einer einzelnen <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> zugeordnet|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Die Schutzebene Hierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig vom Vertrag/Rückrufvertrag.|  
   
@@ -65,18 +66,18 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |----------------------------------|-------------------------------------|  
 |Aktion|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>, abhängig vom Vertrag/Rückrufvertrag.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|Name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
 |DataContractFormatAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |---------------------------------------|-------------------------------------|  
-|Verwendung|Der Wert <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> ist auf <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> für den Vorgang festgelegt.|  
+|Mit|Der Wert <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> ist auf <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> für den Vorgang festgelegt.|  
   
 |XmlSerializerFormatAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |----------------------------------------|-------------------------------------|  
 |Stil|Diese <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Eigenschaft ist auf <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> für den Vorgang festgelegt.|  
-|Verwendung|<xref:System.ServiceModel.XmlSerializerFormatAttribute> ist auf <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> für den Vorgang festgelegt.|  
+|Mit|<xref:System.ServiceModel.XmlSerializerFormatAttribute> ist auf <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> für den Vorgang festgelegt.|  
   
 |TransactionFlowAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |------------------------------------|-------------------------------------|  
@@ -92,14 +93,14 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |----------------------------------|-------------------------------------|  
 |Akteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |--------------------------------------|-------------------------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Reihenfolge|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
@@ -108,18 +109,18 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |---------------------------------------|-------------------------------------|  
 |Akteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |MessagePropertyAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |------------------------------------|-------------------------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |MessageParameterAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |-------------------------------------|-------------------------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]der beschreibungsstrukturwerte in Metadaten konvertiert werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   

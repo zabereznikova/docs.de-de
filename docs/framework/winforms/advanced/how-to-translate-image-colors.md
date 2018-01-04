@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c21d20b631d8e0cf68e370dd43b3f5e92144b09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2a2147b9bc86aa7ec03e8455bb0dc51c89a8b282
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-translate-image-colors"></a>Gewusst wie: Verschieben von Bildfarben
 Eine Übersetzung Fügt einen Wert für eine oder mehrere der vier Farbkomponenten. Die Farbe Matrix Einträge, die Übersetzungen darstellen, werden in der folgenden Tabelle angegeben.  
@@ -56,7 +57,7 @@ Eine Übersetzung Fügt einen Wert für eine oder mehrere der vier Farbkomponent
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie `ColorBars.bmp` mit einem Dateinamen und Pfad, die auf Ihrem System gültig sind.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie `ColorBars.bmp` mit einem Dateinamen und Pfad, die auf Ihrem System gültig sind.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Drawing.Imaging.ColorMatrix>  

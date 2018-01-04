@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
 Dieses Beispiel zeigt, wie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Erweiterungspunkte verwendet werden können, um Nachrichtendaten in einem anderen Format als in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erwartet zuzulassen. Standardmäßig erwarten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Formatierer, dass Methodenparameter unter dem `soap:body`-Element enthalten sind. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
@@ -70,7 +71,7 @@ Dieses Beispiel zeigt, wie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
  Der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> wird auf die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierung festgelegt.  
   
- Standardmäßig verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einen Adressfilter mit exakter Übereinstimmung. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Zu diesem Zweck verwendet es die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>-Eigenschaft.  
+ Standardmäßig verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einen Adressfilter mit exakter Übereinstimmung. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Er verwendet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> für diesen Zweck.  
   
 ### <a name="installing-operation-formatters"></a>Installieren von Vorgangsformatierern  
  Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines Ersatzverhaltens muss die Implementierung zuerst nach speziellen, vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Typladeprogramm standardmäßig installierten Formatiererverhalten suchen, und das dann entweder ersetzen oder ein kompatibles Verhalten so hinzufügen, dass es nach dem Standardverhalten ausgeführt wird.  

@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Vom Datenvertragsserialisierer unterstützte Typen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet <xref:System.Runtime.Serialization.DataContractSerializer> als Standardserialisierungsmodul, um Daten in XML und XML in Daten umzuwandeln. <xref:System.Runtime.Serialization.DataContractSerializer> ist für die Serialisierung von *Datenvertragstypen* konzipiert. Es unterstützt jedoch viele andere Typen, die Sie sich als Typen mit einem impliziten Datenvertrag vorstellen können. Die folgende Liste enthält alle Typen, die serialisiert werden können:  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt das vom <xref:System.Xml.Serialization.XmlSerializer> -Webdienst und vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Webdienst verwendete Programmiermodell nicht. Es werden insbesondere keine Attribute wie <xref:System.Xml.Serialization.XmlElementAttribute> und <xref:System.Xml.Serialization.XmlAttributeAttribute>unterstützt. Um die Unterstützung für dieses Programmiermodell zu aktivieren, muss [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auf die Verwendung von <xref:System.Xml.Serialization.XmlSerializer> anstelle von <xref:System.Runtime.Serialization.DataContractSerializer>umgeschaltet werden.  
   
--   Der <xref:System.DBNull> -Typ wird auf besondere Weise behandelt. Dieser Typ ist ein Singeltontyp. Bei einer Deserialisierung berücksichtigt der Deserialisierer die Singletoneinschränkung und lässt alle `DBNull` -Verweise auf die Singletoninstanz zeigen. Da `DBNull` ein serialisierbarer Typ ist, wird eine <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> -Berechtigung gefordert.  
+-   Der <xref:System.DBNull> -Typ wird auf besondere Weise behandelt. Dieser Typ ist ein Singeltontyp. Bei einer Deserialisierung berücksichtigt der Deserialisierer die Singletoneinschränkung und lässt alle `DBNull`-Verweise auf die Singletoninstanz zeigen. Da `DBNull` ein serialisierbarer Typ ist, wird eine <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> -Berechtigung gefordert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML- und ADO.NET-Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  

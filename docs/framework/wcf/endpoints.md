@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation-Endpunkte
 Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst verläuft über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst anbietet.  
@@ -46,7 +47,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
  [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Beschreibt, wie die Kommunikation mit einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst über Endpunkte erfolgt.  
   
- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Veranschaulicht, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.  
   
  [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  

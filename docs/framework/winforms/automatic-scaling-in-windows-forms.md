@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4eefab1dccc295557d95485d6f38add41e634fa4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Dadurch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die automatische Skalierung und visuelle Stile unterstützt, kann für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen im Vergleich zu systemeigenen Windows-Anwendungen ein konsistentes Aussehen und Verhalten auf dem Computer jedes Benutzers beibehalten werden.

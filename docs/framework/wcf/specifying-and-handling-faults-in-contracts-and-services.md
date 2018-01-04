@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7df149ab75d2e3f1e9167f66ef8ec3c40b73c827
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Angeben und Behandeln von Fehlern in Verträgen und Diensten
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen behandeln Fehler, indem sie verwaltete Ausnahmeobjekte SOAP-Fehlerobjekten und SOAP-Fehlerobjekte verwalteten Ausnahmeobjekten zuordnen. Die Themen in diesem Abschnitt erläutern, wie Verträge erstellt werden, die Fehlerbedingungen als benutzerdefinierte SOAP-Fehler verfügbar machen, wie solche Fehler als Teil einer Dienstimplementierung zurückgegeben werden, und wie Clients diese Fehler abfangen.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
  Deklarierte SOAP-Fehler sind äußerst nützlich zur Erstellung interoperabler, verteilter Anwendungen. In manchen Fällen ist es jedoch für einen Dienst (oder einen Duplexclient) nützlich, einen undeklarierten SOAP-Fehler zu senden, also einen, der in der Web Services Description Language (WSDL) für diesen Vorgang nicht erwähnt ist. Bei der Entwicklung eines Diensts können beispielsweise unerwartete Situationen eintreten, in denen es für Debuggingzwecke sinnvoll sein kann, Information an den Client zurückzusenden. Zusätzlich können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft oder die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festlegen, um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients zu ermöglichen, Informationen über interne Dienstvorgangsausnahmen abzurufen. Senden von Fehlern einzelner sowohl die Debugeigenschaften Verhalten festlegen, werden beschrieben [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 > [!IMPORTANT]
->  Da mit verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden können, kann mit der Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients ermöglicht werden, Informationen über interne Dienstvorgangsausnahmen, einschließlich persönlich identifizierbarer oder anderer vertraulicher Informationen abzurufen.  
+>  Da mit verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden können, kann mit der Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true`[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients ermöglicht werden, Informationen über interne Dienstvorgangsausnahmen, einschließlich persönlich identifizierbarer oder anderer vertraulicher Informationen abzurufen.  
 >   
 >  Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.ServiceModel.ExceptionDetail>. Clients müssen auf die Möglichkeit von unbekannten SOAP-Fehlern vorbereitet sein, die an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients als <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte zurückgegeben werden, damit sie die Debuginformationen korrekt abrufen können.  
   

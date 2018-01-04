@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Verwenden mehrerer verschiedener Vertrauensprotokolle in Verbundszenarien
 Unter bestimmten Bedingungen sind Szenarios denkbar, in denen Verbundclients mit einem Dienst und mit einem Security Token Service (STS) kommunizieren, die nicht die gleiche Trust-Version besitzen. Die Dienst-WSDL kann eine `RequestSecurityTokenTemplate`-Assertion mit WS-Trust-Elementen enthalten, die aus anderen Versionen stammen als der STS. In solchen Fällen konvertiert ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client die aus `RequestSecurityTokenTemplate` empfangenen WS-Trust-Elemente, damit Sie der STS-Trust-Version entsprechen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] behandelt nicht übereinstimmende Trust-Versionen nur für Standardbindungen. Alle Standardalgorithmusparameter, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erkannt werden, sind Teil der Standardbindung. In diesem Thema wird das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Verhalten mit verschiedenen Vertrauenseinstellungen zwischen dem Dienst und dem STS beschrieben.  

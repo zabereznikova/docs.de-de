@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Vorbereitungen für Windows Communication Foundation: Einfachere Integration in der Zukunft
 Wenn Sie heute ASP.NET verwenden und vorhaben, zukünftig [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, bietet dieses Thema Tipps, die gewährleisten, dass neue ASP.NET-Webdienste mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen ordnungsgemäß zusammenwirken.  

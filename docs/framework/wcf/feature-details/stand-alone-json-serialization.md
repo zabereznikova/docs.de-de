@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Eigenständige JSON-Serialisierung.
 JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendung von JavaScript-Code entworfen wurde, der auf Webseiten innerhalb des Browsers ausgeführt wird. Es ist das von ASP.NET AJAX-Diensten, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellt wurden, verwendete Standarddatenformat.  
@@ -31,7 +32,7 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
 ## <a name="mapping-net-types-to-json-types"></a>Zuordnung von .NET-Typen zu JSON-Typen  
  Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaScript-Typen, die für die Zuordnung während der Serialisierung und Deserialisierung gelten.  
   
-|.NET-Typen|JSON/JavaScript|Notizen|  
+|.NET-Typen|JSON/JavaScript|Hinweise|  
 |----------------|----------------------|-----------|  
 |Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Anzahl|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|  
 |<xref:System.Enum>|Anzahl|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|  
@@ -42,7 +43,7 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
 |<xref:System.Array>vom Typ<xref:System.Byte>|Array von Zahlen|Jede Zahl stellt den Wert eines Bytes dar.|  
 |<xref:System.DateTime>|DateTime oder Zeichenfolge|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|  
 |<xref:System.DateTimeOffset>|Komplexer Typ|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|  
-|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Zeichenfolge|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|  
+|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement> Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>) angezeigt wird.|Zeichenfolge|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|  
 |<xref:System.DBNull>|Leerer komplexer Typ|--|  
 |Auflistungen, Wörterbücher und Arrays|Array|Siehe den Abschnitt "Auflistungen, Wörterbücher und Arrays" in diesem Thema.|  
 |Komplexe Typen (mit angewendetem <xref:System.Runtime.Serialization.DataContractAttribute> oder <xref:System.SerializableAttribute>)|Komplexer Typ|Datenmember werden Member des komplexen JavaScript-Typs.|  

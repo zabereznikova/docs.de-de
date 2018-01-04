@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 533176b3859c820d3549e5162dcbe5d80e5fcee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 211a52288010adabb712618cee40dbdd9d8b5262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-simplification-features"></a>WCF-Vereinfachungsfunktionen
 In diesem Thema werden neue Funktionen erörtert, die das Schreiben von WCF-Anwendungen vereinfachen.  
@@ -117,7 +118,7 @@ In diesem Thema werden neue Funktionen erörtert, die das Schreiben von WCF-Anwe
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Ruft die maximal zulässige Arraylänge ab und legt sie fest. Dieses Kontingent schränkt die maximale Größe eines Arrays von Primitiven ein, einschließlich Bytearrays, die vom XML-Reader zurückgegeben werden. Der Arbeitsspeicherverbrauch im XML-Reader selbst wird mit diesem Kontingent nicht eingeschränkt, jedoch in der Komponente, die den Reader verwendet. Wenn <xref:System.Runtime.Serialization.DataContractSerializer> z.&amp;#160;B. einen Reader verwendet, der mit <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>gesichert ist, werden keine Bytearrays deserialisiert, deren Größe dieses Kontingent überschreitet.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Ruft die bei jedem Lesevorgang zurückgegebenen maximal zulässigen Bytes ab und legt sie fest. Dieses Kontingent beschränkt die Anzahl der Bytes, die in einem einzelnen Vorgang beim Lesen des Starttags des Elements und dessen Attributen gelesen werden. (In Fällen ohne Streaming wird der Elementname selbst nicht in die Berechnung des Kontingents einbezogen.) Bei zu vielen XML-Attributen kann die Verarbeitungszeit übermäßig lange dauern, da die Attributnamen auf Eindeutigkeit überprüft werden müssen. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> mindert dieses Risiko.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|Tiefe von 128 Knoten|Diese Kontingent schränkt die maximale Schachtelungstiefe von XML-Elementen ein.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> interagiert mit <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: Der Reader behält stets Daten für das aktuelle Element und alle seiner übergeordneten Elemente im Arbeitsspeicher, weshalb der maximale Arbeitsspeicherverbrauch proportional zum Produkt aus diesen beiden Einstellungen ist. Wenn Sie ein tief geschachteltes Objektdiagramm deserialisieren, ist das Deserialisierungsprogramm gezwungen, auf den gesamten Stapel zuzugreifen und eine nicht behebbare <xref:System.StackOverflowException>auszulösen. Ein direkter Zusammenhang besteht zwischen XML-Schachtelung und der objektschachtelung sowohl die <xref:System.Runtime.Serialization.DataContractSerializer> und <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> wird verwendet, um dieses Risiko zu mindern.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Dieses Kontingent beschränkt die maximale Anzahl von Zeichen, die in einer Nametable zulässig sind. Die Nametable enthält bestimmte Zeichenfolgen (z. B. Namespaces and Präfixe), die beim Verarbeiten von XML-Dokumenten auftreten. Da diese Zeichenfolgen im Arbeitsspeicher gepuffert werden, kann mit diesem Kontingent eine übermäßige Pufferung verhindert werden, wenn die Zeichenfolgen erwartungsgemäß gestreamt werden sollen.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Dieses Kontingent beschränkt die maximale Anzahl von Zeichen, die in einer Nametable zulässig sind. Die Nametable enthält bestimmte Zeichenfolgen (z. B. Namespaces and Präfixe), die beim Verarbeiten von XML-Dokumenten auftreten. Da diese Zeichenfolgen im Arbeitsspeicher gepuffert werden, kann mit diesem Kontingent eine übermäßige Pufferung verhindert werden, wenn die Zeichenfolgen erwartungsgemäß gestreamt werden sollen.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Dieses Kontingent schränkt die maximale Größe der Zeichenfolgen ein, die vom XML-Reader zurückgegeben werden. Der Arbeitsspeicherverbrauch im XML-Reader selbst wird mit diesem Kontingent nicht eingeschränkt, jedoch in der Komponente, die den Reader verwendet. Wenn <xref:System.Runtime.Serialization.DataContractSerializer> z.&amp;#160;B. einen Reader verwendet, der mit <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>gesichert ist, werden keine Zeichenfolgen deserialisiert, deren Größe dieses Kontingent überschreitet.|  
   
 > [!IMPORTANT]

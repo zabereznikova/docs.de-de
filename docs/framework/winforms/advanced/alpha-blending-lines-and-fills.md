@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b3c0ee3ec82d4d8447c43b7dc9b275591ebe890
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alphablending von Linien und Füllungen
 In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], eine Farbe ist ein 32-Bit-Wert mit jeweils 8 Bit für Alpha, Rot, Grün und Blau. Der alphanumerische Wert gibt an, die Transparenz der Farbe – das Ausmaß, der die Farbe wird mit der Hintergrundfarbe gemischt. Alpha Werte reichen von 0 bis 255, wobei 0 für eine vollständig transparent Farbe darstellt, und 255 stellt eine vollständig deckende Farbe dar.  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Datenübertragungsarchitektur - Übersicht
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann als Messaginginfrastruktur betrachtet werden. Damit können Nachrichten empfangen, verarbeitet und für weitere Aktionen an Benutzercode verteilt werden, oder es können Nachrichten anhand von Daten des Benutzercodes erstellt und an ein Ziel übergeben werden. In diesem Thema, das sich an fortgeschrittene Entwickler richtet, wird die Architektur zur Verarbeitung von Nachrichten und der darin enthaltenen Daten beschrieben. Eine einfachere, funktionsbezogene Betrachtung zum Senden und Empfangen von Daten finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -212,7 +213,7 @@ ms.lasthandoff: 12/02/2017
  Im `SetDesiredTemperature` -Beispiel wird ein bidirektionales Nachrichtenaustauschmuster beschrieben. Eine Nachricht wird vom Vorgang zurückgegeben, ist jedoch leer. Es ist möglich, einen Fehler vom Vorgang zurückzugeben. Im Beispiel "Set Lightbulb" ist das Nachrichtenaustauschmuster unidirektional. Es ist also keine ausgehende Nachricht vorhanden, die beschrieben werden müsste. Der Dienst kann dem Client in diesem Fall keinen Status mitteilen.  
   
 ### <a name="2-using-the-message-class-directly"></a>2. Direktes Verwenden der Nachrichtenklasse  
- Es ist möglich, die <xref:System.ServiceModel.Channels.Message>-Klasse (oder eine ihrer Unterklassen) direkt in einem Vertrag für einen Vorgang zu verwenden. In diesem Fall übergibt das Dienstframework `Message` einfach an den Kanalstapel und umgekehrt, ohne weitere Verarbeitung.  
+ Es ist möglich, die <xref:System.ServiceModel.Channels.Message> -Klasse (oder eine ihrer Unterklassen) direkt in einem Vertrag für einen Vorgang zu verwenden. In diesem Fall übergibt das Dienstframework `Message` einfach an den Kanalstapel und umgekehrt, ohne weitere Verarbeitung.  
   
  Es gibt zwei Hauptanwendungsfälle für das direkte Verwenden von `Message` . Sie können es für erweiterte Szenarien verwenden, wenn keines der anderen Programmiermodelle ausreichende Flexibilität zum Beschreiben Ihrer Nachricht bietet. So möchten Sie z.&#160;B. eventuell Dateien auf Festplatte zum Beschreiben einer Nachricht verwenden, wobei die Dateieigenschaften zu Nachrichtenheadern werden und der Dateiinhalt zum Nachrichtentext wird. Sie können dann Folgendes erstellen.  
   
@@ -253,7 +254,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="5-stream"></a>5. Stream  
  Die Verwendung eines `Stream` oder einer seiner Unterklassen in einem Vorgangsvertrag oder als einzelner Nachrichtentextteil in einem Nachrichtenvertrag kann als separates Programmiermodell im Gegensatz zu den oben beschriebenen betrachtet werden. Die Verwendung eines `Stream` auf diese Weise ist die einzige Möglichkeit, zu gewährleisten, dass Ihr Vertrag für ein Streamingmodell verwendet werden kann, fast so, als ob Sie eine eigene Streaming-kompatible `Message` -Unterklasse schreiben würden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Wenn der `Stream` oder eine seiner Unterklassen auf diese Art verwendet wird, wird das Serialisierungsprogramm nicht aufgerufen. Für ausgehende Nachrichten wird eine besondere `Message` -Streaming-Unterklasse erstellt, und der Stream wird ausgeschrieben, wie im Abschnitt über die <xref:System.Xml.IStreamProvider> -Schnittstelle beschrieben. Für eingehende Nachrichten erstellt das Dienstframework eine `Stream` -Unterklasse über der eingehenden Nachricht und übergibt sie an den Vorgang.  
+ Wenn der `Stream` oder eine seiner Unterklassen auf diese Art verwendet wird, wird das Serialisierungsprogramm nicht aufgerufen. Für ausgehende Nachrichten wird eine besondere `Message` -Streaming-Unterklasse erstellt, und der Stream wird ausgeschrieben, wie im Abschnitt über die <xref:System.Xml.IStreamProvider> -Schnittstelle beschrieben. Für eingehende Nachrichten erstellt das Dienstframework eine `Stream`-Unterklasse über der eingehenden Nachricht und übergibt sie an den Vorgang.  
   
 ## <a name="programming-model-restrictions"></a>Einschränkungen des Programmiermodells  
  Die oben beschriebenen Programmiermodelle können nicht willkürlich kombiniert werden. Wenn ein Vorgang beispielsweise einen Nachrichtenvertragstyp akzeptiert, muss der Nachrichtenvertrag der einzige Eingabeparameter sein. Darüber hinaus muss der Vorgang dann entweder eine leere Nachricht (ungültiger Rückgabewert) oder einen anderen Nachrichtenvertrag zurückgeben. Diese Einschränkungen des Programmiermodells werden in den Themen für jedes einzelne Programmiermodell beschrieben: [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md), [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)und [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
@@ -265,7 +266,7 @@ ms.lasthandoff: 12/02/2017
   
  Die folgenden Tabellen listen die Methoden auf, die ein Nachrichtenformatierungsprogramm möglicherweise implementiert.  
   
-|Schnittstelle|Methode|Aktion|  
+|Interface|Methode|Aktion|  
 |---------------|------------|------------|  
 |<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.DeserializeRequest%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|Konvertiert eine eingehende `Message` in Vorgangsparameter|  
 |<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.SerializeReply%28System.ServiceModel.Channels.MessageVersion%2CSystem.Object%5B%5D%2CSystem.Object%29>|Erstellt eine ausgehende `Message` aus Vorgangsrückgabewert/out-Parametern|  
@@ -282,4 +283,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> und <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> sind die Vorgangsverhalten, die für das Plug-In der Nachrichtenformatierungsprogramme für `DataContractSerializer` und `XmlSerializer`verantwortlich sind. Das <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> -Verhalten kann mit jedem Serialisierungsprogramm funktionieren, das von <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet wird, u.&amp;#160;a. <xref:System.Runtime.Serialization.NetDataContractSerializer> (ausführlich beschrieben unter "Verwenden der eigenständigen Serialisierung"). Das Verhalten ruft eine der virtuellen `CreateSerializer` -Methodenüberladungen auf, um das Serialisierungsprogramm zu erhalten. Um ein anderes Serialisierungsprogramm zu verwenden, erstellen Sie eine neue <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> -Unterklasse und überschreiben beide `CreateSerializer` -Überladungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

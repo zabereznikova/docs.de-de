@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41d0b2ccd126416a625e37e6bfdca8f4fd96faf2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-bodied"></a>Code-Bodied
 Dieser Abschnitt enthält benutzerdefinierte, im Code deklarativ erstellte Aktivitätsbeispiele.  
@@ -25,19 +26,19 @@ Dieser Abschnitt enthält benutzerdefinierte, im Code deklarativ erstellte Aktiv
  [BTextmarken](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
  In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Aktivität geschrieben wird, die ein Lesezeichen erstellt, um externe Eingaben zu empfangen.  
   
- [Benutzerdefinierte Zusammensetzungen mit Nativeactivity](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
+ [Benutzerdefinierte Zusammensetzungen mit NativeActivity](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
  In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.NativeActivity> geschrieben wird, die andere <xref:System.Activities.Activity>-Objekte plant, um den Fluss der Ausführung eines Workflows zu steuern.  
   
  [Ausführungseigenschaften](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  
  Dieses Beispiel zeigt, wie in einer benutzerdefinierten Aktivität eine Ausführungseigenschaft definiert und verwendet wird.  
   
- [Verfügbarmachen und Aufrufen von ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
+ [Bereitstellen und Aufrufen von ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
  In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Aktivität, die über eine <xref:System.Activities.ActivityAction> verfügt, entwickelt wird.  
   
  [Verwenden von AsyncCodeActivityContext in einer Aktivität](../../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)  
  In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Activities.CodeActivity> entwickelt wird, die <xref:System.Activities.AsyncCodeActivityContext> verwendet, um Arbeiten asynchron außerhalb des Workflows auszuführen. 
   
- [Hello World benutzerdefinierten Aktivität](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
+ [Benutzerdefinierte Aktivität „Hello World“](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
  In diesem Beispiel werden mehrere Hauptfunktionen von [!INCLUDE[wf](../../../../includes/wf-md.md)] veranschaulicht, einschließlich der Erstellung einer einfachen benutzerdefinierten Aktivität.  
   
  [Dynamische Argumente](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5)-Aktivität, die eine [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5)-Aktivität in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflow umschließt. Die WF 3-Aktivität kann eine einzelne Blattaktivität oder eine ganze Aktivitätsstruktur darstellen. Die Ausführung (einschließlich Abbruch und Ausnahmebehandlung) und die Persistenz der [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivität treten im Kontext der [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflowinstanz auf, die ausgeführt wird.  
@@ -64,4 +65,4 @@ Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[ne
 4.  Eine benutzerdefinierte WF 3-Aktivität kann über Workflowwarteschlangen in der Interoperationsumgebung auf Daten zugreifen, wie dies auch innerhalb der WF 3-Workflowlaufzeit möglich ist. Es sind keine benutzerdefinierten Änderungen an Aktivitätscode erforderlich. Auf dem Host werden Daten in eine WF 3-Workflowwarteschlange eingereiht, indem ein <xref:System.Activities.Bookmark>-Objekt wieder aufgenommen wird. Der Name des Lesezeichens entspricht dem Workflow-Warteschlangennamen des <xref:System.IComparable>-Objekts in Form einer Zeichenfolge.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden einer .NET Framework 3.0 oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+ [Verwenden einer .NET Framework 3.0- oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

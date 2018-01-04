@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Übersicht über die Metadatenarchitektur
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet eine umfangreiche Infrastruktur für den Export, die Veröffentlichung, den Abruf und den Import von Dienstmetadaten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste beschreiben mithilfe von Metadaten die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
@@ -102,6 +103,6 @@ ms.lasthandoff: 12/02/2017
  [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

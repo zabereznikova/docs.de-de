@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2785b666039b9a8594e86cdd3a6fb25b9c382158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Festlegen von standardmäßigen Zellenstilen und Datenformaten für das gesamte Steuerelement, für bestimmte Spalten, für die Zeilen- und Spaltenüberschriften und für abwechselnde Zeilen, um einen Ledger-Effekt zu erstellen von Zellen. Standardstile für das gesamte Steuerelement festgelegt werden standardmäßig überschrieben, die Stile für abwechselnde Zeilen und Spalten festgelegt. Darüber hinaus überschreiben die Stile, die Sie im Code für einzelne Zeilen und Zellen festlegen Standardstile.  

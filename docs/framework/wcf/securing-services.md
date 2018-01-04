@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Sichern von Diensten
 Die Sicherheit eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diensts besteht aus zwei primären Anforderungen: Übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, die Überwachung von Sicherheitsereignissen, wird im beschrieben [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Mithilfe der Funktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]lassen sich die beiden primären Anforderungen problemlos implementieren.  
@@ -100,7 +101,7 @@ Die Sicherheit eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diens
 #### <a name="credential-values"></a>Anmeldeinformationswerte  
  Bei einem *Anmeldeinformationswert* handelt es sich um die tatsächlichen Anmeldeinformationen, die vom Dienst verwendet werden. Nach Angabe eines Anmeldeinformationstyps muss der Dienst unter Umständen auch mit den tatsächlichen Anmeldeinformationen konfiguriert werden. Wurde Windows ausgewählt (und wird der Dienst in einer Windows-Domäne ausgeführt), wird kein tatsächlicher Anmeldeinformationswert angegeben.  
   
-## <a name="identity"></a>Identity  
+## <a name="identity"></a>Identität  
  In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]besitzt der Begriff *Identität* andere Bedeutungen für den Server und den Client. Zusammenfassend bedeutet dies, dass beim Ausführen eines Diensts dem Sicherheitskontext nach der Authentifizierung eine Identität zugewiesen wird. Um die tatsächliche Identität anzuzeigen, überprüfen Sie die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> -Eigenschaft und die <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> -Eigenschaft der <xref:System.ServiceModel.ServiceSecurityContext> -Klasse. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Vorgehensweise: Prüfen des Sicherheitskontexts](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
   
  Im Gegensatz dazu wird mit der Identität der Dienst geprüft. Zur Entwurfszeit kann ein Cliententwickler legen die [ \<Identität >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) Element auf einen Wert, der vom Dienst abgerufen. Während der Laufzeit gleicht der Client den Wert des Elements mit der tatsächlichen Identität des Diensts ab. Bei fehlerhafter Prüfung wird die Kommunikation vom Client beendet. Der Wert kann ein Benutzerprinzipalname sein (UPN), falls der Dienst unter einer bestimmten Benutzeridentität ausgeführt wird oder ein Dienstprinzipalname (SPN), falls der Dienst unter einem Computerkonto ausgeführt wird. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][-Identität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). Die Anmeldeinformationen können auch ein Zertifikat oder ein Feld auf einem Zertifikat sein, mit dem das Zertifikat identifiziert wird.  
@@ -118,7 +119,7 @@ Die Sicherheit eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diens
  [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)  
  [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)  
- [Sicherheit (Übersicht)](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
  [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdbd6260cc435094b499b9e4f3b7bf02f32e27a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contracts"></a>Dienstverträge
 Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dargestellt werden.  
@@ -29,7 +30,7 @@ Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in [!INCLUDE[indig
  [Fehlervertrag](../../../../docs/framework/wcf/samples/fault-contract.md)  
  Veranschaulicht, wie Fehlerinformationen von einem Dienst zu einem Client übermittelt werden.  
   
- [Unidirektionale](../../../../docs/framework/wcf/samples/one-way.md)  
+ [Unidirektional](../../../../docs/framework/wcf/samples/one-way.md)  
  Erläutert einen Dienstvertrag mit unidirektionalen Dienstvorgängen.  
   
  [Sitzung](../../../../docs/framework/wcf/samples/session.md)  

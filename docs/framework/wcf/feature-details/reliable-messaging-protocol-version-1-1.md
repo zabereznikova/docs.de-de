@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 586e26825bd01947706bb26061ef1b8879fecb4c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Zuverlässiges Messaging-Protokoll, Version 1,1
 In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Implementierungsdetails für das WS-ReliableMessaging-Protokoll in der Version 1.1 vom Februar 2007 beschrieben, die für die Interoperation mithilfe des HTTP-Transports erforderlich sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] orientiert sich an der WS-ReliableMessaging-Spezifikation mit den in diesem Thema erläuterten Einschränkungen und Klarstellungen. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&#160;1.1 ab [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] implementiert ist.  
@@ -381,7 +382,7 @@ Example TerminateSequenceResponse message:
   
 -   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gibt immer die `wsrmp:ExactlyOnce`-Zustellungszusicherung an.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und liest die folgenden Eigenschaften der WS-ReliableMessaging-Assertion und ermöglicht ihre Steuerung über das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement`:  
+-   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und liest die folgenden Eigenschaften der WS-ReliableMessaging-Assertion und ermöglicht die Steuerung sie auf die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d52b71fe783764dcdbf5acd2ffe0e0ee1e7e56d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6282dfbf5e67f91167e5abf0640641000994d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-msmq-binding"></a>Net MSMQ-Bindung
 Dieser Abschnitt enthält Beispiele, in denen die Verwendung von MSMQ-Bindungsattributen eines Endpunktelements veranschaulicht wird.  
@@ -26,13 +27,13 @@ Dieser Abschnitt enthält Beispiele, in denen die Verwendung von MSMQ-Bindungsat
  [Abgewickelte MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
  In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) durchgeführt wird.  
   
- [Volatile-Warteschlangenkommunikation](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+ [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  Veranschaulicht, wie eine flüchtige Kommunikation unter Verwendung von Warteschlangen über Message Queuing (MSMQ)-Transport durchgeführt wird.  
   
- [Warteschlangen für unzustellbare](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  Veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung.  
   
- [Beschädigten Sie in MSMQ 4.0 Handhabung von Nachrichten](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
+ [Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
  Veranschaulicht die Behandlung nicht verarbeitbarer Nachrichten in einem Dienst mithilfe von MSMQ 4.0.  
   
  [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
@@ -41,7 +42,7 @@ Dieser Abschnitt enthält Beispiele, in denen die Verwendung von MSMQ-Bindungsat
  [Bidirektionale Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md)  
  Veranschaulicht das Ausführen der transaktiven bidirektionalen Warteschlangenkommunikation über MSMQ.  
   
- [Transaktive Batchverarbeitung:](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+ [Transaktive Batchverarbeitung](../../../../docs/framework/wcf/samples/transacted-batching.md)  
  In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mithilfe von Message Queuing (MSMQ) veranschaulicht.  
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16e278fd0eb227ddd382157d38c7370e604c35d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
 Dies ist eines der beiden "Gewusst wie"-Themen, die veranschaulichen, wie Sie Metadaten für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst veröffentlichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
@@ -274,7 +275,7 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  [Vorgehensweise Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [Selbsthosting](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Selbst gehostete Dienste](../../../../docs/framework/wcf/samples/self-host.md)  
  [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

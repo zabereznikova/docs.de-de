@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Standard
 Diese Abschnitt enthält Beispiele, in denen die grundlegende [!INCLUDE[wf](../../../../includes/wf-md.md)]-Funktionalität veranschaulicht wird.  
@@ -34,7 +35,7 @@ Diese Abschnitt enthält Beispiele, in denen die grundlegende [!INCLUDE[wf](../.
  [Designer](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
  Enthält Beispiele, die die Verwendung von [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] veranschaulichen.  
   
- [Hosten von Designern](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ [Erneutes Hosten von Designern](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  Enthält Beispiele, in denen veranschaulicht wird, wie der Aktivitätsdesigner neu gehostet wird.  
   
  [Ausführung](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
@@ -55,13 +56,13 @@ Diese Abschnitt enthält Beispiele, in denen die grundlegende [!INCLUDE[wf](../.
  [Dienste](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
  Enthält Beispiele, in denen Workflowdienste veranschaulicht werden.  
   
- [Nachverfolgen](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
+ [Nachverfolgung](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
  Enthält Beispiele, in denen die Workflowverfolgung veranschaulicht wird.  
   
  [Transaktionen](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Enthält Beispiele, in denen Workflowtransaktionen veranschaulicht werden.  
   
- [Überprüfung](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
+ [Validierung](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  Enthält Beispiele, in denen die Validierung in [!INCLUDE[wf2](../../../../includes/wf2-md.md)] veranschaulicht wird.  
   
 ## <a name="reference"></a>Verweis

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>Identitätswechsel und Transportsicherheit
 *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, die Identität des Clients anzunehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. In diesem Thema wird die Verwendung der Transportsicherheit mit der Identitätswechsel-Funktion in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beschrieben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Identitätswechsel mit nachrichtensicherheit, finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -27,11 +28,11 @@ ms.lasthandoff: 11/21/2017
   
 |Ebene des Identitätswechsels|Beschreibung|  
 |-------------------------|-----------------|  
-|Keine|Die Serveranwendung versucht nicht, die Identität des Clients anzunehmen.|  
+|Keiner|Die Serveranwendung versucht nicht, die Identität des Clients anzunehmen.|  
 |Anonym|Die Serveranwendung kann mit den Anmeldeinformationen des Clients Zugriffsüberprüfungen durchführen, erhält jedoch keine Informationen über die Identität des Clients. Diese Ebene des Identitätswechsels ist nur sinnvoll bei einer computerinternen Kommunikation, z.&#160;B. bei Named Pipes (benannten Pipes). Die Verwendung von `Anonymous` mit einer Remoteverbindung erhöht die Ebene des Identitätswechsels auf Identifizieren.|  
 |Identifizieren (Identify)|Die Serveranwendung kennt die Identität des Clients und kann mit den Anmeldeinformationen des Clients Zugriffsvalidierungen durchführen, sie kann jedoch nicht die Identität des Clients annehmen. Identifizieren ist die standardmäßig in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei SSPI-Anmeldeinformationen verwendete Ebene des Identitätswechsels, es sei denn, der Tokenaussteller stellt eine andere Identitätswechselebene bereit.|  
 |Identitätswechsel|Die Serveranwendung kann Zugriffsüberprüfungen durchführen und auf dem Servercomputer als Client auf Ressourcen zugreifen. Die Serveranwendung kann jedoch nicht mit der Identität des Clients auf Ressourcen auf Remotecomputern zugreifen, da das Identitätswechsel-Token über keine Anmeldeinformationen für das Netzwerk verfügt.|  
-|Delegate|Bei der Identitätswechselebene Delegieren verfügt die Serveranwendung über dieselben Möglichkeiten wie bei der Ebene `Impersonate` und kann zudem unter der Identität des Clients auf Remotecomputer zugreifen und die Identität an andere Anwendungen übergeben.<br /><br /> **Wichtige** das Domänenkonto Server markiert werden muss als vertrauenswürdig für die Delegierung auf dem Domänencontroller mit diesen zusätzlichen Funktionen verwenden. Diese Ebene des Identitätswechsels kann nicht mit als vertraulich eingestuften Clientdomänenkonten verwendet werden.|  
+|delegate|Bei der Identitätswechselebene Delegieren verfügt die Serveranwendung über dieselben Möglichkeiten wie bei der Ebene `Impersonate` und kann zudem unter der Identität des Clients auf Remotecomputer zugreifen und die Identität an andere Anwendungen übergeben.<br /><br /> **Wichtige** das Domänenkonto Server markiert werden muss als vertrauenswürdig für die Delegierung auf dem Domänencontroller mit diesen zusätzlichen Funktionen verwenden. Diese Ebene des Identitätswechsels kann nicht mit als vertraulich eingestuften Clientdomänenkonten verwendet werden.|  
   
  Die transportsicherheit am häufigsten verwendeten Ebenen sind `Identify` und `Impersonate`. Die Ebenen `None` und `Anonymous` sind nicht für die üblichen Verwendungszwecke zu empfehlen, und bei vielen Transporten werden diese Ebenen nicht für die Authentifizierung unterstützt. Die `Delegate`-Ebene ist eine leistungsstarke Funktion, die nur mit großer Sorgfalt verwendet werden sollte. Nur vertrauenswürdigen Serveranwendungen sollte die Berechtigung gegeben werden, Anmeldeinformationen delegieren zu können.  
   
@@ -68,4 +69,4 @@ ms.lasthandoff: 11/21/2017
  [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Grundlegendes zu HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+ [Grundlagen der HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

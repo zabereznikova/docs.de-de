@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>Warteschlangenübersicht
 In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die nachfolgenden Abschnitte enthalten Details dazu, wie die hier beschriebenen Warteschlangenbegriffe sich in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] auswirken.  
@@ -83,11 +84,11 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  Nachdem eine Nachricht in der Zielwarteschlange eingetroffen ist, schlägt der Dienst beim Verarbeiten der Nachricht ggf. wiederholt fehl. Eine Anwendung, die im Rahmen einer Transaktion eine Nachricht aus einer Warteschlange ausliest und eine Datenbank aktualisiert, kann zum Beispiel auf das Problem treffen, dass die Verbindung zur Datenbank vorübergehend unterbrochen ist. In diesem Fall wird für die Transaktion ein Rollback ausgeführt, es wird eine neue Transaktion erstellt, und die Nachricht wird erneut aus der Warteschlange ausgelesen. Ein zweiter Versuch kann erfolgreich sein oder fehlschlagen. Es kann je nach Fehlerursache auch vorkommen, dass die Nachricht wiederholt nicht an die Anwendung zugestellt wird. In diesem Fall wird die Nachricht als "potenziell schädlich" eingestuft. Nachrichten dieser Art werden in eine Warteschlange für potenziell schädliche Nachrichten verschoben, die von einer Anwendung zur Bearbeitung von potenziell schädlichen Nachrichten gelesen werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Warteschlangen für unzustellbare](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Volatile-Warteschlangenkommunikation](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+ [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Message Queuing-Integration Bindung-Beispiele](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  

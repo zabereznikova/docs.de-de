@@ -13,14 +13,15 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ef5406831e1bfaa9c1c4f959363bc8b26cd3820
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
-In diesem Abschnitt wird das in der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]-Version eingeführte Kontextaustauschprotokoll beschrieben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  
+In diesem Abschnitt wird beschrieben, das eingeführte kontextaustauschprotokoll [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] freizugeben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  
   
  Das Kontextaustauschprotokoll wird in einer benutzerdefinierten Kanalebene implementiert. Der Kontext wird mithilfe der <xref:System.ServiceModel.Channels.ContextMessageProperty>-Eigenschaft von der Kanalebene an die Anwendungsebene (und umgekehrt) übermittelt. Zur Übertragung zwischen Endpunkten wird der Wert des Kontexts entweder auf der Kanalebene in einen SOAP-Header serialisiert oder in die bzw. aus den Nachrichteneigenschaften konvertiert, die eine HTTP-Anforderung bzw. eine HTTP-Antwort darstellen. Im zweiten Fall wird erwartet, das eine der zugrunde liegenden Kanalebenen die Eigenschaften der HTTP-Anforderungs- bzw. HTTP-Antwortnachrichten in bzw. aus HTTP-Cookies umwandelt. Der für den Kontextaustausch zu verwendende Mechanismus wird mithilfe der <xref:System.ServiceModel.Channels.ContextExchangeMechanism>-Eigenschaft für das <xref:System.ServiceModel.Channels.ContextBindingElement> ausgewählt Gültige Werte sind `HttpCookie` und `SoapHeader`.  
   
@@ -78,4 +79,4 @@ In diesem Abschnitt wird das in der [!INCLUDE[indigo1](../../../../includes/indi
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Handbuch Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+ [Leitfaden für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b759580a93f6b0ab0e3d84295b7ab8a0c48a7bb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a29ceb6dd90645bc34c440117bafcd8afd774422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-samples"></a>Suche (Beispiele)
 Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.  
@@ -35,13 +36,13 @@ Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.
  [Konfiguration](../../../../docs/framework/wcf/samples/configuration-sample.md)  
  Veranschaulicht, wie ein Dienst mit einer Konfigurationsdatei erkennbar gemacht wird und wie <xref:System.ServiceModel.Discovery.DynamicEndpoint> bei der Konfiguration verwendet wird, um nach diesem Dienst zu suchen.  
   
- [Ermittlungsbindungselement](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
+ [Beispiel für Ermittlungsbindungselement](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
  Veranschaulicht, wie ein Suchbindungselement in einer benutzerdefinierten Bindung hinzugefügt wird. Dies ermöglicht es Clients, einen Dienst zu suchen, wenn ein Kanal geöffnet ist.  
   
  [Suchproxybeispiel](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  Zeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können.  
   
- [Ermitteln eines Diensts mit Uniquelistenurimode (Beispiel)](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ [Ermitteln eines Diensts mit UniqueListenUriMode (Beispiel)](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
  Veranschaulicht, wie ein Dienst gesucht wird, für den die <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.ListenUriMode.Unique> festgelegt ist.  
   
  [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
@@ -50,7 +51,7 @@ Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.
  [Benutzerdefinierte Suchkriterien](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
  Veranschaulicht, wie eine benutzerdefinierte Bereichsübereinstimmung mithilfe der Logik erstellt wird und wie ein benutzerdefinierter Suchdienst implementiert wird.  
   
- [Für Workflowsuche](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
+ [Beispiel für Workflowsuche](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
  Veranschaulicht, wie ein Workflowdienst erkennbar gemacht wird, und wie eine benutzerdefinierte Codeaktivität erstellt wird, die nach einem bestimmten Dienst sucht.  
   
  [Suchrouterdienst](../../../../docs/framework/wcf/samples/discovery-router-service.md)  

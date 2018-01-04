@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38373b8e3201ea0a6c32d972c7ac9c72888d5eae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bc6d1fa2450d0aba52bd6a5a030c025fede0cb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ist ein neues Steuerelement, das ersetzt die <xref:System.Windows.Forms.DataGrid> Steuerelement. Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet zahlreiche grundlegende und erweiterte Funktionen, die fehlen in der <xref:System.Windows.Forms.DataGrid> Steuerelement. Darüber hinaus die Architektur der <xref:System.Windows.Forms.DataGridView> Steuerelement kann es viel einfacher erweitern und anpassen, die als die <xref:System.Windows.Forms.DataGrid> Steuerelement.  

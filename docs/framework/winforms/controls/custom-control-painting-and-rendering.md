@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 355a5842348aa4395d1841d0343080ddef634456
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-control-painting-and-rendering"></a>Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
 Benutzerdefiniertes Zeichnen von Steuerelementen ist einer der zahlreichen komplizierten Aufgaben, die leicht, von .NET Framework. Wenn Sie ein benutzerdefiniertes Steuerelement zu erstellen, stehen Ihnen viele Optionen zur grafischen Darstellung des Steuerelements. Wenn Sie ein Steuerelement erstellen, die von erben die `Control`, müssen Sie Code, der das Steuerelement zum Rendern der grafischen Darstellung ermöglicht bereitstellen. Wenn Sie ein Benutzersteuerelement erstellen durch Erben von der `UserControl`, oder erben werden aus einer Windows Forms-Steuerelemente, können Sie außer Kraft setzen die standardmäßige grafische Darstellung und fügen Sie eigenen Code Grafiken. Wenn Sie benutzerdefiniertes Rendering für die konstituierenden Steuerelemente bereitstellen möchten eine `UserControl` Sie erstellen, die Optionen eingeschränkt werden, aber weiterhin eine Breite Palette von grafischen Möglichkeiten für Steuerelemente und Anwendungen zu ermöglichen.  

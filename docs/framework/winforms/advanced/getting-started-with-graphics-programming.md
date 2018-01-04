@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-graphics-programming"></a>Erste Schritte mit der Grafikprogrammierung
 In diesem Abschnitt wird gezeigt, wie die ersten Schritte mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in einer Windows Forms-Anwendung. In den folgenden Themen wird gezeigt, wie Sie verschiedene [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aufgaben wie zeichnen und Ausfüllen von Formen und Text.  

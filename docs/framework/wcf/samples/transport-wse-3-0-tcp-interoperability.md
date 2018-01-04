@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd1492c4e2e8941a77f344c04414a763390e89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
 Das Beispiel zum WSE 3.0-TCP-Interoperabilitätstransport veranschaulicht, wie eine TCP-Duplexsitzung als ein benutzerdefinierter [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte veranschaulichen, wie dieser benutzerdefinierte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transport erstellt wird:  
@@ -102,7 +103,7 @@ Das Beispiel zum WSE 3.0-TCP-Interoperabilitätstransport veranschaulicht, wie e
  Wenn ein neuer Socket entgegengenommen ist, wird ein Serverkanal mit diesem Socket initialisiert. Alle Ein- und Ausgaben sind bereits in der Basisklasse implementiert, daher dient dieser Kanal zum Initialisieren des Sockets.  
   
 ## <a name="adding-a-binding-element"></a>Hinzufügen eines Bindungselements  
- Nachdem nun die Factorys und Kanäle erstellt sind, müssen Sie der ServiceModel-Laufzeit über eine Bindung verfügbar gemacht werden. Eine Bindung ist eine Auflistung von Bindungselementen, die den mit einer Dienstadresse verknüpften Kommunikationsstapel darstellt. Jedes Element im Stapel wird durch ein Bindungselement dargestellt.  
+ Nachdem nun die Factorys und Kanäle erstellt sind, müssen sie der ServiceModel-Laufzeit über eine Bindung verfügbar gemacht werden. Eine Bindung ist eine Auflistung von Bindungselementen, die den mit einer Dienstadresse verknüpften Kommunikationsstapel darstellt. Jedes Element im Stapel wird durch ein Bindungselement dargestellt.  
   
  Im Beispiel ist das Bindungselement `WseTcpTransportBindingElement`, das von <xref:System.ServiceModel.Channels.TransportBindingElement> abgeleitet wird. Es unterstützt <xref:System.ServiceModel.Channels.IDuplexSessionChannel> und überschreibt die folgenden Methoden, um die mit unserer Bindung verknüpften Factorys zu erstellen.  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 78fbde5f83d4a24594e06b787756c7ab3762d75a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cad98ab0df372b19efcf102cce3f80e3f7b0632f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Benutzerdefinierter sicherer Metadatenendpunkt
 In diesem Beispiel wird veranschaulicht, wie einen Dienst mit einem sicheren Metadatenendpunkt implementiert, die eines der nicht-standardmetadatenaustausch-Bindungen verwendet, und konfigurieren [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oder -Clients beim Abrufen der Metadaten eines metadatenendpunkts. Es gibt zwei vom System bereitgestellte Bindungen, die für die Bereitstellung von Metadatenendpunkten verfügbar sind: mexHttpBinding und mexHttpsBinding. mexHttpBinding wird verwendet, um einen Metadatenendpunkt über eine nicht sichere Verbindung über HTTP bereitzustellen. mexHttpsBinding wird verwendet, um einen Metadatenendpunkt über eine sichere Verbindung über HTTPS verfügbar zu machen. In diesem Beispiel wird veranschaulicht, wie ein sicherer Metadatenendpunkt mithilfe der <xref:System.ServiceModel.WSHttpBinding> verfügbar gemacht wird. Diese Vorgehensweise eignet sich, wenn Sie die Sicherheitseinstellungen der Bindung ändern, aber nicht HTTPS verwenden möchten. Wenn Sie mexHttpsBinding verwenden, ist der Metadatenendpunkt sicher, die Bindungseinstellungen können jedoch nicht geändert werden.  
@@ -73,7 +74,7 @@ In diesem Beispiel wird veranschaulicht, wie einen Dienst mit einem sicheren Met
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Und es funktioniert. In diesem Beispiel verwendet der Server jedoch einen nicht standardmäßigen Endpunkt, um die Metadaten zu hosten. Deshalb muss "Svcutil.exe" angewiesen werden, die richtige Bindung zu verwenden. Dazu können Sie eine Datei "Svcutil.exe.config" verwenden.  
+ Und es funktioniert. In diesem Beispiel verwendet der Server jedoch einen nicht standardmäßigen Endpunkt, um die Metadaten zu hosten. Deshalb muss „Svcutil.exe“ angewiesen werden, die richtige Bindung zu verwenden. Dazu können Sie eine Datei "Svcutil.exe.config" verwenden.  
   
  Die Datei "Svcutil.exe.config" sieht wie eine normale Clientkonfigurationsdatei aus. Die einzigen ungewöhnlichen Aspekte sind der Clientendpunktname und -vertrag:  
   

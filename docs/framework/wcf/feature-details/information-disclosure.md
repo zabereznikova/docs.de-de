@@ -13,14 +13,15 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
-Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Gegenmaßnahmen.  
+Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Entschärfungen.  
   
 ## <a name="message-security-and-http"></a>Nachrichtensicherheit und HTTP  
  Falls Sie die Sicherheit auf Nachrichtenebene mit einer HTTP-Transportschicht verwenden, dürfen Sie nicht vergessen, dass bei dieser Sicherheitsstufe HTTP-Header nicht geschützt sind. HTTP-Header lassen sich nur durch einen HTTPS-Transport, nicht jedoch durch HTTP schützen. Beim HTTPS-Transport wird die gesamte Nachricht einschließlich der HTTP-Header mit dem SSL-Protokoll (Secure Sockets Layer) verschlüsselt.  
@@ -67,9 +68,9 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Identität des Endpunkts angegeben wird, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ausweitung von Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Replay-Angriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

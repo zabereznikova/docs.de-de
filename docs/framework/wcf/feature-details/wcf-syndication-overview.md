@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>Übersicht über WCF Syndication
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt das Verfügbarmachen von Syndication-Feeds von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst aus. Syndication ist ein Mechanismus der Anwendungsintegration, bei dem ein Server Anwendungsdaten in einem interoperablen, als Feed bezeichnetem Format verfügbar macht. Ein Feed ist eine Auflistung von Anwendungsdaten, die aus einigen feedeigenen Metadaten (Titel, Autor, URL und andere Metadaten) und einer Reihe von Feedelementen besteht. Innerhalb des Feeds sind die Feedelemente normalerweise in umgekehrter chronologischer Reihenfolge geordnet. Ein Feedelement besteht aus einem Standardsatz elementeigener Metadaten (Titel, URL, Erstellungsdatum, Kategorie und andere elementeigenen Metadaten) und einer beliebigen Anzahl anwendungsspezifischer Daten. Die beiden häufigsten Typen von Syndication-Feeds sind RSS&#160;2.0 (Really Simple Syndication) und Atom&#160;1.0, die beide von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt werden.  

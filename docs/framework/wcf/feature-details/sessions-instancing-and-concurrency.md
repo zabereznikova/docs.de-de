@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d.&amp;#160;h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -39,7 +40,7 @@ Eine *Sitzung* ist die Korrelation (d.&amp;#160;h. die Beziehung) aller zwischen
   
  Falls Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>-Klasse und den von ihr bereitgestellten Funktionen in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungen vertraut sind, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzung auf:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Sitzungen werden immer vom Server initiiert.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
   
@@ -92,7 +93,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienstinstanz verarbeitet jeweils nur eine Nachricht, akzeptiert jedoch eintrittsinvariante Aufrufe. Der Dienst akzeptiert diese Aufrufe nur dann, wenn der Aufruf über ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Clientobjekt erfolgt.  
   
 > [!NOTE]
->  Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  Die Parallelität steht mit dem Instanziierungsmodus in Beziehung. In <xref:System.ServiceModel.InstanceContextMode.PerCall> Instanziierung ist Parallelität ist nicht relevant, da die Verarbeitung jeder Meldung von einem neuen <xref:System.ServiceModel.InstanceContext> und daher nie mehr als einem Thread in aktiv ist die <xref:System.ServiceModel.InstanceContext>.  
   
@@ -120,7 +121,7 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Sitzungen](../../../../docs/framework/wcf/using-sessions.md)  
  [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Vorgehensweise: Steuern der Dienstinstanzierung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Vorgehensweise: Steuern der Dienstinstanzerstellung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md)  
  [Instanziierung](../../../../docs/framework/wcf/samples/instancing.md)  
  [Sitzung](../../../../docs/framework/wcf/samples/session.md)

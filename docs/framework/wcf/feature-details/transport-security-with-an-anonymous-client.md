@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Transportsicherheit mit einem anonymen Client
 Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Szenario verwendet Transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen. Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen. Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.  
@@ -125,7 +126,7 @@ Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Szenario verwende
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [WS-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

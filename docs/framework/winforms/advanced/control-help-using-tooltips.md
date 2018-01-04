@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb0bffe79c7b00e42708f58a035d983802b53d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cdc1447bcb601e18b8b625a890003453e9e7da8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-help-using-tooltips"></a>Benutzerführung mithilfe von QuickInfos
 Sie können die <xref:System.Windows.Forms.ToolTip> Komponente zum Anzeigen einer kurzen spezialisiert Hilfetext für einzelne Steuerelemente für Windows Forms. Die <xref:System.Windows.Forms.ToolTip> Komponente enthält eine Eigenschaft, die für jedes Steuerelement im Formular angezeigten Text angibt. Weitere Informationen zum Arbeiten mit der <xref:System.Windows.Forms.ToolTip> Komponente auf diese Weise finden Sie unter [Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in einem Windows Form zur Entwurfszeit](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Darüber hinaus können Sie konfigurieren die <xref:System.Windows.Forms.ToolTip> Komponente so, dass eine Verzögerung, bevor er angezeigt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

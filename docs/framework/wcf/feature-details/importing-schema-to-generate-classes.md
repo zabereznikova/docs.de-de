@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genutzt werden können, verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractImporter>-Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -196,6 +197,6 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
  <xref:System.Runtime.Serialization.ImportOptions>  
  [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Schemaimport / Export](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [Import und Export von Schemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
  [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

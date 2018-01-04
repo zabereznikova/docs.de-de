@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Übernehmen von Windows Communication Foundation
 Sie können sich für den Einsatz von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] für eine Neuentwicklung entscheiden, während Sie Ihre vorhandenen Anwendungen, die über ASP.NET entwickelt wurden, weiterhin pflegen. Da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] darauf ausgerichtet ist, in jedem Szenario die passende Wahl für eine Erleichterung der Kommunikation mit Anwendungen, die mit .NET Framework erstellt wurden, darzustellen, kann es auch als eine Art Standardtool für das Lösen vieler verschiedener Softwarekommunikationsprobleme dienen, wie es ASP.NET nicht könnte.  
@@ -37,4 +38,4 @@ Sie können sich für den Einsatz von [!INCLUDE[indigo1](../../../../includes/in
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  [Vorgehensweise: Migrieren von ASP.NET-Webdienstcode zu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
- [Vorgehensweise: Migrieren von ASP.NET Web Service-Clientcode zu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Vorgehensweise: Migrieren von ASP.NET-Webdienst-Clientcode zu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

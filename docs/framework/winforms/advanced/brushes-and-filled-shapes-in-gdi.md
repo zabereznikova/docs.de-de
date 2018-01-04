@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinsel und gefüllte Formen in GDI+
 Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer Gliederung und dem inneren. Die Kontur mit einem Stift gezeichnet, und das innere mit einem Pinsel gefüllt ist. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet mehrere für die Innenflächen geschlossene Formen füllen: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, und <xref:System.Drawing.Drawing2D.PathGradientBrush>. Alle diese Klassen erben von der <xref:System.Drawing.Brush> Klasse. Die folgende Abbildung zeigt ein Rechteck mit eines Pinsels in Volltonfarbe gefüllt und eine Ellipse, die mit einem Schraffurpinsel gefüllt.  

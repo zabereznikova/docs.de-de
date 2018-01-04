@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 642ba5100cca17623a07e5de613b6d6aa26bd23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15282ae7d1988e560877d10c249fa026510e1d64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-activities"></a>Integrierte Aktivitäten
 Dieser Abschnitt enthält Beispiele, in denen integrierte [!INCLUDE[wf](../../../../includes/wf-md.md)]-Aktivitäten veranschaulicht werden.  
@@ -25,16 +26,16 @@ Dieser Abschnitt enthält Beispiele, in denen integrierte [!INCLUDE[wf](../../..
  [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
  Veranschaulicht, wie die <xref:System.Activities.Statements.TryCatch>-Aktivität innerhalb einer komplexen Ablaufsteuerungsaktivität verwendet werden kann.  
   
- [Emulierungsunterbrechung in eine Weile Aktivität](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
+ [Emulierungsunterbrechung in einer While-Aktivität](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
  Veranschaulicht, wie der Schleifenmechanismus der folgenden Aktivitäten unterbrochen werden kann: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> und <xref:System.Activities.Statements.ParallelForEach%601>.  
   
  [DynamicActivity-Erstellung](../../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)  
  Veranschaulicht zwei unterschiedliche Möglichkeiten zum Erstellen einer Aktivität mithilfe der <xref:System.Activities.DynamicActivity>-Aktivität zur Laufzeit.  
   
- [Verwenden von Variablen mit einer .NET Framework 3.5-Ruleset](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
+ [Verwenden von Variablen mit einem .NET Framework 3.5-Ruleset](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
  Veranschaulicht, wie ein Workflow erstellt wird, der mithilfe der <xref:System.Activities.Statements.Interop>-Aktivität eine in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] geschriebene benutzerdefinierte Aktivität integriert, die Richtlinien und Regeln verwendet.  
   
- [Laden von XAML](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
+ [Laden aus XAML](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
  Veranschaulicht, wie ein XAML-Workflow dynamisch geladen wird, ohne das XamlBuildTask-Tool ausführen zu müssen.  
   
  [Verwenden von Auflistungsaktivitäten](../../../../docs/framework/windows-workflow-foundation/samples/using-collection-activities.md)  
@@ -55,8 +56,8 @@ Dieser Abschnitt enthält Beispiele, in denen integrierte [!INCLUDE[wf](../../..
  [InvokeMethod](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
  Veranschaulicht die unterschiedlichen Möglichkeiten zum Aufrufen von Methoden einer Klasse mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität.  
   
- [Verwendung von Switch-Aktivität mit benutzerdefinierten Typen](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
+ [Verwenden der Switch-Aktivität mit benutzerdefinierten Typen](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
  Beschreibt, wie eine <xref:System.Activities.Statements.Switch%601>-Aktivität aktiviert wird, um zur Laufzeit einen benutzerdefinierten komplexen Typ auszuwerten.  
   
- [Interoperabilität mit 3.5-Regelsatz](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
+ [Zusammenarbeit mit dem 3.5-Regelsatz](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
  Veranschaulicht die Verwendung der <xref:System.Activities.Statements.Interop>-Aktivität zur Integration mit einer benutzerdefinierten Aktivität in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] mithilfe der <xref:System.Workflow.Activities.PolicyActivity> und mit Regeln.

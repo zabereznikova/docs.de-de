@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cb3b38a2587105a786a16aee7ecf424a5a23294
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 455929144f771128ca070cd02e65c919ce4c741f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst über den Code
 Dies ist eines der beiden "Gewusst wie"-Themen, in denen erläutert wird, wie Sie Metadaten für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst veröffentlichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe von Code dargestellt.  
@@ -98,7 +99,7 @@ Dies ist eines der beiden "Gewusst wie"-Themen, in denen erläutert wird, wie Si
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [Selbsthosting](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Selbst gehostete Dienste](../../../../docs/framework/wcf/samples/self-host.md)  
  [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

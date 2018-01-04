@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>Bekannte Typen in Datenverträgen
 Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht es Ihnen, vorab die Typen anzugeben, die während der Deserialisierung in Betracht gezogen werden sollen. Ein Arbeitsbeispiel finden Sie unter [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -53,7 +54,7 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird die Verwendung der <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse veranschaulicht.  
   
-#### <a name="example-1"></a>Beispiel 1  
+#### <a name="example-1"></a>Beispiel 1  
  Es sind drei Klassen mit einer Vererbungsbeziehung gegeben.  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]

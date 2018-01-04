@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 281ae701bc3e5cee38952a05474360019f76a665
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Gewusst wie: Ausschneiden mit einem Bereich
 Eine der Eigenschaften von der <xref:System.Drawing.Graphics> Klasse ist die Clip-Bereich. Alle Zeichnungen geschieht, indem eine angegebene <xref:System.Drawing.Graphics> Objekt ist nur für den Ausschneidebereich dieses <xref:System.Drawing.Graphics> Objekt. Sie können die Clip-Bereich festlegen, durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A> Methode.  

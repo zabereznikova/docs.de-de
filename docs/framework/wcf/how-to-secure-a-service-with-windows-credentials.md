@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
 In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst, befindet sich in einer Windows-Domäne und wird von Clients in der gleichen Domäne aufgerufen. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Dieses Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
@@ -161,4 +162,4 @@ In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLU
  [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)  
- [Sicherheit (Übersicht)](../../../docs/framework/wcf/feature-details/security-overview.md)
+ [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)

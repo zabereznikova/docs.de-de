@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b41e47ae4067ac52cc747d675ec5231f25b1352
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-http-authentication"></a>Grundlagen der HTTP-Authentifizierung
 Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen. Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.  
@@ -46,6 +47,6 @@ Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt i
 -   Ein Server sollte kein Schema enthalten (in den WWW-Authentifizierungsheadern), das die geschützten Ressourcen nicht akzeptieren bzw. angemessen sichern kann. Clients können aus den unterschiedlichen Authentifizierungsschemen des Servers wählen. Einige Clients wählen standardmäßig ein schwaches Authentifizierungsschema oder das erste Authentifizierungsschema in der Liste des Servers.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Verwenden des Identitätswechsels mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Verwenden von Identitätswechsel mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

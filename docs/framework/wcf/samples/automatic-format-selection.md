@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92934e9e9e8cbd38a7f00b1c7846d3e1b8dba583
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-format-selection"></a>Automatische Formatauswahl
 In diesem Beispiel wird veranschaulicht, wie die automatische Formatauswahl (XML oder JSON) mit dem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Web-REST-Programmiermodell aktiviert wird und wie das Format im Vorgangscode explizit festgelegt wird.  

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-protocols"></a>Sicherheitsprotokolle
 Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt werden die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Details (implementiert im <xref:System.ServiceModel.Channels.SecurityBindingElement>) der folgenden Webdienste-Sicherheitsprotokolle beschrieben.  
@@ -81,7 +82,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 |------------|---------------|  
 |s|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|a|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
+|eine|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
 |wsse|TBD – OASIS WSS 1,0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
 |wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
@@ -190,7 +191,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  Sicherheitsheader-Layout: Strict  
   
- Algorithmussuite: Basic256  
+ Algorithmussammlung: Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
  Bei diesem Authentifizierungsmodus authentifiziert sich der Client über ein Benutzernamentoken, das auf der SOAP-Schicht als signiertes unterstützendes Token angezeigt wird, das immer vom Initiator an den Empfänger gesendet wird. Der Dienst wird über ein X.509-Zertifikat auf der Transportschicht authentifiziert. Die verwendete Bindung ist eine Transportbindung.  

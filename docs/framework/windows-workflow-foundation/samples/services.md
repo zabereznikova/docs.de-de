@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2cee42de74609cbfc793822471655d88b32d9ce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Dienste
 Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../../../includes/wf-md.md)]-Dienstfunktionalität veranschaulicht wird.  
@@ -34,10 +35,10 @@ Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../
  [Grundlegende Verwendung der Aktivitäten SendParameters und ReceiveParameters](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
  Veranschaulicht die Verwendung von <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` und <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` Aktivitäten.
   
- [Nur grundlegende XAML-Dienst](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
+ [Einfacher nur XAML-fähiger Dienst](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
  Veranschaulicht, wie ein nur XAML-fähiger Dienst erstellt wird.  
   
- [Formatieren von Meldungen in Workflowdiensten](../../../../docs/framework/windows-workflow-foundation/samples/formatting-messages-in-workflow-services.md)  
+ [Formatieren von Nachrichten in Workflowdiensten](../../../../docs/framework/windows-workflow-foundation/samples/formatting-messages-in-workflow-services.md)  
  Veranschaulicht, wie verschiedene Benutzertypen in Messagingaktivitäten (WF-Dienste) verwendet werden können. Der Beispieldienst ist ein einfacher Dienst zur Kostengenehmigung und macht drei Vorgänge verfügbar.  
   
  [Permanenter Duplex](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
@@ -46,16 +47,16 @@ Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../
  [Inhaltsbasierte Korrelation](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  Veranschaulicht, wie die Messagingaktivitäten (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> und <xref:System.ServiceModel.Activities.ReceiveReply>) mit mehreren inhaltsbasierten Korrelationen und einer inhaltsbasierter Korrelation verwendet werden können.  
   
- [Zwischenspeichern von Channels mit Send](../../../../docs/framework/windows-workflow-foundation/samples/channel-caching-with-send.md)  
+ [Zwischenspeichern von Kanälen mit Send](../../../../docs/framework/windows-workflow-foundation/samples/channel-caching-with-send.md)  
  Veranschaulicht, wie <xref:System.ServiceModel.Activities.SendMessageChannelCache> verwendet wird.  
   
  [Permanente Verzögerung in XAMLX](../../../../docs/framework/windows-workflow-foundation/samples/durable-delay-in-xamlx.md)  
  Veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.  
   
- [Gepuffert empfangen](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
+ [Gepuffertes Empfangen](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
  Veranschaulicht, wie die gepufferte Empfangsfunktion in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird.  
   
- [Verwendung von XAML-Aktivierung](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
+ [XAML-Aktivierung](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
  Veranschaulicht, wie ein deklarativer Workflow in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] gehostet wird.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird eine Vielzahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. In diesem Thema finden Sie eine Liste mit Webdienstprotokollen, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert werden. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
@@ -75,7 +76,7 @@ Von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird eine Vielzahl v
 |WS-Secure Conversation|[Webdienste sichere Konversationssprache](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Web Services Trust-Sprache](http://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Webdienste sichere Konversationssprache](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Wurde gemäß den an das OASIS WS-SX Technical Committee übermittelten Fehlerberichten geändert.<br /><br /> [WS-Sx-Nachricht](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Zuverlässiges Messaging-Protokoll, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[Protokoll für zuverlässiges Messaging, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
@@ -111,12 +112,12 @@ Von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird eine Vielzahl v
 -   [Basic Security Profile 1.0 arbeiten Entwurf](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Messagingprotokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL und Richtlinie](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [Sicherheitsprotokolle](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Zuverlässiges Messaging-Protokoll, Version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Zuverlässiges Messaging-Protokoll, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [Protokoll für zuverlässiges Messaging, Version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [Protokoll für zuverlässiges Messaging, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
  [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
  [Kontextaustauschprotokoll](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

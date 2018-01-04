@@ -16,18 +16,19 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dad8fe137cfc495d1edc6936d13830861e1654e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Vorgehensweise: Einen Feed sowohl als Atom als auch als RSS verfügbar machen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Syndication-Feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
   
-1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut gekennzeichnet ist. Jeder Vorgang, der als Syndication-Feed verfügbar gemacht wird, gibt ein <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Objekt zurück. Beachten Sie die Parameter für das <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` gibt die URL an, mit der dieser Dienstvorgang aufgerufen wird. Die Zeichenfolge für diesen Parameter enthält Literale und eine Variable in der geschweiften Klammern ({*Format*}). Diese Variable entspricht dem `format`-Parameter des Dienstvorgangs. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.UriTemplate>. `BodyStyle` wirkt sich darauf aus, wie die Nachrichten, die dieser Dienstvorgang sendet und empfängt, geschrieben werden. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> gibt an, dass die an diesen Dienstvorgang gesendeten und von ihm empfangenen Daten nicht von Infrastruktur-definierten XML-Elementen eingeschlossen werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut gekennzeichnet ist. Jeder Vorgang, der als Syndication-Feed verfügbar gemacht wird, gibt ein <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Objekt zurück. Beachten Sie die Parameter für das <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` gibt die URL an, mit der dieser Dienstvorgang aufgerufen wird. Die Zeichenfolge für diesen Parameter enthält Literale und eine Variable in der geschweiften Klammern ({*Format*}). Diese Variable entspricht dem `format`-Parameter des Dienstvorgangs. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.UriTemplate>. `BodyStyle` wirkt sich darauf aus, wie die Nachrichten, die dieser Dienstvorgang sendet und empfängt, geschrieben werden. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> gibt an, dass die an diesen Dienstvorgang gesendeten und von ihm empfangenen Daten nicht von Infrastruktur-definierten XML-Elementen eingeschlossen werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

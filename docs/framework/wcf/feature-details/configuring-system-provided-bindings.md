@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurieren der vom System bereitgestellten Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Bindungen bestehen aus Elementen, die definieren, wie die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanäle im Protokollstapel zugeordnet werden, um die erforderlichen Kommunikationsfunktionen bereitzustellen. Eine Bindung enthält drei Arten von Elementen:  
@@ -73,7 +74,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Keine<br /><br /> (Transport)|Keine, (Transport)|(Keine), Ja|Ja|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Keine, Nachricht, (Transport), Beide|(Keine)|(Keine), Ja|Nein|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|Keine, Nachricht, (Transport), Gemischt|(Keine)|(Keine)|Ja|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Keine, (Transport)|(Keine)|(Keine), Ja|nicht verfügbar|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Keine, (Transport)|(Keine)|(Keine), Ja|n/v|  
   
  Die in der vorstehenden Tabelle aufgeführten Funktionen werden in der folgenden Tabelle erläutert.  
   

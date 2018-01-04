@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa388328b1fee73aef829a512dcbcadbd3889781
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Erstellen von asynchronen Aktivitäten in WF
 Das <xref:System.Activities.AsyncCodeActivity>-Objekt stellt eine Basisklasse für Aktivitätsautoren bereit, mit der abgeleitete Aktivitäten asynchrone Ausführungslogik implementieren können. Dies ist nützlich bei benutzerdefinierten Aktivitäten, die asynchrone Aufgaben ausführen müssen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die parallel ausgeführt werden, bockiert werden. Dieses Thema enthält eine Übersicht zum Erstellen von benutzerdefinierten asynchronen Aktivitäten mit <xref:System.Activities.AsyncCodeActivity>.  

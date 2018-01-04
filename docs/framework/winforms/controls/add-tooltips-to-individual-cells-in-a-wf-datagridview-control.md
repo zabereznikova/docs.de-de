@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73d12bb38e4929582a8317d8ab3d7b23a7d1f603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms
 Standardmäßig QuickInfos werden zum Anzeigen der Werte von <xref:System.Windows.Forms.DataGridView> Zellen, die zu klein, um den gesamten Inhalt anzuzeigen. Sie können dieses Verhalten jedoch überschreiben, um QuickInfo-Text-Werte für einzelne Zellen festzulegen. Dies ist hilfreich, die Benutzer zusätzliche Informationen zu einer Zelle angezeigt oder eine alternative Beschreibung des Zelleninhalts Benutzer bereitzustellen. Haben eine Zeile, die Statussymbolen anzeigt, sollten Sie erläuterungen zu den Text mithilfe von QuickInfos bereitstellen.  
@@ -46,7 +47,7 @@ Standardmäßig QuickInfos werden zum Anzeigen der Werte von <xref:System.Window
   
 -   Ein <xref:System.Windows.Forms.DataGridView> Steuerelement namens `dataGridView1` , enthält eine Spalte namens `Rating` für die Anzeige von Zeichenfolgenwerten, die von einem bis vier Sternchen ("*") Symbole. Die <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignisses des Steuerelements muss die Ereignishandlermethode, die im Beispiel gezeigte zugeordnet werden.  
   
--   Verweise auf die <xref:System?displayProperty=nameWithType>-Assembly und die <xref:System.Windows.Forms?displayProperty=nameWithType>-Assembly.  
+-   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Beim Binden der <xref:System.Windows.Forms.DataGridView> die Steuerung an eine externe Datenquelle oder eine eigene Datenquelle durch das Implementieren des virtuellen Modus bereitstellen, treten möglicherweise Leistungsprobleme auftreten. Um Leistungseinbußen zu vermeiden, bei der Arbeit mit großen Datenmengen, behandeln die <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> Ereignis statt der Einstellung der <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> Eigenschaft aus mehreren Zellen. Wenn Sie dieses Ereignis behandeln, Abrufen des Werts einer Zelle <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> Eigenschaft löst das-Ereignis aus und gibt den Wert der <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> -Eigenschaft im Ereignishandler angegeben.  

@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf XML basierende Kommunikationsinfrastruktur. Da XML-Daten häufig in im definierten standard-Text-Format codiert ist die [XML 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=94838), verbundene Systeme Entwicklern und Architekten sind in der Regel besorgt Wire Ressourcenbedarf (oder der Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML-dürfen besondere Herausforderung dar, für die effiziente Übertragung binärer Daten.  
@@ -162,7 +163,7 @@ class MyData
  Streaming ist auch beim Peerkanaltransport nicht verfügbar und kann deshalb nicht mit <xref:System.ServiceModel.NetPeerTcpBinding> verwendet werden.  
   
 #### <a name="streaming-and-sessions"></a>Streaming und Sitzungen  
- Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients Streamingaufrufe an dasselbe Dienstobjekt über eine sitzungsbasierte Bindung durchführen und der Parallelitätsmodus des Dienstobjekts auf "single" und sein Instanzkontextmodus auf "PerSession" festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den Instanzkontextmodus des Dienstobjekts auf "PerCall" oder die Parallelität auf "Multiple" festlegen.  
+ Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients Streamingaufrufe an dasselbe Dienstobjekt über eine sitzungsbasierte Bindung durchführen und der Parallelitätsmodus des Dienstobjekts auf „single“ und sein Instanzkontextmodus auf „PerSession“ festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den Instanzkontextmodus des Dienstobjekts auf "PerCall" oder die Parallelität auf "Multiple" festlegen.  
   
 > [!NOTE]
 >  MaxConcurrentSessions hat in diesem Fall keine Auswirkungen, da nur eine "Sitzung" verfügbar ist.  

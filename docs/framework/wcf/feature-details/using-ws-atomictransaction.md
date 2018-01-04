@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12e6e2be3e01ea920b45cce7a27814dd19c00935
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ws-atomictransaction"></a>Verwenden von WS-AtomicTransaction
 WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll. Mit diesem Protokoll können Sie verteilte Transaktionen unter Verwendung von Webdienstnachrichten übergeben und interoperativ zwischen heterogenen Transaktionsinfrastrukturen koordinieren. WS-AT verwendet das Zwei-Phasen-Commitprotokoll, um eine unteilbare Ausgabe zwischen verteilten Anwendungen, Transaktions-Managern und Ressourcen-Managern zu erzielen.  
@@ -36,4 +37,4 @@ WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll. Mit 
  Wenn Server und Client mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geschrieben werden, müssen Sie kein WS-AT verwenden. Sie können stattdessen die Standardeinstellungen von `NetTcpBinding` mit aktiviertem `TransactionFlow`-Attribut verwenden. Dieses nutzt dann stattdessen das `OleTransactions`-Protokoll. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Andernfalls müssen Sie bei der Weitergabe von Transaktionen an Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden, WS-AT verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der WS-AtomicTransaction-Unterstützung](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+ [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

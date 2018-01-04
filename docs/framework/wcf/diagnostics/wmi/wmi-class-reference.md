@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>WMI-Klassenreferenz
 In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] offengelegt werden.  
@@ -42,9 +43,9 @@ In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von 
   
  [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
- [Callbackbehavior definiert](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
+ [CallbackBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
   
- [Kanalklasse](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
+ [Channel-Klasse](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
   
  [ChannelPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
   
@@ -74,13 +75,13 @@ In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von 
   
  [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
- [Msmqbindingelementbase definiert](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
+ [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
  [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   
  [MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
   
- [Mtommessageencodingbindingelement definiert](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
+ [MtomMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
   
  [MustUnderstandBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/mustunderstandbehavior.md)  
   
@@ -128,7 +129,7 @@ In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von 
   
  [ServiceSecurityAuditBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicesecurityauditbehavior.md)  
   
- ["ServiceThrottlingBehavior"](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
+ [ServiceThrottlingBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
   
  [ServiceTimeoutsBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicetimeoutsbehavior.md)  
   
@@ -162,13 +163,13 @@ In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von 
   
  [UseManagedPresentationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/usemanagedpresentationbindingelement.md)  
   
- [Windowsstreamsecuritybindungelement](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
+ [WindowsStreamSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
   
  [WSAT_TraceEvent](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
   
  [WSAT_TraceProvider](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceprovider.md)  
   
- [Wsat_tracerecord definiert](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-tracerecord.md)  
+ [WSAT_TraceRecord](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-tracerecord.md)  
   
  [XmlDictionaryReaderQuotas](../../../../../docs/framework/wcf/diagnostics/wmi/xmldictionaryreaderquotas.md)  
   
