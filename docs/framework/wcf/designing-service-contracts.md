@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
@@ -276,10 +277,10 @@ End Interface
 ##### <a name="names-namespaces-and-obfuscation"></a>Namen, Namespaces und Obfuskation  
  Die Namen und Namespaces der .NET-Typen in der Definition von Verträgen und Vorgängen sind wichtig, wenn Verträge in WSDL konvertiert und wenn Vertragsnachrichten erstellt und gesendet werden. Aus diesem Grund sollten Namen und Namespaces von Verträgen unbedingt explizit mithilfe der `Name`- und der `Namespace`-Eigenschaft aller unterstützenden Vertragsattribute (wie <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> und anderer Vertragsattribute) festgelegt werden.  
   
- Sind die Namen und Namespaces nicht explizit festgelegt, verändert die Verwendung des IL-Verbergens für die Assembly die Namen und Namespaces des Vertragstyps. Dadurch ergeben sich Änderungen beim WSDL- und Übertragungsaustausch, wodurch üblicherweise Fehler auftreten. Wenn Sie die Vertragsnamen und -Namespaces nicht explizit festlegen, aber dennoch das Verbergen verwenden möchten, unterbinden Sie Änderungen an den Namen und Namespaces des Vertragstyps mithilfe des <xref:System.Reflection.ObfuscationAttribute>-Attributs und des <xref:System.Reflection.ObfuscateAssemblyAttribute>-Attributs.  
+ Sind die Namen und Namespaces nicht explizit festgelegt, verändert die Verwendung der IL-Obfuskation für die Assembly die Namen und Namespaces des Vertragstyps. Dadurch ergeben sich Änderungen beim WSDL- und Übertragungsaustausch, wodurch üblicherweise Fehler auftreten. Wenn Sie die Vertragsnamen und -Namespaces nicht explizit festlegen, aber dennoch das Verbergen verwenden möchten, unterbinden Sie Änderungen an den Namen und Namespaces des Vertragstyps mithilfe des <xref:System.Reflection.ObfuscationAttribute>-Attributs und des <xref:System.Reflection.ObfuscateAssemblyAttribute>-Attributs.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen Sie einen Anforderung-Antwort-Vertrag](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
  [Vorgehensweise: Erstellen eines unidirektionalen Vertrags](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
  [Vorgehensweise: Erstellen eines Duplexvertrags](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  

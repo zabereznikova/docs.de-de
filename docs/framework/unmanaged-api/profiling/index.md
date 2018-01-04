@@ -17,17 +17,18 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilerstellung (Referenz zur nicht verwalteten API)
 Die profilerstellungs-API ermöglicht einem Profiler zum Überwachen der Ausführung eines Programms durch die common Language Runtime (CLR).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [Übersicht über die Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
  Beschreibt die Dienste und Schnittstellen, die die CLR, die zur Unterstützung von Profilerstellungstools in der .NET Framework-Umgebung bereitstellt.  
   
  [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
@@ -36,7 +37,7 @@ Die profilerstellungs-API ermöglicht einem Profiler zum Überwachen der Ausfüh
  [Einrichten einer Profilerstellungsumgebung](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
  Beschreibt die Schritte, die Sie ausführen müssen, um eine .NET Framework-Anwendung ein Profil erstellen.  
   
- [CLR-Profiler und den Windows Store-Apps](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
+ [CLR-Profiler und Windows Store-Apps](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
  Erläutert, wie so portieren Sie Diagnosetools, die die CLR Profiling-API wurde erfolgreich mit Windows Store-apps arbeiten zu nutzen.  
   
  [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  

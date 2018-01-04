@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und den Windows Store-Apps
 Dieses Thema bietet eine Übersicht zu bedenken, wenn das Schreiben von Diagnosetools, die Analyse von verwaltetem Code, die innerhalb einer Windows Store-Apps ausgeführt wird.  Darüber hinaus Richtlinien, um Ihre vorhandenen Entwicklungstools zu ändern, sodass bei der Ausführung für Windows Store-apps funktionieren weiterhin.  Um diese Informationen zu verstehen, ist es am besten, wenn Sie mit der Common Language Runtime Profiling-API vertraut sind, Sie bereits diese API in ein Diagnosetool verwendet haben, dass ausgeführt wird, ordnungsgemäß für Windows-desktopanwendungen, und Sie jetzt interessiert sind, ändern Sie das tool für Windows Store-apps ordnungsgemäß ausgeführt wird.  
@@ -413,7 +414,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  Verwalteter XAML-Windows Store-apps stellen jedoch jetzt starke Nutzung von abhängigen Handles.  Insbesondere werden die CLR, die diese unterstützen bei der Verwaltung von Verweis Zyklen zwischen verwalteten Objekten und nicht verwaltete Windows-Runtime-Objekte verwendet.  Dies bedeutet, dass es ist wichtiger als je für Arbeitsspeicher-Profiler dieser abhängigen Ziehpunkte informiert werden, sodass zusammen mit dem Rest des Randes im Heap Diagramm visuell dargestellt werden können.  Der Profiler-DLL zu verwendende [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), und [ConditionalWeakTableElementReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-conditionalweaktableelementreferences-method.md) zusammen, um eine vollständige Ansicht des Diagramms Heap zu bilden. .  
   
 <a name="Conclusion"></a>   
-## <a name="conclusion"></a>Schlussfolgerung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Es ist möglich, die CLR Profiling-API verwenden, um verwalteten Code ausgeführt wird, in Windows Store-apps zu analysieren.  Sie können in der Tat nehmen eine vorhandene Profiler, die Sie entwickeln und einige bestimmten Änderungen vornehmen, damit sie Windows Store-apps Ziel verwendet werden kann.   Die Benutzeroberfläche der Profiler sollte die neuen APIs verwenden, für die Aktivierung von Windows Store-app im Debugmodus.  Stellen Sie sicher, dass die Profiler-DLL nur diese APIs, die für Windows Store-apps nutzt.  Der Kommunikationsmechanismus zwischen Ihrem Profiler-DLL und die Benutzeroberfläche von Profiler sollte mit den Windows Store-app-API-Einschränkungen Bedenken und Bewusstsein für die eingeschränkten Berechtigungen an Ort für Windows Store-apps geschrieben werden.  Der Profiler-DLL wie die CLR WinMDs behandelt, bewusst sein, und wie der Garbage Collector-Verhalten in Bezug auf die verwalteten Threads unterscheidet.  
   
 <a name="Resources"></a>   

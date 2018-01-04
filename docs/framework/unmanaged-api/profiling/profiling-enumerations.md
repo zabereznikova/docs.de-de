@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e0b539c8e455040cc97f37f75476b0efe796abb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84ac67b35bdbf686edb2fa35cc651aad4c19516b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-enumerations"></a>Profilerstellungsenumerationen
 Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profilerstellungs-API verwendet.  
@@ -79,7 +80,7 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Zeigt den Grund für einen Übergang von verwaltetem zu nicht verwaltetem Code an oder umgekehrt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über die profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [Übersicht über die Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   

@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cfe60c221062e3ad7ae1b8cbdc9b135e6fa2e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d54930a29a24dab97ce403c2808fb74b8cbfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|301|  
+|Id|301|  
 |Stichwörter|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Ebene|Fehler|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -39,6 +40,6 @@ ms.lasthandoff: 12/02/2017
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
 |--------------------|--------------------|-----------------|  
-|Name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
+|name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
 |HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ". Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
 |Payload|`xs:string`|Die benutzerdefinierte Nutzlast des Ereignisses.|

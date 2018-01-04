@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be20fa22484cb002792a5bc714f2009fb342f644
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-reference"></a>Ausnahmenreferenz
 In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] generierten Ausnahmen aufgeführt.  
@@ -28,7 +29,7 @@ In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo
   
  [Konfiguration](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Kernkommunikation: Kanalframeworks](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Kernkommunikation: Kanalframework](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
  [Kernkommunikation: Verbindungsframework](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
@@ -44,7 +45,7 @@ In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo
   
  [Kernkommunikation: Hilfsprogramme](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Kernkommunikationen: Webhost-Unterstützung](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Kernkommunikationen: Webhostunterstützung](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Transaktion](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
@@ -54,7 +55,7 @@ In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo
   
  [MSMQ-Integrationstransport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
- [MSMQ-Transport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [MSMQ-Transport.](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   
  [Zuverlässiges Messaging](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
   

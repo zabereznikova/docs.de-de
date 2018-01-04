@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c8b1f3c5b206b2e6a108e784a206d597b69fd662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c746d0f7a6be96f95f1a051e22de0ad1bd2d2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError-Methode
 Benachrichtigt den Profiler, dass der Just-in-Time (JIT)-Compiler einen Fehler bei der Neukompilierung aufgetreten.  
@@ -65,7 +66,7 @@ HRESULT ReJITError(
 |CORPROF_E_MODULE_IS_DYNAMIC|Das angegebene Modul wurde dynamisch generiert (z. B. durch `Reflection.Emit`), und wird daher von dieser Methode nicht unterstützt.|  
 |CORPROF_E_FUNCTION_IS_COLLECTIBLE|Die Methode in einer entladbare Assembly instanziiert wird, und kann daher nicht neu kompiliert werden. Beachten Sie, die von Typen und Funktionen, die in einen Reflektionskontext definiert (z. B. `List<MyCollectibleStruct>`) in einer entladbare Assembly instanziiert werden kann.|  
 |E_OUTOFMEMORY|Die CLR den Puffertypen nicht genügend Arbeitsspeicher auf die angegebene Methode für die JIT-Neukompilierung zu markieren.|  
-|Sonstige|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Beispielsweise wird ein Systemaufruf zum Ändern des Zugriffsschutz einer Seite des Speichers ein Fehler auftritt, der Betriebssystemfehler angezeigt.|  
+|Andere|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Beispielsweise wird ein Systemaufruf zum Ändern des Zugriffsschutz einer Seite des Speichers ein Fehler auftritt, der Betriebssystemfehler angezeigt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

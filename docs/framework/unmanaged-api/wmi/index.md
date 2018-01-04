@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 
@@ -34,9 +35,9 @@ Die API umfasst die folgenden Funktionen:
 | [ConnectServerWmi-Funktion](connectserverwmi.md) | Erstellt eine Verbindung über DCOM mit einem WMI-Namespace auf einem angegebenen Computer an. |
 | [CreateClassEnumWmi-Funktion](createclassenumwmi.md) | Gibt einen Enumerator für alle Klassen, die die angegebenen Auswahlkriterien entsprechen. |
 | [CreateInstanceEnumWmi-Funktion](createinstanceenumwmi.md) | Gibt einen Enumerator, der das bestehen einer bestimmten Klasse, die angegebenen Auswahlkriterien erfüllen zurückgibt. |
-| [Löschen Sie-Funktion](delete.md) | Löscht eine angegebene Eigenschaft aus einer Klassendefinition und aller seiner Qualifizierer an. |
+| [Delete-Funktion](delete.md) | Löscht eine angegebene Eigenschaft aus einer Klassendefinition und aller seiner Qualifizierer an. |
 | [DeleteMethod-Funktion](deletemethod.md) | Löscht eine angegebene Methode aus der Definition einer CIM-Klasse. |
-| ["EndEnumeration"-Funktion](endenumeration.md) | Beendet eine Enumerationsfolge an. | 
+| [EndEnumeration-Funktion](endenumeration.md) | Beendet eine Enumerationsfolge an. | 
 | [EndMethodEnumeration-Funktion](endmethodenumeration.md) | Beendet eine Enumerationsfolge gestartet durch Aufrufen der [BeginMethodEnumeration Funktion](beginmethodenumeration.md). |
 | [ExecNotificationQueryWmi-Funktion](execnotificationquerywmi.md) | Führt eine Abfrage aus, um Ereignisse zu empfangen. |
 | [ExecQueryWmi-Funktion](execquerywmi.md) | Führt eine Abfrage zum Abrufen von Objekten. |
@@ -48,7 +49,7 @@ Die API umfasst die folgenden Funktionen:
 | [GetMethod-Funktion](getmethod.md) | Ruft Informationen über die angegebene Methode ab. | 
 | [GetMethodOrigin-Funktion](getmethodorigin.md) | Bestimmt die Klasse, die in der eine Methode deklariert wird. |
 | [GetMethodQualifierSet-Funktion](getmethodqualifierset.md) | Ruft den Qualifizierer für eine bestimmte Methode festgelegt. |
-| ["GetNames"-Funktion](getnames.md) | Ruft eine Teilmenge oder aller der Namen der Eigenschaften eines Objekts ab. |
+| [GetNames-Funktion](getnames.md) | Ruft eine Teilmenge oder aller der Namen der Eigenschaften eines Objekts ab. |
 | [GetObjectText-Funktion](getobjecttext.md) | Gibt ein Text-Rendering eines Objekts in der MOF-Syntax zurück. | 
 | [GetPropertyHandle-Funktion](getpropertyhandle.md) | Gibt ein eindeutige-Handle, das eine Eigenschaft identifiziert. |
 | [GetPropertyOrigin-Funktion](getpropertyorigin.md) | Bestimmt die Klasse, die in der eine Eigenschaft deklariert wird. |

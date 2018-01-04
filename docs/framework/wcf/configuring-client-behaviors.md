@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-client-behaviors"></a>Konfigurieren von Clientverhalten
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] konfiguriert Verhaltensweisen auf zwei Arten: entweder durch Verweisen auf Verhaltenskonfigurationen &#8211; definiert im `<behavior>`-Abschnitt der Konfigurationsdatei einer Clientanwendung &#8211; oder programmgesteuert in der aufrufenden Anwendung. In diesem Abschnitt werden beide Ansätze beschrieben.  
