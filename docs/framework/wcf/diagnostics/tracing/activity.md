@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382197f2a8d2375903f286dc5aa54ce5dc632bce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity"></a>Aktivität
 In diesem Thema werden Aktivitätsablaufverfolgungen im Ablaufverfolgungsmodell von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] beschrieben. Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
@@ -105,11 +106,11 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Durch den Empfang oder die Verarbeitung einer Nachricht ausgelöste Aktivitäten werden durch Ablaufverfolgungsgrenzen dargestellt.  
   
--   Aktivitäten stellen Aktivitäten dar, nicht notwendigerweise Objekte. Eine Aktivität als interpretiert werden soll "das geschah bei. . . (sinnvolle Ausgabe einer Ablaufverfolgung stattfand)" interpretiert werden.  
+-   Aktivitäten stellen Aktivitäten dar, nicht notwendigerweise Objekte. Eine Aktivität als interpretiert werden soll "das geschah bei. sein. sein. (sinnvolle Ausgabe einer Ablaufverfolgung stattfand)" interpretiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

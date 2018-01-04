@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-list"></a>Liste der Aktivitäten
 In diesem Thema werden alle von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] definierten Aktivitäten aufgeführt.  
@@ -32,7 +33,7 @@ In diesem Thema werden alle von [!INCLUDE[indigo1](../../../../../includes/indig
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Ambient-Aktivität|-/- (wird nicht über ServiceModel gesteuert)|Die Aktivität, deren ID in TLS festgelegt wird, bevor Aufrufe an ServiceModel-Code (client- oder serverseitig) stattfinden.<br /><br /> Beispiel: Eine Aktivität, bei der "open" auf dem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Client oder "serviceHost.open" aufgerufen wird.|  
 |B|Konstrukt<br /><br /> erstellen. Vertragstyp: "[Typ]".|Konstrukt||  
-|A|Öffnen<br /><br /> [ClientBase &#124; ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
+|C|Öffnen<br /><br /> [ClientBase &#124; ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
 |I|Schließen Sie [ClientBase &#124; ChannelFactory]. Vertragstyp: "[Typ]".|Schließen||  
 |M|ServiceHost erstellen. ServiceType: "[Typ]".|Konstrukt||  
 |N|ServiceHost öffnen. ServiceType: "[Typ]".|Öffnen||  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33fb115ea77c255235218f17e643d4173b7bffbf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5dd1ed6572e105d33c1a87d2214cf03795c4f850
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
 ID: 115  
@@ -30,5 +31,5 @@ ID: 115
  Dieses Ereignis gibt an, dass die Ablaufverfolgungsquelle von der Nachrichtenprotokollierung nicht erstellt werden konnte. Das Ereignis führt die Ausnahme, den Prozessnamen und die Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

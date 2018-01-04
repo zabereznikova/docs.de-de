@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>Ablaufverfolgung
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] stellt Anwendungsinstrumentations- und Diagnosedaten für die Fehlerüberwachung und die Analyse bereit. Sie können die Ablaufverfolgung an Stelle eines Debuggers verwenden, um zu erfahren, wie sich eine Anwendung verhält oder warum sie Fehler generiert. Für ein End-to-End-Ereignis können Sie auch Fehler und Verarbeitung über mehrere Komponenten hinweg korrelieren.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  In diesem Abschnitt wird beschrieben, wie Sie Aktivitätsablaufverfolgung und Weitergabe verwenden können, damit eine End-to-End-Korrelation das Debuggen unterstützt.  
   
- [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  In diesem Abschnitt wird beschrieben, wie Sie die Ablaufverfolgung zum Debuggen Ihrer Anwendung verwenden können.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
   
  Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, verfügbar gemacht zu werden, sowie nützliche Tipps zur Verwendung von WebHost.  
   
- [Referenz für ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [Referenz für Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
  In diesem Thema sind alle von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] generierten Ablaufverfolgungen aufgeführt.  
   

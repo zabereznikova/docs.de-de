@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 773644df36767281d168628783fa2da7f49215f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3c7661339a7a1645de30dcd0b1f9fad54dac5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a>System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
 System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction  
@@ -26,6 +27,6 @@ System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransactio
  Complus: Aufrufen der Methode mit der Transaktion im COM+-Kontext.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

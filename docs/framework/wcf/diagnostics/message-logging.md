@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-logging"></a>Nachrichtenprotokollierung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht das Protokollieren eingehender und ausgehender Nachrichten, um diese offline zu verwenden. Bei der Nachrichtenprotokollierung können Sie die Nachricht und den Nachrichtentext sehen. Diese Art der Protokollierung ist besonders hilfreich, um zu sehen, welche Argumente übergeben und wie diese vom empfangenden Endpunkt als XML empfangen wurden. Indem Sie die Nachricht protokollieren, wie sie empfangen wurde, können Sie außerdem falsch formatierte Nachrichten erkennen und sehen, wie die Nachricht empfangen wurde. Außerdem können Sie die verwendeten Sicherheitstoken, verschlüsselte und signierte Nachrichtenteile sowie unveränderte Nachrichtenteile untersuchen.  

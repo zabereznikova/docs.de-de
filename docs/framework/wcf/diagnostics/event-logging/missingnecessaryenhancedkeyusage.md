@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1e1b57a1b5a4dfc29a1c6ee4eee7fb1ffc8f72f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40fbc768f060dc7f3d602ab625d3e71808868346
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a>MissingNecessaryEnhancedKeyUsage
 ID: 157  
@@ -30,5 +31,5 @@ ID: 157
  Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck nicht die spezifischen Daten unter seinen erweiterten Schlüsselverwendungen bereitstellt. Das Ereignis führt den Prozessnamen und die Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

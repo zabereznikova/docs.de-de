@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>End-to-End-Ablaufverfolgung
 Die End-to-End (e2e)-Ablaufverfolgung ermöglicht Entwicklern das Nachverfolgen der Ausführung von Code in der [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Infrastruktur, um zu ermitteln, warum bei einem Codepfad ein Fehler aufgetreten ist, oder um eine ausführliche Ablaufverfolgung zur Kapazitätsplanung und Leistungsanalyse bereitzustellen. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] verfügt über drei Korrelationsmechanismen zum Ermitteln von Fehlerursachen: Aktivitäten, Übertragungen und Weitergabe.  
@@ -38,5 +39,5 @@ Die End-to-End (e2e)-Ablaufverfolgung ermöglicht Entwicklern das Nachverfolgen 
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

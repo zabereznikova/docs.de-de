@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a796ba8759d90d815c599fcbd2974fd9f315cae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 307338ce3f8b68b227bc264cc92b40a0bdb7c412
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failedtoloadperformancecounter"></a>FailedToLoadPerformanceCounter
 ID: 118  
@@ -30,5 +31,5 @@ ID: 118
  Dieses Ereignis gibt an, dass kein Leistungsindikator geladen wurde. Das Ereignis listet die Elemente Kategoriename, Indikatorname, Instanzname, Ausnahme, Prozessname und Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

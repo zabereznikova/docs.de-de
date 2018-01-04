@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eee340eb1134fc9e8e0a4b1e1d4885fbea9ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06a622cd602738b5a2bcf1332e1abd41a1097b49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolrecoverybeginningfailure"></a>ProtocolRecoveryBeginningFailure
 ID: 144  
@@ -27,8 +28,8 @@ ID: 144
  Kategorie: TransactionBridge  
   
 ## <a name="description"></a>Beschreibung  
- Dieses Ereignis gibt an, dass das MSDTC WS-Atomic Transaction-Protokoll beim Start der Wiederherstellung fehlgeschlagen ist. Aus diesem Grund ist die WS-Atomic Transaction-Funktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf.  
+ Dieses Ereignis gibt an, dass das MSDTC WS-Atomic-Transaktionsprotokoll beim Start der Wiederherstellung fehlgeschlagen ist. Aus diesem Grund ist die WS-Atomic-Transaktionsfunktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

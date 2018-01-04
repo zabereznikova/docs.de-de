@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bc3b784dca090ed768711728a054782e06c7b10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d391d7bb8276f4b20d831acd59aa8a78db38995c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="220---messagesenttotransport"></a>220 - MessageSentToTransport
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|220|  
+|Id|220|  
 |Stichwörter|EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  

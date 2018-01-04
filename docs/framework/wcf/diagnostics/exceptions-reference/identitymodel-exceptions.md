@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f38d09ef9b1ee2e620b42082a05c6832eec7c746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel-Ausnahmen
 In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generiert werden.  
@@ -77,7 +78,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |TraceCodeSecurityTokenProviderOpened|Sicherheitstokenanbieter wurde geöffnet.|  
 |PublicKeyNotRSA|Der öffentliche Schlüssel ist kein RSA-Schlüssel.|  
 |InvalidReaderState|Dieser bestimmte Zustand ist für den angegebenen Eingabeleser ungültig.|  
-|UnableToResolveReferenceUriForSignature|Unfähig, den bestimmten URI in der Signatur aufzulösen, um den Digest zu berechnen.|  
+|UnableToResolveReferenceUriForSignature|Unfähig, den bestimmten URI in der Signatur aufzulösen, um den Hashwert zu berechnen.|  
 |EmptyBase64Attribute|Für den erforderlichen base64-Attributnamen und den Namespace wurde ein leerer Wert gefunden.|  
 |SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|Die SAML SubjectConfirmation erfordert eine Bestätigungsmethode, wenn die Bestätigungsdaten oder KeyInfo angegeben werden.|  
 |SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|Die gelesene SamlAudienceRestrictionCondition muss wenigstens einen "Audience"-Wert enthalten. Es wurde keiner gefunden.|  
@@ -94,7 +95,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124; " Größe ' liegt außerhalb des gültigen Bereichs. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Der Sicherheitstoken-Manager kann keinen Tokenauthentifizierer für diese bestimmte Anforderung erstellen.|  
 |UnableToCreateKeyedHashAlgorithm|Unfähig, einen KeyedHashAlgorithm aus dem bestimmten Wert für den bestimmten Signaturalgorithmus zu erstellen.|  
 |SAMLUnableToLoadAssertion|Die \<Saml:assertion > Element konnte nicht geladen.|  
-|X509FindValueMismatchMulti|Dieser bestimmte X509FindType erfordert, dass der Typ des Arguments findValue einen von 2 Werten annimmt. Das Argument "findValue" ist ein anderer Typ.|  
+|X509FindValueMismatchMulti|Dieser bestimmte X509FindType erfordert, dass der Typ des Arguments findValue einen von 2 Werten annimmt. Das Argument „findValue“ ist ein anderer Typ.|  
 |TraceCodeSecurityIdentityDeterminationSuccess|Identität wurde für eine EndpointAddress bestimmt.|  
 |UndefinedUseOfPrefixAtElement|Dieses bestimmte Präfix, das beim Element verwendet wird, verfügt über keinen definierten Namespace.|  
 |TraceCodeSecuritySessionResponderOperationFailure|Der Sicherheitssitzungsvorgang am Server ist fehlgeschlagen.|  
@@ -204,7 +205,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|Der erforderliche "NameIdentifier" und die "ConfirmationMethod"-Elemente können für das gelesene SamlSubject nicht gefunden werden.|  
 |TraceCodeSecurityAuditWrittenFailure|Beim Schreiben ins Sicherheitsüberwachungsprotokoll ist ein Fehler aufgetreten.|  
 |UnsupportedCryptoAlgorithm|Der angegebene crypto-Algorithmus wird in diesem Kontext nicht unterstützt.|  
-|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|Das Signiertoken verfügt über keinen Schlüssel, der die angegebene Algorithmussuite unterstützt.|  
+|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|Das Signiertoken verfügt über keinen Schlüssel, der die angegebene Algorithmussammlung unterstützt.|  
 |SAMLNameIdentifierMissingIdentifierValueOnRead|Die für SamlIdentifier gelesene Zeichenkette "Identifier" fehlt.|  
 |SAMLSubjectStatementRequiresSubject|Die SAML-Subjektanweisung erfordert einen angegebenen SAML-Betreff.|  
 |TraceCodeSslClientCertMissing|Der SSL-Remoteclient hat ein erforderliches Zertifikat nicht bereitgestellt.|  
@@ -256,9 +257,9 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SettingdMayBeModifiedOnlyWhenTheWriterIsInStartState|Die Writer-Einstellungen dürfen nur geändert werden, wenn der Writer im Start-Zustand ist.|  
 |ArgumentInvalidCertificate|Das Zertifikat ist ungültig.|  
 |DigestVerificationFailedForReference|Digestüberprüfung für den angegebenen Verweis ist fehlgeschlagen.|  
-|SAMLAuthorityBindingRequiresBinding|Das auf der SamlAuthorityBinding angegebene Attribut "Binding" darf nicht NULL sein oder die Länge 0 (null) haben.|  
+|SAMLAuthorityBindingRequiresBinding|Das auf der SamlAuthorityBinding angegebene Attribut „Binding“ darf nicht NULL sein oder die Länge 0 (null) haben.|  
 |AESInsufficientOutputBuffer|Der Ausgabepuffer muss größer als die angegebene Bytezahl sein.|  
-|SAMLAuthorityBindingMissingBindingOnRead|Das für eine SamlAuthorityBinding gelesene Attribut "Binding" fehlt oder hat die Länge 0 (null).|  
+|SAMLAuthorityBindingMissingBindingOnRead|Das für eine SamlAuthorityBinding gelesene Attribut „Binding“ fehlt oder hat die Länge 0 (null).|  
 |SAMLAuthorityBindingInvalidAuthorityKind|Die SamlAuthorityBinding, die gelesen wird, besitzt eine ungültige AuthorityKind. Das Format von AuthorityKind muss ein QName sein.|  
 |ProvidedNetworkCredentialsForKerberosHasInvalidUserName|Die für das Kerberos-Token angegebenen NetworkCredentials besitzen keinen gültigen Benutzernamen.|  
 |SSPIPackageNotSupported|Das angegebene SSPI-Paket wird nicht unterstützt.|  

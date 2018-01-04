@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8cbf27ae76d562b2d68eb51557550621ec468327
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44d06fbbf4340b5a1b8504be681b57bc958c4b83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmiunregistrationfailed"></a>WmiUnregistrationFailed
 ID: 127  
@@ -27,8 +28,8 @@ ID: 127
  Kategorie: ServiceModel  
   
 ## <a name="description"></a>Beschreibung  
- Dieses Ereignis gibt an, dass die Registrierung des WMI-Anbieter nicht aufgehoben wurde. Das Ereignis listet das WMI-Objekt, den Fehler, den Prozessnamen und die Prozess-ID auf.  
+ Dieses Ereignis gibt an, dass die Registrierung des WMI-Anbieters nicht aufgehoben wurde. Das Ereignis listet das WMI-Objekt, den Fehler, den Prozessnamen und die Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

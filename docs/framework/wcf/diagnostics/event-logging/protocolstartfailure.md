@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85a7b8fdceca4211e3eb0ca303f9d41355cb272f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02ac57306fcb518456d33b27101566bcd14415c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolstartfailure"></a>ProtocolStartFailure
 ID: 143  
@@ -27,8 +28,8 @@ ID: 143
  Kategorie: TransactionBridge  
   
 ## <a name="description"></a>Beschreibung  
- Dieses Ereignis gibt an, dass der WS-Atomic Transaction-Protokolldienst nicht gestartet werden konnte. Aus diesem Grund ist die WS-Atomic-Transaktionsfunktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf. .  
+ Dieses Ereignis gibt an, dass der WS-Atomic Transaction-Protokolldienst nicht gestartet werden konnte. Aus diesem Grund ist die WS-Atomic-Transaktionsfunktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf. sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

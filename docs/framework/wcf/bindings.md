@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation-Bindungen
 Bindungen bestimmen, wie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstendpunkt mit anderen Endpunkten kommuniziert. Eine Bindung muss grundsätzlich erst einmal den zu verwendenden Transportweg festlegen (z. B. HTTP oder TCP). Sie können jedoch auch andere Merkmale wie Sicherheit und Transaktionssupport über Bindungen festlegen.  

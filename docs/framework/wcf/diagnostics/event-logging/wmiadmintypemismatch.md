@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcb0d2d7a312e0a2734fb3b3fbb5a1cc9e1f2297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ffc7c2d524347281bfceaf90ba3fa2f56e9ca994
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmiadmintypemismatch"></a>WmiAdminTypeMismatch
 ID: 128  
@@ -30,5 +31,5 @@ ID: 128
  Dieses Ereignis gibt an, dass ein Typenkonflikt aufgetreten ist. Die angegebene Eigenschaft der CIM-Klasse kann den Wert des angegebenen Typs nicht annehmen. Das Ereignis führt den Prozessnamen und die Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

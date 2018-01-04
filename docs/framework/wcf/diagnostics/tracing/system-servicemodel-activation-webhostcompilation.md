@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 681cc27e1b4b3821260d013525b5190dedbef43b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f6d782fb78730fcbb82eeded8c9e556e29dce9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationwebhostcompilation"></a>System.ServiceModel.Activation.WebHostCompilation
 System.ServiceModel.Activation.WebHostCompilation  
@@ -26,6 +27,6 @@ System.ServiceModel.Activation.WebHostCompilation
  Tritt auf, wenn ein von Internet Information Service (IIS) oder Windows Process Activation Service (WAS) gehosteter Dienst aus Inlinecode kompiliert wird, der sich in der .svc-Datei befindet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

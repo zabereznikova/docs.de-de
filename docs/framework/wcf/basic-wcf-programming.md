@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>Basis-WCF-Programmierung
 Dieser Abschnitt präsentiert die Grundlagen zum Erstellen von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen.  
@@ -77,4 +78,4 @@ Dieser Abschnitt präsentiert die Grundlagen zum Erstellen von [!INCLUDE[indigo1
   
  [IIS-Hosting mithilfe von Inlinecode](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
- [Selbsthosting](../../../docs/framework/wcf/samples/self-host.md)
+ [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)

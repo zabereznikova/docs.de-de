@@ -14,18 +14,19 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 616751adfd14e2f07de764b37d684ecdc276847b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
 In der folgenden Tabelle werden die Ereignisebenen, Bezeichner und Nachrichten definiert, die der analytischen Ablaufverfolgung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zugeordnet sind.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
-|Ereignis-ID|Ereignisgrad|Ereignismeldung|Schlüsselwörter|  
+|Ereignis-ID|Ereignisgrad|Ereignismeldung|Stichwörter|  
 |--------------|-----------------|-------------------|--------------|  
 |[131 - BufferPoolAllocation](../../../../../docs/framework/wcf/diagnostics/etw/131-bufferpoolallocation.md)|Ausführlich|Poolreservierung %1 Bytes.|Infrastruktur|  
 |[132 - BufferPoolChangeQuota](../../../../../docs/framework/wcf/diagnostics/etw/132-bufferpoolchangequota.md)|Ausführlich|BufferPool der Größe %1, Kontingent wird um %2 geändert.|Infrastruktur|  
@@ -59,7 +60,7 @@ In der folgenden Tabelle werden die Ereignisebenen, Bezeichner und Nachrichten d
 |[301 - UserDefinedErrorOccurred](../../../../../docs/framework/wcf/diagnostics/etw/301-userdefinederroroccurred.md)|Fehler|Name: '%1', Verweis: '%2', Nutzlast: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |[302 - UserDefinedWarningOccurred](../../../../../docs/framework/wcf/diagnostics/etw/302-userdefinedwarningoccurred.md)|Warnung|Name: '%1', Verweis: '%2', Nutzlast: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |[303 - UserDefinedInformationEventOccured](../../../../../docs/framework/wcf/diagnostics/etw/303-userdefinedinformationeventoccured.md)|Information|Name: '%1', Verweis: '%2', Nutzlast: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
-|[401 - StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung|  
+|[401- StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung|  
 |[402 - StartSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/402-startsignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung|  
 |[403 - SuspendSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/403-suspendsignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung|  
 |[404 - ResumeSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/404-resumesignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung|  
@@ -99,14 +100,14 @@ In der folgenden Tabelle werden die Ereignisebenen, Bezeichner und Nachrichten d
 |[716 - ClientChannelOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/716-clientchannelopenstop.md)|Information|Öffnen von ServiceChannel anhalten.|ServiceModel|  
 |[717 - HttpSendStreamedMessageStart](../../../../../docs/framework/wcf/diagnostics/etw/717-httpsendstreamedmessagestart.md)|Information|HTTP-Sendevorgang für die gestreamte Nachricht wurde gestartet.|HTTP|  
 |[1400 - ChannelInitializationTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1400-channelinitializationtimeout.md)|Fehler|1%|ServiceModel|  
-|[1401 - "CloseTimeout"](../../../../../docs/framework/wcf/diagnostics/etw/1401-closetimeout.md)|Fehler|1%|ServiceModel|  
+|[1401 - CloseTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1401-closetimeout.md)|Fehler|1%|ServiceModel|  
 |[1402 - IdleTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1402-idletimeout.md)|Fehler|%1 Verbindungspoolschlüssel: %2|ServiceModel|  
 |[1403 - LeaseTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1403-leasetimeout.md)|Information|%1 Verbindungspoolschlüssel: %2|ServiceModel|  
-|[1405 - "opentimeout"](../../../../../docs/framework/wcf/diagnostics/etw/1405-opentimeout.md)|Fehler|%1|ServiceModel|  
+|[1405 - OpenTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1405-opentimeout.md)|Fehler|%1|ServiceModel|  
 |[1406 - ReceiveTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1406-receivetimeout.md)|Fehler|%1|ServiceModel|  
 |[1407 - SendTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1407-sendtimeout.md)|Fehler|%1|ServiceModel|  
-|[1409 - Zeitlimit für Inaktivität](../../../../../docs/framework/wcf/diagnostics/etw/1409-inactivitytimeout.md)|Information|%1|ServiceModel|  
-|[1416 fest - MaxReceivedMessageSizeExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1416-maxreceivedmessagesizeexceeded.md)|Fehler|%1|Kontingent|  
+|[1409 - InactivityTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1409-inactivitytimeout.md)|Information|%1|ServiceModel|  
+|[1416 - MaxReceivedMessageSizeExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1416-maxreceivedmessagesizeexceeded.md)|Fehler|%1|Kontingent|  
 |[1417 - MaxSentMessageSizeExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1417-maxsentmessagesizeexceeded.md)|Fehler|%1|Kontingent|  
 |[1418 - MaxOutboundConnectionsPerEndpointExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1418-maxoutboundconnectionsperendpointexceeded.md)|Information|%1|Kontingent|  
 |[1419 - MaxPendingConnectionsExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1419-maxpendingconnectionsexceeded.md)|Information|%1|Kontingent|  
@@ -191,7 +192,7 @@ In der folgenden Tabelle werden die Ereignisebenen, Bezeichner und Nachrichten d
 |[3366 - SharedListenerProxyRegisterFailed](../../../../../docs/framework/wcf/diagnostics/etw/3366-sharedlistenerproxyregisterfailed.md)|Fehler|Fehler beim Registrieren von SharedListenerProxy mit Status "%1".|ActivationServices|  
 |[3367 - ConnectionPoolPreambleFailed](../../../../../docs/framework/wcf/diagnostics/etw/3367-connectionpoolpreamblefailed.md)|Fehler|ConnectionPoolPreambleFailed.|Kanal|  
 |[3368 - SslOnInitiateUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3368-ssloninitiateupgrade.md)|Ausführlich|SslOnAcceptUpgradeStart|Sicherheit|  
-|[3369 - von sslonacceptupgrade ausgegeben](../../../../../docs/framework/wcf/diagnostics/etw/3369-sslonacceptupgrade.md)|Ausführlich|SslOnAcceptUpgradeStop|Sicherheit|  
+|[3369 - SslOnAcceptUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3369-sslonacceptupgrade.md)|Ausführlich|SslOnAcceptUpgradeStop|Sicherheit|  
 |[3370 - BinaryMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3370-binarymessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Kanal|  
 |[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von MtomMessageEncoder gestartet.|Kanal|  
 |[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von TextMessageEncoder gestartet.|Kanal|  
@@ -368,15 +369,15 @@ In der folgenden Tabelle werden die Ereignisebenen, Bezeichner und Nachrichten d
 |[5605 - SessionCookieReadingSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5605-sessioncookiereadingsuccess.md)|Ausführlich|Lesen des Sitzungstokens aus dem Sitzungscookie erfolgreich.|Sicherheit|  
 |[5606 - PrincipalSettingFromSessionTokenStarted](../../../../../docs/framework/wcf/diagnostics/etw/5606-principalsettingfromsessiontokenstarted.md)|Ausführlich|Prinzipaleinstellung aus dem Sitzungstoken gestartet.|Sicherheit|  
 |[5607 - PrincipalSettingFromSessionTokenSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5607-principalsettingfromsessiontokensuccess.md)|Ausführlich|Prinzipaleinstellung aus dem Sitzungstoken erfolgreich.|Sicherheit|  
-|[57393 - appDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Information|AppDomain wird entladen. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|Infrastruktur|  
+|[57393 - AppDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Information|AppDomain wird entladen. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|Infrastruktur|  
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|Information|Eine Ausnahme wird verarbeitet.|Infrastruktur|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Fehler|Unerwarteter Fehler. Anwendungen sollten diesen Fehler nicht behandeln. Zu Diagnosezwecken ist diesem Fehler die folgende englischsprachige Meldung zugewiesen: %1.|Infrastruktur|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|Warnung|Eine Ausnahme wird ausgelöst. Quelle: %1.|Infrastruktur|  
 |[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|Kritisch|Ausnahmefehler.|Infrastruktur|  
 |[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|Kritisch|Wurde in EventLog geschrieben.|Infrastruktur|  
-|[57400 - einem TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Fehler|Wurde in EventLog geschrieben.|Infrastruktur|  
-|[57401 - einer TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|Information|Wurde in EventLog geschrieben.|Infrastruktur|  
-|[57402 - einem TraceCodeEventLogVerbose](../../../../../docs/framework/wcf/diagnostics/etw/57402-tracecodeeventlogverbose.md)|Ausführlich|Wurde in EventLog geschrieben.|Infrastruktur|  
-|[57403 - einem TraceCodeEventLogWarning](../../../../../docs/framework/wcf/diagnostics/etw/57403-tracecodeeventlogwarning.md)|Warnung|Wurde in EventLog geschrieben.|Infrastruktur|  
+|[57400 - TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Fehler|Wurde in EventLog geschrieben.|Infrastruktur|  
+|[57401 - TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|Information|Wurde in EventLog geschrieben.|Infrastruktur|  
+|[57402 - TraceCodeEventLogVerbose](../../../../../docs/framework/wcf/diagnostics/etw/57402-tracecodeeventlogverbose.md)|Ausführlich|Wurde in EventLog geschrieben.|Infrastruktur|  
+|[57403 - TraceCodeEventLogWarning](../../../../../docs/framework/wcf/diagnostics/etw/57403-tracecodeeventlogwarning.md)|Warnung|Wurde in EventLog geschrieben.|Infrastruktur|  
 |[57404 - HandledExceptionWarning](../../../../../docs/framework/wcf/diagnostics/etw/57404-handledexceptionwarning.md)|Warnung|Eine Ausnahme wird verarbeitet.|Infrastruktur|  
 |[62326 - HttpHandlerPickedForUrl](../../../../../docs/framework/wcf/diagnostics/etw/62326-httphandlerpickedforurl.md)|Information|Die URL '%1' hostet ein XAML-Dokument mit Stammelementtyp '%2'. Der HTTP-Handlertyp '%3' wurde zum Verarbeiten aller Anforderungen an diese URL ausgewählt.|WebHost|

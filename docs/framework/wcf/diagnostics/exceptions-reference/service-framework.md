@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>Dienstframework
 In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgeführt.  
@@ -169,6 +170,6 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |SFxUserCodeThrewException|Der angegebene Benutzervorgang hat eine Ausnahme ausgelöst, die im Benutzercode nicht behandelt wird. Wenn dieses Problem wiederholt auftritt, kann dies auf einen Fehler in der Implementierung der angegebenen Methode hinweisen.|  
 |SfxUseTypedMessageForCustomAttributes|Der angegebene Parameter kann dem Vorgangsparameter nicht zugeordnet werden, da zusätzliche Attribute erforderlich sind.|  
 |SFxVersionMismatchInOperationContextAndMessage2|Der Nachricht können keine ausgehenden Header hinzugefügt werden, da MessageVersion in OperationContext.Current nicht mit der Headerversion der verarbeiteten Nachricht übereinstimmt.|  
-|SFxWellKnownNonSingleton0|Um einen der ServiceHost-Konstruktoren zu verwenden, der eine Dienstinstanz annimmt, muss der InstanceContextMode des Diensts auf InstanceContextMode.Single festgelegt sein. Dies kann über das ServiceBehaviorAttribute konfiguriert werden. Andernfalls sollten Sie erwägen, die ServiceHost-Konstruktoren zu verwenden, die ein Type-Argument annehmen.|  
+|SFxWellKnownNonSingleton0|Um einen der ServiceHost-Konstruktoren zu verwenden, der eine Dienstinstanz annimmt, muss der InstanceContextMode des Diensts auf InstanceContextMode.Single festgelegt sein. Dies kann über das ServiceBehaviorAttribute konfiguriert werden. Andernfalls sollten Sie erwägen, die ServiceHost-Konstruktoren zu verwenden, die ein Typargument annehmen.|  
 |SFxWrapperTypeHasMultipleNamespaces|Der Wrappertyp für die angegebene Nachricht kann nicht als Datenvertragstyp projiziert werden, da er mehrere Namespaces aufweist. Verwenden Sie den XmlSerializer.|  
 |UriMustBeAbsolute|Der URI muss absolut sein.|

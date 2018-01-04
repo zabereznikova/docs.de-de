@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0c1d3a58f59f9a45583bf5f0b5c70fe2e7ea446
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2eae5a3019b77ace6b67d7487d621a47439534e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsconnectionpoolmaxoutboundconnectionsperendpointquotareached"></a>System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached
 System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached  
@@ -26,6 +27,6 @@ System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuot
  MaxOutboundConnectionsPerEndpoint-Kontingent wurde erreicht, daher wurde die Verbindung beendet und nicht in diesem Verbindungspool gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

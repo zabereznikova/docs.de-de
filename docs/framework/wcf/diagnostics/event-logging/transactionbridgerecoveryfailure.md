@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d60d6061a8b6af00b38922dfbc3c1f2e1a1dcf0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 03eed22efe7c0c81faaa24239384e84427e7996d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionbridgerecoveryfailure"></a>TransactionBridgeRecoveryFailure
 ID: 146  
@@ -27,8 +28,8 @@ ID: 146
  Kategorie: TransactionBridge  
   
 ## <a name="description"></a>Beschreibung  
- Dieses Ereignis gibt an, dass MSDTC TransactionBridge bei der Wiederherstellung fehlgeschlagen ist. Hierbei handelt es sich um einen schwerwiegenden Fehler. Der MSDTC wurde beendet. Das Ereignis führt die Ausnahme, den Prozessnamen und die Prozess-ID auf. .  
+ Dieses Ereignis gibt an, dass MSDTC TransactionBridge bei der Wiederherstellung fehlgeschlagen ist. Hierbei handelt es sich um einen schwerwiegenden Fehler. Der MSDTC wurde beendet. Das Ereignis führt die Ausnahme, den Prozessnamen und die Prozess-ID auf. sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c39a60d3b34ca1b5c219d12bda4af5217f389f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a4074920d3ca616498c14511bf39763d7d87ed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 Projekte für Portable Teilmengen ermöglichen es Programmierern .NET-Assemblys, eine einzelne Quellstruktur zu verwalten und das System mit Unterstützung mehrerer .NET-Implementierungen (Desktop, Silverlight, Windows Phone und XBOX) aufzubauen. Projekte für Portable Teilmengen verweisen nur portable .NET-Bibliotheken, die einer .NET Framework-Assembly sind, die für die Implementierung einer .NET verwendet werden kann.  

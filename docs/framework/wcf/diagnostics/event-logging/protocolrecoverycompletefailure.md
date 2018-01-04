@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f163851dd0baf374817c202c1370fff9cc64d0d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb53fd68d0b62bdc86831b62f6b38329467c0c27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolrecoverycompletefailure"></a>ProtocolRecoveryCompleteFailure
 ID: 145  
@@ -27,8 +28,8 @@ ID: 145
  Kategorie: TransactionBridge  
   
 ## <a name="description"></a>Beschreibung  
- Dieses Ereignis gibt an, dass der WS-Atomic Transaction-Protokolldienst nicht gestartet und wiederhergestellt werden konnte. Aus diesem Grund ist die WS-Atomic Transaction-Funktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf.  
+ Dieses Ereignis gibt an, dass der WS-Atomic-Transaktionsprotokolldienst nicht gestartet und wiederhergestellt werden konnte. Aus diesem Grund ist die WS-Atomic-Transaktionsfunktionalität deaktiviert. Das Ereignis führt die Protokoll-ID, den Protokollnamen, die Ausnahme, den Prozessnamen und Prozess-ID auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollierung von Komponentenereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
