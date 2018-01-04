@@ -17,17 +17,18 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="e1e4d-102">Übersicht über Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="e1e4d-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="e1e4d-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e1e4d-103">In This Section</span></span>  
- [<span data-ttu-id="e1e4d-104">Erste Schritte mit Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="e1e4d-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [<span data-ttu-id="e1e4d-105">Erfassen von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="e1e4d-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [<span data-ttu-id="e1e4d-106">Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="e1e4d-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [<span data-ttu-id="e1e4d-107">Speichern von Eingabehilfen</span><span class="sxs-lookup"><span data-stu-id="e1e4d-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [<span data-ttu-id="e1e4d-108">Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF</span><span class="sxs-lookup"><span data-stu-id="e1e4d-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="e1e4d-109">Erweiterte Behandlung von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="e1e4d-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="b6213-102">Übersicht über Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="b6213-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="b6213-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b6213-103">In This Section</span></span>  
+ [<span data-ttu-id="b6213-104">Erste Schritte mit Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="b6213-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
+  [<span data-ttu-id="b6213-105">Erfassen von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="b6213-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+  [<span data-ttu-id="b6213-106">Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="b6213-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+  [<span data-ttu-id="b6213-107">Speichern von Eingabehilfen</span><span class="sxs-lookup"><span data-stu-id="b6213-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
+  [<span data-ttu-id="b6213-108">Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF</span><span class="sxs-lookup"><span data-stu-id="b6213-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="b6213-109">Erweiterte Behandlung von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="b6213-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
