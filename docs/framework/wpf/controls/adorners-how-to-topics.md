@@ -15,23 +15,24 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 328ecec80670e112019364d6749c4c54a58ddf48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f9c38e8cb466963d229b96e21f8149b7a4afaa7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="adorners-how-to-topics"></a><span data-ttu-id="8e0bf-102">Gewusst-wie-Themen zu Adorner</span><span class="sxs-lookup"><span data-stu-id="8e0bf-102">Adorners How-to Topics</span></span>
-<span data-ttu-id="8e0bf-103">In den folgenden Beispielen wird gezeigt, wie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adornerframework.</span><span class="sxs-lookup"><span data-stu-id="8e0bf-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
+# <a name="adorners-how-to-topics"></a><span data-ttu-id="4f103-102">Gewusst-wie-Themen zu Adorner</span><span class="sxs-lookup"><span data-stu-id="4f103-102">Adorners How-to Topics</span></span>
+<span data-ttu-id="4f103-103">In den folgenden Beispielen wird gezeigt, wie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adornerframework.</span><span class="sxs-lookup"><span data-stu-id="4f103-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8e0bf-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8e0bf-104">In This Section</span></span>  
- [<span data-ttu-id="8e0bf-105">Implementieren eines Adorners</span><span class="sxs-lookup"><span data-stu-id="8e0bf-105">Implement an Adorner</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [<span data-ttu-id="8e0bf-106">Binden eines Adorners an ein Element</span><span class="sxs-lookup"><span data-stu-id="8e0bf-106">Bind an Adorner to an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [<span data-ttu-id="8e0bf-107">Verzieren der untergeordneten Elemente eines Bereichs</span><span class="sxs-lookup"><span data-stu-id="8e0bf-107">Adorn the Children of a Panel</span></span>](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [<span data-ttu-id="8e0bf-108">Entfernen eines Adorners aus einem Element</span><span class="sxs-lookup"><span data-stu-id="8e0bf-108">Remove an Adorner from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [<span data-ttu-id="8e0bf-109">Entfernen aller Adorner aus einem Element</span><span class="sxs-lookup"><span data-stu-id="8e0bf-109">Remove all Adorners from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4f103-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4f103-104">In This Section</span></span>  
+ [<span data-ttu-id="4f103-105">Implementieren eines Adorners</span><span class="sxs-lookup"><span data-stu-id="4f103-105">Implement an Adorner</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
+ [<span data-ttu-id="4f103-106">Binden eines Adorners an ein Element</span><span class="sxs-lookup"><span data-stu-id="4f103-106">Bind an Adorner to an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
+ [<span data-ttu-id="4f103-107">Verzieren der untergeordneten Elemente eines Bereichs</span><span class="sxs-lookup"><span data-stu-id="4f103-107">Adorn the Children of a Panel</span></span>](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
+ [<span data-ttu-id="4f103-108">Entfernen eines Adorners aus einem Element</span><span class="sxs-lookup"><span data-stu-id="4f103-108">Remove an Adorner from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
+ [<span data-ttu-id="4f103-109">Entfernen aller Adorner aus einem Element</span><span class="sxs-lookup"><span data-stu-id="4f103-109">Remove all Adorners from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="8e0bf-110">Verweis</span><span class="sxs-lookup"><span data-stu-id="8e0bf-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4f103-110">Verweis</span><span class="sxs-lookup"><span data-stu-id="4f103-110">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -42,4 +43,4 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="8e0bf-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="8e0bf-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="4f103-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4f103-111">Related Sections</span></span>

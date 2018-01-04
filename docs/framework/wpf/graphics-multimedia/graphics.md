@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="3b441-102">Grafik</span><span class="sxs-lookup"><span data-stu-id="3b441-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="3b441-103">bietet integrierte Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhalt vergleichen, die Dies erleichtert, Entwicklern das Erstellen von interessante Benutzeroberflächen und Inhalt.</span><span class="sxs-lookup"><span data-stu-id="3b441-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="b6824-102">Grafik</span><span class="sxs-lookup"><span data-stu-id="b6824-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b6824-103">bietet integrierte Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhalt vergleichen, die Dies erleichtert, Entwicklern das Erstellen von interessante Benutzeroberflächen und Inhalt.</span><span class="sxs-lookup"><span data-stu-id="b6824-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b441-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3b441-104">In This Section</span></span>  
- [<span data-ttu-id="3b441-105">Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="3b441-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="3b441-106">Pinsel</span><span class="sxs-lookup"><span data-stu-id="3b441-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="3b441-107">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="3b441-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="3b441-108">Geometrien</span><span class="sxs-lookup"><span data-stu-id="3b441-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="3b441-109">Bilder</span><span class="sxs-lookup"><span data-stu-id="3b441-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="3b441-110">Formen</span><span class="sxs-lookup"><span data-stu-id="3b441-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="3b441-111">Transformationen</span><span class="sxs-lookup"><span data-stu-id="3b441-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="3b441-112">Registrierungseinstellungen für das Rendern von Grafiken</span><span class="sxs-lookup"><span data-stu-id="3b441-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="3b441-113">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="3b441-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b6824-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b6824-104">In This Section</span></span>  
+ [<span data-ttu-id="b6824-105">Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="b6824-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="b6824-106">Pinsel</span><span class="sxs-lookup"><span data-stu-id="b6824-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="b6824-107">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="b6824-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="b6824-108">Geometrien</span><span class="sxs-lookup"><span data-stu-id="b6824-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="b6824-109">Bilder</span><span class="sxs-lookup"><span data-stu-id="b6824-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="b6824-110">Formen</span><span class="sxs-lookup"><span data-stu-id="b6824-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="b6824-111">Transformationen</span><span class="sxs-lookup"><span data-stu-id="b6824-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="b6824-112">Registrierungseinstellungen für das Rendern von Grafiken</span><span class="sxs-lookup"><span data-stu-id="b6824-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="b6824-113">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="b6824-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3b441-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b441-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b6824-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6824-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="3b441-115">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="3b441-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="3b441-116">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="3b441-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="3b441-117">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="3b441-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="b6824-115">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="b6824-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="b6824-116">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="b6824-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="b6824-117">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="b6824-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

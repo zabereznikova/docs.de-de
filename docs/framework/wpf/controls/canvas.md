@@ -18,19 +18,20 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f2d82be5dc5a5c78b19a6ac5326cbecf9918092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c79cd6b9c4b1f4f7227a08a1a719e147e41055fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="canvas"></a><span data-ttu-id="3fd0b-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="3fd0b-102">Canvas</span></span>
-<span data-ttu-id="3fd0b-103"><xref:System.Windows.Controls.Canvas>ist ein Layoutsteuerelement, die absolute Positionierung von untergeordneten Elementen ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="3fd0b-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="5de40-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="5de40-102">Canvas</span></span>
+<span data-ttu-id="5de40-103"><xref:System.Windows.Controls.Canvas>ist ein Layoutsteuerelement, die absolute Positionierung von untergeordneten Elementen ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="5de40-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3fd0b-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3fd0b-104">In This Section</span></span>  
- [<span data-ttu-id="3fd0b-105">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="3fd0b-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5de40-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5de40-104">In This Section</span></span>  
+ [<span data-ttu-id="5de40-105">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="5de40-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3fd0b-106">Verweis</span><span class="sxs-lookup"><span data-stu-id="3fd0b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5de40-106">Verweis</span><span class="sxs-lookup"><span data-stu-id="5de40-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -45,9 +46,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="3fd0b-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3fd0b-107">Related Sections</span></span>  
- [<span data-ttu-id="3fd0b-108">Layout</span><span class="sxs-lookup"><span data-stu-id="3fd0b-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="5de40-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="5de40-107">Related Sections</span></span>  
+ [<span data-ttu-id="5de40-108">Layout</span><span class="sxs-lookup"><span data-stu-id="5de40-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="3fd0b-109">Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="3fd0b-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="5de40-109">Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="5de40-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="3fd0b-110">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="3fd0b-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="5de40-110">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5de40-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

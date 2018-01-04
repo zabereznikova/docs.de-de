@@ -18,24 +18,25 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ca2931b8eff6404ab79aa525eabcb46baa7cc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d061bd77c2edc00a912f4d64bc7ef38b608f9066
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="border"></a><span data-ttu-id="d4723-102">Rahmen</span><span class="sxs-lookup"><span data-stu-id="d4723-102">Border</span></span>
-<span data-ttu-id="d4723-103">Im folgende Beispiel wird veranschaulicht, wie Eigenschaften dynamisch ändern die <xref:System.Windows.Controls.Border> Element.</span><span class="sxs-lookup"><span data-stu-id="d4723-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="c6373-102">Rahmen</span><span class="sxs-lookup"><span data-stu-id="c6373-102">Border</span></span>
+<span data-ttu-id="c6373-103">Im folgende Beispiel wird veranschaulicht, wie Eigenschaften dynamisch ändern die <xref:System.Windows.Controls.Border> Element.</span><span class="sxs-lookup"><span data-stu-id="c6373-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d4723-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d4723-104">In This Section</span></span>  
- [<span data-ttu-id="d4723-105">Animieren eines BorderThickness-Werts</span><span class="sxs-lookup"><span data-stu-id="d4723-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c6373-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c6373-104">In This Section</span></span>  
+ [<span data-ttu-id="c6373-105">Animieren eines BorderThickness-Werts</span><span class="sxs-lookup"><span data-stu-id="c6373-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="d4723-106">Verweis</span><span class="sxs-lookup"><span data-stu-id="d4723-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c6373-106">Verweis</span><span class="sxs-lookup"><span data-stu-id="c6373-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="d4723-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d4723-107">Related Sections</span></span>  
- [<span data-ttu-id="d4723-108">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="d4723-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="c6373-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="c6373-107">Related Sections</span></span>  
+ [<span data-ttu-id="c6373-108">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="c6373-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
   
- [<span data-ttu-id="d4723-109">Übersicht über Alignment, Margin und Padding</span><span class="sxs-lookup"><span data-stu-id="d4723-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="c6373-109">Übersicht über Alignment, Margin und Padding</span><span class="sxs-lookup"><span data-stu-id="c6373-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)

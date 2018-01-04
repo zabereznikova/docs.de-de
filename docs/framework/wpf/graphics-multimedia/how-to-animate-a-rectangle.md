@@ -19,27 +19,28 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 773323d5e4b92ad5fef63072e1e7405882e0f26c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2176682a5e3f396cc9d9fc60baf409fd1e9ba807
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="be561-102">Gewusst wie: Animieren eines Rechtecks</span><span class="sxs-lookup"><span data-stu-id="be561-102">How to: Animate a Rectangle</span></span>
-<span data-ttu-id="be561-103">Dieses Beispiel zeigt, wie Änderungen an Größe und Position eines Rechtecks animiert werden.</span><span class="sxs-lookup"><span data-stu-id="be561-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
+# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="97fa5-102">Gewusst wie: Animieren eines Rechtecks</span><span class="sxs-lookup"><span data-stu-id="97fa5-102">How to: Animate a Rectangle</span></span>
+<span data-ttu-id="97fa5-103">Dieses Beispiel zeigt, wie Änderungen an Größe und Position eines Rechtecks animiert werden.</span><span class="sxs-lookup"><span data-stu-id="97fa5-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="be561-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="be561-104">Example</span></span>  
- <span data-ttu-id="be561-105">Im folgenden Beispiel wird eine Instanz von der <xref:System.Windows.Media.Animation.RectAnimation> Klasse zum Animieren der <xref:System.Windows.Media.RectangleGeometry.Rect%2A> Eigenschaft eine <xref:System.Windows.Media.RectangleGeometry>, die Änderungen auf die Größe und Position des Rechtecks animiert.</span><span class="sxs-lookup"><span data-stu-id="be561-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
+## <a name="example"></a><span data-ttu-id="97fa5-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="97fa5-104">Example</span></span>  
+ <span data-ttu-id="97fa5-105">Im folgenden Beispiel wird eine Instanz von der <xref:System.Windows.Media.Animation.RectAnimation> Klasse zum Animieren der <xref:System.Windows.Media.RectangleGeometry.Rect%2A> Eigenschaft eine <xref:System.Windows.Media.RectangleGeometry>, die Änderungen auf die Größe und Position des Rechtecks animiert.</span><span class="sxs-lookup"><span data-stu-id="97fa5-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#RectAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/RectAnimationExample.cs#rectanimationwholepage)]
  [!code-vb[BasicAnimations_snip#RectAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/RectAnimationExample.vb#rectanimationwholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="be561-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="be561-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="97fa5-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97fa5-106">See Also</span></span>  
  <xref:System.Windows.Media.Animation.RectAnimation>  
  <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
  <xref:System.Windows.Media.RectangleGeometry>  
- [<span data-ttu-id="be561-107">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="be561-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="be561-108">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="be561-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="be561-109">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="be561-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [<span data-ttu-id="be561-110">Animation und zeitlichen Steuerung</span><span class="sxs-lookup"><span data-stu-id="be561-110">Animation and Timing</span></span>](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="be561-111">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="be561-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [<span data-ttu-id="97fa5-107">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="97fa5-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="97fa5-108">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="97fa5-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="97fa5-109">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="97fa5-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [<span data-ttu-id="97fa5-110">Animation und zeitlichen Steuerung</span><span class="sxs-lookup"><span data-stu-id="97fa5-110">Animation and Timing</span></span>](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="97fa5-111">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="97fa5-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

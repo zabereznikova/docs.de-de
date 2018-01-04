@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa8d4fba67227e9ca1e3971ea9dc983a5054e08e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6a46884b056b5ba3bc768deb0725f96386fea84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="documentviewer"></a><span data-ttu-id="66c2d-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="66c2d-102">DocumentViewer</span></span>
-<span data-ttu-id="66c2d-103">Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Dokumente) in einem paginierten Format.</span><span class="sxs-lookup"><span data-stu-id="66c2d-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="873cf-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="873cf-102">DocumentViewer</span></span>
+<span data-ttu-id="873cf-103">Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Dokumente) in einem paginierten Format.</span><span class="sxs-lookup"><span data-stu-id="873cf-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="66c2d-104">Verweis</span><span class="sxs-lookup"><span data-stu-id="66c2d-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="873cf-104">Verweis</span><span class="sxs-lookup"><span data-stu-id="873cf-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="66c2d-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="66c2d-105">See Also</span></span>  
- [<span data-ttu-id="66c2d-106">Dokumente</span><span class="sxs-lookup"><span data-stu-id="66c2d-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="66c2d-107">Serialisierung und Speicherung von Dokumenten</span><span class="sxs-lookup"><span data-stu-id="66c2d-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="66c2d-108">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="66c2d-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="873cf-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="873cf-105">See Also</span></span>  
+ [<span data-ttu-id="873cf-106">Dokumente</span><span class="sxs-lookup"><span data-stu-id="873cf-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
+ [<span data-ttu-id="873cf-107">Serialisierung und Speicherung von Dokumenten</span><span class="sxs-lookup"><span data-stu-id="873cf-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [<span data-ttu-id="873cf-108">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="873cf-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

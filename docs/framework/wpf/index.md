@@ -24,20 +24,21 @@ caps.latest.revision: "97"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d7dce942499984c24f982e321d976982e404978
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4c2fb9d69e7b0ccfc2b87aea0cda5e7b4804f416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="cfaad-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="cfaad-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="cfaad-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von modernen Desktopbranchenanwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="cfaad-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="b0a66-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b0a66-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="b0a66-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von modernen Desktopbranchenanwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="b0a66-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cfaad-104">Im Mozilla Firefox-Browser wird die Erweiterung Microsoft Framework Assistant deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="cfaad-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="cfaad-105">Informationen, wie die Erweiterung aus Firefox entfernt wird, finden Sie unter [Entfernen von .NET Framework Assistant für Firefox](https://support.microsoft.com/en-us/kb/963707).</span><span class="sxs-lookup"><span data-stu-id="cfaad-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
+>  <span data-ttu-id="b0a66-104">Im Mozilla Firefox-Browser wird die Erweiterung Microsoft Framework Assistant deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="b0a66-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="b0a66-105">Informationen, wie die Erweiterung aus Firefox entfernt wird, finden Sie unter [Entfernen von .NET Framework Assistant für Firefox](https://support.microsoft.com/en-us/kb/963707).</span><span class="sxs-lookup"><span data-stu-id="b0a66-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [<span data-ttu-id="cfaad-106">Erstellen von modernen Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="cfaad-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="b0a66-106">Erstellen von modernen Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b0a66-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
- [<span data-ttu-id="cfaad-107">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="cfaad-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="b0a66-107">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="b0a66-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="cfaad-108">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cfaad-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="b0a66-108">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b0a66-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

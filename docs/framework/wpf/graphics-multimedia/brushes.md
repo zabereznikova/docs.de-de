@@ -18,25 +18,26 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ece5049f6749315e393aa0aad4e002fcb416ba7c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9af3fcfc2e910a61e9ac1b999863e40bc26400da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="brushes"></a><span data-ttu-id="90c3f-102">Pinsel</span><span class="sxs-lookup"><span data-stu-id="90c3f-102">Brushes</span></span>
-<span data-ttu-id="90c3f-103">In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel zum Inhalt auf dem Bildschirm "Zeichnen"</span><span class="sxs-lookup"><span data-stu-id="90c3f-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
+# <a name="brushes"></a><span data-ttu-id="527ed-102">Pinsel</span><span class="sxs-lookup"><span data-stu-id="527ed-102">Brushes</span></span>
+<span data-ttu-id="527ed-103">In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel zum Inhalt auf dem Bildschirm "Zeichnen"</span><span class="sxs-lookup"><span data-stu-id="527ed-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="90c3f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="90c3f-104">In This Section</span></span>  
- [<span data-ttu-id="90c3f-105">Übersicht über WPF-Pinsel</span><span class="sxs-lookup"><span data-stu-id="90c3f-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [<span data-ttu-id="90c3f-106">Übersicht über Pinseltransformationen</span><span class="sxs-lookup"><span data-stu-id="90c3f-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [<span data-ttu-id="90c3f-107">Übersicht über Durchlässigkeitsmasken</span><span class="sxs-lookup"><span data-stu-id="90c3f-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [<span data-ttu-id="90c3f-108">Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen</span><span class="sxs-lookup"><span data-stu-id="90c3f-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [<span data-ttu-id="90c3f-109">Zeichnen mit Bildern, Zeichnungen und visuellen Elementen</span><span class="sxs-lookup"><span data-stu-id="90c3f-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [<span data-ttu-id="90c3f-110">Übersicht über TileBrush</span><span class="sxs-lookup"><span data-stu-id="90c3f-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [<span data-ttu-id="90c3f-111">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="90c3f-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="527ed-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="527ed-104">In This Section</span></span>  
+ [<span data-ttu-id="527ed-105">Übersicht über WPF-Pinsel</span><span class="sxs-lookup"><span data-stu-id="527ed-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [<span data-ttu-id="527ed-106">Übersicht über Pinseltransformationen</span><span class="sxs-lookup"><span data-stu-id="527ed-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [<span data-ttu-id="527ed-107">Übersicht über Durchlässigkeitsmasken</span><span class="sxs-lookup"><span data-stu-id="527ed-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [<span data-ttu-id="527ed-108">Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen</span><span class="sxs-lookup"><span data-stu-id="527ed-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="527ed-109">Zeichnen mit Bildern, Zeichnungen und visuellen Elementen</span><span class="sxs-lookup"><span data-stu-id="527ed-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="527ed-110">Übersicht über TileBrush</span><span class="sxs-lookup"><span data-stu-id="527ed-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [<span data-ttu-id="527ed-111">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="527ed-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="90c3f-112">Verweis</span><span class="sxs-lookup"><span data-stu-id="90c3f-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="527ed-112">Verweis</span><span class="sxs-lookup"><span data-stu-id="527ed-112">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="90c3f-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="90c3f-113">Related Sections</span></span>  
- [<span data-ttu-id="90c3f-114">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="90c3f-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="527ed-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="527ed-113">Related Sections</span></span>  
+ [<span data-ttu-id="527ed-114">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="527ed-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="90c3f-115">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="90c3f-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="527ed-115">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="527ed-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

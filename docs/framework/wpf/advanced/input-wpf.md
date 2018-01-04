@@ -17,25 +17,26 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-wpf"></a><span data-ttu-id="22a86-102">Eingabe (WPF)</span><span class="sxs-lookup"><span data-stu-id="22a86-102">Input (WPF)</span></span>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="22a86-103">bietet Unterstützung für verschiedene Arten von Eingaben.</span><span class="sxs-lookup"><span data-stu-id="22a86-103"> includes support for several types of input.</span></span> <span data-ttu-id="22a86-104">Diese Eingabe enthält Text, Touch, Maus, Befehle, den Fokus, Fingereingabe, Drag & Drop und Freihandeingaben.</span><span class="sxs-lookup"><span data-stu-id="22a86-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="22a86-105">Dieser Abschnitt enthält Themen im Zusammenhang mit in WPF eingegeben.</span><span class="sxs-lookup"><span data-stu-id="22a86-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="c9201-102">Eingabe (WPF)</span><span class="sxs-lookup"><span data-stu-id="c9201-102">Input (WPF)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="c9201-103">bietet Unterstützung für verschiedene Arten von Eingaben.</span><span class="sxs-lookup"><span data-stu-id="c9201-103"> includes support for several types of input.</span></span> <span data-ttu-id="c9201-104">Diese Eingabe enthält Text, Touch, Maus, Befehle, den Fokus, Fingereingabe, Drag & Drop und Freihandeingaben.</span><span class="sxs-lookup"><span data-stu-id="c9201-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="c9201-105">Dieser Abschnitt enthält Themen im Zusammenhang mit in WPF eingegeben.</span><span class="sxs-lookup"><span data-stu-id="c9201-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="22a86-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="22a86-106">In This Section</span></span>  
- [<span data-ttu-id="22a86-107">Übersicht über die Eingabe</span><span class="sxs-lookup"><span data-stu-id="22a86-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="22a86-108">Befehlsübersicht</span><span class="sxs-lookup"><span data-stu-id="22a86-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="22a86-109">Fokus - Übersicht</span><span class="sxs-lookup"><span data-stu-id="22a86-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="22a86-110">Fokusstile in Steuerelementen und FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="22a86-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="22a86-111">Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung</span><span class="sxs-lookup"><span data-stu-id="22a86-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="22a86-112">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="22a86-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="22a86-113">Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="22a86-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c9201-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c9201-106">In This Section</span></span>  
+ [<span data-ttu-id="c9201-107">Übersicht über die Eingabe</span><span class="sxs-lookup"><span data-stu-id="c9201-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="c9201-108">Befehlsübersicht</span><span class="sxs-lookup"><span data-stu-id="c9201-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="c9201-109">Fokus - Übersicht</span><span class="sxs-lookup"><span data-stu-id="c9201-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [<span data-ttu-id="c9201-110">Fokusstile in Steuerelementen und FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="c9201-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="c9201-111">Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung</span><span class="sxs-lookup"><span data-stu-id="c9201-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="c9201-112">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="c9201-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="c9201-113">Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="c9201-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="22a86-114">Verweis</span><span class="sxs-lookup"><span data-stu-id="22a86-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c9201-114">Verweis</span><span class="sxs-lookup"><span data-stu-id="c9201-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="22a86-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="22a86-115">Related Sections</span></span>  
- [<span data-ttu-id="22a86-116">Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="22a86-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="22a86-117">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="22a86-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="c9201-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="c9201-115">Related Sections</span></span>  
+ [<span data-ttu-id="c9201-116">Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="c9201-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+  [<span data-ttu-id="c9201-117">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="c9201-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)

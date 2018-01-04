@@ -16,18 +16,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8328ae4bcbff54743e8df0a4b6ff6da3065ea470
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9bc43b42c2e671e13076ba87ce72e054bd65d107
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="4aa3d-102">ProcessUnhandledException-Funktion (WPF nicht verwaltete API-Referenz)</span><span class="sxs-lookup"><span data-stu-id="4aa3d-102">ProcessUnhandledException Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="4aa3d-103">Diese API unterstützt die Windows Presentation Foundation (WPF)-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4aa3d-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="36974-102">ProcessUnhandledException-Funktion (WPF nicht verwaltete API-Referenz)</span><span class="sxs-lookup"><span data-stu-id="36974-102">ProcessUnhandledException Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="36974-103">Diese API unterstützt die Windows Presentation Foundation (WPF)-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="36974-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="4aa3d-104">Von der Windows Presentation Foundation (WPF)-Infrastruktur verwendet, für die Ausnahmebehandlung.</span><span class="sxs-lookup"><span data-stu-id="4aa3d-104">Used by the Windows Presentation Foundation (WPF) infrastructure for exception handling.</span></span>  
+ <span data-ttu-id="36974-104">Von der Windows Presentation Foundation (WPF)-Infrastruktur verwendet, für die Ausnahmebehandlung.</span><span class="sxs-lookup"><span data-stu-id="36974-104">Used by the Windows Presentation Foundation (WPF) infrastructure for exception handling.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4aa3d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="4aa3d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36974-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="36974-105">Syntax</span></span>  
   
 ```cpp  
 void __stdcall ProcessUnhandledException(  
@@ -35,20 +36,20 @@ void __stdcall ProcessUnhandledException(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4aa3d-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="4aa3d-106">Parameters</span></span>  
- <span data-ttu-id="4aa3d-107">errorMsg</span><span class="sxs-lookup"><span data-stu-id="4aa3d-107">errorMsg</span></span>  
- <span data-ttu-id="4aa3d-108">Die Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="4aa3d-108">The error message.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="36974-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="36974-106">Parameters</span></span>  
+ <span data-ttu-id="36974-107">errorMsg</span><span class="sxs-lookup"><span data-stu-id="36974-107">errorMsg</span></span>  
+ <span data-ttu-id="36974-108">Die Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="36974-108">The error message.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4aa3d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4aa3d-109">Requirements</span></span>  
- <span data-ttu-id="4aa3d-110">**Plattformen:** finden Sie unter [Systemanforderungen für .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4aa3d-110">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36974-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="36974-109">Requirements</span></span>  
+ <span data-ttu-id="36974-110">**Plattformen:** finden Sie unter [Systemanforderungen für .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36974-110">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4aa3d-111">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="4aa3d-111">**DLL:**</span></span>  
+ <span data-ttu-id="36974-111">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="36974-111">**DLL:**</span></span>  
   
- <span data-ttu-id="4aa3d-112">In .NET Framework 3.0 und 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="4aa3d-112">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="36974-112">In .NET Framework 3.0 und 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="36974-112">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="4aa3d-113">In .NET Framework 4 und höher: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="4aa3d-113">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="36974-113">In .NET Framework 4 und höher: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="36974-113">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="4aa3d-114">**.NET Framework-Version:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4aa3d-114">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="36974-114">**.NET Framework-Version:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36974-114">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4aa3d-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4aa3d-115">See Also</span></span>  
- [<span data-ttu-id="4aa3d-116">WPF – Referenz zur nicht verwalteten API</span><span class="sxs-lookup"><span data-stu-id="4aa3d-116">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="36974-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36974-115">See Also</span></span>  
+ [<span data-ttu-id="36974-116">WPF – Referenz zur nicht verwalteten API</span><span class="sxs-lookup"><span data-stu-id="36974-116">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

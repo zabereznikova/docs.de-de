@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="8fb89-102">Gewusst-wie-Themen zu visueller Ebenenprogrammierung</span><span class="sxs-lookup"><span data-stu-id="8fb89-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="8fb89-103">Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8fb89-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="47c37-102">Gewusst-wie-Themen zu visueller Ebenenprogrammierung</span><span class="sxs-lookup"><span data-stu-id="47c37-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="47c37-103">Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="47c37-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8fb89-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8fb89-104">In This Section</span></span>  
- [<span data-ttu-id="8fb89-105">Abrufen des Offsets eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="8fb89-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="8fb89-106">Auflisten des Zeichnungsinhalts eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="8fb89-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="8fb89-107">Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt</span><span class="sxs-lookup"><span data-stu-id="8fb89-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="8fb89-108">Treffertest mit Geometrie als Parameter</span><span class="sxs-lookup"><span data-stu-id="8fb89-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="8fb89-109">Treffertest mithilfe eines Win32-Hostcontainers</span><span class="sxs-lookup"><span data-stu-id="8fb89-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="8fb89-110">Rendern in Pro-Frame-Intervallen mit CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="8fb89-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="47c37-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="47c37-104">In This Section</span></span>  
+ [<span data-ttu-id="47c37-105">Abrufen des Offsets eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="47c37-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="47c37-106">Auflisten des Zeichnungsinhalts eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="47c37-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="47c37-107">Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt</span><span class="sxs-lookup"><span data-stu-id="47c37-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="47c37-108">Treffertest mit Geometrie als Parameter</span><span class="sxs-lookup"><span data-stu-id="47c37-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="47c37-109">Treffertest mithilfe eines Win32-Hostcontainers</span><span class="sxs-lookup"><span data-stu-id="47c37-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="47c37-110">Rendern in Pro-Frame-Intervallen mit CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="47c37-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8fb89-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8fb89-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="47c37-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="47c37-111">See Also</span></span>  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="8fb89-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="8fb89-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="8fb89-113">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="8fb89-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="47c37-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="47c37-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="47c37-113">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="47c37-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

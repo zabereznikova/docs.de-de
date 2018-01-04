@@ -19,24 +19,25 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9746683ec5b7ad142591c2b419f9af21be8d69c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d62d657b886b867481088e32fe1dd0614377e146
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-find-the-source-element-in-an-event-handler"></a><span data-ttu-id="b5f75-102">Gewusst wie: Suchen des Quellelements in einem Ereignishandler</span><span class="sxs-lookup"><span data-stu-id="b5f75-102">How to: Find the Source Element in an Event Handler</span></span>
-<span data-ttu-id="b5f75-103">Dieses Beispiel zeigt, wie Sie die Source-Element in einem Ereignishandler zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="b5f75-103">This example shows how to find the source element in an event handler.</span></span>  
+# <a name="how-to-find-the-source-element-in-an-event-handler"></a><span data-ttu-id="099bc-102">Gewusst wie: Suchen des Quellelements in einem Ereignishandler</span><span class="sxs-lookup"><span data-stu-id="099bc-102">How to: Find the Source Element in an Event Handler</span></span>
+<span data-ttu-id="099bc-103">Dieses Beispiel zeigt, wie Sie die Source-Element in einem Ereignishandler zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="099bc-103">This example shows how to find the source element in an event handler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b5f75-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b5f75-104">Example</span></span>  
- <span data-ttu-id="b5f75-105">Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignishandler, der in einer Code-Behind-Datei deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="b5f75-105">The following example shows a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler that is declared in a code-behind file.</span></span> <span data-ttu-id="b5f75-106">Wenn ein Benutzer die Schaltfläche, der der Handler angefügt ist klickt, ändert der Handler einen Eigenschaftswert.</span><span class="sxs-lookup"><span data-stu-id="b5f75-106">When a user clicks the button that the handler is attached to, the handler changes a property value.</span></span> <span data-ttu-id="b5f75-107">Der Handlercode verwendet die <xref:System.Windows.RoutedEventArgs.Source%2A> Eigenschaft Routingereignis Daten, die in den Ereignisargumenten gemeldet wird, so ändern Sie die <xref:System.Windows.FrameworkElement.Width%2A> -Eigenschaftenwert der <xref:System.Windows.RoutedEventArgs.Source%2A> Element.</span><span class="sxs-lookup"><span data-stu-id="b5f75-107">The handler code uses the <xref:System.Windows.RoutedEventArgs.Source%2A> property of the routed event data that is reported in the event arguments to change the <xref:System.Windows.FrameworkElement.Width%2A> property value on the <xref:System.Windows.RoutedEventArgs.Source%2A> element.</span></span>  
+## <a name="example"></a><span data-ttu-id="099bc-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="099bc-104">Example</span></span>  
+ <span data-ttu-id="099bc-105">Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignishandler, der in einer Code-Behind-Datei deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="099bc-105">The following example shows a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler that is declared in a code-behind file.</span></span> <span data-ttu-id="099bc-106">Wenn ein Benutzer die Schaltfläche, der der Handler angefügt ist klickt, ändert der Handler einen Eigenschaftswert.</span><span class="sxs-lookup"><span data-stu-id="099bc-106">When a user clicks the button that the handler is attached to, the handler changes a property value.</span></span> <span data-ttu-id="099bc-107">Der Handlercode verwendet die <xref:System.Windows.RoutedEventArgs.Source%2A> Eigenschaft Routingereignis Daten, die in den Ereignisargumenten gemeldet wird, so ändern Sie die <xref:System.Windows.FrameworkElement.Width%2A> -Eigenschaftenwert der <xref:System.Windows.RoutedEventArgs.Source%2A> Element.</span><span class="sxs-lookup"><span data-stu-id="099bc-107">The handler code uses the <xref:System.Windows.RoutedEventArgs.Source%2A> property of the routed event data that is reported in the event arguments to change the <xref:System.Windows.FrameworkElement.Width%2A> property value on the <xref:System.Windows.RoutedEventArgs.Source%2A> element.</span></span>  
   
  [!code-xaml[RoutedEventSource#XAMLHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventSource/CSharp/default.xaml#xamlhandler)]  
   
  [!code-csharp[RoutedEventSource#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventSource/CSharp/default.xaml.cs#handler)]
  [!code-vb[RoutedEventSource#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventSource/VisualBasic/default.xaml.vb#handler)]  
   
-## <a name="see-also"></a><span data-ttu-id="b5f75-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b5f75-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="099bc-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="099bc-108">See Also</span></span>  
  <xref:System.Windows.RoutedEventArgs>  
- [<span data-ttu-id="b5f75-109">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="b5f75-109">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [<span data-ttu-id="b5f75-110">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="b5f75-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [<span data-ttu-id="099bc-109">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="099bc-109">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="099bc-110">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="099bc-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

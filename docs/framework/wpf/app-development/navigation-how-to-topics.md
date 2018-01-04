@@ -15,22 +15,23 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9f75ed7436b5a4d333d6d82f35b8c1a5601f9b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cfdd416337a10797f374be566816ec61ca4ee3cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="10213-102">Gewusst-wie-Themen zur Navigation</span><span class="sxs-lookup"><span data-stu-id="10213-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="10213-103">In den folgenden Themen wird gezeigt, wie mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Navigation.</span><span class="sxs-lookup"><span data-stu-id="10213-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="ac366-102">Gewusst-wie-Themen zur Navigation</span><span class="sxs-lookup"><span data-stu-id="ac366-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="ac366-103">In den folgenden Themen wird gezeigt, wie mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Navigation.</span><span class="sxs-lookup"><span data-stu-id="ac366-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="10213-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="10213-104">In This Section</span></span>  
- [<span data-ttu-id="10213-105">Aufrufen von Seitenfunktionen</span><span class="sxs-lookup"><span data-stu-id="10213-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [<span data-ttu-id="10213-106">Abrufen des Rückgabewerts einer Seitenfunktion</span><span class="sxs-lookup"><span data-stu-id="10213-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="10213-107">Vorwärts- oder Rückwärtsnavigation mit dem Navigationsverlauf</span><span class="sxs-lookup"><span data-stu-id="10213-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="10213-108">Zurückgeben aus einer Seitenfunktion</span><span class="sxs-lookup"><span data-stu-id="10213-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ac366-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="ac366-104">In This Section</span></span>  
+ [<span data-ttu-id="ac366-105">Aufrufen von Seitenfunktionen</span><span class="sxs-lookup"><span data-stu-id="ac366-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
+  [<span data-ttu-id="ac366-106">Abrufen des Rückgabewerts einer Seitenfunktion</span><span class="sxs-lookup"><span data-stu-id="ac366-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="ac366-107">Vorwärts- oder Rückwärtsnavigation mit dem Navigationsverlauf</span><span class="sxs-lookup"><span data-stu-id="ac366-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="ac366-108">Zurückgeben aus einer Seitenfunktion</span><span class="sxs-lookup"><span data-stu-id="ac366-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="10213-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="10213-109">Related Sections</span></span>  
- [<span data-ttu-id="10213-110">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="10213-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="ac366-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="ac366-109">Related Sections</span></span>  
+ [<span data-ttu-id="ac366-110">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="ac366-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
- [<span data-ttu-id="10213-111">Übersicht über die strukturierte Navigation</span><span class="sxs-lookup"><span data-stu-id="10213-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [<span data-ttu-id="ac366-111">Übersicht über die strukturierte Navigation</span><span class="sxs-lookup"><span data-stu-id="ac366-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)

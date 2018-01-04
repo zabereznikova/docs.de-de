@@ -19,17 +19,18 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4337cdf95324289ba5245812a22b444f538c2f31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: daf8875801f9b20fe214e40364e6e367b8965938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="frame"></a><span data-ttu-id="14494-102">Frame</span><span class="sxs-lookup"><span data-stu-id="14494-102">Frame</span></span>
-<span data-ttu-id="14494-103">Die <xref:System.Windows.Controls.Frame> Steuerelement unterstützt Inhaltsnavigation im Inhalt.</span><span class="sxs-lookup"><span data-stu-id="14494-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="14494-104"><xref:System.Windows.Controls.Frame>aufgenommen werden kann, durch ein Stammelement wie <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, oder als Insel innerhalb einer Struktur, die ein Stammelement gehört.</span><span class="sxs-lookup"><span data-stu-id="14494-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="af796-102">Frame</span><span class="sxs-lookup"><span data-stu-id="af796-102">Frame</span></span>
+<span data-ttu-id="af796-103">Die <xref:System.Windows.Controls.Frame> Steuerelement unterstützt Inhaltsnavigation im Inhalt.</span><span class="sxs-lookup"><span data-stu-id="af796-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="af796-104"><xref:System.Windows.Controls.Frame>aufgenommen werden kann, durch ein Stammelement wie <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, oder als Insel innerhalb einer Struktur, die ein Stammelement gehört.</span><span class="sxs-lookup"><span data-stu-id="af796-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="14494-105">Verweis</span><span class="sxs-lookup"><span data-stu-id="14494-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="af796-105">Verweis</span><span class="sxs-lookup"><span data-stu-id="af796-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="14494-106">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="14494-106">Related Sections</span></span>  
- [<span data-ttu-id="14494-107">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="14494-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="af796-106">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="af796-106">Related Sections</span></span>  
+ [<span data-ttu-id="af796-107">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="af796-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)

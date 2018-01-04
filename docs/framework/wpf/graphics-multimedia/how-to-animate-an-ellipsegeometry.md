@@ -20,22 +20,23 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 948aa340436b51b6e8cbb09f4b0791535ca5ecd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc9eea56d9070d33820f8e2ef1bd8eba3ec04303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-animate-an-ellipsegeometry"></a><span data-ttu-id="fa026-102">Gewusst wie: Animieren eines "EllipseGeometry"-Elements</span><span class="sxs-lookup"><span data-stu-id="fa026-102">How to: Animate an EllipseGeometry</span></span>
-<span data-ttu-id="fa026-103">In diesem Beispiel wird gezeigt, wie zum Animieren einer <xref:System.Windows.Media.Geometry> innerhalb einer <xref:System.Windows.Shapes.Path> Element.</span><span class="sxs-lookup"><span data-stu-id="fa026-103">This example shows how to animate a <xref:System.Windows.Media.Geometry> within a <xref:System.Windows.Shapes.Path> element.</span></span> <span data-ttu-id="fa026-104">Im folgenden Beispiel ein <xref:System.Windows.Media.Animation.PointAnimation> dient zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> von einer <xref:System.Windows.Media.EllipseGeometry>.</span><span class="sxs-lookup"><span data-stu-id="fa026-104">In the following example, a <xref:System.Windows.Media.Animation.PointAnimation> is used to animate the <xref:System.Windows.Media.EllipseGeometry.Center%2A> of an <xref:System.Windows.Media.EllipseGeometry>.</span></span>  
+# <a name="how-to-animate-an-ellipsegeometry"></a><span data-ttu-id="7968a-102">Gewusst wie: Animieren eines "EllipseGeometry"-Elements</span><span class="sxs-lookup"><span data-stu-id="7968a-102">How to: Animate an EllipseGeometry</span></span>
+<span data-ttu-id="7968a-103">In diesem Beispiel wird gezeigt, wie zum Animieren einer <xref:System.Windows.Media.Geometry> innerhalb einer <xref:System.Windows.Shapes.Path> Element.</span><span class="sxs-lookup"><span data-stu-id="7968a-103">This example shows how to animate a <xref:System.Windows.Media.Geometry> within a <xref:System.Windows.Shapes.Path> element.</span></span> <span data-ttu-id="7968a-104">Im folgenden Beispiel ein <xref:System.Windows.Media.Animation.PointAnimation> dient zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> von einer <xref:System.Windows.Media.EllipseGeometry>.</span><span class="sxs-lookup"><span data-stu-id="7968a-104">In the following example, a <xref:System.Windows.Media.Animation.PointAnimation> is used to animate the <xref:System.Windows.Media.EllipseGeometry.Center%2A> of an <xref:System.Windows.Media.EllipseGeometry>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fa026-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fa026-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7968a-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7968a-105">Example</span></span>  
  [!code-xaml[animatepath_snip_XAML#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animatepath_snip_XAML/CS/EllipseGeometryExample.xaml#1)]  
   
  [!code-csharp[animatepath_snip#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animatepath_snip/CSharp/EllipseGeometryExample.cs#101)]  
   
  [!code-vb[animatepath_snip#201](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animatepath_snip/VisualBasic/EllipseGeometryExample.vb#201)]  
   
-## <a name="see-also"></a><span data-ttu-id="fa026-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa026-106">See Also</span></span>  
- [<span data-ttu-id="fa026-107">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="fa026-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="fa026-108">Übersicht über Geometrien</span><span class="sxs-lookup"><span data-stu-id="fa026-108">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a><span data-ttu-id="7968a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7968a-106">See Also</span></span>  
+ [<span data-ttu-id="7968a-107">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="7968a-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="7968a-108">Übersicht über Geometrien</span><span class="sxs-lookup"><span data-stu-id="7968a-108">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

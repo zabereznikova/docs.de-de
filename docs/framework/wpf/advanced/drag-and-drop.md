@@ -18,22 +18,23 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="0b574-102">Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="0b574-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="0b574-103">bietet eine äußerst flexible Drag- and -Drop-Infrastruktur das Ziehen und Ablegen von Daten innerhalb des Kontextbereichs unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen sowie andere [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="0b574-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="5c220-102">Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="5c220-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="5c220-103">bietet eine äußerst flexible Drag- and -Drop-Infrastruktur das Ziehen und Ablegen von Daten innerhalb des Kontextbereichs unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen sowie andere [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="5c220-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0b574-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="0b574-104">In This Section</span></span>  
- [<span data-ttu-id="0b574-105">Übersicht über Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="0b574-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [<span data-ttu-id="0b574-106">Daten und Datenobjekte</span><span class="sxs-lookup"><span data-stu-id="0b574-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [<span data-ttu-id="0b574-107">Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement</span><span class="sxs-lookup"><span data-stu-id="0b574-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="0b574-108">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="0b574-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5c220-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5c220-104">In This Section</span></span>  
+ [<span data-ttu-id="5c220-105">Übersicht über Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="5c220-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
+ [<span data-ttu-id="5c220-106">Daten und Datenobjekte</span><span class="sxs-lookup"><span data-stu-id="5c220-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
+ [<span data-ttu-id="5c220-107">Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement</span><span class="sxs-lookup"><span data-stu-id="5c220-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="5c220-108">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="5c220-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="0b574-109">Verweis</span><span class="sxs-lookup"><span data-stu-id="0b574-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5c220-109">Verweis</span><span class="sxs-lookup"><span data-stu-id="5c220-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/18/2017
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="0b574-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="0b574-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5c220-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="5c220-110">Related Sections</span></span>

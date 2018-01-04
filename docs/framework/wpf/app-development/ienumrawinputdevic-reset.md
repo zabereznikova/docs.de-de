@@ -14,20 +14,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a94cdaa7296ff6d45aff5f895e2b8cab3286480
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 57b4a688995ca81388c62373719c978a92723548
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ienumrawinputdevicreset"></a><span data-ttu-id="0a5ef-102">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="0a5ef-102">IEnumRAWINPUTDEVIC:Reset</span></span>
-<span data-ttu-id="0a5ef-103">Setzt die Enumerationsfolge auf den Anfang zurück.</span><span class="sxs-lookup"><span data-stu-id="0a5ef-103">Resets the enumeration sequence to the beginning.</span></span>  
+# <a name="ienumrawinputdevicreset"></a><span data-ttu-id="8084e-102">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="8084e-102">IEnumRAWINPUTDEVIC:Reset</span></span>
+<span data-ttu-id="8084e-103">Setzt die Enumerationsfolge auf den Anfang zurück.</span><span class="sxs-lookup"><span data-stu-id="8084e-103">Resets the enumeration sequence to the beginning.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a5ef-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0a5ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8084e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8084e-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="0a5ef-105">Eigenschaftswert/Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0a5ef-105">Property Value/Return Value</span></span>  
- <span data-ttu-id="0a5ef-106">HRESULT: S_OK.</span><span class="sxs-lookup"><span data-stu-id="0a5ef-106">HRESULT: S_OK.</span></span>
+## <a name="property-valuereturn-value"></a><span data-ttu-id="8084e-105">Eigenschaftswert/Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="8084e-105">Property Value/Return Value</span></span>  
+ <span data-ttu-id="8084e-106">HRESULT: S_OK.</span><span class="sxs-lookup"><span data-stu-id="8084e-106">HRESULT: S_OK.</span></span>

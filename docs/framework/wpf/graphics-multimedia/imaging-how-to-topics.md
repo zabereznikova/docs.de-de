@@ -17,40 +17,41 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30310b08f33d0f8c4b854635ba41565bce439c05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d3bd20a35f5d4b28f0ab4aaba02fdd19a3ee9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imaging-how-to-topics"></a><span data-ttu-id="4e584-102">Gewusst-wie-Themen zur Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="4e584-102">Imaging How-to Topics</span></span>
-<span data-ttu-id="4e584-103">Die Themen in diesem Abschnitt zeigen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zum Anzeigen oder Ändern von Bitmapbildern.</span><span class="sxs-lookup"><span data-stu-id="4e584-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
+# <a name="imaging-how-to-topics"></a><span data-ttu-id="c413e-102">Gewusst-wie-Themen zur Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="c413e-102">Imaging How-to Topics</span></span>
+<span data-ttu-id="c413e-103">Die Themen in diesem Abschnitt zeigen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zum Anzeigen oder Ändern von Bitmapbildern.</span><span class="sxs-lookup"><span data-stu-id="c413e-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4e584-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4e584-104">In This Section</span></span>  
- [<span data-ttu-id="4e584-105">Verwenden eines BitmapImage in XAML</span><span class="sxs-lookup"><span data-stu-id="4e584-105">Use a BitmapImage in XAML</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [<span data-ttu-id="4e584-106">Laden eines Bilds als Miniaturansicht</span><span class="sxs-lookup"><span data-stu-id="4e584-106">Load an Image as a Thumbnail</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [<span data-ttu-id="4e584-107">Anwenden einer Transformation auf ein Bitmapbild</span><span class="sxs-lookup"><span data-stu-id="4e584-107">Apply a Transform to a Bitmap Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [<span data-ttu-id="4e584-108">Erstellen einer Bitmap aus einem visuellen Element</span><span class="sxs-lookup"><span data-stu-id="4e584-108">Create a Bitmap from a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [<span data-ttu-id="4e584-109">Codieren eines Visual-Objekts in einer Bilddatei</span><span class="sxs-lookup"><span data-stu-id="4e584-109">Encode a Visual to an Image File</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [<span data-ttu-id="4e584-110">Erstellen einer neuen BitmapSource</span><span class="sxs-lookup"><span data-stu-id="4e584-110">Create a new BitmapSource</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [<span data-ttu-id="4e584-111">Verketten von BitmapSource-Objekten</span><span class="sxs-lookup"><span data-stu-id="4e584-111">Chain BitmapSource Objects Together</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [<span data-ttu-id="4e584-112">Konvertieren einer BitmapSource in ein anderes PixelFormat</span><span class="sxs-lookup"><span data-stu-id="4e584-112">Convert a BitmapSource to a Different PixelFormat</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [<span data-ttu-id="4e584-113">Konvertieren einer BitmapSource in ein indiziertes Pixelformat</span><span class="sxs-lookup"><span data-stu-id="4e584-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [<span data-ttu-id="4e584-114">Codieren und Decodieren eines JPEG-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-114">Encode and Decode a JPEG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [<span data-ttu-id="4e584-115">Codieren und Decodieren eines BMP-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-115">Encode and Decode a BMP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [<span data-ttu-id="4e584-116">Codieren und Decodieren eines PNG-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-116">Encode and Decode a PNG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [<span data-ttu-id="4e584-117">Codieren und Decodieren eines WDP-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-117">Encode and Decode a WDP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [<span data-ttu-id="4e584-118">Codieren und Decodieren eines GIF-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-118">Encode and Decode a GIF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [<span data-ttu-id="4e584-119">Codieren und Decodieren eines TIFF-Bilds</span><span class="sxs-lookup"><span data-stu-id="4e584-119">Encode and Decode a TIFF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [<span data-ttu-id="4e584-120">Schreiben von Metadaten in eine Bitmap</span><span class="sxs-lookup"><span data-stu-id="4e584-120">Write Metadata to a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [<span data-ttu-id="4e584-121">Lesen von Metadaten aus einer Bitmap</span><span class="sxs-lookup"><span data-stu-id="4e584-121">Read Metadata from a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c413e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c413e-104">In This Section</span></span>  
+ [<span data-ttu-id="c413e-105">Verwenden eines BitmapImage in XAML</span><span class="sxs-lookup"><span data-stu-id="c413e-105">Use a BitmapImage in XAML</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
+ [<span data-ttu-id="c413e-106">Laden eines Bilds als Miniaturansicht</span><span class="sxs-lookup"><span data-stu-id="c413e-106">Load an Image as a Thumbnail</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
+ [<span data-ttu-id="c413e-107">Anwenden einer Transformation auf ein Bitmapbild</span><span class="sxs-lookup"><span data-stu-id="c413e-107">Apply a Transform to a Bitmap Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [<span data-ttu-id="c413e-108">Erstellen einer Bitmap aus einem visuellen Element</span><span class="sxs-lookup"><span data-stu-id="c413e-108">Create a Bitmap from a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
+ [<span data-ttu-id="c413e-109">Codieren eines Visual-Objekts in einer Bilddatei</span><span class="sxs-lookup"><span data-stu-id="c413e-109">Encode a Visual to an Image File</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
+ [<span data-ttu-id="c413e-110">Erstellen einer neuen BitmapSource</span><span class="sxs-lookup"><span data-stu-id="c413e-110">Create a new BitmapSource</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
+ [<span data-ttu-id="c413e-111">Verketten von BitmapSource-Objekten</span><span class="sxs-lookup"><span data-stu-id="c413e-111">Chain BitmapSource Objects Together</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
+ [<span data-ttu-id="c413e-112">Konvertieren einer BitmapSource in ein anderes PixelFormat</span><span class="sxs-lookup"><span data-stu-id="c413e-112">Convert a BitmapSource to a Different PixelFormat</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [<span data-ttu-id="c413e-113">Konvertieren einer BitmapSource in ein indiziertes Pixelformat</span><span class="sxs-lookup"><span data-stu-id="c413e-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [<span data-ttu-id="c413e-114">Codieren und Decodieren eines JPEG-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-114">Encode and Decode a JPEG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
+ [<span data-ttu-id="c413e-115">Codieren und Decodieren eines BMP-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-115">Encode and Decode a BMP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
+ [<span data-ttu-id="c413e-116">Codieren und Decodieren eines PNG-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-116">Encode and Decode a PNG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
+ [<span data-ttu-id="c413e-117">Codieren und Decodieren eines WDP-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-117">Encode and Decode a WDP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
+ [<span data-ttu-id="c413e-118">Codieren und Decodieren eines GIF-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-118">Encode and Decode a GIF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
+ [<span data-ttu-id="c413e-119">Codieren und Decodieren eines TIFF-Bilds</span><span class="sxs-lookup"><span data-stu-id="c413e-119">Encode and Decode a TIFF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
+ [<span data-ttu-id="c413e-120">Schreiben von Metadaten in eine Bitmap</span><span class="sxs-lookup"><span data-stu-id="c413e-120">Write Metadata to a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
+ [<span data-ttu-id="c413e-121">Lesen von Metadaten aus einer Bitmap</span><span class="sxs-lookup"><span data-stu-id="c413e-121">Read Metadata from a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
   
-## <a name="reference"></a><span data-ttu-id="4e584-122">Verweis</span><span class="sxs-lookup"><span data-stu-id="4e584-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c413e-122">Verweis</span><span class="sxs-lookup"><span data-stu-id="c413e-122">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="4e584-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e584-123">See Also</span></span>  
- [<span data-ttu-id="4e584-124">Übersicht über die Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="4e584-124">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c413e-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c413e-123">See Also</span></span>  
+ [<span data-ttu-id="c413e-124">Übersicht über die Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="c413e-124">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

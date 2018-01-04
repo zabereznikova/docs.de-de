@@ -17,20 +17,21 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ee925facb1dee797c94efc8d795150217b081b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e423178c12e7882ed331eece17d170c4c79d5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="richtextbox"></a><span data-ttu-id="e05ab-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e05ab-102">RichTextBox</span></span>
-<span data-ttu-id="e05ab-103">Die <xref:System.Windows.Controls.RichTextBox> Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Funktionen wie Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.</span><span class="sxs-lookup"><span data-stu-id="e05ab-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="1ee22-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="1ee22-102">RichTextBox</span></span>
+<span data-ttu-id="1ee22-103">Die <xref:System.Windows.Controls.RichTextBox> Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Funktionen wie Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.</span><span class="sxs-lookup"><span data-stu-id="1ee22-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e05ab-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e05ab-104">In This Section</span></span>  
- [<span data-ttu-id="e05ab-105">Übersicht über RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e05ab-105">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [<span data-ttu-id="e05ab-106">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="e05ab-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1ee22-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1ee22-104">In This Section</span></span>  
+ [<span data-ttu-id="1ee22-105">Übersicht über RichTextBox</span><span class="sxs-lookup"><span data-stu-id="1ee22-105">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
+ [<span data-ttu-id="1ee22-106">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="1ee22-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e05ab-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e05ab-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1ee22-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1ee22-107">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="e05ab-108">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="e05ab-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="e05ab-109">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="e05ab-109">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="1ee22-108">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="1ee22-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="1ee22-109">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="1ee22-109">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

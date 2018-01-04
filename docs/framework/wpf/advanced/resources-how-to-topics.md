@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="4a829-102">Gewusst-wie-Themen zu Ressourcen</span><span class="sxs-lookup"><span data-stu-id="4a829-102">Resources How-to Topics</span></span>
-<span data-ttu-id="4a829-103">Die Themen in diesem Abschnitt wird beschrieben, wie mit [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="4a829-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="eca3b-102">Gewusst-wie-Themen zu Ressourcen</span><span class="sxs-lookup"><span data-stu-id="eca3b-102">Resources How-to Topics</span></span>
+<span data-ttu-id="eca3b-103">Die Themen in diesem Abschnitt wird beschrieben, wie mit [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="eca3b-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4a829-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4a829-104">In This Section</span></span>  
- [<span data-ttu-id="4a829-105">Definieren einer Ressource und Verweisen auf eine Ressource</span><span class="sxs-lookup"><span data-stu-id="4a829-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="4a829-106">Verwenden von Anwendungsressourcen</span><span class="sxs-lookup"><span data-stu-id="4a829-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="4a829-107">Verwenden von SystemFonts</span><span class="sxs-lookup"><span data-stu-id="4a829-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="4a829-108">Verwenden von Systemschriftartschlüsseln</span><span class="sxs-lookup"><span data-stu-id="4a829-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="4a829-109">Verwenden von SystemParameters</span><span class="sxs-lookup"><span data-stu-id="4a829-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="4a829-110">Verwenden von Systemparameterschlüsseln</span><span class="sxs-lookup"><span data-stu-id="4a829-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eca3b-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="eca3b-104">In This Section</span></span>  
+ [<span data-ttu-id="eca3b-105">Definieren einer Ressource und Verweisen auf eine Ressource</span><span class="sxs-lookup"><span data-stu-id="eca3b-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="eca3b-106">Verwenden von Anwendungsressourcen</span><span class="sxs-lookup"><span data-stu-id="eca3b-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
+ [<span data-ttu-id="eca3b-107">Verwenden von SystemFonts</span><span class="sxs-lookup"><span data-stu-id="eca3b-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="eca3b-108">Verwenden von Systemschriftartschlüsseln</span><span class="sxs-lookup"><span data-stu-id="eca3b-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="eca3b-109">Verwenden von SystemParameters</span><span class="sxs-lookup"><span data-stu-id="eca3b-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [<span data-ttu-id="eca3b-110">Verwenden von Systemparameterschlüsseln</span><span class="sxs-lookup"><span data-stu-id="eca3b-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="4a829-111">Verweis</span><span class="sxs-lookup"><span data-stu-id="4a829-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="eca3b-111">Verweis</span><span class="sxs-lookup"><span data-stu-id="eca3b-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="4a829-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4a829-112">Related Sections</span></span>  
- [<span data-ttu-id="4a829-113">XAML-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="4a829-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="eca3b-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="eca3b-112">Related Sections</span></span>  
+ [<span data-ttu-id="eca3b-113">XAML-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="eca3b-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
