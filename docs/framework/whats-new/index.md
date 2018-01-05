@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 <a name="introduction"></a> Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden Versionen von .NET Framework:  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 [.NET 2015 und .NET Framework 4.6](#v46)   
 [.NET Framework 4.5.2](#v452)   
 [.NET Framework 4.5.1](#v451)   
-[.NET Framework 4.5](#core)   
+[.NET Framework 4.5](#v45)   
 
 Dieser Artikel enthält keine umfassenden Informationen zu jeder neuen Funktion und unterliegt möglichen Änderungen. Allgemeine Informationen zu .NET Framework finden Sie unter [Erste Schritte](../../../docs/framework/get-started/index.md). Informationen zu unterstützten Plattformen finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md). Downloadlinks und Installationsanweisungen finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md).
 
@@ -1243,7 +1243,7 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
 
  [Zurück nach oben](#introduction)
 
-<a name="core"></a> 
+<a name="v45"></a> 
 ## <a name="whats-new-in-the-net-framework-45"></a>Neuigkeiten in .NET Framework 4.5
 
 ### <a name="core-new-features-and-improvements"></a>Wichtige neue Features und Verbesserungen
