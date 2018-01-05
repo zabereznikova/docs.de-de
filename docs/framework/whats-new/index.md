@@ -13,11 +13,12 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 <a name="introduction"></a> Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden Versionen von .NET Framework:  
@@ -301,7 +302,7 @@ End Class
 
  Sie können dann eine Ressourcendatei erstellen, DataAnnotation.Localization.fr.resx, deren Schlüssel die Zeichenfolge der Fehlermeldung und ihr Wert die lokalisierte Fehlermeldung ist. Die Datei muss sich im Ordner `App.LocalResources` befinden. Das folgende Beispiel enthält den Schlüssel und seinen Wert in einer lokalisierten Fehlermeldung (Französisch, fr):
 
-| Name                                 | Wert                                     |
+| name                                 | Wert                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Die Bewertung muss zwischen 1 und 10 liegen. | La note doit être comprise entre 1 et 10. |
 
@@ -398,7 +399,7 @@ End Function
 
  Um darauf in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] zu reagieren, wurden die folgenden drei Methoden zur <xref:System.Security.Cryptography.ECDiffieHellman>-Basisklasse hinzugefügt, um diese KDF-Routinen und deren Eingaben eindeutiger darzustellen:
 
-|Die ECDiffieHellman-Methode|Beschreibung|
+|Die ECDiffieHellman-Methode|description|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
@@ -1180,7 +1181,7 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
 
      Diese Methode wird möglicherweise durch eine Eintragung verwendet, die zuvor durch <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> als Antwort auf die <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>-Methode erstellt wurde. Sie fragt `System.Transactions` ab, um die Transaktion zu einer MSDTC-Transaktion heraufzustufen und um die heraufstufbare Eintragung zu einer dauerhaften Eintragung zu „konvertieren“. Nachdem die Methode erfolgreich abgeschlossen wurde, wird die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle nicht mehr durch `System.Transactions` referenziert, und alle künftigen Benachrichtigungen gelangen zur angegebenen <xref:System.Transactions.ISinglePhaseNotification>-Schnittstelle. Die entsprechende Eintrag muss als eine dauerhafte Eintragung fungieren und die Transaktionsprotokollierung und -wiederherstellung unterstützen. Unter <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> finden Sie entsprechende Einzelheiten. Darüber hinaus muss die Eintragung <xref:System.Transactions.ISinglePhaseNotification> unterstützen.  Diese Methode kann *nur* während der Verarbeitung eines <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>-Aufrufs aufgerufen werden. Wenn dies nicht der Fall ist, wird eine <xref:System.Transactions.TransactionException>-Ausnahme ausgelöst.
 
- [Zurück zum Anfang](#introduction)
+ [Zurück nach oben](#introduction)
 
 <a name="v451"></a> 
 ## <a name="whats-new-in-the-net-framework-451"></a>Neuigkeiten in .NET Framework 4.5.1
@@ -1240,7 +1241,7 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
 
  Informationen zu neuen Funktionen in ASP.NET 4.5.1 finden Sie unter [ASP.NET 4.5.1 und Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094) auf der ASP.NET-Website.
 
- [Zurück zum Anfang](#introduction)
+ [Zurück nach oben](#introduction)
 
 <a name="core"></a> 
 ## <a name="whats-new-in-the-net-framework-45"></a>Neuigkeiten in .NET Framework 4.5
