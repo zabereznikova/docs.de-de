@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -47,7 +48,7 @@ sn [-quiet][option [parameter(s)]]
   
 #### <a name="parameters"></a>Parameter  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**-a** *identitätschlüsselpaardatei* *öffentlichersignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einer Datei.|  
 |**-ac** *öffentlicheridentitätschlüsseldatei* *identitätsschlüsselpaarcontainer* *öffentlicherSignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einem Schlüsselcontainer.|  

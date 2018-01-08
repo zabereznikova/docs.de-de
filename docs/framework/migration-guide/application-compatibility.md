@@ -19,11 +19,12 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.workload: dotnet
+ms.openlocfilehash: 0144d75d7b158efb5ab205dfdd96884fb630eabc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
@@ -61,7 +62,7 @@ Jedes Problem umfasst die folgenden Informationen:
     |   |   |
     |---|---|
     |Hauptversion|Eine wesentliche Änderung, die eine große Anzahl von Apps beeinflusst oder erhebliche Änderungen des Codes erforderlich macht.|
-    |Nebenversion|Eine Änderung, die eine kleine Anzahl von Apps beeinflusst oder geringfügige Änderungen des Codes erforderlich macht.|
+    |Gering|Eine Änderung, die eine kleine Anzahl von Apps beeinflusst oder geringfügige Änderungen des Codes erforderlich macht.|
     |Grenzfall|Eine Änderung, die nur Apps in sehr spezifischen, nicht üblichen Szenarien beeinflusst.|
     |Transparent|Eine Änderung ohne nennenswerte Auswirkungen auf die Entwickler oder Benutzer der Anwendung.|
 

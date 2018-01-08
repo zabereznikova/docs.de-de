@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] einige bestimmte Sicherheitsszenarien nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht, weshalb [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch die Ausführung eines Diensts mit der Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, beispielsweise Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung, werden beim Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unter Windows&#160;XP Home Edition unterstützt.  
@@ -114,14 +115,14 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
  Verlegen Sie den `issue_ticket`-Endpunkt, damit dieses Szenario funktioniert.  
   
 ## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL-Importattribute können verloren werden  
- WCF kann die Attribute eines `<wst:Claims>`-Elements in einer`RST`-Vorlage beim Ausführen eines WSDL-Imports nicht verfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>` direkt in`WSFederationHttpBinding.Security.Message.TokenRequestParameters` oder in`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.  
+ WCF kann die Attribute eines `<wst:Claims>`-Elements in einer `RST`-Vorlage beim Ausführen eines WSDL-Imports nicht nachverfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>` direkt in`WSFederationHttpBinding.Security.Message.TokenRequestParameters` oder in`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.  
   
  Ändern Sie nach Abschluss des Importvorgangs die Bindung direkt auf dem Client, um dieses Problem zu korrigieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Offenlegung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Ausweitung von Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Replay-Angriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

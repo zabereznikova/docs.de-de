@@ -12,21 +12,21 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
 In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Framework-Datei-E/A verwendet werden, kategorisiert in Datei-E/A-Klassen, Klassen zum Erstellen von Streams und Klassen zum Lesen und Schreiben in Streams.  
   
- Für das Betreten der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]-Dokumentation und eine umfassendere Auflistung siehe [Übersicht über die Klassenbibliothek](../../../../../docs/standard/class-library-overview.md).  
+ Für das Betreten der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]-Dokumentation und eine umfassendere Auflistung siehe [Übersicht über die Klassenbibliothek](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Grundlegende E/A-Klassen für Dateien, Laufwerke und Verzeichnisse  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die für Datei-E/A verwendet werden.  
   
-|Klasse|Beschreibung|  
+|Klasse|description|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
@@ -43,7 +43,7 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 ## <a name="classes-used-to-create-streams"></a>Klassen zum Erstellen von Streams  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
   
-|Klasse|Beschreibung|  
+|Klasse|description|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Unterstützt den zufälligen Zugriff auf Dateien über die <xref:System.IO.FileStream.Seek%2A>-Methode. <xref:System.IO.FileStream> öffnet Dateien standardmäßig synchron, unterstützt aber auch den asynchronen Vorgang.|  
@@ -64,7 +64,7 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Schreibt Zeichen an einen `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Streams](../../../../../docs/standard/io/composing-streams.md)  
- [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)  
- [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)  
+ [Erstellen von Streams](../../../../standard/io/composing-streams.md)  
+ [Datei- und Stream-E/A](../../../../standard/io/index.md)  
+ [Asynchrone Datei-E/A](../../../../standard/io/asynchronous-file-i-o.md)  
  [Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

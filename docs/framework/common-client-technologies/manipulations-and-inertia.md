@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 45f36483477c9f6f670de0ac3f44a446f7ae4ee4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d8bcc561ec5bf35385ca48ffd78ccd7fda8a99eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulations-and-inertia"></a>Manipulationen und Trägheit
 Die Prozessorklassen *Manipulationen* und *Trägheit* unterstützen Ihre Anwendung beim Verschieben von UI-Elementen (User Interface, Benutzeroberfläche) auf dem Bildschirm auf natürliche und intuitive Weise. Durch Manipulationen können Benutzer Komponenten mit Manipulatoren verschieben, drehen und deren Größe verändern. Solche Manipulatoren sind z.B. Computermäuse, Stifte oder (bei einem Szenario mit Touchscreen) die Finger der Benutzer. *Trägheit* emuliert das Echtzeitverhalten von UI-Elementen, die sich in Bewegung befinden, indem Reibungskräfte für die Elemente simuliert werden. Damit sind Elemente in der Lage, ihre Bewegung (sowohl linear als auch winkelförmig) graduell zu verlangsamen, bevor die Bewegung angehalten wird.  

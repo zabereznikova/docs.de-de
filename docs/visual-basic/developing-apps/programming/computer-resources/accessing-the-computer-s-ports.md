@@ -14,11 +14,11 @@ ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Zugreifen auf die Anschlüsse des Computers (Visual Basic)
 Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.  
@@ -43,7 +43,7 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Beschreibt das `My.Computer.Ports`-Objekt und dessen Member  
   
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  Beschreibt die `SerialPortNames`-Eigenschaft, die eine Auflistung der Namen der seriellen Anschlüsse eines Computers abruft.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  

@@ -14,11 +14,12 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -181,7 +182,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
   
 In der folgenden Tabelle sind die unterstützten Sprachen aufgeführt.  
   
-| Sprache              | Kultur |
+| Sprache              | culture |
 | --------------------- | :-----: |
 | Arabisch                | ar      |
 | Tschechisch                 | cs      |
@@ -196,7 +197,7 @@ In der folgenden Tabelle sind die unterstützten Sprachen aufgeführt.
 | Italienisch               | it      |
 | Japanisch              | ja      |
 | Koreanisch                | ko      |
-| Norwegisch             | nein      |
+| Norwegisch             | Nein      |
 | Polnisch                | pl      |
 | Portugiesisch (Brasilien)   | pt-BR   |
 | Portugiesisch (Portugal) | pt-PT   |

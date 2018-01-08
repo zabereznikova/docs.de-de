@@ -14,11 +14,11 @@ ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c4d46bbd3e432e2551c60f9e2996cadeda39c8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e36652e50a9708ef523babde9372702dfcc3829c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Zugreifen auf die Maus (Visual Basic)
 Mit dem `My.Computer.Mouse`-Objekt können Sie Informationen zu der Maus des Computers abrufen: Ist eine Maus vorhanden, wie viele Tasten hat sie und welche Informationen zum Mausrad liegen vor?  
@@ -28,9 +28,9 @@ Mit dem `My.Computer.Mouse`-Objekt können Sie Informationen zu der Maus des Com
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Stellen Sie fest, ob die Maus über ein Mausrad verfügt.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists%2A>|  
-|Stellen Sie fest, ob die rechte und die linke Maustaste getauscht wurden|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped%2A>|  
-|Legen Sie fest, wie weit gescrollt wird, wenn das Mausrad einmal gedreht wird.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines%2A>|  
+|Stellen Sie fest, ob die Maus über ein Mausrad verfügt.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Stellen Sie fest, ob die rechte und die linke Maustaste getauscht wurden|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Legen Sie fest, wie weit gescrollt wird, wenn das Mausrad einmal gedreht wird.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Mouse>

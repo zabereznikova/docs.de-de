@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
@@ -46,7 +46,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 -   **Suchen**. Sie können Ihre Position im Stream abfragen und ändern.  
   
- Weitere Informationen finden Sie unter [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
+ Weitere Informationen finden Sie unter [Composing Streams](../../../../standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Arten von Streams  
  In [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wird ein Stream von der <xref:System.IO.Stream>-Klasse dargestellt, die die abstrakte Klasse für alle anderen Streams bildet. Sie können nicht direkt eine Instanz der <xref:System.IO.Stream>-Klasse erstellen, doch Sie müssen eine der Klassen verwenden, die diese implementiert.  
@@ -59,19 +59,19 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 -   <xref:System.IO.MemoryStream>  
   
--   <xref:System.Net.Sockets.NetworkStream>.  
+-   <xref:System.Net.Sockets.NetworkStream>  
   
  In der nachstehenden Tabelle werden Aufgaben aufgeführt, die häufig mit einem Stream durchgeführt werden:  
   
-|Aktion|Informationen|
+|Beschreibung|Informationen|
 |---|---|   
-|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
-|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
-|Verschlüsseln von Daten|[Verschlüsseln von Daten](../../../../../docs/standard/security/encrypting-data.md)|  
-|Entschlüsseln von Daten|[Entschlüsseln von Daten](../../../../../docs/standard/security/decrypting-data.md)|  
+|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Verschlüsseln von Daten|[Verschlüsseln von Daten](../../../../standard/security/encrypting-data.md)|  
+|Entschlüsseln von Daten|[Entschlüsseln von Daten](../../../../standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Dateizugriff und Dateiattribute  
  Sie können steuern, wie Dateien erstellt, geöffnet und mit den Enumerationen <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> und <xref:System.IO.FileShare> freigegeben werden, die die von den Konstruktoren der <xref:System.IO.FileStream>-Klasse verwendeten Flags enthalten. Wenn Sie z.B. einen neuen <xref:System.IO.FileStream> öffnen oder erstellen, lässt die <xref:System.IO.FileMode>-Enumeration zu, dass Sie angeben, ob die Datei zum Anfügen geöffnet ist, ob eine neue Datei erstellt wird, falls die angegebene Datei nicht vorhanden ist, ob die Datei überschrieben wird usw.  
@@ -82,32 +82,32 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Beschreibung|Siehe|  
 |---|---|
-|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dateiberechtigungen  
- Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann mit der <xref:System.Security.Permissions.FileIOPermission>-Klasse vorgenommen werden. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) und unter <xref:System.Security.Permissions.FileIOPermission>.  
+ Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann mit der <xref:System.Security.Permissions.FileIOPermission>-Klasse vorgenommen werden. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Isolierte Dateispeicherung  
  Die isolierte Speicherung versucht die Probleme zu lösen, die bei der Arbeit mit Dateien auftreten, wenn der Benutzer oder der Code nicht die notwendigen Berechtigungen aufweist. Die isolierte Speicherung weist jedem Benutzer ein Datendepot zu, das einen oder mehrere Speicher enthalten kann. Speicher können voneinander nach Benutzer und Assembly isoliert werden. Nur der Benutzer oder die Assembly, der bzw. die einen Speicher erstellt hat, verfügt über Zugriff auf ihn. Ein Speicher verhält sich wie ein vollständiges virtuelles Dateisystem. Sie können innerhalb eines Speichers Verzeichnisse und Dateien erstellen und bearbeiten.  
   
  In der nachstehenden Tabelle werden die Aufgaben aufgelistet, die häufig dem isolierten Datenspeicher zugeordnet sind.  
   
-|Aktion|Informationen|
+|Beschreibung|Siehe|
 |---|---|  
-|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Dateiereignisse  
  Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Streams](../../../../../docs/standard/io/composing-streams.md)  
- [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)  
- [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)  
+ [Erstellen von Streams](../../../../standard/io/composing-streams.md)  
+ [Datei- und Stream-E/A](../../../../standard/io/index.md)  
+ [Asynchrone Datei-E/A](../../../../standard/io/asynchronous-file-i-o.md)  
  [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

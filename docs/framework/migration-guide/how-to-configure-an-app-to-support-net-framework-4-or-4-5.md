@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5
 Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten oder *aktivieren*, um verwalteten Code auszuführen. Normalerweise wird eine .NET Framework-App in der CLR-Version ausgeführt, für die sie erstellt wurde, aber Sie können dieses Verhalten für Desktop-Apps ändern, indem Sie eine Anwendungskonfigurationsdatei (auch als app.config-Datei bezeichnet) verwenden. Das Standardaktivierungsverhalten für Windows Store-Apps oder Windows Phone-Apps kann jedoch nicht mit einer Anwendungskonfigurationsdatei geändert werden. In diesem Artikel wird beschrieben, wie Sie eine Desktop-App in einer anderen Version von .NET Framework ausführen, und wie auf die Version 4 oder 4.5 abgezielt werden kann.  
@@ -81,7 +82,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
   
 |App.config-Dateieinstellung|Auf Computer mit installierter Version 3.5|Auf Computer mit installierten Versionen 3.5 und 4 oder 4.5|Auf Computer mit installierter Version 4 oder 4.5|  
 |-|-|-|-|  
-|Keine|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|  
+|Keiner|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|  
 |`<supportedRuntime version="v2.0.50727"/>`|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|  
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Wird unter 4 oder 4.5 ausgeführt|  
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Wird unter 3.5 ausgeführt|Wird unter 4 oder 4.5 ausgeführt|Wird unter 4 oder 4.5 ausgeführt|  

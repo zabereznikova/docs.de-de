@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hosting-net-core"></a>Hosten von .NET Core
 
@@ -139,7 +140,7 @@ Ein Beispiel zur Verwendung von coreclrhost.h (statt direkt mscoree.h) sehen Sie
 6. Verwenden Sie entweder `coreclr_execute_assembly` oder `coreclr_create_delegate`, um verwalteten Code auszuführen. Diese Funktionen sind analog zu den `ExecuteAssembly`- und `CreateDelegate`-Funktionen von Mscoree aus Schritt 7 des vorherigen Workflows.
 7. Verwenden Sie `coreclr_shutdown`, um die AppDomain zu entladen und die Laufzeit herunterzufahren. 
 
-## <a name="conclusion"></a>Schlussfolgerung
+## <a name="conclusion"></a>Schlussbemerkung
 Nachdem Ihr Host erstellt wurde, kann er getestet werden, indem er von der Befehlszeile aus ausgeführt wird und Argumente (z.B. die auszuführende verwaltete Anwendung) übergeben werden, die der Host erwartet. Beim Angeben der .NET Core-Anwendung, die den Host ausführt, müssen Sie die DLL-Datei verwenden, die von `dotnet build` erzeugt wurde. Ausführbare Dateien, die für eigenständige Anwendungen von `dotnet publish` erstellt wurden, sind tatsächlich die Standardeinstellung des .NET Core-Host (sodass die Anwendung direkt über die Befehlszeile in Hauptszenarios gestartet werden kann); der Benutzercode wird in einer DLL mit dem gleichen Namen kompiliert. 
 
 Wenn anfangs Funktionsstörungen auftreten, überprüfen Sie, dass *coreclr.dll* in dem Speicherort zur Verfügung steht, den der Host erwartet, dass sich alle erforderlichen Framework-Bibliotheken in der TPA-Liste befinden, und dass die CoreCLR-Bitanzahl (32 oder 64 Bit) der Erstellungsart des Host entspricht.

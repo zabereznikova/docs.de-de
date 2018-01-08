@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 Die Metadaten in einer Assembly werden vom Assembly Registration-Tool gelesen, und die erforderlichen Einträge werden der Registrierung hinzugefügt. COM-Clients sind so in der Lage, .NET Framework-Klassen transparent zu erstellen. Sobald eine Klasse registriert ist, kann diese von jedem COM-Client wie eine COM-Klasse verwendet werden. Die Klasse wird beim Installieren der Assembly nur einmal registriert. COM kann keine Instanzen von Klassen in der Assembly erstellen, bevor diese nicht registriert wurden.  
@@ -39,11 +40,11 @@ regasm assemblyFile [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|description|  
 |---------------|-----------------|  
 |*assemblyFile*|Die in COM zu registrierende Assembly.|  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/codebase**|Es wird ein Codebase-Eintrag in der Registrierung erstellt. Mit dem Codebase-Eintrag wird der Dateipfad für eine Assembly festgelegt, die nicht im globalen Assemblycache installiert ist. Die Option sollte nicht angegeben werden, wenn Sie die zu registrierende Assembly später im globalen Assemblycache installieren. Bei dem mit der **/codebase**-Option festgelegten *assemblyFile*-Argument muss es sich um eine [Assembly mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md) handeln.|  
 |**/registered**|Mit dieser Option wird angegeben, dass dieses Tool nur auf bereits registrierte Typbibliotheken verweist.|  

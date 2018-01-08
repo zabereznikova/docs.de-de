@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Enthält Links zu Themen, in denen die Verwendung von LINQ mit Visual Basic beschrieben wird.  
   
- [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  Enthält Informationen über [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Enthält Programmierbeispiele.  
   
  [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Enthält Links zu Themen, in denen das Erstellen eines [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)-Objektmodells in Anwendungen erläutert wird.  
+ Enthält Links zu Themen, in denen das Erstellen eines [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)-Objektmodells in Anwendungen erläutert wird.  
   
  [Arbeiten mit Datasets in N-Tier-Anwendungen](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Enthält Links zu Themen über die Erstellung mehrschichtiger Datenanwendungen.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [Rückspeichern von Daten in der Datenbank](/visualstudio/data-tools/save-data-back-to-the-database)  
  Enthält Links zu Seiten, die erläutern, wie aktualisierte Daten von einer Anwendung an eine Datenbank gesendet werden.  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  Beschreibt die ADO.NET-Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen.
 
  [Daten in Office-Projektmappen](https://msdn.microsoft.com/library/xx069ybh)  

@@ -16,11 +16,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 Bei dem Tool zur Generierung und Bearbeitung von Manifesten (Mage.exe) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann "Mage.exe" von Batchskripten und anderen Windows-basierten Anwendungen aus ausgeführt werden, einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen.  
@@ -42,7 +43,7 @@ Mage [commands] [commandOptions]
 #### <a name="parameters"></a>Parameter  
  In der folgenden Tabelle werden die von "Mage.exe" unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#NewUpdate) und ["Sign"-Befehlsoptionen](#Sign).  
   
-|Befehl|Beschreibung|  
+|Befehl|description|  
 |-------------|-----------------|  
 |**-cc, ClearApplicationCache**|Löscht den heruntergeladenen Anwendungscache aller Anwendungen, die nur online ausgeführt werden.|  
 |**-n, -New** *Dateityp [neue Optionen]*|Erstellt eine neue Datei des angegebenen Typs. Gültige Typen sind:<br /><br /> -   `Deployment`: Erstellt ein neues Bereitstellungsmanifest.<br />-   `Application`: Erstellt ein neues Anwendungsmanifest.<br /><br /> Wenn Sie mit diesem Befehl keine weiteren Parameter angeben, wird eine Datei des entsprechenden Typs mit den zugehörigen Standardtags und Attributwerten erstellt.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um den Dateinamen und den Pfad der neuen Datei anzugeben.<br /><br /> Verwenden Sie die Option **-FromDirectory** (siehe folgende Tabelle), um ein Anwendungsmanifest mit allen Assemblys für eine dem \<dependency>-Abschnitt des Manifests hinzugefügte Anwendung zu erstellen.|  
@@ -54,7 +55,7 @@ Mage [commands] [commandOptions]
 ## <a name="new-and-update-command-options"></a>Befehlsoptionen für "New" und "Update"  
  In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `-New` und `-Update` unterstützt werden.  
   
-|Optionen|Standardwert|Gilt für|Beschreibung|  
+|Optionen|Standardwert|Gilt für|description|  
 |-------------|-------------------|----------------|-----------------|  
 |**-a, -Algorithm**|sha1RSA|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Gibt den Algorithmus an, mit dem Abhängigkeitsdigests generiert werden sollen. Der Wert muss "sha256RSA" oder "sha1RSA" lauten.<br /><br /> Verwenden Sie diese Option mit dem Befehl "-Update". Diese Option wird bei der Verwendung des Befehls "-Sign" ignoriert.|  
 |**-appc, -AppCodeBase** `manifestReference`||Bereitstellungsmanifeste|Fügt einen URL- oder Dateipfadverweis in die Anwendungsmanifestdatei ein. Dieser Wert muss der vollständige Pfad zum Anwendungsmanifest sein.|  
@@ -83,7 +84,7 @@ Mage [commands] [commandOptions]
 ## <a name="sign-command-options"></a>"Sign"-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.  
   
-|Optionen|Beschreibung|  
+|Optionen|description|  
 |-------------|-----------------|  
 |**-cf, -CertFile** `filePath`|Gibt den Speicherort eines digitalen Zertifikats zum Signieren eines Manifests an. Diese Option kann zusammen mit der Option **-Password** verwendet werden.|  
 |**-ch, -CertHash** `hashSignature`|Der Hash eines im persönlichen Zertifikatspeicher des Clientcomputers gespeicherten digitalen Zertifikats. Dieser entspricht der Eigenschaft "Fingerabdruck" eines digitalen Zertifikats, das in der Zertifikatkonsole von Windows angezeigt wird.<br /><br /> `hashSignature` kann groß oder klein geschrieben werden und als einzelne Zeichenfolge oder so angegeben werden, dass die einzelnen Oktette des Fingerabdrucks durch Leerzeichen getrennt sind und der vollständige Fingerabdruck in Anführungszeichen eingeschlossen ist.|  

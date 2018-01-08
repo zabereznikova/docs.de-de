@@ -22,11 +22,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -44,11 +45,11 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>Parameter
 
-| Argument | Beschreibung |
+| Argument | description |
 | -------- | ----------- |
 |`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis:** Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
 
-| Option | Beschreibung |
+| Option | description |
 | ------ | ----------- |
 |**/32bitpreferred**|Erstellt ein Abbild im PE32-Format (vorzugweise 32 Bit).|
 |**/alignment:** `integer`|Legt FileAlignment auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .alignment-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|
@@ -105,7 +106,7 @@ Sie können *Ilasm.exe* zusammen mit dem zugehörigen Tool [*Ildasm.exe*](../../
 Mit diesem Verfahren können Sie auch eine einzelne PE-Datei aus mehreren PE-Dateien erstellen, die von unterschiedlichen Compilern generiert wurden.
 
 > [!NOTE]
-> Für PE-Dateien, die eingebetteten systemeigenen Code enthalten (z. B. von Visual C++ erstellte PE-Dateien), ist dieses Verfahren gegenwärtig jedoch nicht geeignet.
+> Für PE-Dateien, die eingebetteten systemeigenen Code enthalten (z. B. von Visual C++ erstellte PE-Dateien), ist dieses Verfahren gegenwärtig jedoch nicht geeignet.
 
 Damit dieses Zusammenspiel von *Ildasm.exe* und *Ilasm.exe* so exakt wie möglich erfolgt, ersetzt der Assembler lange Codierungen (die Sie möglicherweise in Ihren IL-Quellen geschrieben haben oder die aus einem anderen Compiler ausgegeben wurden) standardmäßig nicht durch kurze Codierungen. Verwenden Sie die Option **/optimize** , um kurze Codierungen nach Möglichkeit zu ersetzen.
 

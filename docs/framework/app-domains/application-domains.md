@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isolierung der Anwendungen voneinander. Windows verwendet beispielsweise Prozesse, um Anwendungen zu isolieren. Diese Isolierung ist erforderlich, um sicherzustellen, dass der in einer Anwendung ausgeführte Code andere, unabhängig davon ausgeführte Anwendungen nicht beeinträchtigt.  
@@ -40,7 +41,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
 -   [Die Vorteile der Isolation von Anwendungen](#benefits)  
   
--   [Referenz](#reference)  
+-   [Verweis](#reference)  
   
 <a name="benefits"></a>   
 ## <a name="the-benefits-of-isolating-applications"></a>Die Vorteile der Isolation von Anwendungen  
@@ -122,7 +123,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Die <xref:System.AppDomain> ist die programmgesteuerte Schnittstelle zu Anwendungsdomänen. Diese Klasse enthält Methoden zum Erstellen und Entladen von Domänen, zum Erstellen von Instanzen von Typen in Domänen und zum Registrieren von verschiedenen Benachrichtigungen wie das Entladen von Domänen. In der folgenden Tabelle werden häufig verwendete <xref:System.AppDomain>-Methoden aufgelistet.  
   
-|AppDomain-Methode|Beschreibung|  
+|AppDomain-Methode|description|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Erstellt eine neue Anwendungsdomäne. Es wird empfohlen, dass Sie eine Überladung dieser Methode verwenden, die ein <xref:System.AppDomainSetup>-Objekt angibt. Dies ist die bevorzugte Methode zum Festlegen der Eigenschaften einer neuen Domäne, z. B. die Anwendungsbasis oder das Stammverzeichnis für die Anwendung, des Speicherorts der Konfigurationsdatei für die Domäne und des Suchpfads, den die Common Language Runtime verwenden soll, um Assemblys in die Domäne zu laden.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> und <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Führt eine Assembly in der Anwendungsdomäne aus. Hierbei handelt es sich um eine Instanzmethode, mit der Code in einer anderen Anwendungsdomäne ausgeführt werden kann, für die ein Verweis vorhanden ist.|  

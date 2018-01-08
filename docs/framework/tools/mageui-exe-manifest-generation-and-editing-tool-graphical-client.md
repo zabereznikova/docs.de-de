@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 "MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="uielement-list"></a>UIElement-Liste  
  Die folgende Tabelle gibt einen Überblick über die verfügbaren Menü- und Symbolleistenelemente.  
   
-|Befehl|Menü|Verknüpfung|Beschreibung|  
+|Befehl|Menü|Verknüpfung|description|  
 |-------------|----------|--------------|-----------------|  
 |**Anwendungsmanifest**|**Datei, Neu**||Erstellt ein neues Anwendungsmanifest.|  
 |**Bereitstellungsmanifest**|**Datei, Neu**||Erstellt ein neues Bereitstellungsmanifest.|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="preferences-dialog-box"></a>Dialogfeld "Einstellungen2  
  Das Dialogfeld **Einstellungen** enthält die folgenden Elemente.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Beim Speichern signieren**|Fordert Sie beim Speichern der vorgenommenen Änderungen zum Signieren der Datei auf.|  
 |**Standardsignaturzertifikat verwenden**|Verwendet den im Textfeld **Zertifikatsdatei** eingegebenen Schlüssel zum Signieren aller Dateien. Auf diese Weise wird die Aufforderung zum Signieren entfernt, die i.d.R. angezeigt wird, wenn Sie eine Datei speichern und **Beim Speichern signieren** aktiviert ist. Verwenden Sie die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Textfeld **Zertifikatdatei**, um eine Schlüsseldatei auszuwählen.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  Dieses Dialogfeld enthält die folgenden Elemente:  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Mit Zertifikatsdatei signieren**|Signiert das Manifest mit einem im Dateisystem gespeicherten digitalen Zertifikat.|  
 |**Datei**|Stellt einen Bereich für die Eingabe des Pfads zur PFX-Datei bereit, die das Zertifikat darstellt.|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  Die Registerkarte **Anwendungsmanifest** enthält die folgenden Registerkarten.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
@@ -97,18 +98,18 @@ ms.lasthandoff: 11/21/2017
 ### <a name="name-tab"></a>Registerkarte "Name"  
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Anwendungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Name**|Erforderlich. Der Name des Anwendungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
-|**Prozessor**|Optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
-|**Kultur**|Optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
+|**Prozessor**|Dies ist optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
+|**Kultur**|Dies ist optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
 |**Öffentliches Schlüsseltoken**|Optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
  Diese Informationen werden normalerweise im Bereitstellungsmanifest bereitgestellt. Diese Felder können nur geändert werden, wenn das Kontrollkästchen **Anwendungsmanifest für Vertrauensinformationen verwenden** auf der Registerkarte **Anwendungsoptionen** aktiviert ist.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Publisher**|Der Name der Person oder Organisation, die für die Anwendung verantwortlich ist. Dieser Wert wird als Ordnername für das Startmenü verwendet.|  
 |**Produkt**|Der vollständige Produktname. Wenn Sie **Lokal installieren** für das Element **Anwendungstyp** auf der Registerkarte **Bereitstellungsoptionen** des Bereitstellungsmanifests ausgewählt haben, wird dieser Name im Menülink **Start** und unter **Programme hinzufügen oder entfernen** für diese Anwendung angezeigt.|  
@@ -116,14 +117,14 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="application-options-tab"></a>Registerkarte "Anwendungsoptionen"  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Windows Presentation Foundation-Browseranwendung**|Gibt an, ob es sich um eine WPF-Anwendung handelt, die im Browser als XAML-Browseranwendung (XBAP) ausgeführt wird.|  
 |**Anwendungsmanifest für Vertrauensinformationen verwenden**|Gibt an, ob dieses Manifest Vertrauensinformationen enthält.|  
   
 ### <a name="files-tab"></a>Registerkarte "Dateien"  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Anwendungsverzeichnis**|Das Verzeichnis, in dem sich die Dateien der Anwendung befinden. Verwenden Sie die Schaltfläche mit den Auslassungszeichen (**...**), um das Verzeichnis auszuwählen.|  
 |**Auffüllen**|Fügt alle Dateien im Anwendungsverzeichnis und in den Unterverzeichnissen zum Anwendungsmanifest hinzu. Wenn "MageUI.exe" im Verzeichnis eine einzelne ausführbare Datei findet, wird diese automatisch als Einstiegspunkt gekennzeichnet. Hierbei handelt es sich um die Datei, die zuerst ausgeführt wird, wenn die ClickOnce-Anwendung auf dem Client gestartet wird.|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="permissions-required-tab"></a>Registerkarte "Erforderliche Berechtigungen"  
  Verwenden Sie die Registerkarte **Erforderliche Berechtigungen**, wenn Sie der Anwendung umfassenderen Zugriff auf den lokalen Computer gewähren müssen, als ihr standardmäßig erteilt wird. Weitere Informationen finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications).  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [NIB: Benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Details**|Die für das Anwendungsmanifest erstellte XML-Datei zum Darstellen des Berechtigungssatzes. Sie sollten diesen XML-Code nicht manuell bearbeiten, sofern Sie nicht mit dem XML-Format des Anwendungsmanifests vertraut sind. Weitere Informationen finden Sie unter [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest).|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  
  Die Registerkarte **Bereitstellungsmanifest** enthält die folgenden Registerkarten.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
@@ -154,29 +155,29 @@ ms.lasthandoff: 11/21/2017
 ### <a name="name-tab"></a>Registerkarte "Name"  
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Bereitstellungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Name**|Erforderlich. Der Namen des Bereitstellungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
-|**Prozessor**|Optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur kompiliert haben.|  
-|**Kultur**|Optional. Der zweiteilige ISO-Land-/Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
+|**Prozessor**|Dies ist optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur kompiliert haben.|  
+|**Kultur**|Dies ist optional. Der zweiteilige ISO-Land-/Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
 |**Öffentliches Schlüsseltoken**|Dies ist optional. Der öffentliche Schlüssel, mit dem dieses Bereitstellungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Publisher**|Erforderlich. Der Name der Person oder Organisation, die für die Anwendung verantwortlich ist. Dieser Wert wird als Ordnername für das Startmenü verwendet.|  
 |**Produkt**|Erforderlich. Der vollständige Produktname. Bei Auswahl von **Lokal installieren** für das Element **Anwendungstyp** auf der Registerkarte **Bereitstellungsoptionen** wird dieser Name im Menülink **Start** und unter **Programme hinzufügen oder entfernen** für diese Anwendung angezeigt.|  
-|**Supportstandort**|Optional. Die URL, über die Kunden Hilfe und Unterstützung für die Anwendung erhalten können.|  
+|**Supportstandort**|Dies ist optional. Die URL, über die Kunden Hilfe und Unterstützung für die Anwendung erhalten können.|  
   
 ### <a name="deployment-options-tab"></a>Registerkarte "Bereitstellungsoptionen"  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Anwendungstyp**|Dies ist optional. Gibt an, ob sich diese Anwendung auf dem Clientcomputer selbst installiert (**Lokal installieren**), ob sie online ausgeführt wird (**Nur online**), oder ob es sich um eine WPF-Anwendung handelt, die im Browser ausgeführt wird (**WPF-Browseranwendung**). Der Standardwert ist **Lokal installieren**.|  
-|**Startposition**|Optional. Die URL, über die die Anwendung eigentlich gestartet werden soll. Hilfreich beim Bereitstellen einer Anwendung von einer CD, die sich über das Internet selbst aktualisieren soll.|  
-|**Startposition (ProviderURL) im Manifest einschließen**|Optional. Gibt die URL an, die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] auf Anwendungsupdates überprüft.|  
+|**Startposition**|Dies ist optional. Die URL, über die die Anwendung eigentlich gestartet werden soll. Hilfreich beim Bereitstellen einer Anwendung von einer CD, die sich über das Internet selbst aktualisieren soll.|  
+|**Startposition (ProviderURL) im Manifest einschließen**|Dies ist optional. Gibt die URL an, die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] auf Anwendungsupdates überprüft.|  
 |**Anwendung nach dem Installieren automatisch ausführen**|Erforderlich. Gibt an, dass die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]Anwendung unmittelbar nach der ersten Installation über eine URL ausgeführt werden soll. Dieses Kontrollkästchen ist standardmäßig aktiviert.|  
 |**Übergeben von URL-Parametern an die Anwendung zulassen**|Erforderlich. Gestattet die Übertragung der Parameterdaten an die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung über eine Abfragezeichenfolge, die an die URL des Bereitstellungsmanifests angefügt wird. Das Kontrollkästchen ist standardmäßig deaktiviert.|  
 |**Dateierweiterung „.deploy“ verwenden**|Erforderlich. Bei Auswahl dieser Option müssen alle Dateien im Anwendungsmanifest die Erweiterung ".deploy" aufweisen. Das Kontrollkästchen ist standardmäßig deaktiviert.|  
@@ -184,18 +185,18 @@ ms.lasthandoff: 11/21/2017
 ### <a name="update-options-tab"></a>Registerkarte "Aktualisierungsoptionen"  
  Die Registerkarte **Aktualisierungsoptionen** enthält die hier genannten Optionen nur, wenn für das Auswahlfeld **Anwendungstyp** auf der Registerkarte **Name** die Option **Lokal installieren** festgelegt ist.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Diese Anwendung soll nach Updates suchen**|Gibt an, ob [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] nach Anwendungsupdates suchen soll. Wenn dieses Kontrollkästchen nicht aktiviert ist, sucht die Anwendung nicht nach Updates, sofern Sie sie nicht mithilfe der APIs im <xref:System.Deployment.Application>-Namespace programmgesteuert aktualisieren.|  
 |**Zeitpunkt für das Prüfen auf Updates auswählen**|Bietet zwei Optionen zum Prüfen auf Updates:<br /><br /> -   **Vor dem Starten der Anwendung**. Das Prüfen auf Updates erfolgt vor der Ausführung der Anwendung.<br />-   **Nach dem Starten der Anwendung**. Das Prüfen auf Updates beginnt, sobald das Hauptformular der Anwendung initialisiert wurde, und wird beim nächsten Starten der Anwendung ausgeführt.|  
 |**Häufigkeit des Prüfens auf Updates**|Bestimmt, wie oft [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] auf Updates prüfen soll:<br /><br /> -   **Bei jedem Ausführen der Anwendung überprüfen**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] führt jedes Mal eine Prüfung auf Updates durch, wenn der Benutzer die Anwendung öffnet.<br />-   **Prüfung alle**: Wählen Sie ein vor der Prüfung auf Updates zu verstreichendes Zeitintervall und eine Einheit (Stunden, Tage oder Wochen) aus.|  
-|**Mindestens erforderliche Version für diese Anwendung angeben**|Optional. Gibt an, dass eine bestimmte Version der Anwendung installiert sein muss, wodurch verhindert wird, dass Ihre Benutzer mit einer früheren Version arbeiten.|  
+|**Mindestens erforderliche Version für diese Anwendung angeben**|Dies ist optional. Gibt an, dass eine bestimmte Version der Anwendung installiert sein muss, wodurch verhindert wird, dass Ihre Benutzer mit einer früheren Version arbeiten.|  
 |**Version**|Diese ist erforderlich, wenn das Kontrollkästchen **Mindestens erforderliche Version für diese Anwendung angeben** aktiviert ist. Die Versionsnummer muss im Format *N.N.N.N* bereitgestellt werden. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
   
 ### <a name="application-reference-tab"></a>Registerkarte "Anwendungsverweis"  
  Die Registerkarte **Anwendungsverweis** enthält die gleichen Felder wie die weiter oben in diesem Thema beschriebene Registerkarte **Name**. Die einzige Ausnahme ist das folgende Feld.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
 |**Manifest auswählen**|Ermöglicht Ihnen die Auswahl des Anwendungsmanifests. Alle anderen Felder auf dieser Seite werden aufgefüllt, wenn Sie ein Anwendungsmanifest auswählen.|  
   

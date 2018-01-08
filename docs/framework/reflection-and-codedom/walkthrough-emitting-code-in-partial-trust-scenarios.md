@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
@@ -192,7 +193,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
 <a name="Example"></a>   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>description  
  Das folgende Codebeispiel veranschaulicht die Verwendung des <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>-Flags, um anonym gehosteten dynamischen Methoden das Überspringen von JIT-Sichtbarkeitsprüfungen zu ermöglichen, wenn der Zielmember die gleiche oder eine geringere Vertrauensebene aufweist als die Assembly, die den Code ausgibt.  
   
  Im Beispiel wird eine `Worker`-Klasse definiert, die über die Grenzen der Anwendungsdomäne hinweg gemarshallt werden kann. Die Klasse verfügt über zwei `AccessPrivateMethod`-Methodenüberladungen, die dynamische Methoden ausgeben und ausführen. Die erste Überladung gibt eine dynamische Methode (mit oder ohne JIT-Sichtbarkeitsprüfungen) aus, die die private `PrivateMethod`-Methode der `Worker`-Klasse aufruft. Die zweite Überladung gibt eine dynamische Methode aus, die auf eine `internal`-Eigenschaft (`Friend`-Eigenschaft in Visual Basic) der <xref:System.String>-Klasse zugreift.  

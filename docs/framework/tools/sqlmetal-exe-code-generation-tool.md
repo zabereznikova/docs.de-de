@@ -20,11 +20,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54f304117c86066e18bfb40f3b3640819647ac0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] -Komponente von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
@@ -53,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Verbindungsoptionen**  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/server:** *\<name>*|Gibt den Datenbank-Servernamen an.|  
 |**/database:** *\<name>*|Gibt den Datenbankkatalog auf dem Server an.|  
@@ -64,7 +65,7 @@ sqlmetal [options] [<input file>]
   
  **Extraktionsoptionen**  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/views**|Extrahiert Datenbankansichten.|  
 |**/functions**|Extrahiert Datenbankfunktionen.|  
@@ -72,7 +73,7 @@ sqlmetal [options] [<input file>]
   
  **Ausgabeoptionen**  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/dbml** *[:Dateipfad]*|Sendet die Ausgabe als DBML-Datei. Kann nicht zusammen mit der Option **/map** verwendet werden.|  
 |**/code** *[:Dateipfad]*|Sendet die Ausgabe als Quellcode. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
@@ -80,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Verschiedenes**  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/language:** *\<sprache>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<<sprache>*: vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
 |**/namespace:** *\<name>*|Gibt den Namespace des generierten Codes an. Standardwert: kein Namespace.|  
@@ -91,7 +92,7 @@ sqlmetal [options] [<input file>]
   
  **Eingabedatei**  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**\<eingabedatei>**|Gibt eine SQL Server Express-Datei (.mdf), eine [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
   
