@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilieren von Anwendungen mit .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]ist eine vorkompilierungstechnologie für die Erstellung und Bereitstellung von Windows-apps, die mit Visual Studio 2015 und höher enthalten ist. Die in verwaltetem Code (C# oder Visual Basic) geschriebene Releaseversion von Apps mit .NET Framework und Windows 10 als Ziel für systemeigenen Code werden automatisch kompiliert.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   Optimierte anwendungsspeichernutzung.  
 
 > [!IMPORTANT]
-> Für die meisten apps und Szenarien bietet .NET Native, bedeutend schneller Startzeiten und eine überragende Leistung im Vergleich zu einer app kompilierte IL oder ein NGEN-Image. Allerdings können die Ergebnisse variieren. Um sicherzustellen, dass Ihre app von .NET native die Leistungssteigerungen profitiert hat, sollten Sie seine Leistung, die nicht .NET Native Version Ihrer app vergleichen. Weitere Informationen finden Sie unter [Übersicht über Leistungssitzungen](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Für die meisten apps und Szenarien bietet .NET Native, bedeutend schneller Startzeiten und eine überragende Leistung im Vergleich zu einer app kompilierte IL oder ein NGEN-Image. Allerdings können die Ergebnisse variieren. Um sicherzustellen, dass Ihre app von .NET native die Leistungssteigerungen profitiert hat, sollten Sie seine Leistung, die nicht .NET Native Version Ihrer app vergleichen. Weitere Informationen finden Sie unter [Übersicht über Leistungssitzungen](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
 Aber [!INCLUDE[net_native](../../../includes/net-native-md.md)] umfasst mehr als nur eine Kompilierung in systemeigenem Code. Es ändert die Art und Weise, in der .NET Framework-Anwendungen erstellt und ausgeführt werden. Insbesondere:  
   

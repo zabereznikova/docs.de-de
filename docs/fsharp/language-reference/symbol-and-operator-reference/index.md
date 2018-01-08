@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -92,7 +92,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer als"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li><ul/>|
 |`>>`|[Funktionen](../functions/index.md)|<ul><li>Verfasst zwei Funktionen (Vorwärtskompositionsoperator).<br /></li><ul/>|
 |`>>>`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Verschiebt Bits in der Menge auf der linken Seite um die Anzahl der Bits nach rechts, die auf der rechten Seite angegeben wurde.<br /></li><ul/>|
-|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die rechte Seite größer gleich der linken Seite ist; andernfalls wird `false` zurückgegeben.<br /></li><ul/>|
+|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` ist die linke Seite größer als oder gleich der rechten Seite ist; andernfalls gibt `false`.<br /></li><ul/>|
 |`>=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li><ul/>|
 |`?`|[Parameter und Argumente](../parameters-and-arguments.md)|<ul><li>Gibt ein optionales Argument an.<br /></li><li>Wird als Operator für dynamische Methoden- und Eigenschaftenaufrufe verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li><ul/>|
 |`? ... <- ...`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird als Operator zum Festlegen von dynamischen Eigenschaften verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li><ul/>|

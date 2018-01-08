@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>Transaktionsgrundlagen
 In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zuerst erstellt sie eine neue Tabelle in einer Datenbank. Danach ruft sie ein spezielles Objekt auf, um Daten zu sammeln, zu formatieren und in die neue Tabelle einzufügen. Diese beiden Aufgaben sind aufeinander bezogen und sogar voneinander abhängig, da nur dann eine neue Tabelle erstellt werden sollte, wenn diese mit Daten gefüllt werden kann. Wenn beide Aufgaben im Bereich einer Transaktion ausgeführt werden, wird die zwischen ihnen bestehende Beziehung verstärkt. Falls die zweite Aufgabe fehlschlägt, wird die erste Aufgabe bis zu einem Punkt rückgängig gemacht, der vor der Erstellung der Tabelle liegt.  
@@ -30,7 +30,7 @@ In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#1
   
  Wenn Sie mithilfe der in <xref:System.Transactions> verfügbaren Klassen eine Transaktionsanwendung entwickeln, müssen Sie weder um den erforderlichen Typ von Transaktion noch um den benötigten Transaktions-Manager Gedanken machen. Die <xref:System.Transactions>-Infrastruktur verwaltet diese automatisch für Sie.  
   
- Beim Erstellen einer Transaktion können Sie die Isolationsstufe angeben, die für die Transaktion gelten soll. Die durch die <xref:System.Transactions.IsolationLevel>-Klasse definierte Isolationsstufe einer Transaktion bestimmt, über welche Zugriffsebene auf die von der Transaktion betroffenen Daten andere Transaktionen verfügen.  
+ Beim Erstellen einer Transaktion können Sie die Isolationsstufe angeben, die für die Transaktion gelten soll. Die Isolationsstufe, definiert durch die <xref:System.Transactions.IsolationLevel> Enum bestimmt, welche Zugriffsebene, die andere Transaktionen auf die Daten durch Ihre Transaktion Auswirkungen werden.  
   
  Sie können mithilfe von ADO.NET, Transaktionen erstellen <xref:System.EnterpriseServices>, oder das transaktionsprogrammierungsmodell durch die <xref:System.Transactions> Namespace. Die [Features von System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) Thema wird erläutert, die Funktionen, die Sie verwenden können, zum Schreiben einer transaktionsanwendung mit der <xref:System.Transactions> Namespace.  
   

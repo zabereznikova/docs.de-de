@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehlerbehandlungsroutine und gibt den Speicherort der Routine innerhalb einer Prozedur an. kann auch verwendet werden, um eine Fehlerbehandlungsroutine zu deaktivieren.  
   
- Ohne eine `On Error` -Anweisung alle Laufzeitfehler, der auftritt, ist ein schwerwiegender Fehler: eine Fehlermeldung angezeigt wird, und die Ausführung beendet.  
+ Ohne Fehlerbehandlung, alle Laufzeitfehler, der auftritt, ist ein schwerwiegender Fehler: eine Fehlermeldung angezeigt wird, und die Ausführung beendet.  
   
  Wann immer möglich, empfehlen wir Sie Exception Handling, strukturierte im Code behandeln, statt unstrukturierte Ausnahmebehandlung verwenden und die `On Error` Anweisung. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
