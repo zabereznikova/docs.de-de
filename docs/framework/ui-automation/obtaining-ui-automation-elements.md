@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>Abrufen von Benutzeroberflächenautomatisierungs-Elementen
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Stammelement  
- Für jede Suche nach <xref:System.Windows.Automation.AutomationElement> -Objekten ist ein Ausgangspunkt erforderlich. Dies kann ein beliebiges Element sein, z. B. der Desktop, ein Anwendungsfenster oder ein Steuerelement.  
+ Für jede Suche nach <xref:System.Windows.Automation.AutomationElement> -Objekten ist ein Ausgangspunkt erforderlich. Dies kann ein beliebiges Element sein, z. B. der Desktop, ein Anwendungsfenster oder ein Steuerelement.  
   
  Das Stammelement für den Desktop, von dem alle Elemente abgeleitet werden, werden aus der statischen abgerufen <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> Eigenschaft.  
   
@@ -108,5 +109,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navigieren Sie zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
