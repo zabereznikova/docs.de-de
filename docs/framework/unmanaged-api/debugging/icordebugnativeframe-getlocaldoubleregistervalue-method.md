@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75b8c4d5551c9624852f1e0f730d1215236608de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ece07fcffbc0d0e6b8cf06cc04866c1b651e6a01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="a837e-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue-Methode</span><span class="sxs-lookup"><span data-stu-id="a837e-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
-<span data-ttu-id="a837e-103">Ruft den Wert eines Arguments oder einer lokalen Variablen, die in den zwei angegebenen Registern für diese systemeigenen Rahmen gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="a837e-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="14c36-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue-Methode</span><span class="sxs-lookup"><span data-stu-id="14c36-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
+<span data-ttu-id="14c36-103">Ruft den Wert eines Arguments oder einer lokalen Variablen, die in den zwei angegebenen Registern für diese systemeigenen Rahmen gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="14c36-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a837e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a837e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14c36-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="14c36-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalDoubleRegisterValue (  
@@ -42,33 +43,33 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a837e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a837e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="14c36-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="14c36-105">Parameters</span></span>  
  `highWordReg`  
- <span data-ttu-id="a837e-106">[in] Der Wert der "CorDebugRegister"-Enumeration, die angibt, die Registrierung, die das hohe Word des Werts enthält.</span><span class="sxs-lookup"><span data-stu-id="a837e-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
+ <span data-ttu-id="14c36-106">[in] Der Wert der "CorDebugRegister"-Enumeration, die angibt, die Registrierung, die das hohe Word des Werts enthält.</span><span class="sxs-lookup"><span data-stu-id="14c36-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
   
  `lowWordReg`  
- <span data-ttu-id="a837e-107">[in] Der Wert der `CorDebugRegister` -Enumeration, die Register, enthält das niedrige Word des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="a837e-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="14c36-107">[in] Der Wert der `CorDebugRegister` -Enumeration, die Register, enthält das niedrige Word des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="14c36-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="a837e-108">[in] Eine ganze Zahl, die die Größe der binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.</span><span class="sxs-lookup"><span data-stu-id="a837e-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="14c36-108">[in] Eine ganze Zahl, die die Größe der binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.</span><span class="sxs-lookup"><span data-stu-id="14c36-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="a837e-109">[in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der Typ des Werts verweist.</span><span class="sxs-lookup"><span data-stu-id="a837e-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="14c36-109">[in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der Typ des Werts verweist.</span><span class="sxs-lookup"><span data-stu-id="14c36-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="a837e-110">[out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugValue", der den abgerufenen Wert, der in der angegebenen Register gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="a837e-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
+ <span data-ttu-id="14c36-110">[out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugValue", der den abgerufenen Wert, der in der angegebenen Register gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="14c36-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a837e-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a837e-111">Remarks</span></span>  
- <span data-ttu-id="a837e-112">Die `GetLocalDoubleRegisterValue` Methode kann verwendet werden, entweder in einem systemeigenen Rahmen oder eine just-in-Time (JIT)-Frame kompiliert.</span><span class="sxs-lookup"><span data-stu-id="a837e-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14c36-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="14c36-111">Remarks</span></span>  
+ <span data-ttu-id="14c36-112">Die `GetLocalDoubleRegisterValue` Methode kann verwendet werden, entweder in einem systemeigenen Rahmen oder eine just-in-Time (JIT)-Frame kompiliert.</span><span class="sxs-lookup"><span data-stu-id="14c36-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a837e-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a837e-113">Requirements</span></span>  
- <span data-ttu-id="a837e-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a837e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14c36-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="14c36-113">Requirements</span></span>  
+ <span data-ttu-id="14c36-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14c36-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a837e-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a837e-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="14c36-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14c36-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a837e-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a837e-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="14c36-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14c36-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a837e-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a837e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="14c36-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14c36-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a837e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a837e-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="14c36-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="14c36-118">See Also</span></span>  
  
