@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
@@ -39,7 +39,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 |Dynamische Objekte|Sie können verfügbare Eigenschaften und Indexer, der ein Objekt, das implementiert binden die <xref:System.Dynamic.IDynamicMetaObjectProvider> Schnittstelle. Wenn Sie auf den Member im Code zugreifen können, kann daran eine Bindung erfolgen. Wenn Sie z. B. mithilfe eines dynamischen Objekts auf einen Member im Code über `someObjet.AProperty` zugreifen können, können Sie durch Festlegen des Bindungspfads auf `AProperty` eine Bindung herstellen.|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]-Objekte|Sie können zum Binden [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] Objekte, z. B. <xref:System.Data.DataTable>. Die [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementiert die <xref:System.ComponentModel.IBindingList> -Schnittstelle, die Benachrichtigungen bereitstellt, der das Bindungsmodul überwacht.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Objekte|Sie binden an und ausführen können `XPath` eine Abfrage auf eine <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, oder <xref:System.Xml.XmlElement>. Eine einfache Möglichkeit, Zugriff auf [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, die die Bindungsquelle in Markup ist die Verwendung einer <xref:System.Windows.Data.XmlDataProvider> Objekt. Weitere Informationen finden Sie unter [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Sie können auch zum Binden einer <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument>, oder binden Sie die Ergebnisse von Abfragen, die auf Objekte dieser Typen unter Verwendung von LINQ to XML ausgeführt. Ist eine einfache Möglichkeit, die LINQ to XML zum Zugreifen auf XML-Daten zu verwenden, die Bindungsquelle in Markup ist, die Verwendung einer <xref:System.Windows.Data.ObjectDataProvider> Objekt. Weitere Informationen finden Sie unter [Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|<xref:System.Windows.DependencyObject>-Objekte|Sie binden Abhängigkeit Eigenschaften einer <xref:System.Windows.DependencyObject>. Ein Beispiel finden Sie unter [Binden der Eigenschaften von zwei Steuerelementen](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|<xref:System.Windows.DependencyObject>-Objekte|Sie können an beliebiger Abhängigkeitseigenschaften binden <xref:System.Windows.DependencyObject>. Ein Beispiel finden Sie unter [Binden der Eigenschaften von zwei Steuerelementen](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementieren einer Klasse als Bindungsquelle  
