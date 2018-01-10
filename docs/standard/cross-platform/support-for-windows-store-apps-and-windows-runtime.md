@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] unterstützt mehrere Softwareentwicklungsszenarien mit [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Diese Szenarien werden in drei Kategorien eingeteilt:  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[Roadmap für Windows Store-apps mit c# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=242212)|Stellt wichtige Ressourcen bereit, die Ihnen beim Einstieg in die Entwicklung von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps mithilfe von C# oder Visual Basic helfen, darunter auch viele Schnellstartthemen, Richtlinien und Best Practices. (Im Windows Developer Center)|  
 |[Entwickeln von Windows Store-apps (VB / C#-/ C++ und XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Stellt wichtige Ressourcen bereit, die Ihnen beim Einstieg in die Entwicklung von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps mithilfe von C# oder Visual Basic helfen, darunter auch viele Schnellstartthemen, Richtlinien und Best Practices. (Im Windows Developer Center)|  
 |[Erstellen von Windows-Runtime-Komponenten in c# und Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Beschreibt die Vorgehensweise beim Erstellen einer [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente mit .NET Framework und erläutert, wie diese als Teil einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App verwendet wird, die für Windows mit JavaScript erstellt wird. Außerdem wird beschrieben, wie Sie diese Kombination mit Visual Studio debuggen können. (Im Windows Developer Center)|  
-|[Windows-Runtime-Verweis](http://go.microsoft.com/fwlink/?LinkId=238319)|Die Referenzdokumentation für [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (Im Windows Developer Center)|  
+|[Windows-Runtime-Verweis](/uwp/api/)|Die Referenzdokumentation für [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (Im Windows Developer Center)|  
 |[Übergeben eines URI an Windows-Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Beschreibt ein Problem, das auftreten kann, wenn Sie einen URI aus verwaltetem Code an [!INCLUDE[wrt](../../../includes/wrt-md.md)] übergeben, und wie Sie es vermeiden können.|
