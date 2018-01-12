@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B-Unterstützung  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützt den Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](http://go.microsoft.com/fwlink/?LinkId=100111).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützt den Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie unter der [NSA-Suite B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Dazu gehören die folgenden Algorithmen:  
   

@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  
@@ -57,7 +57,7 @@ Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilf
   
 |Visual Studio-SKU|Unterstützung bei der Erstellung einer portablen Klassenbibliothek|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010 Professional, Premium oder Ultimate|Ja, bei der Installation der [Tools für Portable Bibliotheken](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Visual Studio 2010 Professional, Premium oder Ultimate|Ja, bei der Installation der [Tools für Portable Bibliotheken](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Visual Studio Express 2010-Versionen|Nein.|  
 |Visual Studio 2012 Professional, Premium oder Ultimate|Ja. Für Phone-Unterstützung installieren der [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Visual Studio Express 2012-Versionen|Nein.|  
@@ -171,7 +171,7 @@ Dialogfeld "Zielplattformen ändern" in Visual Studio 2012
   
  Beispielsweise enthält die portable Klassenbibliothek nur dann UI-bezogene Typen, wenn Sie als Ziel Windows 8.1 und Windows Phone 8.1 wählen. Sie treffen möglicherweise auch Einschränkungen an, wenn Sie für Plattformen entwickeln, die vor der Einführung der portablen Klassenbibliothek veröffentlicht wurden (wie Xbox, .NET Framework 4 und Windows Phone 7). Das .NET Framework veröffentlicht Pakete über NuGet, wodurch die Unterstützung für portable Klassenbibliotheken für einige dieser älteren Plattformen verbessert wird. Weitere Informationen und eine Liste von NuGet-Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Wird ein Member in der portablen Klassenbibliothek und für Ihre Ziele unterstützt, erscheint es in Ihrem Projekt in IntelliSense. Darüber hinaus das Symbol "Portable Klassenbibliothek" ![unterstützt von Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") wird in den Membertabellen der [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkId=211358) neben den unterstützten Membern. Beispielsweise zeigt die folgende Membertabelle, dass die <xref:System.String.Chars%2A>-Eigenschaft in der <xref:System.String>-Klasse in der portablen Klassenbibliothek unterstützt wird:  
+ Wird ein Member in der portablen Klassenbibliothek und für Ihre Ziele unterstützt, erscheint es in Ihrem Projekt in IntelliSense. Darüber hinaus das Symbol "Portable Klassenbibliothek" ![unterstützt von Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") wird in den Membertabellen der [.NET Framework-Klassenbibliothek](https://msdn.microsoft.com/library/mt472912.aspx) neben den unterstützten Membern. Beispielsweise zeigt die folgende Membertabelle, dass die <xref:System.String.Chars%2A>-Eigenschaft in der <xref:System.String>-Klasse in der portablen Klassenbibliothek unterstützt wird:  
   
  ![Symbol "unterstützter Member"](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Symbol für die portable Klassenbibliothek  
