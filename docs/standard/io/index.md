@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
-Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. In .NET Framework enthalten die [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142)-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenstreams und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
+Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
   
  Eine Datei ist eine geordnete, mit einem Namen versehene Auflistung von dauerhaft gespeicherten Bytes. Beim Umgang mit Dateien arbeiten Sie mit Verzeichnispfaden, Datenträgern sowie mit Datei- und Verzeichnisnamen. Im Unterschied dazu, handelt es sich bei einem Stream um eine Sequenz von Bytes, die zum Lesen von und zum Schreiben in einen Sicherungsspeicher verwendet wird, für den unterschiedliche Speichermedien (z. B. Festplatten oder Arbeitsspeicher) verwendet werden können. Ebenso wie es neben Festplatten mehrere andere Sicherungsspeicher gibt, gibt es neben Dateistreams zusätzlich Netzwerk-, Speicher- und Pipestreams.  
   
@@ -51,7 +51,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md), [Gewusst wie: Erstellen einer Verzeichnisauflistung](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) und [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Weitere Informationen finden Sie unter [Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md), [Gewusst wie: Erstellen einer Verzeichnisauflistung](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) und [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Streams  
  Die abstrakte <xref:System.IO.Stream>-Basisklasse unterstützt das Lesen und Schreiben von Bytes. Alle Klassen, die Streams darstellen, erben von der <xref:System.IO.Stream>-Klasse. Die <xref:System.IO.Stream>-Klasse und die davon abgeleiteten Klassen stellen eine allgemeine Ansicht von Datenquellen und Repositorys bereit, sodass Programmierer sich nicht mit den Einzelheiten des Betriebssystems und der jeweiligen Geräte befassen müssen.  
@@ -128,7 +128,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
 ## <a name="isolated-storage"></a>Isolierte Speicherung  
  Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.  
   
- Die isolierte Speicherung ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) .  
+ Die isolierte Speicherung ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im [Windows.Storage](/uwp/api/Windows.Storage)-Namespace. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
  Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:  
   
@@ -147,7 +147,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
 -   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175).  
+-   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.  
   
@@ -160,7 +160,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
 ## <a name="io-and-security"></a>E/A und Sicherheit  
  Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
+ Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
   
  Eine Sicherheitsüberprüfung wird nur beim Erstellen des Streams ausgeführt. Übergeben Sie daher keinen geöffneten Stream an weniger vertrauenswürdigen Code oder an Anwendungsdomänen.  
   
