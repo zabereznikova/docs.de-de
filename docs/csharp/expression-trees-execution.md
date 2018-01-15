@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>Ausführen von Ausdrucksbaumstrukturen
 
@@ -28,7 +28,7 @@ Der Ausdruckstyp `Expression<TDelegate>` ist das einzige konkrete Beispiel in de
 
 In den meisten Fällen erstellt dies eine einfache Zuordnung zwischen einem Ausdruck und seinem entsprechenden Delegaten. Angenommen, eine Ausdrucksbaumstruktur, die durch `Expression<Func<int>>` dargestellt wird, wird in einen Delegaten des Typs `Func<int>` konvertiert. Für einen Lambdaausdruck mit beliebigem Rückgabetyp und Argumentliste besteht ein Delegattyp, der der Zieltyp für den ausführbaren Code ist, der von diesem Lambdaausdruck dargestellt wird.
 
-Der `LamdbaExpression`-Typ enthält `Compile`- und `CompileToMethod`-Member, die Sie verwenden würden, um eine Ausdrucksbaumstruktur in ausführbaren Code zu konvertieren. Die `Compile`-Methode erstellt einen Delegaten. Die `ConmpileToMethod`-Methode aktualisiert ein `MethodBuilder`-Objekt mit der IL, das die kompilierte Ausgabe der Ausdrucksbaumstruktur darstellt. Beachten Sie, dass `CompileToMethod` nur auf dem Desktop-Framework verfügbar ist, nicht auf dem .NET Core-Framework.
+Der `LamdbaExpression`-Typ enthält `Compile`- und `CompileToMethod`-Member, die Sie verwenden würden, um eine Ausdrucksbaumstruktur in ausführbaren Code zu konvertieren. Die `Compile`-Methode erstellt einen Delegaten. Die `CompileToMethod`-Methode aktualisiert ein `MethodBuilder`-Objekt mit der IL, das die kompilierte Ausgabe der Ausdrucksbaumstruktur darstellt. Beachten Sie, dass `CompileToMethod` nur auf dem Desktop-Framework verfügbar ist, nicht auf dem .NET Core-Framework.
 
 Optional können Sie auch einen `DebugInfoGenerator` angeben, der das Symbol „Debuginformationen“ für das generierte Delegatobjekt empfängt. Dies ermöglicht es Ihnen, die Ausdrucksbaumstruktur in ein Delegatobjekt zu konvertieren, und über vollständige Debuginformationen über die generierten Delegate zu verfügen.
 

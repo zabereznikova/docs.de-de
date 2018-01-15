@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
 Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
@@ -29,7 +29,7 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
 ## <a name="determining-the-transaction-type"></a>Bestimmen des Transaktionstyps  
  Eine lokale Transaktion zu sein, wenn sie eine Phase hat und direkt von der Datenbank behandelt wird, wird als Transaktion behandelt. Eine Transaktion ist eine verteilte Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert wird und verwendet für die transaktionsauflösung ausfallsichere Mechanismen (z. B. Zweiphasen-Commit) behandelt.  
   
- Alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Zusätzlich gibt es eine neue <xref:System.Data.Common.DbTransaction>-Klasse zum Schreiben von anbieterunabhängigem Code, der Transaktionen erfordert.  
+ Alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus besteht eine <xref:System.Data.Common.DbTransaction> Klasse, die zum Schreiben von anbieterunabhängigem Code, der Transaktionen erfordert.  
   
 > [!NOTE]
 >  Transaktionen sind am effizientesten, wenn sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben. Weitere Informationen zum Ausführen serverseitiger Transaktionen finden Sie in der Onlinedokumentation zu SQL Server.  
