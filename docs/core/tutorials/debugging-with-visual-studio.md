@@ -1,21 +1,21 @@
 ---
-title: "Debuggen Ihrer C#-Anwendung „Hallo Welt“ mit Visual Studio 2017"
-description: "Sie erfahren, wie Sie eine in C# geschriebene „Hello World“-App mit Visual Studio 2017 debuggen."
+title: "Debuggen einer „Hallo Welt“-Anwendung in C# oder Visual Basic mit .NET Core in Visual Studio 2017"
+description: "Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene „Hallo Welt“-App mit Visual Studio 2017 debuggen."
 keywords: .NET Core, .NET Core-Konsolenanwendung, Debuggen von .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 12/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.workload: dotnetcore
-ms.openlocfilehash: 3ab19566acb36cb96e0572931ba39f2ae99a3ca7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6c8e1de4e0053ae6f74dc6c74fe37b6d7661932e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
 
@@ -33,17 +33,12 @@ Sie sollten immer beginnen, indem Sie Ihr Programm im Debugmodus testen. Im Debu
 
 Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunktionen aus:
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Haltepunkt ausgeführt wird. 
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    Legen sie einen Haltepunkt auf der Zeile `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` fest, indem Sie auf den linken Rand des Codefensters auf dieser Zeile klicken, oder indem Sie das Menüelement **Debuggen** > **Haltepunkt ein/aus** mit der ausgewählten Zeile auswählen. Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
 
    ![Visual Studio-Programmfenster mit festgelegtem Haltepunkt](./media/debugging-with-visual-studio/setbreakpoint.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   Legen sie einen Haltepunkt auf der Zeile `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` fest, indem Sie auf den linken Rand des Codefensters auf dieser Zeile klicken, oder indem Sie das Menüelement **Debuggen** > **Haltepunkt ein/aus** mit der ausgewählten Zeile auswählen. Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
-
-   <a name="visual-studio-program-window-with-breakpoint-setmediadebugging-with-visual-studiovb-setbreakpointpng"></a>![Visual Studio-Programmfenster mit festgelegtem Haltepunkt](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
----
 
 1. Führen Sie das Programm durch Auswählen der Schaltfläche **HelloWorld** mit dem grünen Pfeil auf der Symbolleiste, Drücken von F5 oder Auswahl von **Debuggen** > **Debuggen starten** im Debugmodus aus.
 
@@ -51,36 +46,50 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
 
 1. Die Ausführung des Programms endet, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird. Im Fenster **Auto** werden die Werte der im Bereich der aktuellen Zeile verwendeten Variablen angezeigt. Im Fenster **Lokal** (das Sie anzeigen können, indem Sie auf die Registerkarte **Lokal** klicken) werden die Werte von Variablen angezeigt, die in der gerade ausgeführten Methode definiert sind.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    ![Visual Studio-Anwendungsfenster](./media/debugging-with-visual-studio/break.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   <a name="visual-studio-application-windowmediadebugging-with-visual-studiovb-breakpng"></a>![Visual Studio-Anwendungsfenster](./media/debugging-with-visual-studio/vb-break.png)
----
 
 1. Sie können den Wert der Variablen ändern, um zu sehen, wie sich dies auf Ihr Programm auswirkt. Wenn das **Direktfenster** nicht angezeigt wird, zeigen Sie es durch Auswahl des Menüelements **Debuggen** > **Fenster** > **Direkt** an. Das **Direktfenster** dient Ihrer Interaktion mit der Anwendung, die Sie debuggen.
 
 1. Sie können die Werte der Variablen interaktiv ändern. Geben Sie `name = "Gracie"` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Geben Sie `date = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
 
    Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des <xref:System.DateTime> -Werts angezeigt. Darüber hinaus wird der Wert der Variablen in den Fenstern **Auto** und **Lokal** aktualisiert.
 
    ![Auto-Fenster und Direktfenster](./media/debugging-with-visual-studio/autosimmediate.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Geben Sie `currentDate = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
-
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
-
-   ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
--->
----
 
 1. Setzen Sie die Ausführung des Programms durch Auswählen der Schaltfläche **Fortfahren** in der Symbolleiste oder des Menüelements **Debuggen** > **Fortfahren** fort. Die im Konsolenfenster angezeigten Werte entsprechen auch den Änderungen im **Direktfenster**.
 
    ![Konsolenfenster, das den getippten Wert „Jack“ in der Aufforderung „Wie lautet Ihr Name?“ zeigt, gefolgt von „Hallo Gracie“ am 1.11.2016 um 11:59 Uhr](./media/debugging-with-visual-studio/changed.png)
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und den Debugmodus zu beenden.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Haltepunkt ausgeführt wird. 
+
+   Legen sie einen Haltepunkt auf der Zeile `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` fest, indem Sie auf den linken Rand des Codefensters auf dieser Zeile klicken, oder indem Sie das Menüelement **Debuggen** > **Haltepunkt ein/aus** mit der ausgewählten Zeile auswählen. Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
+
+   ![Visual Studio-Programmfenster mit festgelegtem Haltepunkt](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+
+1. Führen Sie das Programm durch Auswählen der Schaltfläche **HelloWorld** mit dem grünen Pfeil auf der Symbolleiste, Drücken von F5 oder Auswahl von **Debuggen** > **Debuggen starten** im Debugmodus aus.
+
+1. Geben Sie eine Zeichenfolge im Konsolenfenster ein, wenn das Programm Sie zur Eingabe eines Namens auffordert, und drücken Sie die EINGABETASTE.
+
+1. Die Ausführung des Programms endet, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird. Im Fenster **Auto** werden die Werte der im Bereich der aktuellen Zeile verwendeten Variablen angezeigt. Im Fenster **Lokal** (das Sie anzeigen können, indem Sie auf die Registerkarte **Lokal** klicken) werden die Werte von Variablen angezeigt, die in der gerade ausgeführten Methode definiert sind.
+
+   ![Visual Studio-Anwendungsfenster](./media/debugging-with-visual-studio/vb-break.png)
+
+1. Sie können den Wert der Variablen ändern, um zu sehen, wie sich dies auf Ihr Programm auswirkt. Wenn das **Direktfenster** nicht angezeigt wird, zeigen Sie es durch Auswahl des Menüelements **Debuggen** > **Fenster** > **Direkt** an. Das **Direktfenster** dient Ihrer Interaktion mit der Anwendung, die Sie debuggen.
+
+1. Sie können die Werte der Variablen interaktiv ändern. Geben Sie `name = "Gracie"` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
+
+1. Geben Sie `currentDate = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
+
+1. Setzen Sie die Ausführung des Programms durch Auswählen der Schaltfläche **Fortfahren** in der Symbolleiste oder des Menüelements **Debuggen** > **Fortfahren** fort. Die im Konsolenfenster angezeigten Werte entsprechen auch den Änderungen im **Direktfenster**.
+
+   ![Konsolenfenster mit den in das Direktfenster eingegebenen geänderten Werten](./media/debugging-with-visual-studio/changed.png)
+
+1. Drücken Sie eine beliebige Taste, um die Anwendung und den Debugmodus zu beenden.
+---
 
 ## <a name="setting-a-conditional-breakpoint"></a>Festlegen eines bedingten Haltepunkts
 
@@ -98,17 +107,6 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
    ```csharp
    String.IsNullOrEmpty(name)
    ```
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Feld für **Bedingungen**.
-
-   ![Panel für Haltepunkteinstellungen](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
-
-1. Ersetzen Sie für den **bedingten Ausdruck** „e.g. x = 5“ durch Folgendes:
-
-   ```vb
-   String.IsNullOrEmpty(name)
-   ```
----
 
    Sie prüfen auf eine Codebedingung, dass der `String.IsNullOrEmpty(name)`-Methodenaufruf `true` ist, weil entweder *Name* kein Wert zugewiesen wurde, oder weil sein Wert eine leere Zeichenfolge ist („“). Sie können auch eine *Trefferanzahl* angeben, wodurch die Ausführung des Programms unterbrochen wird, bevor eine Anweisung eine angegebene Anzahl von Malen ausgeführt wird, oder eine *Filterbedingung*, wodurch die Ausführung des Programms auf Basis von Attributen wie Threadbezeichner, Prozessname oder Threadname unterbrochen wird.
 
@@ -122,7 +120,6 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 
 1. Wählen Sie das Fenster **Lokal**, das die Werte der lokalen Variablen der momentan ausgeführten Methode anzeigt, in diesem Fall der `Main`-Methode in Ihrem Programm. Stellen Sie sicher, dass der Wert der Variablen `name` `""` bzw. <xref:System.String.Empty?displayProperty=nameWithType> ist.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Bestätigen Sie, dass der Wert eine leere Zeichenfolge ist, indem Sie die folgende Anweisung im **Direktfenster** eingeben. Das Ergebnis ist `true`.
 
    ```csharp
@@ -130,21 +127,47 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
    ```
 
    ![Das Direktfenster, das einen Wert „true“ zurückgibt, nachdem die Anweisung ausgeführt wurde](./media/debugging-with-visual-studio/emptystring.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Bestätigen Sie, dass der Wert eine leere Zeichenfolge ist, indem Sie die folgende Anweisung im **Direktfenster** eingeben. Das Ergebnis ist `true`.
-
-   ```vb
-   ? String.IsNullOrEmpty(name)
-   ```
-  ![Das Direktfenster, das einen Wert „true“ zurückgibt, nachdem die Anweisung ausgeführt wurde](./media/debugging-with-visual-studio/vb-emptystring.png)
----
 
 1. Wählen Sie die Schaltfläche **Fortfahren** auf der Symbolleiste, um die Ausführung des Programms fortzusetzen.
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
 
 1. Löschen Sie den Haltepunkt durch Klicken auf den Punkt am linken Rand des Codefensters oder Auswählen des Menüelements **Debuggen > Haltepunkt ein/aus** mit der ausgewählten Zeile.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Feld für **Bedingungen**.
 
+   ![Panel für Haltepunkteinstellungen](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+
+1. Ersetzen Sie für den **bedingten Ausdruck** „e.g. x = 5“ durch Folgendes:
+
+   ```vb
+   String.IsNullOrEmpty(name)
+   ```
+
+   Sie prüfen auf eine Codebedingung, dass der `String.IsNullOrEmpty(name)`-Methodenaufruf `True` ist, weil entweder *Name* kein Wert zugewiesen wurde, oder weil sein Wert eine leere Zeichenfolge ist („“). Sie können auch eine *Trefferanzahl* angeben, wodurch die Ausführung des Programms unterbrochen wird, bevor eine Anweisung eine angegebene Anzahl von Malen ausgeführt wird, oder eine *Filterbedingung*, wodurch die Ausführung des Programms auf Basis von Attributen wie Threadbezeichner, Prozessname oder Threadname unterbrochen wird.
+
+1. Wählen Sie die Schaltfläche **Schließen** aus, um das Dialogfeld zu schließen.
+
+1. Führen Sie das Programm im Debugmodus aus.
+
+1. Drücken Sie im Konsolenfenster die EINGABETASTE, wenn Sie zur Eingabe Ihres Namens aufgefordert werden.
+
+1. Da die angegebene Bedingung erfüllt wurde – `name` ist entweder `null` oder <xref:System.String.Empty?displayProperty=nameWithType> – endet die Ausführung des Programms, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird.
+
+1. Wählen Sie das Fenster **Lokal**, das die Werte der lokalen Variablen der momentan ausgeführten Methode anzeigt, in diesem Fall der `Main`-Methode in Ihrem Programm. Stellen Sie sicher, dass der Wert der Variablen `name` `""` bzw. <xref:System.String.Empty?displayProperty=nameWithType> ist.
+
+1. Bestätigen Sie, dass der Wert eine leere Zeichenfolge ist, indem Sie die folgende Anweisung im **Direktfenster** eingeben. Das Ergebnis ist `true`.
+
+   ```vb
+   ? String.IsNullOrEmpty(name)
+   ```
+  ![Das Direktfenster, das einen Wert „true“ zurückgibt, nachdem die Anweisung ausgeführt wurde](./media/debugging-with-visual-studio/vb-emptystring.png)
+
+1. Wählen Sie die Schaltfläche **Fortfahren** auf der Symbolleiste, um die Ausführung des Programms fortzusetzen.
+
+1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
+
+1. Löschen Sie den Haltepunkt durch Klicken auf den Punkt am linken Rand des Codefensters oder Auswählen des Menüelements **Debuggen > Haltepunkt ein/aus** mit der ausgewählten Zeile.
 ---
 ## <a name="stepping-through-a-program"></a>Schrittweises Ausführen eines Programms
 
@@ -160,19 +183,8 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt nun die nächste auszuführende Zeile hervor. Wie die Abbildung zeigt, sind weniger als eine Millisekunde zum Ausführen des Codes zwischen der letzten Anweisung und dieser verstrichen. `args` bleibt die einzige deklarierte Variable, und das Konsolenfenster ist noch leer.
 
    ![Visual Studio-Fenster](./media/debugging-with-visual-studio/stepinto2.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Wählen Sie auf der Menüleiste **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
 
-   ![Visual Studio-Fenster](./media/debugging-with-visual-studio/vb-stepinto1.png)
-
-   Nun wird im Fenster **Auto** angezeigt, dass der Wert der `args`-Variablen ein leeres Zeichenfolgenarray ist, weil Sie dem Programm keine Befehlszeilenargumente übergeben haben. Darüber hinaus hat Visual Studio ein leeres Konsolenfenster geöffnet.
-
-1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt nun die nächste auszuführende Zeile hervor. Wie die Abbildung zeigt, sind weniger als eine Millisekunde zum Ausführen des Codes zwischen der letzten Anweisung und dieser verstrichen. `args` bleibt die einzige deklarierte Variable, und das Konsolenfenster ist noch leer.
-
-   ![Visual Studio-Fenster](./media/debugging-with-visual-studio/vb-stepinto2.png)
----
-
-1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `name` enthält. Das Fenster **Auto** zeigt, dass `name` `null` (in C#) oder `Nothing` (in Visual Basic) ist, und das Konsolenfenster zeigt die Zeichenfolge „What is your name?“ an.
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `name` enthält. Das Fenster **Auto** zeigt, dass `name` `null` ist, und das Konsolenfenster zeigt die Zeichenfolge „What is your name?“ an.
 
 1. Reagieren Sie auf die Aufforderung, indem Sie eine Zeichenfolge im Konsolenfenster eingeben und die EINGABETASTE drücken. Die Konsole reagieren nicht, und die eingegebene Zeichenfolge wird nicht im Konsolenfenster angezeigt, aber die <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>-Methode wird dennoch Ihre Eingabe erfassen.
 
@@ -185,6 +197,31 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung**, oder drücken Sie UMSCHALT+ F11-Taste. Dadurch wird die schrittweise Ausführung beendet. Das Konsolenfenster zeigt eine Meldung an und wartet, bis Sie eine Taste drücken.
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. Wählen Sie auf der Menüleiste **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
+
+   ![Visual Studio-Fenster](./media/debugging-with-visual-studio/vb-stepinto1.png)
+
+   Nun wird im Fenster **Auto** angezeigt, dass der Wert der `args`-Variablen ein leeres Zeichenfolgenarray ist, weil Sie dem Programm keine Befehlszeilenargumente übergeben haben. Darüber hinaus hat Visual Studio ein leeres Konsolenfenster geöffnet.
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt nun die nächste auszuführende Zeile hervor. Wie die Abbildung zeigt, sind weniger als eine Millisekunde zum Ausführen des Codes zwischen der letzten Anweisung und dieser verstrichen. `args` bleibt die einzige deklarierte Variable, und das Konsolenfenster ist noch leer.
+
+   ![Visual Studio-Fenster](./media/debugging-with-visual-studio/vb-stepinto2.png)
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `name` enthält. Das Fenster **Auto** zeigt, dass `name` `Nothing` ist, und das Konsolenfenster zeigt die Zeichenfolge „What is your name?“ an.
+
+1. Reagieren Sie auf die Aufforderung, indem Sie eine Zeichenfolge im Konsolenfenster eingeben und die EINGABETASTE drücken. Die Konsole reagieren nicht, und die eingegebene Zeichenfolge wird nicht im Konsolenfenster angezeigt, aber die <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>-Methode wird dennoch Ihre Eingabe erfassen.
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `date` (in C#) oder `currentDate` (in Visual Basic) enthält. Das Fenster **Auto** zeigt den <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaftswert und den nach Aufruf der <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>-Methode zurückgegebenen Wert an. Das Konsolenfenster zeigt auch die Zeichenfolge an, die eingegeben wurde, als die Konsole zur Eingabe aufforderte.
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Das Fenster **Auto** zeigt den Wert der Variablen `date` nach der Zuweisung von der <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaft an. Das Konsolenfenster ist unverändert.
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio ruft die <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>-Methode auf. Die Werte der Variablen `date` (oder `currentDate`) und `name` werden im Fenster **Auto** angezeigt, und das Konsolenfenster zeigt die formatierte Zeichenfolge an.
+
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung**, oder drücken Sie UMSCHALT+ F11-Taste. Dadurch wird die schrittweise Ausführung beendet. Das Konsolenfenster zeigt eine Meldung an und wartet, bis Sie eine Taste drücken.
+
+1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
+---
 
 ## <a name="building-a-release-version"></a>Erstellen einer endgültigen Releaseversion
 
