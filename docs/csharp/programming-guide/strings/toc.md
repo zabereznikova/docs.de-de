@@ -2,7 +2,6 @@
 ## [Gewusst wie: Verketten von mehreren Zeichenfolgen](how-to-concatenate-multiple-strings.md)
 ## [Gewusst wie: Ändern von Zeichenfolgeninhalten](how-to-modify-string-contents.md)
 ## [Gewusst wie: Vergleichen von Zeichenfolgen](how-to-compare-strings.md)
-## [Gewusst wie: Analysieren von Zeichenfolgen mithilfe von String.Split](how-to-parse-strings-using-string-split.md)
 ## [Gewusst wie: Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](how-to-search-strings-using-string-methods.md)
 ## [Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken](how-to-search-strings-using-regular-expressions.md)
 ## [Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](how-to-determine-whether-a-string-represents-a-numeric-value.md)
