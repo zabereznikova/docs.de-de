@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
@@ -39,7 +40,7 @@ dotnet test [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>description
 
 Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Komponententests sind Konsolenanwendungsprojekte, die Abhängigkeiten vom Komponententest-Framework (z.B. MSTest, NUnit oder xUnit) und dotnet-Test Runner für das Komponententest-Framework aufweisen. Sie werden als NuGet-Pakete verpackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
@@ -189,7 +190,7 @@ Führen Sie die Tests im Projekt `test1` durch:
 
 | Testframework | Unterstützte Eigenschaften                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Priorität</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Priorität</li><li>TestCategory</li></ul> |
 | Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Merkmale</li></ul>                                   |
 
 `<operator>` beschreibt die Beziehung zwischen der Eigenschaft und dem Wert:
@@ -211,7 +212,7 @@ Ausdrücke können mit bedingten Operatoren verknüpft werden:
 | <code>&#124;</code>      | ODER       |
 | `&`      | UND      |
 
-Sie können Ausdrücke in Klammern einschließen, wenn bedingte Operatoren verwenden (z. B. `(Name~TestMethod1) | (Name~TestMethod2)`).
+Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren verwenden (z.B. `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 

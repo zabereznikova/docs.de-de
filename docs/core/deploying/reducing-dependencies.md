@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzieren von Paketabhängigkeiten mit „project.json“
 
@@ -30,7 +31,7 @@ Jedoch ist die Wahrscheinlichkeit hoch, dass Ihre Bibliothek nicht jedes einzeln
 Derzeit gibt es keinen offiziellen `dotnet`-Befehl, der Paketverweise beschränkt.  Stattdessen müssen Sie dies manuell tun.  Der allgemeine Prozess sieht folgendermaßen aus:
 
 1. Verweisen Sie auf `NETStandard.Library` Version `1.6.0` in einem `dependencies`-Abschnitt Ihrer `project.json`.
-2. Wiederherstellen von Paketen mit `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) über die Befehlszeile.
+2. Stellen Sie Pakete mit `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) über die Befehlszeile wieder her.
 3. Prüfen Sie die Datei `project.lock.json`, und suchen Sie den Abschnitt `NETSTandard.Library`.  Er befindet sich nahe dem Anfang der Datei.
 4. Kopieren Sie alle unter `dependencies` aufgeführten Pakete.
 5. Entfernen Sie den `.NETStandard.Library`-Verweis, und ersetzen Sie ihn durch die kopierten Pakete.
@@ -60,7 +61,7 @@ Um diese Bibliothek zu beschränken, beginnen Sie mit der `project.json`-Datei, 
 }
 ```
 
-Als Nächstes Wiederherstellen von Paketen mit `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)), Überprüfen der `project.lock.json` Datei, und suchen Sie alle Pakete für wiederhergestellt `NETSTandard.Library`.
+Als Nächstes stellen Sie Pakete mit `dotnet restore` wieder her ([siehe Hinweis](#dotnet-restore-note)), prüfen die Datei `project.lock.json` und suchen alle für `NETSTandard.Library` wiederhergestellten Pakete.
 
 So sieht der entsprechende Abschnitt in der Datei `project.lock.json` aus, wenn auf `netstandard1.0` abgezielt wird:
 

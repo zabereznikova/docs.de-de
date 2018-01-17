@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch sie kann eine Anwendung Zeichenfolgen, Images und andere Daten in der Sprache und Kultur des Benutzers anzeigen und alternative Daten bereitstellen, wenn keine Ressourcen für die Sprache oder Kultur des Benutzers verfügbar sind. .NET Framework verwendet ein Speichenarchitekturmodell (Hub and Spoke), um lokalisierte Ressourcen zu finden und aufzurufen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, die verwendet wird, wenn keine lokalisierten Ressourcen verfügbar sind. Sie verwenden das <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut, um die Standardkultur der Anwendung festzulegen. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne lokalisierte Kultur aber keinen Code enthält. Da die Satellitenassemblys kein Teil der Hauptassembly sind, können Sie die Ressourcen problemlos entsprechend einer bestimmten Kultur ersetzen oder aktualisieren, ohne die Hauptassembly der App ersetzen zu müssen.  
@@ -82,7 +83,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  In der folgenden Tabelle werden die Optionen von „al.exe“ ausführlicher beschrieben, die in diesen Befehlen verwendet werden.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/target:**lib|Gibt an, dass Ihre Satellitenassembly in einer Bibliotheksdatei (.dll) kompiliert ist. Da eine Satellitenassembly keinen ausführbaren Code enthält und nicht die Hauptassembly einer Anwendung ist, müssen Sie Satellitenassemblys als DLLs speichern.|  
 |**/embed:**strings.de.resources|Gibt den Namen der einzubettenden Ressourcendatei an, wenn „al.exe“ die Assembly kompiliert. Sie können mehrere RESOURCEN-Dateien in einer Satellitenassembly einbetten. Wenn Sie allerdings das Speichenarchitekturmodell einsetzen, müssen Sie eine Satellitenassembly für jede Kultur kompilieren. Sie können allerdings separate RESOURCES-Dateien für Zeichenfolgen und Objekte erstellen.|  
@@ -250,7 +251,7 @@ gacutil /i:StringLibrary.resources.dll
 7.  Kompilieren Sie den folgenden Quellcode für „StringLibrary.cs“ zusammen mit den Ressourcen der Standardkultur in eine verzögert signierte Bibliotheksassembly mit dem Namen „StringLibrary.dll“:  
   
     > [!IMPORTANT]
-    >  Wenn Sie die Befehlszeile anstelle von Visual Studio zum Erstellen des Beispiels verwenden, sollten Sie den Aufruf zum Ändern der <xref:System.Resources.ResourceManager> -Klassenkonstruktor nicht zum `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Wenn Sie die Befehlszeile statt Visual Studio zum Erstellen des Beispiels verwenden, sollten Sie den Aufruf des <xref:System.Resources.ResourceManager>-Klassenkonstruktors in `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);` ändern.  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  

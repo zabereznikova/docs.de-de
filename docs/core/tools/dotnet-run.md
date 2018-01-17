@@ -7,17 +7,18 @@ ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet run`: Führt Quellcode ohne explizite Kompilierungs- oder Startbefehle aus.
 
@@ -39,7 +40,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>description
 
 Der `dotnet run`-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode mit einem Befehl. Es empfiehlt sich für eine schnelle iterative Entwicklung aus der Befehlszeile. Der Befehl hängt vom [`dotnet build`](dotnet-build.md)-Befehl ab, um den Code zu erstellen. Alle Anforderungen für den Build, z.B. dass das Projekt zuerst wiederhergestellt werden muss, werden auch auf `dotnet run` angewendet. 
 
@@ -75,7 +76,7 @@ Erstellt und führt die Anwendung mithilfe des angegebenen [Frameworks](../../st
 
 `--force`
 
-Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen *project.assets.json*.
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen von *project.assets.json*.
 
 `-h|--help`
 

@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
 
@@ -39,11 +40,11 @@ So veröffentlichen Sie Ihre Anwendung und führen sie aus:
 
       * *HelloWorld.deps.json*
 
-         Abhängigkeiten Laufzeitdatei der Anwendung. Definiert die .NET Core-Komponenten und die Bibliotheken (einschließlich der dynamic Link Library, die die Anwendung enthält), die zum Ausführen der Anwendung erforderlich sind. Weitere Informationen finden Sie unter [Runtime Konfigurationsdateien](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         Die Datei für Runtimeabhängigkeiten der Anwendung. In dieser werden die Komponenten und Bibliotheken (einschließlich der Dynamic Link Library, die Ihre Anwendung enthält) von .NET Core definiert, die zum Ausführen der Anwendung erforderlich sind. Weitere Informationen finden Sie unter [Runtime Configuration Files (Konfigurationsdateien der Runtime)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
  
       * *HelloWorld.dll*
 
-         Die Datei, die die Anwendung enthält. Es ist eine dynamic Link Library, der durch Eingabe ausgeführt werden, kann die `dotnet HelloWorld.dll` Befehl in einem Konsolenfenster. 
+         Die Datei, die Ihre Anwendung enthält. Dabei handelt es sich um eine Dynamic Link Library, die in einem Konsolenfenster mithilfe des Befehls `dotnet HelloWorld.dll` ausgeführt werden kann. 
 
       * *HelloWorld.pdb* (optional für die Bereitstellung)
 
@@ -51,7 +52,7 @@ So veröffentlichen Sie Ihre Anwendung und führen sie aus:
 
       * *HelloWorld.runtimeconfig.json*
 
-         Common Language Runtime-Konfigurationsdatei der Anwendung. Er identifiziert die Version von .NET Core, die Ihre Anwendung erstellt wurde, führen Sie auf. Weitere Informationen finden Sie unter [Runtime Konfigurationsdateien](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+         Die Runtimekonfigurationsdatei der Anwendung. Diese Datei identifiziert die Version von .NET Core, für die Ihre Anwendung erstellt wurde. Weitere Informationen finden Sie unter [Runtime Configuration Files (Konfigurationsdateien der Runtime)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Konsolenfenster, das veröffentlichte Dateien zeigt](media/publishing-with-visual-studio/publishedfiles.png)
 

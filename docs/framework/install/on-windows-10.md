@@ -3,16 +3,17 @@ title: Installieren von .NET Framework unter Windows 10
 description: Erfahren Sie, wie Sie .NET Framework unter Windows 10 oder Windows Server 2016 installieren.
 author: rlander
 ms.author: mairaw
-keywords: .NET Framework, installieren
-ms.date: 11/17/2017
+keywords: .Net Framework, installieren
+ms.date: 12/20/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installieren von .NET Framework unter Windows 10 und Windows Server 2016
 
@@ -27,7 +28,7 @@ Sie wurden möglicherweise auf diese Seite geleitet, nach dem Sie versucht haben
 .NET Framework 4.7.1 ist enthalten in:
 
 * [Windows 10 Fall Creators Update (Version 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server 2016 (Version 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows Server Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
 [.NET Framework 4.7.1 herunterladen](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)

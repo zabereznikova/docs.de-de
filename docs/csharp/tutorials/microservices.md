@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>In Docker gehostete Microservices
-
-## <a name="introduction"></a>Einführung
 
 In diesem Tutorial werden die erforderlichen Aufgaben zum Erstellen und Bereitstellen eines ASP.NET Core-Microservice in einem Docker-Container erläutert. Im Verlauf dieses Tutorials lernen Sie Folgendes:
 
@@ -56,13 +54,13 @@ An diesem Punkt müssen Sie eine Reihe von Befehlszeilentools installieren, die 
 
 `npm install -g yo bower grunt-cli gulp`
 
-Die `-g`-Option gibt an, dass dies eine globale Installation ist, und diese Tools im gesamten System verfügbar sind. (Eine lokale Installation beschränkt das Paket auf ein einzelnes Projekt). Nachdem Sie diese wesentlichen Tools installiert haben, müssen Sie die Yeoman-ASP.NET-Vorlagengeneratoren installieren:
+Die `-g`-Option gibt an, dass dies eine globale Installation ist, und diese Tools im gesamten System verfügbar sind. (Eine lokale Installation beschränkt das Paket auf ein einzelnes Projekt). Nachdem Sie diese wesentlichen Tools installiert haben, müssen Sie die ASP.NET-Vorlagengeneratoren installieren:
 
 `npm install -g generator-aspnet`
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
-Jetzt haben Sie alle Tools installiert und können eine neue ASP.NET Core-Anwendung erstellen. Um den Befehlszeilengenerator zu verwenden, führen Sie den folgenden Yeoman-Befehl in Ihrer bevorzugten Shell aus:
+Da Sie nun alle Tools installiert haben, können Sie eine neue ASP.NET Core-Anwendung erstellen. Um den Befehlszeilengenerator zu verwenden, führen Sie den folgenden Yeoman-Befehl in Ihrer bevorzugten Shell aus:
 
 `yo aspnet`
 
@@ -70,7 +68,7 @@ Dieser Befehl fordert Sie auf, auszuwählen, welchen Anwendungstyp Sie erstellen
 
 Die Vorlage erstellt acht Dateien für Sie:
 
-* Eine für ASP.NET Core-Anwendungen angepasste .gitignore-Datei.
+* Eine für ASP.NET Core-Anwendungen angepasste GITIGNORE-Datei.
 * Eine Startup.cs-Datei. Diese enthält die Grundlage für die Anwendung.
 * Eine Program.cs-Datei. Diese enthält den Einstiegspunkt für die Anwendung.
 * Eine WeatherMicroservice.csproj-Datei. Dies ist die Build-Datei für die Anwendung.
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Hiermit wird die Projektdatei aus dem aktuellen Verzeichnis in die Docker-VM kopiert und werden alle Pakete wiederhergestellt. Die Verwendung der Dotnet-CLI bedeutet, dass das Docker-Image das .NET Core-SDK einbeziehen muss. Danach wird der Rest der Anwendung kopiert, und der Dotnet-publish-Befehl erstellt Ihre Anwendung und macht daraus ein Paket.
+Dadurch wird die Projektdatei aus dem aktuellen Verzeichnis in die Docker-VM kopiert, und alle Pakete werden wiederhergestellt. Die Verwendung der Dotnet-CLI bedeutet, dass das Docker-Image das .NET Core-SDK einbeziehen muss. Danach wird der Rest der Anwendung kopiert, und der Dotnet-publish-Befehl erstellt Ihre Anwendung und macht daraus ein Paket.
 
 Die letzte Zeile der Datei führt die Anwendung aus:
 
@@ -267,7 +265,7 @@ Die letzte Zeile der Datei führt die Anwendung aus:
 ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
-Auf diesen konfigurierten Port wird im `--server.urls`-Argument für `dotnet` in der letzten Zeile der Docker-Datei verwiesen. Die `ENTRYPOINT`-Befehl teilt Docker mit, welcher Befehl und welche Befehlszeilenoptionen den Dienst starten. 
+Auf diesen konfigurierten Port wird im `--server.urls`-Argument für `dotnet` in der letzten Zeile der Docker-Datei verwiesen. Der `ENTRYPOINT`-Befehl teilt Docker mit, welcher Befehl und welche Befehlszeilenoptionen den Dienst starten. 
 
 ## <a name="building-and-running-the-image-in-a-container"></a>Erstellen und Ausführen des Images in einem Container
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-Sie erstellen das Image mithilfe des Docker-build-Befehls. Führen Sie den folgenden Befehl in dem Verzeichnis aus, das Ihren Code enthält.
+Sie erstellen das Image mithilfe des `docker build`-Befehls. Führen Sie den folgenden Befehl in dem Verzeichnis aus, das Ihren Code enthält.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 Das `--sig-proxy=false`-Argument bedeutet, dass `Ctrl-C`-Befehle nicht an den Containerprozess gesendet werden, aber stattdessen den `docker attach`-Befehl beenden. Das letzte Argument ist der Name, den der Container im `docker run`-Befehl erhält. 
 
 > [!NOTE]
-> Sie können auch die Docker zugewiesene Container-ID verwenden, um auf einen Container zu verweisen. Wenn Sie in `docker run` keinen Namen für den Container angegeben haben, müssen Sie die Container-ID verwenden.
+> Sie können auch die von Docker zugewiesene Container-ID verwenden, um auf einen Container zu verweisen. Wenn Sie in `docker run` keinen Namen für den Container angegeben haben, müssen Sie die Container-ID verwenden.
 
 Öffnen Sie einen Browser, und navigieren Sie zu Ihrem Dienst. Sie sehen die Diagnosemeldungen des angefügten ausgeführten Containers in den Befehlsfenstern.
 
@@ -344,9 +342,9 @@ Wenn Sie nicht benutzte Images von Ihrem Computer entfernen möchten, verwenden 
 docker rmi weather-microservice
 ```
 
-## <a name="conclusion"></a>Schlussfolgerung 
+## <a name="conclusion"></a>Schlussbemerkung 
 
-In diesem Tutorial haben Sie einen ASP.NET Core-Microservice erstellt und einige einfache Funktionen hinzugefügt.
+In diesem Tutorial haben Sie einen ASP.NET Core-Microservice erstellt und einige einfache Features hinzugefügt.
 
 Sie haben ein Docker-Containerimage für diesen Dienst erstellt und diesen Container auf dem Computer ausgeführt. Sie haben dem Dienst ein Terminalfenster angefügt und die Diagnosemeldungen Ihres Diensts gesehen.
 

@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="porting-to-net-core---libraries"></a>Portieren auf .NET Core – Bibliotheken
 
@@ -24,7 +25,7 @@ In diesem Artikel wird die Portierung von Bibliothekscode zu .NET Core beschrieb
 In diesem Artikel wird vorausgesetzt, dass:
 
 - Sie Visual Studio 2017 oder höher verwenden.
-  - .NET Core ist nicht in früheren Versionen von Visual Studio unterstützt.
+  - .NET Core in früheren Versionen von Visual Studio nicht unterstützt wird.
 - Sie den [empfohlenen Portierungsprozess](index.md) verstehen.
 - Sie alle Probleme mit [Abhängigkeiten von Drittanbietern](third-party-deps.md) gelöst haben.
 

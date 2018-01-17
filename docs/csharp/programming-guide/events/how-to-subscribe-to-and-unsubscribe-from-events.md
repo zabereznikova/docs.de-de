@@ -12,11 +12,11 @@ ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements (C#-Programmierhandbuch)
 Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn dieses Ereignis ausgelöst wird, können Sie ein Ereignis abonnieren, das von einer anderen Klasse veröffentlicht wurde. Sie können z.B. das `click`-Ereignis einer Schaltfläche abonnieren, damit Ihre Anwendung etwas nützliches macht, wenn ein Benutzer auf die Schaltfläche klickt.  
@@ -35,7 +35,7 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
   
      Die Codezeile, die für das Abonnement des Ereignisses erforderlich ist, wird auch automatisch in der `InitializeComponent`-Methode in der Datei „Form1.Designer.cs“ in Ihrem Projekt generiert. Sie sieht ungefähr so aus:  
   
-    ```  
+    ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
@@ -43,7 +43,7 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
   
 1.  Definieren Sie eine Ereignishandlermethode, deren Signatur mit der Delegatsignatur des Ereignisses übereinstimmt. Wenn das Ereignis z.B. auf dem Delegattyp <xref:System.EventHandler> basiert, repräsentiert der folgende Code den Methodenstub:  
   
-    ```  
+    ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
     {  
        // Do something useful here.  
@@ -52,19 +52,19 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
   
 2.  Verwenden Sie den Additionszuweisungsoperator (`+=`), um ihren Ereignishandler Ihrem Ereignis anzufügen. Gehen Sie in folgendem Beispiel davon aus, dass ein Objekt mit dem Namen `publisher` ein Ereignis mit dem Namen `RaiseCustomEvent` aufweist. Beachten Sie, dass die Abonnementklasse einen Verweis auf die Herausgeberklasse benötigt, um deren Ereignis abonnieren zu können.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
      Beachten Sie, dass die oben stehende Syntax in C# 2.0 neu ist. Sie entsprechen der Syntax in C# 1.0, in der der kapselnde Delegat mithilfe des Schlüsselwort `new` explizit erstellt werden muss:  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
      Ein Ereignishandler kann auch mithilfe eines Lambdaausdruckes hinzugefügt werden:  
   
-    ```  
+    ```csharp
     public Form1()  
     {  
         InitializeComponent();  
@@ -80,7 +80,7 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
   
 -   Wenn Sie das Abonnement eines Ereignisses später nicht kündigen müssen, können Sie den Additionszuweisungsoperator (`+=`) verwenden, um eine anonyme Methode an das Ereignis anzufügen. Gehen Sie in folgendem Beispiel davon aus, dass ein Objekt mit dem Namen `publisher` ein Ereignis mit dem Namen `RaiseCustomEvent` aufweist, und dass eine `CustomEventArgs`-Klasse so definiert wurde, dass Sie eine Art von spezialisierter Ereignisinformation enthält. Beachten Sie, dass die Abonnementklasse einen Verweis auf die `publisher` benötigt, um deren Ereignis abonnieren zu können.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
     {  
       string s = o.ToString() + " " + e.ToString();  
@@ -97,7 +97,7 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
   
 -   Verwenden Sie den Subtraktionszuweisungsoperator (`-=`), um ein Ereignisabonnement zu kündigen:  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
@@ -107,5 +107,5 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
  [Ereignisse](../../../csharp/programming-guide/events/index.md)  
  [event](../../../csharp/language-reference/keywords/event.md)  
  [Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [= Operator-(C#-Referenz)](../../language-reference/operators/subtraction-assignment-operator.md)  
+ [-= Operator (C#-Referenz)](../../language-reference/operators/subtraction-assignment-operator.md)  
  [+=-Operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)

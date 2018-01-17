@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -32,7 +33,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Der Bereitstellungsprozess](#the_deployment_process)  
+ [Bereitstellungsprozess](#the_deployment_process)  
  [Bereitstellen von .NET Framework](#deploying_in_a_test_environment)  
  [Erstellen einer Sammlung](#creating_a_collection)  
  [Erstellen eines Pakets und Programms](#creating_a_package)  
@@ -132,13 +133,13 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|  
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|  
 |**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim [Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.|  
   
- Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. Bei einer automatischen Installation-Benutzer interagieren nicht mit der Installation, und die chaining Anwendung muss den Rückgabecode erfassen und den Neustart initiieren; finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](http://go.microsoft.com/fwlink/?LinkId=179606).  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Auswählen eines Verteilungspunkts  
@@ -240,7 +241,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt [Downloadfehlercodes](#additional_error_codes).  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|description|  
 |-----------------|-----------------|  
 |0|Die Installation wurde erfolgreich abgeschlossen.|  
 |1602|Der Benutzer hat die Installation abgebrochen.|  

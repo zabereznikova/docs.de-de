@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify-Tool)
 Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (Compilerentwickler, Skriptmodulentwickler usw.), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie als Entwickler einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes eingeschränkt wurde. Hierzu können Sie das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
@@ -42,11 +43,11 @@ peverify filename [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|description|  
 |--------------|-----------------|  
 |*filename*|Die portierbare ausführbare Datei (Portable Executable, PE), deren MSIL und Metadaten überprüft werden sollen.|  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Bricht die Überprüfung nach *maxErrorCount*-Fehlern ab.<br /><br /> Dieser Parameter wird in .NET Framework, Version 2.0 oder höher, nicht unterstützt.|  
 |**/clock**|Erfasst und meldet die folgenden Überprüfungszeiten in Millisekunden:<br /><br /> **MD Val. cycle**<br /> Validierungszyklus der Metadaten<br /><br /> **MD Val. pure**<br /> Reine Metadatenvalidierung<br /><br /> **IL Ver. cycle**<br /> Überprüfungszyklus der Microsoft Intermediate Language (MSIL)<br /><br /> **IL Ver pure**<br /> Reine MSIL-Überprüfung<br /><br /> Die Zeiten **MD Val. cycle** und **IL Ver. cycle** umfassen die Zeit, die erforderlich ist, um die notwendigen Prozeduren zum Starten und Herunterfahren auszuführen. Die Zeiten **MD Val. pure** und **IL Ver pure** umfassen die Zeit, die erforderlich ist, um nur die Validierung oder Überprüfung auszuführen.|  

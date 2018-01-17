@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 023a8db1e34498c4c2cbe741225d218280c04e41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -46,9 +47,9 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
   
      So wie in der folgenden Tabelle gezeigt, können Komponenten, die mit der .NET Framework-Version 1.1 erstellt wurden, parallel mit Komponenten der Version 4 ausgeführt werden. Sie können jedoch nicht mit Komponenten der Version 2.0, 3.0 oder 3.5 ausgeführt werden, da das parallele Hosting für diese Versionen nicht verfügbar ist.  
   
-    |.NET Framework-Version|1.1|2.0 - 3.5|4|  
+    |.NET Framework-Version|1,1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Nicht zutreffend|Nein|Ja|  
+    |1,1|Nicht zutreffend|Nein|Ja|  
     |2.0 - 3.5|Nein|Nicht zutreffend|Ja|  
     |4|Ja|Ja|Nicht zutreffend|  
   
@@ -182,5 +183,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [\<Startup >-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+ [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

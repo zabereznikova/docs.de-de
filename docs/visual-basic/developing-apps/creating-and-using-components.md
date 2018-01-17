@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Erstellen und Verwenden von Komponenten in Visual Basic
 Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Komponente ist ein Objekt, das wiederverwendet werden, mit anderen Objekten interagieren, die Steuerung von externen Ressourcen ermöglichen und Unterstützung während der Entwurfszeit bieten kann.  
@@ -33,54 +33,39 @@ Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentM
   
 -   Wenn die Komponente aufgrund einfacher Vererbung nicht von einer der Basisimplementierungen abgeleitet werden kann, implementieren Sie <xref:System.ComponentModel.IComponent>.  
   
- Weitere Informationen zur Unterstützung während der Entwurfszeit finden Sie unter [Entwurfszeitattribute für Komponenten](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) und [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
-  
 ## <a name="component-classes"></a>Komponentenklassen  
  Der Namespace <xref:System.ComponentModel> stellt Klassen bereit, mit denen das Verhalten von Komponenten und Steuerelementen zur Laufzeit und zur Entwurfszeit implementiert wird. Dieser Namespace enthält die Basisklassen und Schnittstellen zum Implementieren von Attributen und Typkonvertern, die Datenquellen binden und Komponenten lizenzieren.  
   
  Die zentralen Komponentenklassen sind:  
   
--   <xref:System.ComponentModel.Component>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
+-   <xref:System.ComponentModel.Component> Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
+-   <xref:System.ComponentModel.MarshalByValueComponent> Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
   
 -   <xref:System.ComponentModel.Container>. Die Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IContainer>. Diese Klasse enthält 0 oder mehr Komponenten.  
   
  Einige der Klassen, die für die Komponentenlizenzierung verwendet werden, sind:  
   
--   <xref:System.ComponentModel.License>. Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
+-   <xref:System.ComponentModel.License> Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
   
--   <xref:System.ComponentModel.LicenseManager>. Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
+-   <xref:System.ComponentModel.LicenseManager> Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
   
--   <xref:System.ComponentModel.LicenseProvider>. Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
+-   <xref:System.ComponentModel.LicenseProvider> Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
+-   <xref:System.ComponentModel.LicenseProviderAttribute> Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
   
  Klassen, die häufig zum Beschreiben und Beibehalten von Komponenten verwendet werden.  
   
--   <xref:System.ComponentModel.TypeDescriptor>. Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
+-   <xref:System.ComponentModel.TypeDescriptor> Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
   
--   <xref:System.ComponentModel.EventDescriptor>. Enthält Informationen über ein Ereignis.  
+-   <xref:System.ComponentModel.EventDescriptor> Enthält Informationen über ein Ereignis.  
   
--   <xref:System.ComponentModel.PropertyDescriptor>. Gibt Informationen über eine Eigenschaft an.  
+-   <xref:System.ComponentModel.PropertyDescriptor> Gibt Informationen über eine Eigenschaft an.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Klasse vs. Komponente vs. Steuerelement](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Definiert *Komponente* und *Steuerelement*, und erläutert die Unterschiede zwischen ihnen und den Klassen.  
-  
- [Komponentenerstellung](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Roadmap für erste Schritte mit Komponenten.  
-  
- [Exemplarische Vorgehensweise: Erstellen von Komponenten](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Enthält Links zu Themen, die eine Schritt-für-Schritt-Anleitung für die Programmierung von Komponenten bereitstellen.  
-  
- [Komponentenklassen](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Beschreibt, was eine Klasse zu einer Komponente macht, wie Komponentenfunktionen verfügbar gemacht werden und wie der Zugriff auf Komponenten und die Erstellung von Komponenteninstanzen gesteuert werden.  
-  
  [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Erläutert die Behebung häufiger Probleme.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Zugriff auf die zur Entwurfszeit Unterstützung in Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Vorgehensweise: Erweitern Sie das Aussehen und Verhalten von Steuerelementen im Entwurfsmodus](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Vorgehensweise: Ausführen von benutzerdefinierter Initialisierung für Steuerelemente im Entwurfsmodus](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Vorgehensweise: Zugriff auf Entwurfszeitunterstützung in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

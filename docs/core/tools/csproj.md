@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -37,11 +38,11 @@ Es wird implizit auf Metapakete verwiesen, basierend auf der Grundlage des/der Z
 ### <a name="recommendations"></a>Empfehlungen
 Da implizit auf die `Microsoft.NETCore.App`- oder `NetStandard.Library`-Metapakete verwiesen wird, sehen Sie im Folgenden unsere empfohlenen bewährten Methoden:
 
-* Wenn Sie .NET Core "oder" Standard ".NET verwenden zu können, müssen Sie keine keinen expliziten Verweis auf die `Microsoft.NETCore.App` oder `NetStandard.Library` Metapackages über eine `<PackageReference>` Element in der Projektdatei.
-* Wenn Sie eine bestimmte Version der Laufzeit benötigen, wenn .NET Core als Ziel haben, sollten Sie verwenden die `<RuntimeFrameworkVersion>` -Eigenschaft im Projekt (z. B. `1.0.4`) anstelle von Verweisen auf die Metapackage.
+* Wenn .NET Core oder .NET Standard angezielt wird, darf nie ein expliziter Verweis auf die `Microsoft.NETCore.App`- oder `NetStandard.Library`-Metapakete über das `<PackageReference>`-Element in Ihrer Projektdatei vorhanden sein.
+* Wenn Sie .NET Core anzielen und eine bestimmte Version der Runtime benötigen, sollten Sie die `<RuntimeFrameworkVersion>`-Eigenschaft in Ihrem Projekt (z.B. `1.0.4`) verwenden, anstatt auf Metapakete zu verweisen.
     * Dies kann vorkommen, wenn Sie [eigenständige Bereitstellungen](../deploying/index.md#self-contained-deployments-scd) verwenden und Sie z.B. eine bestimmte Patchversion der 1.0.0 LTS-Laufzeit benötigen.
-* Wenn Sie eine bestimmte Version von benötigen der `NetStandard.Library` Metapackage, wenn .NET Standard verwenden, können Sie die `<NetStandardImplicitPackageVersion>` Eigenschaft, und legen die Version, die Sie benötigen.
-* Nicht explizit hinzugefügt oder aktualisieren Sie Verweise auf entweder dem `Microsoft.NETCore.App` oder `NetStandard.Library` Metapackage in .NET Framework-Projekten. Wenn eine beliebige Version von `NetStandard.Library` ist erforderlich, wenn diese Version mit einer standardmäßigen .NET basierende NuGet-Paket NuGet automatisch installiert werden.
+* Wenn Sie .NET Standard anzielen und eine bestimmte Version der `NetStandard.Library`-Metapakete benötigen, können Sie die `<NetStandardImplicitPackageVersion>`-Eigenschaft verwenden und die Version festlegen, die Sie benötigen.
+* Fügen Sie dem `Microsoft.NETCore.App`- oder `NetStandard.Library`-Metapaket in .NET Framework-Projekten nicht explizit Verweise hinzu, und aktualisieren Sie diese auch nicht. Wenn bei der Verwendung eines auf .NET Standard basierenden NuGet-Pakets eine bestimmte Version von `NetStandard.Library` benötigt wird, installiert NuGet diese automatisch.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Standardkompilierung in .NET Core-Projekten
 Beim Wechsel zum *csproj*-Format in den neuesten SDK-Versionen, haben wir die Standardaufnahmen- und ausschlüsse für Compile-Elemente und eingebettete Ressourcen zu den SDK-Eigenschaftendateien verschoben. Dies bedeutet, dass Sie diese Elemente nicht länger in Ihrer Projektdatei angeben müssen. 
@@ -54,7 +55,7 @@ Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipe
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (oder andere Spracherweiterungen) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | Nicht zutreffend                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Nicht zutreffend                        |
-| Keine              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| Keiner              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 Wenn Sie über Globs in Ihrem Projekt verfügen, und Sie versuchen, es mit dem neuesten SDK zu erstellen, erhalten Sie den folgenden Fehler:
 
@@ -71,9 +72,9 @@ Wenn diese Eigenschaft auf `false` festgelegt wird, wird die implizite Aufnahme 
 
 Diese Änderung ändert die Hauptfunktionsweise anderer Aufnahmen nicht. Wenn Sie z.B. einige Dateien angeben möchten, die mit Ihrer Anwendung veröffentlicht werden, können Sie weiterhin die bekannten Mechanismen in *csproj* dafür nutzen (z.B. das `<Content>`-Element).
 
-`<EnableDefaultCompileItems>`nur deaktiviert `Compile` Globs jedoch andere Globs, wie die implizite beeinflussen nicht `None` Glob, die gilt auch für \*cs-Elemente. Aus diesem Grund **Projektmappen-Explorer** weiterhin anzeigen \*cs-Elemente als Teil des Projekts, das als `None` Elemente. In ähnlicher Weise können Sie `<EnableDefaultNoneItems>` zum Deaktivieren der impliziten `None` Glob.
+`<EnableDefaultCompileItems>` deaktiviert nur `Compile`-Globmuster, wirkt sich jedoch nicht auf andere Globmuster wie das implizite `None`-Globmuster aus, das ebenfalls für \*.cs-Elemente gilt. Deshalb zeigt **Projektmappen-Explorer** die \*.cs-Elemente weiterhin als Teil des Projekts an, die als `None`-Elemente eingebunden wurden. Sie können `<EnableDefaultNoneItems>` ähnlich verwenden, um das implizite `None`-Globmuster zu deaktivieren.
 
-So deaktivieren Sie **alle impliziten Globs**, Sie können festlegen, die `<EnableDefaultItems>` Eigenschaft, um `false` wie im folgenden Beispiel:
+Sie können die `<EnableDefaultItems>`-Eigenschaft wie im folgenden Beispiel auf `false` festlegen, um **alle impliziten Globmuster** zu deaktivieren:
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -184,7 +185,7 @@ Im folgenden Beispiel werden nur die Fallbacks für das `netcoreapp1.0`-Ziel ang
 Mit dem Wechsel zu MSBuild haben wir die Eingabemetadaten, die beim Packen eines NuGet-Pakets verwendet werden, aus *project.json* in *.csproj*-Dateien verschoben. Die Eingaben sind MSBuild-Eigenschaften, sodass sie in eine `<PropertyGroup>`-Gruppe wechseln müssen. In der folgenden Liste sind die Eigenschaften aufgeführt, die als Eingaben für den Packvorgang verwendet werden, wenn der Befehl `dotnet pack` oder das MSBuild-Ziel `Pack` verwendet wird, das Bestandteil des SDKs ist. 
 
 ### <a name="ispackable"></a>IsPackable
-Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`. 
+Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`sein. 
 
 ### <a name="packageversion"></a>PackageVersion
 Gibt die Version an, die das resultierende Paket haben wird. Akzeptiert alle Arten von NuGet-Versionszeichenfolgen. Standardmäßig beträgt der Wert `$(Version)` der Eigenschaft `Version` im Projekt. 
@@ -198,7 +199,7 @@ Ein benutzerfreundlicher Titel des Pakets, der in der Regel in der Benutzeroberf
 ### <a name="authors"></a>Authors
 Eine durch Semikolons getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Diese werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete von den gleichen Autoren zu geben.
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>description
 Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche.
 
 ### <a name="copyright"></a>Copyright

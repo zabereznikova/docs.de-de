@@ -17,11 +17,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
 In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.Emit>-Namespace beschrieben, mit denen ein Compiler oder ein Tool zur Laufzeit Metadaten und Microsoft Intermediate Language (MSIL) ausgeben und optional eine übertragbare ausführbare Datei (PE-Datei) auf dem Datenträger generieren kann. Dieser Namespace wird primär von Skriptmodulen und Compilern verwendet. Die vom <xref:System.Reflection.Emit>-Namespace bereitgestellte Funktionalität wird in diesem Abschnitt als Reflektionsausgabe bezeichnet.  
@@ -49,17 +50,17 @@ In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.E
 [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
 Beschreibt Sicherheitsaspekte im Zusammenhang mit dem Erstellen dynamischer Assemblys mithilfe der Reflektionsausgabe.  
 
-[Vorgehensweise: definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md)   
-Zeigt, wie eine einfache dynamische Methode und eine dynamische Methode, die an eine Instanz einer Klasse gebunden ausgeführt.
+[Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md)   
+Zeigt, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, ausgeführt werden.
 
-[Vorgehensweise: definieren ein generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)   
-Zeigt, wie einen einfachen generischen Typ mit zwei Typparametern erstellt, wie Klasse, die Schnittstelle und die speziellen Einschränkungen auf die Typparameter angewendet und Memers erstellen, die die Typparameter der Klasse als Parametertypen und Rückgabetypen von.
+[Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)   
+Zeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstellen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.
 
-[Vorgehensweise: definieren eine generische Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md)   
-Zeigt, wie erstellen, auszugeben und eine einfache generische Methode aufrufen.
+[Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md)   
+Zeigt, wie einfache generische Methoden erstellt, ausgegeben und aufgerufen werden.
 
-[Entladbare Assemblys für die dynamische typgenerierung](collectible-assemblies.md)   
-Führt ein entladbare Assemblys, bei die dynamische Assemblys sind, die entladen werden können, ohne Entladen der Anwendungsdomäne, in der sie erstellt wurden.
+[Entladbare Assemblys für die dynamische Typgenerierung](collectible-assemblies.md)   
+Führt in das Thema „entladbare Assemblys“ ein. Dabei handelt es sich um dynamische Assemblys, die entladen werden können, ohne gleichzeitig auch die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -79,4 +80,4 @@ Führt ein entladbare Assemblys, bei die dynamische Assemblys sind, die entladen
  Erläutert das Durchsuchen von Metadaten und verwaltetem Code.  
   
  [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Bietet eine Übersicht über Assemblys in .NET Implementierungen.
+ Bietet eine Übersicht über Assemblys in .NET-Implementierungen.

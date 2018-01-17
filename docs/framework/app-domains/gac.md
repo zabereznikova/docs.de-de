@@ -21,19 +21,20 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eedb33042bd904340cc02526c3f1cf927c09bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-assembly-cache"></a>Globaler Assemblycache
-Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
+Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
   
  Geben Sie Assemblys nur dann durch eine Installation im globalen Assemblycache frei, wenn dies unbedingt erforderlich ist. Wenn die Freigabe einer Assembly nicht unbedingt erforderlich ist, empfiehlt es sich, die Assemblyabhängigkeiten privat zu halten und Assemblys im Anwendungsverzeichnis abzulegen. Assemblys müssen außerdem nicht im globalen Assemblycache installiert sein, um für COM-Interop oder nicht verwalteten Code verfügbar zu sein.  
   
 > [!NOTE]
->  Es gibt Szenarien, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit dem **xcopy**-Befehl das Anwendungsverzeichnis kopieren. Sie müssen die Assembly zusätzlich in den globalen Assemblycache verschieben.  
+>  Es gibt Szenarios, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit dem **xcopy**-Befehl das Anwendungsverzeichnis kopieren. Sie müssen die Assembly zusätzlich in den globalen Assemblycache verschieben.  
   
  Es gibt zwei Möglichkeiten für die Bereitstellung einer Assembly im globalen Assemblycache:  
   
@@ -42,11 +43,11 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt e
 -   Die Verwendung des Entwicklertools [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) aus [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Bei Bereitstellungsszenarien sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
+    >  Bei Bereitstellungsszenarios sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
   
- Ab .NET Framework 4 lautet die Standardposition des globalen Assemblycache **%windir%\Microsoft.NET\assembly**. In früheren Versionen von .NET Framework lautet der Standardspeicherort **%windir%\assembly**.  
+ Ab .NET Framework 4 lautet der Standardspeicherort des globalen Assemblycaches **%windir%\Microsoft.NET\assembly**. In früheren Versionen von .NET Framework lautet der Standardspeicherort **%windir%\assembly**.  
   
- Administratoren verwenden zum Schutz des Verzeichnisses systemroot oftmals eine Zugriffssteuerungsliste (ACL – Access Control List), um Schreib- und Ausführungszugriffe zu kontrollieren. Da der globale Assemblycache in einem Unterverzeichnis des Verzeichnisses systemroot installiert ist, erbt er die ACL dieses Verzeichnisses. Aus diesem Grund empfiehlt es sich, nur Benutzern mit Administratorrechten das Löschen von Dateien aus dem globalen Assemblycache zu gestatten.  
+ Administratoren verwenden zum Schutz des Verzeichnisses systemroot oftmals eine Zugriffssteuerungsliste (ACL – Access Control List), um Schreib- und Ausführungszugriffe zu kontrollieren. Da der globale Assemblycache in einem Unterverzeichnis des Verzeichnisses „Systemstamm“ installiert ist, erbt er die ACL dieses Verzeichnisses. Aus diesem Grund wird empfohlen, nur Benutzern mit Administratorrechten das Löschen von Dateien aus dem globalen Assemblycache zu gestatten.  
   
  Alle Assemblys, die im globalen Assemblycache bereitgestellt werden, müssen starke Namen besitzen. Beim Hinzufügen einer Assembly zum globalen Assemblycache werden Integritätsprüfungen für alle Dateien vorgenommen, aus denen die Assembly besteht. Diese Integritätsprüfungen werden vom Cache durchgeführt, um sicherzustellen, dass eine Assembly nicht manipuliert wurde (z. B. wenn eine Datei geändert wurde, aber das Manifest diese Änderung nicht widerspiegelt).  
   

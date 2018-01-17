@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrieren von DNX zur .NET Core-CLI (project.json)
 
@@ -53,7 +54,7 @@ Wenn Sie DNX verwendet haben, haben Sie bisher einige Befehle aus einem der drei
 Die folgende Tabelle stellt die Zuordnung zwischen DNX-/DNU-Befehlen und ihren CLI-Gegenstücken dar.
 
 
-| DNX-Befehl                       | CLI-Befehl       | Beschreibung                                                                                                       |
+| DNX-Befehl                       | CLI-Befehl       | description                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | Code aus Quelle ausführen.                                                                                             |
 | dnu build                         | dotnet build      | Erstellen einer IL-Binärdatei des Codes.                                                                                  |
@@ -76,7 +77,7 @@ In DNU war ein Konzept namens „globale Befehle“ enthalten. Im Wesentlichen w
 Dieses Konzept wird in CLI nicht unterstützt. CLI unterstützt jedoch das Konzept, Befehle pro Projekt hinzuzufügen, die mithilfe der bekannten Syntax `dotnet <command>` aufgerufen werden können.
 
 ### <a name="installing-dependencies"></a>Installieren von Abhängigkeiten
-Seit V1 verfügen die .NET Core-CLI-Tools nicht mehr über einen Befehl `install` für das Installieren von Abhängigkeiten. Um ein Paket von NuGet zu installieren, müssen Sie es als eine Abhängigkeit hinzufügen Ihrer `project.json` Datei, und führen Sie `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)). 
+Seit V1 verfügen die .NET Core-CLI-Tools nicht mehr über einen Befehl `install` für das Installieren von Abhängigkeiten. Wenn Sie ein Paket von NuGet installieren möchten, müssen Sie es als Abhängigkeit zu Ihrer Datei `project.json` hinzufügen und dann `dotnet restore` ausführen ([siehe Hinweis](#dotnet-restore-note)). 
 
 ### <a name="running-your-code"></a>Ausführen des Codes
 Im Wesentlichen gibt es zwei Möglichkeiten, den Code auszuführen. Eine Möglichkeit ist das Ausführen von der Quelle mit dem Befehl `dotnet run`. Im Gegensatz zu `dnx run` führt dieser keine Kompilierung im Speicher durch. Stattdessen wird `dotnet build` aufgerufen, um den Code zu erstellen und dann die erstellte Binärdatei auszuführen. 
@@ -129,7 +130,7 @@ Wenn Sie andere `dnx`-Ziele verwenden, wie z.B. `dnx451`, müssen diese ebenfall
 
 Ihre Datei `project.json` ist nun weitgehend bereit. Sie müssen nun Ihre Liste der Abhängigkeiten durchgehen und die Abhängigkeiten auf deren neuere Versionen aktualisieren, besonders, wenn Sie Abhängigkeiten von ASP.NET Core verwenden. Wenn Sie separate Pakete für BLC APIs verwenden, können Sie das Laufzeitpaket verwenden, wie im Dokument [application portability type (Arten der Portabilität von Anwendungen)](../deploying/index.md) erklärt. 
 
-Sobald Sie bereit sind, können Sie versuchen, eine Wiederherstellung mit `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)). Je nach Version Ihrer Abhängigkeiten könnten Fehler auftreten, wenn NuGet die Abhängigkeiten für eines der oben genannten Zielframeworks nicht lösen kann. Dies ist ein „Zeitpunkt“-Problem; im Lauf der Zeit werden immer mehr Pakete eine Unterstützung dieser Frameworks bieten. Wenn dieses Problem auftritt, können Sie vorläufig die Anweisung `imports` innerhalb des Knotens `framework` verwenden, um NuGet mitzuteilen, dass es die Pakete, die das Framework als Ziel haben, innerhalb der „imports“-Anweisung wiederherstellen kann. Die Fehler beim Wiederherstellen, die in diesem Fall auftreten, sollten genügend Informationen bereitstellen, damit Sie entscheiden können, welches Framework Sie importieren müssen. Wenn Sie sich hiermit nicht auskennen behebt normalerweise auch das Angeben von `dnxcore50` und `portable-net45+win8` in der `imports`-Anweisung das Problem. Der folgende JSON-Ausschnitt zeigt, wie dies aussieht:
+Sobald Sie bereit sind, können Sie eine Wiederherstellung mit `dotnet restore` ausführen ([siehe Hinweis](#dotnet-restore-note)). Je nach Version Ihrer Abhängigkeiten könnten Fehler auftreten, wenn NuGet die Abhängigkeiten für eines der oben genannten Zielframeworks nicht lösen kann. Dies ist ein „Zeitpunkt“-Problem; im Lauf der Zeit werden immer mehr Pakete eine Unterstützung dieser Frameworks bieten. Wenn dieses Problem auftritt, können Sie vorläufig die Anweisung `imports` innerhalb des Knotens `framework` verwenden, um NuGet mitzuteilen, dass es die Pakete, die das Framework als Ziel haben, innerhalb der „imports“-Anweisung wiederherstellen kann. Die Fehler beim Wiederherstellen, die in diesem Fall auftreten, sollten genügend Informationen bereitstellen, damit Sie entscheiden können, welches Framework Sie importieren müssen. Wenn Sie sich hiermit nicht auskennen behebt normalerweise auch das Angeben von `dnxcore50` und `portable-net45+win8` in der `imports`-Anweisung das Problem. Der folgende JSON-Ausschnitt zeigt, wie dies aussieht:
 
 ```json
     "frameworks": {

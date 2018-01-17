@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
 
@@ -80,7 +81,7 @@ Dadurch werden `Newtonsoft.Json` und dessen Abhängigkeiten zum Klassenbibliothe
 </ItemGroup>
 ```
 
-Führen Sie [ `dotnet restore` ](../tools/dotnet-restore.md), ([Siehe Hinweis](#dotnet-restore-note)) das Abhängigkeiten wiederhergestellt und erstellt eine *Obj* Ordner innerhalb der *Bibliothek* mit drei Dateien, einschließlich einer *project.assets.json* Datei:
+Führen Sie [`dotnet restore`](../tools/dotnet-restore.md) aus ([siehe Hinweis](#dotnet-restore-note)), wodurch Abhängigkeiten wiederhergestellt werden und ein *obj*-Ordner mit drei Dateien innerhalb von *library* erstellt wird, einschließlich einer *project.assets.json*-Datei:
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ Erstellen Sie die Abhängigkeit von der Bibliothek, indem Sie den `dotnet add re
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Führen Sie `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) zum Wiederherstellen der Abhängigkeiten der drei Projekte in der Projektmappe. Öffnen Sie *Program.cs*, und ersetzen Sie den Inhalt der `Main`-Methode durch diese Zeile:
+Führen Sie `dotnet restore` aus ([siehe Hinweis](#dotnet-restore-note)), um die Abhängigkeiten der drei Projekte in der Projektmappe wiederherzustellen. Öffnen Sie *Program.cs*, und ersetzen Sie den Inhalt der `Main`-Methode durch diese Zeile:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

@@ -13,14 +13,14 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (C#-Compileroptionen)
-Gibt an, welche Version der common Language Runtime (CLR) die Assembly ausführen kann.  
+Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,11 +40,11 @@ Gibt an, welche Version der common Language Runtime (CLR) die Assembly ausführe
   
 -   **ARM** kompiliert Ihre Assembly für die Ausführung auf einem Computer mit einem ARM-Prozessor (Advanced RISC-Computer).  
   
--   **x64** kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.  
+-   **x64** kompiliert Ihre Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Befehlssatz unterstützt.  
   
--   **x86** kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).  
+-   **x86** kompiliert die Assembly für die 32-Bit-CLR (Common Language Runtime), die mit x86 kompatibel ist.  
   
--   **Itanium** kompiliert die Assembly für die 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.  
+-   **Itanium** kompiliert Ihre Assembly für die Ausführung durch die 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.  
   
  Auf einem 64-Bit-Windows-Betriebssystem:  
   

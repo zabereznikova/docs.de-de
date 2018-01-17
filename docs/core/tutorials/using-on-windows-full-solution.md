@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: e922a2c91fab5c513f5c560920d37d77da2d6f84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017
 
@@ -27,7 +28,7 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 
 ### <a name="writing-the-library"></a>Schreiben der Bibliothek
 
-1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**. In der **neues Projekt** Dialogfeld erweitern Sie die **Visual C#-** Knoten, und wählen Sie die **.NET Standard** Knoten, und wählen Sie dann **-Klassenbibliothek (.NET Standard)**. 
+1. Wählen Sie in Visual Studio **Datei**, **Neu**, **Projekt**aus. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#**. Klicken Sie auf den Knoten **.NET Standard** und anschließend auf **Klassenbibliothek (.NET Standard)**. 
 
 2. Geben Sie dem Projekt den Namen „Library“ und der Projektmappe den Namen „Golden“. Lassen Sie **Projektmappenverzeichnis erstellen** aktiviert. Klicken Sie auf **OK**.
 

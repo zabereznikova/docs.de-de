@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -156,7 +157,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
  [Dialogfeld „Erweiterte Einstellungen für Dienste“](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [Implementieren eines ](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
  [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

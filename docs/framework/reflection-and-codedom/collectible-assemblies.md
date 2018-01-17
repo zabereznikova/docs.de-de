@@ -1,5 +1,5 @@
 ---
-title: "Entladbare Assemblys für die dynamische typgenerierung"
+title: "Entladbare Assemblys für die dynamische Typgenerierung"
 description: 
 ms.date: 08/29/2017
 ms.prod: .net
@@ -13,73 +13,74 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c9a613f4cc13c3e4189a59ace2e05d01d1bcb4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0756fe317469898dd165e55be7125922f5b692f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="collectible-assemblies-for-dynamic-type-generation"></a>Entladbare Assemblys für die dynamische typgenerierung
+# <a name="collectible-assemblies-for-dynamic-type-generation"></a>Entladbare Assemblys für die dynamische Typgenerierung
 
-*Entladbare Assemblys* sind dynamische Assemblys, die entladen werden können, ohne Entladen der Anwendungsdomäne, in dem sie erstellt wurden. Alle verwaltetem und unverwaltetem Speicher verwendet, die durch eine entladbare Assembly und die darin enthaltenen Typen kann freigegeben werden. Informationen wie z. B. der Name der Assembly wird aus internen Tabellen entfernt.
+Bei *entladbaren Assemblys* handelt es sich um dynamische Assemblys, die entladen werden können, ohne die Anwendungsdomäne zu entladen, in der sie erstellt wurden. Der verwaltete und nicht verwaltete Speicher, der von einer entladbaren Assembly und den darin enthaltenen Typen verwendet wurde, kann wieder freigegeben werden. Informationen wie der Name der Assembly werden aus den internen Tabellen entfernt.
 
-Verwenden Sie zum Aktivieren der Entladung der <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> kennzeichnen, wenn Sie eine dynamische Assembly erstellen. Die Assembly ist flüchtig (d. h., es kann nicht gespeichert werden) und im beschriebenen Einschränkungen unterliegt den [Beschränkungen entladbarer Assemblys](#restrictions-on-collectible-assemblies) Abschnitt. Die common Language Runtime (CLR) entlädt entladbare Assemblys automatisch, wenn Sie alle Objekte, die mit der Assembly verknüpfte freigeben. In jeder anderen Hinsicht entladbarer Assemblys erstellt und auf die gleiche Weise wie andere dynamische Assemblys verwendet.
+Verwenden Sie zum Aktivieren der Entladung das <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType>-Flag, wenn Sie eine dynamische Assembly erstellen. Die Assembly ist flüchtig (d.h. sie kann nicht gespeichert werden) und unterliegt den Einschränkungen, die im Abschnitt [Einschränkungen bei entladbaren Assemblys](#restrictions-on-collectible-assemblies) beschrieben werden. Die Common Language Runtime (CLR) entlädt eine entladbare Assembly automatisch, wenn Sie alle Objekte freigeben, die der Assembly zugeordnet sind. In jeder anderen Hinsicht werden entladbare Assemblys genau wie andere dynamische Assemblys erstellt und verwendet.
 
-## <a name="lifetime-of-collectible-assemblies"></a>Lebensdauer entladbarer Assemblys
+## <a name="lifetime-of-collectible-assemblies"></a>Lebensdauer von entladbaren Assemblys
 
-Die Lebensdauer einer entladbare Assembly wird gesteuert, indem das Vorhandensein von Verweisen auf die darin enthaltenen Typen und die Objekte, die von diesen Typen erstellt werden. Die common Language Runtime entladen eine Assembly nicht, solange mindestens einer der folgenden vorhanden (`T` ist jeder Typ, der in der Assembly definiert ist): 
+Die Lebensdauer einer entladbaren Assembly wird durch das Vorhandensein der Verweise auf die enthaltenen Typen und auf die Objekte, die aus diesen Typen erstellt werden, gesteuert. Die Common Language Runtime entlädt eine Assembly nicht, solange mindestens eins der folgenden Objekte vorhanden ist (bei `T` handelt es sich um einen beliebigen Typ, der in der Assembly definiert wird): 
 
 - Eine Instanz von `T`.
 
 - Eine Instanz eines Arrays von `T`.
  
-- Eine Instanz eines generischen Typs, der verfügt `T` als eines seiner Typargumente. Dies schließt generische Sammlungen des `T`, selbst wenn diese Auflistung leer ist.
+- Eine Instanz eines generischen Typs, der über `T` als Typargument verfügt. Dies schließt generische Auflistungen von `T` ein, auch wenn diese Auflistung leer ist.
 
-- Eine Instanz von <xref:System.Type> oder <xref:System.Reflection.Emit.TypeBuilder> darstellt, die `T`. 
+- Eine Instanz von <xref:System.Type> oder <xref:System.Reflection.Emit.TypeBuilder>, die `T` darstellt. 
 
    > [!IMPORTANT]
-   > Sie müssen alle Objekte freigeben, die Teile der Assembly darstellen. Die <xref:System.Reflection.Emit.ModuleBuilder> , definiert `T` behält einen Verweis auf die <xref:System.Reflection.Emit.TypeBuilder>, und die <xref:System.Reflection.Emit.AssemblyBuilder> Objekt verwaltet einen Verweis auf die <xref:System.Reflection.Emit.ModuleBuilder>, sodass Verweise auf diese Objekte freigegeben werden müssen. Auch das Vorhandensein eines eine <xref:System.Reflection.Emit.LocalBuilder> oder ein <xref:System.Reflection.Emit.ILGenerator> verwendet bei der Erstellung von `T` wird verhindert, dass entladen.
+   > Sie müssen alle Objekte freigeben, die Teile der Assembly darstellen. Die <xref:System.Reflection.Emit.ModuleBuilder>-Klasse, die `T` definiert, behält einen Verweis auf <xref:System.Reflection.Emit.TypeBuilder> bei, und das <xref:System.Reflection.Emit.AssemblyBuilder>-Objekt behält einen Verweis auf <xref:System.Reflection.Emit.ModuleBuilder> bei. Die Verweise auf diese Objekte müssen ebenfalls freigegeben werden. Auch das Vorhandensein einer <xref:System.Reflection.Emit.LocalBuilder>- oder <xref:System.Reflection.Emit.ILGenerator>-Klasse, die bei der Erstellung von `T` verwendet werden, verhindert das Entladen.
 
-- Ein statischer Verweis auf `T` von einem anderen dynamisch definierte Typ `T1` , die durch das Ausführen von Code weiterhin erreichbar ist. Beispielsweise `T1` abgeleitet möglicherweise `T`, oder `T` möglicherweise, dass der Typ eines Parameters in einer Methode des `T1`.
+- Ein statischer Verweis auf `T` durch einen anderen dynamisch definierten `T1`-Typ, der für ausgeführten Code weiterhin erreichbar ist. `T1` kann beispielsweise von `T` abgeleitet werden, oder `T` kann den Typ eines Parameters in einer Methode von `T1` darstellen.
  
-- Ein **ByRef** in einem statischen Feld, das zu gehört `T`.
+- Ein **ByRef**-Modifizierer für ein statisches Feld, das zu `T` gehört.
 
-- Ein <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle>, oder <xref:System.RuntimeMethodHandle> bezieht, die sich auf `T` oder mit einer Komponente von `T`.
+- Eine <xref:System.RuntimeTypeHandle>-, <xref:System.RuntimeFieldHandle>- oder <xref:System.RuntimeMethodHandle>-Struktur, die auf `T` oder eine Komponente von `T` verweist.
 
-- Eine Instanz eines Reflektionsobjekts, die indirekt verwendet werden konnte oder direkt für den Zugriff auf die <xref:System.Type> Objekt, das darstellt `T`. Z. B. die <xref:System.Type> -Objekt für `T` abgerufen werden kann, von einem Arraytyp, dessen Elementtyp `T`, oder aus einem generischen Typ, der verfügt `T` als Typargument. 
+- Eine Instanz eines beliebigen Reflektionsobjekts, das indirekt oder direkt verwendet werden kann, um auf das <xref:System.Type>-Objekt zuzugreifen, das `T` darstellt. Das <xref:System.Type>-Objekt für `T` kann beispielsweise von einem Arraytyp abgerufen werden, dessen Elementtyp `T` ist, oder von einem generischen Typ mit `T` als Typargument. 
 
-- Eine Methode `M` in der Aufrufliste für einen beliebigen Thread, in dem `M` ist eine Methode `T` oder eine auf Modulebene-Methode, die in der Assembly definiert ist.
+- Eine `M`-Methode in der Aufrufliste eines beliebigen Threads, bei der `M` eine Methode von `T` oder eine Methode auf Modulebene darstellt, die in der Assembly definiert ist.
 
-- Ein Delegat auf eine statische Methode, die in einem Modul der Assembly definiert ist.
+- Ein Delegat von einer statischen Methode, der in einem Modul der Assembly definiert wird.
 
-Wenn nur ein Element aus dieser Liste für nur einen Typ oder eine Methode in der Assembly vorhanden ist, kann die Common Language Runtime die Assembly nicht entfernen.
+Wenn ein Element aus dieser Liste für einen Typ oder eine Methode in der Assembly vorhanden ist, kann die Runtime die Assembly nicht entladen.
 
 > [!NOTE]
-> Die Common Language Runtime wird nicht tatsächlich die Assembly entladen, bis für alle Elemente in der Liste Finalizer ausgeführt haben.
+> Die Runtime entlädt die Assembly nicht, bevor Finalizer für alle Elemente in der Liste ausgeführt wurden.
 
-Zwecks Überwachung Lebensdauer einen konstruierten generischen Typ wie z. B. `List<int>` (in c#) oder `List(Of Integer)` (in Visual Basic) ist, erstellt und verwendet die Generierung einer entladbare Assembly gilt wurden entweder in der Assembly definiert, enthält die generische Typdefinition oder in einer Assembly enthält, die die Definition eines seiner Typargumente. Die genaue Assembly, die verwendet wird, ist ein Implementierungsdetail und kann geändert.
+Zum Nachverfolgen der Lebensdauer sollte ein konstruierter generischer Typ wie `List<int>` (in C#) oder `List(Of Integer)` (in Visual Basic), der bei der Generierung einer entladbaren Assembly erstellt und verwendet wird, entweder in der Assembly definiert werden, die die generische Typdefinition enthält, oder in einer Assembly, die die Definition von einem seiner Typargumente enthält. Die Assembly, die verwendet wird, stellt ein Implementierungsdetail dar und unterliegt Änderungen.
  
-## <a name="restrictions-on-collectible-assemblies"></a>Einschränkungen für entladbare Assemblys
+## <a name="restrictions-on-collectible-assemblies"></a>Einschränkungen bei entladbaren Assemblys
 
-Entladbare Assemblys gelten die folgenden Einschränkungen: 
+Für entladbare Assemblys gelten folgende Einschränkungen: 
 
-- **Der Code statische Verweise**   
-  Typen in eine gewöhnliche dynamische Assembly sind keine statische Verweise auf Typen, die in einer entladbare Assembly definiert sind. Wenn Sie einen normalen Typ definieren, die von einem Typ in einer entladbare Assembly erbt beispielsweise eine <xref:System.NotSupportedException> Ausnahme wird ausgelöst. Ein Typ in einer entladbare Assembly kann Code statische Verweise auf einen Typ in einer anderen entladbare Assembly haben, aber dies erweitert die Lebensdauer der Assembly, die die Lebensdauer der verweisenden Assembly verwiesen wird.
+- **Statische Verweise**   
+  Die Typen in einer gewöhnlichen dynamischen Assembly können keine statischen Verweise auf Typen enthalten, die in einer entladbaren Assembly definiert sind. Wenn Sie beispielsweise einen normalen Typ definieren, der von einem Typ in einer entladbaren Assembly erbt, wird eine <xref:System.NotSupportedException>-Ausnahme ausgelöst. Ein Typ in einer entladbaren Assembly kann statische Verweise auf einen Typ in einer anderen entladbaren Assembly enthalten, dadurch wird jedoch die Lebensdauer der Assembly, auf die verweisen wird, auf die Lebensdauer der verweisenden Assembly erweitert.
 
-- **COM-interop**   
-   Keine COM-Schnittstellen können innerhalb einer entladbaren Assembly definiert werden, und keine Instanzen von Typen in einer entladbare Assembly in COM-Objekte konvertiert werden können. Ein Typ in einer entladbare Assembly kann nicht als COM callable Wrapper (CCW) oder Common Language Runtime callable Wrapper (RCW) dienen. Allerdings können Typen in Assemblys entladbarer Objekte, die COM-Schnittstellen implementieren.
+- **COM-Interop**   
+   In einer entladbaren Assembly können keine COM-Schnittstellen definiert werden, und Instanzen von Typen in einer entladbaren Assembly können nicht in COM-Objekte konvertiert werden. Ein Typ in einer entladbaren Assembly kann nicht als COM Callable Wrapper (CCW) oder Runtime Callable Wrapper (RCW) verwendet werden. Typen in entladbaren Assemblys können jedoch Objekte verwenden, die COM-Schnittstellen implementieren.
 
 - **Plattformaufruf**   
-   Methoden, auf die <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut kann nicht kompiliert werden, wenn sie in einer entladbare Assembly deklariert werden. Die <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> Anweisung kann nicht in der Implementierung eines Typs in eine entladbare Assembly verwendet werden, und solche Typen können nicht zu nicht verwaltetem Code gemarshallt werden. Allerdings können Sie in systemeigenen Code mit Aufrufen eines Einstiegspunkts, das in einer nicht-entladbare Assembly deklariert ist.
+   Methoden mit dem <xref:System.Runtime.InteropServices.DllImportAttribute>-Attribut können nicht kompiliert werden, wen diese in einer entladbaren Assembly definiert werden. Die <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType>-Anweisung kann nicht in der Implementierung eines Typs in einer entladbaren Assembly verwendet werden, und solche Typen können nicht an nicht verwalteten Code gemarshallt werden. Sie können jedoch Aufrufe in nativem Code durchführen, indem Sie einen Einstiegspunkt verwenden, der in einer nicht entladbaren Assembly deklariert ist.
  
 - **Marshalling**   
-   Objekte (in bestimmten, Delegaten), die in entladbare Assemblys definiert sind, können nicht gemarshallt werden. Dies ist eine Einschränkung für alle flüchtigen ausgegebenen Typen.
+   Objekte (insbesondere Delegaten), die in entladbaren Assemblys definiert sind, können nicht gemarshallt werden. Diese Einschränkung gilt für alle flüchtig ausgegebenen Typen.
 
-- **Das Laden einer Assembly**   
-   Reflektionsausgabe ist der einzige Mechanismus, der zum Laden von Assemblys entladbare unterstützt wird. Assemblys, die geladen werden, indem Sie jede sonstige Form von das Laden einer Assembly können nicht entladen werden.
+- **Laden von Assemblys**   
+   Die Reflektionsausgabe stellt den einzigen Mechanismus dar, der zum Laden von entladbaren Assemblys unterstützt wird. Assemblys, die mithilfe einer anderen Methode zum Laden von Assemblys geladen werden, können nicht entladen werden.
  
-- **Kontext gebundene Objekte**    
-   Kontextunabhängige Variablen werden nicht unterstützt. Typen in einer entladbare Assembly können nicht erweitert werden <xref:System.ContextBoundObject>. Jedoch kann Code entladbarer Assemblys verwendet kontextgebundene-Objekte, die definiert, werden an anderer Stelle.
+- **Kontextgebundene Objekte**    
+   Kontextstatische Variablen werden nicht unterstützt. Typen in einer entladbaren Assembly können <xref:System.ContextBoundObject> nicht erweitern. Der Code in entladbaren Assemblys kann jedoch in kontextgebundenen Objekten verwendet werden, die an anderer Stelle definiert werden.
 
 - **Threadstatische Daten**       
    Threadstatische Variablen werden nicht unterstützt.

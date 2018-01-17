@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
 <a name="introduction"></a> In den Tabellen dieses Artikels sind die Typen aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veraltet sind, geordnet nach Assembly. Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -93,51 +94,51 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|Die <xref:System.Configuration.Assemblies.AssemblyHash>-Klasse ist veraltet.|  
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5. Verwenden Sie stattdessen die <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType>-Klasse im System.Runtime.CompilerServices-Namespace.|  
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Es steht eine alternative API zur Verfügung: Geben Sie stattdessen das benutzerdefinierte <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>-Attribut aus.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Dieses Attribut ist veraltet und wird in einer der nächsten Versionen entfernt.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|Das <xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>-Objekt ist veraltet.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Dieses Attribut ist veraltet. Anwendungsdomänen beachten Aktivierungskontextgrenzen in IDispatch-Aufrufen nicht mehr.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|  
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> wird nur für .NET 2.0-Transparenzkompatibilität verwendet.|  
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> wird nur für .NET 2.0-Transparenzkompatibilität verwendet. Verwenden Sie stattdessen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Die Deklarationssicherheit auf Assemblyebene wurde als veraltet eingestuft und wird von der CLR nicht mehr als Standardeinstellung erzwungen.|  
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Dieser Typ ist veraltet und wird in einem der nächsten Releases von .NET Framework entfernt.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="Core"></a>   
 ### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
@@ -154,24 +155,24 @@ ms.lasthandoff: 11/21/2017
 |----------|-------------|  
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Verwenden Sie diesen Typ nicht.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="data"></a>   
 ### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll  
   
-|Typ|Nachricht|  
+|Typ|Meldung|  
 |----------|-------------|  
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> ist veraltet.|  
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> ist veraltet.|  
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|Die <xref:System.Data.TypedDataSetGenerator>-Klasse wird in einer der nächsten Versionen entfernt. Verwenden Sie <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> in "System.Design.dll".|  
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|Die <xref:System.Xml.XmlDataDocument>-Klasse wird in einer der nächsten Versionen entfernt.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="oracleclient"></a>   
 ### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
   
-|Typ|Nachricht|  
+|Typ|Meldung|  
 |----------|-------------|  
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> ist veraltet.|  
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> ist veraltet.|  
@@ -182,14 +183,14 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> ist veraltet.|  
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> ist veraltet.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="design"></a>   
 ### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll  
   
 |Typ|Meldung|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> .|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da die Bearbeitung von Datenbindungen über <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> gestartet wird, anstatt über das Eigenschaftenraster.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da die Bearbeitung von Datenbindungen über <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> gestartet wird, anstatt über das Eigenschaftenraster.|  
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|Die empfohlenen Alternativen sind <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> und <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da das Dialogfeld "AutoFormat" vom Designerhost gestartet wird. Die Liste der verfügbaren automatischen Formatierungen wird für <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> in der <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType>-Eigenschaft verfügbar gemacht.|  
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|Die empfohlene Alternative ist das <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType>-Objekt, da es ein <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>-Objekt zum Bearbeiten des Inhalts verwendet. Designerbereiche ermöglichen eine bessere Steuerung des zu bearbeitenden Inhalts.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="system"></a>   
 ### <a name="assembly-systemdll"></a>Assembly: System.dll  
@@ -217,9 +218,9 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Diese Klasse ist veraltet.|  
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen die Leistungsindikatoren über die <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>-Klasse.|  
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType>, um auf den globalen Standardproxy zuzugreifen und diesen festzulegen. Verwenden Sie "null" anstelle von <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|  
-|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|  
+|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="enterpriseservices"></a>   
 ### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll  
@@ -228,7 +229,7 @@ ms.lasthandoff: 11/21/2017
 |----------|-------------|  
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|Die <xref:System.EnterpriseServices.RegistrationHelperTx>-Klasse ist veraltet.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="net"></a>   
 ### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll  
@@ -243,9 +244,9 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Net.Sockets.SecurityCriticalAction?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
 |<xref:System.Net.Sockets.SocketPolicy?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
 |<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
-|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|  
+|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="servicemodel"></a>   
 ### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll  
@@ -261,7 +262,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|  
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="web"></a>   
 ### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll  
@@ -282,7 +283,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Dieser Typ ist veraltet. Das Passport-Authentifizierungsprodukt wird nicht mehr unterstützt und wurde durch ein [Microsoft-Konto](http://go.microsoft.com/fwlink/?LinkId=733413) abgelöst.|  
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|Die empfohlenen Alternativen sind <xref:System.Convert?displayProperty=nameWithType> und <xref:System.String.Format%2A?displayProperty=nameWithType>.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="mobile"></a>   
 ### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll  
@@ -482,82 +483,82 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](http://go.microsoft.com/fwlink/?LinkId=157231).|  
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](http://go.microsoft.com/fwlink/?LinkId=157231).|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="workflow_activities"></a>   
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll  
   
 |Typ|Meldung|  
 |----------|-------------|  
-|Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
+|Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll  
   
 |Typ|Meldung|  
 |----------|-------------|  
-|Alle Typen im <xref:System.Workflow.ComponentModel>-Namespace außer <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.ComponentModel.Compiler>-Namespace außer <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.ComponentModel.Design>-Namespace außer <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
+|Alle Typen im <xref:System.Workflow.ComponentModel>-Namespace außer <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.ComponentModel.Compiler>-Namespace außer <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.ComponentModel.Design>-Namespace außer <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="workflow_runtime"></a>   
 ### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll  
   
 |Typ|Meldung|  
 |----------|-------------| 
-|<xref:System.Activities.Statements.Interop>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>.\*.|   
-|Alle Typen im <xref:System.Workflow.Runtime>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.Runtime.Configuration>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.Runtime.DebugEngine>-Namespace außer <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.Runtime.Hosting>-Namespace außer <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.Runtime.Tracking>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>.\*.|  
+|<xref:System.Activities.Statements.Interop>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>\*.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>\*.|   
+|Alle Typen im <xref:System.Workflow.Runtime>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.Runtime.Configuration>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.Runtime.DebugEngine>-Namespace außer <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.Runtime.Hosting>-Namespace außer <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.Runtime.Tracking>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="workflowservices"></a>   
 ### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll  
   
 |Typ|Meldung|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="xaml"></a>   
 ### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
@@ -566,29 +567,29 @@ ms.lasthandoff: 11/21/2017
 |----------|-------------|  
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Wird vom XAML-Parser nicht verwendet. Sehen Sie unter <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType> nach.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="xml"></a>   
 ### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll  
   
 |Typ|Meldung|  
 |----------|-------------|  
-|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|  
+|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|Verwenden Sie <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> für die Schemakompilierung und -validierung.|  
 |<xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType>|Verwenden Sie stattdessen ein <xref:System.Xml.XmlReader?displayProperty=nameWithType>-Objekt, das von der <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>-Methode erstellt wird, mit dem entsprechenden <xref:System.Xml.XmlReaderSettings?displayProperty=nameWithType>-Objekt.|  
 |<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|Die Verwendung dieses Typs generiert einen Compilerfehler. Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType>.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="WindowsBase"></a>   
 ### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll  
   
-|Typ|Nachricht|  
+|Typ|Meldung|  
 |----------|-------------|  
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> ist veraltet. Diese Schnittstelle wird nicht mehr verwendet.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
 ## <a name="obsolete-types-in-microsoft-assemblies"></a>Veraltete Typen in Microsoft-Assemblys  
@@ -598,7 +599,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly: IEHost.dll und IEExec.exe  
  Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework entfernt. Alle ihrer Typen und Member sind veraltet und werden ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nicht mehr unterstützt. Diese Assemblys wurden verwendet, um Windows Forms-Steuerelemente zu hosten und ausführbare Dateien in Internet Explorer auszuführen. Empfohlene Alternativen schließen ClickOnce, XAML-Browseranwendungen (XBAP) und Microsoft Silverlight ein.  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="Engine"></a>   
 ### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll  
@@ -608,7 +609,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen bitte <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> aus der *Microsoft.Build*-Assembly.|  
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen bitte <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> aus der *Microsoft.Build*-Assembly.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="jscript"></a>   
 ### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll  
@@ -634,11 +635,11 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da er in Visual Studio 2005 als veraltet eingestuft ist. Für diese Funktion wird kein Ersatz bereitgestellt. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|  
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da er in Visual Studio 2005 als veraltet eingestuft ist. Für diese Funktion wird kein Ersatz bereitgestellt. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|  
   
- [Zurück zum Anfang](#introduction)  
+ [Zurück nach oben](#introduction)  
   
 <a name="VBCompat"></a>   
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll  
-  Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual Basic 6.0-Ressourcencenter](https://msdn.microsoft.com/library/windows/desktop/ms788229).
+  Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual Basic 6.0 Resource Center (Ressourcencenter für Visual Basic 6.0)](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Typ|Meldung|  
 |----------|-------------|  
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Dieser Member ist veraltet.|  
@@ -771,7 +772,7 @@ ms.lasthandoff: 11/21/2017
 <a name="visualc"></a>   
 ### <a name="assembly-microsoftvisualcdll"></a>Assembly: Microsoft.VisualC.dll  
   
-|Typ|Nachricht|  
+|Typ|Meldung|  
 |----------|-------------|  
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|  
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|  

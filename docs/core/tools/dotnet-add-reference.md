@@ -7,17 +7,18 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add-Verweis
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet add reference`: Fügt Projekt-zu-Projekt (P2P)-Verweise hinzu.
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>description
 
 Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen von Projektverweisen auf ein Projekt. Nach dem Ausführen des Befehls werden die [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items)-Elemente zur Projektdatei hinzugefügt.
 
@@ -63,7 +64,7 @@ Projektverweis hinzufügen:
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-Fügen Sie dem Projekt mehrere Projektverweise im aktuellen Verzeichnis hinzu:
+Fügen Sie dem Projekt im aktuellen Verzeichnis mehrere Projektverweise hinzu:
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

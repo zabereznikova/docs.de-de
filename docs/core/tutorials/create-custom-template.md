@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -39,7 +40,7 @@ Wenn Sie das heruntergeladenen Beispiel mit einer Dateisystemverteilung verwende
 
 ## <a name="create-a-template-from-a-project"></a>Erstellen einer Vorlage aus einem Projekt
 
-Verwenden Sie ein vorhandenes Projekt, das Sie sich überzeugt haben kompiliert und ausgeführt wird, oder erstellen ein neuen Konsolenprojekts für die app in einem Ordner auf der Festplatte freigeben. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents/Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
+Verwenden Sie ein vorhandenes Projekt, von dem Sie wissen, dass es ordnungsgemäß kompiliert und ausgeführt wird, oder erstellen Sie ein neues Konsolen-App-Projekt in einem Ordner auf Ihrer Festplatte. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents/Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
 
 1. Fügen Sie dem Stamm des Projekts einen Ordner mit dem Namen *.template.config* hinzu.
 1. Erstellen Sie im Ordner *.template.config* eine *template.json*-Datei, um Ihre Vorlage zu konfigurieren. Weitere Informationen und Memberdefinitionen für die *template.json*-Datei finden Sie unter [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](../tools/custom-templates.md#templatejson) und im [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template).
@@ -72,13 +73,13 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
 
 1. Fügen Sie im **\<packageTypes>**-Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
 
-   | Element            | Typ   | Beschreibung |
+   | Element            | Typ   | description |
    | ------------------ | ------ | ----------- |
-   | **\<authors>**     | string | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
-   | **\<description>** | string | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
-   | **\<id>**          | string | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-   | **\<packageType>** | string | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
-   | **\<version>**     | string | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
+   | **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
+   | **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
+   | **\<id>**          | Zeichenfolge | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
+   | **\<packageType>** | Zeichenfolge | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
+   | **\<version>**     | Zeichenfolge | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
 
    Das vollständige *NUSPEC*-Dateischema finden Sie in der [.nuspec-Referenz](/nuget/schema/nuspec).
 

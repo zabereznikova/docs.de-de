@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
@@ -548,6 +549,6 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET Websiteverwaltungs-Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [ASP.NET-Websiteverwaltungs-Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Exemplarische Vorgehensweise: Verwenden von ASP.NET-Anwendungsdiensten](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

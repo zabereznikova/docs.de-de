@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet-vstest`: Führt Tests auf Grundlage der angegebenen Dateien aus.
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>description
 
 Der `dotnet-vstest`-Befehl führt die `VSTest.Console`-Befehlszeilenanwendung aus, um automatisierte Komponententests und Tests der codierten UI-Anwendung auszuführen.
 
@@ -117,6 +118,10 @@ Führt Tests in `mytestproject.dll` aus:
 
 `dotnet vstest mytestproject.dll`
 
+Führen Sie Tests in `mytestproject.dll` aus, und exportieren Sie sie in den benutzerdefinierten Ordner mit benutzerdefiniertem Namen:
+
+`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+
 Führt Tests in `mytestproject.dll` und `myothertestproject.exe` aus:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
@@ -128,3 +133,4 @@ Führt `TestMethod1`-Tests aus:
 Führt `TestMethod1`- und `TestMethod2`-Tests aus:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
+

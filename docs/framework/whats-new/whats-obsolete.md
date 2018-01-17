@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
@@ -67,8 +68,8 @@ ms.lasthandoff: 10/18/2017
 |4|v4.0|  
 |3.5|v2.0.50727|  
 |2.0|v2.0.50727|  
-|1.1|v1.1.4322|  
-|1.0|v1.0.3705|  
+|1,1|v1.1.4322|  
+|1,0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Listen mit veralteten Komponenten für .NET Framework 4.5 und 4.6  
  [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md)  

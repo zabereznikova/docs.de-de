@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90e1d16b47e1f603ac7faaa582388ec682591850
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 545ac4d3a14f083dc4513f12b018cda5c7833b21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Gewusst wie: Laden von Assemblys in eine Anwendungsdomäne
 Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden. Es wird empfohlen, die `static` <xref:System.Reflection.Assembly.Load%2A>-Methode (`Shared` in Visual Basic) der Klasse <xref:System.Reflection.Assembly?displayProperty=nameWithType> zu verwenden. Sie könne Assemblys u.a. auch so laden:  
@@ -56,7 +57,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [Programmieren mit Anwendungsdomänen](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
  [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)  
  [Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  

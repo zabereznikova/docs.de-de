@@ -1,40 +1,40 @@
 ---
-title: Die Beziehung zwischen den Funktionen der Programmiersprache und Bibliothekstypen | Microsoft Docs
-description: "Sprachfunktionen basieren häufig auf Bibliothekstypen für die Implementierung. Diese Beziehung zu verstehen."
-keywords: C#-Sprachentwurf-Standardbibliothek
+title: Die Beziehung zwischen Sprachfeatures und Bibliothekstypen | Microsoft-Dokumentation
+description: "Die Implementierung von Sprachfeatures hängt oft von Bibliothekstypen ab. Diese Beziehung wird in diesem Artikel erläutert."
+keywords: C#-Sprachentwurf, Standardbibliothek
 author: billwagner
 ms.author: wiwagn
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 93fd26a72743fcf45df3904cb8d0c787d8a228a8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 01/05/2018
 ---
-# <a name="relationships-between-language-features-and-library-types"></a>Beziehungen zwischen den Funktionen der Programmiersprache und Bibliothekstypen
+# <a name="relationships-between-language-features-and-library-types"></a>Die Beziehung zwischen Sprachfeatures und Bibliothekstypen
 
-Der C#-Sprachendefinition erfordert eine Standardbibliothek auf bestimmte Typen und bestimmte zugängliche Member für diese Typen verfügen. Der Compiler generiert Code, der diese erforderlichen Typen und Member für viele verschiedene Sprachfunktionen verwendet. Falls erforderlich, stehen die NuGet-Pakete, die enthalten Typen, die für neuere Versionen der Sprache benötigt wird, wenn die Schreiben von Code für Umgebungen, in denen diese Typen oder Member nicht noch bereitgestellt wurden.
+Die C#-Sprachdefinition erfordert eine Standardbibliothek, damit bestimmte Typen und bestimmte zugängliche Members für diese Typen verfügbar sind. Der Compiler generiert Code, der die erforderlichen Typen und Members für viele verschiedene Sprachfeatures verwendet. Beim Schreiben von Code für Umgebungen, für die diese Typen und Members noch nicht bereitgestellt wurden, stehen bei Bedarf NuGet-Pakete zur Verfügung, die Typen enthalten, die für neuere Versionen der Sprache erforderlich sind.
 
-Dieser Abhängigkeit von Funktionen der Standardbibliothek wurde Teil der C#-Sprache seit der ersten Version. In dieser Version enthalten Beispiele:
+Diese Abhängigkeit von den Funktionen der Standardbibliothek ist seit der ersten Version Teil der Sprache „C#“. In dieser Version sind folgende Beispiele enthalten:
 
-* <xref:System.Exception>– verwendet für alle vom Compiler generierte Ausnahmen.
-* <xref:System.String>-die C#- `string` Typ ist ein Synonym für <xref:System.String>.
-* <xref:System.Int32>-Synonym für `int`.
+* <xref:System.Exception>: wird für alle vom Compiler generierten Ausnahmen verwendet.
+* <xref:System.String>: Der C#-Typ `string` stellt ein Synonym für <xref:System.String> dar.
+* <xref:System.Int32>: Synonym von `int`.
 
-Diese erste Version war einfach: der Compiler und die Standardbibliothek geliefert zusammen, und es wurde nur eine Version der einzelnen.
+Diese erste Version war einfach, denn der Compiler und die Standardbibliothek waren beide enthalten, und von beiden gab es nur eine Version.
 
-Nachfolgende Versionen von c# haben gelegentlich neue Typen oder Member Abhängigkeiten hinzugefügt. Beispiele hierfür sind: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> und <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C#-7.0 weiterhin dies durch Hinzufügen einer Abhängigkeit auf <xref:System.ValueTuple> zum Implementieren der [Tupel](../tuples.md) Sprachfunktion.
+Bei nachfolgenden Versionen von C# wurden den Abhängigkeiten gelegentlich neue Typen oder Members hinzugefügt. Beispiele dafür sind <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> und <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. In C# 7.0 wird dies fortgesetzt, indem die Abhängigkeit von <xref:System.ValueTuple> hinzugefügt wird, um das Sprachfeature für [Tupels](../tuples.md) hinzuzufügen.
 
-Das Entwurfsteam Sprache funktioniert auf um die Typen und Member, die in eine kompatible Standardbibliothek erforderlich die Angriffsfläche zu reduzieren. Das Ziel wird für eine fehlerfreie Entwurf verteilt, auf dem neuen Bibliotheksfunktionen nahtlos in die Sprache integriert sind. Es werden neue Funktionen in zukünftigen Versionen von c#, die erfordern neue Typen und Member in eine Standardbibliothek. Es ist wichtig zu verstehen, wie diese Abhängigkeiten in Ihre Arbeit zu verwalten.
+Das Entwurfsteam für die Sprache arbeitet daran, die Oberfläche der Typen und Members zu verringern, die für eine kompatible Standardbibliothek erforderlich sind. Das Ziel ist ein übersichtliches Design, bei dem neue Bibliotheksfeatures nahtlos in die Sprache integriert werden können. In zukünftigen Versionen von C# werden neue Features hinzugefügt, die neue Typen und Members in einer Standardbibliothek erfordern. Es ist wichtig, ein Verständnis dafür zu entwickeln, wie Sie diese Abhängigkeiten in Ihrer Arbeit verwalten.
 
-## <a name="managing-your-dependencies"></a>Verwalten Ihre Abhängigkeiten
+## <a name="managing-your-dependencies"></a>Verwalten Ihrer Abhängigkeiten
 
-C#-Compiler-Tools werden jetzt von den Freigabezyklus der Bibliotheken .NET auf unterstützten Plattformen entkoppelt. Tatsächlich haben unterschiedliche .NET Bibliotheken unterschiedliche Versionszyklen: .NET Framework auf Windows Relesed als Windows Update, .NET Core auf einem separaten Zeitplan, und die Xamarin-Versionen der Bibliothek die Updates im Lieferumfang der Xamarin-Tools für jede Zielplattform geliefert wird.
+C#-Compilertools werden nun vom Releasezyklus der .NET-Bibliotheken auf den unterstützten Plattformen entkoppelt. Unterschiedliche .NET-Bibliotheken weisen unterschiedliche Releasezyklen auf. So wird .NET Framework unter Windows als Windows Update veröffentlicht, während .NET Core einem anderen Zeitplan folgt und die Xamarin-Versionen der Bibliotheksupdates in den Xamarin-Tools für jede Zielplattform enthalten sind.
 
-Sie wird nicht den Großteil der Optimierungszeit, diese Änderungen beachten. Allerdings bei der Arbeit mit einer neueren Version der Sprache, die Features nicht erfordert noch in der .NET-Bibliotheken für diese Plattform, verweisen die NuGet-Pakete zum Bereitstellen dieser neuen Typen.
-Die Plattformen, die Ihre app unterstützt bei Neuinstallationen Framework aktualisiert werden, können Sie den zusätzlichen Verweis entfernen.
+In den meisten Fällen werden Sie diese Änderungen nicht bemerken. Wenn Sie jedoch mit einer neueren Version der Sprache arbeitet, die Features erfordert, die noch nicht in den .NET-Bibliotheken auf dieser Plattform enthalten sind, können Sie auf die entsprechenden NuGet-Pakete verweisen, um diese Typen bereitzustellen.
+Da die Plattformen, die Ihre App unterstützt, durch die Installation neuer Frameworks aktualisiert werden, können Sie zusätzliche Verweise entfernen.
 
-Diese Trennung bedeutet, dass Sie neue Sprachfeatures verwenden können, selbst wenn Sie Computer, die möglicherweise keine entsprechende Framework abzielen.
+Diese Trennung bedeutet, dass Sie neue Sprachfeatures auch dann verwenden können, wenn Sie Computer anzielen, die das entsprechende Framework nicht besitzen.

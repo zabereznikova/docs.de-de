@@ -16,11 +16,12 @@ caps.latest.revision: "30"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fe694f9324a67e1ffa3eacf16cfbfcc266550693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 29e2036eda51d895535f5a5f3f8fc9ab5831990e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Gewusst wie: Deaktivieren des Strong-Name-Bypass-Features
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
@@ -63,5 +64,5 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
   
 ## <a name="see-also"></a>Siehe auch  
  [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [\<BypassTrustedAppStrongNames >-Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+ [\<bypassTrustedAppStrongNames>-Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
  [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

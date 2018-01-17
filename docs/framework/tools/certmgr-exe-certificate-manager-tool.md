@@ -24,11 +24,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9612603642a38083aba30c1c6dc931031d1d04e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
@@ -54,12 +55,12 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|description|  
 |--------------|-----------------|  
 |*sourceStorename*|Der Zertifikatspeicher, der die vorhandenen Zertifikate, die CTLs oder CRLs enthält, die hinzugefügt, gelöscht, gespeichert oder angezeigt werden sollen. Dabei kann es sich um eine Speicherdatei oder einen Systemspeicher handeln.|  
 |*destinationStorename*|Der Ausgabezertifikatsspeicher bzw. die Ausgabedatei.|  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/add**|Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.|  
 |**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option **/add** oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
@@ -147,5 +148,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Siehe auch  
  [Extras](../../../docs/framework/tools/index.md)  
- [MakeCert.exe (Certificate Creation-Tool)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Tool für die Zertifikaterstellung)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b62a737a5106c64d08a342365867c460075011b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt. Die DLR vereinfacht es, dynamische Sprachen für die Ausführung auf dem .NET Framework zu entwickeln und statisch typisierten Sprachen dynamische Funktionen hinzuzufügen.  

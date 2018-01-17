@@ -9,13 +9,14 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>Voraussetzungen für die .NET Core auf macOS
+# <a name="prerequisites-for-net-core-on-macos"></a>Erforderliche Komponenten für .NET Core unter macOS
 
 Dieser Artikel zeigt Ihnen die unterstützten macOS-Versionen und .NET Core-Abhängigkeiten, die Sie benötigen, um .NET Core-Anwendungen auf macOS-Computern zu entwickeln, bereitzustellen und auszuführen. Die unterstützten Betriebssystemversionen und Abhängigkeiten für die drei Arten der Entwicklung von .NET Core-Apps auf einem Mac: über die [Befehlszeile mit Ihrem bevorzugten Editor](tutorials/using-with-xplat-cli.md), mit [Visual Studio Code](https://code.visualstudio.com/) oder unter Verwendung von [Visual Studio für Mac](https://www.visualstudio.com/vs/visual-studio-mac/).
 
@@ -23,15 +24,15 @@ Dieser Artikel zeigt Ihnen die unterstützten macOS-Versionen und .NET Core-Abh�
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET Core 2.x wird unter den folgenden Versionen von Mac OS unterstützt:
+.NET Core 2.x wird von folgenden macOS-Versionen unterstützt:
 
-* MacOS 10.12 "Sierra" und höher
+* macOS 10.12 „Sierra“ und höher
 
 Unter [.NET Core 2.x Supported OS Versions (Von .NET Core 2.x unterstützte Betriebssystemversionen)](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) finden Sie die vollständige Liste der Betriebssysteme, die von .NET Core 2.x unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-.NET Core 1.x wird unter den folgenden Versionen von Mac OS unterstützt:
+.NET Core 1.x wird von folgenden macOS-Versionen unterstützt:
 
 * macOS 10.12 „Sierra“
 * macOS 10.11 „El Capitan“
@@ -64,13 +65,13 @@ Laden Sie das .NET Core SDK von [.NET Downloads](https://www.microsoft.com/net/d
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>Erhöhen Sie die maximale Dateigröße für öffnen
+## <a name="increase-the-maximum-open-file-limit"></a>Erhöhen des Limits für die maximale Anzahl von geöffneten Dateien
 
-Das Standardlimit für die geöffnete Datei auf MacOS möglicherweise nicht ausreichend, damit einige .NET Core-arbeitsauslastungen, z. B. das Wiederherstellen von Projekten oder Ausführen von Komponententests.
+Das Standardlimit für geöffnete Dateien unter macOS ist für einige .NET Core-Workloads möglicherweise nicht ausreichend, z.B. für das Wiederherstellen von Projekten oder das Ausführen von Komponententests.
 
-Sie können diesen Höchstwert vergrößern, indem Sie die folgenden Schritte:
+Sie können dieses Limit erhöhen, indem Sie diese Schritte befolgen:
 
-1. Mit einem Texteditor eine neue Datei erstellen _/Library/LaunchDaemons/limit.maxfiles.plist_, und speichern Sie die Datei mit diesem Inhalt:
+1. Erstellen Sie mithilfe eines Text-Editors die neue Datei _/Library/LaunchDaemons/limit.maxfiles.plist_, und speichern Sie die Datei mit diesem Inhalt:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,13 +97,13 @@ Sie können diesen Höchstwert vergrößern, indem Sie die folgenden Schritte:
 </plist>
 ```
 
-2. Führen Sie in der terminal-Fenster den folgenden Befehl ein:
+2. Führen Sie in einem Terminalfenster folgenden Befehl aus:
 
 ```console
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 ```
 
-3. Neustart von Ihrem Mac, um diese Einstellungen anzuwenden.
+3. Starten Sie Ihren Mac neu, um diese Einstellungen zu übernehmen.
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio für Mac
 

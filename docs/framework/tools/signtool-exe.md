@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -37,7 +38,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|description|  
 |--------------|-----------------|  
 |`command`|Einer von vier Befehlen (`catdb`, `sign`, `Timestamp` oder `Verify`), der einen für eine Datei auszuführenden Vorgang angibt. In der folgenden Tabelle finden Sie eine Beschreibung der einzelnen Befehle.|  
 |`options`|Eine Option, die einen Befehl ändert. Neben der globalen `/q`-Option und `/v`-Option wird von jedem Befehl ein eindeutiger Satz von Optionen unterstützt.|  
@@ -45,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  Vom Signierungstool werden die folgenden Befehle unterstützt. Jeder Befehl wird mit einem unterschiedlichem Satz von Optionen verwendet, die in den jeweiligen Abschnitten aufgeführt sind.  
   
-|Befehl|Beschreibung|  
+|Befehl|description|  
 |-------------|-----------------|  
 |`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#catdb).|  
 |`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#sign).|  
@@ -54,7 +55,7 @@ signtool [command] [options] [file_name | ...]
   
  Die folgenden Optionen gelten für alle Signierungstoolbefehle.  
   
-|Globale Option|Beschreibung|  
+|Globale Option|description|  
 |-------------------|-----------------|  
 |**/q**|Bei erfolgreicher Ausführung des Befehls erfolgt keine Ausgabe, bei einen Fehler werden minimale Daten ausgegeben|  
 |**/v**|Zeigt unabhängig von der erfolgreichen Ausführung des Befehls eine ausführliche Ausgabe und Warnmeldungen an.|  
@@ -64,7 +65,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `catdb`-Befehl verwendet werden können.  
   
-|Catdb-Option|Beschreibung|  
+|Catdb-Option|description|  
 |------------------|-----------------|  
 |`/d`|Gibt an, dass die Standardkatalogdatenbank aktualisiert wird. Wenn weder die `/d`-Option noch die `/g`-Option verwendet wird, führt das Signierungstool ein Update der Systemkomponenten- und Treiberdatenbank aus.|  
 |`/g` *GUID*|Gibt an, dass die durch die *GUID* (Globally Unique Identifier) bezeichnete Katalogdatenbank aktualisiert wird.|  
@@ -75,7 +76,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>sign-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `sign`-Befehl verwendet werden können.  
   
-|Sign-Befehlsoption|Beschreibung|  
+|Sign-Befehlsoption|description|  
 |-------------------------|-----------------|  
 |`/a`|Wählt automatisch das beste Signaturzertifikat aus. Das Signierungstool findet alle gültigen Zertifikate, die sämtliche angegebenen Bedingungen erfüllen, und wählt das Zertifikat mit der längsten Gültigkeitsdauer aus. Wenn diese Option nicht vorhanden ist, wird vom Signierungstool nur ein bestehendes gültiges Signaturzertifikat erwartet.|  
 |`/ac` *datei*|Fügt dem Signaturblock ein zusätzliches Zertifikat aus *file* hinzu.|  
@@ -111,7 +112,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `TimeStamp`-Befehl verwendet werden können.  
   
-|TimeStamp-Option|Beschreibung|  
+|TimeStamp-Option|description|  
 |----------------------|-----------------|  
 |`/p7`|Fügt PKCS #7-Dateien Zeitstempel hinzu.|  
 |`/t` *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
@@ -124,7 +125,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>"Verify"-Befehlsoptionen  
   
-|"Verify"-Option|Beschreibung|  
+|"Verify"-Option|description|  
 |-------------------|-----------------|  
 |`/a`|Gibt an, dass alle Methoden zum Überprüfen der Datei verwendet werden können. Zuerst werden die Katalogdatenbanken durchsucht, um zu ermitteln, ob die Datei in einem Katalog signiert ist. Wenn die Datei nicht in einem Katalog signiert ist, versucht das Signierungstool, die eingebettete Signatur der Datei zu überprüfen. Diese Option wird zum Überprüfen von Dateien empfohlen, die möglicherweise, jedoch nicht unbedingt in einem Katalog signiert sind. Beispiele für diese Dateien sind Windows-Dateien oder Treiber.|  
 |`/ad`|Sucht den Katalog in der Standardkatalogdatenbank.|  
@@ -142,7 +143,7 @@ signtool [command] [options] [file_name | ...]
 |`/pa`|Gibt an, dass die standardmäßige Authenticode-Überprüfungsrichtlinie verwendet werden soll. Ohne Angabe der `/pa`-Option wird vom Signierungstool die Windows-Treiberüberprüfungsrichtlinie verwendet. Diese Option kann nicht mit den `catdb`-Optionen verwendet werden.|  
 |`/pg` *PolicyGUID*|Gibt eine Überprüfungsrichtlinie nach GUID an. Die *PolicyGUID* entspricht der „ActionID“ der Überprüfungsrichtlinie. Diese Option kann nicht mit den `catdb`-Optionen verwendet werden.|  
 |`/ph`|Gibt an, dass Seitenhashwerte vom Signierungstool gedruckt und überprüft werden sollen.|  
-|`/r` *StammAntragstellername*|Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein.|  
+|`/r` *RootSubjectName*|Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein.|  
 |`/tw`|Gibt an, dass bei einer Signatur ohne Zeitstempel eine Warnung generiert werden soll.|  
   
  Verwendungsbeispiele finden Sie unter [Using SignTool to Sign a File (Überprüfen einer Datei mit SignTool)](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx).  
@@ -150,7 +151,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Rückgabewert  
  Beim Beenden wird vom Signierungstool einer der folgenden Exitcodes zurückgegeben.  
   
-|Exitcode|Beschreibung|  
+|Exitcode|description|  
 |---------------|-----------------|  
 |0|Ausführung war erfolgreich.|  
 |1|Ausführung ist fehlgeschlagen.|  
@@ -178,7 +179,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  Durch den folgenden Befehl wird eine Datei digital signiert und mit einem Zeitstempel versehen. Das zum Signieren der Datei verwendete Zertifikat ist in einer PFX-Datei gespeichert.  
   
 ```  
-signtool sign /f MyCert.pfx /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird eine Datei mit einem Zertifikat aus dem `My`-Speicher signiert, das den Antragstellernamen `My Company Certificate` aufweist.  
@@ -196,7 +197,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  Durch den folgenden Befehl wird einer bereits digital signierten Datei ein Zeitstempel hinzugefügt.  
   
 ```  
-signtool timestamp /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird überprüft, ob eine Datei signiert wurde.  

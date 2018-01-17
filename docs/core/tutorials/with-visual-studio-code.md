@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit c# und Visual Studio Code - C#-Handbuch
+title: Erste Schritte mit C# und Visual Studio Code (C#-Handbuch)
 description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe von Visual Studio Code erstellen und debuggen.
 keywords: "C#, erste Schritte, Erwerb, Installation, Visual Studio Code, plattformübergreifend"
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -34,20 +35,20 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
     * Öffnen Sie Visual Studio Code.
     * Klicken Sie im linken Menü auf das Explorer-Symbol, und klicken Sie dann auf **Ordner öffnen**.
-    * Wählen Sie **Datei** > **Ordner öffnen** über das Hauptmenü auf den Ordner zu öffnen, die Sie möchten des C#-Projekts, und klicken Sie auf **Ordner auswählen**. In unserem Beispiel erstellen wir einen Ordner für unsere Projekt mit dem Namen *HelloWorld*.
+    * Klicken Sie im Hauptmenü auf **Datei** > **Open Folder** (Ordner öffnen), um den Ordner zu öffnen, in dem Sie Ihr C#-Projekt speichern möchten, und klicken Sie auf **Ordner auswählen**. Für dieses Beispiel wird ein Ordner namens *HelloWorld* für das Projekt erstellt.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Initialisieren Sie ein C#-Projekt:
-    * Öffnen Sie das integrierte Terminal aus Visual Studio-Code, indem Sie auswählen **Ansicht** > **integrierten Terminal** über das Hauptmenü.
+    * Öffnen Sie das integrierte Terminal von Visual Studio Code, indem Sie im Hauptmenü auf **Ansicht** > **Integriertes Terminal** klicken.
     * Geben Sie im Terminalfenster `dotnet new console` ein.
-    * Dieser Befehl erstellt eine `Program.cs` Datei im Ordner mit einem einfache "Hello World"-Programm, der bereits geschrieben werden, zusammen mit einer C#-Projektdatei mit dem Namen `HelloWorld.csproj`.
+    * Durch diesen Befehl wird eine `Program.cs`-Datei in Ihrem Ordner erstellt, die ein bereits geschriebenes einfaches „Hallo Welt“-Programm enthält. Zusätzlich wird eine C#-Projektdatei namens `HelloWorld.csproj` erstellt.
 
       ![Der Befehl „dotnet new“](media/with-visual-studio-code/dotnetnew.png)
 
 3. Lösen Sie die Buildobjekte auf:
 
-    * Für **.NET Core 1.x**, Typ `dotnet restore`. Durch Ausführen von `dotnet restore` erhalten Sie Zugriff auf die erforderlichen .NET Core-Pakete, die Sie zum Erstellen Ihres Projekts benötigen.
+    * Geben Sie für **.NET Core 1.x** den Befehl `dotnet restore` ein. Durch Ausführen von `dotnet restore` erhalten Sie Zugriff auf die erforderlichen .NET Core-Pakete, die Sie zum Erstellen Ihres Projekts benötigen.
 
       ![Der Befehl „dotnet restore“](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -61,13 +62,13 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
 Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurzes Videotutorial zu [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) oder [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) ansehen.
 
-## <a name="debug"></a>Debuggen
+## <a name="debug"></a>Debug
 
-1. Öffnen Sie *Program.cs*, indem Sie darauf klicken. Beim ersten einer C#-Datei in Visual Studio Code öffnen [OmniSharp](http://www.omnisharp.net/) im Editor lädt.
+1. Öffnen Sie *Program.cs*, indem Sie darauf klicken. Wenn Sie eine C#-Datei zum ersten Mal in Visual Studio Code öffnen, wird [OmniSharp](http://www.omnisharp.net/) im Editor geladen.
 
     ![Öffnen der Datei „Program.cs“](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio-Code sollten Sie aufgefordert, die fehlenden Ressourcen zum Erstellen und Debuggen der app hinzufügen. Wählen Sie **Ja**. 
+2. Visual Studio Code fordert Sie dazu auf, die fehlenden Objekte zum Erstellen und Debuggen Ihrer App hinzuzufügen. Wählen Sie **Ja**. 
 
     ![Aufforderung bei fehlenden Objekten](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
     ![Auswählen von .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Fügen Sie einen Haltepunkt zu Ihrem Projekt durch Klicken auf die **Editor Rand**, dies ist der Speicherplatz auf der linken Seite von der Zeilennummern im Editor neben der Zeile 9.
+5. Fügen Sie einen Breakpoint zu Ihrem Projekt hinzu, indem Sie neben Zeile 9 auf den **Rand des Editors** (der Bereich links neben den Zeilennummern im Editor) klicken.
 
     ![Festlegen eines Haltepunkts](media/with-visual-studio-code/setbreakpoint.png)
 
-6. Wählen Sie zum Starten des Debugvorgangs <kbd>F5</kbd> oder den grünen Pfeil. Der Debugger hält die Ausführung des Programms an, wenn der Haltepunkt erreicht wird, den Sie im vorherigen Schritt festgelegt haben.
-    * Beim Debuggen, können Sie die lokalen Variablen in der oberen linken Bereich anzeigen oder die Debug-Konsole.
+6. Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf den grünen Pfeil, um das Debuggen zu starten. Der Debugger hält die Ausführung des Programms an, wenn der Haltepunkt erreicht wird, den Sie im vorherigen Schritt festgelegt haben.
+    * Während des Debuggens können Sie Ihre lokalen Variablen im oberen linken Bereich oder in der Debugkonsole anzeigen.
 
     ![Ausführen und Debuggen](media/with-visual-studio-code/rundebug.png)
 

@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e87568cc6ac86e7bdc24fd7e31f5b8c3ed260c88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer-Tool)
 Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly. Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält. Diese Datei können Sie mit Tools wie [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) überprüfen.  
@@ -42,11 +43,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|description|  
 |--------------|-----------------|  
 |*tlbFile*|Der Name einer beliebigen Datei, die eine COM-Typbibliothek enthält.|  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Gibt die Versionsnummer der zu erstellenden Assembly an. Geben Sie *versionnumber* im Format *major.minor.build.revision* an.|  
 |**/company:** `companyinformation`|Fügt der Ausgabeassembly Unternehmensinformationen hinzu.|  
@@ -141,5 +142,5 @@ void SomeMethod(out bool x);
  [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
  [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Attribute für den Import von Typbibliotheken in Interop-Assemblys](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
+ [Attribute zum Importieren von Typbibliotheken in Interop-Assemblys](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

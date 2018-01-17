@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Verpacken und Bereitstellen von Ressourcen in Desktop-Apps
 Anwendungen sind davon abhängig, dass der .NET Framework-Ressourcen-Manager, der von der Klasse <xref:System.Resources.ResourceManager> dargestellt wird, lokalisierte Ressourcen abruft. Der Ressourcen-Manager geht davon aus, dass ein Speichenarchitektur-Modell (Hub-and-Spoke) verwendet wird, um Ressourcen zu verpacken und bereitzustellen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, deren Ressourcen verwendet werden, wenn keine lokalisierten Ressourcen gefunden werden können. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne Kultur aber keinen Code enthält.  
@@ -64,7 +65,7 @@ Anwendungen sind davon abhängig, dass der .NET Framework-Ressourcen-Manager, de
  Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Eine vollständige Liste der Kulturnamen finden Sie in der [Referenz zur Unterstützung der Landessprache (NLS)](http://go.microsoft.com/fwlink/?LinkId=200048) im Go Global Developer Center.  
   
 > [!NOTE]
->  Informationen zum Erstellen von Ressourcendateien, finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
+>  Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
 ## <a name="the-resource-fallback-process"></a>Der Ressourcenfallback-Prozess  
