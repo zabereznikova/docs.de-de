@@ -13,24 +13,24 @@ dev_langs:
 - vb
 ms.assetid: 9a02b608-e7bb-4041-a452-a7fed26fd008
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e43ca054477b75b5737a8ef8f05fc1874d870ac5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 885c411491564244c26123a0dc8abcad47b31b62
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-retrieve-entity-conflict-information"></a><span data-ttu-id="801d2-102">Gewusst wie: Abrufen von Entitätskonfliktinformationen</span><span class="sxs-lookup"><span data-stu-id="801d2-102">How to: Retrieve Entity Conflict Information</span></span>
-<span data-ttu-id="801d2-103">Sie können Objekte der <xref:System.Data.Linq.ObjectChangeConflict>-Klasse verwenden, um Informationen über von <xref:System.Data.Linq.ChangeConflictException>-Ausnahmen erkannte Konflikte bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="801d2-103">You can use objects of the <xref:System.Data.Linq.ObjectChangeConflict> class to provide information about conflicts revealed by <xref:System.Data.Linq.ChangeConflictException> exceptions.</span></span> <span data-ttu-id="801d2-104">Weitere Informationen finden Sie unter [vollständige Parallelität: Übersicht über](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="801d2-104">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
+# <a name="how-to-retrieve-entity-conflict-information"></a><span data-ttu-id="88ae4-102">Gewusst wie: Abrufen von Entitätskonfliktinformationen</span><span class="sxs-lookup"><span data-stu-id="88ae4-102">How to: Retrieve Entity Conflict Information</span></span>
+<span data-ttu-id="88ae4-103">Sie können Objekte der <xref:System.Data.Linq.ObjectChangeConflict>-Klasse verwenden, um Informationen über von <xref:System.Data.Linq.ChangeConflictException>-Ausnahmen erkannte Konflikte bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="88ae4-103">You can use objects of the <xref:System.Data.Linq.ObjectChangeConflict> class to provide information about conflicts revealed by <xref:System.Data.Linq.ChangeConflictException> exceptions.</span></span> <span data-ttu-id="88ae4-104">Weitere Informationen finden Sie unter [vollständige Parallelität: Übersicht über](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="88ae4-104">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="801d2-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="801d2-105">Example</span></span>  
- <span data-ttu-id="801d2-106">Im folgenden Beispiel wird eine Liste akkumulierter Konflikte durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="801d2-106">The following example iterates through a list of accumulated conflicts.</span></span>  
+## <a name="example"></a><span data-ttu-id="88ae4-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="88ae4-105">Example</span></span>  
+ <span data-ttu-id="88ae4-106">Im folgenden Beispiel wird eine Liste akkumulierter Konflikte durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="88ae4-106">The following example iterates through a list of accumulated conflicts.</span></span>  
   
  [!code-csharp[System.Data.Linq.ObjectChangeConflict#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.objectchangeconflict/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.ObjectChangeConflict#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.objectchangeconflict/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="801d2-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="801d2-107">See Also</span></span>  
- [<span data-ttu-id="801d2-108">Vorgehensweise: Verwalten von Änderungskonflikten</span><span class="sxs-lookup"><span data-stu-id="801d2-108">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="88ae4-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88ae4-107">See Also</span></span>  
+ [<span data-ttu-id="88ae4-108">Vorgehensweise: Verwalten von Änderungskonflikten</span><span class="sxs-lookup"><span data-stu-id="88ae4-108">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

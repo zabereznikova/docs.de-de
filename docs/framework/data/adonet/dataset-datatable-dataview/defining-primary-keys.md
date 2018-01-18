@@ -13,22 +13,22 @@ dev_langs:
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: dffced0e3d8cd28699d41ea6bb286e3d59f16bb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abd1dc4b515121343b2ca9674b263c327d153fad
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="defining-primary-keys"></a><span data-ttu-id="519b0-102">Definieren von Primärschlüsseln</span><span class="sxs-lookup"><span data-stu-id="519b0-102">Defining Primary Keys</span></span>
-<span data-ttu-id="519b0-103">Eine Datenbanktabelle enthält i. d. R. eine Spalte oder eine Gruppe von Spalten, die jede Zeile in der Tabelle eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="519b0-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="519b0-104">Diese identifizierende Spalte oder Spaltengruppe wird als Primärschlüssel bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="519b0-104">This identifying column or group of columns is called the primary key.</span></span>  
+# <a name="defining-primary-keys"></a><span data-ttu-id="2abbf-102">Definieren von Primärschlüsseln</span><span class="sxs-lookup"><span data-stu-id="2abbf-102">Defining Primary Keys</span></span>
+<span data-ttu-id="2abbf-103">Eine Datenbanktabelle enthält i. d. R. eine Spalte oder eine Gruppe von Spalten, die jede Zeile in der Tabelle eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="2abbf-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="2abbf-104">Diese identifizierende Spalte oder Spaltengruppe wird als Primärschlüssel bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2abbf-104">This identifying column or group of columns is called the primary key.</span></span>  
   
- <span data-ttu-id="519b0-105">Beim Identifizieren von einer einzelnes <xref:System.Data.DataColumn> als die <xref:System.Data.DataTable.PrimaryKey%2A> für eine <xref:System.Data.DataTable>, setzt die Tabelle automatisch die <xref:System.Data.DataColumn.AllowDBNull%2A> Eigenschaft der Spalte, die **"false"** und die <xref:System.Data.DataColumn.Unique%2A> Eigenschaft  **"true"**.</span><span class="sxs-lookup"><span data-stu-id="519b0-105">When you identify a single <xref:System.Data.DataColumn> as the <xref:System.Data.DataTable.PrimaryKey%2A> for a <xref:System.Data.DataTable>, the table automatically sets the <xref:System.Data.DataColumn.AllowDBNull%2A> property of the column to **false** and the <xref:System.Data.DataColumn.Unique%2A> property to **true**.</span></span> <span data-ttu-id="519b0-106">Für den mehrspaltigen Primärschlüssel, nur die **AllowDBNull** -Eigenschaftensatz wird automatisch auf **"false"**.</span><span class="sxs-lookup"><span data-stu-id="519b0-106">For multiple-column primary keys, only the **AllowDBNull** property is automatically set to **false**.</span></span>  
+ <span data-ttu-id="2abbf-105">Beim Identifizieren von einer einzelnes <xref:System.Data.DataColumn> als die <xref:System.Data.DataTable.PrimaryKey%2A> für eine <xref:System.Data.DataTable>, setzt die Tabelle automatisch die <xref:System.Data.DataColumn.AllowDBNull%2A> Eigenschaft der Spalte, die **"false"** und die <xref:System.Data.DataColumn.Unique%2A> Eigenschaft  **"true"**.</span><span class="sxs-lookup"><span data-stu-id="2abbf-105">When you identify a single <xref:System.Data.DataColumn> as the <xref:System.Data.DataTable.PrimaryKey%2A> for a <xref:System.Data.DataTable>, the table automatically sets the <xref:System.Data.DataColumn.AllowDBNull%2A> property of the column to **false** and the <xref:System.Data.DataColumn.Unique%2A> property to **true**.</span></span> <span data-ttu-id="2abbf-106">Für den mehrspaltigen Primärschlüssel, nur die **AllowDBNull** -Eigenschaftensatz wird automatisch auf **"false"**.</span><span class="sxs-lookup"><span data-stu-id="2abbf-106">For multiple-column primary keys, only the **AllowDBNull** property is automatically set to **false**.</span></span>  
   
- <span data-ttu-id="519b0-107">Die **PrimaryKey** Eigenschaft eine <xref:System.Data.DataTable> erhält als Wert ein Array von einem oder mehreren **DataColumn** Objekte, wie in den folgenden Beispielen gezeigt.</span><span class="sxs-lookup"><span data-stu-id="519b0-107">The **PrimaryKey** property of a <xref:System.Data.DataTable> receives as its value an array of one or more **DataColumn** objects, as shown in the following examples.</span></span> <span data-ttu-id="519b0-108">Im ersten Beispiel wird eine einzelne Spalte als Primärschlüssel definiert.</span><span class="sxs-lookup"><span data-stu-id="519b0-108">The first example defines a single column as the primary key.</span></span>  
+ <span data-ttu-id="2abbf-107">Die **PrimaryKey** Eigenschaft eine <xref:System.Data.DataTable> erhält als Wert ein Array von einem oder mehreren **DataColumn** Objekte, wie in den folgenden Beispielen gezeigt.</span><span class="sxs-lookup"><span data-stu-id="2abbf-107">The **PrimaryKey** property of a <xref:System.Data.DataTable> receives as its value an array of one or more **DataColumn** objects, as shown in the following examples.</span></span> <span data-ttu-id="2abbf-108">Im ersten Beispiel wird eine einzelne Spalte als Primärschlüssel definiert.</span><span class="sxs-lookup"><span data-stu-id="2abbf-108">The first example defines a single column as the primary key.</span></span>  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -50,7 +50,7 @@ columns[0] = workTable.Columns["CustID"];
 workTable.PrimaryKey = columns;  
 ```  
   
- <span data-ttu-id="519b0-109">	Im folgenden Beispiel werden zwei Spalten als Primärschlüssel definiert.</span><span class="sxs-lookup"><span data-stu-id="519b0-109">The following example defines two columns as a primary key.</span></span>  
+ <span data-ttu-id="2abbf-109">	Im folgenden Beispiel werden zwei Spalten als Primärschlüssel definiert.</span><span class="sxs-lookup"><span data-stu-id="2abbf-109">The following example defines two columns as a primary key.</span></span>  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustLName"), _  
@@ -76,8 +76,8 @@ keyColumn[1] = workTable.Columns["CustFName"];
 workTable.PrimaryKey = keyColumn;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="519b0-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="519b0-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2abbf-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2abbf-110">See Also</span></span>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="519b0-111">DataTable-Schemadefinition</span><span class="sxs-lookup"><span data-stu-id="519b0-111">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [<span data-ttu-id="519b0-112">DataTables</span><span class="sxs-lookup"><span data-stu-id="519b0-112">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [<span data-ttu-id="519b0-113">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="519b0-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="2abbf-111">DataTable-Schemadefinition</span><span class="sxs-lookup"><span data-stu-id="2abbf-111">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [<span data-ttu-id="2abbf-112">DataTables</span><span class="sxs-lookup"><span data-stu-id="2abbf-112">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="2abbf-113">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="2abbf-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

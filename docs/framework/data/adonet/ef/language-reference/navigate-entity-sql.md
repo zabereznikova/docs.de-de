@@ -10,84 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a860fae543e4d74e2b0569ed3672f3dc113f84c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6d61e3fb03a1e0ee0cdf344bd61167ad3046a13
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="navigate-entity-sql"></a><span data-ttu-id="e5694-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e5694-102">NAVIGATE (Entity SQL)</span></span>
-<span data-ttu-id="e5694-103">Navigiert durch die zwischen Entitäten eingerichteten Beziehungen.</span><span class="sxs-lookup"><span data-stu-id="e5694-103">Navigates over the relationship established between entities.</span></span>  
+# <a name="navigate-entity-sql"></a><span data-ttu-id="512cb-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="512cb-102">NAVIGATE (Entity SQL)</span></span>
+<span data-ttu-id="512cb-103">Navigiert durch die zwischen Entitäten eingerichteten Beziehungen.</span><span class="sxs-lookup"><span data-stu-id="512cb-103">Navigates over the relationship established between entities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5694-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e5694-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="512cb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="512cb-104">Syntax</span></span>  
   
 ```  
 navigate(instance-expresssion, [relationship-type], [to-end [, from-end] ])  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="e5694-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="e5694-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="512cb-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="512cb-105">Arguments</span></span>  
  `instance-expresssion`  
- <span data-ttu-id="e5694-106">Eine Instanz einer Entität.</span><span class="sxs-lookup"><span data-stu-id="e5694-106">An instance of an entity.</span></span>  
+ <span data-ttu-id="512cb-106">Eine Instanz einer Entität.</span><span class="sxs-lookup"><span data-stu-id="512cb-106">An instance of an entity.</span></span>  
   
  `relationship-type`  
- <span data-ttu-id="e5694-107">Der Typname der Beziehung aus der CSDL-Datei (Conceptual Schema Definition Language, konzeptionelle Schemadefinitionssprache).</span><span class="sxs-lookup"><span data-stu-id="e5694-107">The type name of the relationship, from the conceptual schema definition language (CSDL) file.</span></span> <span data-ttu-id="e5694-108">Die `relationship-type` ist als qualifiziert \<Namespace >.\< Beziehungstypname >.</span><span class="sxs-lookup"><span data-stu-id="e5694-108">The `relationship-type` is qualified as \<namespace>.\<relationship type name>.</span></span>  
+ <span data-ttu-id="512cb-107">Der Typname der Beziehung aus der CSDL-Datei (Conceptual Schema Definition Language, konzeptionelle Schemadefinitionssprache).</span><span class="sxs-lookup"><span data-stu-id="512cb-107">The type name of the relationship, from the conceptual schema definition language (CSDL) file.</span></span> <span data-ttu-id="512cb-108">Die `relationship-type` ist als qualifiziert \<Namespace >.\< Beziehungstypname >.</span><span class="sxs-lookup"><span data-stu-id="512cb-108">The `relationship-type` is qualified as \<namespace>.\<relationship type name>.</span></span>  
   
  `to`  
- <span data-ttu-id="e5694-109">Das Ende der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="e5694-109">The end of the relationship.</span></span>  
+ <span data-ttu-id="512cb-109">Das Ende der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="512cb-109">The end of the relationship.</span></span>  
   
  `from`  
- <span data-ttu-id="e5694-110">Der Anfang der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="e5694-110">The beginning of the relationship.</span></span>  
+ <span data-ttu-id="512cb-110">Der Anfang der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="512cb-110">The beginning of the relationship.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e5694-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="e5694-111">Return Value</span></span>  
- <span data-ttu-id="e5694-112">Wenn die Kardinalität des "to"-Endes "1" beträgt, ist der Rückgabewert `Ref<T>`.</span><span class="sxs-lookup"><span data-stu-id="e5694-112">If the cardinality of the to end is 1, the return value will be `Ref<T>`.</span></span> <span data-ttu-id="e5694-113">Wenn die Kardinalität des "to"-Endes "n" beträgt, ist der Rückgabewert `Collection<Ref<T>>`.</span><span class="sxs-lookup"><span data-stu-id="e5694-113">If the cardinality of the to end is n, the return value will be `Collection<Ref<T>>`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="512cb-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="512cb-111">Return Value</span></span>  
+ <span data-ttu-id="512cb-112">Wenn die Kardinalität des "to"-Endes "1" beträgt, ist der Rückgabewert `Ref<T>`.</span><span class="sxs-lookup"><span data-stu-id="512cb-112">If the cardinality of the to end is 1, the return value will be `Ref<T>`.</span></span> <span data-ttu-id="512cb-113">Wenn die Kardinalität des "to"-Endes "n" beträgt, ist der Rückgabewert `Collection<Ref<T>>`.</span><span class="sxs-lookup"><span data-stu-id="512cb-113">If the cardinality of the to end is n, the return value will be `Collection<Ref<T>>`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e5694-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e5694-114">Remarks</span></span>  
- <span data-ttu-id="e5694-115">Beziehungen sind im [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) Konstrukte der ersten Klasse.</span><span class="sxs-lookup"><span data-stu-id="e5694-115">Relationships are first-class constructs in the [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM).</span></span> <span data-ttu-id="e5694-116">Beziehungen können zwischen zwei oder mehr Entitätstypen festgelegt werden, und Benutzer können über die Beziehung von einem Ende (Entität) zu einem anderen navigieren.</span><span class="sxs-lookup"><span data-stu-id="e5694-116">Relationships can be established between two or more entity types, and users can navigate over the relationship from one end (entity) to another.</span></span> <span data-ttu-id="e5694-117">`from` und `to` sind bedingt optional, wenn es keine Mehrdeutigkeit in der Namensauflösung innerhalb der Beziehung gibt.</span><span class="sxs-lookup"><span data-stu-id="e5694-117">`from` and `to` are conditionally optional when there is no ambiguity in name resolution within the relationship.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="512cb-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="512cb-114">Remarks</span></span>  
+ <span data-ttu-id="512cb-115">Beziehungen sind im [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) Konstrukte der ersten Klasse.</span><span class="sxs-lookup"><span data-stu-id="512cb-115">Relationships are first-class constructs in the [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM).</span></span> <span data-ttu-id="512cb-116">Beziehungen können zwischen zwei oder mehr Entitätstypen festgelegt werden, und Benutzer können über die Beziehung von einem Ende (Entität) zu einem anderen navigieren.</span><span class="sxs-lookup"><span data-stu-id="512cb-116">Relationships can be established between two or more entity types, and users can navigate over the relationship from one end (entity) to another.</span></span> <span data-ttu-id="512cb-117">`from` und `to` sind bedingt optional, wenn es keine Mehrdeutigkeit in der Namensauflösung innerhalb der Beziehung gibt.</span><span class="sxs-lookup"><span data-stu-id="512cb-117">`from` and `to` are conditionally optional when there is no ambiguity in name resolution within the relationship.</span></span>  
   
- <span data-ttu-id="e5694-118">NAVIGATE ist im O- und im C-Raum gültig.</span><span class="sxs-lookup"><span data-stu-id="e5694-118">NAVIGATE is valid in O and C space.</span></span>  
+ <span data-ttu-id="512cb-118">NAVIGATE ist im O- und im C-Raum gültig.</span><span class="sxs-lookup"><span data-stu-id="512cb-118">NAVIGATE is valid in O and C space.</span></span>  
   
- <span data-ttu-id="e5694-119">Ein Navigationskonstrukt hat die folgende allgemeine Form:</span><span class="sxs-lookup"><span data-stu-id="e5694-119">The general form of a navigation construct is the following:</span></span>  
+ <span data-ttu-id="512cb-119">Ein Navigationskonstrukt hat die folgende allgemeine Form:</span><span class="sxs-lookup"><span data-stu-id="512cb-119">The general form of a navigation construct is the following:</span></span>  
   
- <span data-ttu-id="e5694-120">navigate(`instance-expresssion`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span><span class="sxs-lookup"><span data-stu-id="e5694-120">navigate(`instance-expresssion`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span></span>  
+ <span data-ttu-id="512cb-120">navigate(`instance-expresssion`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span><span class="sxs-lookup"><span data-stu-id="512cb-120">navigate(`instance-expresssion`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span></span>  
   
- <span data-ttu-id="e5694-121">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e5694-121">For example:</span></span>  
+ <span data-ttu-id="512cb-121">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="512cb-121">For example:</span></span>  
   
 ```  
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)  
 From LOB.Orders as o  
 ```  
   
- <span data-ttu-id="e5694-122">Dabei ist "OrderCustomer" die `relationship`, und "Customer" und "Order" sind das `to-end` bzw. das `from-end` der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="e5694-122">Where OrderCustomer is the `relationship`, and Customer and Order are the `to-end` (customer) and `from-end` (order) of the relationship.</span></span> <span data-ttu-id="e5694-123">Wenn OrderCustomer eine n: 1-Beziehung wurde, dann ist der Ergebnistyp des Navigationsausdrucks Ref\<Kunden >.</span><span class="sxs-lookup"><span data-stu-id="e5694-123">If OrderCustomer was a n:1 relationship, then the result type of the navigate expression is Ref\<Customer>.</span></span>  
+ <span data-ttu-id="512cb-122">Dabei ist "OrderCustomer" die `relationship`, und "Customer" und "Order" sind das `to-end` bzw. das `from-end` der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="512cb-122">Where OrderCustomer is the `relationship`, and Customer and Order are the `to-end` (customer) and `from-end` (order) of the relationship.</span></span> <span data-ttu-id="512cb-123">Wenn OrderCustomer eine n: 1-Beziehung wurde, dann ist der Ergebnistyp des Navigationsausdrucks Ref\<Kunden >.</span><span class="sxs-lookup"><span data-stu-id="512cb-123">If OrderCustomer was a n:1 relationship, then the result type of the navigate expression is Ref\<Customer>.</span></span>  
   
- <span data-ttu-id="e5694-124">Eine einfachere Form dieses Ausdrucks ist die Folgende:</span><span class="sxs-lookup"><span data-stu-id="e5694-124">The simpler form of this expression is the following:</span></span>  
+ <span data-ttu-id="512cb-124">Eine einfachere Form dieses Ausdrucks ist die Folgende:</span><span class="sxs-lookup"><span data-stu-id="512cb-124">The simpler form of this expression is the following:</span></span>  
   
 ```  
 Select o.Id, navigate(o, OrderCustomer)  
 From LOB.Orders as o  
 ```  
   
- <span data-ttu-id="e5694-125">Auf ähnliche Weise, in einer Abfrage der folgenden Form der Navigationsausdruck wäre eine Auflistung < Ref\<Reihenfolge >>.</span><span class="sxs-lookup"><span data-stu-id="e5694-125">Similarly, in a query of the following form, The navigate expression would produce a Collection<Ref\<Order>>.</span></span>  
+ <span data-ttu-id="512cb-125">Auf ähnliche Weise, in einer Abfrage der folgenden Form der Navigationsausdruck wäre eine Auflistung < Ref\<Reihenfolge >>.</span><span class="sxs-lookup"><span data-stu-id="512cb-125">Similarly, in a query of the following form, The navigate expression would produce a Collection<Ref\<Order>>.</span></span>  
   
 ```  
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)  
 From LOB.Customers as c  
 ```  
   
- <span data-ttu-id="e5694-126">Der Instanzausdruck muss ein Entitäts-/Verweistyp sein.</span><span class="sxs-lookup"><span data-stu-id="e5694-126">The instance-expression must be an entity/ref type.</span></span>  
+ <span data-ttu-id="512cb-126">Der Instanzausdruck muss ein Entitäts-/Verweistyp sein.</span><span class="sxs-lookup"><span data-stu-id="512cb-126">The instance-expression must be an entity/ref type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5694-127">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e5694-127">Example</span></span>  
- <span data-ttu-id="e5694-128">In der folgenden Entity SQL-Abfrage wird mithilfe des NAVIGATE-Operators die zwischen den Entitätstypen "Address" und "SalesOrderHeader" bestehende Beziehung navigiert.</span><span class="sxs-lookup"><span data-stu-id="e5694-128">The following Entity SQL query uses the NAVIGATE operator to navigate over the relationship established between Address and SalesOrderHeader entity types.</span></span> <span data-ttu-id="e5694-129">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="e5694-129">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e5694-130">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="e5694-130">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="512cb-127">Beispiel</span><span class="sxs-lookup"><span data-stu-id="512cb-127">Example</span></span>  
+ <span data-ttu-id="512cb-128">In der folgenden Entity SQL-Abfrage wird mithilfe des NAVIGATE-Operators die zwischen den Entitätstypen "Address" und "SalesOrderHeader" bestehende Beziehung navigiert.</span><span class="sxs-lookup"><span data-stu-id="512cb-128">The following Entity SQL query uses the NAVIGATE operator to navigate over the relationship established between Address and SalesOrderHeader entity types.</span></span> <span data-ttu-id="512cb-129">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="512cb-129">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="512cb-130">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="512cb-130">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="e5694-131">Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e5694-131">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="512cb-131">Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="512cb-131">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="e5694-132">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="e5694-132">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="512cb-132">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="512cb-132">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5694-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5694-133">See Also</span></span>  
- [<span data-ttu-id="e5694-134">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="e5694-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="e5694-135">Vorgehensweise: Navigieren Sie zum Navigieren über Beziehungen mit Operator</span><span class="sxs-lookup"><span data-stu-id="e5694-135">How to: Navigate Relationships with Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="512cb-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="512cb-133">See Also</span></span>  
+ [<span data-ttu-id="512cb-134">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="512cb-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="512cb-135">Vorgehensweise: Navigieren Sie zum Navigieren über Beziehungen mit Operator</span><span class="sxs-lookup"><span data-stu-id="512cb-135">How to: Navigate Relationships with Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)

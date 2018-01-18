@@ -13,75 +13,75 @@ dev_langs:
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2c6d171e289195dbff69dcc77ae9823b62681695
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cc73f3fd8988af78dc139b777ebaf9fa37b3e0e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="method-based-query-syntax-examples-partitioning-linq"></a><span data-ttu-id="7ecea-102">Beispiele für die methodenbasierte Abfragesyntax: Partitionierung (LINQ)</span><span class="sxs-lookup"><span data-stu-id="7ecea-102">Method-Based Query Syntax Examples: Partitioning (LINQ</span></span>
-<span data-ttu-id="7ecea-103">Die Beispiele in diesem Thema zeigen, wie Sie mit der <xref:System.Linq.Enumerable.Skip%2A>-Methode, der <xref:System.Linq.Enumerable.SkipWhile%2A>-Methode, der <xref:System.Linq.Enumerable.Take%2A>-Methode und der <xref:System.Linq.Enumerable.TakeWhile%2A>-Methode und mithilfe der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.</span><span class="sxs-lookup"><span data-stu-id="7ecea-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>, <xref:System.Linq.Enumerable.Take%2A>, and <xref:System.Linq.Enumerable.TakeWhile%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
+# <a name="method-based-query-syntax-examples-partitioning-linq"></a><span data-ttu-id="c07f6-102">Beispiele für die methodenbasierte Abfragesyntax: Partitionierung (LINQ)</span><span class="sxs-lookup"><span data-stu-id="c07f6-102">Method-Based Query Syntax Examples: Partitioning (LINQ</span></span>
+<span data-ttu-id="c07f6-103">Die Beispiele in diesem Thema zeigen, wie Sie mit der <xref:System.Linq.Enumerable.Skip%2A>-Methode, der <xref:System.Linq.Enumerable.SkipWhile%2A>-Methode, der <xref:System.Linq.Enumerable.Take%2A>-Methode und der <xref:System.Linq.Enumerable.TakeWhile%2A>-Methode und mithilfe der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.</span><span class="sxs-lookup"><span data-stu-id="c07f6-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>, <xref:System.Linq.Enumerable.Take%2A>, and <xref:System.Linq.Enumerable.TakeWhile%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
   
- <span data-ttu-id="7ecea-104">Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben, [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="7ecea-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="c07f6-104">Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben, [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="c07f6-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="7ecea-105">In den Beispielen in diesem Thema wird auf die Tabellen <legacyBold>Contact</legacyBold>, <legacyBold>Address</legacyBold>, <legacyBold>Product</legacyBold>, <legacyBold>SalesOrderHeader</legacyBold> und <legacyBold>SalesOrderDetail</legacyBold> in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank zurückgegriffen.</span><span class="sxs-lookup"><span data-stu-id="7ecea-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="c07f6-105">In den Beispielen in diesem Thema wird auf die Tabellen <legacyBold>Contact</legacyBold>, <legacyBold>Address</legacyBold>, <legacyBold>Product</legacyBold>, <legacyBold>SalesOrderHeader</legacyBold> und <legacyBold>SalesOrderDetail</legacyBold> in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank zurückgegriffen.</span><span class="sxs-lookup"><span data-stu-id="c07f6-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="7ecea-106">In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="7ecea-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="c07f6-106">In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="c07f6-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="7ecea-107">Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="7ecea-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="c07f6-107">Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="c07f6-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="skip"></a><span data-ttu-id="7ecea-108">Skip</span><span class="sxs-lookup"><span data-stu-id="7ecea-108">Skip</span></span>  
+## <a name="skip"></a><span data-ttu-id="c07f6-108">Skip</span><span class="sxs-lookup"><span data-stu-id="c07f6-108">Skip</span></span>  
   
-### <a name="example"></a><span data-ttu-id="7ecea-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-109">Example</span></span>  
- <span data-ttu-id="7ecea-110">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Skip%2A>-Methode verwendet, um, mit Ausnahme der ersten fünf Kontakte, alle Kontakte in der `Contact`-Tabelle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7ecea-110">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first five contacts of the `Contact` table.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-109">Example</span></span>  
+ <span data-ttu-id="c07f6-110">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Skip%2A>-Methode verwendet, um, mit Ausnahme der ersten fünf Kontakte, alle Kontakte in der `Contact`-Tabelle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07f6-110">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first five contacts of the `Contact` table.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipsimple)]
  [!code-vb[DP LINQ to DataSet Examples#SkipSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#skipsimple)]  
   
-### <a name="example"></a><span data-ttu-id="7ecea-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-111">Example</span></span>  
- <span data-ttu-id="7ecea-112">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Skip%2A>-Methode verwendet, um, mit Ausnahme der ersten beiden Adressen, alle Adressen in Seattle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7ecea-112">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-111">Example</span></span>  
+ <span data-ttu-id="c07f6-112">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Skip%2A>-Methode verwendet, um, mit Ausnahme der ersten beiden Adressen, alle Adressen in Seattle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07f6-112">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipnested)]
  [!code-vb[DP LINQ to DataSet Examples#SkipNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#skipnested)]  
   
-## <a name="skipwhile"></a><span data-ttu-id="7ecea-113">SkipWhile</span><span class="sxs-lookup"><span data-stu-id="7ecea-113">SkipWhile</span></span>  
+## <a name="skipwhile"></a><span data-ttu-id="c07f6-113">SkipWhile</span><span class="sxs-lookup"><span data-stu-id="c07f6-113">SkipWhile</span></span>  
   
-### <a name="example"></a><span data-ttu-id="7ecea-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-114">Example</span></span>  
- <span data-ttu-id="7ecea-115">In diesem Beispiel werden die Methoden <xref:System.Linq.Enumerable.OrderBy%2A> und <xref:System.Linq.Enumerable.SkipWhile%2A> verwendet, um aus der `Product`-Tabelle alle Produkte abzurufen, deren Listenpreis größer als 300.00 ist.</span><span class="sxs-lookup"><span data-stu-id="7ecea-115">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.SkipWhile%2A> methods to return products from the `Product` table with a list price greater than 300.00.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-114">Example</span></span>  
+ <span data-ttu-id="c07f6-115">In diesem Beispiel werden die Methoden <xref:System.Linq.Enumerable.OrderBy%2A> und <xref:System.Linq.Enumerable.SkipWhile%2A> verwendet, um aus der `Product`-Tabelle alle Produkte abzurufen, deren Listenpreis größer als 300.00 ist.</span><span class="sxs-lookup"><span data-stu-id="c07f6-115">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.SkipWhile%2A> methods to return products from the `Product` table with a list price greater than 300.00.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipWhileSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipwhilesimple_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SkipWhileSimple_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#skipwhilesimple_mq)]  
   
-## <a name="take"></a><span data-ttu-id="7ecea-116">Take</span><span class="sxs-lookup"><span data-stu-id="7ecea-116">Take</span></span>  
+## <a name="take"></a><span data-ttu-id="c07f6-116">Take</span><span class="sxs-lookup"><span data-stu-id="c07f6-116">Take</span></span>  
   
-### <a name="example"></a><span data-ttu-id="7ecea-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-117">Example</span></span>  
- <span data-ttu-id="7ecea-118">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Take%2A>-Methode verwendet, um nur die ersten fünf Kontakte aus der `Contact`-Tabelle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7ecea-118">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get only the first five contacts from the `Contact` table.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-117">Example</span></span>  
+ <span data-ttu-id="c07f6-118">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Take%2A>-Methode verwendet, um nur die ersten fünf Kontakte aus der `Contact`-Tabelle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07f6-118">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get only the first five contacts from the `Contact` table.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takesimple)]
  [!code-vb[DP LINQ to DataSet Examples#TakeSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takesimple)]  
   
-### <a name="example"></a><span data-ttu-id="7ecea-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-119">Example</span></span>  
- <span data-ttu-id="7ecea-120">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Take%2A>-Methode verwendet, um die ersten drei Adressen in Seattle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7ecea-120">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-119">Example</span></span>  
+ <span data-ttu-id="c07f6-120">In diesem Beispiel wird die <xref:System.Linq.Enumerable.Take%2A>-Methode verwendet, um die ersten drei Adressen in Seattle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07f6-120">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takenested)]
  [!code-vb[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takenested)]  
   
-## <a name="takewhile"></a><span data-ttu-id="7ecea-121">TakeWhile</span><span class="sxs-lookup"><span data-stu-id="7ecea-121">TakeWhile</span></span>  
+## <a name="takewhile"></a><span data-ttu-id="c07f6-121">TakeWhile</span><span class="sxs-lookup"><span data-stu-id="c07f6-121">TakeWhile</span></span>  
   
-### <a name="example"></a><span data-ttu-id="7ecea-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7ecea-122">Example</span></span>  
- <span data-ttu-id="7ecea-123">In diesem Beispiel werden die Methoden <xref:System.Linq.Enumerable.OrderBy%2A> und <xref:System.Linq.Enumerable.TakeWhile%2A> verwendet, um aus der `Product`-Tabelle alle Produkte abzurufen, deren Listenpreis kleiner als 300.00 ist.</span><span class="sxs-lookup"><span data-stu-id="7ecea-123">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.TakeWhile%2A> to return products from the `Product` table with a list price less than 300.00.</span></span>  
+### <a name="example"></a><span data-ttu-id="c07f6-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c07f6-122">Example</span></span>  
+ <span data-ttu-id="c07f6-123">In diesem Beispiel werden die Methoden <xref:System.Linq.Enumerable.OrderBy%2A> und <xref:System.Linq.Enumerable.TakeWhile%2A> verwendet, um aus der `Product`-Tabelle alle Produkte abzurufen, deren Listenpreis kleiner als 300.00 ist.</span><span class="sxs-lookup"><span data-stu-id="c07f6-123">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.TakeWhile%2A> to return products from the `Product` table with a list price less than 300.00.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeWhileSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takewhilesimple_mq)]
  [!code-vb[DP LINQ to DataSet Examples#TakeWhileSimple_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takewhilesimple_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="7ecea-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7ecea-124">See Also</span></span>  
- [<span data-ttu-id="7ecea-125">Laden von Daten in ein DataSet</span><span class="sxs-lookup"><span data-stu-id="7ecea-125">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="7ecea-126">Beispiele für LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="7ecea-126">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="7ecea-127">Übersicht über Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="7ecea-127">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="c07f6-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c07f6-124">See Also</span></span>  
+ [<span data-ttu-id="c07f6-125">Laden von Daten in ein DataSet</span><span class="sxs-lookup"><span data-stu-id="c07f6-125">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="c07f6-126">Beispiele für LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="c07f6-126">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="c07f6-127">Übersicht über Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="c07f6-127">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
