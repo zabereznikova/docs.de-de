@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten schemaauflistungen zu ermitteln, rufen Sie die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
@@ -28,7 +28,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |database_name|Zeichenfolge|Name der Datenbank.|  
-|DBID|Int16|Datenbank-ID.|  
+|dbid|Int16|Datenbank-ID.|  
 |create_date|DateTime|Erstellungsdatum der Datenbank.|  
   
 ## <a name="foreign-keys"></a>ForeignKeys  
@@ -87,7 +87,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |SPECIFIC_SCHEMA|Zeichenfolge|Spezifischer Name des Schemas.|  
 |SPECIFIC_NAME|Zeichenfolge|Spezifischer Name des Katalogs.|  
 |ROUTINE_CATALOG|Zeichenfolge|Katalog, zu dem die gespeicherte Prozedur gehört.|  
-|FÜR ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
+|ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
 |ROUTINE_NAME|Zeichenfolge|Name der gespeicherten Prozedur.|  
 |ROUTINE_TYPE|Zeichenfolge|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |CREATED|DateTime|Zeitpunkt der Erstellung der Prozedur.|  
@@ -223,7 +223,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Benutzer-ID, eindeutig innerhalb dieser Datenbank. 1 ist der Datenbankbesitzer.|  
-|Benutzername|Zeichenfolge|Benutzername oder Gruppenname, eindeutig innerhalb dieser Datenbank.|  
+|user_name|Zeichenfolge|Benutzername oder Gruppenname, eindeutig innerhalb dieser Datenbank.|  
 |createdate|DateTime|Datum, an dem das Konto hinzugefügt wurde.|  
 |updatedate|DateTime|Datum, an dem das Konto zuletzt geändert wurde.|  
   

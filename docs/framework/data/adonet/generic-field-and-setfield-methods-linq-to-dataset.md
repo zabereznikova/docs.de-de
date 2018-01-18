@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 7f71a6e380730ce3d622437b28a3722793524968
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6281f2fdd00f210f09c97861d2ea723d259af004
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Generische Field- und SetField-Methoden (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] stellt der <xref:System.Data.DataRow>-Klasse Erweiterungsmethoden für den Zugriff auf Spaltenwerte zur Verfügung: die <xref:System.Data.DataRowExtensions.Field%2A>-Methode und die <xref:System.Data.DataRowExtensions.SetField%2A>-Methode. Diese Methoden erleichtern Entwicklern den Zugriff auf Spaltenwerte, besonders hinsichtlich der NULL-Werte. Das <xref:System.Data.DataSet> verwendet <xref:System.DBNull.Value>, um NULL-Werte darzustellen, während [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] auf die Unterstützung für den in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] eingeführten Typ zurückgreift, der NULL-Werte zulässt. Verwenden den schon vorhandenen Spaltenaccessor in <xref:System.Data.DataRow> erfordert, dass Sie das Rückgabeobjekt in den entsprechenden Typ umwandeln. Wenn ein bestimmtes Feld in einem <xref:System.Data.DataRow> null sein kann, müssen Sie explizit für einen null-Wert überprüfen, da zurückgeben <xref:System.DBNull.Value> und impliziten Umwandlung in einen anderen Typ löst eine <xref:System.InvalidCastException>. Im folgenden Beispiel wenn die <xref:System.Data.DataRow.IsNull%2A> Methode wurde nicht zum Prüfen auf einen null-Wert, eine Ausnahme wird ausgelöst, wenn der Indexer zurückgegeben <xref:System.DBNull.Value> und es wurde versucht,-Typ umzuwandeln eine <xref:System.String>.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>DataTable-Einschränkungen
 Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTable> enthaltenen Daten einschränken, um die Datenintegrität zu erhalten. Eine Einschränkung ist eine automatische Regel, die auf eine Spalte oder zugehörige Spalten angewendet wird und die die Vorgehensweise beim Ändern des Werts einer Spalte festlegt. Einschränkungen werden erzwungen, wenn die `System.Data.DataSet.EnforceConstraints` Eigenschaft der <xref:System.Data.DataSet> ist **"true"**. Ein Codebeispiel, in dem das Festlegen der `EnforceConstraints`-Eigenschaft veranschaulicht wird, finden Sie im <xref:System.Data.DataSet.EnforceConstraints%2A>-Referenzthema.  
@@ -35,7 +35,7 @@ Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTab
   
 |Festgelegte Regel|Beschreibung|  
 |------------------|-----------------|  
-|**CASCADE**|Verknüpfte Zeilen werden gelöscht oder aktualisiert.|  
+|**Cascade**|Verknüpfte Zeilen werden gelöscht oder aktualisiert.|  
 |**SetNull**|Legen Sie Werte in verknüpften Zeilen **DBNull**.|  
 |**SetDefault**|Für die Werte in verknüpften Zeilen wird der Standardwert festgelegt.|  
 |**Keine**|In verknüpften Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Festgelegte Regel|Beschreibung|  
 |------------------|-----------------|  
-|**CASCADE**|Änderungen in untergeordneten Zeilen werden akzeptiert oder zurückgewiesen.|  
+|**Cascade**|Änderungen in untergeordneten Zeilen werden akzeptiert oder zurückgewiesen.|  
 |**Keine**|In den untergeordneten Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
   
 ### <a name="example"></a>Beispiel  

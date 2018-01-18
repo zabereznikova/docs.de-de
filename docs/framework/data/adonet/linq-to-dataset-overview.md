@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Übersicht über LINQ to DataSet
 Das <xref:System.Data.DataSet> ist eine der am meisten verwendeten Komponenten von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es ist eines der Schlüsselelemente des nicht verbundenen Programmierungsmodells, auf dem [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] basiert, und versetzt Sie in die Lage, Daten aus unterschiedlichen Datenquellen explizit zwischenzuspeichern. Für die Darstellungsebene arbeitet das <xref:System.Data.DataSet> eng mit GUI-Steuerelementen für die Datenbindung zusammen. Für die mittlere Ebene stellt es einen Cache bereit, in dem die relationale Form von Daten zwischengespeichert wird, und es bietet Dienste für die schnelle und einfache Navigation in Abfragen und Hierarchien. Ein gängiges Verfahren verwendet, um die Anzahl der Anforderungen für eine Datenbank zu verringern, ist die Verwendung der <xref:System.Data.DataSet> für das caching in der mittleren Ebene. Betrachten Sie beispielsweise einen datengesteuerten [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung. Ein beträchtlicher Teil der Anwendung weist keine häufigen Änderungen auf und bleibt auch über Sitzungsgrenzen hinweg und bei verschiedenen Benutzern unverändert. Diese Daten können im Arbeitsspeicher des Webservers abgelegt werden, wodurch sich die Zahl der Datenbankanfragen verringert und die Interaktionen des Benutzers beschleunigt werden. Ein weiterer nützlicher Aspekt, der die <xref:System.Data.DataSet> ist, dass eine Anwendung Teilmengen von Daten aus mindestens einer Datenquelle in Anwendungsraum einbinden können. Die Anwendung kann dann die Daten im Arbeitsspeicher bearbeiten, während die relationale Form erhalten bleibt.  

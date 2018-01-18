@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -72,7 +72,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ## <a name="provider-manifest-discoverability"></a>Ermittelbarkeit des Anbietermanifests  
  Das Manifest wird indirekt von mehreren Komponententypen der Entitätsdienste (z. B. Tools oder Abfrage) verwendet. Die direktere Nutzung erfolgt jedoch für die Metadaten mithilfe des Metadaten-Ladeprogramms des Datenspeichers.  
   
- ![dfb3d02b &#45; 7a8c &#45; 4D 51 &#45; ac5a &#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Anbieter können jedoch unterschiedliche Speicher oder unterschiedliche Versionen des gleichen Speichers unterstützen. Daher muss ein Anbieter für jeden unterstützten Datenspeicher ein anderes Manifest melden.  
   
@@ -88,7 +88,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ## <a name="provider-manifest-programming-model"></a>Programmiermodell für das Anbietermanifest  
  Anbieter werden von <xref:System.Data.Common.DbXmlEnabledProviderManifest> abgeleitet, sodass die Manifeste deklarativ angegeben werden können. In der folgenden Abbildung wird die Klassenhierarchie eines Anbieters dargestellt:  
   
- ![Keine](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Ermittelbarkeits-API  
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
@@ -273,7 +273,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
 |Aggregat|Boolean|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
 |BuiltIn|Boolean|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
-|StoreFunctionName|Zeichenfolge|Nein|\<Name >|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
+|StoreFunctionName|Zeichenfolge|Nein|\<Name>|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
 |NiladicFunction|Boolean|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
 |ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Conversion|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -Sind ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) wird als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt implementiert. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
@@ -63,7 +63,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... VON.. WHERE... GRUPPIEREN SIE NACH... ORDER BY".  
+ SqlSelectStatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... FROM  .. WHERE... GRUPPIEREN SIE NACH... ORDER BY".  
   
  Jede der SQL-Klauseln wird durch einen StringBuilder dargestellt. Außerdem überwacht es, ob "Distinct" angegeben wurde und es sich um die Anweisung auf oberster Ebene handelt. Wenn es sich nicht um die Anweisung auf oberster Ebene handelt, wird die ORDER BY-Klausel weggelassen, es sei denn, die Anweisung verfügt auch über eine TOP-Klausel.  
   

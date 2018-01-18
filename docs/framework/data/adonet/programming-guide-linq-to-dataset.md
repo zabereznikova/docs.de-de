@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc7c58f7062871fc3f6ac084bdeafcb12dad1f86
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programmierhandbuch (LINQ to DataSet)
 Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -66,4 +66,4 @@ Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmi
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  [NICHT im BUILD: LINQ Allgemein Programmierhandbuch](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ-Framework](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+ [LINQ Framework](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)

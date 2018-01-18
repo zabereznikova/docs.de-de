@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 Die **Keyref** Element können Sie Links zwischen Elementen in einem Dokument herstellen. Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar. Wenn ein Schema gibt die **Keyref** Element, das Element wird konvertiert, während die Schemazuordnungsprozesses in eine entsprechende foreign Key-Einschränkung für die Spalten in den Tabellen der der <xref:System.Data.DataSet>. Wird standardmäßig die **Keyref** Element generiert auch eine Beziehung mit der **ParentTable**, **untergeordneteTabelle**, **ParentColumn**, und  **ChildColumn** Eigenschaften der Beziehung angegeben.  
@@ -27,8 +27,8 @@ Die **Keyref** Element können Sie Links zwischen Elementen in einem Dokument he
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**msdata: ConstraintOnly**|Wenn **ConstraintOnly = "true"** angegeben ist, auf die **Keyref** -Element im Schema, eine Einschränkung erstellt wird, aber keine Beziehung erstellt. Wenn dieses Attribut nicht angegeben ist (oder **"false"**), werden sowohl die Einschränkung als auch die Beziehung erstellt, der **DataSet**.|  
-|**ConstraintName**|Wenn die **ConstraintName** -Attribut angegeben ist, deren Wert als den Namen der Einschränkung verwendet. Andernfalls der **Namen** Attribut des der **Keyref** -Element im Schema enthält den Namen der Einschränkung in der **DataSet**.|  
+|**msdata:ConstraintOnly**|Wenn **ConstraintOnly = "true"** angegeben ist, auf die **Keyref** -Element im Schema, eine Einschränkung erstellt wird, aber keine Beziehung erstellt. Wenn dieses Attribut nicht angegeben ist (oder **"false"**), werden sowohl die Einschränkung als auch die Beziehung erstellt, der **DataSet**.|  
+|**msdata:ConstraintName**|Wenn die **ConstraintName** -Attribut angegeben ist, deren Wert als den Namen der Einschränkung verwendet. Andernfalls der **Namen** Attribut des der **Keyref** -Element im Schema enthält den Namen der Einschränkung in der **DataSet**.|  
 |**msdata:UpdateRule**|Wenn die **UpdateRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **UpdateRule** -Einschränkungseigenschaft im die  **DataSet**. Andernfalls die **UpdateRule** -Eigenschaftensatz auf **Cascade**.|  
 |**msdata:DeleteRule**|Wenn die **DeleteRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **DeleteRule** -Einschränkungseigenschaft im die  **DataSet**. Andernfalls die **DeleteRule** -Eigenschaftensatz auf **Cascade**.|  
 |**msdata:AcceptRejectRule**|Wenn die **AcceptRejectRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **AcceptRejectRule** -Einschränkungseigenschaft im die  **DataSet**. Andernfalls die **AcceptRejectRule** -Eigenschaftensatz auf **keine**.|  

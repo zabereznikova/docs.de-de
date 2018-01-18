@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd760cf51aa0f3e89e49831b1aa165e62b321d20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2f6c60197b1d71feb13ca351ad19298e09ea56
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Hinzufügen von vorhandenen Einschränkungen zu einem "DataSet"
 Die **füllen** Methode der **"DataAdapter"** füllt eine <xref:System.Data.DataSet> nur mit Tabellenspalten und Tabellenzeilen aus einer Datenquelle; jedoch Einschränkungen werden häufig festgelegt, indem die Datenquelle die **Ausfüllen** Methode fügt diese Schemainformationen nicht der **DataSet** standardmäßig. Zum Auffüllen einer **DataSet** mit vorhandenen primary Key-Einschränkungsinformationen aus einer Datenquelle können Sie entweder die **FillSchema** Methode der **"DataAdapter"**, oder legen Sie die **MissingSchemaAction** Eigenschaft von der **"DataAdapter"** auf **AddWithKey** vor dem Aufruf **füllen**. Dadurch wird sichergestellt, dass die Einschränkungen in der **DataSet** in der Datenquelle entsprechen. Foreign Key-Einschränkungsinformationen nicht enthalten ist, und muss entsprechend explizit erstellt werden [DataTable-Einschränkungen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

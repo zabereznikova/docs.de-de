@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
 In einem Schema können Sie geben eine schlüsseleinschränkung für ein Element oder-Attribut mit dem **Schlüssel** Element. Das Element oder Attribut, für das Sie eine Schlüsseleinschränkung angeben, muss eindeutige Werte in jeder Schemainstanz aufweisen und darf keine NULL-Werte enthalten.  
@@ -29,8 +29,8 @@ In einem Schema können Sie geben eine schlüsseleinschränkung für ein Element
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** Attribut den Wert des Einschränkungsnamen bereitstellt.|  
-|**msdata: PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, die **IsPrimaryKey** -Einschränkungseigenschaft auf festgelegt ist **"true"**, wodurch sie zu einen Primärschlüssel. Die **AllowDBNull** -Spalteneigenschaft ist auf **"false"**, da der Primärschlüssel null-Werte enthalten darf.|  
+|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** Attribut den Wert des Einschränkungsnamen bereitstellt.|  
+|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, die **IsPrimaryKey** -Einschränkungseigenschaft auf festgelegt ist **"true"**, wodurch sie zu einen Primärschlüssel. Die **AllowDBNull** -Spalteneigenschaft ist auf **"false"**, da der Primärschlüssel null-Werte enthalten darf.|  
   
  Beim Konvertieren eines Schemas, in denen eine Key-Einschränkung angegeben wird, erstellt der Zuordnungsprozess eine unique-Einschränkung für die Tabelle mit den **AllowDBNull** Spalteneigenschaft auf festgelegt **"false"** für jede Spalte in der Einschränkung. Die **IsPrimaryKey** gegen die unique-Einschränkung ist auch-Eigenschaftensatz auf **"false"** , sofern Sie angegeben haben `msdata:PrimaryKey="true"` auf die **Schlüssel** Element. Dies ist mit einer unique-Einschränkung im Schema mit `PrimaryKey="true"` identisch.  
   

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-typed-datasets"></a>Abfragen von typisierten DataSets
 Wenn zum Zeitpunkt der Anwendungskonzeptionierung bereits das <xref:System.Data.DataSet>-Schema bekannt ist, wird empfohlen, bei der Benutzung von <xref:System.Data.DataSet> mit einem typisierten [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu arbeiten. Eine typisierte <xref:System.Data.DataSet> ist eine Klasse, die von abgeleitet ist eine <xref:System.Data.DataSet>. Damit erbt sie alle Methoden, Ereignisse und Eigenschaften eines <xref:System.Data.DataSet>. Darüber hinaus eine typisierte <xref:System.Data.DataSet> stellt stark typisierte Methoden, Ereignisse und Eigenschaften bereit. Das heißt, dass Sie auf Tabellen und Spalten anhand ihres Namens zugreifen können und keine auflistungsbasierten Methoden verwenden müssen. Dadurch werden Abfragen einfacher und lesbarer. Weitere Informationen finden Sie unter [typisierter DataSets](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 52478c2222c9212665434c8a98676a3d5b7bc5d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7787cfc3bdcb5f9adce7e699ff50b255c575a1ba
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>ASP.NET-Anwendungen mit Wait-Handles
 Die Rückruf- und Abrufmodelle für die Behandlung asynchroner Vorgänge sind hilfreich, wenn die Anwendung nur eine asynchrone Operation gleichzeitig verarbeitet. Die Wait-Modelle ermöglichen eine flexiblere Verarbeitung mehrerer asynchroner Operationen. Es gibt zwei Wait-Modelle, benannt nach den zur Implementierung verwendeten <xref:System.Threading.WaitHandle>-Methoden: das Wait (Any)-Modell und das Wait (All)-Modell.  

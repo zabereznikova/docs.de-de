@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-lobs"></a>Oracle-LOBs
 Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** Datentypen.  
@@ -27,8 +27,8 @@ Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.Orac
   
 |Datentyp|Beschreibung|  
 |---------------|-----------------|  
-|**BLOB**|Ein Oracle **BLOB** -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Dies ordnet eine **Array** des Typs **Byte**.|  
-|**CLOB**|Ein Oracle **CLOB** -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 Gigabyte festgelegt. Entspricht dem **Zeichenfolge**.|  
+|**Blob**|Ein Oracle **BLOB** -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Dies ordnet eine **Array** des Typs **Byte**.|  
+|**Clob**|Ein Oracle **CLOB** -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 Gigabyte festgelegt. Entspricht dem **Zeichenfolge**.|  
 |**NClob**|Ein Oracle **NCLOB** -Datentyp, Zeichendaten enthält, auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
   
  Ein **OracleLob** unterscheidet sich von einer <xref:System.Data.OracleClient.OracleBFile> darin, dass die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist. Sie können auch ein Objekt mit Lese-/ Schreibzugriff sein, im Gegensatz zu einer **OracleBFile**, die immer schreibgeschützt ist.  

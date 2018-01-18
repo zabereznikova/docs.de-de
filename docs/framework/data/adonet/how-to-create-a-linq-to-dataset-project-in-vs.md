@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6710d3e9bf52ff10ee8dd545161f0858001f2c40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3add191250a10d1d6016263ada0ba53fc8082717
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio
 Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Projekten benötigen bestimmte importierte Namespaces (Visual Basic) oder `using`-Direktiven (C#) und -Verweise. Die Mindestanforderung ist ein Verweis auf <legacyBold>System.Core.dll</legacyBold> und eine `using`-Direktive für <xref:System.Linq>. Standardmäßig werden diese angegeben, wenn Sie ein neues [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]-Projekt erstellen. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] erfordert außerdem einen Verweis auf "System.Data.dll" und "System.Data.DataSetExtensions.dll" sowie eine `Imports`-Direktive (Visual Basic) oder eine `using`-Direktive (C#).  

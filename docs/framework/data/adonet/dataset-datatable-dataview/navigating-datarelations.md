@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d7d1dc98bdb235c6501ee503494d3c2bdc3a1820
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84272a24dde909205d01f4ced5a57450c5fdbd7f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigating-datarelations"></a>Navigieren in "DataRelations"
 Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Dies ermöglicht es Ihnen, alle verwandten <xref:System.Data.DataRow> Objekte in einem **DataTable** Wenn eine einzelne **DataRow** aus einer verknüpften **DataTable**. Beispielsweise nach dem Herstellen einer **DataRelation** zwischen einer Tabelle möglicher Kunden und eine Tabelle der Aufträge, können Sie alle Auftragszeilen für eine bestimmte Kundenzeile mit abrufen **GetChildRows**.  

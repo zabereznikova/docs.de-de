@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6d22b72e05e6293a7fd3bcf7ddfba6e116e441f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>Vergleichssemantik (Entity SQL)
 Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operationen werden Typinstanzen verglichen:  
@@ -77,7 +77,7 @@ Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-
 ## <a name="supported-combinations"></a>Unterstützte Kombinationen  
  In der folgenden Tabelle werden alle unterstützten Kombinationen von Vergleichsoperatoren für jede Art von Typ angezeigt:  
   
-|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IST NULL.**<br /><br /> **IST UNGLEICH NULL**|  
+|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IST UNGLEICH NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Entitätstyp|Ref<sup>1</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Ref<sup>1</sup>|  
 |Komplexer Typ|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|  

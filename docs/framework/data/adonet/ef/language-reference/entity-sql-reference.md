@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-bezogene Referenzthemen. Dieses Thema fasst zusammen und gruppiert die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Operatoren nach Kategorie.  
@@ -57,7 +57,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |[= (Gleich)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Überprüft zwei Ausdrücke auf Gleichheit.|  
 |[> (Größer als)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck größer als der rechte Ausdruck ist.|  
 |[>= (Größer als oder gleich)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck größer oder gleich dem rechten Ausdruck ist.|  
-|[IST &#91; NICHT &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.|  
+|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.|  
 |[< (Kleiner als)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck kleiner als der rechte Ausdruck ist.|  
 |[<= (kleiner als oder gleich)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck kleiner oder gleich dem rechten Ausdruck ist.|  
 |[&#91; NICHT &#93; ZWISCHEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Ermittelt, ob der Ergebniswert eines Ausdrucks in einem angegebenen Bereich liegt.|  
@@ -111,7 +111,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Gibt eine Auflistung der vom Abfrageausdruck auf der linken Seite des EXCEPT-Operanden zurückgegebenen und unterschiedlichen Werte zurück, die nicht zusätzlich vom Abfrageausdruck auf der rechten Seite des EXCEPT-Operanden zurückgegeben werden.|  
 |[&#91; NICHT &#93; VORHANDEN IST](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Bestimmt, ob eine Auflistung leer ist.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Konvertiert eine Auflistung von Auflistungen in eine vereinfachte Auflistung.|  
-|[&#91; NICHT &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.|  
+|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Gibt eine Auflistung aller unterschiedlicher Werte zurück, die sowohl vom Abfrageausdruck auf der linken als auch dem auf der rechten Seite des INTERSECT-Operands zurückgegeben werden.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Bestimmt, ob zwei Auflistungen über gemeinsame Elemente verfügen.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Wird verwendet, um eine Auflistung von Objekten in eine Menge zu konvertieren, indem eine neue Auflistung zurückgegeben wird, aus der alle doppelten Elemente entfernt wurden.|  
@@ -124,7 +124,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Konvertiert einen Ausdruck von einem Datentyp in einen anderen.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Verwendet eine [Funktion](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) Vorgang um eine Auflistung von Entitätstypen oder komplexen Typen zu deklarieren.|  
-|[IST &#91; NICHT &#93; DER](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Ermittelt, ob der Typ eines Ausdrucks vom angegebenen Typ oder einem seiner Untertypen ist.|  
+|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Ermittelt, ob der Typ eines Ausdrucks vom angegebenen Typ oder einem seiner Untertypen ist.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Gibt eine Auflistung der Objekte von einem Abfrageausdruck eines bestimmten Typs zurück.|  
 |[Konstruktoren benannter Typen](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Wird verwendet, um Instanzen von Entitätstypen oder komplexen Typen zu erstellen.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Erstellt eine Instanz einer Multimenge aus einer Liste von Werten.|  

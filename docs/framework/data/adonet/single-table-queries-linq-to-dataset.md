@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Abfragen für einzelne Tabellen (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]-Abfragen arbeiten mit Datenquellen, implementieren die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die <xref:System.Data.DataTable> Klasse nicht beiden Schnittstellen implementieren, damit Sie aufrufen müssen die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Methode, wenn Sie verwenden möchten die <xref:System.Data.DataTable> als Quelle für die `From` -Klausel eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfrage.  

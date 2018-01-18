@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von eindeutigen XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 In einem Schema Definition Language (XSD) XML-Schema der **eindeutige** Element gibt die eindeutigkeitseinschränkung für ein Element oder Attribut an. 	Beim Übersetzen eines XML-Schemas in ein relationales Schema wird die im XML-Schema für ein Element oder Attribut angegebene eindeutige Einschränkung einer eindeutigen Einschränkung in der <xref:System.Data.DataTable> des entsprechenden <xref:System.Data.DataSet> zugeordnet, das erstellt wird.  
@@ -27,8 +27,8 @@ In einem Schema Definition Language (XSD) XML-Schema der **eindeutige** Element 
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** Attribut den Wert des Einschränkungsnamen bereitstellt.|  
-|**msdata: PrimaryKey**|Wenn `PrimaryKey="true"` ist vorhanden, in der **eindeutige** Element, eine unique-Einschränkung wird erstellt, mit der **IsPrimaryKey** -Eigenschaftensatz auf **"true"**.|  
+|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** Attribut den Wert des Einschränkungsnamen bereitstellt.|  
+|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` ist vorhanden, in der **eindeutige** Element, eine unique-Einschränkung wird erstellt, mit der **IsPrimaryKey** -Eigenschaftensatz auf **"true"**.|  
   
  Das folgende Beispiel zeigt eine XML-Schema, verwendet der **eindeutige** Element, um eine Unique-Einschränkung anzugeben.  
   

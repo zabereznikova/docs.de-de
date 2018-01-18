@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2573ff7ff4a03d5ec8a56ef311a3c065d040ccf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 In diesem Abschnitt werden Informationen über die Language-Integrated Query (LINQ)-Standardabfrageoperatoren bereitgestellt, die in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen unterstützt bzw. nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem nullbasierten Index in der Sequenz, die bearbeiteten ist ein <xref:System.Collections.Generic.IEqualityComparer%601>, oder <xref:System.Collections.Generic.IComparer%601>. Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  

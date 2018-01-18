@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Zuordnen von CLR-Methoden zu kanonischen Funktionen
 Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine auf vielen Datenbanksystemen verbreitete Funktionalität implementieren, z. B. Zeichenfolgenbearbeitung und mathematische Funktionen. Dadurch können Entwickler für einen großen Bereich von Datenbanksystemen entwickeln. Beim Aufrufen aus einer Abfragetechnologie wie LINQ to Entities werden diese kanonischen Funktionen in die entsprechenden Speicherfunktionen des verwendeten Anbieters übersetzt. Dadurch können Funktionsaufrufe für verschiedene Datenquellen in einer allgemeinen Form ausgedrückt werden, und es werden konsistente datenquellenübergreifende Abfragemöglichkeiten bereitgestellt. Weiterhin werden die bitweisen Operatoren AND, OR, NOT und XOR kanonischen Funktionen zugeordnet, wenn der Operand ein numerischer Typ ist. Bei booleschen Operanden werden durch die bitweisen Operatoren AND, OR, NOT und XOR die logischen Operationen AND, OR, NOT und XOR ihrer Operanden berechnet. Weitere Informationen finden Sie unter [kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -81,11 +81,11 @@ Betriebssystem. Replace String (Zeichenfolge `oldValue`, Zeichenfolge `newValue`
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!=-Operator||  
 |Boolesche Op_LessThan ("DateTime" `t1`, "DateTime" `t2`)|<-Operator||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<=-Operator||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` als DateInterval,\_<br /><br /> ByVal `DateValue` als "DateTime",\_<br /><br /> Optionale ByVal `FirstDayOfWeekValue` als "FirstDayOfWeek" = VbSunday,\_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` als "DateTime",\_<br /><br /> Optionale ByVal `FirstDayOfWeekValue` als "FirstDayOfWeek" = VbSunday,\_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
-Icrosoft. VisualBasic.DateAndTime.Day ("DateTime" `TimeValue`)|Day()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  

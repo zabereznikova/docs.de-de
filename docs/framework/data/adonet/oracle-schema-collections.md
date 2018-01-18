@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2ac06c78670b4113ab718c06423c04c0ea27c208
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-schema-collections"></a>Oracle-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den allgemeinen Schemaauflistungen die folgenden spezifischen Schemaauflistungen:  
@@ -156,7 +156,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |TIMESTAMP|Zeichenfolge|Timestamp zur Spezifikation des Objekts (Zeichendaten).|  
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
-|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (J &#124; N).|  
+|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
 |SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
@@ -231,7 +231,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |TIMESTAMP|Zeichenfolge|Timestamp zur Spezifikation des Objekts (Zeichendaten).|  
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
-|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (J &#124; N).|  
+|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
 |SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
   
 ## <a name="packages"></a>Pakete  
@@ -247,7 +247,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |TIMESTAMP|Zeichenfolge|Timestamp zur Spezifikation des Objekts (Zeichendaten).|  
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
-|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (J &#124; N).|  
+|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
 |SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
@@ -264,7 +264,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |TIMESTAMP|Zeichenfolge|Timestamp zur Spezifikation des Objekts (Zeichendaten).|  
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
-|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (J &#124; N).|  
+|GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
 |SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
