@@ -24,7 +24,7 @@ Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B.
   
  Beim Instanziieren einer Struktur mit dem [new](../../../csharp/language-reference/keywords/new.md) Operator wird eine Struktur erstellt und der entsprechende Konstruktor wird,  gemäß der [Signatur des Konstruktors](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax), aufgerufen. Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden. In einem solchen Fall gibt es keinen Konstruktoraufruf, sodass die Zuordnung effizienter ausgeführt werden kann. Die Felder werden jedoch nicht zugewiesen, und das Objekt kann erst verwendet werden, nachdem alle Felder initialisiert wurden. Dies schließt die Unfähigkeit in Bezug auf Abrufen oder Festlegen von Werten über automatisch implementierte Eigenschaften mit ein.
  
- Wenn Sie ein Struktur-Objekt mit dem standardmäßigen, parameterlosen Konstruktor instanziiert haben, werden allen Membern ihre  [Standardwerte](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) zugewiesen ihre.
+ Wenn Sie ein Struktur-Objekt mit dem standardmäßigen, parameterlosen Konstruktor instanziiert haben, werden allen Membern ihre  [Standardwerte](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) zugewiesen.
   
  Wenn Sie einen Konstruktor mit Parametern für eine Struktur zu schreiben, müssen Sie alle Elemente explizit initialisieren; andernfalls ein oder mehrere Mitglieder nicht zugewiesen, und die Struktur kann nicht verwendet werden, erzeugen Compilerfehler CS0171.  
   
