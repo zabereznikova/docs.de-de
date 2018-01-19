@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
@@ -73,7 +73,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
  [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Abschnitte zur Plattform  
- [Anwendungsdomänen (C# und Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Anwendungsdomänen (C# und Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Assemblys und der globale Assemblycache](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
