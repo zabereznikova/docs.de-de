@@ -26,11 +26,11 @@ Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B.
  
  Wenn Sie ein Struktur-Objekt mit dem standardmäßigen, parameterlosen Konstruktor instanziiert haben, werden allen Membern ihre  [Standardwerte](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) zugewiesen.
   
- Wenn Sie einen Konstruktor mit Parametern für eine Struktur zu schreiben, müssen Sie alle Elemente explizit initialisieren; andernfalls ein oder mehrere Mitglieder nicht zugewiesen, und die Struktur kann nicht verwendet werden, erzeugen Compilerfehler CS0171.  
+ Wenn Sie für eine Struktur einen Konstruktor mit Parametern schreiben, müssen Sie alle Elemente explizit initialisieren; andernfalls sind ein oder mehrere Member nicht zugewiesen, und die Struktur kann nicht verwendet werden, was einen Compilerfehler CS0171 erzeugt.  
   
  Bei Strukturen findet keine Vererbung wie bei Klassen statt. Eine Struktur kann nicht von einer anderen Struktur oder Klasse erben, und sie kann auch nicht die Basis einer Klasse sein. Stattdessen erben Strukturen von der <xref:System.Object>-Basisklasse. Eine Struktur kann Schnittstellen implementieren. Dies geschieht auf dieselbe Weise wie bei Klassen.  
   
- Sie können keine Klasse mit dem `struct`-Schlüsselwort deklarieren. Klassen und Strukturen weisen in C# semantische Unterschiede auf. Eine Struktur ist ein Werttyp, während eine Klasse ein Referenztyp ist. Weitere Informationen finden Sie unter [Werttypen](../../../csharp/language-reference/keywords/value-types.md).  
+ Sie können keine Klasse mit dem `struct`-Schlüsselwort deklarieren. Klassen und Strukturen weisen in C# semantische Unterschiede auf. Eine Struktur ist ein Werttyp, während eine Klasse ein Verweistyp ist. Weitere Informationen finden Sie unter [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md) und [Werttypen](../../../csharp/language-reference/keywords/value-types.md).  
   
  Sofern keine Semantik für Verweistypen benötigt wird, kann das System kleine Klassen effizienter verarbeiten, wenn diese als Struktur definiert werden.  
   
