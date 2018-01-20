@@ -14,66 +14,66 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d85749d697094722930a72114a1b33249f684cf0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f7ccbc1bd6bf039821133944d73a74b4820b4fb6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="oftype-entity-sql"></a><span data-ttu-id="4e81e-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4e81e-102">OFTYPE (Entity SQL)</span></span>
-<span data-ttu-id="4e81e-103">Gibt eine Auflistung der Objekte von einem Abfrageausdruck eines bestimmten Typs zurück.</span><span class="sxs-lookup"><span data-stu-id="4e81e-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
+# <a name="oftype-entity-sql"></a><span data-ttu-id="41f38-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="41f38-102">OFTYPE (Entity SQL)</span></span>
+<span data-ttu-id="41f38-103">Gibt eine Auflistung der Objekte von einem Abfrageausdruck eines bestimmten Typs zurück.</span><span class="sxs-lookup"><span data-stu-id="41f38-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e81e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4e81e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41f38-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="41f38-104">Syntax</span></span>  
   
 ```  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="4e81e-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="4e81e-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="41f38-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="41f38-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="4e81e-106">Jeder gültige Abfrageausdruck, der eine Auflistung von Objekten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="4e81e-106">Any valid query expression that returns a collection of objects.</span></span>  
+ <span data-ttu-id="41f38-106">Jeder gültige Abfrageausdruck, der eine Auflistung von Objekten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="41f38-106">Any valid query expression that returns a collection of objects.</span></span>  
   
  `test_type`  
- <span data-ttu-id="4e81e-107">Der Typ, dessen Übereinstimmung mit jedem von `expression` zurückgegebenen Objekt getestet wird.</span><span class="sxs-lookup"><span data-stu-id="4e81e-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="4e81e-108">Der Typ muss mit einem Namespace qualifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="4e81e-108">The type must be qualified by a namespace.</span></span>  
+ <span data-ttu-id="41f38-107">Der Typ, dessen Übereinstimmung mit jedem von `expression` zurückgegebenen Objekt getestet wird.</span><span class="sxs-lookup"><span data-stu-id="41f38-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="41f38-108">Der Typ muss mit einem Namespace qualifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="41f38-108">The type must be qualified by a namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4e81e-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="4e81e-109">Return Value</span></span>  
- <span data-ttu-id="4e81e-110">Eine Auflistung von Objekten vom Typ `test_type`, von einem Basistyp oder von einem von `test_type`abgeleiteten Typ.</span><span class="sxs-lookup"><span data-stu-id="4e81e-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="4e81e-111">Wenn ONLY angegeben wird, werden nur Instanzen des `test_type` oder eine leere Auflistung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4e81e-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="41f38-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="41f38-109">Return Value</span></span>  
+ <span data-ttu-id="41f38-110">Eine Auflistung von Objekten vom Typ `test_type`, von einem Basistyp oder von einem von `test_type`abgeleiteten Typ.</span><span class="sxs-lookup"><span data-stu-id="41f38-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="41f38-111">Wenn ONLY angegeben wird, werden nur Instanzen des `test_type` oder eine leere Auflistung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="41f38-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4e81e-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4e81e-112">Remarks</span></span>  
- <span data-ttu-id="4e81e-113">Ein `OFTYPE` -Ausdruck stellt einen Typausdruck dar, der angegeben wird, um einen Typtest für jedes Element einer Auflistung durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="4e81e-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="4e81e-114">Der `OFTYPE` -Ausdruck liefert eine neue Auflistung des angegebenen Typs, die nur die zu diesem Typ oder einem seiner Untertypen äquivalenten Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="4e81e-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41f38-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="41f38-112">Remarks</span></span>  
+ <span data-ttu-id="41f38-113">Ein `OFTYPE` -Ausdruck stellt einen Typausdruck dar, der angegeben wird, um einen Typtest für jedes Element einer Auflistung durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="41f38-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="41f38-114">Der `OFTYPE` -Ausdruck liefert eine neue Auflistung des angegebenen Typs, die nur die zu diesem Typ oder einem seiner Untertypen äquivalenten Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="41f38-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
   
- <span data-ttu-id="4e81e-115">Ein `OFTYPE` -Ausdruck ist eine Abkürzung des folgenden Abfrageausdrucks:</span><span class="sxs-lookup"><span data-stu-id="4e81e-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
+ <span data-ttu-id="41f38-115">Ein `OFTYPE` -Ausdruck ist eine Abkürzung des folgenden Abfrageausdrucks:</span><span class="sxs-lookup"><span data-stu-id="41f38-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
   
 ```  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
- <span data-ttu-id="4e81e-116">Wenn beispielsweise "Manager" ein Untertyp von "Employee" (Mitarbeiter) ist, liefert der folgende Ausdruck nur die Manager aus einer Auflistung der Mitarbeiter:</span><span class="sxs-lookup"><span data-stu-id="4e81e-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
+ <span data-ttu-id="41f38-116">Wenn beispielsweise "Manager" ein Untertyp von "Employee" (Mitarbeiter) ist, liefert der folgende Ausdruck nur die Manager aus einer Auflistung der Mitarbeiter:</span><span class="sxs-lookup"><span data-stu-id="41f38-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
   
 ```  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="4e81e-117">Mithilfe des Typfilters kann eine Auflistung auch umgewandelt werden:</span><span class="sxs-lookup"><span data-stu-id="4e81e-117">It is also possible to up cast a collection using the type filter:</span></span>  
+ <span data-ttu-id="41f38-117">Mithilfe des Typfilters kann eine Auflistung auch umgewandelt werden:</span><span class="sxs-lookup"><span data-stu-id="41f38-117">It is also possible to up cast a collection using the type filter:</span></span>  
   
 ```  
 OfType(executives, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="4e81e-118">Da alle Direktoren Manager sind, enthält die resultierende Auflistung alle Direktoren, auch wenn die Auflistung nun als eine Auflistung von Managern typisiert ist.</span><span class="sxs-lookup"><span data-stu-id="4e81e-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
+ <span data-ttu-id="41f38-118">Da alle Direktoren Manager sind, enthält die resultierende Auflistung alle Direktoren, auch wenn die Auflistung nun als eine Auflistung von Managern typisiert ist.</span><span class="sxs-lookup"><span data-stu-id="41f38-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
   
- <span data-ttu-id="4e81e-119">In der folgenden Tabelle wird das Verhalten des `OFTYPE` -Operators für verschiedene Muster dargestellt.</span><span class="sxs-lookup"><span data-stu-id="4e81e-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="4e81e-120">Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:</span><span class="sxs-lookup"><span data-stu-id="4e81e-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
+ <span data-ttu-id="41f38-119">In der folgenden Tabelle wird das Verhalten des `OFTYPE` -Operators für verschiedene Muster dargestellt.</span><span class="sxs-lookup"><span data-stu-id="41f38-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="41f38-120">Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:</span><span class="sxs-lookup"><span data-stu-id="41f38-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
   
-|<span data-ttu-id="4e81e-121">Muster</span><span class="sxs-lookup"><span data-stu-id="4e81e-121">Pattern</span></span>|<span data-ttu-id="4e81e-122">Verhalten</span><span class="sxs-lookup"><span data-stu-id="4e81e-122">Behavior</span></span>|  
+|<span data-ttu-id="41f38-121">Muster</span><span class="sxs-lookup"><span data-stu-id="41f38-121">Pattern</span></span>|<span data-ttu-id="41f38-122">Verhalten</span><span class="sxs-lookup"><span data-stu-id="41f38-122">Behavior</span></span>|  
 |-------------|--------------|  
-|<span data-ttu-id="4e81e-123">OFTYPE (Collection(EntityType), (EntityType)</span><span class="sxs-lookup"><span data-stu-id="4e81e-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="4e81e-124">Collection(EntityType)</span><span class="sxs-lookup"><span data-stu-id="4e81e-124">Collection(EntityType)</span></span>|  
-|<span data-ttu-id="4e81e-125">OFTYPE(Collection(ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="4e81e-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="4e81e-126">Löst aus</span><span class="sxs-lookup"><span data-stu-id="4e81e-126">Throws</span></span>|  
-|<span data-ttu-id="4e81e-127">OFTYPE(Collection(RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="4e81e-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="4e81e-128">Löst aus</span><span class="sxs-lookup"><span data-stu-id="4e81e-128">Throws</span></span>|  
+|<span data-ttu-id="41f38-123">OFTYPE (Collection(EntityType), (EntityType)</span><span class="sxs-lookup"><span data-stu-id="41f38-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="41f38-124">Collection(EntityType)</span><span class="sxs-lookup"><span data-stu-id="41f38-124">Collection(EntityType)</span></span>|  
+|<span data-ttu-id="41f38-125">OFTYPE(Collection(ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="41f38-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="41f38-126">Löst aus</span><span class="sxs-lookup"><span data-stu-id="41f38-126">Throws</span></span>|  
+|<span data-ttu-id="41f38-127">OFTYPE(Collection(RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="41f38-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="41f38-128">Löst aus</span><span class="sxs-lookup"><span data-stu-id="41f38-128">Throws</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4e81e-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4e81e-129">Example</span></span>  
- <span data-ttu-id="4e81e-130">Die folgende [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage verwendet den OFTYPE-Operator, um eine Auflistung der OnsiteCourse-Objekte von einer Auflistung von Kursobjekten zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="4e81e-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="4e81e-131">Die Abfrage basiert auf dem [Modell "School"](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="4e81e-131">The query is based on the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
+## <a name="example"></a><span data-ttu-id="41f38-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="41f38-129">Example</span></span>  
+ <span data-ttu-id="41f38-130">Die folgende [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage verwendet den OFTYPE-Operator, um eine Auflistung der OnsiteCourse-Objekte von einer Auflistung von Kursobjekten zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="41f38-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="41f38-131">Diese Abfrage beruht auf dem [Modell ' School '](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="41f38-131">The query is based on the [School Model](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
-## <a name="see-also"></a><span data-ttu-id="4e81e-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e81e-132">See Also</span></span>  
- [<span data-ttu-id="4e81e-133">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="4e81e-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="41f38-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="41f38-132">See Also</span></span>  
+ [<span data-ttu-id="41f38-133">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="41f38-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

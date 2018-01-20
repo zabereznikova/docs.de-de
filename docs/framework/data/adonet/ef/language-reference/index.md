@@ -14,28 +14,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b9611ef66525545c1babe087b1a5e6c7842ef871
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 14e16748a5a5797b5d36c68e12dbad2e3ae2562f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="entity-sql-language-reference"></a><span data-ttu-id="68f77-102">Entity SQL-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="68f77-102">Entity SQL Language Reference</span></span>
-<span data-ttu-id="68f77-103">Dieser Abschnitt bietet ausführliche Dokumentationen zu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und den Modell- und Zuordnungssprachen, die von [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="68f77-103">This section provides detailed documentation [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)], and the modeling and mapping languages used by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  
+# <a name="entity-sql-language-reference"></a><span data-ttu-id="f6444-102">Entity SQL-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="f6444-102">Entity SQL Language Reference</span></span>
+<span data-ttu-id="f6444-103">Dieser Abschnitt bietet ausführliche Dokumentationen zu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und den Modell- und Zuordnungssprachen, die von [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f6444-103">This section provides detailed documentation [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)], and the modeling and mapping languages used by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="68f77-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="68f77-104">In This Section</span></span>  
- [<span data-ttu-id="68f77-105">CSDL, SSDL, and MSL Specifications (CSDL-, SSDL- und MSL-Spezifikationen)</span><span class="sxs-lookup"><span data-stu-id="68f77-105">CSDL, SSDL, and MSL Specifications</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f6444-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="f6444-104">In This Section</span></span>  
+ [<span data-ttu-id="f6444-105">CSDL, SSDL, and MSL Specifications (CSDL-, SSDL- und MSL-Spezifikationen)</span><span class="sxs-lookup"><span data-stu-id="f6444-105">CSDL, SSDL, and MSL Specifications</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  
   
- [<span data-ttu-id="68f77-106">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="68f77-106">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [<span data-ttu-id="f6444-106">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="f6444-106">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
- [<span data-ttu-id="68f77-107">Entity SQL Language (Entity SQL-Sprache)</span><span class="sxs-lookup"><span data-stu-id="68f77-107">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [<span data-ttu-id="f6444-107">Entity SQL Language (Entity SQL-Sprache)</span><span class="sxs-lookup"><span data-stu-id="f6444-107">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
   
- [<span data-ttu-id="68f77-108">Canonical Functions (Kanonische Funktionen)</span><span class="sxs-lookup"><span data-stu-id="68f77-108">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
+ [<span data-ttu-id="f6444-108">Canonical Functions (Kanonische Funktionen)</span><span class="sxs-lookup"><span data-stu-id="f6444-108">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="68f77-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="68f77-109">Related Sections</span></span>  
- [<span data-ttu-id="68f77-110">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="68f77-110">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+## <a name="related-sections"></a><span data-ttu-id="f6444-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="f6444-109">Related Sections</span></span>  
+ [<span data-ttu-id="f6444-110">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="f6444-110">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
   
-## <a name="see-also"></a><span data-ttu-id="68f77-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68f77-111">See Also</span></span>  
- [<span data-ttu-id="68f77-112">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="68f77-112">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [<span data-ttu-id="68f77-113">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="68f77-113">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [<span data-ttu-id="68f77-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="68f77-114">Samples</span></span>](http://msdn.microsoft.com/en-us/77500b07-de49-4fb7-93ee-ce76f72d4646)
+## <a name="see-also"></a><span data-ttu-id="f6444-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6444-111">See Also</span></span>  
+ [<span data-ttu-id="f6444-112">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f6444-112">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="f6444-113">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="f6444-113">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [<span data-ttu-id="f6444-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="f6444-114">Samples</span></span>](http://msdn.microsoft.com/library/77500b07-de49-4fb7-93ee-ce76f72d4646)

@@ -20,64 +20,64 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltgcservergt-element"></a><span data-ttu-id="db5be-102">&lt;GcServer&gt; Element</span><span class="sxs-lookup"><span data-stu-id="db5be-102">&lt;gcServer&gt; Element</span></span>
-<span data-ttu-id="db5be-103">Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.</span><span class="sxs-lookup"><span data-stu-id="db5be-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
+# <a name="ltgcservergt-element"></a><span data-ttu-id="2ceea-102">&lt;GcServer&gt; Element</span><span class="sxs-lookup"><span data-stu-id="2ceea-102">&lt;gcServer&gt; Element</span></span>
+<span data-ttu-id="2ceea-103">Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.</span><span class="sxs-lookup"><span data-stu-id="2ceea-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
- <span data-ttu-id="db5be-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="db5be-104">\<configuration></span></span>  
-<span data-ttu-id="db5be-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="db5be-105">\<runtime></span></span>  
-<span data-ttu-id="db5be-106">\<GcServer ></span><span class="sxs-lookup"><span data-stu-id="db5be-106">\<gcServer></span></span>  
+ <span data-ttu-id="2ceea-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2ceea-104">\<configuration></span></span>  
+<span data-ttu-id="2ceea-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="2ceea-105">\<runtime></span></span>  
+<span data-ttu-id="2ceea-106">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="2ceea-106">\<gcServer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db5be-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="db5be-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ceea-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="2ceea-107">Syntax</span></span>  
   
 ```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="db5be-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="db5be-108">Attributes and Elements</span></span>  
- <span data-ttu-id="db5be-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="db5be-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2ceea-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="2ceea-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2ceea-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2ceea-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="db5be-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="db5be-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2ceea-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="2ceea-110">Attributes</span></span>  
   
-|<span data-ttu-id="db5be-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="db5be-111">Attribute</span></span>|<span data-ttu-id="db5be-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="db5be-112">Description</span></span>|  
+|<span data-ttu-id="2ceea-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="2ceea-111">Attribute</span></span>|<span data-ttu-id="2ceea-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2ceea-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="db5be-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="db5be-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="db5be-114">Gibt an, ob die Runtime die Garbage Collection auf dem Server ausführt.</span><span class="sxs-lookup"><span data-stu-id="db5be-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
+|`enabled`|<span data-ttu-id="2ceea-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="2ceea-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2ceea-114">Gibt an, ob die Runtime die Garbage Collection auf dem Server ausführt.</span><span class="sxs-lookup"><span data-stu-id="2ceea-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="db5be-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="db5be-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="2ceea-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="2ceea-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="db5be-116">Wert</span><span class="sxs-lookup"><span data-stu-id="db5be-116">Value</span></span>|<span data-ttu-id="db5be-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="db5be-117">Description</span></span>|  
+|<span data-ttu-id="2ceea-116">Wert</span><span class="sxs-lookup"><span data-stu-id="2ceea-116">Value</span></span>|<span data-ttu-id="2ceea-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2ceea-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="db5be-118">Die Garbage Collection wird nicht auf dem Server ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="db5be-118">Does not run server garbage collection.</span></span> <span data-ttu-id="db5be-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="db5be-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="db5be-120">Die Garbage Collection wird auf dem Server ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="db5be-120">Runs server garbage collection.</span></span>|  
+|`false`|<span data-ttu-id="2ceea-118">Die Garbage Collection wird nicht auf dem Server ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2ceea-118">Does not run server garbage collection.</span></span> <span data-ttu-id="2ceea-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="2ceea-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="2ceea-120">Die Garbage Collection wird auf dem Server ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2ceea-120">Runs server garbage collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="db5be-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="db5be-121">Child Elements</span></span>  
- <span data-ttu-id="db5be-122">Keine</span><span class="sxs-lookup"><span data-stu-id="db5be-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2ceea-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2ceea-121">Child Elements</span></span>  
+ <span data-ttu-id="2ceea-122">Keine</span><span class="sxs-lookup"><span data-stu-id="2ceea-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="db5be-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="db5be-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2ceea-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2ceea-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="db5be-124">Element</span><span class="sxs-lookup"><span data-stu-id="db5be-124">Element</span></span>|<span data-ttu-id="db5be-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="db5be-125">Description</span></span>|  
+|<span data-ttu-id="2ceea-124">Element</span><span class="sxs-lookup"><span data-stu-id="2ceea-124">Element</span></span>|<span data-ttu-id="2ceea-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2ceea-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="db5be-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="db5be-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="db5be-127">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="db5be-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="2ceea-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="2ceea-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="2ceea-127">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2ceea-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="db5be-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="db5be-128">Remarks</span></span>  
- <span data-ttu-id="db5be-129">Die Common Language Runtime (CLR) unterstützt zwei Arten der Garbage Collection: die Garbage Collection auf der Arbeitsstation, die auf allen Systemen verfügbar ist, und die Garbage Collection auf dem Server, die auf Systemen mit mehreren Prozessoren verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="db5be-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="db5be-130">Mit dem `<gcServer>`-Element steuern Sie die Art der von der CLR ausgeführten Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="db5be-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="db5be-131">Mithilfe der <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>-Eigenschaft können Sie bestimmen, ob die Garbage Collection auf dem Server aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="db5be-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ceea-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2ceea-128">Remarks</span></span>  
+ <span data-ttu-id="2ceea-129">Die Common Language Runtime (CLR) unterstützt zwei Arten der Garbage Collection: die Garbage Collection auf der Arbeitsstation, die auf allen Systemen verfügbar ist, und die Garbage Collection auf dem Server, die auf Systemen mit mehreren Prozessoren verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="2ceea-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="2ceea-130">Mit dem `<gcServer>`-Element steuern Sie die Art der von der CLR ausgeführten Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2ceea-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="2ceea-131">Mithilfe der <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>-Eigenschaft können Sie bestimmen, ob die Garbage Collection auf dem Server aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="2ceea-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- <span data-ttu-id="db5be-132">Für Computer mit einem Prozessor stellt die Garbage Collection auf der Arbeitsstation (Standardeinstellung) in der Regel die schnellste Lösung dar.</span><span class="sxs-lookup"><span data-stu-id="db5be-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="db5be-133">Auf Computern mit zwei Prozessoren kann die Arbeitsstation- oder die Serveroption verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="db5be-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="db5be-134">Sind mehr als zwei Prozessoren vorhanden, stellt die Garbage Collection auf dem Server in der Regel die schnellste Lösung dar.</span><span class="sxs-lookup"><span data-stu-id="db5be-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
+ <span data-ttu-id="2ceea-132">Für Computer mit einem Prozessor stellt die Garbage Collection auf der Arbeitsstation (Standardeinstellung) in der Regel die schnellste Lösung dar.</span><span class="sxs-lookup"><span data-stu-id="2ceea-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="2ceea-133">Auf Computern mit zwei Prozessoren kann die Arbeitsstation- oder die Serveroption verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2ceea-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="2ceea-134">Sind mehr als zwei Prozessoren vorhanden, stellt die Garbage Collection auf dem Server in der Regel die schnellste Lösung dar.</span><span class="sxs-lookup"><span data-stu-id="2ceea-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- <span data-ttu-id="db5be-135">Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden. Wenn es in der Computerkonfigurationsdatei enthalten ist, wird es ignoriert.</span><span class="sxs-lookup"><span data-stu-id="db5be-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
+ <span data-ttu-id="2ceea-135">Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden. Wenn es in der Computerkonfigurationsdatei enthalten ist, wird es ignoriert.</span><span class="sxs-lookup"><span data-stu-id="2ceea-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="db5be-136">In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="db5be-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="db5be-137">Ab [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] erfolgt die Garbage Collection auf dem Server gleichzeitig.</span><span class="sxs-lookup"><span data-stu-id="db5be-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="db5be-138">Um Garbagecollection für Server nicht gleichzeitig zu verwenden, legen die `<gcServer>` Element `true` und [ \<GcConcurrent > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) auf `false`.</span><span class="sxs-lookup"><span data-stu-id="db5be-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
+>  <span data-ttu-id="2ceea-136">In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="2ceea-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="2ceea-137">Ab [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] erfolgt die Garbage Collection auf dem Server gleichzeitig.</span><span class="sxs-lookup"><span data-stu-id="2ceea-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="2ceea-138">Um Garbagecollection für Server nicht gleichzeitig zu verwenden, legen die `<gcServer>` Element `true` und [ \<GcConcurrent > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) auf `false`.</span><span class="sxs-lookup"><span data-stu-id="2ceea-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db5be-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="db5be-139">Example</span></span>  
- <span data-ttu-id="db5be-140">Im folgenden Beispiel wird die Garbage Collection auf dem Server aktiviert.</span><span class="sxs-lookup"><span data-stu-id="db5be-140">The following example enables server garbage collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="2ceea-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2ceea-139">Example</span></span>  
+ <span data-ttu-id="2ceea-140">Im folgenden Beispiel wird die Garbage Collection auf dem Server aktiviert.</span><span class="sxs-lookup"><span data-stu-id="2ceea-140">The following example enables server garbage collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,8 +87,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="db5be-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="db5be-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2ceea-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ceea-141">See Also</span></span>  
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="db5be-142">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="db5be-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="db5be-143">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="db5be-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="db5be-144">Vorgehensweise: Deaktivieren der gleichzeitigen Garbagecollection</span><span class="sxs-lookup"><span data-stu-id="db5be-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [<span data-ttu-id="2ceea-142">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="2ceea-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="2ceea-143">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="2ceea-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="2ceea-144">Vorgehensweise: Deaktivieren der gleichzeitigen Garbagecollection</span><span class="sxs-lookup"><span data-stu-id="2ceea-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
