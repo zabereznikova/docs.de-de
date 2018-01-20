@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
 Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version einer Assembly verwenden soll, indem Sie z. B. eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly. Die Herausgeberrichtliniendatei gibt Assemblyumleitung und CodeBase-Einstellungen Code und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache platziert.  
@@ -72,7 +72,7 @@ Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version e
   
     -   Die *PublisherPolicyAssemblyFile* -Argument ist der Name der Herausgeberrichtlinienassembly an, die durch diesen Befehl entsteht. Der Dateiname der Assembly muss Folgendes Format aufweisen:  
   
-         **Richtlinie.** *MajorNumber* **.** *MinorNumber* **.** *MainAssemblyName* **DLL**  
+         **Richtlinie.** *MajorNumber* **.** *MinorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   Die *KeyPairFile* -Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly und die Herausgeberrichtlinienassembly mit dem gleichen Schlüsselpaar anmelden.  
   
@@ -100,7 +100,7 @@ Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version e
   
 1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
   
-     **Gacutil/i***PublisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Der folgende Befehl fügt `policy.1.0.myAssembly.dll` im globalen Assemblycache.  
   
@@ -115,7 +115,7 @@ Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version e
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)  
- [Konfigurieren von .NET Framework-Apps](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Konfigurieren von .NET Framework-Apps](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

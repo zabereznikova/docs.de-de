@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein Add-in zu erstellen, das einfachen Rechnerfunktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen stellt es die grundlegende Funktionalität eines einer Pipeline und wie ein Add-in Dienste für einen Host bereitstellen kann.  
@@ -52,11 +52,11 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
   
 -   Die hostanwendung wird ausgeführt.  
   
- Diese Pipeline übergibt nur serialisierbare Typen (<xref:System.Double> und <xref:System.String>), zwischen dem Host und das Add-in. Ein Beispiel, das zeigt, wie Auflistungen von komplexen Datentypen übergeben werden, finden Sie unter [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Diese Pipeline übergibt nur serialisierbare Typen (<xref:System.Double> und <xref:System.String>), zwischen dem Host und das Add-in. Ein Beispiel, das zeigt, wie Auflistungen von komplexen Datentypen übergeben werden, finden Sie unter [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Der Vertrag für diese Pipeline definiert ein Objektmodell aus vier arithmetischen Operationen: hinzufügen, subtrahieren, Multiplizieren und Dividieren. Der Host stellt das Add-in mit einer Formel zum Berechnen, wie z. B. 2 + 2, und das Add-in gibt das Ergebnis an den Host zurück.  
   
- Version 2 des Rechner-add-Ins bietet mehr berechnen Möglichkeiten und versionsverwaltung veranschaulicht. Es wird beschrieben, [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host Änderungen](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Version 2 des Rechner-add-Ins bietet mehr berechnen Möglichkeiten und versionsverwaltung veranschaulicht. Es wird beschrieben, [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host Änderungen](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für diese exemplarische Vorgehensweise wird Folgendes benötigt:  
@@ -73,7 +73,7 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
 2.  Nennen Sie die Projektmappe `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Erstellen der Pipelineverzeichnisstruktur  
- Das Add-In Modell erfordert, dass die Pipeline Segment Assemblys in einer angegebenen Verzeichnisstruktur platziert werden. Weitere Informationen über die Pipelinestruktur finden Sie unter [Pipelineentwicklung](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Das Add-In Modell erfordert, dass die Pipeline Segment Assemblys in einer angegebenen Verzeichnisstruktur platziert werden. Weitere Informationen über die Pipelinestruktur finden Sie unter [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Zum Erstellen der Pipeline-Verzeichnisstruktur  
   
@@ -92,10 +92,10 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
       HostSideAdapters  
     ```  
   
-     Es ist nicht erforderlich, platzieren die Ordnerstruktur für die Pipeline in Ihrem Anwendungsordner; Dies erfolgt hier nur zur Vereinfachung für. Den entsprechenden Schritt wird die exemplarischen Vorgehensweise erläutert, wie den Code ändern, wenn die Ordnerstruktur für die Pipeline an einem anderen Speicherort. Finden Sie in den Ausführungen des Pipeline-Directory-Anforderungen in [Pipelineentwicklung](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Es ist nicht erforderlich, platzieren die Ordnerstruktur für die Pipeline in Ihrem Anwendungsordner; Dies erfolgt hier nur zur Vereinfachung für. Den entsprechenden Schritt wird die exemplarischen Vorgehensweise erläutert, wie den Code ändern, wenn die Ordnerstruktur für die Pipeline an einem anderen Speicherort. Finden Sie in den Ausführungen des Pipeline-Directory-Anforderungen in [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  Die `CalcV2` Ordner wird in dieser exemplarischen Vorgehensweise nicht verwendet; es ist ein Platzhalter für [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host Änderungen](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  Die `CalcV2` Ordner wird in dieser exemplarischen Vorgehensweise nicht verwendet; es ist ein Platzhalter für [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host Änderungen](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Der Vertrag und Ansichten werden erstellt  
  Das Vertragssegment für diese Pipeline definiert die `ICalc1Contract` -Schnittstelle, die vier Methoden definiert: `add`, `subtract`, `multiply`, und `divide`.  
@@ -204,7 +204,7 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
   
  In dieser Pipeline bietet das Add-in einen Dienst auf dem Host und den Fluss von Typen aus dem Add-in auf dem Host. Da keine Typen vom Host für die Add-in übergeben, müssen Sie keinen Ansicht zu Vertrag-Adapter enthalten.  
   
- Verwenden Sie zum Implementieren der Verwaltung der Lebensdauer einer <xref:System.AddIn.Pipeline.ContractHandle> ein Lebensdauertoken der Vertrag anzufügende Objekt. Sie müssen einen Verweis auf dieses Handle in der Reihenfolge für die Verwaltung der Objektlebensdauer zu behalten. Nachdem das Token angewendet wird, ist keine zusätzliche Programmierung erforderlich, da das Add-in-System Objekte freigeben kann, wenn sie nicht mehr verwendet werden und für die Garbagecollection zur Verfügung stellen. Weitere Informationen finden Sie unter [Verwaltung der Lebensdauer](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Verwenden Sie zum Implementieren der Verwaltung der Lebensdauer einer <xref:System.AddIn.Pipeline.ContractHandle> ein Lebensdauertoken der Vertrag anzufügende Objekt. Sie müssen einen Verweis auf dieses Handle in der Reihenfolge für die Verwaltung der Objektlebensdauer zu behalten. Nachdem das Token angewendet wird, ist keine zusätzliche Programmierung erforderlich, da das Add-in-System Objekte freigeben kann, wenn sie nicht mehr verwendet werden und für die Garbagecollection zur Verfügung stellen. Weitere Informationen finden Sie unter [Lebenszeitverwaltung](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>So erstellen Sie die hostseitige adapter  
   
@@ -334,12 +334,12 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
     |Calc1AddInSideAdapter|MyApp\Pipeline\AddInSideAdapters|  
     |Calc1AddInView|MyApp\Pipeline\AddInViews|  
     |Calc1Contract|MyApp\Pipeline\Contracts|  
-    |Calc1Host|"MyApp"|  
+    |Calc1Host|MyApp|  
     |Calc1HostSideAdapter|MyApp\Pipeline\HostSideAdapters|  
-    |Calc1HVA|"MyApp"|  
+    |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  Wenn Sie sich entschieden, die Ordnerstruktur für die Pipeline in einem anderen Speicherort als den Anwendungsordner, müssen Sie die Pfade in der Tabelle aufgeführt sind, entsprechend ändern. Finden Sie in den Ausführungen des Pipeline-Directory-Anforderungen in [Pipelineentwicklung](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Wenn Sie sich entschieden, die Ordnerstruktur für die Pipeline in einem anderen Speicherort als den Anwendungsordner, müssen Sie die Pfade in der Tabelle aufgeführt sind, entsprechend ändern. Finden Sie in den Ausführungen des Pipeline-Directory-Anforderungen in [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Erstellen Sie die Visual Studio-Projektmappe.  
   
@@ -348,7 +348,7 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
     > [!NOTE]
     >  Wenn Sie nicht geändert hat **lokale Kopie** auf **"false"** für die `Calc1AddInView` Projektverweise in der `AddInCalcV1` Projekt Ladeprogramm Kontext Probleme verhindert das Add-in befindlich.  
   
-     Informationen zur Bereitstellung in der Pipeline finden Sie unter [Pipelineentwicklung](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Informationen zur Bereitstellung in der Pipeline finden Sie unter [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Ausführen der Hostanwendung  
  Sie können nun den Host ausführen und interagieren mit dem Add-in.  
@@ -364,8 +364,8 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
 4.  Typ **beenden** , und drücken Sie die **EINGABETASTE** Taste, um die Anwendung zu schließen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als die Host-Änderungen](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Pipelineentwicklung](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Verträge, Ansichten und Adapter](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als die Host-Änderungen](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Verträge, Ansichten und Adapter](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Pipelineentwicklung](../../../docs/framework/add-ins/pipeline-development.md)

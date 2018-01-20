@@ -33,11 +33,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 283faabf0f23df2650f8d87fdebae1102b83235d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Konfigurationsdateischema für .NET Framework
 
@@ -86,10 +86,10 @@ Informationen über die Typen, das Format und den Speicherort der Konfigurations
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Remoting Settings Schema (Schema für die Remoteeinstellungen)](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e): Beschreibt die Elemente, mit denen Client- und Serveranwendungen konfiguriert werden, die Remotefunktionen implementieren.
+[Remoting Settings Schema (Schema für die Remoteeinstellungen)](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e): Beschreibt die Elemente, mit denen Client- und Serveranwendungen konfiguriert werden, die Remotefunktionen implementieren.
 
 [ASP.NET Settings Schema (Schema für die ASP.NET-Einstellungen)](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx): Beschreibt die Elemente, die das Verhalten von ASP.NET-Webanwendungen steuern.
 
-[Web Services Settings Schema (Schema für die Webdiensteinstellungen)](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e): Das Einstellungsschema für Webdienste definiert Konfigurationsdateielemente, die das Verhalten von ASP.NET-Webdiensten und deren Clients steuern.
+[Web Services Settings Schema (Schema für die Webdiensteinstellungen)](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e): Das Einstellungsschema für Webdienste definiert Konfigurationsdateielemente, die das Verhalten von ASP.NET-Webdiensten und deren Clients steuern.
 
-[Configuring .NET Framework Apps (Konfigurieren von .NET Framework-Apps)](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42): Beschreibt, wie Sicherheit, Assemblybindung und Remotefunktionen in .NET Framework konfiguriert werden.
+[Configuring .NET Framework Apps (Konfigurieren von .NET Framework-Apps)](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42): Beschreibt, wie Sicherheit, Assemblybindung und Remotefunktionen in .NET Framework konfiguriert werden.

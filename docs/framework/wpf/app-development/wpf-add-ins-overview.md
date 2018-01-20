@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] beinhaltet ein Add-In-Modell, mit dem Entwickler Anwendungen erstellen können, die Add-In-Erweiterbarkeit unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie durch [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] erweitert wird, um diese Szenarien sowie die zugrunde liegende Architektur, die Vorteile und die Einschränkungen zu ermöglichen.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Hat die <xref:System.SerializableAttribute> Attribut angewendet.  
   
 > [!NOTE]
->  Weitere Informationen über das Erstellen von remotefähigen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten finden Sie unter [Erstellen remotefähiger Objekte](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Weitere Informationen über das Erstellen von remotefähigen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten finden Sie unter [Erstellen remotefähiger Objekte](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Typen von [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sind nicht remotefähig. Um das Problem zu beheben, erweitert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], damit die durch Add-Ins erstellte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von Hostanwendungen angezeigt werden kann. Diese Unterstützung wird durch bereitgestellt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] durch zwei Arten: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem Sie die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md)  
  [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)  
- [Übersicht über .NET Framework-Remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Machen Objekte remotefähig](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [Übersicht über .NET Framework-Remoting](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Machen Objekte remotefähig](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/how-to-topics.md)

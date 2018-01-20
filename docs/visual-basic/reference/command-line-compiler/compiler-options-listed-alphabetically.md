@@ -11,11 +11,11 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92678a09f9b4dd9f35f4f5c0e5ecb00385b703d1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
 Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Es folgt eine Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilen-Compileroptionen (alphabetisch sortiert).  
@@ -42,7 +42,7 @@ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet ein
 |[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importiert einen Namespace aus einer angegebenen Assembly.|  
 |[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
 |[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Sprachversion angeben: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Gibt den Speicherort der Assemblys, auf die verwiesen wird durch die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) Option.|  
 |[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Erstellt einen Link zu einer verwalteten Ressource.|  
 |[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse enthält die `Sub Main` Prozedur beim Start verwendet.|  
@@ -83,6 +83,6 @@ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet ein
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Compileroptionen nach Kategorien sortiert](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [Introduction to the Project Designer (Einführung in den Projekt-Designer)](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introduction to the Project Designer (Einführung in den Projekt-Designer)](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)

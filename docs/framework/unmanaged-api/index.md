@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
@@ -31,7 +31,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  [Allgemeine Datentypen](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
  Führt häufig verwendete Datentypen auf, im Besonderen für unverwaltete Profilerstellungs- und Debug-APIs.  
   
- [ALink-Tool](../../../docs/framework/unmanaged-api/alink/index.md)  
+ [ALink](../../../docs/framework/unmanaged-api/alink/index.md)  
  Beschreibt die ALink-API, die die Erstellung von .NET Framework-Assemblys und ungebundenen Modulen unterstützt.  
   
  [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
@@ -40,7 +40,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  [Konstanten](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Beschreibt die Konstanten, die in CorSym.idl definiert werden.  
   
- [Benutzerdefinierte Schnittstellenattribute](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Benutzerdefinierte Schnittstellenattribute](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Beschreibt benutzerdefinierte Schnittstellenattribute des Component Object Model (COM).  
   
  [Debuggen](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
   
- [Weiterführende Informationen zu .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Weiterführende Informationen zu .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

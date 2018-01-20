@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Diese Funktion sorgt dafür, dass der gesamte Prozess mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist, d. h. alle zum Prozess gehörenden Fenster werden nicht skaliert. Im [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)befinden sich die vier Fenster, die das hervorgehobene Rechteck bilden, z. B. an den physischen Koordinaten, die von der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]abgerufen werden, und nicht an den logischen Koordinaten. Wenn das Beispiel nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop dargestellt werden, was zu einer falschen Platzierung in einer Nicht-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] -Umgebung führen würde.  
+     Diese Funktion sorgt dafür, dass der gesamte Prozess mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist, d. h. alle zum Prozess gehörenden Fenster werden nicht skaliert. In der [Hervorhebung Beispiel](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), befinden sich beispielsweise die vier Fenster, die das hervorgehobene Rechteck bilden an den physischen Koordinaten abgerufenes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], nicht den logischen Koordinaten. Wenn das Beispiel nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop dargestellt werden, was zu einer falschen Platzierung in einer Nicht-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] -Umgebung führen würde.  
   
 2.  Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Wenn Ihre Anwendung eine direkte prozessübergreifende Kommunikation mit nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatiblen Anwendungen unterhält, müssen Sie mithilfe der [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktionen `PhysicalToLogicalPoint` und `LogicalToPhysicalPoint`möglicherweise zwischen logischen und physischen Koordinaten konvertieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Hervorhebung-Beispiel](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

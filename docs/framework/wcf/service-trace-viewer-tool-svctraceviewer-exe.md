@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-Tool hilft Ihnen beim Analysieren von Diagnoseablaufverfolgungen, die von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generiert werden. Service Trace Viewer ermöglicht das einfache Zusammenführen, Anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, sodass Sie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstprobleme diagnostizieren, beheben und überprüfen können.  
@@ -421,7 +421,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
 |![Aktivitätsstopp-Ablaufverfolgung](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Aktivitätsstopp-Ablaufverfolgung: Eine Ablaufverfolgung, die das Ende einer Aktivität markiert. sein. Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstopp-Ablaufverfolgung pro Aktivitäts-ID und Ablaufverfolgungsquelle definieren. Es werden keine Ablaufverfolgungen von einer bestimmten Ablaufverfolgungsquelle angezeigt, nachdem die Ablaufverfolgungsquelle einen Aktivitätsstopp ausgegeben hat, es sei denn, die Ablaufverfolgungszeit weist eine grobe Granularität auf. Ist das der Fall, überlappen sich zwei Ablaufverfolgungen mit der gleichen Zeit, einschließlich eines Stopps, möglicherweise bei der Anzeige. Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Stopps für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Stoppablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Aktivität anhalten-Ablaufverfolgung](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Aktivität anhalten-Ablaufverfolgung: Eine Ablaufverfolgung, die markiert, wann eine Aktivität angehalten wurde. Es werden erst Ablaufverfolgungen in einer angehaltenen Aktivität ausgegeben, wenn die Aktivität fortgesetzt wird. Eine angehaltene Aktivität gibt an, dass keine Verarbeitungen in dieser Aktivität im Bereich der Ablaufverfolgungsquelle stattfinden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Anhalten-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Aktivität fortsetzen-Ablaufverfolgung](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Aktivität fortsetzen-Ablaufverfolgung: Eine Ablaufverfolgung, die die Zeit markiert, zu der eine Aktivität nach dem Anhalten wieder fortgesetzt wird. Ablaufverfolgungen können in dieser Aktivität möglicherweise erneut ausgegeben werden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Fortsetzen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
-|![Übertragen Sie](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Übertragen von](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Übertragung von: Eine Ablaufverfolgung, die eine Übertragung von einer anderen Aktivität zur aktuellen Aktivität definiert.|  
 |![Übertragen auf](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Übertragung an: Eine Ablaufverfolgung, die eine Übertragung der logischen Ablaufsteuerung von der aktuellen Aktivität auf eine andere definiert.|  
   
@@ -437,7 +437,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
   
 |Symbol|Beschreibung|  
 |----------|-----------------|  
-|![Aktivität](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "Wcfc_defaultActivityc")|Aktivität: Gibt an, dass die aktuelle Aktivität eine generische Aktivität ist.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Aktivität: Gibt an, dass die aktuelle Aktivität eine generische Aktivität ist.|  
 |![Stammaktivität](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Stammaktivität: Gibt die Stammaktivität eines Prozesses an.|  
   
 ### <a name="wcf-activities"></a>WCF-Aktivitäten  
@@ -463,4 +463,4 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
 ## <a name="see-also"></a>Siehe auch  
  [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Aktivitätsablaufverfolgung und Weitergabe für die End-To-End-Ablaufverfolgungskorrelation](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Aktivitätsablaufverfolgung und Weitergabe für die End-To-End-Ablaufverfolgungskorrelation](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
