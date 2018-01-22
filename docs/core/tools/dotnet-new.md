@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ Die Vorlage, die instanziiert werden soll, wenn der Befehl aufgerufen wird. Jede
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. Die folgende Tabelle zeigt die Vorlagen, die bereits mit dem .NET Core 2.0 SDK vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-|Vorlagenbeschreibung                          | Vorlagenname  | Sprachen     |
-|----------------------------------------------|----------------|---------------|
-| Konsolenanwendung                          | Konsole        | [C#], F#, VB  |
-| Klassenbibliothek                                | classlib       | [C#], F#, VB  |
-| Unittestprojekt                            | mstest         | [C#], F#, VB  |
-| xUnit-Testprojekt                           | xunit          | [C#], F#, VB  |
-| ASP.NET Core leer                           | Web            | [C#], F#      |
-| ASP.NET Core-Web-App (Model-View-Controller) | MVC            | [C#], F#      |
-| ASP.NET Core-Web-App                         | razor          | [C#]          |
-| ASP.NET Core mit Angular                    | angular        | [C#]          |
-| ASP.NET Core mit React.js                   | react          | [C#]          |
-| ASP.NET Core mit React.js und Redux         | reactredux     | [C#]          |
-| ASP.NET Core-Web-API                         | Web-API         | [C#], F#      |
-| global.json-Datei                             | globaljson     |               |
-| NuGet-Konfiguration                                 | nugetconfig    |               |
-| Web-Konfiguration                                   | webconfig      |               |
-| Projektmappendatei                                | sln            |               |
-| Seite „Razor“                                   | Seite           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|Vorlagenbeschreibung                          | Vorlagenname | Sprachen     |
+|----------------------------------------------|---------------|---------------|
+| Konsolenanwendung                          | `console`     | [C#], F#, VB  |
+| Klassenbibliothek                                | `classlib`    | [C#], F#, VB  |
+| Unittestprojekt                            | `mstest`      | [C#], F#, VB  |
+| xUnit-Testprojekt                           | `xunit`       | [C#], F#, VB  |
+| ASP.NET Core leer                           | `web`         | [C#], F#      |
+| ASP.NET Core-Web-App (Model-View-Controller) | `mvc`         | [C#], F#      |
+| ASP.NET Core-Web-App                         | `razor`       | [C#]          |
+| ASP.NET Core mit Angular                    | `angular`     | [C#]          |
+| ASP.NET Core mit React.js                   | `react`       | [C#]          |
+| ASP.NET Core mit React.js und Redux         | `reactredux`  | [C#]          |
+| ASP.NET Core-Web-API                         | `webapi`      | [C#], F#      |
+| global.json-Datei                             | `globaljson`  |               |
+| NuGet-Konfiguration                                 | `nugetconfig` |               |
+| Web-Konfiguration                                   | `webconfig`   |               |
+| Projektmappendatei                                | `sln`         |               |
+| Seite „Razor“                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -all`, um eine Liste der verfügbaren Vorlagen abzurufen. Die folgende Tabelle zeigt die Vorlagen, die bereits mit dem .NET Core 1.x SDK vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-|Vorlagenbeschreibung  | Vorlagenname  | Sprachen |
-|----------------------|----------------|-----------|
-| Konsolenanwendung  | Konsole        | [C#], F#  |
-| Klassenbibliothek        | classlib       | [C#], F#  |
-| Unittestprojekt    | mstest         | [C#], F#  |
-| xUnit-Testprojekt   | xunit          | [C#], F#  |
-| ASP.NET Core leer   | Web            | [C#]      |
-| ASP.NET Core-Web-App | MVC            | [C#], F#  |
-| ASP.NET Core-Web-API | Web-API         | [C#]      |
-| NuGet-Konfiguration         | nugetconfig    |           |
-| Web-Konfiguration           | webconfig      |           |
-| Projektmappendatei        | sln            |           |
+|Vorlagenbeschreibung  | Vorlagenname | Sprachen |
+|----------------------|---------------|-----------|
+| Konsolenanwendung  | `console`     | [C#], F#  |
+| Klassenbibliothek        | `classlib`    | [C#], F#  |
+| Unittestprojekt    | `mstest`      | [C#], F#  |
+| xUnit-Testprojekt   | `xunit`       | [C#], F#  |
+| ASP.NET Core leer   | `web`         | [C#]      |
+| ASP.NET Core-Web-App | `mvc`         | [C#], F#  |
+| ASP.NET Core-Web-API | `webapi`      | [C#]      |
+| NuGet-Konfiguration         | `nugetconfig` |           |
+| Web-Konfiguration           | `webconfig`   |           |
+| Projektmappendatei        | `sln`         |           |
 
 ---
 

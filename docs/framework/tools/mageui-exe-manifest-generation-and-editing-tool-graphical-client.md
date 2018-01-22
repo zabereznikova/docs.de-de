@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 "MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -138,7 +138,7 @@ ms.lasthandoff: 12/22/2017
   
 |Benutzeroberflächenelement|description|  
 |----------------|-----------------|  
-|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [NIB: Benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [NIB: Benannte Berechtigungssätze](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Details**|Die für das Anwendungsmanifest erstellte XML-Datei zum Darstellen des Berechtigungssatzes. Sie sollten diesen XML-Code nicht manuell bearbeiten, sofern Sie nicht mit dem XML-Format des Anwendungsmanifests vertraut sind. Weitere Informationen finden Sie unter [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  
