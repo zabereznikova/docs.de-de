@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Technologiebeispiel für die Generikaserialisierung in Webdiensten
 [Beispiel herunterladen](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -73,11 +73,11 @@ ms.lasthandoff: 12/23/2017
 2.  Geben Sie **http://localhost/[virtuelles Verzeichnis]/Service.asmx** ein, wobei [virtuelles Verzeichnis] das virtuelle Verzeichnis darstellt, das Sie beim Erstellen des Beispiels angelegt haben.  
   
 ## <a name="remarks"></a>Hinweise  
- Im Beispiel wird eine Standard-ASP.NET-Seite angezeigt, die Links zur Definition des Webdiensts enthält. Sie können den Quellcode für den Webdienst ändern und zusätzlich die Anzeige anpassen. Weitere Informationen finden Sie unter [Erstellen von XML-Webdienstclients](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Im Beispiel wird eine Standard-ASP.NET-Seite angezeigt, die Links zur Definition des Webdiensts enthält. Sie können den Quellcode für den Webdienst ändern und zusätzlich die Anzeige anpassen. Weitere Informationen finden Sie unter [Erstellen von XML-Webdienstclients](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serialisierung](../../../docs/standard/serialization/index.md)  
- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)
+ [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

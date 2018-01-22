@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Sicherheit in Windows Forms
 Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festgelegte Ebenen für Code kann unabhängig von der Benutzer, den Code ausführt, ist. Dies erfolgt zusätzlich zu Sicherheit Schemas, die bereits auf Ihrem Computer vorhanden sein können. Diese können in den Browser (z. B. die Zone-basierte Sicherheit in Internet Explorer verfügbar) oder des Betriebssystems (z. B. die Anmeldeinformationen-basierte Sicherheit von Windows NT) umfassen.  
@@ -44,10 +44,10 @@ Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festg
  Beschreibt Fenstern, verwenden der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer teilweise vertrauenswürdigen Umgebung.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [NIB: Standardsicherheitsrichtlinie](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB: Standardsicherheitsrichtlinie](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  Listet die Standardberechtigungen, die in die volle Vertrauenswürdigkeit, Lokales Intranet und Internet Berechtigungssätze gewährt.  
   
- [NIB: Allgemein Security Policy-Verwaltung](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB: Allgemein Security Policy-Verwaltung](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  Bietet Informationen zum Verwalten von der .NET Framework-Sicherheitsrichtlinie und erhöhen von Berechtigungen.  
   
  [Problematische Berechtigungen und richtlinienverwaltung](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festg
  [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)  
  Enthält Links zu Themen, in denen die bewährten Methoden zum Schreiben von sicheren Code für .NET Framework.  
   
- [NIB: Anfordern von Berechtigungen](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB: Anfordern von Berechtigungen](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  Erläutert die Verwendung von Attributen, die der Laufzeit wissen, welche Berechtigungen Code ausgeführt werden muss.  
   
  [Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festg
  [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md)  
  Erläutert die Grundlagen der Arbeit mit .NET Framework Sicherheitsrichtlinie von Zeit ausführen.  
   
- [NIB: Bestimmen des Zeitpunkts für die Sicherheitsrichtlinien ändern](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB: Bestimmen des Zeitpunkts für die Sicherheitsrichtlinien ändern](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  Erläutert, wie Sie feststellen, wann Ihre Anwendungen von der Standardsicherheitsrichtlinie voneinander abweichen müssen.  
   
- [NIB: Bereitstellen von Sicherheitsrichtlinien](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB: Bereitstellen von Sicherheitsrichtlinien](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  Erläutert die beste Art und Weise zum Bereitstellen von Änderungen von Sicherheitsrichtlinien an.

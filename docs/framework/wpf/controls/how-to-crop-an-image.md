@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 084e3dc7fad2bcb3b7ab787302f55c824ff3739d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11f5b280635d2fe7b83d8c4496606ed02bc44149
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-crop-an-image"></a>Gewusst wie: Zuschneiden eines Bilds
 In diesem Beispiel wird gezeigt, wie ein Bild mit einzubeziehende <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>wird in erster Linie verwendet, wenn eine zugeschnittene Version eines Bilds Codierung out in eine Datei zu speichern. Zum Zuschneiden eines Bilds zu Anzeigezwecken finden Sie die [Erstellen eines Clippingbereichs](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) Thema.  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap>wird in erster Linie verwendet, wenn eine zugeschnittene Version eines Bilds Codierung out in eine Datei zu speichern. Zum Zuschneiden eines Bilds zu Anzeigezwecken finden Sie die [Erstellen eines Clippingbereichs](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) Thema.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Ressourcen in den Beispielen unten definiert.  
@@ -51,4 +51,4 @@ In diesem Beispiel wird gezeigt, wie ein Bild mit einzubeziehende <xref:System.W
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Clippingbereichs](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+ [Erstellen eines Clippingbereichs](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)

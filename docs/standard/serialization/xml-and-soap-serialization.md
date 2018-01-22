@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>XML- und SOAP-Serialisierung
 Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften eines Objekts bzw. die Parameter und Rückgabewerte von Methoden in einen XML-Stream konvertiert (serialisiert), der einem bestimmtem XSD (XML Schema Definition)-Dokument entspricht. Die XML-Serialisierung führt zu stark typisierten Klassen mit öffentlichen Eigenschaften und Feldern, die in ein serielles Format (hier XML) konvertiert werden.  
@@ -93,10 +93,10 @@ Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften ein
  Fügt Typen hinzu, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse verwendet werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Advanced Development Technologies (Erweiterte Entwicklungstechnologien)](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [Advanced Development Technologies (Erweiterte Entwicklungstechnologien)](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Enthält Links zu weiteren Informationen über anspruchsvolle Aufgaben und Verfahren für die Entwicklung in .NET&#160;Framework.  
   
- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Stellt Themen bereit, in denen beschrieben und erklärt wird, wie XML-Webdienste mit ASP.NET programmiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  

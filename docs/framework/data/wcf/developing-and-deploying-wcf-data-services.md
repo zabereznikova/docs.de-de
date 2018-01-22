@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Weitere grundlegende Informationen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], finden Sie unter [Einstieg](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) und [Übersicht](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -63,7 +63,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
     -   Auf diesen Server kann nur auf dem lokalen Computer zugegriffen werden.  
   
-    -   Dieser Server lauscht an `localhost` und an einem bestimmten Anschluss auf Nachrichten, nicht an Anschluss 80, dem Standardanschluss für HTTP-Nachrichten. Weitere Informationen finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+    -   Dieser Server lauscht an `localhost` und an einem bestimmten Anschluss auf Nachrichten, nicht an Anschluss 80, dem Standardanschluss für HTTP-Nachrichten. Weitere Informationen finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
     -   Dieser Server führt den Datendienst im Kontext Ihres aktuellen Benutzerkontos aus. Wenn Sie z. B. als Administrator angemeldet sind, verfügt ein auf dem [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server ausgeführter Datendienst über Administratorrechte. Dies kann dazu führen, dass der Datendienst auf Ressourcen zugreifen kann, für die er bei der Bereitstellung auf einem IIS-Server keine Zugriffsrechte besitzt.  
   
@@ -89,7 +89,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
 -   Beim Debuggen eines Datendiensts möchten Sie möglicherweise mehr Informationen zu einem Fehler vom Datendienst erhalten als während der normalen Ausführung. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] im Beitrag [Debuggen von WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). Sie können auch die Ablaufverfolgung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktivieren, um in der HTTP-Messagingebene ausgelöste Ausnahmen anzuzeigen. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Ein Datendienst wird normalerweise als [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendungsprojekt entwickelt, Sie können den Datendienst in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jedoch auch als [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Websiteprojekt erstellen. Informationen über die Unterschiede zwischen den zwei Projekttypen finden Sie unter [NIB: Vergleich von Webanwendungsprojekten und Websiteprojekten in Visual Studio](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Ein Datendienst wird normalerweise als [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendungsprojekt entwickelt, Sie können den Datendienst in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jedoch auch als [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Websiteprojekt erstellen. Informationen zu den Unterschieden zwischen den beiden Typen von Projekten finden Sie unter [NIB: Webanwendungsprojekten und Websiteprojekten in Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
 -   Wenn Sie einen Datendienst mithilfe des Dialogfelds **Neues Element hinzufügen** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]erstellen, wird der Datendienst von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS gehostet. Dies ( [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] und IIS) ist zwar der Standardhost für einen Datendienst, es werden jedoch auch andere Hostingoptionen unterstützt. Weitere Informationen finden Sie unter [Hosting des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
@@ -102,9 +102,9 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
     -   **Bereitstellungstechnologien für ASP.NET-Webanwendungen**  
   
-        -   [Webbereitstellungspaket](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [Webbereitstellungspaket](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [One-Click-Veröffentlichung](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [One-Click-Veröffentlichung](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **Bereitstellungstechnologien für ASP.NET-Websites**  
   
@@ -114,7 +114,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu den Bereitstellungsoptionen für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung finden Sie unter [Übersicht über die Bereitstellung von Webanwendungsprojekten für Visual Studio und ASP.NET](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Bereitstellungsoptionen für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung finden Sie unter [Bereitstellungsübersicht für Visual Studio und ASP.NET Web](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
@@ -126,7 +126,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung  
  Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:  
   
--   Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] kann zu diesem Zweck automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, die in das Webbereitstellungspaket einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung eingeschlossen werden können. Weitere Informationen finden Sie unter [NIB: Gewusst wie: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Bei einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Website kann für diese Aufgabe der **Datenbankveröffentlichungs-Assistent** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]verwendet werden. Weitere Informationen finden Sie unter [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] kann zu diesem Zweck automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, die in das Webbereitstellungspaket einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung eingeschlossen werden können. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Bei einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Website kann für diese Aufgabe der **Datenbankveröffentlichungs-Assistent** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]verwendet werden. Weitere Informationen finden Sie unter [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] eine einfache [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen unter IIS bereitgestellten Datendienst unter Windows Server zu überwachen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] das Überwachen eines Datendiensts mit Windows Server AppFabric finden Sie im Beitrag [Nachverfolgung von WCF Data Services mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

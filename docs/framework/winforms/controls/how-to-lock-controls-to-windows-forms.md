@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a0bd0f8dcde95dcbb5ef8fcf398256b6931859c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f5cd70e71a4a8bc48a3240055117dadc1086a50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Gewusst wie: Sperren von Steuerelementen für Windows Forms
 Wenn Sie die Benutzeroberfläche (UI) von der Windows-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie ordnungsgemäß positioniert sind, sodass Sie nicht versehentlich verschieben oder deren Größe ändern, wenn Sie andere Eigenschaften festlegen.  
@@ -29,7 +29,7 @@ Wenn Sie die Benutzeroberfläche (UI) von der Windows-Anwendung entwerfen, könn
  Darüber hinaus können Sie sperren und entsperren Sie alle Steuerelemente im Formular gleichzeitig, was für Formulare mit vielen Steuerelementen hilfreich ist, oder Sie einzelne Steuerelemente entsperren. Nachdem Sie alle Steuerelemente platziert haben, möchten Sie sie auf dem Formular, Sperren Sie diese um fehlerhafte Bewegung zu verhindern.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-lock-a-control"></a>So sperren Sie ein Steuerelement  
   

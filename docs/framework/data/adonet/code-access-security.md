@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2181682fcdf0468a978dd939dbbcbb4a18cdd38b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/17/2018
  Die CLR ermöglicht es Code, nur die Vorgänge auszuführen, zu denen er berechtigt ist. Code kann Berechtigungen anfordern, und diese Berechtigungen werden entsprechend der von einem Administrator festgelegten Sicherheitsrichtlinie gewährt.  
   
 > [!NOTE]
->  Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [NIB: Konfigurieren der Sicherheitsrichtlinien](http://msdn.microsoft.com/en-us/0f130bcd-1bba-4346-b231-0bcca7dab1a4) und [NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [NIB: Konfigurieren der Sicherheitsrichtlinien](http://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) und [NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
@@ -49,14 +49,14 @@ ms.lasthandoff: 01/17/2018
 ### <a name="requesting-permissions"></a>Anfordern von Berechtigungen  
  Zweck der Anforderung von Berechtigungen ist es, die Laufzeit darüber zu informieren, welche Berechtigungen Ihre Anwendung zum Ausführen benötigt, und sicherzustellen, dass die Anwendung nur die Berechtigungen erhält, die sie tatsächlich benötigt. Wenn die Anwendung z. B. Daten auf die lokale Festplatte schreiben muss, benötigt sie die <xref:System.Security.Permissions.FileIOPermission>. Wenn diese Berechtigung nicht gewährt wurde, schlagen alle Versuche, auf die Festplatte zu schreiben, fehl. Wenn die Anwendung die `FileIOPermission` anfordert und die Berechtigung nicht gewährt wurde, generiert die Anwendung aber von vornherein die Ausnahme und wird nicht geladen.  
   
- In einem Szenario, in dem die Anwendung nur Daten vom Datenträger lesen muss, können Sie festlegen, dass der Anwendung niemals Schreibberechtigungen gewährt werden. Auf diese Weise kann Ihr Code im Falle eines Fehlers im Programm oder eines bösartigen Angriffs die Daten, mit denen er arbeitet, nicht beschädigen. Weitere Informationen finden Sie unter [NIB: Anfordern von Berechtigungen](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ In einem Szenario, in dem die Anwendung nur Daten vom Datenträger lesen muss, können Sie festlegen, dass der Anwendung niemals Schreibberechtigungen gewährt werden. Auf diese Weise kann Ihr Code im Falle eines Fehlers im Programm oder eines bösartigen Angriffs die Daten, mit denen er arbeitet, nicht beschädigen. Weitere Informationen finden Sie unter [NIB: Anfordern von Berechtigungen](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Rollenbasierte Sicherheit und CAS  
  Durch Implementieren der rollenbasierten Sicherheit und der Codezugriffssicherheit (CAS) lässt sich die Gesamtsicherheit Ihrer Anwendung verbessern. Als Grundlage für die rollenbasierte Sicherheit kann ein Windows-Konto oder eine benutzerdefinierte Identität verwendet werden, wodurch die Informationen zum Sicherheitsprinzipal für den aktuellen Thread verfügbar werden. Anwendungen müssen darüber hinaus oft anhand der vom Benutzer bereitgestellten Anmeldeinformationen Daten- oder Ressourcenzugriff gewähren. In der Regel überprüfen diese Anwendungen zunächst die Rolle des Benutzers und stellen dann auf Grundlage dieser Rolle den Zugriff auf Ressourcen bereit.  
   
  Die rollenbasierte Sicherheit ermöglicht es einer Komponente, zur Laufzeit aktuelle Benutzer und die ihnen zugeordneten Rollen zu identifizieren. Diese Informationen werden dann mithilfe einer CAS-Richtlinie zugeordnet, um die zur Laufzeit gewährten Berechtigungen zu bestimmen. Für eine bestimmte Anwendungsdomäne kann der Host die Standardrichtlinie der rollenbasierten Sicherheit ändern und einen Standardsicherheitsprinzipal festlegen, der für einen Benutzer und die mit diesem Benutzer verknüpften Rollen steht.  
   
- Die CLR verwendet Berechtigungen zum Implementieren ihres Mechanismus zur Durchsetzung von Beschränkungen für verwalteten Code. Rollenbasierte Sicherheitsberechtigungen bieten die Möglichkeit aufzudecken, ob ein Benutzer (oder der Agent, der im Auftrag des Benutzers agiert) eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0).  
+ Die CLR verwendet Berechtigungen zum Implementieren ihres Mechanismus zur Durchsetzung von Beschränkungen für verwalteten Code. Rollenbasierte Sicherheitsberechtigungen bieten die Möglichkeit aufzudecken, ob ein Benutzer (oder der Agent, der im Auftrag des Benutzers agiert) eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
   
  Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zu den mit der rollenbasierten Sicherheit in SQL Server, finden Sie unter [SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 01/17/2018
  Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Beispielsweise enthalten <xref:System.Data.SqlClient> Berechtigungen für Code mit der eine <xref:System.Security.Policy.Zone> von `LocalIntranet`, ein Systemadministrator kann den Berechtigungssatz für kopieren `LocalIntranet`, benennen Sie sie in "CustomLocalIntranet", fügen die <xref:System.Data.SqlClient> Berechtigungen, importieren die CustomLocalIntranet Berechtigungssatz mithilfe der [Caspol.exe (Code Access Security Policy-Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md), und legen Sie den Berechtigungssatz `LocalIntranet_Zone` zu CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Beispielberechtigungssatz  
- Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Informationen zum Erstellen benutzerdefinierter Berechtigungssätze finden Sie unter [NIB: Konfigurieren der Berechtigung legt mithilfe von Caspol.exe](http://msdn.microsoft.com/en-us/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Informationen zum Erstellen benutzerdefinierter Berechtigungssätze finden Sie unter [NIB: Konfigurieren der Berechtigung legt mithilfe von Caspol.exe](http://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -171,7 +171,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Überprüfen des ADO.NET-Codezugriffs mit Sicherheitsberechtigungen  
- In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter [NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) und [NIB: Security Policy Best Practices](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter [NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) und [NIB: Security Policy Best Practices](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das Schreiben von Code gezeigt, durch den eine bestimmte Verbindungszeichenfolge verlangt wird. Der Code simuliert das Verweigern uneingeschränkter Berechtigungen für <xref:System.Data.SqlClient>. Unter Praxisbedingungen würde dies durch eine CAS-Richtlinie implementiert werden.  
@@ -203,11 +203,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
  Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Win32 API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
   
- .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
- [Codezugriffssicherheit](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Rollenbasierte Sicherheit](http://msdn.microsoft.com/en-us/239442e3-5be4-4203-b7fd-793baffea803)  
+ [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [Codezugriffssicherheit](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
+ [Rollenbasierte Sicherheit](http://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

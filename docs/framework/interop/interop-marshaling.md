@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 <a name="top"></a> Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.  
@@ -105,7 +105,7 @@ Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt
     > [!NOTE]
     >  Sobald der Thread eines C#-Clients auf STA festgelegt ist, erfordern Aufrufe von MTA-COM-Komponenten apartmentübergreifendes Marshalling.  
   
- Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [Managed and Unmanaged Threading (Verwaltetes und nicht verwaltetes Threading)](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [Managed and Unmanaged Threading (Verwaltetes und nicht verwaltetes Threading)](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
   
  [Zurück zum Anfang](#top)  
   
@@ -145,7 +145,7 @@ Verweisübergabe über Prozess- und Hostgrenzen hinweg
  ![SOAP oder TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "Interopremotesoap")  
 Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse  
   
- Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Aufrufe zwischen [Serviced Components](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) und COM.  
+ Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Aufrufe zwischen [Serviced Components](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) und COM.  
   
  [Zurück zum Anfang](#top)  
   
@@ -159,10 +159,10 @@ Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse
 |[Marshaling Data with COM Interop (Marshallen von Daten mit COM-Interop)](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Beschreibt, wie Sie COM-Wrapper anpassen, um das Marshallingverhalten zu ändern.|  
 |[How to: Migrate Managed-Code DCOM to WCF (Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF)](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|  
 |[Gewusst wie: Zuordnen von HRESULTs und Ausnahmen](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|  
-|[Interoperation mit generischen Typen](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|  
+|[Interoperation mit generischen Typen](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|  
 |[Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)|Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.|  
-|[Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|  
-|[Entwurfsüberlegungen für die Interoperation](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|  
+|[Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|  
+|[Entwurfsüberlegungen für die Interoperation](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|  
   
  [Zurück zum Anfang](#top)  
   

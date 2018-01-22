@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06ad98fef8c51cb995644c3b29236a9b0f8cfe29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Entwickeln eines zusammengesetzten Windows Forms-Steuerelements
 Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem Sie andere Windows Forms-Steuerelemente kombinieren. Zusammengesetzte Steuerelemente, die davon Herleiten <xref:System.Web.UI.UserControl> werden als Benutzersteuerelemente bezeichnet. Die Basisklasse, <xref:System.Windows.Forms.UserControl>, ermöglicht Tastaturrouting für die untergeordneten Steuerelemente und stellt damit sicher, dass untergeordnete Steuerelemente den Fokus erhalten können. Ein Beispiel für ein Benutzersteuerelement, finden Sie unter der <xref:System.Windows.Forms.UserControl> -Beispiel in [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
@@ -34,7 +34,7 @@ Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem 
   
 -   [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438)  
+-   [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](http://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438)  
   
 -   [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -56,7 +56,7 @@ Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem 
   
 -   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f)  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](http://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f)  
   
 -   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

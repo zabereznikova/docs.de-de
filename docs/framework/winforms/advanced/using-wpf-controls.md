@@ -17,18 +17,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-wpf-controls"></a>Verwenden von WPF-Steuerelementen
 Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Forms-basierten Anwendungen verwenden. Obwohl diese zwei unterschiedliche Ansicht Technologien sind, zusammenarbeiten sie reibungslos.  
   
  Windows Forms-Designer bietet eine visuelle entwurfsumgebung zum Hosten von Windows Presentation Foundation-Steuerelemente. Ein WPF-Steuerelement gehostet wird, von einem speziellen Windows Forms-Steuerelement mit dem Namen <xref:System.Windows.Forms.Integration.ElementHost>. Dieses Steuerelement ermöglicht das WPF-Steuerelement zur Teilnahme an der das Formularlayout und zum Empfangen von Nachrichten von Tastatur und Maus. Sie können zur Entwurfszeit Anordnen der <xref:System.Windows.Forms.Integration.ElementHost> steuern, wie Sie jedes Windows Forms-Steuerelement.  
   
- Sie können auch Windows Forms-Steuerelemente in Ihrer WPF-basierten Anwendungen. Weitere Informationen finden Sie unter [WPF-Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+ Sie können auch Windows Forms-Steuerelemente in Ihrer WPF-basierten Anwendungen. Weitere Informationen finden Sie unter [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Kopieren und Einfügen eines ElementHost-Steuerelements zur Entwurfszeit](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -63,5 +63,5 @@ Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Form
  [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  Beschreibt die Interoperation zwischen der Windows Presentation Foundation und Windows Forms-Technologien.  
   
- [WPF-Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  Beschreibt das Entwerfen von Windows Presentation Foundation-Steuerelementen in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].

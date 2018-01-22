@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] verwenden können, um mühelos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste und entsprechende Anwendungen zu erstellen.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  Eine Diensthostdatei (service1.svc) wird auch dann erstellt, wenn das vorhandene Projekt ein Webprojekt ist.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF-WF-Dienstprojektvorlage und Elementvorlage.  
- Mit diesen Vorlagen werden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste erstellt, die als Host für einen WF-Workflow fungieren. Auf diesen Workflow können Sie auf die gleiche Weise zugreifen wie auf einen Webdienst. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Typen des Workflows finden Sie unter [Windows Workflow Foundation Lernprogramme](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Erstellen von Workflowprojekten, finden Sie unter [Erstellen von Legacyworkflowprojekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Mit diesen Vorlagen werden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste erstellt, die als Host für einen WF-Workflow fungieren. Auf diesen Workflow können Sie auf die gleiche Weise zugreifen wie auf einen Webdienst. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Typen des Workflows finden Sie unter [Windows Workflow Foundation Lernprogramme](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Erstellen von Workflowprojekten, finden Sie unter [Erstellen von Legacyworkflowprojekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Designer ist reaktionsfreudiger, wenn Workflows des Typs XOML anstelle von Code-basierten Workflows verwendet werden. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
   

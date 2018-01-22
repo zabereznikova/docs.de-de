@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 96a8b8321239e3f01b30bcbe0400930a292a8f41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migration-guidance"></a>Migrationsanleitung
 Mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veröffentlicht Microsoft die zweite Hauptversion von [!INCLUDE[wf](../../../includes/wf-md.md)]i. [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde unter [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] veröffentlicht (enthält auch die Typen in den System.Workflow.*-Namespaces, jetzt als WF3 bezeichnet) und unter [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] erweitert. WF3 ist auch Teil der [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aber neben einer neuen workflowtechnologie (Typen in den System.Activities.\* Namespaces; als WF4 bezeichnet). Beim Erwägen des Zeitpunkts für die Umstellung auf WF4 sollten Sie zuerst bedenken, dass Sie allein den zeitlichen Ablauf steuern können.  
@@ -45,7 +45,7 @@ Mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veröffentl
  [WF-Anleitung: Zustandsautomat](http://go.microsoft.com/fwlink/?LinkId=153855)  
  Erläutert die WF4-Ablaufsteuerungsmodellierung bei Nichtvorhandensein einer Zustandsautomataktivität (State Machine).  
   
- Beachten Sie, dass diese Anleitung nur für Workflowprojekte gilt, die .NET Framework 4 als Zielframework verwenden. Zustandsautomatworkflows wurden in .NET 4.0.1 mit dem Plattform Update 1 hinzugefügt und in .NET Framework 4.5 beibehalten. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Zustandsautomatworkflows in .NET 4.0.1 - 4.0.3 und .NET Framework 4.5 finden Sie unter [Update 4.0.1 für Microsoft .NET Framework 4-Funktionen](http://msdn.microsoft.com/en-us/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) und [Zustandsautomatworkflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Beachten Sie, dass diese Anleitung nur für Workflowprojekte gilt, die .NET Framework 4 als Zielframework verwenden. Zustandsautomatworkflows wurden in .NET 4.0.1 mit dem Plattform Update 1 hinzugefügt und in .NET Framework 4.5 beibehalten. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Zustandsautomatworkflows in .NET 4.0.1 - 4.0.3 und .NET Framework 4.5 finden Sie unter [Update 4.0.1 für Microsoft .NET Framework 4-Funktionen](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) und [Zustandsautomatworkflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [Rezeptbuch für WF-Migration: Benutzerdefinierte Aktivitäten](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Enthält Beispiele und Anweisungen zum Umgestalten von benutzerdefinierten WF3-Aktivitäten unter WF4.  

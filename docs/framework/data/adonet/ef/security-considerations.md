@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Neben diesen Hinweisen sollten Sie auch die Empfehlungen zum Erstellen sicherer [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -109,7 +109,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
   
      Angriffe durch Einschleusung von SQL-Befehlen können in [!INCLUDE[esql](../../../../../includes/esql-md.md)] ausgeführt werden, indem böswillige Eingaben für Werte vorgenommen werden, die in Abfrageprädikaten und Parameternamen verwendet werden. Um das Risiko von Angriffen durch Einschleusung von SQL-Befehlen zu vermeiden, sollten Sie niemals Benutzereingaben mit [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Befehlstext kombinieren.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen akzeptieren Parameter an allen Stellen, an denen Literale akzeptiert werden. Sie sollten parametrisierte Abfragen verwenden, anstatt Literale von einem externen Agenten direkt in die Abfrage einzufügen. Sie sollten auch berücksichtigen, mithilfe des Abfrage-Generator-Methoden zur sicheren Erstellung [Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen akzeptieren Parameter an allen Stellen, an denen Literale akzeptiert werden. Sie sollten parametrisierte Abfragen verwenden, anstatt Literale von einem externen Agenten direkt in die Abfrage einzufügen. Sie sollten auch berücksichtigen, mithilfe des Abfrage-Generator-Methoden zur sicheren Erstellung [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Angriffe durch Einschleusen von [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -143,7 +143,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Die folgenden Sicherheitsaspekte gelten, wenn Sie Entitätstypen generieren und mit Entitätstypen arbeiten.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Geben Sie einen ObjectContext nicht über Anwendungsdomänen hinweg frei.  
- Einen <xref:System.Data.Objects.ObjectContext> für mehr als eine Anwendungsdomäne freizugeben macht möglicherweise Informationen in der Verbindungszeichenfolge verfügbar. Stattdessen sollten Sie serialisierte Objekte oder Objektdiagramme an die andere Anwendungsdomäne übertragen und dann diese Objekte einem <xref:System.Data.Objects.ObjectContext> in der Anwendungsdomäne anfügen. Weitere Informationen finden Sie unter [Serialisieren von Objekten](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Einen <xref:System.Data.Objects.ObjectContext> für mehr als eine Anwendungsdomäne freizugeben macht möglicherweise Informationen in der Verbindungszeichenfolge verfügbar. Stattdessen sollten Sie serialisierte Objekte oder Objektdiagramme an die andere Anwendungsdomäne übertragen und dann diese Objekte einem <xref:System.Data.Objects.ObjectContext> in der Anwendungsdomäne anfügen. Weitere Informationen finden Sie unter [Serialisieren von Objekten](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Verhindern Sie Verletzungen der Typsicherheit.  
  Wenn die Typsicherheit verletzt wird, kann [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] die Integrität der Daten in Objekten nicht garantieren. Verletzungen der Typsicherheit könnten auftreten, wenn Sie zulassen, dass nicht vertrauenswürdige Anwendungen mit voll vertrauenswürdiger Codezugriffssicherheit ausgeführt werden.  

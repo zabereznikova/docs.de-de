@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 97c0ad9c64046e9c93ce8690016f71d0950fb2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;message&gt;-Element von &lt;ws2007FederationHttpBinding&gt;
 Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) Element.  
   
- \<System. ServiceModel >  
-\<Bindungen >  
-\<ws2007FederationHttpBinding >  
-\<Binden von >  
-\<Sicherheit >  
-\<Meldung >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<ws2007FederationHttpBinding>  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -99,7 +99,7 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ 
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`algorithmSuite`|Dies ist optional. Legt die Nachrichtenverschlüsselung, Signatur und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> In der folgenden Tabelle sind die möglichen Werte aufgeführt. Der Standardwert ist Basic256.|  
-|`issuedKeyType`|Gibt den Typ des auszustellenden Schlüssels an. Folgende Werte sind gültig:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> Der Standardwert ist SymmetricKey. Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedKeyType`|Gibt den Typ des auszustellenden Schlüssels an. Folgende Werte sind gültig:<br /><br /> -SymmetricKey<br />-   PublicKey<br />-BearerKey<br /><br /> Der Standardwert ist SymmetricKey. Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|Ein URI, der den Typ des auszustellenden Tokens angibt. Die Standardeinstellung ist `null`.|  
 |`negotiateServiceCredential`|Ein Wert, der angibt, ob die Dienstanmeldeinformationen als Teil der Aushandlung ausgetauscht werden sollen oder ob sie out-of-band zur Verfügung stehen. Der Standardwert ist `true`, was bedeutet, dass die Dienstanmeldeinformationen ausgehandelt werden.|  
   
@@ -128,16 +128,16 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ClaimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Gibt eine Auflistung von Anspruchstypen für diese Bindung an. Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<Aussteller >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Gibt einen Endpunkt an, der ein Sicherheitstoken ausstellt. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<IssuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Gibt die Endpunktadresse des Ausstellers an.|  
-|[\<TokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Eine Auflistung von Tokenanforderungsparametern. Jeder Parameter ist ein XML-Element.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Gibt eine Auflistung von Anspruchstypen für diese Bindung an. Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Gibt einen Endpunkt an, der ein Sicherheitstoken ausstellt. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Gibt die Endpunktadresse des Ausstellers an.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Eine Auflistung von Tokenanforderungsparametern. Jeder Parameter ist ein XML-Element.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
@@ -146,5 +146,5 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ 
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<Binden von >](../../../../../docs/framework/misc/binding.md)
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt
 Der zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann erweitert werden, indem Sie einen zugeordneten benutzerdefinierten Designer erstellen.  
@@ -74,7 +74,7 @@ Der zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann erweitert w
  Das vollständige Codebeispiel finden Sie unter [Vorgehensweise: Erstellen Sie eine Windows Forms-Steuerelement, dass akzeptiert Vorteil von Entwurfszeitfunktionen](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
@@ -86,7 +86,7 @@ Der zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann erweitert w
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
--   Erstellen Sie eine Windows Forms-Anwendungsprojekt namens "MarqueeControlTest". Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Erstellen Sie eine Windows Forms-Anwendungsprojekt namens "MarqueeControlTest". Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Erstellen eines Projekts für eine Bibliothek  
  Der nächste Schritt besteht darin-Steuerelementbibliothek-Projekt zu erstellen. Erstellen Sie ein neues benutzerdefiniertes Steuerelement und den entsprechenden benutzerdefinierten Designer.  
@@ -95,11 +95,11 @@ Der zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann erweitert w
   
 1.  Fügen Sie ein Windows Forms-Steuerelementbibliothek-Projekt zur Projektmappe hinzu. Nennen Sie das Projekt "MarqueeControlLibrary".  
   
-2.  Mit **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Quelldatei mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von einer Sprache Ihrer Wahl zu löschen. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Mit **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Quelldatei mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von einer Sprache Ihrer Wahl zu löschen. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element an der `MarqueeControlLibrary` Projekt. Benennen Sie die neue Quelldatei Basis von "MarqueeControl."  
   
-4.  Mit **Projektmappen-Explorer**, erstellen Sie einen neuen Ordner in der `MarqueeControlLibrary` Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nennen Sie den Ordner "Entwurf".  
+4.  Mit **Projektmappen-Explorer**, erstellen Sie einen neuen Ordner in der `MarqueeControlLibrary` Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nennen Sie den Ordner "Entwurf".  
   
 5.  Mit der rechten Maustaste die **Entwurf** Ordner, und fügen Sie eine neue Klasse hinzu. Benennen Sie der Quelldatei Basis von "MarqueeControlRootDesigner."  
   

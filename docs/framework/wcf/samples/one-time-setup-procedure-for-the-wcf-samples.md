@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele werden in Internetinformationsdienste (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausgeführt. Diesem einmaligen Setupverfahren wird ein Ordner erstellt, auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.  
@@ -36,7 +36,7 @@ Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele we
   
 3.  Wenn [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] nicht installiert ist, und das Betriebssystem ist nicht Windows Server 2008 SP2 oder höher installieren [Hotfix 251798](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Führen Sie die folgenden Befehle durch. Weitere Informationen dazu, warum diese Befehle ausgeführt werden müssen, finden Sie unter [IIS-Hostdienst](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Führen Sie die folgenden Befehle durch. Weitere Informationen dazu, warum diese Befehle ausgeführt werden müssen, finden Sie unter [IIS-Hostdienst](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  Wenn IIS neu installiert wird, müssen die folgenden Befehle noch einmal ausgeführt werden.  

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Übersicht über das ListView-Steuerelement (Windows Forms)
 Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt. Das Steuerelement verfügt über vier Ansichtsmodi: LargeIcon, SmallIcon, Liste und Details.  
@@ -55,7 +55,7 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
   
  Die <xref:System.Windows.Forms.ListView.Activation%2A> Eigenschaft bestimmt, welche Aktion der Benutzer ausführen muss, zum Aktivieren eines Elements in der Liste: die Optionen sind <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, und <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>zur Aktivierung muss einem Klick auf das Element zu aktivieren. <xref:System.Windows.Forms.ItemActivation.TwoClick>Aktivierung muss der Benutzer doppelklicken, um das Element zu aktivieren. einem einzigen Mausklick ändert sich die Farbe des Elementtexts. <xref:System.Windows.Forms.ItemActivation.Standard>Aktivierung muss der Benutzer doppelklicken, um ein Element zu aktivieren, aber das Element ändert sich nicht auf die Darstellung.  
   
- Die <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere Funktionen, die verfügbar sind auf der Windows XP-Plattform, einschließlich u. a. Einfügemarken, Gruppierung und Ansicht "Nebeneinander". Weitere Informationen finden Sie unter [Windows XP-Features und Windows Forms-Steuerelemente](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ Die <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere Funktionen, die verfügbar sind auf der Windows XP-Plattform, einschließlich u. a. Einfügemarken, Gruppierung und Ansicht "Nebeneinander". Weitere Informationen finden Sie unter [Windows XP-Features und Windows Forms-Steuerelemente](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.ListView>  

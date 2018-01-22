@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-types-and-functions"></a>Datentypen und Funktionen
 In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime (CLR) beschrieben. Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL-Abfragen zur Verfügung.  
@@ -45,4 +45,4 @@ In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstüt
 ## <a name="see-also"></a>Siehe auch  
  [SQL-CLR-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [.NET Framework-Klassenbibliothek in Visual Studio](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [.NET Framework-Klassenbibliothek in Visual Studio](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

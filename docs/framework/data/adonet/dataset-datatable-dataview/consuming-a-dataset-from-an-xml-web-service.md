@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Verwenden eines "DataSet" von einem XML-Webdienst aus
 Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Die **DataSet** ist "serializable", als Eingabe für angegeben werden, oder Ausgabe aus XML-Webdiensten, ohne eine zusätzliche Codierung erforderlich, um den Inhalt zu streamen der **DataSet** aus einem XML-Webdienst zu einem Client und zurück. Die **DataSet** wird implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und dann aus dem XML-Stream als rekonstruiert ein **DataSet** auf der Empfängerseite. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen über das DiffGram-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -29,7 +29,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
  Im folgende Beispiel wird gezeigt, wie zum Erstellen einer XML-Webdienst und den Client, mit denen die **DataSet** Übertragung relationaler Daten (einschließlich der geänderte Daten), und beheben Sie alle Updates zurück, an die ursprüngliche Datenquelle.  
   
 > [!NOTE]
->  Es wird empfohlen, beim Erstellen eines XML-Webdiensts immer die Sicherheitsaspekte zu berücksichtigen. Informationen zum Sichern von einem XML-Webdienst finden Sie unter [Sichern von mit ASP.NET erstellte XML-Webdienste Services](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Es wird empfohlen, beim Erstellen eines XML-Webdiensts immer die Sicherheitsaspekte zu berücksichtigen. Informationen zum Sichern von einem XML-Webdienst finden Sie unter [Sichern von mit ASP.NET erstellte XML-Webdienste Services](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>So erstellen Sie einen XML-Webdienst, der ein "DataSet" zurückgibt und verarbeitet  
   
@@ -277,5 +277,5 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
  [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

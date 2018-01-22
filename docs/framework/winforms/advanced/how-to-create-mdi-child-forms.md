@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2bbbe8dbbfa6b2aebd3834314f0f56b7c7643c21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Gewusst wie: Erstellen von untergeordneten MDI-Formularen
 Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), wie diese Formulare den Mittelpunkt der Benutzerinteraktion sind.  
@@ -33,7 +33,7 @@ Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Documen
  Im folgenden Verfahren erstellen Sie ein untergeordnetes MDI-Formular, das ein <xref:System.Windows.Forms.RichTextBox>-Steuerelement anzeigt, das den meisten Textverarbeitungsprogrammen ähnelt. Durch Ersetzen des <xref:System.Windows.Forms>-Steuerelements durch andere Steuerelementen (z. B. das <xref:System.Windows.Forms.DataGridView>-Steuerelement oder eine Kombination von Steuerelementen können Sie untergeordnete MDI-Fenster (und durch Erweiterung auch MDI-Anwendungen) mit vielfältigen Möglichkeiten erstellen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-mdi-child-forms"></a>So erstellen Sie untergeordnete MDI-Formulare  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] )-Anwendungen können als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-EXE-, -DLL-Datei oder als Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Microsoft Build Engine (MSBuild). Neben dem Code und XAML-Dateien muss die Anwendung eine MSBuild-Projektdatei enthalten. Weitere Informationen finden Sie unter „MSBuild“.  
   
--   Visual Studio. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [Anwendungsentwicklung in Visual Studio](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68) und [WPF-Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+-   Visual Studio. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [Anwendungsentwicklung in Visual Studio](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) und [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF-Buildpipeline  

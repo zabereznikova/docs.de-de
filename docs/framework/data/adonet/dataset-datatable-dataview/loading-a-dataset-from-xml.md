@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Laden eines "DataSets" aus XML
 Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream oder einem XML-Dokument erstellt werden. Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
   
- Zum Auffüllen einer <xref:System.Data.DataSet> anhand der Daten aus XML, die **ReadXml** Methode der <xref:System.Data.DataSet> Objekt. Die **ReadXml** Methode liest aus einer Datei, einen Stream oder eine **XmlReader**, und verwendet als Argumente die Quelle der XML-Daten sowie ein optionales **XmlReadMode** Argument. (Weitere Informationen zu den **XmlReader**, finden Sie unter [NIB: Lesen von XML-Daten mit XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) Die **ReadXml** Methode liest den Inhalt der XML-Stream oder das Dokument und lädt die <xref:System.Data.DataSet> mit Daten. Erstellt jedoch auch das relationale Schema der <xref:System.Data.DataSet> je nach den **XmlReadMode** angegeben und davon, ob ein relationales Schema bereits vorhanden ist.  
+ Zum Auffüllen einer <xref:System.Data.DataSet> anhand der Daten aus XML, die **ReadXml** Methode der <xref:System.Data.DataSet> Objekt. Die **ReadXml** Methode liest aus einer Datei, einen Stream oder eine **XmlReader**, und verwendet als Argumente die Quelle der XML-Daten sowie ein optionales **XmlReadMode** Argument. (Weitere Informationen zu den **XmlReader**, finden Sie unter [NIB: Lesen von XML-Daten mit XmlTextReader](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) Die **ReadXml** Methode liest den Inhalt der XML-Stream oder das Dokument und lädt die <xref:System.Data.DataSet> mit Daten. Erstellt jedoch auch das relationale Schema der <xref:System.Data.DataSet> je nach den **XmlReadMode** angegeben und davon, ob ein relationales Schema bereits vorhanden ist.  
   
  Die folgende Tabelle beschreibt die Optionen für die **XmlReadMode** Argument.  
   

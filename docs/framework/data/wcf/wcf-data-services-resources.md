@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services-Ressourcen
 Einführende Themen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] finden Sie unter den folgenden Links. Viele dieser Themen enthalten auch Links zu verwandten Themen, die ausführlichere Informationen enthalten.  
@@ -33,7 +33,7 @@ Einführende Themen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md
  [Anwendungsszenarios](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Stellt einen aufgabenbasierten Ansatz für das Erstellen [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] und Anwendungen, die Zugriff auf [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.  
   
- [Visual Studio und .NET Framework-Glossar](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio und .NET Framework-Glossar](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  Enthält die Begriffe, die in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] und [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Dokumentation.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
@@ -45,10 +45,10 @@ Einführende Themen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md
  [WCF Data Services-Teamblog](http://go.microsoft.com/fwlink/?LinkId=150511)  
  Blog mit Updates und Diskussionen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Features und -Funktionen.  
   
- [OData-Website](http://go.microsoft.com/fwlink/?LinkID=184554)  
+ [OData Web Site](http://go.microsoft.com/fwlink/?LinkID=184554)  
  Die primäre Quelle von Informationen zu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [OData-SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
+ [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
  Enthält Beispieldienste, Beispiele und Programmierbibliotheken, mit denen Sie arbeiten können [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.  
   
  [OData-Blog](http://go.microsoft.com/fwlink/?LinkId=185868)  

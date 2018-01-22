@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Gewusst wie: Erstellen eines Datendiensts mit einer ADO.NET-Entity Framework-Datenquelle (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] macht Entitätsdaten als Datendienst verfügbar. Diese Entitätsdaten erfolgt durch die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Wenn die Datenquelle eine relationale Datenbank ist. In diesem Thema wird gezeigt, wie ein [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-basiertes Datenmodell in einer [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Webanwendung erstellt wird, die auf einer vorhandenen Datenbank basiert, und wie mit diesem Datenmodell ein neuer Datendienst erstellt wird.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. Klicken Sie auf **Fertig stellen** um den Assistenten abzuschließen.  
   
-     Dadurch wird ein Standarddatenmodell auf Grundlage der bestimmten Datenbank erstellt. Das [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ermöglicht das Anpassen des Datenmodells. Weitere Informationen finden Sie unter [MSBuild-Aufgaben](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
+     Dadurch wird ein Standarddatenmodell auf Grundlage der bestimmten Datenbank erstellt. Das [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ermöglicht das Anpassen des Datenmodells. Weitere Informationen finden Sie unter [MSBuild-Aufgaben](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>So erstellen Sie den Datendienst mit dem neuen Datenmodell  
   

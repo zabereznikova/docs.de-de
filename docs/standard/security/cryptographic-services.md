@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.  
   
-     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [NIB: Beispiel für sichere Cryptography Next Generation (CNG)-Kommunikation](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) .  
+     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Finden Sie unter [NIB: Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) für Weitere Informationen.  
   
 -   Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:  
   

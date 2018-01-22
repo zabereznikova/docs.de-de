@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Verwenden von starken Namen (Referenz zur nicht verwalteten API)
 Die API für starke Namen kann ein Client zum Verwalten der Signierung für Assemblys mit starken Namens.  
@@ -30,7 +30,7 @@ Die API für starke Namen kann ein Client zum Verwalten der Signierung für Asse
  Beim Signieren einer Assembly mit einem starken Namen wird der Datei, die das Assemblymanifest enthält, eine Verschlüsselung mit einem öffentlichen Schlüssel hinzugefügt. Signieren mit starkem Namen hilft Überprüfen der Eindeutigkeit der Namen, verhindert Vortäuschen von Namen und stellt Aufrufern eine eindeutige Identität bereit, wenn ein Verweis aufgelöst wird. Allerdings ist keine Maß an Vertrauenswürdigkeit mit einem starken Namen verknüpft.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Starke Namen von globalen statischen Funktionen](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Starke Namen von globalen statischen Funktionen](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Beschreibt die nicht verwalteten globalen statischen Funktionen, die die API für starke Namen verwendet.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ Die API für starke Namen kann ein Client zum Verwalten der Signierung für Asse
  [StrongNameTokenFromPublicKey-Funktion](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Ruft ein Token, das einen öffentlichen Schlüssel darstellt. Veraltete ab der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Starke Benennung-Struktur](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Starke Benennung-Struktur](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Beschreibt die nicht verwaltete Struktur, die die API für starke Namen verwendet, zum Verwalten der Signierung für Assemblys mit starken Namens...  
   
  [PublicKeyBlob-Struktur](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

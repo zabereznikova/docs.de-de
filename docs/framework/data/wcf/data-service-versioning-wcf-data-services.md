@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Datendienst-Versionskontrolle (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht es Ihnen, Datendienste zu erstellen, sodass Clients Daten als Ressourcen mit URIs zugreifen können, die auf einem Datenmodell basieren. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt auch die Definition von Dienstvorgängen. Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen diese Datendienste eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z. B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Wenn Sie Änderungen an einem vorhandenen Datendienst vornehmen, müssen Sie berücksichtigen, ob eine neue Version des Datendiensts definiert wird und wie die Auswirkungen auf vorhandene Clientanwendungen am besten minimiert werden. Dieses Thema enthält einen Leitfaden, wann und wie eine neue Version eines Datendiensts erstellt wird. Es wird auch beschrieben, wie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] einen Austausch zwischen Clients und Datendiensten behandelt, die andere Versionen des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls unterstützen.  
@@ -75,12 +75,12 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht 
   
 |[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokollversion|Unterstützt seit...|  
 |-----------------------------------------------------------------------------------|----------------------------|  
-|Version 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Servicepack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]Version 3|  
+|Version 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]Version 3|  
 |Version 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Ein Update für [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Können Sie herunterladen und installieren Sie das Update aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]Version 4|  
 |Version 3|– Sie können herunterladen und installieren Sie eine Vorabversion, die unterstützt [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 3-Version aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Metadatenversionen  
- Standardmäßig stellt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Datenmodelle mit Version 1.1 von CSDL dar. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die Version des Endes der CSDL wird bestimmt durch den Namespace des der [Schemaelement](http://msdn.microsoft.com/en-us/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]die Spezifikation [ \[MC-CSDL\]: Conceptual Schema Definition File Format](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Standardmäßig stellt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Datenmodelle mit Version 1.1 von CSDL dar. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die Version des Endes der CSDL wird bestimmt durch den Namespace des der [Schemaelement](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]die Spezifikation [ \[MC-CSDL\]: Conceptual Schema Definition File Format](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
  Das `DataServices`-Element der zurückgegebenen Metadaten enthält auch ein `DataServiceVersion`-Attribut, das den gleichen Wert wie der `DataServiceVersion`-Header in der Antwortnachricht hat. Clientanwendungen, z. B. die **Hinzufügen eines Dienstverweises** im Dialogfeld [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], verwenden Sie diese Informationen zum Generieren von Client-Datendienstklassen, die ordnungsgemäß mit der Version der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , die den Datendienst hostet. Weitere Informationen finden Sie unter [OData: Versionskontrolle von Protokollen](http://go.microsoft.com/fwlink/?LinkId=186071).  
   

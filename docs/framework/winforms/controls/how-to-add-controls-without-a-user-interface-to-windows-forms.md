@@ -25,27 +25,27 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
 Nicht sichtbare Steuerelement (bzw. eine Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer keine und müssen daher nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Sobald ein Steuerelement auf der Komponentenleiste hinzugefügt wurde, können Sie wählen Sie die Komponente und seine Eigenschaften festlegen, wie jedem anderen Steuerelement im Formular.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Hinzufügen eine Komponente zu einem Windows Form  
   
-1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  In der **Toolbox**, klicken Sie auf eine Komponente, und ziehen Sie es in Ihr Formular.  
   
      Die Komponente wird auf der Komponentenleiste angezeigt.  
   
- Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein gängiges Szenario, vor allem, da Komponenten nicht visuellen Ausdruck, im Gegensatz zu Steuerelemente verfügen, die über eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt wird. (Beachten Sie, dass [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] enthält eine Reihe von verschiedenen Zeitgeber; in diesem Fall verwenden Sie eine Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen über die verschiedenen Zeitgeber in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], finden Sie unter [Einführung in serverbasierte Zeitgeber](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein gängiges Szenario, vor allem, da Komponenten nicht visuellen Ausdruck, im Gegensatz zu Steuerelemente verfügen, die über eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt wird. (Beachten Sie, dass [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] enthält eine Reihe von verschiedenen Zeitgeber; in diesem Fall verwenden Sie eine Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen über die verschiedenen Zeitgeber in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], finden Sie unter [Einführung in serverbasierte Zeitgeber](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Komponenten haben häufig steuerelementspezifischen Eigenschaften, die für die Komponente, für die effiziente Ausführung festgelegt werden müssen. Im Fall von der <xref:System.Windows.Forms.Timer> folgenden Komponente, legen Sie die `Interval` Eigenschaft. Achten Sie darauf, beim Komponenten Ihrem Projekt hinzufügen, Sie die Eigenschaften für die jeweilige Komponente erforderlich legen.  

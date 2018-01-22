@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14163ecca60e516f7e88d4e453e8f4addd960340
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-up-instructions"></a>Setupanweisungen
 In diesen Themen wird das Einrichten von Diensten beschrieben, die zum Ausführen eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind.  
@@ -55,4 +55,4 @@ In diesen Themen wird das Einrichten von Diensten beschrieben, die zum Ausführe
  Erläutert die Schritte zum Installieren von Message Queuing.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Tipps zur Problembehandlung](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

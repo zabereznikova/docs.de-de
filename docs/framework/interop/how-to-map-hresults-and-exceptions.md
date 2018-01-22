@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Gewusst wie: Zuordnen von HRESULTs und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
@@ -151,5 +151,5 @@ CMyClass::MethodThatThrows
  Ausnahmefelder, wie z.B. **Message**, **Source** und **StackTrace** sind für die **StackOverflowException** nicht verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Ausnahmen](../../../docs/standard/exceptions/index.md)

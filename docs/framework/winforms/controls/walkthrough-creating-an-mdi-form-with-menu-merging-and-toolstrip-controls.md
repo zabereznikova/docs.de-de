@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b170c3e3311dbbfb070a66107bd4f22407647bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e0538151c19eb47f8a51330b7f2c06818d1e73f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Exemplarische Vorgehensweise: Erstellen eines MDI-Formulars mit der Zusammenführungsfunktion für Menüs und ToolStrip-Steuerelemente
 Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace unterstützt MDI-Anwendungen (Multiple Document Interface, Schnittstelle für mehrere Dokumente), und das <xref:System.Windows.Forms.MenuStrip>-Steuerelement unterstützt das Zusammenführen von Menüs. MDI-Formulare können auch <xref:System.Windows.Forms.ToolStrip>-Steuerelemente enthalten.  
@@ -52,7 +52,7 @@ Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace unterstü
  Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [Vorgehensweise: Erstellen eines MDI-Formulars mit das Zusammenführen von Menüs und ToolStrip-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
@@ -66,7 +66,7 @@ Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace unterstü
   
 1.  Erstellen Sie ein Windows-Anwendungsprojekt namens **MDI-Formulars**.  
   
-     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Wählen Sie in der Windows Forms-Designer das Formular aus.  
   
@@ -120,7 +120,7 @@ Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace unterstü
   
 1.  Fügen Sie ein neues Formular mit dem Namen `ChildForm` zum Projekt.  
   
-     Weitere Informationen finden Sie unter [wie: Hinzufügen von Windows Forms zu einem Projekt](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Weitere Informationen finden Sie unter [wie: Hinzufügen von Windows Forms zu einem Projekt](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
 2.  Aus der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.MenuStrip> -Steuerelement auf das untergeordnete Formular.  
   
@@ -128,7 +128,7 @@ Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace unterstü
   
 4.  In der **-Elementauflistungs-Editor** Dialogfeld Feld, fügen Sie einen neuen <xref:System.Windows.Forms.ToolStripMenuItem> mit dem Namen **ChildMenuItem** auf dem untergeordneten-Menü.  
   
-     Weitere Informationen finden Sie unter [ToolStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
+     Weitere Informationen finden Sie unter [ToolStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
   
 ## <a name="testing-the-form"></a>Testen das Formular  
   

@@ -9,11 +9,11 @@ ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08bee0060898fce5db9404162a4cdea2e9e59774
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 04bcc14bf1ce85423c5a5a99659955c62c74d8a5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>Startwert vom Typ &#39;kann nicht konvertiert werden; &lt;Typ1&gt;&#39; Grenzwert des &#39;&lt; Typ2&gt;&#39; und Step-Wert des &#39;&lt; Typ3&gt;&#39; in einen gemeinsamen Typ
 Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.  
@@ -23,5 +23,5 @@ Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen a
 1.  Ändern Sie den Typ von mindestens einem Wert, damit alle Werte in einen gemeinsamen Typ konvertiert werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debuggen von Änderungen in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [Debuggen von Änderungen in Visual Basic .NET](http://msdn.microsoft.com/library/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
  [For...Next-Anweisung](../../visual-basic/language-reference/statements/for-next-statement.md)

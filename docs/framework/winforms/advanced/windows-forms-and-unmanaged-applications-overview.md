@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c6b31aacfb95452cc86b5359cbec4946e85eac4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ad64588727584a9b3de0a95e9bad252a3fb0581
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Übersicht über Windows Forms und nicht verwaltete Anwendungen
 Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkungen mit nicht verwalteten Anwendungen zusammenarbeiten. In den folgenden Abschnitten werden die von Windows Forms-Anwendungen und -Steuerelementen unterstützten und nicht unterstützten Szenarien und Konfigurationen beschrieben.  
@@ -70,7 +70,7 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
  [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [COM-Interoperabilität in .NET Framework-Anwendungen](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Beispiele für die COM-Interoperabilität](http://msdn.microsoft.com/en-us/09c38567-6380-4d70-848a-e896a4ca05f4)  
+ [Beispiele für die COM-Interoperabilität](http://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
  [Aximp.exe (Windows Forms ActiveX Control Importer-Tool)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Verpacken einer Assembly für COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  

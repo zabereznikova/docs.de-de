@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft eine *Sitzung* eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
@@ -147,7 +147,7 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
  Zwischen der <xref:System.ServiceModel.SessionMode>-Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sitzungen, Instanziierung und Parallelität](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Freigeben von InstanceContext-Objekten  
- Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. Ein vollständiges Beispiel finden Sie unter [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. Ein vollständiges Beispiel finden Sie unter [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Sitzungen und Streaming  
  Wenn Sie eine große Datenmenge übertragen müssen, ist der Streamingübertragungsmodus in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine praktische Alternative zum Standardverhalten, bei dem vollständiger Nachrichten im Arbeitsspeicher bepuffert und verarbeitet werden. Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients über eine sitzungsbasierte Bindung Streamingaufrufe an das gleiche Dienstobjekt senden und der Parallelitätsmodus des Dienstobjekts auf "single" und sein Instanzkontextmodus auf `PerSession`festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den `InstanceContextMode` des Dienstobjekts auf `PerCall` oder die Parallelität auf "multiple" festlegen.  

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.  
@@ -32,11 +32,11 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Exemplarische Vorgehensweise: Erstellen einer einfachen WPF-Anwendung mit dem WPF-Designer](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|Veranschaulicht das Erstellen einer einfachen WPF-Anwendung mit der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Veranschaulicht das Erstellen von eines dynamischen Layouts mit einem <xref:System.Windows.Controls.Grid> panel-Steuerelement.|  
-|[Exemplarische Vorgehensweise: Erstellen einer veränderbaren Anwendung mit dem WPF-Designer](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Veranschaulicht, wie Fensterlayouts zu erstellen, die zur Laufzeit vom Benutzer in der Größe veränderbar sind.|  
-|[Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF-Designer](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen erstellen, die Daten an ein Steuerelement zu verbinden.|  
-|[Exemplarische Vorgehensweise: Verwenden einer DesignInstance zum Binden an Daten im Designer](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen zur Entwurfszeit für einen Datenkontext zu erstellen, die zur Laufzeit zugewiesen wird.|  
+|[Exemplarische Vorgehensweise: Erstellen einer einfachen WPF-Anwendung mit dem WPF-Designer](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|Veranschaulicht das Erstellen einer einfachen WPF-Anwendung mit der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
+|[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Veranschaulicht das Erstellen von eines dynamischen Layouts mit einem <xref:System.Windows.Controls.Grid> panel-Steuerelement.|  
+|[Exemplarische Vorgehensweise: Erstellen einer veränderbaren Anwendung mit dem WPF-Designer](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Veranschaulicht, wie Fensterlayouts zu erstellen, die zur Laufzeit vom Benutzer in der Größe veränderbar sind.|  
+|[Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF-Designer](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen erstellen, die Daten an ein Steuerelement zu verbinden.|  
+|[Exemplarische Vorgehensweise: Verwenden einer DesignInstance zum Binden an Daten im Designer](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen zur Entwurfszeit für einen Datenkontext zu erstellen, die zur Laufzeit zugewiesen wird.|  
   
 ## <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF  
   
@@ -61,4 +61,4 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Exemplarische Vorgehensweisen für Visual Studio](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Erhalten eine verknüpfte Liste von exemplarischen Vorgehensweisen für alle Bereiche der Programmierung in Visual Studio.|
+|[Exemplarische Vorgehensweisen für Visual Studio](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Erhalten eine verknüpfte Liste von exemplarischen Vorgehensweisen für alle Bereiche der Programmierung in Visual Studio.|

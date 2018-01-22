@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ca5f32d95ddaa2dac03ad55e2599bafe5af502f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1232f1f091412017e22f29d529bf7c76b32a4b6d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit
 Sie können das Steuerelement durch Festlegen der Formularrand ausrichten machen die <xref:System.Windows.Forms.Control.Dock%2A>. Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet. Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:  
@@ -38,7 +38,7 @@ Sie können das Steuerelement durch Festlegen der Formularrand ausrichten machen
  Diese Werte können auch im Code festgelegt werden. Weitere Informationen finden Sie unter [wie: Ausrichten eines Steuerelements an den Kanten Formularen](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Um die Dock-Eigenschaft für das Steuerelement zur Entwurfszeit festgelegt.  
   

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0db7b9677b5c8c415b6d0b3f49bd149c06843a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030183e77a141036416a3bcb8a4c4018df0a7e65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement
 Diese exemplarische Vorgehensweise veranschaulicht das Verwenden der <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> zuzuordnenden Eigenschaft [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Element.  
@@ -52,7 +52,7 @@ Diese exemplarische Vorgehensweise veranschaulicht das Verwenden der <xref:Syste
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen einer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Anwendungsprojekt mit dem Namen `PropertyMappingWithElementHost`. Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen einer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Anwendungsprojekt mit dem Namen `PropertyMappingWithElementHost`. Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assemblys.  
   
@@ -71,7 +71,7 @@ Diese exemplarische Vorgehensweise veranschaulicht das Verwenden der <xref:Syste
   
 4.  Öffnen Sie `Form1` im Windows Forms-Designer. Doppelklicken Sie auf das Formular zum Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.Form.Load> Ereignis.  
   
-5.  Kehren Sie zum Windows Forms-Designer zurück, und fügen Sie einen Ereignishandler für des Formulars <xref:System.Windows.Forms.Control.Resize> Ereignis. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie Ereignis-Handler mithilfe des Designers](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).  
+5.  Kehren Sie zum Windows Forms-Designer zurück, und fügen Sie einen Ereignishandler für des Formulars <xref:System.Windows.Forms.Control.Resize> Ereignis. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie Ereignis-Handler mithilfe des Designers](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 6.  Deklarieren Sie eine <xref:System.Windows.Forms.Integration.ElementHost> -Feld in der `Form1` Klasse.  
   
@@ -153,5 +153,5 @@ Diese exemplarische Vorgehensweise veranschaulicht das Verwenden der <xref:Syste
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF-Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 15a6585e0653fd87730abd1aef08ffd392cf8c87
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist eine Komponente von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] Version 3.5, die eine Laufzeitinfrastruktur für die Verwaltung relationaler Daten als Objekte bereitstellt.  
@@ -52,14 +52,14 @@ ms.lasthandoff: 01/17/2018
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Technologien für [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Benutzer.  
   
- [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  Links zum [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Portal.  
   
- [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](http://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
  Listet exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf.  
   
  [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Beschreibt, wie die in der Dokumentation verwendeten Beispieldatenbanken heruntergeladen werden.  
   
- [LinqDataSource Technology Overview (LinqDataSource-Technologie – Übersicht)](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [LinqDataSource Technology Overview (LinqDataSource-Technologie – Übersicht)](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Erläutert, wie das <xref:System.Web.UI.WebControls.LinqDataSource>-Steuerelement über die [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]-Datenquellen-Steuerarchitektur [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] für Web-Entwickler bereitstellt.

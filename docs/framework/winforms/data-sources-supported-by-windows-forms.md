@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenbanken gespeicherten Daten nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  
@@ -48,7 +48,7 @@ Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenba
  Unterstützt Windows Forms-Steuerelement für Datenbindungseigenschaften öffentlichen Eigenschaften auf der Instanz eines Objekts mit der <xref:System.Windows.Forms.Binding> Typ. Windows Forms unterstützt auch Liste basierend Binden von Steuerelementen, wie z. B. eine <xref:System.Windows.Forms.ListControl> an eine Objektinstanz, wenn eine <xref:System.Windows.Forms.BindingSource> verwendet wird.  
   
  Arrays oder einer Auflistung  
- Zur Verwendung als eine Datenquelle, eine Liste muss Folgendes implementieren die <xref:System.Collections.IList> Schnittstelle; eine Beispiel wäre ein Array, das eine Instanz ist die <xref:System.Array> Klasse. Weitere Informationen zu Arrays finden Sie unter [Vorgehensweise: Erstellen Sie ein Array von Objekten (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Zur Verwendung als eine Datenquelle, eine Liste muss Folgendes implementieren die <xref:System.Collections.IList> Schnittstelle; eine Beispiel wäre ein Array, das eine Instanz ist die <xref:System.Array> Klasse. Weitere Informationen zu Arrays finden Sie unter [Vorgehensweise: Erstellen Sie ein Array von Objekten (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  Sie sollten im Allgemeinen verwenden <xref:System.ComponentModel.BindingList%601> beim Erstellen von Listen mit Objekten, für die Datenbindung. <xref:System.ComponentModel.BindingList%601>ist eine generische Version der <xref:System.ComponentModel.IBindingList> Schnittstelle. Die <xref:System.ComponentModel.IBindingList> -Schnittstelle erweitert die <xref:System.Collections.IList> -Schnittstelle durch Hinzufügen von Eigenschaften, Methoden und Ereignisse, die für die bidirektionale Datenbindung erforderlich.  
   

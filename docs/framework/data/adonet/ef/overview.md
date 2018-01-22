@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist ein Satz von Technologien in ADO.NET, der die Entwicklung datenorientierter Softwareanwendungen unterstützt. Architekten und Entwickler datenorientierter Anwendungen mussten zwei sehr verschiedene Ziele erreichen. Sie mussten die Entitäten, die Beziehungen und die Logik der zu lösenden Geschäftsprobleme modellieren und mit den zum Speichern und Abrufen von Daten verwendeten Datenmodulen arbeiten. Die Daten können auf mehrere Speichersysteme verteilt sein, die jeweils über eigene Protokolle verfügen. Selbst Anwendungen, die mit nur einem Speichersystem arbeiten, müssen ein ausgewogenes Verhältnis zwischen den Anforderungen des Speichersystems und den Anforderungen beim Schreiben von effizientem und verwaltbarem Anwendungscode finden.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  Anhand der folgenden Themen können Sie mehr über [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erfahren:  
   
  [Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Geben Sie Informationen zum Einrichten und Ausführen von schnell mithilfe der [Schnellstart](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), die zeigt, wie eine einfache [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung.  
+ Geben Sie Informationen zum Einrichten und Ausführen von schnell mithilfe der [Schnellstart](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), die zeigt, wie eine einfache [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung.  
   
  [Entity Framework-Terminologie](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Hier werden viele der durch das Entity Data Model und [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eingeführten und in der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Dokumentation verwendeten Begriffe definiert.  

@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Verwenden eines persistenten Pfads zum Zurückkehren zu einem vorher identifizierten AutomationElement  
   
--   Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem durch Verwendung von [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Eigenschaften wie „AutomationID“, Steuerelementmuster und Ereignislistener eine bestimmte Folge von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Aktionen reproduziert (oder „wiedergegeben“) wird. Unter [Test Script Generator Sample](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) finden Sie ein Beispiel, in dem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] dazu verwendet wird, Testskripts zu erstellen, die auf Benutzerinteraktion mit der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem durch Verwendung von [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Eigenschaften wie „AutomationID“, Steuerelementmuster und Ereignislistener eine bestimmte Folge von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Aktionen reproduziert (oder „wiedergegeben“) wird. Finden Sie unter [testen Sie Skriptbeispiel Generator](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) für ein Beispiel, verwendet [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zum Generieren von Testskripts basierend auf Benutzerinteraktion mit dem [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

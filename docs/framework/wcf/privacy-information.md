@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Wenn Sie mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Version 3.0 eine Anwendung erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sendet aus Ihrer Anwendung keine Daten an Microsoft, sofern nicht von Ihnen oder dem Endbenutzer anders festgelegt.  
@@ -174,15 +174,15 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<Bedingungen NotBefore = "[" DateTime "]" NotOnOrAfter "DateTime" = >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
  \<Zielgruppe > [Uri]\</Audience > +  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--abstrakten Basistyp  
   
@@ -206,7 +206,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \<Anweisung / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Betreff >  
   
@@ -222,7 +222,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `</NameIdentifier>?`  
   
- \<"Subjectconfirmation" >  
+ \<SubjectConfirmation>  
   
  \<ConfirmationMethod > [AnyUri]\</ConfirmationMethod > +  
   
@@ -232,9 +232,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</ "Subjectconfirmation" >?  
   
- \</ Betreff >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -266,9 +266,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<"Attributestatement" >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -282,21 +282,21 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</-Attribut > +  
+ \</Attribute>+  
   
- \</ "Attributestatement" > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- Entscheidung = "[zulassen &#124; Deny &#124; unbestimmt]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<Aktion-Namespace = "[Uri]" > [Zeichenfolge] \< /Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Beweise >  
   
@@ -306,9 +306,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</ Beweis >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ Assertion >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Aus Nachrichtentext bei der Protokollierung entschlüsselter/unverschlüsselter Nachrichten entfernte Informationen  
  Wie weiter oben beschrieben, entfernt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bei protokollierten entschlüsselten/unverschlüsselten Nachrichten Schlüssel und bekannte mögliche persönliche Informationen aus Nachrichtenheadern. Darüber hinaus entfernt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Schlüssel und bekannte mögliche persönliche Informationen aus Nachrichtentext für die Textelemente und Aktionen in der folgenden Liste, die Sicherheitsmeldungen beim Schlüsselaustausch beschreiben.  
@@ -413,5 +413,5 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)

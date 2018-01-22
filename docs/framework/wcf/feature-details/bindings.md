@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation-Bindungen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterscheidet, wie die Software für eine Anwendung geschrieben wird und wie die Software mit anderer Software kommuniziert. Mit Bindungen werden Transport, Codierung und Protokolldetails angegeben, die für die Kommunikation zwischen Clients und Diensten erforderlich sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert mit Bindungen die zugrunde liegende Übertragungsdarstellung des Endpunkts. Deshalb müssen die an der Kommunikation beteiligten Parteien die Bindungsdetails aufeinander abstimmen. Das geschieht am einfachsten, indem die Clients eines Diensts dieselbe Bindung wie der Endpunkt dieses Diensts verwenden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vorgehensweise hierzu finden Sie unter [Bindungen verwenden, und Konfigurieren von Windows Communication Foundation-Dienste und Clients](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterscheidet, wie die Software für eine Anwendung geschrieben wird und wie die Software mit anderer Software kommuniziert. Mit Bindungen werden Transport, Codierung und Protokolldetails angegeben, die für die Kommunikation zwischen Clients und Diensten erforderlich sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert mit Bindungen die zugrunde liegende Übertragungsdarstellung des Endpunkts. Deshalb müssen die an der Kommunikation beteiligten Parteien die Bindungsdetails aufeinander abstimmen. Das geschieht am einfachsten, indem die Clients eines Diensts dieselbe Bindung wie der Endpunkt dieses Diensts verwenden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vorgehensweise hierzu finden Sie unter [Bindungen verwenden, und Konfigurieren von Windows Communication Foundation-Dienste und Clients](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Eine Bindung besteht aus einer Auflistung von Bindungselementen. Jedes Element beschreibt einige Aspekte der Kommunikation zwischen dem Endpunkt und den Clients. Eine Bindung muss mindestens ein Transportbindungselement, mindestens ein Nachrichten codierendes Bindungselement (was standardmäßig durch das Transportbindungselement erfolgen kann) und eine beliebige Zahl von sonstigen Protokollbindungselementen umfassen. In dem Prozess, der aus dieser Beschreibung eine Laufzeit aufbaut, kann jedes Bindungselement Code zu dieser Laufzeit beitragen.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Beschreibt, wie die Bindungen verwendet und geändert werden, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Unterstützung allgemeiner Szenarien bereitstellt.  
   
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Beschreibt, wie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Bindungen für Dienste und Clients imperativ in Code und deklarativ mithilfe der Konfiguration definiert werden.  
   
  [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)  

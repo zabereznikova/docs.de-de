@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozess. Es wird niemals die Situation eintreten, dass ein Entwickler dafür garantieren kann, dass eine Anwendung vor allen Angriffen sicher ist, weil unmöglich vorhergesagt werden kann, welche Arten von Angriffen durch neue Technologien hervorgebracht werden. Umgekehrt kann nicht behauptet werden, dass Sicherheitsmängel nicht vorhanden sind oder nicht vorhanden sein können, nur weil diese noch nicht in einem System entdeckt (oder veröffentlicht) wurden. Sie müssen die Sicherheit bereits in der Entwurfsphase des Projekts planen, und Sie müssen planen, wie die Sicherheit über die gesamte Lebensdauer der Anwendung hinweg gewährleistet werden soll.  
@@ -78,7 +78,7 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Codezugriffssicherheit und ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Beschreibt die Interaktionen zwischen der Codezugriffssicherheit, der rollenbasierten Sicherheit und teilweise vertrauenswürdigen Umgebungen aus der Sicht einer ADO.NET-Anwendung.|  
-|[Codezugriffssicherheit](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Enthält Links zu weiteren Themen mit Erläuterungen zu CAS in .NET Framework.|  
+|[Codezugriffssicherheit](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Enthält Links zu weiteren Themen mit Erläuterungen zu CAS in .NET Framework.|  
   
 ## <a name="database-security"></a>Datenbanksicherheit  
  Das Prinzip der minimalen Rechtegewährung gilt auch für Ihre Datenquelle. Bei der Datenbanksicherheit gilt es folgende allgemeine Richtlinien zu beachten:  
@@ -100,7 +100,7 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|  
-|[Empfehlungen für die Daten für Zugriffsmethoden](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
+|[Empfehlungen für die Daten für Zugriffsmethoden](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
   
 ## <a name="security-policy-and-administration"></a>Sicherheitsrichtlinie und Verwaltung  
  Eine unsachgemäße Verwaltung der CAS-Richtlinie kann potenziell die Sicherheit schwächen. Nach dem Bereitstellen einer Anwendung sollten Verfahren zum Überwachen der Sicherheit eingesetzt und regelmäßige Risikobewertungen vorgenommen werden.  
@@ -109,11 +109,11 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|  
-|[NIB: Security Policy Best Practices](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|  
+|[NIB: Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|  
+|[NIB: Security Policy Best Practices](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

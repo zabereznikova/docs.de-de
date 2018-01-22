@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Endpunktadresse wird im [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft für die Authentifizierung des Endpunkts durch andere Endpunkte, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaften enthält, die eventuelle weitere SOAP-Header definieren, die für das Erreichen des Diensts erforderlich sind. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
@@ -130,7 +130,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
 -   Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.  
   
--   In der benutzerdefinierten Konfiguration [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen der [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
+-   In der benutzerdefinierten Konfiguration [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen der [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
   
  Die Konfiguration ist im Allgemeinen dem Code vorzuziehen, da sie es Ihnen ermöglicht, die Header nach der Bereitstellung zu ändern.  
   
@@ -141,7 +141,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
 -   Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>-Klasse zur Verhaltensauflistung des Endpunkts an.  
   
--   Geben Sie in der Konfiguration, die eine benutzerdefinierte abhöradresse mit der `ListenUri` Attribut des Diensts [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
+-   Geben Sie in der Konfiguration, die eine benutzerdefinierte abhöradresse mit der `ListenUri` Attribut des Diensts [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
   
 ### <a name="custom-soap-address-filter"></a>Benutzerdefinierter SOAP-Adressenfilter  
  Der <xref:System.ServiceModel.EndpointAddress.Uri%2A> wird in Verbindung mit einer beliebigen <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaft zur Definition des SOAP-Adressfilters eines Endpunkts verwendet (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Standardmäßig prüft dieser Filter, ob eine eingehende Nachricht über einen `To`-Nachrichtenheader verfügt, der mit dem URI des Endpunkts übereinstimmt, und ob alle erforderlichen Endpunktheader in der Nachricht vorhanden sind.  
