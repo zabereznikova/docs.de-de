@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
-Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer eines Objekts erscheint eine Eigenschaft wie ein Feld; der Zugriff auf die Eigenschaft erfordert dieselbe Syntax. Für den Implementierer einer Klasse, besteht eine Eigenschaft aus einem oder zwei Codeblöcken, die einen [get](../../../csharp/language-reference/keywords/get.md)-Accessor und/oder einen [set](../../../csharp/language-reference/keywords/set.md)-Accessor darstellen. Der Codeblock für den `get`-Accessor wird ausgeführt, wenn die Eigenschaft gelesen wird; der Codeblock für den `set`-Accessor wird ausgeführt, wenn der Eigenschaft ein neuer Wert zugewiesen wird. Eine Eigenschaft ohne einen `set`-Accessor ist schreibgeschützt. Eine Eigenschaft ohne einen `get`-Accessor ist lesegeschützt. Eine Eigenschaft, die beide Accessoren umfasst, ermöglicht Lese-/ Schreibzugriff.  
+Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer eines Objekts erscheint eine Eigenschaft wie ein Feld; der Zugriff auf die Eigenschaft erfordert dieselbe Syntax. Für den Implementierer einer Klasse besteht eine Eigenschaft aus einem oder zwei Codeblöcken, die einen [get](../../../csharp/language-reference/keywords/get.md)-Accessor und/oder einen [set](../../../csharp/language-reference/keywords/set.md)-Accessor darstellen. Der Codeblock für den `get`-Accessor wird ausgeführt, wenn die Eigenschaft gelesen wird; der Codeblock für den `set`-Accessor wird ausgeführt, wenn der Eigenschaft ein neuer Wert zugewiesen wird. Eine Eigenschaft ohne einen `set`-Accessor ist schreibgeschützt. Eine Eigenschaft ohne einen `get`-Accessor ist lesegeschützt. Eine Eigenschaft, die beide Accessoren umfasst, ermöglicht Lese-/ Schreibzugriff.  
   
- Im Gegensatz zu Feldern, werden Eigenschaften nicht als Variablen klassifiziert. Aus diesem Grund können Sie Eigenschaften nicht als [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md)-Parameter übergeben.  
+ Im Gegensatz zu Feldern werden Eigenschaften nicht als Variablen klassifiziert. Aus diesem Grund können Sie Eigenschaften nicht als [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md)-Parameter übergeben.  
   
  Eigenschaften sind vielseitig verwendbar: Sie können Daten überprüfen, bevor sie eine Änderung zulassen. Sie können Daten in einer Klasse transparent verfügbar machen, in denen die Daten in Wirklichkeit von einer anderen Quelle abgerufen werden, z.B. einer Datenbank. Sie können eine Aktion ausführen, wenn Daten geändert werden, z.B. ein Ereignis auslösen, oder den Wert anderer Felder verändern.  
   
@@ -29,12 +29,12 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
- In diesem Beispiel wird `Month` als Eigenschaft so deklariert, dass der `set`-Accessor dafür sorgen kann, dass der `Month`-Wert zwischen 1 und 12 festgelegt wird. Die `Month`-Eigenschaft verwendet ein privates Feld, um den tatsächlichen Wert nachzuverfolgen. Der tatsächliche Speicherort der Daten für eine Eigenschaft wird häufig als „Sicherungsspeicher“ der Eigenschaft bezeichnet. Es ist üblich für Eigenschaften, die privaten Felder als Sicherungsspeicher zu verwenden. Das Feld wird als privat gekennzeichnet um sicherzustellen, dass es nur durch Aufrufen der Eigenschaft geändert werden kann. Weitere Informationen zu öffentlichen und privaten Zugriffsbeschränkungen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ In diesem Beispiel wird `Month` als Eigenschaft so deklariert, dass der `set`-Accessor dafür sorgen kann, dass der `Month`-Wert zwischen 1 und 12 festgelegt wird. Die `Month`-Eigenschaft verwendet ein privates Feld, um den tatsächlichen Wert nachzuverfolgen. Der tatsächliche Speicherort der Daten für eine Eigenschaft wird häufig als „Sicherungsspeicher“ der Eigenschaft bezeichnet. Es ist üblich für Eigenschaften die privaten Felder als Sicherungsspeicher zu verwenden. Das Feld wird als privat gekennzeichnet, um sicherzustellen, dass es nur durch Aufrufen der Eigenschaft geändert werden kann. Weitere Informationen zu öffentlichen und privaten Zugriffsbeschränkungen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Automatisch implementierte Eigenschaften stellen eine vereinfachte Syntax für einfache Eigenschaftendeklarationen bereit. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
 ## <a name="the-get-accessor"></a>Der get-Accessor  
- Der Text des `get` Accessors ähnelt dem einer Methode. Er muss einen Wert des Eigenschaftentyps zurückgeben. Die Ausführung des `get` Accessors entspricht dem Lesen des Wert des Felds. Wenn Sie z.B. die private Variable vom `get` -Accessor zurückgeben und Optimierungen aktiviert sind, wird der Aufruf an die `get`-Accessor-Methode vom Compiler eingebettet, damit kein zusätzlicher Aufwand an Methodenaufrufen entsteht. Allerdings kann eine `get`-Accessor-Methode kann nicht eingebettet werden, da der Compiler zum Zeitpunkt der Kompilierung nicht erkennt, welche Methode zur Laufzeit tatsächlich aufgerufen wird. Im folgenden finden Sie einen `get`-Accessor, der den Wert eines privaten Felds zurückgibt `name`:  
+ Der Text des `get` Accessors ähnelt dem einer Methode. Er muss einen Wert des Eigenschaftentyps zurückgeben. Die Ausführung des `get` Accessors entspricht dem Lesen des Wert des Felds. Wenn Sie z.B. die private Variable vom `get` -Accessor zurückgeben und Optimierungen aktiviert sind, wird der Aufruf an die `get`-Accessor-Methode vom Compiler eingebettet, damit kein zusätzlicher Aufwand an Methodenaufrufen entsteht. Allerdings kann eine `get`-Accessor-Methode nicht eingebettet werden, da der Compiler zum Zeitpunkt der Kompilierung nicht erkennt, welche Methode zur Laufzeit tatsächlich aufgerufen wird. Im folgenden finden Sie einen `get`-Accessor, der den Wert eines privaten Felds `name` zurückgibt:  
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
@@ -44,15 +44,15 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  Der `get` Accessor muss mit einer [return](../../../csharp/language-reference/keywords/return.md)- oder einer [throw](../../../csharp/language-reference/keywords/throw.md)-Anweisung enden, und die Steuerung darf nicht über den Accessortext hinausgehen.  
   
- Es ist ein unzulässiger Programmierstil den Zustand des Objekts mithilfe des `get`-Accessors zu verändern. Der folgende Accessor hat z.B. den Nebeneffekt, dass der Zustand des Objekts, bei jedem Zugriff auf das `number`-Feld verändert wird.  
+ Es ist ein unzulässiger Programmierstil den Zustand des Objekts mithilfe des `get`-Accessors zu verändern. Der folgende Accessor hat z.B. den Nebeneffekt, dass der Zustand des Objekts bei jedem Zugriff auf das `number`-Feld verändert wird.  
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Zum Beispiel:  
+ Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückzugeben. Zum Beispiel:  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
- Im vorherigen Codesegment, wenn Sie der `Name`-Eigenschaft keinen Wert zuweisen, wird der Wert NA zurückgegeben.  
+ Im vorherigen Codesegment wird der Wert NA zurückgegeben, wenn Sie der `Name`-Eigenschaft keinen Wert zuweisen.  
   
 ## <a name="the-set-accessor"></a>Der set-Accessor  
  Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../../csharp/language-reference/keywords/void.md) ist. Er verwendet einen impliziten Parameter mit dem Namen `value`, dessen Typ der Typ der Eigenschaft ist. Im folgenden Beispiel wird ein `set`-Accessor der `Name`-Eigenschaft hinzugefügt.  
@@ -63,12 +63,12 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
- Das Verwenden des impliziten Parameternamens, `value`, für die Deklaration einer lokalen Variablen in einem `set`-Accessor ist ein Fehler.  
+ Das Verwenden des impliziten Parameternamens `value` für die Deklaration einer lokalen Variablen in einem `set`-Accessor ist ein Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Eigenschaften können gekennzeichnet werden, als `public`, `private`, `protected`, `internal`, `protected internal` oder `private protected`. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Eigenschaft zugreifen können. Die `get`- und `set`-Accessoren für die gleiche Eigenschaft haben möglicherweise verschiedene Zugriffsmodifizierer. Z.B. kann `get` möglicherweise `public` sein, um den schreibgeschützten Zugriff von außerhalb des Typs zu ermöglichen, und `set` kann möglicherweise `private` oder `protected` sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Eigenschaften können als `public`, `private`, `protected`, `internal`, `protected internal` oder `private protected` gekennzeichnet werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Eigenschaft zugreifen können. Die `get`- und `set`-Accessoren für die gleiche Eigenschaft haben möglicherweise verschiedene Zugriffsmodifizierer. Z.B. kann `get` möglicherweise `public` sein, um den schreibgeschützten Zugriff von außerhalb des Typs zu ermöglichen, und `set` kann möglicherweise `private` oder `protected` sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Eine Eigenschaft kann als statische Eigenschaft deklariert werden, mithilfe des `static`-Schlüsselworts. Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Eine Eigenschaft kann mithilfe des `static`-Schlüsselworts als statische Eigenschaft deklariert werden. Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Ein Ereignis kann mithilfe des [virtual](../../../csharp/language-reference/keywords/virtual.md)-Schlüsselworts als virtuelles Ereignis gekennzeichnet werden. Dies ermöglicht abgeleiteten Klassen, das Ereignisverhalten mithilfe des [override](../../../csharp/language-reference/keywords/override.md)-Schlüsselworts zu überschreiben. Weitere Informationen zu diesen Optionen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -78,7 +78,7 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
 >  Das Verwenden eines [virtual](../../../csharp/language-reference/keywords/virtual.md)(virtuell)-, [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt)- oder [override](../../../csharp/language-reference/keywords/override.md)(außer Kraft setzen)- Modifizierers für einen Accessor einer [statischen](../../../csharp/language-reference/keywords/static.md) Eigenschaft ist ein Fehler.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt,Instanz-, statische- und schreibgeschützte Eigenschaften. Dieser Parameter akzeptiert den Namen des Mitarbeiters auf der Tastatur, Inkremente `NumberOfEmployees` durch 1, und zeigt den Mitarbeiternamen und die Nummer an.  
+ Dieses Beispiel zeigt Instanz-, statische- und schreibgeschützte Eigenschaften. Dieser Parameter akzeptiert die Eingabe des Namen des Mitarbeiters mit der Tastatur, erhöht `NumberOfEmployees` um 1, und zeigt den Mitarbeiternamen und die Nummer an.  
   
  [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
