@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>C#-Schnellstarts #
 
@@ -34,11 +34,17 @@ Im Schnellstart [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer
 
 Dieser Schnellstart setzt voraus, dass Sie das Tutorial [Hello World](hello-world.yml) abgeschlossen haben.
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Verzweigungen und Schleifen](branches-and-loops.yml)
+## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Branches und Schleifen](branches-and-loops.yml)
 
 Der Schnellstart [Branches und Schleifen](branches-and-loops.yml) erläutert die Grundlagen der Auswahl verschiedener Codepfadausführungen auf Basis der in Variablen gespeicherten Werte. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](branches-and-loops-local.md) verfügbar.
 
 In dieser ersten Lektion wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml) und [Zahlen in C#](numbers-in-csharp.yml) abgeschlossen haben.
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Interpolierte Zeichenfolgen](interpolated-strings.yml)
+
+Der Schnellstart [Interpolierte Zeichenfolgen](interpolated-strings.yml) zeigt Ihnen, wie Sie einen Ausdruck in eine umfangreichere Zeichenfolge einfügen. Sie erfahren, wie Sie einen interpolierten Ausdruck definieren und wie Sie eine Ergebniszeichenfolge aus einer interpolierten Zeichenfolge erzeugen, die mindestens einen interpolierten Ausdruck umfasst. Zudem wird erläutert, wie Sie die Formatierung, die Spaltenbreite und die Ausrichtung von Ausdrücken steuern, die in der Ergebniszeichenfolge enthalten sind. 
+
+In dieser ersten Lektion wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml), [Zahlen in C#](numbers-in-csharp.yml) und [Branches und Schleifen](branches-and-loops.yml) abgeschlossen haben.
 
 ## <a name="list-collectionlist-collectionyml"></a>[Listensammlung](list-collection.yml)
 
