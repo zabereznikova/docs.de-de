@@ -100,7 +100,7 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
      Weitere Informationen zum Ausblenden von Mitgliedern finden Sie unter [new-Modifizierer](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel implementieren zwei Klassen `Cube` und `Square` eine abstrakte Klasse `Shape`, und überschreiben die abstrakte `Area`-Eigenschaft. Beachten Sie die Verwendung des [überschreiben](../../../csharp/language-reference/keywords/override.md)-Modifizierers in den Eigenschaften. Das Programm akzeptiert die Seite als Eingabe und berechnet die Bereiche für das Quadrat und den Cube. Das Programm akzeptiert auch den Bereich als Eingabe und berechnet die entsprechende Seite für das Quadrat und den Cube.  
+ In diesem Beispiel implementieren zwei Klassen `Cube` und `Square` eine abstrakte Klasse `Shape`, und überschreiben die abstrakte `Area`-Eigenschaft. Beachten Sie die Verwendung des [override](../../../csharp/language-reference/keywords/override.md)-Modifizierers in den Eigenschaften. Das Programm akzeptiert die Seite als Eingabe und berechnet die Bereiche für das Quadrat und den Cube. Das Programm akzeptiert auch den Bereich als Eingabe und berechnet die entsprechende Seite für das Quadrat und den Cube.  
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
