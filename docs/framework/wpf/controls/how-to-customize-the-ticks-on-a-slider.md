@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 610fa829b4d2c49d0c3ae760f5601610bd2a0c46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d21d2950ed228bf588a202419c222ee86dde5b0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler
 In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Slider> -Steuerelement mit Teilstrichen.  
@@ -39,4 +39,4 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
  <xref:System.Windows.Controls.Slider>  
  <xref:System.Windows.Controls.Primitives.TickBar>  
  <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [Slider How-to Topics (Vorgehensweisen für Schieberegler)](http://msdn.microsoft.com/en-us/534be86c-afb2-425d-8186-631278a9925e)
+ [Slider How-to Topics (Vorgehensweisen für Schieberegler)](http://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)

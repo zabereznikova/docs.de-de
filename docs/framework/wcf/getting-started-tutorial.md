@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
 Die in diesem Abschnitt enthaltenen Themen sollen Ihnen einen schnellen Überblick über das Programmieren mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] geben. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Wenn Sie dieses Lernprogramm absolviert haben, verfügen Sie über ein grundlegendes Verständnis der zur Erstellung von Dienst- und Clientanwendungen mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] notwendigen Schritte. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt die Adresse, auf dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.  
@@ -36,7 +36,7 @@ Die in diesem Abschnitt enthaltenen Themen sollen Ihnen einen schnellen Überbli
 > [!NOTE]
 >  Ausgeführtes Betriebssystem [!INCLUDE[wv](../../../includes/wv-md.md)] oder höheren Versionen von Windows-Betriebssystem können Sie beginnen müssen [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] , wechseln Sie im Startmenü mit der Visual Studio 2011 mit der rechten Maustaste, und wählen **als Administrator ausführen**. Visual Studio 2011 immer als Administrator starten, erstellen eine Verknüpfung, klicken Sie mit der mit der rechten Maustaste auf die Verknüpfung, wählen Sie Eigenschaften aus, wählen Sie, die **Kompatibilität** Registerkarte, und überprüfen Sie die **führen dieses Programm als Administrator** Kontrollkästchen. Wenn Sie Visual Studio&#160;2011 über diese Verknüpfung starten, wird es immer im Administratormodus ausgeführt.  
   
- Für Beispielanwendungen, die auf die Festplatte heruntergeladen werden können und ausgeführt wurde, finden Sie unter den Themen in [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). In diesem Thema, siehe, insbesondere die [Einstieg](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Für Beispielanwendungen, die auf die Festplatte heruntergeladen werden können und ausgeführt wurde, finden Sie unter den Themen in [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). In diesem Thema, siehe, insbesondere die [Einstieg](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Weitere ausführliche Informationen zum Erstellen von Diensten und Clients, finden Sie unter [grundlegende WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Die in diesem Abschnitt enthaltenen Themen sollen Ihnen einen schnellen Überbli
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Grundlegender Programmierlebenszyklus](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

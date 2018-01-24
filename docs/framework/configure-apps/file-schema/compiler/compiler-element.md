@@ -22,17 +22,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c08e324066b872abb8df8b8b780ab3e4644a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;Compilerfehler&gt; Element
 Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.  
   
  \<Konfiguration-Element >  
-\<System.CodeDom-Element >  
+\<system.codedom Element>  
 \<Compilers-Element >  
 \<Compilerfehler >-Element  
   
@@ -72,7 +72,7 @@ Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|[\<System.CodeDom > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
 |[\<Compiler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Container für compilerkonfigurationselemente; enthält 0 (null) oder mehrere `<compiler>` Elemente.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -112,4 +112,4 @@ Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<Compiler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Compiler-Element für Compiler für Kompilierung ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [Compiler-Element für Compiler für Kompilierung ((ASP.NET Settings Schema)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

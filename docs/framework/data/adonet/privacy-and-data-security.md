@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>Datenschutz und -sicherheit
 Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informationen in ADO.NET-Anwendungen hängt von den Produkten und Technologien ab, mit denen die jeweilige Anwendung erstellt wird. ADO.NET selbst stellt keine direkten Dienste zum Sichern oder Verschlüsseln von Daten bereit.  
   
 ## <a name="cryptography-and-hash-codes"></a>Kryptografie und Hashcodes  
- Die Klassen im .NET Framework-<xref:System.Security.Cryptography>-Namespace können in Ihren ADO.NET-Anwendungen verwendet werden, um zu verhindern, dass Daten von Unbefugten gelesen oder verändert werden können. Einige Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen um verwaltete Implementierungen handelt. Die [Kryptografiedienste](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781) Thema bietet einen Überblick über die Kryptografie in .NET Framework, beschreibt Kryptografieoptionen und wie Sie bestimmte kryptografische Aufgaben ausführen können.  
+ Die Klassen im .NET Framework-<xref:System.Security.Cryptography>-Namespace können in Ihren ADO.NET-Anwendungen verwendet werden, um zu verhindern, dass Daten von Unbefugten gelesen oder verändert werden können. Einige Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen um verwaltete Implementierungen handelt. Die [Kryptografiedienste](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) Thema bietet einen Überblick über die Kryptografie in .NET Framework, beschreibt Kryptografieoptionen und wie Sie bestimmte kryptografische Aufgaben ausführen können.  
   
  Anders als bei der Kryptografie, die das Verschlüsseln und anschließende Entschlüsseln von Daten ermöglicht, ist das Erstellen von Hashwerten von Daten (Hashing) ein unidirektionaler Vorgang. Das Hashing von Daten empfiehlt sich, wenn Sie unbefugte Manipulationen Ihrer Daten verhindern möchten, indem Sie überprüfen, dass die Daten nicht geändert wurden: Bei identischen Eingabezeichenfolgen produzieren Hashalgorithmen immer identische kurze Ausgabewerte, die leicht miteinander verglichen werden können. [Sicherstellen der Datenintegrität über Hashcodes](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) wird beschrieben, wie Sie generieren und Überprüfen von Hashwerten.  
   

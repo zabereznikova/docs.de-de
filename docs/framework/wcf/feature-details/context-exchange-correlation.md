@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>Kontextaustauschkorrelation
 Kontextkorrelation basiert auf dem kontextaustauschmechanismus, der gemäß der [.NET Context Exchange Protocol Specification](http://go.microsoft.com/fwlink/?LinkId=166059). Bei der Kontextkorrelation wird ein bekannter Kontextheader oder ein Cookie verwendet, um Nachrichten der richtigen Instanz zuzuordnen. Zur Durchführung der Kontextkorrelation muss eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> auf dem Endpunkt verwendet werden, der für <xref:System.ServiceModel.Activities.WorkflowServiceHost> bereitgestellt wird. In diesem Thema wird erläutert, wie die Kontextkorrelation mit Messagingaktivitäten in einem Workflowdienst verwendet wird.  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- Beachten Sie, dass die Kontextkorrelation in diesen Beispielen explizit konfiguriert wurde. Wenn der Clientworkflow nicht auch in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Objekt gehostet wird, muss die Korrelation explizit konfiguriert werden, es sei denn, die Aktivitäten sind in einer <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität enthalten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontextkorrelation, finden Sie unter der [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) Beispiel.  
+ Beachten Sie, dass die Kontextkorrelation in diesen Beispielen explizit konfiguriert wurde. Wenn der Clientworkflow nicht auch in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Objekt gehostet wird, muss die Korrelation explizit konfiguriert werden, es sei denn, die Aktivitäten sind in einer <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität enthalten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontextkorrelation, finden Sie unter der [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) Beispiel.  
   
  Wenn der Client, der die Aufrufe an den Workflowdienst durchführt, kein Workflow ist, kann er trotzdem wiederholte Aufrufe ausführen. Es muss nur gewährleistet sein, dass er den explizit den Kontext übergibt, den der erste Aufruf an den Workflowdienst zurückgibt. Proxys, die durch das Hinzufügen eines Dienstverweises in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] generiert werden, speichern und übergeben diesen Kontext standardmäßig.

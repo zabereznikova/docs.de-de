@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
 Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> steuert ein professionelles Aussehen und Verhalten durch Schreiben einer eigenen Klasse abgeleitet wurde. die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
@@ -44,7 +44,7 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
  Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [Vorgehensweise: Erstellen einer professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
@@ -60,7 +60,7 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
   
 2.  In **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Quelldatei mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von einer Sprache Ihrer Wahl zu löschen.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element an der **StackViewLibrary** Projekt. Benennen Sie die neue Quelldatei Basis von `StackView`.  
   
@@ -94,12 +94,12 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
-    |Verwendung|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
+    |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
     |ImageTransparentColor|`238, 238, 238`|  
     |Margin|`0, 0, 0, 0`|  
     |Textabstand|`3, 3, 3, 3`|  
-    |Text|**E-Mail-Nachrichten**|  
+    |Text|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Wiederholen Sie Schritt 7 für drei weitere <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
@@ -132,7 +132,7 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
   
 8.  Benennen Sie die `mailStackButton_Click` Ereignishandler `stackButton_Click`.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Fügen Sie den folgenden Code in der `stackButton_Click` -Ereignishandler.  
   
@@ -146,7 +146,7 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
 12. Wiederholen Sie die Schritte 10 und 11 für den `contactsStackButton` und `tasksStackButton` Steuerelemente.  
   
 ## <a name="defining-icons"></a>Definieren von Symbolen  
- Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten als Ressourcen gespeichert, und die Symbole in Windows Forms-Designer angezeigt. Weitere Informationen finden Sie unter [wie: Hinzufügen von Hintergrundbildern zu Windows Forms](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten als Ressourcen gespeichert, und die Symbole in Windows Forms-Designer angezeigt. Weitere Informationen finden Sie unter [wie: Hinzufügen von Hintergrundbildern zu Windows Forms](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>So definieren Sie Symbole  
   

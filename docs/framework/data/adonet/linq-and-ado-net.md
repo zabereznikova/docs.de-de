@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ und ADO.NET
 Unter den heutigen Bedingungen müssen viele Entwickler von Geschäftsanwendungen mit zwei (oder mehr) Programmiersprachen arbeiten: mit einer allgemeinen Programmiersprache für die Geschäftslogik- und die Darstellungsschicht (wie [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] oder [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) und einer Abfragesprache für die Interaktion mit der Datenbank (z. B. [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage ist jedoch für den Compiler nicht lesbar und wird nicht auf Fehler (Syntaxfehler, tatsächliche Existenz der Spalten oder Zeilen, auf die verwiesen wird, usw.) geprüft. Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
@@ -33,7 +33,7 @@ Unter den heutigen Bedingungen müssen viele Entwickler von Geschäftsanwendunge
   
  ![LINQ to ADO.NET Übersicht](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- Allgemeine Informationen zu LINQ-Sprachfunktionen, finden Sie unter [Einführung in LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Informationen zur Verwendung von LINQ in Ihren Anwendungen finden Sie unter der [nicht im BUILD: LINQ Allgemein Programmierhandbuch](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049), die enthält detaillierte Informationen zur Verwendung von LINQ-Technologien.  
+ Allgemeine Informationen zu LINQ-Sprachfunktionen, finden Sie unter [Einführung in LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Informationen zur Verwendung von LINQ in Ihren Anwendungen finden Sie unter der [nicht im BUILD: LINQ Allgemein Programmierhandbuch](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049), die enthält detaillierte Informationen zur Verwendung von LINQ-Technologien.  
   
  Die folgenden Abschnitte enthalten weitere Informationen zu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] und [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   

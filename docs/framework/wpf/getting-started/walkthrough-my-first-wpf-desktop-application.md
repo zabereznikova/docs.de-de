@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 In dieser exemplarischen Vorgehensweise bietet eine Einführung in die Entwicklung einer [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Anwendung, die die Elemente enthält, die für die meisten gelten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Markup, CodeBehind, Anwendungsdefinitionen, Steuerelemente, Layout, die Datenbindung und Stile. 
@@ -56,7 +56,7 @@ Weitere Informationen zum Installieren der neuesten Version von Visual Studio fi
 ## <a name="creating-the-application-project"></a>Erstellen des Anwendungsprojekts  
  n diesem Abschnitt erstellen Sie die Anwendungsstruktur, die eine Anwendungsdefinition, zwei Seiten und ein Bild enthält. 
   
-1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `ExpenseIt`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `ExpenseIt`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  Diese exemplarische Vorgehensweise verwendet die <xref:System.Windows.Controls.DataGrid> Steuerelement, das in .NET Framework 4 verfügbar. Stellen Sie sicher, dass Ihr Projekt auf .NET Framework 4 abzielt oder höher. Weitere Informationen finden Sie unter[wie: eine Version von .NET Framework als Ziel](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -115,7 +115,7 @@ Weitere Informationen zum Installieren der neuesten Version von Visual Studio fi
 ## <a name="adding-files-to-the-application"></a>Hinzufügen von Dateien zur Anwendung  
  In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu. 
   
-1. Fügen Sie eine neue Seite (WPF) auf das Projekt mit dem Namen `ExpenseItHome.xaml`. Weitere Informationen finden Sie unter [wie: Hinzufügen neuer Elemente zu einem WPF-Projekt](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Fügen Sie eine neue Seite (WPF) auf das Projekt mit dem Namen `ExpenseItHome.xaml`. Weitere Informationen finden Sie unter [wie: Hinzufügen neuer Elemente zu einem WPF-Projekt](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Diese Seite ist die erste Seite, das beim Anwendungsstart angezeigt wird. Sie zeigt eine Liste von Personen, aus denen ein Benutzer eine Person auswählen kann, um die zugehörige Spesenabrechnung anzuzeigen. 
   
@@ -171,7 +171,7 @@ Weitere Informationen zum Installieren der neuesten Version von Visual Studio fi
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Fügen Sie dem Projekt ein Bild mit dem Namen „watermark.png“ hinzu. Sie können ein eigenes Bild erstellen oder die Datei aus dem Beispielcode kopieren. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Fügen Sie dem Projekt ein Bild mit dem Namen „watermark.png“ hinzu. Sie können ein eigenes Bild erstellen oder die Datei aus dem Beispielcode kopieren. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Erstellen und Ausführen der Anwendung  
  In diesem Abschnitt wird die Anwendung erstellt und dann ausgeführt. 
@@ -280,7 +280,7 @@ Weitere Informationen zum Installieren der neuesten Version von Visual Studio fi
   
 1. Öffnen Sie „ExpenseItHome.xaml“. 
   
-2. Hinzufügen einer <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler, um die <xref:System.Windows.Controls.Button> Element. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer einfachen Ereignishandler](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Hinzufügen einer <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler, um die <xref:System.Windows.Controls.Button> Element. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer einfachen Ereignishandler](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unterstützt Sie auf Ihrem Weg von der frühen Entwicklungsumgebung, die vom [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensthost und dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient gebildet wird, zur eigentlichen Bereitstellung der Anwendung in einer Produktionsumgebung zu Testzwecken. Bevor Sie sich auf einen finalen Bereitstellungsplan festlegen, können Sie mithilfe des [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishings sicherstellen, dass der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst ordnungsgemäß funktioniert und für die Veröffentlichung bereit ist. Auch können Sie Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheken zu Testzwecken an einer Reihe von Orten bereitstellen.  
@@ -30,7 +30,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unters
   
 -   Syndication-Dienstbibliothek  
   
- Sie können diese Dienstvorlagen durch Auswahl **Datei** -> **neues Projekt** -> **Visual Basic** oder **Visual C#-**  ->  **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF-Workflowdienstanwendung und WCF-Dienstanwendung) können Veröffentlichung unter Verwendung von [One-Click-Veröffentlichung für Webanwendungen](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Sie können diese Dienstvorlagen durch Auswahl **Datei** -> **neues Projekt** -> **Visual Basic** oder **Visual C#-**  ->  **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF-Workflowdienstanwendung und WCF-Dienstanwendung) können Veröffentlichung unter Verwendung von [One-Click-Veröffentlichung für Webanwendungen](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  Der Dienst kann an den folgenden Zielorten veröffentlicht werden:  
   

@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ff36438ab02ae6822d7df8425a615aef2ddbf2f2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-net-event-patterns"></a>Standardereignismuster in .NET
 
-[Zurück](events-overview.md)
+[Vorherige](events-overview.md)
 
 .NET-Ereignisse folgen in der Regel einigen bekannten Mustern. Standardisierung auf diese Muster bedeutet, dass Entwickler Kenntnisse über diese Standardmuster nutzen können, die auf ein beliebiges .NET Ereignisprogramm angewendet werden können.
 
@@ -91,7 +91,7 @@ Dies scheint ein öffentliches Feld zu deklarieren, das als eine Vorgehensweise 
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFIleFound;
+lister.FileFound += onFileFound;
 ```
 
 und das Entfernen von Handlern:
@@ -259,4 +259,4 @@ Indem Sie diese Muster und Konventionen erlernen, werden Sie schnell idiomatisch
 
 Als Nächstes sehen Sie einige Änderungen in diesen Mustern in der neuesten Version von .NET.
 
-[Weiter](modern-events.md)
+[Nächste](modern-events.md)

@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 10914281632a6651b3872485b795d9a636dc6bd0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.  
@@ -34,18 +34,18 @@ sgen [options]
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:***Dateiname*|Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind. Nur ein Dateiname kann bereitgestellt werden. Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.|  
+|**/ a**[**Ssembly**] **: *** Dateiname*|Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind. Nur ein Dateiname kann bereitgestellt werden. Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.|  
 |**/c[ompiler]:** *Optionen*|Gibt die Optionen für die Übergabe an den C#-Compiler an. Bei Übergabe an den Compiler werden alle csc.exe-Optionen unterstützt. Damit kann angegeben werden, dass die Assembly signiert werden soll. Außerdem kann die Schlüsseldatei angegeben werden.|  
 |**/d**[**ebug**]|Generiert ein Image, das mit einem Debugger verwendet werden kann.|  
 |**/f[orce]**|Erzwingt das Überschreiben einer vorhandenen, gleichnamigen Assembly. Der Standardwert ist **FALSE**.|  
 |**/help oder /?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/k**[**eep**]|Unterdrückt das Löschen der generierten Quelldateien und anderer temporärer Dateien, nachdem sie in die Serialisierungsassembly kompiliert wurden. Damit kann ermittelt werden, ob das Tool für einen bestimmten Typ Serialisierungscode generiert.|  
 |**/n**[**ologo**]|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
-|**/o**[**ut**]**:***Pfad*|Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll. **Hinweis:**Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus „xmlSerializers.dll“.|  
+|**/o**[**ut**]**:***path*|Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll. **Hinweis:**Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus „xmlSerializers.dll“.|  
 |**/p**[**roxytypes**]|Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.|  
-|**/r**[**eference**]**:***assemblyfiles*|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
+|**/ r**[**Eference**] **: *** Assemblyfiles*|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
 |**/s**[**ilent**]|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
-|**/t**[**ype**]**:***Typ*|Generiert Serialisierungscode nur für den angegebenen Typ.|  
+|**/t**[**ype**]**:***type*|Generiert Serialisierungscode nur für den angegebenen Typ.|  
 |**/v**[**erbose**]|Zeigt eine ausführliche Ausgabe für das Debuggen an. Listet Typen aus der Zielassembly auf, die nicht mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
@@ -69,5 +69,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Siehe auch  
  [Extras](../../../docs/framework/tools/index.md)  
- [Übersicht über XML-Webdienste](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [Übersicht über XML-Webdienste](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Vorgehensweise: Erstellen eines Transaktionsdiensts
 In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiensts und die Nutzung einer von einem Client initiierten Transaktion für die Koordinierung von Dienstvorgängen veranschaulicht.  
@@ -76,7 +76,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
     }  
     ```  
   
-3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
+3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
   
     ```xml  
     <service name="CalculatorService">  

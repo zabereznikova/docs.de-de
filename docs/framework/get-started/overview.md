@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
 
@@ -96,7 +96,7 @@ Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit 
 
 - Dienstorientierte Apps mit Windows Communication Foundation (WCF) Siehe [Dienstorientierte Anwendungen mit WCF](../../../docs/framework/wcf/index.md).
 
-- Workflowfähige Apps mit Windows Workflow Foundation (WF) Siehe [Erstellen von Workflows in .NET Framework](http://msdn.microsoft.com/en-us/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Workflowfähige Apps mit Windows Workflow Foundation (WF) Siehe [Erstellen von Workflows in .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwendbarer Typen, die die Entwicklung für Windows-GUIs erheblich vereinfachen. Beim Schreiben einer ASP.NET Web Form-Apps können diese Web Forms-Klassen verwendet werden.
 
@@ -106,5 +106,5 @@ Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwe
 [Installationshandbuch](../../../docs/framework/install/index.md)   
 [Entwicklungshandbuch](../../../docs/framework/development-guide.md)   
 [Tools](../../../docs/framework/tools/index.md)   
-[.NET Framework-Beispiele](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[.NET Framework-Beispiele](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)

@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Gewusst wie: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio geliefert Installationskomponenten, die Ihre dienstanwendungen zugeordnete Ressourcen installieren können. Installationskomponenten registrieren Sie einen einzelnen Dienst auf dem System, das installiert wird, und lassen Sie den Dienststeuerungs-Manager wissen, dass der Dienst vorhanden ist. Bei der Arbeit mit einer dienstanwendung können Sie einen Link im Fenster Eigenschaften die entsprechenden Installationsprogramme automatisch zu Ihrem Projekt hinzufügen auswählen.  
@@ -39,7 +39,7 @@ Visual Studio geliefert Installationskomponenten, die Ihre dienstanwendungen zug
  Sie brauchen keine besondere Codierung innerhalb der Installationsprogramme, stellen die Dienste ordnungsgemäß zu installieren. Allerdings müssen Sie gelegentlich den Inhalt der Installationsprogramme zu ändern, wenn Sie spezielle Funktionen während des Installationsvorgangs hinzufügen müssen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Die dienstanwendung Installationsprogramme hinzu  
   

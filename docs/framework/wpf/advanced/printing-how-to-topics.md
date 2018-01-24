@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>Gewusst-wie-Themen zum Drucken
 Die Themen in diesem Abschnitt zeigen, wie das Drucken und Verwaltungsfunktionen Drucksystem enthalten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sowie das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Druckpfad.  
@@ -42,7 +42,7 @@ Die Themen in diesem Abschnitt zeigen, wie das Drucken und Verwaltungsfunktionen
  [Auflisten einer Teilmenge von Druckwarteschlangen](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Anweisungen für eine Liste von Druckern mit bestimmten Merkmalen generiert.  
   
- [Nicht im Build: Gewusst: das Drucken Schema erweitern und neue Drucksystemklassen zu erstellen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [Nicht im Build: Gewusst: das Drucken Schema erweitern und neue Drucksystemklassen zu erstellen](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Erweiterte Diskussion wie verwalteter Code die Programmierer die Druckschema drucken Specialty-Geräten oder Drucker mit neuen oder ungewöhnlich, dass Funktionen erweitern können.  
   
  [Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

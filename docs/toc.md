@@ -151,6 +151,9 @@
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
+## [Zusätzliche Tools für .NET Core](core/additional-tools/index.md)
+### [WCF Web Service Reference-Anbieter](core/additional-tools/wcf-web-service-reference-guide.md)
+### [XML Serializer Generator](core/additional-tools/xml-serializer-generator.md)
 ## [Portieren aus .NET Framework](core/porting/index.md)
 ### [Organisieren von Projekten für .NET Core](core/porting/project-structure.md)
 ### [Analysieren der Abhängigkeiten von Drittanbietern](core/porting/third-party-deps.md)
@@ -258,6 +261,8 @@
 ### [Dokumentieren von Code](csharp/codedoc.md)
 ### [Versionskontrolle](csharp/versioning.md)
 ## [Vorgehensweisen zu C#-Themen](csharp/how-to/index.md)
+### [Vorgehensweise zum Analysieren von Zeichenfolgen mithilfe von `String.Split`](csharp/how-to/parse-strings-using-split.md)
+### [Verketten von Zeichenfolgen](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform-SDK (Roslyn APIs)](csharp/roslyn-sdk/)
 ## [C#-Programmierhandbuch](csharp/programming-guide/)

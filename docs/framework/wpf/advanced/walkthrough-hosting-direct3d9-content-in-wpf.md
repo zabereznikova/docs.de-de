@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 10558348a963f0b243dcfbe23171f6e24da6da0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ad6ac99a77e3477499a871e269cc7faa7a59f12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF
 In dieser exemplarischen Vorgehensweise zeigt, wie Direct3D9-Inhalt in eine Windows Presentation Foundation (WPF)-Anwendung gehostet wird.  
@@ -50,7 +50,7 @@ In dieser exemplarischen Vorgehensweise zeigt, wie Direct3D9-Inhalt in eine Wind
   
 #### <a name="to-create-the-wpf-project"></a>So erstellen Sie das WPF-Projekt  
   
--   Erstellen ein neues WPF-Anwendungsprojekts in Visual c# mit dem Namen `D3DHost`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Erstellen ein neues WPF-Anwendungsprojekts in Visual c# mit dem Namen `D3DHost`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
      "MainWindow.xaml" wird geöffnet, der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

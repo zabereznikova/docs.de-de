@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-settings-attributes"></a>Attribute für Anwendungseinstellungen
 Die Anwendungseinstellungen-Architektur bietet viele Attribute, die für die Wrapperklasse für Applikationen-Einstellungen oder der einzelnen Eigenschaften angewendet werden können. Diese Attribute werden zur Laufzeit von der Anwendung Einstellungen Infrastruktur häufig speziell der Einstellungsanbieter untersucht, um seine ordnungsgemäße Ausführung benutzerdefinierte Wrapper genannten Anforderungen anzupassen.  
@@ -52,4 +52,4 @@ Die Anwendungseinstellungen-Architektur bietet viele Attribute, die für die Wra
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [Architektur der Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Vorgehensweise: Erstellen von Anwendungseinstellungen](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)
+ [Vorgehensweise: Erstellen von Anwendungseinstellungen](http://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

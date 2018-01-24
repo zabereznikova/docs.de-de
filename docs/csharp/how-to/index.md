@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -58,7 +58,7 @@ Zeichenfolgen sind der grundlegende Datentyp für das Anzeigen oder Bearbeiten v
 - [Ändern des Inhalts einer Zeichenfolge](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Benutzen von `String.Split` zum Trennen von Zeichenfolgen](parse-strings-using-split.md).
-- [Vereinen von mehreren Zeichenfolgen](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
+- [Vereinen von mehreren Zeichenfolgen](concatenate-multiple-strings.md).
 - [Suchen von Text in einer Zeichenfolge](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
 

@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
   
 2.  Aktivieren oder deaktivieren Sie **Kennworthash lokal speichern, um Offlineanmeldung zu ermöglichen**. Wenn Sie diese Option auswählen, wird das Benutzerkennwort in verschlüsselter Form lokal zwischengespeichert. Dies ist nützlich, wenn Sie den Offlinemodus für die Anwendung implementieren. Bei ausgewählter Option können Sie die Benutzer überprüfen, selbst wenn die Eigenschaft <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> auf `true` gesetzt wurde.  
   
-3.  Aktivieren oder deaktivieren Sie **Erneute Benutzeranmeldung bei Ablauf des Cookies anfordern**. Das Authentifizierungscookie ist für den Remotedienst konfiguriert und gibt an, wie lange eine Benutzeranmeldung aktiv bleibt. Weitere Informationen zum Konfigurieren des Cookies finden Sie im Abschnitt zum `timeout`-Attribut im [forms-Element für Authentifizierung (ASP.NET-Einstellungsschema)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Aktivieren oder deaktivieren Sie **Erneute Benutzeranmeldung bei Ablauf des Cookies anfordern**. Das Authentifizierungscookie ist für den Remotedienst konfiguriert und gibt an, wie lange eine Benutzeranmeldung aktiv bleibt. Weitere Informationen zum Konfigurieren des Cookies finden Sie im Abschnitt zum `timeout`-Attribut im [forms-Element für Authentifizierung (ASP.NET-Einstellungsschema)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Bei ausgewählter Option wird beim Versuch, auf die Remoterollen oder Webeinstellungsdienste zuzugreifen, eine <xref:System.Net.WebException> ausgelöst, nachdem das Authentifizierungscookie abgelaufen ist. Sie können diese Ausnahme behandeln und ein Anmeldedialogfeld anzeigen, um Benutzer erneut zu überprüfen. Ein Beispiel für dieses Verhalten finden Sie unter [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Diese Option ist nützlich für Anwendungen, die an öffentlichen Speicherorten bereitgestellt werden, um sicherzustellen, dass Benutzer, die die Anwendung nach Gebrauch weiterhin ausführen, nicht auf unbestimmte Zeit authentifiziert bleiben.  
   

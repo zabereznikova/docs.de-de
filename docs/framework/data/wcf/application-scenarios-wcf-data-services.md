@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Anwendungsszenarios (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt einen Kernsatz von Szenarien zum Verfügbarmachen und Nutzen von Daten als [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Dieses Thema verweist auf die für diese Szenarios relevanten Themen.  
@@ -48,11 +48,11 @@ ms.lasthandoff: 12/22/2017
 -   [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Nutzen Sie in einer Silverlight-basierten Clientanwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed.  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Vorgehensweise: Binden von Datendienstdaten an Steuerelemente (WCF Data Services/Silverlight)](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Vorgehensweise: Binden von Datendienstdaten an Steuerelemente (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Nutzen Sie in einer AJAX-basierten Clientanwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed.  
  -   [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  Verfügbar und nutzbar machen eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds mit der ein binary large Object, die Zugriff auf und als Stream geändert wird.  
  -   [Streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

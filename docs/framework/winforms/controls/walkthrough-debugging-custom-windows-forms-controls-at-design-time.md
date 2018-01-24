@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit
 Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden Sie es zum Debuggen des Verhaltens zur Entwurfszeit. Dies gilt vor allem, wenn Sie einen benutzerdefinierten Designer für das benutzerdefinierte Steuerelement erstellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Windows Forms-Steuerelement, dass akzeptiert Vorteil von Visual Studio zur Entwurfszeit-Funktionen](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -55,14 +55,14 @@ Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden 
  Wenn Sie fertig sind, müssen Sie einen Überblick über die Aufgaben zum Debuggen der Entwurfszeitverhalten eines benutzerdefinierten Steuerelements erforderlich.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Der erste Schritt besteht darin das Anwendungsprojekt zu erstellen. Verwenden Sie dieses Projekt zum Erstellen der Anwendung, die das benutzerdefinierte Steuerelement hostet.  
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
--   Erstellen Sie ein Windows-Anwendungsprojekt mit dem Namen "DebuggingExample". Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Erstellen Sie ein Windows-Anwendungsprojekt mit dem Namen "DebuggingExample". Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Erstellen eines Projekts für eine Bibliothek  
  Der nächste Schritt ist zur-Steuerelementbibliothek-Projekt erstellen und richten Sie das benutzerdefinierte Steuerelement.  
@@ -71,9 +71,9 @@ Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden 
   
 1.  Hinzufügen einer **Windows-Steuerelementbibliothek** Projekt der Projektmappe.  
   
-2.  Fügen Sie einen neuen **UserControl** dem DebugControlLibrary-Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Benennen Sie die neue Quelldatei Basis von "DebugControl".  
+2.  Fügen Sie einen neuen **UserControl** dem DebugControlLibrary-Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Benennen Sie die neue Quelldatei Basis von "DebugControl".  
   
-3.  Mithilfe der **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Codedatei mit dem Basisnamen der löschen "`UserControl1`". Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Mithilfe der **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Codedatei mit dem Basisnamen der löschen "`UserControl1`". Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Erstellen Sie die Projektmappe.  
   
@@ -186,4 +186,4 @@ Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden 
 ## <a name="see-also"></a>Siehe auch  
  [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [Vorgehensweise: Zugriff auf Entwurfszeitdienste](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Vorgehensweise: Zugriff auf die zur Entwurfszeit Unterstützung in Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [Vorgehensweise: Zugriff auf Entwurfszeitunterstützung in Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

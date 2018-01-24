@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>Arbeiten mit der Datendefinitionssprache
 Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 4 der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Datendefinitionssprache (DDL) unterstützt. Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells (SSDL) ermöglicht.  
@@ -51,11 +51,11 @@ Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.
   
 2.  Fügen Sie der Anwendung ein vorhandenes Modell hinzu.  
   
-    1.  Fügen Sie ein leeres Modell mit dem Namen `SchoolModel`. Um ein leeres Modell erstellen, finden Sie unter der [Vorgehensweise: Erstellen Sie eine neue EDMX-Datei](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) Thema.  
+    1.  Fügen Sie ein leeres Modell mit dem Namen `SchoolModel`. Um ein leeres Modell erstellen, finden Sie unter der [Vorgehensweise: Erstellen Sie eine neue EDMX-Datei](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) Thema.  
   
      Die Datei SchoolModel.edmx wird dem Projekt hinzugefügt.  
   
-    1.  Kopieren Sie den konzeptionellen, Speicher und Zuordnen von Inhalt für das Modell "School" aus der [Modell ' School '](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) Thema.  
+    1.  Kopieren Sie den konzeptionellen, Speicher und Zuordnen von Inhalt für das Modell "School" aus der [Modell ' School '](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) Thema.  
   
     2.  Öffnen Sie die Datei SchoolModel.edmx`edmx:Runtime`, und fügen Sie den Inhalt zwischen den -Tags ein.  
   

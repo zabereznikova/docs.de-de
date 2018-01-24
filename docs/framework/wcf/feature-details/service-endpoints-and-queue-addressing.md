@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Zur Erinnerung stellt die folgende Abbildung die klassische Bereitstellung von Anwendungen in der Warteschlange von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dar.  
@@ -57,7 +57,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Die Warteschlangenadresse wird vom Listener als Abhör-URI zum Lesen von Nachrichten verwendet. Mit anderen Worten, die Warteschlangenadresse entspricht dem Abhöranschluss des TCP-Sockets.  
   
- Ein Endpunkt, der aus einer Warteschlange liest, muss die Adresse der Warteschlange nach demselben Schema angeben, das zuvor beim Öffnen des ServiceHost angegeben worden war. Beispiele finden Sie unter [Net MSMQ-Bindung](../../../../docs/framework/wcf/samples/net-msmq-binding.md) und [Message Queuing-Integration binden Samples](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Ein Endpunkt, der aus einer Warteschlange liest, muss die Adresse der Warteschlange nach demselben Schema angeben, das zuvor beim Öffnen des ServiceHost angegeben worden war. Beispiele finden Sie unter [Net MSMQ-Bindung](../../../../docs/framework/wcf/samples/net-msmq-binding.md) und [Message Queuing-Integration binden Samples](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Mehrere Verträge in einer Warteschlange  
  Nachrichten in einer Warteschlange können verschiedene Verträge implementieren. In diesem Fall muss eines der folgenden Szenarien zutreffen, um alle Nachrichten erfolgreich lesen und verarbeiten zu können:  

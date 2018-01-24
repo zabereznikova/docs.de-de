@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute
 Der benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigenschaft verfügbar machen. Diese exemplarische Vorgehensweise veranschaulicht, wie die <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> Klasse steuern, wie eine Auflistung zur Entwurfszeit serialisiert wird. Anwenden der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wert auf die Auflistungseigenschaft wird sichergestellt, dass die Eigenschaft serialisiert wird.  
@@ -35,7 +35,7 @@ Der benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigen
  Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [wie: Serialisieren Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
@@ -47,9 +47,9 @@ Der benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigen
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>So erstellen Sie ein Steuerelement über eine serialisierbare Auflistung  
   
-1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt aufgerufen `SerializationDemoControlLib`. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt aufgerufen `SerializationDemoControlLib`. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Benennen Sie `UserControl1` auf `SerializationDemoControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Benennen Sie `UserControl1` auf `SerializationDemoControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> Eigenschaft `10`.  
   
@@ -60,8 +60,8 @@ Der benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigen
     |Eigenschaft|Ändern in|  
     |--------------|---------------|  
     |**Multiline**|`true`|  
-    |**Andocken**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Bildlaufleisten**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  In der **Code-Editor**, deklarieren Sie ein Array, mit dem Namen Zeichenfolgenfeld `stringsValue` in `SerializationDemoControl`.  

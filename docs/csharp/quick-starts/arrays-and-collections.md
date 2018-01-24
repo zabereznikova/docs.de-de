@@ -5,16 +5,16 @@ keywords: C#, Erste Schritte, Tutorial, Sammlungen, Liste
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="c-quick-start-collections"></a>C#-Schnellstart: Sammlungen #
 
@@ -192,7 +192,7 @@ Fügen Sie Folgendes am Ende Ihrer neuen `Main`-Methode hinzu:
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Dies sind die ersten beiden Werte einer *Fibonacci-Sequenz* – einer Sequenz von Zahlen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie diesen Code hinzu:
+Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Dies sind die ersten beiden Werte einer *Fibonacci-Sequenz* – einer Sequenz von Zahlen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie den folgenden Code hinzu:
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];

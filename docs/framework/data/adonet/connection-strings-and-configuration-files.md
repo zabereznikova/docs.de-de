@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in einer Anwendung Quellcode kompiliert können angezeigt werden, mithilfe der [Ildasm.exe (IL-Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Tool. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
@@ -156,7 +156,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  Der <xref:System.Configuration>-Namespace stellt Klassen zum programmgesteuerten Arbeiten mit Konfigurationseinstellungen bereit. Die <xref:System.Configuration.ConfigurationManager>-Klasse ermöglicht den Zugriff auf Computer-, Anwendungs- und Benutzerkonfigurationsdateien. Wenn Sie eine ASP.NET-Anwendung erstellen, können Sie mithilfe der <xref:System.Web.Configuration.WebConfigurationManager> Klasse, die die gleiche Funktionalität bereitstellt, während ermöglicht es Ihnen auf Einstellungen zugreifen, die spezifisch für ASP.NET-Anwendungen, z. B. die sind außerdem in gefunden  **\< System.Web >**.  
   
 > [!NOTE]
->  Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>"App.config"-Beispiel  
  In diesem Beispiel wird veranschaulicht, wie Verschlüsseln aktivieren bzw. Deaktivieren der **ConnectionStrings** im Abschnitt ein **"App.config"** Datei für eine Windows-Anwendung. In diesem Beispiel übernimmt die Prozedur den Namen der Anwendung, z. B. <legacyBold>MyApplication.exe</legacyBold>, als Argument. Die **"App.config"** -Datei wird dann verschlüsselt und in den Ordner mit der ausführbaren Datei mit dem Namen "MyApplication.exe.config" kopiert.  
@@ -178,7 +178,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Weitere Informationen zum Absichern von ASP.NET-Anwendungen finden Sie unter [NIB: ASP.NET-Sicherheit](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) und [ASP.NET 2.0 Sicherheitsmaßnahmen auf einen Blick](http://go.microsoft.com/fwlink/?LinkId=59997) im ASP.NET Developer Center.  
+ Weitere Informationen zum Absichern von ASP.NET-Anwendungen finden Sie unter [NIB: ASP.NET-Sicherheit](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) und [ASP.NET 2.0 Sicherheitsmaßnahmen auf einen Blick](http://go.microsoft.com/fwlink/?LinkId=59997) im ASP.NET Developer Center.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  

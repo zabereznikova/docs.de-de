@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 649936abfe149371445c77802bda2e72f558a41d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-data-with-com-interop"></a>Marshallen von Daten mit COM-Interop
 COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten aus verwaltetem Code als auch das Bereitstellen verwalteter Objekte für COM. Die Unterstützung für das Marshalling von Daten zu und von COM ist umfangreich und stellt fast immer das richtige Marshallingverhalten bereit.  
@@ -40,23 +40,23 @@ Beschreibt, wie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen.
  Beschreibt, wie Sie verwalteten DCOM-Code zu WCF für die sicherste Lösung migrieren.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [COM-Datentypen](https://msdn.microsoft.com/en-us/library/sak564ww(v=vs.100).aspx)  
+ [COM-Datentypen](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  Stellt die entsprechenden verwalteten und nicht verwalteten Datentypen bereit.  
   
- [Anpassen von COM-Aufrufwrappern](https://msdn.microsoft.com/en-us/library/3bwc828w(v=vs.100).aspx)  
+ [Anpassen von COM-Aufrufwrappern](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
  Beschreibt, wie Sie explizites Marshalling von Datentypen mithilfe der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut zur Entwurfszeit.  
   
- [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/en-us/library/e753eftz(v=vs.100).aspx)  
+ [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  Beschreibt, wie das Marshallingverhalten von Typen in einer Interop-Assembly angepasst und COM-Typen manuell definiert werden.  
   
- [Erweiterte COM-Interoperabilität](https://msdn.microsoft.com/en-us/library/bd9cdfyx(v=vs.100).aspx)  
+ [Erweiterte COM-Interoperabilität](https://msdn.microsoft.com/library/bd9cdfyx(v=vs.100).aspx)  
  Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.  
   
- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/en-us/library/xk1120c3(v=vs.100).aspx)  
+ [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/xk1120c3(v=vs.100).aspx)  
  Beschreibt den Konvertierungsprozess beim Export einer Assembly in eine Typbibliothek.  
   
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/en-us/library/k83zzh38(v=vs.100).aspx)  
+ [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/k83zzh38(v=vs.100).aspx)  
  Beschreibt den Konvertierungsprozess beim Import einer Typbibliothek in eine Assembly.  
   
- [Interoperation mit generischen Typen](https://msdn.microsoft.com/en-us/library/ms229590(v=vs.100).aspx)  
+ [Interoperation mit generischen Typen](https://msdn.microsoft.com/library/ms229590(v=vs.100).aspx)  
  Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.

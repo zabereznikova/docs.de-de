@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib-Methode
 Löst den einfachen Namen einer Typbibliothek durch den vollqualifizierten Pfad zurückgeben.  
@@ -45,7 +45,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parameter  
  `bstrSimpleName`  
- [in] Ein [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , die den einfachen Namen der Typbibliothek enthält.  
+ [in] Ein [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , die den einfachen Namen der Typbibliothek enthält.  
   
  `tlbid`  
  [in] Die in der Registrierung der Typbibliothek zugewiesene GUID.  
@@ -60,15 +60,15 @@ HRESULT ResolveTypeLib(
  [in] Die Nebenversionsnummer der Typbibliothek. Z. B. für Version *x.y*, ist die Nummer der Nebenversion *y*.  
   
  `syskind`  
- [in] Ein [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) Flag, das die betriebsumgebung identifiziert. Häufig verwendete Werte sind SYS_WIN32 und SYS_WIN64.  
+ [in] Ein [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) Flag, das die betriebsumgebung identifiziert. Häufig verwendete Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Ein Zeiger auf eine [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
+ [out] Ein Zeiger auf eine [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ResolveTypeLib` Methode wird aufgerufen, indem Sie die [LoadTypeLibWithResolver-Funktion](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) während [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) verarbeiten.  
   
- Benutzerdefinierte Implementierungen dieser Schnittstelle müssen Zurückgeben einer [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
+ Benutzerdefinierte Implementierungen dieser Schnittstelle müssen Zurückgeben einer [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -81,4 +81,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Siehe auch  
  [Tlbexp-Hilfsfunktionen](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Gewusst wie: Verankern von Steuerelementen in Windows Forms
 Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sollten die Steuerelemente im Formular Größe und ordnungsgemäß neu zu positionieren. Zum Ändern der Größe von Steuerelementen dynamisch mit dem Formular können Sie die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft von Windows Forms-Steuerelementen. Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft definiert ein Ankerposition für das Steuerelement. Wenn ein Steuerelement einem Formular verankert ist und der Größe des Formulars, behält das Steuerelement den Abstand zwischen dem Steuerelement und dem Anker Positionen an. Angenommen, Sie haben eine <xref:System.Windows.Forms.TextBox> Steuerelement, das den linken, rechten und unteren Rand des Formulars verbunden ist wie die Größe des Formulars die <xref:System.Windows.Forms.TextBox> ändert die Größe horizontal steuern, sodass er die gleiche Distanz vom die rechten und linken Rand des Formulars verwaltet. Darüber hinaus wird das Steuerelement vertikal positioniert, sodass am Speicherort stets die gleiche Distanz vom unteren Rand des Formulars. Wenn ein Steuerelement verankert ist, und der Größe des Formulars, wird die Position des Steuerelements relativ zu den Rändern des Formulars geändert.  
@@ -36,7 +36,7 @@ Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sol
  Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft interagiert mit den <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Um ein Steuerelement in einem Formular zu verankern.  
   

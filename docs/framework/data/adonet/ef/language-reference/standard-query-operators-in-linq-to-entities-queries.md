@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardabfrageoperatoren in LINQ to Entities-Abfragen
 In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. LINQ stellt eine Reihe von Standardabfragemethoden für die Verwendung in einer Abfrage bereit. Die meisten dieser Methoden bearbeiten Sequenzen; In diesem Kontext ist eine Sequenz ein Objekt, dessen Typ implementiert, den <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung, Gruppierung, Paging und mehr bereit. Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax, sodass sie mithilfe von Abfrageausdruckssyntax aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen methodenbasierter Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt. Eine Liste der Standardabfrageoperatoren, die über entsprechende Abfrageausdrucksklauseln verfügen, finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -78,7 +78,7 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
 |`Sum`|Gibt NULL zurück.|Gibt NULL zurück.|Gibt die Summe der von NULL verschiedenen Werte in einer Sequenz zurück.|Berechnet die Summe einer Sequenz von numerischen Werten.|  
   
 ## <a name="type-methods"></a>Typmethoden  
- Die beiden LINQ-Methoden, die für Typkonvertierung und -test verwendet werden, werden im Kontext des [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt. Dies bedeutet, dass nur Typen unterstützt werden, die einem entsprechenden [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]-Typ zugeordnet werden können. Eine Liste dieser Typen finden Sie [konzeptionellen Modell Typen (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). Als Typmethoden werden `Convert` und `OfType` verwendet.  
+ Die beiden LINQ-Methoden, die für Typkonvertierung und -test verwendet werden, werden im Kontext des [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt. Dies bedeutet, dass nur Typen unterstützt werden, die einem entsprechenden [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]-Typ zugeordnet werden können. Eine Liste dieser Typen finden Sie [konzeptionellen Modell Typen (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Als Typmethoden werden `Convert` und `OfType` verwendet.  
   
  `OfType` wird für Entitätstypen unterstützt. `Convert` wird für primitive Typen in einem konzeptionellen Modell unterstützt.  Die C#-Methoden `is` und `as` werden ebenfalls unterstützt.  
   

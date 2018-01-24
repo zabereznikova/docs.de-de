@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>Hinweise  
  Die Sicherheitsrichtlinie teilt sich in drei Richtlinienebenen auf: Computerrichtlinie, Benutzerrichtlinie und Organisationsrichtlinie. Der Satz von Berechtigungen, den eine Assembly erhält, wird von der Schnittmenge der auf diesen drei Richtlinienebenen zulässigen Berechtigungssätze bestimmt. Jede Richtlinienebene wird durch eine hierarchische Codegruppenstruktur dargestellt. Jede Codegruppe verfügt über eine Mitgliedschaftsbedingung, die bestimmt, welcher Code ein Element dieser Gruppe darstellt. Außerdem wird jeder Codegruppe ein benannter Berechtigungssatz zugeordnet. Dieser Berechtigungssatz gibt die Berechtigungen an, die dem Code, der die Mitgliedschaftsbedingung erfüllt, von der Laufzeit erteilt werden. Jede Ebene der Sicherheitsrichtlinie wird von einer Hierarchie der Codegruppen und dem zugehörigen benannten Berechtigungssatz definiert und verwaltet. Die Ebene der Sicherheitsrichtlinie wird mit den Optionen **-user**, **-customuser**, **-machine** und **-enterprise** festgelegt.  
   
- Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Verweise auf Codegruppen und Berechtigungssätze  
  Für das vereinfachte Erstellen von Verweisen auf Codegruppen in einer Hierarchie wird mit der Option **-list** eine Liste mit Einzügen angezeigt. In dieser sind die Codegruppen und deren numerische Bezeichnungen (1, 1.1, 1.1.1 usw.) aufgeführt. Die anderen Befehlszeilenoperationen bzgl. Codegruppen verwenden für Verweise auf bestimmte Codegruppen ebenfalls die numerischen Bezeichnungen.  
