@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/18/2017
 ---
-# <a name="c-60-draft-language-specification"></a>C# 6.0 Entwurfssprachenspezifikation
+# <a name="c-60-draft-language-specification"></a>C# 6.0 Entwurf der Sprachspezifikation
 Die C#-Sprachspezifikation ist die verbindliche Quelle für die Grammatik und Syntax von C#. Diese Spezifikation enthält ausführliche Informationen zu allen Aspekten der Programmiersprache, darunter auch viele Punkte, die in der Dokumentation zu Visual C# nicht behandelt werden.
 
 Sie können Version 5.0 dieser Spezifikation aus dem [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=7029) herunterladen. Wenn Sie Visual Studio 2015 installiert haben, können Sie die Spezifikation auch auf Ihrem Computer im Ordner "Programme (x86)/Microsoft Visual Studio 14.0/VC#/Specifications/1033" finden. Wenn Sie eine andere Version von Visual Studio installiert haben oder wenn Ihre Version von Visual Studio nicht in Englisch ist, passen Sie den Pfad entsprechend an.
