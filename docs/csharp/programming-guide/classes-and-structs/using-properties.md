@@ -78,7 +78,7 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
 >  Das Verwenden eines [virtual](../../../csharp/language-reference/keywords/virtual.md)(virtuell)-, [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt)- oder [override](../../../csharp/language-reference/keywords/override.md)(außer Kraft setzen)- Modifizierers für einen Accessor einer [statischen](../../../csharp/language-reference/keywords/static.md) Eigenschaft ist ein Fehler.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt Instanz-, statische- und schreibgeschützte Eigenschaften. Dieser Parameter akzeptiert die Eingabe des Namen des Mitarbeiters mit der Tastatur, erhöht `NumberOfEmployees` um 1, und zeigt den Mitarbeiternamen und die Nummer an.  
+ Dieses Beispiel zeigt Instanz-, statische- und schreibgeschützte Eigenschaften. Es akzeptiert die Eingabe des Parameters `Name` des Mitarbeiters mit der Tastatur, erhöht `NumberOfEmployees` um 1, und zeigt den Mitarbeiternamen und die Nummer an.  
   
  [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
