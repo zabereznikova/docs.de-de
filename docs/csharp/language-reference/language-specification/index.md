@@ -1,5 +1,5 @@
 ---
-title: C# 6.0 Entwurfssprachenspezifikation
+title: C# 6.0 Entwurf der Sprachspezifikation
 ms.date: 07/01/2017
 ms.prod: .net
 ms.technology: devlang-csharp
@@ -26,7 +26,7 @@ Sie können Version 5.0 dieser Spezifikation aus dem [Microsoft Download Center]
 
 Die Version 6.0 der Spezifikation wurde nicht als Standard genehmigt. Diese Website enthält einen [*Entwurf* der C# 6.0-Spezifikation](../../../../_csharplang/spec/lexical-structure.md). Diese wird aus den Markdowndateien erstellt, die in [dotnet/csharplang GitHub repository](https://github.com/dotnet/csharplang/blob/master/spec/README.md) enthalten sind.
 
-Themen der Entwurfsspezifikation sollten im Repository [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) erstellt werden. Falls Sie daran interessiert sind, die Fehler zu beheben, die Sie finden, können Sie einen [Pull Request](https://github.com/dotnet/csharplang/pulls) im selben Repository übermitteln.
+Probleme mit dem Entwurf der Spezifikation sollten im Repository [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) erstellt werden. Falls Sie daran interessiert sind, die Fehler zu beheben, die Sie finden, können Sie einen [Pull Request](https://github.com/dotnet/csharplang/pulls) im selben Repository übermitteln.
 
 ## <a name="see-also"></a>Siehe auch  
  [C#-Referenz](../../language-reference/index.md)  
