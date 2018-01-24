@@ -18,7 +18,8 @@ ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
 Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!“ -Programms. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
@@ -31,7 +32,7 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt** aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
@@ -135,7 +136,8 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [C#-Referenz](../../../csharp/language-reference/index.md)  
  [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
