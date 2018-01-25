@@ -13,48 +13,48 @@ ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef68b6a75d9f5bd65e7d549240dc061097f2d30c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="moduleassemblyname-c-compiler-option"></a><span data-ttu-id="6c3c2-102">/moduleassemblyname (C#-Compileroption)</span><span class="sxs-lookup"><span data-stu-id="6c3c2-102">/moduleassemblyname (C# Compiler Option)</span></span>
-<span data-ttu-id="6c3c2-103">Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  
+# <a name="-moduleassemblyname-c-compiler-option"></a><span data-ttu-id="b7123-102">-moduleassemblyname (C#-Compileroption)</span><span class="sxs-lookup"><span data-stu-id="b7123-102">-moduleassemblyname (C# Compiler Option)</span></span>
+<span data-ttu-id="b7123-103">Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="b7123-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c3c2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6c3c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7123-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b7123-104">Syntax</span></span>  
   
 ```console  
-/moduleassemblyname:assembly_name  
+-moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6c3c2-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="6c3c2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="b7123-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="b7123-105">Arguments</span></span>  
  `assembly_name`  
- <span data-ttu-id="6c3c2-106">Der Name einer Assembly, auf deren nicht öffentliche Typen die NETMODULE-Datei zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="6c3c2-106">The name of the assembly whose non-public types the .netmodule can access.</span></span>  
+ <span data-ttu-id="b7123-106">Der Name einer Assembly, auf deren nicht öffentliche Typen die NETMODULE-Datei zugreifen kann</span><span class="sxs-lookup"><span data-stu-id="b7123-106">The name of the assembly whose non-public types the .netmodule can access.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c3c2-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6c3c2-107">Remarks</span></span>  
- <span data-ttu-id="6c3c2-108">**/moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei, und wenn die folgenden Bedingungen erfüllt sind, verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="6c3c2-108">**/moduleassemblyname** should be used when building a .netmodule, and where the following conditions are true:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b7123-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b7123-107">Remarks</span></span>  
+ <span data-ttu-id="b7123-108">**-moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei und wenn die folgenden Bedingungen erfüllt sind verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="b7123-108">**-moduleassemblyname** should be used when building a .netmodule, and where the following conditions are true:</span></span>  
   
--   <span data-ttu-id="6c3c2-109">Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-109">The .netmodule needs access to non-public types in an existing assembly.</span></span>  
+-   <span data-ttu-id="b7123-109">Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.</span><span class="sxs-lookup"><span data-stu-id="b7123-109">The .netmodule needs access to non-public types in an existing assembly.</span></span>  
   
--   <span data-ttu-id="6c3c2-110">Sie kennen den Namen der Assembly, in die die NETMODULE-Datei integriert wird.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-110">You know the name of the assembly into which the .netmodule will be built.</span></span>  
+-   <span data-ttu-id="b7123-110">Sie kennen den Namen der Assembly, in die die NETMODULE-Datei integriert wird.</span><span class="sxs-lookup"><span data-stu-id="b7123-110">You know the name of the assembly into which the .netmodule will be built.</span></span>  
   
--   <span data-ttu-id="6c3c2-111">Die vorhandene Assembly hat der Assembly, in die die NETMODULE-Datei integriert wird, Friend-Assembly-Zugriff erteilt.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-111">The existing assembly has granted friend assembly access to the assembly into which the .netmodule will be built.</span></span>  
+-   <span data-ttu-id="b7123-111">Die vorhandene Assembly hat der Assembly, in die die NETMODULE-Datei integriert wird, Friend-Assembly-Zugriff erteilt.</span><span class="sxs-lookup"><span data-stu-id="b7123-111">The existing assembly has granted friend assembly access to the assembly into which the .netmodule will be built.</span></span>  
   
- <span data-ttu-id="6c3c2-112">Weitere Informationen zum Erstellen einer NETMODULE-Datei finden Sie unter [/target:module (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="6c3c2-112">For more information on building a .netmodule, see [/target:module (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
+ <span data-ttu-id="b7123-112">Weitere Informationen zum Erstellen einer NETMODULE-Datei finden Sie unter [-target:module (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="b7123-112">For more information on building a .netmodule, see [-target:module (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
   
- <span data-ttu-id="6c3c2-113">Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="6c3c2-113">For more information on friend assemblies, see [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span></span>  
+ <span data-ttu-id="b7123-113">Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="b7123-113">For more information on friend assemblies, see [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span></span>  
   
- <span data-ttu-id="6c3c2-114">Diese Option steht nicht in der Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-114">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
+ <span data-ttu-id="b7123-114">Diese Option steht nicht in der Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="b7123-114">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- <span data-ttu-id="6c3c2-115">Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-115">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="b7123-115">Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="b7123-115">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6c3c2-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6c3c2-116">Example</span></span>  
- <span data-ttu-id="6c3c2-117">In diesem Beispiel wird eine Assembly mit einem privaten Typ erstellt, und die Friend-Assembly-erhält Zugriff auf eine Assembly namens „csman_an_assembly“.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-117">This sample builds an assembly with a private type, and that gives friend assembly access to an assembly called csman_an_assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7123-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b7123-116">Example</span></span>  
+ <span data-ttu-id="b7123-117">In diesem Beispiel wird eine Assembly mit einem privaten Typ erstellt, und die Friend-Assembly-erhält Zugriff auf eine Assembly namens „csman_an_assembly“.</span><span class="sxs-lookup"><span data-stu-id="b7123-117">This sample builds an assembly with a private type, and that gives friend assembly access to an assembly called csman_an_assembly.</span></span>  
   
 ```csharp  
 // moduleassemblyname_1.cs  
-// compile with: /target:library  
+// compile with: -target:library  
 using System;  
 using System.Runtime.CompilerServices;  
   
@@ -69,12 +69,12 @@ class An_Internal_Class
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6c3c2-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6c3c2-118">Example</span></span>  
- <span data-ttu-id="6c3c2-119">In diesem Beispiel wird eine NETMODULE-Datei erstellt, das auf einen nicht öffentlichen Typ in der Assembly „moduleassemblyname_1.dll“ zugreift.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-119">This sample builds a .netmodule that accesses a non-public type in the assembly moduleassemblyname_1.dll.</span></span> <span data-ttu-id="6c3c2-120">Da wir wissen, dass die NETMODULE-Datei in eine Assembly namens „csman_an_assembly“ integriert wird, können wir **/moduleassemblyname** angeben. Dadurch wird der NETMODULE-Datei ermöglicht, auf nicht öffentliche Typen in einer Assembly zuzugreifen, die Friend-Assembly-Zugriff auf „csman_an_assembly“ gewährt hat.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-120">By knowing that this .netmodule will be built into an assembly called csman_an_assembly, we can specify **/moduleassemblyname**, allowing the .netmodule to access non-public types in an assembly that has granted friend assembly access to csman_an_assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7123-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b7123-118">Example</span></span>  
+ <span data-ttu-id="b7123-119">In diesem Beispiel wird eine NETMODULE-Datei erstellt, das auf einen nicht öffentlichen Typ in der Assembly „moduleassemblyname_1.dll“ zugreift.</span><span class="sxs-lookup"><span data-stu-id="b7123-119">This sample builds a .netmodule that accesses a non-public type in the assembly moduleassemblyname_1.dll.</span></span> <span data-ttu-id="b7123-120">Da bekannt ist, dass die NETMODULE-Datei in eine Assembly namens „csman_an_assembly“ integriert wird, kann **-moduleassemblyname** angegeben werden. Dadurch wird es der NETMODULE-Datei ermöglicht, auf nicht öffentliche Typen in einer Assembly zuzugreifen, die Friend-Assembly-Zugriff auf „csman_an_assembly“ zulässt.</span><span class="sxs-lookup"><span data-stu-id="b7123-120">By knowing that this .netmodule will be built into an assembly called csman_an_assembly, we can specify **-moduleassemblyname**, allowing the .netmodule to access non-public types in an assembly that has granted friend assembly access to csman_an_assembly.</span></span>  
   
 ```csharp  
 // moduleassemblyname_2.cs  
-// compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
+// compile with: -moduleassemblyname:csman_an_assembly -target:module -reference:moduleassemblyname_1.dll  
 class B {  
     public void Test() {  
         An_Internal_Class x = new An_Internal_Class();  
@@ -83,12 +83,12 @@ class B {
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6c3c2-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6c3c2-121">Example</span></span>  
- <span data-ttu-id="6c3c2-122">In diesem Codebeispiel wird die Assembly „csman_an_assembly“ erstellt, die auf die zuvor erstellte Assembly und eine NETMODULE-Datei verweisen.</span><span class="sxs-lookup"><span data-stu-id="6c3c2-122">This code sample builds the assembly csman_an_assembly, referencing the previously-built assembly and .netmodule.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7123-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b7123-121">Example</span></span>  
+ <span data-ttu-id="b7123-122">In diesem Codebeispiel wird die Assembly „csman_an_assembly“ erstellt, die auf die zuvor erstellte Assembly und eine NETMODULE-Datei verweisen.</span><span class="sxs-lookup"><span data-stu-id="b7123-122">This code sample builds the assembly csman_an_assembly, referencing the previously-built assembly and .netmodule.</span></span>  
   
 ```csharp  
 // csman_an_assembly.cs  
-// compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
+// compile with: -addmodule:moduleassemblyname_2.netmodule -reference:moduleassemblyname_1.dll  
 class A {  
     public static void Main() {  
         B bb = new B();  
@@ -97,7 +97,7 @@ class A {
 }  
 ```  
   
- <span data-ttu-id="6c3c2-123">**An_Internal_Class.Test** aufgerufen</span><span class="sxs-lookup"><span data-stu-id="6c3c2-123">**An_Internal_Class.Test called**</span></span>  
-## <a name="see-also"></a><span data-ttu-id="6c3c2-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6c3c2-124">See Also</span></span>  
- [<span data-ttu-id="6c3c2-125">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="6c3c2-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="6c3c2-126">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="6c3c2-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+ <span data-ttu-id="b7123-123">**An_Internal_Class.Test** aufgerufen</span><span class="sxs-lookup"><span data-stu-id="b7123-123">**An_Internal_Class.Test called**</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b7123-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7123-124">See Also</span></span>  
+ [<span data-ttu-id="b7123-125">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="b7123-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="b7123-126">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="b7123-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
