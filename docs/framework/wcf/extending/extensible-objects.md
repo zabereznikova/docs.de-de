@@ -1,25 +1,20 @@
 ---
 title: Erweiterbare Objekte
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>Erweiterbare Objekte
 Das erweiterbare Objektmuster wird verwendet, um entweder vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um einem Objekt neue Zustandsfunktionen hinzuzufügen. Erweiterungen, die einem der erweiterbaren Objekte zugeordnet sind, ermöglichen es Verhalten in verschiedenen Phasen der Verarbeitung, auf gemeinsam verwendete Zustände und Funktionen zuzugreifen, die an ein zugängliches und allgemeines erweiterbares Objekt angefügt sind.  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  Wenn der Auflistung eine Erweiterung hinzugefügt wird, wird <xref:System.ServiceModel.IExtension%601.Attach%2A> aufgerufen, bevor die Erweiterung in die Auflistung aufgenommen wird. Wenn eine Erweiterung aus der Auflistung entfernt wird, wird nach der Entfernung <xref:System.ServiceModel.IExtension%601.Detach%2A> aufgerufen. Dies bedeutet (vorausgesetzt, es erfolgt eine entsprechende Synchronisierung), dass eine Erweiterung nur dann sicher in einer Auflistung enthalten ist, wenn sie sich zwischen den Zuständen <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> befindet.  
   
- Für das Objekt, das an <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> oder <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> übergeben wird, muss nicht <xref:System.ServiceModel.IExtension%601> gelten (beispielsweise können Sie jedes Objekt übergeben), aber bei der zurückgegebenen Erweiterung handelt es sich um <xref:System.ServiceModel.IExtension%601>.  
+ Für das Objekt, das an <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> oder <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> übergeben wird, muss nicht <xref:System.ServiceModel.IExtension%601> gelten (beispielsweise können Sie jedes Objekt übergeben), aber bei der zurückgegebenen Erweiterung handelt es sich um <xref:System.ServiceModel.IExtension%601>.  
   
- Wenn keine Erweiterung in der Auflistung ein <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> gibt null zurück, und <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> eine leere Auflistung zurück. Wenn mehrere Erweiterungen <xref:System.ServiceModel.IExtension%601> implementieren, gibt <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> eine davon zurück. Der von <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> zurückgegebene Wert ist eine Momentaufnahme.  
+ Wenn keine Erweiterung in der Auflistung ein <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> gibt null zurück, und <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> eine leere Auflistung zurück. Wenn mehrere Erweiterungen <xref:System.ServiceModel.IExtension%601> implementieren, gibt <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> eine davon zurück. Der von <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> zurückgegebene Wert ist eine Momentaufnahme.
   
  Es gibt zwei Hauptszenarios. Beim ersten Szenario wird die <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A>-Eigenschaft als typbasiertes Wörterbuch verwendet, um den Zustand für ein Objekt einzufügen und auf diese Weise eine andere Komponente in die Lage zu versetzen, anhand des Typs danach zu suchen.  
   
  Beim zweiten Szenario werden die Eigenschaften <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> verwendet, um einem Objekt die Teilnahme am benutzerdefinierten Verhalten zu ermöglichen, zum Beispiel das Registrieren von Ereignissen, Beobachten von Zustandsübergängen usw.  
   
- Die <xref:System.ServiceModel.IExtensionCollection%601>-Schnittstelle ist eine Auflistung von <xref:System.ServiceModel.IExtension%601>-Objekten, für die der Abruf von <xref:System.ServiceModel.IExtension%601> anhand des Typs zulässig ist. <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType> gibt das zuletzt hinzugefügte Objekt zurück, das eine <xref:System.ServiceModel.IExtension%601> dieses Typs ist.  
+ Die <xref:System.ServiceModel.IExtensionCollection%601>-Schnittstelle ist eine Auflistung von <xref:System.ServiceModel.IExtension%601>-Objekten, für die der Abruf von <xref:System.ServiceModel.IExtension%601> anhand des Typs zulässig ist. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> gibt das zuletzt hinzugefügte Objekt zurück, das eine <xref:System.ServiceModel.IExtension%601> dieses Typs ist.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Erweiterbare Objekte in Windows Communication Foundation  
  Es gibt vier erweiterbare Objekte in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
