@@ -13,19 +13,19 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: c1181ef98ac5f335c9737771eda2b3bd9227cc9f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="codepage-c-compiler-options"></a>/codepage (C#-Compileroptionen)
+# <a name="-codepage-c-compiler-options"></a>-codepage (C#-Compileroptionen)
 Diese Option gibt an, welche Codepage beim Kompilieren verwendet werden soll, wenn die erforderliche Seite nicht die aktuelle Standardcodepage für das System ist.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/codepage:id  
+-codepage:id  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -33,9 +33,9 @@ Diese Option gibt an, welche Codepage beim Kompilieren verwendet werden soll, we
  Die ID der Codepage, die für alle Quellcodedateien in der Kompilierung verwendet werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie eine oder mehrere Quellcodedateien kompilieren, für die beim Erstellen nicht die Verwendung der Standardcodepage auf dem Computer festgelegt wurde, können Sie die Option **/codepage** verwenden, um anzugeben, welche Codeseite verwendet werden soll. **/codepage** wirkt sich auf alle bei der Kompilierung verwendeten Quellcodedateien aus.  
+ Wenn Sie eine oder mehrere Quellcodedateien kompilieren, für die beim Erstellen nicht die Verwendung der Standardcodepage auf dem Computer festgelegt wurde, können Sie die Option **-codepage** verwenden, um anzugeben, welche Codepage verwendet werden soll. **-codepage** wirkt sich auf alle bei der Kompilierung verwendeten Quellcodedateien aus.  
   
- Wenn die Quellcodedateien mit der auf dem Computer aktivierten Codepage oder mit UNICODE bzw. UTF-8 erstellt wurden, müssen Sie **/codepage** nicht verwenden.  
+ Wenn die Quellcodedateien mit der auf dem Computer aktivierten Codepage oder mit UNICODE bzw. UTF-8 erstellt wurden, müssen Sie **-codepage** nicht verwenden.  
   
  Weitere Informationen darüber, wie ermittelt wird, welche Codeseiten auf dem System unterstützt werden, finden Sie unter [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx).  
   

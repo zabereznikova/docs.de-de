@@ -13,19 +13,19 @@ ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 108244d7de49c2ff4df1ac7202e77958743b32df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7528283765c2b6f4a9d5e84015526a95938a6281
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="pdb-c-compiler-options"></a>/pdb (C#-Compileroptionen)
-Die Compileroption **/pdb** gibt den Namen und Speicherort der Debugsymboldatei an.  
+# <a name="-pdb-c-compiler-options"></a>-pdb (C#-Compileroptionen)
+Die Compileroption **-pdb** gibt den Namen und Speicherort der Debugsymboldatei an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/pdb:filename  
+-pdb:filename  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -33,9 +33,9 @@ Die Compileroption **/pdb** gibt den Namen und Speicherort der Debugsymboldatei 
  Der Name und Speicherort der Debugsymboldatei  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie [/debug (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) angeben, erstellt der Compiler eine PDB-Datei im gleichen Verzeichnis, in dem der Compiler die Ausgabedatei (.exe oder .dll) mit einem Dateinamen erstellt, der mit dem Namen der Ausgabedatei identisch ist.  
+ Wenn Sie [-debug (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) angeben, erstellt der Compiler eine PDB-Datei im gleichen Verzeichnis, in dem der Compiler die Ausgabedatei (.exe oder .dll) mit einem Dateinamen erstellt, der mit dem Namen der Ausgabedatei identisch ist.  
   
- Mit **/pdb** können Sie einen nicht standardmäßigen Dateinamen und -speicherort für die PDB-Datei angeben.  
+ Mit **-pdb** können Sie einen Dateinamen und -speicherort für die PDB-Datei angeben, die nicht dem Standard entsprechen.  
   
  Diese Compileroption kann weder in der Visual Studio-Entwicklungsumgebung festgelegt werden, noch kann sie programmgesteuert geändert werden.  
   
@@ -43,7 +43,7 @@ Die Compileroption **/pdb** gibt den Namen und Speicherort der Debugsymboldatei 
  Kompilieren Sie `t.cs`, und erstellen Sie eine PDB-Datei mit dem Namen „tt.pdb“:  
   
 ```console  
-csc /debug /pdb:tt t.cs  
+csc -debug -pdb:tt t.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

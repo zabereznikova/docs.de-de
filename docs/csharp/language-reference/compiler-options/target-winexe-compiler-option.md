@@ -13,31 +13,31 @@ ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e155c64689f34c89443c7ff0a3dee38d6c190fcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b13af4e665a2bf5a75472bc8f4a501e90c59281a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinexe-c-compiler-options"></a>/target:winexe (C#-Compileroptionen)
-Die Option **/target:winexe** bewirkt, dass der Compiler eine ausführbare Windows-Anwendung (EXE) erstellt.  
+# <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C#-Compileroptionen)
+Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windows-Programm (EXE) erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/target:winexe  
+-target:winexe  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt. Ein Windows-Programm stellt eine Benutzeroberfläche entweder aus der .NET Framework-Bibliothek oder mit den Win32-APIs bereit.  
   
- Verwenden Sie [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), um eine Konsolenanwendung zu erstellen.  
+ Verwenden Sie [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), um eine Konsolenanwendung zu erstellen.  
   
- Sofern Sie nicht die Option [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) verwenden, erhält die Ausgabedatei den Namen der Eingabedatei, die die [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode enthält.  
+ Sofern Sie nicht die Option [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) verwenden, erhält die Ausgabedatei den Namen der Eingabedatei, die die [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode enthält.  
   
- Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **/out** oder [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) verwendet, um das Windows-Programm zu erstellen.  
+ Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **-out** oder [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) verwendet, um das Windows-Programm zu erstellen.  
   
- Nur eine **Main**-Methode wird in den Quellcodedateien benötigt, die in eine EXE-Datei kompiliert werden. Sollte Ihr Code mehr als eine Klasse mit einer **Main**-Methode haben, können Sie mit der Option [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) angeben, welche Klasse die **Main**-Methode enthält.  
+ Nur eine **Main**-Methode wird in den Quellcodedateien benötigt, die in eine EXE-Datei kompiliert werden. Sollte Ihr Code mehr als eine Klasse mit einer **Main**-Methode enthalten, können Sie mit der Option [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) angeben, welche Klasse die **Main**-Methode enthält.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -53,9 +53,9 @@ Die Option **/target:winexe** bewirkt, dass der Compiler eine ausführbare Windo
  Kompilieren Sie `in.cs` in ein Windows-Programm:  
   
 ```console  
-csc /target:winexe in.cs  
+csc -target:winexe in.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [/ target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

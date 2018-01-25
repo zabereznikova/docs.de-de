@@ -8,29 +8,29 @@ ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f690591b79159a0196a1637903f2cc53442976e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 444fcd69db327ea9d9c3dc739b42520bb9472c4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (C#-Compileroptionen)
-Wenn Sie die Compileroption **/target:winmdobj** verwenden, erstellt der Compiler eine WINMDOBJ-Zwischendatei, die Sie in eine binäre Windows Runtime-Datei (.winmd) konvertieren können. Die WINMD-Datei kann dann von verwalteten Sprachprogrammen und auch von JavaScript- und C++-Programmen verwendet werden.  
+# <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C#-Compileroptionen)
+Wenn Sie die Compileroption **-target:winmdobj** verwenden, erstellt der Compiler eine WINMDOBJ-Zwischendatei, die Sie in eine binäre Windows Runtime-Datei (.winmd) konvertieren können. Die WINMD-Datei kann dann von verwalteten Sprachprogrammen und auch von JavaScript- und C++-Programmen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/target:winmdobj  
+-target:winmdobj  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die Einstellung **winmdobj** signalisiert dem Compiler, dass ein Zwischenmodul erforderlich ist. Als Antwort darauf kompiliert Visual Studio die C#-Klassenbibliothek als WINMDOBJ-Datei. Die WINMDOBJ-Datei kann dann durch das <xref:Microsoft.Build.Tasks.WinMDExp>-Exporttool eingegeben werden, um eine Windows-Metadatendatei (.winmd) zu erzeugen. Die WINMD-Datei enthält sowohl den Code von der ursprünglichen Bibliothek als auch die WinMD-Metadaten, die von JavaScript oder C++ und von der Windows-Runtime verwendet werden.  
   
- Die Ausgabe einer Datei, die mithilfe der Compileroption **/target:winmdobj** kompiliert wird, ist für die reine Verwendung als Eingabe für das WimMDExp-Exporttool vorgesehen. Auf die WINMDOBJ-Datei selbst wird nicht direkt verwiesen.  
+ Die Ausgabe einer Datei, die mithilfe der Compileroption **-target:winmdobj** kompiliert wird, ist für die reine Verwendung als Eingabe für das WimMDExp-Exporttool vorgesehen. Auf die WINMDOBJ-Datei selbst wird nicht direkt verwiesen.  
   
- Sofern Sie nicht die Option [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) verwenden, erhält die Ausgabedatei den Namen der ersten Eingabedatei. Eine [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode ist nicht erforderlich.  
+ Sofern Sie nicht die Option [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) verwenden, erhält die Ausgabedatei den Namen der ersten Eingabedatei. Eine [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode ist nicht erforderlich.  
   
- Wenn Sie die Option /target:winmdobj an einer Eingabeaufforderung festlegen, werden alle Dateien bis zur nächsten Option **/out** oder [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) verwendet, um das Windows-Programm zu erstellen.  
+ Wenn Sie die Option -target:winmdobj an einer Eingabeaufforderung festlegen, werden alle Dateien bis zur nächsten Option **-out** oder [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) verwendet, um das Windows-Programm zu erstellen.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>So legen Sie diese Compileroption in der Visual Studio-IDE für eine Windows Store-App fest  
   
@@ -48,9 +48,9 @@ Wenn Sie die Compileroption **/target:winmdobj** verwenden, erstellt der Compile
  Der folgende Befehl kompiliert `filename.cs` in eine WINMDOBJ-Zwischendatei.  
   
 ```console  
-csc /target:winmdobj filename.cs  
+csc -target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [/ target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

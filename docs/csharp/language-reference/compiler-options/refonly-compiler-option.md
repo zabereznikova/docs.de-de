@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (C# Compileroptionen)
+# <a name="-refonly-c-compiler-options"></a>-refonly (C# Compileroptionen)
 
-Die **/refonly** Option gibt an, dass eine Verweisassembly Ausgabe anstelle einer Implementierung-Assembly, wie die primäre Ausgabe werden soll. Der Parameter `/refonly` deaktiviert im Hintergrund die Ausgabe von PDBs, da Verweisassemblys nicht ausgeführt werden können.
+Die Option **-refonly** gibt an, dass eine Verweisassembly statt einer Implementierungsassembly als primäre Ausgabe ausgegeben werden soll. Der Parameter `-refonly` deaktiviert im Hintergrund die Ausgabe von PDBs, da Verweisassemblys nicht ausgeführt werden können.
 
 ## <a name="syntax"></a>Syntax
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>Hinweise
@@ -40,7 +41,7 @@ Verweisassemblys entfernen außerdem Metadaten (private Member) aus auf Metadate
 - Alle virtuellen Methoden werden beibehalten. Explizite Schnittstellenimplementierungen werden beibehalten. Explizit implementierte Eigenschaften und Ereignisse werden beibehalten, aber ihre Accessoren sind virtuell (und werden deshalb beibehalten).
 - Alle Felder einer Struktur werden beibehalten. (Dies ist ein Kandidat für eine Optimierung nach C# 7.1)
 
-Die Optionen `/refonly` und [`/refout`](refout-compiler-option.md) schließen sich gegenseitig aus.
+Die Optionen `-refonly` und [`-refout`](refout-compiler-option.md) schließen sich gegenseitig aus.
 
 ## <a name="see-also"></a>Siehe auch
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  

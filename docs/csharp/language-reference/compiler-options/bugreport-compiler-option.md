@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport (C#-Compileroptionen)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (C#-Compileroptionen)
 Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei eingefügt werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -33,7 +33,7 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
  Der Name der Datei, die den Problembericht enthalten soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **/bugreport** Option gibt an, dass die folgende Informationen in eingefügt werden soll `file`:  
+ Die Option **-bugreport** gibt an, dass die folgende Informationen in `file` eingefügt werden soll:  
   
 -   Eine Kopie aller Quellcodedateien in der Kompilierung.  
   
@@ -49,7 +49,7 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
   
 -   Eine Beschreibung Ihres Vorschlags zur Beseitigung des Problems. Sie werden aufgefordert, diese Beschreibung einzugeben.  
   
- Wenn diese Option mit **/errorreport:prompt** oder **/errorreport:send** verwendet wird, werden die Informationen in der Datei an die Microsoft Corporation gesendet.  
+ Wenn diese Option mit **-errorreport:prompt** oder **-errorreport:send** verwendet wird, werden die Informationen in der Datei an die Microsoft Corporation gesendet.  
   
  Da von allen Quellcodedateien Kopien in `file` gespeichert werden, empfiehlt es sich, den vermuteten Codefehler im kürzestmöglichen Programm zu reproduzieren.  
   
@@ -59,5 +59,5 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
- [/ errorreport (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [-errorreport (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

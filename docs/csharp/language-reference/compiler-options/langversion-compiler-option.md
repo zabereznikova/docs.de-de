@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (C#-Compileroptionen)
+# <a name="-langversion-c-compiler-options"></a>-langversion (C#-Compileroptionen)
 Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C#-Sprachspezifikation enthalten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -52,17 +52,17 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 
   
 ## <a name="remarks"></a>Hinweise  
- Metadaten, auf die von Ihrer C#-Anwendung verwiesen wird, unterliefen nicht der Compileroption **/langversion**.  
+ Metadaten, auf die von Ihrer C#-Anwendung verwiesen wird, unterliegen nicht der Compileroption **-langversion**.  
   
- Da jede Version des C#-Compilers Erweiterungen der Sprachspezifikation enthält, bietet **/langversion** Ihnen nicht die gleichen Funktionen wie die einer früheren Compilerversion.  
+ Da jede Version des C#-Compilers Erweiterungen der Sprachspezifikation enthält, bietet **-langversion** Ihnen nicht die gleiche Funktionalität wie die einer früheren Compilerversion.  
  
  Darüber hinaus sind die neue Syntax und die neuen Features nicht unbedingt an die spezifische Frameworkversion gebunden, während C#-Versionupdates für gewöhnlich mit den Hauptversionen von .NET Framework einhergehen. Während die neuen Features ein Compilerupdate erfordern, das mit der C#-Revision veröffentlicht wird, hat jedes Feature seine eigene mindestens erforderliche .NET-API- oder CLR-Anforderungen, durch die es auf abwärtskomptatiblen Frameworks ausgeführt werden kann, indem NuGet-Pakete oder andere Bibliotheken einbezogen werden.
   
- Unabhängig von der verwendeten **/langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen. Davon ausgenommen sind Friend-Assemblys und [/moduleassemblyname (C#-Compileroption)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), die unter **/langversion:ISO-1** laufen.  
+ Unabhängig von der verwendeten **-langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen. Davon ausgenommen sind Friend-Assemblys und [-moduleassemblyname (C#-Compileroption)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), die unter **-langversion:ISO-1** laufen.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaftenseite** des Projekts.  
   
 2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   
@@ -100,7 +100,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 oder gebündelter .NET Framework 4.0-Compiler    
 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 oder gebündelter .NET Framework 4.5-Compiler    
 [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio Build Tools 2015    
-[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a>: Microsoft Visual Studio Build Tools 2017   
+[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Aktuell</a>: Microsoft Visual Studio Build Tools 2017   
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 20??    

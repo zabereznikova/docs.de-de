@@ -1,12 +1,8 @@
 ---
 title: "Übersicht über die Dynamic Language Runtime | Microsoft-Dokumentation"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt. Die DLR vereinfacht es, dynamische Sprachen für die Ausführung auf dem .NET Framework zu entwickeln und statisch typisierten Sprachen dynamische Funktionen hinzuzufügen.  
@@ -52,10 +48,10 @@ Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common La
   
  `scriptobj.Count += 1;`  
   
- Wie die CLR ist die DLR auch ein Teil von .NET Framework und wird mit dem .NET Framework und Installationspaketen von Visual Studio bereitgestellt. Die Open-Source-Version der DLR ist ebenso zum Download auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website verfügbar.  
+ Wie die CLR ist die DLR auch ein Teil von .NET Framework und wird mit dem .NET Framework und Installationspaketen von Visual Studio bereitgestellt. Die Open-Source-Version der DLR ist ebenso zum Download im Repository [IronLanguages/dlr](https://github.com/IronLanguages/dlr) auf GitHub verfügbar.  
   
 > [!NOTE]
->  Die Open-Source-Version der DLR verfügt über alle Funktionen der DLR, die in Visual Studio und dem .NET Framework integriert ist. Es wird auch zusätzliche Unterstützung für Sprachimplementierungen geboten. Weitere Informationen finden Sie in der Dokumentation auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website.  
+>  Die Open-Source-Version der DLR verfügt über alle Funktionen der DLR, die in Visual Studio und dem .NET Framework integriert ist. Es wird auch zusätzliche Unterstützung für Sprachimplementierungen geboten. Weitere Informationen finden Sie in der Dokumentation im Repository [IronLanguages/dlr](https://github.com/IronLanguages/dlr) auf GitHub. 
   
  Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgendes:  
   
@@ -98,7 +94,7 @@ DLR-Architektur
  Die DLR verwendet Binder in Aufrufwebsites, um nicht nur mit .NET Framework zu kommunizieren, sondern auch mit anderen Infrastrukturen und Diensten, einschließlich Silverlight und COM. Binder kapseln die Semantik einer Sprache ein und geben an, wie Vorgänge in einer Aufrufwebsite durchgeführt werden, indem Ausdrucksbaumstrukturen verwendet werden. Dadurch werden dynamische und statisch typisierte Sprachen aktiviert, die die DLR zum Freigeben von Bibliotheken und Erhalten von Zugriff auf alle Technologien verwenden, die die DLR unterstützt.  
   
 ## <a name="dlr-documentation"></a>DLR-Dokumentation  
- Weitere Informationen zur Verwendung der Open-Source-Version der DLR zum Hinzufügen dynamischen Verhaltens zu einer Sprache oder Informationen darüber, wie Sie die Verwendung einer dynamischer Sprache mit .NET Framework aktivieren, finden Sie in der Dokumentation auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website.  
+ Weitere Informationen zur Verwendung der Open-Source-Version der DLR zum Hinzufügen dynamischen Verhaltens zu einer Sprache oder Informationen darüber, wie Sie die Verwendung einer dynamischer Sprache mit .NET Framework aktivieren, finden Sie in der Dokumentation im Repository [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) auf GitHub.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Dynamic.ExpandoObject>  

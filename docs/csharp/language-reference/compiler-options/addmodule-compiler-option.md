@@ -13,19 +13,19 @@ ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2652102682de9dff24c66180dde36f33b4b6bbfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="addmodule-c-compiler-options"></a>/addmodule (C#-Compileroptionen)
+# <a name="-addmodule-c-compiler-options"></a>-addmodule (C#-Compileroptionen)
 Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mocule“ in der aktuellen Kompilierung erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/addmodule:file[;file2]  
+-addmodule:file[;file2]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -33,11 +33,11 @@ Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mo
  Eine Ausgabedatei, die Metadaten enthält. Die Datei kann kein Assemblymanifest enthalten. Trennen Sie die Dateinamen entweder mit einem Komma oder einem Semikolon, um mehr als eine Datei zu importieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Module, die mit **/addmodule** hinzugefügt werden, müssen sich zur Laufzeit im gleichen Verzeichnis wie die Ausgabedatei befinden. Das bedeutet, dass Sie zur Kompilierzeit ein beliebiges Modul in einem Verzeichnis angeben können, sich das Modul aber zur Laufzeit im Anwendungsverzeichnis befinden muss. Wenn sich das Modul zur Laufzeit nicht im Anwendungsverzeichnis befindet, wird eine <xref:System.TypeLoadException> ausgelöst.  
+ Alle Module, die mit **-addmodule** hinzugefügt werden, müssen sich zur Laufzeit im gleichen Verzeichnis wie die Ausgabedatei befinden. Das bedeutet, dass Sie zur Kompilierzeit ein beliebiges Modul in einem Verzeichnis angeben können, sich das Modul aber zur Laufzeit im Anwendungsverzeichnis befinden muss. Wenn sich das Modul zur Laufzeit nicht im Anwendungsverzeichnis befindet, wird eine <xref:System.TypeLoadException> ausgelöst.  
   
- `file` kann keine Assembly enthalten. Wenn die Ausgabedatei z.B. mit [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) erstellt wurde, können seine Metadaten mit **/addmodule** importiert werden.  
+ `file` kann keine Assembly enthalten. Wenn die Ausgabedatei z.B. mit [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) erstellt wurde, können die Metadaten mit **-addmodule** importiert werden.  
   
- Wenn die Ausgabedatei mit einer **/target**-Option, die nicht **/target:module** ist, erstellt wurde, können seine Metadaten nicht mit **/addmodule** importiert werden. Stattdessen werden sie mit [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) importiert.  
+ Wenn die Ausgabedatei mit einer anderen **-target**-Option als **-target:module** erstellt wurde, können die Metadaten nicht mit **-addmodule** importiert werden. Stattdessen werden sie mit [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) importiert.  
   
  Diese Compileroption steht in Visual Studio nicht zur Verfügung, da ein Projekt nicht auf ein Modul verweisen kann. Des Weiteren kann diese Compileroption nicht programmgesteuert geändert werden.  
   
@@ -45,7 +45,7 @@ Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mo
  Kompilieren Sie die Quelldatei `input.cs`, und fügen Sie Metadaten aus `metad1.netmodule` und `metad2.netmodule` hinzu, um `out.exe` zu erstellen:  
   
 ```console  
-csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
+csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

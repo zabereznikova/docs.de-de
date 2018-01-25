@@ -13,19 +13,19 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (C#-Compileroptionen)
-Die Option **/lib** gibt den Speicherort der Assembly an, auf die verwiesen wird. Dies geschieht mithilfe der Option [/reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="-lib-c-compiler-options"></a>-lib (C#-Compileroptionen)
+Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird. Dies geschieht mithilfe der Option [-reference (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -42,15 +42,15 @@ Die Option **/lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
   
 2.  Das Verzeichnis des CLR-Systems (Common Language Runtime)  
   
-3.  Von **/lib** angegebene Verzeichnisse  
+3.  Von **-lib** angegebene Verzeichnisse  
   
 4.  Von den LIB-Umgebungsvariablen angegebene Verzeichnisse  
   
- Verwenden Sie **/reference**, um einen Assemblyverweis anzugeben.  
+ Verwenden Sie **-reference**, um einen Assemblyverweis anzugeben.  
   
- **/lib** ist additiv. Wenn es mehr als einmal angegeben wird, wird es an jeden vorherigen Wert angehängt.  
+ **-lib** ist additiv. Wenn es mehr als einmal angegeben wird, wird es an jeden vorherigen Wert angehängt.  
   
- Alternativ zu **/lib** können Sie auch alle erforderlichen Assemblys direkt in das Arbeitsverzeichnis kopieren. Damit können Sie den Namen das Assembly ganz einfach an **/reference** übergeben. Anschließend können Sie die Assemblys wieder aus dem Arbeitsverzeichnis löschen. Da der Pfad der abhängigen Assembly nicht im Assemblymanifest angegeben ist, kann die Anwendung auf dem Zielcomputer gestartet werden. Sie findet und verwendet die Assembly dann im globalen Assemblycache.  
+ Alternativ zu **-lib** können Sie auch alle erforderlichen Assemblys direkt in das Arbeitsverzeichnis kopieren. Dadurch können Sie den Namen der Assembly ganz einfach an **-reference** übergeben. Anschließend können Sie die Assemblys wieder aus dem Arbeitsverzeichnis löschen. Da der Pfad der abhängigen Assembly nicht im Assemblymanifest angegeben ist, kann die Anwendung auf dem Zielcomputer gestartet werden. Sie findet und verwendet die Assembly dann im globalen Assemblycache.  
   
  Nur weil der Compiler auf die Assembly verweisen kann, heißt das nicht, dass die CLR die Assembly zur Laufzeit finden und laden kann. Weitere Informationen dazu, wie die Laufzeit nach verwiesenen Assemblys sucht, finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../framework/deployment/how-the-runtime-locates-assemblies.md).  
   
@@ -68,7 +68,7 @@ Die Option **/lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
  Kompilieren Sie „t2.cs“, um eine EXE-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis und im Stammverzeichnis des Laufwerks C nach Assemblyverweisen.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

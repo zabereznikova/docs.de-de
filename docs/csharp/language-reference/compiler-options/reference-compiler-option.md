@@ -18,37 +18,37 @@ ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b3995cd22f50aa8a3a329b22a4fbe4e9b8ffa4ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60a00b1cd088a051e1a58d245c455b9678a74988
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="reference-c-compiler-options"></a>/reference (C#-Compileroptionen)
-Die Option **/reference** veranlasst den Compiler, [öffentliche](../../../csharp/language-reference/keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  
+# <a name="-reference-c-compiler-options"></a>-reference (C#-Compileroptionen)
+Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../csharp/language-reference/keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/reference:[alias=]filename  
-/reference:filename  
+-reference:[alias=]filename  
+-reference:filename  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  `filename`  
- Der Name einer Datei, die ein Assemblymanifest enthält. Um mehr als eine Datei zu importieren, fügen Sie eine separate Option **/reference** für jede Datei ein.  
+ Der Name einer Datei, die ein Assemblymanifest enthält. Fügen Sie die separate Option **-reference** für jede Datei ein, um mehr als eine Datei zu importieren.  
   
  `alias`  
  Ein gültiger C#-Bezeichner, der einen Stammnamespace darstellt, der alle Namespaces in der Assembly enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Um mehr als eine Datei zu importieren, fügen Sie eine Option **/reference** für jede Datei ein.  
+ Fügen Sie die Option **-reference** für jede Datei ein, um mehr als eine Datei zu importieren.  
   
- Die zu importierenden Dateien müssen ein Manifest enthalten. Die Ausgabedatei muss mit einer der Optionen [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) außer [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) kompiliert werden.  
+ Die zu importierenden Dateien müssen ein Manifest enthalten. Die Ausgabedatei muss mit einer anderen [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)-Option als [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) kompiliert werden.  
   
- **/r** ist die Kurzform von **/reference**.  
+ **-r** ist die Kurzform von **-reference**.  
   
- Verwenden Sie [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md), um Metadaten aus einer Ausgabedatei zu importieren, die kein Assemblymanifest enthält.  
+ Verwenden Sie [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md), um Metadaten aus einer Ausgabedatei zu importieren, die kein Assemblymanifest enthält.  
   
  Wenn Sie auf eine Assembly (Assembly A) verweisen, die auf eine andere Assembly (Assembly B) verweist, müssen Sie auf Assembly B verweisen, wenn:  
   
@@ -56,23 +56,23 @@ Die Option **/reference** veranlasst den Compiler, [öffentliche](../../../cshar
   
 -   Sie rufen ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode auf, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Verwenden Sie [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md), um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden. Das **/lib**-Thema erläutert auch die Verzeichnisse, in denen der Compiler nach Assemblys sucht.  
+ Verwenden Sie [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md), um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden. Der Artikel **-lib** erläutert auch die Verzeichnisse, in denen der Compiler nach Assemblys sucht.  
   
  Damit der Compiler einen Typ in einer Assembly, und nicht in einem Modul, erkennen kann, muss die Auflösung des Typs durch die Definition einer Instanz des Typs erzwungen werden. Der Compiler verfügt über andere Möglichkeiten, Typnamen in einer Assembly aufzulösen. Beispielsweise wird beim Erben von einem Typ in einer Assembly der Typname vom Compiler erkannt werden.  
   
- Manchmal ist es erforderlich, auf zwei verschiedene Versionen derselben Komponente aus einer Assembly heraus zu verweisen. Verwenden Sie hierzu die Alias-Teiloption auf dem Schalter **/reference** für jede Datei, um zwischen den beiden Dateien zu unterscheiden. Dieser Alias wird als Qualifizierer für den Namen der Komponente verwendet und wird für die Komponente in einer der Dateien aufgelöst.  
+ Manchmal ist es erforderlich, auf zwei verschiedene Versionen derselben Komponente aus einer Assembly heraus zu verweisen. Verwenden Sie hierzu die Alias-Teiloption des Parameters **-reference** für jede Datei, um zwischen den beiden Dateien zu unterscheiden. Dieser Alias wird als Qualifizierer für den Namen der Komponente verwendet und wird für die Komponente in einer der Dateien aufgelöst.  
   
- Die csc-Antwortdatei (.rsp), welche auf häufig verwendete .NET Framework-Assemblys verweist, wird standardmäßig verwendet. Verwenden Sie [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md), wenn der Compiler csc.rsp nicht verwenden soll.  
+ Die csc-Antwortdatei (.rsp), welche auf häufig verwendete .NET Framework-Assemblys verweist, wird standardmäßig verwendet. Verwenden Sie [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md), wenn der Compiler „csc.rsp“ nicht verwenden soll.  
   
 > [!NOTE]
-> Verwenden Sie in Visual Studio das Dialogfeld **Verweis hinzufügen**. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Um ein gleichwertiges Verhalten zwischen Hinzufügen von Verweisen mit `/reference` und Hinzufügen von Verweisen mithilfe des Dialogfelds **Verweis hinzufügen** sicherzustellen, legen Sie die Eigenschaft **Einbetten von Interop-Typen** für die Assembly, die Sie hinzufügen möchten, auf **FALSE** fest. Der Standardwert für diese Eigenschaft ist **TRUE**.  
+> Verwenden Sie in Visual Studio das Dialogfeld **Verweis hinzufügen**. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Um ein gleichwertiges Verhalten zwischen Hinzufügen von Verweisen mit `-reference` und Hinzufügen von Verweisen mithilfe des Dialogfelds **Verweis hinzufügen** sicherzustellen, legen Sie die Eigenschaft **Einbetten von Interop-Typen** für die Assembly, die Sie hinzufügen möchten, auf **FALSE** fest. Der Standardwert für diese Eigenschaft ist **TRUE**.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Verwendung der Funktion [extern-Alias](../../../csharp/language-reference/keywords/extern-alias.md).  
   
- Kompilieren Sie die Quelldatei und importieren Sie Metadaten aus `grid.dll` und `grid20.dll`, die bereits zuvor kompiliert wurden. Die beiden DLLs enthalten separate Versionen derselben Komponente, und Sie verwenden zwei **/reference** mit Aliasoptionen, um die Quelldatei zu kompilieren. Die Optionen sehen folgendermaßen aus:  
+ Kompilieren Sie die Quelldatei und importieren Sie Metadaten aus `grid.dll` und `grid20.dll`, die bereits zuvor kompiliert wurden. Die beiden DLLs enthalten separate Versionen derselben Komponente, und Sie verwenden zwei **-reference**-Parameter mit Aliasoptionen, um die Quelldatei zu kompilieren. Die Optionen sehen folgendermaßen aus:  
   
- /reference:GridV1=grid.dll und /reference:GridV2=grid20.dll  
+ -reference:GridV1=grid.dll und -reference:GridV2=grid20.dll  
   
  Dadurch werden die externen Aliase „GridV1“ und „GridV2“ eingerichtet, die Sie in Ihrem Programm über eine extern-Anweisung verwenden:  
   

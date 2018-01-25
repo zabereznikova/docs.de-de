@@ -13,36 +13,36 @@ ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4705fc6fc3e3fa41f46b8617aa23ab507afa0cd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be1b6379080b2af799990c43e5339a9a548eb067
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-c-compiler-options"></a>/debug (C#-Compileroptionen)
-Die Option **/debug** führt dazu, dass der Compiler Debuginformationen generiert und sie in der Ausgabedatei bzw. in Ausgabedateien platziert.  
+# <a name="-debug-c-compiler-options"></a>-debug (C#-Compileroptionen)
+Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generiert und sie in der Ausgabedatei bzw. in Ausgabedateien platziert.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/debug[+ | -]  
-/debug:{full | pdbonly}  
+-debug[+ | -]  
+-debug:{full | pdbonly}  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  `+` &#124; `-`  
- Wenn `+` oder nur **/debug** angegeben wird, generiert der Compiler Debuginformationen und platziert sie in einer Programmdatenbank (PDB-Datei). Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie **/debug** nicht anzugeben, werden keine Debuginformationen erstellt.  
+ Wenn `+` oder nur **-debug** angegeben wird, generiert der Compiler Debuginformationen und platziert sie in einer Programmdatenbank (PDB-Datei). Wenn Sie `-` angeben (entspricht dem Weglassen von **-debug**), werden keine Debuginformationen erstellt.  
   
  `full` &#124; `pdbonly`  
- Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Das vollständige Argument, das aktiv ist, wenn Sie **/debug:pdbonly** nicht angeben, ermöglicht das Anfügen eines Debuggers an das ausgeführte Programm. Durch die Angabe von pdbonly wird das Debuggen von Quellcode möglich, wenn das Programm im Debugger gestartet wird. Der Assembler wird jedoch nur angezeigt, wenn das aktive Programm an den Debugger angefügt ist.  
+ Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Das vollständige Argument, das aktiv ist, wenn Sie **-debug:pdbonly** nicht angeben, ermöglicht das Anfügen eines Debuggers an das ausgeführte Programm. Durch die Angabe von pdbonly wird das Debuggen von Quellcode möglich, wenn das Programm im Debugger gestartet wird. Der Assembler wird jedoch nur angezeigt, wenn das aktive Programm an den Debugger angefügt ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn **/debug**, **/debug+** oder **/debug:full** nicht angegeben ist, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
+ Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn **-debug**, **-debug+** oder **-debug:full** nicht angegeben ist, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
   
- Wenn Sie **/debug:full** verwenden, beachten Sie, dass dies Einfluss auf die Geschwindigkeit und Größe von optimiertem JIT-Code hat und die Codequalität mit **/debug:full** etwas beeinträchtigen kann. Zum Generieren von Releasecode empfehlen wir **/debug:pdbonly** oder keine PDB-Datei.  
+ Wenn Sie **-debug:full** verwenden, beachten Sie, dass dies Einfluss auf die Geschwindigkeit und Größe von optimiertem JIT-Code hat und die Codequalität mit **-debug:full** beeinträchtigt sein kann. Zum Generieren von Releasecode wird empfohlen, **-debug:pdbonly** oder keine PDB-Datei zu verwenden.  
   
 > [!NOTE]
->  Ein Unterschied zwischen **/debug:pdbonly** und **/debug:full** besteht darin, dass der Compiler mit **/debug:full** ein <xref:System.Diagnostics.DebuggableAttribute> ausgibt, was dem JIT-Compiler mitteilt, dass die Debuginformation verfügbar ist. Deshalb wird ein Fehler ausgegeben, wenn in Ihrem Code <xref:System.Diagnostics.DebuggableAttribute> auf FALSE festgelegt ist, wenn Sie **/debug:full** verwenden.  
+>  Ein Unterschied zwischen **-debug:pdbonly** und **-debug:full** besteht darin, dass der Compiler mit **-debug:full** ein <xref:System.Diagnostics.DebuggableAttribute>-Objekt ausgibt, das dem JIT-Compiler mitteilt, dass die Debuginformation verfügbar ist. Deshalb wird ein Fehler ausgegeben, wenn bei der Verwendung von **-debug:full** <xref:System.Diagnostics.DebuggableAttribute> in Ihrem Code auf FALSE festgelegt ist.  
   
  Weitere Informationen zur Konfiguration der Leistung einer Anwendung beim Debuggen finden Sie unter [Erleichtern des Debuggens für ein Image](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
@@ -50,7 +50,7 @@ Die Option **/debug** führt dazu, dass der Compiler Debuginformationen generier
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaftenseite** des Projekts.  
   
 2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   
@@ -64,7 +64,7 @@ Die Option **/debug** führt dazu, dass der Compiler Debuginformationen generier
  Platzieren Sie die Debuginformationen in der Ausgabedatei `app.pdb`:  
   
 ```console  
-csc /debug /pdb:app.pdb test.cs  
+csc -debug -pdb:app.pdb test.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

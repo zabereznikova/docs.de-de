@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -33,29 +33,29 @@ ms.lasthandoff: 11/21/2017
  Wenn Sie benannte und optionale Parameter zusammen verwenden, können Sie Argumente für nur ein paar Parameter aus einer Liste von optionalen Parametern bereitstellen. Diese Funktion erleichtert den Zugriff auf COM-Schnittstellen wie etwa die Automatisierungs-APIs in Microsoft Office erheblich.  
   
 ## <a name="named-arguments"></a>Benannte Argumente  
- Bei Verwendung benannter Argumente bleibt es Ihnen erspart, sich an die Reihenfolge von Parametern in den Parameterlisten von aufgerufenen Methoden zu erinnern oder sie nachzuschauen. Der Parameter für jedes Argument kann vom Parameternamen angegeben werden. Z. B. eine Funktion, die Bestelldetails ausgibt (z. B. Verkäufer Name, Order Anzahl & Product Name) kann auf die übliche Weise aufgerufen werden, durch das Senden von Argumenten nach Position in der Reihenfolge von der Funktion definiert.
+ Bei Verwendung benannter Argumente bleibt es Ihnen erspart, sich an die Reihenfolge von Parametern in den Parameterlisten von aufgerufenen Methoden zu erinnern oder sie nachzuschauen. Der Parameter für jedes Argument kann vom Parameternamen angegeben werden. Eine Funktion, die beispielsweise Details zu einer Bestellung ausgibt (z.B. Verkäufername, Bestellnummer und Produktname), kann standardmäßig aufgerufen werden, indem anhand der Position Argumente in der Reihenfolge gesendet werden, die von der Funktion definiert wurde.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Wenn Sie sich nicht auf die Reihenfolge der Parameter erinnern, aber ihre Namen kennen, können Sie die Argumente in beliebiger Reihenfolge senden.  
+ Wenn Sie sich nicht an die Reihenfolge der Parameter erinnern, aber deren Namen wissen, können Sie die Argumente in einer beliebigen Reihenfolge senden.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Benannte Argumente verbessern auch die Lesbarkeit des Codes, indem sie identifizieren, was jedes Argument darstellt. In der folgenden Beispielmethode der `sellerName` darf nicht Null oder leer sein. Beide `sellerName` und `productName` sind Zeichenfolgentypen, anstatt das Senden von Argumenten nach Position, ist es sinnvoll, benannte Argumente verwenden, um die beiden eindeutig und weniger Verwirrung für jede Person beim Lesen des Codes.
+ Benannte Argumente verbessern auch die Lesbarkeit des Codes, indem sie identifizieren, was jedes Argument darstellt. In der folgenden Beispielmethode kann `sellerName` nicht NULL oder leer sein. Da es sich bei `sellerName` und `productName` um Zeichenfolgentypen handelt, sollten Sie benannte Argumente verwenden, anstatt Argumente nach Position zu senden, um die beiden Parameter zu unterscheiden und die Leser des Codes nicht zu verwirren.
   
- Benannte Argumente, bei der Verwendung mit Positionsargumenten, gelten als 
+ Benannte Argumente sind länger gültig, wenn sie mit positionellen Argumenten verwendet werden, da 
 
-- Sie sind keine Positionsargumente gefolgt oder
+- ihnen keine positionellen Argumente folgen, bzw. da
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _beginnend mit c# 7.2_, sie sind in der richtigen Position verwendet. Im folgenden Beispiel ist der Parameter `orderNum` befindet sich in der richtigen Position aber wird nicht explizit benannt.
+- sie _ab C# 7.2_ in der richtigen Position verwendet werden. Im folgenden Beispiel befindet sich der Parameter `orderNum` in der richtigen Position, ist jedoch nicht explizit benannt.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Benannte Argumente außerhalb der normalen Reihenfolge sind jedoch ungültig, wenn sie von positionellen Argumenten befolgt werden.
+ Benannte Argumente, die sich außerhalb der Reihenfolge befinden, sind jedoch ungültig, wenn diesen positionelle Argumente folgen.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code implementiert die Beispielen in diesem Abschnitt sowie einige zusätzlichen Spalten.  
+ Der folgende Code implementiert die Beispiele in diesem Abschnitt sowie einige zusätzliche Beispiele.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ Optionale Parameter in ExampleMethod
 ## <a name="com-interfaces"></a>COM-Schnittstellen  
  Benannte und optionale Argumente verbessern zusammen mit der Unterstützung von dynamischen Objekten und anderen Verbesserungen deutlich die Interoperabilität mit COM-APIs wie Office-Automatisierungs-APIs.  
   
- Die Methode [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) hat z.B. in der Schnittstelle [Bereich](http://go.microsoft.com/fwlink/?LinkId=148196) von Microsoft Office Excel sieben Parameter, von denen alle optional sind. Diese Parameter sind in der folgenden Abbildung dargestellt.  
+ Die Methode [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) hat z.B. in der Schnittstelle [Bereich](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) von Microsoft Office Excel sieben Parameter, von denen alle optional sind. Diese Parameter sind in der folgenden Abbildung dargestellt.  
   
  ![IntelliSense-QuickInfo für die AutoFormat-Methode.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat-Parameter  
