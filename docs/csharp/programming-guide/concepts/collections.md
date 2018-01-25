@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -198,7 +198,7 @@ public class Galaxy
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace aufgelistet:  
 
-|Klasse|Beschreibung| 
+|Klasse|description| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|  
 |<xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|  
@@ -224,7 +224,7 @@ public class Galaxy
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen im `System.Collections`-Namespace aufgelistet:  
   
-|Klasse|Beschreibung|  
+|Klasse|description|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Stellt ein Array von Objekten dar, das je nach Bedarf dynamisch vergrößert wird.|  
 |<xref:System.Collections.Hashtable>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.|  
@@ -546,7 +546,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iteratoren  
+##  <a name="iterators"></a>Iterators  
  Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung, um jedes Element der Auflistung separat zurückzugeben.  
   
  Sie rufen einen Iterator mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung auf. Jede Iteration der `foreach`-Schleife ruft den Iterator auf. Wenn eine `yield return`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
@@ -587,7 +587,7 @@ private static IEnumerable<int> EvenSequence(
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)  
- [Erstellen und Bearbeiten von Sammlungen](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Erstellen und Bearbeiten von Auflistungen](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
  [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  

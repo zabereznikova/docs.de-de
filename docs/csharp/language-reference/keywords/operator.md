@@ -12,17 +12,17 @@ ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8fae5487d5daa5ada52d45919598d1abd217aee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d035319318a710ccee62a0c64ce5981767a21ca
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="operator-c-reference"></a>operator (C#-Referenz)
 Verwenden Sie das Schlüsselwort `operator`, um einen integrierten Operator zu überladen oder um eine benutzerdefinierte Konvertierung in einer Klassen- oder Strukturdeklaration bereitzustellen.  
   
 ## <a name="example"></a>Beispiel  
- Die Folgende ist eine stark vereinfachte Klasse für Bruchzahlen. Sie überlädt die Operatoren „+“ und „*“, um Addition und Multiplikation bei Brüchen auszuführen, und stellt auch einen Konvertierungsoperator bereit, der einen Bruchtyp in einen doppelten Typ konvertiert.  
+ Die Folgende ist eine stark vereinfachte Klasse für Bruchzahlen. Sie überlädt die Operatoren `+` und `*`, um Addition und Multiplikation bei Brüchen auszuführen, und stellt einen Konvertierungsoperator bereit, der einen `Fraction`-Typ in einen `double`-Typ konvertiert.  
   
  [!code-csharp[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   

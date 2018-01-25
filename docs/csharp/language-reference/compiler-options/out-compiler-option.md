@@ -13,19 +13,19 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out (C#-Compileroptionen)
-Die Option **/out** gibt den Namen der Ausgabedatei an.  
+# <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
+Die Option **-out** gibt den Namen der Ausgabedatei an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -33,7 +33,7 @@ Die Option **/out** gibt den Namen der Ausgabedatei an.
  Der Name der Ausgabedatei, die vom Compiler erstellt wurde  
   
 ## <a name="remarks"></a>Hinweise  
- In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **/out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **/out** angegebenen Ausgabedatei kompiliert.  
+ In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **-out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **-out** angegebenen Ausgabedatei kompiliert.  
   
  Geben Sie den vollständigen Namen und die Erweiterung der Datei an, die Sie erstellen möchten.  
   
@@ -45,11 +45,11 @@ Die Option **/out** gibt den Namen der Ausgabedatei an.
   
  Eine Quellcodedatei zum Kompilieren einer Ausgabedatei kann nicht in der gleichen Kompilierung für die Kompilierung einer anderen Ausgabedatei verwendet werden.  
   
- Wenn bei einer Befehlszeilenkompilierung mehrere Ausgabedateien erstellt werden, sollten Sie bedenken, dass nur eine der Ausgabedateien eine Assembly sein kann und dass nur die erste angegebene Ausgabedatei (implizit oder explizit mit **/out**) die Assembly sein kann.  
+ Wenn bei einer Befehlszeilenkompilierung mehrere Ausgabedateien erstellt werden, sollten Sie bedenken, dass nur eine der Ausgabedateien eine Assembly sein kann und dass nur die erste angegebene Ausgabedatei (implizit oder explizit mit **-out**) die Assembly sein kann.  
   
  Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
   
- Die Compileroption „/out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Die Compileroption „-out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -65,7 +65,7 @@ Die Option **/out** gibt den Namen der Ausgabedatei an.
  Kompilieren Sie `t.cs`, und erstellen Sie die Ausgabedatei `t.exe` und die Datei `t2.cs` sowie die Modulausgabedatei `mymodule.netmodule`:  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

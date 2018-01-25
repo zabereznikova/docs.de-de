@@ -13,19 +13,19 @@ ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e0d4697e0e14c84c4bc642521cf4f9cdf6a4ed6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7682a3e1ecf483b8495d817ef01e57093ae0f987
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowin32manifest-c-compiler-options"></a>/nowin32manifest (C#-Compileroptionen)
-Verwenden Sie die Option **/nowin32manifest**, um den Compiler anzuweisen, kein Anwendungsmanifest in die ausführbare Datei einzubetten.  
+# <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C#-Compileroptionen)
+Verwenden Sie die Option **-nowin32manifest**, um den Compiler anzuweisen, kein Anwendungsmanifest in die ausführbare Datei einzubetten.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/nowin32manifest  
+-nowin32manifest  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -33,7 +33,7 @@ Verwenden Sie die Option **/nowin32manifest**, um den Compiler anzuweisen, kein 
   
  Legen Sie diese Option in Visual Studio auf der Seite **Application Property** (Anwendungseigenschaft) fest, indem Sie in der **Manifest**-Dropdownliste auf die Option **Create Application Without a Manifest** (Anwendung ohne ein Manifest erstellen) klicken. Weitere Informationen finden Sie unter [Seite „Anwendung“, Projekt-Designer (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Weitere Informationen zum Erstellen von Manifesten finden Sie unter [/win32manifest (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
+ Weitere Informationen zum Erstellen von Manifesten finden Sie unter [-win32manifest (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  

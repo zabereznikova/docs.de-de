@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.
@@ -70,31 +70,31 @@ csc File.cs
 - Kompiliert *file.cs*, sodass *file.exe* entsteht:
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - Kompiliert *file.cs* und erstellt *my.exe*:
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen und definiert das DEBUG-Symbol. Die Ausgabe lautet *File2.exe*:
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis, wodurch eine Debugversion von *File2.dll* erstellt wird. Es werden weder Logo noch Warnungen angezeigt:
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu *Name.xyz* (eine DLL-Datei):
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe

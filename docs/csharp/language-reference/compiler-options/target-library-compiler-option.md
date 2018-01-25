@@ -13,27 +13,27 @@ ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 242f8ada7cbffc4a6986339d28c4284b50afca25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library (C#-Compileroptionen)
-Die Option **/target:library** veranlasst den Compiler, eine Dynamic Link Library (DLL) zu erstellen, anstatt einer ausführbaren Datei (EXE).  
+# <a name="-targetlibrary-c-compiler-options"></a>-target:library (C#-Compileroptionen)
+Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link Library (DLL) statt einer ausführbaren Datei (EXE) zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/target:library  
+-target:library  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die DLL wird mit der DLL-Dateiendung erstellt.  
   
- Sofern nicht anders mit der Option [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) angegeben wurde, erhält die Ausgabedatei den Namen der ersten Eingabedatei.  
+ Sofern es nicht anders mit der Option [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) angegeben wurde, erhält die Ausgabedatei den Namen der ersten Eingabedatei.  
   
- Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **/out** oder **/target:module** verwendet, um die DLL-Datei zu erstellen.  
+ Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **-out** oder **-target:module** verwendet, um die DLL-Datei zu erstellen.  
   
  Beim Erstellen einer DLL-Datei ist eine [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode nicht erforderlich.  
   
@@ -51,9 +51,9 @@ Die Option **/target:library** veranlasst den Compiler, eine Dynamic Link Librar
  Kompilieren Sie `in.cs`, und `in.dll` wird erstellt:  
   
 ```console  
-csc /target:library in.cs  
+csc -target:library in.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [/ target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

@@ -14,19 +14,19 @@ ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c24da8bb745847612d882d00eff7f03dbc60475
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32res-c-compiler-options"></a>/win32res (C#-Compileroptionen)
-Die Option **/win32res** fügt eine win32res-Ressource in die Ausgabedatei ein.  
+# <a name="-win32res-c-compiler-options"></a>-win32res (C#-Compileroptionen)
+Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/win32res:filename  
+-win32res:filename  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -36,9 +36,9 @@ Die Option **/win32res** fügt eine win32res-Ressource in die Ausgabedatei ein.
 ## <a name="remarks"></a>Hinweise  
  Eine Win32-Ressourcendatei kann mit dem [Ressourcencompiler](../../language-reference/compiler-options/resource-compiler-option.md) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine RES-Datei erstellt.  
   
- Eine Win32-Ressource kann Versions- oder Bitmapinformationen (Symbolinformationen) enthalten, anhand derer die Anwendung im Datei-Explorer identifiziert werden kann. Wenn sie **/win32res** nicht angeben, generiert der Compiler Versioninformationen auf Grundlage der Assemblyversion  
+ Eine Win32-Ressource kann Versions- oder Bitmapinformationen (Symbolinformationen) enthalten, anhand derer die Anwendung im Datei-Explorer identifiziert werden kann. Wenn sie **-win32res** nicht angeben, generiert der Compiler Versionsinformationen auf Grundlage der Assemblyversion.  
   
- Schauen Sie sich [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) zum Verweisen oder [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) zum Anfügen einer .NET Framework-Ressourcendatei an  
+ Weitere Informationen zum Verweisen auf eine .NET Framework-Ressourcendatei finden Sie unter [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), weitere Informationen zum Anfügen einer .NET Framework-Ressourcendatei unter [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -52,7 +52,7 @@ Die Option **/win32res** fügt eine win32res-Ressource in die Ausgabedatei ein.
  Kompilieren Sie `in.cs`, und fügen Sie die Win32-Ressourcendatei `rf.res` an, um `in.exe` zu erzeugen:  
   
 ```console  
-csc /win32res:rf.res in.cs  
+csc -win32res:rf.res in.cs  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

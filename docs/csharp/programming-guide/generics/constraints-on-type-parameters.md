@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 Wenn Sie eine generische Klasse definieren, können Sie Beschränkungen auf die Arten der Typen anwenden, die Clientcode für generische Typargumente verwenden kann, wenn er Ihre Klasse instanziiert. Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Diese Einschränkungen werden als Constraints bezeichnet. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sechs verschiedenen Contrainttypen aufgelistet:  
   
-|Constraint|Beschreibung|  
+|Constraint|description|  
 |----------------|-----------------|  
-|where T: struct|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
-|where T : class|Das Typargument muss ein Verweistyp sein. Dies gilt ebenfalls für Klassen-, Schnittstellen-, Delegat- oder Arraytypen.|  
-|where T : new()|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|  
-|where T : \<basisklassenname>|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.|  
-|where T : \<schnittstellenname>|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein.|  
-|where T : U|Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.|  
+|`where T: struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
+|`where T : class`|Das Typargument muss ein Verweistyp sein. Dies gilt ebenfalls für Klassen-, Schnittstellen-, Delegat- oder Arraytypen.|  
+|`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|  
+|`where T : `*\<Basisklassenname>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.|  
+|`where T : `*\<Schnittstellenname>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein.|  
+|`where T : U`|Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.|  
   
 ## <a name="why-use-constraints"></a>Weshalb Constraints?  
  Wenn Sie untersuchen möchten, ob ein bestimmtes Argument in einer generischen Liste gültig ist oder es mit einem anderen Element vergleichen möchten, muss der Compiler eine Garantie haben, dass der Operator oder die Methode, die er aufgerufen hat, von jedem Typargument unterstützt wird, das von Clientcode angegeben werden kann. Diese Garantie wird gegeben, indem Sie einen oder mehrere Constraints auf Ihre generische Klassendefinition anwenden. Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden. Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können. Constraints werden mit dem kontextuellen Schlüsselwort `where` angewendet. Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden eines Basisklassenconstraints hinzugefügt werden kann (in [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)).  

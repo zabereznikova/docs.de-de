@@ -21,19 +21,19 @@ ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f00db0cfd191de060b67aee4618d99740cb81248
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign (C#-Compileroptionen)
-Mit der Option **/filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.  
+# <a name="-filealign-c-compiler-options"></a>-filealign (C#-Compileroptionen)
+Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/filealign:number  
+-filealign:number  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -41,7 +41,7 @@ Mit der Option **/filealign** können Sie die Größe der Abschnitte in Ihrer Au
  Ein Wert, der die Größe der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Jeder Abschnitt wird auf einer Grenze angeordnet, die ein Mehrfaches des **/filealign**-Werts ist. Es gibt keinen festen Standardwert. Wenn **/filealign** nicht angegeben ist, wird die Common Language Runtime einen Standardwert zur Kompilierzeit wählen.  
+ Jeder Abschnitt wird auf einer Grenze angeordnet, die ein Vielfaches des Werts **-filealign** darstellt. Es gibt keinen festen Standardwert. Wenn **-filealign** nicht angegeben ist, wählt die Common Language Runtime zur Kompilierzeit einen Standardwert.  
   
  Das Angeben der Abschnittsgröße wirkt sich auf die Größe der Ausgabedatei aus. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
   
@@ -49,7 +49,7 @@ Mit der Option **/filealign** können Sie die Größe der Abschnitte in Ihrer Au
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaftenseite** des Projekts.  
   
 2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   

@@ -17,35 +17,35 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a>/optimize (C#-Compileroptionen)
-Die Option **/optimize** aktiviert oder deaktiviert die vom Compiler durchgeführten Optimierungen, damit Ihre Ausgabedatei kleiner, schneller und effizienter wird.  
+# <a name="-optimize-c-compiler-options"></a>-optimize (C#-Compileroptionen)
+Die Option **-optimize** aktiviert oder deaktiviert die vom Compiler durchgeführten Optimierungen, damit Ihre Ausgabedatei kleiner, schneller und effizienter wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-/optimize[+ | -]  
+-optimize[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Außerdem weist **/optimize** die Common Language Runtime an, den Code zur Laufzeit zu optimieren.  
+ Außerdem weist **-optimize** die Common Language Runtime an, den Code zur Laufzeit zu optimieren.  
   
- Optimierungen sind standardmäßig deaktiviert. Geben Sie **/optimize+** an, um Optimierungen zu aktivieren.  
+ Optimierungen sind standardmäßig deaktiviert. Geben Sie **-optimize+** an, um Optimierungen zu aktivieren.  
   
- Beim Erstellen eines Moduls, das von einer Assembly verwendet werden soll, verwenden Sie dieselben **/optimize**-Einstellungen wie die der Assembly.  
+ Beim Erstellen eines Moduls, das von einer Assembly verwendet werden soll, verwenden Sie dieselben **-optimize**-Einstellungen wie die der Assembly.  
   
- **/o** ist die Kurzform von **/optimize**.  
+ **-o** ist die Kurzform von **-optimize**.  
   
- Es ist möglich, die Optionen **/ optimize** und [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) zu kombinieren.  
+ Es ist möglich, die Optionen **-optimize** und [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) zu kombinieren.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaftenseite** des Projekts.  
   
 2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   
@@ -57,7 +57,7 @@ Die Option **/optimize** aktiviert oder deaktiviert die vom Compiler durchgefüh
  Kompilieren Sie `t2.cs`, um Compileroptimierungen zu aktivieren:  
   
 ```console  
-csc t2.cs /optimize  
+csc t2.cs -optimize  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
