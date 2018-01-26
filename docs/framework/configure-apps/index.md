@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  Dieses Thema beschreibt die Syntax von Konfigurationsdateien und enthält Informationen zu den drei Arten von Konfigurationsdateien: Computer, Anwendung und Sicherheit.  
   
 ## <a name="configuration-file-format"></a>Format von Konfigurationsdateien  
- Konfigurationsdateien enthalten Elemente, so genannte logische Datenstrukturen zur Einstellung von Konfigurationsinformationen. Innerhalb der Konfigurationsdatei können Sie Anfang und Ende eines Elements durch Tags markieren. Zum Beispiel besteht das Element `<runtime>` aus `<runtime>`*untergeordneten*`</runtime>`-Elementen. Ein leeres Element würde in Form von `<runtime/>` oder `<runtime>``</runtime>` geschrieben.  
+ Konfigurationsdateien enthalten Elemente, so genannte logische Datenstrukturen zur Einstellung von Konfigurationsinformationen. Innerhalb der Konfigurationsdatei können Sie Anfang und Ende eines Elements durch Tags markieren. Zum Beispiel besteht das Element `<runtime>` aus `<runtime>`*untergeordneten*`</runtime>`-Elementen. Ein leeres Element würde in Form von `<runtime/>` oder `<runtime></runtime>` geschrieben.  
   
  Wie bei allen XML-Dateien wird bei der Syntax von Konfigurationsdateien die Groß-/Kleinschreibung berücksichtigt.  
   

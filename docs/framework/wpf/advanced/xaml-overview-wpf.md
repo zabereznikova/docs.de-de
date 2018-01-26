@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>Übersicht über XAML (WPF)
 Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können. Dieses Thema beschreibt speziell XAML entsprechend der Implementierung durch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML selbst geht über das in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementierte Sprachkonzept hinaus.  
@@ -56,7 +56,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
 ## <a name="xaml-syntax-in-brief"></a>Kurzer Überblick über die XAML-Syntax  
  In den folgenden Abschnitten werden die grundlegenden Formen der XAML-Syntax erläutert und ein kurzes Markupbeispiel vorgestellt. Diese Abschnitte beabsichtigen keine Wiedergabe vollständiger Informationen über jedes Syntaxformat, z.B. wie diese im Unterstützungstypsystem dargestellt werden. Weitere Informationen zu den Besonderheiten der XAML-Syntax für jede der in diesem Thema vorgestellten Syntax finden Sie unter [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- Wenn Sie bereits mit der XML-Sprache vertraut sind, wird Ihnen vieles dessen, was Sie in den folgenden Abschnitten lesen, elementar erscheinen. Dies liegt im grundlegenden Entwurfsprinzip von XAML begründet.  Die XAML-Sprache definiert zwar eigene Konzepte, aber diese Konzepte arbeiten mit der XML-Sprache und -Markup-Form.  
+ Wenn Sie bereits mit der XML-Sprache vertraut sind, wird Ihnen vieles dessen, was Sie in den folgenden Abschnitten lesen, elementar erscheinen. Dies liegt im grundlegenden Entwurfsprinzip von XAML begründet.  Die XAML-Sprache definiert eigene Konzepte, aber diese Konzepte funktionieren innerhalb des XML-Sprache und die markupoptionen eines Formulars.  
   
 ### <a name="xaml-object-elements"></a>XAML-Objektelemente  
  Ein Objektelement deklariert in der Regel eine Instanz eines Typs. Dieser Typ ist in den Assemblys definiert, die die Unterstützungstypen für eine Technologie bereitstellen, die XAML als Sprache verwendet.  
