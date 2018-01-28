@@ -42,7 +42,7 @@ Dabei gilt:
 - *format-string* ist eine Formatzeichenfolge, die zu dem Objekttyp passt, der formatiert wird. Für den Wert <xref:System.DateTime> wäre es beispielsweise eine Standardzeichenfolge für Datum und Zeit wie etwa „D“ und „d“.
 
 > [!IMPORTANT]
-> Sie sind keine Leerzeichen zwischen den `$` und `"` , der die Zeichenfolge beginnt. Auf diese Weise verursacht einen Kompilierzeitfehler.
+> Zwischen `$` und dem `"` am Anfang der Zeichenfolge dürfen keine Leerzeichen gesetzt werden. Dies hätte einen Kompilierzeitfehler zur Folge.
 
  Eine interpolierte Zeichenfolge können Sie überall dort verwenden, wo Sie ein Zeichenfolgenliteral verwenden.  Die interpolierte Zeichenfolge wird immer nach ausgewertet, wenn der Code mit der interpolierten Zeichenfolge ausgeführt wird. So können Sie die Definition und die Auswertung einer interpolierten Zeichenfolge voneinander trennen.  
   
