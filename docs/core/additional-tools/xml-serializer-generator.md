@@ -8,11 +8,11 @@ ms.date: 01/19/2017
 ms.topic: tutorial
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: 4b838cafe1f4835c1c5aa6086c0997a4a9e39a9e
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: b2f52a068d128b2eb978c9e086508bd87e103ebc
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
 
@@ -132,5 +132,5 @@ Herzlichen Glückwunsch! Sie haben gerade:
 ## <a name="related-resources"></a>Verwandte Ressourcen
 
 * [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
-* [How to: Serialize Using XmlSerializer (C#) (Vorgehensweise: Serialisieren mit XmlSerializer (C#))](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer)
-* [How to: Serialize Using XmlSerializer (Visual Basic) (Vorgehensweise: Serialisieren mit „XmlSerializer“ (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer)
+* [How to: Serialize Using XmlSerializer (C#) (Vorgehensweise: Serialisieren mit XmlSerializer (C#))](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [How to: Serialize Using XmlSerializer (Visual Basic) (Vorgehensweise: Serialisieren mit „XmlSerializer“ (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

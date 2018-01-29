@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Erstellen von Docker-Images für .NET Core-Anwendungen
 
@@ -101,7 +102,7 @@ Dieses verwendet das [Docker-Feature für mehrstufige Builds](https://docs.docke
 * das Erstellen des Beispiels in einem Container, der auf dem **größeren** Docker-Basisimage für ASP.NET Core-Builds basiert 
 * das Kopieren der finalen Buildergebnisse in ein Docker-Image, das auf dem **kleineren** Docker-Basisimage der ASP.NET Core-Runtime basiert
 
-> [!Note]
+> [!NOTE]
 > Das Buildimage enthält im Gegensatz zum Runtimeimage die erforderlichen Tools zum Erstellen von Anwendungen.
 
 ### <a name="prerequisites"></a>Erforderliche Komponenten
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] Das `docker run`-Argument „-p“ ordnet Port 5000 auf Ihrem lokalen Computer zu Port 80 im Container zu (das Format für die Zuordnung von Ports lautet `host:container`). Weitere Informationen finden Sie unter den Befehlszeilenparametern in der Referenz zu [docker run](https://docs.docker.com/engine/reference/commandline/exec/).
+> [!NOTE]
+> Das `docker run`-Argument „-p“ ordnet Port 5000 auf Ihrem lokalen Computer zu Port 80 im Container zu (das Format für die Zuordnung von Ports lautet `host:container`). Weitere Informationen finden Sie unter den Befehlszeilenparametern in der Referenz zu [docker run](https://docs.docker.com/engine/reference/commandline/exec/).
 
 Rufen Sie nach dem Starten der Anwendung **http://localhost:5000** im Webbrowser auf.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Führen Sie aus `docker exec aspnetcore_sample ipconfig`.
 * Kopieren Sie die IP-Adresse des Containers (z.B. 172.29.245.43), und fügen Sie diese in Ihrem Browser ein.
 
-> [!Note]
+> [!NOTE]
 > „docker exec“ identifiziert Container per Name oder Hash. In diesem Beispiel wird der Name (aspnetcore_sample) verwendet.
 
 Im folgenden Beispiel wird dargestellt, wie Sie die IP-Adresse eines ausgeführten Windows-Containers abrufen können.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > „docker exec“ führt einen neuen Befehl in einem ausgeführten Container aus. Weitere Informationen finden Sie unter den Befehlszeilenparametern in der [Referenz zu docker exec](https://docs.docker.com/engine/reference/commandline/exec/).
 
 Sie können eine Anwendung, die für die Produktion bereitgestellt werden kann, lokal mithilfe des Befehls [dotnet publish](../tools/dotnet-publish.md) erstellen.
@@ -224,7 +226,7 @@ Sie können eine Anwendung, die für die Produktion bereitgestellt werden kann, 
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > Das Argument „-c release“ erstellt die Anwendung im Releasemodus (der Standardwert ist der Debugmodus). Weitere Informationen finden Sie unter den Befehlszeilenparametern in der [Referenz zu dotnet run](../tools/dotnet-run.md).
 
 Sie können die Anwendung mithilfe des folgenden Befehls unter **Windows** ausführen.
@@ -265,5 +267,5 @@ Im Folgenden finden Sie weiterführende Schritte:
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud (Erste Schritte mit Visual Studio für Mac, Container und serverlose Code in der Cloud)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Erste Schritte mit Docker und Visual Studio für Mac – Übung](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > Wenn Sie kein Azure-Abonnement besitzen, [registrieren Sie sich noch heute für ein kostenloses 30-Tage-Konto](https://azure.microsoft.com/free/?b=16.48), und erhalten Sie ein Azure-Guthaben in Höhe von 200 US-Dollar, um eine beliebige Kombination von Azure-Diensten zu testen.
