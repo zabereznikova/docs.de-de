@@ -2,9 +2,11 @@
 title: -resource (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /resource
+f1_keywords:
+- /resource
 helpviewer_keywords:
 - -resource compiler option [C#]
 - /resource compiler option [C#]
@@ -13,14 +15,14 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a305f98b09d390afbeba7b55ab44ff09abc74617
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C#-Compileroptionen)
 Bettet die angegebene Ressource in die Ausgabedatei ein.  
@@ -42,7 +44,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist „öffentlich“.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.  
+ Verwenden Sie [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.  
   
  Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.  
   
