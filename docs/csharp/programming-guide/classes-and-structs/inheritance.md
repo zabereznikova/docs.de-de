@@ -2,7 +2,8 @@
 title: Vererbung (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
@@ -12,7 +13,7 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
@@ -50,7 +51,7 @@ Klassenvererbung
 ## <a name="interfaces"></a>Schnittstellen  
  Eine *Schnittstelle* ist ein Verweistyp, der einer abstrakten Basisklasse leicht ähnelt, die nur aus zwei abstrakten Membern besteht. Wenn eine Klasse eine Schnittstelle implementiert, muss sie eine Implementierung für alle Member der Schnittstelle bereitstellen. Eine Klasse kann mehrere Schnittstellen implementieren, auch wenn sie nur von einer einzelnen direkten Basisklasse ableiten kann.  
   
- Schnittstellen werden verwendet, um bestimmte Funktionen zu definieren, die nicht unbedingt in einer „ist ein“-Beziehung zueinander stehen. Die <xref:System.IEquatable%601?displayProperty=nameWithType>-Schnittstelle kann z.B. von jeder beliebigen Klasse oder Struktur implementiert werden, die es Clientcode ermöglichen muss, ermitteln zu können, ob zwei Objekte des Typs äquivalent sind (allerdings definiert der Typ Äquivalenz). <xref:System.IEquatable%601> impliziert nicht dieselbe Art einer „ist ein“-Beziehung, wie sie zwischen einer Basis- und einer abgeleiteten Klasse besteht (z.B. ist ein `Mammal` ein `Animal`). Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
+ Schnittstellen werden verwendet, um bestimmte Funktionen zu definieren, die nicht unbedingt in einer „ist ein“-Beziehung zueinander stehen. Die <xref:System.IEquatable%601?displayProperty=nameWithType> -Schnittstelle kann z.B. von jeder beliebigen Klasse oder Struktur implementiert werden, die es Clientcode ermöglichen muss, ermitteln zu können, ob zwei Objekte des Typs äquivalent sind (allerdings definiert der Typ Äquivalenz). <xref:System.IEquatable%601> impliziert nicht dieselbe Art einer „ist ein“-Beziehung, wie sie zwischen einer Basis- und einer abgeleiteten Klasse besteht (z.B. ist ein `Mammal` ein `Animal`). Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Weitere Ableitung verhindern  
  Eine Klasse kann andere Klassen daran hindern, von ihr oder einem ihrer Member zu erben, indem sie sich selbst oder den Member als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) deklariert. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  

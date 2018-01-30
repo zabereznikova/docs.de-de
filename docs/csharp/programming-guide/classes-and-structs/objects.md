@@ -2,13 +2,14 @@
 title: Objekte (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
@@ -26,7 +27,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 ## <a name="struct-instances-vs-class-instances"></a>Strukturinstanzen im Vergleich zu Klasseninstanzen  
  Da Klassen Verweistypen sind, enthält eine Variable eines Klassenobjekts einen Verweis auf die Adresse des Objekts auf dem verwalteten Heap. Wenn dem ersten Objekt ein zweites Objekt desselben Typs zugewiesen wird, verweisen beide Variablen auf das Objekt in dieser Adresse. Dieser Punkt wird in diesem Thema an späterer Stelle ausführlicher behandelt.  
   
- Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/keywords/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person2` sind Instanzen oder Objekte des Typs.  
+ Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/keywords/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person 2` sind Instanzen oder Objekte des Typs.  
   
  [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
