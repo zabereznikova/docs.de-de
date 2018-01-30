@@ -48,7 +48,7 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückzugeben. Zum Beispiel:  
+ Der `get`-Accessor kann wahlweise verwendet werden, um den Wert des Felds zurückzugeben oder den Wert des Felds zunächst zu berechnen und dann zurückzugeben. Zum Beispiel:  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
@@ -78,7 +78,7 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
 >  Das Verwenden eines [virtual](../../../csharp/language-reference/keywords/virtual.md)(virtuell)-, [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt)- oder [override](../../../csharp/language-reference/keywords/override.md)(außer Kraft setzen)- Modifizierers für einen Accessor einer [statischen](../../../csharp/language-reference/keywords/static.md) Eigenschaft ist ein Fehler.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt Instanz-, statische- und schreibgeschützte Eigenschaften. Es akzeptiert die Eingabe des Parameters `Name` des Mitarbeiters mit der Tastatur, erhöht `NumberOfEmployees` um 1, und zeigt den Mitarbeiternamen und die Nummer an.  
+ Dieses Beispiel stellt Instanz-, statische und schreibgeschützte Eigenschaften dar. Es nimmt den über die Tastatur eingegebenen Namen des Mitarbeiters entgegen, zählt den Wert von `NumberOfEmployees` um 1 hoch und zeigt Name und Nummer des Mitarbeiters an. 
   
  [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
