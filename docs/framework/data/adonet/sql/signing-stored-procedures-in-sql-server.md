@@ -1,50 +1,63 @@
 ---
 title: Signieren von gespeicherten Prozeduren in SQL Server
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/05/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signieren von gespeicherten Prozeduren in SQL Server
-Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren. Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL. In einem solchen Fall erstellen Sie einen Benutzer, der dem Zertifikat zugeordnet wird, wodurch ihm Berechtigungen für die Objekte gewährt werden, auf die die gespeicherte Prozedur zugreifen können muss.  
+ Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datenhashwert. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Sie können gespeicherte Prozeduren, Funktionen (mit Ausnahme von Inline-Tabellenwertfunktionen), Trigger und Assemblys signieren.  
   
- Bei der Ausführung der gespeicherten Prozedur kombiniert SQL Server die Berechtigungen des Zertifikatsbenutzers mit den Berechtigungen des Aufrufers. Im Gegensatz zur EXECUTE AS-Klausel ändert sich der Ausführungskontext der Prozedur nicht. Integrierte Funktionen, die Anmelde- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.  
+ Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren. Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL. Anschließend können Sie erstellen einen mit dem Zertifikat zugeordneten Benutzer Benutzerberechtigungen das Zertifikat für die Objekte, die die gespeicherte Prozedur zugreifen muss.  
+
+ Sie können auch eine Anmeldung für das gleiche Zertifikat erstellen und dann erforderlichen Berechtigungen auf Serverebene, die dieser Anmeldung zu gewähren, oder hinzufügen die Anmeldung an eine oder mehrere der festen Serverrollen. Dies dient zum Aktivieren der vermeiden der `TRUSTWORTHY` Datenbank-Einstellung für Szenarien, in denen Berechtigungen auf höhere Ebene erforderlich sind.  
   
- Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datendigest. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Signiert werden können gespeicherte Prozeduren, Funktionen oder Trigger.  
-  
-> [!NOTE]
->  Sie können in der Masterdatenbank ein Zertifikat zum Gewähren von Berechtigungen auf Serverebene erstellen.  
+ Wenn die gespeicherte Prozedur ausgeführt wird, kombiniert SQL Server die Berechtigungen der Zertifikatsbenutzer und/oder Anmeldung, mit denen des Aufrufers. Im Gegensatz zu den `EXECUTE AS` -Klausel ändert nicht den Ausführungskontext der Prozedur. Integrierte Funktionen, die Anmelde- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.  
   
 ## <a name="creating-certificates"></a>Erstellen von Zertifikaten  
- Beim Signieren einer gespeicherten Prozedur mit einem Zertifikat wird mithilfe des privaten Schlüssels ein Datendigest erstellt, der aus dem verschlüsselten Hash der gespeicherten Prozedur besteht. Zur Laufzeit wird der Datendigest mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen. Wenn die gespeicherte Prozedur geändert wird, wird der Hashwert ungültig, sodass die digitale Signatur nicht mehr übereinstimmt. Auf diese Weise wird verhindert, dass der Code der gespeicherten Prozedur durch einen Benutzer geändert wird, der keine Zugriffsberechtigung für den privaten Schlüssel besitzt. Daher muss die Prozedur nach jeder Änderung neu signiert werden.  
+ Wenn Sie eine gespeicherte Prozedur mit einem Zertifikat oder den asymmetrischen Schlüssel, einen Datendigest, bestehend aus dem verschlüsselten Hash der Code der gespeicherten Prozedur, zusammen mit der Execute Anmelden – als Benutzer erstellt wird, mit dem privaten Schlüssel. Zur Laufzeit wird der Datenhashwert mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen. Ändern die Execute-wie Benutzer den Hashwert ungültig, sodass die digitale Signatur nicht mehr übereinstimmt. Ändern die gespeicherte Prozedur löscht die Signatur vollständig, die verhindert, dass eine Person, die keinen Zugriff auf den privaten Schlüssel am Code der gespeicherten Prozedur zu ändern. In beiden Fällen müssen Sie erneut anmelden die Prozedur bei jeder Änderung des Codes oder der Execute-Benutzer.  
   
- Zum Signieren eines Moduls sind die folgenden vier Schritte auszuführen:  
+ Zum Signieren eines Moduls stehen zwei Schritte:  
   
 1.  Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat. Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können. Die Standardgültigkeitsdauer beträgt ein Jahr.  
   
-2.  Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer. Dieser Benutzer ist nur in der Datenbank vorhanden, und er wird keiner Anmeldung zugeordnet.  
-  
-3.  Gewähren Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen für die Datenbankobjekte.  
-  
-> [!NOTE]
->  Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY-Anweisung widerrufen wurden. DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.  
-  
 1.  Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact-SQL-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`-Anweisung.  
+
+Nachdem das Modul signiert wurde, muss einen oder mehrere Prinzipale erstellt werden, um die zusätzlichen Berechtigungen enthalten, die dem Zertifikat zugeordnet werden sollen.  
+
+Wenn das Modul zusätzliche Datenbankebene Berechtigungen benötigt:  
+  
+1.  Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer. Dieser Benutzer nur in der Datenbank vorhanden ist, und es ist nicht mit einer Anmeldung verknüpft, es sei denn, eine Anmeldung auch über das gleiche Zertifikat erstellt wurde.  
+  
+1.  Gewähren Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen für die Datenbankebene.  
+  
+Wenn das Modul zusätzliche auf Serverebene Berechtigungen benötigt:  
+  
+1.  Kopieren Sie das Zertifikat an die `master` Datenbank.  
+ 
+1.  Erstellen Sie eine Anmeldung mit diesem Zertifikat mit der Transact-SQL-verknüpften `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Anweisung.  
+  
+1.  Erteilen Sie die Anmeldung mit Zertifikat die erforderlichen Berechtigungen für die Serverebene.  
+  
+> [!NOTE]  
+>  Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY-Anweisung widerrufen wurden. DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
