@@ -4,8 +4,12 @@
 #### [m_WriteList Field (m_WriteList-Feld)](m_writelist.md)
 ### [ConnectionGroup Class (ConnectionGroup-Klasse)](connectiongroup.md)
 #### [m_ConnectionList Field (m_ConnectionList-Feld)](m_connectionlist.md)
+### [CoreResponseData Class (CoreResponseData-Klasse)](coreresponsedata.md)
+#### [m_ResponseHeaders Field (m_ResponseHeaders-Feld)](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode Field (m_StatusCode-Feld)](coreresponsedata_m_statuscode.md)
 ### HTTPWebRequest-Klasse
 #### [_AutoRedirects Field (_AutoRedirects-Feld)](_autoredirects.md)
+#### [_CoreResponse Field (_CoreResponse-Feld)](httpwebrequest__coreresponse.md)
 #### [_HttpResponse Field (_HttpResponse-Feld)](_httpresponse.md)
 ### ServicePoint-Klasse
 #### [m_ConnectionGroupList Field (m_ConnectionGroupList-Feld)](m_connectiongrouplist.md)
