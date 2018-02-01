@@ -18,14 +18,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
-In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implementierte Eigenschaften präziser, wenn in den Eigenschaftenzugriffsmethoden keine zusätzliche Logik erforderlich ist. Sie ermöglichen es Clientcode, Objekte zu erstellen. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates, anonymes, dahinter liegendes Feld, auf das nur über `get` und `set`-Accessoren zugegriffen werden kann.  
+In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implementierte Eigenschaften präziser, wenn in den Eigenschaftenzugriffsmethoden keine zusätzliche Logik erforderlich ist. Zudem ermöglichen sie Clientcode das Erstellen von Objekten. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates anonymes Unterstützungsfeld, auf das nur über die Zugriffsmethoden `get` und `set` der Eigenschaft zugegriffen werden kann.
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine einfache Klasse, die über einige automatisch implementierte Eigenschaften verfügt:  
   
  [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
- Ab C#-6 können Sie automatisch implementierte Eigenschaften wie Felder initialisieren:  
+ Ab C# 6 können Sie automatisch implementierte Eigenschaften ähnlich wie Felder initialisieren: 
   
 ```csharp  
 public string FirstName { get; set; } = "Jane";  
