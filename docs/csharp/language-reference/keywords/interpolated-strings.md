@@ -2,10 +2,11 @@
 title: Interpolierte Zeichenfolgen (C#-Referenz)
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa

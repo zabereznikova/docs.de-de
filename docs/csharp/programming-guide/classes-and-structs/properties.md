@@ -2,14 +2,16 @@
 title: Eigenschaften (C#-Programmierhandbuch)
 ms.date: 03/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.properties
+f1_keywords:
+- cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
@@ -26,7 +28,7 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
   
 - Mithilfe von Eigenschaften kann eine Klasse eine öffentliche Methode zum Abrufen und Festlegen von Werten verfügbar machen und dabei den Implementierungs- oder Verifizierungscode ausblenden.  
   
-- Ein [get](../../../csharp/language-reference/keywords/get.md)-Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../../csharp/language-reference/keywords/set.md)-Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Ein [get](../../../csharp/language-reference/keywords/get.md) -Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../../csharp/language-reference/keywords/set.md) -Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
 - Das [value](../../../csharp/language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Accessor zugewiesen wird.  
 - Eigenschaften können sein: *Lesen/Schreiben* (beide verfügen über einen `get`- und `set`-Accessor), *schreibgeschützt* (verfügen über einen `get`-Accessor, jedoch keinen `set`-Accessor), oder *lesegeschützt* (verfügen über einen `set`-Accessor, jedoch keinen `get` Accessor). Lesegeschützte Eigenschaften sind selten und werden am häufigsten verwendet, um den Zugriff auf vertrauliche Daten einzuschränken.
