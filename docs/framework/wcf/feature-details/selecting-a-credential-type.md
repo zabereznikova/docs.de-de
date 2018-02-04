@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Anmeldeinformationen viele Formate haben, zum Beispiel Benutzernamentoken und X.509-Zertifikate. In diesem Thema werden Anmeldeinformationen, ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und die richtige Auswahl von Anmeldeinformationen für Ihre Anwendung beschrieben.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  Wenn SSL-Sicherheit in Verbindung mit .NET Framework&#160;3.5 und höher verwendet wird, verwenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients zur Validierung des Dienstzertifikats mittels einer Zertifikatskette sowohl die Zwischenzertifikate aus dem lokalen Zertifikatspeicher als auch die Zwischenzertifikate, die sie im Rahmen der SSL-Verhandlung empfangen haben. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 #### <a name="out-of-band-negotiation"></a>Out-of-Band-Aushandlung  
- Wenn die automatische Aushandlung deaktiviert ist, müssen die Dienstanmeldeinformationen auf dem Client bereitgestellt werden, bevor Nachrichten an den Dienst gesendet werden. Dies ist auch bekannt als ein *Out-of-Band-* bereitstellen. Wenn es sich beim angegebenen Typ der Anmeldeinformationen um ein Zertifikat handelt und die automatische Aushandlung deaktiviert ist, muss sich der Client an den Besitzer des Dienstes wenden, um das Zertifikat zu erhalten und auf dem Computer zu installieren, auf dem die Clientanwendung ausgeführt wird. Sie können dies zum Beispiel nutzen, wenn Sie genau steuern möchten, welche Clients in einem Business-to-Business-Szenario auf einen Dienst zugreifen können. Diese Out-of-Band-Aushandlung kann per E-Mail erfolgen, und das X.509-Zertifikat wird im Windows-Zertifikatspeicher gespeichert. Dabei wird ein Tool wie das Microsoft Management Console (MMC)-Zertifikat-Snap-In verwendet.  
+ Wenn die automatische Aushandlung deaktiviert ist, müssen die Dienstanmeldeinformationen auf dem Client bereitgestellt werden, bevor Nachrichten an den Dienst gesendet werden. Dies ist auch bekannt als ein *Out-of-Band-* bereitstellen. Wenn es sich beim angegebenen Typ der Anmeldeinformationen um ein Zertifikat handelt und die automatische Aushandlung deaktiviert ist, muss sich der Client an den Besitzer des Dienstes wenden, um das Zertifikat zu erhalten und auf dem Computer zu installieren, auf dem die Clientanwendung ausgeführt wird. Sie können dies zum Beispiel nutzen, wenn Sie genau steuern möchten, welche Clients in einem Business-to-Business-Szenario auf einen Dienst zugreifen können. Diese Out-des-Band-Aushandlung kann per e-Mail erfolgen, und das x. 509-Zertifikat wird mithilfe eines Tools wie z. B. die Microsoft Management Console (MMC)-Zertifikat-Snap-in in Windows-Zertifikatspeicher gespeichert.  
   
 > [!NOTE]
 >  Die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft wird verwendet, um den Dienst mit einem Zertifikat bereitzustellen, das per Out-of-Band-Aushandlung beschafft wurde. Dies ist erforderlich, wenn Sie die <xref:System.ServiceModel.BasicHttpBinding>-Klasse verwenden, da die Bindung keine automatisierte Aushandlung zulässt. Die Eigenschaft wird auch in einem nicht korrelierten Duplexszenario verwendet. Dies ist ein Szenario, bei dem ein Server eine Nachricht an den Client sendet, ohne dass der Client zuerst eine Anforderung an den Server senden muss. Da der Server nicht über eine Anforderung des Clients verfügt, muss er das Zertifikat des Clients verwenden, um die Nachricht an den Client zu verschlüsseln.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  Wenn die Identität nicht gewechselt werden kann (also wenn das Einrichten eines Sicherheitskontexts aktiviert ist (Standardeinstellung)), kann ein bestimmtes Verhalten auftreten. Wenn Sie einen Dienst erstellen, der mit einem anderen Dienst kommuniziert, können Sie die Identität, die zum Öffnen des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients für den anderen Dienst verwendet wird, nicht ändern. Dies wird zu einem Problem, wenn mehrere Clients den ersten Dienst verwenden dürfen und der Dienst die Identität der Clients annimmt, wenn er auf den anderen Dienst zugreift. Wenn der Dienst denselben Client für alle Aufrufer wiederverwendet, erfolgen alle Aufrufe des anderen Dienstes unter der Identität des ersten Aufrufers, der zum Öffnen des Clients für den anderen Dienst verwendet wurde. Anders ausgedrückt: Der Dienst verwendet die Identität des ersten Clients für alle Clients, um mit dem anderen Dienst zu kommunizieren. Dies kann zur Erweiterung von Berechtigungen führen. Wenn dies nicht das für den Dienst erwünschte Verhalten darstellt, müssen Sie jeden Aufrufer verfolgen und für jeden Aufrufer einen neuen Client für den anderen Dienst erstellen. Außerdem müssen Sie sicherstellen, dass der Dienst nur den richtigen Client für den jeweiligen Aufrufer verwendet, um mit dem zweiten Dienst zu kommunizieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Anmeldeinformationen und sichere Sitzungen finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Anmeldeinformationen und sichere Sitzungen finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

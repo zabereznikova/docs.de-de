@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Teilnehmer auf einen Schlüssel und einen Initialisierungsvektor geeinigt und die entsprechenden Werte ausgetauscht haben müssen. Der Initialisierungsvektor ist nicht geheim und kann mit der Nachricht in Klartext übermittelt werden. Der Schlüssel muss jedoch vor Unbefugten geheim gehalten werden. Aufgrund dieser Probleme wird die Verschlüsselung mit geheimem Schlüssel oft in Verbindung mit der Verschlüsselung mit öffentlichem Schlüssel eingesetzt, um die Werte von Schlüssel und Initialisierungsvektor vertraulich zu kommunizieren.  
   
- Wenn es sich bei Alice und Bob um zwei Teilnehmer handelt, die über einen unsicheren Kanal miteinander kommunizieren möchten, könnten sie die Verschlüsselung mit geheimem Schlüssel wie nachfolgend beschrieben vornehmen: Alice und Bob einigen sich darauf, einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erzeugt einen Netzwerkstream (eventuell eine benannte Pipe oder eine Netzwerk-E-Mail), über den die Nachricht gesendet werden soll. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.  
+ Wenn es sich bei Alice und Bob um zwei Teilnehmer handelt, die über einen unsicheren Kanal miteinander kommunizieren möchten, könnten sie die Verschlüsselung mit geheimem Schlüssel wie nachfolgend beschrieben vornehmen: Alice und Bob einigen sich darauf, einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erzeugt einen Netzwerkstream (vielleicht eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementiert werden:  
   

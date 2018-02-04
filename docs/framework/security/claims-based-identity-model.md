@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
-Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers sein, ein anderer eine E-Mail-Adresse. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
+Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch ist möglicherweise der Name des Benutzers, ein anderer eine e-Mail-Adresse. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
   
  Bei diesem Modell ist das einmalige Anmelden viel einfacher zu erreichen, und die Anwendung ist nicht mehr für Folgendes zuständig:  
   
@@ -49,7 +51,7 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
  Für die Beschreibung des Programmiermodells in Windows Identity Foundation (WIF) verwenden wir den Begriff „Identität“ um einen Satz von Attributen darzustellen, die einen Benutzer oder eine andere Entität in einem System beschreiben, das Sie sicher machen möchten.  
   
 ### <a name="claim"></a>Anspruch  
- Sie können sich einen Anspruch als eine bestimmte Identitätsinformation wie Name, E-Mail-Adresse, Alter oder Mitgliedschaft in der Vertriebsrolle vorstellen. Je mehr Ansprüche die Anwendung empfängt, desto mehr wissen Sie über den Benutzer. Sie fragen sich vielleicht, warum diese als „Ansprüche“ bezeichnet werden und nicht als „Attribute“, wie es häufig beim Beschreiben von Unternehmensverzeichnissen verwendet wird. Dies liegt in der Übermittlungsmethode begründet. In diesem Modell sucht die Anwendung nicht nach Benutzerattributen in einem Verzeichnis. Stattdessen stellt der Benutzer Ansprüche an die Anwendung, die von der Anwendung überprüft werden. Jeder Anspruch wird von einem Aussteller gestellt, und Sie vertrauen dem Anspruch nur so weit, wie Sie dem Aussteller vertrauen. Beispielsweise vertrauen Sie einem Anspruch, der vom Domänencontroller Ihres Unternehmens gestellt wurde, mehr als einem Anspruch vom Benutzer selbst. WIF stellt Ansprüche mit einem <xref:System.Security.Claims.Claim>-Typ dar, der über eine <xref:System.Security.Claims.Claim.Issuer%2A>-Eigenschaft verfügt, mit der Sie feststellen können, wer den Anspruch ausgegeben hat.  
+ Stellen Sie sich einen Anspruch als eine bestimmte Identitätsinformation wie Name, e-Mail-Adresse, Alter, Mitgliedschaft in der Rolle "Sales". Je mehr Ansprüche die Anwendung empfängt, desto mehr wissen Sie über den Benutzer. Sie fragen sich vielleicht, warum diese als „Ansprüche“ bezeichnet werden und nicht als „Attribute“, wie es häufig beim Beschreiben von Unternehmensverzeichnissen verwendet wird. Dies liegt in der Übermittlungsmethode begründet. In diesem Modell sucht die Anwendung nicht nach Benutzerattributen in einem Verzeichnis. Stattdessen stellt der Benutzer Ansprüche an die Anwendung, die von der Anwendung überprüft werden. Jeder Anspruch wird von einem Aussteller gestellt, und Sie vertrauen dem Anspruch nur so weit, wie Sie dem Aussteller vertrauen. Beispielsweise vertrauen Sie einem Anspruch, der vom Domänencontroller Ihres Unternehmens gestellt wurde, mehr als einem Anspruch vom Benutzer selbst. WIF stellt Ansprüche mit einem <xref:System.Security.Claims.Claim>-Typ dar, der über eine <xref:System.Security.Claims.Claim.Issuer%2A>-Eigenschaft verfügt, mit der Sie feststellen können, wer den Anspruch ausgegeben hat.  
   
 ### <a name="security-token"></a>Sicherheitstoken  
  Der Benutzer stellt der Anwendung einen Satz von Ansprüchen zusammen mit einer Anforderung bereit. In einem Webdienst werden diese Ansprüche im Sicherheitsheader des SOAP-Umschlags transportiert. In einer browserbasierten Webanwendung werden die Ansprüche möglicherweise über ein HTTP POST vom Browser des Benutzers empfangen und später in einem Cookie zwischengespeichert, wenn eine Sitzung gewünscht wird. Unabhängig davon, wie diese Ansprüche empfangen werden, müssen sie serialisiert werden. An dieser Stelle kommen die Sicherheitstoken ins Spiel. Ein Sicherheitstoken ist ein Satz von serialisierten Ansprüchen, der durch die ausstellende Stelle digital signiert ist. Die Signatur ist wichtig: Sie verleiht Ihnen die Sicherheit, dass der Benutzer nicht einen beliebigen Satz von Ansprüchen zusammengestellt und an Sie gesendet hat. In Situationen mit niedrigen Sicherheitsanforderungen, in denen Kryptografie nicht notwendig oder gewünscht ist, können Sie nicht signierte Token verwenden. Dieses Szenario wird jedoch in diesem Thema nicht beschrieben.  

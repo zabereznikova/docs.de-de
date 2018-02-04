@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Verzögertes im Vergleich zu unmittelbarem Laden
 Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Objekt abgerufen. Die *verwandte* Objekte werden nicht automatisch zum gleichen Zeitpunkt abgerufen. (Weitere Informationen finden Sie unter [Beziehungsübergreifendes](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Für Sie ist nicht erkennbar, dass verwandte Objekte nicht bereits geladen sind, da der Versuch, auf diese Objekte zuzugreifen, eine Abfrage erzeugt, die diese Objekte abruft.  
   
- Sie möchten beispielsweise eine bestimmte Gruppe von Bestellungen abrufen und anschließend bestimmten Kunden eine Benachrichtigung per E-Mail senden. Sie müssen nicht notwendigerweise zunächst alle Kundendaten zu jeder Bestellung abrufen. Sie können mithilfe von verzögertem Laden weitere Informationen erst dann abrufen, wenn Sie diese benötigen. Betrachten Sie das folgende Beispiel:  
+ Sie möchten z. B. für eine bestimmte Gruppe von Bestellungen abzufragen, und klicken Sie dann nur gelegentlich eine e-Mail-Benachrichtigung an bestimmte Kunden senden. Sie müssen nicht notwendigerweise zunächst alle Kundendaten zu jeder Bestellung abrufen. Sie können mithilfe von verzögertem Laden weitere Informationen erst dann abrufen, wenn Sie diese benötigen. Betrachten Sie das folgende Beispiel:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  

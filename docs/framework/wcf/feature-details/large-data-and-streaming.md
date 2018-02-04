@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf XML basierende Kommunikationsinfrastruktur. Da XML-Daten häufig in im definierten standard-Text-Format codiert ist die [XML 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=94838), verbundene Systeme Entwicklern und Architekten sind in der Regel besorgt Wire Ressourcenbedarf (oder der Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML-dürfen besondere Herausforderung dar, für die effiziente Übertragung binärer Daten.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  In einer Base64-codierten Zeichenfolge stellt jedes Zeichen 6 Bits der ursprünglichen 8-Bit-Daten dar. Das ergibt ein Codierung-Mehraufwand-Verhältnis von 4:3 für Base64, wobei üblicherweise bei der Konvertierung hinzugefügte zusätzliche Formatierungszeichen (Wagenrücklauf/Zeilenvorschub) nicht berücksichtigt werden. Während die Bedeutung der Unterschiede zwischen XML und binären Codierungen normalerweise vom Szenario abhängen, ist die Größenzunahme von über 33&#160;% beim Übertragen einer 500-MB-Nutzlast in der Regel nicht akzeptabel.  
   
- Um diesen Codierungsaufwand zu verhindern, ermöglicht der MTOM-Standard (Message Transmission Optimization Mechanism) eine Externalisierung großer Datenelement, die in einer Nachrichten enthalten sind. Dabei können die Elemente als Binärdaten ohne spezielle Codierung mit der Nachricht gesendet werden. Bei MTOM werden Daten in ähnlicher Weise wie bei SMTP-E-Mail-Nachrichten (Simple Mail Transfer Protocol) mit Anlagen oder eingebetteten Inhalten (Bilder oder anderer eingebetteter Inhalt) ausgetauscht. MTOM-Nachrichten werden als multipart/related MIME-Sequenzen verpackt, wobei der Stammteil die eigentliche SOAP-Nachricht darstellt.  
+ Um diesen Codierungsaufwand zu verhindern, ermöglicht der MTOM-Standard (Message Transmission Optimization Mechanism) eine Externalisierung großer Datenelement, die in einer Nachrichten enthalten sind. Dabei können die Elemente als Binärdaten ohne spezielle Codierung mit der Nachricht gesendet werden. Bei MTOM werden Nachrichten in ähnlicher Weise wie Simple Mail Transfer Protocol (SMTP) e-Mail-Nachrichten mit Anlagen oder eingebetteten Inhalten (Bilder oder anderer eingebetteter Inhalt) ausgetauscht. MTOM-Nachrichten werden als Multipart/related MIME-Sequenzen verpackt, wobei der Stammteil die eigentliche SOAP-Nachricht.  
   
  Eine MTOM-SOAP-Nachricht wird in ihrer uncodierten Version geändert. Dabei ersetzen spezielle Elementtags, die sich auf die jeweiligen MIME-Teile beziehen, die ursprünglichen Elemente in der Nachricht, die binäre Daten enthielten. Als Ergebnis bezieht sich die SOAP-Nachricht auf binären Inhalt, indem auf die mit ihr gesendeten MIME-Teile verwiesen wird, ansonsten jedoch nur XML-Textdaten enthalten sind. Da dieses Model eng an das weit verbreiteten SMTP-Modell anlehnt, gibt es ein breites Angebot an Tools zur Codierung und Decodierung von MTOM-Nachrichten für viele Pattformen, was eine hohe Interoperabilität gewährleistet.  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>Codierungen  
  Ein *Codierung* definiert einen Satz von Regeln dazu, wie Nachrichten bei der Übertragung zu präsentieren. Ein *Encoder* implementiert diese Codierung und sorgt auf der Absenderseite eingeräumt eine <xref:System.ServiceModel.Channels.Message> in-Memory-Nachricht in einen Bytestream oder Bytepuffer, der über das Netzwerk gesendet werden kann. Auf der Empfängerseite wandelt der Encoder die Bytesequenz wieder in eine Nachricht im Arbeitsspeicher um.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält drei Encoder. Sie können jedoch gegebenenfalls auch eigene Encoder schreiben und integrieren.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält drei Encoder und ermöglicht Ihnen das Schreiben und schließen Sie eine eigene Encoder bei Bedarf.  
   
  Jede der Standardbindungen schließt einen vorkonfigurierten Encoder ein. Dabei verwenden standardmäßig die Bindungen mit dem Präfix Net* den binären Encoder (indem die <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>-Klasse eingeschlossen wird), und die Klassen <xref:System.ServiceModel.BasicHttpBinding> und <xref:System.ServiceModel.WSHttpBinding> verwenden den Textnachrichtenencoder (anhand der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse).  
   

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; -Element (Netzwerkeinstellungen)
-Konfiguriert das Übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von E-Mail-Nachrichten.  
+Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von e-Mail-Nachrichten.  
   
  \<configuration>  
-\<System.NET >  
-\<MailSettings >  
-\<SMTP >  
+\<system.net>  
+\<mailSettings>  
+\<smtp>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,9 +55,9 @@ Konfiguriert das Übermittlungsformat, die Übermittlungsmethode und die Absende
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`deliveryFormat`|Gibt das Übermittlungsformat für ausgehende E-Mail-Nachrichten an. Zulässige Werte sind "SevenBit" und "International".|  
-|`deliveryMethod`|Gibt die Übermittlungsmethode für E-Mails an. Zulässige Werte sind "network", "pickupDirectoryFromIis" und "specifiedPickupDirectory".|  
-|`from`|Gibt die Absenderadresse für ausgehende E-Mails an.|  
+|`deliveryFormat`|Gibt das übermittlungsformat für ausgehende e-Mails an. Zulässige Werte sind "SevenBit" und "International".|  
+|`deliveryMethod`|Gibt die Übermittlungsmethode für e-Mails an. Zulässige Werte sind "network", "pickupDirectoryFromIis" und "specifiedPickupDirectory".|  
+|`from`|Gibt die Absenderadresse für ausgehende e-Mails.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -71,7 +73,7 @@ Konfiguriert das Übermittlungsformat, die Übermittlungsmethode und die Absende
 |[\<mailSettings>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguriert E-Mail-Sendeoptionen.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die entsprechenden SMTP-Parameter, um e-Mails unter Verwendung der Standard-Netzwerkanmeldeinformationen zu senden.  
+ Im folgenden Beispiel wird die entsprechenden SMTP-Parameter, um e-Mail-Nachricht mit der Standard-Netzwerkanmeldeinformationen zu senden.  
   
 ```xml  
 <configuration>  

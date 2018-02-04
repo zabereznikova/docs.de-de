@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Add-Ins und Erweiterbarkeit
 <a name="top"></a> Add-Ins stellen erweiterte Funktionen oder Dienste für eine Hostanwendung bereit. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ein Programmiermodell bereit, mit dem Entwickler Add-Ins entwickeln und in ihrer Hostanwendung aktivieren können. Zu diesem Zweck erstellt das Modell eine Kommunikationspipeline zwischen dem Host und dem Add-In. Das Modell wird implementiert, indem die Typen in den Namespaces <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>und <xref:System.AddIn.Contract> verwendet werden.  
@@ -105,7 +107,7 @@ Add-In-Pipeline
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Unterscheiden zwischen Add-Ins und Hosts  
- Der Unterschied zwischen einem Add-In und einem Host besteht darin, dass der Host die Komponente ist, die das Add-In aktiviert. Der Host kann die größere der beiden Komponenten, beispielsweise eine Textverarbeitungsanwendung mit ihren Rechtschreibprüfungen, oder die kleinere der beiden Komponenten sein, beispielsweise ein Instant Messaging-Client mit einem eingebetteten Media Player. Das Add-In-Modell unterstützt Add-Ins sowohl in Client- als auch in Serverszenarien. Beispiele für Server-Add-Ins sind Add-Ins, die Virenüberprüfung, Spamfilter und IP-Schutz für Mailserver bieten. Beispiele für Client-Add-Ins sind Referenz-Add-Ins für Textverarbeitungsprogramme, spezielle Funktionen für Grafikprogramme und Spiele sowie Virenüberprüfung für lokale E-Mail-Clients.  
+ Der Unterschied zwischen einem Add-In und einem Host besteht darin, dass der Host die Komponente ist, die das Add-In aktiviert. Der Host kann die größere der beiden Komponenten, beispielsweise eine Textverarbeitungsanwendung mit ihren Rechtschreibprüfungen, oder die kleinere der beiden Komponenten sein, beispielsweise ein Instant Messaging-Client mit einem eingebetteten Media Player. Das Add-In-Modell unterstützt Add-Ins sowohl in Client- als auch in Serverszenarien. Beispiele für Server-Add-Ins sind Add-Ins, die Virenüberprüfung, Spamfilter und IP-Schutz für Mailserver bieten. Beispiele für Client-add-Ins sind Referenz-add-ins für Textverarbeitungsprogramme, spezielle Funktionen für Grafikprogramme und Spiele sowie virenüberprüfung für lokale e-Mail-Clients.  
   
  [Zurück zum Anfang](#top)  
   

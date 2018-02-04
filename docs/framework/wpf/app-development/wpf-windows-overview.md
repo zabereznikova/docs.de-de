@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,16 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendungen. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen ihre eigenen Windows bereitstellen, indem Sie mit der <xref:System.Windows.Window> Klasse. Dieses Thema enthält <xref:System.Windows.Window> vor die Grundlagen zum Erstellen und Verwalten von Windows in eigenständigen Anwendungen abdecken.  
@@ -120,7 +122,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
  Bestimmt, wie Sie das Fenster implementieren Konfiguration für [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Für ein Fenster, das definiert ist, verwenden beide [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Markupdateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markupdateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
   
 -   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` Elemente.  
   
@@ -193,7 +195,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Verhindern der Fensteraktivierung  
- Es gibt Szenarien, in denen angezeigte Fenster nicht aktiviert werden sollten, z. B. Unterhaltungsfenster einer Internet-Messenger-Anwendung oder Benachrichtigungsfenster einer E-Mail-Anwendung.  
+ Es gibt Szenarien, in denen Windows nicht aktiviert werden soll, wenn Sie z. B. Konversation Windows über eine internetanwendung der Messenger-Format oder Benachrichtigungsfenster einer e-Mail-Anwendung angezeigt.  
   
  Wenn die Anwendung ein Fenster verfügt, die nicht aktiviert werden sollte, wenn Sie angezeigt wird, legen Sie seine <xref:System.Windows.Window.ShowActivated%2A> Eigenschaft, um `false` vor dem Aufruf der <xref:System.Windows.Window.Show%2A> Methode zum ersten Mal. Daraus folgt:  
   

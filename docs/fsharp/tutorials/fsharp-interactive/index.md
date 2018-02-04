@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F# #
 
@@ -26,7 +26,7 @@ Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Ref
 
 F# Interactive (fsi.exe) wird zum interaktiven Ausführen von F#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet. Dies bedeutet, dass F# Interactive eine REPL (Read, Evaluate, Print Loop = Lesen-Auswerten-Drucken-Schleife) für F# ausführt.
 
-Starten Sie "fsi.exe", um F# Interactive in der Konsole auszuführen.  Sie findet fsi.exe in "c:\Programme\Microsoft Dateien (x86) \Microsoft SDKs\F#\<Version > \Framework\<Version >\". Informationen zu verfügbaren Befehlszeilenoptionen finden Sie unter [F# Interactive-Optionen](fsharp-interactive-options.md).
+Starten Sie "fsi.exe", um F# Interactive in der Konsole auszuführen.  Sie findet fsi.exe in "c:\Programme\Microsoft Dateien (x86) \Microsoft SDKs\F#\<Version > \Framework\<Version >\". Informationen zu verfügbaren Befehlszeilenoptionen finden Sie unter [F# Interactive-Optionen](../../language-reference/fsharp-interactive-options.md).
 
 Zum Ausführen von F# Interactive über Visual Studio können Sie auf die entsprechende Symbolleistenschaltfläche **F# Interactive** klicken oder die Tastenkombination **Strg+Alt+F** verwenden. Dadurch wird das Interactive-Fenster geöffnet, ein Toolfenster, in dem eine F# Interactive-Sitzung ausgeführt wird. Sie können auch Code auswählen, den Sie im Interactive-Fenster ausführen möchten, und die Tastenkombination **ALT+EINGABE** drücken. F# Interactive wird in einem Toolfenster mit der Bezeichnung **F# Interactive** gestartet. Wenn Sie diese Tastenkombination verwenden, überprüfen Sie, ob das Editorfenster den Fokus besitzt.
 
@@ -98,5 +98,5 @@ test
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[F# Interactive-Optionen](fsharp-interactive-options.md)|Beschreibt die Befehlszeilensyntax und Optionen für F# Interactive (fsi.exe).|
+|[F# Interactive-Optionen](../../language-reference/fsharp-interactive-options.md)|Beschreibt die Befehlszeilensyntax und Optionen für f# Interactive, fsi.exe.|
 |[Referenz zur F# Interactive-Bibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Beschreibt die beim Ausführen von Code in F# Interactive verfügbare Bibliotheksfunktion.|

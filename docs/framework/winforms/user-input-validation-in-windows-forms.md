@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzer Daten in die Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie können erforderlich, dass bestimmte Textfelder werden nicht mit der Länge Null, dass ein Feld als eine Telefonnummer oder andere Arten von wohlgeformte Daten formatiert werden, dass eine Zeichenfolge keine unsicheren Zeichen enthält, die verwendet werden können, um die Sicherheit einer Datenbank zu gefährden. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in der Anwendung.  

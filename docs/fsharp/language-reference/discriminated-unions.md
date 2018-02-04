@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 16e2a011-c785-48c8-859f-79df7f3a0e29
-ms.openlocfilehash: a374f521bcde7506bb3a9eebb627eaffcd8b94a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b7a02512ce4a63885e771be56f106bc66cc2743e
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -31,7 +31,7 @@ type type-name =
 ```
 
 ## <a name="remarks"></a>Hinweise
-Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann eine von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen, jedoch der möglichen Optionen wird jeweils ein *Fallbezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, der mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Ab F# 3.1 können Sie einem einzelnen Feld einen Namen geben, der Name ist jedoch optional, selbst wenn andere Felder im gleichen Fall benannt sind.
+Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann eine von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen, jedoch der möglichen Optionen wird jeweils ein *Fallbezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Ab F# 3.1 können Sie einem einzelnen Feld einen Namen geben, der Name ist jedoch optional, selbst wenn andere Felder im gleichen Fall benannt sind.
 
 Betrachten Sie zum Beispiel die folgende Deklaration eines Formtyps:
 
@@ -69,7 +69,7 @@ Die Fallbezeichner können für den Unterscheidungs-Union-Typ als Konstruktoren 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-Die Fallbezeichner werden auch in Musterabgleichsausdrücken verwendet. In einem Mustervergleichsausdruck werden Bezeichner für die Werte bereitgestellt, die den einzelnen Fällen zugeordnet sind. Im folgenden Code ist `x` z. B. der Bezeichner, dem der Wert des `Some`-Falls des `option`-Typs zugeordnet ist.
+Die Fallbezeichner werden auch in Musterabgleichsausdrücken verwendet. In einem Musterabgleichsausdruck werden Bezeichner für die Werte bereitgestellt, die den einzelnen Fällen zugeordnet sind. Im folgenden Code ist `x` z. B. der Bezeichner, dem der Wert des `Some`-Falls des `option`-Typs zugeordnet ist.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
@@ -113,9 +113,9 @@ type SingleCase = Case of string
 
 [<Struct>]
 type Multicase =
-    | Case1 of string
-    | Case2 of int
-    | Case3 of double
+    | Case1 of Case1 : string
+    | Case2 of Case2 : int
+    | Case3 of Case3 : double
 ```
 
 Da diese sind Werttypen und nicht auf Typen verweisen, sind zusätzliche Überlegungen, die im Vergleich mit dem Verweis Unterscheidungs-Unions:
@@ -141,7 +141,7 @@ Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a>Verwenden von Unterscheidungs-Unions für Baumdatenstrukturen
+## <a name="using-discriminated-unions-for-tree-data-structures"></a>Verwenden von Unterscheidungs-Unions für Datenstrukturen
 Unterscheidungs-Unions können rekursiv sein, d. h., dass die Union selbst im Typ eines Falles oder mehrerer Fälle enthalten sein kann. Rekursive Unterscheidungs-Unions können verwendet werden, um Strukturen zur Gestaltung von Ausdrücken in Programmiersprachen zu erstellen. Im folgenden Code wird eine rekursive Unterscheidungs-Union verwendet, um eine binäre Strukturdatenstruktur zu erstellen. Die Union besteht aus zwei Fällen: `Node`, der ein Knoten mit einem ganzzahligen Wert und linken und rechten Teilstrukturen ist, und `Tip`, der die Struktur beendet.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]

@@ -3,20 +3,21 @@ title: "Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendungen"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - printing [Visual Studio], reports
 - reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ce2a8b12d8202a9f201a82b0d4a571249210d48
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2b0300f31e4c75c72a72590ad22c19441acb7519
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendungen
 Visual Studio unterstützt eine Vielzahl von Lösungen zur einfacheren Datenberichten Visual Basic-Anwendungen hinzufügen. Sie können erstellen und Hinzufügen von Berichten mithilfe von ReportViewer-Steuerelemente, Crystal Reports oder SQL Server Reporting Services.  
@@ -68,7 +69,7 @@ Visual Studio unterstützt eine Vielzahl von Lösungen zur einfacheren Datenberi
   
 -   Geplante berichtsverarbeitung, damit Sie beim Ausführen von Berichten exakt angeben können.  
   
--   Abonnenten-basierter berichtsverteilung per E-mail oder an Speicherorte für Dateifreigaben.  
+-   Abonnenten-basierter berichtsverteilung per e-Mail oder Speicherorte für Dateifreigaben.  
   
 -   Ad-hoc-Berichte, damit geschäftlichen Bereich Berichte erstellen können, je nach Bedarf.  
   

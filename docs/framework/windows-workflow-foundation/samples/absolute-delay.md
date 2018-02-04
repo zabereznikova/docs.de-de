@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Absolute Verzögerung
 Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt (<xref:System.DateTime>). Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne (<xref:System.TimeSpan>) bzw. eine Anzahl von Minuten/Sekunden verzögert werden kann.  
@@ -49,7 +50,7 @@ Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in ei
   
  In diesem Beispiel wird auch veranschaulicht, wie die Persistenz für <xref:System.Activities.WorkflowApplication> aktiviert wird. Für dieses spezielle Beispiel werden permanente Zeitgeber verwendet. Die Workflowdaten werden während der Leerlaufzeit in die Persistenzdatenbank entladen, während auf das Ablaufen des Zeitgebers gewartet wird. Diese Implementierung kann auch für andere Persistenzaktionen verwendet werden. In diesem Beispiel wird veranschaulicht, wie die Persistenzverbindungszeichenfolge mit SQL Server eingerichtet und der Instanzspeicher erstellt wird, um die Daten für Workflowinstanzen beizubehalten. Mit einer bereitgestellten Logik wird festlegt, wie der Workflow fortgesetzt wird, sobald ein Ereignis ausgelöst wird, das die Workflowinstanz ausführbar macht.  
   
- Wenn Sie dieses Beispiel schrittweise durchlaufen, können Sie erkennen, zu welchem Zeitpunkt die integrierte Verzögerung beginnt und endet. Nach dem Ende der Verzögerung wird eine E-Mail-Nachricht gesendet. Ab diesem Punkt wird die AbsoluteDelay-Aktivität bis zum angegebenen Zeitpunkt (<xref:System.DateTime>) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E-Mail gesendet. Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay-Aktivität.  
+ Während Sie in diesem Beispiel durchlaufen, sehen Sie sich, dass die Zeit, in der die integrierte Verzögerung beginnt und abgeschlossen ist, die wiederum, verursacht eine e-Mail-Nachricht gesendet werden. Ab diesem Punkt wird die AbsoluteDelay-Aktivität bis zum angegebenen Zeitpunkt (<xref:System.DateTime>) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E-Mail gesendet. Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay-Aktivität.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
 Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:  
@@ -29,9 +31,9 @@ Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden norm
   
  Ein Anspruch wird von der <xref:System.Security.Claims.Claim>-Klasse dargestellt. Diese Klasse hat die folgenden Eigenschaften:  
   
--   <xref:System.Security.Claims.Claim.Type%2A> stellt den Typ des Anspruchs dar und ist in der Regel ein URI. Der Anspruch der E-Mailadresse wird z.B. als `http://schemas.microsoft.com/ws/2008/06/identity/claims/email` dargestellt.  
+-   <xref:System.Security.Claims.Claim.Type%2A> stellt den Typ des Anspruchs dar und ist in der Regel ein URI. Die e-Mail-adressanspruchs liegt z. B. als `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A> enthält den Wert des Anspruchs und wird als Zeichenfolge dargestellt. Der Anspruch der E-Mailadresse kann z.B. als „someone@contoso.com“ dargestellt werden.  
+-   <xref:System.Security.Claims.Claim.Value%2A> enthält den Wert des Anspruchs und wird als Zeichenfolge dargestellt. Beispielsweise kann die e-Mail-Adresse dargestellt werden, als "someone@contoso.com".  
   
 -   <xref:System.Security.Claims.Claim.ValueType%2A> stellt den Typ des Anspruchswerts dar und ist in der Regel ein URI. Der Zeichenfolgentyp wird z.B. durch `http://www.w3.org/2001/XMLSchema#string` dargestellt. Gemäß dem XML-Schema muss der Werttyp ein QName sein. Der Wert muss im Format `namespace#format` vorhanden sein, um WIF zur Ausgabe eines gültigen QName-Werts zu aktivieren. Ist der Namespace kein klar definierter Namespace, kann die generierte XML-Datei möglicherweise nicht vom Schema überprüft werden, da keine veröffentlichte XSD-Datei für diesen Namespace vorhanden sein wird. Der Standardwert ist `http://www.w3.org/2001/XMLSchema#string`. Weitere Informationen zu bekannten Werttypen, die Sie sicher verwenden können, finden Sie unter [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155).  
   

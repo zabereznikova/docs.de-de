@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Begriffe, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dokumentation finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Begriffe, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dokumentation finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  Zugriffssteuerungsliste  
  Eine Liste mit den Arten von Sicherheitsschutz, der auf ein Objekt angewendet wird. (Ein Objekt kann eine Datei, ein Prozess, ein Ereignis oder ein sonstiges Element sein, die über einen Sicherheitsdeskriptor verfügen.) Ein Eintrag in einer Zugriffssteuerungsliste wird als Access Control Entry (ACE) bezeichnet. Es gibt zwei Typen von Zugriffssteuerungslisten: freigegebene Zugriffssteuerungslisten und Systemzugriffssteuerungslisten.  
@@ -184,7 +186,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Software, die entscheidet, ob eine Datei als vertrauenswürdig eingestuft wird. Diese Entscheidung basiert auf dem Zertifikat, das der Datei zugeordnet ist.  
   
  Benutzerprinzipalname (UPN)  
- Einen Benutzerkontonamen (auch bezeichnet als das *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer E-mail-Adresse).  
+ Einen Benutzerkontonamen (auch bezeichnet als das *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer e-Mail-Adresse).  
   
 > [!NOTE]
 >  Abgesehen von Standard-UPNs akzeptiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch abwärtskompatible UPNs wie cohowinery.com\someone.  
