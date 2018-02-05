@@ -1,9 +1,10 @@
 ---
 title: Integer-Datentyp (Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Integer
@@ -27,11 +28,11 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69c7fb6caf5d9a10c7d033d1ba0a05c9230d472c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba700cac58c96b3d6d2f5ed3c74fdd7e95761352
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer-Datentyp (Visual Basic)
 Speichert 32-Bit-(4-Byte-)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von -2.147.483.648 bis einschließlich 2.147.483.647 bewegen.  
@@ -56,10 +57,18 @@ Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffe
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
+Beginnend mit Visual Basic 15.5, Sie können auch das Unterstrich-Zeichen (`_`) als führende Trennzeichen zwischen Präfix und die, binäre oktalen oder hexadezimalen Ziffern. Zum Beispiel:
+
+```vb
+Dim number As Integer = &H_C305_F860
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Numerische Literale zählen auch die `I` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `Integer` -Datentyp, wie im folgenden Beispiel gezeigt.
 
 ```vb
-Dim number = &H035826I
+Dim number = &H_035826I
 ```
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
