@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3d513f48155a582a5158cccdd682f5b8485caefd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4d4515b8ebea338a153319dfd02eab8d389b843b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Auswerten von XPath-Ausdrücken mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt die <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>-Methode bereit, mit der ein XPath-Ausdruck ausgewertet werden kann. Die <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>-Methode verwendet einen XPath-Ausdruck, wertet ihn aus und gibt je nach Ergebnis des XPath-Ausdrucks einen der W3C-XPath-Typen Boolean, Number, String oder Node Set zurück.  
@@ -58,8 +61,8 @@ Console.WriteLine(total);
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Wählen Sie die XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Vergleich von Knoten mit "XPathNavigator"](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
  [Kompilierte XPath-Ausdrücke](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

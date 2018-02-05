@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3d2c8db03d494be13a93df06a359e4e4294c22a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9992efa209773a6e9f74050183260346f7f1f0ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
 Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>-Klasse oder der <xref:System.Xml.XPath.XPathDocument>-Klasse eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten oder XML-Knotengruppen im Speicher.  
@@ -30,16 +33,16 @@ Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der
  [Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Beschreibt die Erstellung eines schreibgeschützten Objekts der <xref:System.Xml.XPath.XPathDocument>-Klasse zum Lesen eines XML-Dokuments sowie die Erstellung eines editierbaren Objekts der <xref:System.Xml.XmlDocument>-Klasse zum Lesen und Bearbeiten eines XML-Dokuments. In diesem Thema wird auch beschrieben, wie ein <xref:System.Xml.XPath.XPathNavigator>-Objekt aus jeder Klasse zum Navigieren und Bearbeiten eines XML-Dokuments zurückgegeben wird.  
   
- [Auswählen, auswerten und Zuordnen von XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
  Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage, für das Auswerten und Überprüfen der Ergebnisse eines XPath-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem XML-Dokument mit einem angegebenen XPath-Ausdruck übereinstimmt.  
   
- [Zugreifen auf XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Zugreifen auf XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
  Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Navigieren von Knoten, das Extrahieren von XML-Daten und das Zugreifen auf stark typisierte XML-Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt bereit.  
   
- [Bearbeiten von XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [Bearbeiten von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
  Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Einfügen, Ändern oder Entfernen von Knoten und Werten aus einem XML-Dokument, das in einem <xref:System.Xml.XmlDocument>-Objekt enthalten ist.  
   
- [Schema-Validierung mit "XPathNavigator"](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ [Schemavalidierung mithilfe von „XPathNavigator“](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  Beschreibt die Möglichkeiten zum Validieren der XML-Inhalte, die in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt enthalten sind.  
   
 ## <a name="see-also"></a>Siehe auch  

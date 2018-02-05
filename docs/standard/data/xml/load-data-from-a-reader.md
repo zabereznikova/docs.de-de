@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Laden von Daten aus einem Reader
 Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode und einem Parameter eines <xref:System.Xml.XmlReader> geladen wird, weist das Verhalten Unterschiede zu dem Verhalten auf, das beim Laden von Daten aus anderen Formaten eintritt. Wenn sich der Reader in seinem Ausgangszustand befindet, verarbeitet <xref:System.Xml.XmlDocument.Load%2A> den gesamten Inhalt des Readers und erstellt das XML-DOM (Dokumentobjektmodell) aus allen Daten im Reader.  

@@ -12,15 +12,18 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6e6f23c413bbefe6a29746e2f6a1887a23dd3bfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fe09b2fa156575c7843f8b32bf758c44086b5ca8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
 Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei generischen Typen keine Notwendigkeit zum Einschließen der Elemente besteht.  
@@ -61,6 +64,6 @@ Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den u
  Mit der <xref:System.Collections.Generic.List%601> -Klasse können Sie Ihre eigenen generischen <xref:System.Collections.Generic.IComparer%601> -Schnittstellenimplementierungen zum Sortieren und Durchsuchen der Liste angeben. Die Klassen <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> verfügen ebenfalls über diese Funktion. Darüber hinaus ermöglichen Ihnen diese Klassen das Angeben von Vergleichen beim Erstellen der Auflistung. In ähnlicher Weise können Sie mit den Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.ObjectModel.KeyedCollection%602> eigene Gleichheitsvergleiche angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sammlungen und Datenstrukturen](../../../docs/standard/collections/index.md)  
+ [Auflistungen und Datenstrukturen](../../../docs/standard/collections/index.md)  
  [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)  
  [Generika](../../../docs/standard/generics/index.md)

@@ -19,15 +19,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a26f6750f68609b40e6917fc5b257e43d95c3c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 557d639cc8a4e7ade2cfbd1f5d7264bca226d273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster
 Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verfügbar zu machen. Das ereignisbasierte asynchrone Muster gibt Klassen das empfohlene Verfahren zum Präsentieren von asynchronem Verhalten vor.  

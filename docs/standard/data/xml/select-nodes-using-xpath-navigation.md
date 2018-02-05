@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 836702a3200a21c6a9830bdcd1f74a78129b5a6c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Auswählen von Knoten mithilfe der XPath-Navigation
 Das XML-DOM (Document Object Model) enthält Methoden, die Ihnen ermöglichen, mithilfe der XPath-Navigation (XML Path Language) Informationen im DOM abzufragen. Mit XPath können Sie einen bestimmten einzelnen Knoten oder alle Knoten suchen, die bestimmte Kriterien erfüllen.  

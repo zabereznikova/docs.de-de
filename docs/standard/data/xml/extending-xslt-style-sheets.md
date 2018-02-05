@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ccd1a95586bc92bcc712639eded135a69da1a36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aea28532dd81745b8d018cbeed454bbd008c8ed7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-xslt-style-sheets"></a>Erweitern von XSLT-Stylesheets
 In diesem Abschnitt werden die verschiedenen Methoden zum Erweitern der XSLT-Funktionen beschrieben. Mithilfe der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse können Sie Erweiterungsobjekte oder Parameter hinzufügen. Die Erweiterungsobjekte oder Parameter können dann aus dem Stylesheet aufgerufen werden. Darüber hinaus können Sie auch Skriptblöcke in das Stylesheet einbetten, indem Sie das `msxsl:script`-Element verwenden.  
@@ -29,7 +32,7 @@ In diesem Abschnitt werden die verschiedenen Methoden zum Erweitern der XSLT-Fun
  [XSLT-Parameter](../../../../docs/standard/data/xml/xslt-parameters.md)  
  Erläutert die Verwendung der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse zum Verarbeiten von XSLT-Parametern.  
   
- [Skript-Blöcke verwenden msxsl: Script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
+ [Skriptblöcke, die „msxsl:script“ verwenden](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
  Erläutert die Verwendung des `msxsl:script`-Elements.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

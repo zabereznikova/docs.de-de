@@ -1,5 +1,5 @@
 ---
-title: Sortierte Auflistungstypen
+title: Sortierte Sammlungstypen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,15 +15,18 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0f23a69a8e2493e018b0a37628762247c0e33430
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7efe53d472e1789d49acc3973acdf190c8ff6662
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  

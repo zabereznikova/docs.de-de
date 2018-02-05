@@ -23,15 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d8a461d79ecdcadc3f880f6a813918cf891abd45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
 Mithilfe von asynchronen Vorgängen können Sie ressourcenintensive E/A-Vorgänge auszuführen, ohne den Hauptthread zu blockieren. Diese Überlegungen zur Leistung sind insbesondere in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -App oder [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] -App wichtig, bei der ein zeitaufwendiger Streamvorgang den UI-Thread blockieren kann und es dann den Anschein hat, dass Ihre App nicht funktioniert.  

@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Übersicht über die .NET Framework-Klassenbibliothek
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enthält Klassen, Schnittstellen und Werttypen, die den Entwicklungsprozess beschleunigen und optimieren und den Zugriff auf Systemfunktionen ermöglichen. .NET Framework gewährleistet durch überwiegend CLS-kompatible Typen Interoperabilität zwischen verschiedenen Sprachen und kann daher in jeder Programmiersprache verwendet werden, deren Compiler der CLS (Common Language Specification) entspricht.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  In der folgenden Tabelle sind die in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] verfügbaren Basistypen mit einer Kurzbeschreibung der einzelnen Typen und den entsprechenden Typen in Visual Basic, C#, C++ und JScript aufgeführt.  
   
-|Kategorie|Klassenname|Beschreibung|Datentyp in Visual Basic|Datentyp in C#|C++-Datentyp|Datentyp in JScript|  
+|Kategorie|Klassenname|description|Datentyp in Visual Basic|Datentyp in C#|C++-Datentyp|Datentyp in JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**Byte**|  
 ||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /><br /> - oder - <br /><br /> **char** **mit Vorzeichen**|**SByte**|  

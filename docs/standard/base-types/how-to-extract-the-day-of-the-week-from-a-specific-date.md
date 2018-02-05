@@ -28,15 +28,18 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3accb01eb8c5edb8b3e245020b43c5a94a8bb4cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e0628dfefb8da5c11e9927ab5ec98c2feb3fe89f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum
 Mit .NET Framework ist es einfach, den Wochentag für ein bestimmtes Datum festzulegen und den lokalisierten Namen eines Wochentags für ein bestimmtes Datum anzuzeigen. Ein Aufzählungswert, der den einem bestimmten Datum entsprechenden Wochentag anzeigt, ist über die <xref:System.DateTime.DayOfWeek%2A>- oder die <xref:System.DateTimeOffset.DayOfWeek%2A>-Eigenschaft verfügbar. Dagegen ist das Abrufen des Namens eines Wochentags ein Formatierungsvorgang, der durch das Aufrufen einer Formatierungsmethode ausgeführt werden kann, wie z. B. der `ToString`-Methode eines Datums- oder Zeitwertes oder der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode. In diesem Thema wird gezeigt, wie diese Formatierungsvorgänge ausgeführt werden.  

@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f36bae495631db68afb1404398cbf43e890d4f33
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-types-generics-overview"></a>Generische Typen (Generika) – Übersicht
 
@@ -22,7 +25,7 @@ Generika werden andauernd in C# verwendet, entweder implizit oder explizit. Wenn
 
 Generika wurden zum ersten Mal in .NET Framework 2.0 eingeführt und umfassten Änderungen sowohl an der Sprache C# als auch an der Common Language Runtime (CLR). **Generika** sind im Grunde eine „Codevorlage“, mit der Entwickler [typsichere](https://msdn.microsoft.com/library/hbzz1a9a.aspx) Datenstrukturen definieren können, ohne sich tatsächlich auf einen Datentyp festlegen zu müssen. `List<T>` ist beispielsweise eine [generische Auflistung](xref:System.Collections.Generic), die deklariert und mit beliebigen Typen verwendet werden kann: `List<int>`, `List<string>`, `List<Person>` usw.
 
-Worum liegt also der Sinn? Warum sind Generika nützlich? Um dies zu verstehen, müssen wir uns eine bestimmte Klasse ansehen, und zwar vor und nach dem Hinzufügen von Generika. Wir sehen uns `ArrayList` an. In C# 1.0 wiesen die `ArrayList`-Elemente den Typ `object` auf. Dies bedeutete, dass jedes hinzugefügte Element im Hintergrund in ein `object` konvertiert wurde. Das Gleiche passierte beim Lesen der Elemente aus der Liste (dieser Prozess wird als [Boxing](https://msdn.microsoft.com/library/yz2be5wk.aspx) bzw. Unboxing bezeichnet). Boxing und Unboxing wirken sich auf die Leistung aus. Schlimmer noch: Zum Zeitpunkt der Kompilierung lässt sich nicht mitteilen, welchen Typ die Daten in der Liste tatsächlich aufweisen. Dies beeinträchtigt die Stabilität des Codes. Generika lösen dieses Problem, indem sie zusätzliche Informationen zum Datentyp bereitstellen, die in jeder Instanz der Liste enthalten sind. Einfach gesagt: Zu `List<int>` können Sie nur Ganzzahlen hinzufügen, zu `List<Person>` nur Personen usw.
+Worum liegt also der Sinn? Warum sind Generika nützlich? Um dies zu verstehen, müssen wir uns eine bestimmte Klasse ansehen, und zwar vor und nach dem Hinzufügen von Generika. Wir sehen uns `ArrayList` an. In C# 1.0 wiesen die `ArrayList`-Elemente den Typ `object` auf. Dies bedeutete, dass jedes hinzugefügte Element im Hintergrund in ein `object` konvertiert wurde. Das Gleiche passierte beim Lesen der Elemente aus der Liste (dieser Prozess wird als [Boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) bzw. Unboxing bezeichnet). Boxing und Unboxing wirken sich auf die Leistung aus. Schlimmer noch: Zum Zeitpunkt der Kompilierung lässt sich nicht mitteilen, welchen Typ die Daten in der Liste tatsächlich aufweisen. Dies beeinträchtigt die Stabilität des Codes. Generika lösen dieses Problem, indem sie zusätzliche Informationen zum Datentyp bereitstellen, die in jeder Instanz der Liste enthalten sind. Einfach gesagt: Zu `List<int>` können Sie nur Ganzzahlen hinzufügen, zu `List<Person>` nur Personen usw.
 
 Generika sind auch zur Laufzeit verfügbar und werden **konkretisiert**. Dies bedeutet, dass die Runtime weiß, welche Art Datenstruktur Sie verwenden, und die Daten effizienter im Arbeitsspeicher speichern kann.
 
@@ -72,4 +75,4 @@ Ein weiterer nützlicher Vorteil: Wenn die Runtime den Typ der Generika kennt, w
 ## <a name="further-reading-and-resources"></a>Weitere Informationen und Ressourcen
 
 *   [Einführung in Generika in C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C#-Programmierhandbuch – Generika](https://msdn.microsoft.com/library/512aeb7t.aspx)
+*   [C#-Programmierhandbuch – Generika](../../docs/csharp/programming-guide/generics/index.md)
