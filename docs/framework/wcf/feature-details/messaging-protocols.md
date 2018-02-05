@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanalstapel wendet Codierungs- und Transportkanäle an, um eine interne Nachrichtendarstellung in ihr Kabelformat umzuwandeln und sie über einen bestimmten Transport zu versenden. Der am häufigsten verwendete Transport, der für die Interoperabilität bei Webdiensten verwendet wird, ist HTTP, und die am häufigsten von Webdiensten verwendeten Codierungen sind das XML-basierte SOAP 1.1, SOAP 1.2 und der Message Transmission Optimization Mechanism (MTOM).  
@@ -61,7 +63,7 @@ W3C Web Services Addressing 1.0 - Metadaten|http://www.w3.org/TR/ws-addr-metadat
 |------------|---------------------------------------------------|  
 |s11|http://schemas.xmlsoap.org/soap/envelope (möglicherweise in englischer Sprache)|  
 |s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wsam|http://www.w3.org/2007/05/addressing/metadata|  
 |wsap|http://schemas.xmlsoap.org/ws/2004/09/policy/addressing (in englischer Sprache)|  
 |wsa10|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
@@ -73,12 +75,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 und SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Umschlag und Verarbeitungsmodell  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert SOAP 1.1-Umschlagsverarbeitung, unter Befolgung von Basic Profile 1.1 (BP11) und Basic Profile 1.0 (SSBP10). SOAP 1.2-Umschlagsverarbeitung wird unter Befolgung von SOAP12-Part1 implementiert.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert SOAP 1.1-umschlagsverarbeitung, die nach der Basic Profile 1.1 (BP11) und Basic Profile 1.0 (SSBP10). SOAP 1.2-Umschlagsverarbeitung wird unter Befolgung von SOAP12-Part1 implementiert.  
   
  Dieser Abschnitt erklärt bestimmte, in Hinsicht auf BP11 und SOAP12-Part1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] getroffene Implementierungsentscheidungen.  
   
 #### <a name="mandatory-header-processing"></a>Erforderliche Headerverarbeitung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] befolgt bei der Headerverarbeitung Regeln, die als `mustUnderstand` gekennzeichnet und in den SOAP 1.1- und SOAP 1.2-Spezifikationen beschrieben sind, mit den folgenden Variationen.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] folgt den Regeln für die Header verarbeitet markiert `mustUnderstand` SOAP 1.1 und SOAP 1.2-Spezifikationen mit den folgenden Variationen beschrieben.  
   
  Eine Nachricht, die in den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalstapel übergeht, wird von einzelnen Kanälen verarbeitet, die durch zugeordnete Bindungselemente konfiguriert werden, u. a. Textnachrichtencodierung, Sicherheit, zuverlässiges Messaging und Transaktionen. Jeder Kanal erkennt Header des zugeordneten Namespace, und kennzeichnet sie als verstanden. Sobald eine Nachricht in den Verteiler eingeht, liest der Vorgangsformatierer Header, die vom entsprechenden Nachrichten-/Vorgangsvertrag erwartet werden, und kennzeichnet sie als verstanden. Der Verteiler überprüft, ob einige der verbleibenden Header nicht verstanden, aber als `mustUnderstand` gekennzeichnet sind, und löst eine Ausnahme aus. Nachrichten, die an den Empfänger gerichtete `mustUnderstand`-Header enthalten, werden nicht vom Empfängeranwendungscode verarbeitet.  
   
@@ -100,14 +102,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="http-binding"></a>HTTP-Bindung  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP-Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die SOAP1.1 HTTP-Bindung gemäß Abschnitt 3.4 der Basic Profile 1.1-Spezifikation, mit den folgenden Erklärungen:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die SOAP1. 1 http-Bindung gemäß der Basic Profile 1.1-Spezifikation, Abschnitt 3.4 mit den folgenden Erklärungen:  
   
 -   B2211: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementiert keine Umleitung von HTTP-POST-Anforderungen.  
   
 -   B2212: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients unterstützen HTTP-Cookies in Übereinstimmung mit 3.4.8.  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1,2 HTTP-Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die SOAP1.2 HTTP-Bindung gemäß der Beschreibung in der SOAP 1.2-Teil 2 (SOAP12Part2)-Spezifikation, mit den folgenden Erklärungen.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert SOAP 1.2 http-Bindung an, wie in der SOAP 1.2-Teil 2 (SOAP12Part2) Spezifikation mit den folgenden Erklärungen beschrieben.  
   
  SOAP 1.2 hat einen optionalen Aktionsparameter für den `application/soap+xml`-Medientyp eingeführt. Dieser Parameter ist nützlich bei der Optimierung des Sendens von Nachrichten, ohne dass der Text der SOAP-Nachricht analysiert werden muss, wenn die WS-Adressierung nicht verwendet wird.  
   
@@ -118,7 +120,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Wenn die WS-Adressierung deaktiviert ist und eine eingehende Anforderung keinen Aktionsparameter enthält, gilt die Nachrichten-`Action` als nicht angegeben.  
   
 ## <a name="ws-addressing"></a>WS-Adressierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert drei Versionen der WS-Adressierung:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] der WS-Adressierung implementiert 3-Versionen:  
   
 -   WS-Adressierung 2004/08  
   
@@ -130,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Alle Versionen der WS-Adressierung, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert werden, verwenden zur Beschreibung von Endpunkten Endpunktverweise.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Endpunktverweise und WS-Adressierungsversionen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert eine Reihe von Infrastrukturprotokollen, die WS-Adressierung und insbesondere das `EndpointReference`-Element und die `W3C.WsAddressing.EndpointReferenceType`-Klasse verwenden (z. B. WS-ReliableMessaging, WS-SecureConversation und WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Verwendung beider Versionen der WS-Adressierung mit anderen Infrastrukturprotokollen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte unterstützen eine Version der WS-Adressierung pro Endpunkt.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert eine Reihe von Infrastruktur-Protokolle, die WS-Adressierung verwenden, insbesondere die `EndpointReference` Element und `W3C.WsAddressing.EndpointReferenceType` -Klasse (z. B. WS-ReliableMessaging, WS-SecureConversation und WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Verwendung beider Versionen der WS-Adressierung mit anderen Infrastrukturprotokollen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte unterstützen eine Version der WS-Adressierung pro Endpunkt.  
   
  Für R3111 muss der Namespace des `EndpointReference`-Elements oder -Typs, das/der in über einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt ausgetauschten Nachrichten verwendet wird, der Version der WS-Adressierung entsprechen, die von diesem Endpunkt implementiert wird.  
   
@@ -174,7 +176,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Anwendungen, die mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen interagieren, können diese Nachrichtenheader hinzufügen und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verarbeitet sie dementsprechend.  
   
 #### <a name="reference-parameters-and-properties"></a>Verweisparameter und -eigenschaften  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die Verarbeitung von Endpunktverweisparametern und  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die Verarbeitung von endpunktverweisparametern und Endpunkt Verweisparameter  
   
  Verweiseigenschaften in Übereinstimmung mit den jeweiligen Spezifikationen.  
   
@@ -232,7 +234,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1-Bindung und WS-Richtlinienassertionen  
   
 #### <a name="indicating-use-of-ws-addressing"></a>Angeben der Verwendung von WS-Adressierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet Richtlinienassertionen, um Endpunktunterstützung für eine bestimmte WS-Adressierungsversion anzugeben.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet Richtlinienassertionen, um endpunktunterstützung für eine bestimmte Version von WS-Adressierung anzugeben.  
   
  Die folgende Richtlinienassertion verfügt über das Endpoint Policy Subject [WS-PA] und gibt an, dass von diesem Endpunkt gesendete und empfangene Nachrichten WS-Adressierung 2004/08 verwenden müssen.  
   
@@ -276,7 +278,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Es gibt aber Nachrichtenaustauschmuster, die davon profitieren, zwei unabhängige, entgegengesetzte HTTP-Verbindungen zwischen dem Anforderungsdienst und dem Antwortdienst etabliert zu haben, z. B. unaufgeforderte unidirektionale Nachrichten, die vom Antwortdienst gesendet werden.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine Funktion,über die zwei zugrunde liegende Transportkanäle einen Composite Duplex-Kanal bilden können, bei dem ein Kanal für eingehende Nachrichten und der andere für ausgehende Nachrichten verwendet wird. Im Fall des HTTP-Transports stellt Composite Duplex zwei umgekehrte HTTP-Verbindungen bereit. Der Anforderungsdienst verwendet eine Verbindung, um Nachrichten an den Antwortdienst zu senden, und der Antwortdienst verwendet die andere, um Nachrichten zurück an den Anforderungsdienst zu senden.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine Funktion, die über die zwei zugrunde liegende Transportkanäle bilden können Composite Duplex-Kanal, bei dem ein Kanal für eingehende Nachrichten und der andere für ausgehende Nachrichten verwendet wird. Im Fall des HTTP-Transports stellt Composite Duplex zwei umgekehrte HTTP-Verbindungen bereit. Der Anforderungsdienst verwendet eine Verbindung, um Nachrichten an den Antwortdienst zu senden, und der Antwortdienst verwendet die andere, um Nachrichten zurück an den Anforderungsdienst zu senden.  
   
  Die WS-AM-Assertion von Antworten, die über separate HTTP-Anforderungen gesendet werden, ist Folgende:  
   
@@ -523,7 +525,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143: Der Wert des Content-ID-Headers des Infoset MIME-Teils muss der Produktion `msg-id` von RFC 2822 folgen, wobei die Präfix- und Suffixteile des `[CFWS]` entfallen.  
   
- Eine Reihe von MIME-Implementierungen gelockert Anforderungen für den Wert "\<" und ">" ist eine e-Mail-Adresse und verwendet `absoluteURI` eingeschlossen "\<", ">" zusätzlich zur e-Mail-Adresse. Diese Version von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet Werte des Content-ID MIME Headers in der Form:  
+ Eine Reihe von MIME-Implementierungen gelockert Anforderungen für den Wert "\<" und ">" auf eine e-Mail-Adresse und verwendet `absoluteURI` eingeschlossen "\<", ">" zusätzlich zur e-Mail-Adresse. Diese Version von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet Werte des Content-ID MIME Headers in der Form:  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -574,7 +576,7 @@ mail-address   =     id-left "@" id-right
  Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt, der konfiguriert wird, um MTOM zu verwenden, sendet immer MTOM-codierte Nachrichten. Selbst wenn kein Teil die erforderlichen Kriterien erfüllt, ist die Nachricht noch immer MTOM-codiert (als MIME-Paket mit einem einzelnen MIME-Teil serialisiert, der den SOAP-Umschlag enthält).  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>WS-Policy-Assertion für MTOM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die folgende Richtlinienassertion, um die MTOM-Verwendung durch den Endpunkt anzugeben:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die folgende Richtlinienassertion, die MTOM-Verwendung durch den Endpunkt anzugeben:  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
