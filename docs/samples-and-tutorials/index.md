@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>Beispiele und Tutorials
 
-Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](http://fsharp.org/learn.html). Wenn Sie C# mit einem Online-Code-Editor erkunden möchten, sehen Sie sich diese [interaktiven Tutorials](http://go.microsoft.com/fwlink/p/?LinkId=817234) an. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
+Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](http://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1), und fahren Sie dann mit den [interaktiven C#-Schnellstarts](../csharp/quick-starts/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -27,7 +27,7 @@ Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen 
 
 Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehörigen Komponententests erstellen. Zu Beginn des Leitfadens erstellen Sie eine einfache Webdienst-App und fügen dann Tests hinzu. Anschließend erstellen Sie weitere Tests für die Implementierung neuer Funktionen. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) finden Sie im dotnet/docs-Repository auf GitHub.
 
-### <a name="tutorials"></a>Lernprogramme
+### <a name="tutorials"></a>Tutorials
 
 **[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: erweiterte Schritt-für-Schritt-Anleitung](../core/tutorials/using-with-xplat-cli.md)**
 
@@ -65,7 +65,7 @@ Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksba
 
 Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated Query (sprachintegrierte Abfrage, LINQ). Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) finden Sie im dotnet/docs-Repository auf GitHub.
 
-### <a name="tutorials"></a>Lernprogramme
+### <a name="tutorials"></a>Tutorials
 
 **[Konsolenanwendung](../csharp/tutorials/console-teleprompter.md)**
 
