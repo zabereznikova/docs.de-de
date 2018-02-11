@@ -5,17 +5,19 @@ ms.date: 04/23/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: tuples [Visual Basic]
+helpviewer_keywords:
+- tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be50b22e9acca9ff8cfbde798d78869ee1c72634
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tuples-visual-basic"></a>Tupel (Visual Basic)
 
@@ -44,58 +46,87 @@ Statt die Standardnamen für ein Tupel Felder, instanziieren Sie ein *mit dem Na
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
-## <a name="tuples-versus-structures"></a>Tupel im Vergleich zu Strukturen
+## <a name="inferred-tuple-element-names"></a>Abgeleitete Tupel Elementnamen
 
-Ein Visual Basic-Tupel ist ein Werttyp, der eine Instanz einer von der eine **System.ValueTuple** generische Typen. Z. B. die `holiday` im vorherigen Beispiel definierte Tupel ist eine Instanz der <xref:System.ValueTuple%603> Struktur. Es wurde entwickelt, um einen einfachen Container für Daten werden. Da das Tupel zielt darauf ab, um es einfach, um ein Objekt mit mehreren Datenelementen erstellen können, fehlen einige der Funktionen, die möglicherweise eine benutzerdefinierte Struktur. Dazu gehören:
+Beginnend mit Visual Basic 15.3, kann Visual Basic die Namen der Tupelelemente ableiten; Sie müssen keinen explizit zuweisen. Abgeleitete Tupel Namen sind hilfreich, wenn Sie ein Tupel aus einem Satz von Variablen initialisieren, und der Elementname Tupel mit dem Variablennamen identisch sein sollen. 
 
-- Kundenelemente. Sie können nicht Ihre eigenen Eigenschaften, Methoden oder Ereignisse für ein Tupel definieren.
+Das folgende Beispiel erstellt eine `stateInfo` Tupel, das drei explizit enthält benannten Elementen, `state`, `stateName`, und `capital`. Beachten Sie, dass bei der Benennung der Elemente, Tupel Initialisierung die Anweisung einfach benannten Elemente der Werte von gleichnamigen Variablen weist.
 
-- Überprüfung. Die Daten, die Felder zugewiesen sind, kann nicht überprüft werden.
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
+ 
+Da Elemente und Variablen, die denselben Namen haben, kann die Visual Basic-Compiler die Namen der Felder, wie im folgenden Beispiel gezeigt ableiten.
 
-- Unveränderlichkeit. Visual Basic-Tupeln sind änderbar. Im Gegensatz dazu kann eine benutzerdefinierte Struktur Sie steuern, ob eine Instanz änderbare oder unveränderlich ist.
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Wenn Sie benutzerdefinierte Elemente, die Eigenschaft und die feldvalidierung oder die Unveränderlichkeit wichtig sind, verwenden Sie das Visual Basic [Struktur](../../../language-reference/statements/structure-statement.md) Anweisung, um einen benutzerdefinierten Typ definieren.
+Um interred Tupel Elementnamen zu aktivieren, müssen Sie die Version von Visual Basic-Compiler in Visual Basic-Projekt verwendet definieren (\*.vbproj) Datei: 
 
-Ein Visual Basic-Tupel Unterstützungsobjekt für Datenobjekte erbt Member seiner **ValueTuple** Typ. Zusätzlich zu den zugehörigen Felder gehören dazu die folgenden Methoden:
+```xml 
+<PropertyGroup> 
+  <LangVersion>15.3</LangVersion> 
+</PropertyGroup> 
 
-| Member | Beschreibung |
+The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+
+In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+
+- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+
+- The candidate name is duplicated in the tuple.
+ 
+When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+  
+## Tuples versus structures
+
+A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+
+- Customer members. You cannot define your own properties, methods, or events for a tuple.
+
+- Validation. You cannot validate the data assigned to fields.
+
+- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+
+If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+
+A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+
+| Member | Description |
 | ---|---|
-| CompareTo | Vergleicht das aktuelle Tupel in einer anderen Tupel mit derselben Anzahl von Elementen an. |
-| gleich | Bestimmt, ob das aktuelle Tupel an eine andere Tupel oder Objekt entspricht. |
-| GetHashCode | Berechnet den Hashcode für die aktuelle Instanz. |
-| ToString | Gibt die Zeichenfolgendarstellung dieses Tupel, im Format `(Item1, Item2...)`, wobei `Item1` und `Item2` die Werte der Felder für das Tupel darstellen. |
+| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
+| Equals | Determines whether the current tuple is equal to another tuple or object. |
+| GetHashCode | Calculates the hash code for the current instance. |
+| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
 
-Darüber hinaus die **ValueTuple** Typen implementieren <xref:System.Collections.IStructuralComparable> und <xref:System.Collections.IStructuralEquatable> Schnittstellen, die Ihnen ermöglichen, die Kunden vergleichen zu definieren.
+In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
 
-## <a name="assignment-and-tuples"></a>Zuweisung und Tupel
+## Assignment and tuples
 
-Visual Basic unterstützt die Zuordnung zwischen Tupeltypen, die die gleiche Anzahl von Feldern verfügen. Die Feldtypen können konvertiert werden, wenn eine der folgenden Aussagen zutrifft:
+Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
 
-- Die Quell- und Ziel-Feld sind vom gleichen Typ.
+- The source and target field are of the same type.
 
-- Eine Konvertierung erweiternde (oder implizite) des Quelltyps in den Zieltyp definiert ist. 
+- A widening (or implicit) conversion of the source type to the target type is defined. 
 
-- `Option Strict`ist `On`, und eine (oder explizite) einschränkende Konvertierung des Quelltyps in den Zieltyp definiert ist. Diese Konvertierung kann eine Ausnahme ausgelöst, wenn der Quellwert außerhalb des Bereichs des Zieltyps liegt.
+- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
 
-Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
+Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
 
-Berücksichtigen Sie diese Variablen, die in den folgenden Beispielen verwendet werden:
+Consider these variables used in the following examples:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-Die ersten beiden Variablen `unnamed` und `anonymous`, haben keine semantische Namen für die Felder angegeben. Die Feldnamen werden standardmäßig `Item1` und `Item2`. Die letzten beiden Variablen `named` und `differentName` semantische Feldnamen haben. Beachten Sie, dass diese zwei Tupel unterschiedliche Namen für die Felder besitzen.
+The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
 
-Alle vier diese Tupel haben die gleiche Anzahl von Feldern (bezeichnet als "Stelligkeit"), und die Datentypen dieser Felder identisch sind. Daher funktionieren alle Zuweisungen:
+All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Beachten Sie, dass die Namen der Tupel nicht zugewiesen sind. Die Werte der Felder werden nach der Reihenfolge der Felder im Tupel zugewiesen.
+Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
 
-Beachten Sie, dass wir zuweisen können die `named` Tupel für die `conversion` Tupel, obwohl das erste Feld der `named` ist ein `Integer`, und das erste Feld der `conversion` ist eine `Long`. Diese Zuweisung ist erfolgreich, da es sich bei Konvertierung einer `Integer` auf eine `Long` ist eine erweiternde Konvertierung.
+Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tupel mit verschiedenen Anzahlen von Felder sind nicht zugeordnet werden kann:
+Tuples with different numbers of fields are not assignable:
 
 ```vb
 ' Does not compile.
