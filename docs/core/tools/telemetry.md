@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.workload: dotnetcore
-ms.openlocfilehash: 66ad63f0b2a2f62f34f0784b236d242f1d92066a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core-CLI-Tools-Telemetrie
 
@@ -133,5 +134,5 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 ## <a name="see-also"></a>Siehe auch
 
 [What we've learned from .NET Core SDK Telemetry (Was wir von der .NET Core-SDK-Telemetrie gelernt haben)](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Telemetry reference source (dotnet/cli repo; release/2.0.0 branch) (Verweisquelle der Telemetrie (dotnet-/CLI-Repository, Version 2.0.0 Branch)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
+[Telemetry reference source (dotnet/cli repo; release/2.0.0 branch) (Verweisquelle der Telemetrie (dotnet-/CLI-Repository, Version 2.0.0 Branch)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
 [.NET Core SDK Usage Data (.NET Core SDK-Nutzungsdaten)](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
