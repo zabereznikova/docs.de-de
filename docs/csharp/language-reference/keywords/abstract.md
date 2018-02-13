@@ -2,21 +2,23 @@
 title: abstract (C#-Referenz)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-helpviewer_keywords: abstract keyword [C#]
+helpviewer_keywords:
+- abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (C#-Referenz)
 Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implementierung fehlt oder dass diese unvollständig ist. Der abstract-Modifizierer kann für Klassen, Methoden, Eigenschaften, Indexer und Ereignisse verwendet werden. Verwenden Sie den `abstract`-Modifizierer in einer Klassendeklaration, um anzugeben, dass die Klasse nur die Basisklasse für eine andere Klasse sein soll. Als abstrakt markierte Member oder Member in einer abstrakten Klasse müssen von Klassen, die von der abstrakten Klasse abgeleitet wurden, implementiert werden.  
@@ -50,7 +52,7 @@ Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implemen
     public abstract void MyMethod();  
     ```  
   
-     Die Implementierung wird von der überschreibenden Methode [override](../../../csharp/language-reference/keywords/override.md) zur Verfügung gestellt, die ein Member einer nicht abstrakten Klasse ist.  
+     Die Implementierung wird von der Methode [override](../../../csharp/language-reference/keywords/override.md) zur Verfügung gestellt, die ein Member einer nicht abstrakten Klasse ist.  
   
 -   Es ist unzulässig, die Modifizierer [static](../../../csharp/language-reference/keywords/static.md) oder [virtual](../../../csharp/language-reference/keywords/virtual.md) in einer abstrakten Methodendeklaration zu verwenden.  
   

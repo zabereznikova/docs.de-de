@@ -1,9 +1,11 @@
 ---
 title: "Systemanforderungen für .NET Framework"
+description: "Finden Sie heraus, was die Anforderungen der Hardware, des Betriebssystems und der Software sind, um .NET Framework 4.5 und höhere Versionen zu installieren."
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 02/02/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - software requirements
@@ -15,16 +17,31 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
-Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für .NET Framework 4.5 und zugehörige Punktreleases (4.5.1 und 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und zugehörige Punktreleases (4.6.1 und 4.6.2) sowie .NET Framework 4.7 und das zugehörige Punktrelease (4.7.1). Für Entwicklungsumgebungen, in denen Apps für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
+Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für die folgenden .NET Framework-Versionen:
+
+* .NET Framework 4.5 und dessen Punktversionen (4.5.1 und 4.5.2).
+* .NET Framework 4.6 und dessen Punktversionen (4.6.1 und 4.6.2).
+* .NET Framework 4.7 und dessen Punktversionen (4.7.1 und 4.7.2).
+
+Für Entwicklungsumgebungen, in denen Apps für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
+
+> [!IMPORTANT]
+> Alle .NET Framework-Versionen ab .NET Framework 4 sind direkte Updates, d.h. eine einzelne 4.x-Version kann auf einem System vorhanden sein.
+> Darüber hinaus sind bestimmte .NET Framework-Versionen auf einigen Versionen des Windows-Betriebssystems vorinstalliert. Dies bedeutet Folgendes:
+>
+> * Ist bereits eine höhere Version auf dem Computer installiert, können Sie keine vorherige 4.x-Version installieren.
+> * Wenn auf dem Betriebssystem bereits eine .NET-Version installiert wird, können Sie keine vorherige 4.x-Version auf dem gleichen Computer installieren.
+> * Wenn Sie eine höhere Version installieren, müssen Sie zuerst die vorherige Version deinstallieren.
 
 Downloadinformationen und Links finden Sie unter [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).
 
