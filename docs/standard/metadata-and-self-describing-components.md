@@ -21,15 +21,18 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente (.exe oder .dll) nicht einfach eine andere Softwarekomponente verwenden, die in einer anderen Sprache geschrieben war. COM ist die Lösung dieses Problems angegangen. Mit .NET Framework wird die Interoperation von Komponenten erleichtert, indem zusätzliche deklarative Informationen von Compilern an alle Module und Assemblys weitergegeben werden. Diese Informationen, so genannte Metadaten, ermöglichen eine nahtlose Interaktion der Komponenten.  
@@ -161,11 +164,11 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
  Folgende Tabelle zeigt einen Teil der **MethodDef**-Tabelle, welche die `Add`-Methode beschreibt und auf die das Metadatentoken verweist. Obwohl es in dieser Assembly auch andere Metadatentabellen gibt, die jeweils ihre eigenen, eindeutigen Werte besitzen, wird hier nur diese Tabelle erläutert.  
   
-|Zeile|RVA (Relative Virtuelle Adresse)|ImplFlags|Flags|Name<br /><br /> (Zeigt auf Zeichenfolgenheap.)|Signatur (Zeigt auf BLOB-Heap.)|  
+|Zeile|RVA (Relative Virtuelle Adresse)|ImplFlags|Flags|name<br /><br /> (Zeigt auf Zeichenfolgenheap.)|Signatur (Zeigt auf BLOB-Heap.)|  
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|  
-|1|0x00002050|IL<br /><br /> Verwaltet|Öffentlich<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (constructor)||  
-|2|0x00002058|IL<br /><br /> Verwaltet|Öffentlich<br /><br /> Statisch<br /><br /> ReuseSlot|Main|Zeichenfolge|  
-|3|0x0000208c|IL<br /><br /> Verwaltet|Öffentlich<br /><br /> Statisch<br /><br /> ReuseSlot|Hinzufügen|int, int, int|  
+|1|0x00002050|IL<br /><br /> Verwaltet|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (constructor)||  
+|2|0x00002058|IL<br /><br /> Verwaltet|Public<br /><br /> Statisch<br /><br /> ReuseSlot|Main|Zeichenfolge|  
+|3|0x0000208c|IL<br /><br /> Verwaltet|Public<br /><br /> Statisch<br /><br /> ReuseSlot|Hinzufügen|int, int, int|  
   
  Jede Spalte der Tabelle enthält wichtige Informationen über Ihren Code. Über die **RVA**-Spalte kann die Runtime die Startspeicheradresse der MSIL berechnen, die diese Methode definiert. Die **ImplFlags**-Spalte und die **Flags**-Spalte enthalten Bitmasken, welche die Methode beschreiben (z.B., ob es sich um eine öffentliche oder eine private Methode handelt). Die **Name**-Spalte gibt den Namen der Methode aus dem String-Heap an. Die Spalte **Signatur** gibt die Definition der Signatur der Methode im BLOB-Heap an.  
   
@@ -175,6 +178,6 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Attribute](../../docs/standard/attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|

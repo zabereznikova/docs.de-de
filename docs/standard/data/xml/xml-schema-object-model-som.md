@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 44ce1337e347020926fe2dee29d70fe226ad087a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-som"></a>XML-Schemaobjektmodell (SOM)
 Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Validieren von Strukturen in XML-kompatiblen Dokumenten. Wie bei der Datenmodellierung in einer relationalen Datenbank kann mithilfe eines Schemas die Struktur von XML-Dokumenten definiert werden. Dies erfolgt durch Festlegen der Elemente, die in Dokumenten verwendet werden dürfen, einschließlich der Struktur und der Typen, denen diese Elemente entsprechen müssen, um für dieses spezielle Schema gültig zu sein.  
@@ -25,7 +28,7 @@ Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Val
  Das SOM (Schema Object Model) stellt im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace eine Reihe von Klassen zur Verfügung, mit denen Sie ein Schema aus einer Datei auslesen oder programmgesteuert und speicherintern ein Schema erstellen können. Das Schema kann durchlaufen, bearbeitet, kompiliert, validiert oder in eine Datei geschrieben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [XML-Schema-Objektmodellübersicht](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  In diesem Abschnitt werden das SOM (Schema Object Model) und die von diesem bereitgestellten Funktionen und Klassen beschrieben.  
   
  [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
@@ -34,7 +37,7 @@ Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Val
  [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  In diesem Abschnitt wird beschrieben, wie mithilfe von Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace XML-Schemata im Speicher erstellt werden.  
   
- [Durchlaufen von XML-Schemata](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  In diesem Abschnitt wird beschrieben, wie ein XML-Schema durchlaufen wird, um auf die im SOM gespeicherten Elemente, Attribute und Typen zuzugreifen.  
   
  [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)  

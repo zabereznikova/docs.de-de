@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -124,7 +127,7 @@ Weitere Informationen sowie einige Beispiele finden Sie im Thema [LINQ (Language
 
 Jedes Betriebssystem umfasst eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API), die Systemdienste bereitstellt. In .NET gibt es verschiedene Möglichkeiten, diese APIs aufzurufen.
 
-Die wichtigste Methode, um native Interoperabilität zu erreichen, erfolgt über einen Plattformaufruf oder „P/Invoke“, der auf Linux- und Windows-Plattformen unterstützt wird. Eine nur unter Windows verfügbare Methode zum Erreichen nativer Interoperabilität wird als „COM interop“ bezeichnet und zur Arbeit mit [COM-Komponenten](https://msdn.microsoft.com/library/bwa2bx93.aspx) in verwaltetem Code verwendet. Die Methode basiert auf der P/Invoke-Infrastruktur, funktioniert jedoch etwas anders.
+Die wichtigste Methode, um native Interoperabilität zu erreichen, erfolgt über einen Plattformaufruf oder „P/Invoke“, der auf Linux- und Windows-Plattformen unterstützt wird. Eine nur unter Windows verfügbare Methode zum Erreichen nativer Interoperabilität wird als „COM interop“ bezeichnet und zur Arbeit mit [COM-Komponenten](/cpp/atl/introduction-to-com) in verwaltetem Code verwendet. Die Methode basiert auf der P/Invoke-Infrastruktur, funktioniert jedoch etwas anders.
 
 Der Großteil der Interoperabilitätsunterstützung von Mono (und damit auch von Xamarin) für Java und Objective-C ist gleich aufgebaut, verwendet also die gleichen Prinzipien.
 

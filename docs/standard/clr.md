@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 .NET Framework stellt eine als Common Language Runtime bezeichnete Laufzeitumgebung bereit, die Code ausführt und Dienste für die Erleichterung des Entwicklungsprozesses bereitstellt.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  Compiler und Tools machen die Funktionen der Common Language Runtime verfügbar und ermöglichen das Schreiben von Code, mit dem die Vorteile dieser verwalteten Ausführungsumgebung genutzt werden können. Mit einem Sprachcompiler für die Common Language Runtime entwickelter Code wird "verwalteter Code" genannt. Dieser nutzt Features wie sprachübergreifende Integration, sprachübergreifende Ausnahmebehandlung, erhöhte Sicherheit, Unterstützung bei der Versionserstellung und Bereitstellung, ein vereinfachtes Modell für die Interaktion von Komponenten sowie Debug- und Profilerstellungsdienste.  
   
 > [!NOTE]
->  Compiler und Tools sind in der Lage, eine von der Common Language Runtime nutzbare Ausgabe zu erzeugen, da sowohl das Typsystem, das Format der Metadaten als auch die Laufzeitumgebung (das virtuelle Ausführungssystem) von einem öffentlichen Standard definiert werden, dem ECMA-Standard für die Common Language Infrastructure. Weitere Informationen finden Sie unter [ECMA C# und Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkId=99212).  
+>  Compiler und Tools sind in der Lage, eine von der Common Language Runtime nutzbare Ausgabe zu erzeugen, da sowohl das Typsystem, das Format der Metadaten als auch die Laufzeitumgebung (das virtuelle Ausführungssystem) von einem öffentlichen Standard definiert werden, dem ECMA-Standard für die Common Language Infrastructure. Weitere Informationen finden Sie unter [ECMA C# und Common Language Infrastructure Standards](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/).  
   
  Damit die Common Language Runtime Dienste für verwalteten Code bereitstellen kann, müssen Sprachcompiler Metadaten ausgeben, mit denen die Typen, Member und Verweise im Code beschrieben werden. Metadata werden gemeinsam mit dem Code gespeichert. Jede PE (Portable Executable)-Datei der Common Language Runtime, die geladen werden kann, enthält Metadaten. Die Laufzeit verwendet Metadaten zum Suchen und Laden von Klassen, Anordnen von Instanzen im Speicher, Auflösen von Methodenaufrufen, Generieren von systemeigenem Code, Erzwingen von Sicherheit und zum Festlegen von Begrenzungen im Laufzeitkontext.  
   
@@ -68,8 +71,8 @@ ms.lasthandoff: 10/18/2017
   
 |.NET Framework-Version|Enthält CLR-Version|  
 |----------------------------|--------------------------|  
-|1.0|1.0|  
-|1.1|1.1|  
+|1,0|1,0|  
+|1,1|1,1|  
 |2.0|2.0|  
 |3.0|2.0|  
 |3.5|2.0|  
@@ -80,11 +83,11 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Der verwaltete Ausführungsprozess](../../docs/standard/managed-execution-process.md)|Enthält eine Beschreibung der Schritte, die erforderlich sind, um die Vorteile der Common Language Runtime nutzen zu können.|  
 |[Automatische Speicherverwaltung](../../docs/standard/automatic-memory-management.md)|Erläutert, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.|  
-|[NIB: Übersicht über .NET Framework](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Beschreibt die wichtigsten Konzepte von .NET Framework, z. B. das allgemeine Typsystem, sprachübergreifende Interoperabilität, verwaltete Ausführung, Anwendungsdomänen und Assemblys.|  
+|[NIB: Übersicht über .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Beschreibt die wichtigsten Konzepte von .NET Framework, z. B. das allgemeine Typsystem, sprachübergreifende Interoperabilität, verwaltete Ausführung, Anwendungsdomänen und Assemblys.|  
 |[Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)|Enthält eine Beschreibung der Deklaration, Verwendung und Verwaltung von Typen in der Laufzeit für die Unterstützung einer sprachübergreifenden Integration.|  
   
 ## <a name="see-also"></a>Siehe auch  
