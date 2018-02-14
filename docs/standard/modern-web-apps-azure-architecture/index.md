@@ -9,13 +9,16 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
+
+![Titelbild](./media/cover.jpg)
+
 
 .NET Core und ASP.NET Core bieten mehrere Vorteile gegenüber der traditionellen .NET-Entwicklung. Sie sollten .NET Core für Ihre Serveranwendungen verwenden, wenn einige oder alle der folgenden Punkte für den Erfolg Ihrer Anwendung wichtig sind:
 
