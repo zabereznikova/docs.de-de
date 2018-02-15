@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure-Hosting Empfehlungen für ASP.NET Core Web-Apps
 
 > "Line-of-Business-Führungskräfte überall sind IT-Abteilungen zum Abrufen von Anwendungen aus der Cloud (aka SaaS) umgehen und wie würden Sie eine Zeitschrift Abonnement bezahlt. Und wenn der Dienst nicht mehr benötigt wird, können sie das Abonnement kündigen, keine Geräte, die Links in der Ecke nicht verwendet."  
-> _\-Daryl Plummer, Gartner Analytiker_
+> _\- Daryl Plummer, Gartner Analytiker_
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -25,7 +28,7 @@ Alle von Ihnen gewünschten Anforderungen und Architektur der Anwendung, kann Wi
 
 Webanwendungen können mit gehostet werden:
 
--   App Service-Web-Apps
+-   App Service Web Apps
 
 -   Container
 
@@ -35,7 +38,7 @@ Webanwendungen können mit gehostet werden:
 
 Von diesen sind App Service-Web-Apps die empfohlene Vorgehensweise für die meisten Szenarien. Erwägen Sie bei Microservice Architekturen einen Container basierenden Ansatz oder aus einem Service Fabric aus. Wenn Sie mehr Kontrolle über die Computer, die Ihre Anwendung ausführen möchten, sollten Sie die Azure Virtual Machines.
 
-### <a name="app-service-web-apps"></a>App Service-Web-Apps
+### <a name="app-service-web-apps"></a>App Service Web Apps
 
 App Service Web Apps bietet eine vollständig verwaltete Plattform zum Hosten von Webanwendungen optimiert. Es ist ein platform-as-a-service(PaaS) anbieten, können, die Sie auf Ihrer Geschäftslogik konzentrieren, während Azure die Infrastruktur übernimmt, zum Ausführen und skalieren Sie die app erforderlich sind. Einige der wesentlichen Features der App Service-Web-Apps:
 
@@ -115,16 +118,16 @@ Abbildung 11 – 2 zeigt ein Beispiel-Referenzarchitektur. Dieses Diagramm wird 
 **Verweise – Azure Hosten von Empfehlungen**
 
 -   Azure-Lösung Architectures\
-    <https://Azure.Microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Azure-Entwickler Konventionen\
-    <https://Azure.Microsoft.com/Campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Was ist, dass Azure App Service? \
-    <https://docs.Microsoft.com/Azure/App-Service/App-Service-Value-Prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Azure App Service, Virtual Machines, Service Fabric und Cloud Services Comparison\
-    <https://docs.Microsoft.com/Azure/App-Service-Web/Choose-Web-Site-Cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Vorherigen] (Development-Prozess-für-azure.md)

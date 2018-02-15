@@ -1,19 +1,22 @@
 ---
 title: "Innere Schleife Entwicklungsworkflow für Docker-apps"
-description: Lebenszyklus von Datenvolumes Docker-Anwendung mit Microsoft-Webplattform und Tools
+description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Innere Schleife Entwicklungsworkflow für Docker-apps
 
-Vor dem Auslösen des äußeren Schleife Workflows umfasst die gesamte DevOps durchlaufen, Ausgangspunkt für alle weiteren auf jeder Entwickler-Computer, codieren die app selbst mithilfe seiner bevorzugten Sprachen oder Plattformen und lokal testen (Abbildung 4-14). In jedem Fall, müssen aber einen sehr wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern lokal.
+Vor dem Auslösen des äußeren Schleife Workflows umfasst die gesamte DevOps durchlaufen, Ausgangspunkt für alle weiteren auf jeder Entwickler-Computer, codieren die app selbst, ihren bevorzugten Sprachen oder Plattformen verwenden und lokal testen (Abbildung 4-14). In jedem Fall, müssen aber einen sehr wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern lokal.
 
 ![](./media/image18.png)
 

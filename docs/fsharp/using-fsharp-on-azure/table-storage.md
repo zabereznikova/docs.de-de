@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: bf833a96809768011f26df35332ab2372ced2aaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Erste Schritte mit Azure-Tabellenspeicher mit f# #
 
@@ -186,8 +186,8 @@ Sie können eine Tabelle aus einem Speicherkonto löschen. Eine Tabelle, die gel
 
 Nun, dass Sie die Grundlagen des tabellenspeichers gelernt haben, führen Sie die folgenden Links, um weitere Informationen zu komplexeren Speicheraufgaben:
 
-- [Speicherclientbibliothek für .NET-Referenz](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [Azure-Speicher-APIs für .NET](/dotnet/api/overview/azure/storage)
 - [Azure-Speicher-Typanbieter](http://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure-Speicher-Teamblog](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Konfigurieren von Verbindungszeichenfolgen](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Konfigurieren von Verbindungszeichenfolgen für Azure-Speicher](/azure/storage/common/storage-configure-connection-string)
 - [Erste Schritte mit Azure-Tabellenspeicher in .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

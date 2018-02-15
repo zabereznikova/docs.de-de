@@ -1,15 +1,18 @@
 ---
 title: "Microservices und multicontainer Anwendungen für die hohe Skalierbarkeit und Verfügbarkeit orchestriert"
-description: Lebenszyklus von Datenvolumes Docker-Anwendung mit Microsoft-Webplattform und Tools
+description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Microservices und multicontainer Anwendungen für die hohe Skalierbarkeit und Verfügbarkeit orchestriert
 
@@ -39,10 +42,10 @@ Tabelle 4 – 1: Softwareplattformen für das clustering Container, Orchestrieru
 
 | Plattform | Beschreibung |
 |---|---|
-| Docker Punktschwarms<br/> ![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/Images/swarm.PNG?v=2016-07-10-am](./media/image7.png) | Docker Punktschwarms bietet Ihnen die Möglichkeit, cluster, und planen Docker-Containern. Mithilfe von Punktschwarms können Sie einen Pool von Docker-Hosts in einem einzelnen, virtuellen Docker-Host aktivieren. Clients können API-Anforderungen an Punktschwarms auf die gleiche Weise vornehmen, die sie für Hosts, was bedeutet, dass Punktschwarms für Anwendungen, um die Skalierung auf mehreren Hosts erleichtert. <br /><br /> Docker Punktschwarms ist ein Produkt von Docker des Unternehmens. <br /><br /> Docker v1.12 oder höher einheitlichen und integrierten Containerhostclustern Modus. |
+| Docker Punktschwarms<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker Punktschwarms bietet Ihnen die Möglichkeit, cluster, und planen Docker-Containern. Mithilfe von Punktschwarms können Sie einen Pool von Docker-Hosts in einem einzelnen, virtuellen Docker-Host aktivieren. Clients können API-Anforderungen an Punktschwarms auf die gleiche Weise vornehmen, die sie für Hosts, was bedeutet, dass Punktschwarms für Anwendungen, um die Skalierung auf mehreren Hosts erleichtert. <br /><br /> Docker Punktschwarms ist ein Produkt von Docker des Unternehmens. <br /><br /> Docker v1.12 oder höher einheitlichen und integrierten Containerhostclustern Modus. |
 | Mesosphere DC/OS<br/>![https://mesosphere.com/WP-Content/Uploads/2016/04/Logo-horizontal-Styled.PNG](./media/image8.png) |  Mesosphere Enterprise DC/OS (basierend auf Apache Mesos) ist eine produktionsbereite-Plattform für die Ausführung von Containern und verteilten Anwendungen. <br /><br /> DC/OS funktioniert, indem eine Auflistung, die Ressourcen im Cluster werden so abstrahiert und um diese Ressourcen für Komponenten baut auf den er zur Verfügung. Marathon dient in der Regel als ein Planer DC/OS integriert. |
-| Google-Kubernetes<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes ist ein Open Source-Produkt, die Funktionalität bereitstellt, die Bereiche von Clusterinfrastruktur und Container Planung Automatisierungsplattform Funktionen. Mithilfe dieser Option können Sie mehrere Cluster Hosts Bereitstellung, Skalierung und Vorgänge des Anwendungscontainer automatisieren. <br /><br /> Kubernetes bietet eine Container-orientierte Infrastruktur, die logischen Einheiten für die einfache Verwaltung und-Ermittlung Anwendungscontainer gruppiert. |
-| Azure Service Fabric<br />![https://Azure.Microsoft.com/svghandler/Service-Fabric?Width=600&Height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) ist eine Microsoft Microservices Plattform zum Erstellen von Anwendungen. Es ist ein [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) der Dienste und Computercluster erstellt. Standardmäßig Service Fabric bereitstellt und Dienste als Prozesse aktiviert, aber Service Fabric-Dienste in Docker-containerimages bereitstellen können. Noch wichtiger ist, können Sie Dienste in Prozessen mit Diensten in Containern in der gleichen Anwendung kombinieren. <br /><br /> Ab Mai 2017 ist das Feature des Service Fabric, das Bereitstellen von Diensten als Docker-Container unterstützt, in vorschauzustand. <br /><br /> Sie entwickeln Service Fabric-Dienste in vielerlei Hinsicht von der Verwendung der [Service Fabric-Programmiermodelle](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) bis zur Bereitstellung von [Gast ausführbare Dateien](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) sowie Container. Service Fabric unterstützt wie implementierungslösung Anwendungsmodelle [zustandsbehaftete Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes ist ein Open Source-Produkt, die Funktionalität bereitstellt, die Bereiche von Clusterinfrastruktur und Container Planung Automatisierungsplattform Funktionen. Mithilfe dieser Option können Sie mehrere Cluster Hosts Bereitstellung, Skalierung und Vorgänge des Anwendungscontainer automatisieren. <br /><br /> Kubernetes bietet eine Container-orientierte Infrastruktur, die logischen Einheiten für die einfache Verwaltung und-Ermittlung Anwendungscontainer gruppiert. |
+| Azure Service Fabric<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) ist eine Microsoft Microservices Plattform zum Erstellen von Anwendungen. Es ist ein [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) der Dienste und Computercluster erstellt. Standardmäßig Service Fabric bereitstellt und Dienste als Prozesse aktiviert, aber Service Fabric-Dienste in Docker-containerimages bereitstellen können. Noch wichtiger ist, können Sie Dienste in Prozessen mit Diensten in Containern in der gleichen Anwendung kombinieren. <br /><br /> Ab Mai 2017 ist das Feature des Service Fabric, das Bereitstellen von Diensten als Docker-Container unterstützt, in vorschauzustand. <br /><br /> Sie entwickeln Service Fabric-Dienste in vielerlei Hinsicht von der Verwendung der [Service Fabric-Programmiermodelle](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) bis zur Bereitstellung von [Gast ausführbare Dateien](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) sowie Container. Service Fabric unterstützt wie implementierungslösung Anwendungsmodelle [zustandsbehaftete Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Container-basierte Orchestrators verwenden in Azure
 
@@ -89,19 +92,19 @@ Containerdienst ist derzeit für die Standard-A, D, DS, G und GS-Serie-Linux-VMs
 Folgendes sind die Speicherorte, in denen Sie weitere Informationen finden:
 
 -   Einführung in Projektmappen mit Containerdienst hosting Docker-Container:  
-    https://docs.Microsoft.com/Azure/Container-Service/kubernetes/Container-Service-Intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Übersicht über die Docker-Punktschwarms:  
-    <https://docs.docker.com/swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Containerhostclustern Sie Modus (Übersicht):  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Übersicht über die Mesosphere DC/OS:    
-    <https://docs.mesosphere.com/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (die offizielle Website):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Verwenden von Service Fabric
 
@@ -147,7 +150,7 @@ Im Hinblick auf den Container im Service Fabric können Sie auch die Dienste in 
 
 Abbildung 4 – 11: Business Microservice mit verschiedenen Diensten (Container) in Service Fabric
 
-So genannten "sidecardatei" Container (zwei Container, die zusammen als Teil eines logischen Diensts bereitgestellt werden muss) sind jedoch auch in der Service Fabric möglich. Wichtig ist, dass eine Business Microservice die logische Begrenzung um mehrere zusammenhängende Elemente ist. In vielen Fällen ist es möglicherweise Einzeldienst mit einem einzelnen Datenmodell, aber in anderen Fällen Sie physische mehrere Dienste, sowie ggf..
+So genannten "sidecardatei" Container (zwei Container, die zusammen als Teil eines logischen Diensts bereitgestellt werden muss) sind jedoch auch in der Service Fabric möglich. Wichtig ist, dass eine Business Microservice die logische Begrenzung um mehrere zusammenhängende Elemente ist. In vielen Fällen ist es möglicherweise Einzeldienst mit einem einzelnen Datenmodell, aber in anderen Fällen Sie physische mehrere Dienste, sowie ggf.
 
 Zum Zeitpunkt der Erstellung dieses Dokuments (April 2017), in Service Fabric können Sie keine bereitstellen SF zuverlässige statusbehaftete Dienste für Container – Sie können nur Gast-Container, zustandslose Dienste oder actordienste in Containern bereitstellen. Aber beachten Sie, dass Sie die Dienste in Prozessen und Diensten in Containern in der gleichen Service Fabric-Anwendung kombinieren können, wie in Abbildung 4-12 gezeigt.
 

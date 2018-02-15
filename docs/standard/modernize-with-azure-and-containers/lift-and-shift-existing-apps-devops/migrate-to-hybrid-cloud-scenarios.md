@@ -4,11 +4,14 @@ description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
-ms.openlocfilehash: 7394d0fd208e131b4e683298f6ca31a9eddade28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren Sie zu Hybrid Cloud-Szenarien
 
@@ -20,7 +23,7 @@ Bei der Sicherheit, können Sie die Verwaltungs- und Sicherheitsfunktionen über
 
 Sie können schließlich verteilen und nahtlos Analysieren von Daten, Abfragesprachen für Cloud- und lokalen Ressourcen verwenden und Anwenden von Analysen und umfassende learning in Azure, um Ihre Daten, unabhängig von der Updatequelle optimal zu nutzen.
 
-## <a name="azure-stack"></a>Azure-Stapel
+## <a name="azure-stack"></a>Azure Stack
 
 Azure Stapel ist ein Hybrid-Cloud-Plattform, mit der Azure-Dienste von Ihrer Organisation Datacenter übermitteln kann. Azure-Stapel dient zur Unterstützung der neuer Optionen für modernen Anwendungen in der wichtigsten Szenarien, z. B. Rand und nicht verbundenen Umgebungen oder Besprechung bestimmte Sicherheits- und Compliance-Anforderungen.
 
@@ -48,23 +51,23 @@ Microsoft Azure Stapel Development Kit ist ein Einzelknoten-Bereitstellung von A
 
 -   **Azure hybridcloud**
 
-    [https://www.Microsoft.com/Cloud-Platform/Hybrid-Cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure-Stapel**
+-   **Azure Stack**
 
-    [https://Azure.Microsoft.com/Overview/Azure-Stack/](https://azure.microsoft.com/overview/azure-stack/)
+    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
 -   **Active Directory-Dienstkonten für Windows-Containern**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/Manage-Containers/Manage-ServiceAccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
 -   **Erstellen Sie einen Container mit Active Directory-Unterstützung**
 
-    [https://Blogs.msdn.Microsoft.com/containerstuff/2017/01/30/Create-a-Container-with-Active-Directory-Support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
 -   **Lizenzierung von Azure Hybrid-Vorteil**
 
-    [https://Azure.Microsoft.com/Pricing/Hybrid-Use-Benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
 [Zurück](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

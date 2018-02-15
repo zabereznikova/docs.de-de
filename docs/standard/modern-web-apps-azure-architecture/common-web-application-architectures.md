@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>Allgemeine Web-Anwendungsarchitektur
 
@@ -137,7 +140,7 @@ Da das Kernstück der Anwendung nicht von Infrastruktur abhängig ist, ist es se
 
 **Abbildung 5-11.** Integrationstests Infrastruktur Implementierungen mit externen Abhängigkeiten.
 
-Da die Benutzeroberflächenebene für Typen, die in der Infrastructure-Projekt definiert direkte Abhängigkeit besitzt, ist es ebenso sehr einfach out Implementierungen, entweder testen zu vereinfachen oder als Reaktion auf die sich ändernden anwendungsanforderungen ausgetauscht werden.. ASP.NET Core des integrierten Verwendung von und Unterstützung für Abhängigkeitsinjektion macht diese Architektur die am besten geeignete Möglichkeit, die Struktur nicht triviale monolithischen Anwendungen.
+Da die Benutzeroberflächenebene für Typen, die in der Infrastructure-Projekt definiert direkte Abhängigkeit besitzt, ist es ebenso sehr einfach out Implementierungen, entweder testen zu vereinfachen oder als Reaktion auf die sich ändernden anwendungsanforderungen ausgetauscht werden. ASP.NET Core des integrierten Verwendung von und Unterstützung für Abhängigkeitsinjektion macht diese Architektur die am besten geeignete Möglichkeit, die Struktur nicht triviale monolithischen Anwendungen.
 
 Für monolithischen Anwendungen werden alle Projekte Anwendung Kern, der Infrastruktur und der Benutzeroberfläche als eine einzelne Anwendung ausgeführt. Die Common Language Runtime-Anwendungsarchitektur sieht möglicherweise etwas wie Abbildung 5 – 12.
 
@@ -169,7 +172,7 @@ Zusätzlich zu den Data Access-Implementierungen sollte das Infrastruktur-Projek
 Die Benutzeroberflächenebene in einer ASP.NET-MVC-Anwendung Core werden den Einstiegspunkt für die Anwendung, und es werden ein ASP.NET Core MVC-Projekt. Dieses Projekt sollte die Anwendung Core-Projekt verweist, und die Typen sollten mit Infrastruktur ausschließlich über Schnittstellen, die in der Anwendung Core definiert interagieren. Keine direkte Instanziierung von (oder statische Aufrufe) Ebene Infrastrukturtypen in der Benutzeroberflächenebene zugelassen werden sollte.
 
 > ### <a name="ui-layer-types"></a>Benutzeroberflächentypen-Ebene
-> -   Domänencontroller
+> -   Controller
 > -   Filter
 > -   Ansichten
 > -   ViewModels
@@ -216,11 +219,11 @@ Während monolithischen apps von Docker in Sub-Systeme, die skaliert werden kann
 
 > ### <a name="references--common-web-architectures"></a>Verweise – allgemeine Web-Architekturen
 > - **Die Clean-Architektur**  
-> <https://8thlight.com/Blog/Uncle-Bob/2012/08/13/the-Clean-Architecture.HTML>
+> <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Die Onion-Architektur**  
-> <http://jeffreypalermo.com/Blog/the-Onion-Architecture-Part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Das Repositorymuster**  
-> <http://deviq.com/Repository-Pattern/>
+> <http://deviq.com/repository-pattern/>
 > - **Bereinigen der Architektur Lösung-Beispiel**  
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Architektur Microservices e-Book** <http://aka.ms/MicroservicesEbook>

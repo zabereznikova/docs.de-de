@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine Client Side Web-Technologien
 
 > "Websites sollte guten von innen nach"und"out."  
-> _-Paul Cookson_
+> _- Paul Cookson_
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -67,7 +70,7 @@ Angenommen Sie, dass wenn ein Textfeld Wert 10 überschreitet, ein Element auf d
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery Vs ein SPA-Framework
 
-| **Faktor** | **jQuery** | **Angular**|
+| **Factor** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
 | Das DOM abstrahiert | **Ja** | **Ja** |
 | AJAX-Unterstützung | **Ja** | **Ja** |
@@ -145,27 +148,27 @@ JavaScript-Frameworks weiterhin mit breakneck Geschwindigkeit entwickeln. Verwen
 
 > ### <a name="references--client-web-technologies"></a>Verweise – Client-Web-Technologien
 > - **HTML und CSS**  
-> <https://www.w3.org/Standards/Webdesign/htmlcss>
-> - **Im Vergleich zur sass WENIGER**  
-> <https://www.keycdn.com/Blog/sass-VS-less/>
+> <https://www.w3.org/standards/webdesign/htmlcss>
+> - **Im Vergleich zur sass LESS**  
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Formatieren von ASP.NET Core-Apps mit einem niedrigeren Sass und Schriftart Awesome**  
-> <https://docs.Microsoft.com/ASPNET/Core/Client-Side/less-sass-FA>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Die clientseitige-Entwicklung in ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Client-Side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
-> <https://jQuery.com/>
-> - **jQuery Vs AngularJS**  
-> <https://www.airpair.com/angularjs/Posts/jQuery-angularjs-Comparison-Migration-Walkthrough>
+> <https://jquery.com/>
+> - **jQuery vs AngularJS**  
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
-> <https://Angular.IO/>
-> - **Reagieren**  
-> <https://Facebook.github.IO/REACT/>
+> <https://angular.io/>
+> - **React**  
+> <https://facebook.github.io/react/>
 > - **Slingshot reagieren**  
-> <https://github.com/coryhouse/REACT-Slingshot>
+> <https://github.com/coryhouse/react-slingshot>
 > - **Vs Angular 2 Vergleich reagieren**  
-> <https://www.codementor.IO/codementorteam/REACT-VS-Angular-2-Comparison-Beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **5 bewährte JavaScript-Frameworks von 2017**  
-> <https://hackernoon.com/5-Best-JavaScript-Frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
 [Vorherigen] (Allgemeine-Web-Anwendung-architectures.md) [weiter] (Develop-asp-net-core-mvc-apps.md)

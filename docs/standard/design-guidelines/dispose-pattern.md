@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Dispose-Muster
 Alle Programme abrufen eine oder mehrere Systemressourcen, z. B. Arbeitsspeicher, Systemhandles oder Datenbankverbindungen, im Rahmen ihrer Ausführung. Entwickler müssen solche Systemressourcen mit Vorsicht werden, da sie freigegeben werden müssen, nachdem sie eingerichtet und verwendet wurden.  
@@ -35,7 +35,7 @@ Alle Programme abrufen eine oder mehrere Systemressourcen, z. B. Arbeitsspeicher
   
  Leider ist verwalteter Speicher nur eine verschiedener Arten von Systemressourcen. Ressourcen mit Ausnahme des verwalteten Speichers noch explizit freigegeben werden müssen und nicht verwalteten Ressourcen genannt werden. Der globale Katalogserver wurde ausdrücklich nicht entwickelt solche nicht verwalteten Ressourcen verwalten was bedeutet, dass die Verantwortung für die Verwaltung von nicht verwalteten Ressourcen in die Hände der Entwickler liegt.  
   
- Die CLR bietet Hilfe in nicht verwaltete Ressourcen freizugeben. <xref:System.Object?displayProperty=nameWithType>deklariert eine virtuelle Methode <xref:System.Object.Finalize%2A> (auch als "Finalizer" bezeichnet), wird vom GC aufgerufen, bevor der Speicher des Objekts vom GC freigegeben wird und überschrieben werden, kann um nicht verwaltete Ressourcen freizugeben. Typen, die den Finalizer außer Kraft setzen, werden als finalisierbaren Typen bezeichnet.  
+ Die CLR bietet Hilfe in nicht verwaltete Ressourcen freizugeben. <xref:System.Object?displayProperty=nameWithType> deklariert eine virtuelle Methode <xref:System.Object.Finalize%2A> (auch als "Finalizer" bezeichnet), wird vom GC aufgerufen, bevor der Speicher des Objekts vom GC freigegeben wird und überschrieben werden, kann um nicht verwaltete Ressourcen freizugeben. Typen, die den Finalizer außer Kraft setzen, werden als finalisierbaren Typen bezeichnet.  
   
  Obwohl Finalizer in einigen Szenarien Cleanup wirksam sind, haben sie zwei erhebliche Nachteile:  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  In diesem Abschnitt gilt auch, Klassen, mit der eine Basis, die nicht bereits das Dispose-Muster implementiert wird. Wenn Sie von einer Klasse, die bereits das Steuerelementmuster implementiert erben, überschreiben Sie einfach die `Dispose(bool)` Methode, um zusätzliche Ressourcen Bereinigungslogik bereitzustellen.  
   
- **Führen Sie ✓** deklarieren Sie eine geschützte virtuelle "void" `Dispose(bool disposing)` Methode, um die gesamte Logik zu zentralisieren, die sich auf die Freigabe nicht verwalteter Ressourcen beziehen.  
+ **Führen Sie ✓** deklarieren eine `protected virtual void Dispose(bool disposing)` Methode, um die gesamte Logik zu zentralisieren, die sich auf die Freigabe nicht verwalteter Ressourcen beziehen.  
   
  Bei dieser Methode sollten alle ressourcenbereinigung auftreten. Die Methode wird von beiden die Finalizer aufgerufen und die `IDisposable.Dispose` Methode. Der Parameter werden "false", wenn in einer Finalize-Methode aufgerufen. Es sollte verwendet werden, um sicherzustellen, dass jedem Code ausgeführt wird, während des Abschlusses nicht andere finalisierbare Objekte zugreift. Informationen zum Implementieren der Finalizer werden im nächsten Abschnitt beschrieben.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X nicht** alle Überladungen der deklarieren die `Dispose` andere Methode als `Dispose()` und `Dispose(bool)`.  
   
- `Dispose`Berücksichtigen Sie ein reserviertes Wort zu helfen, dieses Muster Sicherungssystems und schließt Verwechslungen zwischen Implementierer, Benutzer und -Compiler. Für einige Sprachen empfiehlt sich, dieses Muster für bestimmte Typen automatisch zu implementieren.  
+ `Dispose` Berücksichtigen Sie ein reserviertes Wort zu helfen, dieses Muster Sicherungssystems und schließt Verwechslungen zwischen Implementierer, Benutzer und -Compiler. Für einige Sprachen empfiehlt sich, dieses Muster für bestimmte Typen automatisch zu implementieren.  
   
  **Führen Sie ✓** ermöglichen die `Dispose(bool)` Methode, die mehr als einmal aufgerufen werden. Die Methode empfiehlt sich, nach dem ersten Aufruf nichts zu tun.  
   
@@ -285,7 +285,7 @@ public class ComplexResourceHolder : IDisposable {
   
  **✓ GGF.** erstellen und verwenden ein abzuschließendes Objekt inaktiv kritische (ein Typ mit einer Typhierarchie, die enthält <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) für Situationen, in der ein Finalizer absolut werden auch bei der erzwungenen Anwendung Domäne entladen und Threads ausgeführt muss, Bricht ab.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
  *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   

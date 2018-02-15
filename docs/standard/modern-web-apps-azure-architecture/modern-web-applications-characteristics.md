@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale der modernen Webanwendungen
 
 > "… ordnungsgemäßen entwerfen die im Lieferumfang der Funktionen zu zweit. Dieser Ansatz ist damit den mühseligen, jedoch weiterhin erfolgreich ausgeführt werden."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -41,7 +44,7 @@ ASP.NET Core ist für die Cloud (öffentliche Cloud, private Cloud, keiner Cloud
 
 ## <a name="cross-platform"></a>Plattformübergreifend
 
-ASP.NET Core plattformübergreifende ist und auf Linux und MacOS sowie Windows ausgeführt werden kann. Viele neue Optionen für Entwicklung und Bereitstellung von apps mit ASP.NET Core wird geöffnet. Docker-Container, der in der Regel Linux derzeit ausgeführt wird, können als host für ASP.NET Core-Anwendungen, sodass sie die Vorteile nutzen [Container und Microservices](../microservices-architecture).
+ASP.NET Core plattformübergreifende ist und auf Linux und MacOS sowie Windows ausgeführt werden kann. Viele neue Optionen für Entwicklung und Bereitstellung von apps mit ASP.NET Core wird geöffnet. Docker-Container, der in der Regel Linux derzeit ausgeführt wird, können als host für ASP.NET Core-Anwendungen, sodass sie die Vorteile nutzen [Container und Microservices](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modulare und lose
 
@@ -71,11 +74,11 @@ Zusätzlich zu ASP.NET Core, herkömmlichen ASP.NET 4.x weiterhin eine robuste u
 
 > ### <a name="references--modern-web-applications"></a>Verweise – moderner Webanwendungen
 > - **Einführung in ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Sechs Schlüssel Vorteile von ASP.NET Core, die anders und besser zu vereinfachen**  
-> <https://Blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-Which-Make-IT-different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Testen in ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Vorherigen] (index.md) [weiter] (Choose-between-traditional-web-and-single-page-apps.md)

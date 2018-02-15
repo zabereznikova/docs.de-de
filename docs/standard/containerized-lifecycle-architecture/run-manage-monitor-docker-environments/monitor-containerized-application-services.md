@@ -1,15 +1,18 @@
 ---
 title: "Überwachen von Datenvolumes Anwendungsdienste"
-description: Lebenszyklus von Datenvolumes Docker-Anwendung mit Microsoft-Webplattform und Tools
+description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3e4a78eb47d0e6712919c89b6f52ec8e4248fb23
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von Datenvolumes Anwendungsdienste
 
@@ -45,10 +48,10 @@ Folgen Sie den Anweisungen in den Artikeln in der folgenden Liste dargestellt, u
 [https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) und <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Richten Sie Application Insights für ASP.NET aus:**  
-[https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-ASP-NET](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
 
 -   **Application Insights für Webseiten:**  
-<https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-JavaScript>
+<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
 ## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
@@ -56,7 +59,7 @@ Folgen Sie den Anweisungen in den Artikeln in der folgenden Liste dargestellt, u
 
 ### <a name="operations-management-suitehttpmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](http://microsoft.com/oms) Container-Lösung für Docker
 
-Zusätzlich zur Bereitstellung wertvoller Dienste selbst, die Operations Management Suite-Container-Lösung verwalten und zu überwachen Docker-Hosts und Container Bericht enthält Informationen, die Container und die containerhosts befinden, der Container ausgeführt werden oder fehlerhaft ist, und gesendet, um Protokolle für Docker-Daemon und die Container *"stdout"* und *"stderr"*. Es zeigt auch die Leistungsmetriken wie CPU, Arbeitsspeicher, Netzwerk und Speicher für den Container und Hosts helfen Ihnen beim beheben und lauter Nachbar-Containern suchen.
+Zusätzlich zur Bereitstellung wertvoller Dienste selbst, die Operations Management Suite-Container-Lösung verwalten und zu überwachen Docker-Hosts und Container Bericht enthält Informationen, die Container und die containerhosts befinden, der Container ausgeführt werden oder fehlerhaft ist, und gesendet, um Protokolle für Docker-Daemon und die Container *"stdout"* und *"stderr"*. Die Lösung zeigt auch Leistungsmetriken wie CPU, Arbeitsspeicher, Netzwerk und Speicher für den Container und Hosts an, um Sie bei der Problembehandlung und Suche nach auffälligen Nachbarcontainern zu unterstützen.
 
 ![](./media/image2.png)
 
@@ -88,13 +91,13 @@ Verwenden die Operations Management Suite-Container-Lösung, können Sie Folgend
 
 Sehen Sie durch Ausführen von Abfragen, z. B. Datentyp Leistungsinformationen = Perf, wie in Abbildung 6 – 3 gezeigt.
 
-![DockerPerfMetricsView](./media/image3.png){Width = "5.78625 In" Height = "3,25 In"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Abbildung 6 – 3: Leistungsmetriken Docker-Hosts gezeigt, die von Operations Management Suite
 
 Speichern von Abfragen ist auch eine standard-Funktion im Operations Management Suite und ermöglicht Ihnen Abfragen nützlich gefunden haben und die Erkennung von Trends in Ihrem System beibehalten.
 
-**Weitere Informationen** Informationen zum Installieren und konfigurieren die Docker Container-Lösung in gefunden [Operations Management Suite](http://microsoft.com/oms), wechseln Sie zu <https://docs.microsoft.com/azure/ Log-Analytics/Log-Analyse-Container>.
+**Weitere Informationen** Informationen zum Installieren und konfigurieren die Docker Container-Lösung in gefunden [Operations Management Suite](http://microsoft.com/oms), wechseln Sie zu <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
 
 >[!div class="step-by-step"]
 [Vorherigen] (Verwalten von-Production-Docker-environments.md) [weiter] (.. /Key-takeaways/Index.MD)

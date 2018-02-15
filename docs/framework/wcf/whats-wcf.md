@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zur Erstellung dienstorientierter Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zum Erstellen von dienstorientierten Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
   
 -   Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.  
   
@@ -70,11 +72,11 @@ ms.lasthandoff: 01/19/2018
   
 -   **Mehrfache Transporte und Codierungen**  
   
-     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode ist das Senden von textcodierten SOAP-Nachrichten mit dem HyperText Transfer Protocol (HTTP) zur Verwendung im World Wide Web. Alternativ können Sie mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Nachrichten über TCP, Named Pipes oder MSMQ senden. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. [!INCLUDE[crabout](../../../includes/crabout-md.md)]indem Sie unterstützten Transporten und Codierungen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
+     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode ist das Senden von textcodierten SOAP-Nachrichten mit dem HyperText Transfer Protocol (HTTP) zur Verwendung im World Wide Web. Alternativ können Sie mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Nachrichten über TCP, Named Pipes oder MSMQ senden. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] indem Sie unterstützten Transporten und Codierungen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt den zuverlässigen Nachrichtenaustausch mit per WS-Reliable Messaging implementierten zuverlässigen Sitzungen und der Verwendung von MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Unterstützung von zuverlässigen Nachrichten und Nachrichten in Warteschlangen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt zuverlässige Nachrichtenaustausch mit zuverlässigen Sitzungen über WS-Reliable Messaging implementiert und mithilfe von MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Unterstützung von zuverlässigen Nachrichten und Nachrichten in Warteschlangen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Permanente Nachrichten**  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **Erweiterungen**  
   
-     Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Architektur verfügt über eine Reihe von Erweiterungspunkten. Wenn zusätzliche Fähigkeiten benötigt werden, können Sie an verschiedenen Punkten ansetzen, um das Verhalten eines Diensts anzupassen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu den verfügbaren Erweiterungspunkten finden Sie unter [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).  
+     Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Architektur verfügt über eine Reihe von Erweiterungspunkten. Wenn zusätzliche Fähigkeiten benötigt werden, können Sie an verschiedenen Punkten ansetzen, um das Verhalten eines Diensts anzupassen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] verfügbaren Erweiterungspunkten finden Sie unter [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF-Integration mit anderen Microsoft-Technologien  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ist eine flexible Plattform. Aufgrund der hohen Flexibilität wird [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auch in zahlreichen anderen Produkten von Microsoft eingesetzt. Durch Kenntnisse der Grundlagen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]besitzen Sie einen unmittelbaren Vorteil, wenn Sie auch eines dieser Produkte verwenden.  

@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -60,7 +63,7 @@ public class LocalFileImageService : IImageService
 
 Integrationstests werden geschrieben, aus der Perspektive des Entwicklers, um sicherzustellen, dass einige Komponenten des Systems ordnungsgemäß zusammenwirken. Funktionstests werden geschrieben, aus der Perspektive des Benutzers, und überprüfen die Richtigkeit des Systems basierend auf den Anforderungen. Der folgende Auszug bietet Analogie zum sind im Wesentlichen Funktionstests, im Vergleich zu Komponententests:
 
-> "Oft die Entwicklung eines Systems ist auf die Erstellung eines Hauses Statusmodul vergleichbar. Während diese Analogie nicht ganz richtig ist, können wir ihn im Rahmen der Unterschied zwischen Einheit und Funktionstests erweitern. UnitTests erfolgt analog zur ein Erstellen von Inspektor ein Haus Konstruktion Website besuchen. Er konzentriert sich auf die verschiedenen internen Systemen des Hauses, die Grundlage, Abfassung, für die elektrische Sanitär- und usw.. Er stellt sicher, dass die Teile des Hauses werden voll funktionsfähig und sicher, d. h. das Erstellen von Code zu erfüllen (Tests). Funktionstests in diesem Szenario sind vergleichbar mit dem Hauseigentümer derselben Konstruktion Website besuchen. Er wird davon ausgegangen, dass die internen Systemen entsprechend verhält, dass das Erstellen von Inspektor seine Aufgabe ausgeführt wird. Die Hauseigentümer konzentriert sich darauf, was er z. B. in diesem Haus Gültigkeitsdauer kann. Er hat Bedenken hinsichtlich des Hauses wie sieht, sind die verschiedenen Räumen eine angenehme Größe und passt die House der Familie muss, sind die Fenster an eine gute Stelle zum Abfangen von Sun morgen. Die Hauseigentümer wird auf die House Funktionstests ausführen. Er verfügt über die Sicht des Benutzers. Erstellen von Inspektor ausführt Komponententests auf die House. Er verfügt über die Perspektive des."
+> "Oft die Entwicklung eines Systems ist auf die Erstellung eines Hauses Statusmodul vergleichbar. Während diese Analogie nicht ganz richtig ist, können wir ihn im Rahmen der Unterschied zwischen Einheit und Funktionstests erweitern. UnitTests erfolgt analog zur ein Erstellen von Inspektor ein Haus Konstruktion Website besuchen. Er konzentriert sich auf die verschiedenen internen Systemen des Hauses, die Grundlage, Abfassung, für die elektrische Sanitär- und usw. Er stellt sicher, dass die Teile des Hauses werden voll funktionsfähig und sicher, d. h. das Erstellen von Code zu erfüllen (Tests). Funktionstests in diesem Szenario sind vergleichbar mit dem Hauseigentümer derselben Konstruktion Website besuchen. Er wird davon ausgegangen, dass die internen Systemen entsprechend verhält, dass das Erstellen von Inspektor seine Aufgabe ausgeführt wird. Die Hauseigentümer konzentriert sich darauf, was er z. B. in diesem Haus Gültigkeitsdauer kann. Er hat Bedenken hinsichtlich des Hauses wie sieht, sind die verschiedenen Räumen eine angenehme Größe und passt die House der Familie muss, sind die Fenster an eine gute Stelle zum Abfangen von Sun morgen. Die Hauseigentümer wird auf die House Funktionstests ausführen. Er verfügt über die Sicht des Benutzers. Erstellen von Inspektor ausführt Komponententests auf die House. Er verfügt über die Perspektive des."
 
 Quelle: [Komponententests im Vergleich zu Funktionstests](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 

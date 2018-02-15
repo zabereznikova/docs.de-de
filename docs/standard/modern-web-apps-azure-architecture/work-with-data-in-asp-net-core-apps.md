@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -199,11 +202,11 @@ Ist die erste DbContext der \_CatalogContext und das zweite ist ' DbContext ' in
 
 > ### <a name="references--entity-framework-core"></a>Verweise – Entity Framework Core
 > - **EF zentrale Dokumente**  
-> <https://docs.Microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF Core: Verwandte Daten**  
-> <https://docs.Microsoft.com/EF/Core/Querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Vermeiden Sie Lazy Loading Entitäten im ASPNET-Anwendungen**  
-> <http://ardalis.com/AVOID-Lazy-Loading-Entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core "oder" Micro-ORM, "?
 
@@ -283,7 +286,7 @@ Die DocumentDB-Abfragesprache ist eine einfache, aber leistungsstarker Schnittst
 **Verweise – DocumentDB**
 
 -   DocumentDB Introduction\
-    <https://docs.Microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Andere Optionen Persistenz
 
@@ -300,7 +303,7 @@ ASP.NET Core-Anwendungen können zusätzlich zum relationalen und NoSQL-Speicher
 **Verweise – Azure-Speicher**
 
 -   Azure-Speicher Introduction\
-    <https://docs.Microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Zwischenspeicherung
 

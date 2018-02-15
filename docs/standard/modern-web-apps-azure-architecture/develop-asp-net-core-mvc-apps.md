@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -62,7 +65,7 @@ public class ProductsController : Controller
 
 Core ASP.NET-MVC wird ausgeführt, sobald eine bestimmte Anforderung verfügt über eine Route zugeordnet wurde, aber bevor die Aktion wird aufgerufen, [modellbindung](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding) und [modellüberprüfung](https://docs.microsoft.com/aspnet/core/mvc/models/validation) in der Anforderung. Wurden die modellbindung ist verantwortlich für das Konvertieren von eingehender HTTP-Daten in die Typen als Parameter der Aktionsmethode angegeben, die aufgerufen wird. Beispielsweise, wenn die Aktionsmethode einen Int-Id-Parameter erwartet, versucht wurden die modellbindung, geben Sie diesen Parameter aus einem Wert, der als Teil der Anforderung bereitgestellt. Sucht zu diesem Zweck wurden die modellbindung für Werte in ein bereitgestelltes Formular, Werte in der Route selbst und Abfragezeichenfolgen-Werte. Angenommen, ein Id-Wert gefunden wird, wird es in eine ganze Zahl konvertiert werden vor der Aktionsmethode übergeben wird.
 
-Nach dem Binden des Modells, jedoch vor dem Aufrufen der Aktionsmethode erfolgt die modellüberprüfung. Modellvalidierung optionale Attribute auf den Typ des Modells verwendet und können Sie sicherstellen, dass das angegebene Modellobjekt bestimmte datenanforderungen entspricht. Bestimmte Werte angegeben werden können, als erforderlich sind, oder auf eine bestimmte Länge oder einen numerischen Bereich beschränkt, usw.. Wenn Validierungsattribute angegeben sind, aber das Modell nicht der Anforderungen entspricht, die Eigenschaft ModelState.IsValid wird "false" sein und der Satz von Validierungsregeln fehlschlagen wird zum Senden an die anfordernde Client verfügbar sein.
+Nach dem Binden des Modells, jedoch vor dem Aufrufen der Aktionsmethode erfolgt die modellüberprüfung. Modellvalidierung optionale Attribute auf den Typ des Modells verwendet und können Sie sicherstellen, dass das angegebene Modellobjekt bestimmte datenanforderungen entspricht. Bestimmte Werte angegeben werden können, als erforderlich sind, oder auf eine bestimmte Länge oder einen numerischen Bereich beschränkt, usw. Wenn Validierungsattribute angegeben sind, aber das Modell nicht der Anforderungen entspricht, die Eigenschaft ModelState.IsValid wird "false" sein und der Satz von Validierungsregeln fehlschlagen wird zum Senden an die anfordernde Client verfügbar sein.
 
 Bei Verwendung von modellvalidierung sollten Sie darauf achten, überprüfen Sie immer, dass das Modell gültig ist, vor dem Ausführen der Befehle Status ändern, um sicherzustellen, dass Ihre app durch ungültige Daten nicht beschädigt ist. Sie können eine [Filter](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) neu hinzuzufügenden Code dafür in jeder Aktion zu umgehen. ASP.NET Core MVC-Filter bieten eine Möglichkeit, Gruppen von Anforderungen abfangen, damit allgemeine Richtlinien und querschnittliche Anmerkungen auf Basis eines targeted angewendet werden können. Filter können auf einzelne Aktionen, die gesamte Controller oder global für eine Anwendung angewendet werden.
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC wird auch eine Konvention zum Suchen von Ansichten verwendet. Sie können es mit einer benutzerdefinierten Konvention überschreiben, sodass Ansichten in Ihre Featureordner (mit dem Namen der Funktion durch die FeatureConvention oben aufgeführten) gespeichert werden. Können Sie weitere Informationen zu diesen Ansatz und Herunterladen von ein funktionstüchtiges Beispiel aus dem MSDN-Artikel [Feature Slices für ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Querschnittliche Sicherheitsrisiken
+### <a name="cross-cutting-concerns"></a>Übergreifende Belange
 
 Anwendungen hinausgeht, wird es zunehmend wichtig, verlagern Sie querschnittliche Bedenken Beseitigung von Duplikaten und Konsistenz zu gewährleisten. Einige Beispiele für querschnittliche Begriffe in ASP.NET Core-Anwendungen sind Authentifizierung, Modell Validierungsregeln Zwischenspeichern der Ausgabe und Fehler zu behandeln, obwohl es gibt noch viele andere. ASP.NET Core MVC [Filter](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) ermöglichen es Ihnen, Code vor oder nach der bestimmte Schritte in der Verarbeitungspipeline Anforderung auszuführen. Ein Filter kann z. B. vor und nach der modellbindung, die vor und nach einer Aktion oder vor und nach einer Aktion Ergebnis führen. Einen Autorisierungsfilter können auch zum Steuern des Zugriffs auf den Rest der Pipeline. Abbildung 7 – 2 zeigt fordern wie Ausführung Flüsse gefiltert, wenn konfiguriert.
 
-![Die Anforderung wird über den Autorisierungsfilter, Ressourcenfilter Modell binden, Aktionsfilter, Ausführen von Aktionen und Aktion Ergebniskonvertierung, Ausnahmefilter, Ergebnisfilter und Ergebnis Ausführung verarbeitet. Auf dem Weg heraus wird die Anforderung nur durch Ergebnisfilter und Ressourcenfilter verarbeitet, bevor eine Antwort an den Client gesendet wird.](./media/image7-2.png)
+![Die Anforderung wird von Autorisierungsfilter, Ressourcenfilter, Modellbindung, Aktionsfilter, Aktionsausführung sowie Aktionsergebniskonvertierung, Ausnahmefilter, Ergebnisfilter und Ergebnisausführung verarbeitet. Beim Verlassen der Pipeline wird die Anforderung nur von Ergebnisfiltern und Ressourcenfiltern verarbeitet, bevor sie an den Client gesendet wird.](./media/image7-2.png)
 
 Abbildung 7-2-anforderungsausführung durch Filter und Anforderungspipeline.
 
@@ -279,13 +282,13 @@ Erfahren Sie mehr zu implementieren von Filtern und Laden Sie ein funktionstüch
 
 > ### <a name="references--structuring-applications"></a>Verweise – Strukturieren von Anwendungen
 > - **Bereiche**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/Areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN – Feature Slices für ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filter**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – realen Core ASP.NET MVC-Filter**  
-> <https://msdn.Microsoft.com/magazine/mt767699.aspx>
+> <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Sicherheit
 
@@ -385,15 +388,15 @@ Die meisten Web-APIs sollten ein Token-basierter Authentifizierungssystem implem
 
 > ### <a name="references--security"></a>Verweise – Sicherheit
 > - **Übersicht über die Containerdokumentation Sicherheit**  
-> https://docs.Microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Erzwingen von SSL in einer ASP.NET Core-App**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Einführung in Identity**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authentication/Identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Einführung in die Autorisierung**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Authentifizierung und Autorisierung für API-Apps in Azure App Service**  
-> <https://docs.Microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Clientkommunikation
 
@@ -451,10 +454,10 @@ public class Program
 Erwägen Sie, die Methoden in denen Anwendung kommunizieren direkt mit Clientanwendungen, und überlegen Sie, ob die Kommunikation in Echtzeit Benutzer Ihrer app verbessern würden auftreten.
 
 > ### <a name="references--client-communication"></a>Verweise – Client-Kommunikation
-> - **SignalR für ASP.NET Core**  
-> <https://github.com/ASPNET/SignalR>
-> - **WebSocket-Manager**  
-> https://github.com/Radu-matei/WebSocket-Manager
+> - **ASP.NET Core SignalR**  
+> <https://github.com/aspnet/SignalR>
+> - **WebSocket Manager**  
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Installieren Domain-Driven Design: sollten Sie es?
 
@@ -502,7 +505,7 @@ Ein Hybridansatz wäre nur DDD für die Transaktions- oder komplexeren Bereiche 
 
 > ### <a name="references--domain-driven-design"></a>Verweise – Domain Driven Design
 > - **DDD im Klartext (StackOverflow Answers)**  
-> <https://stackoverflow.com/questions/1222392/can-someone-EXPLAIN-Domain-Driven-Design-ddd-in-Plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Bereitstellung
 
@@ -544,13 +547,13 @@ Wenn Sie Ihre Anwendung in Azure hosten, können Microsoft Azure Application Gat
 
 > ### <a name="references--deployment"></a>Verweise – Bereitstellung
 > - **Hosting- und -Bereitstellungsübersicht**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/>
-> - **Verwendung von Kestrel mit einer reverse-proxy**  
-> <https://docs.Microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-Use-kestrel-with-a-Reverse-Proxy>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
+> - Verwendung von Kestrel mit einer reverse-proxy  
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Host ASP.NET Core-apps in Docker**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Einführung in Azure-Anwendung-Gateway**  
-> <https://docs.Microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Vorherigen] (Allgemeine-Client-Side-Web-technologies.md) [weiter] (Work-with-data-in-asp-net-core-apps.md)

@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wählen Sie zwischen herkömmlichen Web-Apps und einseitige Apps (SPAs)
 
 > "Der Atwood Recht: jede Anwendung, die in JavaScript geschrieben werden, kann schließlich in JavaScript geschrieben."  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -75,7 +78,7 @@ Schreiben von SPAs erfordert Vertrautheit mit JavaScript und/oder TypeScript und
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Vergleich von 4 beliebte JavaScript-Frameworks**  
-> <https://www.developereconomics.com/Feature-Comparison-of-4-Popular-js-MV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **Die Anwendung muss bereits eine API für andere Clients (intern oder öffentlich) verfügbar machen**
 
@@ -85,12 +88,12 @@ Wenn Sie bereits eine Web-API für die Verwendung durch andere Clients unterstü
 
 In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren zu berücksichtigen, bei der Auswahl zwischen einer herkömmlichen Web-Anwendung und einer SPA zusammengefasst.
 
-  | **Faktor** | **Herkömmlichen Web-App** | **Einzelne Page-Anwendung** |
+  | **Factor** | **Herkömmlichen Web-App** | **Einzelseitenanwendung** |
   |---|---|---|
-  | Erforderliche Team Vertrautheit mit JavaScript/TypeScript | **Minimale** | **Erforderlich** |
-  | Unterstützen Browser ohne Scripting | **Unterstützt** | **Nicht unterstützt.** |
-  | Das Verhalten der minimalen die clientseitige Anwendung | **Eignet sich besonders gut** | **Ausgangsstruktur** |
-  | Anforderungen umfangreiche und komplexe an die Benutzeroberfläche | **Begrenzt** | **Eignet sich besonders gut** |
+  | Erforderliche Team Vertrautheit mit JavaScript/TypeScript | minimale | Erforderlich |
+  | Unterstützen Browser ohne Scripting | **Unterstützt** | Nicht unterstützt. |
+  | Das Verhalten der minimalen die clientseitige Anwendung | **Well-Suited** | **Overkill** |
+  | Anforderungen umfangreiche und komplexe an die Benutzeroberfläche | **Begrenzt** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Vorherigen] (Modern-Web-Anwendungen-characteristics.md) [weiter](architectural-principles.md)

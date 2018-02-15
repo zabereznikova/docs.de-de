@@ -4,11 +4,14 @@ description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 87aa05895857a425f11820a564f2a249c77f98e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen von vorhandenen .NET apps wie Windows-Container
 
@@ -94,15 +97,15 @@ Wenn Sie die Dockerfile-Datei den Namen des Abbilds hinzugefügt haben, können 
 
 > | **Tag** | **System- und version** |
 > |---|---|
-> | **"Microsoft/Dotnet-framework:4.x-windowsservercore"** | .NET Framework 4.x unter Windows Server Core |
-> | **"Microsoft/aspnet:4.x-windowsservercore"** | .NET Framework 4.x mit zusätzlichen ASP.NET Anpassung unter Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4.x unter Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4.x mit zusätzlichen ASP.NET Anpassung unter Windows Server Core |
 
 Für .NET Core (plattformübergreifende für Linux und Windows) würde die Tags wie folgt aussehen:
 
 > | **Tag** | **System- und version**
 > |---|---|
-> | **Microsoft/dotnet:2.0.0-Runtime** | .NET Core 2.0 nur das Laufzeitmodul unter Linux |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET Core 2.0 nur das Laufzeitmodul unter Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 nur das Laufzeitmodul unter Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 nur das Laufzeitmodul unter Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Mit mehreren arch Bilder
 
@@ -124,15 +127,15 @@ Einen Container unter Windows ausgeführt wird, mit oder ohne Hyper-V-Isolation 
 
 -   **Dokumentation zu Windows-Containern**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
 
 -   **Grundlagen von Windows-Containern**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/About/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
 
 -   **INFOGRAFIK: Microsoft und Container**
 
-    [https://Info.Microsoft.com/RS/157-GQE-382/Images/Container%20infographic%201.4.17.PDF](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
 >[!div class="step-by-step"]
 [Zurück](how-to-deploy-existing-net-apps-to-azure-app-service.md)

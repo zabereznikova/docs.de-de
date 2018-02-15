@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Exemplarische Vorgehensweise: Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern und Entitäten
 
@@ -66,7 +66,7 @@ Sie können die Datenbank School auf jedem Server erstellen, auf dem SQL Server 
 3. Öffnen Sie das Kontextmenü für den neuen Verbindungsknoten, und wählen Sie dann **neue Abfrage**.
 <br />
 
-4. Open [Erstellen der Beispieldatenbank "School"](http://go.microsoft.com/fwlink/?LinkID=237278) auf der Microsoft-Website, und klicken Sie dann kopieren und Einfügen Datenbankskripts, erstellt die Student-Datenbank in das Editorfenster ein.
+4. Open [Erstellen der Beispieldatenbank "School"](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) auf der Microsoft-Website, und klicken Sie dann kopieren und Einfügen Datenbankskripts, erstellt die Datenbank "School" in das Editorfenster ein.
 <br />
 
 
@@ -240,14 +240,9 @@ Untersuchen Sie anhand der Operatoren für die Abfrage zur Verfügung, in andere
 
 
 ## <a name="see-also"></a>Siehe auch
-[Typanbieter](index.md)
-
-[SqlEntityConnection-Typanbieter](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Exemplarische Vorgehensweise: Generieren von f#-Typen aus einer EDMX-Schemadatei](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM-Generator &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Typanbieter](index.md)  
+[SqlEntityConnection-Typanbieter](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Exemplarische Vorgehensweise: Generieren von f#-Typen aus einer EDMX-Schemadatei](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM-Generator &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

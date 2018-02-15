@@ -4,17 +4,20 @@ description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 0bcc330a5970ab923b48d8790c4de93171283d94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conclusions"></a>Zusammenfassung
 
 -   Container-basierte Lösungen bieten letztlich Kosten eingespart Vorteile. Container sind eine Lösung zu Problemen bei der Bereitstellung, da sie nicht die Unstimmigkeiten zurückzuführen, dass keine Abhängigkeiten in produktionsumgebungen entfernen. Durch das Entfernen dieser Probleme müssen verbessert sie Dev/Test "," DevOps "und" Produktion Vorgänge erheblich.
 
--   Docker-Container ist die Standardeinheit für die Bereitstellung für alle Server-basierten Anwendung oder ein Dienst immer.
+-   Ein Docker-Container wird zur Standardeinheit für jede serverbasierte Anwendung oder jeden serverbasierten Dienst.
 
 -   Für produktionsumgebungen sollten Sie ein Orchestrator (z. B. Service Fabric oder Kubernetes) zum Hosten von skalierbaren Windows-Container-basierte Anwendungen verwenden.
 
@@ -29,4 +32,4 @@ ms.lasthandoff: 11/21/2017
 -   Microsoft Azure bietet die meisten umfassende und vollständige Umgebung, Ihre vorhandenen .NET Framework-Anwendungen mit Windows-Container, Cloud-Infrastruktur und PaaS-Dienste zu aktualisieren.
 
 >[!div class="step-by-step"]
-[Zurück](walkthroughs-technical-get-started-overview.md)
+[Vorherige](walkthroughs-technical-get-started-overview.md)

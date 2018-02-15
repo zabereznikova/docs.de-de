@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="extending-wcf"></a>Erweitern von WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Laufzeitkomponenten zu ändern und zu erweitern, um dienstbasierte Anwendungen genau steuern und erweitern zu können. Die Themen in diesem Abschnitt enthalten eingehende Informationen zur Erweiterbarkeitsarchitektur. Weitere Informationen zur grundlegenden-Programmierung finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht das Ändern und erweitern die Laufzeitkomponenten präzise steuern, und Erweitern von dienstbasierten Anwendungen. Die Themen in diesem Abschnitt enthalten eingehende Informationen zur Erweiterbarkeitsarchitektur. Weitere Informationen zur grundlegenden-Programmierung finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erweitern von ServiceHost und der Dienstmodellebene](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  [Erweitern von Encodern und Serialisierungsprogrammen](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Encoder und Serialisierungsprogramme übersetzen Daten von einem Formular in ein anderes. In den Themen in diesem Abschnitt wird erläutert, wie Sie die angegebenen Klassen erweitern, um besondere Anforderungen zu erfüllen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  

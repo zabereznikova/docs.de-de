@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: e676c1225f7d11381808040cf101e897e0726ad4
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
 > _"Mit der Cloud Einzelpersonen kleine Unternehmen können ihre Finger ausrichten und sofort unternehmenstauglichen Dienste einrichten."_  
-> _-Roy Stephan_
+> _- Roy Stephan_
 
  ## <a name="vision"></a>Vision
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/21/2017
 
 Ob Sie eine vollständige und leistungsfähige IDE oder eine einfache und agile-Editor bevorzugen, hat Microsoft Sie beim Entwickeln von ASP.NET Core Anwendungen behandelt.
 
-**Visual Studio-2017.** Bei Verwendung von *Visual Studio 2017* können erstellen ASP.NET Core-Anwendungen, solange Sie haben die *.NET Core plattformübergreifende Entwicklung* arbeitsauslastung installiert. Abbildung 10 – 1 zeigt die erforderliche Arbeitslast im Setupdialogfeld 2017 von Visual Studio.
+**Visual Studio 2017.** Bei Verwendung von *Visual Studio 2017* können erstellen ASP.NET Core-Anwendungen, solange Sie haben die *.NET Core plattformübergreifende Entwicklung* arbeitsauslastung installiert. Abbildung 10 – 1 zeigt die erforderliche Arbeitslast im Setupdialogfeld 2017 von Visual Studio.
 
 ![](./media/image10-1.png)
 
@@ -110,7 +113,7 @@ Während der Web-App ausgeführt wird, können Sie die Integrität der Anwendung
 ## <a name="references"></a>Verweise
 
 **Erstellen und Bereitstellen der ASP.NET Core-App in Azure**  
-<https://www.VisualStudio.com/docs/Build/Apps/ASPNET/aspnetcore-to-Azure>
+<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
 
 
 >[!div class="step-by-step"]

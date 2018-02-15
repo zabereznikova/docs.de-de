@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Architekturprinzipien
+# <a name="architectural-principles"></a>Architekturprinzipien
 
 > "Wenn Generatoren Gebäude erstellt die Möglichkeit Programmierer schrieb Programme aus, und die erste Woodpecker, die kamen würde Civilization zerstört."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -41,7 +44,7 @@ Die Richtung der Beziehung innerhalb der Anwendung sollte in die Richtung der Ab
 
 ![](./media/image4-1.png)
 
-**Abbildung 4 – 1.** Direkte Abhängigkeitsdiagramm angezeigt.
+**Abbildung 4-1.** Direkte Abhängigkeitsdiagramm angezeigt.
 
 Anwenden des Prinzips der Abhängigkeit Umkehrung A zum Aufrufen von Methoden für eine Abstraktion, die B implementiert, wodurch für eine aufzurufende B zur Laufzeit, ermöglicht jedoch für B, um eine Schnittstelle abhängig von gesteuert ein zum Zeitpunkt der Kompilierung (also *invertieren* die typische Abhängigkeit zur Kompilierungszeit). Zur Laufzeit der Fluss der Ausführung des Programms bleibt unverändert, aber die Einführung von Schnittstellen bedeutet, dass verschiedene Implementierungen dieser Schnittstellen leicht eingesteckt werden können.
 
@@ -103,19 +106,19 @@ Die Anforderung, dass Klassen Änderungen an den oben genannten Funktionen oder 
 Zumindest sollten einzelne Webanwendungen bemühen, werden ihre eigenen gebundene Kontext, mit ihren eigenen Persistenzspeicher für ihr Geschäftsmodell, statt eine Datenbank mit anderen Anwendungen gemeinsam nutzen. Kommunikation zwischen den Kontexten gebundene tritt auf, über die programmgesteuerten Schnittstellen, anstatt über eine freigegebene Datenbank, die Geschäftslogik ermöglicht, und platzieren Sie Ereignisse werden als Reaktion auf Änderungen, die stattfinden. Begrenzt Kontexten Zuordnung eng an Microservices, die idealerweise auch als ihre eigenen einzelne gebundene Kontexte implementiert werden.
 
 > ### <a name="references--modern-web-applications"></a>Verweise – moderner Webanwendungen
-> - **Trennung von Anliegen**  
-> <http://deviq.com/Separation-of-Concerns/>
+> - Trennung von Anliegen  
+> <http://deviq.com/separation-of-concerns/>
 > - **Kapselung** <http://deviq.com/encapsulation/>
 > - **Abhängigkeit Umkehrung Prinzip**  
-> <http://deviq.com/Dependency-Inversion-Principle/>
-> - **Expliziten Abhängigkeiten Prinzip**  
-> <http://deviq.com/Explicit-Dependencies-Principle/>
+> <http://deviq.com/dependency-inversion-principle/>
+> - **Prinzip der expliziten Abhängigkeiten**  
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **Nicht selbst wiederholen**  
-> <http://deviq.com/Don-t-Repeat-Yourself/>
-> - **Persistenz Unkenntnis**  
-> <http://deviq.com/Persistence-ignorance/>
+> <http://deviq.com/don-t-repeat-yourself/>
+> - Persistenz Unkenntnis  
+> <http://deviq.com/persistence-ignorance/>
 > - **Gebundene Kontext**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
 [Vorherigen] (Choose-between-traditional-web-and-single-page-apps.md) [weiter] (Common-Web-Anwendung-architectures.md)
