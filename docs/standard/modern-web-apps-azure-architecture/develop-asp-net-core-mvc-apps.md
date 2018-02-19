@@ -548,7 +548,7 @@ Wenn Sie Ihre Anwendung in Azure hosten, können Microsoft Azure Application Gat
 > ### <a name="references--deployment"></a>Verweise – Bereitstellung
 > - **Hosting- und -Bereitstellungsübersicht**  
 > <https://docs.microsoft.com/aspnet/core/publishing/>
-> - Verwendung von Kestrel mit einer reverse-proxy  
+> - **Verwendung von Kestrel mit einer reverse-proxy**  
 > <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Host ASP.NET Core-apps in Docker**  
 > <https://docs.microsoft.com/aspnet/core/publishing/docker>

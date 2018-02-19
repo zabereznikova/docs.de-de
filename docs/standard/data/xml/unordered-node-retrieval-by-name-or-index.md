@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Abrufen von ungeordneten Knoten anhand des Namens oder Indexes
-Die **XmlNamedNodeMap** wird beschrieben, in der Spezifikation World Wide Web Consortium (W3C) als "NamedNodeMap" durch und ist erforderlich, um eine ungeordnete Gruppe von Knoten mit der Fähigkeit zum Verweisknoten nach Name oder Index zu behandeln. Die einzige Möglichkeit haben Sie Zugriff auf eine **XmlNamedNodeMap** ist, wenn ein **XmlNamedNodeMap** über eine Methode oder Eigenschaft zurückgegeben wird. Es gibt drei Methoden oder Eigenschaften, die Zurückgeben einer **XmlNamedNodeMap**:  
+**XmlNamedNodeMap** wird in der W3C-Spezifikation (World Wide Web Consortium) als „NamedNodeMap“ beschrieben und muss eine ungeordnete Gruppe von Knoten behandeln können und auf Knoten nach Name oder Index verweisen können. Zugriff auf eine **XmlNamedNodeMap** ist nur dann möglich, wenn eine **XmlNamedNodeMap** von einer Methode oder einer Eigenschaft zurückgegeben wurde. Es gibt drei Methoden bzw. Eigenschaften, die eine **XmlNamedNodeMap** zurückgeben:  
   
 -   XmlElement.Attributes  
   
@@ -31,9 +34,9 @@ Die **XmlNamedNodeMap** wird beschrieben, in der Spezifikation World Wide Web Co
   
 -   XmlDocumentType.Notations  
   
- Z. B. die **XmlDocumentType.Entities** Eigenschaft ruft die Auflistung der **XmlEntity** Knoten in der Dokumenttypdeklaration deklarierte. Diese Auflistung wird zurückgegeben, als ein **XmlNamedNodeMap**, und Sie können die Auflistung mit dem Durchlaufen der **Anzahl** Eigenschaft und der Anzeige Entitätsinformationen. Ein Beispiel für die Iteration durch eine **XmlNamedNodeMap**, finden Sie unter <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Die **XmlDocumentType.Entities**-Eigenschaft ruft z.B. die in der Dokumenttypdeklaration deklarierte Auflistung von **XmlEntity**-Knoten ab. Diese Auflistung wird als **XmlNamedNodeMap** zurückgegeben, und Sie können sie mithilfe der **Count**-Eigenschaft durchlaufen und Informationen über die Entitäten anzeigen lassen. Ein Beispiel für das Durchlaufen einer **XmlNamedNodeMap** finden Sie unter <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- Die **XmlAttributeCollection** stammt aus **XmlNamedNodeMap** und nur Attribute geändert werden kann, während Notationen und Entitäten schreibgeschützt sind. Mithilfe der **XmlNamedNodeMap** für die Attribute, können Sie den Knoten für diese Attribute ausgehend von deren XML-Namen abrufen. Dies ist eine einfache Methode zum Bearbeiten der Attributauflistung eines Elementknotens. Dieser Vergleich dazu wird direkt mit **XmlNodeList**, dem implementiert außerdem die **IEnumerable** -Schnittstelle, jedoch mit einem Indexaccessor und keine Zeichenfolge. Die **RemoveNamedItem** und **SetNamedItem** Methoden dienen nur anhand einer **XmlAttributeCollection**. Hinzufügen oder Entfernen aus einer attributauflistung, unabhängig davon, ob die **AttributeCollection** oder **XmlNamedNodeMap** Implementierung, ändert die attributauflistung für das Element. Im folgenden Codebeispiel wird gezeigt, wie ein Attribut entfernt und wie ein neues Attribut erstellt wird.  
+ **XmlAttributeCollection** wird von **XmlNamedNodeMap** abgeleitet. Es können nur Attribute geändert werden. Notationen und Entitäten sind schreibgeschützt. Unter Verwendung von **XmlNamedNodeMap** für die Attribute können Sie Knoten für diese Attribute ausgehend von deren XML-Namen abrufen. Dies ist eine einfache Methode zum Bearbeiten der Attributauflistung eines Elementknotens. Im Vergleich dazu wird bei **XmlNodeList** ebenfalls die **IEnumerable**-Schnittstelle implementiert, jedoch mit einer Indexzugriffsmethode und nicht mit einer Zeichenfolge. Die **RemoveNamedItem**-Methode und die **SetNamedItem**-Methode werden nur bei einer **XmlAttributeCollection** verwendet. Durch Hinzufügen oder Entfernen von Elementen in einer Attributauflistung, sei es mit der **AttributeCollection**- oder der **XmlNamedNodeMap**-Implementierung, wird die Attributauflistung im betreffenden Element verändert. Im folgenden Codebeispiel wird gezeigt, wie ein Attribut entfernt und wie ein neues Attribut erstellt wird.  
   
 ```vb  
 Imports System  
@@ -124,7 +127,7 @@ class test {
 }  
 ```  
   
- Um ein weiteres Codebeispiel finden Sie unter dem zeigt ein Attribut aus entfernt wird ein **AttributeCollection**, finden Sie unter [XmlNamedNodeMap.RemoveNamedItem-Methode](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Weitere Informationen über die Methoden und Eigenschaften finden Sie unter [XmlNamedNodeMap-Member](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Ein weiteres Codebeispiel zum Entfernen eines Attributs aus einer **AttributeCollection** finden Sie unter [XmlNamedNodeMap.RemoveNamedItem-Methode](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Weitere Informationen über die Methoden und Eigenschaften finden Sie unter [XmlNamedNodeMap-Member](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
