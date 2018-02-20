@@ -6,7 +6,7 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: API-Verweis
+        - name: .NET API-Browser
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
         - name: Leitfaden für .NET
@@ -356,7 +356,7 @@
             - name: Erste Schritte
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
-            - name: Lernprogramme
+            - name: Tutorials
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
             - name: Überblick
@@ -587,6 +587,6 @@
             - name: Sprachreferenz
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: Verweis
+            - name: Referenz
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
