@@ -1,5 +1,4 @@
 # [Zeichenfolgen](index.md)
-## [Gewusst wie: Verketten von mehreren Zeichenfolgen](how-to-concatenate-multiple-strings.md)
 ## [Gewusst wie: Ändern von Zeichenfolgeninhalten](how-to-modify-string-contents.md)
 ## [Gewusst wie: Vergleichen von Zeichenfolgen](how-to-compare-strings.md)
 ## [Gewusst wie: Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](how-to-search-strings-using-string-methods.md)
