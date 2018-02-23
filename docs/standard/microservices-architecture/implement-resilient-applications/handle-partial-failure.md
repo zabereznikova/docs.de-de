@@ -1,6 +1,6 @@
 ---
-title: Behandlung von teilweise fehlerhaft.
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Behandlung von teilweise fehlerhaft."
+title: Behandeln von Teilfehlern
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Behandeln von Teilfehlern"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,40 +8,43 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: b7d16acf3de2d395da70e8f46e59c129dec24f71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0b03a5d341dbaadde302692ed0ed236ff3423e63
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="handling-partial-failure"></a>Behandlung von teilweise fehlerhaft.
+# <a name="handling-partial-failure"></a>Behandeln von Teilfehlern
 
-Verteilter Systeme wie Microservices-basierte Anwendungen ist eine partielle allgegenwärtigen Ausfallrisiko. Z. B. ein einzelnen Microservice-Container kann fehlschlagen, möglicherweise nicht verfügbar für kurze Zeit reagieren bzw. einen einzelnen virtuellen Computer oder Server kann abstürzen. Da Clients und Dienste separate Vorgänge dar, ein Dienst zeitnah auf einem Client-Anforderung reagiert möglicherweise nicht. Der Dienst möglicherweise überladene ist und antwortet extrem langsam, Anforderungen oder einfach möglicherweise nicht verfügbar für kurze Zeit aufgrund von Netzwerkproblemen.
+In verteilten Systemen wie Anwendungen, die auf Microservices basieren, gibt es ein allgegenwärtiges Risiko für Teilfehler. Zum Beispiel kann ein einzelner Microservice oder Container fehlschlagen oder für eine kurze Zeit nicht verfügbar sein, oder eine einzelne VM oder ein Server kann abstürzen. Da Clients und Dienste separate Vorgänge sind, kann ein Dienst möglicherweise nicht schnell genug auf die Anforderung eines Clients reagieren. Der Dienst ist möglicherweise überlastet und antwortet sehr langsam auf Anforderungen, oder er ist aufgrund von Netzwerkproblemen vorübergehend nicht verfügbar.
 
-Angenommen Sie, die Detailseite Reihenfolge aus der eShopOnContainers beispielanwendung. Wenn die Sortierung Microservice nicht reagiert bei der Benutzer versucht, einen Auftrag, eine fehlerhafte Implementierung des Clientprozesses (MVC-Web-Anwendung) zu senden – Wenn der Clientcode synchrone RPCs mit kein Timeout verwendet würde beispielsweise – Threads für unbegrenzte Zeit blockiert würde eine Antwort warten. Zusätzlich zur Erstellung von einem Benutzer negatives Erlebnis, alle nicht reagierenden Wait belegt oder blockiert einen Thread, und Threads sind äußerst sinnvoll sein, in hoch skalierbare Anwendungen. Wenn viele blockierte Threads vorhanden sind, kann schließlich der Laufzeit der Anwendung nicht mehr genügend Threads ausführen. In diesem Fall die Anwendung kann reagiert Global anstelle von nur teilweise nicht mehr reagiert, wie in Abbildung 10 – 1.
+Nehmen Sie sich ein Beispiel an der Seite „Auftragsdetails“ der Beispielanwendung „eShopOnContainers“. Wenn der Microservice für Bestellungen nicht mehr reagiert, wenn der Benutzer versucht, einen Auftrag zu übermitteln, würde eine schlechte Implementierung des Clientprozesses (die MVC-Webanwendung) Threads auf unbestimmte Zeit blockieren, da er auf eine Antwort wartet, z.B. wenn der Clientcode synchrone RPCs ohne Timeout verwendet. Dies reduziert nicht nur die Benutzerfreundlichkeit, denn zusätzlich verbraucht oder blockiert jeder Wartevorgang ohne Reaktion einen Thread. Threads sind in hochgradig skalierbaren Anwendungen jedoch sehr wertvoll. Wenn viele Threads blockiert werden, sind für die Laufzeit der Anwendung irgendwann keine Threads mehr verfügbar. In diesem Fall kann es dazu kommen, dass die Anwendung wie in Abbildung 10-1 dargestellt global statt nur teilweise nicht mehr reagiert.
 
 ![](./media/image1.png)
 
-**Abbildung 10 – 1**. Teilweise Ausfälle aufgrund von Abhängigkeiten, die auf Thread-dienstverfügbarkeit auswirkt
+**Abbildung 10-1**. Teilfehler treten wegen Abhängigkeiten auf, die die Verfügbarkeit von Dienstthreads beeinflussen
 
-In einer großen Microservices-basierte Anwendung kann jeder partiellen Fehler verstärkt werden, insbesondere dann, wenn die meisten der internen Microservices Interaktion basiert auf synchrone HTTP-Aufrufe (das eine Antimuster gilt). Überlegen Sie sich ein System, das der eingehenden Aufrufe pro Tag Millionen empfängt. Wenn Ihr System ein schlechtes Design, das lange statusketten synchronen HTTP-Aufrufen basiert aufweist, können diese eingehende Aufrufe führen viele weitere Millionen von ausgehenden aufrufen (angenommen, ein Verhältnis von 1:4) zu zahlreichen internen Microservices als synchrone Abhängigkeiten. Diese Situation ist in Abbildung 10-2, insbesondere Abhängigkeit gezeigt \#3.
+In einer großen, auf Microservices basierten Anwendung können Teilfehler vor allem verstärkt werden, wenn der Großteil der internen Interaktionen von Microservices auf synchronen HTTP-Aufrufen basiert (dies gilt als Antimuster). Stellen Sie sich ein System vor, das täglich Millionen von eingehenden Aufrufen empfängt. Wenn Ihr System schlecht entworfen ist und auf langen Ketten von synchronen HTTP-Aufrufen basiert, können diese eingehenden Aufrufe in vielen weiteren Millionen von ausgehenden Aufrufen (z.B. ein Verhältnis von 1:4) an dutzende interne Microservices als synchrone Abhängigkeiten resultieren. Diese Situation wird in Abbildung 10-2 veranschaulicht, insbesondere in Abhängigkeit \#3.
 
 ![](./media/image2.png)
 
-**Abbildung 10 – 2**. Die Auswirkungen einen falschen Entwurf mit lange statusketten HTTP-Anforderungen
+**Abbildung 10-2**. Die Auswirkungen eines falschen Entwurfs mit langen Ketten von HTTP-Anforderungen
 
-Gelegentliche Fehler praktisch ist sichergestellt, dass in einer verteilten und cloud-basierten System, auch wenn jede Abhängigkeit selbst exzellenten Verfügbarkeit hat. Dies sollte ein Fakt sein, den Sie berücksichtigen müssen.
+Zeitweilige Fehler sind in einem System quasi garantiert, das auf der Verteilung und der Cloud basiert, selbst wenn jede Abhängigkeit eigens über eine hervorragende Verfügbarkeit verfügt. Diesen Fakt sollten Sie berücksichtigen.
 
-Wenn Sie keine entwerfen und Implementieren von Techniken, um die Fehlertoleranz zu gewährleisten, können selbst kleine Ausfallzeiten verstärkt werden. Beispielsweise würde 50 Abhängigkeiten mit 99,99 % Verfügbarkeit in mehreren Stunden Ausfallzeiten monatlich aufgrund dieser sich allmählich ausbreitenden Wirkung. Fällt eine Abhängigkeit Microservice Führungen eine große Anzahl von Anforderungen, Fehler schnell stark beanspruchen alle verfügbare Anforderung Threads in jedem Dienst und kann die gesamte Anwendung, stürzt ab.
+Wenn Sie keine Techniken für die Fehlertoleranz entwerfen oder implementieren, können selbst kleine Ausfälle verstärkt werden. Wegen dieser ausbreitenden Wirkung würden zum Beispiel 50 Abhängigkeiten mit einer Verfügbarkeit von 99,99% für mehrere Stunden im Monat ausfallen. Wenn eine Microserviceabhängigkeit beim Behandeln einer großen Anzahl von Anforderungen fehlschlägt, kann dieser Fehler schnell alle verfügbaren Anforderungsthreads in jedem Dienst beanspruchen und die gesamte Anwendung zum Abstürzen bringen.
 
 ![](./media/image3.png)
 
-**Abbildung 10 – 3**. Teilweise verstärkt von Microservices mit lange statusketten synchronen Aufrufen von HTTP-Fehler
+**Abbildung 10-3**. Teilfehler, der durch Microservices mit langen Ketten von synchronen HTTP-Aufrufen verstärkt wurde
 
-Zur Minimierung dieses Problems im Abschnitt "*asynchrone Microservice Integration Erzwingen des Microservice Autonomie*" (in der Architektur Kapitel) gefördert asynchronen Kommunikation über die interne Verwendung Microservices. Wir erläutern kurz mehr im nächsten Abschnitt.
+Zur Minimierung dieses Problems wird im Abschnitt *Asynchrone Integration von Microservices erzwingt die Autonomie eines Microservice* empfohlen, die asynchrone Kommunikation über die internen Microservices hinweg zu verwenden. Weitere Informationen dazu finden Sie im nächsten Abschnitt.
 
-Darüber hinaus ist es wichtig, dass Sie Ihre Microservices und Clientanwendungen teilfehler behandeln entwerfen – d. h. robusten Microservices und Client Anwendungen erstellen.
+Darüber hinaus ist es wichtig, dass Sie Ihre Microservices und Clientanwendungen dafür entwerfen, Teilfehler zu behandeln – d.h. robuste Microservices und Clientanwendungen zu erstellen.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (teilweise Fehler strategies.md)
+[Zurück] (index.md) [Weiter] (partial-failure-strategies.md)

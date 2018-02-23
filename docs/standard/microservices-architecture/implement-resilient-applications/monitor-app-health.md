@@ -1,59 +1,62 @@
 ---
 title: "Systemüberwachung"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Systemüberwachung"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Systemüberwachung"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: cbbad72f06bcaa882bc50083d9103b0872f51754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
-Systemüberwachung kann in der Nähe von Echtzeit Informationen über den Status von Containern und Microservices erlauben. Systemüberwachung für zahlreiche Aspekte Microservices Betrieb von entscheidender Bedeutung ist, und ist besonders wichtig bei Orchestrators partielle Anwendungsupgrades in Phasen durchführen, wie weiter unten erläutert.
+Über die Systemüberwachung können Sie nahezu in Echtzeit Informationen zum Zustand Ihrer Container und Microservices erhalten. Die Systemüberwachung ist für verschieden Aspekte von Betriebsmicroservices wichtig und ist von besonderer Bedeutung, wenn Orchestratoren wie im Folgenden beschrieben ein Anwendungsupgrade in Phasen ausführen.
 
-Microservices-basierte Anwendungen verwenden häufig Takte oder Integrität überprüft, um ihre Systemmonitore Planern und Orchestrators zum Nachverfolgen der Vielzahl von Diensten zu aktivieren. Wenn Dienste irgendeine "Ich verwende alive" Signal bei Bedarf oder nach einem Zeitplan senden können, kann Ihre Anwendung Risiken stoßen, wenn Bereitstellen von Updates oder Fehlern zu spät einfach zu erkennen und nicht in der Lage zu kaskadierende Fehler beenden, die größere Ausfälle annehmen können.
+Auf einem Microservice basierende Anwendungen verwenden häufig Takte oder Integritätsüberprüfungen, damit ihre Systemmonitore, Zeitpläne und Orchestratoren die verschiedenen Dienste überwachen können. Wenn Dienste auf Verlangen oder nach Zeitplan kein Signal senden können, um deutlich zu machen, dass sie noch funktionieren, können für Ihre Anwendung Risiken entstehen, wenn Sie Updates bereitstellen. Zudem kann es auch vorkommen, dass Fehler zu spät erkannt werden, wodurch kaskadierende Fehler nicht vermieden werden können, die zu größeren Ausfällen führen können.
 
-Im typischen Modell Dienste senden Berichte über ihren Status, und diese Informationen um einen allgemeinen Überblick über den Zustand der Anwendung bereitzustellen zusammengefasst. Bei Verwendung einer Orchestrator können Sie Integritätsinformationen für Ihre Orchestrator-Cluster bereitstellen, damit der Cluster entsprechend reagieren kann. Wenn Sie investieren Sie in qualitativ hochwertige Clientintegritätsberichte, die für Ihre Anwendung angepasst ist, können Sie erkennen und Beheben von Problemen für die ausgeführte Anwendung wesentlich einfacher.
+Dienste in ihrer allgemeinen Form senden Zustandsberichte. Diese Informationen werden dann aggregiert, sodass eine allgemeine Übersicht zum Integritätsstatus Ihrer Anwendung erstellt werden kann. Wenn Sie einen Orchestrator verwenden, können Sie Integritätsinformationen zum Cluster Ihrer Orchestratoren hinzufügen, damit der Cluster entsprechend agieren kann. Wenn Sie in Integritätsberichte von hoher Qualität investieren, die an Ihre Anwendung angepasst werden, können Sie Fehler der ausgeführte Anwendung viel einfacher ermitteln und beheben.
 
-## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementieren die Integrität überprüft in ASP.NET Core services
+## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementieren von Integritätsüberprüfungen in ASP.NET Core-Diensten
 
-Wenn Sie eine ASP.NET Core Microservice oder Web-Anwendung entwickeln, können Sie eine Bibliothek mit dem Namen HealthChecks vom Team ASP.NET verwenden. (Ab Mai 2017 ist eine frühe Version auf GitHub verfügbar).
+Wenn Sie einen ASP.NET Core-Microservice oder eine -Webanwendung entwickeln, können Sie eine Bibliothek mit dem Namen `HealthChecks` des ASP-NET-Teams verwenden. Eine frühe Veröffentlichung wird über diese [GitHub-Repository](https://github.com/dotnet-architecture/HealthChecks) bereitgestellt.
 
-Diese Bibliothek ist einfach zu verwenden und bietet Funktionen, mit denen Sie überprüfen, ob eine bestimmte externe Ressource, die für Ihre Anwendung (z. B. eine SQL Server-Datenbank oder eine remote-API) benötigt ordnungsgemäß ausgeführt wird. Wenn Sie diese Bibliothek verwenden, können Sie auch entscheiden, was es bedeutet, dass die Ressource fehlerfrei ist, wie weiter unten erläutert.
+Die Verwendung dieser Bibliothek ist einfach. Außerdem stellt sie Features bereit, mit denen Sie überprüfen können, ob eine beliebige externe Ressource einwandfrei funktioniert, die für Ihre Anwendung benötigt wird (z.B. eine SQL Server-Datenbank oder eine Remote-API). Wenn Sie diese Bibliothek verwenden, bedeutet das, dass die Ressource einwandfrei funktioniert. Dies wird nachfolgend näher erläutert.
 
-Um diese Bibliothek verwenden, müssen Sie zuerst die Bibliothek in Ihr Microservices verwenden. Zweitens brauchen Sie eine Front-End-Anwendung, die Abfragen für die Statusberichte. Die front-End-Anwendung ist möglicherweise eine benutzerdefinierte Berichterstellungsanwendung, oder es ist möglicherweise ein Orchestrator selbst, der entsprechend reagieren kann den Integritätsstatus.
+Damit Sie diese Bibliothek verwenden können, müssen Sie sie zunächst in Ihren Microservices verwenden. Außerdem ist eine Front-End-Anwendung erforderlich, die Integritätsberichte abfragt. Bei dieser Front-End-Anwendung kann es sich z.B. um eine benutzerdefinierte Anwendung zur Berichterstattung oder einen Orchestrator an sich handeln, der im Hinblick auf den Integritätszustand angemessen reagieren kann.
 
-### <a name="using-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a>Mithilfe der HealthChecks-Bibliothek in Ihrem Back-End-ASP.NET microservices
+### <a name="using-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a>Verwenden der HealthChecks-Bibliothek in Ihren Back-End-ASP.NET-Microservices
 
-Sie können sehen, wie die HealthChecks-Bibliothek in der beispielanwendung eShopOnContainers verwendet wird. Um zu beginnen, müssen Sie definieren, was einen fehlerfreien Status für jede Microservice ausmacht. In der beispielanwendung sind die Microservices fehlerfrei, wenn die Microservice API wird über HTTP und auch die zugehörige SQL Server-Datenbank verfügbar ist.
+In der Beispielanwendung eShopOnContainers können Sie sehen, wie die HealthChecks-Bibliothek verwendet wird. Damit Sie beginnen können, müssen Sie definieren, was die Integritätsstatus für die einzelnen Microservices ausmacht. In der Beispielanwendung funktionieren die Microservices einwandfrei, wenn über HTTP auf die Microservice-API zugegriffen werden kann und wenn die jeweilige SQL Server-Datenbank verfügbar ist.
 
-In der Zukunft werden Sie die Bibliothek HealthChecks als NuGet-Paket installieren. Aber Verfassung dieses Dokuments herunterladen und kompilieren Sie den Code als Teil der Projektmappe werden müssen. Klonen Sie den Code unter https://github.com/aspnet/HealthChecks, und kopieren Sie die folgenden Ordnern der Projektmappe.
+Zukünftig soll die HealthChecks-Bibliothek als NuGet-Paket installiert werden können. Derzeit müssen Sie den Code aber noch als Teil Ihrer Projektmappe herunterladen oder kompilieren. Klonen Sie den unter https://github.com/dotnet-architecture/HealthChecks verfügbaren Code, und kopieren Sie die folgenden Ordner in Ihre Projektmappe:
 
-  - Src/allgemeinen
+  - src/common
   - src/Microsoft.AspNetCore.HealthChecks
   - src/Microsoft.Extensions.HealthChecks
   - src/Microsoft.Extensions.HealthChecks.SqlServer
 
-Sie können auch zusätzliche Überprüfungen wie diejenigen für Azure (Microsoft.Extensions.HealthChecks.AzureStorage), aber da diese Version des eShopOnContainers keine Abhängigkeit auf Azure verwenden, Sie ist nicht erforderlich. Sie benötigen keine der integritätsprüfungen ASP.NET, da ASP.NET Core eShopOnContainers basiert.
+Außerdem können Sie auch zusätzliche Überprüfungen wie die für Azure verwenden (Microsoft.Extensions.HealthChecks.AzureStorage), aber da diese eShopOnContainers-Version nicht von Azure abhängig ist, ist dies nicht erforderlich. Die Überprüfungen der Integrität von ASP.NET sind nicht erforderlich, da eShopOnContainers auf ASP.NET Core basiert.
 
-Abbildung 10 – 6 zeigt die HealthChecks-Bibliothek in Visual Studio bereit als ein grundlegender Baustein von jeder Microservices verwendet werden.
+In Abbildung 10-6 wird die HealthChecks-Bibliothek in Visual Studio dargestellt, die von sämtlichen Microservices als Baustein verwendet werden kann.
 
 ![](./media/image6.png)
 
-**Abbildung 10 – 6**. ASP.NET Core HealthChecks Bibliothek Quellcode in Visual Studio-Projektmappe
+**Abbildung 10-6.** Quellcode der HealthChecks-Bibliothek von ASP.NET Core in einer Visual Studio-Projektmappe
 
-Wie zuvor eingeführt wird, ist die erste Vorgehensweise in jedem Projekt Microservice einen Verweis auf die drei HealthChecks Bibliotheken hinzufügen. Danach fügen Sie die Integrität Aktionen, die Sie in diesem Microservice ausführen möchten. Diese Aktionen sind im Grunde Abhängigkeiten von anderen Microservices (HttpUrlCheck) oder Datenbanken (derzeit SqlCheck\* für SQL Server-Datenbanken). Fügen Sie die Aktion in die Startklasse. jedes Microservice ASP.NET oder ASP.NET Web-Anwendung.
+Wie zuvor bereits erwähnt, müssen Sie als ersten Schritt für jedes Microserviceprojekt einen Verweis auf die drei HealthChecks-Bibliotheken hinzufügen. Fügen Sie anschließend die Aktionen zur Überprüfung der Integrität hinzu, die Sie in diesem Microservice ausführen möchten. Bei diesen Aktionen handelt es sich im Grunde genommen um Abhängigkeiten von anderen Microservices (HttpUrlCheck) oder Datenbanken (derzeit SqlCheck\* für SQL Server-Datenbanken). Fügen Sie die Aktion innerhalb der Startklasse jedes ASP.NET-Microservice oder jeder ASP.NET-Webanwendung hinzu.
 
-Jeder Dienst oder einer Website-Anwendung sollte alle Abhängigkeiten für die HTTP- oder die Datenbank als eine AddHealthCheck Methode hinzufügen konfiguriert werden. Z. B. die MVC-Webanwendung aus eShopOnContainers hängt von vielen Diensten, daher verfügt über mehrere AddCheck-Methoden, die die integritätsprüfungen hinzugefügt.
+Sie sollten jeden Dienst bzw. jede Webanwendung konfigurieren, indem Sie alle HTTP- oder Datenbankabhängigkeiten als genau eine AddHealthCheck-Methode hinzufügen. Beispielsweise ist die MVC-Webanwendung von eShopOnContainers von vielen Diensten abhängig und verfügt daher über verschiedene AddCheck-Methoden, die zu den Integritätsüberprüfungen hinzugefügt werden.
 
-Z. B. im folgenden Codebeispiel sehen Sie wie die Katalog-Microservice eine Abhängigkeit auf der SQL Server-Datenbank hinzugefügt.
+Beispielsweise können Sie im folgenden Code sehen, wie der Katalogmicroservice eine Abhängigkeit von dessen SQL Server-Datenbank hinzufügt.
 
 ```csharp
 // Startup.cs from Catalog.api microservice
@@ -72,7 +75,7 @@ public class Startup
 }
 ```
 
-Die MVC-Webanwendung der eShopOnContainers hat jedoch mehrere Abhängigkeiten auf den übrigen der Microservices an. Aus diesem Grund wird eine AddUrlCheck-Methode für jede Microservice wie im folgenden Beispiel gezeigt:
+Jedoch verfügt die MVC-Webanwendung von eShopOnContainers über mehrere Abhängigkeiten von den restlichen Microservices. Daher ruft diese wie im folgenden Beispiel dargestellt genau eine AddUrlCheck-Methode für jeden Microservice auf:
 
 ```csharp
 // Startup.cs from the MVC web app
@@ -93,9 +96,9 @@ public class Startup
 }
 ```
 
-Daher gebe ein Microservice keinen Status "fehlerfreien", bis alle seine Überprüfungen ebenfalls fehlerfrei sind.
+Somit gibt ein Microservice erst den Status „healthy“ (OK) zurück, wenn alle Überprüfungen einwandfrei durchgeführt werden konnten.
 
-Wenn die Microservice keine Abhängigkeit auf einen Dienst oder SQL Server verfügt, sollten Sie nur eine Prüfung Healthy("Ok") hinzufügen. Der folgende Code stammt aus dem eShopOnContainers basket.api Microservice. (Die Warenkorb-Microservice verwendet den Redis-Cache, aber die Bibliothek enthält noch keinen Redis Health Check-Anbieter).
+Wenn der Microservice nicht über eine Abhängigkeit von einem Dienst oder einem SQL Server verfügt, sollten Sie die Überprüfung „Healthy("Ok")“ hinzufügen. Der folgende Code wurde dem eShopOnContainers-Microservice „basket.api“ entnommen. (Der Warenkorbmicroservice verwendet zwar den Redis-Cache, jedoch enthält die Bibliothek noch keinen Redis-Anbieter für Integritätsüberprüfungen.)
 
 ```csharp
 services.AddHealthChecks(checks =>
@@ -105,7 +108,7 @@ services.AddHealthChecks(checks =>
 });
 ```
 
-Für einen Dienst oder einer Website Anwendung den Health Check-Endpunkt verfügbar machen, muss er die UseHealthChecks aktivieren (\[*Url\_für\_Integrität\_überprüft*\]) Erweiterung Methode. Diese Methode wird an die WebHostBuilder Ebene in der main-Methode der Program-Klasse der ASP.NET Core Dienst oder einer Website Anwendung direkt nach UseKestrel wie im folgenden Code gezeigt.
+Damit ein Dienst oder eine Webanwendung die Endpunkte zur Integritätsüberprüfung zur Verfügung stellen kann, muss die UseHealthChecks-Erweiterungsmethode (\[*URL\_für\_Integritätsüberprüfungen*\]) aktiviert sein. Diese Methode wird auf der WebHostBuilder-Ebene in der Hauptmethode der Programmklasse Ihres ASP.NET Core-Diensts oder Ihrer Anwendung unmittelbar nach UseKestrel ausgeführt (wie im folgenden Code dargestellt).
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC
@@ -127,69 +130,69 @@ namespace Microsoft.eShopOnContainers.WebMVC
 }
 ```
 
-Der Prozess funktioniert wie folgt: jede Microservice macht den Endpunkt HC. Dieser Endpunkt wird von der Bibliothek HealthChecks ASP.NET Core-Middleware erstellt. Wenn es sich bei diesen Endpunkt aufgerufen wird, führt er alle integritätsprüfungen, die in der AddHealthChecks-Methode in die Startklasse konfiguriert sind.
+Der Prozess funktioniert wie folgt: Jeder Microservice stellt den Endpunkt „/hc“ zur Verfügung. Dieser Endpunkt wird von der ASP.NET Core-Middleware „HealthChecks-Bibliothek“ erstellt. Wenn dieser Endpunkt aufgerufen wird, werden alle Integritätsüberprüfungen ausgeführt, die in der Startklasse in der AddHealthChecks-Methode konfiguriert sind.
 
-Die UseHealthChecks Methode erwartet einen Port oder einen Pfad an. Dieser Port oder der Pfad ist der Endpunkt verwendet, um den Integritätsstatus des Diensts zu überprüfen. Der Katalog Microservice verwendet z. B. die HC Pfad.
+Die Methode „UseHealthChecks“ geht davon aus, dass es einen Port oder einen Pfad gibt. Dieser Port bzw. Pfad wird als Endpunkt verwendet, um den Integritätsstatus dieses Diensts zu überprüfen. Beispielsweise verwendet der Katalogmicroservice den Pfad „/hc“.
 
-### <a name="caching-health-check-responses"></a>Health Check-Antworten Zwischenspeichern
+### <a name="caching-health-check-responses"></a>Zwischenspeichern der Antworten der Integritätsüberprüfung
 
-Seit nicht dazu führen, dass ein Denial-of-Service (DoS) in Ihre Dienste möchten, oder Sie einfach keine Service Leistungseinbußen sollten durch Überprüfen von Ressourcen zu häufig können Sie cache zurückgegeben und Konfigurieren einer Cachedauer für jede integritätsprüfung durchgeführt werden.
+Damit in Ihrem Dienst kein Denial of Service (DoS) festgestellt wird, oder wenn die Leistung des Diensts nicht beeinträchtigt werden soll, indem die Ressourcen zu häufig überprüft werden, können Sie die Rückgaben zwischenspeichern und eine Cachedauer für jede Integritätsüberprüfung konfigurieren.
 
-Wird standardmäßig können die Cachedauer intern auf 5 Minuten festgelegt ist, Sie jedoch ändern, Cachedauer auf jede integritätsprüfung durchgeführt werden, wie im folgenden Code:
+Standardmäßig ist die Cachedauer intern auf 5 Minuten festgelegt. Sie können diese Cachedauer allerdings wie im folgenden Code bei jeder Integritätsüberprüfung ändern:
 
 ```csharp
 checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
 ```
 
-### <a name="querying-your-microservices-to-report-about-their-health-status"></a>Abfragen von Ihrer Microservices Bericht zu ihrem Integritätsstatus
+### <a name="querying-your-microservices-to-report-about-their-health-status"></a>Abfragen eines Berichts zum Integritätsstatus der Microservices
 
-Wenn Sie eine integritätsprüfung konfiguriert haben, wie hier beschrieben wird, sobald die Microservice in Docker ausgeführt wird, können Sie direkt über einen Browser überprüfen, ob es fehlerfrei ist. (Dies erfordert, dass Sie den Container Port außerhalb des Docker-Host veröffentlichen, damit Sie über "localhost" oder über die externe IP Docker-Host-Container zugreifen können.) Abbildung 10 – 7 zeigt eine Anforderung in einem Browser und die entsprechende Antwort.
+Wenn Sie wie hier beschrieben Integritätsüberprüfungen konfiguriert haben, können Sie direkt über den Browser überprüfen, ob der Microservice einwandfrei funktioniert, sobald dieser in Docker ausgeführt wird. (Dafür müssen Sie den Containerport außerhalb des Docker-Hosts veröffentlichen, damit Sie über einen Localhost oder das externe Docker-Host-IP auf den Container zugreifen können.) In Abbildung 10-7 wird eine Abfrage in einem Browser mit der zugehörigen Antwort dargestellt.
 
 ![](./media/image7.png)
 
-**Abbildung 10 – 7**. Überprüfen des Integritätsstatus von einem einzigen Dienst in einem browser
+**Abbildung 10-7.** Überprüfen des Integritätsstaus eines einzelnen Diensts über einen Browser
 
-In diesen Test sehen Sie, dass die catalog.api Microservice (Port 5101 ausgeführt) fehlerfrei ist HTTP-Statuscode 200 und Statusinformationen im JSON-Format zurückgeben. Dies bedeutet auch, dass intern der Dienst auch die Integrität ihrer SQL Server-Datenbank-Abhängigkeit aktiviert und integritätsprüfung selbst als fehlerfrei gemeldet wurde.
+In diesem Test können Sie sehen, dass der Microservice „catalog.api“ (der auf Port 5101 ausgeführt wird) einwandfrei funktioniert, da er den HTTP-Status 200 und Statusinformationen im JSON-Format zurückgibt. Das bedeutet außerdem, dass der Dienst intern ebenfalls die Integrität seiner SQL Server-Datenbankabhängigkeit überprüft hat und für die Integritätsüberprüfung „OK“ zurückgegeben wurde.
 
-## <a name="using-watchdogs"></a>Verwenden von watchdogs
+## <a name="using-watchdogs"></a>Verwenden von Überwachungselementen
 
-Watchdog ist einem separaten Dienst, der Überwachen der Integrität und Dienste, und melden der Integrität zu den Microservices durch Erstellen von Abfragen mit der bereits vorgestellten HealthChecks-Bibliothek laden kann. Dies hilft zu verhindern, dass Fehler, die nicht erkannt würden, basierend auf den Überblick über einen einzelnen Dienst. Watchdogs sind auch eine gute zum Hosten von Code, die Aktionen zur Problembehebung für bekannte Bedingungen ohne Benutzerinteraktion ausführen können.
+Bei einem Überwachungselement handelt es sich um einen separaten Dienst, der die Integrität überprüfen und in mehreren Diensten geladen werden kann. Außerdem kann es Berichte zur Integrität der Microservices erstellen, indem es eine Abfrage an die bereit eingeführte HealthChecks-Bibliothek sendet. Dadurch können Fehler vermieden werden, die anhand der Ansicht eines einzelnen Diensts nicht ermittelt werden könnten. Überwachungselemente eignen sich außerdem zum Hosten von Code, über den ohne Benutzerinteraktion Abhilfemaßnahmen für bekannte Bedingungen ausgeführt werden können.
 
-Das eShopOnContainers-Beispiel enthält eine Webseite, die Integritätsberichte Kontrollkästchen Beispiel zeigt, wie in Abbildung 10 – 8 dargestellt. Dies ist der einfachste Watchdog, die Sie möglicherweise, da sie lediglich zeigt der Status des Microservices und Web-Anwendungen in eShopOnContainers werden. In der Regel führt Watchdog auch Aktionen aus, wenn sich in einem fehlerhaften Status erkannt wird.
+Das eShopOnContainers-Beispiel enthält eine Webseite, auf der wie in Abbildung 10-8 dargestellt Beispielberichte zur Integritätsüberprüfung angezeigt werden. Dabei handelt es sich um das einfachste Überwachungselement, da es nur den Zustand der Microservices und Webanwendungen in eShopOnContainers anzeigt. In der Regel führt ein Überwachungselement Aktionen aus, wenn der Status „Fehlerhaft“ ermittelt wird.
 
 ![](./media/image8.png)
 
-**Abbildung 10 – 8**. Beispielbericht Health Check in eShopOnContainers
+**Abbildung 10-8.** Beispielbericht zur Integritätsüberprüfung in eShopOnContainers
 
-Zusammengefasst bietet die Middleware ASP.NET der ASP.NET Core HealthChecks Bibliothek einen einzelnen Health Check-Endpunkt für jede Microservice. Alle darin definierten integritätsprüfungen auszuführen werden und gesamtintegritätsstatus je nach der alle diese Überprüfungen zurückgeben.
+Die ASP.NET-Middleware der HealthChecks-Bibliothek von ASP.NET Core stellt also für jeden Microservice genau einen Endpunkt zur Integritätsüberprüfung bereit. Dadurch werden alle darin definierten Integritätsüberprüfungen ausgeführt und ein allgemeiner Integritätsstatus zurückgegeben, der von diesen Überprüfungen abhängig ist.
 
-Die Bibliothek HealthChecks ist erweiterbar, durch neue Systemdiagnosen zukünftige externer Ressourcen. Beispielsweise erwarten wir, dass in Zukunft die Bibliothek integritätsprüfungen für Redis-Cache und für andere Datenbanken vorhanden sind. Die Bibliothek ermöglicht integritätsberichterstellung durch mehrere Dienst oder diese Anwendung Abhängigkeiten, und Sie können anschließend Aktionen basierend auf diesen Systemdiagnosen.
+Die HealthChecks-Bibliothek ist über neue Integritätsüberprüfungen im Zusammenhang mit externen Ressourcen erweiterbar. Beispielsweise wird erwartet, dass in Zukunft die Bibliothek Integritätsüberprüfungen für den Redis-Cache und andere Datenbanken verfügbar ist. Über die Bibliothek können mithilfe von Dienst- oder Anwendungsabhängigkeiten Berichte zur Integrität erstellt werden. Anhand dieser Integritätsüberprüfungen können Sie Aktionen durchführen.
 
-## <a name="health-checks-when-using-orchestrators"></a>Integritätsprüfungen Verwendung orchestrators
+## <a name="health-checks-when-using-orchestrators"></a>Integritätsüberprüfungen, wenn Orchestratoren verwendet werden
 
-Informationen zum Überwachen der Verfügbarkeit Ihrer Microservices integritätsprüfungen Orchestrators wie Docker Containerhostclustern, Kubernetes und-Dienststrukturen in regelmäßigen Abständen durch Senden von Anforderungen an die Microservices zu testen. Wenn ein Orchestrator feststellt, dass ein Dienstcontainer fehlerhaft ist, Weiterleiten von Anforderungen an diese Instanz wird beendet. Es erstellt auch in der Regel eine neue Instanz der betreffenden Container.
+Orchestratoren wie Docker Swarm, Kubernetes und Service Fabric führen regelmäßig zur Überwachung der Verfügbarkeit Ihrer Microservices Integritätsüberprüfungen durch, indem sie Anforderungen senden, um diese Microservices zu testen. Wenn ein Orchestrator ermittelt, dass ein Dienst bzw. ein Container fehlerhaft ist, leitet er keine Anforderungen mehr an diese Instanz weiter. Außerdem erstellt er dann in der Regel eine neue Instanz dieses Containers.
 
-Für die Instanz, können die meisten Orchestrators Systemdiagnosen Sie Ausfallzeiten Deployments verwalten. Nur, wenn der Status einer Dienstcontainer/ändert fehlerfrei wird die Orchestrator routing des Datenverkehrs Dienstcontainer/Instanzen starten.
+Beispielsweise können die meisten Orchestratoren Integritätsüberprüfungen verwenden, um Bereitstellungen ohne Ausfallzeit zu verwalten. Erst wenn sich der Status des Diensts bzw. Containers in „healthy“ (OK) ändert, leitet der Orchestrator wieder Datenverkehr an die Instanzen des Diensts bzw. Containers weiter.
 
-Systemüberwachung ist besonders wichtig, wenn ein Orchestrator ein Anwendungsupgrade ausführt. Einige Orchestrators (z. B. Azure Service Fabric) aktualisieren von Diensten in Phasen – sie können z. B. ein Fünftel der Cluster-Oberfläche für jedes Anwendungsupgrade aktualisieren. Die Gruppe der Knoten, die zur gleichen Zeit aktualisiert wird als bezeichnet ein *upgradedomäne*. Nachdem jede upgradedomäne aktualisiert wurde und für Benutzer verfügbar ist, muss dieser upgradedomäne integritätsprüfungen übergeben, bevor die Bereitstellung mit der nächsten upgradedomäne fortfährt.
+Die Systemüberwachung ist besonders wichtig, wenn ein Orchestrator ein Anwendungsupgrade ausführt. Einige Orchestratoren (wie Azure Service Fabric) führen in Phasen Updates für Dienste aus. Sie aktualisieren also z.B. ein Fünftel der Clusteroberfläche für jedes Anwendungsupgrade. Die Knoten, für die zur selben Zeit ein Upgrade ausgeführt wird, werden als *Upgradedomäne* bezeichnet. Wenn für alle Upgradedomänen ein Upgrade ausgeführt wurde und für die Benutzer verfügbar sind, muss diese Upgradedomäne Integritätsüberprüfungen übergeben, bevor die Bereitstellung auf die nächste Upgradedomäne verschoben wird.
 
-Ein weiterer Aspekt der Integrität des Diensts meldet Metriken aus dem Dienst. Dies ist eine erweiterte Funktion von das Integritätsmodell des einige Orchestrators, wie Service Fabric. Metriken sind wichtig, wenn ein Orchestrator verwendet werden, da sie verwendet werden, um den Ressourcenverbrauch auszugleichen. Metriken können auch ein Indikator der Systemintegrität sein. Angenommen, Sie möglicherweise eine Anwendung mit vielen Microservices, und jeder Instanz gibt eine Metrik der Anforderungen pro Sekunde (RPS). Wenn ein Dienst mehr Ressourcen (Arbeitsspeicher, Prozessor, usw.) als ein anderer Dienst verwendet wird, konnte der Orchestrator-Dienstinstanzen im Cluster zu dem Versuch, sogar Ressourcenverwendung verwalten bewegen.
+Berichtsmetriken des Diensts machen einen weiteren Aspekt der Dienstintegrität aus. Dabei handelt es sich um eine erweiterte Funktion des Integritätsmodells einiger Orchestratoren wie Service Fabric. Metriken sind von Bedeutung, wenn Orchestratoren verwendet werden, da sie einen Ausgleich für die Ressourcennutzung schaffen. Metriken können außerdem auf Systemintegrität hindeuten. Beispielsweise kann es sein, dass Sie über eine Anwendung mit vielen Microservices verfügen, wobei jede Instanz einen Bericht zu einer „Anforderungen pro Sekunde“-Metrik erstellt. Wenn ein Dienst mehre Ressourcen (z.B. den Arbeitsspeicher oder den Prozessor) als ein anderer Dienst verwendet, kann der Orchestrator Dienstinstanzen innerhalb des Clusters verschieben, um zu versuchen, die Ressourcenverwendung zu verwalten.
 
-Beachten Sie, dass bei Verwendung von Azure Service Fabric eigene darüber [Systemüberwachung Modell](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction), also komplexer als einfache Systemdiagnosen.
+Beachten Sie, dass Azure Service Fabric ein eigenes [Modell zur Systemüberwachung](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction) umfasst, das umfassender ist als einfache Integritätsüberprüfungen.
 
 ## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>Erweiterte Überwachung: Visualisierung, Analyse und Warnungen
 
-Der letzte Teil des Überwachung ist Visualisieren von den Datenstrom, auf die Leistung des Service reporting und warnen, wenn ein Problem festgestellt wird. Sie können verschiedene Lösungen für dieses Aspekts der Überwachung verwenden.
+Als letzter Schritt im Rahmen der Überwachung wird der Ereignisdatenstrom visualisiert, ein Bericht zur Leistung des Diensts wird erstellt, und es wird eine Warnung ausgegeben, wenn ein Problem erkannt wird. Sie können für diesen Bestandteil der Überwachung mehrere Lösungen verwenden.
 
-Können Sie einfache benutzerdefinierte Anwendungen, die mit dem Status der Dienste, wie benutzerdefinierte Seite wurde wir gezeigt, wenn wir erläutert [ASP.NET Core HealthChecks](https://github.com/aspnet/HealthChecks). Oder Sie mithilfe von Tools mit erweiterter Funktionalität wie Azure Application Insights und Operations Management Suite Warnungen basierend auf den Datenstrom von Ereignissen ausgelöst werden sollen.
+Einerseits können Sie einfache benutzerdefinierte Anwendungen verwenden, die den Status Ihrer Dienste anzeigen, z.B. die im Zusammenhang mit [ASP.NET Core-Integritätsüberprüfungen](https://github.com/aspnet/HealthChecks) erwähnten benutzerdefinierten Seiten. Andererseits können Sie auch Tools mit erweiterten Funktionen wie Azure Application Insights und Operations Management Suite verwenden, um Warnungen anhand des Datenstroms der Ereignisse auszulösen.
 
-Abschließend, wenn Sie die ereignisdatenströme gespeichert wurden, können Sie Microsoft Power BI oder eine Lösung eines Drittanbieters, wie Kibana oder Splunk verwenden zum Visualisieren der Daten.
+Außerdem können Sie Microsoft Power BI oder die Lösung eines Drittanbieters (z.B. Kibana oder Splunk) verwenden, um Daten zu visualisieren, wenn Sie alle Ereignisdatenströme gespeichert haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **ASP.NET Core HealthChecks** (frühen Release) [ *https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks (ASP.NET Core-Integritätsüberprüfungen)** (frühe Veröffentlichung) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Einführung in Service Fabric-Integritätsüberwachung**
+-   **Introduction to Service Fabric health monitoring (Einführung in die Systemüberwachung von Service Fabric)**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
 -   **Azure Application Insights**
@@ -199,4 +202,4 @@ Abschließend, wenn Sie die ereignisdatenströme gespeichert wurden, können Sie
     [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[Vorherigen] (implementieren-Circuit-Breaker-pattern.md) [weiter] (.. /Secure-NET-microservices-Web-Applications/Index.MD)
+[Zurück] (implement-circuit-breaker-pattern.md) [Weiter] (../secure-net-microservices-web-applications/index.md)
