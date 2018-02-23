@@ -1,6 +1,6 @@
 ---
-title: Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit"
+title: Implementieren von benutzerdefinierten Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren von Wiederholungen von benutzerdefinierten HTTP-Aufrufen mit exponentiellem Backoff"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4449e5d7e0ca3c81aead26fac653de3ba2187a92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="594e5-104">Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit</span><span class="sxs-lookup"><span data-stu-id="594e5-104">Implementing custom HTTP call retries with exponential backoff</span></span>
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="07660-104">Implementieren von benutzerdefinierten Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff</span><span class="sxs-lookup"><span data-stu-id="07660-104">Implementing custom HTTP call retries with exponential backoff</span></span>
 
-<span data-ttu-id="594e5-105">Um robusten Microservices zu erstellen, müssen Sie mögliche Szenarien der HTTP-Fehler zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="594e5-105">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="594e5-106">Sie könnten zu diesem Zweck eine eigene Implementierung von Wiederholungen mit exponenzieller erstellen.</span><span class="sxs-lookup"><span data-stu-id="594e5-106">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
+<span data-ttu-id="07660-105">Sie müssen mögliche HTTP-Fehlerszenarios verarbeiten können, um robuste Microservices zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="07660-105">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="07660-106">Zu diesem Zweck können Sie eine eigene Implementierung von Wiederholungen mit exponentiellem Backoff erstellen.</span><span class="sxs-lookup"><span data-stu-id="07660-106">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
 
-<span data-ttu-id="594e5-107">Neben der Handhabung von temporale Ressource nicht verfügbar sind, muss exponentielle Backoff auch berücksichtigen, dass Cloudanbieter Verfügbarkeit der Ressourcen, um zu verhindern, dass bei der Verwendung Überladung einschränken kann.</span><span class="sxs-lookup"><span data-stu-id="594e5-107">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="594e5-108">Beispielsweise zu viele verbindungsanforderungen sehr schnell erstellen möglicherweise angezeigt werden als ein Denial-of-Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) Angriff von Cloud-Dienstanbieter.</span><span class="sxs-lookup"><span data-stu-id="594e5-108">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="594e5-109">Daher müssen Sie bieten einen Mechanismus zur Back verbindungsanforderungen zu skalieren, wenn ein Schwellenwert für die Kapazität erreicht wurde.</span><span class="sxs-lookup"><span data-stu-id="594e5-109">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
+<span data-ttu-id="07660-107">Zusätzlich zum Verarbeiten der Nichtverfügbarkeit von temporalen Ressourcen muss beim exponentiellen Backoff ebenfalls berücksichtigt werden, dass der Cloudanbieter die Verfügbarkeit der Ressourcen einschränken kann, um eine Überladung zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="07660-107">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="07660-108">Das Erstellen von zu vielen Verbindungsanforderungen kann beispielsweise vom Cloudanbieter schnell als Denial-of-Service-Angriff ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) gewertet werden.</span><span class="sxs-lookup"><span data-stu-id="07660-108">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="07660-109">Deshalb müssen Sie einen Mechanismus bereitstellen, um Verbindungsanforderungen zu reduzieren, wenn der Schwellenwert für die Kapazität erreicht wurde.</span><span class="sxs-lookup"><span data-stu-id="07660-109">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
 
-<span data-ttu-id="594e5-110">Als eine erste Untersuchungen durchzuführen, konnte Sie Ihren eigenen Code eine Dienstprogrammklasse für Exponentielles Backoff wie in implementieren [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), sowie Code wie den folgenden (steht auch auf eine [GitHub-Repository ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span><span class="sxs-lookup"><span data-stu-id="594e5-110">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
+<span data-ttu-id="07660-110">Zunächst können Sie eigenen Code wie in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) mit einer Hilfsklasse für exponentielle Backoffs sowie Code implementieren, der Folgendem entspricht (dieser ist ebenfalls in einem [GitHub-Repository](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b) verfügbar).</span><span class="sxs-lookup"><span data-stu-id="07660-110">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -93,7 +96,7 @@ public struct ExponentialBackoff
 }
 ```
 
-<span data-ttu-id="594e5-111">Verwenden diesen Code in einem Client C\# Anwendung (Microservice von einer anderen Web-API-Client, eine ASP.NET MVC-Anwendung oder sogar eine C\# Xamarin-Anwendung) ist einfach.</span><span class="sxs-lookup"><span data-stu-id="594e5-111">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="594e5-112">Das folgende Beispiel zeigt, mit der HttpClient-Klasse.</span><span class="sxs-lookup"><span data-stu-id="594e5-112">The following example shows how, using the HttpClient class.</span></span>
+<span data-ttu-id="07660-111">Das Verwenden dieses Codes in einer C\#-Clientanwendung (in einem Web-API-Clientmicroservice, einer ASP.NET MVC-Anwendung oder sogar in einer C\#-Xamarin-Anwendung) ist einfach.</span><span class="sxs-lookup"><span data-stu-id="07660-111">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="07660-112">Dies wird im folgenden Beispiel anhand der HttpClient-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="07660-112">The following example shows how, using the HttpClient class.</span></span>
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -116,8 +119,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-<span data-ttu-id="594e5-113">Dieser Code ist jedoch nur als ein Proof of Concept geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="594e5-113">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="594e5-114">Im nächste Thema wird erläutert, wie mehr hochentwickelte und bewährte Bibliotheken verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="594e5-114">The next topic explains how to use more sophisticated and proven libraries.</span></span>
+<span data-ttu-id="07660-113">Dieser Code ist jedoch nur als Proof of Concept geeignet.</span><span class="sxs-lookup"><span data-stu-id="07660-113">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="07660-114">Im nächsten Artikel wird erklärt, wie Sie optimierte und bewährte Bibliotheken verwenden.</span><span class="sxs-lookup"><span data-stu-id="07660-114">The next topic explains how to use more sophisticated and proven libraries.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="594e5-115">[Vorherigen] (Implement-resilient-entity-framework-core-sql-connections.md) [weiter] (Implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="594e5-115">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>
+<span data-ttu-id="07660-115">[Zurück] (implement-resilient-entity-framework-core-sql-connections.md) [Weiter] (implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="07660-115">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>

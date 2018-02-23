@@ -1,36 +1,39 @@
 ---
-title: Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur"
+title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: e4b63511069b89cc5761ce7ed64f09e9035a56a3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-nosql-databases-as-a-persistence-infrastructure"></a><span data-ttu-id="c7e18-104">Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur</span><span class="sxs-lookup"><span data-stu-id="c7e18-104">Using NoSQL databases as a persistence infrastructure</span></span>
+# <a name="using-nosql-databases-as-a-persistence-infrastructure"></a><span data-ttu-id="575c2-104">Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur</span><span class="sxs-lookup"><span data-stu-id="575c2-104">Using NoSQL databases as a persistence infrastructure</span></span>
 
-<span data-ttu-id="c7e18-105">Wenn Sie keine NoSQL-Datenbanken für Ihre Infrastruktur Datenebene verwenden, verwenden Sie ein ORM wie Entity Framework Core in der Regel nicht.</span><span class="sxs-lookup"><span data-stu-id="c7e18-105">When you use NoSQL databases for your infrastructure data tier, you typically do not use an ORM like Entity Framework Core.</span></span> <span data-ttu-id="c7e18-106">Stattdessen verwenden Sie die API, die vom NoSQL-Modul, wie z. B. Azure-Cosmos-DB, MongoDB, Cassandra, RavenDB, CouchDB oder Azure-Speichertabellen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="c7e18-106">Instead you use the API provided by the NoSQL engine, such as Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB, or Azure Storage Tables.</span></span>
+<span data-ttu-id="575c2-105">Wenn Sie NoSQL-Datenbanken für die Datenschicht Ihrer Infrastruktur verwenden, verwenden Sie in der Regel keine ORM wie Entity Framework Core.</span><span class="sxs-lookup"><span data-stu-id="575c2-105">When you use NoSQL databases for your infrastructure data tier, you typically do not use an ORM like Entity Framework Core.</span></span> <span data-ttu-id="575c2-106">Stattdessen verwenden Sie die API, die von der NoSQL-Engine, wie z.B. Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB oder Azure Table Storage, bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="575c2-106">Instead you use the API provided by the NoSQL engine, such as Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB, or Azure Storage Tables.</span></span>
 
-<span data-ttu-id="c7e18-107">Bei Verwendung eine NoSQL-Datenbank, insbesondere eine dokumentorientiert Datenbank wie Azure-Cosmos-DB, CouchDB oder RavenDB, ist jedoch die Möglichkeit, die Sie das Modell mit DDD Aggregaten entwerfen teilweise ähnelt in EF-Core in Bezug auf die Kennung des Vorgehensweise können Aggregieren Stämme, untergeordneten Entitätsklassen und Wertklassen-Objekt.</span><span class="sxs-lookup"><span data-stu-id="c7e18-107">However, when you use a NoSQL database, especially a document-oriented database like Azure Cosmos DB, CouchDB, or RavenDB, the way you design your model with DDD aggregates is partially similar to how you can do it in EF Core, in regards to the identification of aggregate roots, child entity classes, and value object classes.</span></span> <span data-ttu-id="c7e18-108">Aber letztendlich, wirkt sich die Datenbankauswahl im Entwurf.</span><span class="sxs-lookup"><span data-stu-id="c7e18-108">But, ultimately, the database selection will impact in your design.</span></span>
+<span data-ttu-id="575c2-107">Wenn Sie jedoch eine NoSQL-Datenbank verwenden, insbesondere eine dokumentorientierte Datenbank wie Azure Cosmos DB, CouchDC oder RavenDB, ist die Art und Weise, in der Sie Ihr Modell mit DDD-Aggregaten entwerfen, teilweise mit der Vorgehensweise in EF Core vergleichbar, z.B. in Bezug auf die Identifikation von Aggregatstämmen, untergeordneten Entitätsklassen und Wertobjektklassen.</span><span class="sxs-lookup"><span data-stu-id="575c2-107">However, when you use a NoSQL database, especially a document-oriented database like Azure Cosmos DB, CouchDB, or RavenDB, the way you design your model with DDD aggregates is partially similar to how you can do it in EF Core, in regards to the identification of aggregate roots, child entity classes, and value object classes.</span></span> <span data-ttu-id="575c2-108">Letztendlich hat die Datenbankauswahl jedoch Auswirkungen auf Ihren Entwurf.</span><span class="sxs-lookup"><span data-stu-id="575c2-108">But, ultimately, the database selection will impact in your design.</span></span>
 
-<span data-ttu-id="c7e18-109">Wenn Sie eine Datenbank dokumentorientiert verwenden, implementieren Sie ein Aggregat als ein einzelnes Dokument, das in JSON oder ein anderes Format serialisiert.</span><span class="sxs-lookup"><span data-stu-id="c7e18-109">When you use a document-oriented database, you implement an aggregate as a single document, serialized in JSON or another format.</span></span> <span data-ttu-id="c7e18-110">Allerdings ist die Verwendung der Datenbank aus einer Domäne Modell Codeansicht transparent.</span><span class="sxs-lookup"><span data-stu-id="c7e18-110">However, the use of the database is transparent from a domain model code point of view.</span></span> <span data-ttu-id="c7e18-111">Wenn Sie eine NoSQL-Datenbank verwenden zu können, Sie weiterhin sind Entitätsklassen und aggregieren Stammklassen, aber mit mehr Flexibilität als bei Verwendung EF Core, da die Persistenz ist nicht relationale.</span><span class="sxs-lookup"><span data-stu-id="c7e18-111">When using a NoSQL database, you still are using entity classes and aggregate root classes, but with more flexibility than when using EF Core because the persistence is not relational.</span></span>
+<span data-ttu-id="575c2-109">Wenn Sie eine dokumentorientierte Datenbank verwenden, implementieren Sie ein Aggregat als einzelnes Dokument, das im JSON-Format oder einem anderen Format serialisiert ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-109">When you use a document-oriented database, you implement an aggregate as a single document, serialized in JSON or another format.</span></span> <span data-ttu-id="575c2-110">Allerdings ist die Verwendung der Datenbank aus Sicht eines Codeelements des Domänenmodells transparent.</span><span class="sxs-lookup"><span data-stu-id="575c2-110">However, the use of the database is transparent from a domain model code point of view.</span></span> <span data-ttu-id="575c2-111">Durch eine NoSQL-Datenbank verwenden Sie weiterhin Entitätsklassen und Aggregatstammklassen, jedoch mit mehr Flexibilität als bei der Verwendung von EF Core, da die Persistenz nicht relational ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-111">When using a NoSQL database, you still are using entity classes and aggregate root classes, but with more flexibility than when using EF Core because the persistence is not relational.</span></span>
 
-<span data-ttu-id="c7e18-112">Der Unterschied besteht darin, wie Sie dieses Modell beibehalten.</span><span class="sxs-lookup"><span data-stu-id="c7e18-112">The difference is in how you persist that model.</span></span> <span data-ttu-id="c7e18-113">Wenn Sie Ihre Domänenmodell auf Grundlage von Klassen für POCO-Entitäten implementiert, kann unabhängig von der Infrastruktur Persistenz er anscheinend zu einer anderen Persistenz-Infrastruktur auch aus relationalen Datenquellen zu NoSQL verschoben werden können.</span><span class="sxs-lookup"><span data-stu-id="c7e18-113">If you implemented your domain model based on POCO entity classes, agnostic to the infrastructure persistence, it might look like you could move to a different persistence infrastructure, even from relational to NoSQL.</span></span> <span data-ttu-id="c7e18-114">Allerdings sollten, die nicht Ziel sein.</span><span class="sxs-lookup"><span data-stu-id="c7e18-114">However, that should not be your goal.</span></span> <span data-ttu-id="c7e18-115">Es gibt immer Einschränkungen in den verschiedenen Datenbanken werden mithilfe von Push übertragen Sie zurück, sodass Sie nicht das gleiche Modell für haben können relationale oder NoSQL-Datenbanken.</span><span class="sxs-lookup"><span data-stu-id="c7e18-115">There are always constraints in the different databases will push you back, so you will not be able to have the same model for relational or NoSQL databases.</span></span> <span data-ttu-id="c7e18-116">Ändern die Persistenz Modelle würde nicht trivial, werden, weil Transaktionen und persistenzvorgänge sehr unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="c7e18-116">Changing persistence models would not be trivial, because transactions and persistence operations will be very different.</span></span>
+<span data-ttu-id="575c2-112">Der Unterschied besteht darin, wie Sie dieses Modell speichern.</span><span class="sxs-lookup"><span data-stu-id="575c2-112">The difference is in how you persist that model.</span></span> <span data-ttu-id="575c2-113">Wenn Sie Ihr Domänenmodell (unabhängig von der Persistenz der Infrastruktur) basierend auf POCO-Entitätsklassen implementiert haben, wirkt es möglicherweise so, als könnten Sie zu einer anderen Persistenz der Infrastruktur wechseln, sogar von einer relationalen zur NoSQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="575c2-113">If you implemented your domain model based on POCO entity classes, agnostic to the infrastructure persistence, it might look like you could move to a different persistence infrastructure, even from relational to NoSQL.</span></span> <span data-ttu-id="575c2-114">Das sollte jedoch nicht Ihr Ziel sein.</span><span class="sxs-lookup"><span data-stu-id="575c2-114">However, that should not be your goal.</span></span> <span data-ttu-id="575c2-115">In den verschiedenen Datenbanken gibt es immer Einschränkungen, die Sie davon abhalten. Daher können Sie für relationale oder NoSQL-Datenbanken nicht dasselbe Modell verwenden.</span><span class="sxs-lookup"><span data-stu-id="575c2-115">There are always constraints in the different databases will push you back, so you will not be able to have the same model for relational or NoSQL databases.</span></span> <span data-ttu-id="575c2-116">Das Ändern des Persistenzmodells wäre nicht trivial, da Transaktionen und Persistenzvorgänge völlig verschieden sind.</span><span class="sxs-lookup"><span data-stu-id="575c2-116">Changing persistence models would not be trivial, because transactions and persistence operations will be very different.</span></span>
 
-<span data-ttu-id="c7e18-117">In einer Datenbank dokumentorientiert ist es beispielsweise angemessen für einen aggregierten Stamm, mehrere untergeordnete Sammlungseigenschaften zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="c7e18-117">For example, in a document-oriented database, it is okay for an aggregate root to have multiple child collection properties.</span></span> <span data-ttu-id="c7e18-118">In einer relationalen Datenbank wird Abfragen von mehreren untergeordneten Sammlungseigenschaften unsinnig, ist, da Sie eine Vereinigung aller SQL-Anweisung aus EF abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c7e18-118">In a relational database, querying multiple child collection properties is awful, because you get a UNION ALL SQL statement back from EF.</span></span> <span data-ttu-id="c7e18-119">Mit der gleichen Domänenmodell für relationale Datenbanken oder NoSQL-Datenbanken ist nicht einfach, und Sie sollten nicht versuchen.</span><span class="sxs-lookup"><span data-stu-id="c7e18-119">Having the same domain model for relational databases or NoSQL databases is not simple, and you should not try it.</span></span> <span data-ttu-id="c7e18-120">Sie haben sich tatsächlich so entwerfen Sie Ihr Modell mit einem Überblick darüber, wie die Daten in jeder bestimmte Datenbank verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="c7e18-120">You really have to design your model with an understanding of how the data is going to be used in each particular database.</span></span>
+<span data-ttu-id="575c2-117">So ist es in einer dokumentorientierten Datenbank beispielsweise in Ordnung, wenn ein Aggregatstamm über mehrere untergeordnete Sammlungseigenschaften verfügt.</span><span class="sxs-lookup"><span data-stu-id="575c2-117">For example, in a document-oriented database, it is okay for an aggregate root to have multiple child collection properties.</span></span> <span data-ttu-id="575c2-118">In einer relationalen Datenbank ist das Abfragen mehrerer untergeordneter Sammlungseigenschaften unsinnig, da EF die SQL-Anweisung UNION ALL an Sie zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="575c2-118">In a relational database, querying multiple child collection properties is awful, because you get a UNION ALL SQL statement back from EF.</span></span> <span data-ttu-id="575c2-119">Über dasselbe Domänenmodell für relationale Datenbanken oder NoSQL-Datenbanken zu verfügen, ist nicht einfach. Sie sollten es nicht ausprobieren.</span><span class="sxs-lookup"><span data-stu-id="575c2-119">Having the same domain model for relational databases or NoSQL databases is not simple, and you should not try it.</span></span> <span data-ttu-id="575c2-120">Sie müssen Ihr eigenes Modell entwerfen und dabei verstehen, wie die Daten in den einzelnen Datenbanken verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="575c2-120">You really have to design your model with an understanding of how the data is going to be used in each particular database.</span></span>
 
-<span data-ttu-id="c7e18-121">Ein Vorteil bei Verwendung von NoSQL-Datenbanken ist, dass die Entitäten mehr denormalisierten, Sie sollte daher nicht die Zuordnung zu einer Tabelle.</span><span class="sxs-lookup"><span data-stu-id="c7e18-121">A benefit when using NoSQL databases is that the entities are more denormalized, so you do not set a table mapping.</span></span> <span data-ttu-id="c7e18-122">Ihre Domänenmodell kann flexibler als bei Verwendung einer relationalen Datenbank sein.</span><span class="sxs-lookup"><span data-stu-id="c7e18-122">Your domain model can be more flexible than when using a relational database.</span></span>
+<span data-ttu-id="575c2-121">Ein Vorteil bei der Verwendung von NoSQL-Datenbanken besteht darin, dass die Entitäten denormalisierter sind und Sie daher keine Tabellenzuordnung festlegen.</span><span class="sxs-lookup"><span data-stu-id="575c2-121">A benefit when using NoSQL databases is that the entities are more denormalized, so you do not set a table mapping.</span></span> <span data-ttu-id="575c2-122">Ihr Domänenmodell kann flexibler als bei der Verwendung einer relationalen Datenbank sein.</span><span class="sxs-lookup"><span data-stu-id="575c2-122">Your domain model can be more flexible than when using a relational database.</span></span>
 
-<span data-ttu-id="c7e18-123">Wenn Sie entwerfen Ihre Domänenmodell basierend auf den Aggregate, um NoSQL verschieben und dokumentorientiert Datenbanken möglicherweise noch einfacher als die Verwendung einer relationalen Datenbank, die Aggregate, die Sie entwerfen ähneln serialisiert Dokumente in einer Datenbank dokumentorientiert.</span><span class="sxs-lookup"><span data-stu-id="c7e18-123">When you design your domain model based on aggregates, moving to NoSQL and document-oriented databases might be even easier than using a relational database, because the aggregates you design are similar to serialized documents in a document-oriented database.</span></span> <span data-ttu-id="c7e18-124">Dann können Sie in diesen "Sammlungen" alle Informationen einschließen, die Sie für das Aggregat eventuell.</span><span class="sxs-lookup"><span data-stu-id="c7e18-124">Then you can include in those “bags” all the information you might need for that aggregate.</span></span>
+<span data-ttu-id="575c2-123">Wenn Sie Ihr Domänenmodell basierend auf Aggregaten entwerfen, ist der Wechsel zu NoSQL- und dokumentorientierten Datenbanken möglicherweise einfacher als die Verwendung einer relationalen Datenbank, da die von Ihnen entworfenen Aggregate mit serialisierten Dokumenten in einer dokumentorientierten Datenbank vergleichbar sind.</span><span class="sxs-lookup"><span data-stu-id="575c2-123">When you design your domain model based on aggregates, moving to NoSQL and document-oriented databases might be even easier than using a relational database, because the aggregates you design are similar to serialized documents in a document-oriented database.</span></span> <span data-ttu-id="575c2-124">In diesen Sammlungen können Sie anschließend alle Informationen einschließen, die Sie für dieses Aggregat gebrauchen könnten.</span><span class="sxs-lookup"><span data-stu-id="575c2-124">Then you can include in those “bags” all the information you might need for that aggregate.</span></span>
 
-<span data-ttu-id="c7e18-125">Der folgende JSON-Code wird z. B. eine beispielimplementierung eines Aggregats Reihenfolge aus, bei Verwendung einer Datenbank dokumentorientiert.</span><span class="sxs-lookup"><span data-stu-id="c7e18-125">For instance, the following JSON code is a sample implementation of an order aggregate when using a document-oriented database.</span></span> <span data-ttu-id="c7e18-126">Es ähnelt der aggregierten Reihenfolge, die wir im eShopOnContainers Beispiel, jedoch ohne Verwendung von EF Core unterhalb implementiert.</span><span class="sxs-lookup"><span data-stu-id="c7e18-126">It is similar to the order aggregate we implemented in the eShopOnContainers sample, but without using EF Core underneath.</span></span>
+<span data-ttu-id="575c2-125">Bei dem folgenden JSON-Code handelt es sich beispielsweise um die Beispielimplementierung des Aggregats „Order“ bei der Verwendung einer dokumentorientierten Datenbank.</span><span class="sxs-lookup"><span data-stu-id="575c2-125">For instance, the following JSON code is a sample implementation of an order aggregate when using a document-oriented database.</span></span> <span data-ttu-id="575c2-126">Er ist mit dem Aggregat „Order“ vergleichbar, das im „eShopOnContainers“-Beispiel implementiert wurde, jedoch ohne die untergeordnete Verwendung von EF Core.</span><span class="sxs-lookup"><span data-stu-id="575c2-126">It is similar to the order aggregate we implemented in the eShopOnContainers sample, but without using EF Core underneath.</span></span>
 
 ```json
 {
@@ -55,15 +58,21 @@ ms.lasthandoff: 10/22/2017
 }
 ```
 
-<span data-ttu-id="c7e18-127">Bei Verwendung von C\# Modell, das Aggregat von etwa wie das Azure Cosmos-DB-SDK, das Aggregat zu verwendende Implementierung ähnelt C\# POCO-Klassen, die mit EF Core verwendet.</span><span class="sxs-lookup"><span data-stu-id="c7e18-127">When you use a C\# model to implement the aggregate to be used by something like the Azure Cosmos DB SDK, the aggregate is similar to the C\# POCO classes used with EF Core.</span></span> <span data-ttu-id="c7e18-128">Der Unterschied besteht darin, die Möglichkeit, ihren Einsatz aus dem die Anwendung und Infrastruktur Ebenen, wie im folgenden Code:</span><span class="sxs-lookup"><span data-stu-id="c7e18-128">The difference is in the way to use them from the application and infrastructure layers, as in the following code:</span></span>
+## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a><span data-ttu-id="575c2-127">Einführung in Azure Cosmos DB und die native Cosmos DB-API</span><span class="sxs-lookup"><span data-stu-id="575c2-127">Introduction to Azure Cosmos DB and the native Cosmos DB API</span></span>
+
+<span data-ttu-id="575c2-128">[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) ist der globale verteilte Datenbankdienst von Microsoft für unternehmenskritische Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="575c2-128">[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) is Microsoft's globally distributed database service for mission-critical applications.</span></span> <span data-ttu-id="575c2-129">Azure Cosmos DB stellt eine [sofort einsatzfähige globale Verteilung](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), weltweit eine [elastische Skalierung von Durchsatz und Speicher](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data), Latenzen im einstelligen Millisekundenbereich im 99. Perzentil, [fünf richtig definierte Konsistenzebenen](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels) und garantierte Hochverfügbarkeit bereit. Dies alles wird durch [branchenführende SLAs](https://azure.microsoft.com/support/legal/sla/cosmos-db/) gewährleistet.</span><span class="sxs-lookup"><span data-stu-id="575c2-129">Azure Cosmos DB provides [turn-key global distribution](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), [elastic scaling of throughput and storage](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data) worldwide, single-digit millisecond latencies at the 99th percentile, [five well-defined consistency levels](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels), and guaranteed high availability, all backed by [industry-leading SLAs](https://azure.microsoft.com/support/legal/sla/cosmos-db/).</span></span> <span data-ttu-id="575c2-130">Azure Cosmos DB [indiziert automatisch Daten](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf), ohne dass Sie sich mit der Schema- und Indexverwaltung auseinandersetzen müssen.</span><span class="sxs-lookup"><span data-stu-id="575c2-130">Azure Cosmos DB [automatically indexes data](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) without requiring you to deal with schema and index management.</span></span> <span data-ttu-id="575c2-131">Die Datenbank umfasst mehrere Modelle und unterstützt Dokument-, Schlüsselwert-, Graph- sowie einspaltige Datenmodelle.</span><span class="sxs-lookup"><span data-stu-id="575c2-131">It is multi-model and supports document, key-value, graph, and columnar data models.</span></span>
+
+<span data-ttu-id="575c2-132">![](./media/image19.1.png) Abbildung 9-19.</span><span class="sxs-lookup"><span data-stu-id="575c2-132">![](./media/image19.1.png) Figure 9-19.</span></span> <span data-ttu-id="575c2-133">Globale Verteilung von Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="575c2-133">Azure Cosmos DB global distribution</span></span>
+
+<span data-ttu-id="575c2-134">Bei der Verwendung eines C\#-Modells zur Implementierung des Aggregats, das von der Azure Cosmos DB-API verwendet werden soll, kann das Aggregat mit den in EF Core verwendeten C\#-POCO-Klassen vergleichbar sein.</span><span class="sxs-lookup"><span data-stu-id="575c2-134">When you use a C\# model to implement the aggregate to be used by the Azure Cosmos DB API, the aggregate can be similar to the C\# POCO classes used with EF Core.</span></span> <span data-ttu-id="575c2-135">Der Unterschied besteht darin, wie diese auf der Anwendungs- und der Infrastrukturebene verwendet werden. Dies wird im folgenden Code veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="575c2-135">The difference is in the way to use them from the application and infrastructure layers, as in the following code:</span></span>
 
 ```csharp
-// C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH DOCUMENTDB API
+// C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
 // Then, use AggregateRoot’s methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
-// This can be saved as JSON as is without converting into rows/columns.
+
 Order orderAggregate = new Order
 {
     Id = "2017001",
@@ -82,6 +91,7 @@ Address address = new Address
 }
 
 orderAggregate.UpdateAddress(address);
+
 OrderItem orderItem1 = new OrderItem
 {
     Id = 20170011,
@@ -92,27 +102,16 @@ OrderItem orderItem1 = new OrderItem
     Discount = 0;
 };
 
-OrderItem orderItem2 = new OrderItem
-{
-    Id = 20170012,
-    ProductId = "123457",
-    ProductName = ".NET Mug",
-    UnitPrice = 15,
-    Units = 1,
-    Discount = 0;
-};
-
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
 orderAggregate.AddOrderItem(orderItem2);
-
 // *** End of Domain Model Code ***
-//...
+
 // *** Infrastructure Code using Cosmos DB Client API ***
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
-await client.CreateDocumentAsync(collectionUri, order);
+await client.CreateDocumentAsync(collectionUri, orderAggregate);
 
 // As your app evolves, let's say your object has a new schema. You can insert
 // OrderV2 objects without any changes to the database tier.
@@ -120,23 +119,230 @@ Order2 newOrder = GetOrderV2Sample("IdForSalesOrder2");
 await client.CreateDocumentAsync(collectionUri, newOrder);
 ```
 
-<span data-ttu-id="c7e18-129">Sie können sehen, dass die Möglichkeit, die Arbeit mit Ihrem Domänenmodell ähnlich wie bei Sie es in Ihrer Domäne der Ebene verwenden sein können, wenn die Infrastruktur EF ist.</span><span class="sxs-lookup"><span data-stu-id="c7e18-129">You can see that the way you work with your domain model can be similar to the way you use it in your domain model layer when the infrastructure is EF.</span></span> <span data-ttu-id="c7e18-130">Sie verwenden weiterhin die gleichen aggregieren Stamm-Methoden, um Konsistenz Invarianten und Überprüfungen in das Aggregat sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="c7e18-130">You still use the same aggregate root methods to ensure consistency, invariants, and validations within the aggregate.</span></span>
+<span data-ttu-id="575c2-136">Sie können sehen, dass die Art und Weise, in der Sie mit Ihrem Domänenmodell arbeiten, mit der Verwendungsweise auf der Ebene Ihres Domänenmodells vergleichbar ist, wenn EF die Infrastruktur ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-136">You can see that the way you work with your domain model can be similar to the way you use it in your domain model layer when the infrastructure is EF.</span></span> <span data-ttu-id="575c2-137">Sie verwenden weiterhin die gleichen Aggregatstammmethoden, um Konsistenz, Invarianten und Validierungen innerhalb des Aggregats sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="575c2-137">You still use the same aggregate root methods to ensure consistency, invariants, and validations within the aggregate.</span></span>
 
-<span data-ttu-id="c7e18-131">Jedoch beibehalten, wenn Sie das Modell in der NoSQL-Datenbank, den Code und API ändern sich im Vergleich zu EF Kerncode oder anderen Code, die im Zusammenhang mit relationalen Datenbanken.</span><span class="sxs-lookup"><span data-stu-id="c7e18-131">However, when you persist your model into the NoSQL database, the code and API change dramatically compared to EF Core code or any other code related to relational databases.</span></span>
+<span data-ttu-id="575c2-138">Wenn Sie Ihr Modell jedoch dauerhaft in der NoSQL-Datenbank speichern, führt dies zu einer wesentlichen Änderung des Codes und der API im Vergleich zu EF Core-Code oder einem beliebigen anderen Code für relationale Datenbanken.</span><span class="sxs-lookup"><span data-stu-id="575c2-138">However, when you persist your model into the NoSQL database, the code and API change dramatically compared to EF Core code or any other code related to relational databases.</span></span>
 
-#### <a name="additional-resources"></a><span data-ttu-id="c7e18-132">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="c7e18-132">Additional resources</span></span>
+## <a name="implementing-net-code-targeting-mongodb-and-azure-cosmos-db"></a><span data-ttu-id="575c2-139">Implementieren von .NET-Code für MongoDB und Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="575c2-139">Implementing .NET code targeting MongoDB and Azure Cosmos DB</span></span>
 
--   <span data-ttu-id="c7e18-133">**Modellieren von Daten in DocumentDB**
-    [*https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data*](https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data)</span><span class="sxs-lookup"><span data-stu-id="c7e18-133">**Modeling data in DocumentDB**
-[*https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data*](https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data)</span></span>
+### <a name="using-azure-cosmos-db-from-net-containers"></a><span data-ttu-id="575c2-140">Verwenden von Azure Cosmos DB über .NET-Container</span><span class="sxs-lookup"><span data-stu-id="575c2-140">Using Azure Cosmos DB from .NET containers</span></span>
 
--   <span data-ttu-id="c7e18-134">**Vaughn Vernon. Die ideale Domain Driven Design Aggregat Store? ** 
-     [ *https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)</span><span class="sxs-lookup"><span data-stu-id="c7e18-134">**Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store?**
+<span data-ttu-id="575c2-141">Sie können über .NET-Code, der in Containern ausgeführt wird, auf Azure Cosmos DB-Datenbanken genau wie über eine beliebige andere .NET-Anwendung zugreifen.</span><span class="sxs-lookup"><span data-stu-id="575c2-141">You can access Azure Cosmos DB databases from .NET code running in containers, like from any other .NET application.</span></span> <span data-ttu-id="575c2-142">Die Microservices „Locations.API“ und „Marketing.API“ in eShopOnContainers werden beispielsweise implementiert, damit sie Azure Cosmos DB-Datenbanken verwenden können.</span><span class="sxs-lookup"><span data-stu-id="575c2-142">For instance, the Locations.API and Marketing.API microservices in eShopOnContainers are implemented so they can consume Azure Cosmos DB databases.</span></span>
+
+<span data-ttu-id="575c2-143">Aus der Sicht einer Docker-Entwicklungsumgebung gibt es in Azure Cosmos DB jedoch eine Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="575c2-143">However, there’s a limitation in Azure Cosmos DB from a Docker development environment point of view.</span></span> <span data-ttu-id="575c2-144">Es ist zwar ein lokaler [Azure Cosmos DB-Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) vorhanden, der auf einem lokalen Entwicklungscomputer (z.B. auf einem PC) ausgeführt werden kann, seit Ende 2017 unterstützt dieser jedoch nur noch Windows, nicht Linux.</span><span class="sxs-lookup"><span data-stu-id="575c2-144">Even when there’s a on-premises [Azure Cosmos DB Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) able to run in a local development machine (like a PC), as of late 2017, it just supports Windows, not Linux.</span></span> 
+
+<span data-ttu-id="575c2-145">Dieser Emulator kann auch in Docker ausgeführt werden, allerdings nur in Windows-Containern, nicht in Linux-Containern.</span><span class="sxs-lookup"><span data-stu-id="575c2-145">There is also the possibility to run this emulator on Docker, but just on Windows Containers with the , not Linux Containers.</span></span> <span data-ttu-id="575c2-146">Dies ist ein anfängliches Handicap für die Entwicklungsumgebung, wenn Ihre Anwendung in Linux-Containern bereitgestellt wird, da eine gleichzeitige Bereitstellung von Linux- und Windows-Containern in Docker für Windows derzeit nicht möglich ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-146">That is an initial handicap for the development environment if your application is deployed as Linux containers, since, currently, you cannot deploy Linux and Windows Containers on Docker for Windows at the same time.</span></span> <span data-ttu-id="575c2-147">Alle bereitgestellten Container müssen entweder für Linux oder für Windows bestimmt sein.</span><span class="sxs-lookup"><span data-stu-id="575c2-147">Either all containers being deployed have to be for Linux or for Windows.</span></span>  
+
+<span data-ttu-id="575c2-148">Der ideale und einfachere Weg zur Bereitstellung für eine Entwicklungs-/Testlösung besteht darin, Ihre Datenbanksysteme zusammen mit Ihren benutzerdefinierten Containern als Container bereitzustellen, damit Ihre Entwicklungs-/Testumgebungen immer konsistent sind.</span><span class="sxs-lookup"><span data-stu-id="575c2-148">The ideal and more straightforward deployment for a dev/test solution is to be able to deploy your database systems as containers along with your custom containers so your dev/test environments are always consistent.</span></span>
+
+### <a name="use-mongodb-api-for-local-devtest-linuxwindows-containers-plus-azure-cosmos-db"></a><span data-ttu-id="575c2-149">Verwenden der MongoDB-API für lokale Entwicklungs-/Testcontainer unter Linux/Windows plus Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="575c2-149">Use MongoDB API for local dev/test Linux/Windows containers plus Azure Cosmos DB</span></span>
+
+<span data-ttu-id="575c2-150">Cosmos DB-Datenbanken unterstützen die MongoDB-API für .NET sowie das native MongoDB Wire Protocol.</span><span class="sxs-lookup"><span data-stu-id="575c2-150">Cosmos DB databases support MongoDB API for .NET as well as the native MongoDB wire protocol.</span></span> <span data-ttu-id="575c2-151">Dieses bedeutet, dass Ihre für MongoDB geschriebene Anwendung unter Verwendung vorhandener Treiber jetzt wie in Abbildung 9-20 dargestellt mit Cosmos DB kommunizieren und Cosmos DB-Datenbanken anstelle von MongoDB-Datenbanken verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="575c2-151">This means that by using existing drivers, your application written for MongoDB can now communicate with Cosmos DB and use Cosmos DB databases instead of MongoDB databases, as shown in Figure 9-20.</span></span>
+
+<span data-ttu-id="575c2-152">![](./media/image19.2.png) Abbildung 9-20.</span><span class="sxs-lookup"><span data-stu-id="575c2-152">![](./media/image19.2.png) Figure 9-20.</span></span> <span data-ttu-id="575c2-153">Verwenden der API und des Protokolls von MongoDB für den Zugriff auf Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="575c2-153">Using MongoDB API and protocol to access Azure Cosmos DB</span></span>
+
+<span data-ttu-id="575c2-154">Dies ist ein sehr praktischer Ansatz für Proof of Concepts in Docker-Umgebungen mit Linux-Containern, da es sich bei dem [MongoDB-Docker-Image](https://hub.docker.com/r/_/mongo/) um ein Image für mehrere Architekturen handelt, das Linux- und Windows-basierte Docker-Container unterstützt.</span><span class="sxs-lookup"><span data-stu-id="575c2-154">This is a very convenient approach for proof of concepts in Docker environments with Linux containers because the [MongoDB Docker image](https://hub.docker.com/r/_/mongo/) is a multi-arch image that supports Docker Linux containers and Docker Windows containers.</span></span>
+
+<span data-ttu-id="575c2-155">Wie in Abbildung 9-21 zu sehen ist, unterstützt eShopOnContainers unter Verwendung der MongoDB-API Linux- und Windows-basierte MongoDB-Container in der lokalen Entwicklungsumgebung. Anschließend können Sie jedoch zu der skalierbaren PaaS-Cloudlösung Azure Cosmos DB wechseln, indem Sie [die MongoDB-Verbindungszeichenfolge einfach so ändern, dass diese auf Azure Cosmos DB verweist](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account).</span><span class="sxs-lookup"><span data-stu-id="575c2-155">As shown in the image 9-21, by using the MongoDB API, eShopOnContainers supports MongoDB Linux and Windows containers for the local development environment but then, you can move to a scalable, PaaS cloud solution as Azure Cosmos DB by simply [changing the MongoDB connection string to point to Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account).</span></span> 
+
+<span data-ttu-id="575c2-156">![](./media/image20-bis.png) Abbildung 9-21.</span><span class="sxs-lookup"><span data-stu-id="575c2-156">![](./media/image20-bis.png) Figure 9-21.</span></span> <span data-ttu-id="575c2-157">eShopOnContainers mit MongoDB-Containern für die Entwicklungsumgebung oder Azure Cosmos DB für die Produktion</span><span class="sxs-lookup"><span data-stu-id="575c2-157">eShopOnContainers using MongoDB containers for dev-env or Azure Cosmos DB for production</span></span>
+
+<span data-ttu-id="575c2-158">Azure Cosmos DB für die Produktion würde in der Azure-Cloud als PaaS und als skalierbarer Dienst ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="575c2-158">The production Azure Cosmos DB would be running in Azure’s cloud as a PaaS and scalable service.</span></span>
+
+<span data-ttu-id="575c2-159">Ihre benutzerdefinierten .NET Core-Container können auf einem lokalen Docker-Entwicklungshost ausgeführt werden (das heißt, Docker für Windows wird auf einem Computer mit Windows 10 verwendet) oder in einer Produktionsumgebung wie Kubernetes in Azure AKS oder Azure Service Fabric bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="575c2-159">Your custom .NET Core containers can run on a local development Docker host (that is using Docker for Windows in a Windows 10 machine) or be deployed into a production environment, like Kubernetes in Azure AKS or Azure Service Fabric.</span></span> <span data-ttu-id="575c2-160">In dieser zweiten Umgebung würden Sie nur die benutzerdefinierten .NET Core-Container, jedoch nicht die MongoDB-Container bereitstellen, da Sie Azure Cosmos DB in der Cloud für die Verwaltung der Daten in der Produktion verwenden würden.</span><span class="sxs-lookup"><span data-stu-id="575c2-160">In this second environment, you would deploy only the .NET Core custom containers but not the MongoDB container since you’d be using Azure Cosmos DB in the cloud for handling the data in production.</span></span>
+
+<span data-ttu-id="575c2-161">Ein klarer Vorteil bei der Verwendung der MongoDB-API besteht darin, dass Ihre Lösung in beiden Datenbank-Engines (MongoDB oder Azure Cosmos DB) ausgeführt werden könnte, sodass Migrationen in verschiedenen Umgebungen problemlos durchgeführt werden könnten.</span><span class="sxs-lookup"><span data-stu-id="575c2-161">A clear benefit of using the MongoDB API is that your solution could run in both database engines, MongoDB or Azure Cosmos DB, so migrations to different environments should be easy.</span></span> <span data-ttu-id="575c2-162">Manchmal ist es jedoch sinnvoll, eine native API (in diesem Fall die native Cosmos DB-API) zu verwenden, um die Funktionen einer bestimmten Datenbank-Engine optimal nutzen zu können.</span><span class="sxs-lookup"><span data-stu-id="575c2-162">However, sometimes it is worthwhile to use a native API (that is the native Cosmos DB API) in order to take full advantage of the capabilities of a specific database engine.</span></span>
+
+<span data-ttu-id="575c2-163">Informationen zum weiteren Vergleich zwischen der einfachen Verwendung von MongoDB im Vergleich zu Cosmos DB in der Cloud finden Sie auf dieser Seite unter [Benefits of using Azure Cosmos DB in this page (Vorteile der Verwendung von Azure Cosmos DB)](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction).</span><span class="sxs-lookup"><span data-stu-id="575c2-163">For further comparison between simply using MongoDB versus Cosmos DB in the cloud, see the [Benefits of using Azure Cosmos DB in this page](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction).</span></span> 
+
+
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a><span data-ttu-id="575c2-164">Analysieren Ihres Ansatzes für Produktionsanwendungen: Vergleich zwischen der MongoDB-API und der Cosmos DB-API</span><span class="sxs-lookup"><span data-stu-id="575c2-164">Analyze your approach for production applications: MongoDB API vs. Cosmos DB API</span></span>
+
+<span data-ttu-id="575c2-165">In eShopOnContainers wird die MongoDB-API verwendet, da die Priorität im Wesentlichen darauf liegt, über eine konsistente Entwicklungs-/Testumgebung zu verfügen, in der eine NoSQL-Datenbank verwendet wird, die auch in Azure Cosmos DB eingesetzt werden könnte.</span><span class="sxs-lookup"><span data-stu-id="575c2-165">In eShopOnContainers, we’re using MongoDB API because our priority was fundamentally to have a consistent dev/test environment using a NoSQL database that could also work with Azure Cosmos DB.</span></span>
+
+<span data-ttu-id="575c2-166">Wenn Sie die Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB in Azure für Produktionsanwendungen planen, sollten Sie jedoch die Unterschiede in den Funktionen und der Leistung bei der Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB-Datenbanken verglichen mit der Verwendung der nativen Azure Cosmos DB-API analysieren.</span><span class="sxs-lookup"><span data-stu-id="575c2-166">However, if you planning to use MongoDB API to access Azure Cosmos DB in Azure for production applications, you should analyze the differences in capabilities and performance when using MongoDB API to access Azure Cosmos DB databases compared to using the native Azure Cosmos DB API.</span></span> <span data-ttu-id="575c2-167">Wenn Funktionen und Leistung vergleichbar sind, können Sie die MongoDB-API verwenden und den Vorteil genießen, dass zwei NoSQL-Datenbank-Engines gleichzeitig unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="575c2-167">If it is similar you can use MongoDB API, and you get the benefit of supporting two NoSQL database engines at the same time.</span></span> 
+
+<span data-ttu-id="575c2-168">Alternativ könnten Sie auch MongoDB-Cluster mit dem [MongoDB-Azure-Dienst](https://www.mongodb.com/scale/mongodb-azure-service) als Produktionsdatenbank in der Azure-Cloud verwenden.</span><span class="sxs-lookup"><span data-stu-id="575c2-168">You could also use MongoDB clusters as the production database in Azure’s cloud, too, with [MongoDB Azure Service](https://www.mongodb.com/scale/mongodb-azure-service).</span></span> <span data-ttu-id="575c2-169">Dies ist jedoch kein von Microsoft bereitgestellter PaaS-Dienst.</span><span class="sxs-lookup"><span data-stu-id="575c2-169">But that is not a PaaS service provided by Microsoft.</span></span> <span data-ttu-id="575c2-170">In diesem Fall hostet Azure lediglich diese Lösung aus MongoDB.</span><span class="sxs-lookup"><span data-stu-id="575c2-170">In this case, Azure is just hosting that solution coming from MongoDB.</span></span>
+
+<span data-ttu-id="575c2-171">Im Wesentlichen ist dies nur ein Haftungsausschluss, in dem darauf hingewiesen wird, dass Sie die Verwendung der MongoDB-API nicht immer der Verwendung von Azure Cosmos DB vorziehen sollten. In eShopOnContainers wurde dies durchgeführt, weil es sich dabei um eine praktische Wahl für Linux-Container handelt.</span><span class="sxs-lookup"><span data-stu-id="575c2-171">Basically, this is just a disclaimer stating that you shouldn’t always use MongoDB API against Azure Cosmos DB, as we did in eShopOnContainers because it was a convenient choice for Linux containers.</span></span> <span data-ttu-id="575c2-172">Grundlage der Entscheidung sollten die spezifischen Anforderungen und Tests sein, die Sie für Ihre Produktionsanwendung durchführen müssen.</span><span class="sxs-lookup"><span data-stu-id="575c2-172">The decision should be based on the specific needs and tests you need to do for your production application.</span></span>  
+
+### <a name="the-code-using-mongodb-api-in-net-core-applications"></a><span data-ttu-id="575c2-173">Der Code: Verwendung der MongoDB-API in .NET Core-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="575c2-173">The code: Using MongoDB API in .NET Core applications</span></span>
+
+<span data-ttu-id="575c2-174">Die MongoDB-API für .NET basiert auf NuGet-Paketen, die Sie zu Ihren Projekten hinzufügen müssen, wie das in Abbildung 9-22 dargestellte Paket „Locations.API“.</span><span class="sxs-lookup"><span data-stu-id="575c2-174">MongoDB API for .NET is based on NuGet packages that you need to add to your projects, like the Locations.API shown in Figure 9-22.</span></span>
+
+<span data-ttu-id="575c2-175">![](./media/image21-bis.png) Abbildung 9-22.</span><span class="sxs-lookup"><span data-stu-id="575c2-175">![](./media/image21-bis.png) Figure 9-22.</span></span> <span data-ttu-id="575c2-176">Verweise auf NuGet-Pakete in der MongoDB-API in einem .NET Core-Projekt</span><span class="sxs-lookup"><span data-stu-id="575c2-176">MongoDB API NuGet packages references in a .NET Core project</span></span>
+
+<span data-ttu-id="575c2-177">In den folgenden Abschnitten wird der Code untersucht.</span><span class="sxs-lookup"><span data-stu-id="575c2-177">Let's investigate the code in the following sections.</span></span>
+
+#### <a name="a-model-used-by-mongodb-api"></a><span data-ttu-id="575c2-178">Ein von der MongoDB-API verwendetes Modell</span><span class="sxs-lookup"><span data-stu-id="575c2-178">A Model used by MongoDB API</span></span>
+
+<span data-ttu-id="575c2-179">Zunächst müssen Sie ein Modell definieren, das die Daten enthält, die aus der Datenbank den Speicherplatz Ihrer Anwendung belegen.</span><span class="sxs-lookup"><span data-stu-id="575c2-179">First, you need to define a model that will hold the data coming from the database in your application’s memory space.</span></span> <span data-ttu-id="575c2-180">Im Folgenden sehen Sie ein Beispiel für das Modell, das in eShopOnContainers für „Locations“ verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="575c2-180">Here’s an example of the model used for Locations at eShopOnContainers.</span></span>
+
+```csharp
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver.GeoJsonObjectModel;
+using System.Collections.Generic;
+
+public class Locations
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public int LocationId { get; set; }
+    public string Code { get; set; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Parent_Id { get; set; }
+    public string Description { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+                                                             { get; private set; }
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+                                                             { get; private set; }
+    public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+                                                    => SetPolygon(coordinatesList);
+
+    private void SetPosition(double lon, double lat)
+    {
+        Latitude = lat;
+        Longitude = lon;
+        Location = new GeoJsonPoint<GeoJson2DGeographicCoordinates>(
+            new GeoJson2DGeographicCoordinates(lon, lat));
+    }
+
+    private void SetPolygon(List<GeoJson2DGeographicCoordinates> coordinatesList)
+    {
+        Polygon = new GeoJsonPolygon<GeoJson2DGeographicCoordinates>(
+                  new GeoJsonPolygonCoordinates<GeoJson2DGeographicCoordinates>(
+                  new GeoJsonLinearRingCoordinates<GeoJson2DGeographicCoordinates>(
+                                                                 coordinatesList)));
+    }
+}
+```
+
+<span data-ttu-id="575c2-181">Sie können sehen, dass einige Attribute und Typen aus den NuGet-Paketen von MongoDB stammen.</span><span class="sxs-lookup"><span data-stu-id="575c2-181">You can see there are a few attributes and types coming from the MongoDB NuGet packages.</span></span>
+
+<span data-ttu-id="575c2-182">NoSQL-Datenbanken eignen sich in der Regel sehr gut für die Arbeit mit nicht relationalen hierarchischen Daten.</span><span class="sxs-lookup"><span data-stu-id="575c2-182">NoSQL databases are usually very well suited for working with non-relational hierarchical data.</span></span> <span data-ttu-id="575c2-183">In diesem Beispiel verwenden wir MongoDB-Typen, die speziell für geografische Standorte erstellt wurden, wie z.B. `GeoJson2DGeographicCoordinates`.</span><span class="sxs-lookup"><span data-stu-id="575c2-183">In this example, we are using MongoDB types expecially made for geo-locations, like `GeoJson2DGeographicCoordinates`.</span></span>
+
+#### <a name="retrieve-the-database-and-the-collection"></a><span data-ttu-id="575c2-184">Abrufen von Datenbank und Sammlung</span><span class="sxs-lookup"><span data-stu-id="575c2-184">Retrieve the database and the collection</span></span>
+
+<span data-ttu-id="575c2-185">In eShopOnContainers wurde ein benutzerdefinierter Datenbankkontext erstellt, in dem der Code implementiert wurde, um die Datenbank und die MongoCollections abzurufen. Dies wird im folgenden Code dargestellt.</span><span class="sxs-lookup"><span data-stu-id="575c2-185">In eShopOnContainers, we have created a custom database context where we implement the code to retrieve the database and the MongoCollections, as in the following code.</span></span>
+
+```csharp
+public class LocationsContext
+{
+    private readonly IMongoDatabase _database = null;
+
+    public LocationsContext(IOptions<LocationSettings> settings)
+    {
+        var client = new MongoClient(settings.Value.ConnectionString);
+        if (client != null)
+            _database = client.GetDatabase(settings.Value.Database);
+    }
+
+    public IMongoCollection<Locations> Locations
+    {
+        get
+        {
+            return _database.GetCollection<Locations>("Locations");
+        }
+    }       
+}
+```
+
+#### <a name="retrieve-the-data"></a><span data-ttu-id="575c2-186">Abrufen der Daten</span><span class="sxs-lookup"><span data-stu-id="575c2-186">Retrieve the data</span></span>
+
+<span data-ttu-id="575c2-187">In C#-Code, wie z.B. Web-API-Controllern oder der Implementierung benutzerdefinierter Repositorys, können Sie bei der Abfrage über die MongoDB-API Code schreiben, der mit dem folgenden Code vergleichbar ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-187">In C# code, like Web API controllers or custom Repositories implementation, you can write similar code to the following when querying through the MongoDB API.</span></span> <span data-ttu-id="575c2-188">Beachten Sie, dass das Objekt `_context` eine Instanz der vorherigen Klasse `LocationsContext` ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-188">Note that the `_context` object is an instance of the previous `LocationsContext` class.</span></span>
+
+```csharp
+public async Task<Locations> GetAsync(int locationId)
+{
+    var filter = Builders<Locations>.Filter.Eq("LocationId", locationId);
+    return await _context.Locations
+                            .Find(filter)
+                            .FirstOrDefaultAsync();
+}
+```
+
+#### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a><span data-ttu-id="575c2-189">Verwenden einer Umgebungsvariable in der Datei „docker-compose.override.yml“ für die MongoDB-Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="575c2-189">Use an env-var in the docker-compose.override.yml file for the MongoDB connection string</span></span>
+
+<span data-ttu-id="575c2-190">Bei der Erstellung eines MongoClient-Objekts ist ein grundlegender Parameter erforderlich, genau genommen der Parameter `ConnectionString`, der auf die korrekte Datenbank verweist.</span><span class="sxs-lookup"><span data-stu-id="575c2-190">When creating a MongoClient object, it needs a fundamental parameter which is precisely the `ConnectionString` parameter pointing to the right database.</span></span> <span data-ttu-id="575c2-191">Bei eShopOnContainers kann die Verbindungszeichenfolge auf einen lokalen MongoDB-Docker-Container oder auf eine „Produktionsdatenbank“ in Azure Cosmos DB verweisen.</span><span class="sxs-lookup"><span data-stu-id="575c2-191">In the case of eShopOnContainers, the connection string can point to a local MongoDB Docker container or to a “production” Azure Cosmos DB database.</span></span>  <span data-ttu-id="575c2-192">Diese Verbindungszeichenfolge ergibt sich aus den Umgebungsvariablen, die in den Dateien `docker-compose.override.yml` definiert sind. Diese werden bei der Bereitstellung mit „docker-compose“ oder Visual Studio verwendet, wie im folgenden YML-Code zu sehen ist.</span><span class="sxs-lookup"><span data-stu-id="575c2-192">That connection string comes from the environment variables defined in the `docker-compose.override.yml` files used when deploying with docker-compose or Visual Studio, as in the following yml code.</span></span>
+
+```yml
+# docker-compose.override.yml
+version: '3'
+services:
+  # Other services
+  locations.api:
+    environment:
+      # Other settings
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+
+```
+
+<span data-ttu-id="575c2-193">Die Umgebungsvariable `ConnectionString` wird wie folgt aufgelöst: Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` in der Datei `.env` mit der Azure Cosmos DB-Verbindungszeichenfolge definiert wird, verwendet sie diese für den Zugriff auf die Azure Cosmos DB-Datenbank in der Cloud.</span><span class="sxs-lookup"><span data-stu-id="575c2-193">The `ConnectionString` environment variable is resolved this way: If the `ESHOP_AZURE_COSMOSDB` global variable is defined in the `.env` file with the Azure Cosmos DB connection string, it will use it to access the Azure Cosmos DB database in the cloud.</span></span> 
+
+<span data-ttu-id="575c2-194">Im folgenden Code wird dargestellt, wie die `.env`-Datei mit der globalen Umgebungsvariable in der Azure Cosmos DB-Verbindungszeichenfolge in eShopOnContainers implementiert wird:</span><span class="sxs-lookup"><span data-stu-id="575c2-194">The following code shows the `.env` file with the Azure Cosmos DB connection string global environment variable, as implemented in eShopOnContainers:</span></span>
+
+```yml
+# .env file, in eShopOnContainers root folder
+# Other Docker environment variables
+
+ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
+ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
+
+#ESHOP_AZURE_COSMOSDB=<YourAzureCosmosDBConnData>
+
+#Other environment variables for additional Azure infrastructure assets
+#ESHOP_AZURE_REDIS_BASKET_DB=<YourAzureRedisBasketInfo>
+#ESHOP_AZURE_STORAGE_CATALOG_URL=<YourAzureStorage_Catalog_BLOB_URL>
+#ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
+```
+
+<span data-ttu-id="575c2-195">Sie sollten die Auskommentierung in der Zeile ESHOP_AZURE_COSMOSDB aufheben und diese mit Ihrer Azure Cosmos DB-Verbindungszeichenfolge aktualisieren, die Sie über das Azure-Portal gemäß den Erläuterungen unter [Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account) abgerufen haben.</span><span class="sxs-lookup"><span data-stu-id="575c2-195">You should uncomment the ESHOP_AZURE_COSMOSDB line and update it with your Azure Cosmos DB connection string obtained from the Azure portal as explained in [Connect a MongoDB application to Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account).</span></span>
+
+<span data-ttu-id="575c2-196">Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` leer ist, sprich ihre Auskommentierung in der `.env`-Datei aufgehoben wurde, verwendet der Container eine standardmäßige MongoDB-Verbindungszeichenfolge, die auf den lokalen MongoDB-Container verweist, der in eShopOnContainers unter dem Namen `nosql.data` bereitgestellt wurde. Dies wird im folgenden YML-Code dargestellt.</span><span class="sxs-lookup"><span data-stu-id="575c2-196">If the `ESHOP_AZURE_COSMOSDB` global variable is empty, meaning that it is commented out in the `.env` file, then the container uses a default MongoDB connection string pointing to the local MongoDB container deployed in eShopOnContainers which is named `nosql.data`, as shown in the following .yml code.</span></span> 
+
+#### <a name="additional-resources"></a><span data-ttu-id="575c2-197">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="575c2-197">Additional resources</span></span>
+
+-   <span data-ttu-id="575c2-198">**Modeling document data for NoSQL databases (Modellierung von Dokumentdaten für NoSQL-Datenbanken)**
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)</span><span class="sxs-lookup"><span data-stu-id="575c2-198">**Modeling document data for NoSQL databases**
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)</span></span>
+
+-   <span data-ttu-id="575c2-199">**Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store? (Der ideale DDD-Aggregatspeicher?)**
+    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)</span><span class="sxs-lookup"><span data-stu-id="575c2-199">**Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store?**
 [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)</span></span>
 
--   <span data-ttu-id="c7e18-135">**Ein Persistenz agnostisch Ereignisspeicher für .NET.**</span><span class="sxs-lookup"><span data-stu-id="c7e18-135">**A persistence agnostic Event Store for .NET.**</span></span> <span data-ttu-id="c7e18-136">GitHub-Repository.</span><span class="sxs-lookup"><span data-stu-id="c7e18-136">GitHub repo.</span></span>
-    [<span data-ttu-id="c7e18-137">*https://github.com/NEventStore/NEventStore*</span><span class="sxs-lookup"><span data-stu-id="c7e18-137">*https://github.com/NEventStore/NEventStore*</span></span>](https://github.com/NEventStore/NEventStore)
+-   <span data-ttu-id="575c2-200">**Introduction to Azure Cosmos DB: API for MongoDB (Einführung in Azure Cosmos DB: API für MongoDB)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)</span><span class="sxs-lookup"><span data-stu-id="575c2-200">**Introduction to Azure Cosmos DB: API for MongoDB** 
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)</span></span>
+
+-   <span data-ttu-id="575c2-201">**Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal (Azure Cosmos DB: Erstellen einer MongoDB-API-Web-App mit .NET und dem Azure-Portal)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )</span><span class="sxs-lookup"><span data-stu-id="575c2-201">**Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal** 
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )</span></span>
+
+-   <span data-ttu-id="575c2-202">**Use the Azure Cosmos DB Emulator for local development and testing (Verwenden des Azure Cosmos DB-Emulators für lokale Entwicklungsarbeiten und Tests)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)</span><span class="sxs-lookup"><span data-stu-id="575c2-202">**Use the Azure Cosmos DB Emulator for local development and testing** 
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)</span></span>
+
+-   <span data-ttu-id="575c2-203">**Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)</span><span class="sxs-lookup"><span data-stu-id="575c2-203">**Connect a MongoDB application to Azure Cosmos DB** 
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)</span></span>
+
+-   <span data-ttu-id="575c2-204">**The Cosmos DB Emulator Docker image (Windows Container) (Das Docker-Image im Cosmos DB-Emulator (Windows-Container))** 
+    [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)</span><span class="sxs-lookup"><span data-stu-id="575c2-204">**The Cosmos DB Emulator Docker image (Windows Container)** 
+[*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)</span></span>
+
+-   <span data-ttu-id="575c2-205">**The MongoDB Docker image (Linux and Windows Container) (Das MongoDB-Docker-Image (Linux- und Windows-Container))** 
+    [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)</span><span class="sxs-lookup"><span data-stu-id="575c2-205">**The MongoDB Docker image (Linux and Windows Container)** 
+[*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)</span></span>
+
+-   <span data-ttu-id="575c2-206">**Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account (Verwenden von MongoChef (Studio 3T) mit Azure Cosmos DB: API für MongoDB-Konto)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)</span><span class="sxs-lookup"><span data-stu-id="575c2-206">**Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account** 
+[*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="c7e18-138">[Vorherigen] (Infrastructure-persistence-layer-implemenation-entity-framework-core.md) [weiter] (Microservice-application-layer-web-api-design.md)</span><span class="sxs-lookup"><span data-stu-id="c7e18-138">[Previous] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Next] (microservice-application-layer-web-api-design.md)</span></span>
+<span data-ttu-id="575c2-207">[Zurück] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Weiter] (microservice-application-layer-web-api-design.md)</span><span class="sxs-lookup"><span data-stu-id="575c2-207">[Previous] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Next] (microservice-application-layer-web-api-design.md)</span></span>

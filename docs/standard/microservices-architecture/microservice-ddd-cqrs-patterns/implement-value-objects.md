@@ -1,48 +1,51 @@
 ---
-title: Implementieren des Value-Objekte
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Implementieren des Value-Objekte"
+title: Implementieren von Wertobjekten
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren von Wertobjekten"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c20bc80d2ddb864a3a0172beb211974426a278a8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-value-objects"></a><span data-ttu-id="6becc-104">Implementieren des Value-Objekte</span><span class="sxs-lookup"><span data-stu-id="6becc-104">Implementing value objects</span></span>
+# <a name="implementing-value-objects"></a><span data-ttu-id="7ae7d-104">Implementieren von Wertobjekten</span><span class="sxs-lookup"><span data-stu-id="7ae7d-104">Implementing value objects</span></span>
 
-<span data-ttu-id="6becc-105">Wie in früheren Abschnitten zu Entitäten und Aggregate erläutert wird, ist die Identität grundlegende für Entitäten.</span><span class="sxs-lookup"><span data-stu-id="6becc-105">As discussed in earlier sections about entities and aggregates, identity is fundamental for entities.</span></span> <span data-ttu-id="6becc-106">Es gibt jedoch viele Objekte und Daten in einem System, die nicht mit einer Identität und Identität nachverfolgen, wie z. B. Wert Objekte erfordern.</span><span class="sxs-lookup"><span data-stu-id="6becc-106">However, there are many objects and data items in a system that do not require an identity and identity tracking, such as value objects.</span></span>
+<span data-ttu-id="7ae7d-105">Wie bereits in den vorherigen Abschnitten zu den Themen „Entitäten“ und „Aggregate“ ist die Identität ein grundlegender Bestandteil von Entitäten.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-105">As discussed in earlier sections about entities and aggregates, identity is fundamental for entities.</span></span> <span data-ttu-id="7ae7d-106">Allerdings sind viele Objekte und Datenelemente in einem System enthalten, für die keine Identität oder Identitätsnachverfolgung erforderlich ist, z.B. Wertobjekte.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-106">However, there are many objects and data items in a system that do not require an identity and identity tracking, such as value objects.</span></span>
 
-<span data-ttu-id="6becc-107">Ein Wertobjekt kann mit anderen Entitäten verweisen.</span><span class="sxs-lookup"><span data-stu-id="6becc-107">A value object can reference other entities.</span></span> <span data-ttu-id="6becc-108">Beispielsweise ist in einer Anwendung, die eine Route generiert, die zum Abrufen von einem Punkt in eine andere beschreibt diese Route wäre ein Wertobjekt.</span><span class="sxs-lookup"><span data-stu-id="6becc-108">For example, in an application that generates a route that describes how to get from one point to another, that route would be a value object.</span></span> <span data-ttu-id="6becc-109">Wäre es, eine Momentaufnahme von Punkten auf einer bestimmten Route, aber diese vorgeschlagene Route müsste eine Identität nicht intern diese Entitäten wie Ort, Straße usw. beziehen sich zwar möglicherweise.</span><span class="sxs-lookup"><span data-stu-id="6becc-109">It would be a snapshot of points on a specific route, but this suggested route would not have an identity, even though internally it might refer to entities like City, Road, etc.</span></span>
+<span data-ttu-id="7ae7d-107">Ein Wertobjekt kann auf mehrere Entitäten verweisen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-107">A value object can reference other entities.</span></span> <span data-ttu-id="7ae7d-108">Ein Wertobjekt ist z.B. eine Route, die in einer Anwendung generiert wird und beschreibt, wie man von einem Punkt zu einem anderen gelangt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-108">For example, in an application that generates a route that describes how to get from one point to another, that route would be a value object.</span></span> <span data-ttu-id="7ae7d-109">Dabei handelt es sich dann um eine Momentaufnahme von verschiedenen Punkten auf einer bestimmten Route. Die vorgeschlagene Route verfügt aber über keine Identität, obwohl sie intern möglicherweise auf Entitäten wie „City“ oder „Road“ verweist.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-109">It would be a snapshot of points on a specific route, but this suggested route would not have an identity, even though internally it might refer to entities like City, Road, etc.</span></span>
 
-<span data-ttu-id="6becc-110">Abbildung 9 bis 13 zeigt die Adresse-Wertobjekt in der Order-Aggregat.</span><span class="sxs-lookup"><span data-stu-id="6becc-110">Figure 9-13 shows the Address value object within the Order aggregate.</span></span>
+<span data-ttu-id="7ae7d-110">In Abbildung 9-13 wird das Wertobjekt „Address“ im Aggregat „Order“ angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-110">Figure 9-13 shows the Address value object within the Order aggregate.</span></span>
 
 ![](./media/image14.png)
 
-<span data-ttu-id="6becc-111">**Abbildung 9 bis 13**.</span><span class="sxs-lookup"><span data-stu-id="6becc-111">**Figure 9-13**.</span></span> <span data-ttu-id="6becc-112">Behandeln von Wertobjekt in der Order-Aggregat</span><span class="sxs-lookup"><span data-stu-id="6becc-112">Address value object within the Order aggregate</span></span>
+<span data-ttu-id="7ae7d-111">**Abbildung 9-13.**</span><span class="sxs-lookup"><span data-stu-id="7ae7d-111">**Figure 9-13**.</span></span> <span data-ttu-id="7ae7d-112">Wertobjekt „Address“ im Aggregat „Order“</span><span class="sxs-lookup"><span data-stu-id="7ae7d-112">Address value object within the Order aggregate</span></span>
 
-<span data-ttu-id="6becc-113">Wie in Abbildung 9 bis 13 gezeigt, besteht eine Entität in der Regel mehrere Attribute.</span><span class="sxs-lookup"><span data-stu-id="6becc-113">As shown in Figure 9-13, an entity is usually composed of multiple attributes.</span></span> <span data-ttu-id="6becc-114">Reihenfolge kann z. B. als eine Entität mit einer Identität modelliert und intern besteht aus einem Satz von Attributen wie OrderId, OrderDate, OrderItems. Aber die Adresse, also einfach einen komplexen Wert besteht aus Land, Straße, Stadt, usw. modelliert und als ein Wertobjekt behandelt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="6becc-114">For example, Order can be modeled as an entity with an identity and composed internally of a set of attributes such as OrderId, OrderDate, OrderItems, etc. But the address, which is simply a complex value composed of country, street, city, etc. must be modeled and treated as a value object.</span></span>
+<span data-ttu-id="7ae7d-113">Wie in Abbildung 9-13 dargestellt, besteht eine Entität in der Regel aus mehreren Attributen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-113">As shown in Figure 9-13, an entity is usually composed of multiple attributes.</span></span> <span data-ttu-id="7ae7d-114">Beispielsweise kann die `Order`-Entität als Entität mit einer Identität modelliert sein und intern aus mehreren Attributen wie OrderId, OrderDate oder OrderItems bestehen. Der Wert „Address“, bei dem es sich nur um einen komplexen Wert handelt, der aus Attributen wie dem Land, der Straße oder der Stadt besteht und in dieser Domäne nicht über eine Identität verfügt, muss hingegen als Wertobjekt modelliert und behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-114">For example, the `Order` entity can be modeled as an entity with an identity and composed internally of a set of attributes such as OrderId, OrderDate, OrderItems, etc. But the address, which is simply a complex value composed of country, street, city, etc. and has no identity in this domain,  must be modeled and treated as a value object.</span></span>
 
-## <a name="important-characteristics-of-value-objects"></a><span data-ttu-id="6becc-115">Wichtige Merkmale der Value-Objekte</span><span class="sxs-lookup"><span data-stu-id="6becc-115">Important characteristics of value objects</span></span>
+## <a name="important-characteristics-of-value-objects"></a><span data-ttu-id="7ae7d-115">Wichtige Merkmale von Wertobjekten</span><span class="sxs-lookup"><span data-stu-id="7ae7d-115">Important characteristics of value objects</span></span>
 
-<span data-ttu-id="6becc-116">Es gibt zwei Hauptmerkmale für Wert Objekte:</span><span class="sxs-lookup"><span data-stu-id="6becc-116">There are two main characteristics for value objects:</span></span>
+<span data-ttu-id="7ae7d-116">Die beiden wichtigsten Merkmale von Wertobjekten lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-116">There are two main characteristics for value objects:</span></span>
 
--   <span data-ttu-id="6becc-117">Sie verfügen über keine Identität.</span><span class="sxs-lookup"><span data-stu-id="6becc-117">They have no identity.</span></span>
+-   <span data-ttu-id="7ae7d-117">Sie haben keine Identität.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-117">They have no identity.</span></span>
 
--   <span data-ttu-id="6becc-118">Sie sind unveränderlich.</span><span class="sxs-lookup"><span data-stu-id="6becc-118">They are immutable.</span></span>
+-   <span data-ttu-id="7ae7d-118">Sie sind unveränderlich.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-118">They are immutable.</span></span>
 
-<span data-ttu-id="6becc-119">Die erste Eigenschaft wurde bereits erläutert.</span><span class="sxs-lookup"><span data-stu-id="6becc-119">The first characteristic was already discussed.</span></span> <span data-ttu-id="6becc-120">Unveränderlichkeit ist eine wichtige Anforderung erfüllt.</span><span class="sxs-lookup"><span data-stu-id="6becc-120">Immutability is an important requirement.</span></span> <span data-ttu-id="6becc-121">Die Werte der ein Wertobjekt müssen unveränderlich sein, nachdem das Objekt erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="6becc-121">The values of a value object must be immutable once the object is created.</span></span> <span data-ttu-id="6becc-122">Wenn das Objekt erstellt wird, deshalb müssen Sie die erforderlichen Werte bereitstellen, aber Sie müssen diese zu ändern, während der Lebensdauer des Objekts nicht zulassen.</span><span class="sxs-lookup"><span data-stu-id="6becc-122">Therefore, when the object is constructed, you must provide the required values, but you must not allow them to change during the object’s lifetime.</span></span>
+<span data-ttu-id="7ae7d-119">Das erste Merkmal wurde bereits erwähnt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-119">The first characteristic was already discussed.</span></span> <span data-ttu-id="7ae7d-120">Die Unveränderlichkeit ist eine wichtige Anforderung.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-120">Immutability is an important requirement.</span></span> <span data-ttu-id="7ae7d-121">Die Werte eines Wertobjekts müssen unveränderlich sein, nachdem ein Objekt erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-121">The values of a value object must be immutable once the object is created.</span></span> <span data-ttu-id="7ae7d-122">Aus diesem Grund müssen Sie beim Erstellen des Objekts die erforderlichen Werte zur Verfügung stellen. Dabei müssen Sie festlegen, dass es sich im Laufe seiner Lebensdauer nicht verändern kann.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-122">Therefore, when the object is constructed, you must provide the required values, but you must not allow them to change during the object’s lifetime.</span></span>
 
-<span data-ttu-id="6becc-123">Value-Objekte können Sie bestimmte Tricks für die Leistung aufgrund der Natur unveränderlichen stehen.</span><span class="sxs-lookup"><span data-stu-id="6becc-123">Value objects allow you to perform certain tricks for performance, thanks to their immutable nature.</span></span> <span data-ttu-id="6becc-124">Dies gilt insbesondere in Systemen, wobei es möglicherweise Tausende von Wert Objektinstanzen, von denen viele dieselben Werte aufweisen.</span><span class="sxs-lookup"><span data-stu-id="6becc-124">This is especially true in systems where there may be thousands of value object instances, many of which have the same values.</span></span> <span data-ttu-id="6becc-125">Unveränderliche Natur Speicherschemas wiederverwendet wird; Sie können die austauschbar Objekte sein, da ihre Werte identisch sind, und sie keine Identität haben.</span><span class="sxs-lookup"><span data-stu-id="6becc-125">Their immutable nature allows them to be reused; they can be interchangeable objects, since their values are the same and they have no identity.</span></span> <span data-ttu-id="6becc-126">Dieser Typ der Optimierung kann manchmal einen Unterschied zwischen der Software, die langsam ausgeführt wird und Software leistungsfähige vornehmen.</span><span class="sxs-lookup"><span data-stu-id="6becc-126">This type of optimization can sometimes make a difference between software that runs slowly and software with good performance.</span></span> <span data-ttu-id="6becc-127">Natürlich hängen all diesen Fällen die Umgebung der Anwendung und der Bereitstellung verwendet.</span><span class="sxs-lookup"><span data-stu-id="6becc-127">Of course, all these cases depend on the application environment and deployment context.</span></span>
+<span data-ttu-id="7ae7d-123">Mithilfe von Wertobjekten können Sie aufgrund ihrer Unveränderlichkeit bestimmte Tricks verwenden, die sich positiv auf die Leistung auswirken.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-123">Value objects allow you to perform certain tricks for performance, thanks to their immutable nature.</span></span> <span data-ttu-id="7ae7d-124">Dies gilt insbesondere für Systeme, in denen tausende von Wertobjektinstanzen enthalten sind, von denen viele denselben Wert haben.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-124">This is especially true in systems where there may be thousands of value object instances, many of which have the same values.</span></span> <span data-ttu-id="7ae7d-125">Aufgrund ihrer Unveränderlichkeit können sie wiederverwendet werden, und da sie dieselben Werte haben, jedoch nicht über eine Identität verfügen, können sie als austauschbare Objekt fungieren.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-125">Their immutable nature allows them to be reused; they can be interchangeable objects, since their values are the same and they have no identity.</span></span> <span data-ttu-id="7ae7d-126">Diese Art von Optimierung macht häufig den Unterschied zwischen langsamer Software und Software mit hoher Leistung aus.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-126">This type of optimization can sometimes make a difference between software that runs slowly and software with good performance.</span></span> <span data-ttu-id="7ae7d-127">Trotzdem sind all diese Beispiele abhängig von der Anwendungsumgebung und dem Entwicklungskontext.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-127">Of course, all these cases depend on the application environment and deployment context.</span></span>
 
-## <a name="value-object-implementation-in-c"></a><span data-ttu-id="6becc-128">Wert-Objekt-Implementierung in C\#</span><span class="sxs-lookup"><span data-stu-id="6becc-128">Value object implementation in C\#</span></span>
+## <a name="value-object-implementation-in-c"></a><span data-ttu-id="7ae7d-128">Implementieren von Wertobjekten in C\#</span><span class="sxs-lookup"><span data-stu-id="7ae7d-128">Value object implementation in C\#</span></span>
 
-<span data-ttu-id="6becc-129">Im Hinblick auf die Implementierung haben Sie eine Basisklasse für die Wert-Objekt, die grundlegende Utility-Methoden wie Gleichheit auf Grundlage der Vergleich zwischen allen Attributen, die (seit Start ein Wertobjekt auf Identität nicht basieren muss) und andere grundlegenden Eigenschaften verfügt.</span><span class="sxs-lookup"><span data-stu-id="6becc-129">In terms of implementation, you can have a value object base class that has basic utility methods like equality based on comparison between all the attributes (since a value object must not be based on identity) and other fundamental characteristics.</span></span> <span data-ttu-id="6becc-130">Das folgende Beispiel zeigt eine Objekt-Basisklasse Wert in der Reihenfolge Microservice aus eShopOnContainers verwendet.</span><span class="sxs-lookup"><span data-stu-id="6becc-130">The following example shows a value object base class used in the ordering microservice from eShopOnContainers.</span></span>
+<span data-ttu-id="7ae7d-129">Im Hinblick auf die Implementierung können Sie über eine Wertobjektbasisklasse mit grundlegenden Hilfsprogrammmethoden wie Gleichheit, die auf einem Vergleich aller Attribute basiert (da Wertobjekte nicht auf einer Identität basieren dürfen), und anderen grundlegenden Merkmalen verfügen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-129">In terms of implementation, you can have a value object base class that has basic utility methods like equality based on comparison between all the attributes (since a value object must not be based on identity) and other fundamental characteristics.</span></span> <span data-ttu-id="7ae7d-130">Im folgenden Beispiel wird eine Wertobjektbasisklasse angezeigt, die im eShopOnContainers-Microservice für Bestellungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-130">The following example shows a value object base class used in the ordering microservice from eShopOnContainers.</span></span>
 
 ```csharp
 public abstract class ValueObject
@@ -93,7 +96,7 @@ public abstract class ValueObject
 }
 ```
 
-<span data-ttu-id="6becc-131">Diese Klasse können Sie beim Implementieren des Istwert-Objekts, wie mit der Adresse Wertobjekt im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="6becc-131">You can use this class when implementing your actual value object, as with the Address value object shown in the following example:</span></span>
+<span data-ttu-id="7ae7d-131">Sie können diese Klasse verwenden, wenn Sie das tatsächliche Wertobjekt implementieren. Dies ist z.B. im nachfolgenden Beispiel zum Wertobjekt „Address“der Fall:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-131">You can use this class when implementing your actual value object, as with the Address value object shown in the following example:</span></span>
 
 ```csharp
 public class Address : ValueObject
@@ -104,8 +107,9 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    public Address(string street, string city, string state,
-        string country, string zipcode)
+    private Address() { }
+
+    public Address(string street, string city, string state, string country, string zipcode)
     {
         Street = street;
         City = city;
@@ -116,6 +120,7 @@ public class Address : ValueObject
 
     protected override IEnumerable<object> GetAtomicValues()
     {
+        // Using a yield return statement to return each element one at a time
         yield return Street;
         yield return City;
         yield return State;
@@ -125,48 +130,201 @@ public class Address : ValueObject
 }
 ```
 
-## <a name="hiding-the-identity-characteristic-when-using-ef-core-to-persist-value-objects"></a><span data-ttu-id="6becc-132">Die Identity-Eigenschaft ausblenden, wenn EF Core zum Wert Objekte beibehalten</span><span class="sxs-lookup"><span data-stu-id="6becc-132">Hiding the identity characteristic when using EF Core to persist value objects</span></span>
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a><span data-ttu-id="7ae7d-132">Beibehalten von Wertobjekten in der Datenbank mit EF Core 2.0</span><span class="sxs-lookup"><span data-stu-id="7ae7d-132">How to persist value objects in the database with EF Core 2.0</span></span>
 
-<span data-ttu-id="6becc-133">Eine Beschränkung bei der Verwendung von EF Core ist in der aktuellen Version (EF Core 1.1) Sie können daher nicht [komplexe Typen](https://docs.microsoft.com/de-de/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) gemäß Definition in EF 6.x.</span><span class="sxs-lookup"><span data-stu-id="6becc-133">A limitation when using EF Core is that in its current version (EF Core 1.1) you cannot use [complex types](https://docs.microsoft.com/de-de/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) as defined in EF 6.x.</span></span> <span data-ttu-id="6becc-134">Aus diesem Grund müssen Sie Ihre Wertobjekt als EF Entität speichern.</span><span class="sxs-lookup"><span data-stu-id="6becc-134">Therefore, you must store your value object as an EF entity.</span></span> <span data-ttu-id="6becc-135">Allerdings können Sie seine ID ausblenden, damit Sie sicherstellen, dass die Identität nicht im Modell wichtig ist, die das Wertobjekt gehört.</span><span class="sxs-lookup"><span data-stu-id="6becc-135">However, you can hide its ID so you make clear that the identity is not important in the model that the value object is part of.</span></span> <span data-ttu-id="6becc-136">Sie ausblenden, die ID ist, indem Sie die ID als ein Schatten-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="6becc-136">You hide the ID is by using the ID as a shadow property.</span></span> <span data-ttu-id="6becc-137">Da in der Infrastrukturebene, die die Konfiguration für die ID im Modell ausblenden festgelegt ist, werden transparent für Ihr Domänenmodell, und ihre Implementierung der Infrastruktur konnte in der Zukunft ändern.</span><span class="sxs-lookup"><span data-stu-id="6becc-137">Since that configuration for hiding the ID in the model is set up in the infrastructure level, it will be transparent for your domain model, and its infrastructure implementation could change in the future.</span></span>
+<span data-ttu-id="7ae7d-133">Obenstehend wurde erläutert, wie Sie ein Wertobjekt in Ihrem Domänenmodell definieren.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-133">You just saw how to define a value object in your domain model.</span></span> <span data-ttu-id="7ae7d-134">Nun soll erläutert werden, wie Sie dieses mithilfe von Entity Framework Core (EF Core) beibehalten, obwohl dieser Dienst in der Regel auf Entitäten mit Identitäten ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-134">But, how can you actually persist it into the database through Entity Framework (EF) Core which usually targets entities with identity?</span></span>
 
-<span data-ttu-id="6becc-138">In eShopOnContainers wird die ausgeblendete ID von EF Kerninfrastruktur benötigt auf folgende Weise in der DbContext-Ebene mithilfe der Fluent-API am Infrastructure-Projekt implementiert.</span><span class="sxs-lookup"><span data-stu-id="6becc-138">In eShopOnContainers, the hidden ID needed by EF Core infrastructure is implemented in the following way in the DbContext level, using Fluent API at the infrastructure project.</span></span>
+### <a name="background-and-older-approaches-using-ef-core-11"></a><span data-ttu-id="7ae7d-135">Hintergrund und ältere Ansätze zur Verwendung von EF Core 1.1</span><span class="sxs-lookup"><span data-stu-id="7ae7d-135">Background and older approaches using EF Core 1.1</span></span>
+
+<span data-ttu-id="7ae7d-136">Hintergrundinformation: Mit EF Core 1.0 und 1.1 konnten Sie keine [komplexen Typen](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) verwenden, die in EF 6.x im herkömmlichen .NET Framework definiert sind.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-136">As background, a limitation when using EF Core 1.0 and 1.1 was that you cannot use  [complex types](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) as defined in EF 6.x in the traditional .NET Framework.</span></span> <span data-ttu-id="7ae7d-137">Aus diesem Grund mussten Sie ein Wertobjekt als EF-Entität mit einem ID-Feld speichern, wenn Sie EF Core 1.0 oder 1.1 verwenden.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-137">Therefore, if using EF Core 1.0 or 1.1, you needed to store your value object as an EF entity with an ID field.</span></span> <span data-ttu-id="7ae7d-138">Anschließend konnten Sie die ID ausblenden, um eine Ähnlichkeit zum Wertobjekt ohne Identität herzustellen, und um deutlich zu machen, dass die Identität eines Wertobjekts im Domänenmodell nicht von Bedeutung ist.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-138">Then, so it looked more like a value object with no identity, you could hide its ID so you make clear that the identity of a value object is not important in the domain model.</span></span> <span data-ttu-id="7ae7d-139">Die ID konnte ausgeblendet werden, indem sie als [Schatteneigenschaft](https://docs.microsoft.com/ef/core/modeling/shadow-properties ) verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-139">You could hide that ID by using the ID as a [shadow property](https://docs.microsoft.com/ef/core/modeling/shadow-properties ).</span></span> <span data-ttu-id="7ae7d-140">Da diese Konfiguration zum Ausblenden der ID im Modell in der EF-Infrastruktur eingerichtet ist, würde Ihr Domänenmodell diese durchschauen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-140">Since that configuration for hiding the ID in the model is set up in the EF infrastructure level, it would be kind of transparent for your domain model.</span></span>
+
+<span data-ttu-id="7ae7d-141">In der ersten Version von eShopOnContainers (.NET Core 1.1) wurde die von der EF Core-Infrastruktur verlangte versteckte ID wie folgt auf DbContext-Ebene implementiert. Dafür wurde die Fluent-API im Infrastrukturprojekt verwendet.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-141">In the initial version of eShopOnContainers (.NET Core 1.1), the hidden ID needed by EF Core infrastructure was implemented in the following way in the DbContext level, using Fluent API at the infrastructure project.</span></span> <span data-ttu-id="7ae7d-142">Daher wurde die ID für das Domänenmodell ausgeblendet, sie war aber weiterhin in der Infrastruktur vorhanden.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-142">Therefore, the ID was hidden from the domain model point of view, but still present in the infrastructure.</span></span>
 
 ```csharp
-// Fluent API within the OrderingContext:DbContext in the
-// Ordering.Infrastructure project
-
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// Old approach with EF Core 1.1
+// Fluent API within the OrderingContext:DbContext in the Infrastructure project
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+
+    addressConfiguration.Property<int>("Id")  // Id is a shadow property
+        .IsRequired();
+    addressConfiguration.HasKey("Id");   // Id is a shadow property
 }
 ```
 
-<span data-ttu-id="6becc-139">Aus diesem Grund wird die ID aus der Domäne Modell der Sicht ausgeblendet, und in Zukunft die Wert-Objekt-Infrastruktur auch als ein komplexer Typ oder eine andere Weise implementiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="6becc-139">Therefore, the ID is hidden from the domain model point of view, and in the future, the value object infrastructure could also be implemented as a complex type or another way.</span></span>
+<span data-ttu-id="7ae7d-143">Die Persistenz dieses Wertobjekts in die Datenbank wurde wie eine reguläre Entität in einer anderen Tabelle durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-143">However, the persistence of that value object into the database was performed like a regular entity in a different table.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="6becc-140">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="6becc-140">Additional resources</span></span>
+<span data-ttu-id="7ae7d-144">Mit EF Core 2.0. gibt es neue und bessere Möglichkeiten, Wertobjekte beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-144">With EF Core 2.0, there are new and better ways to persist value objects.</span></span>
 
--   <span data-ttu-id="6becc-141">**Martin Fowler. ValueObject Muster**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)</span><span class="sxs-lookup"><span data-stu-id="6becc-141">**Martin Fowler. ValueObject pattern**
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a><span data-ttu-id="7ae7d-145">Beibehalten von Wertobjekten als eigene Entitätstypen in EF Core 2.0</span><span class="sxs-lookup"><span data-stu-id="7ae7d-145">Persist value objects as owned entity types in EF Core 2.0</span></span>
+
+<span data-ttu-id="7ae7d-146">Auch wenn das kanonische Wertobjektmuster im domänengesteuerten Design und der eigene Entitätstyp in EF Core Nachteile haben, so stellen diese derzeit die beste Möglichkeit dar, Wertobjekte mit EF Core 2.0 beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-146">Even with some gaps between the canonical value object pattern in DDD and the owned entity type in EF Core, it's currently the best way to persist value objects with EF Core 2.0.</span></span> <span data-ttu-id="7ae7d-147">Einschränkungen werden am Ende dieses Abschnitts erläutert.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-147">You can see limitations at the end of this section.</span></span>
+
+<span data-ttu-id="7ae7d-148">Das eigene Entitätstypenfeature wurde schon mit Version 2.0 von EF Core hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-148">The owned entity type feature was added to EF Core since version 2.0.</span></span>
+
+<span data-ttu-id="7ae7d-149">Über einen eigenen Entitätstyp können Sie Typen zuordnen, für die keine Identität im Domänenmodell explizit definiert ist, und die als Eigenschaften verwendet werden, also z.B. als ein Wertobjekt in einer Entität.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-149">An owned entity type allows you to map types that do not have their own identity explicitely defined in the domain model and are used as properties, such as a value object, within any of your entities.</span></span> <span data-ttu-id="7ae7d-150">Ein eigener Entitätstyp verfügt über denselben CLR-Typ wie ein anderer Entitätstyp.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-150">An owned entity type shares the same CLR type with another entity type.</span></span> <span data-ttu-id="7ae7d-151">Die Entität, die die definierende Navigation enthält, ist die besitzende Entität.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-151">The entity containing the defining navigation is the owner entity.</span></span> <span data-ttu-id="7ae7d-152">Beim Abfragen des Besitzers werden standardmäßig eigene Typen eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-152">When querying the owner, the owned types are included by default.</span></span>
+
+<span data-ttu-id="7ae7d-153">Auf den ersten Blick scheint es, als verfüge ein eigener Typ im Domänenmodell nicht über eine Identität.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-153">Just by looking at the domain model, an owned type looks like it doesn’t have any identity.</span></span>
+<span data-ttu-id="7ae7d-154">Die Identität des eigenen Typs befindet sich allerdings im Hintergrund, und die Eigenschaft zur Besitzernavigation ist Teil dieser Identität.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-154">However, under the covers, owned types do have identity, but the owner navigation property is part of this identity.</span></span>
+
+<span data-ttu-id="7ae7d-155">Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf diese beschränkt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-155">The identity of instances of own types is not completely their own.</span></span> <span data-ttu-id="7ae7d-156">Sie besteht aus drei Hauptkomponenten:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-156">It consists of three components:</span></span> 
+
+- <span data-ttu-id="7ae7d-157">Der Identität des Besitzers</span><span class="sxs-lookup"><span data-stu-id="7ae7d-157">The identity of the owner</span></span>
+
+- <span data-ttu-id="7ae7d-158">Der Navigationseigenschaft, die auf diese zeigt</span><span class="sxs-lookup"><span data-stu-id="7ae7d-158">The navigation property pointing to them</span></span>
+
+- <span data-ttu-id="7ae7d-159">Einer unabhängigen Komponente, wenn es um Auflistungen von eigenen Typen geht (in EF Core 2.0 noch nicht unterstützt)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-159">In the case of collections of owned types, an independent component (not yet supported in EF Core 2.0).</span></span>
+
+<span data-ttu-id="7ae7d-160">Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als eigener Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-160">For example, in the Ordering domain model at eShopOnContainers, as part of the Order entity, the Address value object is implemented as an owned entity type within the owner entity, which is the Order entity.</span></span> <span data-ttu-id="7ae7d-161">Bei „Address“ handelt es sich um einen Typ ohne Identitätseigenschaft, der im Domänenmodell definiert ist.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-161">Address is a type with no identity property defined in the domain model.</span></span> <span data-ttu-id="7ae7d-162">Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-162">It is used as a property of the Order type to specify the shipping address for a particular order.</span></span>
+
+<span data-ttu-id="7ae7d-163">Gemäß den Konventionen wird ein Schattenprimärschlüssel für den eigenen Typ erstellt und mithilfe der Tabellenaufteilung derselben Tabelle wie der Besitzer zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-163">By convention, a shadow primary key is created for the owned type and it will be mapped to the same table as the owner by using table splitting.</span></span> <span data-ttu-id="7ae7d-164">Dies ermöglicht die Verwendung von eigenen Typen, ähnlich wie bei den in EF 6 im herkömmlichen .NET Framework verwendeten komplexen Typen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-164">This allows to use owned types similarly to how complex types are used in EF6 in the traditional .NET Framework.</span></span>
+
+<span data-ttu-id="7ae7d-165">Sie sollten wissen, dass eigene Typen standardmäßig nie von EF Core ermittelt werden. D.h., Sie müssen sie explizit deklarieren.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-165">It is important to note that owned types are never discovered by convention in EF Core, so you have to declare them explicitly.</span></span>
+
+<span data-ttu-id="7ae7d-166">In eShopOnContainers in der Datei „OrderingContext.cs“ in der Methode „OnModelCreating()“ gibt es mehrere Infrastrukturkonfigurationen, die angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-166">In eShopOnContainers, at the OrderingContext.cs, within the OnModelCreating() method, there are multiple infrastructure configuration being applied.</span></span> <span data-ttu-id="7ae7d-167">Eine dieser Konfigurationen steht in Beziehung zur Entität „Order“.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-167">One of them is related to the Order entity.</span></span>
+
+```csharp
+// Part of the OrderingContext.cs class at the Ordering.Infrastructure project
+// 
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new PaymentMethodEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderItemEntityTypeConfiguration());
+    //...Additional type configurations
+}
+```
+
+<span data-ttu-id="7ae7d-168">Im folgenden Code ist die Persistenzinfrastruktur für die Entität „Order“ definiert:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-168">In the following code, the persistence infrastructure is defined for the Order entity:</span></span>
+
+```csharp
+// Part of the OrderEntityTypeConfiguration.cs class 
+// 
+public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+{
+    orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+    orderConfiguration.HasKey(o => o.Id);
+    orderConfiguration.Ignore(b => b.DomainEvents);
+    orderConfiguration.Property(o => o.Id)
+        .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+    //Address value object persisted as owned entity in EF Core 2.0
+    orderConfiguration.OwnsOne(o => o.Address);
+
+    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+    
+    //...Additional validations, constraints and code...
+    //...
+}
+```
+
+<span data-ttu-id="7ae7d-169">Im obigen Code gibt die `orderConfiguration.OwnsOne(o => o.Address)`-Methode an, dass es sich bei der `Address`-Eigenschaft um eine eigene Entität vom Typ `Order` handelt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-169">In the previous code, the `orderConfiguration.OwnsOne(o => o.Address)` method specifies that the `Address` property is an owned entity of the `Order` type.</span></span>
+
+<span data-ttu-id="7ae7d-170">Standardmäßig benennen die EF Core-Konventionen die Datenbankspalten für die Eigenschaften des eigenen Entitätstyps mit `EntityProperty_OwnedEntityProperty`.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-170">By default, EF Core conventions name the database columns for the properties of the owned entity type as `EntityProperty_OwnedEntityProperty`.</span></span> <span data-ttu-id="7ae7d-171">Aus diesem Grund werden die internen Eigenschaften von `Address` in der Tabelle `Orders` mit den Namen `Address_Street` oder `Address_City` (usw. für `State`,`Country` und `ZipCode`) angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-171">Therefore, the internal properties of `Address` will appear in the `Orders` table with the names `Address_Street`, `Address_City` (and so on for `State`, `Country` and `ZipCode`).</span></span>
+
+<span data-ttu-id="7ae7d-172">Sie können die Fluentmethode `Property().HasColumnName()` anfügen, um diese Spalten umzubenennen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-172">You can append the `Property().HasColumnName()` fluent method to rename those columns.</span></span> <span data-ttu-id="7ae7d-173">Wenn `Address` eine öffentliche Eigenschaft ist, sehen die Zuordnungen in etwa wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-173">In the case where `Address` is a public property, the mappings would be like the following:</span></span>
+
+```csharp
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.Street).HasColumnName("ShippingStreet");
+
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.City).HasColumnName("ShippingCity");
+```
+
+<span data-ttu-id="7ae7d-174">Sie können die `OwnsOne`-Methode auch in eine Fluentzuordnung ketten.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-174">It is possible to chain the `OwnsOne` method in a fluent mapping.</span></span> <span data-ttu-id="7ae7d-175">Im folgenden hypothetischen Beispiel besitzt `OrderDetails` `BillingAddress` und `ShippingAddress`, wobei es sich um `Address`-Typen handelt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-175">In the following hypothetical example, `OrderDetails` owns `BillingAddress` and `ShippingAddress`, which are both `Address` types.</span></span> <span data-ttu-id="7ae7d-176">Dann besitzt der `Order`-Typ `OrderDetails`.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-176">Then `OrderDetails` is owned by the `Order` type.</span></span>
+
+```csharp
+orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
+    {
+        cb.OwnsOne(c => c.BillingAddress);
+        cb.OwnsOne(c => c.ShippingAddress);
+    });
+//...
+//...
+public class Order
+{
+    public int Id { get; set; }
+    public OrderDetails OrderDetails { get; set; }
+}
+
+public class OrderDetails
+{
+    public StreetAddress BillingAddress { get; set; }
+    public StreetAddress ShippingAddress { get; set; }
+}
+
+public class Address
+{
+    public string Street { get; set; }
+    public string City { get; set; }
+}
+```
+
+### <a name="additional-details-on-owned-entity-types"></a><span data-ttu-id="7ae7d-177">Zusätzliche Details zu eigenen Entitätstypen</span><span class="sxs-lookup"><span data-stu-id="7ae7d-177">Additional details on owned entity types</span></span>
+
+<span data-ttu-id="7ae7d-178">• Eigene Typen werden definiert, wenn Sie eine Navigationseigenschaft für einen Typ mit der OwnsOne-Fluent-API konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-178">•   Owned types are defined when you configure a navigation property to a particular type using the OwnsOne fluent API.</span></span>
+
+<span data-ttu-id="7ae7d-179">• Die Definition eines eigenen Typs im Metadatenmodell ist eine Zusammensetzung aus den folgenden Bestandteilen: Besitzertyp, Navigationseigenschaft und CLR-Typ des eigenen Typs.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-179">•   The definition of an owned type in our metadata model is a composite of: the owner type, the navigation property, and the CLR type of the owned type.</span></span>
+
+<span data-ttu-id="7ae7d-180">• Die Identität (der Schlüssel) einer eigenen Typinstanz in diesem Beispiel ist eine Zusammensetzung aus der Identität des Besitzertyps und der Definition des eigenen Typs.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-180">•   The identity (key) of an owned type instance in our stack is a composite of the identity of the owner type and the definition of the owned type.</span></span>
+
+#### <a name="owned-entities-capabilities"></a><span data-ttu-id="7ae7d-181">Funktionen der eigenen Entitäten:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-181">Owned entities capabilities:</span></span>
+
+<span data-ttu-id="7ae7d-182">• Der eigene Typ kann auf andere Entitäten verweisen, die entweder eigen (geschachtelte eigene Typen) oder nicht eigen (reguläre Navigationseigenschaften zum Verweis auf andere Entitäten) sind.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-182">•   Owned type can reference other entities, either owned (nested owned types) or non-owned (regular reference navigation properties to other entities).</span></span>
+
+<span data-ttu-id="7ae7d-183">• Sie können über unterschiedliche Navigationseigenschaften denselben CLR-Typ als einen anderen eigenen Typ in derselben Besitzerentität zuordnen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-183">•   You can map the same CLR type as different owned types in the same owner entity through separate navigation properties.</span></span>
+
+<span data-ttu-id="7ae7d-184">• Die Tabellenaufteilung wird standardmäßig eingerichtet. Sie können diese Funktion aber auch deaktivieren, indem Sie den eigenen Typ mit ToTable einer anderen Tabelle zuordnen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-184">•   Table splitting is setup by convention, but you can opt out by mapping the owned type to a different table using ToTable.</span></span>
+
+<span data-ttu-id="7ae7d-185">• Für eigene Typen wird automatisch Eager Loading durchgeführt. Es besteht also keine Notwendigkeit, „Include()“ in der Abfrage aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-185">•   Eager loading is performed automatically on owned types, i.e. no need to call Include() on the query.</span></span>
+
+#### <a name="owned-entities-limitations"></a><span data-ttu-id="7ae7d-186">Einschränkungen der eigenen Entitäten:</span><span class="sxs-lookup"><span data-stu-id="7ae7d-186">Owned entities limitations:</span></span>
+
+<span data-ttu-id="7ae7d-187">• Sie können kein DbSet<T>-Objekt eines eigenen Typs erstellen (entwurfsbedingt).</span><span class="sxs-lookup"><span data-stu-id="7ae7d-187">•   You cannot create a DbSet<T> of an owned type (by design).</span></span>
+
+<span data-ttu-id="7ae7d-188">• Sie können für eigene Typen „ModelBuilder.Entity<T>()“ nicht aufrufen (derzeit entwurfsbedingt).</span><span class="sxs-lookup"><span data-stu-id="7ae7d-188">•   You cannot call ModelBuilder.Entity<T>() on owned types (currently by design).</span></span>
+
+<span data-ttu-id="7ae7d-189">• Es gibt noch keine Auflistungen von eigenen Typen. (Sie sollen allerdings in Versionen nach EF Core 2.0 unterstützt werden).</span><span class="sxs-lookup"><span data-stu-id="7ae7d-189">•   No collections of owned types yet (but they will be supported in versions after EF Core 2.0).</span></span>
+
+<span data-ttu-id="7ae7d-190">• Die Konfiguration über ein Attribut wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-190">•   No support for configuring them via an attribute.</span></span>
+
+<span data-ttu-id="7ae7d-191">• Optionale eigene Typen (z.B. Typen, die Nullwerte zulassen), die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-191">•   No support for optional (i.e. nullable) owned types that are mapped with the owner in the same table (i.e. using table splitting).</span></span> <span data-ttu-id="7ae7d-192">Das liegt daran, dass es für den NULL-Wert einen separaten Sentinel gibt.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-192">This is because we don't have a separate sentinel for the null.</span></span>
+
+<span data-ttu-id="7ae7d-193">• Die Vererbungszuordnung für eigene Typen wird nicht unterstützt, aber Sie sollten zwei Blatttypen derselben Schnittstellenvererbungshierarchie als unterschiedliche eigene Typen zuordnen können.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-193">•   No inheritance mapping support for owned types, but you should be able to map two leaf types of the same inheritance hierarchies as different owned types.</span></span> <span data-ttu-id="7ae7d-194">EF Core hat keine Probleme mit der Verarbeitung, weil diese Typen Teil derselben Hierarchie sind.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-194">EF Core will not reason about the fact that they are part of the same hierarchy.</span></span>
+
+#### <a name="main-differences-with-ef6s-complex-types"></a><span data-ttu-id="7ae7d-195">Wichtige Unterschiede zwischen den komplexen Typen für EF 6</span><span class="sxs-lookup"><span data-stu-id="7ae7d-195">Main differences with EF6's complex types</span></span>
+
+<span data-ttu-id="7ae7d-196">• Die Tabellenaufteilung ist optional, d.h., diese Typen können einer anderen Tabelle zugeordnet werden und verlieren trotzdem nicht Ihren Status als eigene Typen.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-196">•   Table splitting is optional, i.e. they can optionally be mapped to a separate table and still be owned types.</span></span>
+
+<span data-ttu-id="7ae7d-197">• Sie können auf andere Entitäten verweisen, d.h., sie können als Abhängigkeiten in Beziehungen zu anderen nicht eigenen Typen agieren.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-197">•   They can reference other entities (i.e. they can act as the dependent side on relationships to other non-owned types).</span></span>
+
+
+## <a name="additional-resources"></a><span data-ttu-id="7ae7d-198">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="7ae7d-198">Additional resources</span></span>
+
+-   <span data-ttu-id="7ae7d-199">**Martin Fowler. ValueObject pattern (ValueObject-Muster)**
+    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-199">**Martin Fowler. ValueObject pattern**
 [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)</span></span>
 
--   <span data-ttu-id="6becc-142">**Eric Evans. Domain Driven Design: Tackling, Complexity in the Heart of Software wird.**</span><span class="sxs-lookup"><span data-stu-id="6becc-142">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.**</span></span> <span data-ttu-id="6becc-143">(Book; enthält eine Erläuterung der Value-Objekte) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="6becc-143">(Book; includes a discussion of value objects) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
+-   <span data-ttu-id="7ae7d-200">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).**</span><span class="sxs-lookup"><span data-stu-id="7ae7d-200">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.**</span></span> <span data-ttu-id="7ae7d-201">(Buch, in dem Wertobjekte thematisiert werden) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-201">(Book; includes a discussion of value objects) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
 
--   <span data-ttu-id="6becc-144">**Vaughn Vernon. Implementieren Domain Driven Design.**</span><span class="sxs-lookup"><span data-stu-id="6becc-144">**Vaughn Vernon. Implementing Domain-Driven Design.**</span></span> <span data-ttu-id="6becc-145">(Book; enthält eine Erläuterung der Value-Objekte) [ *https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="6becc-145">(Book; includes a discussion of value objects) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
+-   <span data-ttu-id="7ae7d-202">**Vaughn Vernon. Implementing Domain-Driven Design (Implementieren des domänengesteuerten Designs.)**</span><span class="sxs-lookup"><span data-stu-id="7ae7d-202">**Vaughn Vernon. Implementing Domain-Driven Design.**</span></span> <span data-ttu-id="7ae7d-203">(Buch, in dem Wertobjekte thematisiert werden) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-203">(Book; includes a discussion of value objects) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
 
--   <span data-ttu-id="6becc-146">**Shadowing von Eigenschaften**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="6becc-146">**Shadow Properties**
+-   <span data-ttu-id="7ae7d-204">**Shadow Properties (Schatteneigenschaften)**
+    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-204">**Shadow Properties**
 [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span></span>
 
--   <span data-ttu-id="6becc-147">**Komplexe Typen und/oder rückgabewertobjekte**.</span><span class="sxs-lookup"><span data-stu-id="6becc-147">**Complex types and/or value objects**.</span></span> <span data-ttu-id="6becc-148">Erläuterung in der EF-Core-GitHub-Repository (Registerkarte "Probleme") [ *https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span><span class="sxs-lookup"><span data-stu-id="6becc-148">Discussion in the EF Core GitHub repo (Issues tab) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span></span>
+-   <span data-ttu-id="7ae7d-205">**Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)**.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-205">**Complex types and/or value objects**.</span></span> <span data-ttu-id="7ae7d-206">Diskussion im EF Core-GitHub-Repository (Registerkarte „Probleme“) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-206">Discussion in the EF Core GitHub repo (Issues tab) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span></span>
 
--   <span data-ttu-id="6becc-149">**ValueObject.cs.**</span><span class="sxs-lookup"><span data-stu-id="6becc-149">**ValueObject.cs.**</span></span> <span data-ttu-id="6becc-150">Basiswert-Objektklasse im eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="6becc-150">Base value object class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="6becc-151">*https://github.com/dotnet/eShopOnContainers/BLOB/Master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span><span class="sxs-lookup"><span data-stu-id="6becc-151">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+-   <span data-ttu-id="7ae7d-207">**ValueObject.cs.**</span><span class="sxs-lookup"><span data-stu-id="7ae7d-207">**ValueObject.cs.**</span></span> <span data-ttu-id="7ae7d-208">Basisklasse der Wertobjekte in eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-208">Base value object class in eShopOnContainers.</span></span>
+    [<span data-ttu-id="7ae7d-209">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span><span class="sxs-lookup"><span data-stu-id="7ae7d-209">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   <span data-ttu-id="6becc-152">**Beheben Sie die Klasse.**</span><span class="sxs-lookup"><span data-stu-id="6becc-152">**Address class.**</span></span> <span data-ttu-id="6becc-153">Beispiel der Wert-Objektklasse im eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="6becc-153">Sample value object class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="6becc-154">*https://github.com/dotnet/eShopOnContainers/BLOB/Master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span><span class="sxs-lookup"><span data-stu-id="6becc-154">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+-   <span data-ttu-id="7ae7d-210">**Klasse „Address“**</span><span class="sxs-lookup"><span data-stu-id="7ae7d-210">**Address class.**</span></span> <span data-ttu-id="7ae7d-211">Beispielklasse der Wertobjekte in eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="7ae7d-211">Sample value object class in eShopOnContainers.</span></span>
+    [<span data-ttu-id="7ae7d-212">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span><span class="sxs-lookup"><span data-stu-id="7ae7d-212">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="6becc-155">[Vorherigen] (Seedwork-domain-model-base-classes-interfaces.md) [weiter] (Enumeration-Klassen-Over-Enum-types.md)</span><span class="sxs-lookup"><span data-stu-id="6becc-155">[Previous] (seedwork-domain-model-base-classes-interfaces.md) [Next] (enumeration-classes-over-enum-types.md)</span></span>
+<span data-ttu-id="7ae7d-213">[Zurück] (seedwork-domain-model-base-classes-interfaces.md) [Weiter] (enumeration-classes-over-enum-types.md)</span><span class="sxs-lookup"><span data-stu-id="7ae7d-213">[Previous] (seedwork-domain-model-base-classes-interfaces.md) [Next] (enumeration-classes-over-enum-types.md)</span></span>
