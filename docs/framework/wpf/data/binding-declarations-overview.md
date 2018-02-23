@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>Übersicht über Bindungsdeklarationen
 In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bindung erläutert.  
@@ -51,7 +53,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
  Wenn Bindungsdeklarationszeichenfolgen im Markup erstellt werden, müssen sie an die entsprechende Abhängigkeitseigenschaft eines Zielobjekts angefügt werden. Das folgende Beispiel zeigt, wie Sie binden die <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> Eigenschaft mit dem die bindungserweiterung, Angeben der <xref:System.Windows.Data.Binding.Source%2A> und <xref:System.Windows.Data.Binding.Path%2A> Eigenschaften.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  Sie können angeben, dass die meisten Eigenschaften von der <xref:System.Windows.Data.Binding> Klasse auf diese Weise. Weitere Informationen über die bindungserweiterung sowie eine Liste mit <xref:System.Windows.Data.Binding> Eigenschaften, die mit der bindungserweiterung festgelegt werden können finden Sie unter der [Markuperweiterung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) (Übersicht).  
   
@@ -69,7 +71,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding und PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>und <xref:System.Windows.Data.PriorityBinding> unterstützen nicht die Verwendung von XAML-Erweiterungssyntax. Deshalb müssen Sie die Syntax der Object-Element verwenden, wenn Sie deklarieren eine <xref:System.Windows.Data.MultiBinding> oder ein <xref:System.Windows.Data.PriorityBinding> in XAML.  
+ <xref:System.Windows.Data.MultiBinding> und <xref:System.Windows.Data.PriorityBinding> unterstützen nicht die Verwendung von XAML-Erweiterungssyntax. Deshalb müssen Sie die Syntax der Object-Element verwenden, wenn Sie deklarieren eine <xref:System.Windows.Data.MultiBinding> oder ein <xref:System.Windows.Data.PriorityBinding> in XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Erstellen einer Bindung in Code  
@@ -77,8 +79,6 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  Wenn das Objekt, das Sie eine Bindung ist eine <xref:System.Windows.FrameworkElement> oder eine <xref:System.Windows.FrameworkContentElement> Sie aufrufen können der `SetBinding` Methode für das Objekt, anstatt Sie direkt mit <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Ein Beispiel finden Sie unter [Erstellen einer Bindung in Code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   

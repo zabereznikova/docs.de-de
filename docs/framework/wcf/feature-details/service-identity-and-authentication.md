@@ -5,29 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: authentication [WCF], specifying the identity of a service
+helpviewer_keywords:
+- authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Description Language (WSDL) generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese Funktion als Schutz gegen *Phishing* indem verhindert, dass einen Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
   
- Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Endpunkte und Endpunktadressen, finden Sie unter [Adressen](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
+ Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Endpunkte und Endpunktadressen, finden Sie unter [Adressen](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
 > [!NOTE]
 >  Wenn Sie NT&#160;LanMan (NTLM) für die Authentifizierung verwenden, wird die Dienstidentität nicht überprüft, weil unter NTLM der Client den Server nicht authentifizieren kann. NTLM wird verwendet, wenn Computer Teil einer Windows-Arbeitsgruppe sind, oder sie eine ältere Version von Windows ausführen, die die Kerberos-Authentifizierung nicht unterstützt.  
@@ -45,22 +48,22 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
  Die <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft der <xref:System.ServiceModel.EndpointAddress>-Klasse stellt die Identität des Diensts dar, der vom Client aufgerufen wird. Der Dienst veröffentlicht die <xref:System.ServiceModel.EndpointAddress.Identity%2A> in seinen Metadaten. Die Ausführung der Cliententwickler die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für den Dienstendpunkt enthält die generierte Konfiguration den Wert des Diensts <xref:System.ServiceModel.EndpointAddress.Identity%2A> Eigenschaft. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur (sofern für Sicherheit konfiguriert) überprüft, ob der Dienst die angegebene Identität besitzt.  
   
 > [!IMPORTANT]
->  Die Metadaten enthalten die erwartete Identität des Diensts. Daher wird empfohlen, die Metadaten des Diensts auf sichere Weise verfügbar zu machen, indem Sie beispielsweise einen HTTPS-Endpunkt für den Dienst erstellen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wie: sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Die Metadaten enthalten die erwartete Identität des Diensts. Daher wird empfohlen, die Metadaten des Diensts auf sichere Weise verfügbar zu machen, indem Sie beispielsweise einen HTTPS-Endpunkt für den Dienst erstellen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Identitätstypen  
- Ein Dienst kann fünf Identitätstypen bereitstellen. Jeder Identitätstyp entspricht einem Element, das im `<identity>`-Element der Konfiguration enthalten sein kann. Der verwendete Typ hängt vom Szenario und den Sicherheitsanforderungen des Diensts ab. In der folgenden Tabelle wird jeder dieser Identitätstypen beschrieben.  
+ Ein Dienst kann sechs Identitätstypen bereitstellen. Jeder Identitätstyp entspricht einem Element, das im `<identity>`-Element der Konfiguration enthalten sein kann. Der verwendete Typ hängt vom Szenario und den Sicherheitsanforderungen des Diensts ab. In der folgenden Tabelle wird jeder dieser Identitätstypen beschrieben.  
   
 |Identitätstyp|Beschreibung|Typisches Szenario|  
 |-------------------|-----------------|----------------------|  
 |DNS (Domain Name System)|Verwenden Sie dieses Element mit X.509-Zertifikaten oder Windows-Konten. Es vergleicht den in den Anmeldeinformationen angegebenen DNS-Namen mit dem in diesem Element angegebenen Wert.|Eine DNS-Prüfung ermöglicht Ihnen, Zertifikate mit DNS- oder Antragstellernamen zu verwenden. Wird ein Zertifikat erneut mit demselben DNS- oder Antragstellernamen ausgestellt, ist die Identitätsprüfung immer noch gültig. Bei der erneuten Ausstellung eines Zertifikats erhält es einen neuen RSA-Schlüssel, behält jedoch denselben DNS- oder Antragstellernamen. Dies bedeutet, dass Clients ihre Identitätsinformationen für den Dienst nicht aktualisieren müssen.|  
-|Zertifikat. Der Standardwert, wenn `ClientCredentialType` auf Certificate festgelegt ist.|Dieses Element gibt einen Base64-codierten X.509-Zertifikatswert für den Vergleich mit dem Client an.<br /><br /> Verwenden Sie dieses Element auch dann, wenn Sie eine [!INCLUDE[infocard](../../../../includes/infocard-md.md)] für die Anmeldeinformationen zur Authentifizierung des Diensts verwenden.|Dieses Element schränkt die Authentifizierung auf ein einziges Zertifikat ein, dessen Fingerabdruckwert für die Authentifizierung verwendet wird. Dies ermöglicht eine strengere Authentifizierung, da Fingerabdruckwerte eindeutig sind. Damit ist eine Einschränkung verbunden: Wird das Zertifikat mit dem gleichen Antragstellernamen erneut ausgestellt, hat es auch einen neuen Fingerabdruck. Daher können Clients den Dienst so lange nicht prüfen, bis der neue Fingerabdruck bekannt ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Suchen den Fingerabdruck eines Zertifikats, finden Sie unter [wie: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
+|Zertifikat. Der Standardwert, wenn `ClientCredentialType` auf Certificate festgelegt ist.|Dieses Element gibt einen Base64-codierten X.509-Zertifikatswert für den Vergleich mit dem Client an.<br /><br /> Verwenden Sie dieses Element auch dann, wenn Sie eine [!INCLUDE[infocard](../../../../includes/infocard-md.md)] für die Anmeldeinformationen zur Authentifizierung des Diensts verwenden.|Dieses Element schränkt die Authentifizierung auf ein einziges Zertifikat ein, dessen Fingerabdruckwert für die Authentifizierung verwendet wird. Dies ermöglicht eine strengere Authentifizierung, da Fingerabdruckwerte eindeutig sind. Damit ist eine Einschränkung verbunden: Wird das Zertifikat mit dem gleichen Antragstellernamen erneut ausgestellt, hat es auch einen neuen Fingerabdruck. Daher können Clients den Dienst so lange nicht prüfen, bis der neue Fingerabdruck bekannt ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Suchen den Fingerabdruck eines Zertifikats, finden Sie unter [wie: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
 |Zertifikatsverweis|Identisch mit der vorher beschriebenen Zertifikatsoption. Jedoch erlaubt Ihnen dieses Element, einen Zertifikatsnamen und den Speicherort anzugeben, von dem das Zertifikat abgerufen werden kann.|Entspricht dem vorher beschriebenen Zertifikatsszenario.<br /><br /> Der Vorteil besteht darin, dass sich der Speicherort des Zertifikats ändern kann.|  
 |RSA|Dieses Element gibt einen RSA-Schlüsselwert für den Vergleich mit dem Client an. Dies ist der Zertifikatsoption ähnlich, statt des Fingerabdrucks des Zertifikats wird jedoch dessen RSA-Schlüssel verwendet.|Eine RSA-Prüfung erlaubt Ihnen, die Authentifizierung speziell auf den RSA-Schlüssel eines einzigen Zertifikats zu beschränken. Dies ermöglicht eine strengere Authentifizierung eines bestimmten RSA-Schlüssels auf Kosten des Diensts, der nicht mehr mit vorhandenen Clients zusammenarbeitet, wenn sich der RSA-Schlüsselwert ändert.|  
 |Benutzerprinzipalname (User Principal Name, UPN) Der Standard, wenn `ClientCredentialType` auf Windows festgelegt ist und der Dienstprozess nicht unter einem der Systemkonten ausgeführt wird.|Dieses Element gibt den UPN an, unter dem der Dienst ausgeführt wird. Siehe den Abschnitt Kerberos-Protokoll und die Identität des [Überschreiben der Identität eines Dienstes zur Authentifizierung](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Dies stellt sicher, dass der Dienst unter einem bestimmten Windows-Benutzerkonto ausgeführt wird. Das Benutzerkonto kann entweder das des momentan angemeldeten Benutzers sein, oder der des Diensts, der unter einem bestimmten Benutzerkonto ausgeführt wird.<br /><br /> Diese Einstellung nutzt die Vorteile der Kerberos-Sicherheit von Windows, wenn der Dienst unter einem Domänenkonto in einer Active Directory-Umgebung ausgeführt wird.|  
 |Dienstprinzipalname (Service Principal Name, SPN) Der Standard, wenn `ClientCredentialType` auf Windows festgelegt ist und der Dienstprozess unter einem der Systemkonten &#8211; LocalService, LocalSystem oder NetworkService &#8211; ausgeführt wird.|Dieses Element gibt den dem Konto des Diensts zugeordneten SPN an. Siehe den Abschnitt Kerberos-Protokoll und die Identität des [Überschreiben der Identität eines Dienstes zur Authentifizierung](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Dies stellt sicher, dass der SPN und das bestimmte, dem SPN zugeordnete Windows-Konto den Dienst identifizieren.<br /><br /> Sie können das Tool Setspn.exe verwenden, um ein Computerkonto dem Benutzerkonto des Diensts zuzuordnen.<br /><br /> Diese Einstellung nutzt die Vorteile der Kerberos-Sicherheit von Windows, wenn der Dienst unter einem der Systemkonten oder unter einem Domänenkonto ausgeführt wird, dem ein SPN-Name zugeordnet ist, und der Computer Mitglied einer Domäne in einer Active Directory-Umgebung ist.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Angeben der Identität für einen Dienst  
- In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Überschreiben, oder geben Sie die Dienstidentität finden Sie unter [Überschreiben der Identität eines Dienstes zur Authentifizierung](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
+ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Überschreiben, oder geben Sie die Dienstidentität finden Sie unter [Überschreiben der Identität eines Dienstes zur Authentifizierung](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
 ## <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Elements in der Konfiguration  
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung in `Certificate,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
@@ -120,7 +123,7 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Stapel von Bindungselementen, die ordnungsgemäß für eine benutzerdefinierte Bindung finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen einer benutzerdefinierten Bindung mit der <xref:System.ServiceModel.Channels.SecurityBindingElement>, finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Stapel von Bindungselementen, die ordnungsgemäß für eine benutzerdefinierte Bindung finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Erstellen einer benutzerdefinierten Bindung mit der <xref:System.ServiceModel.Channels.SecurityBindingElement>, finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
 Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und die Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> dieses Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen. um die visuelle Struktur eines Steuerelements zu ändern, müssen Sie festlegen, der <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements an ihre neuen und vollständige <xref:System.Windows.Controls.ControlTemplate>.  
@@ -63,18 +63,18 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  [ListView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Menu-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [Für das PasswordBox-Stile und Vorlagen](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton-Stile und Vorlagen](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Slider-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [StatusBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Thumb-Stile und Vorlagen](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton-Stile und Vorlagen](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

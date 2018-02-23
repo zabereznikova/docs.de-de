@@ -1,12 +1,9 @@
 ---
-title: Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms
-ms.custom: 
-ms.date: 03/30/2017
+title: Standardbehandlung von Tastatur und Maus Behandlung in Windows Forms-DataGridView-Steuerelement
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Standardbehandlung von Tastatur und Maus Behandlung in Windows Forms-DataGridView-Steuerelement
+
 Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref:System.Windows.Forms.DataGridView> Steuerelement über eine Tastatur und Maus.  
   
 > [!NOTE]
@@ -56,7 +54,8 @@ Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref
 |STRG + POS1|Verschiebt den Fokus zur ersten Zelle im Steuerelement.|  
 |STRG + ENDE|Verschiebt den Fokus zur letzten Zelle im Steuerelement.|  
 |STRG + BILD-AB/NACH-OBEN|Identisch mit der Seite nach unten oder Bild-auf.|  
-|F2|Versetzt die aktuelle Zelle in den Bearbeitungsmodus für die Zelle ein, wenn die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> oder <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|  
+|F2|Versetzt die aktuelle Zelle in den Bearbeitungsmodus für die Zelle ein, wenn die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> oder <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
+|F3|Die aktuelle Spalte sortiert, wenn die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Er ist der gleiche wie das Klicken auf den aktuellen Spaltenheader. Verfügbar seit .NET Framework 4.7.2. Zum Aktivieren dieser Funktion müssen Anwendungen als Ziel .NET Framework 4.7.2 oder höhere Versionen oder explizit Eingabehilfen-Verbesserungen mit AppContext Switches verwenden.|  
 |F4|Wenn die aktuelle Zelle befindet sich eine <xref:System.Windows.Forms.DataGridViewComboBoxCell>, versetzt die Zelle in den Bearbeitungsmodus, und zeigt die Dropdown-Liste.|  
 |ALT + NACH-OBEN/NACH-UNTEN|Wenn die aktuelle Zelle befindet sich eine <xref:System.Windows.Forms.DataGridViewComboBoxCell>, versetzt die Zelle in den Bearbeitungsmodus, und zeigt die Dropdown-Liste.|  
 |LEERTASTE|Wenn die aktuelle Zelle befindet sich eine <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, oder <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, löst die <xref:System.Windows.Forms.DataGridView.CellClick> und <xref:System.Windows.Forms.DataGridView.CellContentClick> Ereignisse. Wenn die aktuelle Zelle befindet sich eine <xref:System.Windows.Forms.DataGridViewButtonCell>, auch auf die Schaltfläche klickt. Wenn die aktuelle Zelle befindet sich eine <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, ändert sich auch auf den Aktivierungszustand.|  
@@ -67,7 +66,8 @@ Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref
 |STRG+EINGABE|Führt einen Commit für Änderungen an der aktuellen Zelle ohne den Fokus zu verschieben. Auch auf Zeilenebene Commits für Änderungen an der aktuellen Zeile, wenn das Steuerelement an eine Datenquelle gebunden ist, die Bearbeitung oder der virtuelle Modus unterstützt mit implementiert wurde Commit-Bereich.|  
 |STRG+0|Gibt eine <xref:System.DBNull.Value?displayProperty=nameWithType> Wert in der aktiven Zelle, wenn die Zelle bearbeitet werden kann. Wird standardmäßig der Anzeigewert für eine <xref:System.DBNull> Zellwert ist der Wert des der <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewCellStyle> faktisch für die aktuelle Zelle.|  
   
-### <a name="selection-keys"></a>Auswahl-Schlüssel  
+### <a name="selection-keys"></a>Auswahl-Schlüssel
+
  Wenn die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> -Eigenschaftensatz auf `false` und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, Ändern der aktiven Zelle die Tasten für die Navigation mit die Auswahl in die neue Zelle ändert. Die UMSCHALTTASTE, STRG und ALT-Tasten wirken sich nicht auf dieses Verhalten aus.  
   
  Wenn die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, das gleiche Verhalten tritt auf, jedoch mit den folgenden Ergänzungen.  
@@ -83,9 +83,9 @@ Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref
   
  Wenn <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> festgelegt ist, um `true` und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, das Verhalten der Ankerzelle und der aktuellen Zelle ist identisch, aber nur ganze Zeilen oder Spalten aktiviert oder deaktiviert werden.  
   
-## <a name="default-mouse-handling"></a>Standardbehandlung von Maus  
+## <a name="default-mouse-handling"></a>Standardbehandlung von Maus
   
-### <a name="basic-mouse-handling"></a>Grundlegende Mausbehandlung  
+### <a name="basic-mouse-handling"></a>Grundlegende Mausbehandlung
   
 > [!NOTE]
 >  Klicken auf eine Zelle mit der linken Maustaste immer ändert die aktuelle Zelle. Auf eine Zelle mit der rechten Maustaste klicken wird ein Kontextmenü geöffnet, wenn ein solcher verfügbar ist.  
@@ -97,7 +97,8 @@ Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref
 |Linken Maustaste klicken|Löst das <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> Ereignisse|  
 |Linke Maustaste, und ziehen Sie auf eine Spaltenheaderzelle|Wenn die <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> Eigenschaft `true`, verschiebt die Spalte, damit sie eine neue Position abgelegt werden kann.|  
   
-### <a name="mouse-selection"></a>Mausauswahl  
+### <a name="mouse-selection"></a>Auswahl der Maus
+
  Ohne das Verhalten der Funktionsauswahl bezieht sich auf die mittlere Maustaste oder das Mausrad.  
   
  Wenn die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> -Eigenschaftensatz auf `false` und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, tritt das folgende Verhalten auf.  
@@ -121,6 +122,7 @@ Die folgende Tabelle beschreibt, wie Benutzer mit interagieren können die <xref
   
  Wenn <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> festgelegt ist, um `true` und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, auf eine Zelle klicken, während der STRG-oder UMSCHALTTASTE verhält sich genauso außer, dass nur vollständige Zeilen und Spalten sind betroffen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>Siehe auch
+
+<xref:System.Windows.Forms.DataGridView>  
  [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

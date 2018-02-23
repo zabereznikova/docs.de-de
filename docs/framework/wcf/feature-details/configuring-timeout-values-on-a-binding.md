@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurieren von Timeoutwerten für eine Bindung
 Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. Wenn diese Timeouteinstellungen ordnungsgemäß festgelegt sind, verbessert sich nicht nur die Leistung des Diensts, sondern auch dessen Anwenderfreundlichkeit und Sicherheit. Die folgenden Timeouts sind für WCF-Bindungen verfügbar:  
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  SendTimeout: Wird zur Initialisierung von OperationTimeout verwendet. Die Einstellung steuert den gesamten Sendevorgang einer Nachricht, einschließlich des Empfangs einer Antwortnachricht für einen Vorgang des Anforderung-Antwort-Diensts. Dieses Timeout gilt auch beim Senden von Antwortnachrichten von einer Rückrufvertragsmethode.  
   
-2.  OpenTimeout: Wird beim Öffnen von Kanälen verwendet, wenn kein expliziter Timeoutwert angegeben ist.  
+2.  "Opentimeout" – wird verwendet, wenn Kanäle geöffnet wird, wenn kein explizites Timeout-Wert angegeben wird.  
   
-3.  CloseTimeout: Wird beim Schließen von Kanälen verwendet, wenn kein expliziter Timeoutwert angegeben ist.  
+3.  "CloseTimeout" – wird verwendet, wenn Kanäle zu schließen, wenn kein explizites Timeout-Wert angegeben wird.  
   
-4.  ReceiveTimeout: Wird nicht verwendet.  
+4.  ReceiveTimeout: wird nicht verwendet.  
   
 ### <a name="service-side-timeouts"></a>Dienstseitige Timeouts  
  Auf der Dienstseite:  
   
-1.  SendTimeout, OpentTimeout und CloseTimeout sind mit den Einstellungen auf dem Client identisch.  
+1.  SendTimeout, "opentimeout", "CloseTimeout" sind identisch wie auf dem Client.  
   
 2.  ReceiveTimeout: Wird von der Dienstframeworkebene verwendet, um das Timeout für Sitzungen im Leerlauf zu initialisieren, das steuert, wie lange eine Sitzung bis zum Timeout im Leerlauf sein kann.
