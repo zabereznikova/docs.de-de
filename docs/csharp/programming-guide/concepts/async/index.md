@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f943bbc849c5c960884752780e48401f4cb59a7d
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: b845bf6f31ef84c78dcfd84832036ca2f2c4cae4
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -30,8 +30,8 @@ Dieses Thema enthält eine Übersicht über die Verwendungsmöglichkeiten der as
 | Anwendungsbereich    | .NET-Typen mit asynchronen Methoden     | Windows-Runtime-Typen mit asynchronen Methoden  |
 |---------------------|-----------------------------------|-------------------------------------------|
 |Webzugriff|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
-|Arbeiten mit Dateien|<xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|[StorageFile](http://go.microsoft.com/fwlink/p/?LinkId=248220)|  
-|Arbeiten mit Bildern||[MediaCapture](http://go.microsoft.com/fwlink/p/?LinkId=261839), [BitmapEncoder](http://go.microsoft.com/fwlink/p/?LinkId=261840), [BitmapDecoder](http://go.microsoft.com/fwlink/p/?LinkId=261841)|  
+|Arbeiten mit Dateien|<xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|<xref:Windows.Storage.StorageFile>|  
+|Arbeiten mit Bildern||<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF-Programmierung|[Synchrone und asynchrone Vorgänge](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
   
 Asynchronität erweist sich als besonders nützlich bei Prozessen, die durch den UI-Thread ausgeführt werden, da sämtliche auf die Benutzeroberfläche bezogenen Aktivitäten sich gemeinhin diesen Thread teilen. Ist ein Prozess in einer synchronen Anwendung blockiert, werden alle blockiert. Die Anwendung reagiert nicht mehr, und Sie denken möglicherweise, es sei ein Fehler aufgetreten, wenn die Anwendung tatsächlich nur wartet.  
@@ -45,7 +45,7 @@ Asynchronität erweist sich als besonders nützlich bei Prozessen, die durch den
   
  Das folgende Beispiel zeigt eine Async-Methode. Fast der gesamte Code sollte Ihnen bekannt vorkommen. Die Kommentare rufen die von Ihnen hinzugefügten Funktionen auf, um die Asynchronie zu erstellen.  
   
- Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](http://go.microsoft.com/fwlink/?LinkID=261549) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.  
+ Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.  
   
 ```csharp  
 // Three things to note in the signature:  
@@ -146,7 +146,7 @@ Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in a
 ##  <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden  
  Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher und .NET Core enthalten viele Member, die mit `async` und `await` funktionieren. Sie können sie durch das Suffix „Async“ erkennen, das dem Membernamen und dem Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> angefügt wird. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.  
   
- Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen und Beispielmethoden finden Sie unter [Schnellstart: Verwenden des await-Operators für die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=248545), [Asynchrone Programmierung (Windows Store-Apps)](http://go.microsoft.com/fwlink/?LinkId=259592) und [WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx).  
+ Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen und Beispielmethoden finden Sie unter [Schnellstart: Verwenden des await-Operators für die asynchrone Programmierung](/previous-versions/windows/apps/hh452713(v=win.10)), [Asynchrone Programmierung (Windows Store-Apps)](/previous-versions/windows/apps/hh464924(v=win.10)) und [WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx).  
   
 ##  <a name="BKMK_Threads"></a> Threads  
 Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der abgewartete Task ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.  
@@ -225,15 +225,15 @@ Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen 
   
 Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden Rückgabetypen auf, die Tasks ähnlich sind:  
   
--   [IAsyncOperation](http://go.microsoft.com/fwlink/p/?LinkId=261896), entspricht <xref:System.Threading.Tasks.Task%601>  
+-   <xref:Windows.Foundation.IAsyncOperation%601>, was <xref:System.Threading.Tasks.Task%601> entspricht.  
   
--   [IAsyncAction](http://go.microsoft.com/fwlink/p/?LinkId=261897), entspricht <xref:System.Threading.Tasks.Task>  
+-   <xref:Windows.Foundation.IAsyncAction>, was <xref:System.Threading.Tasks.Task> entspricht.  
   
--   [IAsyncActionWithProgress](http://go.microsoft.com/fwlink/p/?LinkId=261898)  
+-   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
--   [IAsyncOperationWithProgress](http://go.microsoft.com/fwlink/p/?LinkID=259454)  
+-   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- Weitere Informationen und ein Beispiel finden Sie unter [Schnellstart: Verwenden des await-Operators für die asynchrone Programmierung](http://go.microsoft.com/fwlink/p/?LinkId=248545).  
+ Weitere Informationen und ein Beispiel finden Sie unter [Schnellstart: Verwenden des await-Operators für die asynchrone Programmierung](/previous-versions/windows/apps/hh452713(v=win.10)).  
   
 ##  <a name="BKMK_NamingConvention"></a> Benennungskonvention  
  Gemäß der Konvention fügen Sie die Zeichenfolge „Async“ an die Namen von Methoden an, die einen `async`-Modifizierer besitzen.  
@@ -244,21 +244,21 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
   
 |Titel|description|Beispiel|  
 |-----------|-----------------|------------|  
-|[Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](http://go.microsoft.com/fwlink/p/?LinkID=255191&clcid=0x409) (Asynchrones Beispiel: Aufrufen der exemplarischen Vorgehensweise)|  
+|[Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Asynchrones Beispiel: Aufrufen der exemplarischen Vorgehensweise)|  
 |[Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Fügt der vorherigen exemplarischen Vorgehensweise <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> hinzu. Bei Verwendung von `WhenAll` werden alle Downloads gleichzeitig gestartet.||  
-|[Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Veranschaulicht, wie mehrere Aufgaben gleichzeitig gestartet werden.|[Async Sample: Make Multiple Web Requests in Parallel](http://go.microsoft.com/fwlink/p/?LinkID=254906&clcid=0x409) (Asynchrones Beispiel: Paralleles Erstellen mehrerer Webanforderungen)|  
+|[Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Veranschaulicht, wie mehrere Aufgaben gleichzeitig gestartet werden.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Asynchrones Beispiel: Paralleles Erstellen mehrerer Webanforderungen)|  
 |[Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|Veranschaulicht die Typen, die Async-Methoden zurückgeben können und erklärt, wann die einzelnen Typen geeignet sind.||  
-|[Ablaufsteuerung in asynchronen Programmen (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|Verfolgt die Ablaufsteuerung ausführlich durch eine Reihenfolge von await-Ausdrücken in einem asynchronen Programm.|[Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/p/?LinkID=255285&clcid=0x409) (Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen)|  
-|[Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Zeigt, wie die folgenden Funktionen der asynchronen Lösung hinzugefügt werden:<br /><br /> -   [Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Asynchrone Aufgaben nach einer Zeitperiode abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/p/?LinkID=255046&clcid=0x409) (Asynchrones Beispiel: Feinabstimmung der Anwendung)|  
+|[Ablaufsteuerung in asynchronen Programmen (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|Verfolgt die Ablaufsteuerung ausführlich durch eine Reihenfolge von await-Ausdrücken in einem asynchronen Programm.|[Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen)|  
+|[Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Zeigt, wie die folgenden Funktionen der asynchronen Lösung hinzugefügt werden:<br /><br /> -   [Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Asynchrone Aufgaben nach einer Zeitperiode abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)|  
 |[Ablauf des erneuten Eintretens in asynchronen Anwendungen (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|Zeigt, wie Fälle gehandhabt werden, in denen ein aktiver asynchroner Vorgang neu gestartet wird, während er ausgeführt wird.||  
-|[WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Zeigt, wie zwischen Aufgabentypen in .NET Framework und „IAsyncOperations“ in [!INCLUDE[wrt](~/includes/wrt-md.md)] überbrückt wird, sodass <xref:System.Threading.Tasks.Task.WhenAny%2A> mit einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Methode verwendet werden kann.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](http://go.microsoft.com/fwlink/p/?LinkID=260638) (Thema mit einem asynchronen Beispiel für die Überbrückung zwischen .NET und Windows-Runtime („AsTask“ und „WhenAny“))|  
-|Asynchroner Abbruch: Überbrückung zwischen .NET Framework und Windows-Runtime|Zeigt, wie zwischen Aufgabentypen in .NET Framework und „IAsyncOperations“ in [!INCLUDE[wrt](~/includes/wrt-md.md)] überbrückt wird, sodass <xref:System.Threading.CancellationTokenSource> mit einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Methode verwendet werden kann.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](http://go.microsoft.com/fwlink/p/?LinkId=263004) (Thema mit einem asynchronen Beispiel für die Überbrückung zwischen .NET und Windows-Runtime („AsTask“ & „Cancellation“))|  
+|[WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Zeigt, wie zwischen Aufgabentypen in .NET Framework und „IAsyncOperations“ in [!INCLUDE[wrt](~/includes/wrt-md.md)] überbrückt wird, sodass <xref:System.Threading.Tasks.Task.WhenAny%2A> mit einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Methode verwendet werden kann.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739) (Thema mit einem asynchronen Beispiel für die Überbrückung zwischen .NET und Windows-Runtime („AsTask“ und „WhenAny“))|  
+|Asynchroner Abbruch: Überbrückung zwischen .NET Framework und Windows-Runtime|Zeigt, wie zwischen Aufgabentypen in .NET Framework und „IAsyncOperations“ in [!INCLUDE[wrt](~/includes/wrt-md.md)] überbrückt wird, sodass <xref:System.Threading.CancellationTokenSource> mit einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Methode verwendet werden kann.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3) (Thema mit einem asynchronen Beispiel für die Überbrückung zwischen .NET und Windows-Runtime („AsTask“ & „Cancellation“))|  
 |[Verwenden von Async für den Dateizugriff (C#)](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md)|Listet die Vorteile der Verwendung von "async" und "await" für den Zugriff auf Dateien auf und veranschaulicht sie.||  
-|[Task-based Asynchronous Pattern (TAP)](http://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007) (Aufgabenbasiertes asynchrones Muster)|Beschreibt ein neues Muster für Asynchronie in .NET Framework. Das Muster basiert auf den <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Typen.||  
-|[Videos zur asynchronen Programmierung auf Channel 9](http://go.microsoft.com/fwlink/p/?LinkID=267466)|Stellt Links zu einer Vielzahl von Videos über die asynchrone Programmierung bereit.||  
+|[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)|Beschreibt ein neues Muster für Asynchronie in .NET Framework. Das Muster basiert auf den <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Typen.||  
+|[Videos zur asynchronen Programmierung auf Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Stellt Links zu einer Vielzahl von Videos über die asynchrone Programmierung bereit.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Vollständiges Beispiel  
- Beim folgenden Code handelt es sich um die Datei „MainWindow.xaml.cs“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](http://go.microsoft.com/fwlink/p/?LinkID=261549) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.  
+ Beim folgenden Code handelt es sich um die Datei „MainWindow.xaml.cs“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.  
   
 ```csharp  
 using System;  
