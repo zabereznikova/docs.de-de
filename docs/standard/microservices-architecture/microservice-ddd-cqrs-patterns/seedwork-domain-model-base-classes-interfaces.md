@@ -1,43 +1,46 @@
 ---
-title: "Seedwork (wiederverwendbare Klassen und Schnittstellen für Ihre Domänenmodell)"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Seedwork (wiederverwendbare Klassen und Schnittstellen für Ihre Domänenmodell)"
+title: "SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)"
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 17602d94ea167997389a77f0d2358326258a8219
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (wiederverwendbare Klassen und Schnittstellen für Ihre Domänenmodell)
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
-Die Projektmappenordner enthält eine *SeedWork* Ordner. Die *SeedWork* Ordner enthält benutzerdefinierte Basisklassen, die Sie als Basis für Ihre Domänenentitäten und Wertobjekten verwenden können. Verwenden Sie diese Basisklassen, sodass Sie nicht redundanten Code in jeder Domäne-Objektklasse verfügen. Der Ordner für diese Typen Klassen wird aufgerufen, *SeedWork* und nicht etwas wie *Framework*. Es heißt *SeedWork* weil der Ordner nur eine kleine Teilmenge der wiederverwendbare Klassen enthält, das tatsächlich ein Framework angesehen werden kann. *Seedwork* ein Begriff eingeführt [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) und wurde durch den [Smell](https://martinfowler.com/bliki/Seedwork.html) aber nennen Sie diesen Ordner Allgemein, SharedKernel, auch oder ähnliches.
+Der Projektmappenordner enthält den Ordner *SeedWork*. Der Ordner *SeedWork* enthält benutzerdefinierte Basisklassen, die Sie als Grundlage Ihrer Domänenentitäten und Wertobjekte verwenden können. Mithilfe dieser Basisklassen vermeiden Sie redundanten Code in den Objektklassen der einzelnen Domänen. Der Ordner für diese Klassentypen heißt *SeedWork* und nicht *Framework* oder Ähnliches. Er heißt *SeedWork*, weil der Ordner nur eine kleine Teilmenge der wiederverwendbaren Klassen enthält, und diese stellen nicht wirklich ein Framework dar. Der Begriff *SeedWork* wurde von [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) eingeführt und von [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) bekannt gemacht. Dieser Ordner kann jedoch auch z.B. „Common“ oder „SharedKernel“ heißen.
 
-Abbildung 9 bis 12 zeigt die Klassen, die die Seedwork des Domänenmodells in der Reihenfolge Microservice bilden. Er verfügt über einige benutzerdefinierte Basisklassen wie die Entität, Enumerations- und ValueObject, sowie einige Schnittstellen. Diese Schnittstellen (IRepository und IUnitOfWork) informieren die Infrastrukturebene über herrscht implementiert werden. Diese Schnittstellen werden von der Anwendungsebene auch über die Abhängigkeitsinjektion verwendet.
+In Abbildung 9-12 werden die Klassen gezeigt, die im Microservice für Bestellungen den Stamm des Domänenmodells bilden. Er verfügt über einige benutzerdefinierte Basisklassen wie die „Entity“ (Entität), „Enumeration“ und ValueObject, sowie einige Schnittstellen. Diese Schnittstellen (IRepository und IUnitOfWork) informieren die Infrastrukturebene darüber, was implementiert werden muss. Diese Schnittstellen werden auch über die Abhängigkeitsinjektion von der Anwendungsebene verwendet.
 
 ![](./media/image13.PNG)
 
-**Abbildung 9 bis 12**. Legen Sie ein Beispiel für Domäne Modell "Seedwork" Basis-Klassen und Schnittstellen
+**Abbildung 9-12:** Beispiel für die „Seedwork“-Basisklassen und -Schnittstellen eines Domänenmodells
 
-Dies ist der Typ der Wiederverwendung von kopieren und einfügen, die viele Entwickler mehrere Projekte, keine formale Framework gemeinsam zu verwenden. Sie können in jeder Ebene oder eine Bibliothek Seedworks haben. Wenn der Satz von Klassen und Schnittstellen groß genug ist, abruft, sollten Sie jedoch eine einzelne-Klassenbibliothek zu erstellen.
+Viele Entwickler verwenden diese Vorgänge zum Kopieren und Einfügen (und kein formales Framework) projektübergreifend wieder. SeedWork-Ordner können in jeder Ebene oder Bibliothek vorkommen. Wenn die Anzahl der Klassen und Schnittstellen jedoch zu groß wird, sollten Sie eine einzelne Klassenbibliothek erstellen.
 
-## <a name="the-custom-entity-base-class"></a>Die benutzerdefinierte Entität-Basisklasse
+## <a name="the-custom-entity-base-class"></a>Die benutzerdefinierte Entity-Basisklasse
 
-Der folgende Code ist ein Beispiel für eine Basisklasse für die Entität können Sie Code platzieren, die die gleiche Weise kann, durch eine beliebige Entität "Domain", z. B. die Entitäts-ID verwendet werden [Gleichheitsoperatoren](https://msdn.microsoft.com/en-us/library/c35t2ffz.aspx)usw..
+Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal) oder eine Liste der Domänenereignisse pro Entität.
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
-## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Repository Verträge (Schnittstellen) in der Domäne der Ebene
+Der vorherige Code mit einer Domänenereignisliste pro Entität wird in den nächsten Abschnitten erklärt werden, wenn es um Domänenereignisse geht. 
 
-Repository-Verträge sind einfach .NET-Schnittstellen, die express die Vetragsanforderungen der Repositorys für jedes Aggregat verwendet werden soll. Selbst Repositorys EF Kerncode oder andere Infrastruktur Abhängigkeiten und Code müssen innerhalb des Domänenmodells nicht implementiert werden; die Repositorys sollten nur die Schnittstellen implementieren, die Sie definieren.
+## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Repositoryverträge (Schnittstellen) auf der Ebene des Domänenmodells
 
-Ein Muster, die im Zusammenhang mit dieser Übung (platzieren die Repository-Schnittstellen in der Domäne der Ebene) ist die Schnittstelle getrennt-Muster. Als [erläutert](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) Smell, "Verwendung getrennt Schnittstelle so definieren Sie eine Schnittstelle in einem Paket aber in einer anderen zu implementieren. Auf diese Weise kann ein Client, der die Abhängigkeit auf die Schnittstelle benötigt die Implementierung nicht bewusst sein."
+Repositoryverträge sind einfache .NET-Schnittstellen, die die Vetragsanforderungen der Repositorys darstellen, die für jedes Aggregat verwendet werden sollen. 
 
-Nach dem Muster getrennt-Schnittstelle aktiviert der Anwendungsschicht (in diesem Fall das Web-API-Projekt für die Microservice) haben eine Abhängigkeit für die Anforderungen im Domänenmodell definiert, aber keine direkte Abhängigkeit auf der Infrastruktur/Persistenz Ebene. Sie können darüber hinaus Abhängigkeitsinjektion verwenden, um die Implementierung zu isolieren, die in der Infrastruktur implementiert wird mithilfe von Persistenzebene Repositorys.
+Die Repositorys selbst mit dem EF Core-Code oder anderen Infrastrukturabhängigkeiten und Code (LINQ, SQL etc.) dürfen nicht im Domänenmodell implementiert werden. Diese Repositorys sollten nur die von Ihnen definierte Schnittstelle implementieren. 
 
-Im folgende Beispiel mit der IOrderRepository-Schnittstelle definiert z. B. welche Vorgänge die OrderRepository-Klasse auf der Infrastrukturebene implementieren muss. In der aktuellen Implementierung der Anwendung muss der Code nur die Reihenfolge in der Datenbank hinzugefügt werden, da Abfragen Split folgen, wie Sie die CQS Ansatz und auftragsänderungen nicht implementiert werden.
+Ein ähnliches Prinzip, bei dem die Repositoryschnittstellen in der Ebene des Domänenmodells platziert werden, ist das Schnittstellenaufteilungsprinzip. [Laut Martin Fowler](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) sollten Sie die Schnittstellenaufteilung nutzen, um eine Schnittstelle in einem Paket zu definieren und in einem anderen zu implementieren. So nimmt ein Client, der die Abhängigkeit von der Schnittstelle benötigt, keine Kenntnis von der Implementierung.
+
+Wenn Sie das Schnittstellenaufteilungsprinzip verwenden, kann die Anwendungsebene (in diesem Fall das Web-API-Projekt für den Microservice) eine Abhängigkeit von den im Domänenmodell definierten Anforderungen aufweisen, jedoch keine direkte Abhängigkeit von der Infrastruktur-/Persistenzebene. Außerdem können Sie Abhängigkeitsinjektion verwenden, um die Implementierung zu isolieren, die in der Infrastruktur-/Persistenzebene mithilfe von Repositorys implementiert wurde.
+
+Im folgenden Beispiel wird z.B. mithilfe der IOrderRepository-Schnittstelle definiert, welche Vorgänge die OrderRepository-Klasse auf der Infrastrukturebene implementieren muss. In der aktuellen Implementierung der Anwendung muss der Code nur der Datenbank Bestellungen hinzufügen oder diese aktualisieren, da Abfragen nach dem vereinfachten CQRS-Ansatz aufgeteilt werden.
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }
@@ -122,9 +145,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Martin Fowler. Getrennte-Schnittstelle. ** 
-     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html%20)
+-   **Martin Fowler. Separated Interface (Schnittstellenaufteilung)**
+    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Net-Core-Microservice-Domain-model.md) [weiter] (implementieren-Wert-objects.md)
+[Zurück] (net-core-microservice-domain-model.md) [Weiter] (implement-value-objects.md)

@@ -1,6 +1,6 @@
 ---
-title: Dienstorientierte Architektur
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Dienstorientierte Architektur"
+title: Serviceorientierte Architektur
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Serviceorientierte Architektur"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,26 +8,29 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 970ff86c77100077d4c7710c0a697d1745d35819
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6a5f0f53f4208c9944adea33fe1aa3f35fed81ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="service-oriented-architecture"></a>Dienstorientierte Architektur 
+# <a name="service-oriented-architecture"></a>Serviceorientierte Architektur 
 
-Dienstorientierte Architektur (SOA) wurde ein Überbelastung Begriff und verfügt über verschiedene Bedeutungen für verschiedene Benutzer vorgesehen. Jedoch als einen gemeinsamen Nenner SOA bedeutet, dass Sie Strukturieren Ihrer Anwendung durch zerlegen es in mehrere Dienste (meist als HTTP-Dienste), die als unterschiedliche Typen wie Subsysteme oder Ebenen klassifiziert werden können.
+Der Begriff „serviceorientierte Architektur“ (SOA) wurde zu häufig verwendet und hat daher verschiedene Bedeutungen entwickelt. Der gemeinsame Nenner der Bedeutung von „serviceorientierter Architektur“ ist jedoch, dass die Anwendung strukturiert wird, indem sie in mehrere Dienste zerlegt wird (meistens HTTP-Dienste), die als unterschiedliche Typen klassifiziert werden können, z.B. Subsysteme oder Ebenen.
 
-Diese Dienste können nun als Docker-Container bereitgestellt werden die löst Bereitstellungsprobleme, da alle Abhängigkeiten in den Container-Abbild einbezogen werden. Wenn Sie jedoch zentrale Skalieren von SOA-Anwendungen werden müssen Sie möglicherweise die Skalierbarkeit und Verfügbarkeit Herausforderungen bei der Bereitstellung auf der Grundlage von einzelnen Docker-Hosts. Dies ist, bei denen sich Software- oder ein Orchestrator-clustering Docker beitragen, Sie, wie in späteren Abschnitten beschrieben, in denen wir Bereitstellung Ansätze zum Microservices beschreiben.
+Diese Dienste können nun als Docker-Container bereitgestellt werden. Dadurch werden Bereitstellungsprobleme gelöst, da alle Abhängigkeiten im Containerimage enthalten sind. Wenn Sie jedoch SOA-Anwendungen hochskalieren müssen, können Probleme mit der Skalierbarkeit und Verfügbarkeit auftreten, wenn Sie die Bereitstellung auf Grundlage eines einzelnen Docker-Hosts durchführen. Hierbei kann Docker-Clusteringsoftware oder ein Orchestrator Sie unterstützen. Dies wird in den folgenden Abschnitten erläutert, in denen Ansätze für die Bereitstellung von Microservices beschrieben werden.
 
-Docker-Containern sind nützlich, (aber nicht erforderlich) für herkömmliche dienstorientierten Architekturen und die erweiterten Microservices-Architekturen.
+Für herkömmliche serviceorientierte Architekturen und erweiterte Microservicesarchitekturen sind Docker-Container nützlich, jedoch nicht erforderlich.
 
-Microservices abgeleitet SOA, aber SOA unterscheidet sich vom Microservices-Architektur. Funktionen wie große zentralen Brokern, zentralen Orchestrators auf Ebene der Organisation und die [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) SOA, das typisch sind. Aber in den meisten Fällen sind diese Antimuster in der Microservice-Community. Einige Benutzer in der Tat argumentieren, "die Architektur Microservice SOA richtig ist."
+Microservices werden von serviceorientierten Architekturen abgeleitet, die sich jedoch von Microservicesarchitekturen unterscheiden. Features wie große zentrale Broker, zentrale Orchestratoren auf Organisationsebene und der [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) sind typisch für serviceorientierte Architekturen. In den meisten Fällen sind diese Muster in der Microservicescommunity jedoch nicht beliebt. Einige Benutzer argumentieren, dass die Microservicesarchitektur die geglückte Form der serviceorientierten Architektur sei.
 
-Dieses Handbuch bezieht sich auf Microservices, da ein SOA-Ansatzes kleiner als die Anforderungen und Techniken, mit denen in einer Architektur mit Microservice normativen ist. Wenn Sie wissen, wie eine Microservice-basierte Anwendung erstellen, wissen Sie auch wie eine einfachere dienstorientierten Anwendung erstellt.
+Der Schwerpunkt dieses Handbuchs liegt auf Microservices, da der SOA-Ansatz weniger ausführlich als die Anforderungen und Techniken ist, die in Microservicesarchitekturen verwendet werden. Wenn Sie eine auf Microservices basierte Anwendung erstellen können, können Sie ebenfalls eine einfachere, serviceorientierte Anwendung erstellen.
 
 
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Docker-Anwendung-Status-data.md) [weiter] (Microservices architecture.md)
+[Zurück] (docker-application-state-data.md) [Weiter] (microservices-architecture.md)

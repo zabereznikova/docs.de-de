@@ -1,6 +1,6 @@
 ---
-title: "Resilienz und hohe Verfügbarkeit in microservices"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Resilienz und hohe Verfügbarkeit in microservices"
+title: "Resilienz und Hochverfügbarkeit bei Microservices"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Resilienz und Hochverfügbarkeit bei Microservices"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,77 +8,80 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 149e28ac7bd7383e4e960ed8a226943e2b9bdaa1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbad2f0843e05f05e90e2e83c7c35cd4f06ed5e0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und hohe Verfügbarkeit in microservices
+# <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
-Umgang mit unerwarteten Fehlern ist eine der schwierigsten Probleme zu lösen, insbesondere in einem verteilten System. Viele Entwickler geschriebenen Code umfasst das Behandeln von Ausnahmen, und dies ist auch die meisten Tests Zeitverluste ist. Das Problem ist komplizierter als das Schreiben von Code aus, um Fehler zu behandeln. Was geschieht, wenn der Computer, auf dem die Microservice läuft, ausfällt? Nicht nur müssen Sie diesen Microservice-Fehler (ein besonderes Problem dar selbst) erkennen, sondern auch etwas, um Ihre Microservice Neustart erforderlich.
+Der Umgang mit unerwarteten Fehlern ist eines der am schwierigsten zu lösenden Probleme, vor allem in einem verteilten System. Ein Großteil des Codes, den Entwickler schreiben, bezieht sich auf die Behandlung von Ausnahmen. Und genau in diesen Bereich wird beim Testen die meiste Zeit investiert. Dabei ist das Problem komplexer und mit dem Schreiben von Code zur Fehlerbehandlung nicht gelöst. Was geschieht, wenn der Computer ausfällt, auf dem der Microservice ausgeführt wird? Es reicht nicht, diesen Microservicefehler (schon für sich genommen ein schwieriges Problem) zu erkennen. Vielmehr wird auch Code benötigt, um den Microservice neu zu starten.
 
-Ein Microservice muss, um ausfallsicherheit sein und kann auf einem anderen Computer für die Verfügbarkeit häufig neu gestartet werden. Diese Flexibilität gehören auch nach unten in den Zustand, der im Auftrag der Microservice gespeichert wurde, wobei dieser Status aus der Microservice wiederhergestellt werden kann, und, ob die Microservice erfolgreich neu gestartet werden kann. Das heißt, muss es Flexibilität in der Compute-Funktion (der Prozess kann jedoch jederzeit neu gestartet) sowie ausfallsicherung durch die in den Zustand oder Daten (ohne Datenverlust und die Daten bleiben konsistent).
+Ein Microservice muss ausfallsicher sein. Zudem muss es zur Gewährleistung der Verfügbarkeit möglich sein, den Microservice häufig auf einem anderen Computer neu zu starten. Diese Resilienz reicht bis zu dem Zustand, der für den Microservice gespeichert wurde, wobei der Microservice von diesem Zustand aus wiederhergestellt und neu gestartet werden kann. Das bedeutet, dass Resilienz nicht nur in Bezug auf die Compute-Funktion (der Prozess kann jederzeit neu gestartet werden), sondern auch in Bezug auf den Zustand bzw. die Daten (kein Datenverlust und die Daten bleiben konsistent) gefordert ist.
 
-Die Probleme der Stabilität sind verschärft, während andere Szenarien, z. B. wenn Fehler während eines Anwendungsupgrades auftreten. Die Microservice, arbeiten mit dem Bereitstellungssystem muss bestimmen, ob auf die neuere Version vorwärts oder stattdessen Rollback zu einer früheren Version zu einen konsistenten Zustand zu beizubehalten fortgesetzt werden kann. Fragen, z. B., ob genügend Computer zu gleitenden vorwärts verfügbar sind und die Vorgehensweise beim Wiederherstellen von früheren Versionen von der Microservice berücksichtigt werden müssen. Dies erfordert die Microservice Integritätsinformationen auszugeben, sodass die Gesamtgröße der Anwendung und die Orchestrator diese Entscheidungen treffen können.
+Die Probleme der Resilienz werden in anderen Szenarios noch verschärft, beispielsweise wenn Fehler bei einem Anwendungsupgrade auftreten. Der mit dem Bereitstellungssystem verwendete Microservice muss erkennen, ob die neuere Version installiert werden kann und der Zustand dabei konsistent bleibt oder ob zur Erhaltung des konsistenten Zustands ein Rollback zu einer früheren Version ausgeführt werden muss. Fragen wie die, ob genügend Computer vorhanden sind, um die neuere Version zu installieren, und wie frühere Versionen des Microservices wiederhergestellt werden können, müssen berücksichtigt werden. Dazu muss der Microservice Integritätsinformationen ausgeben, sodass diese Entscheidungen von der Anwendung und dem Orchestrator insgesamt getroffen werden können.
 
-Darüber hinaus Stabilität bezieht sich auf wie Cloud-basierte Systeme Verhalten müssen. Wie bereits erwähnt, wird ein Cloud-basierten System muss Fehlern nutzen und muss versuchen, daraus automatisch wiederhergestellt. Z. B. bei einem Ausfall Netzwerk- oder Container benötigen Client-apps oder Client-Dienste eine Strategie zum sendende von Nachrichten zu wiederholen oder zum Wiederholen von Anforderungen, da in vielen Fällen in der Cloud teilweise treten. Die [Resiliente Anwendungen implementieren](#implementing_resilient_apps) Abschnitt in diesem Handbuch erläutert, wie teilweise Fehler zu behandeln. Es beschreibt Techniken, wie Sie Wiederholungen mit exponenzieller oder einen Trennschalter in .NET Core mit Bibliotheken wie [Polly](https://github.com/App-vNext/Polly), die eine große Vielfalt von Richtlinien zum Behandeln dieses Thema bietet.
+Ferner bezieht sich Resilienz darauf, wie sich cloudbasierte Systeme verhalten müssen. Wie bereits erwähnt, muss ein cloudbasiertes System Fehler aufgreifen und versuchen, sich automatisch wiederherzustellen. Bei einem Netzwerk- oder Containerfehler müssen Clientanwendungen bzw. Clientdienste beispielsweise über eine Strategie zum wiederholten Senden von Nachrichten oder Anforderungen verfügen, da Fehler in der Cloud häufig nur partiell auftreten. Im Abschnitt [Implementing Resilient Applications (Implementieren von stabilen Anwendungen)](#implementing_resilient_apps) in diesem Handbuch wird die Behandlung von partiellen Fehlern thematisiert. Hier werden Techniken wie Wiederholungen mit exponentiellem Backoff oder das Schaltkreisunterbrechermuster in .NET Core durch Verwendung von Bibliotheken wie [Polly](https://github.com/App-vNext/Polly) beschrieben, die eine Vielzahl von Richtlinien zur Behandlung dieses Problems bereitstellen.
 
-## <a name="health-management-and-diagnostics-in-microservices"></a>Integrität Verwaltungs- und Diagnosefunktion in microservices
+## <a name="health-management-and-diagnostics-in-microservices"></a>Integritätsverwaltung und Diagnose in Microservices
 
-Es mag offensichtlich, und es wird häufig übersehen, aber ein Microservice muss gemeldet, die Integrität und Diagnose. Andernfalls ist nur wenig Aufschluss über aus Sicht der Vorgänge. Korrelieren von Diagnoseereignissen über eine Gruppe von unabhängigen Diensten und Umgang mit Computer Uhr schief eingezogenen Blättern, sinnvoll sein, der die Reihenfolge, wird eine große Herausforderung. Die gleiche Weise, die Sie mit einem Microservice über vereinbarten Protokollen und Datenformaten interagieren, ist eine erforderlich für die Standardisierung in Protokollieren von Integrität und Diagnose Ereignisse, die schließlich in eine Ereignisspeicher zum Abfragen und anzeigen. In einem Ansatz Microservices Schlüssel ist, dass die verschiedenen Teams, die über eine einzelne Protokollierungsformat verständigt haben. Es muss eine konsistente Möglichkeit zum Anzeigen von Diagnoseereignissen in der Anwendung sein.
+Es mag offensichtlich erscheinen und wird häufig übersehen, aber ein Microservice muss seine Integritäts- und Diagnoseergebnisse melden. Tut er das nicht, gibt es aus betrieblicher Sicht kaum Einblick. Die Korrelation von Diagnoseereignissen in verschiedenen unabhängigen Diensten und der Umgang mit Computerzeitabweichungen, damit die Ereignisreihenfolge einen Sinn ergibt, stellt dabei durchaus eine Herausforderung dar. Genauso wie Sie mit einem Microservice über vereinbarte Protokolle und Datenformate interagieren, ist eine Standardisierung in Bezug auf die Protokollierung von Integritäts- und Diagnoseereignissen erforderlich, die letztlich einen Ereignisspeicher zum Abfragen und Anzeigen ergeben. Bei einem Microserviceskonzept müssen sich die einzelnen Teams unbedingt auf ein Protokollierungsformat einigen. Für die Anzeige von Diagnoseereignissen in der Anwendung muss es ein einheitliches Konzept geben.
 
 ### <a name="health-checks"></a>Integritätsprüfungen
 
-Integrität unterscheidet sich von der Diagnose. Integrität ist über die Microservice reporting von seinem aktuellen Status, die entsprechenden Aktionen auszuführen. Ein gutes Beispiel arbeitet mit Upgrade und die Bereitstellung Mechanismen zum wahren der Verfügbarkeit. Obwohl ein Dienst möglicherweise zurzeit ist fehlerhaft, da ein Prozess abstürzt oder Computer ein Neustart, möglicherweise der Dienst weiterhin operational. Im letzten Schritt Sie müssen ist dies schlechter vornehmen, indem Sie ein Upgrade ausführen. Die beste Herangehensweise ist, um erste Schritte bei eine Untersuchung oder eine Weile, für die Microservice wiederherstellen. Integritätsereignisse aus einem Microservice helfen uns, fundierte Entscheidungen und faktisch dabei helfen, Selbstheilende Dienste zu erstellen.
+Integritätsprüfungen und Diagnosen sind nicht dasselbe. Bei der Integrität geht es darum, dass der Microservice seinen aktuellen Zustand meldet, damit entsprechende Maßnahmen ergriffen werden können. Ein gutes Beispiel hierfür ist die Verwendung von Upgrade- und Bereitstellungsmechanismen zur Gewährleistung der Verfügbarkeit. So kann ein Dienst beispielsweise aufgrund eines Prozessabsturzes oder aufgrund des Neustarts eines Computers vorübergehend fehlerhaft, aber dennoch funktionstüchtig sein. In diesem Fall würde die Ausführung eines Upgrades die Situation noch verschlimmern. Daher sollte am besten zunächst eine Untersuchung durchgeführt oder dem Microservice Zeit für die Wiederherstellung eingeräumt werden. Integritätsereignisse von einem Microservice helfen uns, fundierte Entscheidungen zu treffen und Services für die Selbstreparatur zu erstellen.
 
-In der Implementierung überprüft Integrität in ASP.NET Core Services Abschnitt dieses Handbuchs wird erläutert, wie eine neue ASP.NET HealthChecks-Bibliothek in Ihr Microservices verwenden, damit sie ihren Status an einen Überwachungsdienst zum entsprechenden Aktionen übermitteln können.
+Im Abschnitt Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten in diesem Handbuch wird erläutert, wie in den Microservices eine ASP.NET HealthChecks-Bibliothek so verwendet werden kann, dass die Microservices ihren Zustand an einen Überwachungsdienst senden, damit entsprechende Maßnahmen ergriffen werden können.
 
-### <a name="using-diagnostics-and-logs-event-streams"></a>Mithilfe von Diagnose- und Protokolle Ereignisstreams
+### <a name="using-diagnostics-and-logs-event-streams"></a>Verwenden von Diagnose- und Protokollereignisdatenströmen
 
-Protokolle Aufschluss darüber geben wie eine Anwendung oder ein Dienst, einschließlich Ausnahmen, Warnungen und informationsmeldungen einfache ausgeführt wird. Normalerweise ist jedes Protokoll in einem Textformat mit einer Zeile pro Ereignis, obwohl Ausnahmen die stapelüberwachung auch häufig über mehrere Zeilen anzeigen.
+Protokolle geben mithilfe von Ausnahmen, Warnungen und einfachen Informationsmeldungen Aufschluss darüber, wie eine Anwendung oder ein Dienst ausgeführt wird. Ein Protokoll weist in der Regel ein Textformat auf und enthält pro Zeile ein Ereignis. In Ausnahmen ist dagegen häufig die Stapelüberwachung in mehreren Zeilen dargestellt.
 
-Aufgrund eines monolithischen Server-basierten Anwendungen können Sie einfach die Protokolle in einer Datei auf Datenträger (eine Protokolldatei) schreiben und Analysieren es mit jedem anderen Tool. Da die Ausführung der Anwendung auf einer festen Serverrolle oder die VM begrenzt ist, ist es im Allgemeinen nicht zu komplex, um den Fluss von Ereignissen zu analysieren. Ist jedoch in einer verteilten Anwendung, in denen mehrere Dienste über viele Knoten in einem Orchestrator-Cluster ausgeführt werden, können verteilte Ereignisse korreliert eine Herausforderung dar.
+Bei monolithischen serverbasierten Anwendungen können Protokolle einfach in eine Datei auf der Festplatte (also in eine Protokolldatei) geschrieben und anschließend mit einem beliebigen Tool analysiert werden. Da die Anwendungsausführung auf einen bestimmten Server oder einen bestimmten virtuellen Computer beschränkt ist, ist die Analyse des Ereignisflusses meist nicht allzu komplex. Bei einer verteilten Anwendung, bei der mehrere Dienste auf verschiedenen Knoten in einem Orchestratorcluster ausgeführt werden, stellt die Korrelation von verteilten Ereignissen dagegen eine Herausforderung dar.
 
-Eine Microservice-basierte Anwendung sollten nicht versuchen den Ausgabestream von Ereignissen oder Logfiles selbst zu speichern, und auch nicht zum Weiterleiten der Ereignisse an einem zentralen Speicherort gespeichert. Es sollte transparent, d. h., dass jeder Prozess nur seine ereignisdatenstrom in eine Standardausgabe schreiben soll, die unterhalb der Ausführung Umgebung Infrastruktur erfasst werden sollen, in dem er ausgeführt wird. Ein Beispiel dieser Ereignis-Stream-Router ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), die ereignisdatenströme aus mehreren Quellen sammelt und veröffentlicht sie Systeme ausgeben. Dazu zählen einfache Standardausgabe für eine Entwicklungsumgebung oder Cloudsysteme wie [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (für lokale Anwendungen) und [fürAzure-Diagnose](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Es gibt auch gute Drittanbieter-Protokoll Analysis-Plattformen und Tools, mit denen, Warnung, Berichts suchen können, und Monitor-Protokolle, sogar in Echtzeit, z. B. [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabedatenstrom von Ereignissen oder Protokolldateien selbst zu speichern oder gar das Routing der Ereignisse an einer zentrale Stelle zu verwalten. Sie sollte transparent sein, d.h., alle Prozesse sollen jeweils nur ihren eigenen Ereignisdatenstrom in eine Standardausgabe schreiben, die darunter von der Infrastruktur der Ausführungsumgebung erfasst wird, in der die Prozesse ausgeführt werden. Ein Beispiel für diese Ereignisdatenstromrouter ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow). Dieser Router erfasst Ereignisdatenströme aus verschiedenen Quellen und veröffentlicht diese in Ausgabesystemen. Hierzu zählen einfache Standardausgaben für eine Entwicklungsumgebung oder für Cloudsysteme wie [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (für lokale Anwendungen) und [Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Es gibt auch von Drittanbietern gute Plattformen und Tools zur Analyse von Protokollen, mit denen Protokolle durchsucht und überwacht, Anwender gewarnt und Berichte gesendet werden können, auch in Echtzeit. Ein Beispiel hierfür ist [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
-### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Verwalten von Informationen zu Integrität und Diagnose Orchestrators
+### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestratoren zum Verwalten von Integritäts- und Diagnoseinformationen
 
-Wenn Sie eine Microservice-basierte Anwendung erstellen, müssen Sie für den Umgang mit Komplexität. Natürlich eine einzelne Microservice ist für den Umgang mit einfachen, aber Dutzende oder Hunderte von Typen und Tausenden von Instanzen des Microservices wird ein komplexes Problem. Es wird nicht nur Ihre Architektur Microservice erstellt – auch aufgefunden hohe Verfügbarkeit, Adressierbarkeit, Stabilität, Integrität und Diagnose, wenn Sie beabsichtigen, ein System stabil und zusammenhängenden verfügen.
+Beim Erstellen einer auf Microservices basierenden Anwendung müssen Sie mit Komplexität umgehen können. Der Umgang mit einem einzelnen Microservice ist natürlich einfach. Aber Dutzende oder Hunderte Arten und Tausende Instanzen von Microservices stellen ein komplexes Problem dar. Dabei geht es nicht nur um die Erstellung der Microservicearchitektur. Gefragt sind auch Hochverfügbarkeit, eine gute Adressierbarkeit, Resilienz, Integrität und Diagnosefunktionen, wenn Sie ein stabiles und kohäsives System erstellen möchten.
 
 ![](./media/image22.png)
 
-**Abbildung 4-22**. Ein Microservice-Plattform ist elementar für eine Integrität der anwendungsverwaltung
+**Abbildung 4-22.** Microserviceplattformen sind für die Integritätsverwaltung einer Anwendung entscheidend
 
-Der komplexer Probleme, die in Abbildung 4-22 dargestellt sind sehr schwer zu sich selbst lösen. Entwicklungsteams sollten beim Lösen von Geschäftsproblemen und zum Erstellen von benutzerdefinierten Anwendungen mit Microservice basierenden Ansätzen konzentrieren. Sie sollten nicht darauf konzentrieren, komplexen Infrastrukturprobleme lösen; Wenn in diesem Fall wäre die Kosten für jede Microservice-basierte Anwendung ansteigen. Daher sind Microservice orientierten Plattformen als Orchestrators oder Microservice Cluster aus, die versuchen, die Festplatte Problemen der Erstellung und Ausführung eines Diensts und effizientes Verwenden von Infrastrukturressourcen bezeichnet. Dies reduziert die Komplexität der Erstellung von Anwendungen, die einen Microservices Ansatz zu verwenden.
+Die in Abbildung 4-22 dargestellten komplexen Probleme lassen sich nur sehr schwer alleine lösen. Entwicklungsteams sollten sich auf die Lösung von Geschäftsproblemen und die Erstellung von benutzerdefinierten Anwendungen mit auf Microservices basierenden Konzepten konzentrieren. Sie sollten sich nicht um die Lösung komplexer Infrastrukturprobleme kümmern. Sollten sie dies dennoch tun, entstehen enorme Kosten für die auf Microservices basierende Anwendung. Daher gibt es Microservice-orientierte Plattformen, die als Orchestratoren oder Microservicecluster bezeichnet werden und zum Beheben von schwierigen Problemen beim Erstellen und Ausführen eines Diensts sowie bei der effizienten Nutzung von Infrastrukturressourcen dienen. Dadurch wird die Erstellung von Anwendungen auf Basis von Microservices vereinfacht.
 
-Verschiedene Orchestrators möglicherweise ähnlich klingen, die Diagnose- und integritätsprüfungen angeboten, die von jedem von ihnen unterscheiden sich jedoch in Funktionen und Status der Fälligkeit, in einigen Fällen, abhängig von die Betriebssystemplattform, wie im nächsten Abschnitt erläutert.
+Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen und Integritätsprüfungen, die die einzelnen Orchestratoren bereitstellen, unterscheiden sich jedoch hinsichtlich der Features und dem Reifegrad, manchmal abhängig von der jeweiligen Betriebssystemplattform. Ausführlichere Informationen hierzu finden Sie im nächsten Abschnitt.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Der zwölf-Faktor-App. XI. Protokolle: Behandeln von Protokollen als ereignisdatenströme**
+-   **The Twelve-Factor App. XI. Logs: Treat logs as event streams (Die Twelve-Factor-App. XI. Protokolle: Behandeln von Protokollen als Ereignisdatenströme)**
     [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft Diagnostics EventFlow-Bibliothek.** GitHub-Repository.
+-   **Microsoft.Diagnostics.EventFlow-Bibliothek.** GitHub-Repository.
 
-    [*https://github.com/Azure/Diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
--   **Neues Azure-Diagnose ist**
+-   **Was ist die Azure-Diagnose?**
     [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Verbinden von Windows-Computern mit Log Analytics-Dienst in Azure**
+-   **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Protokollierung was du Mittelwert: Verwenden des Anwendungsblocks semantische Protokollierung**
-    [*https://msdn.microsoft.com/library/dn440729 (v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+-   **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren, was Sie meinen: Verwenden des Semantic Logging Application Block)**
+    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Offizielle Website.
     [*http://www.splunk.com*](http://www.splunk.com)
 
--   **EventSource-Klasse**. API für Ereignisse, die ereignisablaufverfolgung für Windows (ETW) [ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+-   **EventSource-Klasse**. API für die Ereignisablaufverfolgung für Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Microservice-based-composite-ui-shape-layout.md) [weiter] (Scalable-available-multi-container-microservice-applications.md)
+[Zurück] (microservice-based-composite-ui-shape-layout.md) [Weiter] (scalable-available-multi-container-microservice-applications.md)

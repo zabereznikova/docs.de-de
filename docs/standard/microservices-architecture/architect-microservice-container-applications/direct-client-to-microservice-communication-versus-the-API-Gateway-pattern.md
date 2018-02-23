@@ -1,6 +1,6 @@
 ---
-title: Direkte Kommunikation von Client-zu-Microservice im Vergleich zu den API-Gateway-Muster
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Direkte Kommunikation von Client-zu-Microservice im Vergleich zu den API-Gateway-Muster"
+title: Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster"
 keywords: Docker, Microservices, ASP.NET, Container, API-Gateway
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,116 +8,119 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c8227ec47888c7cf361f34c4c85a09c0666f886e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Direkte Kommunikation von Client-zu-Microservice im Vergleich zu den API-Gateway-Muster
+# <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster
 
-In einer Architektur Microservices stellt jeder Microservice einen Satz (in der Regel) Fine‑grained Endpunkte bereit. Dies kann die Kommunikation Client‑to‑microservice auswirken, wie in diesem Abschnitt erläutert.
+In einer Microservicesarchitektur stellt jeder Microservice (in der Regel) mehrere umfassende Endpunkte zur Verfügung. Dies kann wie in diesem Abschnitt beschrieben Auswirkungen auf die Kommunikation zwischen Client und Microservice haben.
 
-## <a name="direct-client-to-microservice-communication"></a>Direkte Kommunikation von Client-zu-microservice
+## <a name="direct-client-to-microservice-communication"></a>Direkte Kommunikation zwischen Client und Microservice
 
-Ein möglicher Ansatz ist eine direkte Kommunikation von Client-Microservice-Architektur verwenden. Bei diesem Ansatz kann eine Client-app Anforderungen direkt an einige der Microservices vornehmen, wie in Abbildung 4-12 gezeigt.
+Es ist möglich, eine Architektur zur direkten Kommunikation zwischen Client und Microservice zu verwenden. Dabei kann eine Client-App, wie in Abbildung 4-12 dargestellt, auf direktem Weg Anforderungen an einige der Microservices senden.
 
 ![](./media/image12.png)
 
-**Abbildung 4-12**. Verwenden eine direkte Kommunikation von Client-Microservice-Architektur
+**Abbildung 4-12.** Verwenden einer Architektur zur direkten Kommunikation zwischen Client und Microservice
 
-Bei diesem Ansatz. Jede Microservice verfügt über einen öffentlichen Endpunkt in einigen Fällen mit einem anderen TCP-Port für jeden Microservice. Ein Beispiel für eine URL für einen bestimmten Dienst ist möglicherweise die folgende URL in Azure:
+In diesem Ansatz verfügt jeder Microservice über einen öffentlichen Endpunkt. Dabei kann es sein, dass jeder Microservice auf einem anderen TCP-Port ausgeführt wird. In Azure kann die URL eines bestimmten Diensts z.B. wie folgt lauten:
 
-<Http://eshoponcontainers.westus.cloudapp.Azure.com:88 />
+<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
-In einer produktiven Umgebung basierend auf einem Cluster, den URL der Load Balancer verwendet wird, in dem Cluster zugeordnet würde die wiederum die Anforderungen auf die Microservices verteilt. In produktionsumgebungen, haben Sie konnte eine Anwendung Übermittlung Controller (ADC) wie [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) zwischen Ihrem Microservices und dem Internet. Dies dient als eine transparente Ebene, die nicht nur führt den Lastenausgleich, aber Ihre Dienste durch das SSL-Tunnelabschluss Angebot sichert. Dies verbessert die Auslastung des Hosts durch Auslagern der CPU-Intensive SSL-Tunnelabschluss und andere routing Aufgaben für das Azure-Anwendung-Gateway. In jedem Fall sind, ein Lastenausgleichsmodul und ADC aus einer logischen Architektur Anwendungssicht transparent.
+In einer Produktionsumgebung, die auf einem Cluster basiert, wird diese URL dem im Cluster verwendeten Load Balancer zugeordnet, der dann wiederum die Anforderungen an die Microservices weiterleitet. In Produktionsumgebungen kann es sein, dass zwischen Ihren Microservices und dem Internet ein Application Delivery Controller (ADC) wie [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) steht. Dieser Controller fungiert als transparente Ebene, die nicht nur einen Lastenausgleich ausführt, sondern auch Ihre Dienste sichert, indem sie das Beenden von SSL ermöglicht. Dadurch wird das Laden Ihrer Hosts verbessert, denn das Beenden von SSL, das zu einer hohen CPU-Auslastung führt, und andere Pflichten zur Weiterleitung an das Azure Application Gateway werden abgeladen. In jedem Fall sind Lastenausgleich und ADC im Hinblick auf die logische Anwendungsarchitektur transparent.
 
-Eine direkte Kommunikation von Client-Microservice-Architektur möglicherweise ausreichend für eine kleine Microservice basierende Anwendung, insbesondere dann, wenn die Client-app eine serverseitige Webanwendung wie einer ASP.NET MVC-app ist. Allerdings Flächen Herangehensweise bei der Erstellung von großer und komplexer Microservice-basierte Anwendungen (z. B. beim Verarbeiten von Dutzenden Microservice Typen), und insbesondere, wenn der Client-apps remote mobilapps oder SPA-Webanwendungen sind, ein paar Probleme hinsichtlich.
+Eine Architektur zur direkten Kommunikation zwischen Client und Microservice kann sich gut für eine kleine auf einem Microservice basierende Anwendung eignen, insbesondere wenn es sich bei der Client-App um eine Webanwendung auf Serverseite handelt (z.B. eine ASP.NET-MVC-App). Wenn Sie allerdings eine große und komplexe auf einem Microservice basierende Anwendung erstellen (z.B. wenn Sie mit dutzenden Microservicetypen arbeiten), und vor allem wenn es sich bei den Client-Apps um mobile Remote-Apps oder SPA-Webanwendungen handelt, kann dieser Ansatz zu einigen Problemen führen.
 
-Entwickeln eine große Anwendung basierend auf Microservices sollten Sie die folgenden Fragen berücksichtigen:
+Beachten Sie die folgenden Fragen, wenn Sie eine große Anwendung erstellen, die auf Microservices basiert:
 
--   *Wie können Clientanwendungen minimieren Sie die Anzahl der Anforderungen an die Back-End- und reduzieren ' geschwätzige ' Kommunikation mit mehreren Microservices?*
+-   *Wie können Client-Apps die Anzahl von Anforderungen an das Back-End übergeben und umfangreiche Kommunikation von mehreren Microservices reduzieren?*
 
-Mehrere Microservices zum Erstellen einer einzigen Seite der Benutzeroberfläche interagieren, erhöht die Anzahl der Roundtrips über das Internet. Dies erhöht die Latenzzeit und Komplexität auf der Seite der Benutzeroberfläche. Im Idealfall Antworten aggregiert werden sollen, effizient die serverseitig – Dies reduziert die Latenz, da mehrere Teile der Daten parallel zurückkehren und einige Benutzeroberfläche Daten angezeigt kann, sobald er bereit ist.
+Wenn Sie mit mehreren Microservices zum Erstellen einer einzelnen Benutzeroberflächenanzeige interagieren, wird die Anzahl von Roundtrips zum Internet verringert. Dadurch wird die Wartezeit und die Komplexität auf Benutzeroberflächenseite verringert. Idealerweise sollten Antworten auf effiziente Weise auf Serverseite aggregiert werden. Dadurch wird die Wartezeit verringert, da mehrere Daten gleichzeitig zurückgegeben werden und einige Benutzeroberflächen Daten anzeigen, sobald diese verfügbar sind.
 
--   *Behandelt Sie können wie querschnittliche Sicherheitsrisiken wie Autorisierung, Datentransformationen und dynamische Anforderung verteilen?*
+-   *Wie können übergreifende Aspekte wie die Autorisierung, Datentransformationen und die dynamische Weiterleitung von Anforderungen gehandhabt werden?*
 
-Implementieren von Sicherheit und querschnittliche Probleme wie z. B. Sicherheit und die Autorisierung für jede Microservice erheblichen Entwicklungsaufwand erforderlich können. Ein möglicher besteht Ansatz darin, diese Dienste innerhalb des Docker-Host oder interne Cluster um direkten Zugriff von außerhalb darauf einschränken und diese Aspekte querschnittliche an einer zentralen Stelle, wie eine Gateway-API implementiert haben.
+Wenn Sie übergreifende Aspekte wie Sicherheit und Autorisierung in jeden Microservice implementieren, ist unter Umständen ein hohes Maß an Entwicklungsarbeit erforderlich. Dies können Sie vermeiden, indem Sie diese Dienste im Docker-Host oder internen Cluster speichern, um den Direktzugriff von außen einzuschränken und diese übergreifenden Aspekte an zentraler Stelle zu implementieren (z.B. in ein API-Gateway).
 
--   *Wie können Client-apps mit Diensten kommunizieren, die Internet-freundliche Protokolle verwenden?*
+-   *Wie können Client-Apps mit Diensten kommunizieren, die Protokolle verwenden, die nicht für das Internet geeignet sind?*
 
-Auf dem Server (z. B. AMQP oder binäre Protokolle) verwendeten Protokolle werden im Client-apps in der Regel nicht unterstützt. Aus diesem Grund müssen Anforderungen über Protokolle wie HTTP/HTTPS ausgeführt werden und im Anschluss an die anderen Protokolle übersetzt werden. Ein *Man-in-the-Middle-* Ansatz in diesem Fall können.
+Protokolle, die auf Serverseite verwendet werden (wie AMQP oder Binärprotokolle), werden in der Regel in Client-Apps nicht unterstützt. Aus diesem Grund müssen Anforderungen über Protokolle wie HTTP/HTTPS ausgeführt und anschließend in die anderen Protokolle übersetzt werden. In diesem Fall kann der *Man-in-the-Middle*-Ansatz zur Lösung des Problems verwendet werden.
 
--   *Wie können Sie eine Fassade, insbesondere für mobile apps vorgenommen strukturieren?*
+-   *Wie kann eine Fassade angepasst werden, die ausschließlich für mobile Apps erstellt wurde?*
 
-Die API von mehreren Microservices möglicherweise nicht gut für die Anforderungen der verschiedenen Clientanwendungen entworfen werden. Beispielsweise können die Anforderungen einer mobilen App die Anforderungen von einer Web-app abweichen. Für mobile apps müssen Sie möglicherweise noch weiter optimieren, damit Daten Antworten effizienter sein können. Sie können dies vornehmen, durch Aggregieren von Daten aus mehreren Microservices und Zurückgeben einer einzelnen Menge von Daten in einigen Fällen entfernen Sie alle Daten in die Antwort, die nicht von der mobilen Anwendung erforderlich ist. Und natürlich können Sie diese Daten komprimieren. Erneut, kann eine Fassade oder API zwischen der mobilen Anwendung und die Microservices für dieses Szenario praktisch sein.
+Es kann sein, dass die API für mehrere Microservices nicht an die Anforderungen verschiedener Client-Anwendungen angepasst wurde. Beispielweise unterscheiden sich die Anforderungen für mobile Apps von denen für Web-Apps. Für mobile Apps müssen Sie möglicherweise weitere Anpassungen zur Optimierung vornehmen, damit Datenantworten effizienter ausfallen können. Diese Anpassungen können Sie vornehmen, indem Sie Daten aus mehreren Microservices aggregieren und einen einzelnen Datensatz zurückgeben, oder indem Sie jegliche Daten aus der Antwort löschen, die für die mobile App nicht benötigt werden. Außerdem können Sie natürlich die Daten komprimieren. Auch in diesem Szenario kann eine Fassade oder eine API zwischen der mobilen App und den Microservices hilfreich sein.
 
-## <a name="using-an-api-gateway"></a>Mithilfe einer API-Gateway
+## <a name="using-an-api-gateway"></a>Verwenden eines API-Gateways
 
-Beim Entwerfen und Erstellen von großen oder komplexen Microservice-basierte Anwendungen mit mehreren Client-apps kann ein guter Ansatz für sollten eine [API-Gateway](http://microservices.io/patterns/apigateway.html). Dies ist ein Dienst, der einen einzigen Einstiegspunkt für bestimmte Gruppen von Microservices bereitstellt. Ähnliches gilt für die [Fassaden Muster](https://en.wikipedia.org/wiki/Facade_pattern) vom Object‑oriented Entwurf, aber in diesem Fall es ist Teil ein verteiltes System. Die API-Gateway-Muster wird manchmal auch bezeichnet als "Back-End für Front-End" [(BFF)](http://samnewman.io/patterns/architectural/bff/) , da es beim darum geht, die Anforderungen der Client-app zu erstellen.
+Wenn Sie große bzw. komplexe auf einem Microservice basierende Anwendungen mit mehreren Client-Apps entwerfen und erstellen, sollten Sie darüber nachdenken, ob ein [API-Gateway](http://microservices.io/patterns/apigateway.html) hilfreich sein kann. Dabei handelt es sich um einen Dienst, der genau einen Endpunkt für bestimmte Gruppen von Microservices bereitstellt. Dieser Dienst ähnelt zwar dem [Fassadenmuster](https://en.wikipedia.org/wiki/Facade_pattern) des objektorientierten Designs, jedoch ist er in diesem Fall Teil eines verteilten Systems. Das API-Gatewaymuster ist außerdem unter der Bezeichnung „Backend for Frontend“ [(BFF)](http://samnewman.io/patterns/architectural/bff/) (Back-End für Front-End) bekannt, da Sie es erstellen, während Sie entscheiden, welche Anforderungen Ihre App haben soll.
 
-Abbildung 4 – 13 wird gezeigt, wie eine benutzerdefinierte API-Gateway in einem Microservice-basierte Architektur eingepasst werden kann.
-Es ist wichtig, die in diesem Diagramm hervorheben, Sie würden einen einzelnen benutzerdefinierte API-Gateway-Dienst mit Internetzugriff mehrere verwenden und verschiedene Client-apps. Dieser Fakt ein Risiko wichtig sind, da Ihre API-Gatewaydienst wächst und weiterentwickelt werden, auf viele verschiedene Anforderungen an die Client-apps verwendet. Schließlich werden aufgrund dieser unterschiedliche Anforderungen sehr großer und effektiv ist es möglicherweise ziemlich ähnlich einem monolithischen Anwendung oder Dienst aufgrund eines monolithischen. Aus diesem Grund wird sehr viel empfohlen, die die API-Gateway in mehrere Dienste oder in mehrere kleinere-API-Gateways, eins pro Formfaktor, z. B. aufgeteilt ist.
+In Abbildung 4-13 wird dargestellt, wie ein benutzerdefiniertes API-Gateway in eine auf einem Microservice basierende Architektur eingefügt werden kann.
+Es sollte hervorgehoben werden, dass in diesem Diagramm genau ein benutzerdefinierter API-Gatewaydienst verwendet wird, der auf mehrere verschiedene Client-Apps ausgerichtet ist. Dies kann ein wichtiges Risiko darstellen, da ihr API-Gatewaydienst anhand vieler verschiedener Anforderungen aus den Client-Apps größer und weiterentwickelt wird. Aufgrund dieser verschiedenen Anforderungen kann es zu einer Überfrachtung kommen, und letztendlich kann dies einer monolithischen Anwendung oder einem monolithischen Dienst ähneln. Daher wird dringend empfohlen, das API-Gateway in mehrere Dienste oder mehrere kleinere API-Gateways aufzuteilen – z.B. eins pro Formularfaktor.
 
 ![](./media/image13.png)
 
-**Abbildung 4 – 13**. Mithilfe einer API-Gateway implementiert als einen benutzerdefinierten Dienst zum Web-API
+**Abbildung 4-13.** Verwenden eines API-Gateways, das als benutzerdefinierter Web-API-Dienst implementiert ist
 
-In diesem Beispiel würde der API-Gateway als ein benutzerdefiniertes Web-API-Dienst, der als Container implementiert werden.
+In diesem Beispiel wird das API-Gateway als benutzerdefinierter Web-API-Dienst implementiert, der als Container ausgeführt wird.
 
-Wie bereits erwähnt, sollten Sie mehrere API-Gateways implementieren, sodass können Sie verschiedene Fassade für die Anforderungen jeder Client-app verwenden. Jede API-Gateway kann ein anderes bieten API, die für jede Client-app, möglicherweise sogar auf Grundlage der Formfaktor Client durch die Implementierung von bestimmten Adaptercode welche unterhalb mehrere interne Microservices ruft zugeschnitten sind.
+Wie bereits erwähnt, sollten Sie mehrere API-Gateways implementieren, sodass Sie die Fassade an die Anforderungen der einzelnen Client-Apps anpassen können. Jedes API-Gateway kann eine andere API bereitstellen, die auf die einzelnen Client-Apps zugeschnitten ist und möglicherweise sogar auf dem Formfaktor des Clients basiert, indem bestimmter Adaptercode implementiert wird, der im Hintergrund mehrere interne Microservices abruft.
 
-Da eine benutzerdefinierte API-Gateway in der Regel einen Daten-Aggregator ist, müssen Sie dabei vorsichtig sein. In der Regel ist es nicht sinnvoll, eine einzelne API-Gateway Aggregieren der internen Microservices Ihrer Anwendung haben. Wenn dies der Fall ist, fungiert als monolithischen Aggregator oder Orchestrator und Microservice Autonomie von Kopplung alle Microservices verletzt. Aus diesem Grund sollte die API-Gateways basierend auf Business Grenzen und nicht Act als Aggregator für die gesamte Anwendung getrennt werden.
+Da es sich bei einem benutzerdefinierten API-Gateway in der Regel um einen Datenaggregator handelt, müssen Sie vorsichtig damit umgehen. In der Regel sollte nicht ein einzelnes API-Gateway alle internen Microservices Ihrer Anwendung aggregieren. Wenn dies trotzdem der Fall ist, agiert dieses als monolithischer Aggregator oder Orchestrator und beeinträchtig die Autonomie des Microservices, indem alle Microservices aneinander gekoppelt werden. Aus diesem Grund sollten die API-Gateways anhand der Unternehmenseinschränkungen aufgeteilt werden und nicht als Aggregatoren für die gesamte Anwendung agieren.
 
-Eine präzise-API-Gateway kann manchmal werden auch selbst ein Microservice und noch keiner Domäne oder den Geschäftsnamen und die zugehörigen Daten. Mit der API-Gateway-Grenzen, die durch die geschäftlichen oder Domäne vorgegeben hilft Ihnen einen besseren Entwurf zu erhalten.
+Manchmal kann es sich bei einem präzisen API-Gateway schon um einen eigenen Microservice handeln, der sogar über eine Domäne, einen Unternehmensnamen oder über zugehörige Dateien verfügt. Wenn die Einschränkungen des API-Gateways vom Unternehmen oder von der Domäne vorgegeben sind, können Sie auf einfache Weise ein besseres Design erstellen.
 
-Granularität in der API-Gateway-Ebene kann besonders hilfreich, für erweiterte zusammengesetzter UI-Anwendungen, die basierend auf Microservices, sein, da das Konzept eines differenzierte-API-Gateways ein UI-Kompositionsdienst ähnelt. Erörtert, diese später in der [Erstellen zusammengesetzter UI basierend auf Microservices](#creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices).
+Auf der Ebene des API-Gateways kann Granularität besonders nützlich für erweiterte zusammengesetzte Benutzeroberflächenanwendungen sein, die auf Microservices basieren, da das Konzept eines präzisen API-Gateways einem Dienst zur Benutzeroberflächenkomposition ähnelt. Dies wird später unter [Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices](#creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices) erläutert.
 
-Aus diesem Grund für viele Mittel - und große Anwendungen mithilfe einer benutzerdefinierten API-Gateway ist in der Regel ein guter Ansatz, aber nicht als einzelne monolithischen Aggregator oder eindeutigen zentrales Gateway, mit benutzerdefinierten API.
+Aus diesem Grund ist es im Hinblick auf mittelgroße bis große Anwendungen in der Regel hilfreich, ein benutzerdefiniertes API-Gateway zu verwenden. Dieses sollte allerdings nicht als einzelner monolithischer Aggregator oder eindeutiges zentrales benutzerdefiniertes API-Gateway verwendet werden.
 
-Ein anderer Ansatz ist die Verwendung ein Produkts wie [Azure API Management](https://azure.microsoft.com/services/api-management/) wie in Abbildung 4-14 gezeigt. Dieser Ansatz nicht nur Ihren API-Gateway-Anforderungen löst, sondern bietet Funktionen, z. B. das Sammeln von Einblicke zu Ihrer APIs. Wenn Sie eine API Management-Lösung verwenden, ist ein API-Gateway nur eine Komponente in die vollständige API-verwaltungslösung.
+Stattdessen kann auch wie in Abbildung 4-14 dargestellt ein Produkt wie [Azure API Management](https://azure.microsoft.com/services/api-management/) verwendet werden. Über diesen Ansatz wird nicht nur dafür gesorgt, dass die Anforderungen an Ihr API-Gateway erfüllt werden, sondern es werden auch Features wie das Sammeln von Eindrücken aus Ihren APIs bereitgestellt. Wenn Sie eine API-Verwaltungslösung verwenden, macht das API-Gateway nur einen Teil der gesamten Lösung aus.
 
 ![](./media/image14.png)
 
-**Abbildung 4-14**. Mithilfe der Azure API Management für Ihr Gateway-API
+**Abbildung 4-14.** Verwenden von Azure API Management für das API-Gateway
 
-In diesem Fall, wenn ein Produkt wie Azure API Management wird die Tatsache, dass Sie mit einem einzelnen API-Gateway ggf. so riskant ist es nicht verwenden, da diese Arten von API-Gateways "schlankere" sind, bedeutet, dass Sie benutzerdefinierte C#-Code implementieren, der für eine monolithischen weiterentwickelt konnte Komponente. 
+In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. 
 
-Diese Art von Produkt verhält sich eher wie ein reverse-Proxy für die Ingress-Kommunikation, in denen Sie können auch die APIs aus dem internen Microservices Filtern plus Autorisierung an die veröffentlichte-APIs in dieser einzelnen Ebene anwenden.
+Die Vorgehensweise dieses Produkttyps ähnelt einem Reverseproxy für eingehende Kommunikation: Sie können die APIs der internen Microservices ebenfalls filtern und die Autorisierung auf die veröffentlichten APIs auf dieser einzelnen Ebene anwenden.
 
-Der Einsichten, die über eine API Management-System-Hilfe erhalten Sie einen Überblick darüber, wie Ihre-APIs verwendet werden und wie der durchführen. Dies geschieht, indem Sie in der Nähe von Echtzeitanalysen Berichte anzeigen lassen und Erkennen von Trends, die Ihr Unternehmen auswirken können. Darüber hinaus können Sie Protokolle zur Anforderung und Antwort von Aktivitäten zur weiteren Online- und offline-Analyse haben.
+Mithilfe der Informationen, die ein API Management-System bereitstellt, erhalten Sie einen Überblick über die Verwendung und die Leistung Ihrer APIs. Sie erhalten nahezu in Echtzeit Analyseberichte, und es werden Trends ermittelt, die Auswirkungen auf Ihr Unternehmen haben könnten. Außerdem erhalten Sie Protokolle zu Anforderungen und zur Antwortaktivität für weitere Online- und Offlineanalysen.
 
-Mit der Azure-API-Verwaltung können Sie Ihre APIs, die mit einem Schlüssel, ein Token und IP-Filterung sichern. Diese Funktionen ermöglichen die flexible und differenzierte Kontingente erzwingen und Begrenzung der Datenübertragungsrate, ändern die Form und das Verhalten der APIs, die mithilfe von Richtlinien und Verbessern der Leistung mit Zwischenspeichern von Antworten.
+Mit Azure API Management können Sie Ihre APIs mit einem Schlüssel, einem Token und mit IP-Filtern sichern. Über dieses Feature können Sie flexible und präzise Kontingente erzwingen und Einschränkungen beurteilen, die Form und das Verhalten Ihrer APIs verändern, die Richtlinien verwenden, und die Leistung über das Speichern von Antworten verbessern.
 
-In diesem Handbuch und der Verweis-beispielanwendung (eShopOnContainers) werden wir Architektur, die eine einfachere und benutzerdefinierte Datenvolumes Architektur beschränken, um auf einfache Container zu konzentrieren, ohne Verwendung von PaaS-Produkten, wie etwa Azure API Management. Aber für große Microservice basierende Anwendungen, die in Microsoft Azure bereitgestellt werden, wir empfehlen Ihnen, zu überprüfen und übernehmen Azure API Management als Basis für Ihre API-Gateways.
+In diesem Handbuch und in der Referenzbeispielanwendung (eShopOnContainers) wird die Architektur auf eine einfachere und benutzerdefinierte Architektur beschränkt, um den Fokus auf einfache Container zu legen, ohne PaaS-Produkte wie Azure API Management zu verwenden. Für große, auf einem Microservice basierende Anwendungen, die in Microsoft Azure bereitgestellt werden, wird allerdings empfohlen, Azure API Management zu prüfen und als Grundlage für Ihre API-Gateways zu verwenden.
 
-## <a name="drawbacks-of-the-api-gateway-pattern"></a>Nachteile der API-Gateway-Muster
+## <a name="drawbacks-of-the-api-gateway-pattern"></a>Nachteile des API-Gatewaymusters
 
--   Der wichtigste Nachteil besteht darin, wenn Sie ein Gateway-API implementieren, diese Ebene mit der internen Microservices Kopplung sind. Kopplung wie folgt kann schwerwiegende Probleme für Ihre Anwendung führen. Vaster Clemens Architekt an das Azure-Servicebus-Team, bezieht sich auf dieses potenzielle Problem als "neue ESB" in seinem "[Messaging und Microservices](https://www.youtube.com/watch?v=rXi5CLjIQ9k)" Sitzung zu GOTO 2016.
+-   Der größte Nachteil entsteht, wenn Sie ein API-Gateway implementieren. Dann koppeln Sie diese Ebene an die internen Microservices. Eine solche Kopplung kann schwerwiegende Folgen für Ihre Anwendung haben. Clemens Vaster, Architekt im Azure Service Bus-Team, nennt dies in seinem Vortrag unter dem Titel [Messaging and Microservices](https://www.youtube.com/watch?v=rXi5CLjIQ9k) (Messaging und Microservices) auf der Konferenz GOTO 2016 den „neuen ESB“.
 
--   Erstellt unter Verwendung einer Microservices-API-Gateway eine weitere mögliche einzelne Fehlerquelle.
+-   Wenn ein Microservices-API-Gateway verwendet wird, wird möglicherweise ein zusätzlicher Single Point of Failure erstellt.
 
--   Ein API-Gateway können aufgrund der zusätzlichen Netzwerkaufruf höhere Antwortzeiten führen. Allerdings wirkt sich dieser zusätzlichen Aufruf in der Regel weniger als einen Client, die Schnittstelle zu geschwätzig direkten Aufruf der internen Microservices ist.
+-   Durch ein API-Gateway können aufgrund des zusätzlichen Netzwerkaufrufs längere Antwortzeiten entstehen. Dieser zusätzliche Aufruf hat in der Regel weniger Auswirkungen als die Verwendung einer Clientschnittstelle, die zu ausführlich ist und die internen Microservices direkt aufruft.
 
--   Wenn Sie nicht ordnungsgemäß skaliert, können die API-Gateway einen Engpass.
+-   Wenn das API-Gateway nicht ordnungsgemäß hochskaliert wird, kann das API-Gateway zu Engpässen führen.
 
--   Ein API-Gateway erfordert zusätzliche Entwicklungskosten und künftige Wartung, wenn sie benutzerdefinierte Logik und die Datenaggregation enthält. Entwickler müssen den API-Gateway aktualisieren, um jede Microservice Endpunkte verfügbar zu machen. Darüber hinaus können die von implementierungsänderungen in der internen Microservices Änderungen am Code auf der API-Gateway-Ebene führen. Jedoch, wenn die API-Gateway nur Sicherheit, Protokollierung und versionsverwaltung anwenden (wie bei der Verwendung von Azure API Management), dieser zusätzlichen Entwicklungskosten gelten möglicherweise nicht.
+-   Durch API-Gateways entstehen zusätzliche Kosten. Außerdem müssen sie verwaltet werden, wenn sie benutzerdefinierte Logik und Datenaggregation enthalten. Entwickler müssen das API-Gateway aktualisieren, um die Endpunkte aller Microservices zur Verfügung zu stellen. Außerdem kann es zu Codeveränderungen auf der API-Gatewayebene kommen, wenn sich die Implementierung in den internen Microservices ändert. Wenn das API-Gateway allerdings nur die Sicherheit, Protokollierung und Versionsverwaltung anwendet (wie bei der Verwendung von Azure API Management), sollten keine zusätzlichen Kosten entstehen.
 
--   Wenn die API-Gateway durch ein einzelnes Team entwickelt wird, kann ein Engpass Entwicklung sein. Dies ist ein weiterer Grund, warum ein besserer Ansatz ist, mehrere detaillierte API-Gateways verwenden, die auf anderen Client-Anforderungen zu reagieren. Sie können auch der API-Gateway intern aufteilen, in mehrere Bereiche oder Ebenen, die die verschiedenen Teams, die auf die internen Microservices arbeiten gehören.
+-   Wenn das API-Gateway von nur einem Team entwickelt wird, kann es zu Engpässen bei der Entwicklung kommen. Dies stellt einen weiteren Grund dar, warum es besser ist, über mehrere präzise API-Gateways zu verfügen, die auf die verschiedenen Clientanforderungen antworten. Sie können ebenfalls das API-Gateway intern in mehrere Bereiche oder Ebenen aufteilen, die die verschiedenen Teams besitzen, die an den internen Microservices arbeiten.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Charles Rißling. Muster: API-Gateway / Back-End für Front-End-**
+-   **Charles Richardson. Muster: API Gateway / Backend for Front-End (API-Gateway / Back-End für Front-End)**
     [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
 
 -   **Azure API Management**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
--   **Udi Dahan. Dienstorientierte Komposition**\
-    [*http://UdiDahan.com/2014/07/30/Service-Oriented-Composition-with-Video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+-   **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)**\
+    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Messaging und Microservices am GOTO 2016** (video) [ *https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaging und Microservices)** (Video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (identifizieren-Microservice-Domain-Modell-boundaries.md) [weiter] (Kommunikation-in-Microservice-architecture.md)
+[Zurück] (identify-microservice-domain-model-boundaries.md) [Weiter] (communication-in-microservice-architecture.md)

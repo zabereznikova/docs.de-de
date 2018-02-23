@@ -1,112 +1,115 @@
 ---
-title: Ein Microservice DDD-orientierten entwerfen
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Ein Microservice DDD-orientierten entwerfen"
+title: Entwerfen eines DDD-orientierten Microservices
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen eines DDD-orientierten Microservices"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: df45441089fd59d5e0e52b4bcec409adcc11fb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Ein Microservice DDD-orientierten entwerfen
+# <a name="designing-a-ddd-oriented-microservice"></a>Entwerfen eines DDD-orientierten Microservices
 
-Domain driven Design (DDD) Fürsprecher Modellierung basierend auf die Realität Unternehmen als relevant für Ihre Anwendungsfälle. Im Kontext der Erstellung von Anwendungen dreht DDD Probleme als Domänen. Unabhängige Problembereiche als begrenzt Kontexte beschrieben (jeder begrenzt, die den Kontext entspricht ein Microservice), und hebt hervor, die eine einheitliche Sprache, um diese Probleme zu erörtern. Es wird auch vorgeschlagen viele technische Konzepte und Muster, z. B. Domänenentitäten mit umfangreichen Modellen (keine [anemic Domänenmodell](https://martinfowler.com/bliki/AnemicDomainModel.html)), Objekte, Aggregate und aggregieren Stamm (bzw. Stammentität) zur Unterstützung der internen Implementierung Regeln. Dieser Abschnitt enthält den Entwurf und die Implementierung dieser interne Muster.
+Durch domänengesteuertes Design (Domain-Driven Design, DDD) wird die Modellierung von den wirtschaftlichen Gegebenheiten beeinflusst, die für Ihre Anwendungsfälle relevant sind. Im Zusammenhang mit der Erstellung von Anwendungen bezeichnet DDD Domänen als Probleme. Unabhängige Problembereiche werden als Kontextgrenzen beschrieben (jede Kontextgrenze korreliert mit einem Microservice). Zudem wird die Verwendung einer gemeinsamen Sprache zur Erörterung dieser Probleme hervorgehoben. DDD schlägt auch viele technische Konzepte und Muster vor, z.B. Domänenentitäten mit umfangreichen Modellen (kein [anämisches Domänenmodell](https://martinfowler.com/bliki/AnemicDomainModel.html)), Wertobjekte, Aggregate und Regeln für Aggregatstämme (bzw. Stammentitäten) zur Unterstützung der internen Implementierung. Dieser Abschnitt bietet eine Einführung in den Entwurf und die Implementierung dieser internen Muster.
 
-In einigen Fällen sind diese technischen DDD-Regeln und Muster als Hindernisse angesehen, die eine steile Lernkurve für die Implementierung DDD Ansätze aufweisen. Aber der wichtigste Teil ist nicht die Muster selbst, aber den Code organisieren, sodass es auf die geschäftlichen Probleme ausgerichtet ist, und mithilfe der gleichen geschäftsbegriffe (ubiquitäre Sprache). Darüber hinaus sollten DDD Ansätze angewendet werden, nur, wenn Sie komplexe Microservices mit erheblichen Geschäftsregeln implementieren. Mit einfacher Ansätzen können einfachere Aufgaben, wie ein CRUD-Dienst verwaltet werden.
+Manchmal werden diese technischen Konzepte und Muster von DDD als Hindernisse empfunden, die eine steile Lernkurve für die Implementierung von DDD-Ansätzen aufweisen. Wichtig sind jedoch nicht die Muster selbst, sondern die Organisation des Codes zur Ausrichtung auf die geschäftlichen Probleme und die Verwendung der gleichen Geschäftsbedingungen (ubiquitäre Sprache). Darüber hinaus sollten DDD-Ansätze nur angewendet werden, wenn Sie komplexe Microservices mit signifikanten Geschäftsregeln implementieren. Einfachere Aufgaben, wie z.B. ein CRUD-Dienst, können mit einfacheren Ansätzen verwaltet werden.
 
-WHERE zum Zeichnen der Grenzen ist die wichtigste Aufgabe beim Entwerfen und eine Microservice definieren. DDD Muster können Sie die Komplexität in der Domäne zu verstehen. Für das Domänenmodell für jede begrenzt, die den Kontext identifizieren und definieren die Entitäten, die Wert-Objekte und die Aggregate, die Ihre Domäne zu modellieren. Sie erstellen und optimieren ein Domänenmodell, die innerhalb einer Grenze enthalten ist, die den Kontext definiert. Und das ist in Form einer Microservice sehr explizit. Die Komponenten innerhalb dieser Grenzen am Ende Ihrer Microservices wird zwar in manchen Fällen a BC oder Business Microservices können mehrere physische Dienste bestehen. DDD geht es um Grenzen und deshalb Microservices.
+Die wichtigste Aufgabe beim Entwerfen und Definieren eines Microservices besteht darin, herauszufinden, wo die Grenzen gezogen werden sollen. Mithilfe von DDD-Mustern können Sie die Komplexität in der Domäne besser verstehen. Für das Domänenmodell der einzelnen Kontextgrenzen identifizieren und definieren Sie die Entitäten, Wertobjekte und Aggregate, mit denen Ihre Domäne modelliert wird. Sie erstellen und verfeinern ein Domänenmodell innerhalb einer Grenze, die Ihren Kontext definiert. Das wird bei der Form eines Microservice sehr deutlich. Die Komponenten innerhalb dieser Grenzen sind schließlich Ihre Microservices, auch wenn sich eine Kontextgrenze oder Unternehmensmicroservices in einigen Fällen ebenfalls aus mehreren physischen Diensten zusammensetzen können. Bei DDD geht es wie bei Microservices um Grenzen.
 
-## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Behalten Sie die Microservice Kontextgrenzen relativ klein
+## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Kleinhalten der Kontextgrenzen für Microservices
 
-Bestimmen die Grenzen zwischen den Kontexten begrenzt platzieren gleicht zwei konkurrierenden Ziele. Zuerst möchten Sie anfänglich die kleinste mögliche Microservices erstellen zwar, die nicht der Haupt-Treiber werden soll; Erstellen Sie eine Begrenzung um Dinge, die Kohäsion benötigen. Zweitens, möchten Sie ' geschwätzige ' Kommunikation zwischen Microservices zu vermeiden. Diese Ziele können miteinander widersprechen. Sie sollten diese verteilen, indem Zerlegen von das System in beliebig viele kleine Microservices wie möglich bis Kommunikationsgrenzen schnell wächst mit jeder weitere Verbindungsversuche trennen Sie einen neuen begrenzt, die den Kontext angezeigt. Kohäsion ist-Schlüssel in einem einzelnen gebundene Kontext.
+Bei der Bestimmung, wo Grenzen zwischen Kontextgrenzen gesetzt werden sollen, werden zwei konkurrierende Ziele ausbalanciert. Erstellen Sie zunächst die kleinstmöglichen Microservices, auch wenn dies nicht der Haupttreiber sein sollte. Sie sollten eine Grenze um Komponenten erstellen, für die eine Kohäsion erforderlich ist. Zudem sollten umfangreiche Kommunikationen zwischen Microservices vermieden werden. Diese Ziele können im Widerspruch zueinander stehen. Sie sollten diese ausbalancieren, indem Sie sie so lange in möglichst viele kleine Microservices zerlegen, bis Sie sehen können, dass Kommunikationsgrenzen mit jedem zusätzlichen Versuch, eine neue Kontextgrenze zu trennen, schnell wachsen. Kohäsion ist der Schlüssel innerhalb einer einzelnen Kontextgrenze.
 
-Ähnliches gilt für die [Unangemessene Intimität Codegeruch](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) bei der Implementierung von Klassen. Wenn zwei Microservices viel miteinander zusammenarbeiten müssen, sollten sie möglicherweise die gleichen Microservice sein.
+Dies ist vergleichbar mit dem [unangemessenen Code-Smell „Intimacy“](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) bei der Implementierung von Klassen. Wenn zwei Microservices viel zusammenarbeiten müssen, sollten sie möglicherweise derselbe Microservice sein.
 
-Eine andere Möglichkeit, dies ist die Autonomie. Wenn ein Microservice auf einen anderen Dienst direkt eine Anfrage angewiesen ist, ist es nicht tatsächlich autonome.
+Eine andere Betrachtungsweise ist die Autonomie. Wenn ein Microservice für eine direkte Serviceanfrage auf einen anderen Dienst angewiesen ist, ist er nicht wirklich autonom.
 
-## <a name="layers-in-ddd-microservices"></a>Ebenen in DDD microservices
+## <a name="layers-in-ddd-microservices"></a>Ebenen in DDD-Microservices
 
-Die meisten unternehmensanwendungen mit erheblichen geschäftlichen und technischen Komplexität werden durch mehrere Ebenen definiert. Die Ebenen sind eine logische Artefakt und beziehen sich nicht auf die Bereitstellung des Diensts. Sie vorhanden sind, um die Komplexität im Code verwalten Entwicklern zu helfen. Unterschiedliche Ebenen (z. B. die Domäne Modellebene im Vergleich zu der Darstellungsschicht usw.) möglicherweise unterschiedliche Typen der Übersetzungen zwischen diesen Typen erfordert.
+Die meisten Unternehmensanwendungen mit erheblicher geschäftlicher und technischer Komplexität werden durch mehrere Ebenen definiert. Die Ebenen stellen ein logisches Artefakt dar und beziehen sich nicht auf die Bereitstellung des Diensts. Sie sollen Entwickler bei der Verwaltung der Komplexität im Code unterstützen. Unterschiedliche Ebenen (z.B. die Domänenmodellebene im Vergleich zur Darstellungsebene usw.) weisen möglicherweise unterschiedliche Typen auf, wodurch Übersetzungen zwischen diesen Typen erforderlich werden.
 
-Beispielsweise könnte eine Entität aus der Datenbank geladen werden. Teil dieser Informationen oder eine Aggregation von Informationen, einschließlich weiterer Daten von anderen Entitäten kann dann an den Client-Benutzeroberfläche über eine REST-Web-API gesendet werden. Der Punkt hier ist, dass die Entität "Domain" in der Domäne der Ebene enthalten ist und sollten nicht an anderen Bereichen, die es nicht zu, z. B. auf die Präsentationsebene gehört weitergegeben werden.
+Beispielsweise könnte eine Entität aus der Datenbank geladen werden. Ein Teil dieser Informationen, oder eine Aggregation von Informationen einschließlich zusätzlicher Daten aus anderen Entitäten, kann dann über eine REST-Web-API an die Clientbenutzeroberfläche gesendet werden. Der entscheidende Punkt hierbei ist, dass die Entität in der Domänenmodellebene enthalten ist und nicht an andere Bereiche weitergegeben werden sollte, zu denen sie nicht gehört, wie z.B. die Darstellungsebene.
 
-Darüber hinaus benötigen Sie immer gültige Entitäten (finden Sie unter der [entwerfen Überprüfungen in der Domäne der Ebene](#designing-validations-in-the-domain-model-layer) Abschnitt) durch aggregieren Stammelemente (Stamm-Entitäten) gesteuert. Entitäten sollten daher nicht mit Clientansichten gebunden werden, weil auf Benutzeroberflächenebene einige Daten immer noch nicht überprüft werden können. Dies ist das ViewModel für. Das ViewModel ist ein Datenmodell ausschließlich für die Präsentation Ebene benötigt. Die Domänenentitäten gehören nicht direkt auf das ViewModel. Stattdessen müssen Sie zwischen Entitäten ViewModels "und" Domäne und umgekehrt zu übersetzen.
+Darüber hinaus müssen Sie über Entitäten verfügen, die immer gültig sind (siehe Abschnitt [Designing validations in the domain model layer (Entwerfen von Validierungen in der Domänenmodellebene)](#designing-validations-in-the-domain-model-layer)) und von Aggregatstämmen (Stammentitäten) gesteuert werden. Daher sollten Entitäten nicht an Clientansichten gebunden werden, da auf der Benutzeroberflächenebene einige Daten möglicherweise noch nicht überprüft wurden. Dies ist Aufgabe von ViewModel. Bei ViewModel handelt es sich um ein Datenmodell, das sich ausschließlich mit den Anforderungen auf der Darstellungsebene befasst. Die Domänenentitäten gehören nicht direkt zu ViewModel. Stattdessen müssen Sie zwischen ViewModel-Modellen und Domänenentitäten und umgekehrt übersetzen.
 
-Wenn bewältigt Fortschritts relativ komplex ist, es ist wichtig, haben ein Domänenmodell, der durch aggregieren Stammelemente, die (wir gehen in diese ausführlicher weiter unten) Sie sicher stellen, dass die Invarianten und die Regeln bezüglich gesteuert werden dieser Gruppe von Entitäten (aggregate) über einen einzelnen Eintrag ausgeführt Punkt oder ein Tor aggregieren Stamm.
+Bei der Komplexität ist es wichtig, über ein Domänenmodell zu verfügen, das von Aggregatstämmen gesteuert wird, durch die sichergestellt wird, dass alle Invarianten und Regeln, die sich auf diese Gruppe von Entitäten (Aggregat) beziehen, über einen einzigen Einstiegspunkt bzw. ein einziges Gate durchgeführt werden: den Aggregatstamm.
 
-Abbildung 9 – 5 veranschaulicht, wie ein mehrstufigen Entwurf in der eShopOnContainers-Anwendung implementiert wird.
+In Abbildung 9-5 wird gezeigt, wie ein Entwurf mit mehreren Ebenen in die eShopOnContainers-Anwendung implementiert wird.
 
 ![](./media/image6.png)
 
-**Abbildung 9 – 5**. DDD Ebenen in der Reihenfolge Microservice in eShopOnContainers
+**Abbildung 9-5**. DDD-Ebenen für den Microservice für Bestellungen in eShopOnContainers
 
-Möchten Sie das System so entwerfen, dass jede Ebene nur mit bestimmten anderen Ebenen kommuniziert. Die möglicherweise leichter zu erzwingen, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt ist. Für die Instanz, die Domäne der Ebene nicht ergreift eine Abhängigkeit auf eine beliebige andere Ebene (die Domäne Modellklassen Plain Old CLR Objects, werden sollte oder [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), Klassen). Wie in Abbildung 9 – 6 gezeigt die **Ordering.Domain** Ebene Bibliothek weist Abhängigkeiten nur für die .NET Core-Bibliotheken jedoch nicht auf eine beliebige andere benutzerdefinierte Bibliothek (Data-Bibliothek, Persistenz-Bibliothek, usw.).
+Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmten anderen Ebenen kommunizieren. Dies kann möglicherweise leichter durchgesetzt werden, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt wurden. Auf der Domänenmodellebene sollte beispielsweise keine Abhängigkeit für eine andere Ebene ausgewählt werden (bei den Domänenmodellklassen sollte es sich um Plain Old CLR Objects- bzw. um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln). Wie in Abbildung 9-6 zu sehen ist, weist die Bibliothek der Ebene **Ordering.Domain** nur Abhängigkeiten für die .NET Core-Bibliotheken oder NuGet-Pakete auf, jedoch zu keiner anderen benutzerdefinierten Bibliothek, wie z.B. einer Datenbibliothek oder einer Persistenzbibliothek.
 
 ![](./media/image7.PNG)
 
-**Abbildung 9 – 6**. Ebenen implementiert werden, wie Bibliotheken eine bessere Steuerung des Abhängigkeiten zwischen Ebenen zulassen
+**Abbildung 9-6**. Als Bibliotheken implementierte Ebenen lassen eine bessere Kontrolle der Abhängigkeiten zwischen Ebenen zu
 
-### <a name="the-domain-model-layer"></a>Die Domäne der Ebene
+### <a name="the-domain-model-layer"></a>Die Domänenmodellebene
 
-Ausgezeichnete Buch des Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) besagt, dass die folgenden zu der Ebene der Domäne und der Anwendungsschicht.
+Im Buch [Domain-Driven Design](http://domainlanguage.com/ddd/) von Eric Evan steht Folgendes über die Domänenmodellebene und die Anwendungsebene.
 
-**Domäne der Ebene**: verantwortlich für die Darstellung von Konzepten der Business, Informationen zu den Unternehmenssituation und Geschäftsregeln. Zustand, der die Unternehmenssituation wird gesteuert, und hier verwendet werden, obwohl alle technischen Konfigurationsdetails, speichern es an die Infrastruktur delegiert werden. Diese Ebene ist das Kernstück von Business-Software.
+**Domänenmodellebene**: verantwortlich für die Darstellung von Konzepten des Geschäfts, Informationen zur Geschäftslage und Geschäftsregeln Der Zustand, der die Geschäftslage widerspiegelt, wird hier gesteuert und verwendet, auch wenn die technischen Details zur Speicherung an die Infrastruktur delegiert werden. Diese Ebene stellt das Kernstück von Geschäftssoftware dar.
 
-Die Domäne der Ebene ist, in denen das Unternehmen ausgedrückt wird. Wenn Sie eine Domäne der Ebene Microservice in .NET implementieren, wird, auf dieser Ebene als eine Klassenbibliothek mit den Domänenentitäten codiert, die Daten plus Verhalten (Methoden mit Logik) zu erfassen.
+Auf der Domänenmodellebene wird das Geschäft zum Ausdruck gebracht. Wenn Sie die Domänenmodellebene eines Microservices in .NET implementieren, wird diese Ebene als Klassenbibliothek mit den Domänenentitäten codiert, die Daten und Verhalten (Methoden mit Logik) erfassen.
 
-Nach der [Persistenz Unkenntnis](http://deviq.com/persistence-ignorance/) und [Infrastruktur Unkenntnis](https://ayende.com/blog/3137/infrastructure-ignorance) Prinzipien, die dieser Ebene müssen Details zur Persistenz von Daten vollständig ignorieren. Diese Aufgaben Persistenz sollte durch die Infrastrukturebene erfolgen. Aus diesem Grund diese Ebene nicht abwartet, direkte Abhängigkeiten in der Infrastruktur, was bedeutet, dass eine Regel wichtige ist, dass die Domäne Modell Entitätsklassen werden soll [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
+Nach den Grundsätzen [Ignorieren der Persistenz](http://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) muss diese Ebene Details zur Datenpersistenz komplett ignorieren. Diese Persistenzaufgaben sollten auf der Infrastrukturebene durchgeführt werden. Daher sollte diese Ebene keine direkten Abhängigkeiten für die Infrastruktur berücksichtigen. Dies bedeutet, dass eine wichtige Regel vorsieht, dass es sich bei den Entitätsklassen Ihres Domänenmodells um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln sollte.
 
-Domänenentitäten sollte direkte Abhängigkeit (z. B. von einer Basisklasse ableiten) nicht auf alle Data Access-Infrastruktur-Framework wie Entity Framework oder NHibernate aufweisen. Im Idealfall sollten Ihrer Domänenentitäten nicht abgeleitet bzw. implementiert diesen beliebigen Typs in einem Infrastruktur-Framework definiert.
+Domänenentitäten sollten in keiner direkten Abhängigkeit (z.B. durch Ableitung von einer Basisklasse) zu einem Infrastrukturframework für den Datenzugriff wie Entity Framework oder NHibernate stehen. Im Idealfall sollten Ihre Domänenentitäten von keinem Typ abgeleitet werden bzw. keinen Typen implementieren, der in einem Infrastrukturframework definiert ist.
 
-Die meisten modernen ORM-Frameworks wie Entity Framework Core können dieser Ansatz, sodass der Infrastruktur nicht Ihren Modellklassen Domäne verknüpft sind. Allerdings ist mit POCO-Entitäten nicht immer möglich, wenn bestimmte NoSQL-Datenbanken und Frameworks, z. B. Akteure und zuverlässige Auflistungen in Azure Service Fabric verwenden.
+Die meisten modernen ORM-Frameworks wie Entity Framework Core lassen diesen Ansatz zu, damit Ihre Domänenmodellklassen nicht an die Infrastruktur gekoppelt sind. Allerdings ist es nicht immer möglich, über POCO-Entitäten zu verfügen, wenn bestimmte NoSQL-Datenbanken und Frameworks wie Actors und Reliable Collections in Azure Fabric Service verwendet werden.
 
-Auch wenn es auf dem Prinzip der Persistenz Unkenntnis für Sie Domänenmodell folgen wichtig ist, sollte nicht Persistenz Bedenken ignoriert werden. Es ist immer noch sehr wichtig zu verstehen, die physische Datenmodell und wie sie Ihr Objektmodell Entität zugeordnet. Andernfalls können Sie Entwürfe gar nicht erstellen.
+Auch wenn es wichtig ist, bei Ihrem Domänenmodell dem Grundsatz „Ignorieren der Persistenz“ zu folgen, sollten Sie Persistenzprobleme nicht ignorieren. Es ist nach wie vor sehr wichtig, das physische Datenmodell und seine Zuordnung zu Ihrem Entitätsobjektmodell zu verstehen. Andernfalls erstellen Sie möglicherweise ungültige Entwürfe.
 
-Dies bedeutet auch, nicht können Sie ein Modell für eine relationale Datenbank dauern und verschieben Sie sie direkt zu einem NoSQL oder dokumentorientiert Datenbank. In anderen Modellen Entität kann das Modell entsprechen, aber in der Regel nicht. Es sind noch Einschränkungen, die Ihre Entitätsmodell, sowohl auf die speichertechnologie und ORM-Technologie als Grundlage folgen muss.
+Dies bedeutet aber auch nicht, dass Sie ein Modell auswählen können, das für eine relationale Datenbank entworfen wurde, und es direkt in eine NoSQL- oder eine dokumentorientierte Datenbank verschieben können. Bei einigen Entitätsmodellen ist das Modell möglicherweise geeignet, in der Regel ist dies jedoch nicht der Fall. Es gibt nach wie vor Einschränkungen, denen Ihr Entitätsmodell unterworfen ist. Diese beziehen sich sowohl auf die Speichertechnologie als auch auf die ORM-Technologie.
 
 ### <a name="the-application-layer"></a>Die Anwendungsebene
 
-Verschieben in einen für die Anwendungsebene, wir können erneut cite-Eric Evanss Buchs [Domain Driven Design](http://domainlanguage.com/ddd/):
+Wir fahren nun mit der Anwendungsebene fort und können erneut aus dem Buch [Domain-Driven Design](http://domainlanguage.com/ddd/) von Eric Evan zitieren:
 
-**Anwendungsschicht:** definiert die Aufträge, die Software führen soll, und leitet die ausdrucksbasierte Domänenobjekte um Probleme zu arbeiten. Die Aufgaben, denen dieser Ebene für die verantwortliche sind für das Unternehmen sinnvoll oder erforderlich ist, für die Interaktion mit den Anwendungsschichten auf anderen Systemen. Diese Ebene wird schlanke beibehalten. Er enthält keinen Geschäftsregeln oder zur Wissensermittlung, aber nur Koordinaten Aufgaben und Delegaten arbeiten, zusammenarbeitselemente von Domänenobjekten in der nächsten Ebene nach unten. Es muss kein Status reflektieren die Unternehmenssituation allerdings Zustand, der den Fortschritt einer Aufgabe für den Benutzer oder die Anwendung aufweisen.
+**Anwendungsebene:** definiert die Aufträge, die von der Software ausgeführt werden sollen, und leitet die ausdrucksstarken Domänenobjekte zur Bewältigung von Problemen weiter Die Aufgaben, für die diese Ebene verantwortlich ist, sind für das Geschäft von Bedeutung bzw. für die Interaktion mit den Anwendungsebenen anderer Systeme erforderlich. Diese Ebene wird dünn gehalten. Sie enthält keine Geschäftsregeln oder Wissen, sondern koordiniert nur Aufgaben und delegiert Arbeit an Kollaborationen von Domänenobjekten auf der darunterliegenden Ebene. Sie enthält keinen Zustand, der die Geschäftslage widerspiegelt, kann aber einen Zustand aufweisen, der dem Benutzer oder dem Programm den Fortschritt einer Aufgabe anzeigt.
 
-Ein Microservice-Anwendungsebene in .NET wird häufig als ASP.NET Core Web-API-Projekt codiert. Das Projekt implementiert die Microservice Interaktion, Remotezugriff auf das Netzwerk und die externe Web-APIs, die über die Benutzeroberfläche oder Client-apps verwendet. Es schließt Abfragen, wenn mit einem CQRS-Ansatz, Befehle, die von der Microservice und sogar die ereignisgesteuerte Kommunikation zwischen Microservices (integrationsereignisse) akzeptiert. Die ASP.NET Core-Web-API, die die Anwendungsebene darstellt dürfen keine Geschäftsregeln oder domänenwissen (insbesondere Domänenregeln für Transaktionen oder Updates); enthalten. Diese sollte Besitz der Domäne Modell-Klassenbibliothek. Die Anwendung Ebene muss nur Koordinate muss Aufgaben und nicht halten oder eine beliebige Domäne Zustand (Domänenmodell) definieren. Es delegiert die Ausführung von Geschäftsregeln für die Domäne Modellklassen selbst (aggregieren Stämme und Domänenentitäten), die letztlich die Daten in dieser Domänenentitäten aktualisiert werden.
+Die Anwendungsebene eines Microservices in .NET wird häufig als ASP.NET Core-Web-API-Projekt codiert. Das Projekt implementiert die Interaktion des Microservices, den Remotenetzwerkzugriff und die externen Web-APIs, die über die Benutzeroberfläche oder Client-Apps verwendet werden. Es enthält Abfragen, wenn ein CQRS-Ansatz verwendet wird, vom Microservice akzeptierte Befehle und sogar die ereignisgesteuerte Kommunikation zwischen Microservices (Integrationsereignisse). Die ASP.NET Core-Web-API, die die Anwendungsebene darstellt, darf keine Geschäftsregeln oder Domänenwissen enthalten (insbesondere Domänenregeln für Transaktionen oder Updates). Diese sollten der Bibliothek der Domänenmodellklassen zugeordnet sein. Die Anwendungsebene darf nur Aufgaben koordinieren und keinen Domänenstatus enthalten oder definieren (Domänenmodell). Sie delegiert die Ausführung von Geschäftsregeln für die Domänenmodellklassen (Aggregatstämme und Domänenentitäten), wodurch die Daten schließlich innerhalb dieser Domänenentitäten aktualisiert werden.
 
-Grundsätzlich ist die Anwendungslogik, in allen Fällen implementieren, die von einem bestimmten front-End-abhängen. Beispielsweise muss die Implementierung im Zusammenhang mit einem Web-API-Dienst.
+In der Anwendungslogik werden im Wesentlichen alle Fälle implementiert, die von einem bestimmten Front-End abhängen, zum Beispiel die mit einem Web-API-Dienst verbundene Implementierung.
 
-Das Ziel ist, dass die Domänenlogik in die Domäne der Ebene, die Invarianten, das Datenmodell und entsprechende Geschäftsregeln definieren völlig unabhängig von der Präsentation und Anwendungsschicht sein muss. Am häufigsten daran, muss die Domäne der Ebene nicht direkt von einem Infrastructure-Framework abhängig.
+Ziel ist, dass die Domänenlogik auf der Domänenmodellebene sowie die zugehörigen Invarianten, das Datenmodell und verwandte Geschäftsregeln komplett unabhängig von der Darstellungs- und der Anwendungsebene sind. Vor allem darf die Domänenmodellebene nicht direkt von einem Infrastrukturframework abhängig sein.
 
 ### <a name="the-infrastructure-layer"></a>Die Infrastrukturebene
 
-Die Infrastrukturebene ist wie die Daten, die anfänglich, in der Domänenentitäten (im Arbeitsspeicher gehalten werden) in Datenbanken oder anderen persistenten Speicher beibehalten werden. Entity Framework Core-Code verwendet ein Beispiel für die Klassen der Repository-Muster implementieren, die ein ' DbContext ' zu verwenden, um Daten in einer relationalen Datenbank beizubehalten.
+Auf der Infrastrukturebene wird dargestellt, wie die Daten, die anfangs in Domänenentitäten (im Arbeitsspeicher) enthalten waren, dauerhaft in Datenbanken oder einem anderen permanenten Speicher gespeichert werden. Ein Beispiel ist die Verwendung von Entity Framework Core-Code für die Implementierung der Repository-Musterklassen, in denen DBContext für die Speicherung von Daten in einer relationalen Datenbank verwendet wird.
 
-In Übereinstimmung mit den oben erwähnten [Persistenz Unkenntnis](http://deviq.com/persistence-ignorance/) und [Infrastruktur Unkenntnis](https://ayende.com/blog/3137/infrastructure-ignorance) Prinzipien, die Infrastrukturebene müssen nicht "verunreinigt" die Domäne der Ebene. Sie müssen die Domäne Modell Entität Klassen agnostisch aus der Infrastruktur, mit denen Sie Daten (EF oder einem anderen Framework) beizubehalten halten, indem nicht harte Abhängigkeiten Frameworks dauert. Die Domäne Modell Layer-Klassenbibliothek müssen nur Ihr domänencode nur [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) Entität Klassen implementieren das Kernstück der Software und vollständig vom infrastrukturtechnologien.
+Gemäß den oben genannten Grundsätzen [Ignorieren der Persistenz](http://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) darf die Infrastrukturebene die Domänenmodellebene nicht „kontaminieren“. Die Entitätsklassen des Domänenmodells müssen von der Infrastruktur unabhängig sein, in der Sie Daten speichern (EF oder ein anderes Framework), indem keine harten Abhängigkeiten für Frameworks berücksichtigt werden. Ihre Klassenbibliothek auf der Domänenmodellebene sollte nur Ihren Domänencode enthalten und nur [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Entitätsklassen, die das Kernstück Ihrer Software implementieren und komplett entkoppelt von Infrastrukturtechnologien sind.
 
-Daher Ihre Ebenen oder Klassenbibliotheken und Projekte sollten letztlich richten sich nach der Domäne der Ebene (Library), nicht umgekehrt, wie in Abbildung 9 – 7 dargestellt.
+Daher sollten Ihre Ebenen bzw. Klassenbibliotheken und Projekte letztlich wie in Abbildung 9-7 dargestellt von Ihrer Domänenmodellebene (Bibliothek) abhängen, nicht umgekehrt.
 
 ![](./media/image8.png)
 
-**Abbildung 9 – 7**. Abhängigkeiten zwischen Ebenen in DDD
+**Abbildung 9-7**. Abhängigkeiten zwischen Ebenen in DDD
 
-Dieser Entwurf Ebene sollte unabhängig für jeden Microservice erfolgen. Wie bereits erwähnt, können Sie den komplexesten Microservices implementieren befolgen DDD-Muster, bei der Implementierung einfacher datengesteuerte Microservices (einfache CRUD in einer einzelnen Ebene) auf einfachere Weise.
+Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie bereits erwähnt wurde, können Sie die komplexesten Microservices nach den DDD-Mustern implementieren, während einfachere datengesteuerte Microservices (einfacher CRUD-Vorgang auf einer einzelnen Ebene) auf einfachere Weise implementiert werden können.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **DevIQ. Persistenz Unkenntnis Prinzip**
+-   **DevIQ. Persistence Ignorance principle (Grundsatz „Ignorieren der Persistenz“)**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastruktur Unkenntnis**
+-   **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur) **
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. In den Ebenen-Architektur In Domain Driven Design**
+-   **Angel Lopez. Layered Architecture In Domain-Driven Design (Ebenenarchitektur im domänengesteuerten Design)**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Cqrs-Microservice-reads.md) [weiter] (Microservice Domäne model.md)
+[Zurück] (cqrs-microservice-reads.md) [Weiter] (microservice-domain-model.md)

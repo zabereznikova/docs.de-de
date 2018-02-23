@@ -1,42 +1,45 @@
 ---
-title: Testen von ASP.NET Core Services und Web-apps
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Testen von ASP.NET Core Services und Web-apps"
+title: Testen von ASP.NET Core-Diensten und -Webanwendungen
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Testen von ASP.NET Core-Diensten und -Webanwendungen"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f756a679befee676db2bf6d402fd7e34b1621b9d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core Services und Web-apps
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
-Controller sind ein zentraler Bestandteil von ASP.NET Core API-Dienste und ASP.NET MVC-Webanwendung. Daher sollten Sie vertrauen verfügen, die sie für die Anwendung erwartungsgemäß Verhalten. Automatisierte Tests vermittelt Ihnen dieses Vertrauen und Fehler können erkannt werden, bevor sie die Produktion erreichen.
+Controller sind ein zentraler Bestandteil jedes ASP.NET Core API-Diensts und jeder ASP.NET MVC-Webanwendung. Daher sollten Sie auch darauf vertrauen, dass sie in Ihrer Anwendung wie beabsichtigt funktionieren. Automatisierte Tests können Ihnen dieses Vertrauen vermitteln. Sie können zudem dabei helfen, Fehler aufzudecken, bevor diese die Produktion erreichen.
 
-Sie müssen zu testen, wie die Controller basierend auf gültige bzw. ungültige Eingaben verhält, und Testen abhängig vom Ergebnis des Vorgangs Business ausgeführten Domänencontroller-Antworten. Allerdings sollten Sie diese Art von Tests der Microservices verfügen:
+Sie müssen testen, wie der Controller sich auf Grundlage von gültigen bzw. ungültigen Eingaben verhält, und wie die Testcontroller abhängig vom Ergebnis des durchgeführten Geschäftsvorgangs antworten. Allerdings sollten Sie über diese Art von Tests in Ihren Microservices verfügen:
 
--   Komponententests. Diese Stellen Sie sicher, dass die einzelne Komponenten der Anwendung erwartungsgemäß arbeiten. Assertionen testen Sie die Komponente-API.
+-   Komponententests. Diese stellen sicher, dass die einzelnen Komponenten der Anwendung erwartungsgemäß funktionieren. Assertionstests für die Komponenten-API.
 
--   Integrationstests. Diese Stellen Sie sicher, dass die Komponenteninteraktionen erwartungsgemäß für externe Elemente wie beispielsweise Datenbanken. Assertionen können Komponenten-API, angezeigte Benutzeroberfläche oder die Nebeneffekte des Aktionen wie Datenbank-e/a, Protokollierung usw. testen.
+-   Integrationstests. Diese stellen sicher, dass die Komponenteninteraktionen für externe Elemente wie beispielsweise Datenbanken erwartungsgemäß funktionieren. Assertionen können Komponenten-APIs, Benutzeroberflächen oder die Nebeneffekte von Aktionen wie Datenbank-E/A, Protokollierung usw. testen.
 
--   Funktionstests für jede Microservice. Diese Stellen Sie sicher, dass die Anwendung erwartungsgemäß aus Sicht des Benutzers.
+-   Funktionstests für jeden Microservice. Diese stellen sicher, dass die Anwendung aus Sicht des Benutzers erwartungsgemäß funktioniert.
 
--   Testet. Diese Stellen Sie sicher, dass Anwendungsfälle für End-to-End-Dienst, einschließlich der Tests mehrere Dienste zur gleichen Zeit getestet werden. Für diese Art von Tests müssen Sie zunächst die Umgebung vorzubereiten. In diesem Fall daher starten die Dienste (z. B. mit Docker-verfassen oben).
+-   Diensttests. Diese stellen sicher, dass Anwendungsfälle für End-to-End-Dienste, einschließlich der Tests mehrerer Dienste gleichzeitig, getestet werden. Für diese Art von Tests müssen Sie zunächst die Umgebung vorbereiten. In diesem Fall müssen die Dienste gestartet werden (z.B. mit dem Befehl „docker-compose up“).
 
-### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementieren von Komponententests für ASP.NET Core Web-APIs
+### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementieren von Komponententests für ASP.NET Core-Web-APIs
 
-UnitTests umfasst einen Teil einer Anwendung unabhängig von der Infrastruktur und die Abhängigkeiten testen. Wenn Sie Komponententests für Controllerlogik, nur den Inhalt einer einzigen Aktion oder-Methode getestet wird, nicht das Verhalten der zugehörigen Abhängigkeiten oder Framework selbst. Komponententests nicht erkennen Probleme bei der Interaktion zwischen Komponenten – d. h. den Zweck von Integrationstests.
+Ein Komponententest beinhaltet das Testen einer Anwendungskomponente isoliert von ihrer Infrastruktur und ihren Abhängigkeiten. Bei einem Komponententest der Controllerlogik werden nur die Inhalte einer einzelnen Aktion oder Methode getestet, nicht das Verhalten ihrer Abhängigkeiten oder des Frameworks selbst. Komponententests erkennen keine Probleme bei der Interaktion zwischen den Komponenten. Dazu dienen Integrationstests.
 
-Testen Sie als Einheit Sie Ihre Controlleraktionen, stellen Sie sicher, dass Sie sich nur auf ihr Verhalten konzentrieren. Ein Komponententest Controller wird z. B. Filter, routing oder wurden die modellbindung vermieden. Da sie zum Testen von nur einem Schritt zu konzentrieren, sind Komponententests im Allgemeinen einfach zu schreiben und schnell ausgeführt. Ein gut geschriebener Satz von Komponententests kann ohne Mehraufwand häufig ausgeführt werden.
+Konzentrieren Sie sich bei der Durchführung eines Komponententests für Ihre Controlleraktionen daher nur auf deren Verhalten. Bei einem Komponententest des Controllers werden z.B. Filter, Routing oder Modellbindung vermieden. Durch die Fokussierung auf nur einen Aspekt sind Komponententests in der Regel einfach zu schreiben und schnell in der Ausführung. Gut geschriebene Komponententests können häufig ohne großen Mehraufwand ausgeführt werden.
 
-Komponententests werden basierend auf Testframeworks wie xUnit.net MSTest, Moq oder NUnit implementiert. Für die beispielanwendung eShopOnContainers verwenden XUnit.
+Komponententests werden basierend auf Testframeworks wie xUnit.net, MSTest, Moq oder NUnit implementiert. Für die Beispielanwendung eShopOnContainers verwenden wir XUnit.
 
-Wenn Sie einen Komponententest für eine Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, die direkt mit dem new-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Das folgende Beispiel zeigt die Vorgehensweise bei Verwendung [XUnit](https://xunit.github.io/) als das Testframework.
+Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, und verwenden Sie direkt das New-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Das folgende Beispiel zeigt die Vorgehensweise bei Verwendung von [XUnit](https://xunit.github.io/) als Testframework.
 
 ```csharp
 [Fact]
@@ -56,19 +59,19 @@ public void Add_new_Order_raises_new_event()
 }
 ```
 
-### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Implementieren der Integration und funktionale Tests für jede microservice
+### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Implementieren der Integrations- und Funktionstests für jeden Microservice
 
-Wie bereits erwähnt, haben Integrationstests und Funktionstests, verschiedene Zwecke und Ziele. Allerdings ist die Möglichkeit, die beide beim Testen von ASP.NET Core Controller implementieren ähnlich, damit in diesem Abschnitt es Integrationstests konzentrieren können.
+Wie bereits erwähnt, haben Integrationstests und Funktionstests verschiedene Zwecke und Ziele. Allerdings ist die Implementierung der beiden beim Testen von ASP.NET Core-Controllern ähnlich. Aus diesem Grund konzentrieren wir uns in diesem Abschnitt auf Integrationstests.
 
-Integrationstests wird sichergestellt, dass eine Anwendung Komponenten ordnungsgemäß, wenn assembliert. ASP.NET Core unterstützt Integrationstests zu legen, mit der Komponententest-Frameworks und einem integrierten Test Webhost, der verwendet werden kann, um Mehraufwand von Netzwerk-Anforderungen zu verarbeiten.
+Integrationstests stellen sicher, dass die Komponenten einer Anwendung ordnungsgemäß funktionieren, wenn sie zusammengestellt werden. ASP.NET Core unterstützt Integrationstests durch Komponententestframeworks und einen integrierten Testwebhost, der zur Verarbeitung von Anforderungen ohne Netzwerkmehraufwand verwendet werden kann.
 
-Im Gegensatz zu Komponententests ausgeführt werden umfassen Integrationstests häufig Infrastruktur anwendungsaspekten, z. B. eine Datenbank, Dateisystem, Netzwerkressourcen, oder webanforderungen und-Antworten an. Komponententests mithilfe von Fakes oder Modellieren Objekte anstelle von diese Probleme. Aber Integrationstests zu bestätigen, dass das System erwartungsgemäß mit diesen Systemen funktioniert deshalb für Integrationstests für die Sie nicht mithilfe von Fakes oder Modellieren der Objekte dient. Stattdessen können Sie die Infrastruktur, z. B. Datenbank Zugriff oder Dienst der Aufruf von anderen Diensten.
+Im Gegensatz zu Komponententests umfassen Integrationstests häufig Infrastrukturprobleme, z.B. eine Datenbank, ein Dateisystem, Netzwerkressourcen oder Webanforderungen und -antworten. Komponententests verwenden gefälschte oder Mockobjekte anstelle dieser Probleme. Aber der Zweck von Integrationstests ist die Bestätigung, dass das System mit diesen Systemen erwartungsgemäß funktioniert, damit Integrationstests keine gefälschten oder Mockobjekte verwenden müssen. Stattdessen können Sie die Infrastruktur einschließen, z.B. Datenbankzugriff oder Dienstaufruf von anderen Diensten.
 
-Da Integrationstests größere Codesegmente als Komponententests Übung, und Integrationstests erfolgreich Infrastrukturelemente abhängig, tendenziell sie erheblich langsamer als Komponententests. Daher ist es eine gute Idee, wie viele Integrationstests zu beschränken, schreiben und ausführen.
+Da Integrationstests größere Codesegmente ausführen als Komponententests, und da Integrationstests von Infrastrukturelementen abhängig sind, sind sie tendenziell erheblich langsamer als Komponententests. Daher ist es ratsam, die Anzahl der Integrationstests, die Sie schreiben und ausführen, zu beschränken.
 
-ASP.NET Core enthält einen integrierte Test Webhost, der zum Verarbeiten von HTTP-Anforderungen ohne netzwerkmehraufwand verwendet werden kann dies bedeutet, dass Sie diese Tests schneller ausführen können, wenn mit einem echten Webhost. Der Test-Webhost ist als Microsoft.AspNetCore.TestHost in einer Komponente NuGet verfügbar. Diese Integration Testprojekte hinzugefügt werden kann und zum Hosten von ASP.NET Core Anwendungen verwendeten.
+ASP.NET Core enthält einen integrierte Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehraufwand verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei der Verwendung eines echten Webhosts. Der Testwebhost ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponenten verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
 
-Wie Sie den folgenden Code Erstellung Integrationstests für ASP.NET Core Controller sehen können, die Controller über Testhost instanziiert werden. Dies ist vergleichbar mit einer HTTP-Anforderung, aber schneller ausgeführt.
+Wie Sie im folgenden Code sehen können, instanziieren Sie die Controller durch den Testhost, wenn Sie Integrationstest für ASP.NET Core-Controller erstellen. Dies ist vergleichbar mit einer HTTP-Anforderung, aber es wird schneller ausgeführt.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -99,32 +102,32 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Steve Smith. Testen von Controllern** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Testing controllers (Testen von Controllern)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Integrationstests** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Integration testing (Integrationstests)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
 
--   **Komponententests in .NET Core-Dotnet-Test mit**
+-   **Unit testing in .NET Core using dotnet test (Komponententest in .NET Core mit „dotnet test“)**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
 -   **xUnit.net**. Offizielle Website.
-    [*https://xUnit.github.IO/*](https://xunit.github.io/)
+    [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Grundlagen zum Komponententest. ** 
-     [ *https://msdn.microsoft.com/en-us/library/hh694602.aspx*](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+-   **Unit Test Basics. (Grundlagen zu Komponententests.)**
+    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. GitHub-Repository.
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. Offizielle Website.
-    [*https://www.NUnit.org/*](https://www.nunit.org/)
+    [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Für eine Anwendung mit mehreren Container implementierende diensttests 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementieren von Diensttests in einer Anwendung mit mehreren Containern 
 
-Wie bereits erwähnt, wenn Sie Multi-containeranwendungen testen, müssen alle Microservices innerhalb des Docker-Host oder Container-Clusters ausgeführt werden. End-to-End diensttests, die mehrere Vorgänge im Zusammenhang mit mehreren Microservices enthalten erfordern Sie zum Bereitstellen und starten Sie die gesamte Anwendung in der Docker-Host, durch Ausführen von Docker-verfassen nach-oben (oder einen vergleichbaren Mechanismus bei Verwendung von ein Orchestrator). Nachdem die gesamte Anwendung und alle zugehörigen Dienste ausgeführt werden, können Sie die End-to-End-Integration und funktionale Tests ausführen.
+Wie bereits erwähnt: Wenn Sie Multicontaineranwendungen testen, müssen alle Microservices innerhalb des Docker-Hosts oder Containerclusters ausgeführt werden. End-to-End-Diensttests, die mehrere Vorgänge im Zusammenhang mit mehreren Microservices enthalten, erfordern die Bereitstellung und den Start der gesamten Anwendung im Docker-Host durch Ausführen des Befehls „docker-compose up“ (oder eines vergleichbaren Mechanismus bei Verwendung eines Orchestrators). Nachdem die gesamte Anwendung und alle zugehörigen Dienste ausgeführt werden, können Sie die End-to-End-Integration und Funktionstests ausführen.
 
-Es gibt einige Ansätze, die Sie verwenden können. In der Docker-compose.yml-Datei, die Sie verwenden, um die Anwendung (oder ähnliche wie Docker compose.ci.build.yml) bereitstellen, auf Projektmappenebene können erweitern Sie den zu verwendenden Einstiegspunkt [Dotnet Test](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Sie können auch eine andere Compose-Datei, die in der Abbildung Ihrer Zielgruppe, die Tests ausführen müssen. Durch Verwendung einer anderen Compose-Datei Integrationstests, die die Microservices und die Datenbanken für Container enthält, können Sie sicherstellen, dass die verwandten Daten immer auf den ursprünglichen Zustand zurückgesetzt werden, vor dem Ausführen der Tests.
+Es gibt einige Ansätze, die Sie verwenden können. In der Datei „Docker-compose.yml“, die Sie verwenden, um die Anwendung (oder ähnliche wie Docker-compose.ci.build.yml) bereitzustellen, können Sie auf Projektmappenebene den Eingangspunkt erweitern, um [dotnet test](https://docs.microsoft.com/dotnet/core/tools/dotnet-test) zu verwenden. Sie können auch eine andere Compose-Datei verwenden, die Ihre Tests im Image Ihrer Zielgruppe ausführen würde. Durch Verwendung einer anderen Compose-Datei für Integrationstests, die Ihre Microservices und Datenbanken für Container enthält, können Sie sicherstellen, dass die verwandten Daten vor dem Ausführen der Tests immer auf den ursprünglichen Zustand zurückgesetzt werden.
 
-Sobald die Compose-Anwendung ausgeführt wird, können Sie Haltepunkte und Ausnahmen nutzen, wenn Sie Visual Studio ausgeführt werden. Oder Sie können die Integrationstests erfolgreich automatisch ausführen, in der CI-Pipeline in Visual Studio Team Services oder eines anderen Systems von CI-CD, das Docker-Containern unterstützt.
+Sobald die Compose-Anwendung ausgeführt wird, können Sie Haltepunkte und Ausnahmen nutzen, wenn Sie Visual Studio ausführen. Oder Sie können die Integrationstests automatisch in der CI-Pipeline in Visual Studio Team Services oder in jedem anderen CI/CD-System ausführen, das Docker-Container unterstützt.
 
 >[!div class="step-by-step"]
-[Vorherigen] (Abonnieren-events.md) [weiter] (.. /microservice-ddd-CQRS-Patterns/Index.MD)
+[Zurück] (subscribe-events.md) [Weiter] (../microservice-ddd-cqrs-patterns/index.md)

@@ -1,6 +1,6 @@
 ---
-title: "Die clientseitige Validierung (Überprüfung in den Darstellungsschichten)"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Die clientseitige Validierung (Überprüfung in den Darstellungsschichten)"
+title: "Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,64 +8,67 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: db88a3b5c95afdc8d5a20094105f1f5991483ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Die clientseitige Validierung (Überprüfung in den Darstellungsschichten)
+# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
-Auch wenn die Quelle der Wahrheitswert des Domänenmodells und letztlich Sie Validierung auf Modellebene Domäne benötigen, kann Überprüfung immer noch auf der Domänenebene Modell (Serverseite) und der Clientseite verarbeitet werden.
+Obwohl alle Daten aus dem Domänenmodell stammen und dort auch geprüft werden müssen (Serverseite), kann die Prüfung auch gleichzeitig auf der Clientseite passieren.
 
-Die clientseitige Validierung ist eine hervorragende Erleichterung für Benutzer. Es speichert wartet auf einen Roundtrip aufgewendete Zeit sie andernfalls würde, auf dem Server, der möglicherweise Überprüfungsfehler zurückgeben. Aus geschäftlicher sogar einige wenige Bruchteilen von Sekunden multipliziert unzählige Male pro Tag addiert viel Zeit und Aufwand Frustration. Unkompliziert und sofortige Überprüfung kann Benutzer effizienter arbeiten und erzeugt eine bessere Qualität für ein- und Ausgabe.
+Die Prüfung auf Clientseite ist ein für Benutzer sehr praktisches Feature, denn sie spart Zeit, die andernfalls verloren gehen würde, während Sie auf einen Roundtrip auf den Server warten, der ggf. Prüfungsfehler zurückgibt. In Unternehmen reicht es schon aus, wenn täglich Hundert Male Bruchteile von Sekunden verloren gehen, denn so summieren sich Kosten, Aufwand und Frustration. Wenn die Prüfung unkompliziert und ohne Umschweife ausgeführt wird, können Benutzer effizienter arbeiten und Eingaben und Ausgaben von besserer Qualität produzieren.
 
-Ebenso wie das Anzeigen und die Domänenmodell unterschiedlich sind, modellvalidierung anzeigen und Domäne modellvalidierung ähnlich sein, jedoch einen anderen Zweck erfüllen. Wenn Sie befürchten trocken (das wiederhole Dich nicht Prinzip), zu berücksichtigen, dass in diesem Fall Wiederverwendung von Code auch bedeuten, Kopplung dass kann und in unternehmensanwendungen es wichtiger nicht auf die Serverseite mit dem clientseitigen ist als Designanforderungen TROCKENE Prinzip zu verknüpfen.
+Ebenso wie sich das Ansichts- und das Domänenmodell unterscheiden, ähneln sich zwar die Überprüfungen des Ansichts- und des Domänenmodells, erfüllen jedoch einen unterschiedlichen Zweck. Wenn Sie sich an das DRY-Prinzip (Don’t Repeat Yourself) halten, sollten Sie beachten, dass die Wiederverwendung von Code ggf. mit Kopplung einhergeht, denn in Unternehmensanwendungen ist es wichtiger, eine Kopplung der Server- an die Clientseite zu vermeiden, als das DRY-Prinzip einzuhalten.
 
-Auch wenn Sie die clientseitige Validierung verwenden möchten, sollten immer Ihre Befehle zu überprüfen oder DTOs in Servercode, Eingabe, da der Server-APIs sind ein möglich Angriffsvektor. Beides ist normalerweise am besten da haben eine Client-Anwendung im Hinblick auf UX, es empfohlen wird, proaktive werden und nicht zulassen, dass der Benutzer ungültige Informationen geben.
+Selbst wenn Sie die clientseitige Prüfung verwenden, sollten Sie Befehle und Eingabe-DTOs im serverseitigen Code immer überprüfen, da die Server-APIs ein potenzieller Angriffsvektor sind. Das Sicherste ist es, beide Überprüfungen zu verwenden, denn bei Clientanwendungen ist es aus UX-Perspektive empfehlenswert, proaktiv zu sein und nicht zuzulassen, dass Benutzer ungültige Informationen eingeben.
 
-Aus diesem Grund überprüfen im clientseitigen Code Sie in der Regel die ViewModels. Sie können auch den Client überprüfen DTOs oder Befehle ausgeben, bevor sie an die Dienste zu senden.
+Aus diesem Grund überprüfen Sie im clientseitigen Code in der Regel die ViewModels. Sie können auch die Ausgabe-DTOs oder -befehle des Clients überprüfen, bevor sie an die Dienste gesendet werden.
 
-Die Implementierung der clientseitigen Validierung hängt davon ab, welche Art von Client-Anwendung, die Sie erstellen. Unterschiedlich sein, wenn Sie Daten in einer webbasierten MVC-Webanwendung mit Großteil des Codes in einer Webanwendung SPA, Validierung, die in JavaScript oder TypeScript programmiert wird .NET überprüfen oder eine mobile app mit Xamarin und C# hartcodiert\#.
+Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von Clientanwendung Sie erstellen, je nachdem, ob Sie Daten in einer MVC-Webanwendung mit einem Großteil des Codes in .NET, in einer SPA-Webanwendung in JavaScript oder TypeScript oder in einer mobilen, in Xamarin und C\# codierten App prüfen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-### <a name="validation-in-xamarin-mobile-apps"></a>Die Validierung in mobilen Xamarin-apps
+### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
--   **Validieren von Text Eingabe- und Fehler anzeigen**
-    [*https://developer.xamarin.com/recipes/ios/standard\_Steuerelemente/Text\_Feld/Überprüfen von\_Eingabe-/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validate Text Input and Show Errors (Überprüfen der Texteingabe und Anzeigen von Fehlern)**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validierungsrückruf**
+-   **Validation Callback (Prüfungsrückruf)**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
-### <a name="validation-in-aspnet-core-apps"></a>Die Validierung in ASP.NET Core-apps
+### <a name="validation-in-aspnet-core-apps"></a>Prüfung in ASP.NET Core-Apps
 
--   **Rick Anderson. Hinzufügen einer Validierung**
+-   **Rick Anderson. Adding validation (Hinzufügen einer Validierung)**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
-### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Die Validierung in SPA Web-apps (Angular 2 TypeScript JavaScript)
+### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
--   **ADO-Kukic. Überprüfung des Formulars Angular 2** **
-     ** [ *https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Angular 2 Form Validation (Angular 2-Formularprüfung) ****
+    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Überprüfung des Formulars**
+-   **Form Validation (Formularprüfung)**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Überprüfung.** Kinderspiel-Dokumentation.
-    [*http://Breeze.github.IO/doc-js/Validation.HTML*](http://breeze.github.io/doc-js/validation.html)
+-   **Prüfung** Breeze-Dokumentation
+    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
 
-Zusammenfassend sind dies die wichtigsten Konzepte in Bezug auf Überprüfung:
+Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 
--   Entitäten und Aggregate sollte ihre eigenen Konsistenz zu erzwingen und "immer gültig" sein. Aggregate sind verantwortlich, Konsistenzgründen mehrerer Entitäten innerhalb der gleichen Aggregat.
+-   Entitäten und Aggregate sollten ihre eigenen Konsistenz erzwingen und „immer gültig“ sein. Aggregatstämme sind für die Konsistenz mehrerer Entitäten innerhalb desselben Aggregats verantwortlich.
 
--   Wenn Sie glauben, dass eine Entität einen ungültigen Status eingeben muss, erwägen Sie ein anderes Objektmodell – z. B. eine temporäre DTO verwenden, bis Sie die letzte Domänenentität erstellen.
+-   Wenn Sie glauben, dass eine Entität in einen ungültigen Zustand übergehen muss, sollten Sie die Verwendung eines anderen Objektmodells in Betracht ziehen, z.B. ein vorübergehendes DTO, bis Sie die letzte Domänenentität erstellen.
 
--   Wenn Sie mehrere verwandte Objekte, z. B. ein Aggregat erstellen müssen, und sie sind nur gültig, nachdem alle von ihnen erstellt wurden, sollten erwägen Sie, die Diensthostfactory-Muster zu verwenden.
+-   Wenn Sie mehrere verwandte Objekte wie ein Aggregat erstellen müssen und diese nur gültig sind, wenn alle von ihnen erstellt wurden, sollten Sie die Verwendung des Factorymusters erwägen.
 
--   Überprüfung Frameworks werden in bestimmten Schichten, z. B. die Darstellungsschicht oder die Anwendung bzw. eines Diensts-Ebene, aber normalerweise nicht auf der Ebene der Domäne Modell am besten verwendet, da werden müssten, schalten Sie ein Framework für die Infrastruktur eine starke Abhängigkeit.
+-   Prüfungsframeworks funktionieren am besten in bestimmten Ebenen, z.B. in der Darstellungs- oder in der Anwendungs- bzw. Dienstebene, üblicherweise jedoch nicht auf der Domänenmodellebene, da dafür eine starke Abhängigkeit vom Infrastrukturframework notwendig wäre.
 
--   In den meisten Fällen ist mit redundanten Überprüfung clientseitig gut, weil die Anwendung proaktiv kann.
+-   In vielen Fällen ist eine redundante Prüfung auf Clientseite von Vorteil, da die Anwendung so proaktiv sein kann.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Domäne-Modell-Ebene – validations.md) [weiter] (Domäne-Ereignisse-Design-implementation.md)
+[Zurück] (domain-model-layer-validations.md) [Weiter] (domain-events-design-implementation.md)

@@ -1,6 +1,6 @@
 ---
-title: "Sicheres Speichern von Anwendung geheime Schlüssel während der Entwicklung"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Sicheres Speichern von Anwendung geheime Schlüssel während der Entwicklung"
+title: "Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung"
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung"
 keywords: Docker, Microservices, ASP.NET, Container
 author: mjrousos
 ms.author: wiwagn
@@ -8,23 +8,26 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f1b8b257a3e677c7e665e1d394a8adf7e651bec2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="storing-application-secrets-safely-during-development"></a>Sicheres Speichern von Anwendung geheime Schlüssel während der Entwicklung
+# <a name="storing-application-secrets-safely-during-development"></a>Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung
 
-Um mit geschützten Ressourcen und anderen Diensten zu verbinden, müssen ASP.NET Core-Anwendungen in der Regel verwenden Sie Verbindungszeichenfolgen, Kennwörter oder andere Anmeldeinformationen, die vertraulichen Informationen enthalten. Diese vertrauliche Informationen werden bezeichnet *geheime Schlüssel*. Es ist eine bewährte Methode, um geheime Schlüssel nicht im Quellcode einzuschließen und sicherlich nicht zum Speichern von geheimen Schlüsseln in der quellcodeverwaltung. Stattdessen sollten Sie die ASP.NET Core Konfigurationsmodell verwenden, sicherer Speicherorte der geheime Schlüssel gelesen.
+Zum Verbinden mit geschützten Ressourcen und anderen Diensten benötigen ASP.NET Core-Anwendungen in der Regel Verbindungszeichenfolgen, Kennwörter oder andere Anmeldeinformationen, die vertrauliche Informationen enthalten. Diese vertraulichen Informationen werden *Geheimnisse* genannt. Es stellt eine bewährte Methode dar, Geheimnisse nicht in den Quellcode einzufügen und nicht in der Quellcodeverwaltung zu speichern. Stattdessen sollten Sie das Konfigurationsmodell von ASP.NET Core verwenden, um Geheimnisse aus sichereren Speicherorten zu lesen.
 
-Trennen Sie die geheimen Schlüssel für den Zugriff auf die Entwicklung und staging-Ressourcen, von denen, die für den Zugriff auf Produktionsressourcen, verwendet wird, da verschiedene Personen Zugriff auf diese unterschiedliche Sätze von geheimen Schlüsseln benötigen. Zum Speichern von geheimen Schlüsseln, die während der Entwicklung verwendet, sind gebräuchlichen Verfahren entweder Speichern von geheimen Schlüsseln in Umgebungsvariablen oder mit dem ASP.NET Core geheimen Manager-Tool. Bei der Speicher in produktionsumgebungen ist sicherer können Microservices geheime Schlüssel in einem Azure-Schlüsseltresor speichern.
+Sie sollten die Geheimnisse für den Zugriff auf Entwicklungs- und Stagingressourcen von denen trennen, die für den Zugriff auf Produktionsressourcen verwendet werden, da verschiedene Personen Zugriff auf diese verschiedenen Geheimnisse benötigen. Beim Speichern von Geheimnissen, die während der Entwicklung genutzt werden, ist es gebräuchlich, diese entweder in Umgebungsvariablen oder mithilfe des Secret Manager-Tools von ASP.NET Core zu speichern. Für eine sicherere Speicherung in Produktionsumgebungen können Microservices Geheimnisse in Azure Key Vault speichern.
 
-## <a name="storing-secrets-in-environment-variables"></a>Das Speichern von geheimen Schlüsseln in Umgebungsvariablen
+## <a name="storing-secrets-in-environment-variables"></a>Speichern von Geheimnissen in Umgebungsvariablen
 
-Eine Möglichkeit, geheime Schlüssel außerhalb des Quellcodes zu halten ist für Entwickler festzulegende zeichenfolgenbasierte geheimen als [Umgebungsvariablen](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) auf ihren Entwicklungscomputern. Bei Verwendung von Umgebungsvariablen zum Speichern von geheimen Schlüsseln mit hierarchischen Namen (die in den Konfigurationsabschnitten geschachtelt), erstellen Sie einen Namen für die Umgebungsvariablen, der die vollständige Hierarchie des geheimen Namen enthält, getrennt durch Doppelpunkte (:).
+Eine Möglichkeit, um Geheimnisse aus dem Quellcode fernzuhalten, besteht darin, dass Entwickler zeichenfolgenbasierte Geheimnisse als [Umgebungsvariablen](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) auf Ihren Entwicklungscomputern festlegen können. Wenn Sie Umgebungsvariablen zum Speichern von Geheimnissen mit hierarchischen Namen verwenden (die in den Konfigurationsabschnitten geschachtelt sind), erstellen Sie einen Namen für die Umgebungsvariablen, der eine vollständige, mit Doppelpunkten (:) getrennte Hierarchie des Namen des Geheimnisses enthält.
 
-Beispielsweise würde eine Umgebungsvariable Protokollierung: LogLevel:Default Debuggen festlegen entsprechen, einen Konfigurationswert aus den folgenden JSON-Datei folgendermaßen lauten:
+Zum Beispiel würde das Festlegen der Umgebungsvariable „Logging:LogLevel:Default“ auf „Debug“ einem Konfigurationswert der folgenden JSON-Datei entsprechen:
 
 ```json
 {
@@ -36,15 +39,15 @@ Beispielsweise würde eine Umgebungsvariable Protokollierung: LogLevel:Default D
 }
 ```
 
-Zugreifen auf diese Werte von Umgebungsvariablen, benötigt die Anwendung nur AddEnvironmentVariables seine ConfigurationBuilder aufgerufen, wenn ein IConfigurationRoot-Objekt zu erstellen.
+Die Anwendung muss beim Erstellen eines IConfigurationRoot-Objekts nur „AddEnvironmentVariables“ in ihrer ConfigurationBuilder-Klasse aufrufen, um auf diese Werte von Umgebungsvariablen zuzugreifen.
 
-Beachten Sie, dass die Umgebungsvariablen in der Regel als nur-Text gespeichert werden, wenn der Computer oder der Prozess mit der Umgebungsvariablen gefährdet ist, die Werte für Umgebungsvariablen angezeigt werden.
+Beachten Sie, dass Umgebungsvariablen in der Regel als Nur-Text gespeichert werden, wenn der Computer oder der Prozess mit den Umgebungsvariablen also gefährdet ist, sind die Werte der Umgebungsvariable sichtbar.
 
-## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Das Speichern von geheimen Schlüsseln, die mit dem ASP.NET Core Secret-Manager
+## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Speichern von Geheimnissen mit Secret Manager von ASP.NET Core
 
-Die ASP.NET Core [geheimen Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) Tool bietet eine andere Methode halten geheimen Schlüssel aus dem Quellcode. Um den geheimen Schlüssel-Manager-Tool verwenden zu können, schließen Sie eine toolreferenz (DotNetCliToolReference) des Microsoft.Extensions.SecretManager.Tools-Pakets in der Projektdatei. Sobald diese Abhängigkeit vorhanden ist und wiederhergestellt wurde, kann die Dotnet vertrauliche Benutzerdaten-Befehl verwendet werden, um den Wert der geheimen Schlüssel über die Befehlszeile festzulegen. Diese geheimen Informationen werden in einer JSON-Datei im Verzeichnis des Benutzers Profil (Details variieren von OS), von Quellcode gespeichert.
+Das ASP.NET Core-Tool [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) stellt eine weitere Methode bereit, um Geheimnisse aus dem Quellcode fernzuhalten. Fügen Sie eine Referenz zu Tools (DotNetCliToolReference) in das Paket „Microsoft.Extensions.SecretManager.Tools“ in Ihrer Projektdatei ein, um das Secret Manager-Tool zu verwenden. Sobald diese Abhängigkeit vorhanden ist und wiederhergestellt wurde, kann der Befehl „dotnet user-secrets“ verwendet werden, um den Wert der Geheimnisse über die Befehlszeile festzulegen. Diese Geheimnisse werden außerhalb vom Quellcode in einer JSON-Datei im Verzeichnis des Profils vom Benutzer (Details variieren je nach Betriebssystem) gespeichert.
 
-Geheime Schlüssel festlegen, indem das Tool Secret-Manager werden von der UserSecretsId-Eigenschaft des Projekts organisiert, die die geheimen Schlüssel verwendet wird. Aus diesem Grund müssen Sie Sie sicher, dass die UserSecretsId-Eigenschaft in der Projektdatei (wie im folgenden Codeausschnitt gezeigt) festgelegt sein. Die tatsächliche Zeichenfolge, die verwendet werden, weil die ID ist nicht wichtig, solange er eindeutig im Projekt ist.
+Geheimnisse, die durch das Secret Manager-Tool festgelegt wurden, werden von der Eigenschaft „UserSecretsId“ des Projekts organisiert, das die Geheimnisse verwendet. Aus diesem Grund sollten Sie sicherstellen, dass Sie die Eigenschaft „UserSecretsId“ (wie im folgenden Codeausschnitt gezeigt wird) in Ihrer Projektdatei festlegen. Die tatsächliche Zeichenfolge, die als ID verwendet wird, ist nicht wichtig, so lange sie im Projekt eindeutig ist.
 
 ```xml
 <PropertyGroup>
@@ -52,8 +55,8 @@ Geheime Schlüssel festlegen, indem das Tool Secret-Manager werden von der UserS
 </PropertyGroup>
 ```
 
-Mit geheimen Schlüsseln mit geheimen Manager in einer Anwendung gespeichert erfolgt durch Aufrufen von AddUserSecrets&lt;T&gt; für die Instanz ConfigurationBuilder geheime Schlüssel für die Anwendung in der Konfiguration enthalten. Der generische Parameter T muss einen Typ aus der Assembly, die auf die UserSecretId angewendet wurde. In der Regel mit AddUserSecrets&lt;Start&gt; ist in Ordnung.
+Sie können mit Secret Manager gespeicherte Geheimnisse in einer Anwendung verwenden, indem Sie „AddUserSecrets&lt;T&gt;“ auf der Instanz „ConfigurationBuilder“ aufrufen, um Geheimnisse für die Anwendung in der Konfiguration zu enthalten. Der generische Parameter „T“ sollte ein Typ aus der Assembly sein, auf die „UserSecretId“ angewendet wurde. In der Regel ist das Verwenden von „AddUserSecrets&lt;Startup&gt;“ in Ordnung.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Autorisierung-Net-Microservices-Web-applications.md) [weiter] (Azure-Schlüssel-Tresor-schützt-secrets.md)
+[Zurück] (authorization-net-microservices-web-applications.md) [Weiter] (azure-key-vault-protects-secrets.md)

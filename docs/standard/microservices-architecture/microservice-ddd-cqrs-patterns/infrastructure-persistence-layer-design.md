@@ -1,52 +1,55 @@
 ---
-title: Entwerfen der Infrastruktur Persistenzebene
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Entwerfen der Infrastruktur Persistenzebene"
+title: Entwerfen der Persistenzebene der Infrastruktur
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen der Persistenzebene der Infrastruktur"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-the-infrastructure-persistence-layer"></a>Entwerfen der Infrastruktur Persistenzebene
+# <a name="designing-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
-Dauerhaftigkeitskomponenten Daten bereitstellen, Zugriff auf die Daten innerhalb der Grenzen des ein Microservice (d. h. ein Microservice-Datenbank) gehostet wird. Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Unit of Work](http://martinfowler.com/eaaCatalog/unitOfWork.html) -Klassen, wie benutzerdefinierte EF DBContexts.
+Komponenten der Datenpersistenz bieten Zugriff auf die Daten, die innerhalb der Grenzen eines Microservices gehostet werden (d.h. in der Datenbank eines Microservices). Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Arbeitseinheits](http://martinfowler.com/eaaCatalog/unitOfWork.html)-Klassen wie benutzerdefinierte EF-DBContexts.
 
 ## <a name="the-repository-pattern"></a>Das Repositorymuster
 
-Repositorys werden Klassen oder Komponenten, die die Logik erforderlich, um den Zugriff auf Datenquellen zu kapseln. Diese Zentralisierung allgemeine Data Access-Funktionalität, bietet eine bessere Verwaltbarkeit und die Entkopplung der Infrastruktur oder eine Technologie, die Zugriff auf die Datenbanken aus der Domäne der Ebene verwendet. Wenn Sie ein ORM wie Entity Framework verwenden, wird der Code, der implementiert werden muss, Dank LINQ und starke Typisierung vereinfacht. Dadurch können Sie den Fokus auf die Persistenzlogik Daten anstatt auf Daten zugreifen, Basisaufgaben.
+Repositorys sind Klassen oder Komponenten, welche die für den Zugriff auf Datenquellen erforderliche Logik einschließen. Sie zentralisieren allgemeine Funktionen für den Datenzugriff und bieten dabei eine bessere Verwaltbarkeit und Entkopplung der Infrastruktur oder Technologie, die für den Zugriff auf Datenbanken über die Domänenmodellebene verwendet wird. Wenn Sie eine ORM wie Entity Framework verwenden, wird der zu implementierende Code dank LINQ und starker Typisierung vereinfacht. Dadurch können Sie sich auf die Logik der Datenpersistenz konzentrieren und müssen sich nicht mit der Grundstruktur des Datenzugriffs befassen.
 
-Das Repositorymuster ist eine gut dokumentierten Möglichkeit des Arbeitens mit einer Datenquelle. Im Buch [Muster der Anwendungsarchitektur Enterprise](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/), Smell beschreibt ein Repository wie folgt:
+Das Repositorymuster stellt eine Methode mit umfassender Dokumentation für die Arbeit mit einer Datenquelle dar. Im Buch [Patterns of Enterprise Application Architecture (Muster der Architektur von Unternehmensanwendungen)](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/) beschreibt Martin Fowler ein Repository wie folgt:
 
-Ein Repository führt die Tasks der Vermittler zwischen der Domäne dienstmodellebene und datenzuordnung, auf ähnliche Weise auf einen Satz von Domänenobjekten im Arbeitsspeicher fungiert. -Clientobjekte deklarativ Abfragen erstellen und an den Repositorys für Antworten senden. Im Prinzip kapselt ein Repository einen Satz von Objekten, die in der Datenbank und die Vorgänge, die ausgeführt werden können, auf diesen zu ermöglichen, die näher an der Persistenzebene wird gespeichert. -Repositorys, die unterstützt außerdem des Zwecks trennen, klar und in eine Richtung, die Abhängigkeit zwischen der Domäne für die Arbeit und die Verteilung der Daten oder Zuordnung.
+Ein Repository führt die Tasks eines Zwischenspeichers zwischen den Domänenmodellebenen und der Datenzuordnung aus und agiert dabei ähnlich wie eine Reihe von Domänenobjekten im Arbeitsspeicher. Clientobjekte erstellen deklarativ Abfragen und senden diese an die Repositorys, um Antworten darauf zu bekommen. Im Prinzip schließt ein Repository eine Reihe von Objekten, die in der Datenbank gespeichert sind, sowie Vorgänge ein, die darin ausgeführt werden können, und bietet damit eine Möglichkeit, die näher an der Persistenzebene liegt. Zudem unterstützen Repositorys den Zweck der eindeutigen und unidirektionalen Trennung der Abhängigkeit zwischen der Arbeitsdomäne und der Datenzuordnung.
 
-### <a name="define-one-repository-per-aggregate"></a>Definieren Sie ein Repository pro Aggregat
+### <a name="define-one-repository-per-aggregate"></a>Definieren eines Repositorys pro Aggregat
 
-Für jedes Stammelement aggregate oder aggregate sollten Sie eine Repository-Klasse erstellen. In einem Microservice anhand von Mustern Domain driven Design sollte der einzige Kanal, werden, zum Aktualisieren der Datenbank verwendet soll, den Repositorys. Dies ist, da sie eine direkte Beziehung mit der aggregierten Stamm aufweisen, die des Aggregats Invarianten und Transaktionskonsistenz gesteuert. Es ist angemessen, Fragen Sie die Datenbank über andere Kanäle (wie nach einem CQRS-Ansatz), da es sich bei Abfragen der Status der Datenbank nicht geändert werden. Allerdings Bereich transaktional – Updates – muss immer durch den Repositorys und die aggregate Stämme gesteuert werden.
+Sie sollten für jedes Aggregat bzw. für jeden Aggregatstamm eine Repositoryklasse erstellen. In einem auf domänengesteuerten Entwurfsmustern basierenden Microservice sollten Sie für das Update der Datenbank als einzigen Kanal die Repositorys verwenden. Grund dafür ist, dass sie in einer 1:1-Beziehung zum Aggregatstamm stehen, wodurch die Invarianten und die Transaktionskonsistenz des Aggregats gesteuert werden. Die Datenbank kann auch über andere Kanäle abgefragt werden (nach einem CQRS-Ansatz), da sich der Status der Datenbank bei Abfragen nicht ändert. Der Transaktionsbereich (die Updates) muss jedoch immer von den Repositorys und den Aggregatstämmen gesteuert werden.
 
-Im Wesentlichen können mit einem Repository Daten im Arbeitsspeicher zu füllen, die aus der Datenbank in Form von Domänenentitäten stammen. Sobald die Entitäten im Arbeitsspeicher befinden, können sie geändert und dann in der Datenbank über Transaktionen übernommen werden.
+Im Wesentlichen können Sie in einem Repository den Arbeitsspeicher mit Daten auffüllen, die aus der Datenbank in Form von Domänenentitäten stammen. Sobald sich die Entitäten im Arbeitsspeicher befinden, können sie geändert und über Transaktionen wieder in der Datenbank gespeichert werden.
 
-Wie oben bereits erwähnt, wenn Sie das architektonische CQS/CQRS-Muster verwenden, werden die anfängliche Abfragen von clientseitigen Abfragen Out Domänenmodell ausgeführt durch einfache SQL-Anweisungen, die mit dapper, durch ausgeführt werden. Dieser Ansatz ist viel mehr als Repositorys flexibel, da Sie können Abfragen und verknüpfen alle Tabellen müssen und diese Abfragen werden nicht von Regeln aus der Aggregate eingeschränkt. Diese Daten werden für die Präsentation Ebene oder Client-app wechseln
+Wie bereits erwähnt wurde, werden bei Verwendung des CQS/CQRS-Architekturmusters die ersten Abfragen mit Abfragen aus dem Domänenmodell über einfache SQL-Anweisungen mit Dapper ausgeführt. Dieser Ansatz ist flexibler als Repositorys, da Sie alle erforderlichen Tabelle abfragen und verknüpfen können und diese Abfragen nicht durch Regeln aus den Aggregaten eingeschränkt werden. Diese Daten sind dann auf der Darstellungsebene oder in der Client-App enthalten.
 
-Wenn der Benutzer Änderungen vornimmt, stammen die Daten aktualisiert werden aus der Client-app oder eine Präsentation-Ebene für die Anwendungsebene (z. B. eine Web-API-Dienst). Wenn Sie einen Befehl (mit Daten) im Befehlshandler erhalten, verwenden Sie Repositorys zum Abrufen der Daten, die Sie aus der Datenbank aktualisieren möchten. Sie es im Arbeitsspeicher mit den Informationen, die mit den Befehlen übergeben aktualisieren, und klicken Sie dann hinzufügen oder aktualisieren Sie die Daten (Domänenentitäten) in der Datenbank über eine Transaktion.
+Wenn der Benutzer Änderungen vornimmt, werden die zu aktualisierenden Daten von der Client-App oder der Darstellungsebene auf die Anwendungsebene (z.B. ein Web-API-Dienst) verschoben. Wenn Sie in einem Befehlshandler einen Befehl (mit Daten) empfangen, rufen Sie die Daten, die Sie aus der Datenbank aktualisieren möchten, über Repositorys ab. Sie aktualisieren die Daten im Arbeitsspeicher mit den Informationen, die mit den Befehlen übergeben wurden, und können die Daten (Domänenentitäten) anschließend in der Datenbank über eine Transaktion hinzufügen oder aktualisieren.
 
-Wir müssen betonen erneut, die nur ein Repository sollte für jedes aggregieren Stammelement definiert werden, wie in Abbildung 9-17 gezeigt. Um das Ziel der Stamm-aggregate, die Transaktionskonsistenz zwischen allen Objekten innerhalb des Aggregats aufrechterhalten zu erreichen, sollten Sie niemals ein Repository für jede Tabelle in der Datenbank erstellen.
+Denken Sie daran, dass für jeden Aggregatstamm wie in Abbildung 9-17 dargestellt nur ein Repository definiert werden sollte. Damit das Ziel des Aggregatstamms erreicht wird und die Transaktionskonsistenz zwischen allen Objekten im Aggregat erhalten bleibt, sollten Sie niemals für jede Tabelle in der Datenbank ein Repository erstellen.
 
 ![](./media/image18.png)
 
-**Abbildung 9-17**. Die Beziehung zwischen Repositorys, Aggregate und Datenbanktabellen
+**Abbildung 9-17**. Die Beziehung zwischen Repositorys, Aggregaten und Datenbanktabellen
 
-### <a name="enforcing-one-aggregate-root-per-repository"></a>Erzwingen eine aggregierte Stamm pro repository
+### <a name="enforcing-one-aggregate-root-per-repository"></a>Erzwingen eines Aggregatstamms pro Repository
 
-Es kann sinnvoll sein, die Ihrem Repository Entwurf so implementieren, dass sie die Regel führt dazu, dass nur aggregate Stämme Repositorys verfügen sollen sein. Sie können einen generische oder eine Basis-Repository-Typ erstellen, der den Typ von Entitäten einschränkt, mit dem es um sicherzustellen, dass sie die IAggregateRoot markerschnittstelle aufweisen.
+Es kann sinnvoll sein, Ihren Repositoryentwurf so zu implementieren, dass die Regel erzwungen wird, nach der nur Aggregatstämme über Repositorys verfügen sollten. Sie können einen generischen oder grundlegenden Repositorytyp erstellen, der den Entitätstyp einschränkt, mit dem er arbeitet, um sicherzustellen, dass die Entitäten die IAggregateRoot-Markerschnittstelle aufweisen.
 
-Daher implementiert jede Repository-Klasse, die auf der Infrastrukturebene implementiert einen eigenen Vertrag oder einer Schnittstelle, wie im folgenden Code gezeigt:
+Daher implementiert jede auf der Infrastrukturebene implementierte Repositoryklasse wie im folgenden Code dargestellt ihren eigenen Vertrag bzw. ihre eigene Schnittstelle:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
@@ -55,7 +58,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     {
 ```
 
-Jede Schnittstelle spezifischen Repository implementiert die generische IRepository-Schnittstelle:
+Jede spezifische Repositoryschnittstelle implementiert die generische IRepository-Schnittstelle:
 
 ```csharp
 public interface IOrderRepository : IRepository<Order>
@@ -65,67 +68,106 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-Jedoch eine bessere Möglichkeit, den Code die Konvention zu erzwingen, dass jedes Repository zu einer einzelnen gesamtverstärkung verknüpft werden soll wäre, einen generischen Repository-Typ zu implementieren, sodass er explizit ist, dass Sie ein Repository für eine bestimmte Aggregat entwickeln verwenden. Dies kann problemlos durch die Implementierung dieses Generikum in der Basisschnittstelle IRepository wie im folgenden Code erfolgen:
+Eine bessere Möglichkeit, damit der Code die Konvention erzwingt, dass die einzelnen Repositorys mit einem einzelnen Aggregat verknüpft sein sollten, besteht jedoch darin, einen generischen Repositorytyp zu implementieren, damit eindeutig ist, dass Sie ein Repository für ein bestimmtes Aggregat verwenden. Dies kann wie im folgenden Code dargestellt ohne großen Aufwand durch die Implementierung dieses generischen Typs in der IRepository-Basisschnittstelle geschehen:
 
 ```csharp
   public interface IRepository<T> where T : IAggregateRoot
 ```
 
-### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Das Repositorymuster erleichtert es, die Anwendungslogik zu testen.
+### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Das Repositorymuster erleichtert das Testen Ihrer Anwendungslogik
 
-Das Repositorymuster bietet die Möglichkeit, leicht Testen Ihrer Anwendung mit Komponententests abgedeckt. Denken Sie daran, dass Komponententests nur getestet, Ihr Code, der nicht-Infrastruktur, sodass die Repository-Abstraktionen erreichen dieses Ziels erleichtern.
+Das Repositorymuster bietet die Möglichkeit, Ihre Anwendung ohne großen Aufwand mithilfe von Komponententests zu testen. Beachten Sie, dass bei Komponententests nur Ihr Code getestet wird, nicht die Infrastruktur, damit dieses Ziel durch die Repositoryabstraktionen leichter erreicht werden kann.
 
-Wie in einem Abschnitt weiter oben erwähnt, wird empfohlen, dass Sie definieren platziert die Repository-Schnittstellen in die Domäne der Ebene, damit die Anwendungsschicht (z. B. Ihre Web-API-Microservice) nicht direkt auf die Infrastrukturebene abhängt, in denen Ihnen implementiert die tatsächliche Repositoryklassen. Indem Sie auf diese Weise und mithilfe der Abhängigkeitsinjektion in die Ihre Web-API-Controller, können Sie simulierten Repositorys implementieren, die Pseudodaten anstelle von Daten aus der Datenbank zurückgegeben. Entkoppelte Ansatz ermöglicht Ihnen das Erstellen und Ausführen von Komponententests, die können nur die Logik Ihrer Anwendung testen, ohne Verbindung mit der Datenbank.
+Wie in einem Abschnitt weiter oben erwähnt, wird empfohlen, die Repositoryschnittstellen auf der Domänenmodellebene zu definieren und anzuordnen, damit die Anwendungsebene (z.B. Ihr Web-API-Microservice) nicht direkt von der Infrastrukturebene abhängt, auf der Sie die tatsächlichen Repositoryklassen implementiert haben. Auf diese Weise und durch Verwendung der Abhängigkeitsinjektion in den Controllern Ihrer Web-API können Sie Pseudorepositorys implementieren, die anstelle von Daten aus der Datenbank falsche Daten zurückgeben. Mit diesem entkoppelten Ansatz können Sie Komponententests erstellen und ausführen, in denen die Logik Ihrer Anwendung getestet werden kann, ohne dass eine Verbindung zur Datenbank erforderlich ist.
 
-Verbindungen mit Datenbanken können fehlschlagen, vor allem Hunderte von Tests für eine Datenbank ausgeführt wird und fehlerhafte zwei Gründen. Zuerst, dauert es sehr lange aufgrund der großen Anzahl von Tests. Zweitens können die Datenbankdatensätze ändern und Auswirkungen auf die Ergebnisse der Tests, sodass sie möglicherweise nicht konsistent. Tests für die Datenbank ist keine Komponententests erneut durch, sondern eine Integration testen. Sie sollten viele Komponententests schnell ausgeführt haben, aber weniger Integrationstests für die Datenbanken.
+Verbindungen zu Datenbanken können fehlschlagen, und aus zwei Gründen ist von der Durchführung von Hunderten von Tests in einer Datenbank abzuraten. Zunächst einmal kann dies aufgrund der zahlreichen Tests viel Zeit in Anspruch nehmen. Zudem könnten sich die Datensätze in der Datenbank ändern. Dies könnte Auswirkungen auf die Ergebnisse Ihrer Tests haben, sodass diese möglicherweise nicht konsistent sind. Das Testen der Datenbank ist kein Komponententest, sondern ein Integrationstest. Für die Datenbanken sollten viele schnelle Komponententests, aber wenige Integrationstest durchgeführt werden.
 
-Im Hinblick auf die Abgrenzung von Problemen bei Komponententests verarbeitet Ihre Logik Domänenentitäten im Arbeitsspeicher. Es wird davon ausgegangen, dass die Repository-Klasse, die die übermittelt hat. Sobald Ihre Logik die Domänenentitäten ändert, wird angenommen, dass es sich bei die Repository-Klasse werden ordnungsgemäß gespeichert werden. Wichtig dabei ist zum Erstellen von Komponententests für Ihre Domänenmodell und ihrer Domänenlogik. Aggregate sind die wichtigsten Konsistenz Grenzen in DDD.
+Im Hinblick auf die Abgrenzung von Problemen bei Komponententests verwaltet Ihre Logik Domänenentitäten im Arbeitsspeicher. Es wird davon ausgegangen, dass die Repositoryklasse diese Entitäten übermittelt hat. Sobald Ihre Logik die Domänenentitäten ändert, wird davon ausgegangen, dass diese ordnungsgemäß in der Repositoryklasse gespeichert werden. Wichtig dabei ist, dass Komponententests für Ihr Domänenmodell und die zugehörige Domänenlogik erstellt werden. Aggregatstämme stellen die hauptsächlichen Konsistenzgrenzen in DDD dar.
 
-### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Der Unterschied zwischen dem Repository und das ältere Datenzugriff (DAL) Klasse Muster
+### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Der Unterschied zwischen dem Repositorymuster und dem älteren Muster der Datenzugriffsklasse (DAL-Klasse)
 
-Ein Datenzugriffsobjekt führt direkt Datenvorgänge Zugriff und persistenten Speicher. Ein Repository markiert die Daten für die Vorgänge, die Sie in den Speicher einer Einheit von Arbeitsobjekt (wie in der EF bei Verwendung von ' DbContext '), aber diese Updates durchführen möchten nicht sofort ausgeführt werden.
+Ein Datenzugriffsobjekt führt direkt Datenzugriffs- und Persistenzvorgänge für den Speicher aus. Ein Repository markiert die Daten mit den Vorgängen, die Sie in dem Speicher eines Arbeitseinheitsobjekts (wie in EF bei der Verwendung des DbContext) durchführen möchten. Diese Updates werden jedoch nicht sofort durchgeführt.
 
-Eine Arbeitseinheit wird bezeichnet als einzelne Transaktion, die umfasst mehrere INSERT-, Update- und delete-Operationen. Einfach ausgedrückt bedeutet dies, dass alle INSERT-, Update- und Löschtransaktionen für eine bestimmte Benutzeraktion (z. B. die Registrierung auf einer Website), in einer einzelnen Transaktion verarbeitet werden. Dies ist jedoch effizienter, anstatt mehrere Datenbanktransaktionen geschwätzigeren so zu behandeln.
+Eine Arbeitseinheit wird als einzelne Transaktion bezeichnet, die mehrere INSERT-, UPDATE- oder DELETE-Vorgänge umfasst. Einfach ausgedrückt bedeutet dies, dass alle INSERT-, UPDATE- und DELETE-Transaktionen für eine bestimmte Benutzeraktion (z.B. die Registrierung auf einer Website) in einer einzelnen Transaktion verarbeitet werden. Dies ist effizienter als mehrere Datenbanktransaktionen auf umständlichere Weise zu verarbeiten.
 
-Diese mehrere persistenzvorgänge werden weiter unten in einer einzigen Aktion ausgeführt werden, wenn Ihr Code von der Anwendungsebene von Befehlen. Die Entscheidung zum Anwenden der in-Memory-Änderungen auf den tatsächlichen Datenbankspeicher in der Regel hängt die [Unit of Work Muster](http://martinfowler.com/eaaCatalog/unitOfWork.html). In der EF wird das Muster Unit of Work als DBContext implementiert.
+Diese Persistenzvorgänge werden zu einem späteren Zeitpunkt in einer einzelnen Aktion durchgeführt, wenn Ihr Code aus der Anwendungsebene dies anordnet. Die Entscheidung, ob die im Speicher vorgenommenen Änderungen am tatsächlichen Datenbankspeicher angewendet werden sollen, basiert in der Regel auf dem [Arbeitseinheitsmuster](http://martinfowler.com/eaaCatalog/unitOfWork.html). In EF wird das Arbeitseinheitsmuster als DBContext implementiert.
 
-In vielen Fällen kann dieses Muster oder eine Möglichkeit zum Anwenden von Vorgängen für den Speicher Anwendungsleistung erhöhen, und verringern die Gefahr von Inkonsistenzen. Außerdem verringert es Transaktion blockiert sind in den Datenbanktabellen, da die vorgesehene Vorgänge als Teil einer einzigen Transaktion ein Commit ausgeführt werden. Dies ist jedoch effizienter, im Vergleich zu viele isolierte Vorgänge für die Datenbank ausführen. Aus diesem Grund werden können die Ausführung für die Datenbank zu optimieren, indem Sie mehrere Updateaktionen innerhalb derselben Transaktion erfolgt, im Gegensatz zu oft kleiner und separate Transaktion gruppieren die ausgewählten ORM.
+In vielen Fällen kann dieses Muster bzw. diese Methode zum Anwenden von Vorgängen im Speicher die Anwendungsleistung erhöhen und die Gefahr von Inkonsistenzen verringern. Zudem können Transaktionsblockierungen in den Datenbanktabellen verringert werden, da alle vorgesehenen Vorgänge im Rahmen einer Transaktion zugesichert werden. Im Vergleich zur Ausführung vieler isolierter Vorgänge in der Datenbank ist dies der effizientere Weg. Daher kann die ausgewählte ORM die Ausführung in der Datenbank optimieren, indem statt der Ausführung vieler kleiner und separater Transaktionen mehrere Updateaktionen innerhalb derselben Transaktion gruppiert werden.
 
-### <a name="repositories-should-not-be-mandatory"></a>Repositorys darf nicht obligatorisch sein.
+### <a name="repositories-should-not-be-mandatory"></a>Repositorys sollten nicht obligatorisch sein
 
-Benutzerdefinierte Repositorys eignen sich für die oben genannten Gründe, und das ist der Ansatz für die Sortierung Microservice in eShopOnContainers. Es ist jedoch kein wichtige Muster, um in einen DDD Entwurf implementieren oder sogar im allgemeinen-Entwicklung in .NET.
+Benutzerdefinierte Repositorys sind aus den oben genannten Gründen hilfreich, und dies ist der Ansatz für den Microservice „Ordering“ (Bestellung) in eShopOnContainers. Es ist jedoch kein essentielles Muster, das in einem DDD-Entwurf oder auch in der allgemeinen Entwicklung in .NET implementiert werden muss.
 
-Jimmy Bogard, bei der Bereitstellung von direkten Feedback zu diesem Handbuch said z. B. Folgendes:
+Jimmy Bogard hat beispielsweise Folgendes geäußert, als er direktes Feedback zu diesem Leitfaden gegeben hat:
 
-Dies wird wahrscheinlich mein größten Feedback haben. Ich bin wirklich keines Lüfters des Repositorys, die hauptsächlich, da sie wichtige Details des zugrunde liegenden Dauerhaftigkeit ausblenden. Der warum ich MediatR für Befehle zu finden. Ich kann die volle Leistung von der Persistenzebene verwenden und alle dieser Domänenverhalten in meinem aggregieren Stämme push. Ich möchte nicht in der Regel Meine Repositorys modellieren – ich muss weiterhin haben, die die Integration mit reale Sache Test. CQRS passiert vorgesehen, dass wir eine Notwendigkeit einer Repositorys wirklich mehr hatten.
+Dies wird wahrscheinlich mein ausführlichstes Feedback. Ich bin wirklich kein Fan von Repositorys, hauptsächlich deshalb, weil sie die wichtigen Details des zugrunde liegenden Persistenzmechanismus ausblenden. Deswegen vertraue ich auch bei Befehlen auf MediatR. Ich kann die volle Leistung der Persistenzebene nutzen und das gesamte Domänenverhalten per Push in meine Aggregatstämme übertragen. Normalerweise möchte ich keine Pseudorepositorys haben. Ich muss diese Integrationstests weiterhin am Original durchführen können. Dass wir uns nach CQRS gerichtet haben, bedeutet, dass wir keine Repositorys mehr benötigt haben.
 
-Wir finden Repositorys nützlich, aber wir bestätigen Sie, dass sie nicht für Ihre DDD, bei der Datenerfassung entscheidender Bedeutung sind, die die aggregierten Muster und umfangreiche Domänenmodell sind. Daher verwenden Sie das Repositorymuster, davon, wie Sie sehen passen.
+Wir finden Repositorys nützlich, können jedoch bestätigen, dass sie für Ihr DDD nicht so entscheidend sind wie das Aggregatmuster und das umfassende Domänenmodell. Daher können Sie selbst entscheiden, ob Sie das Repositorymuster verwenden möchten oder nicht.
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="the-specification-pattern"></a>Das Spezifikationsmuster
 
-##### <a name="the-repository-pattern"></a>Das Repositorymuster
+Das Spezifikationsmuster (dessen vollständiger Name Abfragespezifikationsmuster lautet) ist ein DDD-Entwurfsmuster, das als Ort dient, an dem Sie die Definition einer Abfrage mit optionaler Sortier- und Auslagerungslogik ablegen können.
 
--   **Edward Hieatt und Rob me. Repositorymuster. ** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+Das Spezifikationsmuster definiert eine Abfrage in einem Objekt. Wenn Sie beispielsweise eine ausgelagerte Abfrage einschließen möchten, die nach bestimmten Produkten sucht, können Sie eine PagedProduct-Spezifikation erstellen, die die erforderlichen Eingabeparameter (pageNumber, pageSize, filter usw.) akzeptiert. Anschließend würde eine ISpecification-Schnittstelle innerhalb einer Repositorymethode (üblicherweise eine List()-Überladung) akzeptiert und die erwartete Abfrage anhand dieser Spezifikation ausgeführt werden.
 
--   **Das Repositorymuster**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+Die Verwendung dieses Ansatzes hat mehrere Vorteile:
 
--   **Repositorymuster: Eine Daten persistenzabstraktion**
+* Die Spezifikation hat einen Namen (im Gegensatz zu einer Reihe von LINQ-Ausdrücken), den Sie bei Diskussionen verwenden können.
+
+* Für die Spezifikation kann ein Komponententest ausgeführt werden, um sicherzustellen, dass sie korrekt ist. Sie kann auch ohne großen Aufwand wiederverwendet werden, wenn Sie ähnliche Verhaltensweisen benötigen, beispielsweise in einer MVC View-Aktion, einer Web API-Aktion sowie in verschiedenen Diensten.
+
+* Eine Spezifikation kann auch verwendet werden, um die Form der zurückzugebenen Daten zu beschreiben, damit in Abfragen nur die erforderlichen Daten zurückgegeben werden. Dadurch entfällt die Notwendigkeit des Lazy Loadings in Webanwendungen (wovon in der Regel ohnehin abgeraten wird). Zudem wird verhindert, dass Repositoryimplementierungen mit diesen Details überladen werden.
+
+Ein Beispiel für eine generische Spezifikationsschnittstelle ist der folgende Code aus [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb ).
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+In den nächsten Abschnitten wird erläutert, wie das Spezifikationsmuster mit Entity Framework Core 2.0 implementiert und wie es über eine beliebige Repositoryklasse verwendet wird.
+
+**Wichtiger Hinweis:** Bei diesem Spezifikationsmuster handelt es sich um ein altes Muster, das auf viele verschiedene Arten implementiert werden kann, z.B. in den folgenden zusätzlichen Ressourcen. Als Muster bzw. Anregung ist es hilfreich, ältere Ansätze zu kennen. Meiden Sie jedoch ältere Implementierungen, die keinen modernen Sprachfunktionen wie Linq und Ausdrücke nutzen.
+
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
+
+### <a name="the-repository-pattern"></a>Das Repositorymuster
+
+-   **Edward Hieatt und Rob Mee. Repository pattern (Repositorymuster).**
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+
+-   **The Repository pattern (Das Repositorymuster)**
+    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
+
+-   **Repository Pattern: A data persistence abstraction (Repositorymuster: Eine Datenpersistenzabstraktion)**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain Driven Design: Tackling, Complexity in the Heart of Software wird.** (Book; enthält eine Erläuterung der des Repositorymusters) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Buch, in dem das Repositorymuster thematisiert wird) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>Einheit des Musters mit Aufgaben
+### <a name="unit-of-work-pattern"></a>Arbeitseinheitsmuster
 
--   **Martin Fowler. Die Einheit der Arbeit Muster. ** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Unit of Work pattern (Arbeitseinheitsmuster).**
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementieren das Repository und die Einheit der Arbeit Muster in einer ASP.NET MVC-Anwendung**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Repository- und Arbeitseinheitsmuster in einer ASP.NET MVC-Anwendung)**
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>Das Spezifikationsmuster
+
+-   **The Specification pattern (Das Spezifikationsmuster).**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Evans, Eric (2004). Domain-Driven Design. Addison-Wesley. S. 224.**
+
+-   **Specifications (Spezifikationen). Martin Fowler**
+    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Vorherigen] (Domäne-Ereignisse-Design-implementation.md) [weiter] (Infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Zurück] (domain-events-design-implementation.md) [Weiter] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

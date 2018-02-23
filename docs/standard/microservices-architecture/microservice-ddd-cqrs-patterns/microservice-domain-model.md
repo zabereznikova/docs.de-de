@@ -1,123 +1,126 @@
 ---
-title: "Entwerfen ein Domänenmodell microservice"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Entwerfen ein Domänenmodell microservice"
+title: "Entwerfen eines Domänenmodells für Microservices"
+description: ".NET Microservices-Architektur für .NET-Containeranwendungen | Entwerfen eines Domänenmodells für Microservices"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 455a2c5a39fb9b765b557610ab108f8c75882dbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-domain-model"></a>Entwerfen ein Domänenmodell microservice
+# <a name="designing-a-microservice-domain-model"></a>Entwerfen eines Domänenmodells für Microservices
 
-*Definieren Sie eine umfangreiche Domänenmodell für jeden Business Microservice oder begrenzt, die den Kontext*
+*Definieren eines umfassenden Domänenmodells für die einzelnen Unternehmensmicroservices oder Kontextgrenzen*
 
-Ziel ist es zum Erstellen eines Modells Einzeldomäne kann für jede Business Microservice oder begrenzt, die den Kontext (BC). Bedenken Sie jedoch, die eine BC oder Business Microservice konnte in einigen Fällen bestehen mehrere physische Dienste, die eine Einzeldomänenmodell gemeinsam nutzen. Das Domänenmodell muss erfassen, Regeln, Verhalten, Business-Sprache und die Einschränkungen der einzelnen begrenzt, die den Kontext oder Business-Microservice, die es darstellt.
+Ihr Ziel ist die Erstellung eines kohäsiven Domänenmodells für die einzelnen Unternehmensmicroservices oder Kontextgrenzen (Bounded Context, BC). Beachten Sie aber, dass ein BC oder Unternehmensmicroservice manchmal auch aus mehreren physischen Diensten bestehen kann, die ein einziges Domänenmodell gemeinsam nutzen. Das Domänenmodell muss die Regeln, das Verhalten, die Geschäftssprache und Einschränkungen der jeweiligen Kontextgrenzen oder des jeweiligen Unternehmensmicroservices erfassen, die es darstellt.
 
-## <a name="the-domain-entity-pattern"></a>Die Entität "Domain"-Muster
+## <a name="the-domain-entity-pattern"></a>Das Domänenentitätsmuster
 
-Entitäten Domänenobjekte darstellen und werden in erster Linie definiert, anhand ihrer Identität, die Geschäftskontinuität und die Persistenz mit der Zeit und nicht nur durch die Attribute, die sie zu bilden. Wie Eric Evans sagt dazu dass, ist "ein Objekt, das durch seine Identität in erster Linie definiert eine Entität aufgerufen." Entitäten sind im Domänenmodell, sehr wichtig, da es sich um die Basis für ein Modell sind. Aus diesem Grund sollten Sie identifizieren und sorgfältig zu entwerfen.
+Entitäten stellen Domänenobjekte dar. Sie werden nicht nur durch die darin enthaltenen Attribute definiert, sondern primär durch ihre Identität, Kontinuität und Persistenz im Laufe der Zeit. Eric Evans sagt, dass ein Objekt, das primär durch seine Identität definiert wird, als Entität bezeichnet werde. Entitäten sind im Domänenmodell sehr wichtig, da sie die Basis eines Modells darstellen. Daher sollten Sie beim Identifizieren und Entwerfen der Entitäten behutsam vorgehen.
 
-*Identität einer Entität kann mehrere Microservices oder begrenzter Kontexten überqueren.*
+*Die Identität einer Entität kann sich über mehrere Microservices oder Kontextgrenzen erstrecken.*
 
-Die gleiche Identität (jedoch nicht die gleiche Entität) in mehreren Kontexten begrenzt oder Microservices modelliert werden kann. Allerdings, das bedeutet nicht, dass in mehreren Kontexten der begrenzt, die dieselbe Entität mit den gleichen Attributen und Logik implementiert würde. Stattdessen begrenzen Entitäten in unterschiedlichen Kontexten begrenzt, die ihre Attribute und Verhalten auf die erforderlichen in diesem begrenzt, die den Kontext Domäne.
+Die gleiche Identität (aber nicht die gleiche Entität) kann für mehrere Kontextgrenzen oder Microservices modelliert werden. Dies impliziert jedoch nicht, dass die gleiche Entität mit den gleichen Attributen und der gleichen Logik in mehreren Kontextgrenzen implementiert würde. Stattdessen begrenzen die Entitäten in den einzelnen Kontextgrenzen ihre Attribute und Verhaltensweisen auf die in der Domäne der Kontextgrenze erforderlichen Attribute und Verhaltensweisen.
 
-Z. B. möglicherweise die Käuferentität die meisten der Attribute für eine Person, die in der Benutzerentität "in das Profil oder die Identität Microservice, einschließlich der Identität definiert sind. Aber Käuferentität in der Reihenfolge Microservice ggf. weniger Attribute, weil nur bestimmte Käufer-Daten mit den Bestellprozess verknüpft ist. Der Kontext der einzelnen Microservice oder begrenzt, die den Kontext wirkt sich auf die Domänenmodell.
+Die Entität „Buyer“ (Käufer) enthält z.B. möglicherweise die meisten Attribute für eine Person, die in der Benutzerentität im Microservice „Profile“ (Profil) oder „Identity“ (Identität) definiert sind, die Identität inbegriffen. Die Entität „Buyer“ (Käufer) im Microservice „Ordering“ (Bestellung) enthält jedoch möglicherweise weniger Attribute, da sich nur bestimmte Käuferdaten auf den Bestellprozess beziehen. Der Kontext der einzelnen Microservices oder Kontextgrenzen hat Auswirkungen auf das zugehörige Domänenmodell.
 
-*Domänenentitäten müssen zusätzlich zur Implementierung von Datenattributen Verhalten implementieren.*
+*Domänenentitäten müssen neben der Implementierung von Datenattributen auch Verhaltensweisen implementieren*
 
-Eine Entität "Domain" DDD muss die Domänenlogik oder das Verhalten im Zusammenhang mit der Entity Data (das Objekt im Arbeitsspeicher zugegriffen) implementieren. Z. B. als Teil einer Order-Entitätsklasse muss Geschäftslogik und Vorgänge, die als Methoden für Aufgaben wie das Hinzufügen von ein Bestellartikel, die datenvalidierung und die gesamte Berechnung implementiert haben. Die Entität Methoden übernehmen die Invarianten und den Regeln der Entität anstatt diese Regeln auf die Anwendungsschicht verteilt.
+Eine Domänenentität in DDD muss die Domänenlogik oder das Verhalten implementieren, die bzw. das sich auf die Entitätsdaten bezieht (das Objekt, auf das im Arbeitsspeicher zugegriffen wird). Als Teil einer Bestellentitätsklasse müssen beispielsweise eine Geschäftslogik und Vorgänge als Methoden für Aufgaben wie das Hinzufügen eines Bestellartikels, einer Datenvalidierung und einer Gesamtberechnung implementiert werden. Diese Regeln werden nicht anwendungsebenenübergreifend verteilt, sondern sind Gegenstand der Entitätsmethoden, die sich auch mit den Invarianten befassen.
 
-Abbildung 9 – 8 zeigt eine Entität "Domain", die nicht nur Datenattribute aber Vorgänge oder Methoden mit verwandten Domänenlogik implementiert.
+In Abbildung 9-8 wird eine Domänenentität dargestellt, die nicht nur Datenattribute, sondern auch Vorgänge oder Methoden mit verwandter Domänenlogik implementiert.
 
 ![](./media/image9.png)
 
-**Abbildung 9 – 8**. Beispiel für eine Entität "Domain" Entwerfen, implementieren Daten plus Verhalten
+**Abbildung 9-8**. Beispiel für den Entwurf einer Domänenentität, die Daten und Verhalten implementiert
 
-In einigen Fällen können Sie natürlich Entitäten haben, die als Teil der Entitätsklasse keine Logik implementieren. Dies kann auf untergeordneten Entitäten innerhalb eines Aggregats vorkommen, wenn die untergeordneten Entität keine besondere Logik nicht verfügt, da der Großteil der Logik in den aggregierten Stamm definiert ist. Wenn Sie eine komplexe Microservice, die einen Großteil der Logik in die Dienstklassen statt in der Domänenentitäten implementiert wurde verfügen, konnte Sie in der anemic Domänenmodell, die im folgenden Abschnitt erläutert fallen.
+Manchmal kann es natürlich auch Entitäten geben, die keine Logik als Teil der Entitätsklasse implementieren. Dies kann in untergeordneten Entitäten innerhalb eines Aggregats der Fall sein, wenn die untergeordnete Entität über keine spezielle Logik verfügt, da der Großteil der Logik im Aggregatstamm definiert ist. Wenn Sie über einen komplexen Microservice verfügen, bei dem ein Großteil der Logik in den Dienstklassen und nicht in den Domänenentitäten implementiert ist, könnten Sie in den Bereich des anämischen Domänenmodells fallen, das im folgenden Abschnitt erläutert wird.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Rich-Domänenmodell im Vergleich zu anemic Domänenmodell
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>Umfassendes Domänenmodell im Vergleich zum anämischen Domänenmodell
 
-In seinen Beitrag [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Smell beschreibt ein anemic Domänenmodell auf diese Weise:
+In seinem Beitrag [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html) beschreibt Martin Fowler ein anämisches Domänenmodell wie folgt:
 
-Die grundlegende Symptom für ein Anemic Domänenmodell ist, dass auf den ersten Blick es reale Sache aussieht. Objekte vorhanden sind, viele nach der Nomen in den Domänenbereich benannt wird und diese Objekte mit dem rich Beziehungen und die Struktur, die "true" Domänenmodelle haben verbunden sind. Der Catch angezeigt wird, wenn Sie sehen Sie sich das Verhalten, und Sie feststellen, dass es kaum trifft auf diese Objekte etwas mehr als dienen der Getter und Setter somit.
+Das grundlegende Merkmal eines anämischen Domänenmodells ist, dass es auf den ersten Blick täuschend echt aussieht. Es sind Objekte vorhanden, von denen viele nach den Nomen im Domänenbereich benannt sind, und diese Objekte sind mit den umfassenden Beziehungen und der Struktur eines echten Domänenmodells verbunden. Wenn Sie jedoch das Verhalten betrachten, stellen Sie fest, dass es für diese Objekte kaum Verhaltensweisen gibt, wodurch sie letztlich nur aus Gettern und Settern bestehen.
 
-Natürlich, wenn Sie ein Domänenmodell anemic verwenden, diese Datenmodellen verwendet werden aus einer Gruppe von Dienstobjekten (bisher benannte der *Geschäftsebene*) die gesamte Domäne oder Business-Logik erfassen. Der Geschäftsebene befindet sich auf das Datenmodell und des Datenmodells nur als Daten verwendet.
+Wenn Sie ein anämisches Domänenmodell verwenden, werden diese Datenmodelle natürlich von einer Reihe von Dienstobjekten verwendet (üblicherweise *Geschäftsebene* genannt), die die gesamte Domänen- oder Geschäftslogik erfassen. Die Geschäftsebene befindet sich oberhalb des Datenmodells und verwendet das Datenmodell nur als Daten.
 
-Die anemic Domänenmodell ist nur ein prozeduralen Stil Design. Anemic Entitätsobjekten sind echte Objekte nicht, weil sie Verhalten (Methoden) fehlt. Sie enthalten nur Dateneigenschaften, und es handelt sich daher nicht eines objektorientierten Entwurfs. Verlegen Sie alle Verhalten out in Service-Objekten (der Geschäftsebene) Sie im Wesentlichen zum Schluss [Spaghetti Code](https://en.wikipedia.org/wiki/Spaghetti_code) oder [Transaktion Skripts](https://martinfowler.com/eaaCatalog/transactionScript.html), und daher verlieren Sie die Vorteile, die einem Domänenmodell bietet.
+Beim anämischen Domänenmodell handelt es sich nur um einen prozeduralen Formatentwurf. Anämische Entitätsobjekte sind keine echten Objekte, da sie über keine Verhaltensweisen (Methoden) verfügen. Da sie nur Dateneigenschaften enthalten, handelt es sich bei dem Modell um keinen objektorientierten Entwurf. Indem das gesamte Verhalten in Serviceobjekte (die Geschäftsebene) eingefügt wird, verfügen Sie am Ende nur noch über [Spaghetticode](https://en.wikipedia.org/wiki/Spaghetti_code) oder [Transaktionsskripts](https://martinfowler.com/eaaCatalog/transactionScript.html). Dadurch verlieren Sie die Vorteile, die ein Domänenmodell mit sich bringt.
 
-Unabhängig davon, wenn Ihre Microservice oder begrenzt, die den Kontext sehr einfach ist (ein CRUD-Dienst) der anemic Domänenmodell in Form von Entitätsobjekten mit nur Dateneigenschaften möglicherweise ausreichend und möglicherweise nicht zu komplexeren DDD-Muster implementieren. In diesem Fall werden einfach persistenzspeicherungsmodell, da Sie nur Daten für CRUD-Zwecke absichtlich eine Entität erstellt haben.
+Unabhängig davon, ob Ihr Microservice oder Ihre Kontextgrenze sehr einfach ist (ein CRUD-Dienst), ist das anämische Domänenmodell in Form von Entitätsobjekten, die nur Dateneigenschaften enthalten, möglicherweise ausreichend, und möglicherweise wäre das Implementieren komplexerer DDD-Muster nicht sinnvoll. In diesem Fall handelt es sich nur um ein Persistenzmodell, da Sie absichtlich eine Entität erstellt haben, die nur Daten für CRUD-Zwecke enthält.
 
-Aus diesem Grund Microservices Architekturen perfekt für ein mit mehreren architektonische Ansatz je nach jedem begrenzt, die den Kontext werden ist. Z. B. in eShopOnContainers, Sortierung Microservice implementiert DDD-Muster, jedoch die Katalog-Microservice, also eine einfache CRUD-Dienst nicht.
+Daher sind Microservicearchitekturen abhängig von den einzelnen Kontextgrenzen perfekt für einen Ansatz mit mehreren Architekturen geeignet. In eShopOnContainers implementiert der Microservice „Ordering“ (Bestellung) beispielsweise DDD-Muster, der Microservice „Catalog“ (Katalog), bei dem es sich um einen einfachen CRUD-Dienst handelt, jedoch nicht.
 
-Einige Personen sagen, dass die anemic Domänenmodell ein Antimuster ist. Dies hängt was Sie implementieren. Ist die Microservice, die Sie erstellen einfach genug (z. B. ein CRUD-Dienst), befolgen die anemic Domänenmodell ein Antimuster ist nicht. Wenn Sie müssen die Komplexität einer Microservice Domäne konfigurieren, die zahlreiche sich stetig ändernden Geschäftsregeln enthält, möglicherweise die anemic Domänenmodell ein Antimuster für diesen Microservice oder begrenzt, die den Kontext sein. Entwerfen sie in diesem Fall als eine umfangreiche Modell mit Entitäten enthält, die Daten plus Verhalten als auch zusätzliche DDD-Muster (Aggregate, rückgabewertobjekte usw.) implementieren möglicherweise große Vorteile für den langfristigen Erfolg eine solche Microservice.
+Manche bezeichnen das anämische Domänenmodell als „Antimuster“. Dies hängt wirklich davon ab, was implementiert wird. Wenn der von Ihnen erstellte Microservice einfach genug ist (z.B. ein CRUD-Dienst), ist er nach dem anämischen Domänenmodell kein Antimuster. Wenn Sie mit der Komplexität der Domäne eines Microservices umgehen müssen, die über zahlreiche, sich ständig ändernde Geschäftsregeln verfügt, stellt das anämische Domänenmodell jedoch möglicherweise ein Antimuster für diesen Microservice oder diese Kontextgrenze dar. In diesem Fall könnte es für den langfristigen Erfolg eines solchen Microservice von großem Vorteil sein, wenn das Domänenmodell als umfassendes Modell mit Entitäten entworfen wird, die Daten und Verhaltensweisen enthalten, und wenn zusätzliche DDD-Muster (Aggregate, Wertobjekte usw.) implementiert werden.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **DevIQ. Entität "Domain"**
+-   **DevIQ. Domain Entity (Domänenentität)**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler. Das Domänenmodell**
+-   **Martin Fowler. The Domain Model (Das Domänenmodell)**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. Die Anemic Domänenmodell**
+-   **Martin Fowler. The Anemic Domain Model (Das anämische Datenmodell)**
 
-    <https://martinfowler.com/bliki/AnemicDomainModel.HTML>
+    <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
-### <a name="the-value-object-pattern"></a>Das Wertobjekt-Muster
+### <a name="the-value-object-pattern"></a>Das Wertobjektmuster
 
-Wie Eric Evans erwähnt wurde, verfügen"viele Objekte nicht konzeptionelle Identität. Diese Objekte beschreiben bestimmte Merkmale von etwas."
+Eric Evans hat festgestellt, dass viele Objekte keine konzeptionelle Identität aufweisen. Diese Objekte beschreiben bestimmte Merkmale einer Komponente.
 
-Eine Entität erfordert eine Identität, aber es gibt viele Objekte in einem System, die keine wie das Wertobjekt-Muster. Ein Wertobjekt ist ein Objekt mit keine konzeptionelle Identität, die einer Domäne Aspekte beschreiben. Hierbei handelt es sich um Objekte, die Sie instanziieren, um Entwurfselemente darzustellen, die nur vorübergehend betreffen. Sie übertragbaren *was* sind, nicht *,* werden. Beispiele für können Zahlen und Zeichenfolgen enthalten, jedoch auch auf höherer Ebene Konzepten wie Gruppen von Attributen.
+Für eine Entität ist eine Identität erforderlich. Viele Objekte in einem System weisen jedoch keine Identität auf, wie z.B. das Wertobjektmuster. Ein Wertobjekt ist ein Objekt ohne konzeptionelle Identität, das einen Domänenaspekt beschreibt. Sie instanziieren diese Objekte, um Entwurfselemente darzustellen, die Sie nur vorübergehend betreffen. Für Sie ist wichtig, *was* die Objekte sind, nicht *wer* sie sind. Zu Beispielen zählen Zahlen und Zeichenfolgen, aber auch Konzepte auf höherer Ebene wie Attributgruppen.
 
-Etwas, das eine Entität in einer Microservice ist möglicherweise keiner Entität in einer anderen Microservice, da im zweiten Fall möglicherweise begrenzt, die den Kontext eine andere Bedeutung haben. Z. B. eine Adresse in einer e-Commerce-Anwendung eine Identität, möglicherweise nicht, da es nur eine Gruppe von Attributen des Kunden-Profils für eine Person oder Firma darstellen kann. In diesem Fall sollte die Adresse als ein Wertobjekt klassifiziert werden. In einer Anwendung für Unternehmen ein Strom-Hilfsprogramm konnte die Kundenadresse jedoch wichtig für die Business-Domäne sein. Daher muss die Adresse eine Identität verfügen, damit das Abrechnungssystem direkt mit der Adresse verknüpft werden kann. In diesem Fall muss eine Adresse als eine Entität "Domain" klassifiziert werden.
+Eine Entität in einem Microservice ist in einem anderen Microservice möglicherweise keine Entität, da die Kontextgrenze im zweiten Fall unter Umständen eine andere Bedeutung hat. Eine Adresse in einer E-Commerce-Anwendung hat z.B. möglicherweise gar keine Identität, da sie lediglich eine Gruppe von Attributen aus dem Kundenprofil einer Person oder eines Unternehmens darstellt. In diesem Fall sollte die Adresse als Wertobjekt klassifiziert werden. In einer Anwendung für ein Stromversorgungsunternehmen könnte die Kundenadresse jedoch wichtig für die Geschäftsdomäne sein. Daher muss die Adresse über eine Identität verfügen, damit das Abrechnungssystem direkt mit der Adresse verknüpft werden kann. In diesem Fall sollte eine Adresse als Domänenentität klassifiziert werden.
 
-Eine Person mit einem Namen und den Nachnamen in der Regel ist eine Entität, da eine Person Identität verfügt, selbst wenn Sie den Namen und den Nachnamen in der Regel mit einem anderen Satz von Werten, z. B. wenn diese Namen bezieht sich auch auf einer anderen Person.
+Eine Person mit Namen und Nachnamen ist in der Regel eine Entität, da eine Person eine Identität hat, selbst wenn der Name und Nachname mit anderen Werten übereinstimmen, z.B. wenn sich diese Namen auch auf eine andere Person beziehen.
 
-Value-Objekte sind in relationalen Datenbanken ORMs wie EF, Verwaltung schwierig, während im Dokument dienstorientierten Datenbanken, die sie einfacher zu implementieren und zu verwenden.
+Die Verwaltung von Wertobjekten in relationalen Datenbanken und ORMs wie EF ist schwer. In dokumentorientierten Datenbanken können diese einfacher implementiert und verwendet werden.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Martin Fowler. Wert Objektmuster**
+-   **Martin Fowler. ValueObject pattern (Wertobjektmuster)**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Wert des Objekts**
+-   **Value Object (Wertobjekt)**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Wert von Objekten im Test-Driven Development**
-    [*https://leanpub.com/tdd-ebook/read\#Leanpub-Auto-Wert-Objekte*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Value Objects in Test-Driven Development (Wertobjekte in testgetriebener Entwicklung)**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Domain Driven Design: Tackling, Complexity in the Heart of Software wird.** (Book; enthält eine Erläuterung der Value-Objekte) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Buch, in dem Wertobjekte thematisiert werden) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-### <a name="the-aggregate-pattern"></a>Die Aggregate-Muster
+### <a name="the-aggregate-pattern"></a>Das Aggregatmuster
 
-Ein Domänenmodell enthält Cluster von verschiedenen Datenentitäten und Prozesse, die einen signifikanten Bereich von Funktionen, z. B. Reihenfolge vertragserfüllung oder Inventur steuern können. Eine differenziertere DDD Einheit ist das Aggregat, das beschreibt einen Cluster oder eine Gruppe von Entitäten und Verhaltensweisen, die als eine zusammenhängende Einheit behandelt werden können.
+Ein Domänenmodell enthält Cluster verschiedener Datenentitäten und Prozesse, die einen wesentlichen Bereich von Funktionen steuern können, wie z.B. Angebotserfüllung oder Bestand. Das Aggregat stellt eine differenziertere DDD-Einheit dar und beschreibt ein Cluster oder eine Gruppe mit Entitäten und Verhaltensweisen, die als kohäsive Einheit behandelt werden können.
 
-Sie definieren in der Regel ein Aggregat basierend auf der Transaktionen, die Sie benötigen. Ein klassisches Beispiel ist eine Bestellung, die auch eine Liste der Bestellartikel enthält. Ein Bestellartikel werden in der Regel eine Entität. Es ist aber eine untergeordnete Entität innerhalb der Reihenfolge Aggregat, das auch die Order-Entität als seine Stammentität, in der Regel mit dem Namen eines aggregierten Stammverzeichnis enthält.
+Sie definieren ein Aggregat in der Regel basierend auf den erforderlichen Transaktionen. Ein klassisches Beispiel ist eine Bestellung, die auch eine Liste mit Bestellartikeln umfasst. Ein Bestellartikel ist in der Regel eine Entität. Im Bestellaggregat, das auch die Bestellentität als Stammentität enthält, handelt es sich dabei jedoch um eine untergeordnete Entität, die in der Regel als Aggregatstamm bezeichnet wird.
 
-Identifizieren von Aggregaten kann schwierig sein. Ein Aggregat ist eine Gruppe von Objekten, die zusammen konsistent sein muss, aber einfach nicht möglich, wählen Sie eine Gruppe von Objekten und beschriften Sie sie ein Aggregat. Sie müssen mit einer Domäne Konzept beginnen und überlegen Sie sich die Entitäten, die in den am häufigsten verwendeten Transaktionen im Zusammenhang mit diesem Konzept verwendet werden. Diese Entitäten, die im Hinblick auf Transaktionen konsistent sein müssen sind, was ein Aggregat bildet. Darum geht, Transaktionsvorgänge ist wahrscheinlich die beste Möglichkeit, Aggregate zu identifizieren.
+Das Identifizieren von Aggregaten kann sich als schwierig erweisen. Ein Aggregat ist eine Gruppe von Objekten, die zusammen konsistent sein müssen. Sie können aber nicht einfach eine Gruppe von Objekten auswählen und diese als Aggregat bezeichnen. Sie müssen mit einem Domänenkonzept beginnen und die Entitäten berücksichtigen, die in den am häufigsten verwendeten Transaktionen im Zusammenhang mit diesem Konzept verwendet werden. Diese Entitäten, die im Hinblick auf Transaktionen konsistent sein müssen, bilden ein Aggregat. Die beste Methode zum Identifizieren von Aggregaten ist wahrscheinlich, an Transaktionsvorgänge zu denken.
 
-### <a name="the-aggregate-root-or-root-entity-pattern"></a>Das Aggregieren Stamm- oder Stammentität-Muster
+### <a name="the-aggregate-root-or-root-entity-pattern"></a>Das Aggregatstamm- oder Stammentitätsmuster
 
-Ein Aggregat ist mindestens eine Entität besteht: aggregieren Stamm, auch als Stammentität oder primäre Ientity bezeichnet. Es kann darüber hinaus mehrere untergeordnete Entitäten und rückgabewertobjekte mit allen Entitäten und Objekte, die zusammenarbeiten, um das erforderliche Verhalten und Transaktionen implementiert haben.
+Ein Aggregat umfasst mindestens eine Entität: den Aggregatstamm, der auch als Stammentität oder primäre Entität bezeichnet wird. Darüber hinaus kann es über mehrere untergeordnete Entitäten und Wertobjekte verfügen, wobei alle Entitäten und Objekte zusammenarbeiten, um erforderliche Verhaltensweisen und Transaktionen zu implementieren.
 
-Eine aggregierte Stamm dient zum Sicherstellen der Konsistenz des Aggregats; Es sollte der einzige Einstiegspunkt für Updates des Aggregats über Methoden oder Vorgänge im aggregatfunktionsaufruf Stammklasse. Sie sollten Änderungen an Entitäten innerhalb des Aggregats nur über den aggregierten Stamm vornehmen. Es ist das Aggregat Konsistenz Guardian, und berücksichtigt alle Invarianten und Konsistenzregeln, die Sie möglicherweise zur Einhaltung in Ihrer Aggregat. Wenn Sie eine untergeordnete Entität oder Wert Objekt unabhängig ändern, kann nicht aggregierte Stamm stellen Sie sicher, dass das Aggregat in einem gültigen Zustand befindet. Es wäre z. B. eine Tabelle mit einer losen bezeichnet. Verwalten von Konsistenz ist die Hauptaufgabe des Stamms aggregieren.
+Der Zweck eines Aggregatstamms besteht darin, die Konsistenz des Aggregats sicherzustellen. Es sollte der einzige Einstiegspunkt für Updates des Aggregats über Methoden oder Vorgänge in der Aggregatstammklasse sein. Änderungen an Entitäten innerhalb des Aggregats sollten nur über den Aggregatstamm vorgenommen werden. Bei der Konsistenzüberwachung des Aggregats werden alle Invarianten und Konsistenzregeln berücksichtigt, die Sie in Ihrem Aggregat einhalten müssen. Wenn Sie eine untergeordnete Entität oder ein Wertobjekt unabhängig ändern, kann der Aggregatstamm nicht sicherstellen, dass das Aggregat einen gültigen Status aufweist. Dies wäre vergleichbar mit einem Tisch mit losem Tischbein. Der Hauptzweck des Aggregatstamms ist das Wahren der Konsistenz.
 
-In Abbildung 9 – 9, sehen Sie Beispiel-Aggregate, wie der Käufer aggregate, enthält eine einzelne Entität (Käufer über die aggregierten Root). Das Order-Aggregat enthält mehrere Entitäten und ein Wertobjekt.
+In Abbildung 9-9 können Sie Beispielaggregate wie das Aggregat „Buyer“ sehen, das eine einzelne Entität enthält (den Aggregatstamm „Buyer“(Käufer)). Das Aggregat „Order“ enthält mehrere Entitäten und ein Wertobjekt.
 
 ![](./media/image10.png)
 
-**Abbildung 9 – 9**. Beispiel für Aggregate mit mehrere oder einzelne Entitäten
+**Abbildung 9-9**. Beispiel für Aggregate mit mehreren oder einzelnen Entitäten
 
-Beachten Sie, dass der Käufer Aggregat zusätzliche untergeordnete-Entitäten, abhängig von Ihrer Problemdomäne sein kann, wie in der Reihenfolge Microservice in der Anwendung der eShopOnContainers-Verweis. Abbildung 9-9 zeigt nur einen Fall, in dem der Käufer eine einzelne Entität als ein Beispiel für ein Aggregat verfügt, nur einen aggregierten Stamm enthält.
+Beachten Sie, dass das Aggregat „Buyer“ (Käufer) über zusätzliche untergeordnete Entitäten verfügen könnte. Dies hängt von Ihrer Domäne ab, wie auch beim Microservice „Ordering“ (Bestellung) in der eShopOnContainers-Referenzanwendung. In Abbildung 9-9 wird ein Fall veranschaulicht, in dem der Käufer über eine einzelne Entität verfügt. Dies ist ein Beispiel für ein Aggregat, das nur einen Aggregatstamm enthält.
 
-Zum Verwalten der Trennung von Aggregaten und eindeutige Grenzen zwischen ihnen beibehalten, es empfiehlt sich in einem Domänenmodell DDD, direkte Navigation zwischen Aggregate und nur mit dem das Feld Fremdschlüssel (FS) zu unterbinden, wie im implementiert ist die [ Sortierung Microservice Domänenmodell](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. Die Order-Entität verfügt über nur ein FK Feld für den Käufer, aber keine EF Core Navigationseigenschaft, wie im folgenden Code gezeigt:
+Es hat sich bewährt, zur Einhaltung der Trennung der Aggregate und für eindeutige Grenzen zwischen den Aggregaten die direkte Navigation zwischen Aggregaten in einem DDD-Domänenmodell nicht zuzulassen und nur über das Feld für den Fremdschlüssel zu verfügen, das im [Domänenmodell des Microservices „Ordering“ (Bestellung)](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers implementiert ist. Die Bestellentität verfügt wie im folgenden Code dargestellt nur über ein Fremdschlüsselfeld für den Käufer, jedoch über keine EF Core-Navigationseigenschaft:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -126,31 +129,34 @@ public class Order : Entity, IAggregateRoot
     public Address Address { get; private set; }
     private int? _buyerId; //FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+    // ... Additional code
 }
 ```
 
-Identifizieren von und Arbeiten mit Aggregaten erfordert Forschung und benutzerfreundlichkeit. Weitere Informationen finden Sie die folgenden zusätzlichen Ressourcenliste.
+Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfahrung erforderlich. Weitere Informationen finden Sie in den folgenden Liste mit Zusatzressourcen.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Vaughn Vernon. Effektive aggregieren Design - Teil I: Modellieren einer einzelnen Gesamtverstärkung**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ABHANDLUNG\_ Aggregate\_Teil\_1. Pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Effektiver Aggregatentwurf – Teil I: Modellierung eines einzelnen Aggregats)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Effektive aggregieren Design - Teil II: Festlegen, dass Aggregate zusammenarbeiten**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektiver Aggregatentwurf – Teil II: Erreichen einer Zusammenarbeit von Aggregaten)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. Effektive aggregieren Design - Teil III: Erhalten von Einblicken, durch die Ermittlung**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Effektiver Aggregatentwurf – Teil III: Einblicke durch Ermittlung)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak. Taktisch Entwurfsmuster DDD**
+-   **Sergey Grybniak. DDD Tactical Design Patterns (Taktische DDD-Entwurfsmuster)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Rißling. Entwickeln von transaktionalen Microservices Aggregate**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates (Entwickeln von Transaktionsmicroservices mit Aggregaten)**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Das Aggregieren Muster**
+-   **DevIQ. The Aggregate pattern (Das Aggregatmuster)**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Ddd-orientierte-microservice.md) [weiter] (Net-Core-Microservice-Domain-model.md)
+[Zurück] (ddd-oriented-microservice.md) [Weiter] (net-core-microservice-domain-model.md)

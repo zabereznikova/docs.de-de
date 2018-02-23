@@ -1,6 +1,6 @@
 ---
-title: Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit"
+title: Implementieren von benutzerdefinierten Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren von Wiederholungen von benutzerdefinierten HTTP-Aufrufen mit exponentiellem Backoff"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4449e5d7e0ca3c81aead26fac653de3ba2187a92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>Implementieren von benutzerdefinierten HTTP-Aufruf Wiederholungen mit exponenzieller Wartezeit
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>Implementieren von benutzerdefinierten Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
 
-Um robusten Microservices zu erstellen, müssen Sie mögliche Szenarien der HTTP-Fehler zu behandeln. Sie könnten zu diesem Zweck eine eigene Implementierung von Wiederholungen mit exponenzieller erstellen.
+Sie müssen mögliche HTTP-Fehlerszenarios verarbeiten können, um robuste Microservices zu erstellen. Zu diesem Zweck können Sie eine eigene Implementierung von Wiederholungen mit exponentiellem Backoff erstellen.
 
-Neben der Handhabung von temporale Ressource nicht verfügbar sind, muss exponentielle Backoff auch berücksichtigen, dass Cloudanbieter Verfügbarkeit der Ressourcen, um zu verhindern, dass bei der Verwendung Überladung einschränken kann. Beispielsweise zu viele verbindungsanforderungen sehr schnell erstellen möglicherweise angezeigt werden als ein Denial-of-Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) Angriff von Cloud-Dienstanbieter. Daher müssen Sie bieten einen Mechanismus zur Back verbindungsanforderungen zu skalieren, wenn ein Schwellenwert für die Kapazität erreicht wurde.
+Zusätzlich zum Verarbeiten der Nichtverfügbarkeit von temporalen Ressourcen muss beim exponentiellen Backoff ebenfalls berücksichtigt werden, dass der Cloudanbieter die Verfügbarkeit der Ressourcen einschränken kann, um eine Überladung zu verhindern. Das Erstellen von zu vielen Verbindungsanforderungen kann beispielsweise vom Cloudanbieter schnell als Denial-of-Service-Angriff ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) gewertet werden. Deshalb müssen Sie einen Mechanismus bereitstellen, um Verbindungsanforderungen zu reduzieren, wenn der Schwellenwert für die Kapazität erreicht wurde.
 
-Als eine erste Untersuchungen durchzuführen, konnte Sie Ihren eigenen Code eine Dienstprogrammklasse für Exponentielles Backoff wie in implementieren [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), sowie Code wie den folgenden (steht auch auf eine [GitHub-Repository ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Zunächst können Sie eigenen Code wie in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) mit einer Hilfsklasse für exponentielle Backoffs sowie Code implementieren, der Folgendem entspricht (dieser ist ebenfalls in einem [GitHub-Repository](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b) verfügbar).
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -93,7 +96,7 @@ public struct ExponentialBackoff
 }
 ```
 
-Verwenden diesen Code in einem Client C\# Anwendung (Microservice von einer anderen Web-API-Client, eine ASP.NET MVC-Anwendung oder sogar eine C\# Xamarin-Anwendung) ist einfach. Das folgende Beispiel zeigt, mit der HttpClient-Klasse.
+Das Verwenden dieses Codes in einer C\#-Clientanwendung (in einem Web-API-Clientmicroservice, einer ASP.NET MVC-Anwendung oder sogar in einer C\#-Xamarin-Anwendung) ist einfach. Dies wird im folgenden Beispiel anhand der HttpClient-Klasse dargestellt.
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -116,8 +119,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Dieser Code ist jedoch nur als ein Proof of Concept geeignet ist. Im nächste Thema wird erläutert, wie mehr hochentwickelte und bewährte Bibliotheken verwendet wird.
+Dieser Code ist jedoch nur als Proof of Concept geeignet. Im nächsten Artikel wird erklärt, wie Sie optimierte und bewährte Bibliotheken verwenden.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Implement-resilient-entity-framework-core-sql-connections.md) [weiter] (Implement-http-call-retries-exponential-backoff-polly.md)
+[Zurück] (implement-resilient-entity-framework-core-sql-connections.md) [Weiter] (implement-http-call-retries-exponential-backoff-polly.md)

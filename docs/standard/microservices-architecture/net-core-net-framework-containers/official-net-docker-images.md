@@ -1,6 +1,6 @@
 ---
-title: Offizielle .NET Docker-images
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Offizielle .NET Docker-images"
+title: Offizielle .NET-Docker-Images
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Offizielle .NET-Docker-Images"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,58 +8,61 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 6f14bd0cf55a552f3881d755ebe7389f000975d8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 42872caa1a9306187daeefd35feb9bec3fae60af
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="official-net-docker-images"></a>Offizielle .NET Docker-images
+# <a name="official-net-docker-images"></a>Offizielle .NET-Docker-Images
 
-Die offizielle .NET Docker-Images sind Docker-Images erstellt und optimiert, die von Microsoft. Sie sind in den Microsoft-Repositorys auf öffentlich verfügbare [Docker Hub](https://hub.docker.com/u/microsoft/). Jedes Repository kann mehrere Abbilder, je nach .NET Versionen, und das Betriebssystem und die Versionen (Linux Debian, Alpine Linux, Windows Nano Server, Windows Server Core, usw.) enthalten.
+Die offiziellen .NET-Docker-Images sind Docker-Images, die von Microsoft erstellt und optimiert werden. Sie sind öffentlich in den Microsoft-Repositorys im [Docker-Hub](https://hub.docker.com/u/microsoft/) verfügbar. Jedes Repository kann je nach .NET-Version und der Version des Betriebssystems mehrere Images enthalten (Linux Debian, Alpine Linux, Windows Nano Server, Windows Server Core usw.).
 
-Vision von Microsoft .NET Repositorys besteht darin, eine präzise und konzentriert sich Repositorys haben, wobei ein Repository darstellt, ein bestimmtes Szenario oder eine arbeitsauslastung. Für die Instanz, die [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Bilder sollte verwendet werden, wenn mithilfe von ASP.NET Core auf Docker, da dies der Fall ist der Container bereitgestellt werden diese Bilder ASP.NET Core zusätzliche Optimierungen schneller gestartet werden kann.
+.NET-Repositorys wurden von Microsoft entworfen, um spezialisierte Repositorys bereitzustellen, falls sie ein bestimmtes Szenario oder eine bestimmte Workload darstellen. Die [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/)-Images sollten z.B. verwendet werden, wenn ASP.NET Core auf Docker verwendet wird, da ASP.NET Core-Images zusätzliche Optimierungen bereitstellen, sodass Container schneller gestartet werden können.
 
-Andererseits, beziehen sich die .NET Core-Bilder (Microsoft/Dotnet) Konsolen-apps, die basierend auf .NET Core. Beispielsweise sollten Batchprozessen Azure WebJobs und Weitere Szenarien Konsole .NET Core verwenden. Diese Images enthalten keine ASP.NET Core-Stapel, was zu kleineren Container-Image.
+Die .NET Core-Images (microsoft/dotnet) hingegen wurden für Konsolen-Apps konzipiert, die auf .NET Core basieren. Beispielsweise sollten Batchprozesse, Azure WebJobs und andere Konsolenszenarios .NET Core verwenden. Diese Images enthalten nicht den ASP.NET Core-Stapel, was zu einem kleineren Containerimage führt.
 
-Die meisten Image-Repositorys bieten umfassende kennzeichnen, können Sie nicht nur eine spezifische Framework-Version auszuwählen, sondern auch auf einem Betriebssystem (Linux-Distribution oder Windows-Version).
+Die meisten Image-Repositorys stellen umfangreiche Taggingfunktionen bereit, die Sie nicht nur bei der Auswahl einer bestimmten Frameworkversion unterstützen, sondern auch bei der des Betriebssystems (Linux-Distribution oder Windows-Version).
 
-Weitere Informationen zu den offiziellen .NET Docker-Images, die von Microsoft bereitgestellt werden kann, finden Sie unter der [.NET Docker Images Zusammenfassung](https://aka.ms/dotnetdockerimages).
+Weitere Informationen zu den offiziellen .NET-Docker-Images, die von Microsoft bereitgestellt werden, finden Sie unter der [Zusammenfassung zu .NET-Docker-Images](https://aka.ms/dotnetdockerimages).
 
-## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>.NET Core und Docker Bild Optimierungen für die Entwicklung und Produktion
+## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>.NET Core- und Docker-Imageoptimierungen für die Entwicklung und die Produktion
 
-Beim Erstellen von Docker-Images für Entwickler, konzentriert sich Microsoft die folgenden Hauptszenarien:
+Beim Erstellen von Docker-Images für Entwickler standen für Microsoft die folgenden wichtigen Szenarios im Mittelpunkt:
 
--   Bildern, mit der *entwickeln* und .NET Core-apps erstellen.
+-   Images zum *Entwickeln* und Erstellen von .NET Core-Apps
 
--   Bildern, mit der *ausführen* .NET Core-apps.
+-   Images zum *Ausführen* von .NET Core-Apps
 
-Warum mehrere Abbilder? Beim Entwickeln, erstellen und Ausführen von Sammelartikeleinheit, müssen Sie in der Regel unterschiedliche Prioritäten. Indem Sie verschiedene Bilder für diese separaten Vorgänge angeben, hilft Microsoft, der separate Prozesse entwickeln, erstellen und Bereitstellen von apps zu optimieren.
+Warum mehrere Images? Beim Entwickeln, Erstellen und Ausführen von Containeranwendungen gibt es üblicherweise unterschiedliche Prioritäten. Durch das Bereitstellen verschiedener Images leistet Microsoft einen Beitrag zur Optimierung der separaten Prozesse des Entwickelns, Erstellens und Bereitstellens von Apps.
 
-### <a name="during-development-and-build"></a>Während der Entwicklung und build
+### <a name="during-development-and-build"></a>Während der Entwicklung und Erstellung
 
-Während der Entwicklung ist wichtig ist wie schnell Sie Änderungen, und die Fähigkeit zum Debuggen der Änderungen durchlaufen können. Die Größe des Bilds ist nicht so wichtig wie die Möglichkeit, Änderungen am Code vornehmen und schnell die Änderungen anzuzeigen. Einige Tools und "Build-Agent-Container", dient die Entwicklung von ASP.NET Core-Image (Microsoft/Aspnetcore-Build) während der Entwicklung und build-Prozesses. Wenn Sie in einem Docker-Container zu erstellen, sind die wichtigsten Aspekte Elemente, die benötigt werden, um die app zu kompilieren. Dies schließt der Compiler und alle anderen Abhängigkeiten .NET sowie Web Development Abhängigkeiten wie Npm, Gulp und Bower.
+In der Entwicklungsphase zählt, wie schnell Sie Änderungen durchlaufen und Änderungen debuggen können. Die Größe des Images ist nicht so entscheidend wie die Fähigkeit, Änderungen am Code vorzunehmen und schnell anzuzeigen. Einige Tools und „Build-Agent-Container“ verwenden das ASP.NET Core-Entwicklungsimage (microsoft/aspnetcore-build) während der Entwicklung und des Buildprozesses. Wenn Sie innerhalb eines Docker-Containers programmieren, sind die Elemente, die zum Kompilieren der App benötigt werden, das Wichtigste. Das schließt den Compiler und alle anderen .NET-Abhängigkeiten sowie Webentwicklungsabhängigkeiten wie npm, Gulp und Bower mit ein.
 
-Warum ist diese Art von buildabbild wichtig? Dieses Bild bereitgestellt nicht in der produktionsumgebung. Stattdessen wird ein Bild, das Sie verwenden, um den Inhalt, den platzieren Sie Sie, in einer Produktions-Images erstellen. Dieses Image würde in Ihrer Umgebung mit continuous Integration (CI) oder Buildumgebung verwendet werden. Für die Instanz, statt Sie manuell sämtliche anwendungsabhängigkeiten direkt auf einen Build-Agent installieren hosten (z. B. eine VM), der Build-Agent ein .NET Core-Image Build instanziieren würde, mit den Abhängigkeiten, die zum Erstellen der Anwendung erforderlich sind. Der Build-Agent muss nur wissen, wie dieses Docker-Image ausgeführt wird. Dies vereinfacht die CI-Umgebung und erleichtert die wesentlich besser vorhersagbar.
+Warum ist diese Art von Buildimage wichtig? Dieses Image wird nie in einer Produktionsumgebung bereitgestellt. Damit wird ausschließlich der Inhalt erstellt, den Sie in einem Produktionsimage platzieren. Dieses Image wird dann in der Continuous Integration- oder Buildumgebung verwendet. Anstatt alle Anwendungsabhängigkeiten z.B. manuell direkt auf einem Build-Agent zu installieren (z.B. einer VM), instanziiert der Build-Agent beispielsweise ein .NET Core-Buildimage mit allen Abhängigkeiten, die zum Erstellen der App erforderlich sind. Der Build-Agent muss nur wissen, wie dieses Docker-Image ausgeführt wird. Dies vereinfacht die CI-Umgebung und macht sie wesentlich vorhersagbarer.
 
-### <a name="in-production"></a>In der Produktion
+### <a name="in-production"></a>In einer Produktionsumgebung
 
-In der Produktion wichtig ist wie schnell Sie bereitstellen, und starten die Container, basierend auf einer Produktion .NET Core-Image. Aus diesem Grund, das nur das Laufzeitmodul Image basierend auf [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) ist klein, damit sie schnell über das Netzwerk aus der Docker-Registrierung, die Docker-Hosts übertragen kann. Die Inhalte sind ausgeführt wird, aktivieren die schnellste Zeit gestartet werden, den Container für die Verarbeitung der Ergebnisse. In das Docker-Modell besteht keine Notwendigkeit für die Kompilierung von C\# code, der als dort ist beim Dotnet Build ausführen Dotnet veröffentlichen, wenn verwenden oder den Container erstellen.
+In der Produktion ist wichtig, wie schnell Sie bereitstellen und die Container basierend auf einem Produktions-.NET Core-Image starten können. Das Image, das auf [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) basiert und nur die Runtime enthält, ist aus diesem Grund klein: damit es von der Docker-Registrierung schnell über das Netzwerk an die Docker-Hosts übertragen werden kann. Die Inhalte sind bereit zur Ausführung und ermöglichen eine minimale Zeitspanne zwischen dem Start des Containers und dem Verarbeiten der Ergebnisse. Anders als bei „dotnet build“ oder „dotnet publish“ beim Verwenden des Buildcontainers besteht im Docker-Modell keine Notwendigkeit, C\#-Code zu kompilieren.
 
-Diese optimierten Images legen Sie nur die Binärdateien und andere Inhalte, die zum Ausführen der Anwendung erforderlich sind. Veröffentlichen Sie der Inhalt von Dotnet erstellt z. B. kompilierte .NET Binärdateien, Bilder, js und CSS-Dateien enthält. Im Laufe der Zeit werden Bilder angezeigt, die JIT-Pakete enthalten.
+In diesem optimierten Image werden nur die Binärdateien und andere Inhalte platziert, die zum Ausführen der Anwendung erforderlich sind. Der von „dotnet publish“ erstellte Inhalt enthält z.B. nur die kompilierten .NET-Binärdateien, Images sowie JS- und CSS-Dateien. Im Laufe der Zeit sehen Sie Images, die JIT-kompilierte Pakete enthalten.
 
-Obwohl mehrere Versionen der Bilder aus .NET Core und ASP.NET Core verfügbar sind, verwenden sie alle eine oder mehrere Ebenen, einschließlich der grundlegenden Ebene. Aus diesem Grund ist die Menge an Speicherplatz erforderlich, um ein Bild speichern kleine; Es besteht nur das Delta zwischen des benutzerdefinierten Abbilds und die Basis-Image. Das Ergebnis ist, dass es schnell das Image per Pull aus der Registrierung abgerufen werden.
+Obwohl mehrere Versionen der .NET Core- und ASP.NET Core-Images verfügbar sind, haben sie alle mindestens eine Ebene gemeinsam, einschließlich der Grundebene. Aus diesem Grund ist wenig Speicherplatz erforderlich, um ein Image zu speichern, denn es besteht nur aus dem Delta zwischen dem benutzerdefinierten Image und dem Basis-Image. So können Sie das Image schnell aus der Registrierung abrufen.
 
-Wenn Sie den .NET Image Repositorys auf Docker Hub durchsuchen, finden Sie mehrere Bildversionen klassifiziert oder mit Tags markiert. Diese Tags helfen um zu entscheiden, welche Sicherung, je nach Version verwenden, die Sie, wie in der folgenden Tabelle aufgeführt benötigen:
+Wenn Sie sich die .NET-Image-Repositorys im Docker-Hub ansehen, werden Sie mehrere Imageversionen finden, die klassifiziert oder mit Tags versehen sind. Diese Tags helfen dabei, je nach benötigter Version zu entscheiden, welches Image verwendet werden sollte, so wie in der folgenden Tabelle:
 
--   Microsoft /**Aspnetcore:2.0**
+-   microsoft/**aspnetcore:2.0**
 
         ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
 
--   Microsoft /**Aspnetcore-Build: 2.0**
+-   microsoft/**aspnetcore-build:2.0**
 
         ASP.NET Core, with SDKs included, on Linux and Windows (multi-arch)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Net-Container-os-targets.md) [weiter] (.. /Architect-microservice-Container-Applications/Index.MD)
+[Zurück] (net-container-os-targets.md) [Weiter] (../architect-microservice-container-applications/index.md)

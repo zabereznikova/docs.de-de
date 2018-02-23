@@ -1,6 +1,6 @@
 ---
-title: Mithilfe von Azure Service Fabric
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Mithilfe von Azure Service Fabric"
+title: Verwenden von Azure Service Fabric
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von Azure Service Fabric"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,88 +8,91 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: aa15f9cf9bc60e9e70607da921f2ce2c75e39ec2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9480a3f67e9d0a61d0669bf34be4b66208f5e9ce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-azure-service-fabric"></a>Mithilfe von Azure Service Fabric
+# <a name="using-azure-service-fabric"></a>Verwenden von Azure Service Fabric
 
-Azure Service Fabric ist von Microsoft Übergang von der Bereitstellung von Box-Produkte, die in der Regel im Format monolithischen wurden für die Bereitstellung von Diensten. Die Erfahrung des Erstellens und große Dienste mit Skalierung, z. B. Azure SQL-Datenbank, Azure-Cosmos-Datenbank, Azure Service Bus oder Cortanas Back-End betreiben geformten Service Fabric. Die Plattform hat sich mit der Zeit mehr Dienste es angenommen. Service Fabric musste wichtiger, nicht nur in Azure, sondern auch in eigenständigen Windows Server-Bereitstellungen ausgeführt.
+Azure Service Fabric entstand aus dem Wandel bei Microsoft von der Bereitstellung von Standardprodukten, die in der Regel eine monolithische Struktur aufweisen, hin zur Bereitstellung von Diensten. Die Erfahrung beim Erstellen und Betreiben von umfangreichen bedarfsgerechten Diensten wie etwa Azure SQL-Datenbank, Azure Cosmos DB, Azure Service Bus oder das Back-End von Cortana hat Service Fabric hervorgebracht. Die Plattform entwickelte sich im Laufe der Zeit immer weiter, je mehr Dienste damit arbeiteten. Wichtig war, dass die Ausführung von Service Fabric nicht nur in Azure, sondern auch in eigenständigen Windows Server-Bereitstellungen möglich sein musste.
 
-Das Ziel des Service Fabric ist, die Festplatte Probleme der Erstellung und Ausführung eines Diensts und effiziente Nutzung von Infrastrukturressourcen zu lösen, sodass Teams mithilfe des Microservices Ansatzes Geschäftsprobleme lösen können.
+Service Fabric soll die schwierigen Probleme beim Erstellen und Ausführen eines Dienstes sowie bei der effizienten Nutzung von Infrastrukturressourcen lösen, sodass sich Teams um die Lösung von Geschäftsproblemen mithilfe eines Microservicekonzepts kümmern können.
 
-Service Fabric bietet zwei allgemeine Bereiche, mit denen Sie Anwendungen erstellen, die einen Microservices Ansatz zu verwenden:
+Service Fabric stellt zwei große Bereiche bereit, mit deren Hilfe Anwendungen auf Basis eines Microservicekonzepts erstellt werden können:
 
--   Eine Plattform, die Dienste bereitstellen, skalieren, aktualisieren erkennen, und fehlgeschlagene Dienste neu starten, dienstidentifizierung zu ermitteln, Status verwalten und Überwachen der Integrität. Diese Systemdienste ermöglichen faktisch viele Merkmale der zuvor beschriebenen Microservices.
+-   Eine Plattform, die Systemdienste zum Bereitstellen, Skalieren, Upgraden, Erkennen und Neustarten von Diensten, bei denen ein Fehler aufgetreten ist, zum Ermitteln der Dienstidentifizierung, zum Verwalten des Zustands sowie zum Überwachen der Integrität bereitstellt. Diese Systemdienste ermöglichen viele der bereits beschriebenen Merkmale von Microservices.
 
--   Programmieren von APIs oder Frameworks, können Sie das Erstellen von Anwendungen als Microservices: [zuverlässige Akteuren und zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Natürlich können Sie keinen Code für Ihre Microservice erstellen auswählen, aber diese APIs stellen den Auftrag einfachere und sie mit der Plattform genauer gesagt integrieren. Auf diese Weise, die Sie abrufen können, Integrität und Diagnose-Informationen, oder Sie können zuverlässige Verwaltung nutzen.
+-   Programmieren von APIs oder Frameworks, mit deren Hilfe Sie Anwendungen als Microservices erstellen können: [Reliable Actors und Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Sie können Ihren Microservice natürlich mit jedem beliebigen Code erstellen. Diese APIs erleichtern jedoch die Arbeit und lassen sich auf einer tieferen Ebene in die Plattform integrieren. Damit erhalten Sie Integritäts- und Diagnoseinformationen oder können zuverlässige Funktionen zur Zustandsverwaltung nutzen.
 
-Service Fabric ist agnostisch im Hinblick auf, wie Sie Ihren Dienst erstellen, und Sie können eine beliebige Technologie verwenden. Aber bietet es integrierte Programmierschnittstellen, die zum Erstellen von Microservices vereinfachen.
+Service Fabric ist im Hinblick auf die Erstellung von Diensten unabhängig, sodass Sie jede beliebige Technologie nutzen können. Die Plattform stellt jedoch integrierte APIs für die Programmierung bereit, die die Erstellung von Microservices erleichtern.
 
-Wie in Abbildung 4-26 gezeigt, können Sie erstellen und Ausführen von Microservices in Service Fabric, entweder als einfachen Prozessen oder als Docker-Containern. Es ist auch möglich, Container-basierte Microservices mit prozessbasierte Microservices innerhalb der gleichen Service Fabric-Cluster zu mischen.
+Wie Sie in Abbildung 4-26 sehen, können Sie Microservices in Service Fabric als einfache Prozesse oder als Docker-Container erstellen und ausführen. Sie können auch containerbasierte Microservices mit prozessbasierten Microservices in einem Service Fabric-Cluster mischen.
 
 ![](./media/image30.png)
 
-**Abbildung 4-26**. Bereitstellen von Microservices als Prozesse oder als Container in Azure Service Fabric
+**Abbildung 4-26.** Bereitstellen von Microservices als Prozesse oder Container in Azure Service Fabric
 
-Service Fabric-Cluster, die basierend auf Linux- und Windows-Hosts können Docker-Linux-Containern und Windows-Container ausführen.
+In Service Fabric-Clustern, die auf Linux- und Windows-Hosts basieren, können Docker-Linux-Container bzw. -Windows-Container ausgeführt werden.
 
-Aktuelle Informationen zur Unterstützung von Containern in Azure Service Fabric finden Sie unter [Service Fabric und Container](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Aktuelle Informationen zur Unterstützung von Containern in Azure Service Fabric finden Sie im Abschnitt [Service Fabric und Container](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-Service Fabric ist ein gutes Beispiel einer Plattform, auf dem können Sie definieren einer anderen logische Architektur (Business Microservices oder Kontexten begrenzt) als die physische Implementierung, die in eingeführt wurden die [im Vergleich zu physischen logische Architektur Architektur](#logical-architecture-versus-physical-architecture) Abschnitt. Angenommen, Sie implementieren [statusbehaftete zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) in [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), die im Abschnitt eingeführt [Stateless im Vergleich zu zustandsbehaftete Microservices](#stateless-versus-stateful-microservices) Später können Sie ein Microservice Geschäftskonzept mit mehreren physischen Dienste haben.
+Service Fabric ist ein gutes Beispiel für eine Plattform, bei der Sie im Vergleich zur physischen Implementierung eine andere logische Architektur (Unternehmensmicroservices oder Kontextgrenzen) definieren können. Eine Einführung hierzu finden Sie im Abschnitt [Logical architecture versus physical architecture (Logische und physische Architektur im Vergleich)](#logical-architecture-versus-physical-architecture). Wenn Sie beispielsweise [zustandsbehaftete zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) in [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) implementieren (eine Einführung hierzu finden Sie im Abschnitt [Zustandslose und zustandsbehaftete Microservices](#stateless-versus-stateful-microservices)), können Sie ein Unternehmensmicroservicekonzept mit mehreren physischen Diensten verwenden.
 
-Wie in Abbildung 4-27 und denken hinsichtlich der logischen/Business Microservice beim Implementieren eines Service Fabric statusbehaftete zuverlässige Diensts dargestellt müssen Sie in der Regel zwei Ebenen der Dienste zu implementieren. Die erste ist der Back-End-statusbehaftete zuverlässige Dienst, der mehrere Partitionen verarbeitet (jede Partition ist ein zustandsbehafteter Dienst). Das zweite ist die Front-End-Diensts oder der Gatewaydienst für routing und Daten Aggregation über mehrere Partitionen oder zustandsbehaftete Dienstinstanzen. Diesem Gateway-Dienst verarbeitet auch clientseitige Kommunikation mit wiederholen-Schleifen, die Zugriff auf die Back-End-Dienst.
-Sie ist einen Gatewaydienst aufgerufen, wenn Sie Ihr benutzerdefinierter Dienst oder ein Alternatevely können Sie auch die Out-of-Box Service Fabric implementieren [Reverse-Proxy-Dienst](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Gemäß der Abbildung 4-27 sowie bei Betrachtung aus der Perspektive von logischen Microservices bzw. Unternehmensmicroservices müssen bei der Implementierung eines zustandsbehafteten zuverlässigen Service Fabric-Diensts in der Regel zwei Dienstebenen implementiert werden. Bei der ersten handelt es sich um den zustandsbehafteten zuverlässigen Back-End-Dienst für die Verarbeitung verschiedener Partitionen (jede Partition stellt einen zustandsbehafteten Dienst dar). Bei der zweiten handelt es sich um den Front-End- oder Gatewaydienst für das Routing und die Datenaggregation in verschiedenen Partitionen oder Instanzen von zustandsbehafteten Diensten. Dieser Gatewaydienst verarbeitet auch die clientseitige Kommunikation mit Wiederholungsschleifen, die auf den Back-End-Dienst zugreifen.
+Es wird von einem Gatewaydienst gesprochen, wenn der benutzerdefinierte Dienst implementiert wird. Alternativ können Sie auch den standardmäßigen [Reverseproxydienst](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) in Service Fabric verwenden.
 
 ![](./media/image31.png)
 
-**Abbildung 4-27**. Business Microservice mit mehreren zustandsbehaftete Dienstinstanzen und eine benutzerdefinierte Front-End-gateway
+**Abbildung 4-27.** Unternehmensmicroservice mit verschiedenen Instanzen eines zustandsbehafteten Diensts und einem benutzerdefinierten Gateway-Front-End
 
-In jedem Fall bei der Verwendung von Service Fabric statusbehaftete zuverlässige Dienste müssen Sie auch einen logischen oder geschäftliche Microservice (Kontext begrenzt), die in der Regel aus mehreren physischen Diensten besteht. Jede dieser Optionen, die Gatewaydienst und Partition Dienst könnte als ASP.NET Web-API-Dienste implementiert werden, wie in Abbildung 4-26 dargestellt.
+Wenn Sie in Service Fabric zustandsbehaftete zuverlässige Dienste verwenden, verwenden Sie auch einen logischen Microservice oder einen Unternehmensmicroservice (Kontextgrenzen), der in der Regel aus mehreren physischen Diensten zusammengesetzt ist. Jeder dieser Dienste, sowohl der Gatewaydienst als auch der Partitionsdienst, kann als ASP.NET-Web-API-Dienst implementiert werden (siehe Abbildung 4-26).
 
-Dienst-Fabrics können gruppiert und Bereitstellen von Gruppen von Services als eine [Service Fabric-Anwendung](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), also die Einheit der Verpackung und Bereitstellung für die Orchestrator oder -Cluster. Aus diesem Grund konnte die Service Fabric-Anwendung diese autonomen Business und logische Microservice Grenze oder begrenzt, die den Kontext werden auch zugeordnet, damit Sie diese Dienste autonom bereitstellen können.
+In Service Fabric können Sie Gruppen von Diensten als [Service Fabric-Anwendung](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model) gruppieren und bereitstellen. Dabei handelt es sich um die Einheit für Paket und Bereitstellung für den Orchestrator oder den Cluster. Daher kann die Service Fabric-Anwendung dieser autonomen Unternehmensmicroservicegrenze und logischen Microservicegrenze oder Kontextgrenze zugeordnet werden, sodass diese Dienste autonom bereitgestellt werden können.
 
 ## <a name="service-fabric-and-containers"></a>Service Fabric und Container
 
-Im Hinblick auf den Container im Service Fabric können Sie auch die Dienste in Container Bilder innerhalb eines Service Fabric-Clusters bereitstellen. Wie in Abbildung 4-28 gezeigt, in den meisten Fällen gibt es werden nur einem Container pro Dienst.
+Im Hinblick auf Container in Service Fabric können Sie Dienste auch in Containerimages in einem Service Fabric-Cluster bereitstellen. Wie in Abbildung 4-28 dargestellt, wird meist nur ein Container pro Dienst verwendet.
 
 ![](./media/image32.png)
 
-**Abbildung 4-28**. Business Microservice mit verschiedenen Diensten (Container) in Service Fabric
+**Abbildung 4-28.** Business-Microservice mit mehreren Diensten (Containern) in Service Fabric
 
-So genannten "sidecardatei" Container (zwei Container, die zusammen als Teil eines logischen Diensts bereitgestellt werden muss) sind jedoch auch in der Service Fabric möglich. Wichtig ist, dass eine Business Microservice die logische Begrenzung um mehrere zusammenhängende Elemente ist. In vielen Fällen ist es möglicherweise Einzeldienst mit einem einzelnen Datenmodell, aber in anderen Fällen möglicherweise physischen mehrere Dienste.
+In Service Fabric können jedoch auch so genannte „Sidecar“-Container (zwei Container, die im Rahmen eines logischen Dienstes gemeinsam bereitgestellt werden müssen) verwendet werden. Wichtig ist dabei, dass ein Unternehmensmicroservice die logische Grenze um mehrere kohäsive Elemente darstellt. Dabei kann es sich häufig um einen einzelnen Dienst mit einem einzigen Datenmodell oder gelegentlich auch um verschiedene physische Dienste handeln.
 
-Seit Mitte 2017 in Service Fabric kann nicht bereitgestellt SF zuverlässige statusbehaftete Dienste für Container – Sie können nur zustandslose Dienste und -actordienste in Containern bereitstellen. Aber beachten Sie, dass Sie die Dienste in Prozessen und Diensten in Containern in der gleichen Service Fabric-Anwendung kombinieren können, wie in Abbildung 4-29 dargestellt.
+Seit Mitte 2017 können in Service Fabric in Containern nur zustandslose Dienste und Actordienste, jedoch keine zuverlässigen zustandsbehafteten Service Fabric-Dienste bereitgestellt werden. In Prozessen und Diensten in Containern in einer Service Fabric-Anwendung können Dienste jedoch gemischt verwendet werden (siehe Abbildung 4-29).
 
 ![](./media/image33.png)
 
-**Abbildung 4-29**. Business Microservice zugeordnet zu einer Service Fabric-Anwendung mit Containern und zustandsbehaftete Dienste
+**Abbildung 4-29.** Ein einer Service Fabric-Anwendung mit Containern und zustandsbehafteten Diensten zugeordneter Business-Microservice
 
-Weitere Informationen zur containerunterstützung in Azure Service Fabric finden Sie unter [Service Fabric und Container](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Weitere Informationen zur Unterstützung von Containern in Azure Service Fabric finden Sie im Abschnitt [Service Fabric und Container](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-## <a name="stateless-versus-stateful-microservices"></a>Zustandslose und zustandsbehaftete microservices
+## <a name="stateless-versus-stateful-microservices"></a>Zustandslose und zustandsbehaftete Microservices
 
-Wie bereits erwähnt, muss jede Microservice (logische begrenzt, die den Kontext) seine Domänenmodell (Daten und Logik) besitzen. Im Fall von zustandslose Microservices werden die Datenbanken externe relationale Optionen wie z. B. SQL Server oder NoSQL-Optionen wie MongoDB oder Azure-Cosmos-Datenbank eingefügt.
+Wie bereits erwähnt, muss jeder Microservice (logische Kontextgrenze) ein eigenes Domänenmodell (Daten und Logik) aufweisen. Bei zustandslosen Microservices sind die Datenbanken extern und arbeiten mit relationalen Varianten wie SQL Server oder NoSQL-Optionen wie MongoDB oder Azure Cosmos DB.
 
-Die Dienste selbst können jedoch sein zustandsbehaftete in Service Fabric, was bedeutet, dass die Daten innerhalb der Microservice befinden. Diese Daten möglicherweise nicht nur auf dem gleichen Server, aber innerhalb des Prozesses Microservice im Arbeitsspeicher vorhanden und auf den Festplatten beibehalten und auf anderen Knoten repliziert. Abbildung 4-30 zeigt die verschiedenen Ansätze.
+Die Dienste selbst können in Service Fabric auch zustandsbehaftet sein, was bedeutet, dass die Daten im selben Microservice enthalten sind. Diese Daten können nicht bloß auf demselben Server, sondern auch im Microserviceprozess, im Arbeitsspeicher oder beständig auf Festplatten enthalten sein und auf andere Knoten repliziert werden. In Abbildung 4-30 sind die verschiedenen Konzepte dargestellt.
 
 ![](./media/image34.png)
 
-**Abbildung 4-30**. Zustandslose und zustandsbehaftete microservices
+**Abbildung 4-30.** Zustandslose und zustandsbehaftete Microservices
 
-Zustandslose Ansatz ist perfekt geeignet und einfacher zu implementieren als statusbehaftete Microservices, da der Ansatz von herkömmlichen und bekannten Muster ähnelt. Aber zustandslose Microservices vorgeben Latenz zwischen den Prozess und Datenquellen. Sie beinhalten auch mehr gleitende Teile beim zum Verbessern der Leistung mit zusätzlichen Cache und Warteschlangen. Das Ergebnis ist, dass Sie mit komplexen Architekturen annehmen können, die zu viele Ebenen aufweisen.
+Das Konzept der zustandslosen Microservices eignet sich sehr gut und ist einfacher zu implementieren als das Konzept der zustandsbehafteten Microservices, da es mit herkömmlichen und vertrauten Mustern vergleichbar ist. Zustandslose Microservices erzeugen jedoch eine Wartezeit zwischen dem Prozess und den Datenquellen. Ferner sind mehr bewegliche Teile erforderlich, wenn Sie versuchen, die Leistung mit zusätzlichem Cache und weiteren Warteschlangen zu verbessern. Daraus können komplexe Architekturen mit zu vielen Ebenen resultieren.
 
-Im Gegensatz dazu [zustandsbehafteten Microservices](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) in fortgeschrittenen Szenarios wird excel können, da es keine Wartezeit zwischen den Domänenlogik und Daten ist. Starker Datenverarbeitung, Spiele wieder endet, Datenbanken als Dienst und andere all mit geringer Latenz Szenarien profitieren zustandsbehaftete Dienste, die lokalen Zustand für einen schnelleren Zugriff zu ermöglichen.
+[Zustandsbehaftete Microservices](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) eignen sich hingegen besonders in anspruchsvolleren Szenarios, da es keine Wartezeit zwischen Domänenlogik und -daten gibt. Umfassende Datenverarbeitungsaufgaben, Back-Ends von Spielen, Database-as-a-Service-Lösungen und andere Szenarios mit kurzer Wartezeit profitieren allesamt von zustandsbehafteten Diensten, die einen lokalen Zustand für einen schnelleren Zugriff ermöglichen.
 
-Zustandslose und zustandsbehaftete Dienste sind ergänzen. Beispielsweise sehen Sie in Abbildung 4-30, in das rechte Diagramm, dass ein zustandsbehafteter Dienst in mehrere Partitionen aufgeteilt werden konnte. Um diese Partitionen zuzugreifen, müssen Sie ggf. ein zustandslosen Diensts fungiert als Gatewaydienst, der weiß, wie jede Partition basierend auf Partitionsschlüssel zu behandeln.
+Zustandslose und zustandsbehaftete Dienste ergänzen sich gegenseitig. In Abbildung 4-30 können Sie in der rechten Grafik beispielsweise erkennen, dass ein zustandsbehafteter Dienst in mehrere Partitionen aufgeteilt werden kann. Für den Zugriff auf diese Partitionen benötigen Sie einen zustandslosen Dienst, der als Gatewaydienst dient, der weiß, wie die einzelnen Partitionen basierend auf Partitionsschlüsseln adressiert werden.
 
-Zustandsbehaftete Dienste müssen Nachteile. Sie geben ein Maß an Komplexität, die zum horizontalen Skalieren kann. Funktionen, die vom externen Datenbank-Systeme in der Regel implementiert würde muss für Aufgaben wie die Datenreplikation zustandsbehaftete Microservices und Partitionierung-Daten behandelt werden. Dies ist jedoch einer der Bereiche, in denen eine Orchestrator wie [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) mit seiner [statusbehaftete zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) können die meisten – indem vereinfacht die Entwicklung und der Lebenszyklus eines zustandsbehafteten Microservices mithilfe der [zuverlässige Dienste-API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+Zustandsbehaftete Dienste haben einige Nachteile. Sie verursachen ein Maß an Komplexität, das ein horizontales Hochskalieren zur Folge hat. Für Funktionalitäten, die üblicherweise durch externe Datenbanksysteme implementiert würden, müssen bestimmte Aufgaben berücksichtigt werden, wie etwa die Datenreplikation in zustandsbehafteten Microservices und die Datenpartitionierung. Dies ist jedoch einer der Bereiche, in denen ein Orchestrator wie [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) mit seinen [zustandsbehafteten zuverlässigen Diensten](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) am besten geeignet ist, da er die Entwicklung und den Lebenszyklus von zustandsbehafteten Microservices mithilfe der [API für Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) und der [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) vereinfacht.
 
-Andere Microservice-Frameworks, die zustandsbehaftete Dienste, die der Akteur-Muster unterstützen, und, die Fehlertoleranz und die Latenz zwischen Geschäftslogik und Daten verbessern ermöglichen sind Microsoft- [Orleans](https://github.com/dotnet/orleans), von Microsoft Research und [ Akka.NET](http://getakka.net/). Beide Frameworks sind derzeit ihre Unterstützung für Docker verbessern.
+Andere Microserviceframeworks, die zustandsbehaftete Dienste zulassen, die das Actor-Muster unterstützen und die Fehlertoleranz sowie die Wartezeit zwischen Geschäftslogik und Daten verbessern, sind Microsoft [Orleans](https://github.com/dotnet/orleans) von Microsoft Research und [Akka.NET](http://getakka.net/). Bei beiden Frameworks wird derzeit die Unterstützung für Docker verbessert.
 
-Beachten Sie, dass der Docker-Containern selbst zustandslos sind. Wenn Sie einen zustandsbehafteten Dienst implementieren möchten, benötigen Sie eine zusätzliche gemäß den zuvor notierten normative und auf höherer Ebene Frameworks. 
+Beachten Sie, dass Docker-Container selbst zustandslos sind. Wenn Sie einen zustandsbehafteten Dienst implementieren möchten, benötigen Sie eines der bereits erwähnten zusätzlich reglementierenden Frameworks auf höherer Ebene. 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Scalable-available-multi-container-microservice-applications.md) [weiter] (.. /docker-Application-Development-Process/Index.MD)
+[Zurück] (scalable-available-multi-container-microservice-applications.md) [Weiter] (../docker-application-development-process/index.md)

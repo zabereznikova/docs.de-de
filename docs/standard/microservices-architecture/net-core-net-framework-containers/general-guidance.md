@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Richtlinien
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Allgemeine Richtlinien"
+title: Allgemeine Anleitung
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,46 +8,49 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 22dea926e77079e4f543934613ced13a28b2dae6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="general-guidance"></a>Allgemeine Richtlinien
+# <a name="general-guidance"></a>Allgemeine Anleitung
 
-Dieser Abschnitt enthält eine Zusammenfassung der wann .NET Core oder .NET Framework auswählen. Wir bieten ausführliche Informationen zu diesen Optionen in den folgenden Abschnitten.
+Dieser Abschnitt enthält eine Zusammenfassung darüber, wann .NET Core bzw. .NET Framework verwendet werden sollte. In den folgenden Abschnitten werden weitere Informationen dazu bereitgestellt.
 
-Verwenden Sie .NET Core, Linux- oder Windows-Container für die Datenvolumes Docker-Server-Anwendung beim:
+Sie sollten .NET Core mit Linux- oder Windows-Containern für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
 
--   Es bestehen plattformübergreifende Anforderungen. Sie möchten z. B. Linux und Windows-Container verwenden.
+-   Es bestehen plattformübergreifende Anforderungen. Sie beispielsweise Linux- und Windows-Container verwenden möchten
 
--   Ihre Anwendungsarchitektur basiert auf Microservices.
+-   Die Architektur Ihrer Anwendung auf Microservices basiert
 
--   Sie müssen Containern schnell starten und einen geringen Ressourcenbedarf pro höhere Dichte zu erreichen oder die weitere Container pro Einheit Hardware anstreben, um die Kosten zu senken.
+-   Sie Container schnell starten müssen und den Ressourcenbedarf pro Container gering halten möchten, um eine höhere Dichte oder mehr Container pro Hardwareeinheit zu erreichen und Ihre Kosten zu senken
 
-Kurz gesagt, sollten Sie bei der Erstellung neuer .NET Sammelartikeleinheit .NET Core als Standardwahl berücksichtigen. Er weist viele Vorteile und mit dem Container Philosophie und den Stil der Arbeit am besten entspricht.
+Kurz gesagt sollte Ihre Wahl standardmäßig auf .NET Core fallen, wenn Sie neue .NET-Containeranwendungen erstellen. .NET Core weist viele Vorteile auf und entspricht dem Konzept und der Arbeitsweise von Containern am besten.
 
-Ein weiterer Vorteil der Verwendung von .NET Core ist, dass Sie nebeneinander .NET Versionen für Anwendungen, in dem gleichen Computer ausführen können. Dieser Vorteil ist wichtiger für Server oder virtuelle Computer, die nicht-Container verwenden, da der Container die Versionen von .NET isolieren, die die app benötigt. (Solange sie mit dem zugrunde liegenden Betriebssystem kompatibel sind.)
+Ein zusätzlicher Vorteil bei der Verwendung von .NET Core besteht darin, dass Sie verschiedene Versionen von .NET für Anwendungen auf dem gleichen Computer parallel ausführen können. Dieser Vorteil ist wichtiger für Server oder virtuelle Computer, die keine Container verwenden, da durch Container die Versionen von .NET isoliert werden, die für die App erforderlich sind. (Solange diese mit dem zugrunde liegenden Betriebssystem kompatibel sind)
 
-Sollten Sie .NET Framework, mit Windows-Container verwenden, für die Datenvolumes Docker-Server-Anwendung beim:
+Sie sollten .NET Framework mit Windows-Containern für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
 
--   Die Anwendung derzeit verwendet .NET Framework und weist starke Abhängigkeiten von Windows.
+-   Ihre Anwendung derzeit .NET Framework verwendet und starke Abhängigkeiten von Windows aufweist
 
--   Sie müssen Windows-APIs verwenden, die von .NET Core nicht unterstützt werden.
+-   Sie Windows-APIs verwenden müssen, die von .NET Core nicht unterstützt werden
 
--   Sie müssen .NET Bibliotheken von Drittanbietern oder NuGet-Pakete, die nicht für die .NET Core verfügbar sind.
+-   Sie .NET-Bibliotheken von Drittanbietern oder NuGet-Pakete verwenden müssen, die für .NET Core nicht verfügbar sind
 
-Mithilfe von .NET Framework auf Docker kann Ihre bereitstellungsumgebung verbessern, indem Sie Bereitstellungsprobleme minimieren. Dies [ *"lift- and -shift-Szenario* ](https://aka.ms/liftandshiftwithcontainersebook) ist wichtig für ältere Anwendungen, die ursprünglich mit herkömmlichen .NET Framework entwickelt wurden, wie ASP.NET Web Forms, MVC-apps oder WCF (web containerizing Windows Communication Foundation)-Dienste.
+Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbessern, indem Bereitstellungsprobleme reduziert werden. Dieses [*Lift & Shift-Szenario*](https://aka.ms/liftandshiftwithcontainersebook) ist wichtig für das Containerisieren von veralteten Anwendungen, die ursprünglich mit dem herkömmlichen .NET Framework entwickelt wurden, z.B. mit ASP.NET WebForms, MVC-Web-Apps oder WCF-Diensten (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **e-Book: Aktualisieren von vorhandenen .NET Framework-Anwendungen mit Azure und Windows-Containern**
+-   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (E-Book: Modernisieren von vorhandenen .NET Framework-Anwendungen mit Azure- und Windows-Containern)**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Beispiel-apps: Modernisierung legacy ASP.NET Web-Apps mithilfe von Windows-Containern**
+-   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (Net-Core-Container-scenarios.md)
+[Zurück] (index.md) [Weiter] (net-core-container-scenarios.md)

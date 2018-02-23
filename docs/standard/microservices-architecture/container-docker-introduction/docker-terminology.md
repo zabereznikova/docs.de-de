@@ -1,6 +1,6 @@
 ---
 title: Docker-Terminologie
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Docker-Terminologie"
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,46 +8,49 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 885b1fbd3369dec54ebde21a5378630c764f852d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 342b4443470053d81534d4de1d56d2797798c746
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
-In diesem Abschnitt werden die Begriffe und Definitionen, denen Sie mit vertraut sein sollten, bevor die erste tiefer in Docker aufgelistet. Weitere Definitionen finden Sie das umfangreiche [Glossar](https://docs.docker.com/v1.11/engine/reference/glossary/) von Docker bereitgestellt.
+In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen Sie vertraut sein sollten, bevor Sie sich ausführlicher mit Docker beschäftigen. Weitere Definitionen finden Sie im umfangreichen, von Docker bereitgestellten [Glossar](https://docs.docker.com/glossary/).
 
-**Container-Abbild**: ein Paket mit den Abhängigkeiten und die benötigten Informationen zum Erstellen eines Containers. Ein-Image enthält alle Abhängigkeiten (z. B. Frameworks) sowie die Bereitstellung und Ausführung der Konfiguration durch eine containerlaufzeit verwendet werden. Mehrere zugrundeliegenden Images, die übereinander zum Bilden des Containers Filesystem Ebenen sind in der Regel ein Bild abgeleitet. Ein Image ist unveränderlich, nachdem es erstellt wurde.
+**Containerimage**: Ein Paket mit allen benötigten Abhängigkeiten und Informationen zum Erstellen eines Containers. Ein Image enthält alle Abhängigkeiten (z.B. Frameworks) sowie die Bereitstellung und Ausführung der Konfiguration, die von einer Containerruntime verwendet werden. In der Regel wird ein Image aus mehreren zugrundeliegenden Images abgeleitet, die übereinander liegen und das Dateisystem des Containers bilden. Ein Image ist unveränderlich, nachdem es erstellt wurde.
 
-**Container**: eine Instanz des Docker-Images. Ein Container stellt die Ausführung einer einzelnen Anwendung, Prozess oder Dienst dar. Er besteht aus den Inhalt des ein Docker Bild, eine ausführungsumgebung und einen standardmäßigen Satz von Anweisungen. Bei einen Dienst zu skalieren, erstellen Sie mehrere Instanzen eines Containers aus dem gleichen Image. Oder Batchauftrag kann mehrere Container aus dem gleichen Bild, das Übergeben von anderen Parametern für jede Instanz erstellen.
+**Container**: Eine Instanz eines Docker-Images. Ein Container stellt die Ausführung einer einzelnen Anwendung, eines Prozesses oder Diensts dar. Er besteht aus den Inhalten eines Docker-Images, einer Ausführungsumgebung und mehreren Standardanweisungen. Beim Skalieren eines Diensts erstellen Sie mehrere Instanzen eines Containers aus dem gleichen Image. Alternativ kann ein Batchauftrag mehrere Container aus dem gleichen Image erstellen und dabei verschiedene Parameter an jede Instanz übergeben.
 
-**Tag**: eine Markierung oder eine Bezeichnung, die Sie können für Bilder gelten, damit verschiedene Bilder oder Versionen desselben Images (abhängig von der Versionsnummer oder die zielumgebung) identifiziert werden können.
+**Tag**: Eine Markierung oder eine Bezeichnung, die Sie auf Images anwenden können, damit verschiedene Images oder Versionen desselben Images (abhängig von der Versionsnummer oder der Zielumgebung) identifiziert werden können.
 
-**Dockerfile-Datei**: eine Textdatei, die Anweisungen zum Erstellen eines Images von Docker enthält.
+**Docker-Datei**: Eine Textdatei, die Anweisungen zum Erstellen eines Docker-Images enthält.
 
-**Erstellen Sie**: die Aktion zum Erstellen eines containerimages auf Grundlage der Informationen und Kontext durch die dockerfile-Datei sowie weitere Dateien in den Ordner, in dem das Image erstellt wird. Sie können Bilder mit dem Befehl "Docker Docker Build" erstellen.
+**Build**: Die Aktion zum Erstellen eines Containerimages auf der Grundlage der Informationen und des Kontexts der Docker-Datei sowie weiteren Dateien im Ordner, in dem das Image erstellt wird. Sie können Images mit dem Docker-Befehl „docker build“ erstellen.
 
-**Repository (Repository)**: eine Auflistung von zugehörigen Docker-Images, mit der Bezeichnung mit dem Tag, der die Version des Bilds angibt. Einige Repositorys enthalten mehrere Varianten für ein bestimmtes Abbild, z. B. ein Image mit SDKs (größere), ein Bild enthält nur Laufzeiten (heller) usw. an. Diese Varianten können mit Tags markiert werden. Einem einzelnen Repository kann Plattform Varianten, z. B. ein Linux-Image und ein Windows-Image enthalten.
+**Repository**: Eine Auflistung von zugehörigen Docker-Images mit dem Tag, das die Version des Images angibt. Einige Repositorys enthalten mehrere Varianten eines bestimmtes Images, z.B. ein Image mit SDKs (schwerer), ein Image nur mit Runtimes (leichter), usw. Diese Varianten können mit Tags markiert werden. Ein einzelnes Repository kann Plattformvarianten enthalten, z.B. ein Linux-Image und ein Windows-Image.
 
-**Registrierung**: ein Dienst, den Zugriff auf Repositorys bereitstellt. Die Standard-Registrierung für die meisten öffentliche Images ist [Docker Hub](https://hub.docker.com/) (im Besitz von Docker in einer Organisation enthalten). Eine Registrierung enthält in der Regel über mehrere Teams Repositorys. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure-Container-Registrierung ist ein weiteres Beispiel.
+**Registrierung**: Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Docker Hub**: einer öffentlichen Registrierung zum Hochladen von Images und mit ihnen arbeiten. Docker Hub bietet Docker Bild zu hosten, öffentlichen oder privaten Registrierungen Buildtrigger und Web-Hooks und Integration in GitHub und Bitbucket.
+**Docker-Hub**: Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 
-**Azure Containerregistrierung**: eine öffentliche Ressource für die Arbeit mit Docker-Images und seiner Komponenten in Azure. Dies bietet eine Registrierung ist in der Nähe Ihrer Bereitstellungen in Azure und die Steuerung zugreifen, wodurch es möglich ist, verwenden Sie die Azure Active Directory-Gruppen und Berechtigungen.
+**Azure Container Registry**: Eine öffentliche Ressource zur Arbeit mit Docker-Images und deren Komponenten in Azure. Dies stellt eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure zur Verfügung. Sie erhalten somit Kontrolle über den Zugriff und können Ihre Azure Active Directory-Gruppen und -Berechtigungen verwenden.
 
-**Docker Trusted Registry (DTR)**: ein Docker Registrierung-Dienst (von Docker), werden kann, installiert lokal, sodass sie innerhalb der Organisation Datencenter und Netzwerk aktiv ist. Es ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist Bestandteil des Produkts Docker Datacenter. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR)**: Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Er ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker-Community Edition (CE)**: Entwicklungstools für Windows und MacOS zum Erstellen, ausführen und Testen von Containern lokal. Docker CE für Windows bietet entwicklungsumgebungen für Linux und Windows-Containern. Die Linux-Docker-Host unter Windows basiert auf einer [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx) virtuellen Computer. Der Host für die Windows-Containern basiert direkt unter Windows. Docker CE für Mac basiert auf der Apple-Hypervisor-Framework und die [Xhyve Hypervisor](https://github.com/mist64/xhyve), Docker-Toolbox auf die Oracle stellt auf einer Linux-Docker-Host-VM auf Mac OS x Docker-CE für Windows und für Mac ersetzt VirtualBox.
+**Docker Community Edition (CE)**: Entwicklungstools für Windows und macOS zum lokalen Erstellen, Ausführen und Testen von Containern. Docker CE für Windows bietet Entwicklungsumgebungen für Linux- und Windows-Container. Der Linux-Docker-Host auf Windows basiert auf einer [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx)-VM. Der Host für die Windows-Container basiert direkt auf Windows. Docker CE für Mac basiert auf dem Apple Hypervisor-Framework und dem [Xhyve-Hypervisor](https://github.com/mist64/xhyve), der eine Linux-Docker-Host-VM auf Mac OS X bereitstellt. Docker CE für Windows und für Mac ersetzt Docker Toolbox, das auf Oracle VirtualBox basiert.
 
-**Docker Enterprise Edition (EE)**: eine Enterprise-Skalierung-Version des Docker-Tools für Linux und Windows-Entwicklung.
+**Docker Enterprise Edition (EE)**: Eine Version der Docker-Tools für Unternehmen für die Linux- und Windows-Entwicklung.
 
-**Verfassen**: ein Befehlszeilentool und YAML Dateiformat mit Metadaten zum Definieren und Ausführen von Anwendungen mit mehreren Container. Sie definieren eine einzelne Anwendung basierend auf mehrere Abbilder mit einer oder mehreren .yml-Dateien, die Werte abhängig von der Umgebung überschreiben können. Nachdem Sie die Definitionen erstellt haben, können Sie die gesamte mit mehreren Steuerelementcontainer-Anwendung mit einem einzigen Befehl bereitstellen (Docker-verfassen oben), der einen Container pro Bild auf dem Docker-Host erstellt.
+**Compose**: Ein Befehlszeilentool und YAML-Dateiformat mit Metadaten zum Definieren und Ausführen von Anwendungen mit mehreren Container. Sie definieren eine einzelne Anwendung basierend auf mehreren Images mit einer oder mehreren .yml-Dateien, die Werte abhängig von der Umgebung überschreiben können. Nachdem Sie die Definitionen erstellt haben, können Sie die gesamte Anwendung mit mehreren Containern mit einem einzigen Befehl (docker-compose up) bereitstellen, der einen Container pro Image auf dem Docker-Host erstellt.
 
-**Cluster**: eine Auflistung von Docker-Hosts, die verfügbar gemacht, als handele es sich um einen einzelnen virtuellen Docker-Host, sodass die Anwendung werden, um mehrere Instanzen der Dienste skaliert kann auf mehreren Hosts im Cluster verteilt. Docker-Clustern können mit Docker Containerhostclustern, Mesosphere DC/OS, Kubernetes und Azure Service Fabric erstellt werden. (Wenn Sie Docker Containerhostclustern für die Verwaltung von einem Cluster verwenden, in der Regel finden Sie in den Cluster als ein *containerhostclustern* anstelle eines Clusters.)
+**Cluster**: Eine Sammlung von zur Verfügung gestellten Docker-Hosts, als handele es sich um einen einzelnen, virtuellen Docker-Host, sodass die Anwendung mehrere Instanzen der Dienste skalieren kann, die auf mehrere Hosts im Cluster verteilt sind. Docker-Cluster können mit Docker Swarm, Mesosphere DC/OS, Kubernetes und Azure Service Fabric erstellt werden. (Wenn Sie Docker Swarm zur Verwaltung eines Clusters verwenden, verweisen Sie in der Regel auf das Cluster als *Schwarm* anstelle eines Clusters.)
 
-**Orchestrator**: ein Tool, das vereinfacht die Verwaltung von Clustern und Docker-Hosts. Orchestrators ermöglichen es Ihnen, ihre Bilder, die Container und die Hosts über eine Befehlszeilenschnittstelle (CLI) zu verwalten oder eine grafische Benutzeroberfläche. Sie können containernetzwerk-Funktionen, Konfigurationen, Lastenausgleich, Dienstermittlung, hohe Verfügbarkeit, Konfiguration des Docker-Hosts und mehr verwalten. Ein Orchestrator ist verantwortlich für ausgeführt sowie die Verteilung, Skalierung und Reparatur Arbeitslasten über eine Auflistung von Knoten. Orchestrator-Produkte werden in der Regel die gleichen Produkte, die Clusterinfrastruktur, z. B. Mesosphere DC/OS, Kubernetes Docker Containerhostclustern und Azure Service Fabric bereitstellen.
+**Orchestrator**: Ein Tool, das die Verwaltung von Clustern und Docker-Hosts vereinfacht. Orchestratoren ermöglichen es Ihnen, Ihre Images, Container und Hosts über eine Befehlszeilenschnittstelle (CLI) oder eine grafische Benutzeroberfläche zu verwalten. Sie können u.a. Containernetzwerke, Konfigurationen, den Lastenausgleich, die Dienstermittlung, die Hochverfügbarkeit und die Konfiguration des Docker-Hosts verwalten. Ein Orchestrator ist verantwortlich für die Ausführung, Verteilung, Skalierung und Reparatur von Workloads in einer Knotensammlung. Orchestratorprodukte sind in der Regel die gleichen Produkte, die Clusterinfrastruktur wie Mesosphere DC/OS, Kubernetes, Docker Swarm und Azure Service Fabric bereitstellen.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Docker-defined.md) [weiter] (Docker-Container-Images-registries.md)
+[Zurück] (docker-defined.md) [Weiter] (docker-containers-images-registries.md)

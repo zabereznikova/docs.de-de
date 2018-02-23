@@ -1,6 +1,6 @@
 ---
-title: Welche Ziel mit .NET Container des Betriebssystems
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Welche Ziel mit .NET Container des Betriebssystems"
+title: Mit .NET-Containern angezieltes Betriebssystem
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Mit .NET-Containern angezieltes Betriebssystem"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,39 +8,42 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 828ccb5e7a76f9419e80793b6cb3a6ba24f358cf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef7a21efa23be3a5181f08066a093abbb915c20f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="what-os-to-target-with-net-containers"></a>Welche Ziel mit .NET Container des Betriebssystems
+# <a name="what-os-to-target-with-net-containers"></a>Mit .NET-Containern angezieltes Betriebssystem
 
-Angesichts die Vielfalt von Docker und die Unterschiede zwischen .NET Framework und .NET Core unterstützten Betriebssysteme, sollten Sie auf einem bestimmten Betriebssystem und bestimmten Versionen, je nachdem das Framework verwendeten abzielen. 
+Durch die Vielzahl der von Docker unterstützten Betriebssysteme und die Unterschiede zwischen .NET Framework und .NET Core sollten Sie abhängig von dem Framework, das Sie verwenden, ein bestimmtes Betriebssystem und bestimmte Versionen anzielen. 
 
-Für Windows können Sie Windows Server Core oder Windows Nano Server verwenden. Diese Windows-Versionen bieten unterschiedliche Eigenschaften (IIS unter Windows Server Core im Vergleich zu einem selbst gehosteten Webserver wie Kestrel in Nano Server), die jeweils möglicherweise von .NET Framework oder .NET Core benötigt wird. 
+Für Windows können Sie Windows Server Core oder Windows Nano Server verwenden. Diese Windows-Versionen bieten unterschiedliche Eigenschaften (IIS in Windows Server Core im Vergleich zu einem selbstgehosteten Webserver wie Kestrel in Nano Server), die jeweils für .NET Framework oder .NET Core erforderlich sind. 
 
-Für Linux sind-Distributionen mehrere verfügbar und in der offiziellen .NET Docker-Images (z. B. Debian) unterstützten.
+Für Linux sind mehrere Distributionen (z.B. Debian) verfügbar und werden in offiziellen .NET Docker-Images unterstützt.
 
-In Abbildung 3 – 1 sehen Sie die mögliche Version des Betriebssystems abhängig von der .NET Framework verwendet.
+In Abbildung 3-1 wird die mögliche Betriebssystemversion in Abhängigkeit vom verwendeten .NET Framework dargestellt.
 
 ![](./media/image1.png)
 
-**Abbildung 3 minus 1.** Abhängig von Versionen von .NET Framework als Ziel-Betriebssysteme
+**Abbildung 3-1.** In Abhängigkeit der Version von .NET Framework anzuzielende Betriebssysteme
 
-Sie können auch Ihr eigenes Image von Docker in Fällen erstellen, eine andere Linux-Distribution verwendet werden soll, oder ein Bild mit Versionen, die nicht von Microsoft bereitgestellt werden soll. Sie können z. B. ein Image erstellen, mit ASP.NET Core auf herkömmliche .NET Framework und Windows Server Core eine nicht damit üblichen Szenario für Docker ist ausgeführt wird.
+Sie können ebenfalls Ihr eigenes Docker-Image erstellen, wenn Sie eine andere Linux-Distribution verwenden oder wenn Sie ein Image mit nicht von Microsoft bereitgestellten Versionen verwenden möchten. Sie könnten beispielsweise ein Image erstellen, bei dem ASP.NET Core unter dem herkömmlichen .NET Framework und Windows Server Core ausgeführt wird. Dabei handelt es sich um ein für Docker ungewöhnliches Szenario.
 
-Wenn Sie die Dockerfile-Datei den Namen des Abbilds hinzugefügt haben, können Sie auswählen, das Betriebssystem und Version je nach Tag, das Sie, das wie in den folgenden Beispielen verwenden:
+Wenn Sie den Namen des Images zu Ihrer Dockerfile-Datei hinzufügen, können Sie das Betriebssystem und die Version wie in den folgenden Beispielen dargestellt in Abhängigkeit vom verwendeten Tag auswählen:
 
--   Microsoft /**Dotnet:2.0.0-Runtime-Jessie**
+-   microsoft/**dotnet:2.0.0-runtime-jessie**
 
         .NET Core 2.0 runtime-only on Linux
 
--   Microsoft /**Dotnet:2.0.0-Runtime-Nanoserver-1709** 
+-   microsoft/**dotnet:2.0.0-runtime-nanoserver-1709** 
 
         .NET Core 2.0 runtime-only on Windows Nano Server (Windows Server 2016 Fall Creators Update version 1709)
 
--   Microsoft /**Aspnetcore:2.0**
+-   microsoft/**aspnetcore:2.0**
     
         .NET Core 2.0 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
         The aspnetcore image has a few optimizations for ASP.NET Core. 
@@ -50,4 +53,4 @@ Wenn Sie die Dockerfile-Datei den Namen des Abbilds hinzugefügt haben, können 
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Container-Framework-Choice-factors.md) [weiter] (offiziellen-Net-Docker-images.md)
+[Zurück] (container-framework-choice-factors.md) [Weiter] (official-net-docker-images.md)

@@ -1,6 +1,6 @@
 ---
-title: "CQRS anwendet und CQS Ansätze in einer DDD Microservice in eShopOnContainers"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | CQRS anwendet und CQS Ansätze in einer DDD Microservice in eShopOnContainers"
+title: "Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,63 +8,66 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: a2c4429a75ca47d4fbcde868b95e76bc65ea2bef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>CQRS anwendet und CQS Ansätze in einer DDD Microservice in eShopOnContainers
+# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
-Der Entwurf von der Reihenfolge Microservice Anwendungs-eShopOnContainers Verweis basiert auf CQRS-Prinzipien. Allerdings verwendet er der einfachste Ansatz, nämlich die einfach trennen die Abfragen mit den Befehlen und zum beide Aktionen mithilfe der gleiche Datenbank.
+Die Struktur des Microservices für Bestellungen in der Referenzanwendung „eShopOnContainers“ basiert auf CQRS-Prinzipien. Allerdings wird darin der einfachste Ansatz verwendet, bei dem Abfragen von Befehlen getrennt werden und dieselbe Datenbank für beide Aktionen dient.
 
-Die wichtigste Komponente von diesen Mustern und der wichtige Punkt hier besteht darin, dass Abfragen Idempotent sind: unabhängig davon, wie oft Sie Abfragen ein Systems zu den Status des Systems nicht ändert auch können Sie ein Datenmodell verschiedene "Lesen" als die Transaktionslogik "Schreibvorgängen" Domäne zu modellieren, obwohl die Reihenfolge Microservices derselben Datenbank verwendet wird. Daher ist dies einen vereinfachten Ansatz ein CQRS.
+Das Wichtigste daran ist, dass Abfragen idempotent sind: Egal wie oft Sie ein System abfragen, der Zustand des Systems ändert sich nicht, selbst wenn Sie ein anderes Datenmodell für Lesevorgänge verwenden als das Domänenmodell für Schreibvorgänge der Transaktionslogik, obwohl der Microservice für Bestellungen dieselbe Datenbank verwendet. Daher ist es ein vereinfachter CQRS-Ansatz.
 
-Befehle, die Transaktionen und Datenupdates auslösen, andererseits, Änderungsstatus im System an. Mit Befehlen, müssen Sie darauf achten, dass bei denen Komplexität und Geschäftsregeln jemals ändern. Dies ist die, wenn Sie DDD-Techniken, um ein besseres modellierten System verfügen anwenden möchten.
+Befehle, die Transaktionen und Datenupdates auslösen, ändern wiederum den Zustand im System. Mit Befehlen müssen Sie im Zusammenhang mit Komplexität und sich kontinuierlich ändernden Geschäftsregeln sorgfältig umgehen. An dieser Stelle können Sie DDD-Techniken anwenden, um das System besser zu modellieren.
 
-In diesem Handbuch dargestellten DDD Muster sollte nicht universell angewendet werden. Sie führen Sie Einschränkungen auf den Entwurf. Diese Einschränkungen bieten Vorteile, z. B. höherer Qualität im Laufe der Zeit vor allem in Befehlen und anderen Code, den Systemstatus ändert. Diese Einschränkungen wird jedoch Komplexität mit weniger Vorteile zum Lesen und Abfragen von Daten hinzufügen.
+Die in diesem Leitfaden vorgestellten DDD-Muster sollten nicht universell angewendet werden, denn sie wirken sich negativ auf Ihren Entwurf aus. Diese Einschränkungen haben zwar Vorteile wie höhere Qualität im Laufe der Zeit, vor allem bei Befehlen und anderen Codezeilen, die den Systemstatus ändern, erhöhen jedoch auch die Komplexität, was Nachteile für das Lesen und Abfragen von Daten hat.
 
-Eine solche Muster ist das Aggregieren Muster wir mehr in späteren Abschnitten untersuchen. Kurz gesagt behandeln in das Muster für aggregieren Sie zahlreiche Domänenobjekte als einzelne Einheit aufgrund ihrer Beziehung in der Domäne. Vorteile dieses Muster in Abfragen können Sie nicht immer erhalten; Sie können die Komplexität der Abfragelogik erhöhen. Für schreibgeschützte Abfragen erhalten Sie nicht die Vorteile mit mehreren Objekten als einer einzelnen Gesamtverstärkung behandelt werden. Sie erhalten nur die Komplexität.
+Ein solches Muster ist das Aggregatmuster, das wir in späteren Abschnitten kennenlernen. Beim Aggregatmuster werden viele Domänenobjekte aufgrund ihrer Beziehung zur Domäne als eine einzelne Einheit behandelt. In Abfragen ist dieses Muster nicht immer vorteilhaft, da es die Komplexität der Abfragelogik verkomplizieren kann. Bei schreibgeschützten Abfragen werden viele Objekte nicht als einzelnes Aggregat behandelt. In diesem Fall erhöht sich nur die Komplexität.
 
-Wie in Abbildung 9 – 2 dargestellt, empfiehlt, diese Anleitung DDD Muster nur im Bereich Transaktions-/Updates von Ihrem Microservice (d. h., wie durch Befehle ausgelöst). Abfragen können einen einfacheren Ansatz folgen und sollte von Befehlen, die nach einem CQRS-Ansatz getrennt werden.
+Wie in Abbildung 9-2 dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Bereich der Transaktionen/Updates Ihres Microservices zu verwenden, d.h. in dem Bereich, in dem Befehle ausgelöst werden. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
 
-Implementieren die Seite"Abfragen", können Sie zwischen viele Ansätze, die aus Ihrem ausgestattete ORM wie EF Core, AutoMapper Projektionen, gespeicherte Prozeduren, Sichten, materialisierte Sichten oder eine micro-ORM auswählen.
+Bei der Implementierung der Abfrageseite können Sie zwischen vielen Ansätzen wählen, z.B. ein vollständiger ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder ein Mikro-ORM.
 
-In diesem Handbuch und im eShopOnContainers (insbesondere die Reihenfolge Microservice), die wir gerade Abfragen, die mit einem Micro implementieren möchten, wie ORM [dapper, durch](https://github.com/StackExchange/dapper-dot-net). Dadurch können Sie jede Abfrage, die basierend auf der SQL-Anweisungen, um die optimale Leistung Dank eine light-Framework mit äußerst wenig Aufwand abrufen zu implementieren.
+In diesem Leitfaden und in eShopOnContainers (insbesondere beim Microservice für Bestellungen) implementieren wir direkte Abfragen mit dem Mikro-ORM [Dapper](https://github.com/StackExchange/dapper-dot-net). So können Sie jede Abfrage auf SQL-Anweisungen basierend implementieren, um aufgrund des schlanken Frameworks mit äußerst wenig Mehraufwand eine optimale Leistung zu erzielen.
 
-Beachten Sie, dass wenn Sie diesen Ansatz verwenden, alle Updates für Ihr Modell, die beeinflussen, wie die Entitäten in einer SQL­Datenbank beibehalten werden auch separate für Updates von dapper, durch oder einem anderen separaten (nicht EF) Methoden zum Abfragen verwendeten SQL-Abfragen erforderlich ist.
+Hinweis: Wenn Sie so vorgehen, erfordern alle Updates für das Modell, die in einer SQL-Datenbank aufbewahrt werden, auch separate Updates für SQL-Abfragen, die von Dapper oder anderen Abfrageansätzen (nicht EF) verwendet werden.
 
-## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS und DDD Muster sind nicht auf oberster Ebene Architekturen
+## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS und DDD-Muster sind keine Architekturen oberster Ebene
 
-Es wichtig zu verstehen, CQRS und die meisten DDD-Muster (z. B. DDD Ebenen oder ein Domänenmodell mit Aggregaten) sind nicht architektonische Stile, sondern nur Architekturmuster. Microservices, SOA und ereignisgesteuerte-Architektur (EDA) sind Beispiele für Stile Architektur auf. Sie beschreiben ein System von vielen Komponenten, wie viele Microservices. CQRS und DDD Muster beschreiben etwas in einem einzigen System oder einer Komponente. In diesem Fall etwas innerhalb einer Microservice.
+CQRS und die meisten DDD-Muster (z.B. DDD-Ebenen oder ein Domänenmodell mit Aggregaten) sind keine Architekturstile, sondern nur Architekturmuster. Microservices, SOA und ereignisgesteuerte Architekturen (Event-Driven Architecture, EDA) sind Beispiele für Architekturstile, denn Sie beschreiben ein System mit vielen Komponenten, z.B. viele Microservices. CQRS und DDD-Muster beschreiben etwas innerhalb eines einzelnen Systems oder einer einzelnen Komponente, in diesem Fall etwas in einem Microservice.
 
-Unterschiedliche Muster außerdem verschiedenen begrenzt Kontexten (BCs). Unterschiedliche Aufgaben haben, und für andere Projektmappen führt. Wichtig ist dabei, die durch das Erzwingen des demselben Musters, das überall zu einem Fehler führt. Verwenden Sie nicht überall CQRS und DDD-Muster. Viele Subsysteme, BCs oder Microservices sind einfacher und leichter mithilfe einfache CRUD-Dienste oder ein anderer Ansatz implementiert werden kann.
+Unterschiedliche Kontextgrenzen (Bounded Contexts, BCs) wenden außerdem verschiedene Muster an. Sie haben unterschiedliche Aufgaben, und das führt häufig zu unterschiedlichen Lösungen. Wenn überall dasselbe Muster erzwungen wird, führt das jedoch zu einem Fehler. Daher sollten Sie dies auf keinen Fall tun. Viele Teilsysteme, BCs oder Microservices sind einfacher und können leichter mithilfe einfacher CRUD-Dienste oder einer anderen Lösung implementiert werden kann.
 
-Es ist nur eine Anwendungsarchitektur: die Architektur der System- oder End-to-End-Anwendung entwerfen (z. B. die Microservices-Architektur). Allerdings gibt des Entwurfs des einzelnen begrenzt, die den Kontext oder Microservice in dieser Anwendung eigene vor-und Nachteile und interne entwurfsentscheidungen auf Ebene Muster Architektur. Versuchen Sie nicht die gleichen architektonische Muster wie CQRS oder DDD überall anwenden.
+Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End-to-End-Anwendung, die Sie gerade entwerfen (z.B. die Microservicesarchitektur). Der Entwurf der einzelnen Kontextgrenzen oder Microservices in dieser Anwendung spiegelt die eigenen Vor-und Nachteile und die interne Entwurfsentscheidungen auf Ebene der Musterarchitektur wider. Wenden Sie auf keinen Fall überall dieselben Architekturmuster wie CQRS oder DDD an.
 
 ####  <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **Martin Fowler. CQRS**
     [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young. CQS im Vergleich zu CQRS**
+-   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Dokumente**
+-   **Greg Young. CQRS Documents (CQRS-Dokumente)**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, Aufgabe basierend Benutzeroberflächen und Ereignis Sourcing**
+-   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, auf Aufgaben basierende Benutzeroberflächen und Ereignis-Sourcing)**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan. Es wird erläutert CQRS**
+-   **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Ereignis-Quellentnahme (ES)**
+-   **Event-Sourcing (ES)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Apply-simplified-microservice-cqrs-ddd-patterns.md) [weiter] (Cqrs Microservice reads.md)
+[Zurück] (apply-simplified-microservice-cqrs-ddd-patterns.md) [Weiter] (cqrs-microservice-reads.md)

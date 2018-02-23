@@ -1,6 +1,6 @@
 ---
-title: "Verwendung von Azure Key Vault zum Schützen von geheimen Schlüsseln zum Zeitpunkt der Produktion"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Verwendung von Azure Key Vault zum Schützen von geheimen Schlüsseln zum Zeitpunkt der Produktion"
+title: Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit"
 keywords: Docker, Microservices, ASP.NET, Container
 author: mjrousos
 ms.author: wiwagn
@@ -8,32 +8,35 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7f922997e8d0c63e206cd68f4efda14985c86b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwendung von Azure Key Vault zum Schützen von geheimen Schlüsseln zum Zeitpunkt der Produktion
+# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 
-Geheime Schlüssel als Umgebungsvariablen gespeichert oder vom Tool geheimen Manager sind weiterhin lokal gespeichert und unverschlüsselt auf dem Computer. Ist eine sicherere Option zum Speichern von geheimen Schlüsseln [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), stellt einen sicheren, zentralen Speicherort zum Speichern von Schlüsseln und geheimen Schlüsseln.
+Geheimnisse, die als Umgebungsvariablen oder vom Secret Manager-Tool gespeichert werden, werden weiterhin lokal und unverschlüsselt auf dem Computer gespeichert. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) ist eine sicherere Option zum Speichern von Geheimnissen, die einen sicheren und zentralen Speicherort für Schlüssel und Geheimnisse bietet.
 
-Das Paket Microsoft.Extensions.Configuration.AzureKeyVault kann es sich um eine ASP.NET Core-Anwendung zum Lesen von Konfigurationsinformationen aus Azure Key Vault. Um mithilfe von geheimen Daten aus einem Azure-Schlüsseltresor zu starten, gehen Sie folgendermaßen vor:
+Das Paket Microsoft.Extensions.Configuration.AzureKeyVault erlaubt einer ASP.NET Core-Anwendung, die Konfigurationsinformationen von Azure Key Vault auszulesen. Führen Sie die folgenden Schritte aus, um mit der Verwendung von Geheimnissen aus Azure Key Vault zu beginnen:
 
-Registrieren Sie zuerst die Anwendung als eine Azure AD-Anwendung. (Zugriff auf wichtige Tresore wird von Azure Active Directory verwaltet.) Dies kann über das Azure-Verwaltungsportal erfolgen.
+Registrieren Sie zunächst Ihre Anwendung als eine Azure AD-Anwendung. (Der Zugriff auf Schlüsseltresore wird von Azure AD verwaltet.) Dies kann über das Azure-Verwaltungsportal erfolgen.
 
-Auch wenn Sie Ihre Anwendung zur Authentifizierung ein Zertifikat und ein Kennwort oder Client-Geheimnis verwenden möchten, können Sie die [neu AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) PowerShell-Cmdlet. Das Zertifikat, das Sie mit Azure Key Vault registrieren benötigt nur mit Ihrem öffentlichen Schlüssel. (Die Anwendung wird den privaten Schlüssel verwenden.)
+Wenn Sie hingegen möchten, dass Ihre Anwendung nicht mit einem Kennwort oder einem Clientgeheimnis authentifiziert wird, sondern mit einem Zertifikat, können Sie das PowerShell-Cmdlet [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) verwenden. Das Zertifikat, das Sie mit Azure Key Vault registrieren, benötigt nur Ihren öffentlichen Schlüssel. (Ihre Anwendung verwendet den privaten Schlüssel.)
 
-Zweitens gewähren Sie dem registrierten Anwendung-Zugriff auf den schlüsseltresor, indem Sie einen neuen Dienstprinzipal zu erstellen. Hierzu können Sie mit den folgenden PowerShell-Befehlen:
+Gewähren Sie zudem der registrierten Anwendung Zugriff auf den Schlüsseltresor, indem Sie einen neuen Dienstprinzipal erstellen. Verwenden Sie hierzu die folgenden PowerShell-Befehle:
 
 ```powershell
 $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
 Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
 ```
 
-Schließen Sie im dritten schlüsseltresor als eine Konfigurationsquelle in Ihrer Anwendung, durch Aufrufen der Erweiterungsmethode IConfigurationBuilder.AddAzureKeyVault, bei der Erstellung einer IConfigurationRoot-Instanz. Beachten Sie, dass bei AddAzureKeyVault Aufrufen die Anwendungs-ID, die registriert und den Zugriff auf den schlüsseltresor in den vorherigen Schritten angegeben wurde.
+Schließen Sie dann den Schlüsseltresor als Konfigurationsquelle in Ihre Anwendung ein, indem Sie die Erweiterungsmethode „IConfigurationBuilder.AddAzureKeyVault“ aufrufen, wenn Sie eine IConfigurationRoot-Instanz erstellen. Beachten Sie, dass das Aufrufen von „AddAzureKeyVault“ die Anwendungs-ID benötigt, die in den vorherigen Schritten registriert wurde und den Zugriff auf den Schlüsseltresor erhalten hat.
 
-  Derzeit unterstützen .NET Standard und .NET Core beim Abrufen von Konfigurationsinformationen aus Azure Key Vault mithilfe einer Client-ID und den geheimen Clientschlüssel. .NET Framework-Anwendungen können eine Überladung der IConfigurationBuilder.AddAzureKeyVault verwenden, die ein Zertifikat anstelle der geheime Clientschlüssel akzeptiert. Verfassung dieses Dokuments arbeiten ist [läuft](https://github.com/aspnet/Configuration/issues/605) auf diese Überladung in standardmäßigen .NET und .NET Core verfügbar zu machen. Bis die AddAzureKeyVault-Überladung, die akzeptiert, dass ein Zertifikat verfügbar ist, können ASP.NET Core Anwendungen Azure Key Vault mit Clientzertifikaten basierende Authentifizierung zugreifen explizit Erstellen eines KeyVaultClient-Objekts, wie im folgenden Beispiel gezeigt:
+  Derzeit unterstützen .NET Standard und .NET Core das Abrufen der Konfigurationsinformationen aus Azure Key Vault mithilfe einer Client-ID und dem geheimen Clientschlüssel. .NET Framework-Anwendungen können eine Überladung von „IConfigurationBuilder.AddAzureKeyVault“ verwenden, die ein Zertifikat anstelle des geheimen Clientschlüssels verwendet. Während dieses Dokument verfasst wird, [wird daran gearbeitet](https://github.com/aspnet/Configuration/issues/605), diese Überladung für .NET Standard und .NET Core verfügbar zu machen. Bis die AddAzureKeyVault-Überladung verfügbar ist, die ein Zertifikat akzeptiert, können ASP.NET Core-Anwendungen auf Azure Key Vault mit zertifikatbasierter Authentifizierung zugreifen, indem wie in folgendem Beispiel gezeigt wird ein KeyVaultClient-Objekt explizit erstellt wird:
 
 ```csharp
 // Configure Key Vault client
@@ -58,24 +61,24 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
         new DefaultKeyVaultSecretManager());
 ```
 
-In diesem Beispiel stammen der Aufruf von AddAzureKeyVault am Ende der konfigurationsanbieterregistrierung. Es ist eine bewährte Methode Azure Key Vault als der letzte Konfigurationsanbieter registrieren, damit er eine Gelegenheit Konfigurationswerte aus vorherigen Anbieter überschrieben hat, und keine Konfigurationswerte aus anderen Quellen, die aus dem schlüsseltresor überschreiben.
+In diesem Beispiel erfolgt der Aufruf von „AddAzureKeyVault“ am Ende der Registrierung des Konfigurationsanbieters. Es ist eine bewährte Methode, Azure Key Vault als letzten Konfigurationsanbieter zu registrieren, damit eine Gelegenheit zum Überschreiben von Konfigurationswerten der vorherigen Anbieter besteht und keine Konfigurationswerte von anderen Quellen die des Schlüsseltresors überschreiben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Mit Azure Key Vault Anwendung geheime Schlüssel schützen**
+-   **Verwenden von Azure Key Vault zum Schützen von Anwendungsgeheimnissen**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Sichere Speicherung von app-Kennwörter während der Entwicklung**
+-   **Safe storage of app secrets during development (Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung)**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
--   **Konfigurieren von Data Protection**
+-   **Configuring data protection (Konfigurieren von Datenschutz)**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Wichtige Management und Lebensdauer**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#Data-Schutz-Standardeinstellungen*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+-   **Key management and lifetime (Verwalten von Schlüsseln und Lebensdauer)**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub-Repository.
-    [*https://github.com/ASPNET/Configuration/Tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Vorherigen] (Developer-app-Kennwörter-storage.md) [weiter] (.. / Schlüssel-takeaways.md)
+[Zurück](developer-app-secrets-storage.md) [Weiter] (../key-takeaways.md)

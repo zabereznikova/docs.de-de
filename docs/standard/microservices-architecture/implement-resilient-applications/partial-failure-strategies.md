@@ -1,6 +1,6 @@
 ---
-title: "Strategien für die Behandlung von teilweise fehlerhaft."
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Strategien für die Behandlung von teilweise fehlerhaft."
+title: Strategien zum Beheben von Teilfehlern
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Strategien zum Beheben von Teilfehlern"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,45 +8,48 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Strategien für die Behandlung von teilweise fehlerhaft.
+# <a name="strategies-for-handling-partial-failure"></a>Strategien zum Beheben von Teilfehlern
 
-Strategien für den Umgang mit teilfehlern zählen den folgende:
+Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
-**Verwenden Sie asynchronen Kommunikation (z. B. die meldungsbasierte Kommunikation) über interne Microservices**. Es wird dringend empfohlen, nicht zu lange statusketten synchronen HTTP-Aufrufen über die interne Microservices erstellt werden, da dieser falsche Entwurf schließlich die Hauptursache für fehlerhafte Ausfälle werden soll. Im Gegensatz dazu, mit Ausnahme der Front-End-Kommunikation zwischen Clientanwendungen und die erste Ebene des Microservices oder differenzierte-API-Gateways, es wird empfohlen, nur asynchrone (nachrichtenbasierte) Kommunikation erfolgt einmal nach der ursprünglichen Anforderung / Antwort-Zyklus, über die interne Microservices. Eventuelle Konsistenz und ereignisgesteuerte Architekturen hilft um Ripple Auswirkungen zu minimieren. Diese Ansätze erzwingen ein höheres Maß an Microservice Autonomie und daher gegen die hier erwähnt Problem verhindern.
+**Asynchrone Kommunikation (z.B. meldungsbasierte Kommunikation) in allen internen Microservices verwenden:** Es wird dringend empfohlen, keine langen Ketten synchroner HTTP-Aufrufe in den internen Microservices zu erstellen, da dieser falsche Entwurf im Endeffekt die Hauptursache für fehlerhafte Ausfälle wird. Außer bei der Front-End-Kommunikation zwischen Clientanwendungen und der ersten Ebene der Microservices oder differenzierten API-Gateways wird sogar empfohlen, nach dem anfänglichen Anforderung/Antwort-Zyklus in den internen Microservices nur asynchrone (nachrichtenbasierte) Kommunikation zu verwenden. Konsistenz- und ereignisgesteuerte Architekturen helfen dabei, Welleneffekte zu minimieren. Diese Ansätze erzwingen ein höheres Maß an Autonomie der Microservices und verhindern daher das hier beschriebene Problem.
 
-**Verwenden von Wiederholungen mit exponenzieller**. Mit dieser Technik können um kurze zu vermeiden, und zwischenzeitliche Fehler die Ursache anhand der Aufruf wiederholt eine bestimmte Anzahl von Malen, aus, für den Fall, dass der Dienst nicht nur für kurze Zeit verfügbar war. Dies kann auftreten, aufgrund von vorübergehenden Netzwerkproblemen oder wenn ein Microservice/Container auf einen anderen Knoten in einem Cluster verschoben wird. Jedoch, wenn diese Wiederholungen nicht ordnungsgemäß mit Trennschalter vorgesehen sind, es kann Vorteile die Effekte Ripple letztendlich auch führte dazu, dass eine [Denial of Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Wiederholungen mit exponentiellem Backoff verwenden:** Diese Technik hilft dabei, kurze und vorübergehende Fehler zu vermeiden, indem Aufrufwiederholungen eine bestimmte Anzahl von Malen ausgeführt werden, falls der Dienst für kurze Zeit nicht verfügbar war. Dazu kann es aufgrund von vorübergehenden Netzwerkproblemen kommen oder wenn ein Microservice/Container in einen anderen Knoten oder ein anderes Cluster verschoben wird. Werden diese Wiederholungen jedoch nicht ordnungsgemäß mit Trennschaltern entworfen, kann dies die Welleneffekte verschärfen und letztendlich zu einem [Denial-of-Service-Angriff (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack) führen.
 
-**Umgehung von Netzwerktimeouts**. Clients sollten im Allgemeinen nicht auf unbestimmte Zeit blockiert und Timeouts beim Warten auf einer Antwort entworfen werden. Verwenden von Timeouts wird sichergestellt, dass Ressourcen nie unbegrenzt gebunden sind.
+**Netzwerktimeouts umgehen:** Clients sollten so konzipiert werden, dass sie nicht auf unbestimmte Zeit blockiert sind und Timeouts beim Warten auf einer Antwort verwenden. Durch Timeouts wird sichergestellt, dass Ressourcen nie unbegrenzt gebunden sind.
 
-**Verwenden Sie einen Trennschalter**. Bei diesem Ansatz verfolgt der Prozess die Anzahl der fehlerhaften Anforderungen. Wenn die Fehlerrate einer konfigurierte Limit, ein "Circuit-Breaker" Roundtrips überschreitet, damit weitere Versuche sofort einen Fehler auslösen. (Wenn eine große Anzahl von Anforderungen fehlschlägt, schlägt vor, die der Dienst nicht verfügbar ist, und Senden von Anforderungen nicht sinnvoll ist.) Nach Ablauf eines Timeouts der Client sollte versuchen Sie es erneut und, wenn neuen Anforderungen erfolgreich ist, schließen Sie der Trennschalter.
+**Trennschalter implementieren:** Bei diesem Ansatz verfolgt der Prozess die Anzahl der fehlerhaften Anforderungen. Wenn die Fehlerrate einen konfigurierten Grenzwert überschreitet, wird der Trennschalter geschlossen, und weitere Versuche lösen sofort einen Fehler aus. (Wenn sehr viele Anforderungen fehlschlagen, kann das daran liegen, dass der Dienst nicht verfügbar ist und dass das Senden von Anforderungen zwecklos ist.) Nach Ablauf der Timeoutphase versucht der Client erneut, eine Anforderung zu senden, und wenn diese erfolgreich ist, wird der Trennschalter wieder geöffnet.
 
-**Bereitstellen der Zugriffe**. Bei diesem Ansatz führt Clientprozess Fallbacklogik, wenn eine Anforderung fehlschlägt, z. B. das Zurückgeben der zwischengespeicherten Daten oder einen Standardwert. Dies ist ein Ansatz für Abfragen geeignet, und ist komplexer nach Updates oder Befehle.
+**Fallbacks bereitstellen:** Bei diesem Ansatz führt der Clientprozess Fallbacklogik aus, wenn eine Anforderung fehlschlägt: Es werden z.B. zwischengespeicherte Daten oder ein Standardwert zurückgegeben. Dieser Ansatz eignet sich für Abfragen und ist bei Updates oder Befehlen komplexer.
 
-**Die Anzahl der Anforderungen in der Warteschlange**. Clients sollten auch eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Client Microservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, ist es wahrscheinlich nicht sinnvoll, um zusätzliche Anforderungen zu erstellen und diese Versuche sollte sofort einen Fehler verursachen. Im Hinblick auf die Implementierung, die Polly [sein Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) Richtlinie kann verwendet werden, um diese Anforderung zu erfüllen. Dieser Ansatz ist im Wesentlichen eine Parallelisierung Drosselung mit [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) als Implementierung. Es kann außerdem eine "Queue" außerhalb der sein. Sie können proaktiv übermäßige Auslastung auch vor der Ausführung ausgeschieden (z. B. weil Kapazität vollständige wiederhergestellt werden kann). Dadurch wird schneller als ein Trennschalter wäre, da der Trennschalter wartet, bis die Fehler, die als Antwort auf bestimmte Fehlerszenarien. Das Objekt BulkheadPolicy in Polly verfügbar macht, wie voll sein Warteschlange sind und Angebote Ereignisse bei einem Überlauf daher können auch verwendet werden um automatisierte horizontale Skalierung zu erzielen.
+**Anzahl der Anforderungen in der Warteschlange begrenzen:** Clients sollten eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Clientmicroservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, sind weitere Anforderungen zwecklos, und diese Versuche lösen sofort einen Fehler aus. Im Hinblick auf die Implementierung kann diese Anforderung mithilfe der [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead)-Richtlinie aus Polly erfüllt werden. Dieser Ansatz ist im Wesentlichen eine Parallelisierungsdrosselung mit [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) als Implementierung. Er lässt außerdem eine „Warteschlange“ außerhalb des Bulkheads zu. Sie können zu viele Ladevorgänge vor der Ausführung bereits proaktiv verhindern, z.B. wenn Kapazität ausgelastet ist. Die Antwort auf bestimmte Fehlerszenarios wird dann schneller gesendet, als ein Trennschalter reagieren würde, da ein Trennschalter auf Fehler wartet. Das BulkheadPolicy-Objekt in Polly gibt an, wie voll der Bulkhead und die Warteschlange sind, und bietet Überlaufereignisse an, damit er auch für die automatisierte horizontale Skalierung verwendet werden kann.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Stabilität Muster**
+-   **Resilienzmuster**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Hinzufügen von Flexibilität und Optimieren der Leistung**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+-   **Adding Resilience and Optimizing Performance (Hinzufügen von Beständigkeit und Optimieren der Leistung)**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Sein.** GitHub-Repository. Implementierung mit Polly Richtlinie. \
-    [*https://github.com/App-vNext/Polly/Wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+-   **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Entwerfen von robusten Anwendungen für Azure**
+-   **Entwerfen robuster Anwendungen für Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **Behandlung vorübergehender Fehler**
+-   **Behandeln vorübergehender Fehler**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Handle-Partial-failure.md) [weiter] (implementieren-Wiederholungen-exponentiellen-backoff.md)
+[Zurück] (handle-partial-failure.md) [Weiter] (implement-retries-exponential-backoff.md)

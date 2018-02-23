@@ -1,64 +1,68 @@
 ---
-title: Verwenden einen Datenbankserver, die als container
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Verwenden einen Datenbankserver, die als container"
+title: "Verwenden eines Datenbankservers, der als Container ausgeführt wird"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden eines Datenbankservers, der als Container ausgeführt wird"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/30/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7e5f33c4e7edf9d0d4551c5125976fcb8fda392f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Verwenden einen Datenbankserver, die als container
+# <a name="using-a-database-server-running-as-a-container"></a>Verwenden eines Datenbankservers, der als Container ausgeführt wird
 
-Sie können Ihre Datenbanken (SQL Server, PostgreSQL, MySQL usw.) auf reguläre eigenständigen Servern in lokalen Clustern und in PaaS-Dienste in der Cloud wie Azure SQL-Datenbank verwenden. Allerdings für Entwicklungs- und testumgebungen, müssen die Datenbanken, die als Container ausgeführt ist es bequem erscheint, da Sie keine externe Abhängigkeit und einfach ausgeführt wird der Docker-verfassen Befehl wird die gesamte Anwendung gestartet. Diese Datenbanken als Container ist auch hervorragend für die Integrationstests erfolgreich, da die Datenbank im Container gestartet wird und wird immer mit den gleichen Beispieldaten aufgefüllt, damit Tests besser vorhersagbar sein können.
+Sie können Ihre Datenbanken (SQL Server, PostgreSQL, MySQL usw.) auf regulären eigenständigen Servern in lokalen Clustern oder in PaaS-Diensten in der Cloud verwenden wie etwa Azure SQL DB. Für Entwicklungs- und Testumgebungen ist jedoch die Ausführung der Datenbanken als Container praktisch, da keine externen Abhängigkeiten bestehen und die gesamte Anwendung einfach mit dem Befehl „docker-compose“ gestartet werden kann. Die Verwendung dieser Datenbanken als Container bietet sich zudem für Integrationstests an, da die Datenbanken im Container gestartet werden und immer mit denselben Beispieldaten aufgefüllt werden, sodass Tests besser vorhersehbar sind.
 
-### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server, die als Container ausgeführt werden, mit einer Datenbank Microservice bezogene
+### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server-Installation, die als Container mit einer microservicebezogenen Datenbank ausgeführt wird
 
-In eShopOnContainers, ist ein Container mit dem Namen sql.data definiert, der [Docker compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) -Datei, die SQL Server für Linux mit allen SQL Server-Datenbanken, die erforderlich sind, für die Microservices ausgeführt wird. (Sie möglicherweise auch eine SQL Server-Container für jede Datenbank, aber wäre es erforderlich, mehr Arbeitsspeicher Docker zugewiesen.) Der wichtige Punkt im Microservices ist, dass jede Microservice ihre verknüpften Daten aus diesem Grund seine zugehörige SQL-Datenbank in diesem Fall besitzt. Die Datenbanken können jedoch eine beliebige Stelle.
+In eShopOnContainers gibt es einen Container mit dem Namen „sql.data“, der in der Datei [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) definiert ist und mit dem SQL Server für Linux mit allen für Microservices benötigten SQL Server-Datenbanken ausführt wird. (Sie können auch für jede Datenbank einen SQL Server-Container verwenden. Dann muss Docker jedoch mehr Speicherplatz zugewiesen werden.) Der entscheidende Punkt bei Microservices ist, dass jeder Microservice die ihm gehörenden Daten und damit die ihm gehörende SQL-Datenbank besitzt. Die Datenbanken können sich jedoch an einem beliebigen Ort befinden.
 
-Container in der beispielanwendung durch folgenden Code in der Datei Docker compose.yml YAML konfiguriert ist, die ausgeführt wird, beim Ausführen von SQL-Server bilden Docker-einrichten. Beachten Sie, dass der Code YAML Konfigurationsinformationen aus dem generischen Docker-compose.yml-Datei und die Docker-compose.override.yml konsolidiert hat. (In der Regel würden Sie die umgebungseinstellungen aus der Basistabelle oder statische Informationen, die im Zusammenhang mit SQL Server-Images trennen.)
+Der SQL Server-Container in der Beispielanwendung wurde mit dem folgenden YAML-Code in der Datei „docker-compose.yml“ konfiguriert, die beim Ausführen des Befehls „docker-compose up“ ausgeführt wird. Der YAML-Code enthält konsolidierte Konfigurationsinformationen aus den allgemeinen Dateien „docker-compose.yml“ und „docker-compose.override.yml“. (Normalerweise würden Sie die Umgebungseinstellungen von den Basisinformationen oder statischen Informationen zum SQL Server-Image trennen.)
 
 ```yml
-sql.data:
-  image: microsoft/mssql-server-linux
-  environment:
-    - SA_PASSWORD=your@password
-    - ACCEPT_EULA=Y
-  ports:
-    - "5434:1433"
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - "5434:1433"
 ```
 
-Die folgenden "Docker run" Befehl kann diesen Container ausgeführt werden:
+Auf ähnliche Weise können Sie anstelle von `docker-compose` den folgenden `docker run`-Befehl zum Ausführen dieses Containers verwenden:
 
 ```
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
 ```
 
-Wenn Sie eine Anwendung mit mehreren Container wie eShopOnContainers bereitstellen, es ist jedoch einfacher, verwenden Sie den Docker-verfassen Befehl, in dem sie alle erforderlichen Container für die Anwendung bereitgestellt.
+Wenn Sie jedoch eine Anwendung mit mehreren Containern wie etwa eShopOnContainers bereitstellen, ist es praktischer, den Befehl „docker-compose up“ zu verwenden, sodass alle für die Anwendung erforderlichen Container bereitgestellt werden.
 
-Wenn Sie dieser SQL Server-Container zum ersten Mal starten, initialisiert der Container SQL Server mit dem Kennwort, das Sie bereitstellen. Wenn SQL Server als Container ausgeführt wird, können Sie die Datenbank aktualisieren, indem Herstellen einer Verbindung über eine reguläre SQL-Verbindung, z. B. von SQL Server Management Studio oder Visual Studio mit C#\# Code.
+Wenn Sie diesen SQL Server-Container zum ersten Mal starten, initialisiert der Container SQL Server mit dem von Ihnen angegebenen Kennwort. Sobald SQL Server als Container ausgeführt wird, können Sie die Datenbank aktualisieren, indem Sie eine normale SQL-Verbindung herstellen wie etwa über SQL Server Management Studio, Visual Studio oder C\#-Code.
 
-Die eShopOnContainers-Anwendung initialisiert jeder Microservice-Datenbank mit Beispieldaten seeding mit den Daten zu starten, wie im folgenden Abschnitt erläutert.
+Die Anwendung eShopOnContainers initialisiert die einzelnen Microservicedatenbanken mit Beispieldaten mittels Daten-Seeding beim Starten, wie im folgenden Abschnitt erläutert.
 
-Mit SQL Server ausgeführt wird, als Container eignet sich nicht nur für die Demo möglicherweise Zugriff auf eine Instanz von SQL Server muss nicht. Wie bereits erwähnt ist es auch hervorragend für Entwicklungs- und testumgebungen, sodass können Sie problemlos Integrationstests beginnend mit einem sauberen Image von SQL Server ausführen und Daten von neuen Beispieldaten seeding bezeichnet.
+Die Ausführung von SQL Server als Container ist nicht nur für eine Demo nützlich, bei der Sie möglicherweise keinen Zugriff auf eine Instanz von SQL Server haben. Sie ist wie bereits erwähnt auch für Entwicklungs- und Testumgebungen nützlich, sodass Sie problemlos Integrationstests von einem sauberen SQL Server-Image aus mit bekannten Daten durch das Seeding neuer Beispieldaten ausführen können.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Führen Sie das Image von SQL Server-Docker unter Linux, Mac oder Windows**
+-   **Run the SQL Server Docker image on Linux, Mac, or Windows (Ausführen des SQL Server Docker-Image unter Linux, Mac oder Windows)**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Verbinden und Abfragen von SQL Server on Linux mit Sqlcmd**
+-   **Connect and query SQL Server on Linux with sqlcmd (Verbinden und Abfragen von SQL Server unter Linux mit sqlcmd)**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
-### <a name="seeding-with-test-data-on-web-application-startup"></a>Das Seeding mit Testdaten beim Start der Web-Anwendung
+### <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding mit Testdaten beim Starten von Webanwendungen
 
-Zum Hinzufügen von Daten in die Datenbank beim Start der Anwendung können Sie die Configure-Methode in die Startklasse des Web-API-Projekts Code wie folgt hinzufügen:
+Um der Datenbank beim Starten der Anwendung Daten hinzuzufügen, können Sie der Configure-Methode in der Startup-Klasse des Web-API-Projekts Code wie den folgenden hinzufügen:
 
 ```csharp
 public class Startup
@@ -77,7 +81,7 @@ public class Startup
 }
 ```
 
-Der folgende Code in der benutzerdefinierten CatalogContextSeed Klasse Daten gefüllt.
+Mit dem folgenden Code in der benutzerdefinierten CatalogContextSeed-Klasse werden die Daten aufgefüllt.
 
 ```csharp
 public class CatalogContextSeed
@@ -128,11 +132,11 @@ public class CatalogContextSeed
 }
 ```
 
-Beim Ausführen von Integrationstests eignet sich über eine Möglichkeit zum Generieren von Daten mit Ihrer Integrationstests konsistent. Es eignet sich hervorragend für testumgebungen, wird alles, was von Grund auf neu, einschließlich einer Instanz von SQL Server ausgeführt wird, für einen Container zu erstellen.
+Beim Ausführen von Integrationstests ist es hilfreich, eine Methode zum Generieren von Daten zu verwenden, die den Integrationstests entsprechen. Besonders günstig für Testumgebungen ist es, wenn alles von Grund auf neu erstellt werden kann, so auch eine Instanz von SQL Server, die in einem Container ausgeführt wird.
 
-### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core InMemory-Datenbank im Vergleich zu SQL Server ausgeführt wird, als container
+### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core-In-Memory Database und eine als Container ausgeführte SQL Server-Instanz im Vergleich
 
-Eine andere gute Wahl, die beim Ausführen von Tests ist die Verwendung von Entity Framework InMemory-Datenbankanbieter. Sie können diese Konfiguration in der Methode ConfigureServices die Startklasse im Web-API-Projekt angeben:
+Eine weitere gute Möglichkeit zum Ausführen von Tests stellt der Entity Framework InMemory-Datenbankanbieter dar. Diese Konfiguration können Sie in der ConfigureServices-Methode der Startup-Klasse im Web-API-Projekt festlegen:
 
 ```csharp
 public class Startup
@@ -156,29 +160,29 @@ public class Startup
 }
 ```
 
-Es ist jedoch eine wichtige Catch. Die in-Memory-Datenbank unterstützt keine viele Einschränkungen, die für eine bestimmte Datenbank spezifisch sind. Sie können z. B. einen eindeutigen Index für eine Spalte in der EF-Core-Modell hinzufügen und Schreibtest für Ihre Datenbank im Arbeitsspeicher, überprüfen Sie, dass es nicht zulässt, dass Sie einen doppelten Wert hinzufügen. Aber wenn Sie die Datenbank im Arbeitsspeicher verwenden, können nicht eindeutige Indizes für eine Spalte behandelt. Aus diesem Grund die Datenbank im Arbeitsspeicher nicht verhält sich genauso wie eine echte SQL Server-Datenbank – emuliert nicht datenbankspezifischen Einschränkungen.
+Diese Option hat jedoch einen Nachteil. Die In-Memory Database unterstützt nur eine begrenzte Anzahl von Einschränkungen für eine bestimmte Datenbank. Beispielsweise möchten Sie im EF Core-Modell einen eindeutigen Index hinzufügen und einen Test schreiben, um zu prüfen, ob das Hinzufügen von identischen Werten verhindert wird. Bei Verwendung einer In-Memory Database können jedoch keine eindeutigen Indizes in einer Spalte verarbeitet werden. Die In-Memory Database verhält sich somit etwas anders als eine echte SQL Server-Datenbank; sie emuliert keine datenbankspezifischen Einschränkungen.
 
-Deshalb ist eine in-Memory-Datenbank immer noch nützlich für das Testen und Prototyping. Aber wenn Sie genau Integrationstests erfolgreich zu erstellen, die das Verhalten der Implementierung eines bestimmten berücksichtigen möchten, müssen Sie eine echte Datenbank wie SQL Server verwenden. Zu diesem Zweck ist das Ausführen von SQL Server in einem Container eine gute Auswahl und genauer als die EF Core InMemory-Datenbankanbieter aus.
+Dennoch ist eine In-Memory Database zum Testen und zum Erstellen von Prototypen hilfreich. Wenn Sie jedoch präzise Integrationstests erstellen möchten, bei denen das Verhalten einer bestimmten Datenbankimplementierung berücksichtigt wird, müssen Sie eine echte Datenbank wie etwa SQL Server verwenden. In diesem Fall ist die Ausführung von SQL Server in einem Container eine gute und im Vergleich zum EF Core InMemory-Datenbankanbieter präzisere Option.
 
-### <a name="using-a-redis-cache-service-running-in-a-container"></a>Verwenden einen Redis Cache-Dienst in einem container
+### <a name="using-a-redis-cache-service-running-in-a-container"></a>Verwenden eines Redis-Cachediensts, der in einem Container ausgeführt wird
 
-Sie können Redis für einen Container, die speziell für die Entwicklung und Tests und Szenarien Proof of Concept ausführen. Dieses Szenario eignet sich, da Sie alle Ihre Abhängigkeiten, die in Containern ausgeführt haben, können – nicht nur für Ihre lokalen Entwicklungscomputern, jedoch für Ihre testumgebungen in Pipelines CI-CD.
+Redis kann insbesondere bei der Entwicklung und beim Testen sowie im Rahmen von Proof-of-Concept-Szenarios in einem Container ausgeführt werden. Dieses Szenario ist praktisch, da alle Abhängigkeiten in Containern ausgeführt werden können – nicht nur für lokale Entwicklungscomputer, sondern auch für die Testumgebungen in den CI/CD-Pipelines.
 
-Beim Ausführen von Redis in der Produktion ist es jedoch besser, die für eine Lösung mit hoher Verfügbarkeit wie Microsoft Azure Redis suchen, die als eine PaaS (Platform als Dienst) ausgeführt wird. In Ihrem Code müssen Sie nur die Verbindungszeichenfolgen ändern.
+Wenn Sie Redis jedoch in der Produktion ausführen, sollten Sie besser eine Lösung mit hoher Verfügbarkeit wie etwa Redis Microsoft Azure verwenden, die als PaaS (Platform as a Service) ausgeführt wird. Im Code müssen Sie hierzu lediglich die Verbindungszeichenfolgen ändern.
 
-Redis bietet ein Docker Bild mit Redis. Dieses Abbild ist von Docker Hub an folgender URL verfügbar:
+Redis stellt ein Docker-Image mit Redis bereit. Dieses Image ist im Docker-Hub unter der folgenden URL verfügbar:
 
-<https://Hub.docker.com/_/redis/>
+<https://hub.docker.com/_/redis/>
 
-Sie können einen Container mit Docker Redis direkt ausführen, durch den folgenden Docker-CLI-Befehl an der Eingabeaufforderung ausführen:
+Ein Docker Redis-Container kann durch Ausführen des folgenden Befehls der Docker-Befehlszeilenschnittstelle in der Eingabeaufforderung direkt ausgeführt werden:
 
 ```
   docker run --name some-redis -d redis
 ```
 
-Die Redis-Image enthält verfügbar gemacht: 6379 (der Port, der von Redis verwendet wird), also standard Container verknüpfen wird automatisch zur Verfügung stellen die verknüpften Container verwendet.
+Das Redis-Image enthält „expose:6379“ (von Redis verwendeter Port), sodass es durch die übliche Containerverknüpfung für die verknüpften Container automatisch verfügbar wird.
 
-In eShopOnContainers verwendet die basket.api Microservice einen Redis-Cache als Container ausgeführt. Basket.data Container wird als Teil der Datei mit mehreren Container Docker-compose.yml definiert, wie im folgenden Beispiel gezeigt:
+In eShopOnContainers verwendet der Microservice „basket.api“ einen als Container ausgeführten Redis-Cache. Dieser „basket.data“-Container wird im Rahmen der Datei „docker-compose.yml“ mit mehreren Containern definiert, wie das folgende Beispiel zeigt:
 
 ```yml
 #docker-compose.yml file
@@ -189,9 +193,9 @@ In eShopOnContainers verwendet die basket.api Microservice einen Redis-Cache als
       - "6379"
 ```
 
-Dieser Code in der Docker-compose.yml definiert einen Container namens basket.data basierend auf Redis-Image und veröffentlichen den Port 6379 intern, was bedeutet, dass darauf zugreifen können nur von anderen Containern, die innerhalb des Docker-Hosts ausgeführt wird.
+Dieser Code in der Datei „docker-compose.yml“ definiert einen Container mit dem Namen „basket.data“ basierend auf dem Redis-Image, und Port 6379 wird intern veröffentlicht, sodass nur andere Container, die im Docker-Host ausgeführt werden, darauf zugreifen können.
 
-In der Docker-compose.override.yml-Datei definiert die basket.api Microservice für das Beispiel eShopOnContainers schließlich die Verbindungszeichenfolge, die für diesen Container Redis verwendet:
+Und schließlich wird in der Datei „docker-compose.override.yml“ im Microservice „basket.api“ für das eShopOnContainers-Beispiel die für diesen Redis-Container zu verwendende Verbindungszeichenfolge definiert:
 
 ```yml
   basket.api:
@@ -203,4 +207,4 @@ In der Docker-compose.override.yml-Datei definiert die basket.api Microservice f
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (multi-container-Anwendungen-Docker-compose.md) [weiter] (Integration-Ereignis-Basis-Microservice-communications.md)
+[Zurück] (multi-container-applications-docker-compose.md) [Weiter] (integration-event-based-microservice-communications.md)

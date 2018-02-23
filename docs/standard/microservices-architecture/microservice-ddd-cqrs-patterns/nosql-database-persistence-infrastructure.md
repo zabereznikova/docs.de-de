@@ -1,36 +1,39 @@
 ---
-title: Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur"
+title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: e4b63511069b89cc5761ce7ed64f09e9035a56a3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden keine NoSQL-Datenbanken als Persistenz Infrastruktur
+# <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
-Wenn Sie keine NoSQL-Datenbanken für Ihre Infrastruktur Datenebene verwenden, verwenden Sie ein ORM wie Entity Framework Core in der Regel nicht. Stattdessen verwenden Sie die API, die vom NoSQL-Modul, wie z. B. Azure-Cosmos-DB, MongoDB, Cassandra, RavenDB, CouchDB oder Azure-Speichertabellen bereitgestellt.
+Wenn Sie NoSQL-Datenbanken für die Datenschicht Ihrer Infrastruktur verwenden, verwenden Sie in der Regel keine ORM wie Entity Framework Core. Stattdessen verwenden Sie die API, die von der NoSQL-Engine, wie z.B. Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB oder Azure Table Storage, bereitgestellt wird.
 
-Bei Verwendung eine NoSQL-Datenbank, insbesondere eine dokumentorientiert Datenbank wie Azure-Cosmos-DB, CouchDB oder RavenDB, ist jedoch die Möglichkeit, die Sie das Modell mit DDD Aggregaten entwerfen teilweise ähnelt in EF-Core in Bezug auf die Kennung des Vorgehensweise können Aggregieren Stämme, untergeordneten Entitätsklassen und Wertklassen-Objekt. Aber letztendlich, wirkt sich die Datenbankauswahl im Entwurf.
+Wenn Sie jedoch eine NoSQL-Datenbank verwenden, insbesondere eine dokumentorientierte Datenbank wie Azure Cosmos DB, CouchDC oder RavenDB, ist die Art und Weise, in der Sie Ihr Modell mit DDD-Aggregaten entwerfen, teilweise mit der Vorgehensweise in EF Core vergleichbar, z.B. in Bezug auf die Identifikation von Aggregatstämmen, untergeordneten Entitätsklassen und Wertobjektklassen. Letztendlich hat die Datenbankauswahl jedoch Auswirkungen auf Ihren Entwurf.
 
-Wenn Sie eine Datenbank dokumentorientiert verwenden, implementieren Sie ein Aggregat als ein einzelnes Dokument, das in JSON oder ein anderes Format serialisiert. Allerdings ist die Verwendung der Datenbank aus einer Domäne Modell Codeansicht transparent. Wenn Sie eine NoSQL-Datenbank verwenden zu können, Sie weiterhin sind Entitätsklassen und aggregieren Stammklassen, aber mit mehr Flexibilität als bei Verwendung EF Core, da die Persistenz ist nicht relationale.
+Wenn Sie eine dokumentorientierte Datenbank verwenden, implementieren Sie ein Aggregat als einzelnes Dokument, das im JSON-Format oder einem anderen Format serialisiert ist. Allerdings ist die Verwendung der Datenbank aus Sicht eines Codeelements des Domänenmodells transparent. Durch eine NoSQL-Datenbank verwenden Sie weiterhin Entitätsklassen und Aggregatstammklassen, jedoch mit mehr Flexibilität als bei der Verwendung von EF Core, da die Persistenz nicht relational ist.
 
-Der Unterschied besteht darin, wie Sie dieses Modell beibehalten. Wenn Sie Ihre Domänenmodell auf Grundlage von Klassen für POCO-Entitäten implementiert, kann unabhängig von der Infrastruktur Persistenz er anscheinend zu einer anderen Persistenz-Infrastruktur auch aus relationalen Datenquellen zu NoSQL verschoben werden können. Allerdings sollten, die nicht Ziel sein. Es gibt immer Einschränkungen in den verschiedenen Datenbanken werden mithilfe von Push übertragen Sie zurück, sodass Sie nicht das gleiche Modell für haben können relationale oder NoSQL-Datenbanken. Ändern die Persistenz Modelle würde nicht trivial, werden, weil Transaktionen und persistenzvorgänge sehr unterschiedlich.
+Der Unterschied besteht darin, wie Sie dieses Modell speichern. Wenn Sie Ihr Domänenmodell (unabhängig von der Persistenz der Infrastruktur) basierend auf POCO-Entitätsklassen implementiert haben, wirkt es möglicherweise so, als könnten Sie zu einer anderen Persistenz der Infrastruktur wechseln, sogar von einer relationalen zur NoSQL-Datenbank. Das sollte jedoch nicht Ihr Ziel sein. In den verschiedenen Datenbanken gibt es immer Einschränkungen, die Sie davon abhalten. Daher können Sie für relationale oder NoSQL-Datenbanken nicht dasselbe Modell verwenden. Das Ändern des Persistenzmodells wäre nicht trivial, da Transaktionen und Persistenzvorgänge völlig verschieden sind.
 
-In einer Datenbank dokumentorientiert ist es beispielsweise angemessen für einen aggregierten Stamm, mehrere untergeordnete Sammlungseigenschaften zu verwenden. In einer relationalen Datenbank wird Abfragen von mehreren untergeordneten Sammlungseigenschaften unsinnig, ist, da Sie eine Vereinigung aller SQL-Anweisung aus EF abzurufen. Mit der gleichen Domänenmodell für relationale Datenbanken oder NoSQL-Datenbanken ist nicht einfach, und Sie sollten nicht versuchen. Sie haben sich tatsächlich so entwerfen Sie Ihr Modell mit einem Überblick darüber, wie die Daten in jeder bestimmte Datenbank verwendet werden soll.
+So ist es in einer dokumentorientierten Datenbank beispielsweise in Ordnung, wenn ein Aggregatstamm über mehrere untergeordnete Sammlungseigenschaften verfügt. In einer relationalen Datenbank ist das Abfragen mehrerer untergeordneter Sammlungseigenschaften unsinnig, da EF die SQL-Anweisung UNION ALL an Sie zurückgibt. Über dasselbe Domänenmodell für relationale Datenbanken oder NoSQL-Datenbanken zu verfügen, ist nicht einfach. Sie sollten es nicht ausprobieren. Sie müssen Ihr eigenes Modell entwerfen und dabei verstehen, wie die Daten in den einzelnen Datenbanken verwendet werden sollen.
 
-Ein Vorteil bei Verwendung von NoSQL-Datenbanken ist, dass die Entitäten mehr denormalisierten, Sie sollte daher nicht die Zuordnung zu einer Tabelle. Ihre Domänenmodell kann flexibler als bei Verwendung einer relationalen Datenbank sein.
+Ein Vorteil bei der Verwendung von NoSQL-Datenbanken besteht darin, dass die Entitäten denormalisierter sind und Sie daher keine Tabellenzuordnung festlegen. Ihr Domänenmodell kann flexibler als bei der Verwendung einer relationalen Datenbank sein.
 
-Wenn Sie entwerfen Ihre Domänenmodell basierend auf den Aggregate, um NoSQL verschieben und dokumentorientiert Datenbanken möglicherweise noch einfacher als die Verwendung einer relationalen Datenbank, die Aggregate, die Sie entwerfen ähneln serialisiert Dokumente in einer Datenbank dokumentorientiert. Dann können Sie in diesen "Sammlungen" alle Informationen einschließen, die Sie für das Aggregat eventuell.
+Wenn Sie Ihr Domänenmodell basierend auf Aggregaten entwerfen, ist der Wechsel zu NoSQL- und dokumentorientierten Datenbanken möglicherweise einfacher als die Verwendung einer relationalen Datenbank, da die von Ihnen entworfenen Aggregate mit serialisierten Dokumenten in einer dokumentorientierten Datenbank vergleichbar sind. In diesen Sammlungen können Sie anschließend alle Informationen einschließen, die Sie für dieses Aggregat gebrauchen könnten.
 
-Der folgende JSON-Code wird z. B. eine beispielimplementierung eines Aggregats Reihenfolge aus, bei Verwendung einer Datenbank dokumentorientiert. Es ähnelt der aggregierten Reihenfolge, die wir im eShopOnContainers Beispiel, jedoch ohne Verwendung von EF Core unterhalb implementiert.
+Bei dem folgenden JSON-Code handelt es sich beispielsweise um die Beispielimplementierung des Aggregats „Order“ bei der Verwendung einer dokumentorientierten Datenbank. Er ist mit dem Aggregat „Order“ vergleichbar, das im „eShopOnContainers“-Beispiel implementiert wurde, jedoch ohne die untergeordnete Verwendung von EF Core.
 
 ```json
 {
@@ -55,15 +58,21 @@ Der folgende JSON-Code wird z. B. eine beispielimplementierung eines Aggregats R
 }
 ```
 
-Bei Verwendung von C\# Modell, das Aggregat von etwa wie das Azure Cosmos-DB-SDK, das Aggregat zu verwendende Implementierung ähnelt C\# POCO-Klassen, die mit EF Core verwendet. Der Unterschied besteht darin, die Möglichkeit, ihren Einsatz aus dem die Anwendung und Infrastruktur Ebenen, wie im folgenden Code:
+## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Einführung in Azure Cosmos DB und die native Cosmos DB-API
+
+[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) ist der globale verteilte Datenbankdienst von Microsoft für unternehmenskritische Anwendungen. Azure Cosmos DB stellt eine [sofort einsatzfähige globale Verteilung](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), weltweit eine [elastische Skalierung von Durchsatz und Speicher](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data), Latenzen im einstelligen Millisekundenbereich im 99. Perzentil, [fünf richtig definierte Konsistenzebenen](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels) und garantierte Hochverfügbarkeit bereit. Dies alles wird durch [branchenführende SLAs](https://azure.microsoft.com/support/legal/sla/cosmos-db/) gewährleistet. Azure Cosmos DB [indiziert automatisch Daten](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf), ohne dass Sie sich mit der Schema- und Indexverwaltung auseinandersetzen müssen. Die Datenbank umfasst mehrere Modelle und unterstützt Dokument-, Schlüsselwert-, Graph- sowie einspaltige Datenmodelle.
+
+![](./media/image19.1.png) Abbildung 9-19. Globale Verteilung von Azure Cosmos DB
+
+Bei der Verwendung eines C\#-Modells zur Implementierung des Aggregats, das von der Azure Cosmos DB-API verwendet werden soll, kann das Aggregat mit den in EF Core verwendeten C\#-POCO-Klassen vergleichbar sein. Der Unterschied besteht darin, wie diese auf der Anwendungs- und der Infrastrukturebene verwendet werden. Dies wird im folgenden Code veranschaulicht:
 
 ```csharp
-// C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH DOCUMENTDB API
+// C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
 // Then, use AggregateRoot’s methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
-// This can be saved as JSON as is without converting into rows/columns.
+
 Order orderAggregate = new Order
 {
     Id = "2017001",
@@ -82,6 +91,7 @@ Address address = new Address
 }
 
 orderAggregate.UpdateAddress(address);
+
 OrderItem orderItem1 = new OrderItem
 {
     Id = 20170011,
@@ -92,27 +102,16 @@ OrderItem orderItem1 = new OrderItem
     Discount = 0;
 };
 
-OrderItem orderItem2 = new OrderItem
-{
-    Id = 20170012,
-    ProductId = "123457",
-    ProductName = ".NET Mug",
-    UnitPrice = 15,
-    Units = 1,
-    Discount = 0;
-};
-
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
 orderAggregate.AddOrderItem(orderItem2);
-
 // *** End of Domain Model Code ***
-//...
+
 // *** Infrastructure Code using Cosmos DB Client API ***
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
-await client.CreateDocumentAsync(collectionUri, order);
+await client.CreateDocumentAsync(collectionUri, orderAggregate);
 
 // As your app evolves, let's say your object has a new schema. You can insert
 // OrderV2 objects without any changes to the database tier.
@@ -120,21 +119,221 @@ Order2 newOrder = GetOrderV2Sample("IdForSalesOrder2");
 await client.CreateDocumentAsync(collectionUri, newOrder);
 ```
 
-Sie können sehen, dass die Möglichkeit, die Arbeit mit Ihrem Domänenmodell ähnlich wie bei Sie es in Ihrer Domäne der Ebene verwenden sein können, wenn die Infrastruktur EF ist. Sie verwenden weiterhin die gleichen aggregieren Stamm-Methoden, um Konsistenz Invarianten und Überprüfungen in das Aggregat sicherzustellen.
+Sie können sehen, dass die Art und Weise, in der Sie mit Ihrem Domänenmodell arbeiten, mit der Verwendungsweise auf der Ebene Ihres Domänenmodells vergleichbar ist, wenn EF die Infrastruktur ist. Sie verwenden weiterhin die gleichen Aggregatstammmethoden, um Konsistenz, Invarianten und Validierungen innerhalb des Aggregats sicherzustellen.
 
-Jedoch beibehalten, wenn Sie das Modell in der NoSQL-Datenbank, den Code und API ändern sich im Vergleich zu EF Kerncode oder anderen Code, die im Zusammenhang mit relationalen Datenbanken.
+Wenn Sie Ihr Modell jedoch dauerhaft in der NoSQL-Datenbank speichern, führt dies zu einer wesentlichen Änderung des Codes und der API im Vergleich zu EF Core-Code oder einem beliebigen anderen Code für relationale Datenbanken.
+
+## <a name="implementing-net-code-targeting-mongodb-and-azure-cosmos-db"></a>Implementieren von .NET-Code für MongoDB und Azure Cosmos DB
+
+### <a name="using-azure-cosmos-db-from-net-containers"></a>Verwenden von Azure Cosmos DB über .NET-Container
+
+Sie können über .NET-Code, der in Containern ausgeführt wird, auf Azure Cosmos DB-Datenbanken genau wie über eine beliebige andere .NET-Anwendung zugreifen. Die Microservices „Locations.API“ und „Marketing.API“ in eShopOnContainers werden beispielsweise implementiert, damit sie Azure Cosmos DB-Datenbanken verwenden können.
+
+Aus der Sicht einer Docker-Entwicklungsumgebung gibt es in Azure Cosmos DB jedoch eine Einschränkung. Es ist zwar ein lokaler [Azure Cosmos DB-Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) vorhanden, der auf einem lokalen Entwicklungscomputer (z.B. auf einem PC) ausgeführt werden kann, seit Ende 2017 unterstützt dieser jedoch nur noch Windows, nicht Linux. 
+
+Dieser Emulator kann auch in Docker ausgeführt werden, allerdings nur in Windows-Containern, nicht in Linux-Containern. Dies ist ein anfängliches Handicap für die Entwicklungsumgebung, wenn Ihre Anwendung in Linux-Containern bereitgestellt wird, da eine gleichzeitige Bereitstellung von Linux- und Windows-Containern in Docker für Windows derzeit nicht möglich ist. Alle bereitgestellten Container müssen entweder für Linux oder für Windows bestimmt sein.  
+
+Der ideale und einfachere Weg zur Bereitstellung für eine Entwicklungs-/Testlösung besteht darin, Ihre Datenbanksysteme zusammen mit Ihren benutzerdefinierten Containern als Container bereitzustellen, damit Ihre Entwicklungs-/Testumgebungen immer konsistent sind.
+
+### <a name="use-mongodb-api-for-local-devtest-linuxwindows-containers-plus-azure-cosmos-db"></a>Verwenden der MongoDB-API für lokale Entwicklungs-/Testcontainer unter Linux/Windows plus Azure Cosmos DB
+
+Cosmos DB-Datenbanken unterstützen die MongoDB-API für .NET sowie das native MongoDB Wire Protocol. Dieses bedeutet, dass Ihre für MongoDB geschriebene Anwendung unter Verwendung vorhandener Treiber jetzt wie in Abbildung 9-20 dargestellt mit Cosmos DB kommunizieren und Cosmos DB-Datenbanken anstelle von MongoDB-Datenbanken verwenden kann.
+
+![](./media/image19.2.png) Abbildung 9-20. Verwenden der API und des Protokolls von MongoDB für den Zugriff auf Azure Cosmos DB
+
+Dies ist ein sehr praktischer Ansatz für Proof of Concepts in Docker-Umgebungen mit Linux-Containern, da es sich bei dem [MongoDB-Docker-Image](https://hub.docker.com/r/_/mongo/) um ein Image für mehrere Architekturen handelt, das Linux- und Windows-basierte Docker-Container unterstützt.
+
+Wie in Abbildung 9-21 zu sehen ist, unterstützt eShopOnContainers unter Verwendung der MongoDB-API Linux- und Windows-basierte MongoDB-Container in der lokalen Entwicklungsumgebung. Anschließend können Sie jedoch zu der skalierbaren PaaS-Cloudlösung Azure Cosmos DB wechseln, indem Sie [die MongoDB-Verbindungszeichenfolge einfach so ändern, dass diese auf Azure Cosmos DB verweist](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account). 
+
+![](./media/image20-bis.png) Abbildung 9-21. eShopOnContainers mit MongoDB-Containern für die Entwicklungsumgebung oder Azure Cosmos DB für die Produktion
+
+Azure Cosmos DB für die Produktion würde in der Azure-Cloud als PaaS und als skalierbarer Dienst ausgeführt werden.
+
+Ihre benutzerdefinierten .NET Core-Container können auf einem lokalen Docker-Entwicklungshost ausgeführt werden (das heißt, Docker für Windows wird auf einem Computer mit Windows 10 verwendet) oder in einer Produktionsumgebung wie Kubernetes in Azure AKS oder Azure Service Fabric bereitgestellt werden. In dieser zweiten Umgebung würden Sie nur die benutzerdefinierten .NET Core-Container, jedoch nicht die MongoDB-Container bereitstellen, da Sie Azure Cosmos DB in der Cloud für die Verwaltung der Daten in der Produktion verwenden würden.
+
+Ein klarer Vorteil bei der Verwendung der MongoDB-API besteht darin, dass Ihre Lösung in beiden Datenbank-Engines (MongoDB oder Azure Cosmos DB) ausgeführt werden könnte, sodass Migrationen in verschiedenen Umgebungen problemlos durchgeführt werden könnten. Manchmal ist es jedoch sinnvoll, eine native API (in diesem Fall die native Cosmos DB-API) zu verwenden, um die Funktionen einer bestimmten Datenbank-Engine optimal nutzen zu können.
+
+Informationen zum weiteren Vergleich zwischen der einfachen Verwendung von MongoDB im Vergleich zu Cosmos DB in der Cloud finden Sie auf dieser Seite unter [Benefits of using Azure Cosmos DB in this page (Vorteile der Verwendung von Azure Cosmos DB)](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction). 
+
+
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analysieren Ihres Ansatzes für Produktionsanwendungen: Vergleich zwischen der MongoDB-API und der Cosmos DB-API
+
+In eShopOnContainers wird die MongoDB-API verwendet, da die Priorität im Wesentlichen darauf liegt, über eine konsistente Entwicklungs-/Testumgebung zu verfügen, in der eine NoSQL-Datenbank verwendet wird, die auch in Azure Cosmos DB eingesetzt werden könnte.
+
+Wenn Sie die Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB in Azure für Produktionsanwendungen planen, sollten Sie jedoch die Unterschiede in den Funktionen und der Leistung bei der Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB-Datenbanken verglichen mit der Verwendung der nativen Azure Cosmos DB-API analysieren. Wenn Funktionen und Leistung vergleichbar sind, können Sie die MongoDB-API verwenden und den Vorteil genießen, dass zwei NoSQL-Datenbank-Engines gleichzeitig unterstützt werden. 
+
+Alternativ könnten Sie auch MongoDB-Cluster mit dem [MongoDB-Azure-Dienst](https://www.mongodb.com/scale/mongodb-azure-service) als Produktionsdatenbank in der Azure-Cloud verwenden. Dies ist jedoch kein von Microsoft bereitgestellter PaaS-Dienst. In diesem Fall hostet Azure lediglich diese Lösung aus MongoDB.
+
+Im Wesentlichen ist dies nur ein Haftungsausschluss, in dem darauf hingewiesen wird, dass Sie die Verwendung der MongoDB-API nicht immer der Verwendung von Azure Cosmos DB vorziehen sollten. In eShopOnContainers wurde dies durchgeführt, weil es sich dabei um eine praktische Wahl für Linux-Container handelt. Grundlage der Entscheidung sollten die spezifischen Anforderungen und Tests sein, die Sie für Ihre Produktionsanwendung durchführen müssen.  
+
+### <a name="the-code-using-mongodb-api-in-net-core-applications"></a>Der Code: Verwendung der MongoDB-API in .NET Core-Anwendungen
+
+Die MongoDB-API für .NET basiert auf NuGet-Paketen, die Sie zu Ihren Projekten hinzufügen müssen, wie das in Abbildung 9-22 dargestellte Paket „Locations.API“.
+
+![](./media/image21-bis.png) Abbildung 9-22. Verweise auf NuGet-Pakete in der MongoDB-API in einem .NET Core-Projekt
+
+In den folgenden Abschnitten wird der Code untersucht.
+
+#### <a name="a-model-used-by-mongodb-api"></a>Ein von der MongoDB-API verwendetes Modell
+
+Zunächst müssen Sie ein Modell definieren, das die Daten enthält, die aus der Datenbank den Speicherplatz Ihrer Anwendung belegen. Im Folgenden sehen Sie ein Beispiel für das Modell, das in eShopOnContainers für „Locations“ verwendet wird.
+
+```csharp
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver.GeoJsonObjectModel;
+using System.Collections.Generic;
+
+public class Locations
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public int LocationId { get; set; }
+    public string Code { get; set; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Parent_Id { get; set; }
+    public string Description { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+                                                             { get; private set; }
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+                                                             { get; private set; }
+    public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+                                                    => SetPolygon(coordinatesList);
+
+    private void SetPosition(double lon, double lat)
+    {
+        Latitude = lat;
+        Longitude = lon;
+        Location = new GeoJsonPoint<GeoJson2DGeographicCoordinates>(
+            new GeoJson2DGeographicCoordinates(lon, lat));
+    }
+
+    private void SetPolygon(List<GeoJson2DGeographicCoordinates> coordinatesList)
+    {
+        Polygon = new GeoJsonPolygon<GeoJson2DGeographicCoordinates>(
+                  new GeoJsonPolygonCoordinates<GeoJson2DGeographicCoordinates>(
+                  new GeoJsonLinearRingCoordinates<GeoJson2DGeographicCoordinates>(
+                                                                 coordinatesList)));
+    }
+}
+```
+
+Sie können sehen, dass einige Attribute und Typen aus den NuGet-Paketen von MongoDB stammen.
+
+NoSQL-Datenbanken eignen sich in der Regel sehr gut für die Arbeit mit nicht relationalen hierarchischen Daten. In diesem Beispiel verwenden wir MongoDB-Typen, die speziell für geografische Standorte erstellt wurden, wie z.B. `GeoJson2DGeographicCoordinates`.
+
+#### <a name="retrieve-the-database-and-the-collection"></a>Abrufen von Datenbank und Sammlung
+
+In eShopOnContainers wurde ein benutzerdefinierter Datenbankkontext erstellt, in dem der Code implementiert wurde, um die Datenbank und die MongoCollections abzurufen. Dies wird im folgenden Code dargestellt.
+
+```csharp
+public class LocationsContext
+{
+    private readonly IMongoDatabase _database = null;
+
+    public LocationsContext(IOptions<LocationSettings> settings)
+    {
+        var client = new MongoClient(settings.Value.ConnectionString);
+        if (client != null)
+            _database = client.GetDatabase(settings.Value.Database);
+    }
+
+    public IMongoCollection<Locations> Locations
+    {
+        get
+        {
+            return _database.GetCollection<Locations>("Locations");
+        }
+    }       
+}
+```
+
+#### <a name="retrieve-the-data"></a>Abrufen der Daten
+
+In C#-Code, wie z.B. Web-API-Controllern oder der Implementierung benutzerdefinierter Repositorys, können Sie bei der Abfrage über die MongoDB-API Code schreiben, der mit dem folgenden Code vergleichbar ist. Beachten Sie, dass das Objekt `_context` eine Instanz der vorherigen Klasse `LocationsContext` ist.
+
+```csharp
+public async Task<Locations> GetAsync(int locationId)
+{
+    var filter = Builders<Locations>.Filter.Eq("LocationId", locationId);
+    return await _context.Locations
+                            .Find(filter)
+                            .FirstOrDefaultAsync();
+}
+```
+
+#### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Verwenden einer Umgebungsvariable in der Datei „docker-compose.override.yml“ für die MongoDB-Verbindungszeichenfolge
+
+Bei der Erstellung eines MongoClient-Objekts ist ein grundlegender Parameter erforderlich, genau genommen der Parameter `ConnectionString`, der auf die korrekte Datenbank verweist. Bei eShopOnContainers kann die Verbindungszeichenfolge auf einen lokalen MongoDB-Docker-Container oder auf eine „Produktionsdatenbank“ in Azure Cosmos DB verweisen.  Diese Verbindungszeichenfolge ergibt sich aus den Umgebungsvariablen, die in den Dateien `docker-compose.override.yml` definiert sind. Diese werden bei der Bereitstellung mit „docker-compose“ oder Visual Studio verwendet, wie im folgenden YML-Code zu sehen ist.
+
+```yml
+# docker-compose.override.yml
+version: '3'
+services:
+  # Other services
+  locations.api:
+    environment:
+      # Other settings
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+
+```
+
+Die Umgebungsvariable `ConnectionString` wird wie folgt aufgelöst: Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` in der Datei `.env` mit der Azure Cosmos DB-Verbindungszeichenfolge definiert wird, verwendet sie diese für den Zugriff auf die Azure Cosmos DB-Datenbank in der Cloud. 
+
+Im folgenden Code wird dargestellt, wie die `.env`-Datei mit der globalen Umgebungsvariable in der Azure Cosmos DB-Verbindungszeichenfolge in eShopOnContainers implementiert wird:
+
+```yml
+# .env file, in eShopOnContainers root folder
+# Other Docker environment variables
+
+ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
+ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
+
+#ESHOP_AZURE_COSMOSDB=<YourAzureCosmosDBConnData>
+
+#Other environment variables for additional Azure infrastructure assets
+#ESHOP_AZURE_REDIS_BASKET_DB=<YourAzureRedisBasketInfo>
+#ESHOP_AZURE_STORAGE_CATALOG_URL=<YourAzureStorage_Catalog_BLOB_URL>
+#ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
+```
+
+Sie sollten die Auskommentierung in der Zeile ESHOP_AZURE_COSMOSDB aufheben und diese mit Ihrer Azure Cosmos DB-Verbindungszeichenfolge aktualisieren, die Sie über das Azure-Portal gemäß den Erläuterungen unter [Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account) abgerufen haben.
+
+Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` leer ist, sprich ihre Auskommentierung in der `.env`-Datei aufgehoben wurde, verwendet der Container eine standardmäßige MongoDB-Verbindungszeichenfolge, die auf den lokalen MongoDB-Container verweist, der in eShopOnContainers unter dem Namen `nosql.data` bereitgestellt wurde. Dies wird im folgenden YML-Code dargestellt. 
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Modellieren von Daten in DocumentDB**
-    [*https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data*](https://docs.microsoft.com/azure/documentdb/documentdb-modeling-data)
+-   **Modeling document data for NoSQL databases (Modellierung von Dokumentdaten für NoSQL-Datenbanken)**
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon. Die ideale Domain Driven Design Aggregat Store? ** 
-     [ *https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+-   **Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store? (Der ideale DDD-Aggregatspeicher?)**
+    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
--   **Ein Persistenz agnostisch Ereignisspeicher für .NET.** GitHub-Repository.
-    [*https://github.com/NEventStore/NEventStore*](https://github.com/NEventStore/NEventStore)
+-   **Introduction to Azure Cosmos DB: API for MongoDB (Einführung in Azure Cosmos DB: API für MongoDB)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+
+-   **Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal (Azure Cosmos DB: Erstellen einer MongoDB-API-Web-App mit .NET und dem Azure-Portal)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+
+-   **Use the Azure Cosmos DB Emulator for local development and testing (Verwenden des Azure Cosmos DB-Emulators für lokale Entwicklungsarbeiten und Tests)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+
+-   **Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
+
+-   **The Cosmos DB Emulator Docker image (Windows Container) (Das Docker-Image im Cosmos DB-Emulator (Windows-Container))** 
+    [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
+
+-   **The MongoDB Docker image (Linux and Windows Container) (Das MongoDB-Docker-Image (Linux- und Windows-Container))** 
+    [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
+
+-   **Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account (Verwenden von MongoChef (Studio 3T) mit Azure Cosmos DB: API für MongoDB-Konto)** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Infrastructure-persistence-layer-implemenation-entity-framework-core.md) [weiter] (Microservice-application-layer-web-api-design.md)
+[Zurück] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Weiter] (microservice-application-layer-web-api-design.md)

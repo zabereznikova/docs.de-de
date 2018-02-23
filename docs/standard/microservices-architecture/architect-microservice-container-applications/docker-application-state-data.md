@@ -1,65 +1,68 @@
 ---
-title: Status und die Daten in Docker-Anwendungen
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Status und die Daten in Docker-Anwendungen"
-keywords: Docker, Microservices "," ASP.NET "," Container "," SQL "," CosmosDB "," Docker
+title: Zustand und Daten in Docker-Anwendungen
+description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Zustand und Daten in Docker-Anwendungen"
+keywords: Docker, Microservices, ASP.NET, Container, SQL, CosmosDB, Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 36d0fb9f27ef56b36c380e2fc972c79cff77003e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef11d89c39ee02d52dab29f949d1ac6be981d87f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="state-and-data-in-docker-applications"></a>Status und die Daten in Docker-Anwendungen
+# <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
-In den meisten Fällen können Sie einen Container als eine Instanz eines Prozesses vorstellen. Ein Prozess behält nicht persistenten Status bei. Während ein Containers in den lokalen Speicher schreiben kann, wäre vorausgesetzt, dass eine Instanz auf unbestimmte Zeit kann z. B. vorausgesetzt, dass eine einzelne Position im Arbeitsspeicher dauerhaft ist. Containerimages, z. B. Prozesse, sollte als gegeben angenommen, mehrere Instanzen oder, die sie werden schließlich abgebrochen; Wenn sie mit einem Container Orchestrator verwaltet werden, sollte davon ausgegangen, dass sie von einem Knoten oder virtuellen Computer in eine andere verschoben werden können.
+In den meisten Fällen können Sie sich einen Container als Instanz eines Prozesses vorstellen. Ein Prozess behält keinen persistenten Zustand bei. Während ein Container in den lokalen Speicher schreiben kann, gleicht die Annahme, dass eine Instanz auf unbestimmte Zeit vorhanden ist, der Annahme, dass ein Speicherort im Arbeitsspeicher dauerhaft ist. Für Containerimages, z.B. Prozesse, sollte angenommen werden, dass sie über mehrere Instanzen verfügen oder irgendwann abgebrochen werden. Wenn sie mit einem Containerorchestrator verwaltet werden, kann man davon ausgehen, dass sie von einem Knoten oder VM in einen anderen verschoben werden können.
 
-Docker bietet eine Funktion mit dem Namen der *overlay Dateisystem*. Dadurch wird eine Kopie-bei-Schreibvorgang-Aufgabe, die speichert Informationen in das Stammverzeichnis Dateisystem des Containers aktualisiert implementiert. Diese Informationen werden darüber hinaus das ursprüngliche Bild auf dem der Container basiert. Wenn der Container aus dem System gelöscht wird, werden diese Änderungen verloren. Aus diesem Grund es zwar möglich, den Status eines Containers in den lokalen Speicher zu speichern, würde Entwerfen eines Systems umgehen dieses die Prämisse eines Container-Entwurf Konflikt mit dem standardmäßigen zustandslos ist.
+Docker bietet ein Feature mit dem Namen *Overlay File System* (Dateisystem überlagern). Dadurch wird ein copy-on-write-Task (Bei Schreibvorgang kopieren) implementiert, die aktualisierte Informationen in das Stammdateisystem des Containers speichert. Diese Informationen kommen zum ursprünglichen Image hinzu, auf dem der Container basiert. Wenn der Container aus dem System gelöscht wird, gehen diese Änderungen verloren. Aus diesem Grund ist es zwar möglich, den Zustand eines Containers in seinem lokalen Speicher zu speichern, doch das Entwerfen eines umgehenden Systems würde mit der Prämisse des Containerdesigns kollidieren. Dieses Design ist standardmäßig zustandslos.
 
-Die folgenden Lösungen werden verwendet, um persistenter Daten in Docker-Anwendungen zu verwalten:
+Die folgenden Lösungen werden verwendet, um persistente Daten in Docker-Anwendungen zu verwalten:
 
--   [Datenvolumes](https://docs.docker.com/engine/tutorials/dockervolumes/) , die an den Host bereitstellen.
+-   [Datenvolumes](https://docs.docker.com/engine/tutorials/dockervolumes/), die in den Host eingebunden werden.
 
--   [Datenvolumecontainer](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) , freigegebenen Speicher in Containern, die mit einer externen Container bereitstellen.
+-   [Datenvolumecontainer](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container), die freigegebenen Speicher in Containern bereitstellen, die einen externen Container verwenden.
 
--   [Volume-Plug-Ins](https://docs.docker.com/engine/tutorials/dockervolumes/) , die Volumes auf remote-Dienste bereitstellen langfristige Dauerhaftigkeit bereitstellen.
+-   [Volume-Plug-Ins](https://docs.docker.com/engine/tutorials/dockervolumes/), die Volumes in Remotedienste einbinden und so langfristige Persistenz bereitstellen.
 
--   [Azure-Speicher](https://docs.microsoft.com/azure/storage/), stellt geografische verteilbarer Speicher, eine geeignete Lösung für langfristige Dauerhaftigkeit für Container bereitstellen.
+-   [Azure Storage](https://docs.microsoft.com/azure/storage/), das geografisch verteilbaren Speicher und eine geeignete Lösung für langfristige Persistenz für Container bereitstellt.
 
--   Relationale Remotedatenbanken wie [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) oder NoSQL-Datenbanken wie [Azure Cosmos-DB](https://docs.microsoft.com/azure/cosmos-db/introduction), oder -Dienste wie zwischenspeichern [Redis](https://redis.io/).
+-   Relationale Remotedatenbanken wie die [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) oder NoSQL-Datenbanken wie [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) oder Zwischenspeicherdienste wie [Redis](https://redis.io/).
 
 Nachfolgend erhalten Sie weitere Details zu diesen Optionen.
 
-**Datenvolumes** Verzeichnisse aus dem Hostbetriebssystem Verzeichnisse in Containern zugeordnet sind. Wenn Code im Container Zugriff auf das Verzeichnis hat, Zugriff tatsächlich ein Verzeichnis auf dem Host-Betriebssystem ist. Dieses Verzeichnis ist nicht an die Lebensdauer des Containers selbst gebunden, oder und das Verzeichnis zugegriffen werden kann, aus Code direkt auf das Hostbetriebssystem ausgeführt wird, um durch einen anderen Container zugeordnet, die den gleichen Hostverzeichnis auf sich selbst. Deshalb dienen Datenvolumes Daten unabhängig von der Lebensdauer des Containers beibehalten. Wenn Sie einen Container löschen oder ein Bild aus dem Docker-Host, die Daten in persistent wird die Datenmenge nicht gelöscht werden. Die Daten in ein Volume können vom Hostbetriebssystem sowie zugegriffen werden.
+**Datenvolumes** sind Verzeichnisse, die vom Hostbetriebssystem den Verzeichnissen in Containern zugeordnet werden. Wenn Code im Container Zugriff auf das Verzeichnis hat, ist dies ein Zugriff auf ein Verzeichnis auf dem Hostbetriebssystem. Dieses Verzeichnis ist nicht an die Lebensdauer des Containers selbst gebunden, und der Zugriff auf das Verzeichnis erfolgt durch Code, der direkt auf dem Hostbetriebssystem ausgeführt wird, oder durch einen anderen Container, der sich selbst das gleiche Hostverzeichnis zuordnet. Deshalb sind diese Datenvolumes dazu entworfen, Daten unabhängig von der Lebensdauer des Containers beizubehalten. Wenn Sie einen Container oder ein Image aus dem Docker-Host löschen, werden die persistenten Daten im Datenvolume nicht gelöscht. Es kann auch vom Hostbetriebssystem auf die Daten in einem Volume zugegriffen werden.
 
-**Datenvolumecontainer** eine Weiterentwicklung der regulären Datenvolumes sind. Ein Daten-Volume-Container ist eine einfache Container, der eine oder mehrere Datenvolumes darin enthalten ist. Die Data-Volume-Container bietet Zugriff auf Container, von einem zentralen Bereitstellungspunkt. Diese Methode des Datenzugriffs liegt daran, dass es sich um den Speicherort der ursprünglichen Daten abstrahiert. Als dem ist das Verhalten ähnlich dem von einem regulären Datenvolume, damit Daten in diesem dedizierten Container unabhängig von den Lebenszyklus von Containern der Anwendung beibehalten werden.
+**Datenvolumecontainer** sind eine Weiterentwicklung der regulären Datenvolumes. Ein Datenvolumecontainer ist ein einfacher Container, der mindestens ein Datenvolume enthält. Der Datenvolumecontainer bietet Zugriff auf Container von einem zentralen Bereitstellungspunkt aus. Diese Methode des Datenzugriffs ist praktisch, da sie den Speicherort der ursprünglichen Daten abstrahiert. Davon abgesehen ähnelt das Verhalten dem eines regulären Datenvolumes, damit Daten in diesem dedizierten Container unabhängig vom Lebenszyklus von Containern der Anwendung beibehalten werden.
 
-Wie in Abbildung 4-5 gezeigt, können reguläre Docker Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des dem Hostserver oder einen virtuellen Computer gespeichert werden. Jedoch zugreifen nicht Docker-Containern zu einem anderen ein Volume aus einem Host-Server oder virtuellen Computer. Das heißt, ist mit diesen Volumes es nicht möglich zum Verwalten von Daten, die gemeinsam von Containern, die auf verschiedenen Docker-Hosts ausgeführt werden soll.
+Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder einer VM auf ein Volume zugreifen. Das heißt, mit diesen Volumes ist es nicht möglich, Daten zu verwalten, die zwischen Containern freigegeben werden, die auf verschiedenen Docker-Hosts ausgeführt werden.
 
 ![](./media/image5.png)
 
-**Abbildung 4-5**. Datenvolumes und externe Datenquellen für Container-basierte Anwendungen
+**Abbildung 4-5**. Datenvolumes und externe Datenquellen für containerbasierte Anwendungen
 
-Darüber hinaus, wenn Docker-Containern durch ein Orchestrator verwaltet werden, möglicherweise Container "zwischen Hosts, je nach den vom Cluster durchgeführten Optimierungen, verschieben". Aus diesem Grund wird nicht empfohlen, Daten-Volumes für Geschäftsdaten zu verwenden. Aber sie sind ein Mechanismus zur Bearbeitung von Ablaufverfolgungsdateien, die temporären Dateien oder vergleichbar, die hat keine Auswirkung auf Datenkonsistenz Business.
+Darüber hinaus können Container möglicherweise zwischen Hosts „verschoben“ werden, wenn Docker-Container von einem Orchestrator verwaltet werden, je nach den vom Cluster durchgeführten Optimierungen. Aus diesem Grund wird nicht empfohlen, Datenvolumes für Geschäftsdaten zu verwenden. Dennoch sind sie ein guter Mechanismus zur Bearbeitung von Ablaufverfolgungsdateien, temporären Dateien oder ähnlichem, die keine Auswirkung auf die Konsistenz von Geschäftsdaten haben.
 
-**Volume-Plug-Ins** wie [Flocker](https://clusterhq.com/flocker/) Datenzugriff auf allen Hosts in einem Cluster bereitstellen. Während nicht alle Volume-Plug-Ins gleichermaßen erstellt werden, bieten Volume-Plug-Ins in der Regel externalisierte zuverlässige Speicherung von Containern unveränderlich.
+**Volume-Plug-Ins** wie [Flocker](https://clusterhq.com/flocker/) bieten Datenzugriff auf allen Hosts in einem Cluster. Obwohl nicht alle Volume-Plug-Ins gleichermaßen erstellt werden, bieten Volume-Plug-Ins in der Regel ausgelagerte, persistente und zuverlässige Speicherung von unveränderlichen Containern.
 
-**Remotedatenquellen und Cache** Tools wie Azure SQL-Datenbank, Azure-Cosmos-Datenbank oder eine remote-Cache, wie in Redis verwendet werden kann Anwendungen Container verwendet die gleiche Weise, sie werden bei der Entwicklung ohne Container verwendet. Dies ist eine bewährte Möglichkeit zum Speichern von Geschäftsdaten-Anwendung.
+Tools für **Remotedatenquellen und -caches** wie Azure SQL-Datenbank, Azure Cosmos DB oder ein Remotecache wie Redis können in Containeranwendungen auf die gleiche Weise verwendet werden wie bei der Entwicklung ohne Container. Dies ist eine bewährte Möglichkeit zum Speichern von Geschäftsanwendungsdaten.
 
-**Azure-Speicher.** Geschäftsdaten müssen in der Regel in externe Ressourcen oder Datenbanken, wie Azure-Speicher abgelegt werden soll. Azure-Speicher in konkret, bietet die folgenden Dienste in der Cloud:
+**Azure Storage.** Geschäftsdaten müssen in der Regel in externen Ressourcen oder Datenbanken wie Azure Storage abgelegt werden. Azure Storage bietet konkret die folgenden Dienste in der Cloud:
 
--   BLOB-Speicher speichert unstrukturierte Daten. Ein Blob kann jeden Datentyp Text- oder Binärdaten, z. B. Dokument oder ein Medium (Bilder, Audio- und Videofunktionen Format)-Dateien sein. BLOB-Speicher wird auch als Objektspeicher bezeichnet.
+-   Blob Storage speichert unstrukturierte Objektdaten. Ein Blob kann jeder Text- oder Binärdatentyp sein, z.B. Dokumenten- oder Mediendaten (Bilder, Audio- und Videodateien). Blob Storage wird auch als Object Storage bezeichnet.
 
--   Speichern von Dateien bietet freigegebenen Speicher für Legacyanwendungen mithilfe von SMB-Standardprotokolls. Azure Virtual Machines und Cloud-Dienste können Dateidaten mithilfe bereitgestellter Freigaben Anwendungskomponenten freigeben. Auf lokale Anwendungen können Dateidaten in einer Freigabe über die Dateidienst-REST-API zugreifen.
+-   File Storage bietet freigegebenen Speicher für Legacyanwendungen mithilfe von SMB-Standardprotokollen. Azure Virtual Machines und Clouddienste können Dateidaten mithilfe bereitgestellter Freigaben für mehrere Anwendungskomponenten freigeben. Lokale Anwendungen können über die REST-API des Dateidiensts auf Dateidaten in einer Freigabe zugreifen.
 
--   Tabellenspeicher speichert strukturierte Datasets. Tabellenspeicher ist ein NoSQL-Schlüsselattribut-Datenspeicher, der schnelle Entwicklung sowie den schnellen Zugriff auf große Mengen von Daten ermöglicht.
+-   File Storage speichert strukturierte Datasets. File Storage ist ein NoSQL-Schlüsselattributdatenspeicher, der schnelle Entwicklung sowie den schnellen Zugriff auf große Datenmengen ermöglicht.
 
-**Relationale Datenbanken und NoSQL-Datenbanken.** Es gibt verschiedene Auswahlmöglichkeiten für externe Datenbanken, angefangen bei relationalen Datenbanken wie SQL Server, PostgreSQL, Oracle oder NoSQL-Datenbanken wie Azure-Cosmos-DB, MongoDB usw. ein. Diese Datenbanken sind nicht weiter als Teil dieses Handbuch erklärt werden, sie in einen Betreff völlig unterschiedlich sind.
+**Relationale Datenbanken und NoSQL-Datenbanken.** Es gibt verschiedene Auswahlmöglichkeiten für externe Datenbanken, angefangen bei relationalen Datenbanken wie SQL Server, PostgreSQL, Oracle oder NoSQL-Datenbanken wie Azure Cosmos DB, MongoDB usw. Diese Datenbanken werden nicht in diesem Leitfaden erklärt, da sie Teil eines völlig anderen Themas sind.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (containerize-monolithischen-applications.md) [weiter] (Service-oriented-architecture.md)
+[Zurück] (containerize-monolithic-applications.md) [Weiter] (service-oriented-architecture.md)

@@ -1,85 +1,97 @@
 ---
-title: "Ein Microservice Domänenmodell mit .NET Core implementieren"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Ein Microservice Domänenmodell mit .NET Core implementieren"
+title: "Implementieren eines Microservicedomänenmodells mit .NET Core"
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren eines Microservicedomänenmodells mit. NET Core"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 26c480a82ad7bb806734decebdfbe5b4a07998e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Ein Microservice Domänenmodell mit .NET Core implementieren 
+# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 
-Im vorherigen Abschnitt wurden die grundlegenden Entwurfsprinzipien und das Muster für das Entwerfen ein Domänenmodell erläutert. Jetzt es Zeit zum Untersuchen von Möglichkeiten, implementieren Sie die Domänenmodell mit .NET Core ist (plain C\# Code) und EF Core. Beachten Sie, dass Ihre Domänenmodell einfach Code besteht. Es wird nur das Modell im EF kernanforderungen, jedoch keine echten Abhängigkeiten für EF verfügen. Sie sollten kein harte Abhängigkeiten oder Verweise auf EF-Core-Installationen oder anderen ORM-in Ihrem Domänenmodell aufweisen.
+Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Beachten Sie dass das Domänenmodell in diesem Beispiel nur aus Ihrem Code besteht. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Modell Domänenstruktur in einer benutzerdefinierten .NET Standard-Bibliothek
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Domänenmodellstruktur in einer benutzerdefinierten .NET Standard-Bibliothek
 
-Ordnerorganisation, die für die Anwendung der eShopOnContainers Verweis verwendet veranschaulicht das DDD-Modell für die Anwendung. Möglicherweise eine anderen Ordnerorganisation deutlicher Entwurf gewählten Optionen für Ihre Anwendung kommuniziert. Wie Sie in Abbildung 9 – 10 sehen können, in der Reihenfolge Domänenmodell sind zwei Aggregate, das Aggregat Reihenfolge und den Käufer-Aggregat. Jedes Aggregat ist eine Gruppe von Domänenentitäten und Value-Objekte, obwohl Sie ein Aggregat besteht aus einer Einzeldomäne Entität (aggregieren Stamm oder Stammentität) sowie möglicherweise.
+Die Ordnerorganisation, die für die Referenzanwendung „eShopOnContainers“ verwendet wird, stellt das Modell für das domänengesteuerte Design für die Anwendung dar. Möglicherweise stellen Sie fest, dass die Ordnerorganisation Ihren Überlegungen zum Anwendungsentwurf angepasst werden muss. Wie in Abbildung 9-10 dargestellt, gibt es im Domänenmodell für Bestellungen zwei Aggregate: das Aggregat „Order“ und das Aggregat „Buyer“. Jedes Aggregat besteht aus einer Gruppe von Domänenentitäten und Wertobjekten. Sie können aber auch über ein Aggregat verfügen, das aus genau einer Domänenentität besteht (dem Aggregatstamm oder der Stammentität).
 
 ![](./media/image11.png)
 
-**Abbildung 9 – 10**. Modell Domänenstruktur für die Sortierung Microservice in eShopOnContainers
+**Abbildung 9-10.** Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
 
-Darüber hinaus umfasst der Domäne der Ebene der Repository-Verträge (Schnittstellen), die die Anforderungen an die Infrastruktur des Modells Domäne sind. Das heißt, diese Schnittstellen express welche Repositorys, die die Infrastrukturebene implementieren muss und wie. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Modellebene Domäne in der Bibliothek der formularinfrastruktur Ebene platziert werden, damit die Domäne der Ebene nicht "durch-API oder Klassen von Technologien, wie Entity Framework-Infrastruktur verunreinigt ist".
+Außerdem umfasst die Ebene des Domänenmodells Repositoryverträge (Schnittstellen), die die Infrastrukturanforderungen Ihres Domänemodells ausmachen. Anders gesagt: Diese Schnittstellen legen fest, welche Repositorys die Infrastrukturebene implementieren muss und auf welche Weise dies geschehen soll. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Domänemodellebene in der Bibliothek auf Infrastruktureben platziert wird, damit die Domänenmodellebene nicht durch die APIs oder Klassen der Infrastrukturtechnologien wie Entity Framework verunreinigt wird.
 
-Sie sehen auch eine [SeedWork](https://martinfowler.com/bliki/Seedwork.html) Ordner mit benutzerdefinierten Basisklassen, die Sie als Basis für Ihre Domänenentitäten und Wert verwenden können Objekte, müssen Sie nicht redundanten Code in jeder Domäne Objektklasse.
+Außerdem wird ein [SeedWork](https://martinfowler.com/bliki/Seedwork.html)-Ordner angezeigt, der benutzerbasierte Basisklassen enthält, die Sie als Grundlage für Ihre Domänenentitäten und Wertobjekte verwenden können, sodass redundanter Code in den Objektklassen der einzelnen Domänen vermieden wird.
 
 ## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Strukturieren von Aggregaten in einer benutzerdefinierten .NET Standard-Bibliothek
 
-Ein Aggregat bezieht sich auf einem Cluster mit Domänenobjekte Transaktionskonsistenz entsprechend gruppiert. Diese Objekte möglicherweise Entitäteninstanzen (von denen die aggregierten Stamm- oder Stammentität ist) sowie alle zusätzlichen Wert Objekte.
+Ein Aggregat bezieht sich auf einen Cluster von Domänenobjekten, die entsprechend der Transaktionskonsistenz gruppiert sind. Bei diesen Objekten kann es sich um Instanzen von Entitäten (wobei eine der Entitäten der Aggregatstamm oder die Stammentität ist) einschließlich zusätzlicher Wertobjekte handeln.
 
-Transaktionskonsistenz bedeutet, dass ein Aggregat unbedingt konsistent und am Ende einer Business-Aktion auf dem neuesten Stand ist. Das Order-Aggregat aus der Sortierung Microservice Domänenmodell eShopOnContainers besteht z. B. wie in Abbildung 9 – 11 dargestellt.
+Der Begriff „Transaktionskonsistenz“ bedeutet, dass ein Aggregat am Ende einer geschäftlichen Transaktion garantiert konsistent und aktuell ist. Das Aggregat „Order“ aus dem Domänenmodell für den Microservice für Bestellungen ist wie in Abbildung 9-11 dargestellt zusammengesetzt.
 
 ![](./media/image12.png)
 
-**Abbildung 9 – 11**. Die Reihenfolge, die in Visual Studio-Projektmappe aggregieren
+**Abbildung 9-11.** Das Aggregat „Order“ in einer Visual Studio-Projektmappe
 
-Wenn Sie eine der Dateien im Ordner "aggregate" öffnen, sehen Sie wie sie markiert ist, als benutzerdefinierte Basisklasse oder Schnittstelle, wie die Entität oder Wert-Objekt, wie im implementiert die [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) Ordner.
+Wenn Sie eine der Dateien in einem Aggregatordner öffnen, sehen Sie, dass diese entweder als benutzerdefinierte Basisklasse oder als benutzerdefinierte Schnittstelle markiert ist. Dies gilt z.B. für Entitäten oder Wertobjekte, die in den [SeedWork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork)-Ordner implementiert wurden.
 
 ## <a name="implementing-domain-entities-as-poco-classes"></a>Implementieren von Domänenentitäten als POCO-Klassen
 
-Sie implementieren ein Domänenmodell in .NET durch das Erstellen von POCO-Klassen, die die Domänenentitäten zu implementieren. Im folgenden Beispiel wird die Order-Klasse als Entität und auch als aggregate Stammzertifizierungsstelle definiert. Da die Order-Klasse von der Entität Basisklasse abgeleitet ist, können sie allgemeine Code in Bezug auf Entitäten wiederverwenden. Beachten Sie, dass diese Basis-Klassen und Schnittstellen von Ihnen in der Domäne Modellprojekt, definiert sind daher ist es Ihr Code, der nicht über ein ORM wie EF Infrastrukturcode der Diagnosefunktion berücksichtigen.
+Domänenmodelle werden in .NET implementiert, indem POCO-Klassen erstellt werden, die Domänenentitäten implementieren. Im folgenden Beispiel ist die Klasse „Order“ als Entität und als Aggregatstamm definiert. Da die Klasse „Order“ von der Basisklasse „Entity“ abgeleitet wird, kann diese häufig verwendeten Code wiederverwenden, der in Zusammenhang mit den Entitäten steht. Denken Sie daran, dass diese Basisklassen und Schnittstellen von Ihnen im Domänenmodellprojekt definiert werden. Es handelt sich also um Ihren Code und nicht um Infrastrukturcode aus einer ORM wie EF.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 1.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
-    public int BuyerId { get; private set; }
-    public DateTime OrderDate { get; private set; }
-    public int StatusId { get; private set; }
-    public ICollection<OrderItem> OrderItems { get; private set; }
-    public Address ShippingAddress { get; private set; }
-    public int PaymentId { get; private set; }
-    protected Order() { } //Design constraint needed only by EF Core
-    public Order(int buyerId, int paymentId)
+    private DateTime _orderDate;
+    public Address Address { get; private set; }
+    private int? _buyerId;
+
+    public OrderStatus OrderStatus { get; private set; }
+    private int _orderStatusId;
+
+    private string _description;
+    private int? _paymentMethodId;
+
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+  
+    public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
+            string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
-        BuyerId = buyerId;
-        PaymentId = paymentId;
-        StatusId = OrderStatus.InProcess.Id;
-        OrderDate = DateTime.UtcNow;
-        OrderItems = new List<OrderItem>();
+        _orderItems = new List<OrderItem>();
+        _buyerId = buyerId;
+        _paymentMethodId = paymentMethodId;
+        _orderStatusId = OrderStatus.Submitted.Id;
+        _orderDate = DateTime.UtcNow;
+        Address = address;
+
+        // ...Additional code ...
     }
 
-    public void AddOrderItem(productName,
-        pictureUrl,
-        unitPrice,
-        discount,
-        units)
+    public void AddOrderItem(int productId, string productName, 
+                            decimal unitPrice, decimal discount, 
+                            string pictureUrl, int units = 1)
     {
         //...
         // Domain rules/logic for adding the OrderItem to the order
         // ...
-        OrderItem item = new OrderItem(this.Id, ProductId, productName,
-            pictureUrl, unitPrice, discount, units);
+
+        var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+        
+        _orderItems.Add(orderItem);
   
-        OrderItems.Add(item);
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -87,15 +99,21 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Es ist wichtig zu beachten, dass dies eine Entität "Domain" als POCO-Klasse implementiert ist. Es ist keine direkte Abhängigkeit von Entity Framework Core oder andere Infrastruktur-Framework kein. Diese Implementierung ist, sollte es sein, nur C#\# Code ein Domänenmodell implementieren.
+Beachten Sie, dass es sich dabei um eine Domänenentität handelt, die als POCO-Klasse implementiert ist. Diese Entität hat keine direkten Abhängigkeiten von EF Core oder anderen Infrastrukturframeworks. Diese Implementierung eignet sich hervorragend für domänengesteuertes Design, da es sich nur um C\#-Code handelt, der ein Domänenmodell implementiert.
 
-Darüber hinaus wird die Klasse mit einer Schnittstelle, die mit dem Namen IAggregateRoot ergänzt. Diese Schnittstelle ist eine leere Schnittstelle, bezeichnet einen *markerschnittstelle*, d. h. nur, um anzugeben, dass dieser Entitätsklasse auch einen aggregierten Stamm wird verwendet.
+Außerdem wird die Klasse durch eine Schnittstelle namens „IAggregateRoot“ ergänzt. Diese Schnittstelle ist leer und wird gelegentlich als *marker interface* (Markierungsschnittstelle) bezeichnet, die verwendet wird, um anzudeuten, dass es sich bei dieser Entitätsklasse ebenfalls um einen Aggregatstamm handelt.
 
-Eine markerschnittstelle wird manchmal als ein Antimuster betrachtet. Es ist jedoch auch eine fehlerfreie Möglichkeit, eine Klasse zu markieren, insbesondere, wenn diese Schnittstelle möglicherweise weiterentwickelt werden. Ein Attribut ist möglicherweise die andere Auswahl für den Marker allerdings handelt es sich schneller die Basisklasse (Entität) neben der IAggregate-Schnittstelle, über die Klasse ein Aggregatattribut-Marker Probieren Sie anstelle angezeigt. Es ist ein Metter Voreinstellungen, in jedem Fall.
+Markierugsschnittstellen werden gelegentlich zwar als Antimuster bezeichnet, jedoch sind sie hilfreich, um eine Klasse zu markieren – insbesondere, wenn sich diese Schnittstelle weiterentwickelt. Der Marker kann zwar auch Attribute verwenden, jedoch geht es schneller, die Basisklasse (Entität) neben der IAggregate-Schnittstelle zu überprüfen, anstatt einen Attributmarker für Aggregate oberhalb der Klasse zu positionieren. Sie können hier nach Belieben entscheiden.
 
-Müssen Sie ein Verfahren zum Aggregieren Stamm, der Großteil des Codes im Zusammenhang mit der Konsistenz und Geschäftsregeln für das Aggregat Entitäten als Methoden in der Reihenfolge-aggregate Stammklasse (z. B. AddOrderItem beim Hinzufügen eines OrderItem-Objekts, das Aggregat) implementiert werden sollte. . Sie sollten nicht erstellen oder OrderItems Objekten unabhängig voneinander oder direkt aktualisieren; die Klasse AggregateRoot muss Steuerelement und Konsistenz von jeder Updatevorgang für seine untergeordneten Entitäten beibehalten werden.
+Wenn ein Aggregatstamm vorhanden ist, bedeutet dies, dass der meiste Code, der im Zusammenhang mit der Konsistenz und den Geschäftsregeln der Entitäten des Aggregats steht, als Methoden in der Aggregatstammklasse „Order“ implementiert werden soll (z.B. AddOrderItem beim Hinzufügen eines OrderItem-Objekts zum Aggregat). Sie sollten OrderItems-Objekte nicht unabhängig oder direkt erstellen oder aktualisieren. Stattdessen sollte die AggregateRoot-Klasse die Kontrolle und Konsistenz jedes Aktualisierungsvorgangs gegenüber der untergeordneten Entitäten behalten.
 
-Beispielsweise sollten Sie *nicht* gehen beliebiger Befehl Handler-Methode oder einer Anwendung Ebene Klassen:
+## <a name="encapsulating-data-in-the-domain-entities"></a>Kapseln von Daten in Domänenentitäten
+
+Ein häufiges Problem im Zusammenhang mit Entitätsmodellen ist, dass sie Navigationseigenschaften für Auflistungen als öffentlich zugängliche Listentypen zur Verfügung stellen. Dadurch kann jedes Mitglied des Entwicklerteams die Inhalte dieser Auflistungstypen ändern. Dabei können möglicherweise wichtige Geschäftsregeln umgangen werden, die im Zusammenhang mit der Auflistung stehen, wodurch das Objekt im Status „ungültig“ hinterlassen wird. Zur Lösung dieses Problems können Sie den Zugriff auf verwandte Auslistungen auf „schreibgeschützt“ beschränken und explizit Methoden zur Verfügung stellen, über die Clients Änderungen vornehmen können.
+
+Beachten Sie, dass viele Attribute im vorherigen Code schreibgeschützt oder privat sind und nur von Klassenmethoden aktualisiert werden können. Dadurch berücksichtigt jedes Update Invarianten der Geschäftsdomäne und die Logik, die in der Klassenmethode angegeben ist.
+
+Wenn Sie sich z.B. an die Muster des domänengesteuerten Designs halten, sollten Sie den folgenden Vorgang *nicht* über eine Befehlshandlermethode oder Anwendungsschichtklasse ausführen:
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -110,17 +128,17 @@ myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
 
-In diesem Fall wird die Add-Methode rein eines Vorgangs zum Hinzufügen von Daten, mit direktem Zugriff auf die Auflistung OrderItems. Aus diesem Grund beziehen sich die meisten Domänenlogik, Regeln oder Überprüfungen auf, dass der Vorgang mit den untergeordneten Entitäten auf der Anwendungsebene (Befehlshandler und Web-API-Controller) verteilt.
+In diesem Fall handelt es sich bei der Methode „Add“ nur um einen Vorgang zum Hinzufügen von Daten mit Direktzugriff auf die OrderItems-Auflistung. Aus diesem Grund wird ein Großteil der Domänenlogik, Regeln oder Validierungen, der im Zusammenhang mit diesem Vorgang mit den untergeordneten Entitäten steht, auf die Anwendungsebene verteilt (Befehlshandler und Web-API-Controller).
 
-Wenn Sie um die aggregierten Stamm wechseln, kann nicht der aggregierte Stamm die Invarianten seine Gültigkeit bzw. ihre Konsistenz garantieren. Schließlich müssen Sie Spaghetti oder Transaktionsskripts Code.
+Wenn Sie den Aggregatstamm umgehen, kann dieser weder seine Invarianten noch seine Gültigkeit oder Konsistenz garantieren. So wird Ihr Code mit der Zeit sehr unübersichtlich, oder es entsteht Transaktionsskriptcode.
 
-Um DDD Muster folgen zu können, benötigen Entitäten nicht öffentlichen Setter in jeder Entitätseigenschaft. Änderungen in einer Entität sollte von expliziten Methoden mit expliziten ubiquitäre Sprache über die Änderung gesteuert, die sie in der Entität ausgeführt werden.
+Wenn Entitäten über öffentliche Setter in einer Entitätseigenschaft verfügen, steht dies im Widerspruch zu den Mustern des domänengesteuerten Designs. Änderungen einer Entität sollten durch explizite Methoden mit expliziten ubiquitären Sprachen zu den Änderungen ausgelöst werden, die in der Entität ausgeführt werden.
 
-Darüber hinaus muss Sammlungen innerhalb der Entität (z. B. die Bestellartikel) schreibgeschützte Eigenschaften (die AsReadOnly Methode weiter unten erläutert). Sie sollten nur von innerhalb der aggregierten Stamm-Klasse, Methoden oder die Methoden der untergeordneten Entität aktualisieren können.
+Außerdem soll es sich bei Auflistungen innerhalb der Entität (wie die der Bestellelemente) um schreibgeschützte Eigenschaften handeln (also um die nachfolgend erläuterte AsReadOnly-Methode). Sie sollten die Entität nur innerhalb der Methoden der Aggregatstammklasse oder der Methoden der untergeordneten Klasse aktualisieren können.
 
-Wie Sie im Code für den Auftrag aggregieren Stamm sehen können, sollten alle Setter private oder mindestens schreibgeschützt sind und extern sein, damit alle Vorgang für die Entität Daten oder seinen untergeordneten Elementen verfügt über Methoden in die Entitätsklasse ausgeführt werden. Damit wird die Konsistenz auf eine gesteuerte und objektorientierte Weise anstelle von Transaktionsskripts Code implementieren.
+Wie Sie in dem Aggregatstamm „Order“ sehen können, sollten alle Setters den Status „privat“ haben oder zumindest extern schreibgeschützt sein, sodass jeder Vorgang für die Daten der Entität oder der untergeordneten Entitäten über Methoden in den Entitätsklassen ausgeführt werden muss. Dadurch bleibt die Konsistenz auf kontrollierte und objektorientierte Weise erhalten, und es wird kein Transaktionsskriptcode verwendet.
 
-Der folgende Codeausschnitt zeigt die richtige Methode zum Hinzufügen eines Objekts OrderItem des Aggregats Reihenfolge von code.
+Im folgenden Codeausschnitt sehen Sie, wie Sie am besten den Task codieren, über den das OrderItem-Objekt dem Aggregat „Order“ hinzugefügt wird.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -134,104 +152,38 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-In diesem Codeausschnitt werden die meisten Überprüfungen oder Logik, die im Zusammenhang mit der Erstellung eines Objekts OrderItem unter der Kontrolle des Stamms aggregieren Reihenfolge werden – in der Methode AddOrderItem – insbesondere Überprüfungen und Logik im Zusammenhang mit anderen Elementen im aggregatfunktionsaufruf. Beispielsweise erhalten Sie möglicherweise das gleiche Produkt-Element als das Ergebnis von mehreren Aufrufen an AddOrderItem. In dieser Methode konnte Sie untersuchen die Produktelemente und dieselben Produktelemente zu einem einzigen OrderItem-Objekt mit mehreren Einheiten zu konsolidieren. Darüber hinaus würde, wenn es gibt verschiedene Rabatte die Produkt-ID ist jedoch gleich, Sie wahrscheinlich höheren Rabatt gelten. Dieses Prinzip gilt für alle anderen Domänenlogik für das Objekt OrderItem.
+In diesem Ausschnitt wird ein Großteil der Validierungen oder Logik, die im Zusammenhang mit dem OrderItem-Objekt stehen, vom Aggregatstamm „Order“ über die Methode „AddOrderItem“ gesteuert. Dies gilt insbesondere für Validierungen und Logik, die im Zusammenhang mit anderen Elementen im Aggregat stehen. Es kann z.B. sein, dass als Ergebnis mehrerer Aufrufe der AddOrderItem-Methode dasselbe Produktelement zurückgegeben wird. Sie können in dieser Methode die Produktelemente untersuchen und dieselben Produktelemente in ein OrderItem-Objekt mit mehreren Einheiten zusammenfassen. Wenn es außerdem unterschiedliche Rabatte gibt, aber die Produkt-ID unverändert bleibt, wird sehr wahrscheinlich der höhere Rabatt ausgewählt. Dieses Prinzip gilt in jeder anderen Domänenlogik für das OrderItem-Objekt.
 
-Darüber hinaus die neue OrderItem(params) Vorgang ebenfalls gesteuert und die von der Methode AddOrderItem vom Stamm aggregieren Reihenfolge ausgeführt. Daher im Zusammenhang Großteil der Logik oder Überprüfungen mit, dass Vorgang (besonders alles, was die Konsistenz zwischen anderen Entitäten untergeordneten wirkt sich auf) in einer einzelnen Stelle innerhalb des Stamms aggregieren kann. Also der ultimate Zweck des Musters aggregieren Stamm.
+Zudem wird der neue OrderItem(params)-Vorgang ebenfalls über die AddOrderItem-Methode aus dem Aggregatstamm „Order“ durchgeführt. Aus diesem Grund befindet sich ein Großteil der Logik oder Validierungen, die im Zusammenhang mit diesem Vorgang stehen, an einem gemeinsamen Ort im Aggregatstamm, insbesondere alle Elemente, die Auswirkungen auf die Konsistenz zwischen anderen untergeordneten Elementen haben. Dies ist der wichtigste Zweck des Aggregatstammmusters.
 
-Bei Verwendung von Entity Framework 1.1 eine Entität DDD kann ausgedrückt werden, da einer der neuen Funktionen von Entity Framework Core 1.1 ist, dass es ermöglicht [zuordnen zu Feldern](https://docs.microsoft.com/ef/core/modeling/backing-field) zusätzlich zu den Eigenschaften. Dies ist hilfreich, wenn Sie eine Sammlung von untergeordneten Entitäten oder rückgabewertobjekte zu schützen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften, und Sie jede Aktualisierung an die feldauflistung in öffentlichen Methoden implementieren und Bereitstellen von nur-Lese-Zugriff über die AsReadOnly-Methode.
+Wenn Sie Entity Framework Core 1.1 oder höher verwenden, kann besser eine Entität des domänengesteuerten Designs festgelegt werden, da diese neben Eigenschaften auch die [Zuordnung zu Feldern](https://docs.microsoft.com/ef/core/modeling/backing-field) zulässt. Dies ist nützlich, wenn Auflistungen von untergeordneten Entitäten oder Wertobjekten geschützt werden sollen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften nutzen, und Sie können jedes Update für die Feldauflistung in öffentlichen Methoden ausführen und schreibgeschützten Zugriff über die AsReadOnly-Methode bereitstellen.
 
-Eigenschaften werden daher in DDD, aktualisieren die Entität nur über Methoden in der Entität (oder der Konstruktor), um alle invariante und die Konsistenz der Daten zu steuern möchten, nur mit einem Get-Accessor definiert. Die Eigenschaften werden durch private Felder unterstützt. Private Member kann nur von innerhalb der Klasse zugegriffen werden. Allerdings dort eine Ausnahme: EF Core muss diese Felder ebenfalls festgelegt.
+Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Es gibt jedoch eine Ausnahme: EF Core muss diese Felder ebenfalls festlegen.
 
-```csharp
-// ENTITY FRAMEWORK CORE 1.1 OR LATER
-// Entity is a custom base class with the ID
-public class Order : Entity, IAggregateRoot
-{
-    // DDD Patterns comment
-    // Using private fields, allowed since EF Core 1.1, is a much better
-    // encapsulation aligned with DDD aggregates and domain entities (instead of
-    // properties and property collections)
-    private bool _someOrderInternalState;
-    private DateTime _orderDate;
-    public Address Address { get; private set; }
-    public Buyer Buyer { get; private set; }
-    private int _buyerId;
-    public OrderStatus OrderStatus { get; private set; }
-    private int _orderStatusId;
 
-    // DDD patterns comment
-    // Using a private collection field is better for DDD aggregate encapsulation.
-    // OrderItem objects cannot be added from outside the aggregate root
-    // directly to the collection, but only through the
-    // OrderAggrergateRoot.AddOrderItem method, which includes behavior.
-    private readonly List<OrderItem> _orderItems;
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
-    // Using List<>.AsReadOnly()
-    // This will create a read-only wrapper around the private list so it is
-    // protected against external updates. It's much cheaper than .ToList(),
-    // because it will not have to copy all items in a new collection.
-    // (Just one heap alloc for the wrapper instance)
-    // https://msdn.microsoft.com/en-us/library/e78dcd75(v=vs.110).aspx
-    public PaymentMethod PaymentMethod { get; private set; }
-    private int _paymentMethodId;
+### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Zuordnen von Eigenschaften zu Feldern in der Datenbanktabelle über get-Accessors
 
-    protected Order() { }
+Das Zuordnen von Eigenschaften zu Datenbanktabellen ist nicht allein Aufgabe der Domäne, sondern Teil der Infrastruktur und der Persistenzebene. Das wird an dieser Stelle erwähnt, damit Sie die neuen Funktionen von EF Core 1.1 oder höher kennen lernen, die mit der Vorgehensweise beim Modellieren von Entitäten im Zusammenhang stehen. Ausführliche Informationen zu diesem Thema finden Sie in dem Abschnitt zur Infrastruktur und Persistenz.
 
-    public Order(int buyerId, int paymentMethodId, Address address)
-    {
-        _orderItems = new List<OrderItem>();
-        _buyerId = buyerId;
-        _paymentMethodId = paymentMethodId;
-        _orderStatusId = OrderStatus.InProcess.Id;
-        _orderDate = DateTime.UtcNow;
-        Address = address;
-    }
-
-    // DDD patterns comment
-    // The Order aggregate root method AddOrderitem() should be the only way
-    // to add items to the Order object, so that any behavior (discounts, etc.)
-    // and validations are controlled by the aggregate root in order to
-    // maintain consistency within the whole aggregate.
-    public void AddOrderItem(int productId, string productName, decimal unitPrice,
-        decimal discount, string pictureUrl, int units = 1)
-    {
-        // ...
-        // Domain rules/logic here for adding OrderItem objects to the order
-        // ...
-        OrderItem item = new OrderItem(this.Id, productId, productName,
-            pictureUrl, unitPrice, discount, units);
-        OrderItems.Add(item);
-    }
-
-    // ...
-    // Additional methods with domain rules/logic related to the Order aggregate
-    // ...
-}
-```
-
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Zuordnen von Eigenschaften nur mit get-Eigenschaftenaccessoren auf die Felder in der Datenbanktabelle
-
-Zuordnen von Eigenschaften zu den Spalten der Datenbanktabelle ist kein Domäne Zuständigkeit, sondern Teil der Infrastruktur und Persistenz-Ebene. Wir erwähnt diese hier nur, damit die neuen Funktionen in der EF 1.1 im Zusammenhang mit, wie Sie Entitäten modellieren können bekannt sind. Weitere Informationen zu diesem Thema werden im Abschnitt-Infrastruktur und Persistenz erläutert.
-
-Bei Verwendung von EF 1.0 müssen innerhalb der DbContext Sie ordnen Sie die Eigenschaften, die nur mit Getter auf die tatsächlichen Felder in der Datenbanktabelle definiert sind. Dies erfolgt mit der HasField-Methode der PropertyBuilder-Klasse.
+Wenn Sie EF Core 1.0 verwenden, müssen Sie im Zusammenhang mit DbContext die Eigenschaften zuordnen, die nur über Getter den Feldern in der Datenbanktabelle zugeordnet sind. Diesen Vorgang führen Sie mit der HasField-Methode der PropertyBuilder-Klasse aus.
 
 ### <a name="mapping-fields-without-properties"></a>Zuordnen von Feldern ohne Eigenschaften
 
-Mit dem neuen Feature in EF Core 1.1 Spalten Felder zuordnen ist es auch möglich, verwenden die Eigenschaften nicht. Stattdessen können Sie nur Spalten aus einer Tabelle Felder zuordnen. Ein allgemeiner Verwendungsfall dafür wird die private Felder für einen internen Status, der nicht von außerhalb der Entität zugegriffen werden muss.
+Mit dem Feature in EF Core 1.1 oder höher, über das Sie Feldern Spalten zuordnen, müssen Sie nicht unbedingt Eigenschaften verwenden. Stattdessen reicht es aus, wenn Sie den Feldern nur Spalten aus einer Tabelle zuordnen. Dies ist ein häufiger auftretender Anwendungsfall, da es sich dabei um private Felder für einen internen Zustand handelt, auf den außerhalb der Entität nicht zugegriffen werden muss.
 
-Angenommen, in der im vorangehenden Codebeispiel wird die \_SomeOrderInternalState Feld verfügt über keine verknüpften Eigenschaft für eine Setter oder Getter-Methode. Dieses Feld wird auch innerhalb der Reihenfolge von Geschäftslogik berechnet und aus der Order-Methoden verwendet werden, es muss jedoch in der Datenbank ebenfalls beibehalten werden. In der EF 1.1 ist daher eine Möglichkeit, ein Feld ohne eine zugehörige Eigenschaft einer Spalte in der Datenbank zugeordnet. Dies wird auch erläutert, der [Infrastrukturebene](#the-infrastructure-layer) Abschnitt dieses Handbuchs.
+Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere private Felder wie das `_paymentMethodId`-Feld, denen keine Eigenschaften für den Setter oder Getter zugeordnet sind. Dieses Feld könnte außerdem innerhalb der Geschäftslogik der Bestellung berechnet und über die Methoden der Bestellung verwendet werden. Es muss allerdings in der Datenbank beibehalten werden. In EF Core gibt es (ab Version 1.1) die Möglichkeit, ein Feld zuzuordnen, wenn keine passende Eigenschaft der Spalte in der Datenbank zugeordnet wird. Dies wird ebenfalls in diesem Handbuch im Abschnitt [Infrastrukturebene](#the-infrastructure-layer) erläutert.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Vaughn Vernon. Modellieren von Aggregate mit DDD und Entity Framework.** Beachten Sie, dass dies *nicht* Entity Framework Core.
-    [*https://vaughnvernon.Co/?p=879*](https://vaughnvernon.co/?p=879)
+-   **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modellieren von Aggregaten mit dem domänengesteuerten Design und Entity Framework).** Hinweis: Dieser Artikel gilt *nicht* für Entity Framework Core.
+    [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Codierung für Domain Driven Design: Tipps für Entwickler Daten Developers**
+-   **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs (Codieren für das domänengesteuerte Design: Tipps für Entwickler mit dem Schwerpunkt „Daten“)**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. Vorgehensweise: Erstellen Sie vollständig gekapselt Domänenmodelle**
+-   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen von vollständig gekapselten Domänenmodellen)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Microservice-Domain-model.md) [weiter] (Seedwork-domain-model-base-classes-interfaces.md)
+[Zurück] (microservice-domain-model.md) [Weiter] (seedwork-domain-model-base-classes-interfaces.md)

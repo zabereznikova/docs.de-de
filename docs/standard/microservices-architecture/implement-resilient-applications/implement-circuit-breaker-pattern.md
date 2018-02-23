@@ -1,36 +1,39 @@
 ---
-title: Implementieren einen Trennschalter
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Implementieren einen Trennschalter"
+title: Implementieren des Trennschaltermusters
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren des Trennschaltermusters"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-circuit-breaker-pattern"></a>Implementieren einen Trennschalter
+# <a name="implementing-the-circuit-breaker-pattern"></a>Implementieren des Trennschaltermusters
 
-Wie bereits erwähnt, sollten Sie Fehler behandeln, die in Anspruch eine Variable Menge an Zeit nehmen können aus, der wiederhergestellt werden soll, wie möglicherweise auftreten, wenn Sie versuchen, eine Verbindung mit einer remote-Dienst oder eine Ressource. Diese Art von Fehler zu behandeln, kann die Stabilität und Stabilität von einer Anwendung verbessern.
+Wie bereits in einem vorherigen Artikel erwähnt wurde, sollten Sie Fehler behandeln, deren Behebung unterschiedlich lange dauern kann. Dies kann beispielsweise der Fall sein, wenn Sie versuchen, sich mit einem Remote-Dienst oder einer Remote-Ressource zu verbinden. Die Behandlung derartiger Fehler kann die Stabilität und Robustheit einer Anwendung erhöhen.
 
-In einer verteilten Umgebung können Aufrufe von remote-Ressourcen und Dienste zu einem Fehler aufgrund von vorübergehenden Fehlern, z. B. langsame Verbindungen und Timeouts verursacht, oder wenn Ressourcen werden langsam oder vorübergehend nicht verfügbar sind. Diese Fehler korrigieren selbst in der Regel nach kurzer Zeit ein, und eine robusten Cloud-Anwendung zu deren Behandlung durch eine Strategie wie die Wiederholung (Muster) vorbereitet werden soll.
+In einer verteilten Umgebung können Aufrufe von Remote-Ressourcen und -Diensten fehlschlagen, wenn vorübergehende Fehler wie langsame Netzwerkverbindungen und Timeouts auftreten oder wenn Ressourcen zu langsam oder vorübergehend nicht verfügbar sind. Diese Fehler werden in der Regel nach kurzer Zeit korrigiert, und eine robuste Cloudanwendung sollte diese durch eine Strategie wie das Wiederholungsmuster behandeln können.
 
-Allerdings möglich gibt es auch Situationen, in denen Fehler aufgrund unerwarteter Ereignisse sind, die beheben wesentlich länger dauern. Diese Fehler können in Schweregrad aus einem teilweise Verlust der Verbindung abgeschlossen bei Ausfall eines Diensts im Bereich. In diesen Situationen ist es möglicherweise nicht sinnvoll, damit eine Anwendung ständig einen Vorgang zu wiederholen, der wahrscheinlich nicht erfolgreich ist. Stattdessen sollte die Anwendung codiert werden, um annehmen, dass der Vorgang fehlgeschlagen ist und den Fehler entsprechend zu behandeln.
+Es gibt jedoch auch Situationen, in denen Fehler aufgrund unerwarteter Ereignisse auftreten. Die Behebung dieser Fehler kann deutlich mehr Zeit in Anspruch nehmen. Zu unterscheiden sind unterschiedliche Schweregrade, die von einem Teilverlust der Konnektivität bis hin zum vollständigen Ausfall des Diensts reichen können. In diesen Situationen ist es möglicherweise nicht sinnvoll, wenn eine Anwendung einen Vorgang mehrfach wiederholt, der wahrscheinlich nicht erfolgreich ausgeführt werden kann. Stattdessen sollte die Anwendung so programmiert sein, dass ein fehlgeschlagener Vorgang akzeptiert und der Fehler entsprechend behandelt wird.
 
-Einen Trennschalter wurde einen anderen Zweck als die Wiederholung (Muster). Die Wiederholung (Muster) kann eine Anwendung einen Vorgang in der Annahme zu wiederholen, die der Vorgang schließlich erfolgreich sein wird. Einen Trennschalter verhindert, dass eine Anwendung eine Operation aus, die vermutlich fehlschlägt. Eine Anwendung kann diese beiden Muster mithilfe des Wiederholungsmusters, das zum Aufrufen eines Vorgangs über ein Trennschalter kombinieren. Allerdings sollte die Wiederholungslogik für alle Ausnahmen, die von der Trennschalter zurückgegeben werden, und es sollte Wiederholungsversuche verwerfen, wenn der Trennschalter gibt an, dass ein Problem nicht vorübergehend ist.
+Das Wiederholungsmuster hat einen anderen Zweck als das Trennschaltermuster. Ersteres ermöglicht es einer Anwendung, einen Vorgang erneut auszuführen, wobei davon ausgegangen wird, dass dieser irgendwann erfolgreich sein wird. Letzteres hindert eine Anwendung daran, einen Vorgang auszuführen, der vermutlich fehlschlagen wird. Eine Anwendung kann beide Muster kombinieren, wenn sie das Wiederholungsmuster nutzt, um einen Vorgang über das Trennschaltermuster aufzurufen. Die Wiederholungslogik sollte jedoch Ausnahmen behandeln können, die eventuell von dem Trennschalter zurückgegeben werden, und auf Wiederholungsversuche verzichten, wenn durch den Trennschalter darauf hingewiesen wird, dass ein Fehler nicht vorübergehend ist.
 
-## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementieren eine einen Trennschalter mit Polly
+## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementieren eines Trennschaltermusters mit Polly
 
-Wie bei der Implementierung von Wiederholungen die empfohlene Vorgehensweise für Trennschalter ist bewährte .NET Bibliotheken wie Polly nutzen.
+Ebenso wie für die Implementierung von Wiederholungen wird auch für Trennschalter empfohlen, auf bewährte .NET-Bibliotheken wie Polly zurückzugreifen.
 
-Die eShopOnContainers-Anwendung verwendet die Polly Circuit-Breaker-Richtlinie aus, bei der Implementierung von HTTP-Wiederholungsversuchen. In der Tat gilt die Anwendung beide Richtlinien für die ResilientHttpClient Utility-Klasse. Wenn Sie ein Objekt des Typs ResilientHttpClient für HTTP-Anforderungen (von eShopOnContainers) verwenden, Sie werden sowohl diese Richtlinien anwenden, jedoch zusätzliche Richtlinien konnte zu hinzugefügt werden.
+Die eShopOnContainers-Anwendung verwendet die Polly-Richtlinie für Trennschalter bei der Implementierung von HTTP-Wiederholungsversuchen. Tatsächlich verwendet die Anwendung sogar beide Richtlinien für die Hilfsklasse ResilientHttpClient. Wenn Sie ein Objekt des Typs ResilientHttpClient für HTTP-Anforderungen (von eShopOnContainers) nutzen, wenden Sie beide Richtlinien an. Sie könnten jedoch auch zusätzliche Richtlinien hinzufügen.
 
-Die einzige zusätzliche auf den Code für Wiederholungen für HTTP-Aufrufs verwendet ist der Code, in dem Sie das Circuit-Breaker Richtlinie hinzufügen zur Liste der Richtlinien zu verwenden, wie am Ende den folgenden Code gezeigt:
+Der nachfolgende Code für Wiederholungen von HTTP-Aufrufen wird nur insofern geändert, als die Trennschalterrichtlinie der zu verwendenden Richtlinienliste hinzugefügt wird. Dies wird am Ende des folgenden Codeausschnitts gezeigt:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -75,15 +78,15 @@ private Policy[] CreatePolicies()
 }
 ```
 
-Der Code Fügt eine Richtlinie an den HTTP-Wrapper. Übergeben, dass die Richtlinie definiert ein Trennschalter, das geöffnet wird, wenn der Code die angegebene Anzahl von aufeinander folgenden Ausnahmen (Ausnahmen in einer Zeile), erkennt als im Parameters ExceptionsAllowedBeforeBreaking (5 in diesem Fall). Wenn die Verbindung geöffnet ist, HTTP-Anforderungen nicht funktionsfähig, aber eine Ausnahme ausgelöst.
+Durch den Code wird dem HTTP-Wrapper eine Richtlinie hinzugefügt. In der Richtlinie wird ein Trennschalter definiert, der sich „öffnet“, wenn der Code die vorgegebene Anzahl aufeinander folgender Ausnahmen erkennt. Die Anzahl der Ausnahmen (in diesem Fall fünf) wird als der Parameter exceptionsAllowedBeforeBreaking übergeben. Wenn der Trennschalter geöffnet ist, können keine HTTP-Anforderungen gestellt werden, und eine Ausnahme wird ausgelöst.
 
-Trennschalter sollte auch verwendet werden, um Anforderungen zu einer fallback-Infrastruktur umzuleiten, haben möglicherweise Probleme in eine bestimmte Ressource, die in einer anderen Umgebung als der Clientanwendung bereitgestellt wird oder einen Dienst, der den HTTP-Aufruf ausführt. Auf diese Weise ist es ein Ausfall im Datencenter, der nur die Back-End-Microservices jedoch nicht Ihre Clientanwendungen angewendet, wirkt sich auf die können die Clientanwendungen fallback Dienste umleiten. Plant eine neue Richtlinie aus, um dies zu automatisieren Polly [Failoverrichtlinie](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) Szenario.
+Trennschalter sollten auch verwendet werden, um Anforderungen an eine Fallbackinfrastruktur umzuleiten, wenn möglicherweise Probleme bei einer bestimmten Ressource auftreten, die in einer anderen Umgebung als die Clientanwendung oder der Dienst bereitgestellt wird, die/der den HTTP-Aufruf ausführt. Auf diese Weise kann die Clientanwendung bei einem Ausfall im Datencenter, der nur Back-End-Microservices, nicht aber Clientanwendungen betrifft, Anforderungen an Fallbackdienste umleiten. Für Polly wird aktuell eine Richtlinie zur Automatisierung dieses [Failoverrichtlinienszenarios](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) geplant.
 
-Alle diese Funktionen sind natürlich für Fälle, in dem Sie das Failover aus, in der .NET Code, anstatt sie automatisch für Sie von Azure verwaltet wird, mit Speicherorttransparenz verwalten.
+Anzumerken ist, dass die erwähnten Features nur für Fälle geeignet sind, in denen das Failover mit .NET Code und nicht automatisch von Azure unter Berücksichtigung von Speicherorttransparenz verwaltet wird.
 
-## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Verwenden die Hilfsprogrammklasse ResilientHttpClient aus eShopOnContainers
+## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Verwenden der Hilfsklasse ResilientHttpClient aus eShopOnContainers
 
-Sie verwenden die Hilfsprogrammklasse ResilientHttpClient, ähnlich wie die .NET HttpClient-Klasse verwenden. Im folgenden Beispiel von der eShopOnContainers MVC-Webanwendung (OrderingService Agent-Klasse von OrderController verwendet) wird das Objekt ResilientHttpClient über den "HttpClient"-Parameter des Konstruktors eingefügt. Anschließend wird das Objekt zum Ausführen von HTTP-Anforderungen verwendet.
+Die Hilfsklasse ResilientHttpClient wird ähnlich verwendet wie die .NET-Klasse HttpClient. Im folgenden Beispiel aus der eShopOnContainers-MVC-Webanwendung (der OrderingService-Agent-Klasse, die von OrderController verwendet wird) wird das ResilientHttpClient-Objekt über den httpClient-Parameter des Konstruktors eingefügt. Anschließend werden mit dem Objekt HTTP-Anforderungen gestellt.
 
 ```csharp
 public class OrderingService : IOrderingService
@@ -134,90 +137,92 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Wenn die \_ApiClient Member-Objekt verwendet wird, verwendet intern die Wrapperklasse mit Polly Policiesؙ – die wiederholungsrichtlinie der Trennschalter-Richtlinie und alle anderen Richtlinien, die aus der Auflistung der Polly-Richtlinien angewendet werden sollen.
+Wenn das \_apiClient-Memberobjekt verwendet wird, nutzt es intern die Wrapperklasse mit der Polly-Wiederholungsrichtlinie und der Polly-Trennschalterrichtlinie. Außerdem können alle weiteren gewünschten Richtlinien der Polly-Richtlinienauflistung angewendet werden.
 
 ## <a name="testing-retries-in-eshoponcontainers"></a>Testen von Wiederholungen in eShopOnContainers
 
-Sobald Sie die eShopOnContainers-Lösung in einem Docker-Host starten, muss er mehrere Container zu starten. Einige der Container werden langsamer starten und zu initialisieren, wie die SQL Server-Container. Dies gilt insbesondere, beim ersten der Anwendung eShopOnContainers in Docker bereitstellen, da er die Images und die Datenbank einrichten muss. Die Tatsache, dass die einige Container langsamer als die andere den Rest der Dienste für anfänglich HTTP-Ausnahmen auslösen, verursachen können, selbst wenn Sie festlegen, dass Abhängigkeiten zwischen Containern am start der Docker-verfassen Ebene, wie in vorherigen Abschnitten beschrieben. Die Docker-verfassen Abhängigkeiten zwischen Containern sind nur auf der Prozessebene. Des Containers Eintrag Punkt Prozess gestartet werden kann, aber SQL Server möglicherweise nicht für Abfragen bereit. Das Ergebnis einer Cascade von Fehlern werden kann, und die Anwendung kann eine Ausnahme abgerufen, beim Versuch, diesen Container nutzen.
+Sobald Sie die eShopOnContainers-Lösung in einem Docker-Host starten, müssen mehrere Container gestartet werden. Einige Container wie der SQL Server-Container werden langsamer gestartet und initialisiert. Dies ist v.a. dann der Fall, wenn Sie die eShopOnContainers-Anwendung zum ersten Mal in Docker bereitstellen, da die Images und die Datenbank eingerichtet werden müssen. Der langsamere Start einiger Container kann dazu führen, dass die anderen Dienste auch dann anfänglich HTTP-Ausnahmen auslösen, wenn Sie, wie in den vorherigen Abschnitten beschrieben, Abhängigkeiten zwischen Containern auf der docker-compose-Ebene festlegen. Diese docker-compose-Abhängigkeiten zwischen Containern befinden sich nur auf der Prozessebene. Auch wenn der Einstiegspunktprozess des Containers bereits gestartet wurde, ist SQL Server möglicherweise noch nicht für Abfragen bereit. Das Ergebnis können zahlreiche Fehler sein. Außerdem wird in der Anwendung möglicherweise eine Ausnahme angezeigt, wenn sie versucht, den Container zu verwenden.
 
-Diese Art von Fehlern beim Start möglicherweise auch angezeigt werden, wenn die Anwendung in der Cloud bereitgestellt wird. In diesem Fall Orchestrators möglicherweise werden Container von einem Knoten oder virtuellen Computer in einen anderen verschieben (die neue Instanzen gestartet wird,), wenn die Anzahl der Container über die Cluster-Knoten hinweg Lastenausgleich.
+Diese Art von Fehler kann auch beim Start angezeigt werden, wenn die Anwendung in der Cloud bereitgestellt wird. In diesem Fall können Orchestratoren einen Container zwischen Knoten oder virtuellen Computern hin- und herschieben (was dem Start neuer Instanzen entspricht), wenn die Anzahl der Container für Clusterknoten ausgeglichen wird.
 
-Die Möglichkeit, die eShopOnContainers dieses Problem gelöst ist mithilfe des Wiederholungsmusters, das die wir zuvor veranschaulicht. Es ist auch an, warum, wenn Sie die Projektmappe zu starten, ablaufverfolgungen oder Warnungen wie folgt auftreten können:
+eShopOnContainers löst dieses Problem mithilfe des Wiederholungsmusters, das bereits beschrieben wurde. Dies ist auch der Grund dafür, warum beim Start der Lösung möglicherweise Protokollablaufverfolgungen oder -warnungen wie die Folgende angezeigt werden:
 
-> "**Wiederholung 1 implementiert, mit Pollys RetryPolicy**, da: System.Net.Http.HttpRequestException: beim Senden der Anforderung ist ein Fehler aufgetreten. ---&gt;System.Net.Http.CurlException: Konnte keine Verbindung mit Server herstellen\\am System.Net.Http.CurlHandler.ThrowIfCURLEError (CURLcode Fehler) n\\am n \[... \].
+> **Retry 1 implemented with Polly's RetryPolicy**, due to: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---&gt; System.Net.Http.CurlException: Couldn't connect to server\\n at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)\\n at \[...\]. (Wiederholung 1 wurde mit Pollys Wiederholungsrichtlinie aus folgendem Grund implementiert: System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. System.Net.Http.CurlException: Mit dem Server\n bei System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)\n konnte keine Verbindung bei [...] hergestellt werden.)
 
-## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testen der Trennschalter in eShopOnContainers
+## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testen eines Trennschalters in eShopOnContainers
 
-Es gibt mehrere Möglichkeiten, Sie können die Verbindung zu öffnen und mit eShopOnContainers zu testen.
+Es gibt mehrere Möglichkeiten, den Trennschalter zu öffnen und ihn auf diese Weise mit eShopOnContainers zu testen.
 
-Eine Möglichkeit besteht darin senken Sie die zulässige Anzahl von Wiederholungen auf 1 in der Trennschalter Richtlinie und stellen Sie die gesamte Lösung in Docker. Klicken Sie mit einem einzelnen Neuversuch besteht eine hohe Wahrscheinlichkeit, die eine HTTP-Anforderung während der Bereitstellung fehl, der Trennschalter wird geöffnet, und Sie erhalten eine Fehlermeldung.
+Eine Option besteht darin, die zulässige Anzahl von Wiederholungen in der Trennschalterrichtlinie auf eins zu reduzieren und die gesamte Lösung erneut in Docker bereitzustellen. Bei einem einzelnen Neuversuch ist die Wahrscheinlichkeit hoch, dass die HTTP-Anforderung bei der Bereitstellung fehlschlägt, der Trennschalter geöffnet und eine Fehlermeldung angezeigt wird.
 
-Eine andere Möglichkeit ist die Verwendung von benutzerdefinierten Middleware, die in der Reihenfolge Microservice implementiert wird. Wenn diese Middleware aktiviert ist, fängt Sie alle HTTP-Anforderungen ab und gibt den Statuscode 500 zurück. Sie können die Middleware aktivieren, indem Sie eine GET-Anforderung an der fehlerhaften URI wie folgt:
+Eine weitere Option besteht in der Verwendung benutzerdefinierter Middleware, die im `Basket`-Microservice implementiert wird. Wenn diese Middleware aktiviert ist, fängt sie alle HTTP-Anforderungen ab und gibt den Statuscode 500 zurück. Sie können die Middleware aktivieren, indem Sie eine GET-Anforderung an den URI stellen, der den Fehler auslöst. Dabei können Sie z.B. folgende Anforderungen verwenden:
 
--   GET/fehlschlagen
+-   GET /failing
 
-Diese Anforderung gibt den aktuellen Status der Middleware zurück. Wenn die Middleware aktiviert ist, die Anforderung den Statuscode 500 zurück. Wenn die Middleware deaktiviert ist, ist es jedoch keine Antwort.
+Diese Anforderung gibt den aktuellen Status der Middleware zurück. Wenn die Middleware aktiviert ist, gibt die Anforderung den Statuscode 500 zurück. Wenn die Middleware deaktiviert ist, wird keine Antwort zurückgegeben.
 
--   GET/fehlschlägt? aktivieren
+-   GET /failing?enable
 
 Diese Anforderung aktiviert die Middleware.
 
--   GET/fehlschlägt? deaktivieren
+-   GET /failing?disable
 
-Diese Anforderung wird die Middleware deaktiviert.
+Diese Anforderung deaktiviert die Middleware.
 
-Sobald die Anwendung ausgeführt wird, können Sie die Middleware aktivieren, indem Sie eine Anforderung mit den folgenden URI in einen beliebigen Browser. Beachten Sie, dass die Sortierung Microservice Port 5102 verwendet.
+Sobald die Anwendung ausgeführt wird, können Sie z.B. die Middleware aktivieren, indem Sie mit dem unten aufgeführten URI in einem Browser eine Anforderung stellen. Beachten Sie, dass der Microservice für Bestellungen den Port 5103 verwendet.
 
-Http://localhost:5102 / fehlschlägt? aktivieren
+http://localhost:5103/failing?enable
 
-Sie können dann überprüfen Sie den Status mit dem URI [Http://localhost:5102 / fehlschlagen](http://localhost:5100/failing), wie in Abbildung 10 – 4 dargestellt.
+Mit dem URI [http://localhost:5103/failing](http://localhost:5103/failing) können Sie anschließend wie in Abbildung 10-4 dargestellt den Status überprüfen.
 
 ![](./media/image4.png)
 
-**Abbildung 10 – 4**. Einen Fehler mit ASP.NET Middleware simulieren
+**Abbildung 10-4.** Überprüfung des „Fehlerstatus“ der ASP.NET-Middleware (hier deaktiviert) 
 
-An diesem Punkt Aufrufen der Reihenfolge Microservice antwortet mit dem Statuscode 500 bei jedem Aufruf sie.
+Der Warenkorbmicroservice antwortet bei Aufruf immer mit dem Statuscode 500.
 
-Sobald die Middleware ausgeführt wird, können Sie versuchen, eine Bestellung von der MVC-Webanwendung vornehmen. Da die Anforderungen ein Fehler auftritt, wird die Verbindung geöffnet.
+Sobald die Middleware ausgeführt wird, können Sie versuchen, über die MVC-Webanwendung eine Bestellung aufzugeben. Da die Anforderungen fehlschlagen, wird der Trennschalter geöffnet.
 
-Im folgenden Beispiel sehen Sie, dass die MVC-Webanwendung einen Catch weist in der Logik zum Platzieren einer Bestellung zu blockieren. Wenn der Code eine Open-Circuit-Ausnahme abfängt, wird dem Benutzer eine benutzerfreundliche Meldung informiert wird gewartet.
+Wie im folgenden Beispiel zu sehen ist, befindet sich in der MVC-Webanwendung ein catch-Block in der Logik zum Aufgeben einer Bestellung. Wenn im Code eine durch den offenen Trennschalter ausgelöste Ausnahme abgefangen wird, erhält der Benutzer eine Wartebenachrichtigung.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 
-Hier ist eine Zusammenfassung. Die wiederholungsrichtlinie versucht, mehrere Male die HTTP-Anforderung und ruft HTTP-Fehler. Wenn die Anzahl der Versuche, die maximale Anzahl Satz für die Richtlinie "Circuit-Breaker" (in diesem Fall 5) erreicht, löst die Anwendung eine BrokenCircuitException an. Das Ergebnis ist eine benutzerfreundliche Meldung an, wie in Abbildung 10 – 5 gezeigt.
+Die durch den Code ausgelösten Schritte werden im Folgenden kurz zusammengefasst. Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Versuche erreicht wird, die für die Trennschalterrichtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung eine BrokenCircuitException aus. Das Ergebnis ist eine Benutzerbenachrichtigung (s. Abbildung 10-5).
 
 ![](./media/image5.png)
 
-**Abbildung 10 – 5**. Trennschalter ein Fehler zurückgegeben, in die Benutzeroberfläche.
+**Abbildung 10-5.** Trennschalter, der einen Fehler zurückgibt, der auf der Benutzeroberfläche angezeigt wird
 
-Sie können eine unterschiedliche Logik für den Fall, öffnen Sie die Verbindung implementieren. Oder Sie können eine HTTP-Anforderung für einen anderen Back-End-Microservice versuchen, ob ein fallback Datacenter oder redundante Back-End-System vorliegt.
+Sie können unterschiedliche Logiken für das Öffnen des Trennschalters festlegen. Alternativ können Sie auch eine HTTP-Anforderung an einen anderen Back-End-Microservice stellen, falls ein Fallbackdatencenter oder ein redundantes Back-End-System vorliegt.
 
-Schließlich ist eine weitere Möglichkeit für die CircuitBreakerPolicy isolieren (der erzwingt öffnen und die Verbindung geöffnet hält) und zurückgesetzt (Dies schließt erneut) zu verwenden. Diese können verwendet werden, einen Hilfsprogramm HTTP-Endpunkt zu erstellen, der isoliert und Zurücksetzen der direkt auf die Richtlinie aufruft. Solche ein HTTP-Endpunkt kann auch verwendet werden entsprechend geschützt werden, in der Produktion vorübergehend isolieren ein downstreamsystem, z. B. wenn das Upgrade ausgeführt werden sollen. Oder es konnte die Verbindung manuell, um ein downstreamsystem schützen Sie vermuten, werden fehlgeschlagene auslöst.
+Eine weitere Möglichkeit für die Implementierung von CircuitBreakerPolicy ist die Verwendung der Isolate-Methode (die die Öffnung des Trennschalters erzwingt und dafür sorgt, dass er geöffnet bleibt) und der Reset-Methode (die den Trennschalter wieder schließt). Diese können für die Erstellung eines Hilfs-HTTP-Endpunkts verwendet werden, der Isolate und Reset direkt in der Richtlinie aufruft. Ein derartiger HTTP-Endpunkt kann auch, falls er entsprechend gesichert ist, in einer Produktionsumgebung verwendet werden, um ein Downstreamsystem beispielsweise bei einem Upgrade vorübergehend zu isolieren. Alternativ könnte er den Trennschalter manuell auslösen, um ein Downstreamsystem zu schützen, das möglicherweise fehlerhaft ist.
 
-## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Die wiederholungsrichtlinie für hinzugefügt eine Strategie jitter
+## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Hinzufügen einer Jitterstrategie zur Wiederholungsrichtlinie
 
-Eine reguläre wiederholungsrichtlinie kann Ihr System in Fällen hoher Parallelität und Skalierbarkeit und unter hohes konfliktpotenzial auswirken. Um Spitzen ähnliche Wiederholungen, die von vielen Clients bei einem teilweise Ausfälle zu vermeiden, ist eine gute Lösung eine Strategie für die Jitter an die wiederholungsrichtlinie/Algorithmus hinzufügen. Dies kann die gesamtleistung des Systems End-to-End-verbessern, indem Exponentielles Backoff hinsichtlich Ihrer Zufälligkeit hinzugefügt. Dies ausbreitet die Spitzen beim Auftreten von Problemen. Wenn Sie Polly verwenden, kann Code zum Implementieren von Jitter wie im folgenden Beispiel aussehen:
+Eine reguläre Wiederholungsrichtlinie kann ein System negativ beeinflussen, falls hohe Parallelität, hohe Skalierbarkeit und ein hohes Konfliktpotenzial vorhanden sind. Um mit Spitzenlasten umgehen zu können, die bei ähnlichen Wiederholungsanforderungen von vielen Clients bei einem Teilausfall auftreten, empfiehlt es sich als Notlösung, den Wiederholungsalgorithmus oder die Wiederholungsrichtlinie um eine Jitterstrategie zu ergänzen. Wenn für den exponentiellen Backoff der Jitter zufällig festgelegt wird, kann dies die Gesamtleistung des End-to-End-Systems verbessern. Dadurch lassen sich beim Auftreten von Problemen Lastspitzen verteilen. Wenn Sie Polly verwenden, könnte der Code zum Implementieren des Jitters wie folgt aussehen:
 
 ```csharp
 Random jitterer = new Random();
@@ -230,18 +235,18 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Wiederholen Sie die Muster**
+-   **Wiederholungsmuster**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
 -   **Verbindungsresilienz** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (.NET Stabilität und vorübergehend fehlerverarbeitung Bibliothek) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung vorübergehender Fehler) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Einen Trennschalter**
+-   **Trennschaltermuster**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Brooker. Jitter: Macht es besser mit Zufälligkeit** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Jitter: Making Things Better With Randomness** (Jitter: Optimierung durch Zufälligkeit) https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Implement-http-call-retries-exponential-backoff-polly.md) [weiter] (Monitor-app-health.md)
+[Zurück] (implement-http-call-retries-exponential-backoff-polly.md) [Weiter] (monitor-app-health.md)

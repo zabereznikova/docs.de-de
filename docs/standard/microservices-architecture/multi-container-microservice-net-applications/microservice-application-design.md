@@ -1,6 +1,6 @@
 ---
-title: Eine Microservice dienstorientierten Anwendung entwerfen
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Eine Microservice dienstorientierten Anwendung entwerfen"
+title: Entwerfen einer an Microservice orientierten Anwendung
+description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen einer an Microservice orientierten Anwendung"
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,194 +8,197 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1e1dc919c7e35580576c86b4cf9872b4f8cea2c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Eine Microservice dienstorientierten Anwendung entwerfen
+# <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
-Dieser Abschnitt konzentriert sich auf das Entwickeln einer hypothetischen serverseitige Enterprise-Anwendung.
+Dieser Abschnitt konzentriert sich auf das Entwickeln einer hypothetischen serverseitigen Unternehmensanwendung.
 
-## <a name="application-specifications"></a>Spezifikationen der Anwendung
+## <a name="application-specifications"></a>Anwendungsspezifikationen
 
-Die hypothetische Anwendung verarbeitet Anforderungen von Geschäftslogik ausführen, den Zugriff auf Datenbanken und Zurückgeben von HTML, JSON oder XML-Antworten. Es wird mitgeteilt, dass die Anwendung eine Vielzahl von Clients, einschließlich Desktopbrowsern mit Single Page Applications (SPAs), herkömmlichen Web-apps, mobile Web-apps und systemeigener mobiler apps unterstützen muss. Die Anwendung möglicherweise auch verfügbar machen eine API für Drittanbieter zu nutzen. Sie sollten auch integrieren Sie ihre Microservices oder externe Anwendungen asynchron ausgeführt wird, kann sein, damit Ansatz Stabilität von der Microservices bei teilfehler hilft.
+Die hypothetische Anwendung verarbeitet Anforderungen, indem sie Geschäftslogik ausführt, auf Datenbanken zugreift und anschließend HTML-, JSON- oder XML-Antworten zurückgibt. Die Anwendung soll eine Vielzahl von Clients unterstützen, einschließlich Desktopbrowsern, die Einzelseitenanwendungen (Single Page Applications, SPAs) ausführen, herkömmlichen Web-Apps, mobilen Web-Apps und nativen Web-Apps. Die Anwendung könnte auch eine API verfügbar machen, die von Drittanbietern verwendet werden kann. Sie sollte zudem in der Lage sein, ihre Microservices oder externen Anwendungen asynchron zu integrieren, sodass dieser Ansatz im Fall von Teilfehlern für eine bessere Stabilität der Microservices sorgt.
 
-Die Anwendung wird diese Typen von Komponenten umfassen:
+Die Anwendung soll aus den folgenden Typen von Komponenten bestehen:
 
--   Komponenten der Präsentation. Dies sind verantwortlich für die Behandlung von der Benutzeroberflächenautomatisierungs und Nutzung von remote-Diensten.
+-   Präsentationskomponenten. Diese sind für die Verarbeitung der Benutzeroberfläche sowie die Verwendung von Remotediensten verantwortlich.
 
--   Domäne oder die Geschäftslogik. Dies ist die Domänenlogik der Anwendung.
+-   Domänen- oder Geschäftslogik. Dabei handelt es sich um die Domänenlogik der Anwendung.
 
--   Datenbank-Zugriffslogik. Dies umfasst die Datenzugriffskomponenten ist verantwortlich für den Zugriff auf Datenbanken (SQL oder NoSQL).
+-   Datenbankzugriffslogik. Diese besteht aus Datenzugriffskomponenten, die für den Zugriff auf Datenbanken verantwortlich sind (SQL oder NoSQL).
 
--   Integration von Anwendungslogik. Dies schließt einen Messagingkanal, hauptsächlich basierend auf nachrichtenbroker.
+-   Anwendungsintegrationslogik. Diese beinhaltet einen Nachrichtenkanal, der hauptsächlich auf Nachrichtenbroker basiert.
 
-Die Anwendung erfordert für hohe Skalierbarkeit und die vertikale Subsysteme autonom, horizontal skalieren lässt, da bestimmte Subsysteme größere Skalierbarkeit als andere benötigen.
+Die Anwendung erfordert eine hohe Skalierbarkeit, wobei sie den vertikalen Subsystemen ermöglichen muss, unabhängig horizontal hochzuskalieren, da einige Subsysteme eine höhere Skalierbarkeit erfordern als andere.
 
-Die Anwendung muss in der Lage, in Umgebungen mit mehreren Infrastruktur (mehrere öffentliche Clouds und lokalen) bereitgestellt werden und im Idealfall sollte über Plattformen hinweg, verschieben Sie einfach von Linux zu Windows (oder umgekehrt).
+Die Anwendung muss in mehreren Infrastrukturumgebungen (mehreren öffentlichen Clouds und lokalen Umgebungen) bereitgestellt werden können und idealerweise plattformübergreifend sein, damit ein Verschieben von Linux nach Windows (oder umgekehrt) einfach möglich ist.
 
-## <a name="development-team-context"></a>Entwicklung Teamprojekt-verwaltungskontext
+## <a name="development-team-context"></a>Kontext des Entwicklungsteams
 
-Außerdem wird vorausgesetzt, Folgendes im Zusammenhang mit den Entwicklungsprozess für die Anwendung:
+Für den Entwicklungsprozess der Anwendung wird außerdem Folgendes angenommen:
 
--   Sie haben mehrere Dev Teams Fokussierung auf bestimmte geschäftliche Bereiche der Anwendung.
+-   Sie verfügen über mehrere Entwicklungsteams, die sich auf unterschiedliche Geschäftsbereiche der Anwendung konzentrieren.
 
--   Neue Teammitglieder müssen schnell produktiv muss, und die Anwendung leicht zu verstehen und zu ändern.
+-   Neue Teammitglieder müssen sich schnell einarbeiten, und die Anwendung muss einfach zu verstehen und zu bearbeiten sein.
 
--   Die Anwendung wird eine langfristige Entwicklung und Geschäftsregeln sich stetig ändernden aufweisen.
+-   Die Anwendung wird langfristig weiterentwickelt und weist Geschäftsregeln, die stetig verändert werden.
 
--   Sie benötigen gute langfristigen Verwaltbarkeit, was bedeutet, dass Flexibilität beim neuen Änderungen in der Zukunft zu implementieren, während mehrere Subsysteme mit minimalen Auswirkungen auf die andere Subsysteme aktualisieren kann.
+-   Sie benötigen eine gute, langfristige Wartbarkeit, d.h. Flexibilität beim Implementieren neuer Änderungen in der Zukunft, wobei es möglich sein muss, dass mehrere Subsysteme ohne größeren Einfluss auf die anderen Subsysteme aktualisiert werden.
 
--   Übung fortlaufende Integration und kontinuierliche Bereitstellung der Anwendung werden sollen.
+-   Sie möchten Continuous Integration und Continuous Deployment der Anwendung ausüben.
 
--   Die Anwendung entwickelt möchten sich entwickelnder Technologie (Frameworks, Programmieren Sprachen, usw.) nutzen. Sie sollten keine vollständigen Migration der Anwendung vornehmen, wenn, neuen Technologien zu verschieben, da die, die zu hohe Kosten und die Vorhersehbarkeit und die Stabilität der Anwendung auswirken würde.
+-   Sie möchten bei der Weiterentwicklung Ihrer Anwendung von neuen Technologien (Frameworks, Programmiersprachen usw.) profitieren. Sie möchten bei der Umstellung auf neue Technologien keine vollständigen Migrationen der Anwendung durchführen, da dies zu hohen Kosten führen würde und sich negativ auf die Vorhersagbarkeit und die Stabilität der Anwendung auswirken würde.
 
 ## <a name="choosing-an-architecture"></a>Auswählen einer Architektur
 
-Was muss der Anwendungsarchitektur Bereitstellung? Die Spezifikationen für die Anwendung zusammen mit der Entwicklung Kontext angegeben, wird empfohlen, dass Sie die Anwendung von in autonomen Subsysteme in Form von zusammenarbeitenden Microservices und Container zu zerlegen, wobei ein Microservice Architekt sollten ist ein Container.
+Welche Architektur sollte für die Anwendungsbereitstellung ausgewählt werden? Im Hinblick auf die Spezifikationen für die Anwendung sowie auf den Entwicklungskontext wird dringend empfohlen, dass Sie die Anwendung zur Architektur in Form von zusammenarbeitenden Microservices und Containern (wobei es sich bei einem Microservice um einen Container handelt) in unabhängige Subsysteme zerlegen.
 
-Bei diesem Ansatz implementiert jeden Dienst (Container) eine Reihe von zusammenhängenden und eng verwandte Funktionen. Beispielsweise kann eine Anwendung der Dienste, z. B. der Katalogdienst Sortierung Service, Dienst Warenkorb, Benutzerprofildienst usw. bestehen.
+Bei diesem Ansatz implementiert jeder Dienst (Container) mehrere zusammenhängende und eng verwandte Funktionen. Beispielsweise kann eine Anwendung aus Diensten wie dem Katalogdienst, dem Bestelldienst, dem Warenkorbdienst, dem Benutzerprofildienst bestehen.
 
-Microservices kommunizieren mithilfe der Protokolle wie HTTP (REST), aber auch asynchron (das AMQP) nach Möglichkeit, insbesondere wenn weitergeben aktualisiert mit integrationsereignisse.
+Microservices kommunizieren mithilfe von Protokollen wie HTTP (REST), nach Möglichkeit jedoch auch asynchron (z.B. über AMQP), insbesondere bei der Weitergabe von Updates bei Integrationsereignissen.
 
-Microservices werden entwickelt und als Container unabhängig voneinander bereitgestellt. Dies bedeutet, dass ein Entwicklungsteam entwickeln und Bereitstellen von einem bestimmten Microservice ohne Auswirkungen auf andere Subsysteme werden kann.
+Microservices werden als Container entwickelt und bereitgestellt, die nicht voneinander abhängig sind. Dies bedeutet, dass ein Entwicklungsteam einen bestimmten Microservice ohne Auswirkungen auf andere Subsysteme entwickeln und bereitstellen kann.
 
-Jede Microservice verfügt über eine eigene Datenbank, sodass es vollständig von anderen Microservices entkoppelt werden. Bei Bedarf Konsistenz zwischen Datenbanken von anderen Microservices erfolgt mithilfe auf Anwendungsebene-integrationsereignisse (über einen logischen Ereignisbus), als im Befehl und Abfrage Verantwortung Segregation (CQRS) behandelt. Aus diesem Grund müssen die Einschränkungen Business eventuellen Konsistenz zwischen mehreren Microservices nutzen und zugehörige Datenbanken.
+Jeder Microservice verfügt über seine eigene Datenbank, wodurch er vollständig von anderen Microservices entkoppelt werden kann. Wenn nötig, kann die Konsistenz zwischen Datenbanken verschiedener Microservices mithilfe von Integrationsereignissen auf Anwendungsebene (über einen logischen Ereignisbus) erreicht werden, wie bei der Command and Query Responsibility Segregation (CQRS). Daher müssen die Geschäftseinschränkungen eine mögliche Konsistenz zwischen den verschiedenen Microservices und verwandten Datenbanken umfassen.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: eine Verweis-Anwendung für .NET Core und Microservices bereitgestellt von Containern
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Eine Referenzanwendung für .NET Core und Microservices, die mithilfe von Containern bereitgestellt wurde
 
-Damit Sie sich die Architektur und den Technologien statt darum geht, eine hypothetic Business-Domäne, die Sie möglicherweise nicht bekannt konzentrieren können, haben wir eine bekannte Business-Domäne ausgewählt, nämlich eine vereinfachte eCommerce (e-Shop)-Anwendung, die stellt einen Katalog mit Produkte, die Bestellungen von Kunden verwendet, Bestand überprüft und führt andere Geschäftsfunktionen. Dieser Container-basierte Anwendungsquellcode steht in der [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub-Repository.
+Damit Sie sich auf die Architektur und die Technologien konzentrieren können, anstatt über eine hypothetische Geschäftsdomäne nachzudenken, mit der Sie sich möglicherweise nicht auskennen, wurde eine bekannte Geschäftsdomäne ausgewählt, nämlich eine vereinfachte E-Commerce-Anwendung (Onlineshop), die einen Katalog von Produkten darstellt, Bestellungen von Kunden entgegennimmt, den Lagerbestand überprüft und weitere Geschäftsfunktionen übernimmt. Dieser containerbasierte Anwendungsquellcode ist im GitHub-Repository [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) verfügbar.
 
-Die Anwendung besteht aus mehreren Subsysteme, einschließlich mehrere Store UI-Front-Ends (eine Webanwendung und eine systemeigene mobile app), zusammen mit den Back-End-Microservices und Container für alle erforderlichen serverseitige Vorgänge. Abbildung 8 – 1 zeigt die Architektur der Anwendung Verweis.
+Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der Shop-Benutzeroberfläche (einer Webanwendung und einer nativen mobilen App), sowie den Back-End-Microservices und -Containern für alle erforderlichen serverseitigen Vorgänge. Abbildung 8-1 zeigt die Architektur der Referenzanwendung.
 
 ![](./media/image1.png)
 
-**Abbildung 8 – 1**. Die eShopOnContainers verweisen auf die Anwendung, die eine direkte Kommunikation von Client-zu-Microservice und den-Ereignisbus anzeigt
+**Abbildung 8-1**. Die Referenzanwendung eShopOnContainers zeigt eine direkte Client-zu-Microservice-Kommunikation und den Ereignisbus.
 
-**Hostingumgebung**. In Abbildung 8 – 1, sehen Sie mehrere Container in einem einzelnen Docker-Host bereitgestellt. Das wäre die Groß-/Kleinschreibung bei der Bereitstellung für einen einzelnen Docker-Host mit der Docker-Befehl zu erstellen. Allerdings Domänenmodus unter Verwendung einer Orchestrator oder Container-Cluster, jeder Container in einen anderen Host (Knoten) ausgeführt werden konnte und einen beliebigen Knoten kann eine beliebige Anzahl von Containern, wie wir zuvor im Abschnitt Architektur erklärt ausgeführt werden.
+**Hostumgebung**. In Abbildung 8-1 werden mehrere Container angezeigt, die innerhalb eines einzelnen Docker-Hosts bereitgestellt wurden. Dies wäre bei der Bereitstellung auf einem einzelnen Docker-Host mit dem Befehl „docker-compose up“ der Fall. Wenn Sie jedoch einen Orchestrator- oder Containercluster verwenden, könnte jeder Container auf einem anderen Host(knoten) ausgeführt werden, und jeder Knoten könnte, wie bereits im Abschnitt zur Architektur weiter oben beschrieben, jede beliebige Anzahl von Containern ausführen.
 
-**Kommunikationsarchitektur**. Die Anwendung eShopOnContainers verwendet zwei Kommunikationstypen, abhängig von der Art der funktionalen Aktion (Abfragen im Vergleich zu Updates und Transaktionen):
+**Kommunikationsarchitektur.** Die Anwendung eShopOnContainers verwendet zwei Kommunikationstypen, abhängig von der Art der funktionalen Aktion (Abfragen im Vergleich zu Updates und Transaktionen):
 
--   Direkte Kommunikation von Client-zu-Microservice. Für Abfragen und wird verwendet, wenn Update oder transaktionsbefehlen, die über die Client-apps zu akzeptieren.
+-   Direkte Kommunikation zwischen Client und Microservice. Diese wird für Abfragen und bei der Annahme von Update- oder Transaktionsbefehlen von den Client-Apps verwendet.
 
--   Asynchrone Kommunikation, die ereignisbasierten. Dies erfolgt über eine Ereignisbus Updates über Microservices weitergegeben oder mit externen Anwendungen zu integrieren. Alle messaging-Broker-Infrastruktur-Technologie wie RabbitMQ oder mit höherer Service Bus wie Azure Service Bus, NServiceBus, MassTransit oder Brighter kann der-Ereignisbus implementiert werden.
+-   Asynchrone, ereignisbasierte Kommunikation. Diese erfolgt über einen Ereignisbus und dient zur Verteilung von Updates zwischen Microservices oder zur Integration in externen Anwendungen. Der Ereignisbus kann mit jeder beliebigen Infrastrukturtechnologie des Nachrichtenbrokers wie RabbitMQ oder mithilfe von Service Bussen höherer Ebene wie Azure Service Bus, NServiceBus, MassTransit oder Brighter implementiert werden.
 
-Die Anwendung wird als eine Reihe von Microservices in Form von Containern bereitgestellt. Client-apps können mit diesen Containern kommunizieren sowie der Kommunikation zwischen Microservices. Wie bereits erwähnt, wird diese anfängliche Architektur eine direkte Kommunikation von Client-Microservice-Architektur verwendet, was bedeutet, dass eine Clientanwendung Anforderungen direkt an jede der Microservices ausführen kann. Jede Microservice verfügt über einen öffentlichen Endpunkt wie https://servicename.applicationname.companyname. Falls erforderlich, können jede Microservice einen anderen TCP-Port. In der Produktion, die URL der Microservices Lastenausgleich zugeordnet würde die Anforderungen auf die verfügbaren Microservice-Instanzen verteilt.
+Die Anwendung wird als eine Reihe von Microservices in der Form von Containern bereitgestellt. Client-Apps können sowohl mit diesen Containern als auch zwischen Microservices kommunizieren. Wie bereits erwähnt, wird bei dieser anfänglichen Architektur eine direkte Client-zu-Microservice-Kommunikationsarchitektur verwendet, wodurch eine Clientanwendung Anforderungen direkt an jeden der Microservices stellen kann. Jeder Microservice verfügt über einen öffentlichen Endpunkt wie „https://servicename.applicationname.companyname“. Falls erforderlich, kann jeder Microservice einen anderen TCP-Port verwenden. In der Produktionsumgebung wäre diese URL dem Lastenausgleich der Microservices zugeordnet, der Anforderungen auf die verfügbaren Microserviceinstanzen verteilt.
 
-**Wichtiger Hinweis auf Vs-API-Gateway. Direkte Kommunikation in eShopOnContainers.** Wie im Abschnitt "Architektur" dieses Handbuchs erläutert, kann die direkte Kommunikation von Client-zu-Microservice Architektur Nachteile aufweisen, wenn Sie eine große und komplexe Microservice-basierte Anwendung erstellen. Doch kann dies ausreichend Platz für eine kleine Anwendung, z. B. in der eShopOnContainers, die zum Ziel hat eine einfachere erste konzentrieren Docker Container-basierte Anwendung Anwendungsstart, und möchten wir aber nicht um ein einzelnes monolithischen-API-Gateway zu erstellen, die auswirken kann die Microservices Entwicklung Autonomie.
+**Wichtiger Hinweis zur API-Gateway im Vergleich zur direkten Kommunikation bei eShopOnContainers.** Wie bereits im Abschnitt zur Architektur in diesem Leitfaden erklärt, kann die direkte Client-zu-Microservice-Architektur Nachteile aufweisen, wenn Sie eine große und komplexe auf Microservices basierte Anwendung erstellen. Sie kann jedoch für eine kleine Anwendung gut genug sein. Beispielsweise für die Anwendung eShopOnContainers, bei der das Ziel ist, den Fokus auf eine einfachere Einsteigeranwendung zu legen, die auf Docker-Containern basiert. Es sollte zudem kein einzelnes monolithisches API-Gateway erstellt werden, das sich auf die Entwicklungsautonomie der Microservices auswirken kann.
 
-Aber wenn Sie vorhaben, eine große Microservice-basierte Anwendung mit Dutzenden von Microservices entwerfen, es wird dringend empfohlen, die Sie berücksichtigen, dass die API-Gateway-Muster, wie wir im Architektur-Abschnitt erläutert.
-Diese Entscheidung hinsichtlich der Architektur konnte umgestaltet werden soll, sobald zu produktionfertiges Anwendungen und Fassaden speziell vorgenommen Betrachtung der Remoteclients. Müssen mehrere benutzerdefinierte API-Gateways, abhängig von den Clientanwendungen Formfaktor Vorteile hinsichtlich der verschiedenen Datenaggregation pro Client-app bereitstellen kann, sowie können interne Microservices oder die APIs an den Client-apps ausblenden und dieser einzelnen Ebene zu autorisieren. 
+Wenn Sie jedoch den Entwurf einer großen auf Microservices basierenden Anwendung mit Dutzenden Microservices planen, wird dringend empfohlen, wie im Abschnitt zur Architektur erklärt das API-Gatewaymuster in Betracht zu ziehen.
+Diese Entscheidung für eine Architektur könnte neu überdacht werden, sobald Sie mit dem Gedanken an einsatzbereite Anwendungen und speziell erstellte Fassaden für Remoteclients spielen. Es kann hinsichtlich der unterschiedlichen Datenaggregation pro Client-App von Vorteil sein, wenn Sie über mehrere benutzerdefinierte API-Gateways abhängig vom Formfaktor der Client-Apps verfügen. Zudem können Sie in diesem Fall interne Microservices oder APIs vor den Client-Apps verstecken und die Autorisierung auf dieser einzelnen Ebene vornehmen. 
 
-Beachten Sie jedoch und wie bereits erwähnt, für große und monolithischen-API-Gateways, die Ihre Microservices Entwicklung Autonomie kill kann.
+Vermeiden Sie jedoch, wie bereits erwähnt, große und monolithische API-Gateways, die die Entwicklungsautonomie Ihrer Microservices zerstören könnten.
 
-### <a name="data-sovereignty-per-microservice"></a>Daten Hoheit pro microservice
+### <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
-In der beispielanwendung jedes Microservice besitzt eine eigene Datenbank oder Daten von Quell- und jede Datenbank, oder -Datenquelle als einen anderen Container bereitgestellt wird. Diese Entscheidung wurde versucht, nur für Entwickler von GitHub den Code abrufen, Klonen Sie sie aus, und öffnen es in Visual Studio oder Visual Studio Code erleichtern. Oder alternativ erleichtert, Kompilieren die benutzerdefinierten Docker-Images, die mithilfe von .NET Core-CLI und dem Docker-Befehlszeilenschnittstelle und bereitstellen, und führen Sie sie in einer Entwicklungsumgebung Docker. In beiden Fällen Datenquellen Container für Daten mit können Entwickler erstellen und in wenigen Minuten bereitstellen, ohne Sie zur Bereitstellung einer externen Datenbank oder eine beliebige andere Datenquelle mit harte Abhängigkeiten auf Infrastruktur (Cloud oder lokal).
+Bei der Beispielanwendung besitzt jeder Microservice seine eigene Datenbank oder Datenquelle, und jede Datenbank oder Datenquelle wird als ein anderer Container bereitgestellt. Diese Entwurfsentscheidung wurde nur getroffen, um einem Entwickler das Abrufen des Codes aus GitHub, das Klonen dieses Codes und das Öffnen in Visual Studio oder Visual Studio Code zu erleichtern. Alternativ wird dadurch das Kompilieren der benutzerdefinierten Docker-Images mithilfe der .NET Core-CLI und der Docker-CLI sowie die anschließende Bereitstellung und Ausführung dieser in einer Docker-Entwicklungsumgebung erleichtert. So oder so können Entwickler durch die Verwendung von Containern für Datenquellen innerhalb von wenigen Minuten erstellen und bereitstellen, ohne eine externe Datenbank oder eine Datenquelle mit festen Abhängigkeiten von der Infrastruktur (Cloud oder lokal) bereitstellen zu müssen.
 
-In einer realen produktionsumgebung für hohe Verfügbarkeit und Skalierbarkeit sollte die Datenbanken auf Datenbankservern in der Cloud oder lokal, aber nicht in Container basieren.
+In einer echten Produktionsumgebung sollten die Datenbanken für Hochverfügbarkeit und Skalierbarkeit auf Datenbankservern in der Cloud oder lokal, jedoch nicht auf Containern basieren.
 
-Aus diesem Grund die Zeiten der Bereitstellung für Microservices (und sogar für Datenbanken in dieser Anwendung) werden in Docker-Containern, und der Verweis-Anwendung wird von Multi-Container, die Microservices Prinzipien Verwaltungsteam.
+Daher handelt es sich bei den Bereitstellungseinheiten für Microservices (und bei dieser Anwendung sogar auch für Datenbanken) um Docker-Container. Außerdem handelt es sich bei der Referenzanwendung um eine Anwendung mit mehreren Containern, die Grundsätze von Microservices umfasst.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **eShopOnContainers GitHub-Repository. Quellcode für die Anwendung Verweis**
+-   **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung**
     *https://aka.ms/eShopOnContainers/*
 
-## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile einer Microservice-basierten Lösung
+## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile eines auf Microservices basierenden Ansatzes
 
-Eine Microservice basierend Lösung wie folgt hat viele Vorteile:
+Ein auf Microservices basierender Ansatz wie dieser hat viele Vorteile:
 
-**Jede Microservice ist relativ klein – einfach verwalten und entwickeln**. Dies gilt insbesondere in folgenden Fällen:
+**Microservices sind relativ klein, einfach zu verwalten und weiterzuentwickeln**. Dies gilt insbesondere in folgenden Fällen:
 
--   Es ist einfach ein Entwickler zu verstehen und raschen Einstieg in gute Produktivität.
+-   Eine solche Lösung ist für Entwickler leicht verständlich und ermöglicht einen schnellen und produktiven Einstieg.
 
--   Container starten schnelle, wodurch Entwickler produktiver.
+-   Containers starten schnell, wodurch Entwickler produktiver arbeiten können.
 
--   Eine IDE wie Visual Studio kann kleinere Projekte schnell geladen werden Entwickler produktiver zu machen.
+-   In einer integrierten Entwicklungsumgebung wie Visual Studio können kleine Projekte schnell geladen werden, wodurch Entwickler produktiv arbeiten können.
 
--   Jede Microservice kann entworfen, entwickelt und bereitgestellt werden, unabhängig von anderen Microservices, die Flexibilität bietet, da neue Versionen des Microservices häufig Bereitstellen einfacher ist.
+-   Jeder Microservice kann unabhängig von anderen Microservices entworfen, entwickelt und bereitgestellt werden. Dadurch ergibt sich Flexibilität, da die häufige Bereitstellung neuer Versionen von Microservices einfacher durchzuführen ist.
 
-**Es ist möglich, Dezentrales Skalieren einzelne Bereiche der Anwendung**. Z. B. möglicherweise die Catalog-Dienst oder die Warenkorb-Dienst, aber nicht der Bestellvorgang skaliert werden müssen. Eine Infrastruktur Microservices wird im Hinblick auf die Ressourcen verwendet, wenn out Skalierung, als wäre eine monolithische Architektur wesentlich effizienter sein.
+**Es ist möglich, einzelne Bereiche der Anwendung horizontal hochzuskalieren**. Beispielsweise könnte es nötig sein, den Katalog- oder den Warenkorbdienst horizontal hochzuskalieren, jedoch nicht den Bestellprozess. Eine Microserviceinfrastruktur ist im Gegensatz zu einer monolithischen Architektur deutlich effizienter hinsichtlich der verwendeten Ressourcen beim horizontalen Hochskalieren.
 
-**Sie können die Entwicklungsarbeit zwischen mehreren Teams aufteilen**. Jeder Dienst kann von einem einzelnen Entwicklungsteam im Besitz eines. Jedes Team kann verwalten, entwickeln, bereitstellen und skalieren ihren Dienst unabhängig von der Rest des Teams.
+**Sie können die Entwicklungsarbeit auf mehrere Teams aufteilen**. Jeder Dienst kann sich im Besitz eines einzigen Entwicklungsteams befinden. Jedes Team kann seinen Dienst unabhängig von den anderen Teams verwalten, entwickeln, bereitstellen und skalieren.
 
-**Probleme sind stärker isolierte**. Wenn ein Problem in einem Dienst vorhanden ist, nur diesen Dienst wird anfänglich (außer wenn das falsche Design mit direkter Abhängigkeiten zwischen Microservices verwendet wird,) beeinträchtigt, und andere Dienste können weiterhin Anforderungen zu verarbeiten. Im Gegensatz dazu kann eine Gestörte Komponente in einer Bereitstellungsarchitektur mit monolithisch das gesamte System beenden insbesondere, wenn sie Ressourcen, z. B. einen Speicherverlust umfasst. Wenn ein Problem in einer Microservice aufgelöst wird, können Sie darüber hinaus nur die betroffenen Microservice bereitstellen, ohne den Rest der Anwendung beeinträchtigen.
+**Probleme sind isolierter**. Wenn bei einem Dienst ein Problem auftritt, ist zunächst einmal nur dieser Dienst davon betroffen (außer wenn der falsche Entwurf verwendet wird, bei dem direkte Abhängigkeiten zwischen den Microservices bestehen), und andere Dienste können weiterhin Anforderungen verarbeiten. Im Gegensatz dazu kann eine fehlerhafte Komponente bei einer monolithischen Bereitstellungsarchitektur das gesamte System zum Ausfall bringen, insbesondere wenn Ressourcen betroffen sind, wie bei einem Arbeitsspeicherverlust. Zudem können Sie, nachdem eine Lösung für ein Problem bei einem Microservice gefunden wurde, nur den betroffenen Microservice bereitstellen, ohne dass der Rest der Anwendung betroffen ist.
 
-**Sie können die neuesten Technologien**. Da Sie starten die Entwicklung von Diensten unabhängig und parallel verwendet werden (danken Container und .NET Core) ausführen können, können Sie beginnen, anstelle der neuesten Technologien und Frameworks ist auf einem älteren Stapel oder Framework für den gesamten hängen die Anwendung.
+**Sie können die neusten Technologien verwenden**. Da Sie unabhängig mit der Entwicklung von Diensten beginnen und diese parallel ausführen können (dank Containern und .NET Core), können Sie die neusten Technologien und Frameworks sinnvoll einsetzen, und Sie müssen für die gesamte Anwendung weiterhin einen älteren Stapel bzw. ein älteres Framework verwenden.
 
-## <a name="downsides-of-a-microservice-based-solution"></a>Nachteile einer Microservice-basierten Lösung
+## <a name="downsides-of-a-microservice-based-solution"></a>Nachteile einer auf Microservices basierenden Lösung
 
-Eine Microservice-basierten Lösung wie folgt hat auch einige Nachteile:
+Eine auf Microservices basierende Lösung wie diese hat auch einige Nachteile:
 
-**Verteilte Anwendung**. Erhöht die Komplexität die Anwendung verteilen für Entwickler beim Entwerfen und erstellen die Dienste. Beispielsweise müssen Entwickler interservice Kommunikation mithilfe von Protokollen wie HTTP oder AMPQ, wodurch Komplexität für das Testen und Ausnahmebehandlung hinzugefügt implementieren. Darüber hinaus wird Latenz hinzugefügt, mit dem System.
+**Verteilte Anwendung**. Durch das Verteilen der Anwendung erhöht sich die Komplexität für Entwickler beim Entwerfen und Erstellen der Dienste. Beispielsweise müssen Entwickler die Kommunikation innerhalb des Diensts mithilfe von Protokollen wie HTTP oder AMPQ implementieren, wodurch das Testen und Ausnahmebehandlungen komplexer werden. Außerdem führt dies beim System zu erhöhter Wartezeit.
 
-**Bereitstellung komplexer**. Eine Anwendung, die Dutzende von Microservices Typen und hohe Skalierbarkeit (sie muss in der Lage, das viele Instanzen pro Dienst erstellen und Ausgleichen von diesen Diensten über viele Hosts) bedeutet, dass ein hohes Maß an Komplexität der Bereitstellung für IT-Betrieb und Verwaltung. Wenn Sie eine Microservice-orientierten-Infrastruktur (z. B. ein Orchestrator und Scheduler) nicht verwenden, kann zusätzliche Komplexität jedoch weitaus höher Entwicklungsarbeiten als Business-Anwendung selbst ist erforderlich.
+**Bereitstellungskomplexität**. Eine Anwendung, die über Dutzende Typen von Microservices verfügt und hohe Skalierbarkeit erfordert (sie muss in der Lage sein, viele Instanzen pro Dienst zu erstellen und diese Dienste über mehrere Hosts hinweg auszugleichen), bedeutet einen hohen Grad an Bereitstellungskomplexität in Bezug auf IT-Vorgänge und -Verwaltung. Wenn Sie keine an Microservices orientierte Infrastruktur (wie einen Orchestrator und Scheduler) verwenden, kann der Entwicklungsaufwand für diese zusätzliche Komplexität den Aufwand für die Geschäftsanwendung selbst übersteigen.
 
-**Atomarische Transaktionen**. Atomarische Transaktionen zwischen mehreren Microservices in der Regel sind nicht möglich. Die geschäftsanforderungen müssen eventuelle Konsistenz zwischen mehreren Microservices zu nutzen.
+**Atomarische Transaktionen**. Atomarische Transaktionen zwischen mehreren Microservices sind üblicherweise nicht möglich. Die Geschäftsanforderungen müssen die eventuelle Konsistenz zwischen mehreren Microservices umfassen.
 
-**Globale Ressourcenverbrauch erhöht** (Gesamter Arbeitsspeicher, Laufwerke und Netzwerkressourcen für alle Server oder Hosts). In vielen Fällen wird beim Ersetzen einer monolithischen-Anwendung mit einem Ansatz Microservices wird globale Ressourcen, die erforderlich sind, durch die neue Microservice-basierte Anwendung größer als die Infrastruktur Anforderungen der ursprünglichen Anwendung aufgrund eines monolithischen Verarbeitungsaufwand erforderlich. Dies ist, da die höhere Grad an Granularität und verteilte Dienste eher globale und Ressourcen benötigt. Wenn Sie die niedrigen Kosten von Ressourcen im Allgemeinen sowie über den Vorteil, dass die Möglichkeit, nur bestimmte Bereiche der Anwendung im Vergleich zur langfristigen Kosten bei monolithischen Anwendungen zu erweitern, die verbesserte Verwendung von Ressourcen ist jedoch normalerweise einen guten Kompromiss für große, Langfristige Anwendungen.
+**Erhöhter Bedarf an globalen Ressourcen** (Gesamtspeicher-, Laufwerk- und Netzwerkressourcen für alle Server oder Hosts). In vielen Fällen übersteigt bei der Umstellung von einer monolithischen Anwendung auf einen Ansatz mit Microservices die Menge der von der neuen auf Microservices basierenden Anwendung benötigten globalen Ressourcen den Bedarf der Infrastruktur der ursprünglichen monolithischen Anwendung. Dies liegt daran, dass das höhere Maß an Granularität und verteilten Diensten mehr globale Ressourcen erfordert. Betrachtet man jedoch die geringen Kosten für Ressourcen im Allgemeinen und den Vorteil, dass nur bestimmte Bereiche der Anwendung horizontal hochskaliert werden können, im Vergleich zu den langfristigen Kosten bei der Weiterentwicklung monolithischer Anwendungen, stellt die verstärkte Verwendung von Ressourcen üblicherweise die bessere Alternative für große, langfristige Anwendungen dar.
 
-**Probleme bei der direkten Client‑to‑microservice Kommunikation**. Wenn die Anwendung mit Dutzenden von Microservices sehr lang ist, sind Probleme und Einschränkungen, wenn die Anwendung erfordert, dass die direkte Kommunikation von Client-zu-Microservice. Ein Problem ist ein potenziellen Konflikt zwischen den Anforderungen des Clients und die APIs, die von jeder der Microservices verfügbar gemacht werden. In bestimmten Fällen kann die Clientanwendung müssen viele separate Anforderungen, die Benutzeroberfläche zu verfassen kann über das Internet ineffizient sein und über eine mobile Netzwerk wäre unpraktisch. Aus diesem Grund sollte die Anforderungen von der Clientanwendung an das Back-End-System minimiert werden.
+**Probleme bei der direkten Kommunikation zwischen Client und Microservice**. Bei einer großen Anwendung mit Dutzenden Microservices ergeben sich Herausforderungen und Einschränkungen, wenn die Anwendung direkte Kommunikation zwischen Client und Microservice erfordert. Ein Problem stellt eine mögliche Diskrepanz zwischen den Anforderungen des Clients und den von jedem der Microservices verfügbar gemachten APIs dar. In einigen Fällen könnte es erforderlich sein, dass die Clientanwendung viele separate Anforderungen stellt, um die Benutzeroberfläche zu bilden. Dies kann über das Internet ineffizient sein und wäre über ein mobiles Netzwerk unpraktisch. Daher sollten Anforderungen von der Clientanwendung an das Back-End-System auf ein Minimum begrenzt werden.
 
-Ein anderes Problem direkte Client-zu-Microservice unterworfen ist, dass einige Microservices Protokolle verwendet werden kann, die nicht webfreundlichen sind. Ein Dienst kann einen binären Protokolls verwenden, während ein anderer Dienst AMQP-messaging verwenden kann. Diese Protokolle sind nicht Firewall‑friendly und intern verwendet werden. In der Regel sollte eine Anwendung Protokolle wie HTTP und WebSockets für die Kommunikation außerhalb der Firewall verwenden.
+Ein weiteres Problem bei der direkten Kommunikation zwischen Client und Microservice liegt darin, dass einige Microservices möglicherweise Protokolle verwenden, die nicht webfreundlich sind. Ein Dienst verwendet möglicherweise ein binäres Protokoll, während ein anderer Dienst AMQP-Nachrichten verwendet. Diese Protokolle sind nicht Firewall-freundlich und werden am besten intern verwendet. Üblicherweise sollte eine Anwendung Protokolle wie HTTP und WebSockets für die Kommunikation außerhalb der Firewall verwenden.
 
-Noch ist ein weiterer Nachteil bei dieser Vorgehensweise direkten Client‑to‑service an, dass sie die Verträge für diese Microservices Umgestalten erschwert. Mit der Zeit sollten Entwickler ändern, wie das System in Dienste partitioniert wird. Sie können z. B. Zusammenführen von zwei Diensten oder einen Dienst in zwei oder mehrere Dienste unterteilt. Jedoch wenn Clients direkt mit den Diensten kommunizieren, kann diese Art der Umgestaltung ausführen Kompatibilität mit Client-apps unterbrechen.
+Ein weiterer Nachteil bei dieser direkten Kommunikation zwischen Client und Dienst ist, dass die Umgestaltung der Verträge für diese Microservices erschwert wird. Im Laufe der Zeit möchten Entwickler möglicherweise ändern, wie das System in Dienste partitioniert wird. Beispielsweise könnten sie zwei Dienste zusammenführen oder einen Dienst in mindestens zwei Dienste aufteilen. Wenn Clients jedoch direkt mit den Diensten kommunizieren, kann diese Art von Umgestaltung dazu führen, dass die Kompatibilität mit Client-Apps nicht mehr gegeben ist.
 
-Wie in der Architektur Abschnitt beim Entwerfen und Erstellen einer komplexen Anwendung, die basierend auf Microservices erwähnt, sollten Sie die Verwendung von mehreren differenzierte API-Gateways anstelle der direkten Client‑to‑microservice Kommunikation einfacher.
+Wie bereits im Abschnitt zur Architektur erwähnt, sollten Sie beim Entwerfen und Erstellen einer komplexen auf Microservices basierenden Anwendung die Verwendung mehrerer differenzierter API-Gateways in Betracht ziehen, anstatt sich für die einfachere direkte Kommunikation zwischen Client und Microservice zu entscheiden.
 
-**Partitionieren der Microservices**. Schließlich wird eine weitere Herausforderung unabhängig davon, welchen Ansatz Sie Ihre Microservice-Architektur ausgeführt werden soll, wie eine End-to-End-Anwendung in mehrere Microservices partitioniert entscheiden. Wie im Abschnitt "Architektur" des Handbuchs erwähnt, gibt es verschiedene Techniken und Ansätze, die Sie ergreifen können. Im Wesentlichen müssen Sie Bereiche der Anwendung, die aus anderen Bereichen entkoppelt werden und bei denen eine geringe Anzahl von harte Abhängigkeiten, zu identifizieren. In vielen Fällen ist dies ausgerichtet Partitionierung Services durch die Groß-/Kleinschreibung verwenden. In der vorliegenden Anwendung e-Shop haben wir z. B. einen Sortierung Dienst, der für alle im Zusammenhang mit der Auftragsprozess Geschäftslogik zuständig ist. Wir haben auch die Catalog-Dienst und dem Warenkorb-Dienst, die andere Funktionen zu implementieren. Idealerweise sollte jeder Dienst nur eine kleine Gruppe von Aufgaben verfügen. Dieser Vorgang ähnelt einzelne Prinzip der Verantwortung (Policies, SRP) angewendet auf Klassen, das angibt, dass ein Grund für das Ändern von eine Klasse nur haben soll. In diesem Fall ist jedoch zu Microservices, sodass der Bereich größer als eine einzelne Klasse ausgeführt wird. Am häufigsten daran, verfügt über ein Microservice, vollständig autonome, End-to-End einschließlich Verantwortung für die eigene Datenquellen zu erhalten.
+**Partitionierung der Microservices.** Schließlich stehen Sie unabhängig davon, für welchen Ansatz Sie sich bei der Architektur der Microservices entscheiden, vor der nächsten Herausforderung: nämlich der Entscheidung, wie Sie eine End-to-End-Anwendung in mehrere Microservices partitionieren wollen. Wie bereits im Abschnitt zur Architektur in diesem Handbuch erwähnt, stehen mehrere Methoden und Ansätze zur Auswahl. Im Grunde müssen Sie Bereiche der Anwendung identifizieren, die von den anderen Bereichen entkoppelt sind und über wenige feste Abhängigkeiten verfügen. In vielen Fällen wird dies je nach Anwendungsfall an die Partitionierung von Diensten angepasst. In der Onlineshopanwendung ist ein Bestelldienst enthalten, der für die gesamte Geschäftslogik im Zusammenhang mit dem Bestellprozess verantwortlich ist. Zudem ist ein Katalogdienst und ein Warenkorbdienst verfügbar, die andere Funktionen implementieren. Idealerweise sollte jeder Dienst nur über wenige Verantwortlichkeiten verfügen. Dies entspricht dem Prinzip der einzigen Verantwortung, das auf Klassen angewendet wird und besagt, dass eine Klasse nur einen Grund zur Änderung haben sollte. In diesem Fall handelt es sich jedoch um Microservices, sodass der Umfang größer ist als bei einer einzelnen Klasse. Vor allem muss ein Microservice vollkommen unabhängig sein (End-to-End), einschließlich der Verantwortung für seine eigenen Datenquellen.
 
-## <a name="external-versus-internal-architecture-and-design-patterns"></a>Externe und interne Architektur und Entwurf-Muster
+## <a name="external-versus-internal-architecture-and-design-patterns"></a>Externe im Vergleich zu internen Architektur- und Entwurfsmuster
 
-Die externe Architektur ist die Microservice-Architektur, die von mehreren Dienst, befolgen im Abschnitt "Architektur" dieses Handbuchs beschriebenen Grundsätze zusammengesetzt. Je nach Art der einzelnen Microservice und unabhängig von der allgemeinen Microservice-Architektur, die Sie auswählen, es ist jedoch häufig und in einigen Fällen sinnvoll, verschiedene interne Architekturen haben, jeweils basieren auf unterschiedliche Muster für verschiedene Microservices. Die Microservices können auch verschiedene Technologien und Programmiersprachen. Abbildung 8 – 2 veranschaulicht diese Vielfalt an.
+Bei der externen Architektur handelt es sich um die Microservicearchitektur, die sich aus mehreren Diensten zusammensetzt und den im Abschnitt zur Architektur in diesem Handbuch beschriebenen Prinzipien folgt. Jedoch ist es, abhängig von der Art jedes Microservices und unabhängig von der allgemeinen Microservicearchitektur, für die Sie sich entscheiden, üblich und manchmal ratsam, über verschiedene interne Architekturen für verschiedene Microservices zu verfügen, von denen jede auf unterschiedlichen Mustern basiert. Die Microservices können sogar verschiedene Technologien und Programmiersprachen verwenden. In Abbildung 8-2 wird diese Vielfalt dargestellt.
 
 ![](./media/image2.png)
 
-**Abbildung 8-2**. Externe und interne Architektur und Entwurf
+**Abbildung 8-2**. Externe im Vergleich zu interner Architektur und Entwurf
 
-Z. B. in unserer *eShopOnContainers* Beispiel, den Katalog Basket und Benutzer Profil Microservices werden einfache (im Wesentlichen CRUD-Subsysteme). Ihre interne Architektur und Entwurf ist einfach. Allerdings könnte Sie andere Microservices, z. B. die Sortierung Microservice verfügen, die komplexer ist und sich stetig ändernden Geschäftsregeln mit einem hohen Grad an Komplexität der Domäne darstellt. In solchen Fällen sollten zum Implementieren von komplexeren Mustern in einer bestimmten Microservice, wie Sie sind mit Ansätze zum Domain driven Design (DDD) definiert, wie wir auf diese Weise werden der *eShopOnContainers* Sortierung Microservice. (Überprüfen wir diese DDD Muster im Abschnitt weiter unten, die die Implementierung von erklärt die *eShopOnContainers* Sortierung Microservice.)
+Beispielsweise sind in dem Beispiel *eShopOnContainers* die Katalog-, Warenkorb- und Benutzerprofilmicroservices einfach (im Grunde CRUD-Subsysteme). Daher ist deren interne Architektur und der interne Entwurf unkompliziert. Jedoch verfügen Sie möglicherweise über andere Microservices wie den Microservice für Bestellungen, der komplizierter ist und Geschäftsregeln mit einem hohen Grad an Domänenkomplexität darstellt, die sich stetig ändern. In solchen Fällen möchten Sie möglicherweise komplexere Muster innerhalb eines bestimmten Microservices implementieren, z.B. die mit den DDD-Ansätzen (Domain-driven Design) definierten Muster, wie es im Microservice für Bestellungen von *eShopOnContainers* vorgemacht wird. (Diese DDD-Muster wird in einem späteren Abschnitt genauer untersucht, in dem die Implementierung des Microservices für Bestellungen von *eShopOnContainers* erklärt wird).
 
-Ein weiterer Grund für eine andere Technologie pro Microservice kann die Art der einzelnen Microservice sein. Beispielsweise ist es möglicherweise eher die Verwendung einen funktionalen Programmiersprache Ihrer Wahl, z. B. F\#, oder sogar eine anderen Sprache wie R aus, wenn AI und Machine learning-Domänen, anstelle einer stärker objektorientierten Programmiersprache wie C anvisierten\#.
+Ein weiterer Grund für eine unterschiedliche Methode je Microservice könnte die Art jedes Microservices darstellen. Beispielsweise ist es möglicherweise besser, eine funktionale Programmiersprache wie F\# oder sogar eine Sprache wie R zu verwenden, wenn Sie für Domänen für KI und maschinelles Lernen entwickeln, anstelle einer objektorientierten Programmiersprache wie C\#.
 
-Entscheidend ist, dass jede Microservice eine andere interne Architektur, die auf Grundlage der Design-Muster aufweisen kann. Nicht alle Microservices sollten implementiert werden, mithilfe von erweiterten DDD-Muster, da, die diese stark engineering werden würde. Auf ähnliche Weise komplexe Microservices mit Geschäftslogik sich stetig ändernden sollten nicht als CRUD-Komponenten implementiert werden, oder mit geringer Qualität Code annehmen kann.
+Das Fazit ist, dass jeder Microservice über eine andere interne Architektur verfügen kann, die auf unterschiedlichen Entwurfsmustern basiert. Nicht alle Microservices sollten mithilfe von komplexen DDD-Mustern implementiert werden, da sie dadurch unnötig kompliziert gemacht würden. Dementsprechend sollten komplexe Microservices mit sich stets ändernder Geschäftslogik nicht als CRUD-Komponenten implementiert werden, da dies zu Code von geringer Qualität führen könnte.
 
 
 
-## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Die neue Welt: mehrere architektonische Muster und polyglot Microservices
+## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Der neue Ansatz: mehrere Architekturmuster und mehrsprachige Microservices
 
-Es gibt viele architektonische Muster von Softwarearchitekten und Entwickler verwendet. Im folgenden sind einige (Mischen Architektur Formatvorlagen und Architekturmuster):
+Softwarearchitekten und -entwickler verwenden eine Vielzahl von Architekturmustern. Im Folgenden sind einige davon aufgelistet (wobei sowohl Architekturstile als auch -muster enthalten sind):
 
--   Einfache CRUD, ein-Ebenen, Single-Ebene.
+-   Einfache CRUD-Architektur, Architektur auf einer einzelnen Ebene
 
--   [Herkömmliche N-Ebenen](https://msdn.microsoft.com/en-us/library/ee658109.aspx#Layers).
+-   [Herkömmliche Architektur mit n Ebenen](https://msdn.microsoft.com/library/ee658109.aspx#Layers)
 
--   [Domain-Driven Design N-Ebenen](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+-   [Domain-Driven Design mit n Ebenen](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)
 
--   [Bereinigen der Architektur](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (wie in [eShopOnWeb](http://aka.ms/WebAppArchitecture))
+-   [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (wie bei [eShopOnWeb](http://aka.ms/WebAppArchitecture) verwendet)
 
--   [Befehls- und Abfragen Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+-   [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS)
 
--   [Ereignisgesteuerte Architektur](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
+-   [Ereignisgesteuerte Architektur](https://en.wikipedia.org/wiki/Event-driven_architecture) (Event-Driven Architecture, EDA)
 
-Sie können auch mit vielen Technologien und Sprachen, z. B. ASP.NET Core Web-APIs, NancyFx, ASP.NET Core SignalR (verfügbar mit .NET Core 2), F Microservices erstellen\#, Node.js, Python, Java, C++, GoLang und vieles mehr.
+Sie können Microservices auch mit vielen Technologien und Sprachen wie ASP.NET Core-Web-APIs, NancyFx, ASP.NET Core SignalR (verfügbar unter .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang usw. erstellen.
 
-Der wichtige Punkt ist, dass keine bestimmte Architekturmuster oder Stil noch auf eine bestimmte Technologie für alle Situationen geeignet ist. Abbildung 8 – 3 zeigt einige Ansätze und -Technologien (jedoch nicht in einer bestimmten Reihenfolge), die in verschiedenen Microservices verwendet werden konnte.
+Wichtig ist, dass weder ein bestimmtes Architekturmuster bzw. ein bestimmter Architekturstil noch eine bestimmte Technologie in allen Situationen die richtige Wahl darstellt. Abbildung 8-3 stellt einige Ansätze und Methoden dar (jedoch in keiner bestimmten Reihenfolge), die bei unterschiedlichen Microservices verwendet werden könnten.
 
 ![](./media/image3.png)
 
-**Abbildung 8 – 3**. Mit mehreren architektonische Muster und die polyglot Microservices Welt
+**Abbildung 8-3**. Die Welt der Muster mit mehreren Architekturen und mehrsprachigen Microservices
 
-Siehe besteht Abbildung 8 – 3, in Anwendungen viele Microservices (begrenzt Kontexten in Domain driven Design Terminologie oder einfach "Subsysteme" als autonome Microservices) jeder Microservice auf andere Weise implementiert werden kann. Jede möglicherweise haben eine andere Architekturmuster und andere Sprachen und Datenbanken je nach der Anwendungsverzeichnis ist, geschäftlichen Anforderungen und Prioritäten verwenden. In einigen Fällen kann die Microservices ähnlich sein. Aber das ist nicht in der Regel der Fall, da jedes Subsystem Kontextgrenze und Anforderungen in der Regel unterschiedlich sind.
+Wie in Abbildung 8-3 dargestellt, können Sie bei Anwendungen, die aus vielen Microservices bestehen (begrenzte Kontexte in DDD-Terminologie oder einfach „Subsysteme“ als unabhängige Microservices), jeden Microservice auf eine andere Weise implementieren. Jeder könnte über ein anderes Architekturmuster verfügen und eine andere Sprache sowie andere Datenbanken verwenden, abhängig von der Art, den Geschäftsanforderungen und den Prioritäten der Anwendung. In einigen Fällen können die Microservices ähnlich sein. Dies ist üblicherweise jedoch nicht der Fall, da sich die Kontextgrenze und die Anforderungen jedes Subsystems für gewöhnlich unterscheiden.
 
-Z. B. möglicherweise für eine einfache Anwendung der CRUD-Wartung, es nicht sinnvoll, Entwerfen und implementieren DDD-Muster. Für Ihre Domäne Core oder Kerngeschäft, müssen Sie jedoch möglicherweise anzuwendende komplexere Mustern um Business Komplexität mit sich stetig ändernden Geschäftsregeln konfigurieren.
+Beispielsweise ergäbe es bei einer einfachen CRUD-Wartungsanwendung möglicherweise keinen Sinn, DDD-Muster zu entwerfen und zu implementieren. Jedoch müssen Sie bei Ihrer Kerndomäne bzw. Ihrem Kerngeschäft möglicherweise komplexere Muster verwenden, um mit der Komplexität durch Geschäftsregeln umgehen zu können, die sich stetig ändern.
 
-Insbesondere, wenn Sie mit großen Anwendungen aus, das mehrere Subsysteme arbeiten, sollten Sie ein Architektur für einmaliges auf oberster Ebene basierend auf einem einzelnen Architekturmuster nicht anwenden. Z. B. CQRS nicht als eine der obersten Ebene Architektur für eine gesamte Anwendung angewendet werden soll, aber für eine bestimmte Gruppe von Diensten nützlich sein.
+Insbesondere wenn Sie es mit großen Anwendungen zu tun haben, die aus mehreren Subsystemen bestehen, sollten Sie nicht eine einzige Hauptarchitektur basierend auf einem einzigen Architekturmuster verwenden. Beispielsweise sollte CQRS nicht als Hauptarchitektur für eine gesamte Anwendung verwendet werden, könnte jedoch für einige bestimmte Dienste hilfreich sein.
 
-Es ist kein Allheilmittel oder ein Muster richtigen Architektur für jeden angegebenen Fall. Sie können nicht "eine Architektur Muster zum Regel" alle "." verwenden. Je nach Prioritäten der einzelnen Microservice müssen Sie einen anderen Ansatz für jede, auswählen, wie in den folgenden Abschnitten erläutert.
+Es gibt keine Universallösung und kein richtiges Architekturmuster für jeden möglichen Fall. Es gibt kein Architekturmuster, das alle anderen hinfällig macht. Abhängig von den Prioritäten jedes Microservices müssen Sie wie in den folgenden Abschnitten erläutert einen anderen Ansatz für jeden Microservice auswählen.
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (Data-driven-Crud-microservice.md)
+[Zurück] (index.md) [Weiter] (data-driven-crud-microservice.md)
