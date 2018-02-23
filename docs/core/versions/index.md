@@ -3,17 +3,18 @@ title: .NET Core-Versionskontrolle
 description: Informationen zur Versionierung in .NET Core
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
 
@@ -23,9 +24,13 @@ In diesem Artikel soll geklärt werden, wie das .NET Core SDK und die Runtime ve
 
 Es gibt viele bewegliche Teile, die in .NET Core unabhängige Versionsangaben haben können. Ab .NET Core 2.0 gibt es jedoch eine leicht verständliche Versionsnummer der höchsten Ebene, die als *die* Version von .NET Core als Ganzes angesehen wird. Im Rest dieses Dokuments wird ausführlich auf die Versionierung aller Teile eingegangen. Diese Informationen können z.B. für Sie wichtig sein, wenn Sie ein Paket-Manager sind.
 
+> [!IMPORTANT]
+> Die in diesem Thema beschriebenen Details zur Versionsverwaltung gelten nicht für die aktuelle Version von SDK und Runtime für .NET Core.
+> Das Versionsschema ändert sich in künftigen Releases. Die aktuellen Vorschläge werden im Repository [dotnet/designs](https://github.com/dotnet/designs/pull/29) gezeigt.
+
 ## <a name="versioning-details"></a>Versionsinformationen
 
-Ab .NET Core 2.0 haben Downloads eine einzige Versionsnummer in ihrem Dateinamen. Folgende Versionsnummern wurden vereinheitlicht.
+Ab .NET Core 2.0 weisen Downloads eine einzige Versionsnummer im Dateinamen auf. Folgende Versionsnummern wurden vereinheitlicht.
 
 * das freigegebene Framework und die damit verknüpfte Runtime
 * das .NET Core SDK und die verknüpfte .NET Core-CLI
@@ -35,7 +40,7 @@ Der Gebrauch einer einzelnen Versionsnummer erleichtert es Benutzern zu wissen, 
 
 ### <a name="installers"></a>Installer
 
-Ab .NET Core 2.0 entsprechen die Downloads für unsere [täglichen Builds](https://github.com/dotnet/core-setup#daily-builds) und [Neuerscheinungen](https://www.microsoft.com/net/download/core) einem neuen Benennungsschema, das leichter verständlich ist.
+Ab .NET Core 2.0 folgen die Downloads für die [täglichen Builds](https://github.com/dotnet/core-setup#daily-builds) und [Releases](https://www.microsoft.com/net/download/core) einem neuen Benennungsschema, das leichter verständlich ist.
 Die Benutzeroberfläche des Installer bei diesen Downloads wurde angepasst, sodass sie nun die Namen und Versionen der installierten Komponenten übersichtlich anzeigen. Insbesondere weisen Titel jetzt die gleiche Versionsnummer auf, die auch im Dateinamen des Downloads verwendet wird.
 
 #### <a name="file-name-format"></a>Dateinamenformat
@@ -88,7 +93,7 @@ Möglicherweise müssen auch nur die .NET Core-Tools aktualisiert werden, ohne d
 #### <a name="minimum-package-set"></a>Minimales Paketset
 
 * `dotnet-runtime-[major].[minor]`: eine Runtime mit der angegebenen Version (nur die neueste Patchversion für eine bestimmte Kombination aus Haupt- und Nebenversionen sollte im Paket-Manager verfügbar sein). Neue Patchversionen aktualisieren das Paket, aber neue Haupt- oder Nebenversionen sind getrennte Pakete.
- 
+
   **Abhängigkeiten**: `dotnet-host`
 
 * `dotnet-sdk`: das neueste SDK `update` führt ein Rollforward für Haupt-, Neben- und Patchversionen aus.
@@ -116,9 +121,9 @@ Eine allgemeine Namenskonvention für ein Dockertag ist das Platzieren der Versi
 * 2.1.1-runtime
 * 2.1.1-sdk
 
-Die SDK Tags sollten aktualisiert werden, sodass sie die Version des SDK statt der Runtime widerspiegeln.
+Die SDK-Tags sollten aktualisiert werden, sodass sie die Version des SDK statt der Runtime widerspiegeln.
 
-Es besteht die Möglichkeit, dass wir die .NET Core-Tools reparieren müssen und deshalb eine bereits existierende Runtime erneut liefern. In diesem Fall wird die SDK Version erhöht (z.B. auf 2.1.2), und die Runtime schließt auf, wenn sie das nächste Mal ausgeliefert wird (z.B. werden die Runtime und das SDK das nächste Mal in Version 2.1.3 geliefert).
+Es besteht die Möglichkeit, dass die .NET Core-Tools (einschließlich SDK) repariert, aber mit einer vorhandenen Runtime erneut bereitgestellt werden. In diesem Fall wird die SDK-Version erhöht (z.B. auf 2.1.2), und die Runtime schließt auf, wenn sie das nächste Mal ausgeliefert wird (z.B. werden die Runtime und das SDK das nächste Mal in Version 2.1.3 geliefert).
 
 ## <a name="semantic-versioning"></a>Semantische Versionskontrolle
 
@@ -128,26 +133,29 @@ Es besteht die Möglichkeit, dass wir die .NET Core-Tools reparieren müssen und
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-Die optionalen Teile `PRERELEASE` und `BUILDNUMBER` werden kein Teil von unterstützten Versionen sein und existieren nur in nächtlichen Builds, die lokal aus Quellzielen und nicht unterstützten Vorschauversionen erstellt werden.
+Die optionalen Teile `PRERELEASE` und `BUILDNUMBER` sind nie Bestandteil von unterstützten Versionen und sind nur in nächtlichen Builds vorhanden, die lokal aus Quellzielen und nicht unterstützten Vorschauversionen erstellt werden.
 
 ### <a name="how-version-numbers-are-incremented"></a>Wie werden Versionsnummern inkrementiert?
 
 `MAJOR` wird inkrementiert, wenn:
-  - eine älter Version nicht mehr unterstützt wird
-  - eine neue `MAJOR`-Version einer vorhandenen Abhängigkeit übernommen wird
-  - die Standardeinstellung eines Kompatibilitätsproblems deaktiviert wird
+
+- eine älter Version nicht mehr unterstützt wird
+- eine neue `MAJOR`-Version einer vorhandenen Abhängigkeit übernommen wird
+- die Standardeinstellung eines Kompatibilitätsproblems deaktiviert wird
 
 `MINOR` wird inkrementiert, wenn:
-  - eine öffentliche API-Oberfläche hinzugefügt wird
-  - ein neues Verhalten hinzugefügt wird
-  - eine neue `MINOR`-Version einer vorhandenen Abhängigkeit übernommen wird
-  - eine neue Abhängigkeit eingeführt wird
-  
+
+- eine öffentliche API-Oberfläche hinzugefügt wird
+- ein neues Verhalten hinzugefügt wird
+- eine neue `MINOR`-Version einer vorhandenen Abhängigkeit übernommen wird
+- eine neue Abhängigkeit eingeführt wird
+
 `PATCH` wird inkrementiert, wenn:
-  - Fehlerkorrekturen vorgenommen werden
-  - Unterstützung für eine neuere Plattform hinzugefügt wird
-  - eine neue `PATCH`-Version einer vorhandenen Abhängigkeit übernommen wird
-  - eine andere Änderung vorgenommen wurde, die keinem der beschriebenen Fälle entspricht
+
+- Fehlerkorrekturen vorgenommen werden
+- Unterstützung für eine neuere Plattform hinzugefügt wird
+- eine neue `PATCH`-Version einer vorhandenen Abhängigkeit übernommen wird
+- eine andere Änderung vorgenommen wurde, die keinem der zuvor beschriebenen Fälle entspricht
 
 Wenn mehrere Änderungen vorgenommen wurden, wird das höchste Element, was von den einzelnen Änderungen betroffen ist, inkrementierte, und die folgenden werden auf 0 (null) zurückgesetzt. Wenn z.B. `MAJOR` inkrementiert wird, werden `MINOR` und `PATCH` auf 0 (null) zurückgesetzt. Wenn `MINOR` inkrementiert wird, wird `PATCH` auf 0 (null) zurückgesetzt, während `MAJOR` nicht beeinträchtigt wird.
 
@@ -176,7 +184,7 @@ Weitere Informationen finden Sie unter [.NET Core Support Lifecycle Fact Sheet (
 
 .NET Core besteht aus den folgenden Teilen:
 
-- einem Host (auch als „Muxer“) bezeichnet: `dotnet.exe` mit `hostfxr`-Richtlinienbibliotheken
+- Ein Host: entweder *dotnet.exe* für vom Framework abhängige Anwendungen oder *\<appname>.exe* für eigenständige Anwendungen.
 - einem SDK (die Tools, die ein Entwickler auf seinem Computer benötigt, aber nicht während der Produktion)
 - eine Runtime
 - eine freigegebene Frameworkimplementierung, die in Paketen verteilt wird Jedes Paket wird unabhängig versioniert, dies gilt besonders für die Patchversionierung.
@@ -204,7 +212,7 @@ Die Versionierung für .NET Core-Metapakete basiert auf der Version von .NET Cor
 
 Die Metapakete in .NET Core 2.1.3 sollten z.B. alle 2.1 als ihre `MAJOR`- und `MINOR`-Versionsnummer haben.
 
-Die Patchversion für die Metapakete wird jedes Mal inkrementiert, wenn ein verwiesenes Paket aktualisiert wird. Patchversionen erhalten keine aktualisierte Frameworkversion. Die Metapakete sind deshalb nicht mit SemVer kompatibel, da deren Schema der Versionskontrolle nicht den Grad der Änderung in den zugrundeliegenden Paketen darstellt, hauptsächlich jedoch die API-Ebene. 
+Die Patchversion für die Metapakete wird jedes Mal inkrementiert, wenn ein verwiesenes Paket aktualisiert wird. Patchversionen erhalten keine aktualisierte Frameworkversion. Die Metapakete sind deshalb nicht mit SemVer kompatibel, weil ihr Schema der Versionskontrolle nicht den Grad der Änderung in den zugrundeliegenden Paketen darstellt, sondern hauptsächlich die API-Ebene.
 
 Es existieren aktuell zwei primäre Metapakete für .NET Core:
 
@@ -226,7 +234,7 @@ Zielframework-Versionen werden aktualisiert, wenn neue APIs hinzugefügt werden.
 
 ## <a name="versioning-in-practice"></a>Versionierung in der Praxis
 
-Wenn Sie .NET Core herunterladen, enthält der Name der von Ihnen heruntergeladenen Datei die Version, z.B. `dotnet-sdk-2.0.4-win10-x64.exe`.
+Wenn Sie .NET Core herunterladen, enthält der Name der heruntergeladenen Datei die Version, z.B. `dotnet-sdk-2.0.4-win10-x64.exe`.
 
 Es gibt täglich Commits und Pull Requests auf .NET Core-Repositorys auf GitHub, wodurch viele Bibliotheken neue Builds erhalten. Es ist nicht sehr praktisch, neue öffentliche .NET Core-Versionen für jede Änderung zu erstellen. Stattdessen werden die Änderungen über einen unbestimmten Zeitraum (z.B. Wochen oder Monate) aggregiert, bevor eine neue, öffentliche stabile .NET Core-Version erstellt wird.
 
@@ -251,7 +259,8 @@ Jedes Mal wenn eine neue Hauptversion von .NET Core ausgeliefert wird, wird die 
 Die verschiedenen Metapakete werden aktualisiert, um auf die aktualisierten .NET Core-Bibliothekspakete zu verweisen. Das [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App)-Metapakete und das `netcore`-Zielframework werden als Hauptupdates versioniert, die mit der `MAJOR`-Versionsnummer der neuen Version übereinstimmen.
 
 ## <a name="see-also"></a>Siehe auch
-[Zielframeworks](../../standard/frameworks.md)   
-[Verpacken der Verteilung in .NET Core](../build/distribution-packaging.md)   
-[Fakten zur Lebensdauer des .NET Core Supports](https://www.microsoft.com/net/core/support)   
-[.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)   
+
+[Zielframeworks](../../standard/frameworks.md)  
+[.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../build/distribution-packaging.md)  
+[.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)  
+[.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)  

@@ -265,6 +265,7 @@
 ## [Vorgehensweisen zu C#-Themen](csharp/how-to/index.md)
 ### [Vorgehensweise zum Analysieren von Zeichenfolgen mithilfe von `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Verketten von Zeichenfolgen](csharp/how-to/concatenate-multiple-strings.md)
+### [Gewusst wie konvertieren einer Zeichenfolge in einen DateTime-Wert](standard/base-types/parsing-datetime.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform-SDK (Roslyn APIs)](csharp/roslyn-sdk/)
 ## [C#-Programmierhandbuch](csharp/programming-guide/)
@@ -282,7 +283,7 @@
 ### [Erste Schritte mit Visual Studio Code und Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Get Started with the .NET Core CLI (Erste Schritte mit der .NET Core-CLI)](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
-## Lernprogramme
+## Tutorials
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Typanbieter](fsharp/tutorials/type-providers/index.md)
 #### [Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
