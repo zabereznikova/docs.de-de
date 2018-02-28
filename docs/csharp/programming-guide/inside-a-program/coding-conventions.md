@@ -2,25 +2,24 @@
 title: "Codekonventionen für C# (C#-Programmierhandbuch)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
-Die [C#-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) definiert keinen Codierungsstandard. Die Richtlinien in diesem Thema werden jedoch von Microsoft verwendet, um Beispiele und die Dokumentation zu entwickeln.  
-  
  Codierungskonventionen dienen den folgenden Zwecken:  
   
 -   Sie kreieren ein konsistentes Erscheinungsbild des Codes, sodass Leser sich auf den Inhalt und nicht auf das Layout konzentrieren können.  
@@ -30,6 +29,8 @@ Die [C#-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) defi
 -   Sie erleichtern das Kopieren, Ändern und Pflegen des Codes.  
   
 -   Sie zeigen die Best Practices für C#.  
+
+ Die Richtlinien in diesem Thema werden von Microsoft verwendet, um Beispiele und die Dokumentation zu entwickeln.  
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
@@ -159,7 +160,7 @@ Die [C#-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) defi
   
 ### <a name="event-handling"></a>Ereignisbehandlung  
   
--   Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambda-Ausdruck.  
+-   Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambdaausdruck.  
   
      [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   

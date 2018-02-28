@@ -2,25 +2,26 @@
 title: Generische Klassen (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>Generische Klassen (C#-Programmierhandbuch)
 Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind. Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw. Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.  
   
- Für die meisten Szenarios, die Auflistungsklassen erfordern, wird empfohlen, die in der Klassenbibliothek von .NET Framework bereitgestellten Auflistungsklassen zu verwenden. Weitere Informationen zur Verwendung dieser Klassen finden Sie unter [Generics in the .NET Framework Class Library (Generika in der .NET Framework-Klassenbibliothek)](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+ Für die meisten Szenarios, die Auflistungsklassen erfordern, wird empfohlen, die in der Klassenbibliothek von .NET bereitgestellten Auflistungsklassen zu verwenden. Weitere Informationen zur Verwendung dieser Klassen finden Sie unter [Generic Collections in .NET (Generische Auflistungen in .NET)](../../../standard/generics/collections.md).  
   
  In der Regel erstellen Sie generische Klassen, indem Sie von einer vorhandenen konkreten Klasse ausgehen und Typen in Typparameter ändern (einen nach dem anderen), bis das optimale Verhältnis zwischen Verallgemeinerung und Verwendbarkeit gefunden ist. Wenn Sie eigene generische Klassen erstellen möchten, sollten Sie die folgenden wichtigen Aspekte beachten:  
   
@@ -74,5 +75,5 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
  <xref:System.Collections.Generic>  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Generika](../../../csharp/programming-guide/generics/index.md)  
- [Speichern des Zustands von Enumeratoren](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+ [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

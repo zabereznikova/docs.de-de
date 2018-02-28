@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Verpacken und Bereitstellen von Ressourcen in Desktop-Apps
 Anwendungen sind davon abhängig, dass der .NET Framework-Ressourcen-Manager, der von der Klasse <xref:System.Resources.ResourceManager> dargestellt wird, lokalisierte Ressourcen abruft. Der Ressourcen-Manager geht davon aus, dass ein Speichenarchitektur-Modell (Hub-and-Spoke) verwendet wird, um Ressourcen zu verpacken und bereitzustellen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, deren Ressourcen verwendet werden, wenn keine lokalisierten Ressourcen gefunden werden können. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne Kultur aber keinen Code enthält.  

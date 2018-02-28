@@ -2,18 +2,20 @@
 title: new-Modifizierer (C#-Referenz)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new-Modifizierer (C#-Referenz)
 Wenn das Schlüsselwort `new` als Deklarationsmodifizierer verwendet wird, blendet es explizit einen von einer Basisklasse geerbten Member aus. Wenn Sie einen geerbten Member ausblenden, ersetzt die abgeleitete Version des Members die Basisklassenversion. Obwohl Sie Member verdecken können, ohne den `new`-Modifizierer zu verwenden, wird eine Compilerwarnung angezeigt. Wenn Sie `new` verwenden, um einen Member explizit auszublenden, wird diese Warnung unterdrückt.  
@@ -26,7 +28,7 @@ Wenn das Schlüsselwort `new` als Deklarationsmodifizierer verwendet wird, blend
   
  Das Ausblenden des Namens durch Vererbung nimmt eine der folgenden Formen an:  
   
--   Im Allgemeinen blendet eine Konstante, ein Feld, eine Eigenschaft oder einen Typ, der in einer Klasse oder Struktur eingegeben wird, alle Basisklassenmember aus, die den gleichen Namen haben.  Es werden bestimmte Fälle unterschieden.  Wenn Sie beispielsweise ein neues Feld mit dem Namen `N` mit einem nicht aufrufbaren Typ deklarieren, und ein Basistyp deklariert `N` als Methode, blendet das neue Feld die Basisdeklaration nicht in der Aufrufsyntax aus.  Finden Sie unter der [5.0 c#-Programmiersprachenspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) Details (siehe Abschnitt "Suche" im Abschnitt "Ausdrücke").  
+-   Im Allgemeinen blendet eine Konstante, ein Feld, eine Eigenschaft oder einen Typ, der in einer Klasse oder Struktur eingegeben wird, alle Basisklassenmember aus, die den gleichen Namen haben.  Es werden bestimmte Fälle unterschieden.  Wenn Sie beispielsweise ein neues Feld mit dem Namen `N` mit einem nicht aufrufbaren Typ deklarieren, und ein Basistyp deklariert `N` als Methode, blendet das neue Feld die Basisdeklaration nicht in der Aufrufsyntax aus.  Weitere Informationen finden Sie unter [C# 5.0-Sprachspezifikation](https://www.microsoft.com/download/details.aspx?id=7029) (siehe Abschnitt „Suche nach Membern“ im Abschnitt „Ausdrücke“).  
   
 -   Durch eine Methode, die in eine Klasse oder Struktur eingeführt ist, werden Eigenschaften, Felder und Typen mit dem gleichen Namen in der Basisklasse ausgeblendet. Alle Basisklassenmethoden mit der gleichen Signatur werden ebenfalls ausgeblendet.  
   

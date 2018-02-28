@@ -5,34 +5,35 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07157057d7ae94d3c6017544ff654ca0ed7b7cf2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.  
   
  **Inhalt**  
   
--   [Erkennen von Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy)  
   
--   [Umgang mit Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Umgang mit Ablaufinvarianz](#BKMK_HandlingReentrancy)  
   
-    -   [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
   
-    -   [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)  
   
-    -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)  
   
--   [Die Beispiel-App überprüfen und ausführen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Die Beispiel-App überprüfen und ausführen](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.  
@@ -92,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Projektmappe auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen, oder, indem Sie den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anweisungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Lösung auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen oder den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anleitungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz  
  Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:  
   
--   [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
   
      Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann  
   
--   [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)  
   
      Abbrechen aller Vorgänge, die noch ausgeführt werden, wenn der Benutzer die Schaltfläche **Start** erneut anklickt, sodass nur der zuletzt angeforderte Vorgang fortgesetzt wird  
   
--   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)  
   
      Alle angeforderten Vorgänge asynchron ausführen lassen, die Anzeige der Ausgabe allerdings koordinieren, damit die Ergebnisse der einzelnen Vorgänge zusammen und in Reihenfolge angezeigt werden.  
   
 ###  <a name="BKMK_DisableTheStartButton"></a> Die Schaltfläche „Start“ deaktivieren  
  Sie können die Schaltfläche **Start** während eines ausführenden Vorgangs blockieren, indem Sie die Schaltfläche oben im `StartButton_Click`-Ereignishandler deaktivieren. Sie können die Schaltfläche aus einem `finally`-Block erneut aktivieren, sobald der Vorgang beendet ist, damit Benutzer die App erneut ausführen können.  
   
- Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt. Sie können Änderungen am Code am Ende dieses Themas hinzufügen, oder Sie können die fertige App unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen. Der Projektname ist "DisableStartButton".  
+ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Projektname ist „DisableStartButton“.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -146,7 +147,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Weitere Informationen zum Abbrechen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
+ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name des Projekts lautet „CancelAndRestart“.  
   
 1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
   
@@ -302,12 +303,12 @@ TOTAL bytes returned:  890591
  Zum Ausschließen der Teillisten entfernen Sie die Kommentarmarkierungen der ersten Codezeile in `StartButton_Click`, um das Textfeld bei jedem erneuten Start des Vorgangs zu löschen.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen  
- Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Benutzer die Schaltfläche **Start** anklickt, ein anderer asynchroner Vorgang gestartet wird und alle Vorgänge vollständig ausgeführt werden. Alle angeforderten Vorgänge laden Websites asynchron aus der Liste herunter, doch die Ausgabe der Vorgänge wird sequenziell dargestellt. Das bedeutet, die tatsächliche Downloadaktivität überlappt, wie es die Ausgabe in [Erkennen von Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) zeigt, die Ergebnislisten für jede Gruppe aber getrennt angezeigt werden.  
+ Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Benutzer die Schaltfläche **Start** anklickt, ein anderer asynchroner Vorgang gestartet wird und alle Vorgänge vollständig ausgeführt werden. Alle angeforderten Vorgänge laden Websites asynchron aus der Liste herunter, doch die Ausgabe der Vorgänge wird sequenziell dargestellt. Das bedeutet, die tatsächliche Downloadaktivität überlappt, wie es die Ausgabe in [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy) zeigt, die Ergebnislisten für jede Gruppe aber getrennt angezeigt werden.  
   
  Die Vorgänge geben global <xref:System.Threading.Tasks.Task>, `pendingWork` frei, der als Gatekeeper für den Anzeigenprozess dient.  
-  
- Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
-  
+
+ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name des Projekts lautet „QueueResults“.  
+   
  Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.  
   
 ```  
@@ -489,8 +490,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 }  
 ```  
   
- Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
-  
+   
 #### <a name="points-of-interest"></a>Relevante Punkte  
  Die Informationszeilen, die mit einem Nummernzeichen (#) in der Ausgabe beginnen, erläutern die Funktionsweise dieses Beispiels.  
   
@@ -551,7 +551,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Herunterladen der App  
   
-1.  Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen.  
+1.  Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.  
   
 2.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
@@ -717,7 +717,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 11. Wählen Sie zum Ausführen des Programms die Tastenkombination „STRG+F5“ aus, und wählen Sie dann mehrmals die Schaltfläche **Start** aus.  
   
-12. Nehmen Sie die Änderungen aus [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) oder [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) vor, um mit Ablaufinvarianz umzugehen.  
+12. Nehmen Sie die Änderungen aus [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton), [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart) oder [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations) vor, um mit Ablaufinvarianz umzugehen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  

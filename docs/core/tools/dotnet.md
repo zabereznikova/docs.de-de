@@ -3,17 +3,17 @@ title: "dotnet-Befehl – .NET Core-CLI"
 description: "Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -200,6 +200,8 @@ Führen Sie eine Framework-abhängige Anwendung mit dem Namen `myapp.dll` aus:
 
 ## <a name="environment-variables"></a>Umgebungsvariablen
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%HOME%\NuGet\Packages` unter Windows verwendet.
@@ -211,3 +213,23 @@ Gibt den Speicherort des Wartungsindex an, der vom freigegebenen Host verwendet 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft gesendet werden. Legen Sie sie auf `true` fest, um die Telemetriefunktion zu deaktivieren (Werte `true`, `1` oder `yes` werden akzeptiert); legen Sie sie andernfalls auf `false` fest, um die Telemetriefunktionen zu aktivieren (Werte `false`, `0` oder `no` werden akzeptiert). Wenn sie nicht festgelegt wird, ist der Standardwert `false`, und die Telemetriefunktion ist aktiviert.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+Gibt an, ob die .NET Core-Runtime, das freigegebene Framework oder das SDK vom globalen Speicherort aus aufgelöst werden. Wenn nicht, ist der Standardwert `true`. Wenn der Wert auf `false` festgelegt wird, wird nicht vom globalen Speicherort aus aufgelöst und es gibt isolierte .NET Core-Installationen (die Werte `0` oder `false` werden akzeptiert). Weitere Informationen zu Lookup mit mehreren Ebenen finden Sie unter [Multi-level SharedFX lookup (SharedFX-Lookup mit mehreren Ebenen)](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%HOME%\NuGet\Packages` unter Windows verwendet.
+
+`DOTNET_SERVICING`
+
+Gibt den Speicherort des Wartungsindex an, der vom freigegebenen Host verwendet wird, wenn die Laufzeit geladen wird.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft gesendet werden. Legen Sie sie auf `true` fest, um die Telemetriefunktion zu deaktivieren (Werte `true`, `1` oder `yes` werden akzeptiert); legen Sie sie andernfalls auf `false` fest, um die Telemetriefunktionen zu aktivieren (Werte `false`, `0` oder `no` werden akzeptiert). Wenn sie nicht festgelegt wird, ist der Standardwert `false`, und die Telemetriefunktion ist aktiviert.
+
+---

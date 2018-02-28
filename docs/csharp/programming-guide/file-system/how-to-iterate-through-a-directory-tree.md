@@ -2,20 +2,21 @@
 title: 'Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
 Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder dem Unterverzeichnis als `string` abrufen, oder Sie können zusätzliche Informationen eines <xref:System.IO.FileInfo?displayProperty=nameWithType> oder <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>-Objekts abrufen.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Wenn Sie den Inhalt einer Verzeichnisstruktur entweder im Arbeitsspeicher oder auf dem Datenträger speichern müssen, speichern Sie am besten nur die <xref:System.IO.FileSystemInfo.FullName%2A>-Eigenschaft (vom Typ `string`) für jede Datei. Anschließend können Sie diese Zeichenfolge nach Bedarf zum Erstellen eines neuen <xref:System.IO.FileInfo>- oder <xref:System.IO.DirectoryInfo>-Objekts verwenden, oder eine beliebige Datei öffnen, für die zusätzliche Verarbeitung erforderlich ist.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Bei stabilem Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden. Weitere Informationen finden Sie unter [NTFS Technical Reference (Technische Referenz für NTFS)](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ Bei stabilem Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden. Weitere Informationen zum Windows-Dateisystem finden Sie in der [technischen Referenz zu NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IO>  
- [LINQ und Dateiverzeichnisse](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ und Dateiverzeichnisse](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)

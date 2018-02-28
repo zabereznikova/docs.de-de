@@ -1,43 +1,47 @@
 ---
 title: "Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern"
-description: "Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern"
-keywords: .NET, .NET Core
+description: "Erfahren Sie, wie Sie Drittanbieterabhängigkeiten analysieren können, um Ihr Projekt von .NET Framework auf .NET Core portieren zu können."
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 02/15/2018
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.workload: dotnetcore
-ms.openlocfilehash: 70b39c9762e4ee7450d0f59455bace0ac728844c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 365aff32de75d0658027c35675ed58a2b23691c5
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern
+# <a name="analyze-your-third-party-dependencies"></a>Analysieren Ihrer Drittanbieterabhängigkeiten
 
-Der erste Schritt bei der Portierung besteht darin, die Abhängigkeiten von Drittanbietern zu verstehen.  Sie müssen herausfinden, welche gegebenenfalls noch nicht unter .NET Core ausgeführt werden und für diese einen Notfallplan entwickeln.
+Wenn Sie Ihren Code auf .NET Core oder .NET Standard portieren möchten, ist der erste Schritt zum Portieren das Verstehen Ihrer Drittanbieterabhängigkeiten. Drittanbieterabhängigkeiten sind entweder [NuGet-Pakete](#analyze-referenced-nuget-packages-on-your-project) oder [DLLs](#analyze-dependencies-that-arent-nuget-packages), auf die Sie in Ihrem Projekt verweisen. Bewerten Sie jede Abhängigkeit, und entwickeln Sie einen Alternativplan für Abhängigkeiten, die nicht mit .NET Core kompatibel sind. In diesem Artikel wird gezeigt, wie Sie bestimmen, ob die Abhängigkeit mit .NET Core kompatibel ist.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="analyze-referenced-nuget-packages-in-your-project"></a>Analysieren von NuGet-Paketen, auf die in Ihrem Projekt verwiesen wird
 
-In diesem Artikel wird davon ausgegangen, dass Sie Windows und Visual Studio sowie Code verwenden, der derzeit auf .NET Framework ausgeführt wird.
+Wenn Sie in Ihrem Projekt auf NuGet-Pakete verweisen, müssen Sie überprüfen, ob diese mit .NET Core kompatibel sind.
+Es gibt zwei Möglichkeiten, dies zu erreichen:
 
-## <a name="analyzing-nuget-packages"></a>Analysieren von NuGet-Paketen
+* [Die NuGet-Paket-Explorer-App](#analyze-nuget-packages-using-nuget-package-explorer) (am zuverlässigsten).
+* [die Website nuget.org](#analyze-nuget-packages-using-nugetorg).
 
-Die Analyse von NuGet-Paketen für Portabilität ist sehr einfach.  Da ein NuGet-Paket selbst eine Reihe von Ordnern darstellt, die plattformspezifische Assemblys enthalten, müssen Sie lediglich überprüfen, ob ein Ordner mit einer .NET Core-Assembly vorhanden ist.
+Wenn sich bei der Analyse herausstellt, dass die Pakete nicht mit .NET Core sondern nur mit .NET Framework kompatibel sind, können Sie prüfen, ob der [.NET Framework-Kompatibilitätsmodus](#net-framework-compatibility-mode) Ihnen beim Portieren helfen kann.
 
-Am einfachsten überprüfen Sie die NuGet-Paket-Ordner mit dem Tool [NuGet-Paket-Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer).  Und so gehen Sie dabei vor.
+### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>Analysieren von NuGet-Paketen mit dem NuGet-Paket-Explorer
 
-1. Laden Sie den NuGet-Paket-Explorer herunter, und öffnen Sie ihn.
-2. Klicken Sie auf „Open package from online feed“ (Paket im Online-Feed öffnen).
+Ein NuGet-Paket besteht wiederum aus mehreren Ordnern, die plattformspezifische Assemblys enthalten. Also müssen Sie prüfen, ob es im Paket einen Ordner gibt, der eine kompatible Assembly enthält.
+
+Am einfachsten überprüfen Sie die NuGet-Paket-Ordner mit dem Tool [NuGet-Paket-Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer). Führen Sie nach der Installation folgende Schritte durch, um die Ordnernamen anzuzeigen:
+
+1. Öffnen Sie den NuGet-Paket-Explorer.
+2. Klicken Sie auf **Open package from online feed** (Paket über Onlinefeed öffnen).
 3. Suchen Sie nach dem Namen des Pakets.
-4. Erweitern Sie den Ordner „Lib“ auf der rechten Seite, und suchen Sie in den Ordnernamen.
+4. Wählen Sie den Paketnamen aus den Suchergebnissen aus, und klicken Sie auf **Öffnen**.
+5. Erweitern Sie den Ordner *Lib* (Bibliotheken) auf der rechten Seite, und suchen Sie in den Ordnernamen.
 
-Unter [nuget.org](https://www.nuget.org/) können Sie im Abschnitt **Dependencies** (Abhängigkeiten) der Seite für dieses Paket auch sehen, was von einem Paket unterstützt wird.
-
-In beiden Fällen müssen Sie unter [nuget.org](https://www.nuget.org/) nach einem Ordner oder Eintrag mit einem der folgenden Namen suchen:
+Suchen Sie nach einem Ordner mit einem der folgenden Namen:
 
 ```
 netstandard1.0
@@ -47,14 +51,21 @@ netstandard1.3
 netstandard1.4
 netstandard1.5
 netstandard1.6
+netstandard2.0
 netcoreapp1.0
+netcoreapp1.1
+netcoreapp2.0
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Hierbei handelt es sich um Target Framework Moniker (TFM), die den Versionen von [.NET-Standard](../../standard/net-standard.md) und den herkömmlichen PCL-Profilen (Portable Class Library) zugeordnet sind, die mit .NET Core kompatibel sind.  Beachten Sie, dass `netcoreapp1.0` zwar kompatibel ist, jedoch nicht für Bibliotheken, sondern für Anwendungen verwendet wird.  Sie können zwar eine `netcoreapp1.0`-basierte Bibliothek verwenden, diese wird jedoch von anderen `netcoreapp1.0`-Anwendungen möglicherweise für nichts *anderes* als für den Verbrauch verwendet.
+Bei diesen Werten handelt es sich um [Target Framework Moniker (TFMs)](../../standard/frameworks.md), die den Versionen des [.NET-Standard](../../standard/net-standard.md) und .NET Core-Profils und der herkömmlichen PCL-Profilen (Portable Class Library) zugeordnet sind, die mit .NET Core kompatibel sind.
+
+> [!IMPORTANT]
+> Beachten Sie bei TFMs, die von einem Paket unterstützt werden, dass `netcoreapp*` trotz Kompatibilität, nur für .NET Core-Projekte konzipiert ist und nicht für .NET Standard-Projekte.
+> Eine Bibliothek, die nur auf `netcoreapp*` und nicht auf `netstandard*` ausgerichtet ist, kann nur von anderen .NET Core-Apps verwendet werden.
 
 Es gibt auch einige ältere TFMs, die in Vorabversionen von .NET Core verwendet wurden, die möglicherweise ebenfalls kompatibel sind:
 
@@ -68,30 +79,59 @@ dotnet5.4
 dotnet5.5
 ```
 
-**Die Wahrscheinlichkeit ist hoch, dass diese mit Ihrem Code funktionieren, eine Garantie für die Kompatibilität besteht jedoch nicht**.  Pakete mit diesen TFMs wurden mit der Vorabversion von .NET Core-Paketen erstellt.  Achten Sie darauf, wann (oder ob) Pakete wie dieses so aktualisiert werden, dass sie auf `netstandard` basieren.
+Die Wahrscheinlichkeit ist hoch, dass diese TFMs mit Ihrem Code funktionieren, eine Garantie für die Kompatibilität besteht jedoch nicht. Pakete mit diesen TFMs wurden mit der Vorabversion von .NET Core-Paketen erstellt. Achten Sie darauf, wann (und ob) Pakete, die diese TFMs verwenden, auf .NET Standard aktualisiert werden.
 
 > [!NOTE]
-> Wenn Sie ein Paket auf eine herkömmliche PCL oder Vorabversion von .NET Core ausrichten möchten, müssen Sie die `imports`-Anweisung in Ihrer `project.json`-Datei verwenden.
+> Wenn Sie ein Paket, das auf eine herkömmliche PCL oder Vorabversion von .NET Core ausrichtet ist, verwenden möchten, müssen Sie das `PackageTargetFallback`-MSBuild-Element in Ihrer Projektdatei verwenden.
+> Weitere Informationen zu diesem MSBuild-Element finden Sie unter [`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback).
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>Analysieren von NuGet-Paketen mit nuget.org
+
+Alternativ können Sie unter [nuget.org](https://www.nuget.org/) im Abschnitt **Dependencies** (Abhängigkeiten) der Seite für jedes Paket auch sehen, welche TFMs von einem Paket unterstützt werden.
+
+Es ist leichter, die Website zum Überprüfen der Kompatibilität zu verwenden. Allerdings stehen dort nicht für alle **Abhängigkeiten** Informationen zur Verfügung.
+
+### <a name="net-framework-compatibility-mode"></a>Der .NET Framework-Kompatibilitätsmodus
+
+Nachdem Sie die NuGet-Pakete analysiert haben, zeigt sich möglicherweise, dass sie nur auf .NET Framework ausgerichtet sind, wie dies bei den meisten NuGet-Paketen der Fall ist.
+
+Mit .NET Standard 2.0 wurde der .NET Framework-Kompatibilitätsmodus eingeführt. Mit diesem Kompatibilitätsmodus können .NET Standard- und .NET Core-Projekte auf .NET Framework-Bibliotheken verweisen. Das Verweisen auf .NET Framework-Bibliotheken funktioniert nicht bei allen Projekten. So funktioniert es z.B. nicht, wenn die Bibliothek Windows Presentation Foundation-APIs (WPF) verwendet. Dadurch werden jedoch viele Portierungsszenarios ermöglicht.
+
+Wenn Sie in Ihrem Projekt auf NuGet-Pakete verweisen, die auf .NET Framework ausgerichtet sind, wie z.B. [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), wird eine Paketfallbackwarnung ([NU1701](/nuget/reference/errors-and-warnings#nu1701)) wie die folgende ausgegeben:
+
+`NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
+
+Diese Warnung wird angezeigt, wenn Sie das Paket hinzufügen und jedes Mal, wenn Sie etwas erstellen, um sicherzustellen, dass Sie das Paket mit Ihrem Projekt testen. Wenn Ihr Projekt wie gewünscht funktioniert, können Sie die Warnung unterdrücken, indem Sie die Paketeigenschaften in Visual Studio bearbeiten oder die Projektdatei in Ihrem bevorzugten Code-Editor manuell bearbeiten.
+
+Um die Warnung durch Bearbeiten der Projektdatei zu unterdrücken, suchen Sie den `PackageReference`-Eintrag für das Paket, für das Sie die Warnung unterdrücken möchten, und fügen Sie das `NoWarn`-Attribut hinzu. Das `NoWarn`-Attribut akzeptiert eine durch Trennzeichen getrennte Liste aller Warnungs-IDs. Im folgenden Beispiel wird gezeigt, wie Sie die `NU1701`-Warnung für das `Huitian.PowerCollections`-Paket unterdrücken, indem Sie Ihre Projektdatei manuell bearbeiten:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Huitian.PowerCollections" Version="1.0.0" NoWarn="NU1701" />
+</ItemGroup>
+```
+
+Weitere Informationen zum Unterdrücken von Compilerwarnungen in Visual Studio finden Sie unter [Unterdrücken von Compilerwarnungen](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages) im Abschnitt zum Unterdrücken von Warnungen für NuGet-Pakete.
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Vorgehensweise, wenn die NuGet-Paket-Abhängigkeit unter .NET Core nicht ausgeführt wird
 
-Es gibt einige Dinge, die Sie tun können, wenn ein NuGet-Paket, auf das Sie angewiesen sind, unter .NET Core nicht ausgeführt wird.
+Es gibt einige Dinge, die Sie tun können, wenn ein NuGet-Paket, auf das Sie angewiesen sind, unter .NET Core nicht ausgeführt wird:
 
-1. Wenn es sich um ein Open Source-Projekt handelt, das beispielsweise von GitHub gehostet wird, können Sie sich direkt an den oder die Entwickler wenden.
-2. Über [nuget.org](https://www.nuget.org/) können Sie sich direkt an den Entwickler wenden, indem Sie nach dem Paket suchen und links auf der Seite des Pakets auf „Contact Owners“ (An Besitzer wenden) klicken.
+1. Wenn es sich um ein Open Source-Projekt handelt, das beispielsweise von GitHub gehostet wird, können Sie sich direkt an die Entwickler wenden.
+2. Sie können den Autor direkt über [nuget.org](https://www.nuget.org/) kontaktieren. Suchen Sie nach dem Paket, und klicken Sie links auf der Paketseite auf **Contact Owners** (Besitzer kontaktieren).
 3. Sie können nach einem anderen Paket suchen, das unter .NET Core ausgeführt wird und denselben Zweck erfüllt wie das Paket, das Sie bisher verwendet haben.
 4. Sie können den vom Paket ausgeführten Code selbst schreiben.
 5. Sie können die Abhängigkeit für das Paket eliminieren, indem Sie die Funktionalität Ihrer Anwendung ändern, zumindest bis eine kompatible Version des Pakets verfügbar ist.
 
-Denken Sie daran, dass Betreiber von Open Source-Projekten und Herausgeber von NuGet-Paketen häufig ehrenamtlich tätig sind, sich kostenlos um einen bestimmten Bereich kümmern, und ansonsten einer anderen Tätigkeit nachgehen. Wenn Sie bei ihnen anfragen, sollten Sie mit einer positiven Äußerung zu der Bibliothek beginnen, bevor Sie um Unterstützung bei .NET Core bitten.
+Denken Sie daran, dass Open-Source-Projektverwalter und NuGet-Paketherausgeber häufig Freiwillige sind. Sie beteiligen sich, weil Ihnen eine bestimmte Domäne wichtig ist. Sie arbeiten daran unentgeltlich und haben häufig einen anderen Job, für den sie unter der Woche arbeiten. Denken Sie daran, wenn Sie sie kontaktieren, um sie nach Hilfe mit .NET Core zu fragen.
 
 Wenn es Ihnen mit den genannten Vorschlägen nicht gelingt, Ihr Problem zu beheben, müssen Sie sich mit dem Portieren auf .NET Core noch etwas gedulden.
 
-Das .NET-Team würde gerne wissen, welche Bibliotheken als Nächstes von .NET Core unterstützt werden sollten. Sie können uns gerne per E-Mail an dotnet@microsoft.com mitteilen, welche Bibliotheken Sie gerne verwenden würden.
+Das .NET-Team würde gerne wissen, welche Bibliotheken von .NET Core unterstützt werden sollten. Sie können uns gerne mit einer E-Mail an dotnet@microsoft.com mitteilen, welche Bibliotheken Sie gerne verwenden würden.
 
-## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Analysieren von Abhängigkeiten, bei denen es sich nicht um NuGet-Pakete handelt
+## <a name="analyze-dependencies-that-arent-nuget-packages"></a>Analysieren von Abhängigkeiten, bei denen es sich nicht um NuGet-Pakete handelt
 
-Möglicherweise verfügen Sie über eine Abhängigkeit, bei der es sich nicht um ein NuGet-Paket, sondern beispielsweise um eine DLL im Dateisystem handelt.  Wenn Sie feststellen möchten, ob diese Abhängigkeit portiert werden kann, haben Sie nur die Möglichkeit, das Tool [ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) auszuführen.
+Möglicherweise verfügen Sie über eine Abhängigkeit, bei der es sich nicht um ein NuGet-Paket, sondern beispielsweise um eine DLL im Dateisystem handelt. Wenn Sie feststellen möchten, ob diese Abhängigkeit portiert werden kann, haben Sie nur die Möglichkeit, das Tool [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) auszuführen. Das Tool kann Assemblys analysieren, die auf .NET Framework ausgerichtet sind, und APIs identifizieren, die nicht auf andere .NET-Plattformen wie .NET Core portiert werden können. Sie können das Tool als Konsolenanwendung oder als [Visual Studio-Erweiterung](../../standard/analyzers/portability-analyzer.md) ausführen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

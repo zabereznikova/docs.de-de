@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca4b411f8d8151b18c7e83be15191a843e628b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 717fffb21d38fb356110a3b492b5b9f540a17577
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Asynchrone Aufgaben nach einer Zeitperiode abbrechen (C#)
 Sie können einen asynchronen Vorgang nach einem gewissen Zeitraum mithilfe der <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType>-Methode abbrechen, wenn Sie nicht auf das Ende des Vorgangs warten möchten. Diese Methode plant den Abbruch aller zugeordneten Aufgaben, die innerhalb des vom `CancelAfter`-Ausdruck festgelegten Zeitraums nicht abgeschlossen sind.  
@@ -26,7 +27,7 @@ Sie können einen asynchronen Vorgang nach einem gewissen Zeitraum mithilfe der 
 >  Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
   
 ## <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen und anschließend die folgenden Schritte ausführen.  
+ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.  
   
 1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
@@ -98,7 +99,7 @@ Downloads canceled.
   
  Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.  
   
- Sie können das Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
+ Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
   
 ```csharp  
 using System;  
@@ -224,6 +225,6 @@ namespace CancelAfterTime
 ## <a name="see-also"></a>Siehe auch  
  [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Brechen Sie eine asynchrone Aufgabe oder eine Liste von Aufgaben (c#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [Cancel an Async Task or a List of Tasks (C#) (Abbrechen einer asynchronen Aufgabe oder Aufgabenliste (C#))](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
  [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

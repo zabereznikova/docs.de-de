@@ -1,23 +1,25 @@
 ---
 title: Neues in Visual Basic
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -25,10 +27,13 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
   
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic/Visual Studio .NET 2017   
-Informationen zu neuen Funktionen finden Sie unter [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 15.5   
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Frühere Versionen
+
+Visual Basic 15.3   
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic / Visual Studio .NET 2015   
 Informationen zu neuen Funktionen finden Sie unter [Visual Basic 14](#visual-basic-14)
@@ -53,6 +58,41 @@ Bitschiebeoperatoren, Deklaration von Schleifenvariablen
 
 Visual Basic / Visual Studio .NET 2002   
 Die erste Version von Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[Nicht schließende benannte Argumente](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+In Visual Basic 15.3 und früheren Versionen mussten positionelle vor benannten Argumenten stehen, wenn ein Methodenaufruf sowohl Argumente nach Position als auch nach Namen beinhaltete. Ab Visual Basic 15.5 können positionelle und benannte Argumente in beliebiger Reihenfolge angeordnet werden, solange sich alle Argumente bis zum letzten positionellen Argument an der korrekten Position befinden. Dies ist besonders dann nützlich, wenn benannte Argumente verwendet werden, um Code lesbarer zu machen.
+
+Der folgende Methodenaufruf hat beispielsweise zwei positionelle Argumente zwischen einem benannten Argument. Das benannte Argument gibt an, dass der Wert 19 für ein Alter steht.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Führendes Hexadezimal-/Binär-/Oktaltrennzeichen**
+
+Mit Visual Basic 2017 wurde Unterstützung für das Unterstrichzeichen (`_`) als Zifferntrennzeichen hinzugefügt. Sie können ab Visual Basic 15.5 den Unterstrich als vorangestelltes Trennzeichen zwischen dem Präfix und Hexadezimal-, Binär- oder Oktalziffern verwenden. Im folgenden Beispiel wird ein Trennzeichen für vorangestellte Ziffern verwendet, um 3.271.948.384 als hexadezimale Zahl zu definieren:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Um den Unterstrich als vorangestelltes Trennzeichen verwenden zu können, müssen Sie Ihrer Visual Basic-Projektdatei (*.vbproj) das folgende Element hinzufügen:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[Rückschluss auf Tupelnamen](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic den Namen der Typelelemente von den entsprechenden Variablennamen ab. Sie müssen ein Tupelelement nicht explizit benennen. In folgendem Beispiel werden Rückschlüsse verwendet, um ein Tupel mit drei benannten Elementen, `state`, `stateName` und `capital`, zu erstellen.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 

@@ -2,30 +2,32 @@
 title: decimal (C#-Referenz)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-helpviewer_keywords: decimal keyword [C#]
+helpviewer_keywords:
+- decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: 0da001851c681fe4d698b920d9668b2f6b731e3a
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="decimal-c-reference"></a>decimal (C#-Referenz)
 Das `decimal`-Schlüsselwort kennzeichnet einen 128-Bit-Datentyp. Im Vergleich zu anderen Gleitkommatypen verfügt der `decimal`-Typ über höhere Genauigkeit und einen kleineren Wertebereich. Dadurch eignet er sich für Finanz- und Währungskalkulationen. Der folgenden Tabelle können Sie den ungefähren Bereich und die Genauigkeit des `decimal`-Typs entnehmen.  
   
-|Typ|Ungefährer Bereich|Genauigkeit|.NET Framework-Typ|  
+|Typ|Ungefährer Bereich|Genauigkeit|.NET Framework-Typ|  
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7.9 x 10<sup>28</sup> bis 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> bis 10<sup>28</sup>)|28-29 signifikante Stellen|<xref:System.Decimal?displayProperty=nameWithType>|  
 
-Der Standardwert von einer `decimal` ist 0, m.
+Der Standardwert eines `decimal`-Objekts ist 0m.
   
 ## <a name="literals"></a>Literale  
  Wenn ein echtes numerisches Literal als `decimal` behandelt werden soll, verwenden Sie das Suffix m oder M. Beispiel:  
@@ -64,6 +66,7 @@ myMoney = (decimal)x;
  Im folgenden Beispiel wird ein Compilerfehler aufgrund des Versuchs verursacht, [Double](../../../csharp/language-reference/keywords/double.md)- und `decimal`-Variablen hinzuzufügen.  
   
 ```csharp  
+decimal dec = 0m;
 double dub = 9;  
 // The following line causes an error that reads "Operator '+' cannot be applied to   
 // operands of type 'double' and 'decimal'"  
