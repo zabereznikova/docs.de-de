@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: 4378afebe6fd0d9317f734457576dc75d7488bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="namespaces"></a>Namespaces
 
@@ -77,7 +77,7 @@ Sie können auch globale verwenden, z. B. den Namespace der obersten Ebene .NET 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-##
+## <a name="recursive-namespaces"></a>Rekursive namespaces
 
 F#-4.1 führt das Konzept von Namespaces, die für alle enthaltenen Code wechselseitig rekursive werden zu ermöglichen.  Dies geschieht über `namespace rec`.  Verwenden von `namespace rec` verringern, können einige sorgen, nicht aufeinander Code für Typen und Module schreiben können.  Im folgenden finden ein Beispiel dafür:
 

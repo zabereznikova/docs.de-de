@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Geben Sie die Zeichen (Visual Basic)
 
@@ -88,7 +88,7 @@ Die Form eines Literals, wie er im Code, in der Regel enthalten Angabe des Daten
 |Textform Literal|Standard-Datentyp|Beispiel|  
 |-----------------------------|-----------------------|-------------|  
 |Numerisch, kein Bruchteil|`Integer`|`2147483647`|  
-|Numerisch, kein Bruchteil Teil, zu groß für`Integer`|`Long`|`2147483648`|  
+|Numerisch, kein Bruchteil Teil, zu groß für `Integer`|`Long`|`2147483648`|  
 |Numerisch, Bruchteil|`Double`|`1.2`|  
 |Eingeschlossen in doppelte Anführungszeichen|`String`|`"A"`|  
 |Eingeschlossen in Nummernzeichen|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ Der Compiler interpretiert normalerweise ein Integer-literal um im System Anzahl
 |Zahlenbasis|Präfix|Gültige Werte|Beispiel|
 |-----------------|------------|------------------------|-------------|
 |Hexadezimalformat (Basis 16)|`&H`|0-9 und A-F|`&HFFFF`|
-|Binär (Basis 2)|`0B`|0-1|`&B01111100`|
+|Binär (Basis 2)|`&B`|0-1|`&B01111100`|
 |Oktalformat (Basis 8)|`&O`|0-7|`&O77`|
 
 In Visual Basic 2017 starten, können Sie das Unterstrich-Zeichen (`_`) als Gruppentrennzeichen um die Lesbarkeit der ein ganzzahliges Literal zu verbessern. Im folgenden Beispiel wird die `_` Zeichen um ein binäres literal in 8-Bit-Gruppen zu gruppieren:
