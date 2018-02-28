@@ -1,92 +1,73 @@
 ---
-title: "Zusätzliche Ressourcen für Visual Basic-Programmierer"
-ms.date: 07/20/2015
+title: "Zusätzliche Ressourcen für Visual Basic-Programmierer"
+description: "Entdecken Sie Onlineressourcen, mit denen Sie Neues lernen, Fragen stellen und mehr Informationen zu Visual Basic erhalten können."
+ms.date: 02/21/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, additional resources
-- Help
 - resources [Visual Basic], additional
-- Help, newsgroups
-- Web sites, Visual Studio
-- webcasts
 - Help, Visual Basic Web sites
-- newsgroups, Visual Studio
-- support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="additional-resources-for-visual-basic-programmers"></a><span data-ttu-id="9f7e7-102">Zusätzliche Ressourcen für Visual Basic-Programmierer</span><span class="sxs-lookup"><span data-stu-id="9f7e7-102">Additional Resources for Visual Basic Programmers</span></span>
-<span data-ttu-id="9f7e7-103">Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-103">The following web sites provide guidance and can help you find answers to common problems.</span></span>  
-  
-## <a name="microsoft-resources"></a><span data-ttu-id="9f7e7-104">Microsoft-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="9f7e7-104">Microsoft Resources</span></span>  
-  
-### <a name="on-the-web"></a><span data-ttu-id="9f7e7-105">Im Web</span><span class="sxs-lookup"><span data-stu-id="9f7e7-105">On the Web</span></span>  
-  
-|<span data-ttu-id="9f7e7-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-106">Term</span></span>|<span data-ttu-id="9f7e7-107">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-107">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-108">Microsoft Visual Basic Developer Center</span><span class="sxs-lookup"><span data-stu-id="9f7e7-108">Microsoft Visual Basic Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkID=47768)|<span data-ttu-id="9f7e7-109">Enthält Codebeispiele, Upgradeinformationen, Videos, kostenlose Downloads sowie technische Inhalte.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-109">Provides code samples, upgrade information, videos, free downloads, and technical content.</span></span>|  
-|[<span data-ttu-id="9f7e7-110">Microsoft Visual Basic-Team-Blog</span><span class="sxs-lookup"><span data-stu-id="9f7e7-110">Microsoft Visual Basic Team Blog</span></span>](http://go.microsoft.com/fwlink/?LinkID=123815)|<span data-ttu-id="9f7e7-111">Bietet Zugriff auf das Visual Basic-Team-Blog.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-111">Provides access to the Visual Basic team blog.</span></span>|  
-|[<span data-ttu-id="9f7e7-112">Microsoft ASP.NET</span><span class="sxs-lookup"><span data-stu-id="9f7e7-112">Microsoft ASP.NET</span></span>](http://go.microsoft.com/fwlink/?LinkID=51657)|<span data-ttu-id="9f7e7-113">Umfasst Artikel, Demonstrationen, Tool-Vorschau und andere Informationen für die Webentwicklung mit Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-113">Provides articles, demonstrations, tool previews, and other information for Web development in Visual Basic.</span></span>|  
-|[<span data-ttu-id="9f7e7-114">MSDN Magazine</span><span class="sxs-lookup"><span data-stu-id="9f7e7-114">MSDN Magazine</span></span>](http://msdn.microsoft.com/magazine/cc159292.aspx)|<span data-ttu-id="9f7e7-115">Bietet ausführliche Artikel zu Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-115">Provides in-depth articles about Visual Basic.</span></span>|  
-|[<span data-ttu-id="9f7e7-116">Microsoft Patterns & Practices</span><span class="sxs-lookup"><span data-stu-id="9f7e7-116">Microsoft patterns & practices</span></span>](http://msdn.microsoft.com/practices/default.aspx)|<span data-ttu-id="9f7e7-117">Bietet angewandte Entwicklungsanleitungen mit Quellcode und Dokumentation in Produktionsgüte.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-117">Provides applied engineering guidance that includes production quality source code and documentation.</span></span>|  
-  
-### <a name="code-samples"></a><span data-ttu-id="9f7e7-118">Codebeispiele</span><span class="sxs-lookup"><span data-stu-id="9f7e7-118">Code Samples</span></span>  
-  
-|<span data-ttu-id="9f7e7-119">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-119">Term</span></span>|<span data-ttu-id="9f7e7-120">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-120">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-121">Codegalerie</span><span class="sxs-lookup"><span data-stu-id="9f7e7-121">Code Gallery</span></span>](http://code.msdn.microsoft.com/)|<span data-ttu-id="9f7e7-122">Hier können Sie Beispielanwendungen und andere Ressourcen herunterladen und an die Entwickler-Community weitergeben.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-122">Download and share sample applications and other resources with the developer community.</span></span>|  
-|[<span data-ttu-id="9f7e7-123">GitHub</span><span class="sxs-lookup"><span data-stu-id="9f7e7-123">GitHub</span></span>](http://www.github.com/)|<span data-ttu-id="9f7e7-124">Hostet Open Source-Softwareprojekte.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-124">Hosts open source software projects.</span></span> <span data-ttu-id="9f7e7-125">Sie können GitHub open Source-Software suchen oder erstellen Sie neue Projekte, mit der Außenwelt freizugeben.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-125">You can use GitHub to find open source software or create new projects to share with the world.</span></span>|  
-|[<span data-ttu-id="9f7e7-126">Visual Basic-Codebeispiele</span><span class="sxs-lookup"><span data-stu-id="9f7e7-126">Visual Basic Code Samples</span></span>](http://msdn.microsoft.com/vbasic/ms789074)|<span data-ttu-id="9f7e7-127">Bietet Anwendungs-, Web- und Datenbeispiele in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-127">Provides application, web, and data samples in Visual Basic.</span></span>|  
-  
-### <a name="forums"></a><span data-ttu-id="9f7e7-128">Foren</span><span class="sxs-lookup"><span data-stu-id="9f7e7-128">Forums</span></span>  
-  
-|<span data-ttu-id="9f7e7-129">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-129">Term</span></span>|<span data-ttu-id="9f7e7-130">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-130">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-131">Visual Basic-Sprache</span><span class="sxs-lookup"><span data-stu-id="9f7e7-131">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)|<span data-ttu-id="9f7e7-132">Erläutert die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachsyntax und den Compiler.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-132">Discusses the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language syntax and compiler.</span></span>|  
-|[<span data-ttu-id="9f7e7-133">Visual Basic-Interop und -Upgrade</span><span class="sxs-lookup"><span data-stu-id="9f7e7-133">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)|<span data-ttu-id="9f7e7-134">Beschreibt das Upgrade auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und die Arbeit mit Interoperabilitätsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-134">Discusses upgrading to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and working with interoperability features.</span></span>|  
-|[<span data-ttu-id="9f7e7-135">Visual Basic-IDE</span><span class="sxs-lookup"><span data-stu-id="9f7e7-135">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)|<span data-ttu-id="9f7e7-136">Erläutert die Arbeit in der integrierten [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Entwicklungsumgebung.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-136">Discusses working in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment.</span></span>|  
-|[<span data-ttu-id="9f7e7-137">Visual Basic Power Packs</span><span class="sxs-lookup"><span data-stu-id="9f7e7-137">Visual Basic Power Packs</span></span>](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|<span data-ttu-id="9f7e7-138">Beschreibt die Add-ins, Steuerelemente, Komponenten, Beispiele und Tools, die Teil der Visual Basic Power Packs sind.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-138">Discusses the add-ins, controls, components, samples and tools that are part of the Visual Basic Power Packs.</span></span>|  
-|[<span data-ttu-id="9f7e7-139">Allgemeines zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9f7e7-139">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)|<span data-ttu-id="9f7e7-140">Erläutert Probleme mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die nicht in anderen Foren besprochen werden.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-140">Discusses issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] that are not discussed in other forums.</span></span>|  
-  
-### <a name="chats-and-discussion-groups"></a><span data-ttu-id="9f7e7-141">Chats und Diskussionsgruppen</span><span class="sxs-lookup"><span data-stu-id="9f7e7-141">Chats and Discussion Groups</span></span>  
-  
-|<span data-ttu-id="9f7e7-142">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-142">Term</span></span>|<span data-ttu-id="9f7e7-143">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-143">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-144">MSDN-Diskussionsgruppen</span><span class="sxs-lookup"><span data-stu-id="9f7e7-144">MSDN Discussion Groups</span></span>](http://go.microsoft.com/fwlink/?LinkId=145961)|<span data-ttu-id="9f7e7-145">Bietet die Möglichkeit, in Form von Newsgroup-Diskussionen mit Experten auf der ganzen Welt zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-145">Provides a newsgroup experience, allowing you to connect as a community with experts from around the world.</span></span>|  
-|[<span data-ttu-id="9f7e7-146">MSDN-Chats</span><span class="sxs-lookup"><span data-stu-id="9f7e7-146">MSDN Chats</span></span>](http://go.microsoft.com/fwlink/?LinkId=145962)|<span data-ttu-id="9f7e7-147">Bietet Diskussionen zu Microsoft-Produkten oder -Technologien.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-147">Provides discussions about Microsoft products or technologies.</span></span> <span data-ttu-id="9f7e7-148">Jeder Chat wird von einem oder mehreren Experten von Microsoft betreut.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-148">Each chat is hosted by one or more Microsoft experts.</span></span> <span data-ttu-id="9f7e7-149">Für abgeschlossene Chats stehen Transkriptionen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-149">Transcripts are available for completed chats.</span></span>|  
-  
-### <a name="videos-and-webcasts"></a><span data-ttu-id="9f7e7-150">Videos und Webcasts</span><span class="sxs-lookup"><span data-stu-id="9f7e7-150">Videos and Webcasts</span></span>  
-  
-|<span data-ttu-id="9f7e7-151">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-151">Term</span></span>|<span data-ttu-id="9f7e7-152">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-152">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-153">Channel9</span><span class="sxs-lookup"><span data-stu-id="9f7e7-153">Channel9</span></span>](http://go.microsoft.com/fwlink/?LinkID=123827)|<span data-ttu-id="9f7e7-154">Bietet eine dauerhafte Community anhand von Videos, Wikis und Foren.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-154">Provides continuous community through videos, Wikis, and forums.</span></span>|  
-|[<span data-ttu-id="9f7e7-155">Ich bin VB</span><span class="sxs-lookup"><span data-stu-id="9f7e7-155">I'm a VB</span></span>](http://msdn.microsoft.com/vbasic/dd776132)|<span data-ttu-id="9f7e7-156">Sehen Sie sich diese Gespräche an, und entdecken Sie, was die Experten an Visual Basic und Visual Studio lieben.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-156">Watch these interviews and discover what the experts love about Visual Basic and Visual Studio.</span></span>|  
-  
-### <a name="support"></a><span data-ttu-id="9f7e7-157">Unterstützung</span><span class="sxs-lookup"><span data-stu-id="9f7e7-157">Support</span></span>  
-  
-|<span data-ttu-id="9f7e7-158">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-158">Term</span></span>|<span data-ttu-id="9f7e7-159">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-159">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-160">Microsoft Hilfe und Support</span><span class="sxs-lookup"><span data-stu-id="9f7e7-160">Microsoft Help and Support</span></span>](http://go.microsoft.com/fwlink/?LinkID=108287)|<span data-ttu-id="9f7e7-161">Bietet Zugriff auf Knowledge Base-Artikel, Downloads und Updates, Support-Webcasts und andere Dienste.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-161">Provides access to Knowledge Base (KB) articles, downloads and updates, support webcasts, and other services.</span></span>|  
-|[<span data-ttu-id="9f7e7-162">Microsoft Connect</span><span class="sxs-lookup"><span data-stu-id="9f7e7-162">Microsoft Connect</span></span>](http://connect.microsoft.com/)|<span data-ttu-id="9f7e7-163">Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio an Microsoft.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-163">Enables you to file bugs or provide suggestions to Microsoft about Visual Studio.</span></span> <span data-ttu-id="9f7e7-164">Sie können auch Fehler melden, indem Sie im Menü **Hilfe** auf **Problem melden** klicken.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-164">You can also report a bug by choosing **Report a Bug** on the **Help** menu.</span></span>|  
-  
-## <a name="third-party-resources"></a><span data-ttu-id="9f7e7-165">Ressourcen von Drittanbietern</span><span class="sxs-lookup"><span data-stu-id="9f7e7-165">Third-Party Resources</span></span>  
- <span data-ttu-id="9f7e7-166">Die MSDN-Website enthält Informationen über aktuelle Sites und Newsgroups von Drittanbietern.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-166">The MSDN web site provides information on current third-party sites and newsgroups of interest.</span></span> <span data-ttu-id="9f7e7-167">Eine aktuelle Liste der verfügbaren Ressourcen finden Sie auf der [MSDN C# Community-Website](http://go.microsoft.com/fwlink/?LinkID=77372).</span><span class="sxs-lookup"><span data-stu-id="9f7e7-167">For the most current list of resources available, see the [MSDN Visual Basic Community Web](http://go.microsoft.com/fwlink/?LinkID=77372) site.</span></span>  
-  
-|<span data-ttu-id="9f7e7-168">Begriff</span><span class="sxs-lookup"><span data-stu-id="9f7e7-168">Term</span></span>|<span data-ttu-id="9f7e7-169">Definition</span><span class="sxs-lookup"><span data-stu-id="9f7e7-169">Definition</span></span>|  
-|----------|----------------|  
-|[<span data-ttu-id="9f7e7-170">DevX Visual Basic Zone</span><span class="sxs-lookup"><span data-stu-id="9f7e7-170">DevX Visual Basic Zone</span></span>](http://go.microsoft.com/fwlink/?LinkId=145978)|<span data-ttu-id="9f7e7-171">Bietet ausführliche technische Artikel für den Visual Basic-Entwickler von heute.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-171">Provides in-depth technical articles for today's Visual Basic developer.</span></span>|  
-|[<span data-ttu-id="9f7e7-172">vb.dotnet.technical</span><span class="sxs-lookup"><span data-stu-id="9f7e7-172">vb.dotnet.technical</span></span>](http://go.microsoft.com/fwlink/?LinkId=145986)|<span data-ttu-id="9f7e7-173">Bietet ein Diskussionsforum für neue Funktionen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] innerhalb der DevX-Foren.</span><span class="sxs-lookup"><span data-stu-id="9f7e7-173">Provides a forum for discussion of new features in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] in the DevX forums.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="9f7e7-174">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9f7e7-174">See Also</span></span>  
- [<span data-ttu-id="9f7e7-175">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="9f7e7-175">Getting Started</span></span>](../../visual-basic/getting-started/index.md)  
- [<span data-ttu-id="9f7e7-176">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="9f7e7-176">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+# <a name="additional-resources"></a><span data-ttu-id="c3941-103">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="c3941-103">Additional resources</span></span>
+
+<span data-ttu-id="c3941-104">Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.</span><span class="sxs-lookup"><span data-stu-id="c3941-104">The following web sites provide guidance and can help you find answers to common problems.</span></span>
+
+## <a name="microsoft-resources"></a><span data-ttu-id="c3941-105">Microsoft-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="c3941-105">Microsoft resources</span></span>
+
+### <a name="on-the-web"></a><span data-ttu-id="c3941-106">Online</span><span class="sxs-lookup"><span data-stu-id="c3941-106">On the web</span></span>
+
+|<span data-ttu-id="c3941-107">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-107">Term</span></span>|<span data-ttu-id="c3941-108">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-108">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-109">Visual Basic .NET-Sprachentwurf</span><span class="sxs-lookup"><span data-stu-id="c3941-109">Visual Basic .NET Language Design</span></span>](https://github.com/dotnet/vblang)|<span data-ttu-id="c3941-110">Offizielles Repository auf Git-Hub für den Visual Basic .NET-Sprachentwurf.</span><span class="sxs-lookup"><span data-stu-id="c3941-110">Official repository on GitHub for Visual Basic .NET language design.</span></span>|
+|[<span data-ttu-id="c3941-111">Microsoft Visual Basic-Team-Blog</span><span class="sxs-lookup"><span data-stu-id="c3941-111">Microsoft Visual Basic Team Blog</span></span>](https://blogs.msdn.microsoft.com/vbteam/)|<span data-ttu-id="c3941-112">Bietet Zugriff auf das Visual Basic-Team-Blog.</span><span class="sxs-lookup"><span data-stu-id="c3941-112">Provides access to the Visual Basic team blog.</span></span>|
+
+### <a name="code-samples"></a><span data-ttu-id="c3941-113">Codebeispiele</span><span class="sxs-lookup"><span data-stu-id="c3941-113">Code samples</span></span>
+
+|<span data-ttu-id="c3941-114">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-114">Term</span></span>|<span data-ttu-id="c3941-115">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-115">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-116">Codegalerie</span><span class="sxs-lookup"><span data-stu-id="c3941-116">Code Gallery</span></span>](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|<span data-ttu-id="c3941-117">Hier können Sie Beispielanwendungen und andere Ressourcen herunterladen und an die Entwickler-Community weitergeben.</span><span class="sxs-lookup"><span data-stu-id="c3941-117">Download and share sample applications and other resources with the developer community.</span></span>|
+|[<span data-ttu-id="c3941-118">Visual Basic– Dokumentationsbeispiele</span><span class="sxs-lookup"><span data-stu-id="c3941-118">Visual Basic documentation samples</span></span>](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|<span data-ttu-id="c3941-119">Enthält die Beispiele, die in der Visual Basic- und .NET-Dokumentation verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c3941-119">Contains the samples used throughout the Visual Basic and .NET documentation.</span></span>|
+
+### <a name="forums"></a><span data-ttu-id="c3941-120">Foren</span><span class="sxs-lookup"><span data-stu-id="c3941-120">Forums</span></span>
+
+|<span data-ttu-id="c3941-121">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-121">Term</span></span>|<span data-ttu-id="c3941-122">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-122">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-123">Visual Basic-Foren</span><span class="sxs-lookup"><span data-stu-id="c3941-123">Visual Basic Forums</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|<span data-ttu-id="c3941-124">Hier werden allgemeine Visual Basic-Probleme besprochen.</span><span class="sxs-lookup"><span data-stu-id="c3941-124">Discusses general Visual Basic issues.</span></span>|
+
+### <a name="videos-and-webcasts"></a><span data-ttu-id="c3941-125">Videos und Webcasts</span><span class="sxs-lookup"><span data-stu-id="c3941-125">Videos and webcasts</span></span>
+
+|<span data-ttu-id="c3941-126">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-126">Term</span></span>|<span data-ttu-id="c3941-127">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-127">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-128">Channel9</span><span class="sxs-lookup"><span data-stu-id="c3941-128">Channel9</span></span>](https://channel9.msdn.com/)|<span data-ttu-id="c3941-129">Bietet eine dauerhafte Community anhand von Videos, Wikis und Foren.</span><span class="sxs-lookup"><span data-stu-id="c3941-129">Provides continuous community through videos, Wikis, and forums.</span></span>|
+
+### <a name="support"></a><span data-ttu-id="c3941-130">Unterstützung</span><span class="sxs-lookup"><span data-stu-id="c3941-130">Support</span></span>
+
+|<span data-ttu-id="c3941-131">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-131">Term</span></span>|<span data-ttu-id="c3941-132">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-132">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-133">Microsoft-Support</span><span class="sxs-lookup"><span data-stu-id="c3941-133">Microsoft Support</span></span>](https://support.microsoft.com)|<span data-ttu-id="c3941-134">Bietet Zugriff auf Knowledge Base-Artikel, Downloads und Updates, Support-Webcasts und andere Dienste.</span><span class="sxs-lookup"><span data-stu-id="c3941-134">Provides access to Knowledge Base (KB) articles, downloads and updates, support webcasts, and other services.</span></span>|
+|[<span data-ttu-id="c3941-135">Fragen zu Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c3941-135">Visual Studio Questions</span></span>](https://developercommunity.visualstudio.com)|<span data-ttu-id="c3941-136">Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio und .NET an Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c3941-136">Enables you to file bugs or provide suggestions to Microsoft about .NET and Visual Studio.</span></span> <span data-ttu-id="c3941-137">Sie können ein Problem in Visual Studio auch über **Hilfe** > **Feedback senden** > **Ein Problem melden** einreichen.</span><span class="sxs-lookup"><span data-stu-id="c3941-137">You can also report a bug by selecting **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.</span></span>|
+
+## <a name="third-party-resources"></a><span data-ttu-id="c3941-138">Ressourcen von Drittanbietern</span><span class="sxs-lookup"><span data-stu-id="c3941-138">Third-party resources</span></span>
+
+|<span data-ttu-id="c3941-139">Begriff</span><span class="sxs-lookup"><span data-stu-id="c3941-139">Term</span></span>|<span data-ttu-id="c3941-140">Definition</span><span class="sxs-lookup"><span data-stu-id="c3941-140">Definition</span></span>|
+|----------|----------------|
+|[<span data-ttu-id="c3941-141">VBForums</span><span class="sxs-lookup"><span data-stu-id="c3941-141">VBForums</span></span>](http://www.vbforums.com/)|<span data-ttu-id="c3941-142">Ein Forum, in dem u.a. über Visual Basic und .NET gesprochen werden kann.</span><span class="sxs-lookup"><span data-stu-id="c3941-142">Provides a forum to discuss Visual Basic, .NET, and more.</span></span>|
+|[<span data-ttu-id="c3941-143">vbCity</span><span class="sxs-lookup"><span data-stu-id="c3941-143">vbCity</span></span>](http://vbcity.com/)|<span data-ttu-id="c3941-144">Eine Communitywebsite, auf der Benutzer Visual Basic und .NET kennenlernen und Fragen dazu stellen können.</span><span class="sxs-lookup"><span data-stu-id="c3941-144">A community site for people to learn and ask questions about Visual Basic and .NET.</span></span>|
+|[<span data-ttu-id="c3941-145">Stapelüberlauf</span><span class="sxs-lookup"><span data-stu-id="c3941-145">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)|<span data-ttu-id="c3941-146">Stack Overflow ist eine Website, auf der Entwickler Fragen stellen und Antworten erhalten können.</span><span class="sxs-lookup"><span data-stu-id="c3941-146">Stack Overflow is a question and answer site for developers.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="c3941-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3941-147">See also</span></span>
+
+[<span data-ttu-id="c3941-148">Erste Schritte mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c3941-148">Get started with Visual Basic</span></span>](../../visual-basic/getting-started/index.md)  
+[<span data-ttu-id="c3941-149">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="c3941-149">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
