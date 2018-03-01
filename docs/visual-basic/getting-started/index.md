@@ -2,20 +2,21 @@
 title: Erste Schritte mit Visual Basic
 ms.date: 08/10/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
@@ -44,7 +45,7 @@ Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen
 [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>Siehe auch
- [Visual Basic abrufen](https://www.visualstudio.com/downloads/)  
+ [Visual Basic abrufen](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  Bietet Downloadlinks für Visual Studio-Versionen, einschließlich Visual Basic-Unterstützung und kostenlose Versionen.  
 
  [Visual Basic-Grundlagen für Einsteiger](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
