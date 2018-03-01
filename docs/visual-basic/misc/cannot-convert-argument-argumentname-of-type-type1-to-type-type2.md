@@ -2,11 +2,13 @@
 title: Argument &#39;kann nicht konvertiert werden; &lt;Argumentname&gt;&#39; Typ &#39;&lt; Typ1&gt;&#39; Eingabe &#39;&lt; Typ2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrForLoop_ConvertToType3
+f1_keywords:
+- vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f5d3dbf62d136eb53897545e6ee473ec57d97686
