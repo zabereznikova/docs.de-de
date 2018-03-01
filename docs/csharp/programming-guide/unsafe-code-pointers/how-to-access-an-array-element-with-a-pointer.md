@@ -2,11 +2,13 @@
 title: 'Gewusst wie: Zugreifen auf ein Arrayelement mit einem Zeiger (C#-Programmierhandbuch)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], array access
+helpviewer_keywords:
+- pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
@@ -26,7 +28,7 @@ for (int i = 65; i < 123; i++)
 }  
 ```  
   
- <span data-ttu-id="0ac2d-104">Der Ausdruck in eckigen Klammern muss implizit in `int`, `uint`, `long` oder `ulong` konvertierbar sein.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="0ac2d-105">Der Vorgang p[e] entspricht *(p+e).</span><span class="sxs-lookup"><span data-stu-id="0ac2d-105">The operation p[e] is equivalent to *(p+e).</span></span> <span data-ttu-id="0ac2d-106">Wie in C und C++ überprüft der Zeigerelementzugriff keine Fehler außerhalb des gültigen Bereichs.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
+ <span data-ttu-id="0ac2d-104">Der Ausdruck in eckigen Klammern muss implizit in `int`, `uint`, `long` oder `ulong` konvertierbar sein.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="0ac2d-105">Der Vorgang p[e] entspricht \*(p+e).</span><span class="sxs-lookup"><span data-stu-id="0ac2d-105">The operation p[e] is equivalent to \*(p+e).</span></span> <span data-ttu-id="0ac2d-106">Wie in C und C++ überprüft der Zeigerelementzugriff keine Fehler außerhalb des gültigen Bereichs.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
   
 ## <a name="example"></a><span data-ttu-id="0ac2d-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0ac2d-107">Example</span></span>  
  <span data-ttu-id="0ac2d-108">In diesem Beispiel werden einem Zeichenarray, `charPointer`, 123 Speicheradressen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-108">In this example, 123 memory locations are allocated to a character array, `charPointer`.</span></span> <span data-ttu-id="0ac2d-109">Das Array wird verwendet, um die Klein- und Großbuchstaben in zwei [for](../../../csharp/language-reference/keywords/for.md)-Schleifen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="0ac2d-109">The array is used to display the lowercase letters and the uppercase letters in two [for](../../../csharp/language-reference/keywords/for.md) loops.</span></span>  

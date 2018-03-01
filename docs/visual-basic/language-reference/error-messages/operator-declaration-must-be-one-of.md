@@ -4,14 +4,16 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-helpviewer_keywords: BC33000
+helpviewer_keywords:
+- BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
@@ -20,7 +22,7 @@ ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="5d29e-102">Operatordeklaration muss einer der: +,-, *,\,/, ^, &amp;, Like, Mod, und, oder Xor, nicht der Fall, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="5d29e-102">Operator declaration must be one of:  +,-,*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="5d29e-102">Operatordeklaration muss einer der: +,-, \*,\,/, ^, &amp;, Like, Mod, und, oder Xor, nicht der Fall, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="5d29e-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="5d29e-103">Sie können nur einen Operator deklarieren, der für überladen geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="5d29e-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="5d29e-104">Die folgende Tabelle enthält die Operatoren, die Sie deklarieren können.</span><span class="sxs-lookup"><span data-stu-id="5d29e-104">The following table lists the operators you can declare.</span></span>  
   
 |<span data-ttu-id="5d29e-105">Typ</span><span class="sxs-lookup"><span data-stu-id="5d29e-105">Type</span></span>|<span data-ttu-id="5d29e-106">Operatoren</span><span class="sxs-lookup"><span data-stu-id="5d29e-106">Operators</span></span>|  
