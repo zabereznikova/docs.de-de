@@ -28,17 +28,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10f4b45eba5d1b6a4baabe184ad51a3f3fdba3eb
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="b2343-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b2343-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="b2343-103">Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von desktop Line-of-Business-Anwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="b2343-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="d2b19-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d2b19-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="d2b19-103">Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von desktop Line-of-Business-Anwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="d2b19-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="b2343-104">Erstellen von Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b2343-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="d2b19-104">Erstellen von Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d2b19-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+
+ [<span data-ttu-id="d2b19-105">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="d2b19-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="b2343-105">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="b2343-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [<span data-ttu-id="b2343-106">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b2343-106">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="d2b19-106">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d2b19-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

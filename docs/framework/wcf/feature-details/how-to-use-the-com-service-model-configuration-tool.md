@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: COM+ [WCF], using service model configuration tool
+helpviewer_keywords:
+- COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      <span data-ttu-id="9e3b2-117">Der Befehl fügt die `IFinances`-Schnittstelle der `ItemOrders.IFinancial`-Komponente (aus der OnlineStore-COM+-Anwendung) zu der Gruppe von Schnittstellen hinzu, die als Webdienste verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="9e3b2-118">Der Dienst verwendet den COM+-Hostingmodus und erfordert deshalb eine explizite Anwendungsaktivierung.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     <span data-ttu-id="9e3b2-119">Obwohl das Sternchenzeichen (*) als Platzhalter für die Komponente und die Schnittstelle verwendet werden kann, sollten Sie es vermeiden, da Sie möglicherweise nur ausgewählte Funktionen als Webdienst verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="9e3b2-120">Bei der Ausführung mit einer künftigen Version dieser Komponente kann die Verwendung des Platzhalters unbeabsichtigt Schnittstellen verfügbar machen, die noch nicht vorhanden waren, als die Konfigurationssyntax festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
+     <span data-ttu-id="9e3b2-119">Obwohl das Sternchenzeichen (\*) als Platzhalter für die Komponente und die Schnittstelle verwendet werden kann, sollten Sie es vermeiden, da Sie möglicherweise nur ausgewählte Funktionen als Webdienst verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-119">While the wildcard asterisk (\*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="9e3b2-120">Bei der Ausführung mit einer künftigen Version dieser Komponente kann die Verwendung des Platzhalters unbeabsichtigt Schnittstellen verfügbar machen, die noch nicht vorhanden waren, als die Konfigurationssyntax festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
      <span data-ttu-id="9e3b2-121">Die Option für die ausführliche Ausgabe weist das Tool an, zusätzlich zu Fehlern Warnungen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="9e3b2-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   
