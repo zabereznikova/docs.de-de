@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure-Blob-Speicher mithilfe von [F#] #
 
@@ -236,7 +236,7 @@ Weitere Informationen zum Verschlüsseln von Blob-Daten finden Sie unter [im Abs
 Nun, dass Sie die Grundlagen des Blob-Speichers gelernt haben, folgen Sie diesen Links erfahren mehr.
 
 ### <a name="tools"></a>Tools
-- [F#-AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) ein F#-Typanbieter die BLOB-, Tabellen- und Warteschlangenspeicher für Azure-Ressourcen zu untersuchen und problemlos anwenden CRUD-Vorgänge für diese verwendet werden kann.
+- [F#-AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) ein F#-Typanbieter die BLOB-, Tabellen- und Warteschlangenspeicher für Azure-Ressourcen zu untersuchen und problemlos anwenden CRUD-Vorgänge für diese verwendet werden kann.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) ein f#-API für die Verwendung von Microsoft Azure Table Storage-Dienst
 - [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) ist eine kostenlose, eigenständige-app von Microsoft, die Ihnen ermöglicht, visuell auf OS X, Windows und Linux mit Azure-Speicher Daten zu arbeiten.
 
@@ -251,4 +251,4 @@ Nun, dass Sie die Grundlagen des Blob-Speichers gelernt haben, folgen Sie diesen
 - [Übertragen von Daten mit AzCopy-Befehlszeilen-Hilfsprogramm unter Windows](/azure/storage/common/storage-use-azcopy)
 - [Übertragen von Daten mit AzCopy-Befehlszeilen-Hilfsprogramm unter Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurieren von Verbindungszeichenfolgen für Azure-Speicher](/azure/storage/common/storage-configure-connection-string)
-- [Azure-Speicher-Teamblog](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure-Speicher-Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)

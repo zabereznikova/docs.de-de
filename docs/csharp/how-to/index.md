@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -59,8 +59,7 @@ Zeichenfolgen sind der grundlegende Datentyp für das Anzeigen oder Bearbeiten v
 - [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Benutzen von `String.Split` zum Trennen von Zeichenfolgen](parse-strings-using-split.md).
 - [Vereinen von mehreren Zeichenfolgen](concatenate-multiple-strings.md).
-- [Suchen von Text in einer Zeichenfolge](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
-- [Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
+- [Suchen von Text in einer Zeichenfolge](search-strings.md).
 
 ## <a name="convert-between-types"></a>Konvertieren zwischen Typen
 

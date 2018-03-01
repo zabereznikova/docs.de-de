@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure-Dateispeicher mit f# #
 
@@ -97,7 +97,7 @@ Hier herunterladen Sie die Datei, die gerade erstellt haben, den Inhalt in eine 
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Legen Sie die maximale Größe für eine Dateifreigabe
 
-Das folgende Beispiel zeigt, wie Sie die aktuelle Verwendung für eine Freigabe zu überprüfen und wie das Kontingent für die Freigabe festgelegt. `FetchAttributes`muss aufgerufen werden, um einer Freigabe Auffüllen `Properties`, und `SetProperties` lokale Änderungen an den Azure-Dateispeicher weitergegeben.
+Das folgende Beispiel zeigt, wie Sie die aktuelle Verwendung für eine Freigabe zu überprüfen und wie das Kontingent für die Freigabe festgelegt. `FetchAttributes` muss aufgerufen werden, um einer Freigabe Auffüllen `Properties`, und `SetProperties` lokale Änderungen an den Azure-Dateispeicher weitergegeben.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -152,7 +152,7 @@ Finden Sie unter folgenden Links für Weitere Informationen zu Azure-Dateispeich
 - [Gewusst wie: Verwenden von AzCopy mit Microsoft Azure-Speicher](/azure/storage/storage-use-azcopy)
 - [Verwenden die Azure-CLI mit Azure-Speicher](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Verweis
+### <a name="reference"></a>Referenz
 
 - [Speicherclientbibliothek für .NET-Referenz](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Datei-Dienst-REST-API-Referenz](/rest/api/storageservices/fileservices/File-Service-REST-API)
@@ -161,5 +161,5 @@ Finden Sie unter folgenden Links für Weitere Informationen zu Azure-Dateispeich
 
 - [Azure-Dateispeicher ist jetzt allgemein verfügbar](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [In Azure-Dateispeicher](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Einführung in Microsoft Azure-Dateidienst](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Beibehalten von Verbindungen mit Microsoft Azure-Dateien](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Einführung in Microsoft Azure-Dateidienst](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Beibehalten von Verbindungen mit Microsoft Azure-Dateien](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

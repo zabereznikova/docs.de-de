@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>Asynchrone Workflows
 
@@ -52,11 +52,11 @@ Zusätzlich zu `let!`, können Sie `use!` zum Ausführen von asynchronen Bindung
 
 ## <a name="asynchronous-primitives"></a>Asynchrone primitiven
 
-Eine Methode, die eine einzelne asynchrone Aufgabe ausführt, und gibt das Ergebnis aufgerufen, ein *asynchrone Primitive*, und diese dienen insbesondere für die Verwendung mit `let!`. Mehrere asynchrone primitiven sind in der f#-Kernbibliothek definiert. Sind zwei solche Methoden für Webanwendungen im Modul definierten [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) und [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Beide primitive Herunterladen von Daten von einer Webseite, eine URL angegeben. `AsyncGetResponse`erzeugt eine `System.Net.WebResponse` -Objekt, und `AsyncDownloadString` erzeugt eine Zeichenfolge, die HTML für eine Webseite darstellt.
+Eine Methode, die eine einzelne asynchrone Aufgabe ausführt, und gibt das Ergebnis aufgerufen, ein *asynchrone Primitive*, und diese dienen insbesondere für die Verwendung mit `let!`. Mehrere asynchrone primitiven sind in der f#-Kernbibliothek definiert. Sind zwei solche Methoden für Webanwendungen im Modul definierten [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) und [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Beide primitive Herunterladen von Daten von einer Webseite, eine URL angegeben. `AsyncGetResponse` erzeugt eine `System.Net.WebResponse` -Objekt, und `AsyncDownloadString` erzeugt eine Zeichenfolge, die HTML für eine Webseite darstellt.
 
 Mehrere primitiven für asynchrone e/a-Vorgänge sind in enthalten die [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) Modul. Diese Erweiterungsmethoden für die `System.IO.Stream` -Klasse sind [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) und [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
-Zusätzliche asynchrone primitiven stehen in der [f# PowerTools](http://fsprojects.github.io/VisualFSharpPowerTools/). Sie können auch eine eigene asynchronen primitiven schreiben, durch die Definition einer Funktion, deren vollständiger Text in einer Async-Block eingeschlossen ist.
+Zusätzliche asynchrone primitiven stehen in der [f# PowerTools](https://fsprojects.github.io/VisualFSharpPowerTools/). Sie können auch eine eigene asynchronen primitiven schreiben, durch die Definition einer Funktion, deren vollständiger Text in einer Async-Block eingeschlossen ist.
 
 Asynchrone Methoden in .NET Framework, die entwickelt wurden für anderen asynchronen Modellen mit dem asynchronen F#-Programmiermodell verwenden möchten, erstellen Sie eine Funktion, ein F#-zurückgibt `Async` Objekt. F#-Bibliothek verfügt über Funktionen, die Dies erleichtert, vornehmen.
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Lernprogramm: Erstellen eines Typanbieters
 
@@ -56,7 +56,7 @@ Typanbieter sind für Situationen geeignet, in denen das Schema zur Laufzeit und
 
 
 ## <a name="a-simple-type-provider"></a>Ein einfacher Typanbieter
-In diesem Beispiel wird Samples.HelloWorldTypeProvider in die `SampleProviders\Providers` Verzeichnis die [f# 3.0 Beispielpaket](http://fsharp3sample.codeplex.com) auf der Codeplex-Website. Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
+In diesem Beispiel wird Samples.HelloWorldTypeProvider in die `SampleProviders\Providers` Verzeichnis die [f# 3.0 Beispielpaket](https://fsharp3sample.codeplex.com) auf der Codeplex-Website. Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ Beachten Sie die folgenden Punkte:
 - Für jede benannte Gruppe wird eine bereitgestellte Eigenschaft erzeugt, und bei einem Zugriff auf die Eigenschaft wird ein Indexer verwendet, um eine `Groups`-Auflistung der Übereinstimmungen abzurufen.
 <br />
 
-Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Den vollständigen Code, laden Sie das Beispiel aus der [f# 3.0 Beispielpaket](http://fsharp3sample.codeplex.com) auf der Codeplex-Website.
+Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Den vollständigen Code, laden Sie das Beispiel aus der [f# 3.0 Beispielpaket](https://fsharp3sample.codeplex.com) auf der Codeplex-Website.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,10 +1140,10 @@ Bisher wurde in diesem Dokument erläutert, wie gelöschte Typen bereitgestellt 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-Der Hilfscode "ProvidedTypes-0.2", der Teil der Version 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
+Der Hilfscode „ProvidedTypes-0.2“, der Teil des Releases 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
 
 
 - IsErased muss auf `false` festgelegt werden.
@@ -1196,10 +1196,10 @@ Berücksichtigen Sie beim Schreiben von Typanbietern die folgenden Regeln und Ei
 Die folgenden Tipps können während des Entwicklungsprozesses hilfreich sein.
 
 
-- `Run Two Instances of Visual Studio.`Sie können den Typanbieter in einer Instanz entwickeln und Testen Sie den Anbieter in den anderen, da die Test-IDE eine Sperre für die DLL-Datei wird, die verhindert, dass den Typanbieter neu erstellt wird. Daher müssen Sie die zweite Instanz von Visual Studio schließen, wenn der Anbieter in der ersten Instanz erstellt wird, und anschließend die zweite Instanz erneut öffnen, sobald die Erstellung abgeschlossen ist.
+- `Run Two Instances of Visual Studio.` Sie können den Typanbieter in einer Instanz entwickeln und Testen Sie den Anbieter in den anderen, da die Test-IDE eine Sperre für die DLL-Datei wird, die verhindert, dass den Typanbieter neu erstellt wird. Daher müssen Sie die zweite Instanz von Visual Studio schließen, wenn der Anbieter in der ersten Instanz erstellt wird, und anschließend die zweite Instanz erneut öffnen, sobald die Erstellung abgeschlossen ist.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`Sie können Typanbieter mit den folgenden Tools aufrufen:
+- `Debug type providers by using invocations of fsc.exe.` Sie können Typanbieter mit den folgenden Tools aufrufen:
 <br />
   - fsc.exe (der F#-Befehlszeilencompiler)
 <br />

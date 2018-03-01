@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Typanbieter
 
 > [!NOTE]
-Dieses Handbuch wurde für F# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](http://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
+Dieses Handbuch wurde für F# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](https://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
 
 Ein F#-Typanbieter ist eine Komponente, die Typen, Eigenschaften und Methoden zur Verwendung im Programm bereitstellt. Typanbieter sind ein wesentlicher Teil der F# 3.0-Unterstützung für die informationsreiche Programmierung. Der Schlüssel zur informationsreichen Programmierung ist das Beseitigen der Schranken, die das Arbeiten mit unterschiedlichen Informationsquellen aus dem Internet und in modernen Unternehmensumgebungen erschweren. Eine wesentliche Schranke, die das Einschließen einer Informationsquelle in ein Programm verhindert, ist die Anforderung, die Informationen als Typen, Eigenschaften und Methoden darzustellen, damit sie in einer Programmiersprache verwendet werden können. Das manuelle Schreiben dieser Typen ist sehr zeitaufwendig, und die Verwaltung dieser Typen ist schwierig. Eine häufige Alternative ist die Verwendung eines Code-Generators, der dem Projekt Dateien hinzufügt. Die herkömmlichen Typen der Codegenerierung lassen sich jedoch nicht gut in die von F# unterstützten explorativen Programmiermodi integrieren, da der generierte Code jedes Mal ersetzt werden muss, wenn ein Dienstverweis angepasst wird.
 

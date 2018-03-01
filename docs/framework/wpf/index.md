@@ -28,17 +28,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10f4b45eba5d1b6a4baabe184ad51a3f3fdba3eb
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von desktop Line-of-Business-Anwendungen unter Windows.  
   
  [Erstellen von Desktopanwendungen mit Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
-  
+
  [Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [Erwerben von Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [Erwerben von Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

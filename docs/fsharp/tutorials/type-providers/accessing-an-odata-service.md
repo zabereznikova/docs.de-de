@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0adae84c-b0fa-455f-994b-274ecdc6df30
-ms.openlocfilehash: 28c2e9a405670f4e5f9512e99e0e6c3e3082856c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 750407c36a989cece30c0c0654ff905c8eee3b33
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-an-odata-service-by-using-type-providers"></a>Exemplarische Vorgehensweise: Zugreifen auf einen OData-Dienst mithilfe von Typanbietern
 
 > [!NOTE]
-Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](http://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
+Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](https://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
 
 > [!NOTE]
 Die API-Referenz Links gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
@@ -69,7 +69,7 @@ In diesem Schritt erstellen Sie einen Typanbieter, der Zugriff auf die Typen und
 open Microsoft.FSharp.Data.TypeProviders
 
 
-type Northwind = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
+type Northwind = ODataService<"https://services.odata.org/Northwind/Northwind.svc/">
 
 let db = Northwind.GetDataContext()
 let fullContext = Northwind.ServiceTypes.NorthwindEntities()
@@ -141,7 +141,7 @@ query {
                   printfn "Name: %s ID: %d" (employee.FirstName + " " + employee.LastName) (employee.EmployeeID))
 ```
 
-4. Formulieren Sie eine Teilzeichenfolgen-Bedingung mit der `System.String.Contains(System.String)`-Methode. Die folgende Abfrage gibt alle Produkte mit der Zeichenfolge "Chef" im Namen zurück. Beachten Sie auch die Verwendung von `System.Nullable<'T>.GetValueOrDefault()`. Der Wert von `UnitPrice` kann NULL sein. Sie müssen den Wert also entweder über die `Value`-Eigenschaft abrufen oder den Aufruf `System.Nullable<'T>.GetValueOrDefault()` verwenden.
+4. Formulieren Sie eine Teilzeichenfolgen-Bedingung mit der `System.String.Contains(System.String)`-Methode. Die folgende Abfrage gibt alle Produkte mit der Zeichenfolge „Chef“ im Namen zurück. Beachten Sie auch die Verwendung von `System.Nullable<'T>.GetValueOrDefault()`. Der Wert von `UnitPrice` kann NULL sein. Sie müssen den Wert also entweder über die `Value`-Eigenschaft abrufen oder den Aufruf `System.Nullable<'T>.GetValueOrDefault()` verwenden.
 <br />
 
 ```fsharp
@@ -242,7 +242,7 @@ db.DataContext.SendingRequest.Add (fun eventArgs -> printfn "Requesting %A" even
 ```
 
 Die Ausgabe des vorherigen Codes lautet:
-<br />`requesting http://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
+<br />`requesting https://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
 
 
 ## <a name="see-also"></a>Siehe auch

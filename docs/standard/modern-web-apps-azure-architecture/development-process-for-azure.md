@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -36,7 +36,7 @@ Ob Sie eine vollständige und leistungsfähige IDE oder eine einfache und agile-
 
 **Abbildung 10 – 1.** Installieren die .NET Core-arbeitsauslastung in Visual Studio 2017.
 
-[Visual Studio 2017 herunterladen](https://www.visualstudio.com/downloads/)
+[Visual Studio 2017 herunterladen](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio-Code und Dotnet CLI** (Cross-Platform-Tools für Mac-, Linux- und Windows). Wenn Sie einen einfachen und plattformübergreifende-Editor unterstützt Entwicklungssprache bevorzugen, können Sie Microsoft Visual Studio-Code und die Dotnet CLI. Diese Produkte bieten eine einfache, aber robuste Erfahrung, die den Entwickler Workflow optimiert. Darüber hinaus unterstützt Visual Studio Code Erweiterungen für C\# und Webentwicklung, die Bereitstellung von Intellisense und Verknüpfung-Aufgaben innerhalb des Editors.
 
@@ -56,9 +56,9 @@ Zum Einstieg in eine ASP.NET Core-Anwendung, die mit der CI-CD zu entwickeln, k�
 
 Um einer releasepipeline für Ihre app zu erstellen, müssen Sie den Anwendungscode in der quellcodeverwaltung haben. Richten Sie ein lokales Repository, und verbinden Sie ihn in einem Remoterepository in einem Teamprojekt. Gehen Sie wie folgt vor:
 
--   [Freigeben von Code mit Git als auch Visual Studio](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) oder
+-   [Freigeben von Code mit Git als auch Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) oder
 
--   [Freigeben von Code in TFVC und Visual Studio](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [Freigeben von Code in TFVC und Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Erstellen Sie ein Azure App Service, in dem Sie Ihre Anwendung bereitstellen. Erstellen Sie eine Web-App, gehen Sie im Azure-Portal auf dem Blatt "App-Dienste". Klicken Sie auf "+" hinzufügen, wählen Sie die Web-App-Vorlage, klicken Sie auf erstellen, und geben Sie einen Namen und andere Details. Die Web-app von {Name} zugegriffen werden. azurewebsites.net.
 
@@ -68,13 +68,13 @@ Erstellen Sie ein Azure App Service, in dem Sie Ihre Anwendung bereitstellen. Er
 
 CI-Build-Prozess führt einen automatischen Buildvorgang aus, wenn Sie neuer Code an das Projekt Quellcodeverwaltungs-Repository übergeben wird. Dadurch erhalten Sie unmittelbar Feedback, in dem der Code erstellt (und automatisierte Tests im Idealfall übergibt) und potenziell bereitgestellt werden kann. Dieser CI-Build erzeugt eine Web Artefakt Paket bereitstellen und veröffentlichen Sie es für die Nutzung vom CD-Prozess.
 
-[Definieren des Buildprozesses CI](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[Definieren des Buildprozesses CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Achten Sie darauf, dass Sie die fortlaufende Integration zu aktivieren, damit das System einen Build in die Warteschlange wird immer eine Person in Ihrem Team führt einen Commit für neuen Code. Testen Sie den Build, und stellen Sie sicher, dass sie eine Web erzeugt Paket als eines seiner Elemente bereitstellen.
 
 Wenn ein Build erfolgreich ist, stellt der CD-Prozess die Ergebnisse der CI-Build für Ihre Azure-Web-app bereit. Um dies zu konfigurieren, erstellen und konfigurieren Sie eine *Version*, die Bereitstellung in Ihren Azure App Service.
 
-[Definieren Sie den versionsprozess CD](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[Definieren Sie den versionsprozess CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Sobald die CI-CD-Pipeline konfiguriert ist, können Sie einfach Updates auf Ihre Web-app und übernehmen sie zur quellcodeverwaltung, die sie bereitgestellt haben.
 
@@ -92,7 +92,7 @@ Entwickeln Ihrer Anwendung ASP.NET Core zur Bereitstellung in Azure unterscheide
 
 #### <a name="step-2-application-code-repository"></a>Schritt 2 Anwendung Code Repository
 
-Wenn Sie zur Freigabe des Codes mit Ihrem Team bereit sind, sollten Sie Ihre Änderungen aus Ihrem lokalen Quellrepository zu freigegebenen Quellrepository Ihres Teams per Push übertragen. Wenn Sie in einer benutzerdefinierten Verzweigung gearbeitet haben, in der Regel dieser Schritt umfasst das Zusammenführen von Code in eine freigegebene Verzweigung (z. B. mithilfe von einer [Pull-Anforderung](https://www.visualstudio.com/docs/git/pull-requests)).
+Wenn Sie zur Freigabe des Codes mit Ihrem Team bereit sind, sollten Sie Ihre Änderungen aus Ihrem lokalen Quellrepository zu freigegebenen Quellrepository Ihres Teams per Push übertragen. Wenn Sie in einer benutzerdefinierten Verzweigung gearbeitet haben, in der Regel dieser Schritt umfasst das Zusammenführen von Code in eine freigegebene Verzweigung (z. B. mithilfe von einer [Pull-Anforderung](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Schritt 3 Build-Server: Fortlaufende Integration. Build, Test-Paket
 
@@ -113,7 +113,7 @@ Während der Web-App ausgeführt wird, können Sie die Integrität der Anwendung
 ## <a name="references"></a>Verweise
 
 **Erstellen und Bereitstellen der ASP.NET Core-App in Azure**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

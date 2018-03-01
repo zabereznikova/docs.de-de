@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 63374fa9-8fb8-43ac-bcb9-ef2290d9f851
-ms.openlocfilehash: 06d955033d465cf58af05f483d21175f90d1777a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2929198172a4e9f908daa64af19208e07859263f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-web-service-by-using-type-providers"></a>Exemplarische Vorgehensweise: Zugreifen auf einen Webdienst mithilfe von Typanbietern
 
 > [!NOTE]
-Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](http://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
+Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](https://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
 
 > [!NOTE]
 Die API-Referenz Links gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
@@ -80,7 +80,7 @@ open Microsoft.FSharp.Data.TypeProviders
 <br />
 
 ```fsharp
-type TerraService = WsdlService<" HYPERLINK "http://terraserver-usa.com/TerraService2.asmx?WSDL" http://msrmaps.com/TerraService2.asmx?WSDL">
+type TerraService = WsdlService<" HYPERLINK "https://terraserver-usa.com/TerraService2.asmx?WSDL" https://msrmaps.com/TerraService2.asmx?WSDL">
 ```
 
   Wenn der Dienst-URI falsch geschrieben oder der Dienst deaktiviert bzw. nicht erreichbar ist, wird unter dieser Codezeile eine rote Wellenlinie angezeigt. Wenn Sie auf den Code zeigen, beschreibt eine Fehlermeldung das Problem. Sie finden die gleiche Informationen in der **Fehlerliste** Fenster oder in der **Fenster "Ausgabe"** Nachdem Sie erstellt haben.

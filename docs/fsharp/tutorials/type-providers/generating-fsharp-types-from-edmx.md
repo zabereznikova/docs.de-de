@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Exemplarische Vorgehensweise: Generieren von F#-Typen aus einer EDMX-Schemadatei
 
 > [!NOTE]
-Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](http://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
+Dieses Handbuch wurde für f# 3.0 geschrieben und wird aktualisiert.  Unter [FSharp.Data](https://fsharp.github.io/FSharp.Data/) finden Sie aktuelle plattformübergeifende Typanbieter.
 
 > [!NOTE]
 Die API-Referenz Links gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
@@ -222,7 +222,7 @@ Dieses Verfahren ist nur erforderlich, wenn Sie wissen möchten, wie ein vollst�
 1. Wählen Sie in der Menüleiste **SQL**, **Transact-SQL-Editor**, **neue Abfrage** zum Erstellen einer Datenbank. Wenn Sie dazu aufgefordert werden, geben Sie Ihren Datenbankserver und die Datenbankinstanz an.
 <br />
 
-2. Kopieren Sie den Inhalt des Datenbankskripts, der die Datenbank Student erstellt wie beschrieben in der [Dokumentation zu Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) im Data Developer Center.
+2. Kopieren Sie den Inhalt des Datenbankskripts, der die Datenbank Student erstellt wie beschrieben in der [Dokumentation zu Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) im Data Developer Center.
 <br />
 
 3. Führen Sie das SQL-Skript, durch Auswählen der Symbolleisten-Schaltfläche mit dem Triangle-Symbol, oder wählen die Tastenkombination STRG + Q.
@@ -275,7 +275,7 @@ Untersuchen von anderen Abfragen anhand der verfügbaren Abfrageoperatoren gemä
 
 [Exemplarische Vorgehensweise: Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern und Entitäten](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 
