@@ -5,18 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: _AxlRSAKeyValueToPublicKeyToken
-api_location: clr.dll
-api_type: DLLExport
+api_name:
+- _AxlRSAKeyValueToPublicKeyToken
+api_location:
+- clr.dll
+api_type:
+- DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b1380f658d9c154d9ea41228cace5f9a3eed39b5
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +49,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  <span data-ttu-id="661b3-108">[in] Die base64-codierte Exponenten-Blob (aus der \<Exponent > Element).</span><span class="sxs-lookup"><span data-stu-id="661b3-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="661b3-109">Finden Sie unter der [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) Struktur.</span><span class="sxs-lookup"><span data-stu-id="661b3-109">See the [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) structure.</span></span>  
   
  `ppwszPublicKeyToken`  
- <span data-ttu-id="661b3-110">[out] Ein Zeiger auf WCHAR * zum Erhalt des hexadezimal codierten öffentlichen Schlüsseltokens.</span><span class="sxs-lookup"><span data-stu-id="661b3-110">[out] A pointer to WCHAR * to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="661b3-110">[out] Ein Zeiger auf WCHAR \* zum Erhalt des hexadezimal codierten öffentlichen Schlüsseltokens.</span><span class="sxs-lookup"><span data-stu-id="661b3-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
 ## <a name="return-value"></a><span data-ttu-id="661b3-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="661b3-111">Return Value</span></span>  
  <span data-ttu-id="661b3-112">`S_OK`, wenn die Funktion erfolgreich ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="661b3-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="661b3-113">Andernfalls wird ein Fehlercode zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="661b3-113">Otherwise, returns an error code.</span></span>  
