@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung eines <xref:System.DateTime>-Werts oder eines <xref:System.DateTimeOffset>-Werts, der sich aus einem Formatierungsvorgang ergibt. Sie kann auch die Darstellung eines Datums- und Uhrzeitwerts definieren, der in einem Analysevorgang erforderlich ist, um die Zeichenfolge erfolgreich in ein Datum und eine Uhrzeit zu konvertieren. Benutzerdefinierte Formatzeichenfolgen bestehen aus einem oder mehreren benutzerdefinierten Formatbezeichnern für Datum und Uhrzeit. Alle Zeichenfolgen, bei denen es sich nicht um [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) handelt, werden als benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit interpretiert.  
@@ -50,7 +53,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit und zeigt eine Ergebniszeichenfolge an, die von den einzelnen Formatbezeichnern erstellt wird. Standardmäßig entsprechen Ergebniszeichenfolgen den Formatierungskonventionen der Kultur "en-US". Wenn ein bestimmter Formatbezeichner eine lokalisierte Ergebniszeichenfolge erzeugt, wird im Beispiel auch die Kultur angegeben, für die die Ergebniszeichenfolge gilt. Weitere Informationen zum Verwenden von benutzerdefinierten Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt Hinweise.  
   
-|Formatbezeichner|Beschreibung|Beispiele|  
+|Formatbezeichner|description|Beispiele|  
 |----------------------|-----------------|--------------|  
 |"d"|Der Tag des Monats, von 1 bis 31.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|  
 |"dd"|Der Tag des Monats, von 01 bis 31.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|  
@@ -358,7 +361,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
   
 -   Für eine Zeit in einer nicht spezifizierten Zeitzone (eine Zeit, deren <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft gleich <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist), entspricht das Ergebnis <xref:System.String.Empty?displayProperty=nameWithType>.  
   
- Für <xref:System.DateTimeOffset> Werte, der Formatbezeichner "K" gleich dem Formatbezeichner "Zzz" und erzeugt ein Ergebnis Zeichenfolge "" enthält die <xref:System.DateTimeOffset> Wert den offset von UTC.  
+ Für <xref:System.DateTimeOffset>-Werte ist der Formatbezeichner „K“ gleich dem Formatbezeichner „zzz“ und erzeugt eine Ergebniszeichenfolge, die den Offset des <xref:System.DateTimeOffset>-Werts von der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält.  
   
  Wenn der Formatbezeichner "K" allein verwendet wird, d. h. ohne andere benutzerdefinierte Formatbezeichner, wird er als Standardformatbezeichner für Datum und Uhrzeit interpretiert, und eine <xref:System.FormatException> wird ausgelöst. Weitere Informationen zur Verwendung eines einzelnen Formatbezeichners finden Sie unter [Verwenden von einzelnen benutzerdefinierten Formatbezeichnern](#UsingSingleSpecifiers) weiter unten in diesem Thema.  
   
@@ -661,7 +664,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
      [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]  
   
 <a name="Notes"></a>   
-## <a name="notes"></a>Notizen  
+## <a name="notes"></a>Hinweise  
   
 <a name="UsingSingleSpecifiers"></a>   
 ### <a name="using-single-custom-format-specifiers"></a>Verwenden von einzelnen benutzerdefinierten Formatbezeichnern  
@@ -691,7 +694,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 ### <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung  
  Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge, die viele der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit enthält. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.  
   
- Darüber hinaus, wenn Sie mithilfe der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor zum Instanziieren einer neuen <xref:System.Globalization.CultureInfo> -Objekt, das dieselbe Kultur aufweist wie die aktuelle Systemkultur, durch die Anpassungen darstellt, der **Regions- und Sprachoptionen** Element in der Systemsteuerung gelten für die neue <xref:System.Globalization.CultureInfo> Objekt. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
+ Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Constructor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften  
  Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Geben Sie für den <xref:System.IFormatProvider>-Parameter ein <xref:System.Globalization.CultureInfo>-Objekt an, das eine Kultur oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt darstellt.  

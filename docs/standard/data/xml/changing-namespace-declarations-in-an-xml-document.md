@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 627882efcbc41310ee177cba984e4add5b07bd15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6db78e689b8529ef62a3b42c2cefb6a5b3d3f02f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Ändern von Namespacedeklarationen in einem XML-Dokument
-Die **XmlDocument** macht Namespacedeklarationen und **Xmlns** Attribute als Teil des Dokumentobjektmodells. Diese werden gespeichert, der **XmlDocument**, sodass, wenn Sie das Dokument zu speichern, können sie den Speicherort dieser Attribute beibehalten. Änderung dieser Attribute hat keine Auswirkung auf die **Namen**, **NamespaceURI**, und **Präfix** Eigenschaften anderer Knoten bereits in der Struktur. Angenommen, wenn Sie das folgende Dokument laden und dann die `test` Element verfügt über **NamespaceURI**`123.`  
+Das **XmlDocument** macht Namespacedeklarationen und **xmlns**-Attribute als Teil des Dokumentobjektmodells verfügbar. Diese werden im **XmlDocument** gespeichert, sodass der Speicherort dieser Attribute beim Speichern des Dokuments beibehalten werden kann. Eine Änderung dieser Attribute hat keine Auswirkungen auf die Eigenschaften **Name**, **NamespaceURI** und **Prefix** anderer Knoten, die bereits in der Struktur vorhanden sind. Wenn Sie z.B. das folgende Dokument laden, weist das `test`-Element den **NamespaceURI** `123.` auf.  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- Wenn Sie entfernen die `xmlns` -Attribut wie folgt die `test` Element immer noch die **NamespaceURI** von `123`.  
+ Wenn Sie das `xmlns`-Attribut wie folgt entfernen, weist das `test`-Element weiterhin den **NamespaceURI** `123` auf.  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -39,7 +42,7 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- Ebenso, wenn Sie ein anderes hinzufügen `xmlns` -Attribut auf die `doc` -Element wie folgt, und dann die `test` Element immer noch **NamespaceURI** `123`.  
+ Gleichermaßen weist das `test`-Element weiterhin den **NamespaceURI** `123` auf, wenn Sie dem `doc`-Element wie folgt ein anderes `xmlns`-Attribut hinzufügen.  
   
 ```vb  
 doc.documentElement.SetAttribute("xmlns","456");  
@@ -49,7 +52,7 @@ doc.documentElement.SetAttribute("xmlns","456");
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- Aus diesem Grund ändern `xmlns` Attribute haben keinen Einfluss, bis Sie speichern und laden die **XmlDocument** Objekt.  
+ Änderungen an `xmlns`-Attributen haben daher keine Auswirkungen, solange Sie das **XmlDocument**-Objekt nicht speichern und erneut laden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,6 +1,6 @@
 ---
-title: "Schnellstart – Verzweigungen und Schleifen – C#-Leitfaden"
-description: "In diesem Schnellstart zu Verzweigungen und Schleifen schreiben Sie einen C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zur wiederholten Ausführung von Anweisungen unterstützt."
+title: "Tutorial „Branches und Schleifen“: Lokale C#-Schnellstarts"
+description: "In diesem Schnellstart zu Branches und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Branches und Schleifen zur wiederholten Ausführung von Anweisungen unterstützt."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Verzweigungen und Schleifen
 
-In diesem Schnellstart erfahren Sie, wie Sie einen Code schreiben, der Variablen untersucht und basierend auf diesen Variablen den Ausführungspfad ändert. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Dieser Schnellstart enthält eine Reihe von Lektionen, in denen Verzweigungs- und Schleifenkonstrukte in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
+In diesem Schnellstart erfahren Sie, wie Sie Code schreiben, der Variablen untersucht und basierend auf diesen Variablen den Ausführungspfad ändert. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Der Schnellstart enthält eine Reihe von Lektionen, in denen Branch- und Schleifenkonstrukte in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 
-Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in der [Einführung zu lokalen Schnellstarts](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Treffen von Entscheidungen mithilfe der `if`-Anweisung
 
-Erstellen Sie ein Verzeichnis mit dem Namen **branches-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n BranchesAndLoops -o .` aus. Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung. 
+Erstellen Sie ein Verzeichnis mit dem Namen **branches-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n BranchesAndLoops -o .` aus. Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung.
 
 Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.Writeline("Hello World!");` durch den folgenden Code:
 
@@ -45,12 +45,11 @@ int b = 3;
 Geben Sie erneut `dotnet run` ein. Da die Antwort kleiner als 10 ist, wird nichts ausgegeben. Die von Ihnen getestete **Bedingung** ist falsch. Es ist kein Code auszuführen, da Sie lediglich eine der möglichen Verzweigungen für eine `if`-Anweisung geschrieben haben: die true-Verzweigung.
 
 > [!TIP]
-> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der Compiler findet und meldet die Fehler. Sehen Sie sich die Fehlerausgabe und den Code, der den Fehler erzeugt hat, genau an. Der Compilerfehler kann Ihnen in der Regel helfen, das Problem zu finden. 
+> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der Compiler findet und meldet die Fehler. Sehen Sie sich die Fehlerausgabe und den Code, der den Fehler erzeugt hat, genau an. Der Compilerfehler kann Ihnen in der Regel helfen, das Problem zu finden.
 
-Das erste Beispiel veranschaulicht die Vorteile von `if`-Anweisungen und Boolean-Typen. Ein *boolean*-Typ ist eine Variable, die einen der folgenden zwei Werte enthalten kann: `true` oder `false`. In C# ist ein besonderer Typ für boolesche Variablen, `bool`, definiert. Die `if`-Anweisung überprüft den Wert eines `bool`-Typs. Wenn der Wert `true` lautet, wird die nach `if` folgende Anweisung ausgeführt. Andernfalls wird diese übersprungen. 
+Das erste Beispiel veranschaulicht die Vorteile von `if`-Anweisungen und Boolean-Typen. Ein *boolean*-Typ ist eine Variable, die einen der folgenden zwei Werte enthalten kann: `true` oder `false`. In C# ist ein besonderer Typ für boolesche Variablen, `bool`, definiert. Die `if`-Anweisung überprüft den Wert eines `bool`-Typs. Wenn der Wert `true` lautet, wird die nach `if` folgende Anweisung ausgeführt. Andernfalls wird diese übersprungen.
 
 Dieser Vorgang zum Überprüfen von Bedingungen und Ausführen von Anweisungen basierend auf diesen Bedingungen ist sehr nützlich.
-
 
 ## <a name="make-if-and-else-work-together"></a>Kombinieren von if- und else-Anweisungen
 
@@ -69,7 +68,7 @@ Die Anweisung, die nach dem Schlüsselwort `else` folgt, wird nur ausgeführt, w
 
 > [!IMPORTANT]
 > Der Einzug unter den `if`- und `else`-Anweisungen dient zur besseren Lesbarkeit.
-> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt. Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Schnellstart folgen der gängigen Vorgehensweise, Zeilen basierend auf dem Steuerungsfluss von Anweisungen mit einem Einzug zu versehen.
+> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt. Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Schnellstart folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.
 
 Da Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie soeben erstellt haben. Ändern Sie den obigen Code dahingehend, dass er mit dem folgenden Code übereinstimmt:
 
@@ -87,7 +86,7 @@ else
 ```
 
 > [!TIP]
-> Im restlichen Schnellstart enthalten alle Codebeispiele geschweifte Klammern gemäß den allgemein gültigen Vorgehensweisen.
+> Im restlichen Schnellstart enthalten alle Codebeispiele geschweifte Klammern gemäß den allgemeingültigen Vorgehensweisen.
 
 Sie können kompliziertere Bedingungen testen. Fügen Sie den folgenden Code in Ihrer `Main`-Methode unter dem Code, den Sie bisher geschrieben haben, hinzu:
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Dieser funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird. 
+Dieser funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird.
 
 Der erste Teil ist der **for-Initialisierer**: `for index = 0;` deklariert, dass `index` die Schleifenvariable ist, und legt den Anfangswert auf `0` fest.
 
@@ -258,7 +257,7 @@ Sie können mit dem Schnellstart [Interpolierte Zeichenfolgen](interpolated-stri
 
 Weitere Informationen zu diesen Begriffen finden Sie unter folgenden Themen:
 
-[if- und else-Anweisung](../language-reference/keywords/if-else.md)   
-[while-Anweisung](../language-reference/keywords/while.md)   
-[do-Anweisung](../language-reference/keywords/do.md)   
-[for-Anweisung](../language-reference/keywords/for.md)   
+[if- und else-Anweisung](../language-reference/keywords/if-else.md)  
+[while-Anweisung](../language-reference/keywords/while.md)  
+[do-Anweisung](../language-reference/keywords/do.md)  
+[for-Anweisung](../language-reference/keywords/for.md)  

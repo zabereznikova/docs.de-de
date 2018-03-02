@@ -2,7 +2,8 @@
 title: "Lambda-Ausdrücke (C#-Programmierhandbuch)"
 ms.date: 03/03/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda-Ausdrücke (C#-Programmierhandbuch)
 Ein Lambda-Ausdruck ist eine [anonyme Funktion](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , mit der Typen für [Delegaten](../../../csharp/programming-guide/delegates/using-delegates.md) oder die [Ausdrucksbaumstruktur](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) erstellt werden können. Mit Lambda-Ausdrücken können lokale Funktionen geschrieben werden, die als Argumente übergeben oder als Wert von Funktionsaufrufen zurückgegeben werden können. Lambda-Ausdrücke sind besonders für das Schreiben von LINQ-Abfrageausdrücken hilfreich.  
@@ -178,7 +179,7 @@ int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 int oddNumbers = numbers.Count(n => n % 2 == 1);  
 ```  
   
- Der Compiler kann den Typ des Eingabeparameters ableiten, Sie können ihn aber auch explizit angeben. Dieser bestimmte Lambda-Ausdruck zählt die ganzen Zahlen `n`, bei denen nach dem Dividieren durch 2 als Rest 1 bleibt.  
+ Der Compiler kann den Typ des Eingabeparameters ableiten, Sie können ihn aber auch explizit angeben. Dieser bestimmte Lambda-Ausdruck zählt die ganzen Zahlen (`n`), bei denen nach dem Dividieren durch zwei als Rest 1 bleibt.  
   
  Mit der folgenden Codezeile wird eine Sequenz erzeugt, die alle Elemente im `numbers` -Array enthält, die vor der 9 auftreten, da dies die erste Zahl in der Sequenz ist, die die Bedingung nicht erfüllt:  
   
@@ -186,14 +187,14 @@ int oddNumbers = numbers.Count(n => n % 2 == 1);
 var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
 ```  
   
- In diesem Beispiel wird gezeigt, wie Sie mehrere Eingabeparameter angeben, indem Sie sie in Klammern einschließen. Mit der Methode werden alle Elemente im Zahlenarray zurückgegeben, bis eine Zahl erreicht wird, deren Wert kleiner ist als seine Position. Verwechseln Sie den Lambda-Operator `=>` nicht mit dem Operator "Größer als oder gleich" `>=`.  
+ In diesem Beispiel wird gezeigt, wie Sie mehrere Eingabeparameter angeben, indem Sie sie in Klammern einschließen. Mit der Methode werden alle Elemente im Zahlenarray zurückgegeben, bis eine Zahl erreicht wird, deren Wert kleiner ist als seine Position. Verwechseln Sie den Lambda-Operator (`=>`) nicht mit dem Operator "Größer als oder gleich" (`>=`).  
   
 ```csharp  
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
 ## <a name="type-inference-in-lambdas"></a>Typrückschluss in Lambdas  
- Beim Schreiben von Lambdas müssen Sie oftmals keinen Typ für die Eingabeparameter angeben, da der Compiler den Typ auf der Grundlage des Lambda-Texts, des zugrunde liegenden Delegattyps des Parameters und anderer Faktoren per Rückschluss ableiten kann, wie in der C#-Programmiersprachenspezifikation beschrieben. Bei den meisten Standardabfrageoperatoren entspricht die erste Eingabe dem Typ der Elemente in der Quellsequenz. Beim Abfragen von `IEnumerable<Customer>` wird die Eingabevariable als `Customer`-Objekt abgeleitet, sodass Sie auf die zugehörigen Methoden und Eigenschaften zugreifen können:  
+ Beim Schreiben von Lambdas müssen Sie oftmals keinen Typ für die Eingabeparameter angeben, da der Compiler den Typ auf der Grundlage des Lambda-Texts, des zugrunde liegenden Delegattyps des Parameters und anderer Faktoren per Rückschluss ableiten kann, wie in der C#-Programmiersprachenspezifikation beschrieben. Bei den meisten Standardabfrageoperatoren entspricht die erste Eingabe dem Typ der Elemente in der Quellsequenz. Beim Abfragen von `IEnumerable<Customer>`wird die Eingabevariable als `Customer` -Objekt abgeleitet, sodass Sie auf die zugehörigen Methoden und Eigenschaften zugreifen können:  
   
 ```csharp  
 customers.Where(c => c.City == "London");  
@@ -266,7 +267,7 @@ class Test
   
 -   Ein Lambda-Ausdruck kann einen `ref` - oder `out` -Parameter nicht direkt von einer einschließenden Methode erfassen.  
   
--   Eine `return`-Anweisung in einem Lambda-Ausdruck bewirkt keine Rückgabe durch die einschließende Methode.  
+-   Eine return-Anweisung in einem Lambda-Ausdruck bewirkt keine Rückgabe durch die einschließende Methode.  
   
 -   Ein Lambda-Ausdruck kann eine `goto` -Anweisung, `break` -Anweisung oder `continue` -Anweisung enthalten, die innerhalb der Lambda-Funktion liegt, wenn das Ziel der jump-Anweisung außerhalb des Blocks liegt. Eine jump-Anweisung darf auch nicht außerhalb des Lambda-Funktionsblocks sein, wenn das Ziel im Block ist.  
   
@@ -274,13 +275,13 @@ class Test
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
- [Delegaten, Ereignisse und Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=195395) im [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Delegaten, Ereignisse und Lambda-Ausdrücke](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) im [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
  [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  
- [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [Visual Studio 2008 C#-Beispiele (Siehe LINQ Beispielabfragedateien und XQuery-Programm)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Rekursive Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=112395)
+ [Ausdrucksbaumstrukturen](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [Visual Studio 2008 C#-Beispiele (siehe LINQ-Beispielabfragedateien und XQuery-Programm)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+ [Rekursive Lambda-Ausdrücke](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

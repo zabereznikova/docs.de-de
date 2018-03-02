@@ -1,5 +1,5 @@
 ---
-title: 'Schnellstart: Interpolierte Zeichenfolgen (C#-Handbuch)'
+title: "Tutorial „Interpolierte Zeichenfolgen“: Lokale C#-Schnellstarts"
 description: "In diesem Schnellstart über interpolierte Zeichenfolgen schreiben Sie C#-Code, um das Ergebnis eines Ausdrucks in eine größere Zeichenfolge einzufügen."
 author: rpetrusha
 ms.author: ronpet
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
 In diesem Schnellstart wird erläutert, wie Sie interpolierte Zeichenfolgen in C# verwenden können, um Werte in eine einzige Ausgabezeichenfolge einzufügen. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. In diesem Schnellstart sind einige Lektionen enthalten, bei denen Werte in Zeichenfolgen eingefügt und auf verschiedene Arten formatiert werden.
 
-Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten. 
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in der [Einführung zu lokalen Schnellstarts](local-environment.md), die Links mit weiteren Einzelheiten enthalten. 
 
 ## <a name="create-an-interpolated-string"></a>Erstellen einer interpolierten Zeichenfolge
 
@@ -45,7 +45,7 @@ Dieses einfache Beispiel enthält die zwei Elemente, über die jede interpoliert
 
 - Mindestens ein *interpolierter Ausdruck*. Ein interpolierter Ausdruck wird durch eine öffnende und eine schließende Klammer (`{` und `}`) angegeben. Sie können jeden C#-Ausdruck in die Klammern einfügen, der einen Wert (einschließlich `null`) zurückgibt. 
 
-Im Folgenden finden Sie weitere Beispiele für interpolierte Zeichenfolgen mit anderen Datentypen.
+Im Folgenden finden Sie weitere Beispiele für interpolierte Zeichenfolgen mit einigen anderen Datentypen.
     
 ## <a name="include-different-data-types"></a>Einschließen verschiedener Datentypen
 
@@ -164,7 +164,7 @@ Die Ausgabe sieht in etwa folgendermaßen aus:
 
 Sie haben den Schnellstart für interpolierte Zeichenfolgen abgeschlossen. 
     
-Sie können mit dem Schnellstart [Arrays und Sammlungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
+Sie können mit dem Schnellstart [Arrays und Auflistungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zum Arbeiten mit interpolierten Zeichenfolgen finden Sie im Artikel [Interpolierte Zeichenfolgen](../language-reference/keywords/interpolated-strings.md) in der C#-Referenz.
 

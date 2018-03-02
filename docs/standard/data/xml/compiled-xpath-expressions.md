@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
@@ -44,7 +47,7 @@ Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath
   
  In der folgenden Tabelle werden alle XPath-Rückgabetypen des W3C sowie ihre Entsprechungen in Microsoft .NET Framework beschrieben. Außerdem wird erläutert, welche Methoden das <xref:System.Xml.XPath.XPathExpression>-Objekt auf der Basis des Rückgabetyps verwenden.  
   
-|XPath-Rückgabetyp des W3C|Entsprechender .NET Framework-Typ|Beschreibung|Methoden|  
+|XPath-Rückgabetyp des W3C|Entsprechender .NET Framework-Typ|description|Methoden|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Eine ungeordnete Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> oder <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Ein `true`-Wert oder ein `false`-Wert.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> oder<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -124,15 +127,15 @@ Console.WriteLine(nodes.Current.Value);
   
  Darüber hinaus kann die Verwendung der von der <xref:System.Xml.XPath.XPathNavigator>-Klasse bereitgestellten Methoden zur Knotensatznavigation zur Leistungssteigerung der Auswahlmethoden führen, die von der <xref:System.Xml.XPath.XPathNavigator>-Klasse für Fälle mit einfachen Auswahlkriterien bereitgestellt werden. Wenn Sie z. B. den ersten untergeordneten Knoten des aktuellen Knotens auswählen müssen, ist es schneller, die <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>-Methode zu verwenden, als den XPath-Ausdruck `child::*[1]` und die <xref:System.Xml.XPath.XPathNavigator.Select%2A>-Methode zu verwenden.  
   
- Legen Sie für Weitere Informationen zum Knoten Navigationsmethoden der <xref:System.Xml.XPath.XPathNavigator> Klasse, finden Sie unter [Node Set Navigation mithilfe von XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Weitere Informationen zu den Methoden der Knotensatznavigation der <xref:System.Xml.XPath.XPathNavigator>-Klasse finden Sie unter [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Wählen Sie die XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Auswerten von XPath-Ausdrücken mit "XPathNavigator"](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Vergleich von Knoten mit "XPathNavigator"](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

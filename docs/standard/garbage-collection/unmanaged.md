@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Bereinigen von nicht verwalteten Ressourcen
-Für die meisten der Objekte, die Ihre app erstellt werden soll, können Sie auf verlassen. NET Garbagecollector Speicherverwaltung. Wenn Sie jedoch Objekte erstellen, die nicht verwaltete Ressourcen enthalten, müssen Sie diese Ressourcen explizit freigeben, wenn diese nicht mehr von der App verwendet werden. Die geläufigsten Typen von nicht verwalteten Ressourcen sind Objekte, die Betriebssystemressourcen umschließen, wie etwa Dateien, Fenster, Netzwerkverbindungen oder Datenbankverbindungen. Der Garbage Collector kann die Lebensdauer eines Objekts nachverfolgen, das eine nicht verwaltete Ressource kapselt, er kann jedoch die nicht verwaltete Ressource nicht freigeben und bereinigen.  
+Für die meisten von der App erstellten Objekte führt der Garbage Collector von .NET die Speicherverwaltung aus. Wenn Sie jedoch Objekte erstellen, die nicht verwaltete Ressourcen enthalten, müssen Sie diese Ressourcen explizit freigeben, wenn diese nicht mehr von der App verwendet werden. Die geläufigsten Typen von nicht verwalteten Ressourcen sind Objekte, die Betriebssystemressourcen umschließen, wie etwa Dateien, Fenster, Netzwerkverbindungen oder Datenbankverbindungen. Der Garbage Collector kann die Lebensdauer eines Objekts nachverfolgen, das eine nicht verwaltete Ressource kapselt, er kann jedoch die nicht verwaltete Ressource nicht freigeben und bereinigen.  
   
  Wenn Ihre Typen nicht verwaltete Ressourcen verwenden, gehen Sie wie folgt vor:  
   
--   Implementieren der [dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md). Hierfür müssen Sie eine <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung bereitstellen, um die deterministische Freigabe von nicht verwalteten Ressourcen zu ermöglichen. Ein Consumer Ihres Typs ruft <xref:System.IDisposable.Dispose%2A> auf, wenn das Objekt (und die Ressourcen, die es verwendet), nicht mehr benötigt wird. Die <xref:System.IDisposable.Dispose%2A>-Methode gibt die nicht verwalteten Ressourcen sofort frei.  
+-   Implementieren Sie das [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md). Hierfür müssen Sie eine <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung bereitstellen, um die deterministische Freigabe von nicht verwalteten Ressourcen zu ermöglichen. Ein Consumer Ihres Typs ruft <xref:System.IDisposable.Dispose%2A> auf, wenn das Objekt (und die Ressourcen, die es verwendet), nicht mehr benötigt wird. Die <xref:System.IDisposable.Dispose%2A>-Methode gibt die nicht verwalteten Ressourcen sofort frei.  
   
 -   Sorgen Sie dafür, dass die nicht verwalteten Ressourcen freigegeben werden können, falls ein Consumer Ihres Typs vergisst, <xref:System.IDisposable.Dispose%2A> aufzurufen. Hierfür gibt es zwei Möglichkeiten:  
   
@@ -47,7 +50,7 @@ Für die meisten der Objekte, die Ihre app erstellt werden soll, können Sie auf
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Implementieren einer Dispose-Methode](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- Beschreibt das Implementieren der [dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) für verwaltete Ressourcen freizugeben.  
+ Beschreibt, wie das [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) für die Freigabe von nicht verwalteten Ressourcen implementiert wird.  
   
  [Verwenden von Objekten, die IDisposable implementieren](../../../docs/standard/garbage-collection/using-objects.md)  
  Beschreibt, wie Consumer eines Typs sicherstellen, dass dessen <xref:System.IDisposable.Dispose%2A>-Implementierung aufgerufen wird. Es wird empfohlen, die `using`-Anweisung in C# oder die `Using`-Anweisung in Visual Basic zu verwenden, um dies durchzuführen.  

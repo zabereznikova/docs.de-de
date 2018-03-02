@@ -8,25 +8,29 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: tasks, how to create a static partitioner
+helpviewer_keywords:
+- tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b28ff0bb8436fefc4956918889435e258ae98b12
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 125bef8d43e16c120e88250a4d9d5a4ff3f63dba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren
-Das folgende Beispiel zeigt eine Möglichkeit, einen einfachen benutzerdefinierten Partitionierer für PLINQ implementiert wird, statische Partitionierung ausführt. Da der Partitionierer dynamische Partitionen nicht unterstützt, ist es nicht von <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Diese speziellen Partitionierer möglicherweise über dem Bereich Standardpartitionierer für Datenquellen Beschleunigung bereit für die jedes Element eine zunehmende Zeitspanne Verarbeitung erfordert.  
+Das folgende Beispiel zeigt eine Möglichkeit, einen einfachen benutzerdefinierten Partitionierer für PLINQ zu implementieren, der statische Partitionierung ausführt. Da der Partitionierer keine dynamischen Partitionen unterstützt, kann er von <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> nicht genutzt werden. Dieser spezielle Partitionierer kann möglicherweise bei Datenquellen, für die jedes Element zunehmende Verarbeitungszeit erfordert, gegenüber dem Standardbereichspartitionierer für Beschleunigung sorgen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[TPL_Partitioners#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#05)]  
   
- Die Partitionen in diesem Beispiel basiert auf der Annahme der ein linearer Anstieg bei Verarbeitungszeit für jedes Element. In der Realität kann es schwer Verarbeitungszeiten auf diese Weise vorhersagbar sein. Bei Verwendung ein statisches Partitionierers mit einer bestimmten Datenquelle können Sie optimieren Sie die Partitionierung Formel für die Quelle, Lastenausgleich Logik hinzufügen, oder verwenden Sie ein Segment Partitionierung Ansatz wie gezeigt in [Vorgehensweise: Implementieren dynamische Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Bei den Partitionen in diesem Beispiel wird ein linearer Anstieg der Verarbeitungszeit für jedes Element vorausgesetzt. In der Realität kann es schwierig sein, Verarbeitungszeiten auf diese Weise vorherzusagen. Bei Verwendung eines statischen Partitionierers mit einer bestimmten Datenquelle können Sie die Partitionierungsformel für die Quelle optimieren, Lastenausgleichslogik hinzufügen oder einen Blockpartitionierungansatz wie in [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) beschrieben verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte Partitionierer für PLINQ und TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)

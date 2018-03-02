@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
-Die **"XmlNodeChangedEventArgs"** kapselt die Argumente, die an die registrierten Ereignishandlern übergeben der **XmlDocument** Objekt für die Behandlung von Ereignissen. 	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
+**XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden. 	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
   
-|Ereignis|Wird ausgelöst|  
+|event|Wird ausgelöst|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wird.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wurde.|  
@@ -35,7 +38,7 @@ Die **"XmlNodeChangedEventArgs"** kapselt die Argumente, die an die registrierte
 |<xref:System.Xml.XmlDocument.NodeChanged>|Wenn der Wert eines Knotens geändert wurde.|  
   
 > [!NOTE]
->  Wenn die **XmlDataDocument** speicherauslastung wird vollständig optimiert, um verwenden **DataSet** Speicher, der **XmlDataDocument** möglicherweise nicht ausgelöst, wenn Änderungen sind oben aufgeführten Ereignisse versucht, die zugrunde liegende **DataSet**. Wenn Sie diese Ereignisse benötigt werden, müssen Sie die gesamte durchlaufen **XmlDocument** einmal, um die Auslastung des Speichers nicht vollständig optimiert stellen.  
+>  Wenn die Speicherauslastung von **XmlDataDocument** vollständig für die **DataSet**-Speicherung optimiert ist, wird durch **XmlDataDocument** bei Änderungen des zugrunde liegenden **DataSet** möglicherweise keines der oben aufgeführten Ereignisse ausgelöst. Wenn diese Ereignisse benötigt werden, muss das ganze **XmlDocument** einmal durchlaufen werden, damit die Speicherauslastung nicht vollständig optimiert wird.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie ein Ereignishandler definiert und dann einem Ereignis hinzugefügt wird.  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Manche DOM-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können. Beispielsweise **AppendChild** ggf. So entfernen Sie den Knoten aus dem übergeordneten Element angefügt wird. In diesem Fall finden Sie unter einem **NodeRemoved** zunächst ausgelöste Ereignis gefolgt von einer **NodeInserted** Ereignis. Vorgänge wie Einstellung **InnerXml** mehrere Ereignisse verursachen.  
+ Manche DOM-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können. **AppendChild** muss den gerade angefügten Knoten möglicherweise auch aus dem übergeordneten Element entfernen. In diesem Fall wird zuerst ein **NodeRemoved**-Ereignis und dann ein **NodeInserted**-Ereignis ausgelöst. Vorgänge (z.B. das Festlegen von **InnerXml**) können zu mehreren Ereignissen führen.  
   
- Im folgenden Codebeispiel wird veranschaulicht, die Erstellung des ereignishandlers und die Fehlerbehandlung der **NodeInserted** Ereignis.  
+ Im folgenden Codebeispiel wird das Erstellen des Ereignishandlers und die Behandlung des **NodeInserted**-Ereignisses veranschaulicht.  
   
 ```vb  
 Imports System  

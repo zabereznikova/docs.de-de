@@ -18,76 +18,79 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Gründe für das Implementieren des ereignisbasierten asynchronen Musters
-Das ereignisbasierte asynchrone Muster stellt ein Muster zum Verfügbarmachen von asynchronem Verhalten einer Klasse. Mit der Einführung dieses Muster der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert zwei Muster zum Verfügbarmachen von asynchronem Verhalten: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType> Schnittstelle und das ereignisbasierte Muster. In diesem Thema wird beschrieben, wenn für beide Muster implementieren geeignet ist.  
+Mit dem ereignisbasierten asynchronen Muster kann das asynchrone Verhalten einer Klasse verfügbar gemacht werden. Mit der Einführung dieses Musters definiert das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zwei Muster, um asynchrones Verhalten verfügbar zu machen: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType>-Schnittstelle und das ereignisbasierte Muster. In diesem Thema wird beschrieben, in welchen Fällen die Muster implementiert werden sollten.  
   
- Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult> Benutzeroberfläche, siehe [das ereignisbasierte asynchrone Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
 ## <a name="general-principles"></a>Allgemeine Prinzipien  
- Im Allgemeinen sollten Sie asynchrone Funktionen, die das ereignisbasierte asynchrone Muster nach Möglichkeit verfügbar machen. Es gibt jedoch einige Anforderungen, die das ereignisbasierte Muster nicht erfüllen. In diesen Fällen müssen Sie möglicherweise zum Implementieren der <xref:System.IAsyncResult> Muster zusätzlich zu den ereignisbasierten Muster.  
+ Allgemein sollten Sie asynchrone Features, die das ereignisbasierte asynchrone Muster verwenden, nach Möglichkeit verfügbar machen. Es gibt jedoch einige Anforderungen, die das ereignisbasierte Muster nicht erfüllen kann. In diesen Fällen müssen Sie neben dem ereignisbasierten Muster möglicherweise auch das <xref:System.IAsyncResult>-Muster implementieren.  
   
 > [!NOTE]
->  Es ist nur in wenigen Fällen die <xref:System.IAsyncResult> Muster implementiert werden, ohne das ereignisbasierte Muster ebenfalls implementiert wird.  
+>  Das <xref:System.IAsyncResult>-Muster wird in den meisten Fällen zusammen mit dem ereignisbasierten Muster implementiert.  
   
 ## <a name="guidelines"></a>Richtlinien  
- Die folgende Liste beschreibt die Richtlinien für, wenn Sie das ereignisbasierte asynchrone Muster implementieren soll:  
+ In der folgenden Liste werden die Richtlinien beschrieben, in welchen Fällen das ereignisbasierte asynchrone Muster implementiert werden sollte:  
   
--   Verwenden Sie das ereignisbasierte Muster als Standard-API, um asynchrones Verhalten für die Klasse verfügbar zu machen.  
+-   Verwenden Sie das ereignisbasierte Muster als Standard-API, um asynchrones Verhalten für Ihre Klasse verfügbar zu machen.  
   
--   Machen Sie nicht die <xref:System.IAsyncResult> Muster, wenn die Klasse in einer Clientanwendung, z. B. Windows Forms in erster Linie verwendet wird.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nicht verfügbar, wenn Ihre Klasse in erster Linie in einer Clientanwendung wie Windows Forms eingesetzt wird.  
   
--   Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster bei Bedarf für Ihre Anforderungen erfüllt. Z. B. Kompatibilität mit einer vorhandenen API müssen Sie möglicherweise verfügbar machen die <xref:System.IAsyncResult> Muster.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nur verfügbar, wenn dies zur Erfüllung Ihrer Anforderungen notwendig ist. Das <xref:System.IAsyncResult>-Muster muss beispielsweise verfügbar gemacht werden, um Kompatibilität mit einer vorhandenen API herzustellen.  
   
--   Machen Sie nicht die <xref:System.IAsyncResult> -Muster nur zusammen mit die ereignisbasierten Muster.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nur in Verbindung mit dem ereignisbasierten Muster verfügbar.  
   
--   Wenn Sie verfügbar machen, müssen die <xref:System.IAsyncResult> Muster, holen Sie dies als eine erweiterte Option. Beispielsweise ein Proxyobjekt zu generieren, generieren die ereignisbasierte standardmäßig mit einer Option zum Generieren der <xref:System.IAsyncResult> Muster.  
+-   Wenn Sie das <xref:System.IAsyncResult>-Muster verfügbar machen, verwenden Sie hierfür eine erweiterte Option. Wenn Sie beispielsweise ein Proxyobjekt generieren, generieren Sie standardmäßig das ereignisbasierte Muster mit einer Option zum Generieren des <xref:System.IAsyncResult>-Musters.  
   
--   Ihre Implementierung ereignisbasierte Muster als Grundlage Ihrer <xref:System.IAsyncResult> Muster-Implementierung.  
+-   Ziehen Sie als Grundlage für die Implementierung Ihres ereignisbasierten Musters die Implementierung Ihres <xref:System.IAsyncResult>-Musters heran.  
   
--   Vermeiden Sie die Muster ereignisbasierten verfügbar zu machen und die <xref:System.IAsyncResult> Muster für die gleiche Klasse. Verfügbar machen das ereignisbasierte Muster für Klassen "höherer Ebene" und die <xref:System.IAsyncResult> Muster Klassen auf "niedrigerer Ebene". Vergleichen Sie das ereignisbasierte Muster z. B. auf die <xref:System.Net.WebClient> Komponente mit dem die <xref:System.IAsyncResult> Muster auf der <xref:System.Web.HttpRequest> Klasse.  
+-   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>-Muster nicht für die gleiche Klasse verfügbar. Machen Sie das ereignisbasierte Muster für übergeordnete Klassen und das <xref:System.IAsyncResult>-Muster Klassen für untergeordnete Klassen verfügbar. Vergleichen Sie z.B. das ereignisbasierte Muster für die <xref:System.Net.WebClient>-Komponente mit dem <xref:System.IAsyncResult>-Muster für die <xref:System.Web.HttpRequest>-Klasse.  
   
-    -   Verfügbar machen das ereignisbasierte Muster und die <xref:System.IAsyncResult> Muster in der gleichen Klasse, wenn Kompatibilität erforderlich ist. Wenn Sie bereits eine API freigegeben haben, verwendet z. B. die <xref:System.IAsyncResult> Muster, müssten Sie die beibehalten werden sollen die <xref:System.IAsyncResult> Muster für die Abwärtskompatibilität.  
+    -   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>-Muster für die gleiche Klasse verfügbar, wenn dies zur Bereitstellung von Kompatibilität erforderlich ist. Wenn Sie z.B. bereits eine API freigegeben haben, die das <xref:System.IAsyncResult>-Muster verwendet, müssten Sie das <xref:System.IAsyncResult>-Muster zum Bereitstellen von Abwärtskompatibilität beibehalten.  
   
-    -   Verfügbar machen das ereignisbasierte Muster und die <xref:System.IAsyncResult> in der gleichen Klasse Muster, wenn das resultierende Objekt Modell Komplexität den Vorteil, dass die Implementierungen trennen überwiegt. Es ist besser, beide Muster für eine einzelne Klasse als zu vermeiden, zu machen das ereignisbasierte Muster verfügbar zu machen.  
+    -   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>-Muster für die gleiche Klasse verfügbar, wenn die resultierende Objektmodellkomplexität den Vorteil einer Trennung der Implementierungen überwiegt. Es ist besser, beide Muster für eine einzelne Klasse verfügbar zu machen, als auf die Bereitstellung des ereignisbasierten Musters zu verzichten.  
   
-    -   Wenn Sie sowohl das ereignisbasierte Muster verfügbar machen müssen und <xref:System.IAsyncResult> Muster für eine einzelne Klasse, verwenden <xref:System.ComponentModel.EditorBrowsableAttribute> festgelegt <xref:System.ComponentModel.EditorBrowsableState.Advanced> zum Kennzeichnen der <xref:System.IAsyncResult> Muster Implementierung als erweiterte Funktion. Dies weist darauf hin, entwurfsumgebungen, wie z. B. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, nicht zum Anzeigen der <xref:System.IAsyncResult> Eigenschaften und Methoden. Diese Eigenschaften und Methoden sind weiterhin voll verwendbar, aber der Entwickler mit IntelliSense arbeiten hat eine genauere Ansicht der API.  
+    -   Wenn Sie sowohl das ereignisbasierte Muster als auch das <xref:System.IAsyncResult>-Muster für eine einzelne Klasse verfügbar machen müssen, legen Sie <xref:System.ComponentModel.EditorBrowsableAttribute> auf <xref:System.ComponentModel.EditorBrowsableState.Advanced> fest, um die Implementierung des <xref:System.IAsyncResult>-Musters als erweitertes Feature zu kennzeichnen. Dies ist ein Hinweis für Entwurfsumgebungen wie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, nicht die <xref:System.IAsyncResult>-Eigenschaften und -Methoden anzuzeigen. Diese Eigenschaften und Methoden sind weiterhin im vollen Umfang nutzbar, aber Entwickler, die mit IntelliSense arbeiten, haben einen umfassenderen Überblick über die API.  
   
-## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Kriterien für das Verfügbarmachen von IAsyncResult-Muster, zusätzlich zu den ereignisbasierten Muster  
- Während das ereignisbasierte asynchrone Muster in den zuvor erwähnten Szenarios viele Vorteile hat, verfügt diese noch einige Nachteile, über die Sie berücksichtigen sollten, wenn Leistung Ihren Anforderungen am wichtigsten ist.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Kriterien für das Verfügbarmachen des IAsyncResult-Musters zusätzlich zum ereignisbasierten Muster  
+ Das ereignisbasierte asynchrone Muster bietet zwar zahlreiche Vorteile im Zusammenhang mit den zuvor erläuterten Szenarien, bringt jedoch auch einige Nachteile mit sich, die Sie berücksichtigen sollten, wenn Leistung an oberster Stelle für Sie steht.  
   
- Es gibt drei Szenarien, die das ereignisbasierte Muster nicht berücksichtigt wird, sowie die <xref:System.IAsyncResult> Muster:  
+ Es gibt drei Szenarien, die weder das ereignisbasierte Muster noch das <xref:System.IAsyncResult>-Muster bewältigen:  
   
--   Warten Sie auf einem blockieren<xref:System.IAsyncResult>  
+-   Blockieren des Wartevorgangs bei einem <xref:System.IAsyncResult>-Objekt  
   
--   Blockieren des Wartevorgang für viele <xref:System.IAsyncResult> Objekte  
+-   Blockieren des Wartevorgang bei vielen <xref:System.IAsyncResult>-Objekten  
   
--   Abrufen der Beendigung der<xref:System.IAsyncResult>  
+-   Abrufen der Beendigung bezüglich <xref:System.IAsyncResult>  
   
- Sie können diese Szenarien unter Verwendung des ereignisbasierten Musters adressieren, aber auf diese Weise ist komplizierter als die Verwendung der <xref:System.IAsyncResult> Muster.  
+ Diese Szenarien können mithilfe des ereignisbasierten Musters bewältigt werden, was jedoch umständlicher ist als die Verwendung des <xref:System.IAsyncResult>-Musters.  
   
- Entwickler verwenden häufig die <xref:System.IAsyncResult> Muster für Dienste, die in der Regel sehr hohe leistungsanforderungen verfügen. Dem Abruf für Abschluss Szenario ist beispielsweise eine Technik Hochleistungs-Server.  
+ Entwickler verwenden häufig das <xref:System.IAsyncResult>-Muster für Dienste, die üblicherweise eine sehr hohe Leistung erfordern. Der Abruf des Beendigungsszenarios ist beispielsweise ein leistungsintensives Serververfahren.  
   
- Darüber hinaus das ereignisbasierte Muster ist weniger effizient als die <xref:System.IAsyncResult> Muster, da mehrere Objekte, insbesondere erstellt <xref:System.EventArgs>, und da threadübergreifend synchronisiert.  
+ Darüber hinaus ist das ereignisbasierte Muster weniger effizient als das <xref:System.IAsyncResult>-Muster, da mehrere Objekte, insbesondere <xref:System.EventArgs>, erstellt werden und es threadübergreifend synchronisiert wird.  
   
- Die folgende Liste enthält einige Empfehlungen ausführen, wenn Sie möchten, verwenden Sie die <xref:System.IAsyncResult> Muster:  
+ Die folgende Liste enthält einige Empfehlungen, die Sie bei Verwendung des <xref:System.IAsyncResult>-Musters berücksichtigen sollten:  
   
--   Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster, wenn Sie ausdrücklich Unterstützung für benötigen <xref:System.Threading.WaitHandle> oder <xref:System.IAsyncResult> Objekte.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nur verfügbar, wenn Sie insbesondere Unterstützung für <xref:System.Threading.WaitHandle>- oder <xref:System.IAsyncResult>-Objekte benötigen.  
   
--   Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster, wenn Sie eine vorhandene API haben, verwendet die <xref:System.IAsyncResult> Muster.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nur verfügbar, wenn Sie eine API basierend auf diesem <xref:System.IAsyncResult>-Muster besitzen.  
   
--   Haben eine vorhandene API basierend auf den <xref:System.IAsyncResult> Muster, sollten Sie auch das ereignisbasierte Muster in der nächsten Version verfügbar zu machen.  
+-   Wenn Sie über eine API basierend auf dem <xref:System.IAsyncResult>-Muster verfügen, sollten Sie das ereignisbasierte Muster zudem im nächsten Release verfügbar machen.  
   
--   Nur verfügbar zu machen <xref:System.IAsyncResult> Muster, wenn Sie hohe leistungsanforderungen haben Sie überprüft haben kann nicht mit dem ereignisbasierten Muster erfüllt sein, aber erfüllt werden können, indem die <xref:System.IAsyncResult> Muster.  
+-   Machen Sie das <xref:System.IAsyncResult>-Muster nur verfügbar, wenn Sie über hohe Leistungsanforderungen verfügen, die gemäß Ihrer Feststellung nicht mit dem ereignisbasierten Muster, jedoch mit dem <xref:System.IAsyncResult>-Muster erfüllt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern (Exemplarische Vorgehensweise: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt)](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Schnellstart – Lokale Umgebung – C#-Leitfaden"
+title: "Tutorial „Lokale Umgebung“: Lokale C#-Schnellstarts"
 description: "Dieser Schnellstart beinhaltet die Grundlagen für die lokale Ausführung der Schnellstarts."
 author: billwagner
 ms.topic: article
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="local-environment"></a>Lokale Umgebung
 
@@ -35,11 +35,11 @@ Sie können mit einem der folgenden Schnellstarts beginnen:
 
 Im Schnellstart [Zahlen in C#](numbers-in-csharp-local.md) erfahren Sie, wie Computer Zahlen speichern und wie Sie Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#. 
 
-Dieser Schnellstart setzt voraus, dass Sie das Tutorial [Hello World](hello-world.yml) abgeschlossen haben.
+In diesem Schnellstart wird vorausgesetzt, dass Sie das Tutorial [Hallo Welt](hello-world.yml) abgeschlossen haben.
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Verzweigungen und Schleifen](branches-and-loops-local.md)
 
-Der Schnellstart [Branches und Schleifen](branches-and-loops-local.md) erläutert die Grundlagen der Auswahl verschiedener Codepfadausführungen auf Basis der in Variablen gespeicherten Werte. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen. 
+Im Schnellstart [Branches und Schleifen](branches-and-loops-local.md) werden die Grundlagen der Auswahl verschiedener Codepfadausführungen auf Basis der in Variablen gespeicherten Werte erläutert. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen. 
 
 In dieser ersten Lektion wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml) und [Zahlen in C#](numbers-in-csharp-local.md) abgeschlossen haben.
 

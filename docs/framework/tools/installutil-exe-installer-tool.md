@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Installer-Tool)
 Das Installationsprogrammtool ist ein Befehlszeilen-Hilfsprogramm, mit dem Sie Serverressourcen installieren und deinstallieren können, indem Sie die Komponenten des Installationsprogramms in angegebenen Assemblys ausführen. Dieses Tool funktioniert in Verbindung mit Klassen im <xref:System.Configuration.Install>-Namespace.  
@@ -158,7 +160,7 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe
 installutil /LogFile=myLog.InstallLog /reg=true myAssembly.exe  
 ```  
   
- Der folgende Befehl führt die Installationsprogramme in der Assembly `myAssembly.exe` aus, verwendet die benutzerdefinierte `/email`-Option des Installationsprogramms, um die E-Mail-Adresse des Benutzers angegeben, und unterdrückt die Ausgabe in die Protokolldatei.  
+ Der folgende Befehl führt die Installationsprogramme in der Assembly `myAssembly.exe` aus, verwendet die benutzerdefinierte `/email`-Option des Installationsprogramms zur Angabe der E-Mail-Adresse des Benutzers und unterdrückt die Ausgabe in die Protokolldatei.  
   
 ```  
 installutil /LogFile= /email=admin@mycompany.com myAssembly.exe  

@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0cd1a3bad69499b4804299adecabad3a43b5eab1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f6c65581437bfb22cf771d66716b3dbb62dbafae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Objektvergleich mit "XmlNameTable"
-**XmlDocuments**beim Erstellen eine Namenstabelle, die speziell für das Dokument erstellt haben. XML-Datei in das Dokument geladen ist, oder Erstellen von Elementen oder Attributen erstellt werden, gelten die Attribut- und Elementnamen in der **XmlNameTable**. Sie können auch erstellen eine **XmlDocument** mithilfe eines vorhandenen **NameTable** aus einem anderen Dokument. Wenn **XmlDocuments** werden erstellt, mit dem Konstruktor, verwendet eine **XmlNameTable** Parameter hat Zugriff auf den Knotennamen, Namespaces und Präfixen, die bereits in gespeichert, das Dokument der  **XmlNameTable**. Nachdem die Namen in der Tabelle gespeichert sind, können Sie rasch mithilfe eines Objektvergleichs anstelle eines Zeichenfolgenvergleichs verglichen werden; dies gilt unabhängig von der Verfahrensweise zum Laden der Namenstabelle mit Namen. Zeichenfolgen können auch hinzugefügt werden, um die Tabelle mit den <xref:System.Xml.NameTable.Add%2A>. Im folgenden Codebeispiel wird gezeigt, eine Namenstabelle erstellt wird und die Zeichenfolge **MyString** zur Tabelle hinzugefügt wird. Danach ein **XmlDocument** wird mit dieser Tabelle und die Namen der Element- und Attributnamen in erstellt **Myfile.xml** der vorhandenen Namenstabelle hinzugefügt werden.  
+**XmlDocuments** weisen beim Erstellen eine für dieses spezifische Dokument erstellte Namenstabelle auf. Beim Laden von XML in das Dokument oder beim Erstellen von Elementen oder Attributen werden Attribut- und Elementnamen in die **XmlNameTable** eingefügt. Sie können auch ein **XmlDocument** unter Verwendung einer vorhandenen **NameTable** aus einem anderen Dokument erstellen. Beim Erstellen von **XmlDocuments** unter Verwendung eines Konstruktors, der einen **XmlNameTable**-Parameter annimmt, verfügt das Dokument über Zugriff auf die bereits in der **XmlNameTable** gespeicherten Namen der Knoten, Namespaces und Präfixe. Nachdem die Namen in der Tabelle gespeichert sind, können Sie rasch mithilfe eines Objektvergleichs anstelle eines Zeichenfolgenvergleichs verglichen werden; dies gilt unabhängig von der Verfahrensweise zum Laden der Namenstabelle mit Namen. Mit <xref:System.Xml.NameTable.Add%2A> können der Namenstabelle auch Zeichenfolgen hinzugefügt werden. Im folgenden Codebeispiel wird veranschaulicht, wie eine Namenstabelle erstellt wird und wie dieser Tabelle die Zeichenfolge **MyString** hinzugefügt wird. Anschließend wird unter Verwendung dieser Tabelle ein **XmlDocument** erstellt, und die Element- und Attributnamen in **Myfile.xml** werden der vorhandenen Namenstabelle hinzugefügt.  
   
 ```vb  
 Dim nt As New NameTable()  

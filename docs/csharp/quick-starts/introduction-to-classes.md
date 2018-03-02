@@ -1,5 +1,5 @@
 ---
-title: "Schnellstarts – Einführung in Klassen – C#-Handbuch"
+title: "Tutorial „Einführung in Klassen“: Lokale C#-Schnellstarts"
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>Einführung in Klassen
 
-Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in der [Einführung zu lokalen Schnellstarts](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
 ## <a name="create-your-application"></a>Erstellen Ihrer Anwendung
 
@@ -76,7 +76,7 @@ namespace classes
 }
 ```
 
-Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `namespace`-Deklaration ist eine Möglichkeit, Ihren Code logisch zu organisieren. Da dieser Schnellstart relativ klein ist, platzieren Sie den gesamten Code in einem einzelnen Namespace. 
+Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `namespace`-Deklaration ist eine Möglichkeit, Ihren Code logisch zu organisieren. Da dieser Schnellstart relativ klein ist, platzieren Sie den gesamten Code in einen einzelnen Namespace. 
 
 `public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf ***Member***. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
 
@@ -203,7 +203,7 @@ Um diesen Schnellstart abzuschließen, können Sie die `GetAccountHistory`-Metho
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-Hier wird die <xref:System.Text.StringBuilder>-Klasse zum Formatieren einer Zeichenfolge verwendet, die eine Zeile für jede Transaktion enthält. Sie haben den Zeichenfolgen-Formatierungscode bereits früher in diesen Schnellstarts gesehen. `\t` ist ein neues Zeichen. Damit wird ein Tabulator zum Formatieren der Ausgabe hinzugefügt.
+Hier wird die <xref:System.Text.StringBuilder>-Klasse zum Formatieren einer Zeichenfolge verwendet, die eine Zeile für jede Transaktion enthält. Sie haben den Zeichenfolgen-Formatierungscode bereits an einer vorherigen Stelle in diesen Schnellstarts gesehen. `\t` ist ein neues Zeichen. Damit wird ein Tabulator zum Formatieren der Ausgabe hinzugefügt.
 
 Fügen Sie diese Zeile **Program.cs** zum Testen hinzu:
 
@@ -215,6 +215,6 @@ Geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie „stecken geblieben“ sind, finden Sie die Quelle für diesen Schnellstart [in unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
+Wenn Sie „stecken geblieben“ sind, sehen Sie sich die Quelle für diesen Schnellstart [in unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/) an.
 
 Herzlichen Glückwunsch, Sie haben nun alle unsere Schnellstarts absolviert. Wenn Sie mehr lernen möchten, nutzen Sie unsere [Tutorials](../tutorials/index.md).

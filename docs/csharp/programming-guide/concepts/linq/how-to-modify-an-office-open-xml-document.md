@@ -5,22 +5,23 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a6bfa60cce332deef2a72da836f96dbe37e65d2a
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Vorgehensweise: Ändern eines Office Open-XML-Dokuments (C#)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ändert und speichert.  
   
- Weitere Informationen zu Office Open XML finden Sie unter [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Weitere Informationen zu Office Open XML finden Sie unter [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) (Open XML-SDK) und [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach dem ersten Absatzelement im Dokument, ruft den Text aus dem Absatz ab und löscht dann alle Textruns im Absatz. Daraufhin wird ein neuer Textrun erstellt, der aus dem Text des ersten Absatzes, umgewandelt in Großbuchstaben, besteht. Anschließend wird das geänderte XML in ein Open XML-Paket serialisiert und das Paket wird geschlossen.  

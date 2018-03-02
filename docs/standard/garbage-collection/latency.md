@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Latenzmodi
 Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads einer Anwendung beenden. In einigen Situationen, z. B. wenn eine Anwendung Daten abruft oder Inhalte anzeigt, kann eine vollständige Garbage Collection zu einem kritischen Zeitpunkt erfolgen und die Leistung beeinträchtigen. Sie können das Ausmaß der Garbage Collection anpassen, indem Sie die <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>-Werte festlegen.  
@@ -57,7 +60,7 @@ Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads
   
 -   Achten Sie auf potenziell zuordnende Threads. Weil die Einstellung der <xref:System.Runtime.GCSettings.LatencyMode%2A>-Eigenschaft prozessweit gültig ist, könnte für jeden potenziell zuordnenden Thread eine <xref:System.OutOfMemoryException> ausgelöst werden.  
   
--   Umschließen Sie den Code mit geringer Latenz in eingeschränkten Ausführungsbereichen (Weitere Informationen finden Sie unter [eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md)).  
+-   Umschließen Sie den Code mit geringer Latenz in eingeschränkten Ausführungsbereichen (weitere Informationen finden Sie unter [Eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
 -   Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.  
   

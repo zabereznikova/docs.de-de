@@ -17,21 +17,24 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 60c31339231405a1cbbb98dae37d36ad3c3709c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Gewusst wie: Öffnen und Anfügen an eine Protokolldatei
-<xref:System.IO.StreamWriter>und <xref:System.IO.StreamReader> Zeichen zu schreiben und Lesen von Zeichen aus Streams. Im folgenden Codebeispiel Beispiel öffnet der `log.txt` Datei für die Eingabe oder die Datei erstellt, falls diese noch nicht vorhanden, und Informationen an das Ende der Datei fügt. Der Inhalt der Datei werden in die Standardausgabe für die Anzeige geschrieben. Als Alternative zu diesem Beispiel kann als eine einzelne Zeichenfolge oder ein Array von Zeichenfolgen, die Informationen gespeichert werden und die <xref:System.IO.File.WriteAllText%2A> oder <xref:System.IO.File.WriteAllLines%2A> Methode kann verwendet werden, um die gleiche Funktionalität zu erzielen.  
+<xref:System.IO.StreamWriter> und <xref:System.IO.StreamReader> schreiben Zeichen in Streams und lesen Zeichen daraus. Im folgenden Codebeispiel werden die `log.txt`-Datei für die Eingabe geöffnet bzw. die Datei erstellt, falls sie noch nicht vorhanden ist, und Informationen an das Ende der Datei angefügt. Der Inhalt der Datei wird dann zur Anzeige in die Standardausgabe geschrieben. Alternativ zu diesem Beispiel könnten die Informationen als einzelne Zeichenfolge oder Zeichenfolgenarray gespeichert werden, und mit der <xref:System.IO.File.WriteAllText%2A>- bzw. <xref:System.IO.File.WriteAllLines%2A>-Methode könnte die gleiche Funktionalität erzielt werden.  
   
 > [!NOTE]
->  Visual Basic-Benutzer können die Methoden und Eigenschaften, die von bereitgestellte verwenden die <xref:Microsoft.VisualBasic.Logging.Log> Klasse oder <xref:Microsoft.VisualBasic.FileIO.FileSystem> Klasse zum Erstellen von oder Schreiben in Protokolldateien.  
+>  Visual Basic-Benutzer können die von der <xref:Microsoft.VisualBasic.Logging.Log>- oder <xref:Microsoft.VisualBasic.FileIO.FileSystem>-Klasse bereitgestellten Methoden und Eigenschaften zum Erstellen von oder Schreiben in Protokolldateien verwenden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]

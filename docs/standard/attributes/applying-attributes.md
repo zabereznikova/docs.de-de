@@ -16,15 +16,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b55684ec30a69bd9773e19420fbe89ca58fd66dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="applying-attributes"></a>Anwenden von Attributen
 Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.  
@@ -37,11 +40,11 @@ Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.
   
 3.  Geben Sie positionelle Parameter und benannte Parameter für das Attribut an.  
   
-     Positionelle Parameter sind erforderlich und müssen vor benannten Parametern stehen. Sie entsprechen den Parametern eines der Attributkonstruktoren. Benannte Parameter sind optional und entsprechen Lese-/Schreibeigenschaften des Attributs. Geben Sie in C++ und c#, `name` = `value` für jeden optionalen Parameter, in dem `name` ist der Name der Eigenschaft. In Visual Basic geben Sie `name`:=`value` an.  
+     Positionelle Parameter sind erforderlich und müssen vor benannten Parametern stehen. Sie entsprechen den Parametern eines der Attributkonstruktoren. Benannte Parameter sind optional und entsprechen Lese-/Schreibeigenschaften des Attributs. Geben Sie in C++ und C# für jeden optionalen Parameter `name`=`value` an, wobei `name` der Name der Eigenschaft ist. In Visual Basic geben Sie `name`:=`value` an.  
   
  Das Attribut wird beim Kompilieren von Code in Metadaten ausgegeben und ist über die Reflexionsdienste der Laufzeit für die Common Language Runtime sowie beliebige weitere benutzerdefinierte Tools und Anwendungen verfügbar.  
   
- Attributnamen enden üblicherweise auf "Attribute". Verschiedene Sprachen, die die Laufzeit unterstützen, z. B. Visual Basic und C#, erfordern jedoch nicht die vollständige Angabe eines Attributnamens. Angenommen, Sie initialisieren möchten <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, müssen Sie nur darauf verweisen **veraltet**.  
+ Attributnamen enden üblicherweise auf "Attribute". Verschiedene Sprachen, die die Laufzeit unterstützen, z. B. Visual Basic und C#, erfordern jedoch nicht die vollständige Angabe eines Attributnamens. Wenn Sie z.B. <xref:System.ObsoleteAttribute?displayProperty=nameWithType> initialisieren möchten, müssen Sie lediglich mit **Veraltet** darauf verweisen.  
   
 ## <a name="applying-an-attribute-to-a-method"></a>Anwenden eines Attributs auf eine Methode  
  Im folgenden Codebeispiel wird die Deklaration von **System.ObsoleteAttribute** dargestellt, mit dem Code als veraltet gekennzeichnet werden kann. Die Zeichenfolge `"Will be removed in next version"` wird an das Attribut übergeben. Dieses Attribut löst eine Compilerwarnung aus. Wenn vom Attribut beschriebener Code aufgerufen wird, wird die übergebene Zeichenfolge angezeigt.  

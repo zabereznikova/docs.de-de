@@ -24,25 +24,28 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Komponente, die entspricht der [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Das Formular für dieses Beispiel verwendet die `PrimeNumberCalculator` Komponente, die in beschriebenen [wie: implementieren eine Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Komponente entsprechend der [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) verwenden. Das Formular für dieses Beispiel verwendet die `PrimeNumberCalculator`-Komponente, die unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) beschrieben wird.  
   
- Wenn Sie ein Projekt, die in diesem Beispiel verwendet ausführen, wird ein Formular "Primzahl Calculator" mit zwei Schaltflächen und ein Raster angezeigt: **neuen Task starten** und **"Abbrechen"**. Klicken Sie auf die **neuen Task starten** mehrmals nacheinander die Schaltfläche, und klicken, startet ein asynchroner Vorgang eine Berechnung aus, um festzustellen, ob eine zufällig generierter Testzahl eine Primzahl ist. Das Formular wird in regelmäßigen Abständen und inkrementelle Ergebnisse anzuzeigen. Jeder Vorgang ist eine eindeutige Aufgaben-ID zugewiesen. Das Ergebnis der Berechnung wird angezeigt, der **Ergebnis** Spalte; Wenn die Anzahl der Tests keine Primzahl ist, wird Sie als beschriftet **zusammengesetzt –** und seine erste Divisor wird angezeigt.  
+ Wenn Sie ein Projekt mit diesem Beispiel ausführen, wird ein Formular namens „Primzahlenrechner“ mit einem Raster und zwei Schaltflächen angezeigt: **Neuen Task starten** und **Abbrechen**. Klicken Sie mehrmals hintereinander auf die Schaltfläche **Neuen Task starten**. Bei jedem Klick wird durch einen asynchronen Vorgang eine Berechnung gestartet, um festzustellen, ob es sich bei einer zufällig generierten Testzahl um eine Primzahl handelt. Das Formular zeigt in regelmäßigen Abständen den Status und inkrementelle Ergebnisse an. Jeder Vorgang ist einer eindeutige Aufgaben-ID zugewiesen. Das Ergebnis der Berechnung wird in der Spalte **Ergebnis** angezeigt. Wenn es sich bei der Testzahl nicht um eine Primzahl handelt, wird sie als **Zusammengesetzt** bezeichnet, und der erste Divisor wird angezeigt.  
   
- Alle ausstehenden Vorgang abgebrochen werden kann, mit der **"Abbrechen"** Schaltfläche. Mehrfachauswahl können vorgenommen werden.  
+ Alle ausstehenden Vorgänge können mit der Schaltfläche **Abbrechen** abgebrochen werden. Es kann eine Mehrfachauswahl vorgenommen werden.  
   
 > [!NOTE]
->  Die meisten Zahlen ist es sich um Primzahlen nicht. Wenn Sie nicht nach mehreren abgeschlossenen Vorgänge eine Primzahl gefunden haben, einfach weitere Aufgaben starten und schließlich finden Sie einige Primzahlen.  
+>  Bei den meisten Zahlen handelt es sich nicht um Primzahlen. Wenn Sie nicht nach mehreren abgeschlossenen Vorgänge eine Primzahl ermittelt haben, starten Sie einfach weitere Aufgaben, bis sie schließlich einige Primzahlen ermittelt haben.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

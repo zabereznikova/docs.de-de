@@ -1,5 +1,5 @@
 ---
-title: "Schnellstart – Zahlen in C# – C#-Leitfaden"
+title: "Tutorial „Zahlen in C#“: Lokale C#-Schnellstarts"
 description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>Schnellstart „Zahlen in C#“ #
+# <a name="numbers-in-c-quickstart"></a>Schnellstart „Zahlen in C#“
 
-Dieser Schnellstart vermittelt Ihnen auf interaktive Weise die Zahlentypen in C#. Sie schreiben einen Teil des Codes, kompilieren diesen und führen ihn aus. Der Schnellstart enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
+Dieser Schnellstart vermittelt Ihnen auf interaktive Weise die Zahlentypen in C#. Sie schreiben einen Teil des Codes, kompilieren diesen und führen ihn aus. Der Schnellstart enthält eine Reihe von Lektionen, in denen Zahlen und mathematische Vorgänge in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 
-Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in der [Einführung zu lokalen Schnellstarts](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
 ## <a name="explore-integer-math"></a>Erkunden von arithmetischen Operationen mit ganzen Zahlen
 
@@ -319,7 +319,7 @@ Sie können Ihre Antwort anhand des [fertig gestellten Beispielcodes auf GitHub]
 
 Wenn Sie möchten, testen Sie andere Formeln. 
 
-Sie haben den Schnellstart-Leitfaden „Zahlen in C#“ abgeschlossen. Sie können mit dem Schnellstart [Verzweigungen und Schleifen](branches-and-loops-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
+Sie haben den Schnellstart „Zahlen in C#“ abgeschlossen. Sie können mit dem Schnellstart [Branches und Schleifen](branches-and-loops-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 

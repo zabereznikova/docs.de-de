@@ -13,18 +13,21 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema-Compilation-Infoset
-Die [World Wide Web Consortium (W3C) XML-Schemaempfehlung](http://go.microsoft.com/fwlink/?linkid=45242) wird der Informationssatz (Infoset), die für die Pre-Schema-Validierung und Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  
+In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](http://go.microsoft.com/fwlink/?linkid=45242) wird der Informationssatz (Infoset) erörtert, der für die Pre-Schema-Validierung und die Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  
   
  Das Pre-Schema-Validation-Infoset wird während der Bearbeitung des Schemas erstellt. Das Post-Schema-Compilation-Infoset wird nach dem Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> während der Kompilierung des Schemas erstellt und als Eigenschaften verfügbar gemacht.  
   

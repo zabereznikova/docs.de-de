@@ -19,39 +19,42 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10ab05ac8b24c0658be2f27809137c6b0bd4834f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62931273acd41768d131c08510e14ff187d64296
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL
 Das folgende Beispiel extrahiert ein Protokoll und eine Portnummer aus einer URL.  
   
 ## <a name="example"></a>Beispiel  
- Im Beispiel wird die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Methode, um das Protokoll zurückgegeben, gefolgt von einem Doppelpunkt und die Portnummer an.  
+ Das Beispiel verwendet die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode, um das Protokoll, gefolgt von einem Doppelpunkt und der Portnummer, zurückzugeben.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
   
  Das Muster für reguläre Ausdrücke `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` kann wie in der folgenden Tabelle dargestellt interpretiert werden.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Starten Sie den Vergleich am Beginn der Zeichenfolge.|  
-|`(?<proto>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Nennen Sie diese Gruppe `proto`.|  
+|`(?<proto>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Als Name der Gruppe wird `proto` festgelegt.|  
 |`://`|Übereinstimmung mit einem Doppelpunkt, gefolgt von zwei Schrägstrichen.|  
 |`[^/]+?`|Übereinstimmung mit mindestens einem Vorkommen (jedoch so wenigen wie möglich) eines beliebigen Zeichens außer einem Schrägstrich.|  
-|`(?<port>:\d+)?`|Übereinstimmung mit keinem oder einem Vorkommen eines Doppelpunkts, gefolgt von mindestens einem Ziffernzeichen. Nennen Sie diese Gruppe `port`.|  
+|`(?<port>:\d+)?`|Übereinstimmung mit keinem oder einem Vorkommen eines Doppelpunkts, gefolgt von mindestens einem Ziffernzeichen. Als Name der Gruppe wird `port` festgelegt.|  
 |`/`|Übereinstimmung mit einem Schrägstrich.|  
   
- Die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Methode erweitert die `${proto}${port}` Ersatzsequenz, verkettet den Wert, der die zwei benannten Gruppen, die im Muster regulären Ausdrucks erfasst. Es ist eine praktische Alternative zum Verketten von Zeichenfolgen abgerufen werden, von dem Auflistungsobjekt zurückgegebenes explizit die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> Eigenschaft.  
+ Die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode erweitert die `${proto}${port}`-Ersatzsequenz, die den Wert der beiden benannten Gruppen verkettet, die im Muster für reguläre Ausdrücke erfasst wurden. Das ist eine praktische Alternative zum expliziten Verketten der Zeichenfolgen, die aus dem von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebenen Auflistungsobjekt abgerufen werden.  
   
- Im Beispiel wird die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Methode mit zwei substitutionen `${proto}` und `${port}`, um die ausgegebene Zeichenfolge die erfassten Gruppen einschließt. Sie können die erfassten Gruppen abrufen, aus der Übereinstimmungssuche <xref:System.Text.RegularExpressions.GroupCollection> -Objekt stattdessen, wie im folgenden Code gezeigt.  
+ Das Beispiel verwendet die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode mit zwei Ersetzungen, `${proto}` und `${port}`, um die erfassten Gruppen in die Ausgabezeichenfolge einzuschließen. Sie können die erfassten Gruppen stattdessen aus dem <xref:System.Text.RegularExpressions.GroupCollection>-Objekt der Übereinstimmung abrufen, wie im folgenden Code gezeigt.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  

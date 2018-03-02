@@ -5,26 +5,27 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3ddd3f35d1a1b6761aace8460aceda638f169f05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dca728cf48c6af6437beb43bcb6a8c8b7283d639
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)
 In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und LINQ to XML den Inhalt von XML-Dokumenten manipulieren können. Die C#-Beispiele fragen Informationen in von Microsoft Word gespeicherten Office Open XML-WordprocessingML-Dokumenten ab und bearbeiten sie.  
   
- Weitere Informationen dazu finden Sie auf der [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573)-Website.  
+ Weitere Informationen finden Sie unter [Introduction to WordprocessingML (Einführung in WordprocessingML)](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|description|  
 |-----------|-----------------|  
 |[Form von WordprocessingML-Dokumenten (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|Enthält eine kurze Erläuterung der Bestandteile von WordprocessingML-Dokumenten.|  
 |[Erstellen eines Office Open-Quell-XML-Dokuments (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Enthält schrittweise Anweisungen zum Erstellen des Quelldokuments für Abfragen in diesem Lernprogramm.|  

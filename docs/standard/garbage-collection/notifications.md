@@ -12,95 +12,99 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: garbage collection, notifications
+helpviewer_keywords:
+- garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-notifications"></a>Garbage Collection-Benachrichtigungen
-Es gibt Situationen, in denen eine vollständige Garbagecollection (d. h. eine Collection der Generation 2) von der common Language Runtime Leistung beeinträchtigen kann. Dies kann ein Problem vor allem mit Servern, die große Mengen von Anforderungen zu verarbeiten; In diesem Fall kann eine lange Garbagecollection einen Anforderungstimeout verursachen. Um zu verhindern, dass eine vollständige Auflistung von im Rahmen eines kritischen Zeitraums aufgetreten sind, können Sie benachrichtigt werden, dass eine vollständige Garbagecollection nähert sich dem und anschließend ergreifen, um die arbeitsauslastung mit einer anderen Serverinstanz umleiten. Sie können auch eine Sammlung selbst auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen zu verarbeiten muss.  
+Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine Garbage Collection der Generation 2) der Common Language Runtime die Leistung beeinträchtigen kann. Dies kann vor allem bei Servern, die eine hohe Zahl an Anforderungen verarbeiten, ein Problem sein; in diesem Fall kann eine lange Garbage Collection einen Anforderungstimeout verursachen. Um eine vollständige Garbage Collection im Rahmen eines kritischen Zeitraums zu verhindern, können Sie benachrichtigt werden, wenn eine vollständige Garbage Collection bevorsteht, und Maßnahmen ergreifen, um die Workload auf eine andere Serverinstanz umzuleiten. Sie können auch selbst eine Garbage Collection auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen verarbeiten muss.  
   
- Die <xref:System.GC.RegisterForFullGCNotification%2A> Methode registriert für eine Benachrichtigung ausgelöst werden, wenn die Common Language Runtime ermittelt, dass eine vollständige Garbagecollection ansteht. Es gibt zwei Komponenten für diese Benachrichtigung: Wenn die vollständige Garbagecollection ansteht und wann die vollständige Garbagecollection abgeschlossen wurde.  
+ Die <xref:System.GC.RegisterForFullGCNotification%2A>-Methode registriert, dass eine Benachrichtigung ausgelöst werden soll, wenn die Runtime erkennt, dass eine vollständige Garbage Collection ansteht. Diese Benachrichtigung besteht aus zwei Teilen: Der eine Teil wird gesendet, wenn die vollständige Garbage Collection ansteht, und der andere Teil, wenn die vollständige Garbage Collection abgeschlossen wurde.  
   
 > [!WARNING]
->  Nur blockierende Garbage Collection auslösen Benachrichtigungen. Wenn die [ \<GcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) Konfigurationselement aktiviert ist, löst die Garbage Collection im Hintergrund keine Benachrichtigungen.  
+>  Nur blockierende Garbage Collections lösen Benachrichtigungen aus. Wenn das [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)-Konfigurationselement aktiviert ist, lösen Garbage Collections im Hintergrund keine Benachrichtigungen aus.  
   
- Um zu bestimmen, wann eine Benachrichtigung ausgelöst wurde, verwenden die <xref:System.GC.WaitForFullGCApproach%2A> und <xref:System.GC.WaitForFullGCComplete%2A> Methoden. In der Regel verwenden Sie diese Methoden in einer `while` Schleife, um fortlaufend abzurufen eine <xref:System.GCNotificationStatus> -Enumeration, der den Status der Benachrichtigung angezeigt. Wenn dieser Wert ist <xref:System.GCNotificationStatus.Succeeded>, können Sie wie folgt vorgehen:  
+ Um zu bestimmen, wann eine Benachrichtigung ausgelöst wurde, verwenden Sie die <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode. In der Regel verwenden Sie diese Methoden in einer `while`-Schleife, um fortlaufend eine <xref:System.GCNotificationStatus>-Enumeration abzurufen, die den Status der Benachrichtigung anzeigt. Wenn dieser Wert <xref:System.GCNotificationStatus.Succeeded> ist, können Sie Folgendes tun:  
   
--   Als Antwort auf eine Benachrichtigung erhalten, mit der <xref:System.GC.WaitForFullGCApproach%2A> -Methode, können Sie die arbeitsauslastung umleiten und möglicherweise eine Collection selbst auslösen.  
+-   Als Antwort auf eine mit der <xref:System.GC.WaitForFullGCApproach%2A>-Methode erhaltene Benachrichtigung können Sie die Workload umleiten und möglicherweise selbst eine Garbage Collection auslösen.  
   
--   Als Antwort auf eine Benachrichtigung erhalten, mit der <xref:System.GC.WaitForFullGCComplete%2A> -Methode, Sie können die aktuellen Serverinstanz, die zur Verarbeitung von Anforderungen erneut verfügbar machen. Sie können auch Informationen sammeln. Beispielsweise können Sie die <xref:System.GC.CollectionCount%2A> Methode, um die Anzahl der Sammlungen erfassen.  
+-   Als Antwort auf eine mit der <xref:System.GC.WaitForFullGCComplete%2A>-Methode erhaltene Benachrichtigung können Sie die aktuelle Serverinstanz erneut zur Verarbeitung von Anforderungen verfügbar machen. Sie können auch Informationen sammeln. Beispielsweise können Sie mit der <xref:System.GC.CollectionCount%2A>-Methode die Anzahl der Sammlungen erfassen.  
   
- Die <xref:System.GC.WaitForFullGCApproach%2A> und <xref:System.GC.WaitForFullGCComplete%2A> Methoden sind für die Zusammenarbeit konzipiert. Mit einem anderen Zeichen ohne kann zu unbestimmte Ergebnissen führen.  
+ Die <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode sind für die Zusammenarbeit konzipiert. Die Verwendung der einen ohne die andere kann zu unvorhersehbaren Ergebnissen führen.  
   
-## <a name="full-garbage-collection"></a>Vollständige Garbagecollection  
- Die Common Language Runtime führt eine vollständige Garbagecollection dazu, dass eine der folgenden Szenarien zutrifft:  
+## <a name="full-garbage-collection"></a>Vollständige Garbage Collection  
+ Die Runtime löst eine vollständige Garbage Collection aus, wenn eines der folgenden Szenarien zutrifft:  
   
--   Genügend Arbeitsspeicher hat in Generation 2 verursacht die nächste Collection der Generation 2 höher gestuft wurden.  
+-   Genügend Arbeitsspeicher wurde in Generation 2 heraufgestuft, um die nächste Generation 2-Garbage Collection auszulösen.  
   
--   Genügend Arbeitsspeicher hat in den großen Objektheap, sodass die nächste Collection der Generation 2 höher gestuft wurden.  
+-   Genügend Arbeitsspeicher wurde in den großen Objektheap heraufgestuft, um die nächste Generation 2-Garbage Collection auszulösen.  
   
--   Eine Auflistung der Generation 1 ist eine Auflistung der Generation 2 aufgrund anderer Faktoren eskaliert.  
+-   Eine Generation 1-Garbage Collection wird aufgrund anderer Faktoren zu einer Generation 2-Garbage Collection eskaliert.  
   
- Die Schwellenwerte, die Sie, in angeben der <xref:System.GC.RegisterForFullGCNotification%2A> Methode anwenden, um die ersten beiden Szenarien. Allerdings im ersten Szenario erhalten nicht immer Sie die Benachrichtigung über die Zeit, die proportional zu den Ihnen angegebenen Schwellenwerte für gibt es zwei Gründe:  
+ Die Schwellenwerte, die Sie in der <xref:System.GC.RegisterForFullGCNotification%2A>-Methode angeben, gelten für die ersten beiden Szenarien. Allerdings erhalten Sie im ersten Szenario die Benachrichtigung nicht immer genau dann, wenn die von Ihnen angegebenen Schwellenwerte auftreten. Dafür gibt es zwei Gründe:  
   
--   Die Common Language Runtime wird jede kleine objektzuordnung (zur Verbesserung der Leistung) nicht überprüft werden.  
+-   Die Runtime überprüft (leistungsbedingt) nicht jede kleine Objektzuordnung.  
   
--   Nur dann höher stufen Generation 1 Sammlungen Speicher in Generation 2.  
+-   Nur Generation 1-Garbage Collections stufen Arbeitsspeicher in Generation 2 herauf.  
   
- Das dritte Szenario trägt auch zur Ungewissheit wann die Benachrichtigung erhält. Obwohl dies keine Garantie dafür ist, beweist es werden eine gute Möglichkeit, die Auswirkungen einer ungünstigen vollständige Garbagecollection verringern, indem Sie die Anforderungen während dieser Zeit umleiten oder ratenbasierte die Auflistung selbst wenn es besser untergebracht werden kann.  
+ Das dritte Szenario trägt auch zur Ungewissheit bei, wann Sie die Benachrichtigung erhalten. Obwohl dies keine Garantie ist, ist es eine gute Möglichkeit, die Auswirkungen einer ungünstigen vollständigen Garbage Collection zu verringern, indem Sie die Anforderungen während dieser Zeit umleiten oder die Garbage Collection zu einem günstigeren Zeitpunkt selbst auslösen.  
   
-## <a name="notification-threshold-parameters"></a>Benachrichtigung Schwellenwert-Parameter  
- Die <xref:System.GC.RegisterForFullGCNotification%2A> -Methode verfügt über zwei Parameter, die Schwellenwerte der Objekte der Generation 2 und den großen Objektheap anzugeben. Wenn diese Werte erfüllt sind, sollte eine Garbage Collection-Benachrichtigung ausgelöst werden. In der folgenden Tabelle werden diese Parameter beschrieben.  
+## <a name="notification-threshold-parameters"></a>Schwellenwertparameter für die Benachrichtigung  
+ Die <xref:System.GC.RegisterForFullGCNotification%2A>-Methode verfügt über zwei Parameter zur Angabe der Schwellenwerte der Objekte der Generation 2 und des großen Objektheaps. Wenn diese Werte erfüllt sind, sollte eine Garbage Collection-Benachrichtigung ausgelöst werden. In der folgenden Tabelle werden diese Parameter beschrieben.  
   
-|Parameter|Beschreibung|  
+|Parameter|description|  
 |---------------|-----------------|  
-|`maxGenerationThreshold`|Eine Zahl zwischen 1 und 99, die angibt, wann die Benachrichtigung ausgelöst werden soll, basierend auf die Objekte in Generation 2 höher gestuft.|  
-|`largeObjectHeapThreshold`|Eine Zahl zwischen 1 und 99, die angibt, wann die Benachrichtigung ausgelöst werden soll, basierend auf den Objekten, die in den großen Objektheap zugeordnet sind.|  
+|`maxGenerationThreshold`|Eine Zahl zwischen 1 und 99, die auf der Grundlage der in Generation 2 heraufgestuften Objekte angibt, wann die Benachrichtigung ausgelöst werden soll.|  
+|`largeObjectHeapThreshold`|Eine Zahl zwischen 1 und 99, die auf der Grundlage der dem großen Objektheap zugeordneten Objekte angibt, wann die Benachrichtigung ausgelöst werden soll.|  
   
- Wenn Sie einen Wert, der zu hoch ist angeben, besteht eine hohe Wahrscheinlichkeit, dass Sie eine Benachrichtigung erhalten, aber möglicherweise zu langen Zeitraum warten, bevor die Laufzeit führt dazu, eine Auflistung dass. Wenn Sie eine Sammlung selbst auslösen, können Sie mehr Objekte als potenziell freigegeben werden würden, wenn die Laufzeit führt dazu, die Auflistung dass freigeben.  
+ Wenn Sie einen zu hohen Wert angeben, besteht eine hohe Wahrscheinlichkeit, dass Sie eine Benachrichtigung erhalten, aber die Wartezeit vor dem Auslösen der Garbage Collection durch die Runtime könnte zu lang sein. Wenn Sie eine Garbage Collection selbst auslösen, können Sie vielleicht mehr Objekte freigegeben, als wenn die Runtime die Garbage Collection auslösen würde.  
   
- Wenn Sie einen Wert, der zu niedrig ist angeben, verursachen die Laufzeit die Auflistung vor mussten Sie ausreichend lange, um benachrichtigt zu werden.  
+ Wenn Sie einen zu niedrigen Wert angeben, könnte die Runtime die Garbage Collection auslösen, bevor Sie benachrichtigt werden können.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Im folgenden Beispiel eine Gruppe von Servern-Dienst eingehende webanforderungen. Um die Arbeitslast der Verarbeitung von Anforderungen zu simulieren, Byte-Arrays hinzugefügt werden eine <xref:System.Collections.Generic.List%601> Auflistung. Jeder Server für eine Garbage Collection-Benachrichtigung registriert, und klicken Sie dann auf startet einen Thread der `WaitForFullGCProc` Benutzermethode überwachen kontinuierlich die <xref:System.GCNotificationStatus> -Enumeration, die von zurückgegeben wird die <xref:System.GC.WaitForFullGCApproach%2A> und die <xref:System.GC.WaitForFullGCComplete%2A> Methoden.  
+### <a name="description"></a>description  
+ Im folgenden Beispiel verarbeitet eine Gruppe von Servern eingehende Webanforderungen. Um die Workload der Verarbeitung von Anforderungen zu simulieren, werden Bytearrays einer <xref:System.Collections.Generic.List%601>-Sammlung hinzugefügt. Jeder Server wird für eine Garbage Collection-Benachrichtigung registriert und startet dann einen Thread auf der `WaitForFullGCProc`-Benutzermethode, um kontinuierlich die <xref:System.GCNotificationStatus> -Enumeration zu überwachen, die von der <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode zurückgegeben wird.  
   
- Die <xref:System.GC.WaitForFullGCApproach%2A> und <xref:System.GC.WaitForFullGCComplete%2A> Methoden aufrufen ihrer jeweiligen Benutzer Ereignisbehandlungsmethoden aus, wenn eine Benachrichtigung ausgelöst wird:  
+ Die <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode rufen ihre jeweiligen Benutzermethoden zur Ereignisbehandlung auf, wenn eine Benachrichtigung ausgelöst wird:  
   
 -   `OnFullGCApproachNotify`  
   
-     Diese Methode ruft die `RedirectRequests` Benutzermethode, den die Anforderung queuing-Server zum Senden von anhalten angewiesen wird, fordert für den Server. Dies wird durch Festlegen der Variablen auf Klassenebene simuliert `bAllocate` auf `false` so, dass keine weiteren Objekte zugewiesen werden.  
+     Diese Methode ruft die `RedirectRequests`-Benutzermethode auf, die den Server, der Anforderungen in die Warteschlange setzt, anweist, das Senden von Anforderungen an den Server anzuhalten. Dies wird durch Festlegen der Variablen auf Klassenebene `bAllocate` auf `false` simuliert, sodass keine weiteren Objekte zugewiesen werden.  
   
-     Als Nächstes wird die `FinishExistingRequests` Benutzermethode wird aufgerufen, um die ausstehende Serveranfragen Verarbeitung beenden. Dadurch wird simuliert, durch Deaktivieren der <xref:System.Collections.Generic.List%601> Auflistung.  
+     Als Nächstes wird die `FinishExistingRequests`-Benutzermethode aufgerufen, um die Verarbeitung der ausstehenden Serveranforderungen zu beenden. Dies wird durch Löschen der <xref:System.Collections.Generic.List%601>-Sammlung simuliert.  
   
-     Zum Schluss wird eine Garbagecollection ausgelöst, da die Arbeitslast gering ist.  
+     Zum Schluss wird eine Garbage Collection ausgelöst, da die Arbeitslast gering ist.  
   
 -   `OnFullGCCompleteNotify`  
   
-     Diese Methode ruft die Benutzermethode `AcceptRequests` Anforderungen akzeptieren, da der Server nicht mehr anfällig für eine vollständige Garbagecollection werden fortgesetzt. Dadurch wird simuliert, indem die `bAllocate` Variable `true` , damit der hinzuzufügenden Objekte fortgesetzt werden können die <xref:System.Collections.Generic.List%601> Auflistung.  
+     Diese Methode ruft die Benutzermethode `AcceptRequests` auf, um das Akzeptieren von Anforderungen fortzusetzen, da der Server nicht mehr für eine vollständige Garbage Collection anfällig ist. Diese Aktion wird durch Festlegung der `bAllocate`-Variablen auf `true` simuliert, sodass das Hinzufügen von Objekten zur <xref:System.Collections.Generic.List%601>-Sammlung fortgesetzt werden kann.  
   
- Der folgende Code enthält die `Main` Methode des Beispiels.  
+ Der folgende Code enthält die `Main`-Methode des Beispiels.  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- Der folgende Code enthält die `WaitForFullGCProc` Benutzermethode, die eine kontinuierliche while-Schleife zu suchende Garbage Collection-Benachrichtigungen enthält.  
+ Der folgende Code enthält die `WaitForFullGCProc`-Benutzermethode, die eine kontinuierliche while-Schleife zum Überprüfen auf Garbage Collection-Benachrichtigungen enthält.  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- Der folgende Code enthält die `OnFullGCApproachNotify` Methode, wie aus einem der  
+ Der folgende Code enthält die `OnFullGCApproachNotify`-Methode gemäß Aufruf durch die  
   
  `WaitForFullGCProc`-Methode.  
   
@@ -108,7 +112,7 @@ Es gibt Situationen, in denen eine vollständige Garbagecollection (d. h. eine C
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- Der folgende Code enthält die `OnFullGCApproachComplete` Methode, wie aus einem der  
+ Der folgende Code enthält die `OnFullGCApproachComplete`-Methode gemäß Aufruf durch die  
   
  `WaitForFullGCProc`-Methode.  
   
@@ -116,7 +120,7 @@ Es gibt Situationen, in denen eine vollständige Garbagecollection (d. h. eine C
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- Der folgende Code enthält die Benutzermethoden, die aufgerufen werden, aus der `OnFullGCApproachNotify` und `OnFullGCCompleteNotify` Methoden. Die Benutzermethoden an Anforderungen umgeleitet werden, vorhandene Anforderungen abgeschlossen und Anforderungen dann fortgesetzt, nachdem eine vollständige Garbagecollection aufgetreten ist.  
+ Der folgende Code enthält die Benutzermethoden, die durch die `OnFullGCApproachNotify`- und `OnFullGCCompleteNotify`-Methode aufgerufen werden. Die Benutzermethoden leiten Anforderungen um, schließen vorhandene Anforderungen ab und setzen dann Anforderungen fort, nachdem eine vollständige Garbage Collection aufgetreten ist.  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]

@@ -22,27 +22,30 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern bestehende benutzerdefinierte numerische Formatzeichenfolge erstellen, um anzugeben, wie numerische Daten formatiert werden sollen. Eine benutzerdefinierte numerische Formatzeichenfolge wird wie jede Formatzeichenfolge definiert, bei der es sich nicht um eine [standardmäßige numerische Formatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md)handelt.  
   
- Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch von der .NET unterstützt [Funktion für kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md), der von einigen verwendet wird `Write` und `WriteLine` Methoden die <xref:System.Console> und <xref:System.IO.StreamWriter> Klassen, die <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode, und die <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> Methode.  
+ Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch vom .NET-Feature für die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) unterstützt, die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird.  
   
 > [!TIP]
 >  Sie können das [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)herunterladen, eine Anwendung, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können.  
   
 <a name="table"></a> Die folgenden Tabelle beschreibt die benutzerdefinierten Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von benutzerdefinierten numerischen Formatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesCustomFormatting) . Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.  
   
-|Formatbezeichner|Name|Beschreibung|Beispiele|  
+|Formatbezeichner|name|description|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|0-Platzhalter|Ersetzt die Ziffer 0 ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird die Ziffer 0 in der Ergebniszeichenfolge angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Bezeichner "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Ziffernplatzhalter|Ersetzt das "#"-Symbol ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird keine Ziffer in der Ergebniszeichenfolge angezeigt.<br /><br /> Beachten Sie, dass keine Ziffer in der Ergebniszeichenfolge angezeigt wird, wenn die entsprechende Ziffer in der Eingabezeichenfolge eine nicht signifikante 0 ist. Zum Beispiel: 0003 ("####") -> 3.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Bezeichner "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -51,7 +54,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 |"%"|Prozentplatzhalter|Multipliziert eine Zahl mit 100 und fügt ein lokalisiertes Prozentsymbol in die Ergebniszeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Bezeichner "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|Promilleplatzhalter|Multipliziert eine Zahl mit 1000 und fügt ein lokalisiertes Promillesymbol in die Ergebniszeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Bezeichner "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Exponentialschreibweise|Formatiert das Ergebnis mit der Exponentialschreibweise, wenn mindestens einmal 0 (null) darauf folgt. Die Groß- oder Kleinschreibung ("E" oder "e") gibt die Schreibweise des Symbols für den Exponenten in der Ergebniszeichenfolge an. Die Anzahl der Nullen, die auf das Zeichen "E" oder auf das Zeichen "e" folgen, bestimmt die Mindestanzahl der Ziffern im Exponenten. Ein Pluszeichen (+) gibt an, dass dem Exponenten immer ein Vorzeichen vorausgeht. Ein Minuszeichen (-) gibt an, dass nur negativen Exponenten ein Vorzeichen vorausgeht.<br /><br /> Weitere Informationen finden Sie unter [Die benutzerdefinierten Bezeichner "E" und "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|Escapezeichen|Das Zeichen, das auf das Escapezeichen folgt, wird als Literal und nicht als benutzerdefinierter Formatbezeichner interpretiert.<br /><br /> Weitere Informationen: [der "\\" Escapezeichen](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
+|"\\"|Escapezeichen|Das Zeichen, das auf das Escapezeichen folgt, wird als Literal und nicht als benutzerdefinierter Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter [Das Escapezeichen „\\“](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
 |'*Zeichenfolge*'<br /><br /> "*Zeichenfolge*"|Zeichenfolgenliteraltrennzeichen|Gibt an, dass die eingeschlossenen Zeichen unverändert in die Ergebniszeichenfolge kopiert werden sollen.|68 ("# ' Grad'") -> 68 Grad<br /><br /> 68 ("#' Grad'") -> 68 Grad|  
 |;|Abschnittstrennzeichen|Definiert Abschnitte mit separaten Formatzeichenfolgen für positive und negative Zahlen sowie Nullen.<br /><br /> Weitere Informationen finden Sie unter [Das Abschnittstrennzeichen ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |Andere|Alle anderen Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.|68 ("# °") -> 68 °|  
@@ -171,7 +174,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>Die "\\" Escape-Zeichen  
+## <a name="the--escape-character"></a>Das Escapezeichen „\\“  
  Die Symbole "#", "0", ".", ",", "%" und "‰" in einer Formatzeichenfolge werden als Formatbezeichner und nicht als Literalzeichen interpretiert. Je nach Position in einer benutzerdefinierten Formatzeichenfolge können das Zeichen "E" bzw. "e" und die Symbole "+" und "-" auch als Formatbezeichner interpretiert werden.  
   
  Um zu verhindern, dass ein Zeichen als Formatbezeichner interpretiert wird, können Sie einen umgekehrten Schrägstrich als Escapezeichen voranstellen. Das Escapezeichen gibt an, dass das folgende Zeichen ein Zeichenliteral ist, das unverändert in der Ergebniszeichenfolge enthalten sein soll.  
@@ -181,7 +184,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 > [!NOTE]
 >  Einige Compiler, z. B. C++- und C#-Compiler, interpretieren möglicherweise auch einen einzelnen umgekehrten Schrägstrich als Escapezeichen. Um sicherzustellen, dass eine Zeichenfolge bei der Formatierung ordnungsgemäß interpretiert wird, können Sie der Zeichenfolge in C# das Literalzeichen für wörtliche Zeichenfolgen (@-Zeichen) voranstellen, oder Sie können jedem umgekehrten Schrägstrich in C# und C++ einen weiteren umgekehrten Schrägstrich voranstellen. Beide Verfahren werden im folgenden C#-Codebeispiel veranschaulicht.  
   
- Im folgende Beispiel verwendet der Escape-Zeichen, um zu verhindern, dass der Formatierungsvorgang das "#", "0" und "\\" Zeichen als Escapezeichen oder Formatbezeichner. In den C#-Beispielen wird ein zusätzlicher umgekehrter Schrägstrich verwendet, um sicherzustellen, dass ein umgekehrter Schrägstrich als Literalzeichen interpretiert wird.  
+ Im folgenden Beispiel wird das Escapezeichen verwendet, um zu verhindern, dass der Formatierungsvorgang die Zeichen „#“, „0“ und „\\“ als Escapezeichen oder als Formatspezifizierer interpretiert. In den C#-Beispielen wird ein zusätzlicher umgekehrter Schrägstrich verwendet, um sicherzustellen, dass ein umgekehrter Schrägstrich als Literalzeichen interpretiert wird.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -193,7 +196,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ## <a name="the--section-separator"></a>Das Abschnittstrennzeichen ";"  
  Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder 0 (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben.  
   
-|Anzahl der Abschnitte|Beschreibung|  
+|Anzahl der Abschnitte|description|  
 |------------------------|-----------------|  
 |Ein Abschnitt|Die Formatzeichenfolge gilt für alle Werte.|  
 |Zwei Abschnitte|Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte.<br /><br /> Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem ersten Abschnitt formatiert.|  
@@ -218,7 +221,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ### <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung  
  Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.NumberFormatInfo> -Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Diese wiederum stellt die Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.  
   
- Darüber hinaus, wenn Sie mithilfe der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor zum Instanziieren einer neuen <xref:System.Globalization.CultureInfo> -Objekt, das dieselbe Kultur aufweist wie die aktuelle Systemkultur, durch die Anpassungen darstellt, der **Regions- und Sprachoptionen** Element in der Systemsteuerung gelten für die neue <xref:System.Globalization.CultureInfo> Objekt. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
+ Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>Rundung bei Formatzeichenfolgen mit Festkomma  
  Bei Formatzeichenfolgen mit Festkomma (d. h. Formatzeichenfolgen, die keine Zeichen im wissenschaftlichen Notationsformat enthalten) werden die Zahlen auf die Anzahl von Dezimalstellen gerundet, die rechts neben dem Dezimaltrennzeichen als Ziffernplatzhalter vorhanden sind. Wenn die Formatzeichenfolge kein Dezimaltrennzeichen enthält, wird die Zahl auf die nächste ganze Zahl gerundet. Wenn die Zahl über mehr Ziffern verfügt, als Ziffernplatzhalter links neben dem Dezimaltrennzeichen stehen, werden die zusätzlichen Ziffern direkt vor dem ersten Ziffernplatzhalter in die Ergebniszeichenfolge kopiert.  

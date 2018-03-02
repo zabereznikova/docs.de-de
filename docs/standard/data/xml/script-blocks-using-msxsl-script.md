@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e127fb02725d11e62c45157b4e45327fc9f1ace
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="script-blocks-using-msxslscript"></a>Skriptblöcke, die "msxsl:script" verwenden
-Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete Skripts unter Verwendung des `msxsl:script`-Elements. Beim Laden des Stylesheets werden alle definierten Funktionen von CodeDOM (Code Document Object Model) in die Microsoft Intermediate Language (MSIL) kompiliert und zur Laufzeit ausgeführt. Die aus dem eingebetteten Skriptblock generierte Assembly und die für das Stylesheet generierte Assembly sind voneinander verschieden.  
+Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete Skripts unter Verwendung des `msxsl:script`-Elements. Beim Laden des Stylesheets werden alle definierten Funktionen von CodeDOM (Code Document Object Model) in die Microsoft Intermediate Language (MSIL) kompiliert und zur Laufzeit ausgeführt. Die aus dem eingebetteten Skriptblock generierte Assembly und die für das Stylesheet generierte Assembly sind voneinander verschieden.  
   
 ## <a name="enable-xslt-script"></a>Aktivieren von XSLT-Skript  
  Die Unterstützung für eingebettete Skripts ist eine optionale XSLT-Einstellung für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse. Die Skriptunterstützung ist in der Standardeinstellung deaktiviert. Sie können die Skriptunterstützung aktivieren, indem Sie ein <xref:System.Xml.Xsl.XsltSettings>-Objekt erstellen, bei dem die <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A>-Eigenschaft auf `true` festgelegt wurde, und das Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben.  
@@ -56,7 +59,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 ```  
   
 ## <a name="script-functions"></a>Skriptfunktionen  
- Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. 	Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, wird empfohlen, die korrekte Syntax für die verwendete Sprache einzuhalten. Verwenden Sie z. B. in einem Microsoft C#-Skriptblock die Kommentarsyntax von C#.  
+ Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, wird empfohlen, die korrekte Syntax für die verwendete Sprache einzuhalten. Verwenden Sie z. B. in einem Microsoft C#-Skriptblock die Kommentarsyntax von C#.  
   
  Die bereitgestellten Argumente und Rückgabewerte für die Funktion können einen beliebigen Typ aufweisen. Da die XPath-Typen des W3C eine Teilmenge der CLR-Typen (Common Language Runtime) sind, findet die Typkonvertierung für Typen statt, die nicht als XPath-Typen betrachtet werden. In der folgenden Tabelle werden die entsprechenden W3C-Typen und die äquivalenten CLR-Typen aufgelistet.  
   
@@ -68,7 +71,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- Numerische CLR-Typen werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator []** konvertiert <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Numerische CLR-Typen werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird konvertiert in <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Alle anderen Typen lösen einen Fehler aus.  
   

@@ -28,25 +28,28 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d813522d0aeb9bf37582c167760d44268df27039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher
-Code, der isolierten Speicherung verwendet durch eingeschränkt ist ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) , die gibt die maximale Größe für das Datendepot in der isolierten Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert. Wenn die maximal Größe überschritten wird zulässige, wenn Sie versuchen, Daten Schreiben einer <xref:System.IO.IsolatedStorage.IsolatedStorageException> Ausnahme wird ausgelöst, und der Vorgang fehlschlägt. Dies hilft, Denial-of-Service-Angriffe zu vermeiden, die verursachen könnte die Anwendung Anforderungen verweigern, da die Speicherung von Daten gefüllt ist.  
+Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.  
   
- Um zu ermitteln, ob ein bestimmter Versuch kommt es zu Verbindungsfehlern aus diesem Grund ist die <xref:System.IO.IsolatedStorage.IsolatedStorage> Klasse enthält drei schreibgeschützte Eigenschaften: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, und <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Sie können diese Eigenschaften verwenden, um zu bestimmen, ob das Schreiben in den Speicher die maximal zulässige Größe des Speichers, der überschritten werden soll. Denken Sie daran, die isolierte Speicher kann gleichzeitig zugegriffen werden. Deshalb, wenn Sie die verbleibenden Speichermenge berechnen, konnte der Speicherplatz nach der Zeit genutzt werden, die Sie versuchen, in den Speicher zu schreiben. Allerdings können Sie die maximale Größe des Speichers verwenden, um zu ermitteln, ob der obere Grenzwert für verfügbaren Speicher ist bald erreicht.  
+ Um Ihnen bei der Bestimmung zu helfen, ob bei einem bestimmten Schreibversuch wahrscheinlich aus diesem Grund ein Fehler auftritt, bietet die <xref:System.IO.IsolatedStorage.IsolatedStorage>-Klasse drei schreibgeschützte Eigenschaften: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> und <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Sie können diese Eigenschaften verwenden, um zu bestimmen, ob beim Schreiben in den Speicher die maximal zulässige Größe des Speichers überschritten wird. Berücksichtigen Sie, dass paralleler Zugriff auf isolierten Speicher möglich ist. Darum denken Sie beim Berechnen der verbleibenden Speichermenge daran, dass der Speicherplatz verbraucht sein könnte, wenn Sie versuchen, in den Speicher zu schreiben. Allerdings können Sie mithilfe der maximalen Größe des Speichers ermitteln, ob der obere Grenzwert verfügbaren Speichers bald erreicht ist.  
   
- Die <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Eigenschaft hängt Beweis aus der Assembly ordnungsgemäß funktioniert. Aus diesem Grund sollten Sie diese Eigenschaft nur auf abrufen <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Objekte, die erstellt wurden die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, oder <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> Methode. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>Objekte, die auf andere Weise erstellt wurden (z. B. Objekte, die von zurückgegeben wurden die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> Methode) keine genaue maximale Größe zurück.  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>-Eigenschaft hängt von dem Beweis ab, dass die Assembly ordnungsgemäß funktioniert. Aus diesem Grund sollten Sie diese Eigenschaft nur bei <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Objekten abrufen, die mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>-, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>- oder <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>-Methode erstellt wurden. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Objekte, die auf andere Weise erstellt wurden (z.B. Objekte, die von der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A>-Methode zurückgegeben wurden), geben keine genaue maximale Größe zurück.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird ein isolierter Speicher abgerufen, einige Dateien erstellt und ruft die <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> Eigenschaft. Der verbleibende Speicherplatz wird in Bytes angegeben.  
+ Im folgenden Codebeispiel werden ein isolierter Speicher abgerufen, einige Dateien erstellt und die <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>-Eigenschaft abgerufen. Der verbleibende Speicherplatz wird in Bytes angegeben.  
   
  [!code-cpp[Conceptual.IsolatedStorage#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source7.cpp#8)]
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]

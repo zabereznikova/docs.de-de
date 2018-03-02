@@ -1,7 +1,6 @@
 ---
-title: "Schnellstart – Sammlungen – C#-Handbuch"
-description: Lernen Sie C#, indem Sie die Listensammlung in diesem Schnellstart erforschen.
-keywords: C#, Erste Schritte, Tutorial, Sammlungen, Liste
+title: "Tutorial „Auflistungen in C#“: Lokale C#-Schnellstarts"
+description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>C#-Schnellstart: Sammlungen #
+# <a name="c-quickstart-collections"></a>C#-Schnellstart: Auflistungen
 
 Dieser Schnellstart bietet eine Einführung zur C#-Sprache und den Grundlagen der <xref:System.Collections.Generic.List%601>-Klasse.
 
-Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in den [Schnellstarts mit der Einführung zu lokalen Umgebungen](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
+Für diesen Schnellstart wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie in der [Einführung zu lokalen Schnellstarts](local-environment.md), die Links mit weiteren Einzelheiten enthalten.
 
 ## <a name="a-basic-list-example"></a>Beispiel für eine einfache Liste
 
@@ -28,7 +27,7 @@ Erstellen Sie ein Verzeichnis mit dem Namen **list-quickstart**. Machen Sie dies
 
 > [!NOTE]
 > Wenn Sie gerade [Erste Schritte mit .NET in 10 Minuten](https://www.microsoft.com/net) abgeschlossen haben, können Sie die gerade erstellte myApp-Anwendung weiterhin verwenden.
- 
+
 Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie den vorhandenen Code durch Folgendes:
 
 ```csharp
@@ -53,16 +52,16 @@ namespace list_quickstart
 
 Ersetzen Sie `<name>` durch Ihren eigenen Namen. Speichern Sie **Program.cs**. Geben Sie `dotnet run` in Ihrem Konsolenfenster ein, um es zu testen.
 
-Sie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Schnellstarts gelernt haben, um die Liste zu durchlaufen.
+Sie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Schnellstarts kennengelernt haben, um die Liste zu durchlaufen.
 
 Der Code zum Anzeigen von Namen nutzt **interpolierte Zeichenfolgen**.  Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A>-Methode aufgerufen haben.
 
 Setzen wir nun unsere Forschungen fort.
-    
+
 ## <a name="modify-list-contents"></a>Ändern von Listeninhalten
 
 Die Sammlung, die Sie erstellt haben, nutzt den <xref:System.Collections.Generic.List%601>-Typ. Dieser Typ speichert Elementsequenzen. Sie geben den Typ der Elemente zwischen den spitzen Klammern an.
-    
+
 Ein wichtiger Aspekt dieses <xref:System.Collections.Generic.List%601>-Typs ist, dass er wachsen oder schrumpfen kann, sodass Sie Elemente hinzufügen oder entfernen können. Fügen Sie diesen Code vor der abschließenden `}` in die `Main`-Methode ein:
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 Sie haben am Ende der Liste zwei weitere Namen hinzugefügt. Sie haben auch einen entfernt. Speichern Sie die Datei, und geben Sie `dotnet run` zum Testen ein.
-    
+
 <xref:System.Collections.Generic.List%601> ermöglicht Ihnen auch, mithilfe des **Indexes** auf einzelne Elemente zu verweisen. Platzieren Sie den Index hinter dem Listennamen zwischen den Zeichen `[` und `]`. C# verwendet 0 für den ersten Index. Fügen Sie diesen Code direkt unterhalb des Codes hinzu, den Sie gerade hinzugefügt haben, und probieren Sie es aus:
 
 ```csharp
@@ -91,9 +90,10 @@ Sie können nicht auf einen Index zugreifen, der hinter dem Ende der Liste liegt
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Speichern Sie die Datei, und geben Sie `dotnet run` erneut ein, um die Ergebnisse anzuzeigen.    
+Speichern Sie die Datei, und geben Sie `dotnet run` erneut ein, um die Ergebnisse anzuzeigen.
 
 ## <a name="search-and-sort-lists"></a>Suchen in und Sortieren von Listen
+
 In unseren Beispielen werden relativ kleine Listen verwendet, aber Ihre Anwendungen erstellen möglicherweise häufig Listen mit viel mehr Elementen, die manchmal in die Tausende gehen. Um in diesen größeren Sammlungen Elemente zu finden, müssen Sie die Liste nach verschiedenen Elementen durchsuchen. Die <xref:System.Collections.Generic.List%601.IndexOf%2A>-Methode sucht nach einem Element und gibt den Index des Elements zurück. Fügen Sie diesen Code am Ende der `Main`-Methode hinzu:
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>Listen mit anderen Typen
 
-Sie haben bisher den `string`-Typ in Listen verwendet. Nun erstellen wir eine <xref:System.Collections.Generic.List%601> mithilfe eines anderen Typs. Zunächst erstellen wir einen Satz von Zahlen. 
+Sie haben bisher den `string`-Typ in Listen verwendet. Nun erstellen wir eine <xref:System.Collections.Generic.List%601> mithilfe eines anderen Typs. Zunächst erstellen wir einen Satz von Zahlen.
 
 Fügen Sie Folgendes am Ende Ihrer neuen `Main`-Methode hinzu:
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Speichern Sie die Datei, und geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen. 
+Speichern Sie die Datei, und geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
 > [!TIP]
-> Um sich genau auf diesen Abschnitt zu konzentrieren, können Sie den Code auskommentieren, der `WorkingWithStrings();` aufruft. Setzen Sie einfach zwei `/`-Zeichen wie folgt vor den Aufruf: `// WorkingWithStrings();`. 
+> Um sich genau auf diesen Abschnitt zu konzentrieren, können Sie den Code auskommentieren, der `WorkingWithStrings();` aufruft. Setzen Sie einfach zwei `/`-Zeichen wie folgt vor den Aufruf: `// WorkingWithStrings();`.
 
 ## <a name="challenge"></a>Herausforderung
+
 Versuchen Sie, einige dieser Konzepte aus dieser Lektion und früheren Lektionen in einen Zusammenhang zu bringen. Erweitern Sie das, was Sie bisher bezüglich Fibonacci-Zahlen erstellt haben. Schreiben Sie den Code zum Generieren der ersten 20 Zahlen der Sequenz. (Hinweis: Die 20. Fibonacci-Zahl lautet 6765.)
 
 ## <a name="complete-challenge"></a>Übung abgeschlossen

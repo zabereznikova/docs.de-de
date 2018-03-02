@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
@@ -67,14 +70,14 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
 ## <a name="managing-namespaces"></a>Verwalten von Namespaces  
  In der <xref:System.Xml.XmlNamespaceManager>-Klasse wird eine Sammlung von Namespace-URIs und ihrer Präfixe gespeichert. Sie können Namespaces in der Sammlung suchen, hinzufügen und entfernen. In bestimmten Kontexten ist die Klasse erforderlich, um die XML-Verarbeitungsleistung zu verbessern. So wird <xref:System.Xml.Xsl.XsltContext> von der <xref:System.Xml.XmlNamespaceManager>-Klasse verwendet, um XPath-Unterstützung bereitzustellen.  
   
- Der Namespace-Manager führt keine Validierung der Namespaces, sondern setzt voraus, dass Präfixe und Namespaces bereits überprüft wurden und entsprechen dem [W3C-Namespaces](http://www.w3.org/TR/REC-xml-names/) Spezifikation.  
+ Der Namespace-Manager führt keine Validierung der Namespaces durch, sondern setzt voraus, dass Präfixe und Namespaces bereits überprüft wurden und der [W3C](http://www.w3.org/TR/REC-xml-names/)-Spezifikation für Namespaces entsprechen.  
   
 > [!NOTE]
->  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) verwendet keine <xref:System.Xml.XmlNamespaceManager> Namespaces zu verwalten. Finden Sie unter [arbeiten mit XML-Namespaces](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) in der LINQ-Dokumentation Informationen zum Verwalten von Namespaces bei Verwendung von LINQ to XML.  
+>  <xref:System.Xml.XmlNamespaceManager> wird von [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) nicht zur Verwaltung von Namespaces verwendet. Informationen zur Verwaltung von Namespaces bei der Verwendung von LINQ to XML finden Sie in der LINQ-Dokumentation unter [Arbeiten mit XML-Namespaces](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430).  
   
  Im Folgenden finden Sie einige der Verwaltungs- und Suchaufgaben, die Sie mit der <xref:System.Xml.XmlNamespaceManager>-Klasse ausführen können. Weitere Informationen und Beispiele finden Sie, indem Sie den Links zur Referenzseite der einzelnen Methoden oder Eigenschaften folgen.  
   
-|So wird's gemacht|Verwendung|  
+|Beschreibung|Mit|  
 |--------|---------|  
 |Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>-Methode|  
 |Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>-Methode|  

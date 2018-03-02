@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7af29acd33ff3909f0d82e3ef7f7027dc5e44aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XSD-Validierung (XML Schema) mit „XmlSchemaCollection“
 Mit der <xref:System.Xml.Schema.XmlSchemaCollection> können XML-Dokumente anhand von XSD-Schemata (XML Schema Definition Language) validiert werden. Die <xref:System.Xml.Schema.XmlSchemaCollection> verbessert die Leistung, indem die Schemata in der Auflistung gespeichert werden, sodass sie nicht bei jeder Validierung erneut in den Speicher geladen werden müssen. Wenn das Schema in der Auflistung der Schemata enthalten ist, wird es mithilfe des `schemaLocation`-Attributs in der Auflistung gesucht.  
   
 > [!IMPORTANT]
->  Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zu den <xref:System.Xml.Schema.XmlSchemaSet> Klasse finden Sie unter ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  Im folgenden Beispiel wird das Stammelement der Datendatei veranschaulicht.  
   
@@ -219,4 +222,4 @@ while(vr.Read()) {
  <xref:System.Xml.XmlParserContext>  
  <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
  <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [Schemakompilierung mit "XmlSchemaCollection"](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+ [Schemakompilierung mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -11,20 +11,24 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, how to wrap EAP patterns
+helpviewer_keywords:
+- tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ae9d90c9bb3d0e8d315cbef510cdfe1b54e66da4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e451c3ce8bb50cb17da7fef25ae0317bcb82c3e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Gewusst wie: Umschließen von EAP-Mustern in einer Aufgabe
-Im folgende Beispiel wird gezeigt, wie eine beliebige Abfolge von Vorgängen für das ereignisbasierte asynchrone Muster (EAP) als eine Aufgabe mit verfügbar machen eine <xref:System.Threading.Tasks.TaskCompletionSource%601>. Außerdem wird gezeigt, wie eine <xref:System.Threading.CancellationToken> für die integrierte Abbruchmethoden aufgerufen werden soll die <xref:System.Net.WebClient> Objekte.  
+Das folgende Beispiel zeigt, wie eine beliebige Abfolge von Vorgängen des ereignisbasierten asynchronen Musters (Event-Based Asynchronous Pattern, EAP) mithilfe einer <xref:System.Threading.Tasks.TaskCompletionSource%601> als einzelne Aufgabe verfügbar gemacht wird. Das Beispiel zeigt auch, wie eine <xref:System.Threading.CancellationToken> zum Aufrufen der integrierten Abbruchmethoden für die <xref:System.Net.WebClient>-Objekte aufgerufen wird.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]
