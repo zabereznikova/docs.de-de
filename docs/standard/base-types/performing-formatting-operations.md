@@ -16,34 +16,37 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f09232080bb5c9aae4902dfc33b638bde82474c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a78c1caac318a19028472a2e4f6e8964f99abfba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="performing-formatting-operations"></a><span data-ttu-id="7aef5-102">Durchführen von Formatierungsvorgängen</span><span class="sxs-lookup"><span data-stu-id="7aef5-102">Performing Formatting Operations</span></span>
-<span data-ttu-id="7aef5-103">Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen zum Ausführen bestimmter Formatierungsvorgänge.</span><span class="sxs-lookup"><span data-stu-id="7aef5-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  
+# <a name="performing-formatting-operations"></a><span data-ttu-id="39f8a-102">Durchführen von Formatierungsvorgängen</span><span class="sxs-lookup"><span data-stu-id="39f8a-102">Performing Formatting Operations</span></span>
+<span data-ttu-id="39f8a-103">Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen zum Ausführen bestimmter Formatierungsvorgänge.</span><span class="sxs-lookup"><span data-stu-id="39f8a-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  
   
--   [<span data-ttu-id="7aef5-104">Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen</span><span class="sxs-lookup"><span data-stu-id="7aef5-104">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+-   [<span data-ttu-id="39f8a-104">Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen</span><span class="sxs-lookup"><span data-stu-id="39f8a-104">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
--   [<span data-ttu-id="7aef5-105">Vorgehensweise: Definieren und Verwenden von benutzerdefinierten Zahlenformatanbietern</span><span class="sxs-lookup"><span data-stu-id="7aef5-105">How to: Define and Use Custom Numeric Format Providers</span></span>](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+-   [<span data-ttu-id="39f8a-105">Vorgehensweise: Definieren und Verwenden von benutzerdefinierten Zahlenformatanbietern</span><span class="sxs-lookup"><span data-stu-id="39f8a-105">How to: Define and Use Custom Numeric Format Providers</span></span>](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
--   [<span data-ttu-id="7aef5-106">Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen</span><span class="sxs-lookup"><span data-stu-id="7aef5-106">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+-   [<span data-ttu-id="39f8a-106">Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen</span><span class="sxs-lookup"><span data-stu-id="39f8a-106">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   <span data-ttu-id="7aef5-107">[Vorgehensweise: Extrahieren Sie den Tag der Woche aus einem bestimmten Datum](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span><span class="sxs-lookup"><span data-stu-id="7aef5-107">[How to: Extract the Day of the Week from a Specific Date](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span></span>  
+-   <span data-ttu-id="39f8a-107">[Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)</span><span class="sxs-lookup"><span data-stu-id="39f8a-107">[How to: Extract the Day of the Week from a Specific Date](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span></span>  
   
--   [<span data-ttu-id="7aef5-108">Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte</span><span class="sxs-lookup"><span data-stu-id="7aef5-108">How to: Round-trip Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+-   [<span data-ttu-id="39f8a-108">Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte</span><span class="sxs-lookup"><span data-stu-id="39f8a-108">How to: Round-trip Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
--   [<span data-ttu-id="7aef5-109">Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer</span><span class="sxs-lookup"><span data-stu-id="7aef5-109">How to: Display Localized Date and Time Information to Web Users</span></span>](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+-   [<span data-ttu-id="39f8a-109">Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer</span><span class="sxs-lookup"><span data-stu-id="39f8a-109">How to: Display Localized Date and Time Information to Web Users</span></span>](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
--   [<span data-ttu-id="7aef5-110">Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="7aef5-110">How to: Display Milliseconds in Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+-   [<span data-ttu-id="39f8a-110">Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="39f8a-110">How to: Display Milliseconds in Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   
--   [<span data-ttu-id="7aef5-111">Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern</span><span class="sxs-lookup"><span data-stu-id="7aef5-111">How to: Display Dates in Non-Gregorian Calendars</span></span>](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+-   [<span data-ttu-id="39f8a-111">Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern</span><span class="sxs-lookup"><span data-stu-id="39f8a-111">How to: Display Dates in Non-Gregorian Calendars</span></span>](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7aef5-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7aef5-112">See Also</span></span>  
- [<span data-ttu-id="7aef5-113">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="7aef5-113">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="39f8a-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="39f8a-112">See Also</span></span>  
+ [<span data-ttu-id="39f8a-113">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="39f8a-113">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)

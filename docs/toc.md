@@ -9,7 +9,6 @@
 ### [Neuerungen in .NET Standard](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [Zielframeworks](standard/frameworks.md)
 ## [.NET-Glossar](standard/glossary.md)
-## [Erstellen von Dokumentation mit mdoc](standard/mdoc/index.md)
 ## [Architekturleitfaden](standard/guidance-architecture.md)
 ### [Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Azure](standard/modern-web-apps-azure-architecture/)
 ### [Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [Übersicht über die Klassenbibliothek](standard/class-library-overview.md)
 ### [Basistypen](standard/base-types/)
 ## [.NET-Klassenbibliotheken](standard/class-libraries.md)
-## Analyzer
+## [Analyzer](standard/analyzers/index.md)
 ### [API Analyzer](standard/analyzers/api-analyzer.md) 
 ### [Portability Analyzer](standard/analyzers/portability-analyzer.md)
+### [Framework Analyzer](standard/analyzers/framework-analyzer.md)
 ## [Behandeln und Auslösen von Ausnahmen](standard/exceptions/)
 ## [.NET-Assemblydateiformat](standard/assembly-format.md)
 ## [Garbage Collection](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [Vorgehensweise zum Analysieren von Zeichenfolgen mithilfe von `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Verketten von Zeichenfolgen](csharp/how-to/concatenate-multiple-strings.md)
 ### [Gewusst wie konvertieren einer Zeichenfolge in einen DateTime-Wert](standard/base-types/parsing-datetime.md)
+### [Suchen von Zeichenfolgen](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform-SDK (Roslyn APIs)](csharp/roslyn-sdk/)
 ## [C#-Programmierhandbuch](csharp/programming-guide/)

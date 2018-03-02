@@ -1,0 +1,117 @@
+---
+title: .NET API-Analysetool
+description: "Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs und Kompatibilitätsprobleme bei Plattformen erkennen können."
+author: oliag
+ms.author: mairaw
+ms.date: 01/30/2018
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.openlocfilehash: 81ab7e32b2af6048d822243226f1054ebd1ca419
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/01/2018
+---
+# <a name="net-api-analyzer"></a><span data-ttu-id="7b10e-103">.NET API-Analysetool</span><span class="sxs-lookup"><span data-stu-id="7b10e-103">.NET API analyzer</span></span>
+
+<span data-ttu-id="7b10e-104">Das .NET API-Analysetool ist ein Roslyn-Analysetool, das potenzielle Kompatibilitätsrisiken für C#-APIs auf verschiedenen Plattformen erkennt und Aufrufe zu veralteten APIs ermittelt.</span><span class="sxs-lookup"><span data-stu-id="7b10e-104">The .NET API Analyzer is a Roslyn analyzer that discovers potential compatibility risks for C# APIs on different platforms and detects calls to deprecated APIs.</span></span> <span data-ttu-id="7b10e-105">Für alle C#-Entwickler kann dieses Tool in jeder Entwicklungsphase nützlich sein.</span><span class="sxs-lookup"><span data-stu-id="7b10e-105">It can be useful for all C# developers at any stage of development.</span></span>
+
+<span data-ttu-id="7b10e-106">Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7b10e-106">API Analyzer comes as a NuGet package [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/).</span></span> <span data-ttu-id="7b10e-107">Nachdem Sie es in einem Projekt referenziert haben, überwacht es automatisch den Code und zeigt Probleme bei der API-Nutzung auf.</span><span class="sxs-lookup"><span data-stu-id="7b10e-107">After you reference it in a project, it automatically monitors the code and indicates problematic API usage.</span></span> <span data-ttu-id="7b10e-108">Zudem erhalten Sie Vorschläge zu möglichen Fehlerbehebungen, wenn Sie auf die Glühbirne klicken.</span><span class="sxs-lookup"><span data-stu-id="7b10e-108">You can also get suggestions on possible fixes by clicking on the light bulb.</span></span> <span data-ttu-id="7b10e-109">Die Warnungen lassen sich jedoch auch über eine Option im Dropdownmenü deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="7b10e-109">The drop-down menu includes an option to suppress the warnings.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="7b10e-110">Beim .NET API-Analysetool handelt es sich um eine Vorabversion.</span><span class="sxs-lookup"><span data-stu-id="7b10e-110">The .NET API analyzer is still a pre-release version.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="7b10e-111">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="7b10e-111">Prerequisites</span></span>
+
+* <span data-ttu-id="7b10e-112">Visual Studio 2017 oder Visual Studio für Mac (alle Versionen)</span><span class="sxs-lookup"><span data-stu-id="7b10e-112">Visual Studio 2017 or Visual Studio for Mac (all versions).</span></span>
+
+## <a name="discovering-deprecated-apis"></a><span data-ttu-id="7b10e-113">Ermittlung von veralteten APIs</span><span class="sxs-lookup"><span data-stu-id="7b10e-113">Discovering deprecated APIs</span></span>
+
+### <a name="what-are-deprecated-apis"></a><span data-ttu-id="7b10e-114">Was sind veraltete APIs?</span><span class="sxs-lookup"><span data-stu-id="7b10e-114">What are deprecated APIs?</span></span>
+
+<span data-ttu-id="7b10e-115">Die .NET-Familie besteht aus einer Reihe großer Produkte, die ständig aktualisiert werden, um den Kundenbedürfnissen besser gerecht zu werden.</span><span class="sxs-lookup"><span data-stu-id="7b10e-115">The .NET family is a set of large products that are constantly upgraded to better serve customer needs.</span></span> <span data-ttu-id="7b10e-116">Es ist dabei üblich, einige APIs als veraltet zu kennzeichnen und durch neue zu ersetzen.</span><span class="sxs-lookup"><span data-stu-id="7b10e-116">It's natural to deprecate some APIs and replace them with new ones.</span></span> <span data-ttu-id="7b10e-117">Eine API gilt als veraltet, sobald es eine bessere Alternative gibt.</span><span class="sxs-lookup"><span data-stu-id="7b10e-117">An API is considered deprecated when a better alternative exists.</span></span> <span data-ttu-id="7b10e-118">Eine Möglichkeit, darüber zu informieren, dass eine API veraltet ist und nicht mehr verwendet werden sollte, ist die Kennzeichnung der API mit dem Attribut <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7b10e-118">One way to inform that an API is deprecated and shouldn't be used is to mark it with the <xref:System.ObsoleteAttribute> attribute.</span></span> <span data-ttu-id="7b10e-119">Der Nachteil dieses Ansatzes ist, dass es nur eine Diagnose-ID für alle veralteten APIs gibt (für C#, [CS0612](../../csharp/misc/cs0612.md)).</span><span class="sxs-lookup"><span data-stu-id="7b10e-119">The disadvantage of this approach is that there is only one diagnostic ID for all obsolete APIs (for C#, [CS0612](../../csharp/misc/cs0612.md)).</span></span> <span data-ttu-id="7b10e-120">Dies bedeutet Folgendes:</span><span class="sxs-lookup"><span data-stu-id="7b10e-120">This means that:</span></span>
+- <span data-ttu-id="7b10e-121">Es ist unmöglich, über dedizierte Dokumente für jeden Fall zu verfügen.</span><span class="sxs-lookup"><span data-stu-id="7b10e-121">It's impossible to have dedicated documents for each case.</span></span>
+- <span data-ttu-id="7b10e-122">Eine bestimmte Kategorie von Warnungen kann nicht unterdrückt werden.</span><span class="sxs-lookup"><span data-stu-id="7b10e-122">It's impossible to suppress certain category of warnings.</span></span> <span data-ttu-id="7b10e-123">Sie können entweder alle oder keine unterdrücken.</span><span class="sxs-lookup"><span data-stu-id="7b10e-123">You can suppress either all or none of them.</span></span>
+- <span data-ttu-id="7b10e-124">Damit Benutzer darüber informiert werden, dass eine API veraltet ist, muss eine referenzierte Assembly oder ein Zielpaket aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="7b10e-124">To inform users of a new deprecation, a referenced assembly or targeting package has to be updated.</span></span>
+
+<span data-ttu-id="7b10e-125">Das API-Analysetool verwendet API-spezifische Fehlercodes, die mit DE beginnen (welches für „Deprecation Error“ steht), über die die Anzeige einzelner Warnungen gesteuert werden können.</span><span class="sxs-lookup"><span data-stu-id="7b10e-125">The API Analyzer uses API-specific error codes that begin with DE (which stands for Deprecation Error), which allows control over the display of individual warnings.</span></span> <span data-ttu-id="7b10e-126">Die veralteten APIs, die vom Analysetool identifiziert werden, sind im Repository [Dotnet/Platform-Compat](https://github.com/dotnet/platform-compat) definiert.</span><span class="sxs-lookup"><span data-stu-id="7b10e-126">The deprecated APIs identified by the analyzer are defined in the [dotnet/platform-compat](https://github.com/dotnet/platform-compat) repo.</span></span>
+
+### <a name="using-the-api-analyzer"></a><span data-ttu-id="7b10e-127">Verwendung des API-Analysetools</span><span class="sxs-lookup"><span data-stu-id="7b10e-127">Using the API Analyzer</span></span>
+
+<span data-ttu-id="7b10e-128">Wenn eine veraltete API, z.B. <xref:System.Net.WebClient>, in einem Code verwendet wird, hebt das API-Analysetool diese durch eine grüne Wellenlinie hervor.</span><span class="sxs-lookup"><span data-stu-id="7b10e-128">When a deprecated API, such as <xref:System.Net.WebClient>, is used in a code, API Analyzer highlights it with a green squiggly line.</span></span> <span data-ttu-id="7b10e-129">Wenn Sie mit der Maus auf den API-Aufruf zeigen, wird eine Glühbirne mit Informationen über die veraltete API angezeigt, wie in folgendem Beispiel zu sehen:</span><span class="sxs-lookup"><span data-stu-id="7b10e-129">When you hover over the API call, a light bulb is displayed with information about the API deprecation, as in the following example:</span></span>
+
+![„Screenshot der WebClient-API mit grüner Wellenlinie und Glühbirne auf der linken Seite“](media/api-analyzer/green-squiggle.jpg)
+
+<span data-ttu-id="7b10e-131">Das Fenster **Fehlerliste** enthält Warnungen mit einer eindeutigen ID pro veralteter API, wie in folgendem Beispiel (`DE004`) gezeigt:</span><span class="sxs-lookup"><span data-stu-id="7b10e-131">The **Error List** window contains warnings with a unique ID per deprecated API, as shown in the following example (`DE004`):</span></span> 
+
+![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings.jpg)
+
+<span data-ttu-id="7b10e-133">Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten Informationen darüber, warum die API veraltet ist, und mit Vorschlägen zu alternativen APIs, die verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="7b10e-133">By clicking on the ID, you go to a webpage with detailed information about why the API was deprecated and suggestions regarding alternative APIs that can be used.</span></span>
+
+<span data-ttu-id="7b10e-134">Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf das markierte Element klicken und die Option **\<Diagnose-ID> unterdrücken** wählen.</span><span class="sxs-lookup"><span data-stu-id="7b10e-134">Any warnings can be suppressed by right-clicking on the highlighted member and selecting **Suppress \<diagnostic ID>**.</span></span> <span data-ttu-id="7b10e-135">Es gibt zwei Möglichkeiten, Warnungen zu unterdrücken:</span><span class="sxs-lookup"><span data-stu-id="7b10e-135">There are two ways to suppress warnings:</span></span> 
+
+* [<span data-ttu-id="7b10e-136">lokal (in der Quelle)</span><span class="sxs-lookup"><span data-stu-id="7b10e-136">locally (in source)</span></span>](#suppressing-warnings-locally)
+* <span data-ttu-id="7b10e-137">[global (in einer Unterdrückungsdatei)](#suppressing-warnings-globally) – empfohlen</span><span class="sxs-lookup"><span data-stu-id="7b10e-137">[globally (in a suppression file)](#suppressing-warnings-globally) - recommended</span></span>
+
+### <a name="suppressing-warnings-locally"></a><span data-ttu-id="7b10e-138">Lokales Unterdrücken von Warnungen</span><span class="sxs-lookup"><span data-stu-id="7b10e-138">Suppressing warnings locally</span></span>
+
+<span data-ttu-id="7b10e-139">Um Warnungen lokal zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** > ***Diagnose-ID* unterdrücken\<Diagnose-ID >** > **in Quelle**.</span><span class="sxs-lookup"><span data-stu-id="7b10e-139">To suppress warnings locally, right-click on the member you want to suppress warnings for and then select **Quick Actions and Refactorings** > **Suppress *diagnostic ID*\<diagnostic ID>** > **in Source**.</span></span> <span data-ttu-id="7b10e-140">Die Warnungspräprozessoranweisung [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) wird Ihrem Quellcode im definierten Bereich hinzugefügt: ![„Screenshot von Code, eingeschlossen durch #pragma warning disable“](media/api-analyzer/suppress-in-source.jpg)</span><span class="sxs-lookup"><span data-stu-id="7b10e-140">The [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) warning preprocessor directive is added to your source code in the scope defined: !["Screenshot of code framed with #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)</span></span>
+
+### <a name="suppressing-warnings-globally"></a><span data-ttu-id="7b10e-141">Globales Unterdrücken von Warnungen</span><span class="sxs-lookup"><span data-stu-id="7b10e-141">Suppressing warnings globally</span></span>
+
+<span data-ttu-id="7b10e-142">Um Warnungen global zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** > ***Diagnose-ID* unterdrücken\<Diagnose-ID >** > **in Unterdrückungsdatei**.</span><span class="sxs-lookup"><span data-stu-id="7b10e-142">To suppress warnings globally, right-click on the member you want to suppress warnings for and then select **Quick Actions and Refactorings** > **Suppress *diagnostic ID*\<diagnostic ID>** > **in Suppression File**.</span></span>
+
+![„Screenshot der WebClient-API mit grüner Wellenlinie und Glühbirne auf der linken Seite“](media/api-analyzer/suppress-in-sup-file.jpg)
+
+<span data-ttu-id="7b10e-144">Die Datei *GlobalSuppressions.cs* wird nach der ersten Unterdrückung zu Ihrem Projekt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="7b10e-144">A *GlobalSuppressions.cs* file is added to your project after the first suppression.</span></span> <span data-ttu-id="7b10e-145">Neue globale Unterdrückungen werden an diese Datei angefügt.</span><span class="sxs-lookup"><span data-stu-id="7b10e-145">New global suppressions are appended to this file.</span></span>
+
+![„Screenshot der WebClient-API mit grüner Wellenlinie und Glühbirne auf der linken Seite“](media/api-analyzer/suppression-file.jpg)
+
+<span data-ttu-id="7b10e-147">Eine globale Unterdrückung ist die empfohlene Methode, um projektübergreifende Konsistenz bei der Verwendung von APIs sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="7b10e-147">Global suppression is the recommended way to ensure consistency of API usage across projects.</span></span>
+
+## <a name="discovering-cross-platform-issues"></a><span data-ttu-id="7b10e-148">Ermittlung plattformübergeifender Probleme</span><span class="sxs-lookup"><span data-stu-id="7b10e-148">Discovering cross-platform issues</span></span>
+
+<span data-ttu-id="7b10e-149">Ähnlich wie bei den veralteten APIs identifiziert das Analysetool alle APIs, die nicht plattformübergeifend sind.</span><span class="sxs-lookup"><span data-stu-id="7b10e-149">Similar to deprecated APIs, the analyzer identifies all APIs that are not cross-platform.</span></span> <span data-ttu-id="7b10e-150">Beispielsweise funktioniert <xref:System.Console.WindowWidth?displayProperty=nameWithType> unter Windows, jedoch nicht unter Linux oder macOS.</span><span class="sxs-lookup"><span data-stu-id="7b10e-150">For example, <xref:System.Console.WindowWidth?displayProperty=nameWithType> works on Windows but not on Linux and macOS.</span></span> <span data-ttu-id="7b10e-151">Die Diagnose-ID wird im Fenster **Fehlerliste** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7b10e-151">The diagnostic ID is shown in the **Error List** window.</span></span> <span data-ttu-id="7b10e-152">Sie können die Warnung unterdrücken, indem Sie mit der rechten Maustaste darauf klicken und **Schnellaktionen und Refactorings** wählen.</span><span class="sxs-lookup"><span data-stu-id="7b10e-152">You can suppress that warning by right-clicking and selecting **Quick Actions and Refactorings**.</span></span> <span data-ttu-id="7b10e-153">Dabei verhält es sich anders als in Fällen veralteter APIs, bei denen Sie zwei Möglichkeiten haben (entweder das veraltete Element weiterhin zu verwenden und Warnungen zu unterdrücken oder es gar nicht zu verwenden). Hier können Sie, wenn Sie Ihren Code nur für bestimmte Plattformen entwickeln, alle Warnungen für alle anderen Plattformen unterdrücken, auf denen Ihr Code später nicht ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="7b10e-153">Unlike deprecation cases where you have two options (either keep using the deprecated member and suppress warnings or not use it at all), here if you're developing your code only for certain platforms, you can suppress all warnings for all other platforms you don't plan to run your code on.</span></span> <span data-ttu-id="7b10e-154">Dazu müssen Sie nur Ihre Projektdatei bearbeiten und die Eigenschaft `PlatformCompatIgnore` hinzufügen, die alle zu ignorierenden Plattformen auflistet.</span><span class="sxs-lookup"><span data-stu-id="7b10e-154">To do so, you just need to edit your project file and add the `PlatformCompatIgnore` property that lists all platforms to be ignored.</span></span> <span data-ttu-id="7b10e-155">Folgende Werte werden akzeptiert: `Linux`, `MacOSX` und `Windows`.</span><span class="sxs-lookup"><span data-stu-id="7b10e-155">The accepted values are: `Linux`, `MacOSX`, and `Windows`.</span></span>
+
+```xml
+<PropertyGroup>
+    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+</PropertyGroup>
+```
+
+<span data-ttu-id="7b10e-156">Wenn Ihr Code auf mehrere Plattformen abzielt und Sie die Vorteile einer API nutzen möchten, die auf einigen Plattformen nicht unterstützt wird, können Sie diesen Teil des Codes mit einer `if`-Anweisung schützen:</span><span class="sxs-lookup"><span data-stu-id="7b10e-156">If your code targets multiple platforms and you want to take advantage of an API not supported on some of them, you can guard that part of the code with an `if` statement:</span></span>
+
+```csharp
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+{
+     var w = Console.WindowWidth;
+     // More code
+}
+```
+
+<span data-ttu-id="7b10e-157">Sie können auch bedingt pro Zielframework/-betriebssystem kompilieren, dies ist jedoch derzeit nur [manuell](../frameworks.md#how-to-specify-target-frameworks) möglich.</span><span class="sxs-lookup"><span data-stu-id="7b10e-157">You can also conditionally compile per target framework/operating system, but you currently need to do that [manually](../frameworks.md#how-to-specify-target-frameworks).</span></span>
+
+## <a name="supported-diagnostics"></a><span data-ttu-id="7b10e-158">Unterstützte Diagnosen</span><span class="sxs-lookup"><span data-stu-id="7b10e-158">Supported diagnostics</span></span>
+
+<span data-ttu-id="7b10e-159">Zurzeit verarbeitet das Analysetool die folgenden Fälle:</span><span class="sxs-lookup"><span data-stu-id="7b10e-159">Currently, the analyzer handles the following cases:</span></span>
+
+* <span data-ttu-id="7b10e-160">Nutzung einer .NET Standard-API, die die Ausnahme <xref:System.PlatformNotSupportedException> (PC001) auslöst.</span><span class="sxs-lookup"><span data-stu-id="7b10e-160">Usage of a .NET Standard API that throws <xref:System.PlatformNotSupportedException> (PC001).</span></span>
+* <span data-ttu-id="7b10e-161">Nutzung einer .NET Standard-API, die im .NET Framework 4.6.1 (PC002) nicht verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="7b10e-161">Usage of a .NET Standard API that isn't available on the .NET Framework 4.6.1 (PC002).</span></span>
+* <span data-ttu-id="7b10e-162">Nutzung einer nativen API, die nicht in UWP (PC003) vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="7b10e-162">Usage of a native API that doesn’t exist in UWP (PC003).</span></span>
+* <span data-ttu-id="7b10e-163">Nutzung einer API, die als veraltet (DEXXXX) gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="7b10e-163">Usage of an API that is marked as deprecated (DEXXXX).</span></span>
+
+## <a name="ci-machine"></a><span data-ttu-id="7b10e-164">CI-Computer</span><span class="sxs-lookup"><span data-stu-id="7b10e-164">CI machine</span></span>
+
+<span data-ttu-id="7b10e-165">All diese Diagnosen stehen nicht nur in der IDE zur Verfügung, sondern auch über die Befehlszeile beim Erstellen Ihres Projekts, das den CI-Server umfasst.</span><span class="sxs-lookup"><span data-stu-id="7b10e-165">All these diagnostics are available not only in the IDE, but also on the command line as part of building your project, which includes the CI server.</span></span>
+
+## <a name="configuration"></a><span data-ttu-id="7b10e-166">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="7b10e-166">Configuration</span></span>
+
+<span data-ttu-id="7b10e-167">Der Benutzer entscheidet, wie die Diagnose behandelt werden soll: als Warnungen, Fehler oder Vorschläge. Alternativ kann er sie auch deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="7b10e-167">The user decides how the diagnostics should be treated: as warnings, errors, suggestions, or to be turned off.</span></span> <span data-ttu-id="7b10e-168">Beispielsweise können Sie als Architekt entscheiden, dass Kompatibilitätsprobleme als Fehler behandelt werden sollen, während Aufrufe einiger veralteter APIs Warnungen und andere Probleme nur Vorschläge generieren.</span><span class="sxs-lookup"><span data-stu-id="7b10e-168">For example, as an architect, you can decide that compatibility issues should be treated as errors, calls to some deprecated APIs generate warnings, while others only generate suggestions.</span></span> <span data-ttu-id="7b10e-169">Diese Einstellungen können Sie getrennt nach Diagnose-ID und Projekt konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="7b10e-169">You can configure this separately by diagnostic ID and by project.</span></span> <span data-ttu-id="7b10e-170">Navigieren Sie hierzu im **Projektmappen-Explorer** unter Ihrem Projekt zum Knoten **Abhängigkeiten**.</span><span class="sxs-lookup"><span data-stu-id="7b10e-170">To do so in **Solution Explorer**, navigate to the **Dependencies** node under your project.</span></span> <span data-ttu-id="7b10e-171">Erweitern Sie die Knoten **Abhängigkeiten** > **Analysetools** > **Microsoft.DotNet.Analyzers.Compatibility**.</span><span class="sxs-lookup"><span data-stu-id="7b10e-171">Expand the nodes **Dependencies** > **Analyzers** > **Microsoft.DotNet.Analyzers.Compatibility**.</span></span> <span data-ttu-id="7b10e-172">Klicken Sie mit der rechten Maustaste auf die Diagnose-ID, wählen Sie **Schweregrad für Regelsatz festlegen**, und wählen Sie die gewünschte Option aus.</span><span class="sxs-lookup"><span data-stu-id="7b10e-172">Right click on the diagnostic ID, select **Set Rule Set Severity** and pick the desired option.</span></span>
+
+![„Screenshot des Projektmappen-Explorers, das Diagnosen und Popupdialogfeld mit Schweregrad für Regelsatz zeigt“](media/api-analyzer/disable-notifications.jpg)
+
+## <a name="see-also"></a><span data-ttu-id="7b10e-174">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7b10e-174">See also</span></span>
+
+* <span data-ttu-id="7b10e-175">Blogbeitrag [Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) (Einführung in das API-Analysetool).</span><span class="sxs-lookup"><span data-stu-id="7b10e-175">[Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) blog post.</span></span>
+* <span data-ttu-id="7b10e-176">Demovideo [API Analyzer](https://youtu.be/eeBEahYXGd0) (API-Analysetool) auf YouTube</span><span class="sxs-lookup"><span data-stu-id="7b10e-176">[API Analyzer](https://youtu.be/eeBEahYXGd0) demo video on YouTube.</span></span>
