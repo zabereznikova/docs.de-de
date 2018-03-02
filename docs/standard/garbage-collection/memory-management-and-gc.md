@@ -13,25 +13,28 @@ helpviewer_keywords:
 - memory management [.NET Framework]
 - garbage collection [.NET Framework profiling]
 ms.assetid: fd0462f7-57ad-4858-bf62-958378873602
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2b9d0f8d4b09e4f95fe33134e900612c59534fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a9d1f2a7ad3432667cdb5ed9223cbabf4089597
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="d3038-102">Speicherverwaltung und Garbagecollection in .NET</span><span class="sxs-lookup"><span data-stu-id="d3038-102">Memory Management and Garbage Collection in .NET</span></span>
-<span data-ttu-id="d3038-103">Dieser Abschnitt der Dokumentation enthält Informationen zum Verwalten des Arbeitsspeichers in .NET.</span><span class="sxs-lookup"><span data-stu-id="d3038-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
+# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="9482f-102">Speicherverwaltung und Garbage Collection in .NET</span><span class="sxs-lookup"><span data-stu-id="9482f-102">Memory Management and Garbage Collection in .NET</span></span>
+<span data-ttu-id="9482f-103">In diesem Abschnitt der Dokumentation sind Informationen zum Verwalten des Arbeitsspeichers in .NET enthalten.</span><span class="sxs-lookup"><span data-stu-id="9482f-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d3038-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d3038-104">In This Section</span></span>  
- [<span data-ttu-id="d3038-105">Bereinigen von nicht verwalteten Ressourcen</span><span class="sxs-lookup"><span data-stu-id="d3038-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
- <span data-ttu-id="d3038-106">Beschreibt, wie Sie ordnungsgemäß nicht verwaltete Ressourcen verwalten und bereinigen.</span><span class="sxs-lookup"><span data-stu-id="d3038-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9482f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9482f-104">In This Section</span></span>  
+ [<span data-ttu-id="9482f-105">Bereinigen von nicht verwalteten Ressourcen</span><span class="sxs-lookup"><span data-stu-id="9482f-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
+ <span data-ttu-id="9482f-106">Beschreibt, wie Sie ordnungsgemäß nicht verwaltete Ressourcen verwalten und bereinigen.</span><span class="sxs-lookup"><span data-stu-id="9482f-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
   
- [<span data-ttu-id="d3038-107">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="d3038-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
- <span data-ttu-id="d3038-108">Enthält Informationen zu der Garbage Collector.</span><span class="sxs-lookup"><span data-stu-id="d3038-108">Provides information about the .NET garbage collector.</span></span>  
+ [<span data-ttu-id="9482f-107">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="9482f-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
+ <span data-ttu-id="9482f-108">Stellt Informationen zum Garbage Collector in .NET bereit.</span><span class="sxs-lookup"><span data-stu-id="9482f-108">Provides information about the .NET garbage collector.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d3038-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d3038-109">Related Sections</span></span>  
- [<span data-ttu-id="d3038-110">Entwicklungshandbuch</span><span class="sxs-lookup"><span data-stu-id="d3038-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+## <a name="related-sections"></a><span data-ttu-id="9482f-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9482f-109">Related Sections</span></span>  
+ [<span data-ttu-id="9482f-110">Entwicklungshandbuch</span><span class="sxs-lookup"><span data-stu-id="9482f-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
