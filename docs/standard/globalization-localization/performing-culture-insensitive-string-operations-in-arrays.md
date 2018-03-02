@@ -13,20 +13,23 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays
-Überladungen der der <xref:System.Array.Sort%2A?displayProperty=nameWithType> und <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> Methoden führen kulturabhängigen Sortierungen standardmäßig mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> Eigenschaft. Kulturabhängige-Ergebnisse, die von diesen Methoden zurückgegebenen können je nach Kultur aufgrund von Unterschieden bei Sortierreihenfolgen. Um kulturabhängige Verhalten zu vermeiden, verwenden Sie eine der Überladungen dieser Methode, die akzeptiert eine `comparer` Parameter. Die `comparer` Parameter gibt die <xref:System.Collections.IComparer> Implementierung, die beim Vergleichen von Elementen im Array. Geben Sie eine benutzerdefinierte, invariante Comparer-Klasse, verwendet für den Parameter <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ein Beispiel einer benutzerdefinierten invariante Comparer-Klasse finden Sie unter "Verwenden der SortedList-Klasse" des Themas die [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) Thema.  
+Überladungen der <xref:System.Array.Sort%2A?displayProperty=nameWithType>- und <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Sortierungen standardmäßig mit der <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>-Eigenschaft aus. Die kulturabhängigen Ergebnisse, die von diesen Methoden zurückgegeben werden, können aufgrund von Unterschieden bei Sortierreihenfolgen je nach Kultur variieren. Um kulturabhängiges Verhalten zu vermeiden, verwenden Sie eine der Überladungen dieser Methode, die einen `comparer`-Parameter akzeptiert. Der `comparer`-Parameter gibt die <xref:System.Collections.IComparer>-Implementierung an, die beim Vergleich von Elementen im Array zu verwenden ist. Geben Sie für den Parameter eine benutzerdefinierte invariante Comparer-Klasse an, in der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> verwendet wird. Ein Beispiel einer benutzerdefinierten invarianten Comparer-Klasse finden Sie im Unterthema „Verwenden der SortedList-Klasse“ des Themas [Durchführen kulturunabhängiger Zeichenfolgenvorgänge in Auflistungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md).  
   
- **Hinweis** übergeben **CultureInfo.InvariantCulture** Methode führt zu einem Vergleich einen kulturunabhängigen Vergleich. Dies bewirkt jedoch keinen nicht linguistischen Vergleich, z. B. auf Dateipfade, Registrierungsschlüssel und Umgebungsvariablen. Und dadurch werden auch keine Sicherheitsentscheidungen anhand des Vergleichsergebnisses unterstützt. Für einen nicht linguistischen Vergleich oder Unterstützung für Ergebnis basierende sicherheitsentscheidungen, die Anwendung sollte eine Vergleichsmethode, die akzeptiert verwenden eine <xref:System.StringComparison> Wert. Leitet die Anwendung sollte <xref:System.StringComparison.Ordinal>.  
+ **Hinweis** Wenn Sie **CultureInfo.InvariantCulture** an eine Vergleichsmethode übergeben, wird ein kulturunabhängiger Vergleich ausgeführt. Dies bewirkt jedoch keinen nicht linguistischen Vergleich, z. B. auf Dateipfade, Registrierungsschlüssel und Umgebungsvariablen. Und dadurch werden auch keine Sicherheitsentscheidungen anhand des Vergleichsergebnisses unterstützt. Für einen nicht linguistischen Vergleich oder Unterstützung für ergebnisbasierte Sicherheitsentscheidungen sollte die Anwendung eine Vergleichsmethode verwenden, die einen <xref:System.StringComparison>-Wert akzeptiert. Die Anwendung sollte dann <xref:System.StringComparison.Ordinal> übergeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  

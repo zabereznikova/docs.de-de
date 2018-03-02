@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c5cfcc9f35e4a07e9426a4dd24c1e2f04985f16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>In ein Dokument eingebettete Stylesheetanweisungen
-Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:stylesheet?>`. Microsoft Internet Explorer akzeptiert diese als Alternative zu den `<?xml-stylesheet?>` Syntax. Wenn die XML-Daten, wie im Folgenden dargestellt, eine `<?xml:stylesheet?>`-Direktive enthalten, wird durch den Versuch, diese Daten in das Dokumentobjektmodell (DOM) zu laden, eine Ausnahme ausgelöst.  
+Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:stylesheet?>`. Microsoft Internet Explorer akzeptiert diese als Alternative zur `<?xml-stylesheet?>`-Syntax. Wenn die XML-Daten, wie im Folgenden dargestellt, eine `<?xml:stylesheet?>`-Direktive enthalten, wird durch den Versuch, diese Daten in das Dokumentobjektmodell (DOM) zu laden, eine Ausnahme ausgelöst.  
   
 ```xml  
 <?xml version="1.0" ?>  
@@ -31,9 +34,9 @@ Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:styles
 </root>  
 ```  
   
- Dies geschieht, weil die `<?xml:stylesheet?>` gilt eine ungültige **ProcessingInstruction** auf das DOM. Alle **ProcessingInstruction**, gemäß der Namespaces in XML-Spezifikation, ohne Doppelpunkt NCNames (Namen) ist nur möglich, und nicht qualifizierte Namen (QNames).  
+ Der Grund hierfür ist, dass `<?xml:stylesheet?>` als ungültige **ProcessingInstruction** für das DOM gilt. Bei einer **ProcessingInstruction** kann es sich, gemäß der Spezifikation „Namespaces in XML“, nur um Namen ohne Doppelpunkt (NCNames) handeln, und nicht um qualifizierte Namen (QNames).  
   
- Aus Abschnitt 6 der Namespaces in XML-Spezifikation, den Effekt des Ausführens der **laden** und **LoadXml** Methoden entsprechen der Spezifikation verwendet werden, in einem Dokument:  
+ Aus Abschnitt 6 der Spezifikation „Namespaces in XML“ ergibt sich Folgendes: Wenn die **Load**-Methode und die **LoadXml**-Methode entsprechend der Spezifikation verwendet werden, hat dies in einem Dokument folgende Auswirkungen:  
   
 -   Alle Elementtypen und Attributnamen enthalten entweder keinen oder einen Doppelpunkt.  
   

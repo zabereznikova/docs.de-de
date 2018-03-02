@@ -24,58 +24,61 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6b07c090a381925f5330a820214126a121d3790b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
-Zugriff auf isolierte Speicherung ist immer für den Benutzer, der sie erstellt beschränkt. Um diese Art von Isolation zu implementieren, verwendet die common Language Runtime dasselbe Konzept der Benutzeridentität, die das Betriebssystem erkennt, die Identität, die dem Prozess, in dem der Code ausgeführt wird, wenn der Speicher geöffnet ist, zugeordnet ist. Diese Identität ist eine authentifizierte Benutzeridentität Identitätswechsel kann dazu führen, dass die Identität des aktuellen Benutzers dynamisch zu ändern.  
+Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
   
- Zugriff auf isolierte Speicherplätze ist auch eingeschränkte gemäß der Identität der Anwendungsverzeichnis Domäne und Assembly, oder die Assembly, die allein zugeordnet ist. Die Laufzeit ruft diese Identitäten auf folgende Weise:  
+ Zudem ist der Zugriff auf isolierte Speicherplätze durch die Identität eingeschränkt, die mit der Domäne und Assembly der Anwendung oder nur mit der Assembly verbunden ist. Die Runtime erhält diese Identitäten auf folgende Weise:  
   
--   Domänenidentität darstellt, den die Anwendung, die sich für eine Webanwendung möglicherweise die vollständige URL-Beweis. Für Shell-gehostetem Code kann die Domänenidentität auf den Verzeichnispfad der Anwendung basieren. Wenn die ausführbare Datei aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, würde z. B. die Domänenidentität C:\Office\MyApp.exe sein.  
+-   Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
   
--   Assemblyidentität ist der Beweis der Assembly. Es kann aus einer kryptografischen digitalen Signatur der Assembly aneinander gehängt u. stammen [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md), den Herausgeber der Software, der die Assembly bzw. dessen URL-Identität. Wenn eine Assembly einen starken Namen und eine Software Publisher Identität verfügt, wird die Software Publisher Identität verwendet. Wenn die Assembly aus dem Internet stammt und ohne Vorzeichen ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starke Namen finden Sie unter [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+-   Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
   
--   Roamingspeichern verschieben sich mit einem Benutzer, der über ein servergespeichertes Profil verfügt. Dateien werden in einem Netzwerkverzeichnis geschrieben und werden auf jedem Computer heruntergeladen haben, die der Benutzer sich anmeldet. Weitere Informationen zu servergespeicherten Benutzerprofilen, finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+-   Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
- Durch die Kombination der Konzepte der Benutzer, Domäne und Assemblyidentität, kann isolierte Speicherung Daten auf folgende Weise Isolieren von denen jede eine eigene Verwendungsszenarien hat:  
+ Durch die Kombination der Konzepte von Benutzer-, Domänen- und Assemblyidentität kann ein isolierter Speicher die Daten wie folgt isolieren, wobei es für jede dieser Methoden eigene Verwendungsszenarien gibt:  
   
--   [Isolation nach Benutzer und assembly](#UserAssembly)  
+-   [Isolation nach Benutzer und Assembly](#UserAssembly)  
   
--   [Isolation nach Benutzer, Domäne und assembly](#UserDomainAssembly)  
+-   [Isolation nach Benutzer, Domäne und Assembly](#UserDomainAssembly)  
   
- Jede dieser Isolationen können mit einem Roamingbenutzerprofil kombiniert werden. Weitere Informationen finden Sie im Abschnitt [isolierte Speicherung und Roaming](#Roaming).  
+ Jede dieser Isolationen kann mit einem Roamingbenutzerprofil kombiniert werden. Weitere Informationen finden Sie im Abschnitt [Isolierter Speicher und Roaming](#Roaming).  
   
- Die folgende Abbildung zeigt, wie Speicher in verschiedenen Bereichen isoliert sind.  
+ Die folgende Abbildung zeigt, wie Speicher in verschiedenen Bereichen isoliert werden.  
   
- ![Isolation nach Benutzer und Assembly](../../../docs/standard/io/media/typesofisolation.gif "Typesofisolation")  
-Typen des isolierten Speichers  
+ ![Isolation nach Benutzer und Assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
+Typen von isoliertem Speicher  
   
- Beachten Sie, dass mit Ausnahme von Roamingspeichern isolierte Speicherung immer implizit nach Computer isoliert ist, da er die Speicher-Funktionen verwendet, die lokal auf einem Computer befinden.  
+ Beachten Sie, dass isolierte Speicher (mit Ausnahme von Roamingspeichern) immer implizit nach Computer isoliert sind, da sie die Speicherfunktionen verwenden, die sich lokal auf einem bestimmten Computer befinden.  
   
 > [!IMPORTANT]
->  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage` -API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) .  
+>  Isolierte Speicher ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage` -API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolation nach Benutzer und Assembly  
- Wenn die Assembly, die die Daten verwendet Datenspeicher muss darauf zugreifen können jede Anwendungsdomäne Isolation nach Benutzer und Assembly eignet. In der Regel wird in dieser Situation isolierter Speicher verwendet, zum Speichern von Daten, die für mehrere Anwendungen angewendet wird und nicht an eine bestimmte Anwendung, z. B. den Namen des Benutzers oder Lizenzinformationen gebunden ist. Um nach Benutzer und Assembly isolierten Speicher zuzugreifen, muss Code vertrauenswürdig ist und die Übertragung von Informationen zwischen Anwendungen sein. Isolation nach Benutzer und Assembly ist in der Regel in Intranets, jedoch nicht auf das Internet zulässig. Aufrufen der statischen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> -Methode und übergeben eines Benutzers und eine Assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Speicher bei dieser Art von Isolation zurückgegeben.  
+ Wenn die Assembly, die den Datenspeicher verwendet, von der Domäne einer beliebigen Anwendung aus zugänglich sein muss, ist eine Isolation nach Benutzer und Assembly angebracht. Typischerweise wird in dieser Situation isolierter Speicher verwendet, um Daten zu speichern, die für mehrere Anwendungen gelten und nicht an eine bestimmte Anwendung gebunden sind, wie z.B. der Benutzername oder Lizenzinformationen. Für den Zugriff auf Speicher, der nach Benutzer und Assembly isoliert ist, muss der Code vertrauenswürdig sein, um eine Datenübertragung zwischen Anwendungen zu ermöglichen. In der Regel ist die Isolation nach Benutzer und Assembly in Intranets erlaubt, nicht aber im Internet. Durch den Aufruf der statischen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType>-Methode und die Übergabe an einen Benutzer und eine Assembly gibt <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Speicher dieses Isolationstyps zurück.  
   
- Im folgenden Codebeispiel ruft einen Speicher, der nach Benutzer und Assembly isoliert ist. Der Speicher durch zugegriffen werden kann die `isoFile` Objekt.  
+ Im folgenden Codebeispiel wird ein Speicher abgerufen, der nach Benutzer und Assembly isoliert ist. Der Zugriff auf den Speicher wird durch das `isoFile`-Objekt ermöglicht.  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
  [!code-vb[Conceptual.IsolatedStorage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#17)]  
   
- Ein Beispiel, die Beweisparameter verwendet, finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
+ Ein Beispiel zur Verwendung der Beweisparameter finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
   
- Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Methode ist als eine Verknüpfung verfügbar, wie im folgenden Codebeispiel gezeigt. Diese Verknüpfung kann nicht verwendet werden, um Läden öffnen, die roaming möglich sind; Verwenden Sie <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in solchen Fällen.  
+ Wie im folgenden Codebeispiel gezeigt, ist die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>-Methode als Verknüpfung verfügbar. Diese Verknüpfung kann nicht zum Öffnen von Speichern verwendet werden, für die Roaming möglich ist. Verwenden Sie in solchen Fällen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
@@ -83,31 +86,31 @@ Typen des isolierten Speichers
   
 <a name="UserDomainAssembly"></a>   
 ## <a name="isolation-by-user-domain-and-assembly"></a>Isolation nach Benutzer, Domäne und Assembly  
- Wenn Ihre Anwendung eine dritten erstellte Assembly, die einen privaten Datenspeicher erfordert verwendet, können Sie isolierte Speicherung verwenden, um die privaten Daten zu speichern. Isolation nach Benutzer, Domäne und Assembly wird sichergestellt, dass nur Code in einer bestimmten Assembly kann die Daten zugreifen und nur, wenn die Assembly von der Anwendung verwendet wird, die ausgeführt wurde, wenn die Assembly der Speicher erstellt und nur während der Benutzer, denen der Speicher erstellt wurde, die  die Anwendung. Isolation nach Benutzer, Domäne und Assembly behält die Drittanbieter-Assembly aus gelangen Daten für andere Anwendungen. Dieser Isolationstyp sollte die Standardauswahl sein, wenn Sie wissen, dass Sie isolierte Speicherung verwenden möchten, aber nicht sicher welche Art von Isolation sind verwenden. Aufrufen der statischen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> Methode <xref:System.IO.IsolatedStorage.IsolatedStorageFile> und übergeben Sie einen Benutzer, Domäne und Assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Speicher bei dieser Art von Isolation zurückgegeben.  
+ Wenn eine Anwendung eine Drittanbieterassembly verwendet, die einen privaten Datenspeicher erfordert, können Sie für die privaten Daten einen isolierten Speicher nutzen. Durch die Isolation nach Benutzer, Domäne und Assembly wird sichergestellt, dass nur Code in einer bestimmten Assembly auf die Daten zugreifen kann. Hierzu müssen zwei Voraussetzungen erfüllt sein. Erstens muss die Assembly von der Anwendung verwendet werden, die ausgeführt wurde, als die Assembly den Speicher angelegt hat. Und zweitens muss die Anwendung durch den Benutzer ausgeführt werden, für den der Speicher angelegt wurde. So wird bei der Isolation nach Benutzer, Domäne und Assembly verhindert, dass die Drittanbieterassembly Daten an andere Anwendungen weitergibt. Wählen Sie diesen Isolationstyp standardmäßig aus, wenn Sie isolierten Speicher verwenden möchten, sich aber nicht sicher sind, welchen Isolationstyp Sie verwenden sollen. Durch den Aufruf der statischen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>-Methode von <xref:System.IO.IsolatedStorage.IsolatedStorageFile> und die Übergabe an einen Benutzer, eine Domäne und eine Assembly gibt <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Speicher dieses Isolationstyps zurück.  
   
- Im folgenden Codebeispiel ruft einen nach Benutzer, Domäne und Assembly isolierten Speicher ab. Der Speicher durch zugegriffen werden kann die `isoFile` Objekt.  
+ Im folgenden Codebeispiel wird ein Speicher abgerufen, der nach Benutzer, Domäne und Assembly isoliert ist. Der Zugriff auf den Speicher wird durch das `isoFile`-Objekt ermöglicht.  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Eine andere Methode ist als eine Verknüpfung verfügbar, wie im folgenden Codebeispiel gezeigt. Diese Verknüpfung kann nicht verwendet werden, um Läden öffnen, die roaming möglich sind; Verwenden Sie <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in solchen Fällen.  
+ Wie im folgenden Codebeispiel gezeigt, ist eine weitere Methode als Verknüpfung verfügbar. Diese Verknüpfung kann nicht zum Öffnen von Speichern verwendet werden, für die Roaming möglich ist. Verwenden Sie in solchen Fällen <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>   
-## <a name="isolated-storage-and-roaming"></a>Isolierte Speicherung und Roaming  
- Servergespeicherte Benutzerprofile sind ein Windows-Feature, mit der einen Benutzer eine Identität in einem Netzwerk einrichten und verwenden Sie diese Identität bei jeder Computer im Netzwerk, über alle personalisierten Einstellungen befördern anmelden kann. Eine Assembly, die isolierte Speicherung verwendet kann angeben, dass mit das servergespeicherte Benutzerprofil des Benutzers isolierter Speicher verschoben werden soll. Roaming kann in Verbindung mit Isolation nach Benutzer und Assembly oder mit Isolation nach Benutzer, Domäne und Assembly verwendet werden. Wenn ein roaming-Gültigkeitsbereich nicht verwendet wird, werden speichert kein Roaming, selbst wenn ein Roamingbenutzerprofil verwendet wird.  
+## <a name="isolated-storage-and-roaming"></a>Isolierter Speicher und Roaming  
+ Roamingbenutzerprofile sind ein Windows-Feature, über das ein Benutzer eine Identität in einem Netzwerk einrichten und sich damit bei jedem Netzwerkcomputer anmelden kann, wobei alle personalisierten Einstellungen übernommen werden. In einer Assembly, die isolierten Speicher verwendet, kann festgelegt werden, dass der isolierte Speicher des Benutzers gemeinsam mit dem Roamingbenutzerprofil wandert bzw. wechselt. Roaming kann in Verbindung mit der Isolation nach Benutzer und Assembly oder mit der Isolation nach Benutzer, Domäne und Assembly verwendet werden. Wenn ein Roamingbereich nicht verwendet wird, wechseln Speicher selbst dann nicht mit dem Profil, wenn ein Roamingbenutzerprofil verwendet wird.  
   
- Im folgenden Codebeispiel ruft einen nach Benutzer und Assembly isolierten Roamingspeicher ab. Der Speicher durch zugegriffen werden kann die `isoFile` Objekt.  
+ Im folgenden Codebeispiel wird ein Roamingspeicher abgerufen, der nach Benutzer und Assembly isoliert ist. Der Zugriff auf den Speicher wird durch das `isoFile`-Objekt ermöglicht.  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- Ein Domänenbereich kann hinzugefügt werden, um eine servergespeicherte nach Benutzer, Domäne und Anwendung isolierten Speicher zu erstellen. Dies wird im folgenden Codebeispiel wird veranschaulicht.  
+ Ein Domänenbereich kann hinzugefügt werden, um einen Roamingspeicher zu erstellen, der nach Benutzer, Domäne und Anwendung isoliert ist. Dies wird im folgenden Codebeispiel veranschaulicht.  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]

@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
-Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen. Es ist für jedes Szenario geeignet, das pushbasierte Benachrichtigungen erfordert. Das Muster definiert einen *Anbieter* (auch bekannt als ein *Betreff* oder ein *Observable-Objekt*) und 0 (null), ein oder mehrere *Beobachter*. Beobachter registrieren sich beim Anbieter, und sobald eine vordefinierte Bedingung, ein Ereignis oder eine Statusänderung stattfindet, benachrichtigt der Anbieter automatisch alle Beobachter, indem er eine ihrer Methoden aufruft. In diesem Methodenaufruf kann der Anbieter den Beobachtern auch aktuelle Statusinformationen bereitstellen. In .NET Framework wird das Entwurfsmuster "Beobachter" angewendet, indem die generischen Schnittstellen <xref:System.IObservable%601?displayProperty=nameWithType> und <xref:System.IObserver%601?displayProperty=nameWithType> implementiert werden. Der generische Typparameter stellt den Typ dar, der Benachrichtigungsinformationen bereitstellt.  
+Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen. Es ist für jedes Szenario geeignet, das pushbasierte Benachrichtigungen erfordert. Das Muster definiert einen *Anbieter* (auch als *Antragssteller* oder *Observable* bezeichnet) und keinen, einen oder mehrere *Beobachter*. Beobachter registrieren sich beim Anbieter, und sobald eine vordefinierte Bedingung, ein Ereignis oder eine Statusänderung stattfindet, benachrichtigt der Anbieter automatisch alle Beobachter, indem er eine ihrer Methoden aufruft. In diesem Methodenaufruf kann der Anbieter den Beobachtern auch aktuelle Statusinformationen bereitstellen. In .NET Framework wird das Entwurfsmuster "Beobachter" angewendet, indem die generischen Schnittstellen <xref:System.IObservable%601?displayProperty=nameWithType> und <xref:System.IObserver%601?displayProperty=nameWithType> implementiert werden. Der generische Typparameter stellt den Typ dar, der Benachrichtigungsinformationen bereitstellt.  
   
 ## <a name="applying-the-pattern"></a>Anwenden des Musters  
  Das Entwurfsmuster "Beobachter" ist für verteilte pushbasierte Benachrichtigungen geeignet, da es eine saubere Trennung zwischen zwei verschiedenen Komponenten bzw. Anwendungsebenen erlaubt, z. B. zwischen einer Datenquellenebene (Geschäftslogik) und einer Benutzeroberflächenebene (Anzeige). Das Muster kann immer dann implementiert werden, wenn ein Anbieter Rückrufe verwendet, um seinen Clients aktuelle Informationen bereitzustellen.  
@@ -53,7 +56,7 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
 -   Ein Objekt, das die Daten enthält, die vom Anbieter an die Beobachter gesendet werden. Der Typ des Objekts entspricht dem generischen Typparameter der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601>. Obwohl dieses Objekt vom selben Typ sein kann wie die <xref:System.IObservable%601>-Implementierung, handelt es sich in den meisten Fällen um einen separaten Typ.  
   
 > [!NOTE]
->  Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise [reagierende Erweiterungen für .NET (Rx)](http://go.microsoft.com/fwlink/?LinkId=186345) bestehen aus einem Satz von Erweiterungsmethoden und LINQ-standardsequenzoperatoren asynchrone Programmierung zu unterstützen.  
+>  Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.  
   
 ## <a name="implementing-the-pattern"></a>Implementieren des Musters  
  Im folgenden Beispiel wird das Entwurfsmuster "Beobachter" verwendet, um ein Informationssystem für die Flughafengepäckausgabe zu implementieren. Eine `BaggageInfo`-Klasse stellt Informationen über ankommende Flüge und über die Laufbänder bereit, von denen das Gepäck der einzelnen Flüge abgeholt werden kann. Dies wird im folgenden Beispiel gezeigt.  
@@ -97,7 +100,7 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Beschreibt bewährte Methoden für die Entwicklung von Anwendungen, die das Entwurfsmuster "Beobachter" implementieren.|  
 |[Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|  

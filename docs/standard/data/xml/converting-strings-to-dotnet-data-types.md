@@ -12,26 +12,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d21667ada5592c62824a97b4a8a9b8127abab75a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konvertieren von Zeichenfolgen in .NET Framework-Datentypen
-Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert** Methode, die den Anforderungen der Anwendung entspricht. Eine Liste aller Konvertierung Methoden zur Verfügung, in der **XmlConvert** Klasse, finden Sie unter <xref:System.Xml.XmlConvert>.  
+Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert**-Methode, die den Anwendungsanforderungen entspricht. Eine Liste sämtlicher in der **XmlConvert**-Klasse verfügbarer Konvertierungsmethoden finden Sie unter <xref:System.Xml.XmlConvert>.  
   
- Die Zeichenfolge zurückgegeben, die von der **ToString** Methode ist eine Zeichenfolgenversion der Daten, die übergeben werden. Darüber hinaus stehen mehrere .NET Framework-Typen, die konvertieren Sie mithilfe der **XmlConvert** -Klasse noch keine Methoden verwendet wird die **System.Convert** Klasse. Die **XmlConvert** Klasse folgt die Datentypspezifikation für XML-Schema (XSD) und weist einen Datentyp der **XmlConvert** zuordnen können.  
+ Die von der **ToString**-Methode zurückgegebene Zeichenfolge ist eine Zeichenfolgenversion der Daten, die übergeben werden. Darüber hinaus gibt es mehrere .NET Framework-Typen, die mit der **XmlConvert**-Klasse konvertiert werden können, wobei sie jedoch nicht die Methoden in der **System.Convert**-Klasse verwenden. Die **XmlConvert**-Klasse entspricht der Spezifikation für XSD-Datentypen (XML-Schema) und besitzt einen Datentyp, dem **XmlConvert** zugeordnet werden kann.  
   
- Die folgende Tabelle enthält die .NET Framework-Datentypen und die Zeichenfolgentypen, die unter Verwendung der XSD-Datentypzuordnung (XML Schema) zurückgegeben werden. Diese .NET Framework-Typen können nicht verarbeitet werden, mithilfe von **System.Convert**.  
+ Die folgende Tabelle enthält die .NET Framework-Datentypen und die Zeichenfolgentypen, die unter Verwendung der XSD-Datentypzuordnung (XML Schema) zurückgegeben werden. Diese .NET Framework-Typen können nicht mit **System.Convert** verarbeitet werden.  
   
-|.NET Framework-Typ|Zurückgegebene Zeichenfolge|  
+|.NET Framework-Typ|Zurückgegebene Zeichenfolge|  
 |-------------------------|---------------------|  
-|Boolean|"true", "false"|  
+|Boolesch|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -40,9 +43,9 @@ Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchte
 |Timespan|Das Format lautet "PnYnMnTnHnMnS". Die bedeutet für `P2Y10M15DT10H30M20S` eine Dauer von 2 Jahren, 10 Monaten, 15 Tagen, 10 Stunden, 30 Minuten und 20 Sekunden.|  
   
 > [!NOTE]
->  Wenn in der Tabelle in eine Zeichenfolge mit den .NET Framework-Typen konvertieren aufgeführt werden. die **ToString** -Methode, die zurückgegebene Zeichenfolge ist nicht der Basistyp, sondern den String-Datentyp XML-Schema (XSD).  
+>  Wenn einer der in der Tabelle aufgeführten .NET Framework-Typen mit der **ToString**-Methode in eine Zeichenfolge umgewandelt wird, ist die zurückgegebene Zeichenfolge nicht der Basistyp, sondern der dem XML-Schema (XSD) entsprechende Zeichenfolgentyp.  
   
- Die **"DateTime"** und **Timespan** Werttyp unterscheidet sich insofern ein **"DateTime"** einen Zeitpunkt darstellt, während eine **TimeSpan** Stellt ein Zeitintervall dar. Die **"DateTime"** und **Timespan** Formate werden in der XML-Schema (XSD) Data-Typen-Spezifikation angegeben. Zum Beispiel:  
+ Der **DateTime**-Werttyp und der **Timespan**-Werttyp unterscheiden sich voneinander in dem Punkt, dass **DateTime** einen Zeitpunkt darstellt, während **TimeSpan** einen Zeitraum angibt. Das **DateTime**- und das **Timespan**-Format werden in der Spezifikation für XSD-Datentypen (XML-Schema) festgelegt. Zum Beispiel:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -58,7 +61,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **Ausgabe**  
   
- `<Date>2001-08-04T00:00:00</Date>`.  
+ `<Date>2001-08-04T00:00:00</Date>`  
   
  Der folgende Code konvertiert eine ganze Zahl in eine Zeichenfolge:  
   
@@ -78,10 +81,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Jedoch wenn Sie eine Zeichenfolge zu konvertieren, **booleschen**, **einzelne**, oder **doppelte**, der .NET Framework-Typ, der zurückgegeben wird entspricht nicht der Rückgabetyp, die bei Verwendung der **System.Convert** Klasse.  
+ Wenn Sie jedoch eine Zeichenfolge in einen der Typen **Boolean**, **Single** oder **Double** konvertieren, ist der zurückgegebene .NET Framework-Typ nicht mit dem bei Verwendung der **System.Convert**-Klasse zurückgegebenen Typ identisch.  
   
 ## <a name="string-to-boolean"></a>Zeichenfolge in Boolean  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren **booleschen** mithilfe der **ToBoolean** Methode.  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToBoolean**-Methode in **Boolean** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
 |----------------------------------|--------------------------------|  
@@ -99,7 +102,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>   
 ```  
   
- Beide können durch den folgenden Code verstanden werden und **Bvalue** ist **System.Boolean.True**:  
+ Beide können vom folgenden Code verarbeitet werden, und **bvalue** ist **System.Boolean.True**:  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -113,7 +116,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>String in Single  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren einer **einzelne** mithilfe der **ToSingle** Methode.  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToSingle**-Methode in **Single** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
 |----------------------------------|--------------------------------|  
@@ -121,7 +124,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>String in Double  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren einer **einzelne** mithilfe der **ToDouble** Methode.  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToDouble**-Methode in **Single** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
 |----------------------------------|--------------------------------|  

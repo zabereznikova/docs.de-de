@@ -22,18 +22,21 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>Verfassen von benutzerdefinierten Attributen
-Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die direkt oder indirekt ableiten <xref:System.Attribute?displayProperty=nameWithType>. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
+Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType> ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
   
  Die wichtigsten Schritte beim ordnungsgemäßen Entwerfen von benutzerdefinierten Attributklassen sind die folgenden:  
   
@@ -55,7 +58,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- Die <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> hat drei Member, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#cpconwritingcustomattributesanchor1), [geerbte](#cpconwritingcustomattributesanchor2), und [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ Das <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> weist drei Member auf, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2)und [AllowMultiple](#cpconwritingcustomattributesanchor3).  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>AttributeTargets-Member  
@@ -69,7 +72,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Inherited Property  
- Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Eigenschaft gibt an, ob das Attribut von Klassen geerbt werden kann, die von den Klassen abgeleitet werden, der das Attribut angewendet wird. Diese Eigenschaft akzeptiert die Kennzeichen **true** (den Standardwert) oder **false** . Beispielsweise hat im folgenden Beispiel `MyAttribute` für <xref:System.AttributeUsageAttribute.Inherited%2A> den Standardwert **true**, während `YourAttribute` den <xref:System.AttributeUsageAttribute.Inherited%2A> -Standardwert **false**aufweist.  
+ Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob das Attribut von Klassen geerbt werden kann, die von den Klassen abgeleitet werden, auf die das Attribut angewendet wird. Diese Eigenschaft akzeptiert die Kennzeichen **true** (den Standardwert) oder **false** . Beispielsweise hat im folgenden Beispiel `MyAttribute` für <xref:System.AttributeUsageAttribute.Inherited%2A> den Standardwert **true**, während `YourAttribute` den <xref:System.AttributeUsageAttribute.Inherited%2A> -Standardwert **false**aufweist.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -89,7 +92,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>AllowMultiple-Eigenschaft  
- Die <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> Eigenschaft gibt an, ob mehrere Instanzen eines Attributs auf ein Element vorhanden sein können. Wenn es auf **true**festgelegt ist, sind mehrere Instanzen zulässig; bei **false** (dem Standardwert) ist nur eine Instanz erlaubt.  
+ Die <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob mehrere Instanzen eines Attributs für ein Element vorhanden sein können. Wenn es auf **true**festgelegt ist, sind mehrere Instanzen zulässig; bei **false** (dem Standardwert) ist nur eine Instanz erlaubt.  
   
  Im folgenden Beispiel weist `MyAttribute` für <xref:System.AttributeUsageAttribute.AllowMultiple%2A> den Standardwert **false**auf, während `YourAttribute` den Wert **true**hat.  
   

@@ -23,18 +23,21 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
-<a name="Top"></a>Ein Standard <xref:System.TimeSpan> -Formatzeichenfolge verwendet einen einzelnen Formatbezeichner zum Definieren der Textdarstellung einer <xref:System.TimeSpan> Werts, der aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+<a name="Top"></a> Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Die Zeichenfolgendarstellungen von <xref:System.TimeSpan>-Werten werden durch Aufrufe der Überladungen der <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>-Methode und durch Methoden, die die kombinierte Formatierung unterstützen (z. B. <xref:System.String.Format%2A?displayProperty=nameWithType>), erzeugt. Weitere Informationen finden Sie unter [Formatieren von Typen](../../../docs/standard/base-types/formatting-types.md) und [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Das folgende Beispiel veranschaulicht die Verwendung von Standardformatzeichenfolgen bei Formatierungsvorgängen.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="top"></a> Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.  
   
-|Formatbezeichner|Name|Beschreibung|Beispiele|  
+|Formatbezeichner|name|description|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter [Der Konstantenformatbezeichner "c"](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter [Der allgemeine kurze Formatbezeichner "g"](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Punkt (.) und der Doppelpunkt (:) sind Literalsymbole. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|Beschreibung|  
+|Element|description|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |*ss*|Die Anzahl von Sekunden zwischen "0" und "59".|  
 |*fffffff*|Der optionale Bruchteil einer Sekunde.  Der Wert kann zwischen "0000001" (ein Tick oder ein Zehnmillionstel einer Sekunde) und "9999999" (9.999.999 Zehnmillionstel einer Sekunde oder eine Sekunde minus ein Tick) liegen.|  
   
- Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich ist und für alle früheren Versionen von .NET Framework vor [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet wird. "c" ist die Standardeinstellung <xref:System.TimeSpan> -Formatzeichenfolge; das <xref:System.TimeSpan.ToString?displayProperty=nameWithType> -Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge "C".  
+ Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich ist und für alle früheren Versionen von .NET Framework vor [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet wird. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> unterstützt auch die standardmäßigen "t"- und "T"-Formatzeichenfolgen, die im Verhalten identisch mit der Standardformatzeichenfolge "c" sind.  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|Beschreibung|  
+|Element|description|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|Beschreibung|  
+|Element|description|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die Anzahl von Tagen ohne führende Nullen.|  
@@ -140,4 +143,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Siehe auch  
  [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
  [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

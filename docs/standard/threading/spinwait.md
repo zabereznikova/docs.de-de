@@ -11,26 +11,30 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: synchronization primitives, SpinWait
+helpviewer_keywords:
+- synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cfaf85c0fe1de3be89618ae540e9c183b66a11eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1e67dd59464de09a35941d91ef984db6b7779b8c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="spinwait"></a>SpinWait
-<xref:System.Threading.SpinWait?displayProperty=nameWithType>ist ein einfacher Synchronisierungstyp, den Sie in der Low-Level-Szenarien verwenden können, um zu vermeiden, die teure Kontextwechsel und Kernelübergänge, die für Kernelereignisse erforderlich sind. Multicore-Computer Wenn eine Ressource nicht erwartungsgemäß für längere Zeit aufrechterhalten werden kann es effizienter sein für einen wartenden Thread im Benutzermodus für ein paar Dutzend oder wenigen Hundert Zyklen zu starten, und wiederholen Sie dann zum Abrufen der Ressourcenanbieters. Wenn die Ressource nach Spinvorgänge verfügbar ist, haben Sie mehrere Tausend Zyklen gespeichert. Wenn die Ressource immer noch nicht verfügbar ist, dann haben nur wenige Zyklen verbracht und weiterhin eine kernelbasierten Wartevorgangs eingeben. Diese Kombination Spinvorgänge dann wartenden wird manchmal als bezeichnet eine *zweiphasigen "Wait"-Vorgang*.  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> ist ein einfacher Synchronisierungstyp, den Sie in Szenarien auf niedriger Ebene verwenden können, um die aufwändigen Kontextwechsel und Kernelübergänge zu vermeiden, die für Kernelereignisse erforderlich sind. Wenn bei Computern mit mehreren Kernen nicht erwartet wird, dass eine Ressource für längere Zeit beibehalten wird, kann es effizienter sein, wenn ein wartender Thread für ein paar Dutzend oder Hundert Zyklen im Benutzermodus rotiert und dann versucht wird, die Ressource zu erlangen. Wenn die Ressource nach den Spinvorgängen verfügbar ist, haben Sie mehrere Tausend Zyklen gespeichert. Wenn die Ressource immer noch nicht verfügbar ist, haben Sie nur wenige Zyklen verbraucht und können weiterhin in einen kernelbasierten Wartevorgang eintreten. Diese Kombination aus Spin- und Wartevorgang wird manchmal als *zweiphasiger Wartevorgang* bezeichnet.  
   
- <xref:System.Threading.SpinWait>Dient in Verbindung mit .NET Framework-Typen verwendet werden, die Kernelereignisse, z. B. umschließen <xref:System.Threading.ManualResetEvent>. <xref:System.Threading.SpinWait>kann auch eigenständig für grundlegende Spinvorgänge-Funktionalität in nur einem Programm verwendet werden.  
+ <xref:System.Threading.SpinWait> soll in Verbindung mit .NET Framework-Typen verwendet werden, die Kernelereignisse wie <xref:System.Threading.ManualResetEvent> umschließen. <xref:System.Threading.SpinWait> kann auch eigenständig für grundlegende Spinfunktionalität in nur einem Programm verwendet werden.  
   
- <xref:System.Threading.SpinWait>ist mehr als nur eine leere Schleife an. Wird sorgfältig implementiert, um die richtige Spinvorgänge Verhalten für die allgemeine Groß-/Kleinschreibung bereitzustellen, und selbst gestartet Kontextwechsel vorkommen, wenn es einen ausreichend langen Zeitraum stößt (ungefähr die Zeitdauer für einen Kernelübergang erforderlich). Z. B. auf Single-Core-Computer <xref:System.Threading.SpinWait> ergibt die Zeitscheibe des Threads sofort verwendet werden, da sich drehenden Blöcke Status für alle Threads weiterleiten. <xref:System.Threading.SpinWait>sogar auf einem Computer mit mehreren Kernen, um zu verhindern, dass den wartende Thread blockierende Threads mit höherer Priorität oder den Garbage Collector auch ergibt. Aus diesem Grund bei Verwendung einer <xref:System.Threading.SpinWait> in einem Vorgang Wartevorgängen wird empfohlen, dass Sie die Kernel-Wartezeit vor dem Aufrufen der <xref:System.Threading.SpinWait> selbst einen Kontextwechsel initiiert. <xref:System.Threading.SpinWait>Stellt die <xref:System.Threading.SpinWait.NextSpinWillYield%2A> -Eigenschaft, die Sie, bevor jedem Aufruf von überprüfen können <xref:System.Threading.SpinWait.SpinOnce%2A>. Wenn die Eigenschaft zurückgibt `true`, eigene "Wait"-Vorgang zu initiieren. Ein Beispiel finden Sie unter [Vorgehensweise: SpinWait verwenden, um einen zwei-Phasen-Vorgang warten implementieren](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).  
+ <xref:System.Threading.SpinWait> ist mehr als nur eine leere Schleife. Es ist sorgfältig implementiert, um das richtige Spinverhalten für den Allgemeinfall bereitzustellen, und initiiert selbst Kontextwechsel, wenn es ausreichend lange rotiert hat (ungefähr der für einen Kernelübergang erforderliche Zeitraum). Auf Einzelkerncomputern erzeugt <xref:System.Threading.SpinWait> z.B. sofort das Zeitsegment des Threads, da sich drehende Blöcke den Status an alle Threads weiterleiten. <xref:System.Threading.SpinWait> erzeugt sie ebenfalls, sogar auf Computern mit mehreren Kernen, um zu verhindern, dass der wartende Thread Threads mit höherer Priorität oder den Garbage Collector blockiert. Aus diesem Grund sollten Sie bei Verwendung von <xref:System.Threading.SpinWait> in einem zweiphasigen Wartevorgang die Kernelwartezeit aufrufen, bevor <xref:System.Threading.SpinWait> selbst einen Kontextwechsel initiiert. <xref:System.Threading.SpinWait> stellt die <xref:System.Threading.SpinWait.NextSpinWillYield%2A>-Eigenschaft bereit, die Sie vor jedem Aufruf von <xref:System.Threading.SpinWait.SpinOnce%2A> überprüfen können. Wenn die Eigenschaft `true` zurückgibt, initiieren Sie Ihren eigenen Wartevorgang. Ein Beispiel finden Sie unter [Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).  
   
- Wenn Sie eine zwei-Phasen "Wait"-Vorgang nicht ausführen, aber einfach drehen sind, bis eine Bedingung wahr ist, können Sie aktivieren <xref:System.Threading.SpinWait> auszuführenden seines Kontexts wechselt, damit es eine gute Bürger in der Windows-Umgebung ist. Das folgende grundlegende Beispiel zeigt eine <xref:System.Threading.SpinWait> in einem Stapel sperrenfreie. Wenn Sie einen hohe Leistung, threadsicheren Stapel benötigen, erwägen Sie <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>.  
+ Wenn Sie keinen zweiphasigen Wartevorgang ausführen, sondern einfach Schleifendurchläufe, bis eine Bedingung wahr ist, können Sie <xref:System.Threading.SpinWait> aktivieren, um dessen Kontextwechsel auszuführen, damit es ein „guter Bürger“ in der Windows-Betriebssystemumgebung ist. Das folgende grundlegende Beispiel zeigt ein <xref:System.Threading.SpinWait> in einem sperrenfreien Stapel. Wenn Sie einen threadsicheren Stapel mit hoher Leistung benötigen, ziehen Sie <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> in Betracht.  
   
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  

@@ -30,15 +30,18 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 <a name="top"></a> Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="explicit_conversion_with_the_explicit_operator"></a>   
 ## <a name="explicit-conversion-with-the-explicit-operator"></a>Explizite Konvertierung mit dem Explicit-Operator  
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> ist größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> ist größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Um solche einschränkenden Konvertierungen zu behandeln, ermöglicht das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Typen das Definieren eines `Explicit`-Operators. Einzelne Sprachcompiler können diesen Operator mithilfe einer eigenen Syntax oder ein Mitglied implementieren die <xref:System.Convert> Klasse aufgerufen werden, um die Konvertierung auszuführen. (Weitere Informationen zur <xref:System.Convert>-Klasse finden Sie unter [Die Convert-Klasse](#Convert) weiter unten in diesem Thema.) Das folgende Beispiel veranschaulicht die Verwendung von Sprachfunktionen, um die explizite Konvertierung dieser potenziell außerhalb des Gültigkeitsbereichs liegenden ganzzahligen Werte in <xref:System.Int32>-Werte zu behandeln.  
+ Um solche einschränkenden Konvertierungen zu behandeln, ermöglicht das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Typen das Definieren eines `Explicit`-Operators. Einzelne Sprachcompiler können diesen Operator dann mithilfe einer eigenen Syntax implementieren, oder ein Member der <xref:System.Convert>-Klasse kann aufgerufen werden, um die Konvertierung auszuführen. (Weitere Informationen zur <xref:System.Convert>-Klasse finden Sie unter [Die Convert-Klasse](#Convert) weiter unten in diesem Thema.) Das folgende Beispiel veranschaulicht die Verwendung von Sprachfunktionen, um die explizite Konvertierung dieser potenziell außerhalb des Gültigkeitsbereichs liegenden ganzzahligen Werte in <xref:System.Int32>-Werte zu behandeln.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -130,7 +133,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>Die IConvertible-Schnittstelle  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Für eine Tabelle mit den erweiternde Konvertierungen und für einschränkende Konvertierungen vom unterstützt die <xref:System.Convert> Klasse, finden Sie unter [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md).  
+ Eine Tabelle, in der die von der <xref:System.Convert>-Klasse unterstützten Erweiterungskonvertierungen und einschränkenden Konvertierungen aufgeführt sind, finden Sie unter [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md).  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>Benutzerdefinierte Konvertierungen mit der ChangeType-Methode  
@@ -195,7 +198,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="the_typeconverter_class"></a>   
 ## <a name="the-typeconverter-class"></a>Die TypeConverter-Klasse  

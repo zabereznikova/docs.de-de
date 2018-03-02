@@ -11,30 +11,34 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: SpinWait, how to synchronize two-phase wait
+helpviewer_keywords:
+- SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2717ba2d63e4ecf40638c369b66f2c696e396a5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 63e4ea5c1c1d6143f1b6daa0312fa32b52af5787
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait
-Das folgende Beispiel zeigt, wie Sie eine <xref:System.Threading.SpinWait?displayProperty=nameWithType> Objekt implementiert einen zweiphasigen Wartevorgang. In der ersten Phase werden die Synchronisierungsobjekt eine `Latch`, für einige Zyklen Spinvorgänge, während er überprüft, ob die Sperre verfügbar geworden ist. In der zweiten Phase, wenn die Sperre verfügbar ist, wird die `Wait` Methodenrückgabe ohne Verwendung der <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> warten; ausführen, andernfalls `Wait` den Wartevorgang ausführt.  
+Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Objekt einen zweiphasigen Wartevorgang implementieren. In der ersten Phase rotiert das Synchronisierungsobjekt, ein `Latch`, für einige Zyklen und überprüft dabei, ob die Sperre verfügbar geworden ist. Wenn in der zweiten Phase die Sperre verfügbar wird, erfolgt die Rückgabe der `Wait`-Methode ohne Verwendung von <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> zur Ausführung des Wartevorgangs; andernfalls führt `Wait` den Wartevorgang aus.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt eine sehr grundlegende Implementierung einer Latch Synchronisierung primitive. Sie können diese Datenstruktur verwenden, wenn die Wartezeiten voraussichtlich sehr kurz sind. In diesem Beispiel wird nur zu Demonstrationszwecken. Wenn Sie in Ihrem Programm Latch-Funktionalität benötigen, erwägen Sie <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
+ Dieses Beispiel zeigt eine sehr grundlegende Implementierung einer Latchsynchronisierungsprimitiven. Sie können diese Datenstruktur verwenden, wenn die Wartezeiten voraussichtlich sehr kurz sind. Das Beispiel dient nur der Veranschaulichung. Wenn Sie in Ihrem Programm Latchfunktionalität benötigen, erwägen Sie die Verwendung von <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
   
- Der Latch verwendet die <xref:System.Threading.SpinWait> Objekt nur bis zum nächsten Aufruf von festliegen installiertem `SpinOnce` bewirkt, dass die <xref:System.Threading.SpinWait> die Zeitscheibe des Threads bereitstellt. An diesem Punkt wird der Latch bewirkt, dass einen eigene Kontextwechsel durch Aufrufen von <xref:System.Threading.WaitHandle.WaitOne%2A> auf die <xref:System.Threading.ManualResetEvent> und im weiteren Verlauf des Timeoutwerts übergeben.  
+ Der Latch verwendet das <xref:System.Threading.SpinWait>-Objekt für Schleifendurchläufe, bis der nächste Aufruf von `SpinOnce` veranlasst, dass <xref:System.Threading.SpinWait> das Zeitsegment des Threads bereitstellt. An diesem Punkt bewirkt der Latch seinen eigenen Kontextwechsel durch Aufruf von <xref:System.Threading.WaitHandle.WaitOne%2A> in <xref:System.Threading.ManualResetEvent> und Übergabe des Rests des Timeoutwerts.  
   
- Die Protokollausgabe wird gezeigt, wie oft der Latch Leistung zu erhöhen, indem Sie ohne die Sperre konnte die <xref:System.Threading.ManualResetEvent>.  
+ Die Protokollausgabe zeigt, wie oft der Latch die Leistung durch Aktivieren der Sperre ohne Verwendung von <xref:System.Threading.ManualResetEvent> erhöhen konnte.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SpinWait](../../../docs/standard/threading/spinwait.md)  

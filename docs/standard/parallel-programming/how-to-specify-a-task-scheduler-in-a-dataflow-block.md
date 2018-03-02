@@ -1,12 +1,8 @@
 ---
 title: 'Gewusst wie: Einen Aufgabenplaner in einem Datenflussblock angeben'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,34 +12,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Gewusst wie: Einen Aufgabenplaner in einem Datenflussblock angeben
-Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.  
+Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
-> [!TIP]
->  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>-Namespace) ist nicht in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enthalten. Öffnen Sie zum Installieren des <xref:System.Threading.Tasks.Dataflow>-Namespace das Projekt in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wählen Sie im Menü "Projekt" die Option **NuGet-Pakete verwalten** aus, und suchen Sie online nach dem `Microsoft.Tpl.Dataflow` -Paket.  
+1.  Erstellen Sie ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Projekt oder ein Visual Basic **Windows Forms-Anwendungsprojekt**. In den folgenden Schritten wird das Projekt `WriterReadersWinForms` benannt.  
   
-### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
-  
-1.  Erstellen einer [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] oder Visual Basic **Windows Forms-Anwendung** Projekt. In den folgenden Schritten wird das Projekt `WriterReadersWinForms` benannt.  
-  
-2.  Fügen Sie im Formular-Designer für das Hauptformular „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) vier <xref:System.Windows.Forms.CheckBox>-Steuerelemente hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Reader 1** für `checkBox1`, **Reader 2** für `checkBox2`, **Reader 3** für `checkBox3`, und  **Writer** für `checkBox4`. Legen Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft für jedes Steuerelement auf `False` fest.  
+2.  Fügen Sie im Formular-Designer für das Hauptformular „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) vier <xref:System.Windows.Forms.CheckBox>-Steuerelemente hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf **Reader 1** für `checkBox1`, **Reader 2** für `checkBox2`, **Reader 3** für `checkBox3` und **Writer** für `checkBox4` fest. Legen Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft für jedes Steuerelement auf `False` fest.  
   
 3.  Fügen Sie dem Formular ein <xref:System.Windows.Forms.Timer>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft auf `2500` fest.  
   
 ## <a name="adding-dataflow-functionality"></a>Hinzufügen der Datenflussfunktionalität  
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflussblöcke erstellen, die Teil der Anwendung sind, und wie Sie die einzelnen Blöcke einem Taskplaner zuordnen.  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>Hinzufügen von Datenflussfunktionalität zur Anwendung  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>Hinzufügen von Datenflussfunktionalität zur Anwendung  
   
 1.  Fügen Sie dem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   

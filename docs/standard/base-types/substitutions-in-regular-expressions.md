@@ -19,22 +19,25 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 <a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode bereitgestellt, die über einen `replacement`-Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
-|Substitution|Beschreibung|  
+|Substitution|description|  
 |------------------|-----------------|  
 |`$` *number*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
 |`${` *Name* `}`|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `\b(\d+)(\.(\d+))?` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Abgleich am Anfang einer Wortgrenze.|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die erste Erfassungsgruppe.|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `^(\w+\s?)+$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Beginnt den Abgleich am Anfang der Eingabezeichenfolge.|  
 |`(\w+\s?)+`|Übereinstimmung mit dem Muster mindestens eines Wortzeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Ersetzen des Texts vor der Übereinstimmung  
- Die Ersetzung <code>$\`</code> ersetzt die übereinstimmende Zeichenfolge vor der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird bis zur Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text folgt, bleibt in der Ergebniszeichenfolge unverändert. Wenn mehrere Übereinstimmungen in einer Eingabezeichenfolge vorhanden sind, wird der Ersetzungstext von der ursprünglichen Eingabezeichenfolge abgeleitet und nicht von der Zeichenfolge, in der Text durch frühere Übereinstimmungen ersetzt wurde. \(Im Beispiel veranschaulicht.\) Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung <code>$\`</code> nicht aus.  
+ Die Ersetzung <code>$\`</code> ersetzt die übereinstimmende Zeichenfolge vor der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird bis zur Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text folgt, bleibt in der Ergebniszeichenfolge unverändert. Wenn mehrere Übereinstimmungen in einer Eingabezeichenfolge vorhanden sind, wird der Ersetzungstext von der ursprünglichen Eingabezeichenfolge abgeleitet und nicht von der Zeichenfolge, in der Text durch frühere Übereinstimmungen ersetzt wurde. \(Dies wird im Beispiel veranschaulicht.\) Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung <code>$\`</code> nicht aus.  
   
  Im folgenden Beispiel wird eine Sequenz von einer oder mehreren Dezimalstellen in der Eingabezeichenfolge mithilfe des Muster eines regulären Ausdrucks `\d+` abgeglichen. Die Ersetzungszeichenfolge <code>$`</code> ersetzt diese Ziffern durch den Text, der der Übereinstimmung vorausgeht.  
   
@@ -200,7 +203,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s\1\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  

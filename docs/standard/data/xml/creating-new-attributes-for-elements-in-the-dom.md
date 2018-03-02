@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Erstellen von neuen Attributen für Elemente im Dokumentobjektmodell
-Erstellen von neuen Attributen unterscheidet sich vom Erstellen anderer Knotentypen, da Attribute keine Knoten sind, jedoch sind Eigenschaften eines Elementknotens und sind in enthalten eine **XmlAttributeCollection** mit dem Element verknüpft sind. Es gibt verschiedene Möglichkeiten, ein Attribut zu erstellen und an ein Element anzuhängen:  
+Das Erstellen von neuen Attributen unterscheidet sich vom Erstellen anderer Knotentypen, da Attribute keine Knoten sind, sondern Eigenschaften eines Elementknotens, und in einer mit dem Element verknüpften **XmlAttributeCollection** enthalten sind. Es gibt verschiedene Möglichkeiten, ein Attribut zu erstellen und an ein Element anzuhängen:  
   
--   Den Elementknoten abrufen und verwenden Sie **SetAttribute** der attributauflistung dieses Elements ein Attribut hinzu.  
+-   Den Elementknoten abrufen und dann mit **SetAttribute** der Attributauflistung dieses Elements ein Attribut hinzufügen  
   
--   Erstellen einer **XmlAttribute** Knoten unter Verwendung der **CreateAttribute** -Methode, den Elementknoten abrufen, verwenden Sie **SetAttributeNode** auf den Knoten der attributauflistung, hinzufügen Element.  
+-   Mit der **CreateAttribute**-Methode einen **XmlAttribute**-Knoten erstellen, den Elementknoten abrufen und dann mit **SetAttributeNode** den Knoten der Attributauflistung dieses Elements hinzufügen  
   
- Im folgende Beispiel wird gezeigt, wie ein Attribut hinzufügen, um ein Element mit dem **SetAttribute** Methode.  
+ Im folgenden Beispiel wird veranschaulicht, wie Sie einem Element mit der **SetAttribute**-Methode ein Attribut hinzufügen.  
   
 ```vb  
 Imports System  
@@ -79,7 +82,7 @@ public class Sample
   }  
 ```  
   
- Das folgende Beispiel zeigt ein neues Attribut erstellt wird, mithilfe der **CreateAttribute** Methode. Anschließend wird das Attribut der attributauflistung hinzugefügt der **Buch** Element mit dem **SetAttributeNode** Methode.  
+ Im folgenden Beispiel wird dargestellt, wie mit der **CreateAttribute**-Methode ein neues Attribut erstellt wird. Anschließend wird das Attribut mithilfe der **SetAttributeNode**-Methode der Attributauflistung des **book**-Elements hinzugefügt.  
   
  Mit dem folgenden XML-Code   
   
@@ -119,17 +122,17 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- Der vollständigen Beispielcode finden Sie unter <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
+ Das vollständige Codebeispiel finden Sie unter <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- Sie können auch erstellen eine **XmlAttribute** Knoten und Verwenden der **InsertBefore** oder **InsertAfter** Methoden, um sie in der entsprechenden Position in der Auflistung einzufügen. Wenn ein Attribut mit demselben Namen bereits vorhanden ist, in der attributauflistung der vorhandenen ist **XmlAttribute** Knoten aus der Auflistung und der neuen entfernt **XmlAttribute** Knoten eingefügt wird. Dies führt die gleiche Weise wie die **SetAttribute** Methode. Diese Methoden erfordern als Parameter einen vorhandenen Knoten als Bezugspunkt möchten die **InsertBefore** und **InsertAfter**. Wenn Sie keinen Referenzknoten, der angibt, wo den neuen Knoten, der Standardwert für eingefügt angeben der **InsertAfter** Methode besteht darin, den neuen Knoten am Anfang der Auflistung eingefügt. Die Standardposition für die **InsertBefore**, wenn kein Referenzknoten angegeben wird, wird am Ende der Auflistung.  
+ Sie können auch einen **XmlAttribute**-Knoten erstellen und diesen mit der **InsertBefore**-Methode oder der **InsertAfter**-Methode an der entsprechenden Position in der Auflistung platzieren. Wenn ein Attribut mit demselben Namen bereits in der Attributauflistung vorhanden ist, wird der bisherige **XmlAttribute**-Knoten aus der Auflistung entfernt, und der neue **XmlAttribute**-Knoten wird eingefügt. Dies erfolgt auf die gleiche Weise wie bei der **SetAttribute**-Methode. Diese Methoden erfordern als Parameter einen vorhandenen Knoten, der als Referenzpunkt für die **InsertBefore**-Methode und die **InsertAfter**-Methode dient. Wenn Sie keinen Referenzknoten bereitstellen, der angibt, wo der neue Knoten eingefügt werden soll, wird mit der **InsertAfter**-Methode der neue Knoten standardmäßig am Anfang der Auflistung eingefügt. Die Standardposition für die **InsertBefore**-Methode ist das Ende der Auflistung, wenn kein Referenzknoten angegeben wird.  
   
- Wenn Sie erstellt ein **XmlNamedNodeMap** von Attributen, können Sie ein Attribut mit Namen hinzufügen der <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Weitere Informationen finden Sie unter [Knotenauflistungen in "NamedNodeMaps" und "NodeLists"](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Wenn Sie eine aus Attributen bestehende **XmlNamedNodeMap** erstellt haben, können Sie mithilfe von <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> ein Attribut anhand des Namens hinzufügen. Weitere Informationen hierzu finden Sie unter [Knotenauflistungen in „NamedNodeMaps“ und „NodeLists“](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
 ## <a name="default-attributes"></a>Standardattribute  
  Wenn Sie ein Element erstellen, das gemäß Deklaration ein Standardattribut aufweist, wird durch das Dokumentobjektmodell (DOM) ein neues Standardattribut mit seinem Standardwert erstellt und an das Element angehängt. Gleichzeitig werden die untergeordneten Knoten des Standardattributs erstellt.  
   
 ## <a name="attribute-child-nodes"></a>Untergeordnete Knoten von Attributen  
- Die Werte eines Attributknotens werden zu dessen untergeordneten Knoten. Es gibt nur zwei Typen von zulässigen untergeordneten Knoten: **XmlText** Knoten, und **XmlEntityReference** Knoten. Dies sind die untergeordneten Knoten in dem Sinne, dass Methoden wie z. B. **FirstChild** und **LastChild** als untergeordnete Knoten zu verarbeiten. Dieses Merkmal eines Attributs mit untergeordneten Knoten ist von Bedeutung, wenn Sie versuchen, Attribute oder untergeordnete Knoten von Attributen zu entfernen. Weitere Informationen finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOKUMENTOBJEKTMODELL](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Die Werte eines Attributknotens werden zu dessen untergeordneten Knoten. Es gibt nur zwei Typen von gültigen untergeordneten Knoten: **XmlText**-Knoten und **XmlEntityReference**-Knoten. Diese sind dahingehend als untergeordnete Knoten zu betrachten, dass sie von Methoden wie **FirstChild** und **LastChild** als untergeordnete Knoten verarbeitet werden. Dieses Merkmal eines Attributs mit untergeordneten Knoten ist von Bedeutung, wenn Sie versuchen, Attribute oder untergeordnete Knoten von Attributen zu entfernen. Weitere Informationen hierzu finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

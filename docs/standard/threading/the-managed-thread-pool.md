@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Verwalteter Threadpool
 Die <xref:System.Threading.ThreadPool>-Klasse stellt einer Anwendung einen Pool von Arbeitsthreads bereit, die vom System verwaltet werden und Ihnen die Möglichkeit bieten, sich mehr auf Anwendungsaufgaben als auf die Threadverwaltung zu konzentrieren. Für kurze Aufgaben, bei denen Hintergrundverarbeitung erforderlich ist, bietet sich der verwaltete Threadpool als einfache Lösung für den Umgang mit mehreren Threads an. Zum Beispiel können Sie, beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Objekte erstellen, die asynchrone Aufgaben in Threads im Threadpool ausführen.  
@@ -52,7 +55,7 @@ Die <xref:System.Threading.ThreadPool>-Klasse stellt einer Anwendung einen Pool 
 -   Dem Thread muss eine stabile Identität zugeordnet werden, oder ein Thread soll einer Aufgabe zugeordnet werden.   
   
 ## <a name="thread-pool-characteristics"></a>Eigenschaften von Threadpools  
- Threadpoolthreads sind Hintergrundthreads. Finden Sie unter [Vordergrund- und Hintergrundthreads](../../../docs/standard/threading/foreground-and-background-threads.md). Jeder Thread verwendet die standardmäßige Stapelgröße, wird mit Standardpriorität ausgeführt und befindet sich im Multithread-Apartment.  
+ Threadpoolthreads sind Hintergrundthreads. Siehe [Vordergrund- und Hintergrundthreads](../../../docs/standard/threading/foreground-and-background-threads.md). Jeder Thread verwendet die standardmäßige Stapelgröße, wird mit Standardpriorität ausgeführt und befindet sich im Multithread-Apartment.  
   
  Pro Prozess gibt es nur einen Threadpool.  
   
@@ -90,25 +93,25 @@ Die <xref:System.Threading.ThreadPool>-Klasse stellt einer Anwendung einen Pool 
 >  Sie können die <xref:System.Threading.ThreadPool.SetMinThreads%2A>-Methode verwenden, um die Mindestanzahl an Threads im Leerlauf zu erhöhen. Allerdings kann ein unnötiges Erhöhen dieses Wertes zu Leistungsproblemen führen. Wenn zu viele Aufgaben gleichzeitig gestartet werden, werden möglicherweise alle Aufgaben zu langsam ausgeführt. In den meisten Fällen erreicht der Threadpool mit dem eigenen Algorithmus für die Zuordnung von Threads eine bessere Leistung.  
   
 ## <a name="skipping-security-checks"></a>Überschreiben von Sicherheitsüberprüfungen  
- Der Threadpool stellt auch die <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType>-Methode und die <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode bereit. Verwenden Sie diese Methoden nur, wenn Sie sicher sind, dass der Stapel des Aufrufers irrelevant für die Sicherheitsüberprüfungen ist, die während der Ausführung der in der Warteschlange stehenden Aufgabe stattfinden. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>und <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> erfassen beide den Stapel des Aufrufers, der mit dem Stapel des Threadpoolthreads zusammengeführt wird, wenn der Thread beginnt, eine Aufgabe auszuführen. Wenn eine Sicherheitsüberprüfung erforderlich ist, muss der gesamte Stapel überprüft werden. Obwohl die Überprüfung Sicherheit gewährleistet, wird dadurch auch die Leistung beeinträchtigt.  
+ Der Threadpool stellt auch die <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType>-Methode und die <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode bereit. Verwenden Sie diese Methoden nur, wenn Sie sicher sind, dass der Stapel des Aufrufers irrelevant für die Sicherheitsüberprüfungen ist, die während der Ausführung der in der Warteschlange stehenden Aufgabe stattfinden. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> und <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> erfassen beide den Stapel des Aufrufers, der mit dem Stapel des Threadpoolthreads zusammengeführt wird, wenn der Thread beginnt, eine Aufgabe auszuführen. Wenn eine Sicherheitsüberprüfung erforderlich ist, muss der gesamte Stapel überprüft werden. Obwohl die Überprüfung Sicherheit gewährleistet, wird dadurch auch die Leistung beeinträchtigt.  
   
 ## <a name="using-the-thread-pool"></a>Verwenden des Threadpools  
- Beginnend mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], der Threadpool am einfachsten ist die Verwendung der [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). Standardmäßig verwenden parallele Bibliothekstypen wie <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> Threadpoolthreads, um Aufgaben auszuführen. Sie können den Threadpool auch verwenden, indem Sie in verwaltetem Code <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> aufrufen (oder `CorQueueUserWorkItem` in nicht verwaltetem Code) und einen <xref:System.Threading.WaitCallback>-Delegaten übergeben, der die Methode darstellt, die die Aufgabe ausführt. Eine andere Möglichkeit, den Threadpool zu verwenden, ist, Arbeitsaufgaben, die mit einem Wartevorgang verknüpft sind, mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode in die Warteschlange zu stellen und ein <xref:System.Threading.WaitHandle> zu übergeben, das bei einer Signalisierung oder einem Timeout die Methode aufruft, die vom <xref:System.Threading.WaitOrTimerCallback>-Delegaten dargestellt wird. Threadpoolthreads werden zum Aufrufen von Rückrufmethoden verwendet.   
+ Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] kann der Threadpool am einfachsten über die [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) verwendet werden. Standardmäßig verwenden parallele Bibliothekstypen wie <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> Threadpoolthreads, um Aufgaben auszuführen. Sie können den Threadpool auch verwenden, indem Sie in verwaltetem Code <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> aufrufen (oder `CorQueueUserWorkItem` in nicht verwaltetem Code) und einen <xref:System.Threading.WaitCallback>-Delegaten übergeben, der die Methode darstellt, die die Aufgabe ausführt. Eine andere Möglichkeit, den Threadpool zu verwenden, ist, Arbeitsaufgaben, die mit einem Wartevorgang verknüpft sind, mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode in die Warteschlange zu stellen und ein <xref:System.Threading.WaitHandle> zu übergeben, das bei einer Signalisierung oder einem Timeout die Methode aufruft, die vom <xref:System.Threading.WaitOrTimerCallback>-Delegaten dargestellt wird. Threadpoolthreads werden zum Aufrufen von Rückrufmethoden verwendet.   
   
 ## <a name="threadpool-examples"></a>Threadpool-Beispiele  
  Die Codebeispiele in diesem Abschnitt veranschaulichen den Threadpool bei Verwendung der <xref:System.Threading.Tasks.Task>-Klasse, der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>-Methode und der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode.   
   
 -   [Ausführen von asynchronen Aufgaben mit der Task Parallel Library](#TaskParallelLibrary)  
   
--   [Ausführen von Code mit "QueueUserWorkItem"](#ExecuteCodeWithQUWI)  
+-   [Asynchrones Ausführen von Code mit QueueUserWorkItem](#ExecuteCodeWithQUWI)  
   
--   [Bereitstellen von Aufgabendaten für "QueueUserWorkItem"](#TaskDataForQUWI)  
+-   [Bereitstellen von Aufgabendaten für QueueUserWorkItem](#TaskDataForQUWI)  
   
 -   [Verwenden von RegisterWaitForSingleObject](#RegisterWaitForSingleObject)  
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>Ausführen von asynchronen Aufgaben mit der Task Parallel Library  
- Im folgenden Beispiel wird veranschaulicht, wie mit einem Aufruf der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode ein <xref:System.Threading.Tasks.Task>-Objekt erstellt und verwendet wird. Ein Beispiel, verwendet der <xref:System.Threading.Tasks.Task%601> Klasse, um einen Wert aus einer asynchronen Aufgabe zurückzugeben, finden Sie unter [wie: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie mit einem Aufruf der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode ein <xref:System.Threading.Tasks.Task>-Objekt erstellt und verwendet wird. Ein Beispiel, in dem die <xref:System.Threading.Tasks.Task%601>-Klasse verwendet wird, um einen Wert aus einer asynchronen Aufgabe zurückzugeben, finden Sie unter [Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -135,7 +138,7 @@ Die <xref:System.Threading.ThreadPool>-Klasse stellt einer Anwendung einen Pool 
   
 -   Aufnehmen einer Aufgabe in die Warteschlange mithilfe der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>-Methode zur Ausführung durch <xref:System.Threading.ThreadPool>-Threads.  
   
--   Auslösen der Ausführung einer Aufgabe mithilfe von <xref:System.Threading.AutoResetEvent>. Finden Sie unter [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
+-   Auslösen der Ausführung einer Aufgabe mithilfe von <xref:System.Threading.AutoResetEvent>. Siehe [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
   
 -   Behandeln von Timeouts und Signalen mit einem <xref:System.Threading.WaitOrTimerCallback>-Delegaten  
   

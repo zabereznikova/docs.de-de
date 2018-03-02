@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: beb6265e8b245893cd7fa5edca28ba1b081481ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-namespace-navigation"></a>XPath-Namespacenavigation
 Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces und die darin enthaltenen Elemente korrekt adressieren. Mithilfe von Namespaces werden Zweideutigkeiten vermieden, die auftreten können, wenn Namen in mehr als einem Kontext verwendet werden. Der Name `ID` kann beispielsweise auf mehrere ID-Bezeichner verweisen, die unterschiedlichen Elementen eines XML-Dokuments zugewiesen sind. In der Namespace-Syntax werden URIs, Namen und Präfixe zur Unterscheidung der Elemente in einem XML-Dokument definiert.  
   
- Anhand des Beispiels in diesem Thema wird gezeigt, wie Präfixe beim Navigieren in einem XML-Dokument mit dem <xref:System.Xml.XPath.XPathNavigator> verwendet werden. Weitere Informationen zu Namespaces und Syntax finden Sie unter [Understanding XML Namespaces](http://go.microsoft.com/fwlink/?linkid=140245).  
+ Anhand des Beispiels in diesem Thema wird gezeigt, wie Präfixe beim Navigieren in einem XML-Dokument mit dem <xref:System.Xml.XPath.XPathNavigator> verwendet werden. Weitere Informationen zu Namespaces und ihrer Syntax finden Sie unter [Grundlegendes zu XML-Namespaces](http://go.microsoft.com/fwlink/?linkid=140245).  
   
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Mithilfe von Namespacedeklarationen werden die Elemente in einem XML-Dokument beim Verwenden einer Instanz des <xref:System.Xml.XPath.XPathNavigator> unterscheidbar und adressierbar gemacht. Namespacepräfixe stellen eine kurze Syntax für Adressierungsnamespaces bereit.  
@@ -78,5 +81,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
  Die Präzision vollqualifizierter Namespaces und Namen dient nicht nur der Bequemlichkeit. Wenn Sie ein wenig mit der Dokumentdefinition und dem Code in den voranstehenden Beispielen experimentieren, können Sie feststellen, dass bei der Navigation ohne vollqualifizierte Elementnamen Ausnahmen ausgelöst werden. Beispiel: Die Elementdefinition `<Search xmlns="http://schemas.microsoft.com/v1/Search">` und die Abfragezeichenfolge `xpath = "/s:Envelope/s:Body/Search";` würde ohne den Namespacepräfix für das `Search`-Element `null` statt des `Search`-Elements zurückgeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zugreifen auf XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Auswählen, auswerten und Zuordnen von XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+ [Zugreifen auf XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

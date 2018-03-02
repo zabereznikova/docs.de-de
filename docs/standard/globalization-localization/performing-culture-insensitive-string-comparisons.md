@@ -19,15 +19,18 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Durchführen kulturunabhängiger Zeichenfolgenvergleiche
 In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode kulturabhängige Vergleiche sowie Vergleiche unter Berücksichtigung der Groß-/Kleinschreibung aus. Diese Methode schließt auch mehrere Überladungen ein, die einen `culture`-Parameter zur Angabe der zu verwendenden Kultur und einen `comparisonType`-Parameter zur Angabe der zu verwendenden Vergleichsregeln bereitstellen. Durch den Aufruf dieser Methoden statt der Standardüberladung wird jede Mehrdeutigkeit hinsichtlich der in einem bestimmten Methodenaufruf verwendeten Regeln vermieden. Es wird verdeutlicht, ob ein bestimmter Vergleich kulturabhängig oder kulturunabhängig ist.  
@@ -35,7 +38,7 @@ In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProp
 > [!NOTE]
 >  Beide Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Sie können kulturunabhängige Vergleiche nicht mithilfe dieser Methode ausführen. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zu verwenden.  
   
- Geben Sie für kulturabhängige Vorgänge den <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>-Enumerationswert oder den <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>-Enumerationswert als `comparisonType`-Parameter an. Wenn Sie möchten einen kulturabhängigen Vergleich mithilfe einer anderen festgelegten Kultur als der aktuellen Kultur ausführen, geben Sie die <xref:System.Globalization.CultureInfo> -Objekt, das diese Kultur wie repräsentiert die `culture` Parameter.  
+ Geben Sie für kulturabhängige Vorgänge den <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>-Enumerationswert oder den <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>-Enumerationswert als `comparisonType`-Parameter an. Wenn Sie einen kulturabhängigen Vergleich mithilfe einer anderen festgelegten Kultur als der aktuellen Kultur ausführen möchten, geben Sie das <xref:System.Globalization.CultureInfo>-Objekt an, das diese Kultur als `culture`-Parameter darstellt.  
   
  Die kulturunabhängigen von der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode unterstützten Zeichenfolgenvergleiche sind entweder linguistisch (auf Grundlage der Sortierkonventionen der invarianten Kultur) oder nicht linguistisch (auf Grundlage des Ordnungswerts der Zeichen in der Zeichenfolge). Die meisten kulturunabhängigen Zeichenfolgenvergleiche sind nicht linguistisch. Geben Sie den <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>-Enumerationswert oder den <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>-Enumerationswert als `comparisonType`-Parameter für diese Vergleiche an. Wenn beispielsweise eine Sicherheitsentscheidung (z. B. ein Benutzername oder ein Kennwortvergleich) auf dem Ergebnis eines Zeichenfolgenvergleichs basiert, sollte der Vorgang kulturunabhängig und nicht linguistisch sein, um sicherzustellen, dass das Ergebnis nicht von den Konventionen einer bestimmten Kultur oder Sprache beeinflusst wird.  
   

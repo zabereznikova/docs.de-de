@@ -12,20 +12,23 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e1fb7d61b8e250884b2c57cad8c5106bc77787a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6bb715c11cc0d9b07e4ea8805ace7680ca92097c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="scheduling-threads"></a>Scheduling von Threads
-Jeder Thread verfügt über eine Threadpriorität zugewiesen. Threads, die innerhalb der common Language Runtime erstellt werden zunächst die Priorität zugewiesen **ThreadPriority.Normal**. Threads, die außerhalb der Runtime erstellt behalten die Priorität, die ihnen zugewiesen waren, bevor sie die verwaltete Umgebung eingegeben haben. Sie können abrufen oder Festlegen der Priorität einen beliebigen Thread mit der **Thread.Priority** Eigenschaft.  
+Jedem Thread ist eine Threadpriorität zugewiesen. Threads, die innerhalb der Common Language Runtime erstellt werden, erhalten anfänglich die Priorität **ThreadPriority.Normal**. Threads, die außerhalb der Runtime erstellt werden, behalten die Priorität bei, die sie vor dem Eintritt in die verwaltete Umgebung innehatten. Sie können die Priorität jedes Threads mithilfe der **Thread.Priority**-Eigenschaft abrufen oder festlegen.  
   
- Threads werden basierend auf deren Priorität Ausführung geplant. Obwohl Threads innerhalb der Runtime ausgeführt werden, werden alle Threads Zeitscheiben Prozessor vom Betriebssystem zugewiesen. Die Details der Planungsalgorithmus bestimmt die Reihenfolge, in der Threads ausgeführt werden, je nach ausgewähltem jedes Betriebssystem. Unter einigen Betriebssystemen erfolgt der Thread mit der höchsten Priorität (der Threads, die ausgeführt werden können) immer zuerst ausgeführt. Wenn mehrere Threads mit gleicher Priorität alle verfügbar sind, durchläuft der Planer die Threads, Priorität, erteilen jeder Thread eine feste Zeitscheibe in dem ausgeführt. Solange ein Thread mit einer höheren Priorität zum Ausführen verfügbar ist, erhalte Threads mit niedrigerer Priorität nicht ausführen. Wenn an einer bestimmten Priorität nicht mehr ausführbar Threads vorhanden sind, wird der Planer verschiebt auf der nächstniedrigeren Priorität und der Priorität für die Ausführung der Threads plant. Wenn ein Thread mit höherer Priorität ausführbar ist, wird der niedrigere Priorität Thread präemptiv unterbrochen wird, und der Thread mit höhere Priorität erneut ausführen zulässig ist. Über die können das Betriebssystem auch Threadprioritäten dynamisch anpassen wie die Benutzeroberfläche einer Anwendung zwischen Vordergrund- und verschoben werden. Andere Betriebssysteme könnten Sie wahlweise einen anderen Planungsalgorithmus verwenden.  
+ Die Ausführung von Threads wird basierend auf ihrer Priorität geplant. Auch wenn Threads innerhalb der Runtime ausgeführt werden, weist das Betriebssystem allen Threads Prozessorzeitsegmente zu. Die Details des Planungsalgorithmus, der zum Ermitteln der Ausführungsreihenfolge der Threads verwendet wird, variieren je nach Betriebssystem. In einigen Betriebssystemen erfolgt die Planung so, dass der Thread mit der höchsten Priorität (aller ausführbaren Threads) immer zuerst ausgeführt wird. Wenn mehrere Threads mit der gleichen Priorität verfügbar sind, durchläuft der Planer diese Threads und weist jedem Thread ein festgelegtes Zeitsegment zu, innerhalb dessen die Ausführung erfolgt. Solange ein Thread mit höherer Priorität für die Ausführung verfügbar ist, werden Threads mit niedrigerer Priorität nicht ausgeführt. Wenn keine ausführbaren Threads mit einer bestimmten Priorität mehr verfügbar sind, fährt der Planer mit der nächstniedrigeren Priorität fort und plant die Ausführung der Threads mit dieser Priorität. Wenn ein Thread mit einer höheren Priorität für die Ausführung verfügbar wird, erhält er Vorrang vor dem Thread mit der niedrigeren Priorität und wird erneut ausgeführt. Darüber hinaus kann das Betriebssystem Threadprioritäten auch dynamisch anpassen, wenn die Benutzeroberfläche einer Anwendung vom Vordergrund in den Hintergrund oder zurück wechselt. Andere Betriebssysteme können einen anderen Planungsalgorithmus einsetzen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Threads und Threading](../../../docs/standard/threading/using-threads-and-threading.md)  

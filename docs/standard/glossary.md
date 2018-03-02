@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -29,21 +32,21 @@ Ahead-of-Time-Compiler
 
 Die ursprüngliche ASP.NET-Implementierung, die im Lieferumfang von .NET Framework enthalten ist.
 
-Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Verweisen auf ASP.NET 4.x, wenn Sie erleichtern, die Sie löschen möchten können nicht mithilfe von ASP.NET beide Implementierungen zu verstehen. 
+Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Beziehen Sie sich auf ASP.NET 4.x, wenn Sie klarstellen möchten, dass Sie ASP.NET nicht für beide Implementierungen verwenden. 
 
-Finden Sie unter [Dokumentation zu ASP.NET](/aspnet/#pivot=aspnet).
+Siehe [ASP.NET-Dokumentation](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von ASP.NET, die auf .NET Core basiert.
 
-Finden Sie unter [Dokumentation zu ASP.NET Core](/aspnet/#pivot=core).
+Siehe [ASP.NET Core-Dokumentation](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>Assembly
 
-Eine *DLL*-Datei, die eine Sammlung von APIs enthält, die von Apps oder anderen Assemblys aufgerufen werden können.
+Eine *.dll*/*.exe*-Datei, die eine Sammlung von APIs enthält, die von Apps oder anderen Assemblys aufgerufen werden können.
 
-Eine .NET-Assembly ist eine Sammlung von Typen. Eine Assembly enthält Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten.  Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
+Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten enthalten. Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -207,7 +210,7 @@ Sie können sich diese Technologie als einen permanenten JIT-Compiler vorstellen
 
 Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP*-Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
 
-Die *ZIP*-Datei besitzt eine *NUPKG*-Erweiterung und eventuell Ressourcen, z.B. *DLL*- und *XML*-Dateien, für die Verwendung mit mehreren Frameworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref*, und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib*.
+Die *ZIP*-Datei besitzt eine *NUPKG*-Erweiterung und eventuell Ressourcen, z.B. *DLL*- und *XML*-Dateien, für die Verwendung mit mehreren Zielframeworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref*, und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib*.
 
 ## <a name="platform"></a>platform
 

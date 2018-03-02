@@ -17,15 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generika
 <a name="top"></a> Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen weniger stark abgeleiteten (allgemeineren) oder einen stärker abgeleiteten (spezifischeren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
@@ -60,11 +63,11 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CoContraSimpleAction#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleaction/cs/example.cs#1)]
  [!code-vb[CoContraSimpleAction#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleaction/vb/example.vb#1)]  
   
- Das erscheint rückständig, ist aber typsicherer Code, der kompiliert und ausgeführt wird. Der Lambda-Ausdruck entspricht dem ihm zugewiesenen Delegaten und definiert daher eine Methode, die einen Parameter des `Base` -Typs akzeptiert und keinen Wert zurückgibt. Der resultierende Delegat kann einer Variable des `Action<Derived>` -Typs zugewiesen werden, da der Typparameter `T` des <xref:System.Action%601> -Delegaten kontravariant ist. Der Code ist typsicher, da `T` einen Parametertyp angibt. Wenn der Delegat des `Action<Base>` -Typs wie ein Delegat des `Action<Derived>`-Typs aufgerufen wird, muss sein Argument vom `Derived`-Typ sein. Dieses Argument kann immer sicher an die zugrunde liegende Methode übergeben werden, da der Parameter der Methode vom `Base`-Typ ist.  
+ Das erscheint rückständig, ist aber typsicherer Code, der kompiliert und ausgeführt wird. Der Lambda-Ausdruck entspricht dem ihm zugewiesenen Delegaten und definiert daher eine Methode, die einen Parameter des `Base`-Typs akzeptiert und keinen Wert zurückgibt. Der resultierende Delegat kann einer Variable des `Action<Derived>` -Typs zugewiesen werden, da der Typparameter `T` des <xref:System.Action%601> -Delegaten kontravariant ist. Der Code ist typsicher, da `T` einen Parametertyp angibt. Wenn der Delegat des `Action<Base>` -Typs wie ein Delegat des `Action<Derived>`-Typs aufgerufen wird, muss sein Argument vom `Derived`-Typ sein. Dieses Argument kann immer sicher an die zugrunde liegende Methode übergeben werden, da der Parameter der Methode vom `Base`-Typ ist.  
   
  Im Allgemeinen können kovariante Typparameter als Rückgabetyp eines Delegaten und kontravariante Typparameter als Parametertypen verwendet werden. Für eine Schnittstelle können kovariante Typparameter als Rückgabetypen der Methoden der Schnittstelle verwendet werden und kontravariante Typparameter als Parametertypen der Methoden der Schnittstelle.  
   
- Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant*bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
+ Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant*bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
   
 -   In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sind variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Generische Schnittstellen mit kontravarianten generischen Typparametern  
@@ -103,18 +106,18 @@ ms.lasthandoff: 11/21/2017
   
  Im folgenden Beispiel werden kontravariante Typparameter veranschaulicht. Im Beispiel wird eine abstrakte (`MustInherit` in Visual Basic) `Shape` -Klasse mit einer `Area` -Eigenschaft definiert. Außerdem wird eine `ShapeAreaComparer` -Klasse definiert, die `IComparer<Shape>` (`IComparer(Of Shape)` in Visual Basic) implementiert. Die Implementierung der <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType>-Methode basiert auf dem Wert der `Area`-Eigenschaft, sodass `ShapeAreaComparer` zum Sortieren von `Shape`-Objekten nach Bereich verwendet werden kann.  
   
- Die `Circle` -Klasse erbt von `Shape` und überschreibt `Area`. Im Beispiel wird ein <xref:System.Collections.Generic.SortedSet%601> von `Circle` -Objekten erstellt, wobei ein Konstruktor verwendet wird, der `IComparer<Circle>` (`IComparer(Of Circle)` in Visual Basic) akzeptiert. Anstelle von `IComparer<Circle>`wird jedoch ein `ShapeAreaComparer` -Objekt übergeben, das `IComparer<Shape>`implementiert. Im Beispiel kann ein Vergleich eines weniger stark abgeleiteten Typs (`Shape`) übergeben werden, wenn der Code einen Vergleich eines stärker abgeleiteten Typs (`Circle`) verlangt, da der Typparameter der generischen <xref:System.Collections.Generic.IComparer%601> -Schnittstelle kontravariant ist.  
+ Die `Circle` -Klasse erbt von `Shape` und überschreibt `Area`. Im Beispiel wird ein <xref:System.Collections.Generic.SortedSet%601> von `Circle` -Objekten erstellt, wobei ein Konstruktor verwendet wird, der `IComparer<Circle>` (`IComparer(Of Circle)` in Visual Basic) akzeptiert. Anstelle von `IComparer<Circle>` wird jedoch ein `ShapeAreaComparer`-Objekt übergeben, das `IComparer<Shape>` implementiert. Im Beispiel kann ein Vergleich eines weniger stark abgeleiteten Typs (`Shape`) übergeben werden, wenn der Code einen Vergleich eines stärker abgeleiteten Typs (`Circle`) verlangt, da der Typparameter der generischen <xref:System.Collections.Generic.IComparer%601> -Schnittstelle kontravariant ist.  
   
  Wenn `Circle` ein neues `SortedSet<Circle>`-Objekt hinzugefügt wird, wird die `IComparer<Shape>.Compare` -Methode (`IComparer(Of Shape).Compare` -Methode in Visual Basic) des `ShapeAreaComparer` -Objekts immer dann aufgerufen, wenn das neue Element mit einem vorhandenen Element verglichen wird. Der Parametertyp der Methode (`Shape`) ist weniger stark abgeleitet als der Typ, der übergeben wird (`Circle`). Deshalb ist der Aufruf typsicher. Kontravarianz ermöglicht es `ShapeAreaComparer` , eine Auflistung eines einzelnen Typs sowie eine Auflistung von gemischten Typen zu sortieren, die von `Shape`abgeleitet werden.  
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Generische Delegaten mit varianten Typparametern  
- In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]verfügen die generischen `Func` -Delegaten (z. B. <xref:System.Func%602>) über kovariante Rückgabetypen und über kontravariante Parametertypen. Die generischen `Action` -Delegaten, z. B. <xref:System.Action%602>, verfügen über kontravariante Parametertypen. Das bedeutet, dass die Delegaten Variablen mit weiter abgeleiteten Parametertypen und (im Fall von generischen `Func` -Delegaten) weniger abgeleiteten Rückgabetypen zugewiesen werden können.  
+ In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]verfügen die generischen `Func` -Delegaten (z. B. <xref:System.Func%602>) über kovariante Rückgabetypen und über kontravariante Parametertypen. Die generischen `Action` -Delegaten, z. B. <xref:System.Action%602>, verfügen über kontravariante Parametertypen. Das bedeutet, dass die Delegaten Variablen mit weiter abgeleiteten Parametertypen und (im Fall von generischen `Func`-Delegaten) weniger abgeleiteten Rückgabetypen zugewiesen werden können.  
   
 > [!NOTE]
 >  Der letzte generische Typparameter der generischen `Func` -Delegaten gibt den Typ des Rückgabewerts in der Signatur des Delegaten an. Er ist kovariant (Schlüsselwort`out` ), wohingegen die anderen generischen Typparameter kontravariant sind (Schlüsselwort`in` ).  
@@ -149,7 +152,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definieren von varianten generischen Schnittstellen und Delegaten  

@@ -1,5 +1,5 @@
 ---
-title: 'XSLT-Stylesheet Scripting mithilfe &lt;msxsl: Script&gt;'
+title: "Skripterstellung für ein XSLT-Stylesheet mit &lt;msxsl:script&gt;"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35f24c0a033748917b465510d4f70b75946a0a74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT-Stylesheet Scripting mithilfe &lt;msxsl: Script&gt;
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Skripterstellung für ein XSLT-Stylesheet mit &lt;msxsl:script&gt;
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Finden Sie unter [mithilfe der Klasse "XslCompiledTransform"](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) für Weitere Informationen.  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element. Wenn das Stylesheet geladen wird, werden alle definierten Funktionen durch Wrapping in eine Klassendefinition in die Microsoft Intermediate Language (MSIL) kompiliert, sodass kein Leistungsverlust auftritt.  
   
@@ -44,19 +47,19 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Da das `msxsl:script`-Element zum `urn:schemas-microsoft-com:xslt`-Namespace gehört, muss das Stylesheet die `xmlns:msxsl=urn:schemas-microsoft-com:xslt`-Namespacedeklaration enthalten.  
   
- Wenn der Aufrufer des Skripts keinen <xref:System.Security.Permissions.SecurityPermissionFlag> -Zugriffsberechtigung verfügt, wird das Skript in einem Stylesheet nicht kompiliert, und der Aufruf von <xref:System.Xml.Xsl.XslTransform.Load%2A> schlägt fehl.  
+ Wenn der Aufrufer des Skripts nicht über die <xref:System.Security.Permissions.SecurityPermissionFlag>-Zugriffsberechtigung verfügt, wird das Skript in einem Stylesheet nicht kompiliert, und der Aufruf von <xref:System.Xml.Xsl.XslTransform.Load%2A> schlägt fehl.  
   
  Wenn der Aufrufer über die `UnmanagedCode`-Berechtigung verfügt, wird das Skript kompiliert. Die zulässigen Vorgänge hängen vom Beweis ab, der zur Ladezeit bereitgestellt wird.  
   
- Wenn Sie eine der <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die zum Laden des Stylesheets einen <xref:System.Xml.XmlReader> oder einen <xref:System.Xml.XPath.XPathNavigator> akzeptiert, müssen Sie die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Überladung verwenden, die einen <xref:System.Security.Policy.Evidence>-Parameter als Argument akzeptiert. Um Beweise, des Aufrufers benötigen <xref:System.Security.Permissions.SecurityPermissionFlag> Berechtigung angeben `Evidence` für die Skriptassembly. Wenn der Aufrufer nicht über diese Berechtigung verfügt, kann der `Evidence`-Parameter auf `null` festgelegt werden. Auf diese Weise schlägt die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Funktion fehl, falls ein Skript gefunden wird. Die `ControlEvidence`-Berechtigung ist äußerst umfassend und sollte nur für in hohem Maße vertrauenswürdigen Code erteilt werden.  
+ Wenn Sie eine der <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die zum Laden des Stylesheets einen <xref:System.Xml.XmlReader> oder einen <xref:System.Xml.XPath.XPathNavigator> akzeptiert, müssen Sie die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Überladung verwenden, die einen <xref:System.Security.Policy.Evidence>-Parameter als Argument akzeptiert. Zum Bereitstellen eines Beweises muss der Aufrufer über die <xref:System.Security.Permissions.SecurityPermissionFlag>-Berechtigung verfügen, um `Evidence` für die Skriptassembly zur Verfügung zu stellen. Wenn der Aufrufer nicht über diese Berechtigung verfügt, kann der `Evidence`-Parameter auf `null` festgelegt werden. Auf diese Weise schlägt die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Funktion fehl, falls ein Skript gefunden wird. Die `ControlEvidence`-Berechtigung ist äußerst umfassend und sollte nur für in hohem Maße vertrauenswürdigen Code erteilt werden.  
   
  Zum Abrufen des Beweises aus der Assembly verwenden Sie `this.GetType().Assembly.Evidence`. Zum Abrufen des Beweises aus einem URI (Uniform Resource Identifier) verwenden Sie `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [Benannte Berechtigungssätze](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. In der folgenden Tabelle werden die Namespaces angezeigt, die standardmäßig unterstützt werden. Sie können Klassen außerhalb der aufgeführten Namespaces verwenden. Diese Klassen müssen jedoch voll qualifiziert sein.  
   
-|Standardnamespaces|Beschreibung|  
+|Standardnamespaces|description|  
 |------------------------|-----------------|  
 |System|Systemklasse.|  
 |System.Collection|Auflistungsklassen.|  
@@ -65,17 +68,17 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |System.Xml|Kern-XML-Klassen.|  
 |System.Xml.Xsl|XSLT-Klassen.|  
 |System.Xml.XPath|XPath-Klassen (XML Path Language).|  
-|Microsoft.VisualBasic|Klassen für Microsoft Visual Basic-Skripts.|  
+|Microsoft.VisualBasic|Klassen für Microsoft Visual Basic-Skripts|  
   
- Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. 	Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
+ Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
   
- Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle sind die jeweiligen W3C-Typen, die entsprechenden .NET Framework-Klassen (Typen), und ob die W3C-Typ ist ein XPath-Typ oder XSLT-Typ.  
+ Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle werden die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typen) samt der Informationen aufgeführt, ob es sich bei einem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
-|Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
+|Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |----------|----------------------------------------------|-----------------------------|  
 |Zeichenfolge|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Nummer|System.Double|XPath|  
+|Boolesch|System.Boolean|XPath|  
+|Anzahl|System.Double|XPath|  
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -83,7 +86,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Wenn die Skriptfunktion einen anderen als die oben genannten Typen verwendet oder wenn sie beim Laden des Stylesheets in das <xref:System.Xml.Xsl.XslTransform>-Objekt nicht kompiliert wird, wird eine Ausnahme ausgelöst.  
   
- Bei Verwendung der `msxsl:script` -Element, es wird dringend empfohlen, das Skript ungeachtet der verwendeten Sprache in einem CDATA-Abschnitt zu platzieren. Folgender XML-Code veranschaulicht z. B. die Vorlage für den CDATA-Abschnitt, in dem der Code platziert wird.  
+ Bei Verwendung des `msxsl:script`-Elements wird dringend empfohlen, das Skript ungeachtet der verwendeten Sprache in einem CDATA-Abschnitt zu platzieren. Folgender XML-Code veranschaulicht z. B. die Vorlage für den CDATA-Abschnitt, in dem der Code platziert wird.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -104,7 +107,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 </msxsl:script>  
 ```  
   
- Hierdurch wird eine Ausnahme ausgelöst, da die kaufmännischen Und-Zeichen nicht durch Escapezeichen geschützt sind. Das Dokument wird als XML geladen, und spezielle-Elementtags wird nicht auf den Text zwischen den `msxsl:script` Element-Tags.  
+ Hierdurch wird eine Ausnahme ausgelöst, da die kaufmännischen Und-Zeichen nicht durch Escapezeichen geschützt sind. Das Dokument wird als XML geladen, und der Text zwischen den `msxsl:script`-Elementtags wird nicht in besonderer Weise behandelt.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Umfang eines Kreises bei angegebenem Radius unter Verwendung eines eingebetteten Skripts berechnet.  
@@ -237,4 +240,4 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XslTransform-Klasse implementiert die XSLT-Prozessor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

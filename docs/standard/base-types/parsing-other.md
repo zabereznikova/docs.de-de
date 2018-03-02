@@ -19,18 +19,21 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd48993f50ec8b91ba7941a682d7de9f22aa12e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 714c361507a95fc5f45efbca79191b17e7917fba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-other-strings-in-net"></a>Analysieren anderer Zeichenfolgen in .NET
-Zusätzlich zu den numerischen und <xref:System.DateTime> Zeichenfolgen, Sie können auch Analysieren von Zeichenfolgen, die die Typen darstellen <xref:System.Char>, <xref:System.Boolean>, und <xref:System.Enum> in Datentypen.  
+Neben den numerischen und den <xref:System.DateTime>-Zeichenfolgen können Sie auch Zeichenfolgen in Datentypen analysieren, die die Typen <xref:System.Char>, <xref:System.Boolean> und <xref:System.Enum> darstellen.  
   
 ## <a name="char"></a>Char  
  Die statische Parse-Methode, die dem **Char**-Datentyp zugeordnet ist, eignet sich zum Konvertieren einer Zeichenfolge mit einem einzigen Zeichen in den entsprechenden Unicode-Wert. Im folgenden Codebeispiel wird eine Zeichenfolge in ein Unicode-Zeichen analysiert.  
@@ -40,24 +43,24 @@ Zusätzlich zu den numerischen und <xref:System.DateTime> Zeichenfolgen, Sie kö
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Boolesch  
- Die **booleschen** -Datentyp enthält eine **analysieren** -Methode, die Sie verwenden können, um eine Zeichenfolge zu konvertieren, die einen booleschen Wert in einen tatsächlichen darstellt **booleschen** Typ. Diese Methode ist von der Groß-/Kleinschreibung unabhängig und kann erfolgreich eine Zeichenfolge mit „True“ oder „False“ analysieren. Die **analysieren** zugeordnete Methode der **booleschen** Typ kann auch Analysieren von Zeichenfolgen, die durch Leerzeichen eingeschlossen sind. Wenn eine andere Zeichenfolge übergeben wird, eine <xref:System.FormatException> ausgelöst wird.  
+ Der **Boolean**-Datentyp enthält eine **Parse**-Methode, mit der Sie eine Zeichenfolge, die einen **-Wert darstellt, in einen tatsächlichen** -Typ konvertieren können. Diese Methode ist von der Groß-/Kleinschreibung unabhängig und kann erfolgreich eine Zeichenfolge mit „True“ oder „False“ analysieren. Die dem **Boolean**-Typ zugeordnete **Parse**-Methode kann auch Zeichenfolgen analysieren, die von Leerzeichen eingeschlossen sind. Wenn eine beliebige andere Zeichenfolge übergeben wird, wird eine <xref:System.FormatException> ausgelöst.  
   
- Im folgenden Codebeispiel wird mit der **analysieren** Methode zum Konvertieren einer Zeichenfolge in einen booleschen Wert.  
+ Im folgenden Codebeispiel wird die **Parse**-Methode zum Konvertieren einer Zeichenfolge in einen Boolean-Wert verwendet.  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
 ## <a name="enumeration"></a>Enumeration  
- Mit der statischen **Parse**-Methode können Sie einen Enumerationstyp auf den Wert einer Zeichenfolge initialisieren. Diese Methode akzeptiert der Enumerationstyp, den Sie analysieren, die zu analysierende Zeichenfolge und ein optionales boolesches Flag, der angibt, ob die Analyse Groß-/Kleinschreibung beachtet wird. Die zu analysierende Zeichenfolge kann mehrere durch Kommas voneinander getrennte Werte enthalten, denen ein oder mehrere Leerzeichen (auch als Leerräume bezeichnet) voran- oder nachgestellt sein können. Wenn die Zeichenfolge mehrere Werte enthält, entspricht der Wert des zurückgegebenen Objekts dem Wert aller angegebenen Werte, kombiniert mit einem bitweisen OR-Vorgang.  
+ Mit der statischen **Parse**-Methode können Sie einen Enumerationstyp auf den Wert einer Zeichenfolge initialisieren. Diese Methode akzeptiert den zu analysierenden Enumerationstyp, die zu analysierende Zeichenfolge und ein optionales Boolean-Flag, das angibt, ob bei der Analyse die Groß-/Kleinschreibung beachtet wird. Die zu analysierende Zeichenfolge kann mehrere durch Kommas voneinander getrennte Werte enthalten, denen ein oder mehrere Leerzeichen (auch als Leerräume bezeichnet) voran- oder nachgestellt sein können. Wenn die Zeichenfolge mehrere Werte enthält, entspricht der Wert des zurückgegebenen Objekts dem Wert aller angegebenen Werte, kombiniert mit einem bitweisen OR-Vorgang.  
   
- Im folgenden Beispiel wird die **analysieren** Methode, um eine Zeichenfolgendarstellung in einen Enumerationswert zu konvertieren. Die <xref:System.DayOfWeek> Enumeration wird mit initialisiert **Donnerstag** aus einer Zeichenfolge.  
+ Im folgenden Beispiel wird die **Parse**-Methode zum Konvertieren einer Zeichenfolgendarstellung in einen Enumerationswert verwendet. Die <xref:System.DayOfWeek>-Enumeration wird über eine Zeichenfolge mit **Donnerstag** initialisiert.  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
  [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)

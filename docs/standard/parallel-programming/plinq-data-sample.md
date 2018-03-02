@@ -11,35 +11,39 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>PLINQ-Datenbeispiel
-Dieses Beispiel enthält Beispieldaten im CSV-Format, zusammen mit den Methoden, die sie in der Auflistungen im Arbeitsspeicher des Kunden, Produkte, Bestellungen und Bestellungsdetails umwandeln. Zum weiteren Experimentieren mit PLINQ Codebeispiele aus bestimmten anderen Themen in den Code in diesem Thema einfügen, und rufen Sie sie aus der `Main` Methode. Sie können diese Daten auch mit Ihren eigenen PLINQ-Abfragen verwenden.  
+Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die sie in Sammlungen von „Customers“, „Products“, „Orders“ und „Order Details“ im Arbeitsspeicher umwandeln. Zum weiteren Experimentieren mit PLINQ können Sie Codebeispiele aus bestimmten anderen Themen in den Code dieses Themas einfügen und ihn von der `Main`-Methode aus aufrufen. Sie können diese Daten auch mit Ihren eigenen PLINQ-Abfragen verwenden.  
   
- Die Daten stellen eine Teilmenge der Northwind-Datenbank dar. Fünfzig (50) Kundendatensätze sind enthalten, aber nicht alle Felder. Eine Teilmenge der Zeilen aus der Bestellungen und den entsprechenden Order_Detail-Daten für jeden Kunden ist enthalten. Alle Produkte sind enthalten.  
+ Die Daten stellen eine Teilmenge der Northwind-Datenbank dar. Fünfzig (50) Kundendatensätze sind enthalten, aber nicht alle Felder. Eine Teilmenge der Zeilen aus den „Orders“ und entsprechende Order_Detail-Daten für jeden Kunden sind enthalten. Alle „Products“ sind enthalten.  
   
 > [!NOTE]
->  Das Dataset ist nicht groß genug ist, um zu veranschaulichen, dass PLINQ schneller als LINQ to Objects für Abfragen ist, enthalten nur grundlegende `where` und `select` Klauseln. Um zu betrachten, Geschwindigkeit für kleine Datasets wie diese erhöht wird, verwenden Sie Abfragen, die rechenintensive Vorgänge für jedes Element in einem DataSet enthalten.  
+>  Das Dataset ist nicht groß genug ist, um zu veranschaulichen, dass PLINQ für Abfragen, die nur grundlegende `where`- und `select`-Klauseln enthalten, schneller als LINQ to Objects ist. Um die Geschwindigkeitssteigerung bei kleinen Datasets wie diesem zu beobachten, verwenden Sie Abfragen, die rechenintensive Vorgänge für jedes Element im Dataset enthalten.  
   
 ### <a name="to-set-up-this-sample"></a>So richten Sie dieses Beispiel ein  
   
-1.  Erstellen Sie ein Visual Basic- oder Visual C#-Konsolenanwendungsprojekt.  
+1.  Erstellen Sie ein Konsolenanwendungsprojekt für Visual C# oder Visual Basic.  
   
-2.  Ersetzen Sie den Inhalt von "Module1.vb" bzw. "Program.cs" mit dem Code, der hier beschriebenen Schritte.  
+2.  Ersetzen Sie den Inhalt von „Module1.vb“ bzw. „Program.cs“ mit dem Code, der diese Schritte befolgt.  
   
-3.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie **Textdatei** , und klicken Sie dann auf **OK**. Kopieren Sie die Daten in diesem Thema aus, und fügen Sie ihn in die neue Textdatei. Auf der **Datei** Menü klicken Sie auf **speichern**, nennen Sie die Datei "Plinqdata.csv" ein, und speichern Sie sie in den Ordner, das die Quellcodedateien enthält.  
+3.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie **Textdatei** aus, und klicken Sie auf **OK**. Kopieren Sie die Daten in dieses Thema, und fügen Sie sie in die neue Textdatei ein. Klicken Sie im Menü **Datei** auf **Speichern**, nennen Sie die Datei „Plinqdata.csv“, und speichern Sie sie in dem Ordner, der Ihre Quellcodedateien enthält.  
   
-4.  Drücken Sie F5, um sicherzustellen, dass das Projekt wird erstellt und ordnungsgemäß ausgeführt. Die folgende Ausgabe sollte im Konsolenfenster angezeigt werden.  
+4.  Drücken Sie F5, um sicherzustellen, dass das Projekt erstellt und ordnungsgemäß ausgeführt wird. Die folgende Ausgabe sollte im Konsolenfenster angezeigt werden.  
   
     ```  
     Customer count: 50  

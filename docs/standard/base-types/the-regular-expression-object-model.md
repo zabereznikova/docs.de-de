@@ -41,34 +41,37 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
-<a name="introduction"></a>Dieses Thema beschreibt das Objektmodell, das bei der Arbeit mit regulären Ausdrücken von .NET verwendet. Es enthält die folgenden Abschnitte:  
+<a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
   
--   [Das Modul für reguläre Ausdrücke](#Engine)  
+-   [The Regular Expression Engine (Die Engine für reguläre Ausdrücke)](#Engine)  
   
--   [Die MatchCollection- und Match-Objekte](#Match_and_MCollection)  
+-   [The MatchCollection and Match Objects (Die MatchCollection- und Match-Objekte)](#Match_and_MCollection)  
   
--   [Die Gruppenauflistung](#GroupCollection)  
+-   [The Group Collection (Die Gruppenauflistung)](#GroupCollection)  
   
--   [Die erfasste Gruppe](#the_captured_group)  
+-   [The Captured Group (Die erfasste Gruppe)](#the_captured_group)  
   
--   [Die Erfassungsauflistung](#CaptureCollection)  
+-   [The Capture Collection (Die Erfassungsauflistung)](#CaptureCollection)  
   
--   [Die einzelne Erfassung](#the_individual_capture)  
+-   [The Individual Capture (Die einzelne Erfassung)](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>Das Modul für reguläre Ausdrücke  
- Das Modul für reguläre Ausdrücke in .NET wird dargestellt, indem die <xref:System.Text.RegularExpressions.Regex> Klasse. Das Modul für reguläre Ausdrücke ist für das Analysieren und Kompilieren eines regulären Ausdrucks sowie für das Ausführen von Vorgängen zuständig, die dem Muster eines regulären Ausdrucks mit einer Eingabezeichenfolge entsprechen. Das Modul ist die zentrale Komponente im Objektmodell von .NET regulären Ausdruck.  
+ Die Engine für reguläre Ausdrücke in .NET wird durch die <xref:System.Text.RegularExpressions.Regex>-Klasse dargestellt. Das Modul für reguläre Ausdrücke ist für das Analysieren und Kompilieren eines regulären Ausdrucks sowie für das Ausführen von Vorgängen zuständig, die dem Muster eines regulären Ausdrucks mit einer Eingabezeichenfolge entsprechen. Die Engine ist die zentrale Komponente im .NET-Objektmodell für reguläre Ausdrücke.  
   
  Das Modul für reguläre Ausdrücke kann auf zwei verschiedene Arten verwendet werden:  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `^\d{3}-\d{2}-\d{4}$` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Entsprechung für den Anfang der Eingabezeichenfolge finden.|  
 |`\d{3}`|Entsprechung für drei Dezimalstellen finden.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\W+(\1)\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `\b\d+\.\d{2}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `\b\d{1,2}\.\s` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d{1,2}`|Entsprechung für eine oder zwei Dezimalstellen finden.|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>Die Match-Auflistung  
  Die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurück, das <xref:System.Text.RegularExpressions.Match>-Objekte enthält, die alle Übereinstimmungen darstellen, die das Modul für reguläre Ausdrücke gefunden hat, und zwar in der Reihenfolge, in der sie in der Eingabezeichenfolge auftreten. Wenn keine Übereinstimmungen vorhanden sind, gibt die Methode ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt ohne Member zurück. Die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ermöglicht den Zugriff auf einzelne Member der Auflistung nach Index, von null bis eins weniger als es dem Wert der <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft entspricht. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> ist der Indexer (in C#) und die Standardeigenschaft der Auflistung (in Visual Basic).  
   
- Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode füllt standardmäßig das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt mithilfe verzögerter Auswertung auf. Zugriff auf Eigenschaften, die eine vollständig aufgefüllte Auflistung erfordern, z. B. die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, führt möglicherweise zu Leistungseinbußen. Daher wird empfohlen, dass Sie auf die Auflistung mit dem <xref:System.Collections.IEnumerator>-Objekt zugreifen, das von der <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Einzelne Sprachen stellen Konstrukte bereit, z. B. `For``Each` in Visual Basic und `foreach` in c#, die der Auflistung umschließen <xref:System.Collections.IEnumerator> Schnittstelle.  
+ Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode füllt standardmäßig das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt mithilfe verzögerter Auswertung auf. Zugriff auf Eigenschaften, die eine vollständig aufgefüllte Auflistung erfordern, z. B. die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, führt möglicherweise zu Leistungseinbußen. Daher wird empfohlen, dass Sie auf die Auflistung mit dem <xref:System.Collections.IEnumerator>-Objekt zugreifen, das von der <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Einzelne Sprachen stellen Konstrukte bereit, z.B. `For``Each` in Visual Basic und `foreach` in C#, die die <xref:System.Collections.IEnumerator>-Schnittstelle der Auflistung umschließen.  
   
  Im folgenden Beispiel wird mithilfe der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType>-Methode ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt mit sämtlichen Übereinstimmungen aufgefüllt, die in einer Eingabezeichenfolge gefunden wurden. Im Beispiel wird die Auflistung aufgeführt, die Übereinstimmungen werden in ein Zeichenfolgenarray kopiert, und die Zeichenpositionen werden in einem ganzzahligen Array erfasst.  
   
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `\b\d+(,\d{3})*\.\d{2}\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -255,7 +258,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>Die erfasste Gruppe  
- Die <xref:System.Text.RegularExpressions.Group>-Klasse stellt das von einer einzelnen Erfassungsgruppe erfassten Ergebnis dar. Gruppenobjekte, die die Erfassungsgruppen darstellen, die in einem regulären Ausdruck definiert werden, werden von der <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft des <xref:System.Text.RegularExpressions.GroupCollection>-Objekts zurückgegeben, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wurde. Die <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft ist der Indexer (in C#) und die Standardeigenschaft (in Visual Basic) <xref:System.Text.RegularExpressions.Group>-Klasse. Sie können auch einzelne Member abrufen, indem die Auflistung mit den `foreach` oder `For``Each` erstellen. Ein Beispiel finden Sie im vorherigen Abschnitt.  
+ Die <xref:System.Text.RegularExpressions.Group>-Klasse stellt das von einer einzelnen Erfassungsgruppe erfassten Ergebnis dar. Gruppenobjekte, die die Erfassungsgruppen darstellen, die in einem regulären Ausdruck definiert werden, werden von der <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft des <xref:System.Text.RegularExpressions.GroupCollection>-Objekts zurückgegeben, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wurde. Die <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft ist der Indexer (in C#) und die Standardeigenschaft (in Visual Basic) <xref:System.Text.RegularExpressions.Group>-Klasse. Sie können auch einzelne Member abrufen, indem Sie die Auflistung mit dem `foreach`- oder dem `For``Each`-Konstrukt durchlaufen. Ein Beispiel finden Sie im vorherigen Abschnitt.  
   
  Im folgenden Beispiel werden verschachtelte Gruppierungskonstrukte verwendet, um Teilzeichenfolgen in Gruppen aufzuzeichnen. Das Muster eines regulären Ausdrucks `(a(b))c` stimmt mit der Zeichenfolge "abc" überein. Es weist die Teilzeichenfolgen "ab" der ersten Erfassungsgruppe und die Teilzeichenfolge "b" der zweiten Erfassungsgruppe zu.  
   
@@ -284,7 +287,7 @@ ms.lasthandoff: 11/21/2017
   
  Das Muster für reguläre Ausdrücke `^(?<name>\w+):(?<value>\w+)` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`(?<name>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Der Name dieser Erfassungsgruppe ist `name`.|  
@@ -293,7 +296,7 @@ ms.lasthandoff: 11/21/2017
   
  Die Eigenschaften der <xref:System.Text.RegularExpressions.Group>-Klasse enthalten Informationen zur erfassten Gruppe: Die `Group.Value`-Eigenschaft enthält die erfasste Teilzeichenfolge, die `Group.Index`-Eigenschaft gibt die Anfangsposition der erfassten Gruppe im Eingabetext an, die `Group.Length`-Eigenschaft enthält die Länge des erfassten Texts, und die `Group.Success`-Eigenschaft gibt an, ob eine Teilzeichenfolge dem Muster entsprach, das durch die Erfassungsgruppe definiert wurde.  
   
- Durch Anwenden von Quantifizierern auf eine Gruppe (Weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) ändert die Beziehung einer Erfassung pro Erfassungsgruppe auf zwei Arten:  
+ Durch Anwenden von Quantifizierern auf eine Gruppe (weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) wird die Beziehung einer Erfassung pro Erfassungsgruppe in zweierlei Hinsicht geändert:  
   
 -   Wenn der `*`-Quantifizierer oder der `*?`-Quantifizierer (der null oder mehr Übereinstimmungen angibt) für eine Gruppe übernommen wird, verfügt eine Erfassungsgruppe möglicherweise über keine Übereinstimmung in der Eingabezeichenfolge. Wenn kein erfasster Text vorhanden ist, werden die Eigenschaften des <xref:System.Text.RegularExpressions.Group>-Objekts entsprechend der Darstellung in der folgenden Tabelle festgelegt.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/21/2017
   
  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`(\s\w+)*`|Entsprechung für null oder mehr Vorkommen eines Leerstellenzeichens finden, auf das mindestens ein Wortzeichen folgt. Dieses Muster entspricht Ortsnamen, die aus mehreren Wörtern bestehen. Dies ist die dritte Erfassungsgruppe.|  

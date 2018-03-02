@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Ausnahmeklasse und -eigenschaften
 
@@ -35,7 +38,7 @@ Object
 
 Die <xref:System.Exception>-Klasse verfügt über die folgenden Eigenschaften, die das Verständnis einer Ausnahme erleichtern.
 
-| Eigenschaftenname | Beschreibung |
+| Eigenschaftenname | description |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Ein <xref:System.Collections.IDictionary>, das beliebige Daten in Schlüssel-Wert-Paaren enthält. |
 | <xref:System.Exception.HelpLink> | Kann einen URL (oder URN) zu einer Hilfedatei enthalten, die ausführliche Informationen zur Ursache einer Ausnahme bereitstellt. |
@@ -46,7 +49,7 @@ Die <xref:System.Exception>-Klasse verfügt über die folgenden Eigenschaften, d
 
 Die meisten der Klassen, die von <xref:System.Exception> erben, implementieren keine weiteren Member und stellen keine weitere Funktionalität bereit. Sie erben einfach von <xref:System.Exception>. Daher finden sich die wichtigsten Informationen für eine Ausnahme in der Hierarchie der Ausnahmeklassen, dem Namen der Ausnahme und den in der Ausnahme enthaltenen Details.
 
-Es wird empfohlen, dass Sie auslösen und nur Abfangen von abgeleiteten Objekte <xref:System.Exception>, aber Sie können jedes Objekt, das von abgeleitet ist Auslösen der <xref:System.Object> Klasse als eine Ausnahme. Beachten Sie, dass einige Sprachen nur das Auslösen und Abfangen von Objekten unterstützen, die nicht von <xref:System.Exception> abgeleitet sind.
+Es wird empfohlen, nur Objekte auszulösen und abzufangen, die von <xref:System.Exception> abgeleitet sind. Sie können jedoch jedes beliebige, von der <xref:System.Object>-Klasse abgeleitete Objekt als Ausnahme auslösen. Beachten Sie, dass einige Sprachen nur das Auslösen und Abfangen von Objekten unterstützen, die nicht von <xref:System.Exception> abgeleitet sind.
   
 ## <a name="see-also"></a>Siehe auch  
 [Ausnahmen](index.md)

@@ -16,25 +16,28 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET Framework], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1f7f74a8b38c06f6a042d55c0def76ddfc5da77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 51e2ada4b493e8b1cbe0744c00fc2c25f9a266fb
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Abrufen des Status einer asynchronen Operation
-Anwendungen, die andere arbeiten, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs durchführen können, sollten keine Blockierung warten, bis der Vorgang abgeschlossen ist. Fortsetzen der Ausführung von Anweisungen beim Warten auf Abschluss eines asynchronen Vorgangs mithilfe einer der folgenden Optionen:  
+Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs weiterarbeiten können, sollten nicht blockiert werden, bis der Vorgang abgeschlossen ist. Verwenden Sie eine der folgenden Optionen, um Anweisungen weiter auszuführen, während Sie darauf warten, dass ein asynchroner Vorgang abgeschlossen wird:  
   
--   Verwenden der <xref:System.IAsyncResult.IsCompleted%2A> Eigenschaft von der <xref:System.IAsyncResult> zurückgegeben, die für des asynchronen Vorgangs **beginnen** *OperationName* Methode, um zu bestimmen, ob der Vorgang abgeschlossen wurde. Dieser Ansatz wird als Abrufintervall bezeichnet und wird in diesem Thema veranschaulicht.  
+-   Verwenden Sie die Eigenschaft <xref:System.IAsyncResult.IsCompleted%2A> des Ergebnisses <xref:System.IAsyncResult>, welches durch die Methode **Begin***OperationName* für asynchrone Vorgänge zurückgegeben wird, um zu ermitteln, ob der Vorgang abgeschlossen ist. Dieser Ansatz wird als Abruf bezeichnet und in diesem Thema veranschaulicht.  
   
--   Verwenden einer <xref:System.AsyncCallback> Delegat, der die Ergebnisse des asynchronen Vorgangs in einem separaten Thread zu verarbeiten. Ein Beispiel für diesen Ansatz finden Sie unter [Verwenden eines AsyncCallback-Delegaten zum Beenden einer asynchronen Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+-   Verwenden Sie ein <xref:System.AsyncCallback>-Delegat, um die Ergebnisse des asynchronen Vorgangs in einem separaten Thread zu verarbeiten. Ein Beispiel zur Veranschaulichung dieses Ansatzes finden Sie unter [Verwenden eines AsyncCallback-Delegaten zum Beenden einer asynchronen Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die Verwendung asynchroner Methoden in der <xref:System.Net.Dns> Klasse Domain Name System-Informationen für einen Benutzer angegebenen Computer abgerufen. In diesem Beispiel startet den asynchronen Vorgang, und gibt dann Punkte (".") in der Konsole aus, bis der Vorgang abgeschlossen ist. Beachten Sie, dass **null** (**nichts** in Visual Basic) übergeben wird, für die <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.AsyncCallback> und <xref:System.Object> Parameter, da diese Argumente bei dieser Vorgehensweise nicht erforderlich sind.  
+ Das folgende Codebeispiel demonstriert die Verwendung von asynchronen Methoden in der <xref:System.Net.Dns>-Klasse, um Informationen aus dem Domain Name System für einen benutzerdefinierten Computer abzurufen. Dieses Beispiel startet den asynchronen Vorgang und gibt dann Punkte („.“) in der Konsole aus, bis der Vorgang abgeschlossen ist. Beachten Sie, dass **NULL** (**Nichts** in Visual Basic) für die Parameter <xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.AsyncCallback> und <xref:System.Object> übergeben wird, da diese Argumente bei diesem Ansatz nicht benötigt werden.  
   
  [!code-csharp[AsyncDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_Poll.cs#3)]
  [!code-vb[AsyncDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_Poll.vb#3)]  

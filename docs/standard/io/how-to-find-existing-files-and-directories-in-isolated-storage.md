@@ -23,25 +23,28 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
-Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> Methode. Diese Methode akzeptiert eine Zeichenfolge, die einem Suchmuster darstellt. Sie können einzelne Zeichen (?) und mehrere Zeichen (*) verwenden Platzhalterzeichen in das Suchmuster, aber die Platzhalterzeichen müssen in den letzten Teil des Namens angezeigt werden. Beispielsweise `directory1/*ect*` ist eine gültige Suchzeichenfolge aber `*ect*/directory2` nicht.  
+Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>-Methode. Diese Methode akzeptiert eine Zeichenfolge, die ein Suchmuster darstellt. Sie können Platzhalterzeichen für einzelne Zeichen (?) und mehrere Zeichen (*) im Suchmuster verwenden, aber die Platzhalterzeichen müssen im letzten Teil des Namens angezeigt werden. Beispielsweise ist `directory1/*ect*` eine gültige Suchzeichenfolge, `*ect*/directory2` aber nicht.  
   
- Um nach einer Datei zu suchen, verwenden die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> Methode. Die Einschränkung für die Platzhalterzeichen in Suchzeichenfolgen, die für gilt <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> gilt auch für <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
+ Um eine Datei zu suchen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType>-Methode. Die für <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> geltende Einschränkung für Platzhalterzeichen in Suchzeichenfolgen gilt auch für <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   
- Keines dieser Methoden ist rekursiv; die <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasse stellt keine Methoden für das Auflisten aller Verzeichnisse oder Dateien in Ihrem Speicher bereit. Allerdings werden rekursive Methoden im folgenden Codebeispiel wird angezeigt.  
+ Keine dieser Methoden ist rekursiv; die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse stellt keine Methoden für das Auflisten aller Verzeichnisse oder Dateien in Ihrem Speicher bereit. Allerdings werden rekursive Methoden im folgenden Codebeispiel gezeigt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie Dateien und Verzeichnissen in einem isolierten Speicher zu erstellen. Zunächst ein, die für Benutzer, Domäne und Assembly isolierten Speicher abgerufen und platziert Sie der `isoStore` Variable. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> Methode wird verwendet, um ein paar andere Verzeichnisse einzurichten und die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> Konstruktor einige Dateien in diese Verzeichnisse erstellt. Der Code durchläuft dann die Ergebnisse der `GetAllDirectories` Methode. Diese Methode verwendet <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> zum Namen der Verzeichnisse im aktuellen Verzeichnis zu suchen. Diese Namen werden in einem Array gespeichert und dann `GetAllDirectories` selbst aufruft, übergibt jedes gefundenen Verzeichnis. Daher werden alle Verzeichnisnamen in einem Array zurückgegeben. Als Nächstes ruft der Code die `GetAllFiles` Methode. Diese Methode ruft `GetAllDirectories` so ermitteln Sie die Namen aller Verzeichnisse, und klicken Sie dann prüft jedes Verzeichnis für Dateien mithilfe der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> Methode. Das Ergebnis wird in einem Array für die Anzeige zurückgegeben.  
+ Das folgende Codebeispiel zeigt das Erstellen von Dateien und Verzeichnissen in einem isolierten Speicher. Zunächst wird ein für Benutzer, Domäne und Assembly isolierter Speicher abgerufen und in der `isoStore`-Variablen platziert. Mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A>-Methode werden ein paar andere Verzeichnisse eingerichtet, und der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29>-Konstruktor erstellt einige Dateien in diesen Verzeichnissen. Der Code durchläuft dann die Ergebnisse der `GetAllDirectories`-Methode. Diese Methode sucht mit <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> alle Verzeichnisnamen im aktuellen Verzeichnis. Diese Namen werden in einem Array gespeichert, und dann ruft `GetAllDirectories` sich selbst auf und übergibt jedes gefundene Verzeichnis. Als Ergebnis werden alle Verzeichnisnamen in einem Array zurückgegeben. Als Nächstes ruft der Code die `GetAllFiles`-Methode auf. Diese Methode ruft `GetAllDirectories` auf, um die Namen aller Verzeichnisse zu ermitteln, und prüft dann jedes Verzeichnis mithilfe der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>-Methode auf Dateien. Das Ergebnis wird in einem Array für die Anzeige zurückgegeben.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]

@@ -31,15 +31,18 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="formatting-types-in-net"></a>Formatieren von Typen in .NET
 <a name="Introduction"></a> Bei der Formatierung wird eine Instanz einer Klasse, Struktur oder eines Enumerationswerts in die entsprechende Zeichenfolgendarstellung konvertiert. Die resultierende Zeichenfolge kann dann häufig Benutzern angezeigt oder sie kann deserialisiert werden, um den ursprünglichen Datentyp wiederherzustellen. Diese Konvertierung kann eine Reihe von Problemen beinhalten:  
@@ -71,7 +74,7 @@ ms.lasthandoff: 10/18/2017
   
     -   [Benutzerdefinierte Formatzeichenfolgen](#customStrings)  
   
-    -   [Formatieren von Zeichenfolgen und Klassenbibliothekstypen .NET](#stringRef)  
+    -   [Formatzeichenfolgen und .NET-Klassenbibliothekstypen](#stringRef)  
   
 -   [Kulturabhängige Formatierung mit Formatanbietern und der IFormatProvider-Schnittstelle](#FormatProviders)  
   
@@ -87,11 +90,11 @@ ms.lasthandoff: 10/18/2017
   
 -   [Verwandte Themen](#RelatedTopics)  
   
--   [Referenz](#Reference)  
+-   [Verweis](#Reference)  
   
 <a name="NetFormatting"></a>   
 ## <a name="formatting-in-net"></a>Formatierung in .NET  
- Der grundlegende Mechanismus für die Formatierung ist die Standardimplementierung von der <xref:System.Object.ToString%2A?displayProperty=nameWithType> -Methode, die in der erläutert wird die [Standard Formatierung mit der ToString-Methode](#DefaultToString) weiter unten in diesem Thema. .NET bietet jedoch mehrere Möglichkeiten, die Standardformatierungsunterstützung zu ändern und zu erweitern. Hierzu gehört Folgendes:  
+ Der grundlegende Mechanismus für die Formatierung ist die Standardimplementierung der <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode, die im Abschnitt [Standardformatierung mit der ToString-Methode](#DefaultToString) später in diesem Thema erläutert wird. .NET bietet jedoch mehrere Möglichkeiten, die Standardformatierungsunterstützung zu ändern und zu erweitern. Hierzu gehört Folgendes:  
   
 -   Überschreiben der <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode, um eine benutzerdefinierte Zeichenfolgendarstellung für den Wert eines Objekts zu definieren. Weitere Information erhalten Sie im Abschnitt [Überschreiben der ToString-Methode](#OverrideToString) später in diesem Thema.  
   
@@ -121,7 +124,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="DefaultToString"></a>   
 ## <a name="default-formatting-using-the-tostring-method"></a>Standardformatierung mit der ToString-Methode  
- Jeder von <xref:System.Object?displayProperty=nameWithType> abgeleitete Typ erbt automatisch eine parameterlose `ToString`-Methode, die standardmäßig den Namen des Typs zurückgibt. Das folgende Beispiel veranschaulicht die `ToString` -Standardmethode. Dabei wird eine Klasse mit dem Namen `Automobile` ohne Implementierung definiert. Wenn die Klasse instanziiert und die zugehörige `ToString` -Methode aufgerufen wird, wird der Typname angezeigt. Beachten Sie, dass die `ToString` -Methode im Beispiel nicht explizit aufgerufen wird. Die <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType>-Methode ruft implizit die `ToString`-Methode des Objekts auf, das ihr als Argument übergeben wird.  
+ Jeder von <xref:System.Object?displayProperty=nameWithType> abgeleitete Typ erbt automatisch eine parameterlose `ToString`-Methode, die standardmäßig den Namen des Typs zurückgibt. Das folgende Beispiel veranschaulicht die `ToString` -Standardmethode. Dabei wird eine Klasse mit dem Namen `Automobile` ohne Implementierung definiert. Wenn die Klasse instanziiert und die zugehörige `ToString` -Methode aufgerufen wird, wird der Typname angezeigt. Beachten Sie, dass die `ToString`-Methode im Beispiel nicht explizit aufgerufen wird. Die <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType>-Methode ruft implizit die `ToString`-Methode des Objekts auf, das ihr als Argument übergeben wird.  
   
  [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
@@ -143,7 +146,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
  [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]  
   
- In .NET die `ToString` -Methode jedes primitiven Werttyps überschrieben, um der Wert des Objekts statt seines Namens anzuzeigen. In der folgenden Tabelle wird die Überschreibung für den jeweiligen primitiven Typ angezeigt. Beachten Sie, dass die meisten der überschriebenen Methoden eine andere Überladung der `ToString` -Methode aufrufen und dabei den Formatbezeichner G übergeben, der das allgemeine Format des Typs definiert, sowie ein <xref:System.IFormatProvider> -Objekt, das die aktuelle Kultur darstellt.  
+ In .NET wurde die `ToString`-Methode jedes primitiven Werttyps überschrieben, um den Wert des Objekts statt seines Namens anzuzeigen. In der folgenden Tabelle wird die Überschreibung für den jeweiligen primitiven Typ angezeigt. Beachten Sie, dass die meisten der überschriebenen Methoden eine andere Überladung der `ToString` -Methode aufrufen und dabei den Formatbezeichner G übergeben, der das allgemeine Format des Typs definiert, sowie ein <xref:System.IFormatProvider> -Objekt, das die aktuelle Kultur darstellt.  
   
 |Typ|ToString-Überschreibung|  
 |----------|-----------------------|  
@@ -178,7 +181,7 @@ ms.lasthandoff: 10/18/2017
   
  .NET definiert einen Satz von Standardformatbezeichnern für alle numerischen Typen, alle Datums- und Uhrzeittypen und alle Enumerationstypen. Beispielsweise definieren die einzelnen Kategorien den Standardformatbezeichner "G", der eine allgemeine Zeichenfolgendarstellung für einen Wert dieses Typs definiert.  
   
- Standardformatzeichenfolgen für Enumerationstypen steuern die Zeichenfolgendarstellung eines Werts direkt. Die an die `ToString` -Methode eines Enumerationswerts übergebenen Formatzeichenfolgen bestimmen, ob der Wert mit seinem Zeichenfolgennamen (Formatbezeichner "G" und "F"), seinem zugrunde liegenden ganzzahligen Wert (Formatbezeichner "D") oder seinem Hexadezimalwert (Formatbezeichner "X") angezeigt wird. Im folgenden Beispiel wird die Verwendung von Standardformatzeichenfolgen zum Formatieren eines <xref:System.DayOfWeek> -Enumerationswerts veranschaulicht.  
+ Standardformatzeichenfolgen für Enumerationstypen steuern die Zeichenfolgendarstellung eines Werts direkt. Die an die `ToString`-Methode eines Enumerationswerts übergebenen Formatzeichenfolgen bestimmen, ob der Wert mit seinem Zeichenfolgennamen (Formatbezeichner "G" und "F"), seinem zugrunde liegenden ganzzahligen Wert (Formatbezeichner "D") oder seinem Hexadezimalwert (Formatbezeichner "X") angezeigt wird. Im folgenden Beispiel wird die Verwendung von Standardformatzeichenfolgen zum Formatieren eines <xref:System.DayOfWeek> -Enumerationswerts veranschaulicht.  
   
  [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
  [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  Weitere Informationen zu standardmäßigen numerischen Formatierungszeichenfolgen finden Sie unter [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Standardformatzeichenfolgen für Datums- und Uhrzeitwerte sind Aliase für benutzerdefinierte Formatzeichenfolgen, die von einer bestimmten <xref:System.Globalization.DateTimeFormatInfo> -Eigenschaft gespeichert werden. Beispielsweise werden durch Aufrufen der `ToString`-Methode eines Datums- und Uhrzeitwerts mit dem Formatbezeichner "D" das Datum und die Uhrzeit mit der benutzerdefinierten Formatzeichenfolge angezeigt, die in der <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur gespeichert sind. (Weitere Informationen zu benutzerdefinierten Formatzeichenfolgen finden Sie unter der [nächsten Abschnitt](#customStrings).) Diese Beziehung wird anhand des folgenden Beispiels veranschaulicht.  
+ Standardformatzeichenfolgen für Datums- und Uhrzeitwerte sind Aliase für benutzerdefinierte Formatzeichenfolgen, die von einer bestimmten <xref:System.Globalization.DateTimeFormatInfo> -Eigenschaft gespeichert werden. Beispielsweise werden durch Aufrufen der `ToString`-Methode eines Datums- und Uhrzeitwerts mit dem Formatbezeichner "D" das Datum und die Uhrzeit mit der benutzerdefinierten Formatzeichenfolge angezeigt, die in der <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur gespeichert sind. (Weitere Informationen zu benutzerdefinierten Formatzeichenfolgen finden Sie im [nächsten Abschnitt](#customStrings).) Diese Beziehung wird anhand des folgenden Beispiels veranschaulicht.  
   
  [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
  [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]  
@@ -258,17 +261,15 @@ ms.lasthandoff: 10/18/2017
  [Zurück nach oben](#Introduction)  
   
 <a name="stringRef"></a>   
-### <a name="format-strings-and-net-class-library-types"></a>Formatieren von Zeichenfolgen und Klassenbibliothekstypen .NET  
- Alle numerischen Typen (d.h. die Typen <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>und <xref:System.Numerics.BigInteger> )  
-  
- sowie die Typen <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>und alle Enumerationstypen unterstützen die Formatierung mit Formatzeichenfolgen. Informationen zu bestimmten Formatzeichenfolgen, die von jedem Typ unterstützt werden, finden Sie in den folgenden Themen  
+### <a name="format-strings-and-net-types"></a>Formatzeichenfolgen und .NET-Typen  
+ Alle numerischen Typen (d.h. <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64> und <xref:System.Numerics.BigInteger>) sowie <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid> und alle Enumerationstypen unterstützen die Formatierung mit Formatzeichenfolgen. Informationen zu bestimmten Formatzeichenfolgen, die von jedem Typ unterstützt werden, finden Sie in den folgenden Themen:  
   
 |Titel|Definition|  
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von numerischen Werten erstellt werden.|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für numerische Werte erstellen.|  
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime> -Werten erstellt werden.|  
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime> -Werte erstellen.|  
+|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime>- und<xref:System.DateTimeOffset>-Werten erstellt werden.|  
+|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime>- und <xref:System.DateTimeOffset>-Werte erstellen.|  
 |[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von Zeitintervallen erstellt werden.|  
 |[Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für Zeitintervalle erstellen.|  
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.|  
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Kulturabhängige Formatierung mit Formatanbietern und der IFormatProvider-Schnittstelle  
- Obwohl Sie mit Formatbezeichnern die Formatierung von Objekten anpassen können, sind für eine sinnvolle Zeichenfolgendarstellung von Objekten oft zusätzliche Formatierungsinformationen erforderlich. Beispielsweise ist für das Formatieren einer Zahl als Währungswert mit der Standardformatzeichenfolge "C" oder mit einer benutzerdefinierten Formatzeichenfolge wie "$ #,#.00" mindestens erforderlich, dass Informationen über das richtige Währungssymbol, das richtige Gruppentrennzeichen und das richtige Dezimaltrennzeichen verfügbar sind, um in die formatierte Zeichenfolge eingeschlossen zu werden. In .NET diese zusätzlichen Formatierungsinformationen erfolgt über die <xref:System.IFormatProvider> -Schnittstelle, die als Parameter an eine oder mehrere Überladungen der bereitgestellt wird die `ToString` -Methode von numerischen Typen sowie Datums- und Uhrzeittypen. <xref:System.IFormatProvider>Implementierungen werden in .NET verwendet, um kulturspezifische Formatierung zu unterstützen. Im folgenden Beispiel wird veranschaulicht, wie sich die Zeichenfolgendarstellung eines Objekts ändert, wenn die Formatierung mit drei <xref:System.IFormatProvider> -Objekten erfolgt, die verschiedene Kulturen darstellen.  
+ Obwohl Sie mit Formatbezeichnern die Formatierung von Objekten anpassen können, sind für eine sinnvolle Zeichenfolgendarstellung von Objekten oft zusätzliche Formatierungsinformationen erforderlich. Beispielsweise ist für das Formatieren einer Zahl als Währungswert mit der Standardformatzeichenfolge "C" oder mit einer benutzerdefinierten Formatzeichenfolge wie "$ #,#.00" mindestens erforderlich, dass Informationen über das richtige Währungssymbol, das richtige Gruppentrennzeichen und das richtige Dezimaltrennzeichen verfügbar sind, um in die formatierte Zeichenfolge eingeschlossen zu werden. In .NET werden diese zusätzlichen Formatierungsinformationen durch die <xref:System.IFormatProvider>-Schnittstelle verfügbar gemacht. Diese wird als Parameter für eine oder mehrere Überladungen der `ToString`-Methode von numerischen Typen sowie von Datums- und Uhrzeittypen bereitgestellt. <xref:System.IFormatProvider>-Implementierungen werden in .NET verwendet, um eine kulturabhängige Formatierung zu unterstützen. Im folgenden Beispiel wird veranschaulicht, wie sich die Zeichenfolgendarstellung eines Objekts ändert, wenn die Formatierung mit drei <xref:System.IFormatProvider> -Objekten erfolgt, die verschiedene Kulturen darstellen.  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
@@ -290,14 +291,14 @@ ms.lasthandoff: 10/18/2017
 |Methode|`formatType` -Parametertyp|  
 |------------|------------------------------------|  
 |`ToString` -Methode für numerische Typen|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
-|`ToString` -Methode für Datums- und Uhrzeittypen|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
+|`ToString`-Methode für Datums- und Uhrzeittypen|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
 > [!NOTE]
 >  Die `ToString` -Methoden der numerischen Typen und der Datums- und Uhrzeittypen werden überladen, und nur einige der Überladungen enthalten einen <xref:System.IFormatProvider> -Parameter. Wenn eine Methode keinen Parameter vom Typ <xref:System.IFormatProvider> aufweist, wird stattdessen das Objekt übergeben, das von der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Beispielsweise führt ein Aufruf der <xref:System.Int32.ToString?displayProperty=nameWithType>-Standardmethode letztendlich zu einem Methodenaufruf wie dem folgenden: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.  
   
- .NET umfasst drei Klassen implementiert, <xref:System.IFormatProvider>:  
+ .NET stellt drei Klassen bereit, die <xref:System.IFormatProvider> implementieren:  
   
 -   <xref:System.Globalization.DateTimeFormatInfo>, eine Klasse, die Formatierungsinformationen für Datums- und Uhrzeitwerte für eine bestimmte Kultur bereitstellt. Die zugehörige <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Implementierung gibt eine Instanz von sich selbst zurück.  
   
@@ -360,7 +361,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#12)]
  [!code-vb[Conceptual.Formatting.Overview#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#12)]  
   
- Im folgenden Beispiel wird ein `Temperature` -Objekt instanziiert. Anschließend wird die <xref:System.Convert.ToString%2A> -Methode aufgerufen und mehrere zusammengesetzte Formatzeichenfolgen werden verwendet, um andere Zeichenfolgendarstellungen eines `Temperature` -Objekts zu erhalten. Die einzelnen Methoden rufen wiederum die <xref:System.IFormattable> -Implementierung der `Temperature` -Klasse auf.  
+ Im folgenden Beispiel wird ein `Temperature`-Objekt instanziiert. Anschließend wird die <xref:System.Convert.ToString%2A> -Methode aufgerufen und mehrere zusammengesetzte Formatzeichenfolgen werden verwendet, um andere Zeichenfolgendarstellungen eines `Temperature` -Objekts zu erhalten. Die einzelnen Methoden rufen wiederum die <xref:System.IFormattable> -Implementierung der `Temperature` -Klasse auf.  
   
  [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
  [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]  
@@ -400,7 +401,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- Im folgenden Beispiel werden mit der `ByteByByteFormatter` -Klasse Ganzzahlwerte formatiert. Beachten Sie, dass die <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> Methode mehr als einmal aufgerufen wird, in der zweiten <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> -Methodenaufruf, und dass die Standardeinstellung <xref:System.Globalization.NumberFormatInfo> -Standardanbieter im dritten Methodenaufruf verwendet wird, da die.`ByteByByteFormatter.Format` -Methode die Formatzeichenfolge "N0" nicht erkennt und ein NULL-Verweis (`Nothing` in Visual Basic) ist.  
+ Im folgenden Beispiel werden mit der `ByteByByteFormatter` -Klasse Ganzzahlwerte formatiert. Beachten Sie, dass die <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Methode im zweiten Aufruf der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode mehr als einmal aufgerufen wird, und dass der <xref:System.Globalization.NumberFormatInfo>-Standardanbieter im dritten Methodenaufruf verwendet wird, da die `ByteByByteFormatter.Format` -Methode die Formatzeichenfolge "N0" nicht erkennt und ein NULL-Verweis (`Nothing` in Visual Basic) ist.  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

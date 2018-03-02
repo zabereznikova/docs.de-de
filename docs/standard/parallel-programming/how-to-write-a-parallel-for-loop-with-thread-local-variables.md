@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel for loops, how to use local state
+helpviewer_keywords:
+- parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e0b3e28c95d9ccfb0ecd1954e16960576d8f115
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  
@@ -34,7 +38,7 @@ Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status i
   
  Die ersten zwei Parameter jeder <xref:System.Threading.Tasks.Parallel.For%2A>-Methode geben die Anfangs- und Enditerationswerte an. In dieser Überladung der Methode ist der dritte Parameter die Stelle, an der Sie Ihren lokalen Zustand initialisieren. In diesem Kontext bedeutet lokaler Zustand eine Variable, deren Lebensdauer sich von dem Zeitpunkt gerade vor der ersten Iteration der Schleife im aktuellen Thread bis zu dem Zeitpunkt gerade nach der letzten Iteration erstreckt.  
   
- Der dritte Parameter ist vom Typ <xref:System.Func%601>, wobei `TResult` der Variablentyp ist, der den threadlokalen Zustand speichert. Der Typ wird von dem generischen type-Argument beim Aufrufen der generischen <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>-Methode definiert, in diesem Fall <xref:System.Int64>. Das type-Argument teilt dem Computer den Typ der temporären Variable mit, die verwendet wird, um den threadlokalen Zustand zu speichern. In diesem Beispiel initialisiert der Ausdruck `() => 0` (oder `Function() 0` in Visual Basic) die lokale Threadvariable auf Null. Wenn das generische Typargument ein Referenztyp oder ein benutzerdefinierter Werttyp ist, würde der Ausdruck wie folgt aussehen:  
+ Der dritte Parameter ist vom Typ <xref:System.Func%601>, wobei `TResult` der Variablentyp ist, der den threadlokalen Zustand speichert. Der Typ wird von dem generischen type-Argument beim Aufrufen der generischen <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>-Methode definiert, in diesem Fall <xref:System.Int64>. Das Typargument teilt dem Computer den Typ der temporären Variable mit, die verwendet wird, um den threadlokalen Zustand zu speichern. In diesem Beispiel initialisiert der Ausdruck `() => 0` (oder `Function() 0` in Visual Basic) die lokale Threadvariable auf Null. Wenn das generische Typargument ein Referenztyp oder ein benutzerdefinierter Werttyp ist, würde der Ausdruck wie folgt aussehen:  
   
 ```csharp  
 () => new MyClass()  
@@ -48,7 +52,7 @@ Function() new MyClass()
   
  Der fünfte Parameter definiert die Methode, die einmal aufgerufen wird, nachdem alle Iterationen in einem bestimmten Thread abgeschlossen wurden. Der Typ des Eingabearguments entspricht erneut dem Typargument der <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>-Methode und dem vom Text-Lambda-Ausdruck zurückgegebenen Typ. In diesem Beispiel wird der Wert zu einer Variable im Gültigkeitsbereich einer Klasse auf eine threadsichere Weise hinzugefügt, indem die <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Durch die Verwendung einer lokalen Threadvariable haben wir das Schreiben an diese Klassenvariable in jeder Iteration der Schleife vermieden.  
   
- Weitere Informationen zur Verwendung von Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Weitere Informationen zur Verwendung von Lambdaausdrücken finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  

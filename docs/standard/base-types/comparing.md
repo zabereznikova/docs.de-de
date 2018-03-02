@@ -24,20 +24,23 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  
   
-|Methodenname|Verwendung|  
+|Methodenname|Mit|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Vergleicht die Werte zweier Zeichenfolgen. Gibt einen Ganzzahlwert zurück.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Vergleicht zwei Zeichenfolgen, ohne die Einstellungen der lokalen Kultur zu berücksichtigen. Gibt einen Ganzzahlwert zurück.|  
@@ -53,9 +56,9 @@ ms.lasthandoff: 11/21/2017
   
 |Rückgabewert|Bedingung|  
 |------------------|---------------|  
-|Eine negative ganze Zahl|Die erste Zeichenfolge steht in der Sortierreihenfolge vor der zweiten Zeichenfolge.<br /><br /> - oder -<br /><br /> Die erste Zeichenfolge ist `null`.|  
-|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder -<br /><br /> Beide Zeichenfolgen sind `null`.|  
-|Eine positive ganze Zahl<br /><br /> - oder -<br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder -<br /><br /> Die zweite Zeichenfolge ist `null`.|  
+|Eine negative ganze Zahl|Die erste Zeichenfolge steht in der Sortierreihenfolge vor der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die erste Zeichenfolge ist `null`.|  
+|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder - <br /><br /> Beide Zeichenfolgen sind `null`.|  
+|Eine positive ganze Zahl<br /><br /> - oder - <br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die zweite Zeichenfolge ist `null`.|  
   
 > [!IMPORTANT]
 >  Die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode ist hauptsächlich für die Anordnung oder Sortierung von Zeichenfolgen bestimmt. Sie sollten die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode nicht verwenden, um einen Übereinstimmungstest auszuführen (also um explizit nach dem Rückgabewert 0 zu suchen, ohne dass dabei berücksichtigt wird, ob eine Zeichenfolge kleiner oder größer als die andere ist). Um festzustellen, ob zwei Zeichenfolgen gleich sind, verwenden Sie stattdessen die <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>-Methode.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  In diesem Beispiel wird `-1` auf der Konsole angezeigt.  
   
- Das vorhergehende Beispiel ist in der Standardeinstellung kulturabhängig. Zum Durchführen eines kulturunabhängigen Zeichenfolgenvergleichs verwenden Sie eine Überladung von der <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode, die Ihnen ermöglicht, geben Sie die Kultur für die Verwendung durch Angabe einer *Kultur* Parameter. Ein Beispiel für die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType> aufzurufende Methode eines kulturunabhängigen Vergleichs finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Das vorhergehende Beispiel ist in der Standardeinstellung kulturabhängig. Zum Durchführen eines kulturunabhängigen Zeichenfolgenvergleichs verwenden Sie eine Überladung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode, bei der Sie die zu verwendende Kultur festlegen können, indem Sie einen *culture*-Parameter angeben. Ein Beispiel für die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zur Durchführung eines kulturunabhängigen Vergleichs finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  Mit der <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>-Methode werden zwei Zeichenfolgenobjekte ohne Berücksichtigung der lokalen Kultur verglichen. Die Rückgabewerte dieser Methode stimmen mit den Werten überein, die von der in der vorherigen Tabelle beschriebenen **Compare** -Methode zurückgegeben werden.  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  In diesem Beispiel wird `-1` auf der Konsole angezeigt.  
   
- Alle Überladungen der der <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Methode führen kulturabhängige Groß-/Kleinschreibung Vergleiche und standardmäßig. Es werden keine Überladungen dieser Methode bereitgestellt, mit denen Sie einen kulturunabhängigen Vergleich durchführen können. Aus Gründen der Übersichtlichkeit des Codes, empfehlen wir die Verwendung der **String.Compare** Methode stattdessen <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> für kulturabhängige Vorgänge oder <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> für kulturunabhängige Operationen. Beispiele für die Verwendung der **String.Compare** -Methode zur Durchführung von kulturabhängigen und kulturunabhängigen Vergleichen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Alle Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode führen in der Standardeinstellung kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Es werden keine Überladungen dieser Methode bereitgestellt, mit denen Sie einen kulturunabhängigen Vergleich durchführen können. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die **String.Compare**-Methode zu verwenden und für kulturabhängige Vorgänge <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> sowie für kulturunabhängige Vorgänge <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> festzulegen. Beispiele für die Verwendung der **String.Compare** -Methode zur Durchführung von kulturabhängigen und kulturunabhängigen Vergleichen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>gleich  
  Mit der **String.Equals** -Methode lässt sich auf einfache Weise feststellen, ob zwei Zeichenfolgen identisch sind. Diese Methode, bei der die Groß-/Kleinschreibung beachtet wird, gibt den booleschen Wert **true** oder **false** zurück. Wie das nächste Beispiel zeigt, kann die Methode einer bestehenden Klasse verwendet werden. Im folgenden Beispiel wird mithilfe der **Equals** -Methode festgestellt, ob ein Zeichenfolgenobjekt den Ausdruck "Hello World" enthält.  

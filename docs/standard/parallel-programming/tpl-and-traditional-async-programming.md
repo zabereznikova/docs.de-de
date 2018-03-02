@@ -11,34 +11,38 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
 .NET Framework stellt die folgenden zwei Standardmuster zum Ausführen von E/A-gebundenen und rechnergebundenen asynchronen Vorgängen bereit:  
   
 -   Das asynchrone Programmiermodell (APM), in dem asynchrone Vorgänge durch ein Paar von Begin/End-Methoden dargestellt werden, z. B. <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Das ereignisbasierte asynchrone Muster (EAP), in dem asynchrone Vorgänge dargestellt werden, durch ein Methoden-/Ereignispaar mit den Namen *OperationName*Async und *OperationName*abgeschlossen, z. B. <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> und <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP wurde in .NET Framework 2.0 eingeführt.)  
+-   Das ereignisbasierte asynchrone Muster (EAP), in dem asynchrone Vorgänge durch ein Methoden-/Ereignispaar mit den Namen *OperationName*Async und *OperationName*Completed dargestellt werden, z. B. <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> und <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP wurde in .NET Framework 2.0 eingeführt.)  
   
- Die Task Parallel Library (TPL) kann mit beiden asynchronen Mustern auf unterschiedlichste Weise verwendet werden. Sie können sowohl APM-, als auch EAP-Vorgänge als Aufgaben für Bibliotheksconsumer verfügbar machen, oder Sie machen die APM-Muster verfügbar, implementieren diese aber intern mithilfe von Task-Objekten. In beiden Fällen können Sie den Code mithilfe von Task-Objekten vereinfachen und profitieren von der folgenden nützlichen Funktionalität:  
+ Die Task Parallel Library (TPL) kann mit beiden asynchronen Mustern auf unterschiedlichste Weise verwendet werden. Sie können sowohl APM-, als auch EAP-Vorgänge als Aufgaben für Bibliotheksconsumer verfügbar machen, oder Sie machen die APM-Muster verfügbar, implementieren diese aber intern mithilfe von Aufgabenobjekten. In beiden Fällen können Sie den Code mithilfe von Aufgabenobjekten vereinfachen und profitieren von der folgenden nützlichen Funktionalität:  
   
 -   Sie können jederzeit nach dem Start der Aufgabe Rückrufe in der Form von Aufgabenfortsetzungen registrieren.  
   
 -   Sie können mehrere Vorgänge, die als Reaktion auf eine `Begin_`-Methode ausgeführt werden, mit den Methoden <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> und <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A> oder <xref:System.Threading.Tasks.Task.WaitAny%2A> koordinieren.  
   
--   Sie können asynchrone E/A-gebundenen und rechnergebundene Vorgänge im gleichen Task-Objekt kapseln.  
+-   Sie können asynchrone E/A-gebundenen und rechnergebundene Vorgänge im gleichen Aufgabenobjekt kapseln.  
   
--   Sie können den Status des Task-Objekts überwachen.  
+-   Sie können den Status des Aufgabenobjekts überwachen.  
   
 -   Sie können den Status eines Vorgangs mittels <xref:System.Threading.Tasks.TaskCompletionSource%601> an ein Task-Objekt marshallen.  
   
@@ -110,7 +114,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Ein vollständigeres Beispiel, die auch die Ausnahmebehandlung und Aufrufen der Methode im Clientcode veranschaulicht, finden Sie unter [wie: Umschließen von EAP-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben werden, finden Sie unter [Gewusst wie: Umschließen von ereignisbasierten APM-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Beachten Sie, dass alle durch <xref:System.Threading.Tasks.TaskCompletionSource%601> erstellten Aufgaben von dieser TaskCompletionSource gestartet werden. Der Benutzercode sollte daher für diese Aufgaben nicht die Start-Methode aufrufen.  
   
@@ -123,7 +127,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Verwenden des StreamExtensions-Beispielcodes  
- Die Datei "Streamextensions.cs", in [Beispiele zur parallelen Programmierung mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) auf der MSDN-Website enthält mehrere referenzimplementierungen, die denen Aufgabenobjekte für asynchrone Datei- und Netzwerk-e/a.  
+ Die Datei „Streamextensions.cs“ unter [Beispiele für die parallele Programmierung mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) auf der MSDN-Website enthält mehrere Referenzimplementierungen, in denen Aufgabenobjekte für asynchrone Datei- und Netzwerk-E/A verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -16,21 +16,24 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-best-practices"></a>Empfohlene Vorgehensweise für das verwaltete Threading
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
   
 > [!NOTE]
-> Beginnend mit .NET Framework 4, geben Sie die Task Parallel Library und PLINQ APIs, die Teil der Komplexität und Risiken der Multithreadprogrammierung zu reduzieren. Weitere Informationen finden Sie unter [parallele Programmierung in .NET](../../../docs/standard/parallel-programming/index.md).  
+> Ab .NET Framework 4 stellen die Task Parallel Library und PLINQ APIs bereit, die die Komplexität und Risiken der Multithreadprogrammierung etwas reduzieren. Weitere Informationen finden Sie unter [Parallele Programmierung in .NET](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks und Racebedingungen  
  Das Multithreading löst Probleme mit dem Durchsatz und der Ansprechempfindlichkeit, verursacht dabei jedoch neue Probleme: Deadlocks und Racebedingungen.  
@@ -38,7 +41,7 @@ Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforde
 ### <a name="deadlocks"></a>Deadlocks  
  Ein Deadlock liegt vor, wenn zwei Threads gleichzeitig versuchen, eine Ressource zu sperren, die der jeweils andere Thread bereits gesperrt hat. Keiner der beiden Threads kann weiter fortgesetzt werden.  
   
- Viele Methoden der Klassen des verwalteten Threadings stellen Timeouts bereit, mit deren Hilfe Sie Deadlocks entdecken können. Der folgende Code z. B. versucht, eine Sperre für ein Objekt mit dem Namen erhalten `lockObject`. Wenn die Sperrung nicht innerhalb von 300 Millisekunden ist <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> gibt `false`.  
+ Viele Methoden der Klassen des verwalteten Threadings stellen Timeouts bereit, mit deren Hilfe Sie Deadlocks entdecken können. Im folgenden Code wird beispielsweise versucht, ein Objekt namens `lockObject` zu sperren. Wenn die Sperrung nicht innerhalb von 300 Millisekunden erfolgt, gibt <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> den Wert `false` zurück.  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
@@ -122,7 +125,7 @@ else {
   
 -   Seien Sie beim Sperren von Instanzen vorsichtig, zum Beispiel `lock(this)` in C# oder `SyncLock(Me)` in Visual Basic. Wenn anderer, für den Typ externer Code in der Anwendung das Objekt sperrt, könnte dies zu Deadlocks führen.  
   
--   Stellen Sie sicher, dass ein Thread, der in einem Monitor überwacht wird, den Monitor verlässt, auch wenn eine Ausnahme auftritt, während der Thread sich im Monitor befindet. Die C#- [Sperre](~/docs/csharp/language-reference/keywords/lock-statement.md) -Anweisung und die Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) Anweisung dieses Verhalten stellen automatisch bereit, wobei eine **schließlich** Block, um sicherzustellen, dass <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> ist wird aufgerufen. Wenn Sie den Aufruf von **Exit** nicht sicherstellen können, empfiehlt sich stattdessen die Verwendung von **Mutex**. Ein Mutex wird automatisch freigegeben, wenn der Thread, in dessen Besitz er sich befindet, beendet wird.  
+-   Stellen Sie sicher, dass ein Thread, der in einem Monitor überwacht wird, den Monitor verlässt, auch wenn eine Ausnahme auftritt, während der Thread sich im Monitor befindet. Die C#-Anweisung [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) und die Visual Basic-Anweisung [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) stellen dieses Verhalten automatisch bereit, wobei sie einen **finally**-Block verwenden, um sicherzustellen, dass <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> aufgerufen wird. Wenn Sie den Aufruf von **Exit** nicht sicherstellen können, empfiehlt sich stattdessen die Verwendung von **Mutex**. Ein Mutex wird automatisch freigegeben, wenn der Thread, in dessen Besitz er sich befindet, beendet wird.  
   
 -   Verwenden Sie mehrere Threads nicht für Aufgaben, für die verschiedene Ressourcen benötigt werden, und vermeiden Sie es, mehrere Threads einer einzelnen Ressource zuzuweisen. Aufgaben, die Ein- und Ausgaben umfassen, sollten beispielsweise über einen eigenen Thread verfügen, da der entsprechende Thread während der E/A-Vorgänge blockiert wird. Dies ermöglicht die Ausführung von anderen Threads. Benutzereingaben sind ein weiteres Beispiel für eine Ressource, die von einem für sie reservierten Thread profitiert. Auf einem Computer mit einem einzelnen Prozessor können eine Aufgabe, die eine ressourcenintensive Berechnung erfordert, und Benutzereingaben oder Aufgaben mit E/A-Vorgängen problemlos gleichzeitig ausgeführt werden. Mehrere rechenintensive Aufgaben machen sich jedoch gegenseitig die Ressourcen streitig.  
   

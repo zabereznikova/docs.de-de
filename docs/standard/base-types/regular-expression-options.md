@@ -18,15 +18,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 <a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Mustervergleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.  
@@ -112,7 +115,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
  [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]  
   
- Den folgenden Abschnitten werden der Optionen, die von regulären Ausdruck in .NET unterstützt.  
+ In den folgenden Abschnitten werden die Optionen aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden.  
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>Standardoptionen  
@@ -170,7 +173,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `^(\w+)\s(\d+)\r*$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Am Anfang der Zeile beginnen.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -212,9 +215,9 @@ ms.lasthandoff: 10/18/2017
 \b\(?((\w+),?\s?)+[\.!?]\)?  
 ```  
   
- sollen nur Sätze mit einem Punkt, Ausrufezeichen oder Fragezeichen am Ende aus einem Dokument extrahiert werden. Nur der resultierende Satz (der durch das <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird) ist von Interesse. Die einzelnen Wörter in der Auflistung sind dies nicht.  
+ sollen nur Sätze mit einem Punkt, Ausrufezeichen oder Fragezeichen am Ende aus einem Dokument extrahiert werden. Nur der resultierende Satz (der durch das <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird) ist von Interesse. Die einzelnen Wörter in der Auflistung sind irrelevant.  
   
- Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da das Modul für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Als Alternative, verwenden Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> Option oder der `n` Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen, die durch gekennzeichnet sind die `(?<` *Namen* `>` *Teilausdruck* `)` erstellen.  
+ Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da das Modul für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Als Alternative können Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option oder die `n`-Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen sind, die durch das Konstrukt `(?<`*name*`>` *subexpression*`)` angegeben werden.  
   
  Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom Muster eines regulären Ausdrucks `\b\(?((\w+),?\s?)+[\.!?]\)?` zurückgegeben werden, wenn die <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode mit und ohne die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option aufgerufen wird. Wie die Ausgabe des ersten Methodenaufrufs zeigt, füllt das Modul für reguläre Ausdrücke das <xref:System.Text.RegularExpressions.GroupCollection>-Auflistungsobjekt und das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt vollständig mit Informationen zu erfassten Teilzeichenfolgen auf. Da die zweite Methode mit `options` mit dem Wert <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> aufgerufen wird, werden keine Informationen zu Gruppen erfasst.  
   
@@ -223,7 +226,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke `\b\(?((?>\w+),?\s?)+[\.!?]\)?` ist entsprechend der folgenden Tabelle definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Bei einer Wortgrenze beginnen.|  
 |`\(?`|Sucht nach einer Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer ("(").|  
@@ -282,11 +285,11 @@ ms.lasthandoff: 10/18/2017
   
 -   Leerzeichen in einer Zeichenklasse werden stets literal interpretiert. Der reguläre Ausdruck `[ .,;:]` findet z. B. ein einzelnes Leerstellenzeichen, Punkt, Komma, Semikolon oder einen Doppelpunkt.  
   
--   Leerraum ist nicht zulässig in eine in Klammern gesetzten Quantifizierern wie z. B. `{`  *n*  `}`, `{`  *n*  `,}`, und `{`  *n*  `,` *m*`}`. Das Muster eines regulären Ausdrucks `\d{1. 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
+-   Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` unzulässig. Das Muster eines regulären Ausdrucks `\d{1. 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
   
 -   Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:  
   
-    -   Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :` *Teilausdruck* `)` löst ein <xref:System.ArgumentException> zur Laufzeit, da das Modul für reguläre Ausdrücke das Muster, das Muster nicht und analysieren kann `( ?:` *Teilausdruck*  `)` findet keine Übereinstimmung *Teilausdruck*.  
+    -   Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da das Modul für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.  
   
     -   Das Sprachelement `\p{`*Name*`}`, das für eine Unicode-Kategorie oder einen benannten Block steht, darf im `\p{`-Teil des Elements kein eingebettetes Leerzeichen enthalten. Falls Sie trotzdem ein Leerzeichen einfügen, löst das Element zur Laufzeit eine <xref:System.ArgumentException> aus.  
   
@@ -296,7 +299,7 @@ ms.lasthandoff: 10/18/2017
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- Dieses Muster wird im definierten Muster ähnlich der [nur explizite Erfassungen](#Explicit) Abschnitt identisch, jedoch verwendet die <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> -Option Musterleerstellen ignoriert werden.  
+ Dieses Muster ist dem im Abschnitt [Nur explizite Erfassungen](#Explicit) definierten Muster ähnlich, außer dass mithilfe der <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Option Musterleerzeichen ignoriert werden.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
@@ -327,7 +330,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`(?<=\d{1,2}\s)`|Dem Anfang der Übereinstimmung müssen eine oder zwei von einem Leerzeichen gefolgte Dezimalstellen vorangestellt sein.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -348,7 +351,7 @@ ms.lasthandoff: 10/18/2017
   
  Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet sich in drei Bereichen: Zeichenklassensyntax, bei Selbstverweisen von Erfassungsgruppen sowie bei der Interpretation von Oktalwerten und Rückverweisen.  
   
--   Zeichenklassensyntax. Da kanonische reguläre Ausdrücke im Gegensatz zu ECMAScript Unicode unterstützen, weisen Zeichenklassen in ECMAScript eine beschränktere Syntax auf, und einige Zeichenklassensprachelemente haben eine andere Bedeutung. ECMAScript unterstützt z. B. keine Sprachelemente wie die Kategorie- oder Blockelemente `\p` und `\P` von Unicode. Entsprechend ist das `\w`-Element, das einem Wortzeichen entspricht, äquivalent zur `[a-zA-Z_0-9]`-Zeichenklasse beim Verwenden von ECMAScript bzw. äquivalent zu `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` beim Verwenden des kanonischen Verhaltens. Weitere Informationen finden Sie unter [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+-   Zeichenklassensyntax. Da kanonische reguläre Ausdrücke im Gegensatz zu ECMAScript Unicode unterstützen, weisen Zeichenklassen in ECMAScript eine beschränktere Syntax auf, und einige Zeichenklassensprachelemente haben eine andere Bedeutung. ECMAScript unterstützt z. B. keine Sprachelemente wie die Kategorie- oder Blockelemente `\p` und `\P` von Unicode. Entsprechend ist das `\w`-Element, das einem Wortzeichen entspricht, äquivalent zur `[a-zA-Z_0-9]`-Zeichenklasse beim Verwenden von ECMAScript bzw. äquivalent zu `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` beim Verwenden des kanonischen Verhaltens. Weitere Informationen finden Sie unter [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
      Im folgenden Beispiel wird der Unterschied zwischen kanonischen und ECMAScript-Mustervergleichen veranschaulicht. Dabei wird ein regulärer Ausdruck, `\b(\w+\s*)+`, definiert, der eine Entsprechung für Wörter findet, denen Leerstellenzeichen folgen. Die Eingabe besteht aus zwei Zeichenfolgen, einer mit dem lateinischen Zeichensatz und einer mit dem kyrillischen Zeichensatz. Wie die Ausgabe zeigt, findet der Aufruf der <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, die ECMAScript verwendet, keine Entsprechung für die kyrillischen Wörter, wohingegen der Methodenaufruf, der einen kanonischen Vergleich verwendet, eine Entsprechung für diese Wörter findet.  
   
@@ -362,7 +365,7 @@ ms.lasthandoff: 10/18/2017
   
      Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |(a+)|Entspricht einem oder mehreren Vorkommen des Buchstabens "a". Dies ist die zweite Erfassungsgruppe.|  
     |(\1)|Entspricht der Teilzeichenfolge, die von der ersten Erfassungsgruppe erfasst wurde. Dies ist die dritte Erfassungsgruppe.|  

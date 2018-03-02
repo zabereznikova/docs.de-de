@@ -11,27 +11,31 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: SpinLock, how to enable thread-tracking
+helpviewer_keywords:
+- SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca5f1b6eace7a24a6bbb7fd541858246828fa757
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f3d5b40f1f7b4b7534a44f4f7ab542d33d373702
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Gewusst wie: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock
-<xref:System.Threading.SpinLock?displayProperty=nameWithType>ist eine Low-Level gegenseitigen Ausschluss-Sperre, die Sie für Szenarien verwenden können, die sehr kurze Wartezeiten aufweisen. <xref:System.Threading.SpinLock>ist nicht wiedereintrittsfähig. Nach ein Thread die Sperre angefordert hat, muss er die Sperre ordnungsgemäß beenden, bevor er erneut eingeben kann. In der Regel können jeder Versuch, die Sperre erneut einen Deadlock verursachen würde, und Deadlocks sehr schwer zu beheben. Als Hilfe bei der Entwicklung <xref:System.Threading.SpinLock?displayProperty=nameWithType> unterstützt einen Modus zum Nachverfolgen von Threads, die bewirkt, eine Ausnahme ausgelöst werden dass, wenn ein Thread versucht, eine Sperre, die sie bereits enthält, erneut eingeben. Dadurch können Sie, die mehrere den Punkt suchen Sie mit dem die Sperre nicht ordnungsgemäß beendet wurde. Thread-Nachverfolgungsmodus einschalten, mithilfe der <xref:System.Threading.SpinLock> Konstruktor, der einen boolescher Wert akzeptiert Eingabeparameter, und übergeben ein Argument des `true`. Deaktivieren Sie nach Abschluss der Entwicklung und Testphase Modus zum Nachverfolgen von Threads für eine bessere Leistung.  
+<xref:System.Threading.SpinLock?displayProperty=nameWithType> ist eine gegenseitige Low-Level- Ausschlusssperre, die Sie für Szenarien mit sehr kurzen Wartezeiten verwenden können. <xref:System.Threading.SpinLock> ist nicht wiedereintrittsfähig. Wenn ein Thread in die Sperre eintritt, muss er die Sperre ordnungsgemäß beenden, bevor er erneut eintreten kann. In der Regel würde jeder Versuch, erneut in die Sperre einzutreten, einen Deadlock verursachen, und Deadlocks sind sehr schwer zu beheben. Als Hilfe zur Entwicklung unterstützt <xref:System.Threading.SpinLock?displayProperty=nameWithType> einen Modus zum Nachverfolgen von Threads, der bewirkt, dass eine Ausnahme ausgelöst wird, wenn ein Thread versucht, erneut in eine Sperre einzutreten, in der er sich bereits befindet. So können Sie leichter den Punkt lokalisieren, an dem die Sperre nicht ordnungsgemäß beendet wurde. Sie können den Modus zum Nachverfolgen von Threads mithilfe des <xref:System.Threading.SpinLock>-Konstruktors einschalten, der einen booleschen Eingabeparameter akzeptiert, und ein `true`-Argument übergeben. Deaktivieren Sie den Modus zum Nachverfolgen von Threads nach Abschluss der Entwicklungs- und Testphase im Interesse besserer Leistung.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Thread-Nachverfolgungsmodus. Die Zeilen, die die Sperre ordnungsgemäß beenden sind auskommentiert, um einen Codefehler zu simulieren, die bewirkt, eines der folgenden Ergebnisse dass:  
+ Das folgende Beispiel veranschaulicht den Modus zum Nachverfolgen von Threads. Die Zeilen zum ordnungsgemäßen Beenden der Sperre sind auskommentiert, um einen Codefehler zu simulieren, der eines der folgenden Ergebnisse bewirkt:  
   
--   Eine Ausnahme wird ausgelöst, wenn die <xref:System.Threading.SpinLock> wurde erstellt, mit dem Argument der `true` (`True` in Visual Basic).  
+-   Eine Ausnahme wird ausgelöst, wenn <xref:System.Threading.SpinLock> mit dem Argument `true` (`True` in Visual Basic) erstellt wird.  
   
--   Wenn ein Deadlock auftreten der <xref:System.Threading.SpinLock> wurde erstellt, mit dem Argument der `false` (`False` in Visual Basic).  
+-   Ein Deadlock wird ausgelöst, wenn <xref:System.Threading.SpinLock> mit dem Argument `false` (`False` in Visual Basic) erstellt wird.  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

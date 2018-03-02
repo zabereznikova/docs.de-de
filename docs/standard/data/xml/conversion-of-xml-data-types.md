@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d18b69c2d5baeac77cbdf45bebd6f0c9d5c94d9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conversion-of-xml-data-types"></a>Konvertierung von XML-Datentypen
-Der Großteil der Methoden gefunden, eine **XmlConvert** Klasse werden verwendet, um Daten zwischen Zeichenfolgen und stark typisierten Formaten konvertiert. Die Methoden sind unabhängig vom Gebietsschema. Dies bedeutet, dass im Rahmen von Konvertierungen keine Gebietsschemaeinstellungen berücksichtigt werden.  
+Mit den meisten Methoden in einer **XmlConvert**-Klasse werden Daten zwischen Zeichenfolgen und stark typisierten Formaten konvertiert. Die Methoden sind unabhängig vom Gebietsschema. Dies bedeutet, dass im Rahmen von Konvertierungen keine Gebietsschemaeinstellungen berücksichtigt werden.  
   
 ## <a name="reading-string-as-types"></a>Lesen von Zeichenfolgen als Typen  
- Im folgenden Beispiel liest eine Zeichenfolge und konvertiert sie in einem **"DateTime"** Typ.  
+ Im folgenden Beispiel wird eine Zeichenfolge gelesen und in einen **DateTime**-Typ konvertiert.  
   
  Die folgenden XML-Eingaben sind vorhanden:  
   
@@ -36,7 +39,7 @@ Der Großteil der Methoden gefunden, eine **XmlConvert** Klasse werden verwendet
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Dieser Code konvertiert die Zeichenfolge, die die **"DateTime"** Format:  
+ Mit diesem Code wird die Zeichenfolge in das **DateTime**-Format konvertiert:  
   
 ```vb  
 reader.ReadStartElement()  
@@ -51,7 +54,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>Schreiben von Zeichenfolgen als Typen  
- Das folgende Beispiel liest eine **Int32** und in eine Zeichenfolge konvertiert.  
+ Im folgenden Beispiel wird ein **Int32**-Typ gelesen und in eine Zeichenfolge konvertiert.  
   
  Die folgenden XML-Eingaben sind vorhanden:  
   
@@ -61,7 +64,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Dieser Code konvertiert das **Int32** in einem **Zeichenfolge**:  
+ Mit diesem Code wird der **Int32**-Typ in einen **String** konvertiert:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

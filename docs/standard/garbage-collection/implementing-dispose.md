@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
-Sie implementieren eine <xref:System.IDisposable.Dispose%2A> Methode zum Freigeben von nicht verwalteter Ressourcen, die von Ihrer Anwendung verwendet. Der .NET-Garbage Collector ordnet nicht verwalteten Arbeitsspeicher weder zu noch gibt er diesen frei.  
+Sie implementieren eine <xref:System.IDisposable.Dispose%2A>-Methode, um nicht verwaltete Ressourcen freizugeben, die von Ihrer Anwendung verwendet werden. Der .NET-Garbage Collector ordnet nicht verwalteten Arbeitsspeicher weder zu noch gibt er diesen frei.  
   
-Das Muster für das Verwerfen eines Objekts, bezeichnet als eine [dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md), legt eine Ordnung für die Lebensdauer eines Objekts. Das Dispose-Muster wird nur für Objekte verwendet, die auf nicht verwaltete Ressourcen zugreifen, wie etwa Datei- und Pipehandles, Registrierungshandles, Wait-Handles oder Zeiger auf Blöcke nicht verwalteten Speichers. Dies liegt daran, dass der Garbage Collector beim Freigeben nicht verwendeter verwalteter Objekte sehr effizient ist, nicht verwaltete Objekt jedoch nicht freigeben kann.  
+Das Muster für das Verwerfen eines Objekts, [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) genannt, legt die Ordnung für die Lebensdauer eines Objekts fest. Das Dispose-Muster wird nur für Objekte verwendet, die auf nicht verwaltete Ressourcen zugreifen, wie etwa Datei- und Pipehandles, Registrierungshandles, Wait-Handles oder Zeiger auf Blöcke nicht verwalteten Speichers. Dies liegt daran, dass der Garbage Collector beim Freigeben nicht verwendeter verwalteter Objekte sehr effizient ist, nicht verwaltete Objekt jedoch nicht freigeben kann.  
   
 Das Dispose-Muster weist zwei Varianten auf:  
   
 * Sie umschließen jede nicht verwaltete Ressource, die ein Typ verwendet, in einem SafeHandle (also in einer von <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> abgeleiteten Klasse). In diesem Fall implementieren Sie die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode. Dies ist die empfohlene Variante und erfordert nicht das Überschreiben der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode.  
   
   > [!NOTE]
-  > Die <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Namespace enthält eine Reihe von abgeleiteten Klassen <xref:System.Runtime.InteropServices.SafeHandle>, die aufgeführt sind, der [Verwenden von SafeHandles](#SafeHandles) Abschnitt. Wenn Sie keine Klasse finden können, die Ihre nicht verwaltete Ressource freigeben kann, können Sie eine eigene Unterklasse von <xref:System.Runtime.InteropServices.SafeHandle> implementieren.  
+  > Der <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType>-Namespace stellt einen Satz von Klassen bereit, die von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitet werden und im Abschnitt [Verwenden von SafeHandles](#SafeHandles) aufgeführt sind. Wenn Sie keine Klasse finden können, die Ihre nicht verwaltete Ressource freigeben kann, können Sie eine eigene Unterklasse von <xref:System.Runtime.InteropServices.SafeHandle> implementieren.  
   
 * Sie implementieren die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode, und Sie überschreiben auch die <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Sie müssen <xref:System.Object.Finalize%2A> überschreiben, um sicherzustellen, dass nicht verwaltete Ressourcen verworfen werden, wenn die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung nicht von einem Consumer Ihres Typs aufgerufen wird. Wenn Sie das unter dem vorherigen Aufzählungspunkt beschriebene empfohlene Verfahren anwenden, führt die <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>-Klasse dies für Sie durch.  
   
@@ -67,7 +70,7 @@ Die `Dispose`-Methode führt die Bereinigung aller Objekte aus, damit der Garbag
   
 ### <a name="the-disposeboolean-overload"></a>Die Dispose(Boolean) Überladung
 
-In der zweiten Überladung ist der *disposing* Parameter ist ein <xref:System.Boolean> , der angibt, ob der Methodenaufruf stammt eine <xref:System.IDisposable.Dispose%2A> Methode (sein Wert ist `true`) oder von einem Finalizer (sein Wert ist `false`).  
+In der zweiten Überladung ist der *disposing*-Parameter ein <xref:System.Boolean>, der angibt, ob der Methodenaufruf von einer <xref:System.IDisposable.Dispose%2A>-Methode (der Wert ist `true`) oder von einem Finalizer (der Wert ist `false`) stammt.  
   
 Der Text der Methode besteht aus zwei Codeblöcken:  
   
@@ -75,7 +78,7 @@ Der Text der Methode besteht aus zwei Codeblöcken:
   
 * Ein bedingter Block, der verwaltete Ressourcen freigibt. Dieser Block wird ausgeführt, wenn der Wert von `disposing` gleich `true` ist. Die verwalteten Ressourcen, die freigegeben werden, können Folgendes umfassen:  
   
-  **Verwaltete Objekte, die implementieren <xref:System.IDisposable>.** Der bedingte Block kann verwendet werden, um deren <xref:System.IDisposable.Dispose%2A>-Implementierung aufzurufen. Wenn Sie ein SafeHandle verwendet haben, um die nicht verwaltete Ressource einschließen, sollten Sie die <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>-Implementierung hier aufrufen.  
+  **Verwaltete Objekte, die <xref:System.IDisposable> implementieren.** Der bedingte Block kann verwendet werden, um deren <xref:System.IDisposable.Dispose%2A>-Implementierung aufzurufen. Wenn Sie ein SafeHandle verwendet haben, um die nicht verwaltete Ressource einschließen, sollten Sie die <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>-Implementierung hier aufrufen.  
   
   **Verwaltete Objekte, die viel Arbeitsspeicher belegen oder knappe Ressourcen nutzen.** Durch die explizite Freigabe in der `Dispose`-Methode werden diese Objekte schneller freigegeben, als wenn sie vom Garbage Collector nicht deterministisch freigegeben werden würden.  
   
@@ -108,13 +111,13 @@ Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispo
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> In c# überschreiben Sie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> durch Definieren einer [Destruktor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> In C# überschreiben Sie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> durch Definieren eines [Destruktors](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementieren des Dispose-Musters für eine abgeleitete Klasse
 
 Eine Klasse, die von einer Klasse abgeleitet ist, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte <xref:System.IDisposable> nicht implementieren, da die Basisklassenimplementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> von den abgeleiteten Klassen geerbt wird. Stattdessen müssen Sie Folgendes bereitstellen, um das Dispose-Muster für eine abgeleitete Klasse zu implementieren:  
   
-* Eine `protected``Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihr den Wert `true` für das *disposing*-Argument übergeben.  
+* Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihr den Wert `true` für das *disposing*-Argument übergeben.  
   
 * Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen. Wenn Sie einen Finalizer bereitstellen, sollte er die `Dispose(Boolean)`-Überladung mit einem *disposing*-Argument mit dem Wert `false` aufrufen.  
   
@@ -132,7 +135,7 @@ Im Folgenden finden Sie das allgemeine Muster für das Implementieren des Dispos
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> In c# überschreiben Sie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> durch Definieren einer [Destruktor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> In C# überschreiben Sie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> durch Definieren eines [Destruktors](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Verwenden von SafeHandles
@@ -175,5 +178,5 @@ Das folgende Beispiel zeigt das Dispose-Muster für eine abgeleitete Klasse, `Di
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Vorgehensweise: definieren und Verarbeiten von Klassen und Strukturen (C + c++ / CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Gewusst wie: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
 [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md)

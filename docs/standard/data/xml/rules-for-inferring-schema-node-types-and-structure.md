@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c28c0f21b03fe7db014f118251363230a6ffc591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a50fcd3e3ee56ded97edef08c2ee08f4a7233
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
 In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem XML-Dokument auftretenden Knotentypen in eine XSD-Struktur (XML Schema Definition) übersetzt.  
@@ -44,12 +47,12 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 > [!NOTE]
 >  Alle `complexType`-Deklarationen werden als anonyme Typen hergeleitet. Das einzige globale hergeleitete Element ist das Stammelement. Alle anderen Elemente sind lokal.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 ### <a name="simple-typed-element"></a>Element eines einfachen Typs  
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Das fett formatierte Element stellt das Schema dar, das für das Element eines einfachen Typs hergeleitet wird.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -58,7 +61,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ### <a name="empty-element"></a>Leeres Element  
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Das fett formatierte Element stellt das für das leere Element hergeleitete Schema dar.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -67,7 +70,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ### <a name="empty-element-with-attributes"></a>Leeres Element mit Attributen  
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für das leere Element mit Attributen hergeleitete Schema dar.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -76,7 +79,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ### <a name="element-with-attributes-and-simple-content"></a>Element mit Attributen und einfachem Inhalt  
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für ein Element mit Attributen und einfachem Inhalt hergeleitete Schema dar.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -88,7 +91,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 > [!NOTE]
 >  Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -100,7 +103,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 > [!NOTE]
 >  Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -112,7 +115,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 > [!NOTE]
 >  Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -124,7 +127,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 > [!NOTE]
 >  Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -151,11 +154,11 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 |Dokumenttyp|Ignoriert.|  
 |Namespaces|Ignoriert.|  
   
- Weitere Informationen zu der Schemarückschlussprozess, finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Xml.Schema.XmlSchemaInference>  
  [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -78,7 +81,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  In der folgenden Tabelle werden einige Eigenschaften beschrieben, über die eine Klasse verfügen kann. Jede für Laufzeitunterstützung ausgelegte Sprache bietet eine Möglichkeit, eines oder mehrere Merkmale für eine Klasse oder einen Klassenmember festzulegen. In einzelnen Programmiersprachen, die .NET als Ziel haben, sind jedoch möglicherweise nicht alle dieser Eigenschaften verfügbar.  
   
-|Merkmal|Beschreibung|  
+|Merkmal|description|  
 |--------------------|-----------------|  
 |sealed|Legt fest, dass von diesem Typ keine andere Klasse abgeleitet werden kann.|  
 |implements|Gibt an, dass die Klasse eine oder mehrere Schnittstellen verwendet; es werden Implementierungen von Schnittstellenmembern bereitgestellt.|  
@@ -95,7 +98,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Strukturen  
- Eine Struktur ist ein Werttyp, der implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet ist. Dies ist wiederum von <xref:System.Object?displayProperty=nameWithType> abgeleitet. Eine Struktur ist hilfreich beim Darstellen von Werten mit geringen Arbeitsspeicheranforderungen und beim Übergeben von Werten über Parameter als Wert an Methoden mit stark typisierten Parametern. In .NET müssen alle primitiven Datentypen (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, und <xref:System.UInt64>) als Strukturen definiert sind.  
+ Eine Struktur ist ein Werttyp, der implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet ist. Dies ist wiederum von <xref:System.Object?displayProperty=nameWithType> abgeleitet. Eine Struktur ist hilfreich beim Darstellen von Werten mit geringen Arbeitsspeicheranforderungen und beim Übergeben von Werten über Parameter als Wert an Methoden mit stark typisierten Parametern. In .NET werden alle primitiven Datentypen (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> und <xref:System.UInt64>) als Strukturen definiert.  
   
  Wie Klassen definieren Strukturen sowohl Daten (die Felder der Struktur) als auch die Vorgänge, die für diese Daten (die Methoden der Struktur) ausgeführt werden können. Dies bedeutet, dass Sie Methoden für Strukturen aufrufen können, einschließlich der für die <xref:System.Object?displayProperty=nameWithType>-Klasse und die <xref:System.ValueType?displayProperty=nameWithType>-Klasse definierten virtuellen Methoden sowie aller Methoden, die für den Werttyp selbst definiert wurden. Anders ausgedrückt können Strukturen Felder, Eigenschaften und Ereignisse sowie statische und nicht statische Methoden aufweisen. Sie können Instanzen von Strukturen erstellen, diese als Parameter übergeben, als lokale Variablen speichern oder im Feld eines anderen Werttyps oder Verweistyps speichern. Strukturen können auch Schnittstellen implementieren.  
   
@@ -166,7 +169,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  In vielen Fällen (z. B. bei Rückrufmethoden) stellt ein Delegat nur eine Methode dar. Sie müssen den Delegaten lediglich erstellen und aufrufen.  
   
- Für Delegaten, die mehrere Methoden darstellen, stellt .NET Methoden bereit, mit die <xref:System.Delegate> und <xref:System.MulticastDelegate> Delegatklasse, um Vorgänge wie das Hinzufügen einer Methode zur Aufrufliste eines Delegaten unterstützt (die <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> Methode), Entfernen einer Methode (die <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> Methode), und Abrufen der Aufrufliste (die <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> Methode).  
+ Für Delegaten, die mehrere Methoden darstellen, enthält .NET Methoden der <xref:System.Delegate>-Delegatklasse und <xref:System.MulticastDelegate>-Delegatklasse, um verschiedene Vorgänge zu unterstützen. Dazu gehören das Hinzufügen einer Methode zur Aufrufliste eines Delegaten (die <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>-Methode), das Entfernen einer Methode (die <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>-Methode) und das Abrufen der Aufrufliste (die <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>-Methode).  
   
 > [!NOTE]
 >  Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
@@ -197,7 +200,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ### <a name="type-accessibility"></a>Typzugriff  
  Alle Typen verfügen über einen Modifizierer, der regelt, welche anderen Typen auf diesen Typ zugreifen können. In der folgenden Tabelle werden die von der Laufzeit unterstützten Zugriffsarten auf Typen beschrieben.  
   
-|Barrierefreiheit|Beschreibung|  
+|Zugriff|description|  
 |-------------------|-----------------|  
 |public|Auf diesen Typ kann von allen Assemblys zugegriffen werden.|  
 |Assembly|Auf diesen Typ kann nur innerhalb seiner Assembly zugegriffen werden.|  
@@ -302,7 +305,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  
   
-|Merkmal|Anwendbar auf|Beschreibung|  
+|Merkmal|Anwendbar auf|description|  
 |--------------------|------------------|-----------------|  
 |abstract|Methoden, Eigenschaften und Ereignisse|Der Typ stellt keine Methodenimplementierung bereit. Typen, die abstrakte Methoden erben oder implementieren, müssen eine Implementierung für die Methode bereitstellen. Die einzige Ausnahme liegt vor, wenn der abgeleitete Typ selbst vom Typ abstract ist. Alle Methoden vom Typ abstract sind auch virtual.|  
 |private, family, assembly, family und assembly, family oder assembly oder public|Alle|Definiert die Zugriffsart des Members:<br /><br /> private<br /> Zugriff ist nur innerhalb desselben Typs wie dem des Members oder innerhalb eines geschachtelten Typs möglich.<br /><br /> family<br /> Zugriff innerhalb desselben Typs wie dem des Members und von abgeleiteten Typen möglich, die davon erben.<br /><br /> Assembly<br /> Zugriff nur in der Assembly möglich, in der der Typ definiert ist.<br /><br /> family und assembly<br /> Zugriff nur von Typen möglich, die sowohl über den Zugriffstyp family als auch assembly verfügen.<br /><br /> family oder assembly<br /> Zugriff nur von Typen möglich, die über den Zugriffstyp "family" oder "assembly" verfügen.<br /><br /> public<br /> Zugriff von jedem Typ möglich.|  
@@ -328,6 +331,6 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 -   Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenbibliothek für .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [.NET-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [Common Language Runtime](../../../docs/standard/clr.md)  
  [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)

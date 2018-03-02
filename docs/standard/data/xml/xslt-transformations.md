@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0d7fa8492487daff68fd8ebaf4159dd537d13e51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
-Mit XSLT (Extensible Stylesheet Language Transformation) können Sie den Inhalt eines XML-Quelldokuments in ein anderes Dokument mit anderem Format oder einer anderen Struktur transformieren. Mit XSLT können Sie beispielsweise XML in HTML für eine Website transformieren oder in ein Dokument, das nur die für eine Anwendung erforderlichen Felder enthält. Dieser Transformationsprozess wird angegeben, indem die [Empfehlung der W3C XSL Transformations (XSLT) Version 1.0](http://go.microsoft.com/fwlink/?LinkID=49919).  
+Mit XSLT (Extensible Stylesheet Language Transformation) können Sie den Inhalt eines XML-Quelldokuments in ein anderes Dokument mit anderem Format oder einer anderen Struktur transformieren. Mit XSLT können Sie beispielsweise XML in HTML für eine Website transformieren oder in ein Dokument, das nur die für eine Anwendung erforderlichen Felder enthält. Dieser Transformationsprozess wird in der [W3C-Empfehlung zu XSL-Transformationen (XSLT) Version 1.0](http://go.microsoft.com/fwlink/?LinkID=49919) spezifiziert.  
   
  Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ist der XSLT-Prozessor in .NET Framework. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt die W3C-Empfehlung zu XSLT 1.0.  
   
@@ -34,13 +37,13 @@ Mit XSLT (Extensible Stylesheet Language Transformation) können Sie den Inhalt 
  [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  Behandelt die Migration von Code von der <xref:System.Xml.Xsl.XslTransform>-Klasse.  
   
- [XSLT-Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT-Compiler („xsltc.exe“)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
  Enthält Informationen zur Verwendung des XSLT-Compilers.  
   
  [XSLT-Transformationen mit der XslTransform-Klasse](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Enthält Informationen zur Verwendung der <xref:System.Xml.Xsl.XslTransform>-Klasse.  
   
- **Hinweis** der <xref:System.Xml.Xsl.XslTransform> Klasse in .NET Framework 2.0 veraltet ist.  
+ **Hinweis** Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet.  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Xml.Xsl.XslCompiledTransform>  

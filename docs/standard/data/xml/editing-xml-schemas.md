@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>Bearbeiten von XML-Schemata
 Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schemaobjektmodells (SOM). Alle Eigenschaften des SOM vor der Kompilierung des Schemas können zum Ändern der vorhandenen Werte eines XML-Schemas verwendet werden. Das XML-Schema kann dann erneut kompiliert werden, um die Änderungen widerzuspiegeln.  
@@ -29,7 +32,7 @@ Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schema
  Der erste Bearbeitungsschritt eines in das DOM geladenen Schemas ist das Durchlaufen des Schemas. Sie sollten mit dem Durchlaufen eines Schemas mithilfe der SOM-API vertraut sein, bevor Sie versuchen, ein Schema zu bearbeiten. Sie sollten auch mit den Eigenschaften vor und nach der Kompilierung des Schemas im Post-Schema-Compilation-Infoset (PSCI) vertraut sein.  
   
 ## <a name="editing-an-xml-schema"></a>Bearbeiten eines XML-Schemas  
- In diesem Abschnitt werden zwei Codebeispiele bereitgestellt, die beide das Kundenschema in erstellten Bearbeiten der [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) Thema. Im ersten Codebeispiel wird dem `PhoneNumber`-Element ein neues `Customer`-Element hinzugefügt, und im zweiten Codebeispiel wird dem `Title`-Element ein neues `FirstName`-Attribut hinzugefügt. Im ersten Beispiel wird die <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas zum Durchlaufen des Kundenschemas verwendet, während im zweiten Codebeispiel die <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas verwendet wird.  
+ In diesem Abschnitt finden Sie zwei Codebeispiele, in denen das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellte Kundenschema bearbeitet wird. Im ersten Codebeispiel wird dem `PhoneNumber`-Element ein neues `Customer`-Element hinzugefügt, und im zweiten Codebeispiel wird dem `Title`-Element ein neues `FirstName`-Attribut hinzugefügt. Im ersten Beispiel wird die <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas zum Durchlaufen des Kundenschemas verwendet, während im zweiten Codebeispiel die <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas verwendet wird.  
   
 ### <a name="phonenumber-element-example"></a>Beispiel: "PhoneNumber"-Element  
  Im ersten Codebeispiel wird dem `PhoneNumber`-Element des Kundenschemas ein neues `Customer`-Element hinzugefügt. Im Codebeispiel wird das Kundenschema in den folgenden Schritten bearbeitet.  
@@ -54,7 +57,7 @@ Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schema
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- Im folgenden finden Sie das geänderte Schema erstellt, der [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) Thema.  
+ Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellt wurde.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schema
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- Im folgenden finden Sie das geänderte Schema erstellt, der [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) Thema.  
+ Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellt wurde.  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -143,10 +146,10 @@ Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schema
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Schema-Objektmodellübersicht](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Durchlaufen von XML-Schemata](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

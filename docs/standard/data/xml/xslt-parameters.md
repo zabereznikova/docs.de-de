@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>XSLT-Parameter
 XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei werden ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
@@ -43,11 +46,11 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  *Dies entspricht einer Knotengruppe, die einen Knoten enthält.  
   
- Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator []** konvertiert <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird in <xref:System.Xml.XPath.XPathNodeIterator> konvertiert.  
   
  Alle anderen Typen lösen einen Fehler aus.  
   

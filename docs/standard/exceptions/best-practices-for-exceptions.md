@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>Bewährte Methoden für Ausnahmen
 
@@ -72,7 +76,7 @@ Ausnahmen stellen sicher, dass Fehler nicht unbemerkt bleiben, weil der aufrufen
 
 ## <a name="use-the-predefined-net-exception-types"></a>Verwenden der vordefinierten .NET-Ausnahmetypen
 
-Führen Sie eine neue Ausnahmenklasse nur ein, wenn keine vordefinierte zutrifft. Beispiel:
+Führen Sie eine neue Ausnahmenklasse nur ein, wenn keine vordefinierte zutrifft. Zum Beispiel:
 
 - Lösen Sie eine <xref:System.InvalidOperationException>-Ausnahme aus, wenn eine festgelegte Eigenschaft oder ein Methodenaufruf aufgrund des aktuellen Status des Objekts nicht geeignet ist.
 
@@ -90,7 +94,7 @@ Wenn eine benutzerdefinierte Ausnahme erforderlich ist, benennen Sie diese entsp
 
 Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei allgemeinen Konstruktoren: den Standardkonstruktor, einen Konstruktor, der eine Zeichenfolgenmeldung akzeptiert, und einen Konstruktor, der eine Zeichenfolgenmeldung und eine innere Ausnahme akzeptiert.
 
-* <xref:System.Exception.%23ctor>, die Standardwerte verwendet.
+* <xref:System.Exception.%23ctor>, der Standardwerte verwendet.
   
 * <xref:System.Exception.%23ctor%28System.String%29>, der eine Zeichenfolgenmeldung akzeptiert.  
   
@@ -102,7 +106,7 @@ Ein Beispiel finden Sie unter [Erstellen benutzerdefinierter Ausnahmen](how-to-c
 
 Stellen Sie beim Erstellen von benutzerdefinierten Ausnahmen sicher, dass die Metadaten für die Ausnahmen für remote ausgeführten Code verfügbar sind. 
 
-Für .NET-Implementierungen, die App-Domänen zu unterstützen, können z. B. Ausnahmen über App-Domänengrenzen hinweg auftreten. Ein Beispiel: App-Domäne A erstellt App-Domäne B, die wiederum Code ausführt, der eine Ausnahme auslöst. Damit die App-Domäne A die Ausnahme ordnungsgemäß erfasst und behandelt, muss die Assembly gefunden werden, in der die durch die App-Domäne B ausgelöste Ausnahme enthalten ist. Wenn die App-Domäne B eine Ausnahme auslöst, die in einer Assembly in ihrer Anwendungsbasis enthalten ist, aber nicht in der Anwendungsbasis von App-Domäne A, kann die App-Domäne A die Ausnahme nicht finden. Daraufhin löst die Common Language Runtime eine <xref:System.IO.FileNotFoundException> aus. Um diese Situation zu vermeiden, haben Sie zwei Möglichkeiten, die Assembly mit den Ausnahmeinformationen bereitzustellen:
+In .NET-Implementierungen, die App-Domänen unterstützen, können Ausnahmen z.B. über mehrere App-Domänen hinweg auftreten. Ein Beispiel: App-Domäne A erstellt App-Domäne B, die wiederum Code ausführt, der eine Ausnahme auslöst. Damit die App-Domäne A die Ausnahme ordnungsgemäß erfasst und behandelt, muss die Assembly gefunden werden, in der die durch die App-Domäne B ausgelöste Ausnahme enthalten ist. Wenn die App-Domäne B eine Ausnahme auslöst, die in einer Assembly in ihrer Anwendungsbasis enthalten ist, aber nicht in der Anwendungsbasis von App-Domäne A, kann die App-Domäne A die Ausnahme nicht finden. Daraufhin löst die Common Language Runtime eine <xref:System.IO.FileNotFoundException> aus. Um diese Situation zu vermeiden, haben Sie zwei Möglichkeiten, die Assembly mit den Ausnahmeinformationen bereitzustellen:
 
 - Legen Sie die Assembly in einer gemeinsamen Anwendungsbasis ab, die sich beide App-Domänen teilen.
 
@@ -116,7 +120,7 @@ Die für Benutzer sichtbare Fehlermeldung wird von der Beschreibungszeichenfolge
 
 ## <a name="use-grammatically-correct-error-messages"></a>Verwenden von grammatisch korrekten Fehlermeldungen
 
-Verfassen Sie klar verständliche Meldungen, und setzen Sie Satzendpunkte. Jeder Satz in einer Beschreibungszeichenfolge sollte mit einem Punkt beendet werden. Z. B. "wurde der Protokolltabelle." Dies ist ein Beispiel für eine angemessene Beschreibungszeichenfolge.
+Verfassen Sie klar verständliche Meldungen, und setzen Sie Satzendpunkte. Jeder Satz in einer Beschreibungszeichenfolge sollte mit einem Punkt beendet werden. Beispiel: „In der Protokolltabelle ist ein Überlauf aufgetreten.“ Dies ist ein Beispiel für eine angemessene Beschreibungszeichenfolge.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Bereitstellen zusätzlicher Eigenschaften in benutzerdefinierten Ausnahmen, sofern erforderlich
 
@@ -134,7 +138,7 @@ Es ist üblich, dass eine Klasse von unterschiedlichen Punkten in der Implementi
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-In einigen Fällen ist es besser, den Konstruktor einer Ausnahme zu verwenden, um die Ausnahme zu generieren. Ein Beispiel ist eine globale Exception-Klasse, wie z. B. <xref:System.ArgumentException>.
+In einigen Fällen ist es besser, den Konstruktor einer Ausnahme zu verwenden, um die Ausnahme zu generieren. Ein Beispiel hierfür ist eine globale Ausnahmeklasse wie etwa <xref:System.ArgumentException>.
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Löschen von Zwischenergebnissen beim Auslösen von Ausnahmen
 

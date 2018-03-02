@@ -19,18 +19,21 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7302b17beb5ce20ec2bd8865149fe2e0bae9cee4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
-Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatierungsvorgang resultierende Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten <xref:System.TimeSpan>-Formatbezeichnern und einer beliebigen Anzahl von Literalzeichen. Eine beliebige Zeichenfolge, die keine [standardmäßige TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md) wird als benutzerdefinierte interpretiert <xref:System.TimeSpan> Formatzeichenfolge.  
+Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatierungsvorgang resultierende Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten <xref:System.TimeSpan>-Formatbezeichnern und einer beliebigen Anzahl von Literalzeichen. Alle Zeichenfolgen, bei denen es sich nicht um [standardmäßige TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md) handelt, werden als benutzerdefinierte <xref:System.TimeSpan>-Formatzeichenfolgen interpretiert.  
   
 > [!IMPORTANT]
 >  Die benutzerdefinierten <xref:System.TimeSpan>-Formatbezeichner enthalten keine Platzhalter für Trennzeichensymbole, z. B. die Symbole, durch die Tage von Stunden, Stunden von Minuten oder Sekunden von Sekundenbruchteilen getrennt werden. Diese Symbole müssen stattdessen als Zeichenfolgenliterale in die benutzerdefinierte Formatzeichenfolge eingeschlossen werden. Beispielsweise definiert `"dd\.hh\:mm"` einen Punkt (.) als Trennzeichen zwischen Tagen und Stunden und einen Doppelpunkt (:) als Trennzeichen zwischen Stunden und Minuten.  
@@ -47,12 +50,12 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<a name="table"></a>Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit.  
+<a name="table"></a> In der folgenden Tabelle werden die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit beschrieben.  
   
-|Formatbezeichner|Beschreibung|Beispiel|  
+|Formatbezeichner|description|Beispiel|  
 |----------------------|-----------------|-------------|  
 |"d", "%d"|Die Anzahl ganzer Tage im Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --&gt; "6.14:32"|  
-|"dd"-"dddddddd"|Die Anzahl ganzer Tage im Zeitintervall, bei Bedarf mit führenden Nullen aufgefüllt.<br /><br /> Weitere Informationen: ["Dd"-"Dddddddd" benutzerdefinierten Formatbezeichnern](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --&gt; "06.14:32"|  
+|"dd"-"dddddddd"|Die Anzahl ganzer Tage im Zeitintervall, bei Bedarf mit führenden Nullen aufgefüllt.<br /><br /> Weitere Informationen finden Sie unter [Benutzerdefinierte Formatbezeichner „dd“ bis „dddddddd“](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --&gt; "06.14:32"|  
 |"h", "%h"|Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen keine führende 0 auf.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --&gt; "14"<br /><br /> `hh\:mm` --> "14:32"|  
 |"hh"|Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen eine führende 0 auf.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "hh"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --&gt; "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|  
 |"m", "%m"|Die Anzahl ganzer Minuten im Zeitintervall, die nicht als Teil von Stunden oder Tagen gezählt werden. Einstellige Minutenangaben weisen keine führende 0 auf.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --&gt; "8"<br /><br /> `h\:m` --> "14:8"|  
@@ -60,7 +63,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
 |"s", "%s"|Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden. Einstellige Sekundenangaben weisen keine führende 0 auf.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|  
 |"ss"|Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden.  Einstellige Sekundenangaben weisen eine führende 0 auf.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --&gt; 06<br /><br /> `ss\.fff` --> 06.965|  
 |"f", "%f"|Die Zehntelsekunden in einem Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|  
-|"ff"|Die Hundertstelsekunden in einem Zeitintervall.<br /><br /> Weitere Informationen:[der benutzerdefinierte Formatbezeichner "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|  
+|"ff"|Die Hundertstelsekunden in einem Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner „ff“](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|  
 |"fff"|Die Millisekunden in einem Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|  
 |"ffff"|Die Zehntausendstelsekunden in einem Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --&gt; 8954<br /><br /> `ss\.ffff` --> 06.8954|  
 |"fffff"|Die Hunderttausendstelsekunden in einem Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|  
@@ -73,9 +76,9 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
 |"FFFFF"|Die Hunderttausendstelsekunden in einem Zeitintervall. Nachkommanullen werden nicht eingeschlossen.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|  
 |"FFFFFF"|Die Millionstelsekunden in einem Zeitintervall. Nachkommanullen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Die Zehnmillionstelsekunden in einem Zeitintervall. Nachkommanullen oder sieben Nullstellen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
-|*"Zeichenfolge*"|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen: [andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|Das Escapezeichen.<br /><br /> Weitere Informationen:[andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
-|Jedes andere Zeichen|Alle anderen Zeichen ohne Escapezeichen werden als benutzerdefinierte Formatbezeichner interpretiert.<br /><br /> Weitere Informationen: [andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|*„string“*|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
+|\|Das Escapezeichen.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|Jedes andere Zeichen|Alle anderen Zeichen ohne Escapezeichen werden als benutzerdefinierte Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   
 ## <a name="the-d-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "d"  
@@ -145,7 +148,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
   
 <a name="mSpecifier"></a>   
 ## <a name="the-m-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "m"  
- Der benutzerdefinierte Formatbezeichner "m" gibt den Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Minuten im Zeitintervall darstellt, die nicht als Teil der Tageskomponente gezählt werden. Es gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert des der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> Eigenschaft liegt zwischen 0 und 9, und es gibt einen zweistelligen Zeichenfolgenwert zurück, wenn der Wert des der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> Eigenschaft liegt zwischen 10 und 59.  
+ Der benutzerdefinierte Formatbezeichner "m" gibt den Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Minuten im Zeitintervall darstellt, die nicht als Teil der Tageskomponente gezählt werden. Er gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft zwischen 0 und 9 liegt, und einen zweistelligen Zeichenfolgenwert, wenn der Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft zwischen 10 und 59 liegt.  
   
  Wenn der benutzerdefinierte Formatbezeichner "m" allein verwendet wird, geben Sie "%m" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.  
   
@@ -182,7 +185,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
   
 <a name="sSpecifier"></a>   
 ## <a name="the-s-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "s"  
- Der benutzerdefinierte Formatbezeichner "s" gibt den Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Sekunden im Zeitintervall darstellt, die nicht als Teil der Stunden-, Tages- oder Minutenkomponente gezählt werden. Es gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert des der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> Eigenschaft liegt zwischen 0 und 9, und es gibt einen zweistelligen Zeichenfolgenwert zurück, wenn der Wert des der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> Eigenschaft liegt zwischen 10 und 59.  
+ Der benutzerdefinierte Formatbezeichner "s" gibt den Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Sekunden im Zeitintervall darstellt, die nicht als Teil der Stunden-, Tages- oder Minutenkomponente gezählt werden. Er gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft zwischen 0 und 9 liegt, und einen zweistelligen Zeichenfolgenwert, wenn der Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft zwischen 10 und 59 liegt.  
   
  Wenn der benutzerdefinierte Formatbezeichner "s" allein verwendet wird, geben Sie "%s" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.  
   
@@ -383,7 +386,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
   
 -   Schließen Sie das Literalzeichen in einfache Anführungszeichen ein (Trennzeichen für Literalzeichenfolgen).  
   
--   Einen umgekehrten Schrägstrich voran ("\\"), der als Escapezeichen interpretiert wird. In C# muss die Formatzeichenfolge folglich @-quoted entsprechen, oder dem Literalzeichen muss ein zusätzlicher umgekehrter Schrägstrich vorangestellt werden.  
+-   Stellen Sie dem Literalzeichen einen umgekehrten Schrägstrich („\\“) voran, der als Escapezeichen interpretiert wird. In C# muss die Formatzeichenfolge folglich @-quoted entsprechen, oder dem Literalzeichen muss ein zusätzlicher umgekehrter Schrägstrich vorangestellt werden.  
   
      In einigen Fällen müssen Sie möglicherweise bedingte Logik verwenden, um ein Literal mit Escapezeichen einer Formatzeichenfolge hinzuzufügen. Im folgenden Beispiel wird bedingte Logik verwendet, um ein Vorzeichensymbol für negative Zeitintervalle hinzuzufügen.  
   

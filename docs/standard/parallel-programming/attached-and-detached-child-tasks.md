@@ -11,20 +11,24 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, child tasks
+helpviewer_keywords:
+- tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c1a0c664dffc2986d4d6985fd2b71cd8055bf2c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attached-and-detached-child-tasks"></a>Angefügte und getrennte untergeordnete Aufgaben
-Ein *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> -Instanz, die im Benutzerdelegaten einer anderen Aufgabe, die erstellt wird so genannte der *übergeordnete Aufgabe*. Eine untergeordnete Aufgabe kann entweder getrennt oder angefügt werden. Ein *getrennte untergeordnete Aufgabe* ist eine Aufgabe, die unabhängig von der übergeordneten ausgeführt wird. Ein *angefügte untergeordnete Aufgabe* ist eine geschachtelte Aufgabe, die mit erstellt ist die <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> Option, dessen übergeordnetes Element nicht explizit oder standardmäßig verhindert angefügt wird. Eine Aufgabe kann beliebig viele angefügte oder getrennte untergeordnete Aufgaben erstellen. Die Anzahl wird lediglich durch die Systemressourcen beschränkt.  
+Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Instanz, die im Benutzerdelegaten einer anderen Aufgabe erstellt wird, die als *übergeordnete Aufgabe* bezeichnet wird. Eine untergeordnete Aufgabe kann entweder getrennt oder angefügt werden. Eine *getrennte untergeordnete Aufgabe* ist eine Aufgabe, die unabhängig von der übergeordneten ausgeführt wird. Eine *angefügte ungeordnete Aufgabe* ist eine geschachtelte Aufgabe, die mit der Option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> erstellt wird, deren übergeordnete Aufgabe nicht explizit oder standardmäßig verhindert, dass die Aufgabe angefügt wird. Eine Aufgabe kann beliebig viele angefügte oder getrennte untergeordnete Aufgaben erstellen. Die Anzahl wird lediglich durch die Systemressourcen beschränkt.  
   
  In der folgenden Tabelle sind die grundlegenden Unterschiede zwischen den zwei Arten von untergeordneten Aufgaben aufgeführt.  
   
@@ -67,7 +71,7 @@ Ein *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:Syste
  Das Abbrechen einer Aufgabe ist kooperativ. Um "abbrechbar" zu sein, muss jede angefügte oder getrennte untergeordnete Aufgabe den Status des Abbruchtokens überwachen. Wenn Sie mit einer Abbruchanforderung ein übergeordnetes Element und alle untergeordneten Elemente abbrechen möchten, übergeben Sie das gleiche Token als Argument an alle Aufgaben und stellen in jeder Aufgabe die Logik zum Reagieren auf die Anforderung in bereit. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Gewusst wie: Abbrechen eine Aufgabe und der zugehörigen untergeordneten Aufgaben](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Abbruch eines übergeordneten Elements  
- Wenn ein übergeordnetes Element abgebrochen wird, bevor ein untergeordnetes Element gestartet wurde, wird das untergeordnete Elemente nie gestartet. Wenn ein übergeordnetes Element nach dem Start einer untergeordneten Aufgabe abgebrochen wird, wird die untergeordnete bis zum Abschluss ausgeführt, sofern keine eigene Abbruchlogik vorhanden ist. Weitere Informationen finden Sie unter [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Wenn eine übergeordnete Aufgabe abgebrochen wird, bevor eine untergeordnete Aufgabe gestartet wurde, wird die untergeordnete Aufgabe nie gestartet. Wenn ein übergeordnetes Element nach dem Start einer untergeordneten Aufgabe abgebrochen wird, wird die untergeordnete bis zum Abschluss ausgeführt, sofern keine eigene Abbruchlogik vorhanden ist. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="when-a-detached-child-task-cancels"></a>Abbruch einer getrennten untergeordneten Aufgabe  
  Wenn eine getrennte untergeordnete Aufgabe mit dem gleichen Token abgebrochen wird, das an die übergeordnete Aufgabe übergeben wurde, und das übergeordnete Element nicht auf die untergeordnete Aufgabe wartet, wird keine Ausnahme weitergeleitet, da die Ausnahme als Kooperationsabbruch ohne Auswirkungen behandelt wird. Dieses Verhalten stimmt mit dem beliebiger Aufgaben der obersten Ebene überein.  
@@ -82,7 +86,7 @@ Ein *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:Syste
   
  Wenn eine untergeordnete Aufgabe nicht an die übergeordnete Aufgabe angefügt werden soll, geben Sie die <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option an, wenn Sie das übergeordnete <xref:System.Threading.Tasks.Task> oder das <xref:System.Threading.Tasks.Task%601>-Objekt erstellen. Wenn eine Aufgabe versucht, sich an ihre übergeordnete Aufgabe anzufügen und für die übergeordnete Aufgabe die <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option festgelegt wurde, kann die untergeordnete Aufgabe nicht an die übergeordnete Aufgabe angefügt werden und wird so ausgeführt, als sei die <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>-Option nicht festgelegt worden.  
   
- Sie können auch verhindern, dass sich eine untergeordnete Aufgabe an das übergeordnete Element anfügt, wenn die untergeordnete Aufgabe nicht rechtzeitig beendet wird. Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten App führen. Ein Beispiel, das veranschaulicht, wie app-Leistung zu verbessern, indem Sie verhindern, dass eine Aufgabe an die übergeordnete Aufgabe angefügt werden, finden Sie unter [wie: Verhindern des Anfügens an seinem übergeordneten Element eine untergeordnete Aufgabe](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Sie können auch verhindern, dass sich eine untergeordnete Aufgabe an das übergeordnete Element anfügt, wenn die untergeordnete Aufgabe nicht rechtzeitig beendet wird. Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten App führen. Ein Beispiel zur Verbesserung der App-Leistung durch Verhindern des Anfügens einer Aufgabe an das übergeordnete Element finden Sie unter [Gewusst wie: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Speichern und Ausgeben eines Dokuments
 Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den folgenden Punkten vom Original abweichen:  
@@ -29,7 +32,7 @@ Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den f
   
 -   Der gesamte Leerraum zwischen Attributen wird zu einem einzigen Leerzeichen zusammengefasst.  
   
--   Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Aber wenn das Dokument gespeichert wird, verwenden sie die <xref:System.Xml.XmlTextWriter> **Einzug** Modus standardmäßig so drucken Sie sorgfältig die Ausgabe, um sie besser lesbar zu machen.  
+-   Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Beim Speichern des Dokuments wird allerdings standardmäßig der besseren Lesbarkeit wegen der **Indenting**-Modus von <xref:System.Xml.XmlTextWriter> verwendet.  
   
 -   Einfache Anführungszeichen für Attributwerte werden standardmäßig in doppelte Anführungszeichen umgewandelt. Das Anführungszeichen kann mit der <xref:System.Xml.XmlTextReader.QuoteChar%2A>-Eigenschaft des <xref:System.Xml.XmlTextWriter> als einfaches oder doppeltes Anführungszeichen festgelegt werden.  
   

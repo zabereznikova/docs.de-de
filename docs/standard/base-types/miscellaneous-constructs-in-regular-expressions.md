@@ -16,15 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
 Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke. Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.  
@@ -38,7 +41,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
  Die Optionen, die Sie aktivieren möchten, werden nach dem Fragezeichen aufgeführt, und die Optionen, die Sie deaktivieren möchten, werden nach dem Minuszeichen eingefügt. In der folgenden Tabelle sind die einzelnen Optionen beschrieben. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |`i`|Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung.|  
 |`m`|Mehrzeilenmodus.|  
@@ -46,33 +49,33 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
 |`s`|Einzeilenmodus.|  
 |`x`|Leerzeichen ohne Escapezeichen ignorieren und Kommentare im x-Modus zulassen.|  
   
- In den Optionen für reguläre Ausdrücke definiert, indem Sie eine Änderung der `(?imnsx-imnsx)` bleibt wirksam bis zum Ende der übergeordneten Gruppe zu erstellen.  
+ Alle Änderungen in Optionen für reguläre Ausdrücke, die über das Konstrukt `(?imnsx-imnsx)` definiert werden, bleiben bis zum Ende der einschließenden Gruppe gültig.  
   
 > [!NOTE]
->  Die `(?imnsx-imnsx:` *Teilausdruck* `)` Gruppierungskonstrukt bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  Das Gruppierungskonstrukt `(?imnsx-imnsx:`*subexpression*`)` bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Im folgenden Beispiel wird die `i`, `n`, und `x` Optionen Groß-/Kleinschreibung und explizite Erfassungen aktivieren und um Leerzeichen im Muster für reguläre Ausdrücke in der Mitte eines regulären Ausdrucks ignorieren.  
+ Im folgenden Beispiel werden die Optionen `i`, `n` und `x` verwendet, um die Groß-/Kleinschreibung zu ignorieren, explizite Erfassungen zu ermöglichen und Leerzeichen im Muster für reguläre Ausdrücke in der Mitte eines regulären Ausdrucks zu ignorieren.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
  Im Beispiel werden zwei reguläre Ausdrücke definiert. Der erste, `\b(D\w+)\s(d\w+)\b`, entspricht zwei aufeinander folgenden Wörtern, die mit dem Großbuchstaben „D“ und dem Kleinbuchstaben „d“ beginnen. Der zweite reguläre Ausdruck, `\b(D\w+)(?ixn) \s (d\w+) \b`, verwendet Inlineoptionen, um dieses Muster entsprechend der folgenden Tabelle zu ändern. Ein Vergleich der Ergebnisse bestätigt den Effekt des `(?ixn)`-Konstrukts.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(D\w+)`|Übereinstimmung mit dem Großbuchstaben „D“, gefolgt von einem oder mehreren Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |`(?ixn)`|Ab diesem Punkt werden Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung und nur explizite Erfassungen durchgeführt sowie Leerzeichen im Muster für reguläre Ausdrücke ignoriert.|  
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
-|`(d\w+)`|Übereinstimmung mit dem Groß- oder Kleinbuchstaben „d“, gefolgt von mindestens einem Wortzeichen. Diese Gruppe wird nicht erfasst, da die `n` (explizite Erfassung)-Option aktiviert wurde...|  
+|`(d\w+)`|Übereinstimmung mit dem Groß- oder Kleinbuchstaben „d“, gefolgt von mindestens einem Wortzeichen. Diese Gruppe wird nicht erfasst, da die Option `n` (explizite Erfassung) aktiviert wurde.|  
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
 ## <a name="inline-comment"></a>Inlinekommentar  
- Die `(?#` *Kommentar* `)` Konstrukt können Sie einen Inlinekommentar in einem regulären Ausdruck einschließen. Das Modul für reguläre Ausdrücke keiner Teil des Kommentars in einem Mustervergleich müssen verwenden, obwohl der Kommentar in der Zeichenfolge enthalten ist, die von zurückgegeben wird die <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> Methode. Der Kommentar endet bei der ersten schließenden Klammer.  
+ Das Konstrukt `(?#` *comment*`)` ermöglicht das Einfügen eines Inlinekommentars in einen regulären Ausdruck. Die Engine für reguläre Ausdrücke verwendet keinen Teil des Kommentars beim Musterabgleich, obwohl der Kommentar in der von der Methode <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> zurückgegebenen Zeichenfolge enthalten ist. Der Kommentar endet bei der ersten schließenden Klammer.  
   
  Im folgenden Beispiel wird das erste Muster für reguläre Ausdrücke aus dem Beispiel im vorherigen Abschnitt wiederholt. Dem regulären Ausdruck werden zwei Inlinekommentare hinzugefügt, um anzugeben, ob beim Vergleich die Groß-/Kleinschreibung berücksichtigt wird. Das Muster für reguläre Ausdrücke, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, ist wie folgt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?# case-sensitive comparison)`|Ein Kommentar. Dieser wirkt sich nicht auf das Verhalten des Mustervergleichs aus.|  
@@ -87,13 +90,13 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Zeilenendekommentar  
- Ein Nummernzeichen (`#`) kennzeichnet einen x‑Modus-Kommentar, die auf das ohne Escapezeichen #-Zeichen am Ende der Muster des regulären Ausdrucks beginnt und wird fortgesetzt, bis das Ende der Zeile. Um dieses Konstrukt zu verwenden, müssen Sie entweder aktivieren die `x` (durch Inlineoptionen) aus, oder geben Sie die <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> -Wert an die `option` Parameter bei der Instanziierung der <xref:System.Text.RegularExpressions.Regex> Objekt oder einen Aufruf einen statischen <xref:System.Text.RegularExpressions.Regex> Methode.  
+ Ein Nummernzeichen (`#`) markiert einen x-Modus-Kommentar, der bei dem nicht durch Escapezeichen formatierten #-Zeichen am Ende des Musters für reguläre Ausdrücke beginnt und bis zum Zeilenende fortgesetzt wird. Um dieses Konstrukt zu verwenden, müssen Sie entweder die `x`-Option (durch Inlineoptionen) aktivieren oder beim Instanziieren des <xref:System.Text.RegularExpressions.Regex>-Objekts bzw. beim Aufrufen einer statischen <xref:System.Text.RegularExpressions.Regex>-Methode den Wert <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> an den `option`-Parameter übergeben.  
   
  Das folgende Beispiel veranschaulicht das Konstrukt für Zeilenendekommentare. Dabei wird bestimmt, ob es sich bei einer Zeichenfolge um eine zusammengesetzte Formatzeichenfolge handelt, die mindestens ein Formatelement einschließt. Die folgende Tabelle beschreibt die Konstrukte im Muster für reguläre Ausdrücke:  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\{`|Übereinstimmung mit einer öffnenden geschweiften Klammer.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -107,7 +110,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Beachten Sie, dass statt der `(?x)` erstellen im regulären Ausdruck, der Kommentar konnte auch wurden erkannt, durch Aufrufen der <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> -Methode und übergeben sie die <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> Enumerationswert.  
+ Anstelle der Bereitstellung des `(?x)`-Konstrukts im regulären Ausdruck hätte der Kommentar auch erkannt werden können, indem die <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode aufgerufen und der <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Enumerationswert übergeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

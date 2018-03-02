@@ -14,15 +14,18 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Schwache Verweise
 Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwendet wird, während der Anwendungscode dieses Objekt erreichen kann. Dies wird als starker Verweis der Anwendung auf das Objekt bezeichnet.  
@@ -31,11 +34,11 @@ Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwende
   
  Schwache Verweise sind hilfreich für Objekte, die viel Speicher belegen, aber leicht wieder erstellt werden können, wenn sie von der Garbage Collection freigegeben werden.  
   
- Angenommen Sie, eine Strukturansicht, in einer Windows Forms-Anwendung eine komplexe hierarchische Auswahl von Optionen für den Benutzer angezeigt. Wenn die zugrunde liegenden Daten umfangreich sind, ist es ineffizient, die Strukturansicht im Speicher zu behalten, wenn der Benutzer mit einem anderen Teil der Anwendung beschäftigt ist.  
+ Nehmen Sie an, dass in der Strukturansicht in einer Windows Forms-Anwendung für den Benutzer eine komplexe hierarchische Optionsauswahl dargestellt wird. Wenn die zugrunde liegenden Daten umfangreich sind, ist es ineffizient, die Strukturansicht im Speicher zu behalten, wenn der Benutzer mit einem anderen Teil der Anwendung beschäftigt ist.  
   
- Wenn der Benutzer sofort auf einen anderen Teil der Anwendung gewechselt wird, können Sie die <xref:System.WeakReference> Klasse erstellen einen schwachen Verweis auf die Struktur und alle starken Verweise zerstören. Wenn der Benutzer wieder zur Strukturansicht zurückwechselt, versucht die Anwendung, einen starken Verweis auf die Strukturansicht zu erhalten und vermeidet, wenn dies gelingt, eine Neuerstellung der Strukturansicht.  
+ Wenn der Benutzer sich mit einem anderen Teil der Anwendung befasst, können Sie mit der <xref:System.WeakReference>-Klasse einen schwachen Verweis auf die Strukturansicht erstellen und alle starken Verweise zerstören. Wenn der Benutzer wieder zur Strukturansicht zurückwechselt, versucht die Anwendung, einen starken Verweis auf die Strukturansicht zu erhalten und vermeidet, wenn dies gelingt, eine Neuerstellung der Strukturansicht.  
   
- Um einen schwachen Verweis mit einem Objekt einzurichten, erstellen Sie eine <xref:System.WeakReference> mit der Instanz des Objekts nachverfolgt werden soll. Legen Sie Sie dann die <xref:System.WeakReference.Target%2A> -Eigenschaft auf dieses Objekt und die ursprüngliche einen Verweis auf das Objekt, das `null`. Ein Codebeispiel finden Sie unter <xref:System.WeakReference> in der Klassenbibliothek.  
+ Um einen schwachen Verweis auf ein Objekt zu erstellen, erstellen Sie mit der Instanz des zu verfolgenden Objekts einen <xref:System.WeakReference>. Sie legen dann die <xref:System.WeakReference.Target%2A>-Eigenschaft für dieses Objekt fest und legen den ursprünglichen Verweis auf das Objekt auf `null` fest. Ein Codebeispiel finden Sie unter <xref:System.WeakReference> in der Klassenbibliothek.  
   
 ## <a name="short-and-long-weak-references"></a>Kurze und lange schwache Verweise  
  Sie können einen kurzen schwachen Verweis oder einen langen schwachen Verweis erstellen:  
@@ -46,11 +49,11 @@ Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwende
   
 -   Long  
   
-     Ein schwacher Verweis wird beibehalten, nach der objektspezifischen <xref:System.Object.Finalize%2A> -Methode aufgerufen wurde. Dadurch kann das Objekt neu erstellt werden, aber der Zustand des Objekts bleibt unvorhersehbar. Um einen langen Verweis zu verwenden, geben `true` in die <xref:System.WeakReference> Konstruktor.  
+     Ein langer schwacher Verweis wird beibehalten, nachdem die <xref:System.Object.Finalize%2A>-Methode des Objekts aufgerufen wurde. Dadurch kann das Objekt neu erstellt werden, aber der Zustand des Objekts bleibt unvorhersehbar. Um einen langen Verweis zu verwenden, geben Sie `true` im <xref:System.WeakReference>-Konstruktor an.  
   
-     Wenn der Typ des Objekts keine <xref:System.Object.Finalize%2A> -Methode, die Funktionen des kurzen schwachen Verweises angewendet, und der schwache Verweis ist nur dann gültig, bis das Ziel gesammelt werden, die auftreten kann, können Sie jederzeit nach der Finalizer ausgeführt werden.  
+     Wenn der Objekttyp keine <xref:System.Object.Finalize%2A>-Methode besitzt, werden die Funktionen des kurzen schwachen Verweises angewendet, und der schwache Verweis ist nur so lange gültig, bis das Ziel gesammelt wurde. Dies ist nach der Ausführung des Finalizers jederzeit möglich.  
   
- Um einen starken Verweis herstellen und das Objekt erneut zu verwenden, wandeln Sie die <xref:System.WeakReference.Target%2A> Eigenschaft eine <xref:System.WeakReference> in den Typ des Objekts. Wenn die <xref:System.WeakReference.Target%2A> -Eigenschaft gibt `null`, das Objekt wurde, andernfalls gesammelt, Sie können weiterhin das Objekt zu verwenden, da die Anwendung einen starken Verweis darauf wiederhergestellt hat.  
+ Um einen starken Verweis zu erstellen und das Objekt erneut zu verwenden, wandeln Sie die <xref:System.WeakReference.Target%2A>-Eigenschaft eines <xref:System.WeakReference> in den Typ des Objekts um. Wenn die <xref:System.WeakReference.Target%2A>-Eigenschaft `null` zurückgibt, wurde das Objekt gesammelt. Andernfalls können Sie das Objekt weiterhin verwenden, weil die Anwendung einen starken Verweis darauf wiederhergestellt hat.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Richtlinien für die Verwendung von schwachen Verweisen  
  Verwenden Sie lange schwache Verweise nur, wenn dies notwendig ist, da der Zustand des Objekts nach Abschluss unvorhersehbar ist.  

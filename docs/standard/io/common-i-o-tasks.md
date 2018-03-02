@@ -1,5 +1,5 @@
 ---
-title: Allgemeine e-A-Aufgaben
+title: Allgemeine E/A-Tasks
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,20 +8,24 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: I/O, common tasks
+helpviewer_keywords:
+- I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51238020f4d93ad32dac85a95d7b1cab26f2dd64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-io-tasks"></a>Allgemeine E/A-Aufgaben
-Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [Datei- und Stream ich-o](../../../docs/standard/io/index.md).  
+Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [Datei- und Datenstrom-E/A](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Allgemeine Dateiaufgaben  
   

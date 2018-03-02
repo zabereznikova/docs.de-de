@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitiven
 <a name="top"></a> .NET Framework stellt eine Reihe von Synchronisierungsmechanismen zum Steuern der Interaktionen von Threads und zum Vermeiden von Racebedingungen bereit. Diese können grob in drei Kategorien eingeteilt werden: Sperren, Signalisieren und Interlocked-Vorgänge.  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  Sperren gewähren jeweils einem Thread oder einer angegebenen Anzahl von Threads die Kontrolle über eine  Ressource. Ein Thread, der eine exklusive Sperre anfordert, wenn die Sperre aktiv ist, wird gesperrt, bis die Sperre verfügbar wird.  
   
 ### <a name="exclusive-locks"></a>Exklusive Sperren  
- Die einfachste Form einer Sperre ist die `lock`-Anweisung in C# und die `SyncLock`-Anweisung in Visual Basic, die den Zugriff auf einen Codeblock steuert. So ein Block wird häufig als kritischer Abschnitt bezeichnet. Die `lock` Anweisung wird implementiert, mit der <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> Methoden und verwendet `try…catch…finally` Block, um sicherzustellen, dass die Sperre aufgehoben wird.  
+ Die einfachste Form einer Sperre ist die `lock`-Anweisung in C# und die `SyncLock`-Anweisung in Visual Basic, die den Zugriff auf einen Codeblock steuert. So ein Block wird häufig als kritischer Abschnitt bezeichnet. Die `lock`-Anweisung wird mithilfe der <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>- und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>-Methode implementiert und verwendet den `try…catch…finally`-Block, um sicherzustellen, dass die Sperre aufgehoben wird.  
   
- Im Allgemeinen ist die Verwendung der `lock` oder `SyncLock` -Anweisung zum Schützen kleiner Codeblöcke Code, nie umfasst mehr als eine einzelne Methode, ist die beste Methode zum Verwenden der <xref:System.Threading.Monitor> Klasse. Die <xref:System.Threading.Monitor>-Klasse ist zwar leistungsstark, aber anfällig für verwaiste Sperren und Deadlocks.  
+ Im Allgemeinen ist die Verwendung der `lock`- oder `SyncLock`-Anweisung zum Schützen kleiner Codeblöcke, die nie mehr als eine einzelne Methode umfassen, die beste Verwendung der <xref:System.Threading.Monitor>-Klasse. Die <xref:System.Threading.Monitor>-Klasse ist zwar leistungsstark, aber anfällig für verwaiste Sperren und Deadlocks.  
   
 #### <a name="monitor-class"></a>Monitor-Klasse  
  Die <xref:System.Threading.Monitor>-Klasse bietet zusätzliche Funktionen, die in Verbindung mit der `lock`-Anweisung verwendet werden können:  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  Eine grundlegende Übersicht finden Sie unter [Mutexe](../../../docs/standard/threading/mutexes.md).  
   
 #### <a name="spinlock-class"></a>SpinLock-Klasse  
- Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie die <xref:System.Threading.SpinLock> Klasse bei der Aufwand erforderlich <xref:System.Threading.Monitor> wird die Leistung beeinträchtigt. Wenn <xref:System.Threading.SpinLock> auf einen gesperrten kritischen Abschnitt stößt, bleibt sie einfach in einer Schleife, bis die Sperre verfügbar wird. Wenn die Sperre für eine sehr kurze Zeit aufrechterhalten wird, bieten Spinvorgänge eine bessere Leistung als das Blockieren. Jedoch, wenn die Sperre für mehr als einige Zehntel Zyklen aufrechterhalten wird <xref:System.Threading.SpinLock> genauso gut wie <xref:System.Threading.Monitor>, aber mehr CPU-Zyklen und kann so die Leistung von anderen Threads oder Prozessen beeinträchtigen.  
+ Beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie die <xref:System.Threading.SpinLock>-Klasse verwenden, wenn der von <xref:System.Threading.Monitor> erforderte Aufwand die Leistung beeinträchtigt. Wenn <xref:System.Threading.SpinLock> auf einen gesperrten kritischen Abschnitt stößt, bleibt sie einfach in einer Schleife, bis die Sperre verfügbar wird. Wenn die Sperre für eine sehr kurze Zeit aufrechterhalten wird, bieten Spinvorgänge eine bessere Leistung als das Blockieren. Wenn aber die Sperre für mehr als einige Zehntel Zyklen aufrechterhalten wird, ist die Leistung von <xref:System.Threading.SpinLock> genauso gut wie von <xref:System.Threading.Monitor>, verwendet aber mehr CPU-Zyklen und kann so die Leistung von anderen Threads oder Prozessen beeinträchtigen.  
   
 ### <a name="other-locks"></a>Andere Sperren  
  Sperren müssen nicht exklusiv sein. Es ist häufig nützlich, eine begrenzte Anzahl von Threads gleichzeitigen Zugriff auf eine Ressource zu ermöglichen. Semaphoren und Lese-/Schreibsperren sollen diese Art von Zugriff auf einen Ressourcenpool steuern.  
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ist ein einfaches Semaphor für die Synchronisierung innerhalb einer einzelnen Prozessgrenze.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="signaling"></a>   
 ## <a name="signaling"></a>Signaling  
@@ -155,9 +158,9 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- Beginnend mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], können Sie die <xref:System.Threading.SpinWait?displayProperty=nameWithType> Struktur, wenn ein Thread warten, bis ein Ereignis signalisiert oder eine Bedingung erfüllt sein, aber wenn die tatsächliche Wartezeit voraussichtlich kürzer als die Wartezeit, die mithilfe eines Wait-Handles oder Otherwi erforderlich sein SE Blockieren des aktuellen Threads. Mithilfe von <xref:System.Threading.SpinWait> können Sie einen kurzen Wartezeitraum angeben und danach nur dann auslösen (z. B. durch Warten oder Ruhezustand), wenn die Bedingung nicht in der angegebenen Zeit erfüllt wurde.  
+ Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] können Sie die <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Struktur verwenden, wenn ein Thread warten muss, bis ein Ereignis signalisiert oder eine Bedingung erfüllt wird, außer wenn die tatsächliche Wartezeit voraussichtlich kürzer als die erforderliche Wartezeit beim Verwenden eines Wait-Handles oder einer anderen Blockierung des aktuellen Threads ist. Mithilfe von <xref:System.Threading.SpinWait> können Sie einen kurzen Wartezeitraum angeben und danach nur dann auslösen (z. B. durch Warten oder Ruhezustand), wenn die Bedingung nicht in der angegebenen Zeit erfüllt wurde.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="interlocked_operations"></a>   
 ## <a name="interlocked-operations"></a>Interlocked-Vorgänge  

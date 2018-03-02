@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, continuations
+helpviewer_keywords:
+- tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
 Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. In der Vergangenheit wurden hierfür vor allem Rückrufmethoden genutzt. In der Task Parallel Library wird die gleiche Funktionalität durch *Fortsetzungsaufgaben*bereitgestellt. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, die wiederum als *Vorgänger*bezeichnet wird, nach deren Beendigung aufgerufen wird.  
@@ -58,7 +62,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>Erstellen einer Fortsetzung für mehrere Vorgänger  
  Sie können auch eine Fortsetzung erstellen, die ausgeführt wird, wenn beliebige oder alle Aufgaben einer Gruppe abgeschlossen wurden. Zum Ausführen einer Fortsetzung nach dem Abschluss aller Vorgängeraufgaben rufen Sie die statische (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>-Methode oder die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>-Instanzmethode auf. Zum Ausführen einer Fortsetzung nach dem Abschluss einer beliebigen Vorgängeraufgabe rufen Sie die statische (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Methode oder die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>-Instanzmethode auf.  
   
- Beachten Sie, das Aufrufe an die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> Überladungen den aufrufenden Thread nicht blockieren.  Allerdings in der Regel rufen alle außer den <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> Methoden zum Abrufen der zurückgegebenen <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> -Eigenschaft, die den aufrufenden Thread blockiert wird.  
+ Beachten Sie, dass Aufrufe der <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Überladungen den aufrufenden Thread nicht blockieren.  Allerdings rufen Sie in der Regel alle Methoden außer den Methoden <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> auf, um die zurückgegebene <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft abzurufen, die den aufrufenden Thread blockiert.  
   
  Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>-Methode aufgerufen, um eine Fortsetzungsaufgabe zu erstellen, die die Ergebnisse ihrer zehn Vorgängeraufgaben wiedergibt. Jede Vorgängeraufgabe errechnet das Quadrat eines Indexwerts aus dem Bereich von 1 bis 10. Wenn die Vorgänger erfolgreich ausgeführt werden (also ihre <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType>-Eigenschaft <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> ist), stellt die <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft der Fortsetzung ein Array der <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Werte dar, die von den einzelnen Vorgängern zurückgegeben wurden. Im Beispiel werden sie addiert, um die Summe der Quadrate für alle Zahlen zwischen eins und zehn zu berechnen.  
   
@@ -119,12 +123,12 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- Der Endstatus der Vorgängeraufgabe hängt vom Endstatus aller zugehörigen untergeordneten Aufgaben ab. Der Status getrennter untergeordneter Aufgaben wirkt sich nicht auf das übergeordnete Element aus. Weitere Informationen finden Sie unter [Attached and Detached Child Tasks (Angefügte und getrennte untergeordnete Aufgaben)](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+ Der Endstatus der Vorgängeraufgabe hängt vom Endstatus aller zugehörigen untergeordneten Aufgaben ab. Der Status getrennter untergeordneter Aufgaben wirkt sich nicht auf das übergeordnete Element aus. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="associating-state-with-continuations"></a>Zuordnen eines Zustands zu Fortsetzungen  
  Sie können einer Aufgabenfortsetzung einen die oft ausgegebene Befehlszeilen  Zustand zuordnen. Die <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode stellt überladene Versionen bereit, von denen jede einen <xref:System.Object> -Wert annimmt, der den Zustand der Fortsetzung darstellt. Sie können später mit der <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>-Eigenschaft auf dieses Zustandsobjekt zugreifen. Das Zustandsobjekt ist `null` , wenn kein Wert angegeben wird.  
   
- Der Fortsetzungszustand ist bei der Verwendung der TPL nützlich, wenn Sie vorhandenen Code konvertieren, der das [Asynchrone Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) verwendet. Im APM Geben Sie in der Regel Objektzustand in der  **beginnen*Methode*** Methode und später darauf zuzugreifen, die mit dem Status der <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> Eigenschaft. Mithilfe der <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode können Sie diesen Zustand beibehalten, wenn Sie Code konvertieren, der das APM zur Verwendung der TPL verwendet.  
+ Der Fortsetzungszustand ist bei der Verwendung der TPL nützlich, wenn Sie vorhandenen Code konvertieren, der das [Asynchrone Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) verwendet. Im APM stellen Sie in der Regel den Objektzustand in der **Begin***Method*-Methode bereit und greifen später mithilfe der <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>-Eigenschaft auf diesen Zustand zu. Mithilfe der <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode können Sie diesen Zustand beibehalten, wenn Sie Code konvertieren, der das APM zur Verwendung der TPL verwendet.  
   
  Der Fortsetzungszustand kann außerdem hilfreich sein, wenn Sie mit <xref:System.Threading.Tasks.Task> -Objekten im [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Debugger arbeiten. Beispielsweise wird im Fenster **Parallele Aufgaben** in der Spalte **Aufgabe** die Zeichenfolgendarstellung des Zustandsobjekts für jede Aufgabe angezeigt. Weitere Informationen zum Fenster **Parallele Aufgaben** finden Sie unter [Verwenden des Fensters „Aufgaben“](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -151,7 +155,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) und [Vorgehensweise: Behandeln von Ausnahmen, die von Aufgaben ausgelöst werden](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) und [Vorgehensweise: Behandeln von Ausnahmen, die von Aufgaben ausgelöst werden](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Wenn die Fortsetzung eine angefügte untergeordnete Aufgabe ist, die mit der <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>-Option erstellt wurde, werden die zugehörigen Ausnahmen vom übergeordneten Element an den aufrufenden Thread zurückgegeben, wie dies auch bei allen anderen angefügten untergeordneten Elementen der Fall ist. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   

@@ -11,33 +11,37 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to create aggregate function
+helpviewer_keywords:
+- PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b098f21e29d0d59cd99ddbb64af6246d9953a3a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 210e9913ab3eba636ff99b7610df05655246f4eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Gewusst wie: Schreiben einer benutzerdefinierten PLINQ-Aggregatfunktion
-Dieses Beispiel zeigt, wie die <xref:System.Linq.ParallelEnumerable.Aggregate%2A> Methode, um eine benutzerdefinierte Aggregatfunktion auf eine Quellsequenz anzuwenden.  
+Dieses Beispiel zeigt, wie mit der <xref:System.Linq.ParallelEnumerable.Aggregate%2A>-Methode eine benutzerdefinierte Aggregatfunktion auf eine Quellsequenz angewendet wird.  
   
 > [!WARNING]
->  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen zur Beschleunigung finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel berechnet die Standardabweichung einer Sequenz von ganzen Zahlen.  
+ Im folgenden Beispiel wird die Standardabweichung einer Sequenz von ganzen Zahlen berechnet.  
   
  [!code-csharp[PLINQ#31](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#31)]
  [!code-vb[PLINQ#31](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#31)]  
   
- In diesem Beispiel verwendet eine Überladung des Operators standard Aggregatabfrage für PLINQ eindeutig ist. Diese Überladung lässt eine zusätzliche <xref:System.Func%603?displayProperty=nameWithType> als dritten Eingabeparameter. Dieser Delegat kombiniert die Ergebnisse von allen Threads, bevor er die abschließende Berechnung der aggregierten Ergebnissen führt. In diesem Beispiel fügen wir die Summen gemeinsam von allen Threads.  
+ In diesem Beispiel wird eine Überladung des Aggregate-Standardabfrageoperators verwendet, der für PLINQ eindeutig ist. Diese Überladung nimmt eine zusätzliche <xref:System.Func%603?displayProperty=nameWithType> als dritten Eingabeparameter an. Dieser Delegat kombiniert die Ergebnisse aller Threads, bevor er die abschließende Berechnung der aggregierten Ergebnisse durchführt. In diesem Beispiel addieren wir die Summen aller Threads.  
   
- Beachten Sie, dass bei einem einzelnen Ausdruck, der Rückgabewert der Textkörper eines Lambda-Ausdrucks besteht aus den <xref:System.Func%602?displayProperty=nameWithType> Delegaten ist der Wert des Ausdrucks.  
+ Beachten Sie: Wenn ein Lambdaausdruckskörper aus einem einzelnen Ausdruck besteht, ist der Rückgabewert des <xref:System.Func%602?displayProperty=nameWithType>-Delegaten der Wert des Ausdrucks.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.ParallelEnumerable>  

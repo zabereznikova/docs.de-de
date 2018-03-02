@@ -5,22 +5,23 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6014b7cf4dc02c2818dd4b9bf5fadfcbd82e3d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c48ab7189840b7d22c53c4f379ab6d8a30d8be88
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.  
   
- Weitere Informationen zu Office Open XML finden Sie unter [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Weitere Informationen zu Office Open XML finden Sie unter [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) (Open XML-SDK) und [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel öffnet ein Office Open XML-Paket und verwendet zum Suchen nach dem Dokumentteil und dem Formatvorlagenteil die Beziehungen innerhalb des Open XML-Pakets. Anschließend fragt es das Dokument ab und projiziert dabei eine Auflistung eines anonymen Typs, die den Absatz-<xref:System.Xml.Linq.XElement>-Knoten, den Namen der Formatvorlage der einzelnen Absätze und den Text der einzelnen Absätze enthält.  

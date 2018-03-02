@@ -18,28 +18,31 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bdb0a6be309f27348ba13bf93fd5aedd3c66a792
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0fec2ed34968bfa8c296f08739dec28e6a6eab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Gewusst wie: Verarbeiten von Ereignissen in einer Web Forms-Anwendung
-Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen werden von einer Webseite mit Steuerelementen füllen, und führen Sie dann eine bestimmte Aktion, die steuern, dass der Benutzer klickt auf Grundlage ab. Angenommen, ein <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> Steuerelement löst ein Ereignis aus, wenn der Benutzer er auf der Webseite klickt. Die Anwendung kann die zugehörige Anwendungslogik klicken auf die Schaltfläche ausführen, indem Sie die Behandlung des Ereignisses.  
+Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer Webseite mit Steuerelementen und das anschließende Durchführen einer bestimmten Aktion, auf deren Steuerelement der Benutzer klickt. Beispielsweise löst ein <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType>-Steuerelement ein Ereignis aus, wenn der Benutzer auf der Webseite darauf klickt. Durch die Verarbeitung des Ereignisses kann Ihre Anwendung die zugehörige Anwendungslogik für diesen Schaltflächenklick ausführen.  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>So behandeln Sie ein Click-Ereignis auf einer Webseite  
   
-1.  Erstellen eine ASP.NET Web Forms-Seite (Webseite), wurde eine <xref:System.Web.UI.WebControls.Button> steuern, mit der `OnClick` Wert festgelegt wird, um den Namen der Methode, die Sie im nächsten Schritt definieren.  
+1.  Erstellen Sie eine ASP.NET Web Forms-Seite (Webseite), bei der der `OnClick`-Wert des <xref:System.Web.UI.WebControls.Button>-Steuerelements auf den Namen der Methode festgelegt ist, die Sie im nächsten Schritt definieren.  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  
     ```  
   
-2.  Definieren Sie einen Ereignishandler, entspricht die <xref:System.Web.UI.WebControls.Button.Click> Ereignis Delegatsignatur und, trägt den Namen, die Sie definiert, für die `OnClick` Wert.  
+2.  Definieren Sie einen Ereignishandler, der der Delegatsignatur des <xref:System.Web.UI.WebControls.Button.Click>-Ereignisses entspricht und den von Ihnen für den `OnClick`-Wert definierten Namen trägt.  
   
     ```csharp  
     protected void Button1_Click(object sender, EventArgs e)  
@@ -54,9 +57,9 @@ Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen werden von einer Webseit
     End Sub  
     ```  
   
-     Die <xref:System.Web.UI.WebControls.Button.Click> Ereignis verwendet die <xref:System.EventHandler> Klasse für den Delegattyp und die <xref:System.EventArgs> Klasse für die Ereignisdaten. Das ASP.NET-Seitenframework generiert automatisch Code, der eine Instanz erstellt <xref:System.EventHandler> und fügt diese Delegatinstanz mit der <xref:System.Web.UI.WebControls.Button.Click> -Ereignis für die <xref:System.Web.UI.WebControls.Button> Instanz.  
+     Das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis verwendet die <xref:System.EventHandler>-Klasse für den Delegattyp und die <xref:System.EventArgs>-Klasse für die Ereignisdaten. Das Framework für ASP.NET-Seiten generiert automatisch Code, der eine <xref:System.EventHandler>-Instanz erstellt und diese Delegatinstanz dem <xref:System.Web.UI.WebControls.Button.Click>-Ereignis der <xref:System.Web.UI.WebControls.Button>-Instanz hinzufügt.  
   
-3.  Fügen Sie im Ereignistext Ereignishandlermethode, die Sie in Schritt 2, definiert Code erforderliche Aktionen auszuführen, die erforderlich sind, wenn das Ereignis auftritt.  
+3.  Fügen Sie in der in Schritt 2 definierten Ereignishandlermethode Code hinzu, um die beim Auftreten des Ereignisses erforderlichen Aktionen auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ereignisse](../../../docs/standard/events/index.md)

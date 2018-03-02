@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="native-interoperability"></a>Native Interoperabilität
 
@@ -71,7 +74,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +87,7 @@ namespace PInvokeSamples {
 }
 ```
 
-Unter Linux verhält es sich natürlich ähnlich. Der Funktionsname ist identisch, da es sich bei `getpid(2)` um einen [POSIX](https://en.wikipedia.org/wiki/POSIX)-Systemaufruf handelt.
+Bei Linux ist es ähnlich. Der Funktionsname ist identisch, da es sich bei `getpid(2)` um einen standardmäßigen [POSIX](https://en.wikipedia.org/wiki/POSIX)-Systemaufruf handelt.
 
 ```csharp
 using System;
@@ -93,7 +96,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -263,7 +266,7 @@ Beide oben aufgeführten Beispiele hängen von Parametern ab, und in beiden Fäl
 
 Das **Marshallen** bezeichnet den Vorgang zum Umwandeln von Typen, wenn diese die verwaltete Grenze zu nativem Code und umgekehrt überschreiten.
 
-Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
+Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](../../docs/framework/interop/default-marshaling-behavior.md) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

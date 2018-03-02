@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator
-Die <xref:System.Xml.XPath.XPathNavigator> Klasse bietet zwei Sätze von Navigationsmethoden, in die erste Menge gefunden der [Node Set Navigation mithilfe von XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) Thema zum Navigieren *Knotengruppen* in einer <xref:System.Xml.XPath.XPathDocument> oder <xref:System.Xml.XmlDocument> Objekt. Die zweite Gruppe, die in diesem Thema beschriebenen zum Navigieren *Attribut-und Namespaceknoten* in einer <xref:System.Xml.XPath.XPathDocument> oder <xref:System.Xml.XmlDocument> Objekt.  
+Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Navigationsmethoden bereit: Die erste Gruppe, die unter dem Thema [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) beschrieben wird, wird zum Navigieren durch *Knotengruppen* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet. Die zweite Gruppe, die in diesem Thema beschrieben wird, wird zum Navigieren durch *Attribut- und Namespaceknoten* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet.  
   
 ## <a name="attribute-node-navigation"></a>Navigieren durch Attributknoten  
  Attribute sind Eigenschaften eines Elements und keine untergeordneten Elemente des entsprechenden Elements. Diese Unterscheidung ist wegen der zum Navigieren durch nebengeordnete, übergeordnete und untergeordnete Knoten verwendeten Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse wichtig.  
@@ -108,6 +111,6 @@ Die <xref:System.Xml.XPath.XPathNavigator> Klasse bietet zwei Sätze von Navigat
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [In Knotengruppen mit "XPathNavigator"](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Extrahieren von XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [Zugreifen auf streng typisierte XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Extrahieren von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [Zugreifen auf streng typisierte XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

@@ -19,27 +19,30 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2660b3cbf7e8ee43a22edbfb66a4262684983b87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 380080c0aa05bc5b94c9ec5fe471f2f255562cd2
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blockieren der Anwendungsausführung mithilfe von AsyncWaitHandle
-Anwendungen, die nicht fortgesetzt werden können, andere Aufgaben während des Wartens auf die Ergebnisse eines asynchronen Vorgangs blockiert, bis der Vorgang abgeschlossen ist. Hauptthread der Anwendung blockiert wird, beim Abschluss eines asynchronen Vorgangs warten, verwenden Sie eine der folgenden Optionen:  
+Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs nicht weiterarbeiten können, werden blockiert, bis der Vorgang abgeschlossen ist. Verwenden Sie eine der folgenden Optionen, um den Hauptthread Ihrer Anwendung zu blockieren, während Sie darauf warten, dass ein asynchroner Vorgang abgeschlossen wird:  
   
--   Verwenden der <xref:System.IAsyncResult.AsyncWaitHandle%2A> Eigenschaft von der <xref:System.IAsyncResult> zurückgegeben, die für des asynchronen Vorgangs **beginnen** *OperationName* Methode. Dieser Ansatz wird in diesem Thema veranschaulicht.  
+-   Verwenden Sie die Eigenschaft <xref:System.IAsyncResult.AsyncWaitHandle%2A> des Ergebnisses <xref:System.IAsyncResult>, welches durch die Methode **Begin***OperationName* für asynchrone Vorgänge zurückgegeben wird. Dieser Ansatz wird in diesem Thema veranschaulicht.  
   
--   Rufen Sie den asynchronen Vorgang **End** *OperationName* Methode. Ein Beispiel für diesen Ansatz finden Sie unter [Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+-   Rufen Sie die Methode **End***OperationName* für asynchrone Vorgänge auf. Ein Beispiel zur Veranschaulichung dieses Ansatzes finden Sie unter [Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
- Anwendungen, die eine mehrere oder <xref:System.Threading.WaitHandle> Objekte blockiert, bis ein asynchroner Vorgang abgeschlossen ist in der Regel ruft der **beginnen** *OperationName* -Methode, führen Sie alle Daten, die ausgeführt werden kann ohne die Ergebnisse des Vorgangs und dann blockieren, bis die asynchronen Vorgänge abgeschlossen ist. Eine Anwendung kann für einen einzelnen Vorgang durch Aufrufen einer der Blockieren der <xref:System.Threading.WaitHandle.WaitOne%2A> Methoden mithilfe der <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Um auf den Abschluss asynchroner Vorgänge blockiert, speichern Sie die entsprechenden <xref:System.IAsyncResult.AsyncWaitHandle%2A> Objekte in einem Array und den Aufruf von der <xref:System.Threading.WaitHandle.WaitAll%2A> Methoden. Zum Blockieren, bis für jede einer Reihe von auf den Abschluss asynchroner Vorgänge, speichern Sie die entsprechenden <xref:System.IAsyncResult.AsyncWaitHandle%2A> Objekte in einem Array und den Aufruf von der <xref:System.Threading.WaitHandle.WaitAny%2A> Methoden.  
+ Anwendungen, die mindestens ein <xref:System.Threading.WaitHandle>-Objekt zum Blockieren verwenden, bis ein asynchroner Vorgang abgeschlossen ist, rufen in der Regel die Methode **Begin***OperationName* auf, arbeiten alle Tasks ab, die ohne die Ergebnisse des Vorgangs ausgeführt werden können, und blockieren dann bis alle asynchronen Vorgänge abgeschlossen sind. Eine Anwendung kann für einen einzelnen Vorgang durch Aufrufen einer der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methoden mithilfe von <xref:System.IAsyncResult.AsyncWaitHandle%2A> blockiert werden. Damit die Anwendungsausführung blockiert wird, solange eine Reihe von asynchronen Vorgängen noch nicht abgeschlossen ist, speichern Sie die zugehörigen <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Objekte in einem Array und rufen Sie eine der <xref:System.Threading.WaitHandle.WaitAll%2A>-Methoden auf. Wenn die Anwendungsausführung blockiert werden soll, solange eine beliebige Reihe von asynchronen Vorgängen noch nicht abgeschlossen ist, speichern Sie die zugehörigen <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Objekte in einem Array und rufen Sie eine der <xref:System.Threading.WaitHandle.WaitAny%2A>-Methoden auf.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie asynchrone Methoden in der DNS-Klasse, Domain Name System-Informationen für einen Benutzer angegebenen Computer abgerufen. Im Beispiel wird veranschaulicht, blockieren mit der <xref:System.Threading.WaitHandle> den asynchronen Vorgang zugeordnet. Beachten Sie, dass `null` (`Nothing` in Visual Basic) übergeben wird, für die <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` und `stateObject` Parameter, da diese nicht erforderlich sind, bei dieser Vorgehensweise.  
+ Das folgende Codebeispiel demonstriert die Verwendung von asynchronen Methoden in der DNS-Klasse, um Informationen aus dem Domain Name System für einen benutzerdefinierten Computer abzurufen. Im Beispiel wird veranschaulicht, wie Sie zum Blockieren das mit dem asynchronen Vorgang verknüpfte <xref:System.Threading.WaitHandle> verwenden. Beachten Sie, dass `null` (`Nothing` in Visual Basic) für die Parameter <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` und `stateObject` übergeben wird, da sie bei diesem Ansatz nicht benötigt werden.  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]
  [!code-vb[AsyncDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlockWait.vb#2)]  

@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a06de3f8fb6351d340e1c8f1bfe8f4105967e25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e18a3151228ea7edb5a8380f6ed707ee88d369e5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-overview"></a>Übersicht über das XML-Schemaobjektmodell (SOM)
 Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche API, mit der Sie Schemata programmgesteuert erstellen, bearbeiten und validieren können. Das SOM arbeitet mit XML-Schemadokumenten auf ähnliche Weise, wie das DOM (Document Object Model) mit XML-Dokumenten arbeitet. XML-Schemadokumente sind gültige XML-Dateien, die sobald sie in das SOM geladen werden, eine Bedeutung zur Struktur und Gültigkeit von anderen XML-Dokumenten tragen, die dem Schema entsprechen.  
@@ -48,8 +51,8 @@ Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche A
 ## <a name="see-also"></a>Siehe auch  
  [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Durchlaufen von XML-Schemata](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

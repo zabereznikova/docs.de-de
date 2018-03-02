@@ -18,21 +18,24 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e741de47fec5f0ed607bba33b963d449c5c51cce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-tables-in-net"></a>Typkonvertierungstabellen in .NET
 Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der gleich groß oder größer ist. Eine einschränkende Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der kleiner ist. Die Tabellen in diesem Thema veranschaulichen die Verhaltensweisen dieser beiden Konvertierungsarten.  
   
 ## <a name="widening-conversions"></a>Erweiterungskonvertierungen  
- Die folgende Tabelle beschreibt die erweiternden Konvertierungen, die ohne den Verlust von Informationen erfolgen können.  
+ Die folgende Tabelle beschreibt die erweiternden Konvertierungen, die ohne Informationsverlust ausgeführt werden können.  
   
 |Typ|Kann ohne Datenverlust konvertiert werden in|  
 |----------|-------------------------------------------|  
@@ -47,7 +50,7 @@ Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Einige erweiternde Konvertierungen in <xref:System.Single> oder <xref:System.Double> kann einem Genauigkeitsverlust führen. Die folgende Tabelle beschreibt die erweiternden Konvertierungen, die einen Informationsverlust nach sich ziehen können.  
+ Einige erweiternde Konvertierungen zu <xref:System.Single> oder <xref:System.Double> können zu einem Genauigkeitsverlust führen. Die folgende Tabelle beschreibt die erweiternden Konvertierungen, die einen Informationsverlust nach sich ziehen können.  
   
 |Typ|Kann konvertiert werden in|  
 |----------|-------------------------|  
@@ -58,11 +61,11 @@ Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>Eingrenzungskonvertierungen  
- Eine einschränkende Konvertierung in <xref:System.Single> oder <xref:System.Double> kann einen Datenverlust verursachen. Wenn der Zieltyp die Quelle nicht mit der gleichen Detailgenauigkeit und im gleichen Umfang wiedergeben kann, wird der resultierende Typ auf die Konstante `PositiveInfinity` oder `NegativeInfinity` festgelegt. `PositiveInfinity`Ergebnis der Division einer positiven Zahl durch 0 (null) und wird auch zurückgegeben, wenn der Wert des eine <xref:System.Single> oder <xref:System.Double> überschreitet den Wert von der `MaxValue` Feld. `NegativeInfinity`Ergebnis der Division einer negativen Zahl durch 0 (null) und wird auch zurückgegeben, wenn der Wert des eine <xref:System.Single> oder <xref:System.Double> unterschreitet den Wert des der `MinValue` Feld. Eine Konvertierung von einem <xref:System.Double> auf eine <xref:System.Single> unter Umständen `PositiveInfinity` oder `NegativeInfinity`.  
+ Eine einschränkende Konvertierung in <xref:System.Single> oder <xref:System.Double> kann zu einem Informationsverlust führen. Wenn der Zieltyp die Quelle nicht mit der gleichen Detailgenauigkeit und im gleichen Umfang wiedergeben kann, wird der resultierende Typ auf die Konstante `PositiveInfinity` oder `NegativeInfinity` festgelegt. `PositiveInfinity` resultiert aus der Division einer positiven Zahl durch null und wird auch zurückgegeben, wenn der Wert eines <xref:System.Single>- oder <xref:System.Double>-Typs den Wert des Felds `MaxValue` überschreitet. `NegativeInfinity` resultiert aus der Division einer negativen Zahl durch null und wird auch zurückgegeben, wenn der Wert eines <xref:System.Single>- oder <xref:System.Double>-Typs den Wert des Felds `MinValue` unterschreitet. Eine Konvertierung aus einem <xref:System.Double>- in einen <xref:System.Single>-Typ kann zu `PositiveInfinity` oder `NegativeInfinity` führen.  
   
- Eine einschränkende Konvertierung kann auch zum Verlust von Informationen für andere Datentypen führen. Allerdings ein <xref:System.OverflowException> wird ausgelöst, wenn der Wert eines Typs, der konvertiert wird außerhalb des Bereichs, die gemäß des Zieltyps liegt `MaxValue` und `MinValue` Felder sowie die Konvertierung von der Laufzeit, um sicherzustellen, dass den Wert des Ziels aktiviert ist Typ nicht überschreitet die `MaxValue` oder `MinValue`. Konvertierungen, die mit ausgeführt werden die <xref:System.Convert?displayProperty=nameWithType> Klasse immer auf diese Weise überprüft werden.  
+ Eine einschränkende Konvertierung kann auch zum Verlust von Informationen für andere Datentypen führen. Es wird jedoch eine <xref:System.OverflowException> ausgelöst, wenn der Wert eines zu konvertierenden Typs außerhalb des von den Feldern `MaxValue` und `MinValue` des Zieltyps angegebenen Bereichs liegt und die Konvertierung von der Runtime geprüft wird, um sicherzustellen, dass der Wert des Zieltyps den `MaxValue` oder `MinValue` nicht überschreitet. Konvertierungen, die mit der <xref:System.Convert?displayProperty=nameWithType>-Klasse ausgeführt werden, werden immer auf diese Weise überprüft.  
   
- Die folgende Tabelle enthält die Konvertierungen, die Auslösen einer <xref:System.OverflowException> mit <xref:System.Convert?displayProperty=nameWithType> oder eine Konvertierung überprüft, wenn der Wert des konvertierten Typs außerhalb des definierten Bereichs des resultierenden Typs ist.  
+ Die folgende Tabelle enthält Konvertierungen, die eine <xref:System.OverflowException> über <xref:System.Convert?displayProperty=nameWithType> oder eine andere Konvertierungsprüfung auslösen, wenn der Wert des zu konvertierenden Typs außerhalb des definierten Bereichs des resultierenden Typs liegt.  
   
 |Typ|Kann konvertiert werden in|  
 |----------|-------------------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden Sie Try-Catch-Block zum Abfangen von Ausnahmen'
+title: 'Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -18,15 +18,18 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a72a21085c37bed4d84518810f69a013d515189
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 192f762872b112ea261d22251175db6867229437
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Verwenden des try/catch-Blocks zum Abfangen von Ausnahmen
 

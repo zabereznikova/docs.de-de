@@ -12,21 +12,24 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>Empfohlene Vorgehensweisen für Beobachterentwurfsmuster
 Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen implementiert. Die <xref:System.IObservable%601?displayProperty=nameWithType>-Schnittstelle stellt den Datenanbieter dar, der auch für die Bereitstellung einer <xref:System.IDisposable>-Implementierung verantwortlich ist, mit der Beobachter Benachrichtigungsabonnements kündigen können. Die <xref:System.IObserver%601?displayProperty=nameWithType>-Schnittstelle stellt den Beobachter dar. Dieses Thema beschreibt die empfohlenen Vorgehensweisen, die Entwickler befolgen sollten, wenn sie das Beobachterentwurfsmuster unter Verwendung dieser Schnittstellen implementieren.  
   
 ## <a name="threading"></a>Threading  
- In der Regel implementiert ein Anbieter die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode, indem er einen bestimmten Beobachter einer Abonnentenliste hinzufügt, die durch ein Auflistungsobjekt dargestellt wird, und implementiert die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode, indem ein bestimmten Beobachter aus der Abonnentenliste entfernt wird. Ein Beobachter kann diese Methoden jederzeit aufrufen. Da der Anbieter/Beobachter-Vertrag außerdem nicht angibt, wer für das Kündigen nach der <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Callbackmethode verantwortlich ist, können der Anbieter und der Beobachter beide versuchen, denselben Member aus der Liste zu entfernen. Aufgrund dieser Möglichkeit sollten die <xref:System.IObservable%601.Subscribe%2A>- und die <xref:System.IDisposable.Dispose%2A>-Methode threadsicher sein. In der Regel wird dies umfasst die Verwendung einer [gleichzeitigen Auflistung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) oder eine Sperre. Für Implementierungen, die nicht threadsicher sind, sollte dies explizit dokumentiert werden.  
+ In der Regel implementiert ein Anbieter die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode, indem er einen bestimmten Beobachter einer Abonnentenliste hinzufügt, die durch ein Auflistungsobjekt dargestellt wird, und implementiert die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode, indem ein bestimmten Beobachter aus der Abonnentenliste entfernt wird. Ein Beobachter kann diese Methoden jederzeit aufrufen. Da der Anbieter/Beobachter-Vertrag außerdem nicht angibt, wer für das Kündigen nach der <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Callbackmethode verantwortlich ist, können der Anbieter und der Beobachter beide versuchen, denselben Member aus der Liste zu entfernen. Aufgrund dieser Möglichkeit sollten die <xref:System.IObservable%601.Subscribe%2A>- und die <xref:System.IDisposable.Dispose%2A>-Methode threadsicher sein. In der Regel umfasst dies die Verwendung einer [gleichzeitigen Auflistung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) oder eine Sperre. Für Implementierungen, die nicht threadsicher sind, sollte dies explizit dokumentiert werden.  
   
  Alle weiteren Garantien müssen in einer Ebene über dem Anbieter/Beobachter-Vertrag angegeben werden. Implementierer sollten klar kommunizieren, wenn sie zusätzliche Anforderungen auferlegen, um Verwirrungen der Benutzer zum Beobachtervertrag zu vermeiden.  
   

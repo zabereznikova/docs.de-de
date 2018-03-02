@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
@@ -24,7 +27,7 @@ Es gibt drei Arten von Klassenbibliotheken, die Sie verwenden können:
 
 *   **Plattformspezifische** Klassenbibliotheken haben Zugriff auf alle APIs einer bestimmten Plattform (z.B. .NET Framework, Xamarin iOS), können jedoch nur von Apps und Bibliotheken verwendet werden, deren Ziel diese Plattform ist.
 *   **Portable** Klassenbibliotheken haben Zugriff auf eine Teilmenge der APIs und können von Apps und Bibliotheken verwendet werden, deren Ziel mehrere Plattformen sind.
-*   **.NET Core**-Klassenbibliotheken führen das plattformspezifische und Portable-Bibliotheken-Konzept in einem einzelnen Modell zusammen, das das Beste von beidem bietet.
+*   **.NET Standard**-Klassenbibliotheken führen das Konzept plattformspezifischer und portabler Bibliotheken in einem einzelnen Modell zusammen, das das Beste aus beiden Welten bietet.
 
 ## <a name="platform-specific-class-libraries"></a>Plattformspezifische Klassenbibliotheken
 

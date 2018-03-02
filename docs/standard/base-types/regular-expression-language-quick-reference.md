@@ -8,7 +8,8 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.RegularExpressionBuilder
+f1_keywords:
+- VS.RegularExpressionBuilder
 helpviewer_keywords:
 - regex cheat sheet
 - parsing text with regular expressions, language elements
@@ -19,18 +20,21 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
-<a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [regulären Ausdrücken von .NET](../../../docs/standard/base-types/regular-expressions.md).  
+<a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
  Jeder Abschnitt dieser Kurzübersicht enthält eine bestimmte Kategorie von Zeichen, Operatoren oder Konstrukten, mit denen Sie reguläre Ausdrücke definieren können:  
   
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="character-escapes"></a>Escapezeichen  
  Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck gibt an, dass es sich bei dem darauf folgenden Zeichen um ein Sonderzeichen handelt (wie in der folgenden Tabelle gezeigt) oder dass das Zeichen als solches interpretiert werden soll. Weitere Informationen finden Sie unter [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
-|Escapezeichen|Beschreibung|Muster|Übereinstimmungen|  
+|Escapezeichen|description|Muster|Übereinstimmungen|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|Entspricht einem Klingelzeichen (Warnsignal) \u0007.|`\a`|"\u0007" in "Fehler!" + '\u0007'|  
 |`\b`|Entspricht in einer Zeichenklasse einem Rücktastenzeichen \u0008.|`[\b]{3,}`|"\b\b\b\b" in "\b\b\b\b"|  
@@ -68,15 +72,15 @@ ms.lasthandoff: 11/21/2017
 |`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Entspricht dem durch *X* oder *x*angegebenen ASCII-Steuerzeichen, wobei *X* oder *x* der Buchstabe des Steuerzeichens ist.|`\cC`|"\x0003" in "\x0003" (Strg-C)|  
 |`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Dies ermöglicht das Modul für reguläre Ausdrücke Sprachelemente (z. B. \* oder?) und Zeichenliterale (dargestellt durch `\*` oder `\?`).|`\d+[\+-x\*]\d+`|"2 + 2" und "3\*9" in "(2+2) \* 3\*9"|  
+|`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Hierdurch kann die Engine für reguläre Ausdrücke Sprachelemente (z.B. \* oder ?) und Zeichenliterale (dargestellt durch `\*` oder `\?`) unterscheiden.|`\d+[\+-x\*]\d+`|„2+2“ und „3\*9“ in „(2+2) \* 3\*9“|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Zeichenklassen  
  Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen verwenden die in der folgenden Tabelle aufgeführten Sprachelemente. Weitere Informationen finden Sie unter [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
-|Zeichenklasse|Beschreibung|Muster|Übereinstimmungen|  
+|Zeichenklasse|description|Muster|Übereinstimmungen|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Entspricht einem beliebigen einzelnen Zeichen in *character_group*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|"a" in "wage"<br /><br /> "a", "e" in "klasse"|  
 |`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group*enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|"r", "g", "n" in "ringen"|  
@@ -91,13 +95,13 @@ ms.lasthandoff: 11/21/2017
 |`\d`|Entspricht einer beliebigen Dezimalziffer.|`\d`|"4" in "4 = IV"|  
 |`\D`|Entspricht einem beliebigen Zeichen, das keine Dezimalziffer ist.|`\D`|" ", "=", " ", "I", "V" in "4 = IV"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Anchor  
  Anchor oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass das Modul die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anchor. Weitere Informationen finden Sie unter [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
-|Assertion|Beschreibung|Muster|Übereinstimmungen|  
+|Assertion|description|Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|Der Vergleich muss am Anfang der Zeichenfolge oder Zeile beginnen.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
 |`$`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeile oder Zeichenfolge erfolgen.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
@@ -108,13 +112,13 @@ ms.lasthandoff: 11/21/2017
 |`\b`|Der Vergleich muss an einer Begrenzung zwischen einem `\w` (alphanumerischen) und einem `\W` (nicht alphanumerischen) Zeichen erfolgen.|`\b\w+\s\w+\b`|"dem demnach", "dem dem" in "dem demnach dem dem"|  
 |`\B`|Der Vergleich darf nicht an einer `\b` -Begrenzung erfolgen.|`\Bend\w*\b`|"ends", "ender" in "end sendet endete sender"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Gruppierungskonstrukte  
  Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und zeichnen gewöhnlich Teilzeichenfolgen einer Eingabezeichenfolge auf. Gruppierungskonstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
-|Gruppierungskonstrukt|Beschreibung|Muster|Übereinstimmungen|  
+|Gruppierungskonstrukt|description|Muster|Übereinstimmungen|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|"aa" in "paarweise"|  
 |`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|"aa" in "paarweise"|  
@@ -127,13 +131,13 @@ ms.lasthandoff: 11/21/2017
 |`(?<!` *Teilausdruck* `)`|Negative Lookbehindassertion mit einer Breite von Null.|`(?<!19)\d{2}\b`|"51", "03" in "1851 1999 1950 1905 2003"|  
 |`(?>` *Teilausdruck* `)`|Nicht zurückverfolgender ("gieriger") Teilausdruck.|`[13579](?>A+B+)`|"1ABB", "3ABB", and "5AB" in "1ABB 3ABBC 5AB 5AC"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantifizierer  
  Quantifizierer geben an, wie viele Instanzen des vorherigen Elements (bei dem es sich um ein Zeichen, eine Gruppe oder eine Zeichenklasse handeln kann) in der Eingabezeichenfolge vorhanden sein müssen, damit eine Entsprechung gefunden wird. Quantifizierer verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Quantifiers](quantifiers-in-regular-expressions.md).  
   
-|Quantifizierer|Beschreibung|Muster|Übereinstimmungen|  
+|Quantifizierer|description|Muster|Übereinstimmungen|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Entspricht dem vorangehenden Element nicht oder mehrmals.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Entspricht dem vorangehenden Element einmal oder mehrmals.|`"be+"`|"bei" in beim"", "be" in "bei"|  
@@ -148,36 +152,36 @@ ms.lasthandoff: 11/21/2017
 |`{` *n* `,}?`|Entspricht dem vorangehenden Element mindestens *n* -mal, jedoch so wenige Male wie möglich.|`"\d{2,}?"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}?`|Entspricht dem vorangehenden Element zwischen *n* - und *m* -mal, jedoch so wenige Male wie möglich.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" in "193024"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Rückverweiskonstrukte  
- Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im gleichen regulären Ausdruck zu identifizieren. In der folgenden Tabelle sind die Rückverweiskonstrukte aufgeführt von regulären Ausdrücken in .NET unterstützt. Weitere Informationen finden Sie unter [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
+ Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im gleichen regulären Ausdruck zu identifizieren. In der folgenden Tabelle sind die Rückverweiskonstrukte aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden. Weitere Informationen finden Sie unter [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
-|Rückverweiskonstrukt|Beschreibung|Muster|Übereinstimmungen|  
+|Rückverweiskonstrukt|description|Muster|Übereinstimmungen|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *number*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|"ee" in "beseelt"|  
 |`\k<` *Name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|"ee" in "beseelt"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Alternierungskonstrukte  
  Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Vergleiche zuzulassen. Diese Konstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
-|Alternierungskonstrukt|Beschreibung|Muster|Übereinstimmungen|  
+|Alternierungskonstrukt|description|Muster|Übereinstimmungen|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (&#124;) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "This is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn das von *expression* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *no* . *expression* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" in "A10 C103 910"|  
 |`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn *name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Hund.jpg, "Yiska spielt.jpg" in "Hund.jpg "Yiska spielt.jpg""|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Ersetzungen  
  Ersetzungen sind Sprachelemente regulärer Ausdrücke, die in Ersetzungsmustern unterstützt werden. Weitere Informationen finden Sie unter [Substitutions](substitutions-in-regular-expressions.md). Die Metazeichen in der folgenden Tabelle sind atomare Assertionen mit einer Breite von Null.  
   
-|Zeichen|Beschreibung|Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
+|Zeichen|description|Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *number*|Ersetzt die untergeordnete Zeichenfolge, die der *number*einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *name*der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
@@ -188,7 +192,7 @@ ms.lasthandoff: 11/21/2017
 |`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
 |`$_`|Ersetzt die gesamte Eingabezeichenfolge.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke  
@@ -202,7 +206,7 @@ ms.lasthandoff: 11/21/2017
   
  Das .NET-Modul für reguläre Ausdrücke unterstützt die folgenden Inlineoptionen.  
   
-|Option|Beschreibung|Muster|Übereinstimmungen|  
+|Option|description|Muster|Übereinstimmungen|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Groß-/Kleinschreibung bei der Suche ignorieren|`\b(?i)a(?-i)a\w+\b`|"Aale" und "Aasblumen" in "Aale essen Aasblumen roh"|  
 |`m`|Mehrzeilenmodus verwenden. `^` und `$` entsprechen dem Anfang und Ende einer Zeile anstatt dem Anfang und Ende einer Zeichenfolge.|Ein Beispiel finden Sie im Abschnitt zum Mehrzeilenmodus in [Regular Expression Options](regular-expression-options.md).||  
@@ -210,11 +214,11 @@ ms.lasthandoff: 11/21/2017
 |`s`|Einzeilenmodus verwenden|Ein Beispiel finden Sie im Abschnitt zum Einzeilenmodus in [Regular Expression Options](regular-expression-options.md).||  
 |`x`|Leerraum ohne Escapezeichen im Muster eines regulären Ausdrucks ignorieren|`\b(?x) \d+ \s \w+`|"1 Erdferkel", "2 Katzen" in "1 Erdferkel 2 Katzen IV Zenturionen"|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Verschiedene Konstrukte  
- Verschiedene Konstrukte ändern Muster von regulären Ausdrücken oder stellen Informationen darüber bereit. In der folgenden Tabelle sind die verschiedenen Konstrukte, die von .NET unterstützten aufgeführt. Weitere Informationen finden Sie unter [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
+ Verschiedene Konstrukte ändern Muster von regulären Ausdrücken oder stellen Informationen darüber bereit. In der folgenden Tabelle sind die verschiedenen Konstrukte aufgeführt, die von .NET unterstützt werden. Weitere Informationen finden Sie unter [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Konstrukt|Definition|Beispiel|  
 |---------------|----------------|-------------|  
@@ -225,8 +229,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex>  
- [Reguläre Ausdrücke](regular-expressions.md)  
- [Klassen für reguläre Ausdrücke](the-regular-expression-object-model.md)  
+ [Reguläre Ausdrücke von .NET](regular-expressions.md)  
+ [Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)  
  [Beispiele für reguläre Ausdrücke](regular-expression-examples.md)  
  [Reguläre Ausdrücke – Kurzübersicht (Download im Word-Format)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Reguläre Ausdrücke – Kurzübersicht (Download im PDF-Format)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

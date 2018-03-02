@@ -15,47 +15,50 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d8031758462df45c030b8b75a3507f1bfb44bfd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ed3d38cdfd70e7588ba0c4d94816c7105c7cf3e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Gewusst wie: Abbrechen einer PLINQ-Abfrage
-In den folgenden Beispielen werden zwei Möglichkeiten zum Abbrechen einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie Sie eine Abfrage abgebrochen wird, aus die Daten Durchlauf größtenteils besteht. Im zweite Beispiel wird gezeigt, wie eine Abfrage abbrechen mit einer Funktion, die rechenintensive wird.  
+In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht. Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.  
   
 > [!NOTE]
->  Wenn "Nur eigenen Code" aktiviert ist, unterbricht Visual Studio wird in der Zeile, die die Ausnahme auslöst und zeigt eine Fehlermeldung an, die besagt, dass "nicht vom Benutzercode behandelten Ausnahme." Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den nachstehenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Zum verhindern, dass Visual Studio den ersten Fehler unterbricht, deaktivieren Sie das Kontrollkästchen "Nur eigenen Code" unter **Extras, Optionen, Debugging, Allgemein**.  
+>  Wenn „Nur eigenen Code“ aktiviert ist, unterbricht Visual Studio die Ausführung in der Zeile, die die Ausnahme auslöst, und eine Fehlermeldung zu einer nicht vom Benutzercode behandelten Ausnahme wird angezeigt. Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den nachstehenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Um zu verhindern, dass Visual Studio die Ausführung beim ersten Fehler unterbricht, deaktivieren Sie unter **Extras, Optionen, Debugging, Allgemein** das Kontrollkästchen „Nur eigenen Code“.  
 >   
->  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen zur Beschleunigung finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
  [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]  
   
- PLINQ-Framework erfolgt kein Rollback für eine einzelne <xref:System.OperationCanceledException> in einer <xref:System.AggregateException?displayProperty=nameWithType>; das <xref:System.OperationCanceledException> müssen in einem separaten Catch-Block behandelt werden. Wenn eine oder mehrere Benutzerdelegaten eine OperationCanceledException(externalCT) (mithilfe ein externen <xref:System.Threading.CancellationToken?displayProperty=nameWithType>), aber keine anderen Ausnahmen und die Abfrage definiert wurde, als `AsParallel().WithCancellation(externalCT)`, dann PLINQ die eine einzelne ausstellen, <xref:System.OperationCanceledException> (ExternalCT) anstelle einer <xref:System.AggregateException?displayProperty=nameWithType>. Löst Sie jedoch, wenn ein Benutzer delegieren einer <xref:System.OperationCanceledException>, ein anderer Delegat löst einen anderen Ausnahmetyp aus, und beide Ausnahmen werden zurückgesetzt, in eine <xref:System.AggregateException>.  
+ Das PLINQ-Framework setzt keine einzelne <xref:System.OperationCanceledException> in eine <xref:System.AggregateException?displayProperty=nameWithType> zurück; die <xref:System.OperationCanceledException> muss in einem separaten Catch-Block behandelt werden. Wenn mindestens ein Benutzerdelegat eine OperationCanceledException(externalCT) (mithilfe einer externen <xref:System.Threading.CancellationToken?displayProperty=nameWithType>) auslöst, aber keine weitere Ausnahme, und die Abfrage als `AsParallel().WithCancellation(externalCT)` definiert wurde, dann gibt PLINQ eine einzelne <xref:System.OperationCanceledException>(externalCT) anstelle einer <xref:System.AggregateException?displayProperty=nameWithType> aus. Löst jedoch ein Benutzerdelegat eine <xref:System.OperationCanceledException> und ein anderer Delegat einen anderen Ausnahmetyp aus, werden beide Ausnahmen in eine <xref:System.AggregateException> zurückgesetzt.  
   
- Die allgemeinen Leitfaden zum Abbruch lautet wie folgt:  
+ Der allgemeine Leitfaden zum Abbruch lautet wie folgt:  
   
-1.  Wenn Sie Benutzerdelegaten Abbruch ausführen sollten Sie PLINQ informieren Sie über externe <xref:System.Threading.CancellationToken> und löst eine <xref:System.OperationCanceledException>(ExternalCT).  
+1.  Wenn Sie einen Benutzerdelegatenabbruch ausführen, sollten Sie PLINQ über die externe <xref:System.Threading.CancellationToken> informieren und eine <xref:System.OperationCanceledException>(ExternalCT) auslösen.  
   
-2.  Wenn ein Abbruch auftritt und keine anderen Ausnahmen ausgelöst werden, dann sollten behandelt eine <xref:System.OperationCanceledException> anstelle einer <xref:System.AggregateException>.  
+2.  Wenn ein Abbruch auftritt und keine anderen Ausnahmen ausgelöst werden, dann sollten Sie eine <xref:System.OperationCanceledException> anstelle einer <xref:System.AggregateException> behandeln.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie zum Abbruch behandelt wird, wenn Sie eine rechenintensive Funktion im Benutzercode haben.  
+ Das folgende Beispiel zeigt, wie Sie einen Abbruch behandeln müssen, wenn der Benutzercode eine rechenintensive Funktion enthält.  
   
  [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
  [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]  
   
- Wenn Sie den Abbruch im Benutzercode behandeln, müssen Sie nicht verwenden <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> in der Abfragedefinition. Allerdings wird empfohlen, dass Sie da hierzu <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> hat keine Auswirkung auf die abfrageleistung und ermöglicht den Abbruch von Abfrageoperatoren und Benutzercode behandelt werden.  
+ Wenn Sie den Abbruch im Benutzercode behandeln, müssen Sie <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nicht in der Abfragedefinition verwenden. Allerdings sollten Sie dies tun, weil <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> keine Auswirkung auf die Abfrageleistung hat und die Behandlung des Abbruchs durch Abfrageoperatoren und Ihren Benutzercode ermöglicht.  
   
- Um die Reaktionsfähigkeit des Systems zu gewährleisten, wird empfohlen, nach einem Abbruch um einmal pro Millisekunde gesucht; Allerdings wird jedem Zeitraum von bis zu 10 Millisekunden als akzeptabel betrachtet. Diese Häufigkeit sollte nicht negativ auf die Leistung Ihres Codes haben.  
+ Um die Reaktionsfähigkeit des Systems zu gewährleisten, sollten Sie etwa einmal pro Millisekunde prüfen, ob ein Abbruch vorliegt; allerdings ist jeder Zeitraum von bis zu 10 Millisekunden akzeptabel. Diese Häufigkeit sollte sich nicht negativ auf die Leistung Ihres Codes auswirken.  
   
- Wenn ein Enumerator verworfen wird, z. B. wenn Code unterbricht aus einer Schleife Foreach (For Each in Visual Basic), die Ergebnisse der Abfrage durchläuft wird die Abfrage abgebrochen wird, jedoch wird keine Ausnahme ausgelöst.  
+ Wenn ein Enumerator verworfen wird, z.B. wenn Code aus einer foreach-Schleife („For Each“ in Visual Basic) ausbricht, die eine Iteration über Abfrageergebnisse durchführt, wird die Abfrage abgebrochen, jedoch keine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.ParallelEnumerable>  

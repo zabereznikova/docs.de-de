@@ -1,12 +1,8 @@
 ---
 title: 'Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,30 +11,31 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc74b4acc5b29395c05e7c8302caefeb51718282
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock
-Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType>- und die <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>-Klasse bereit, sodass Sie Daten aus einer oder mehreren Quellen empfangen und puffern und diese Daten dann als Auflistung weitergeben können. Dieser Batchverarbeitungsmechanismus ist hilfreich, wenn Sie Daten aus einer oder mehreren Quellen sammeln und dann mehrere Datenelemente als Batch verarbeiten. Stellen Sie sich beispielsweise eine Anwendung vor, die Datensätze mithilfe von Datenfluss in eine Datenbank einfügt. Dieser Vorgang kann effizienter werden, wenn mehrere Elemente gleichzeitig statt hintereinander eingefügt werden. In diesem Dokument wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse die Effizienz solcher Datenbankeinfügevorgänge verbessert wird. Außerdem wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>-Klasse sowohl die Ergebnisse als auch Ausnahmen erfasst werden, die auftreten, während das Programm aus einer Datenbank liest.  
-  
-> [!TIP]
->  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>-Namespace) ist nicht in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enthalten. Öffnen Sie zum Installieren des <xref:System.Threading.Tasks.Dataflow>-Namespace das Projekt in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wählen Sie im Menü "Projekt" die Option **NuGet-Pakete verwalten** aus, und suchen Sie online nach dem `Microsoft.Tpl.Dataflow` -Paket.  
-  
+Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType>- und die <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>-Klasse bereit, sodass Sie Daten aus einer oder mehreren Quellen empfangen und puffern und diese Daten dann als Auflistung weitergeben können. Dieser Batchverarbeitungsmechanismus ist hilfreich, wenn Sie Daten aus einer oder mehreren Quellen sammeln und dann mehrere Datenelemente als Batch verarbeiten. Stellen Sie sich beispielsweise eine Anwendung vor, die Datensätze mithilfe von Datenfluss in eine Datenbank einfügt. Dieser Vorgang kann effizienter werden, wenn mehrere Elemente gleichzeitig statt hintereinander eingefügt werden. In diesem Dokument wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse die Effizienz solcher Datenbankeinfügevorgänge verbessert wird. Außerdem wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>-Klasse sowohl die Ergebnisse als auch Ausnahmen erfasst werden, die auftreten, während das Programm aus einer Datenbank liest.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
-1.  Lesen Sie den Abschnitt Join Blöcke in der [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) dokumentieren, bevor Sie in dieser exemplarischen Vorgehensweise beginnen.  
+1.  Lesen Sie den Abschnitt „Gruppierungsblöcke“ im Dokument [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
   
-2.  Stellen Sie sicher, dass Sie über eine Kopie der Northwind-Datenbank (Northwind.sdf) auf Ihrem Computer verfügen. Diese Datei befindet sich in der Regel im Ordner "%" Programm Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
+2.  Stellen Sie sicher, dass Sie über eine Kopie der Northwind-Datenbank (Northwind.sdf) auf Ihrem Computer verfügen. Diese Datei befindet sich normalerweise im Ordner %Programme%\Microsoft SQL Server Compact Edition\v3.5\Samples\\\.  
   
     > [!IMPORTANT]
-    >  In einigen Versionen von Windows können Sie keine Verbindung zu Northwind.sdf herstellen, wenn [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] nicht im Administratormodus ausgeführt wird. Zur Verbindung mit Northwind.sdf starten [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder ein [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Eingabeaufforderung in das **als Administrator ausführen** Modus.  
+    >  In einigen Versionen von Windows können Sie keine Verbindung zu Northwind.sdf herstellen, wenn [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] nicht im Administratormodus ausgeführt wird. Starten Sie zum Herstellen einer Verbindung mit Northwind.sdf [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder eine [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Eingabeaufforderung im Modus **Als Administrator ausführen**.  
   
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  
   
@@ -60,7 +57,7 @@ Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.Ba
 ## <a name="creating-the-console-application"></a>Erstellen der Konsolenanwendung  
   
 <a name="consoleApp"></a>   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], erstellen Sie eine Visual c# oder Visual Basic **Konsolenanwendung** Projekt. In diesem Dokument hat das Projekt den Namen `DataflowBatchDatabase`.  
+1.  Erstellen Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ein **Konsolenanwendungsprojekt** für Visual C# oder Visual Basic. In diesem Dokument hat das Projekt den Namen `DataflowBatchDatabase`.  
   
 2.  Fügen Sie im Projekt einen Verweis auf „System.Data.SqlServerCe.dll“ und einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   
@@ -108,7 +105,7 @@ Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.Ba
  [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
  [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]  
   
- Diese Methode ähnelt `AddEmployees`, außer dass sie auch die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse verwendet, um mehrere `Employee`-Objekte zu puffern, bevor diese Objekte an das <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>-Objekt gesendet werden. Da die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse mehrere Elemente als Auflistung weitergibt, wird das <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>-Objekt so geändert, dass es auf ein Array von `Employee`-Objekten angewendet wird. Wie bei der Methode `AddEmployees` ruft `AddEmployeesBatched` die `PostRandomEmployees`-Methode auf, um mehrere `Employee`-Objekte zu senden. `AddEmployeesBatched` sendet diese Objekte jedoch an das <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Objekt. Die `AddEmployeesBatched` -Methode wartet ebenfalls alle Einfügevorgänge abgeschlossen sind.  
+ Diese Methode ähnelt `AddEmployees`, außer dass sie auch die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse verwendet, um mehrere `Employee`-Objekte zu puffern, bevor diese Objekte an das <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>-Objekt gesendet werden. Da die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse mehrere Elemente als Auflistung weitergibt, wird das <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>-Objekt so geändert, dass es auf ein Array von `Employee`-Objekten angewendet wird. Wie bei der Methode `AddEmployees` ruft `AddEmployeesBatched` die `PostRandomEmployees`-Methode auf, um mehrere `Employee`-Objekte zu senden. `AddEmployeesBatched` sendet diese Objekte jedoch an das <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Objekt. Die `AddEmployeesBatched`-Methode wartet ebenfalls, bis alle Einfügevorgänge abgeschlossen sind.  
   
 <a name="bufferedJoin"></a>   
 ## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Verwenden einer gepufferten Gruppierung zum Lesen von Mitarbeiterdaten aus der Datenbank  

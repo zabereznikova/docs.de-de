@@ -12,15 +12,18 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>Threadingobjekte und -funktionen
 .NET Framework stellt eine Reihe von Objekten bereit, mit denen Sie Multithreadanwendungen erstellen und verwalten können. Verwaltete Threads werden durch die <xref:System.Threading.Thread>-Klasse repräsentiert. Die <xref:System.Threading.ThreadPool>-Klasse ermöglicht eine einfache Erstellung und Verwaltung von Multithreaded-Hintergrundaufgaben. Die <xref:System.ComponentModel.BackgroundWorker>-Klasse erfüllt den gleichen Zweck für Aufgaben, die mit der Benutzeroberfläche interagieren. Die <xref:System.Threading.Timer> -Klasse führt Hintergrundaufgaben in festgelegten Intervallen aus.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  Beschreibt verwaltete Event-Wait-Handles, die signalisieren und auf Signale warten und zum Synchronisieren von Threadaktivitäten verwendet werden.  
   
  [Mutexe](../../../docs/standard/threading/mutexes.md)  
- Erklärt, wie eine <xref:System.Threading.Mutex> zum Synchronisieren des Zugriffs auf ein Objekt oder zum Erstellen eigener Synchronisierungsmechanismen.  
+ Erläutert, wie ein <xref:System.Threading.Mutex> zum Synchronisieren des Zugriffs auf ein Objekt oder zum Erstellen eigener Synchronisierungsmechanismen verwendet wird.  
   
  [Interlocked-Vorgänge](../../../docs/standard/threading/interlocked-operations.md)  
  Erläutert, wie mit der <xref:System.Threading.Interlocked>-Klasse ein Wert in einem einzigen Vorgang erhöht oder verringert und gleichzeitig gespeichert wird.  

@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>„XPathNavigator“ in Transformationen
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse ermöglicht zufälligen schreibgeschützten Datenzugriff und ist als Eingabe für XSLT (Extensible Stylesheet Language for Transformations). Sie ist im <xref:System.Xml.XPath.XPathDocument>, im <xref:System.Xml.XmlDataDocument> und im <xref:System.Xml.XmlDocument> implementiert. Der <xref:System.Xml.XPath.XPathNavigator> basiert auf dem W3C-Datenmodell (World Wide Web Consortium) wie in Abschnitt 5 der XPath-Empfehlung (XML Path Language) beschrieben.  
   
  Der <xref:System.Xml.XPath.XPathNavigator> definiert ein Modell eines Cursors für einen beliebigen Datenspeicher und ermöglicht schnelle schreibgeschützte XPath-Abfragen für einen beliebigen Datenspeicher. Der <xref:System.Xml.XPath.XPathNavigator> ist auch die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird.  
   
- Mithilfe der API können Sie Informationen aus dem aktuellen Knoten in dem Speicher abrufen und zu verbundenen Knoten wechseln. Die <xref:System.Xml.XPath.XPathNavigator> ist ein Cursormodell, das Durchlaufen eines Speichers mithilfe einer Reihe von Durchlauf ausführt **verschieben** Methoden. Der <xref:System.Xml.XPath.XPathNavigator> ist immer auf einem Knoten positioniert. Alle **verschieben** Methode bewirkt, dass ein Fehler auftritt, die die <xref:System.Xml.XPath.XPathNavigator> unverändert.  
+ Mithilfe der API können Sie Informationen aus dem aktuellen Knoten in dem Speicher abrufen und zu verbundenen Knoten wechseln. Der <xref:System.Xml.XPath.XPathNavigator> ist ein Cursorstilmodell, bei dem das Durchlaufen eines Speichers mithilfe einer Gruppe von **Move**-Methoden durchgeführt wird. Der <xref:System.Xml.XPath.XPathNavigator> ist immer auf einem Knoten positioniert. Bei einem fehlerhaften Aufruf einer **Move**-Methode wird der <xref:System.Xml.XPath.XPathNavigator> nicht geändert.  
   
  Der <xref:System.Xml.XPath.XPathNavigator> ist die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird. Im folgenden Codebeispiel wird ein Ergebnisstrukturfragment in einem Stylesheet erstellt. Dabei wird die Funktion mit dem Parameter `fragment` aufgerufen, der XML enthält.  
   
@@ -70,7 +73,7 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse ermöglicht zufälligen schrei
 <root>Some text</root>  
 ```  
   
- Der folgende code verwendet die **test.xsl** Stylesheet und **test.xml** Eingabedaten.  
+ Im folgenden Code werden das **test.xsl**-Stylesheet und die **test.xml**-Eingabedaten verwendet.  
   
 ```vb  
 Imports System  
@@ -124,4 +127,4 @@ public class sample
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XslTransform-Klasse implementiert die XSLT-Prozessor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

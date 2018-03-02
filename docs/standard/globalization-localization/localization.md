@@ -20,24 +20,27 @@ helpviewer_keywords:
 - localization [.NET Framework], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>Lokalisierung
-Lokalisierung ist der Prozess der Übersetzung der Ressourcen einer Anwendung in lokalisierten Versionen für jede Kultur, die die Anwendung unterstützt. Sie sollten mit dem Lokalisierung Schritt fortfahren, erst nach dem Ausführen der [Lokalisierbarkeit](../../../docs/standard/globalization-localization/localizability-review.md) Schritt, um sicherzustellen, dass die globalisierte Anwendung für die Lokalisierung bereit ist.  
+Unter Lokalisierung versteht man den Vorgang, bei dem Anwendungsressourcen in lokalisierte Versionen für sämtliche von der Anwendung unterstützten Kulturen übersetzt werden. Sie sollten erst nach Durchführung des Schritts [Überprüfung der Lokalisierbarkeit](../../../docs/standard/globalization-localization/localizability-review.md) mit dem Lokalisierungsschritt fortfahren, um sicherzustellen, dass die globalisierte Anwendung für die Lokalisierung bereit ist.  
   
- Anwendung für die Lokalisierung bereit ist, wird in zwei grundlegende Blöcke, ein Block, der alle Elemente der Benutzeroberfläche enthält und einen Block mit ausführbarem Code getrennt. Der Benutzer-Schnittstelle-Block enthält nur lokalisierbare Benutzeroberflächenelemente wie z. B. Zeichenfolgen, Fehlermeldungen, Dialogfelder, Menüs, eingebettete Objektressourcen, und so weiter für die neutrale Kultur. Der Codeblock enthält nur den Anwendungscode, die von allen unterstützten Kulturen verwendet werden. Die common Language Runtime unterstützt eine Satellitenassembly-Ressourcenmodell, das ausführbaren Code einer Anwendung von den Ressourcen trennt. Weitere Informationen zum Implementieren dieses Modells finden Sie unter [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md).  
+ Eine zur Lokalisierung bereitstehende Anwendung wird in zwei grundlegende Blöcke unterteilt: einen Block, der alle Elemente der Benutzeroberfläche enthält, und einen Block mit ausführbarem Code. Der Benutzeroberflächenblock enthält nur lokalisierbare Benutzeroberflächenelemente für die neutrale Kultur, z.B. Zeichenfolgen, Fehlermeldungen, Dialogfelder, Menüs und eingebettete Objektressourcen. Der Codeblock enthält nur den Anwendungscode, der von allen unterstützten Kulturen verwendet werden soll. Die Common Language Runtime unterstützt ein Satellitenassembly-Ressourcenmodell, das ausführbaren Code einer Anwendung von den jeweiligen Ressourcen trennt. Weitere Informationen zur Implementierung dieses Modells finden Sie unter [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md).  
   
- Fügen Sie für jede lokalisierte Version der Anwendung eine neue Satellitenassembly, die den lokalisierten Schnittstelle-Block in der entsprechenden Sprache für die Zielkultur übersetzt enthält. Der Codeblock für alle Kulturen sollten identisch sein. Die Kombination einer lokalisierten Version des Blocks Schnittstelle Benutzer mit der Codeblock erzeugt eine lokalisierte Version der Anwendung.  
+ Fügen Sie für jede lokalisierte Version Ihrer Anwendung eine neue Satellitenassembly hinzu, die den lokalisierten Benutzeroberflächenblock enthält, der in der entsprechenden Sprache für die Zielkultur übersetzt wurde. Der Codeblock aller Kulturen sollte identisch sein. Durch die Kombination einer lokalisierten Version des Benutzeroberflächenblocks mit dem Codeblock erzeugen Sie eine lokalisierte Version Ihrer Anwendung.  
   
- Die [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] stellt das Windows Forms Resource Editor (Winres.exe), die Sie zum Lokalisieren von Windows Forms für Ziel Kulturen schnell ermöglicht. Informationen zur Verwendung dieses Tools finden Sie unter [Winres.exe (Windows Forms Resource Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
+ Das [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] stellt den Windows Forms-Ressourcen-Editor (Winres.exe) bereit, mit dem Sie im Handumdrehen Windows Forms für Zielkulturen lokalisieren können. Informationen zur Verwendung dieses Tools finden Sie unter [Winres.exe (Windows Forms-Ressourcen-Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  

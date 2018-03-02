@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="changing-case-in-net"></a>Groß-/Kleinschreibung in .NET ändern
+# <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  
   
-|Methodenname|Verwendung|  
+|Methodenname|Mit|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Konvertiert alle Zeichen in einer Zeichenfolge in Großbuchstaben.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Konvertiert alle Zeichen in einer Zeichenfolge in Kleinbuchstaben.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Konvertiert eine Zeichenfolge in Titelschreibung.|  
   
 > [!WARNING]
->  Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie unter der [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing) Abschnitt.  
+>  Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Schreibung  
@@ -55,7 +58,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Durchführung einer kulturunabhängige Änderung der Groß-/Kleinschreibung oder die schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> -methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> Objekt, das der angegebene Kultur auf die darstellt*Kultur* Parameter. Ein Beispiel für die Verwendung der <xref:System.String.ToUpper%2A> Methode, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Wenn Sie eine kulturunabhängige Änderung der Groß-/Kleinschreibung ausführen oder die Schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>-Objekt, das der angegebenen Kultur entspricht, für den *culture*-Parameter an. Ein Beispiel, in dem gezeigt wird, wie die <xref:System.String.ToUpper%2A>-Methode verwendet wird, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen, finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  Die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode entspricht der vorherigen Methode mit dem Unterschied, dass sie alle Zeichen in einer Zeichenfolge in Kleinbuchstaben konvertiert. Im folgenden Beispiel wird die Zeichenfolge „Hello World!“ in Kleinbuchstaben konvertiert.  
@@ -63,7 +66,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Durchführung einer kulturunabhängige Änderung der Groß-/Kleinschreibung oder die schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> -methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> Objekt, das der angegebene Kultur auf die darstellt*Kultur* Parameter. Ein Beispiel für die Verwendung der <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> Methode, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Wenn Sie eine kulturunabhängige Änderung der Groß-/Kleinschreibung ausführen oder die Schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>-Objekt, das der angegebenen Kultur entspricht, für den *culture*-Parameter an. Ein Beispiel, in dem gezeigt wird, wie die <xref:System.String.ToLower%28System.Globalization.CultureInfo%29>-Methode verwendet wird, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen, finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  Die <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>-Methode konvertiert das erste Zeichen jedes Worts in einen Großbuchstaben und die übrigen Zeichen in Kleinbuchstaben. Wörter, die vollständig in Großbuchstaben vorliegen, werden als Akronyme angesehen und nicht konvertiert.  

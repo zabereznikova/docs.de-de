@@ -11,48 +11,52 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to handle exceptions
+helpviewer_keywords:
+- PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 209e0c1bf89f231d03647ae4351279bfdb172e68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: db3e09bc2b285d014a7d3a6ed6fc4e50f85b537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Gewusst wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage
-Im erste Beispiel in diesem Thema wird gezeigt, wie behandelt die <xref:System.AggregateException?displayProperty=nameWithType> , die bei der Ausführung einer PLINQ-Abfrage ausgelöst werden kann. Im zweite Beispiel wird gezeigt, wie Try / Catch-Blöcke in Delegate so nah wie möglich an, in dem die Ausnahme ausgelöst wird, versetzt wird. Auf diese Weise können Sie sie abfangen, sobald sie auftreten, und die Ausführung der Abfrage möglicherweise weiterhin. Wenn Ausnahmen mittels Bubbling wieder an den Verbindungsthread übergeben werden können, ist es möglich, dass eine Abfrage nach dem Auslösen der Ausnahme weiterhin einige Elemente verarbeitet.  
+Das erste Beispiel in diesem Thema zeigt, wie die <xref:System.AggregateException?displayProperty=nameWithType> behandelt wird, die während der Ausführung von einer PLINQ-Abfrage ausgelöst werden kann. Das zweite Beispiel zeigt, wie try-catch-Blöcke in Delegaten so nah wie möglich an der Position platziert werden, an der die Ausnahme ausgelöst wird. Auf diese Weise können Sie sie sofort nach dem Auftreten abfangen und die Ausführung der Abfrage möglicherweise fortsetzen. Wenn Ausnahmen mittels Bubbling wieder an den Verbindungsthread übergeben werden können, ist es möglich, dass eine Abfrage nach dem Auslösen der Ausnahme weiterhin einige Elemente verarbeitet.  
   
- In einigen Fällen Wenn PLINQ, auf die sequenzielle Ausführung ausgewichen und eine Ausnahme auftritt, die Ausnahme möglicherweise werden direkt weitergegeben, und nicht umschlossen eine <xref:System.AggregateException>. Darüber hinaus <xref:System.Threading.ThreadAbortException>s immer direkt weitergegeben.  
+ Wenn PLINQ auf die sequenzielle Ausführung zurückgreift und eine Ausnahme auftritt, kann die Ausnahme in einigen Fällen direkt weitergegeben werden und muss nicht mit einer <xref:System.AggregateException> umschlossen werden. <xref:System.Threading.ThreadAbortException>s werden darüber hinaus immer direkt weitergegeben.  
   
 > [!NOTE]
->  Wenn "Nur eigenen Code" aktiviert ist, unterbricht Visual Studio wird in der Zeile, die die Ausnahme auslöst und zeigt eine Fehlermeldung an, die besagt, dass "nicht vom Benutzercode behandelten Ausnahme." Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den nachstehenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Zum verhindern, dass Visual Studio den ersten Fehler unterbricht, deaktivieren Sie das Kontrollkästchen "Nur eigenen Code" unter **Extras, Optionen, Debugging, Allgemein**.  
+>  Wenn „Nur eigenen Code“ aktiviert ist, unterbricht Visual Studio die Ausführung in der Zeile, die die Ausnahme auslöst, und zeigt eine Fehlermeldung zu einer nicht vom Benutzercode behandelten Ausnahme an. Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den nachstehenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Um zu verhindern, dass Visual Studio die Ausführung beim ersten Fehler unterbricht, deaktivieren Sie unter **Extras, Optionen, Debugging, Allgemein** das Kontrollkästchen „Nur eigenen Code“.  
 >   
->  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen zur Beschleunigung finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt, wie Sie den Try / Catch-Blöcke, um den Code zu konzentrieren, die Ausführung der Abfrage zum Abfangen von einem <xref:System.AggregateException?displayProperty=nameWithType>s, die ausgelöst werden.  
+ Dieses Beispiel zeigt, wie die try-catch-Blöcke um den Code herum platziert werden, der die Abfrage ausführt, um alle ausgelösten <xref:System.AggregateException?displayProperty=nameWithType>s abzufangen.  
   
  [!code-csharp[PLINQ#41](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#41)]
  [!code-vb[PLINQ#41](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#41)]  
   
- Die Abfrage kann nicht in diesem Beispiel fortgesetzt, nachdem die Ausnahme ausgelöst wird. Nach der Dauer der Anwendungscode, der die Ausnahme abfängt, wurde der PLINQ die Abfrage bereits für alle Threads beendet.  
+ In diesem Beispiel kann die Abfrage nach dem Auslösen der Ausnahme nicht fortgesetzt werden. Zu dem Zeitpunkt, an dem Ihr Anwendungscode die Ausnahme abfängt, hat PLINQ die Abfrage bereits in allen Threads beendet.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie zum Platzieren von eines Try-Catch-Blocks in einen Delegaten, die es ermöglichen, eine Ausnahme abfangen und Fortsetzen der Ausführung der Abfrage möglich wird.  
+ Das folgende Beispiel zeigt, wie Sie einen try-catch-Block in einem Delegaten platzieren, um zu ermöglichen, dass eine Ausnahme abgefangen und die Ausführung der Abfrage fortgesetzt wird.  
   
  [!code-csharp[PLINQ#42](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#42)]
  [!code-vb[PLINQ#42](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#42)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Kompilieren und Ausführen dieser Beispiele, kopieren Sie sie in PLINQ-Datenbeispiel, und rufen Sie die Methode aus.  
+-   Um diese Beispiele zu kompilieren und auszuführen, kopieren Sie sie in das PLINQ Data Sample-Beispiel und rufen die Methode aus „Main“ auf.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Abgefangen Sie eine Ausnahme nicht, es sei denn, Sie wissen, wie Sie sie behandeln, damit Sie den Status des Programms nicht beschädigt werden.  
+ Fangen Sie Ausnahmen nur ab, wenn Sie wissen, wie sie behandelt werden müssen, damit der Status Ihres Programms nicht beschädigt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.ParallelEnumerable>  

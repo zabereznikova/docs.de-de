@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallelism, data
+helpviewer_keywords:
+- parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13788542fa368bd5bcf1c2f277c9d83f84b35cdb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Datenparallelität (Task Parallel Library)
 *Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird. In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.  
   
- Die Task Parallel Library (TPL) unterstützt Datenparallelität durch die <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>-Klasse. Diese Klasse stellt methodenbasierte parallele Implementierungen von [for](~/docs/csharp/language-reference/keywords/for.md)-Schleifen und [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md)-Schleifen bereit (`For` und `For Each` in Visual Basic). Sie schreiben die Schleifenlogik für eine <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Schleife oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Schleife weitgehend auf die gleiche Weise wie eine sequenzielle Schleife. Sie müssen keine Threads erstellen oder Arbeitsaufgaben in die Warteschlange einreihen. In grundlegenden Schleifen sind keine Sperren erforderlich. Die TPL übernimmt alle Arbeiten auf niedriger Ebene für Sie. Ausführliche Informationen zur Verwendung der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, laden Sie das Dokument [Muster für parallele Programmierung: verstehen und anwenden paralleler Muster mit .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). Im folgenden Codebeispiel werden eine einfache `foreach`-Schleife und deren parallele Entsprechung dargestellt.  
+ Die Task Parallel Library (TPL) unterstützt Datenparallelität durch die <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>-Klasse. Diese Klasse stellt methodenbasierte parallele Implementierungen von [for](~/docs/csharp/language-reference/keywords/for.md)-Schleifen und [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md)-Schleifen bereit (`For` und `For Each` in Visual Basic). Sie schreiben die Schleifenlogik für eine <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Schleife oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Schleife weitgehend auf die gleiche Weise wie eine sequenzielle Schleife. Sie müssen keine Threads erstellen oder Arbeitselemente in die Warteschlange einreihen. In grundlegenden Schleifen sind keine Sperren erforderlich. Die TPL übernimmt alle Arbeiten auf niedriger Ebene für Sie. Um ausführliche Informationen über die Verwendung von <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> zu erhalten, laden Sie das Dokument zum Thema [Muster für parallele Programmierung: Verstehen und Anwenden paralleler Muster mit .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222) herunter. Im folgenden Codebeispiel werden eine einfache `foreach`-Schleife und deren parallele Entsprechung dargestellt.  
   
 > [!NOTE]
 >  Diese Dokumentation definiert Delegaten in TPL mithilfe von Lambdaausdrücken. Falls Sie mit der Verwendung von Lambda-Ausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL (Lambda-Ausdrücke in PLINQ und TPL)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -47,11 +51,11 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[How to: Write a Simple Parallel.For Loop (Vorgehensweise: Schreiben einer einfachen Parallel.For-Schleife)](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife über jedes Array oder indizierbare <xref:System.Collections.Generic.IEnumerable%601>-Quellauflistung geschrieben wird.|  
 |[How to: Write a Simple Parallel.ForEach Loop (Vorgehensweise: Schreiben einer einfachen Parallel.ForEach-Schleife)](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife über jede <xref:System.Collections.Generic.IEnumerable%601>-Quellauflistung geschrieben wird.|  
-|[Vorgehensweise: Beenden oder Verlassen einer Parallel.For-Schleife](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Beschreibt, wie eine parallele Schleife beendet oder unterbrochen wird, damit alle Threads von der Aktion informiert werden.|  
+|[Vorgehensweise: Beenden oder Verlassen einer Parallel.For-Schleife](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Beschreibt, wie eine parallele Schleife beendet oder unterbrochen wird, damit alle Threads von der Aktion informiert werden.|  
 |[How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife geschrieben wird, in der jeder Thread eine private Variable beibehält, die für alle anderen Threads nicht sichtbar ist, und wie die Ergebnisse von allen Threads synchronisiert werden, wenn die Schleife abgeschlossen wird.|  
 |[How to: Write a Parallel.ForEach Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen)](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife geschrieben wird, in der jeder Thread eine private Variable beibehält, die für alle anderen Threads nicht sichtbar ist, und wie die Ergebnisse von allen Threads synchronisiert werden, wenn die Schleife abgeschlossen wird.|  
 |[How to: Cancel a Parallel.For or ForEach Loop (Vorgehensweise: Abbrechen einer Parallel.For-Schleife oder einer ForEach-Schleife)](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Beschreibt, wie eine parallele Schleife mit einem <xref:System.Threading.CancellationToken?displayProperty=nameWithType>-Objekt abgebrochen wird|  

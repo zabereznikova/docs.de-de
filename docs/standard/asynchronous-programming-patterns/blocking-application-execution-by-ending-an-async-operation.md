@@ -14,30 +14,33 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ccca6e1e4f6b5cdf098018b59426fb2262e2b346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs
-Anwendungen, die nicht fortgesetzt werden können, andere Aufgaben während des Wartens auf die Ergebnisse eines asynchronen Vorgangs blockiert, bis der Vorgang abgeschlossen ist. Hauptthread der Anwendung blockiert wird, beim Abschluss eines asynchronen Vorgangs warten, verwenden Sie eine der folgenden Optionen:  
+Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs nicht weiterarbeiten können, werden blockiert, bis der Vorgang abgeschlossen ist. Verwenden Sie eine der folgenden Optionen, um den Hauptthread Ihrer Anwendung zu blockieren, während Sie darauf warten, dass ein asynchroner Vorgang abgeschlossen wird:  
   
--   Rufen Sie die asynchronen Vorgänge **End** *OperationName* Methode. Dieser Ansatz wird in diesem Thema veranschaulicht.  
+-   Rufen Sie die Methode **End***OperationName* für asynchrone Vorgänge auf. Dieser Ansatz wird in diesem Thema veranschaulicht.  
   
--   Verwenden der <xref:System.IAsyncResult.AsyncWaitHandle%2A> Eigenschaft von der <xref:System.IAsyncResult> zurückgegeben, die für des asynchronen Vorgangs **beginnen** *OperationName* Methode. Ein Beispiel für diesen Ansatz finden Sie unter [blockieren Anwendung Ausführung mithilfe von AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+-   Verwenden Sie die Eigenschaft <xref:System.IAsyncResult.AsyncWaitHandle%2A> des Ergebnisses <xref:System.IAsyncResult>, welches durch die Methode **Begin***OperationName* für asynchrone Vorgänge zurückgegeben wird. Ein Beispiel zur Veranschaulichung dieses Ansatzes finden Sie unter [Blockieren der Anwendungsausführung mithilfe von AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
- Anwendungen, die die **End** *OperationName* Methode blockiert, bis ein asynchroner Vorgang abgeschlossen ist in der Regel ruft der **beginnen**  *OperationName* -Methode, führen Sie alle Daten, die ausgeführt werden kann, ohne die Ergebnisse des Vorgangs, und rufen dann **End** *OperationName*.  
+ Anwendungen, die die Methode **End***OperationName* zum Blockieren verwenden, bis ein asynchroner Vorgang abgeschlossen ist, rufen in der Regel die Methode **Begin***OperationName* auf, arbeiten alle Tasks ab, die ohne die Ergebnisse des Vorgangs ausgeführt werden können, und rufen dann die Methode **End***OperationName* auf.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die Verwendung asynchroner Methoden in der <xref:System.Net.Dns> Klasse Domain Name System-Informationen für einen Benutzer angegebenen Computer abgerufen. Beachten Sie, dass `null` (`Nothing` in Visual Basic) übergeben wird, für die <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` und `stateObject` Parameter, da diese Argumente bei dieser Vorgehensweise nicht erforderlich sind.  
+ Das folgende Codebeispiel demonstriert die Verwendung von asynchronen Methoden in der <xref:System.Net.Dns>-Klasse, um Informationen aus dem Domain Name System für einen benutzerdefinierten Computer abzurufen. Beachten Sie, dass `null` (`Nothing` in Visual Basic) für die Parameter <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` und `stateObject` übergeben wird, da diese Argumente bei diesem Ansatz nicht benötigt werden.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  

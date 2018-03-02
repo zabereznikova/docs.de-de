@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen'
+title: 'Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit threadlokalen Variablen'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel foreach loop, how to use local state
+helpviewer_keywords:
+- parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen
+# <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit threadlokalen Variablen
 Im folgenden Beispiel wird gezeigt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode geschrieben wird, für die threadlokale Variablen verwendet werden. Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt. Jede Partition erhält eine eigene Kopie der "threadlokalen" Variable. (Der Begriff "threadlokal" ist hier etwas ungenau, da in einigen Fälle zwei Partitionen möglicherweise im gleichen Thread ausgeführt werden.)  
   
- Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>-Methode. Weitere Informationen finden Sie unter [wie: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>-Methode. Weitere Informationen finden Sie unter [Gewusst wie: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Um eine threadlokale Variable in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife verwenden zu können, müssen Sie eine der Methodenüberladungen aufrufen, die zwei type-Parameter erhält. Der erste type-Parameter, `TSource`, gibt den Typ des Quellelements, der zweite type-Parameter, `TLocal`, den Typ der threadlokalen Variable an.  
   
@@ -56,5 +60,5 @@ Im folgenden Beispiel wird gezeigt, wie eine <xref:System.Threading.Tasks.Parall
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+ [Gewusst wie: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
  [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

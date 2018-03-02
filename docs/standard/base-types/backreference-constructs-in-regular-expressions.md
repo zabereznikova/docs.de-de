@@ -17,15 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  
@@ -33,16 +36,16 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
 > [!NOTE]
 >  Eine separate Syntax wird verwendet, um auf benannte und nummerierte Erfassungsgruppen in Ersetzungszeichenfolgen zu verweisen. Weitere Informationen finden Sie unter [Substitutions](substitutions-in-regular-expressions.md).  
   
- .NET definiert separate Sprachelemente, um auf nummerierte und benannte Erfassungsgruppen zu verweisen. Weitere Informationen zum Aufzeichnen von Gruppen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ .NET definiert separate Sprachelemente, um auf nummerierte und benannte Erfassungsgruppen zu verweisen. Weitere Informationen zu Erfassungsgruppen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 ## <a name="numbered-backreferences"></a>Nummerierte Rückverweise  
  Ein nummerierter Rückverweis verwendet die folgende Syntax:  
   
  `\` *number*  
   
- wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *Anzahl* nicht im Muster regulären Ausdrucks definiert ist, tritt ein Analysefehler auf und löst das Modul für reguläre Ausdrücke eine <xref:System.ArgumentException>. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt.  
+ wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt.  
   
- Beachten Sie die Mehrdeutigkeit zwischen oktale Escapesequenz (wie z. B. `\16`) und `\` *Anzahl* Rückverweisen, die die gleiche Notation verwenden. Diese Mehrdeutigkeit wird wie folgt aufgelöst:  
+ Beachten Sie die Mehrdeutigkeit zwischen oktalen Escapesequenzen (z.B. `\16`) und `\`*number*-Rückverweisen mit der gleichen Notation. Diese Mehrdeutigkeit wird wie folgt aufgelöst:  
   
 -   Die Ausdrücke `\1` bis `\9` werden immer als Rückverweise und nicht als oktale Codes interpretiert.  
   
@@ -50,13 +53,13 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
 -   Ausdrücke aus `\10` und höher werden als Rückverweise betrachtet, wenn ein Rückverweis vorhanden ist, der dieser Nummer entspricht; andernfalls werden sie als oktale Codes interpretiert.  
   
--   Wenn ein regulärer Ausdruck einen Rückverweis auf eine nicht definierte Gruppe enthält, tritt ein Analysefehler auf und löst das Modul für reguläre Ausdrücke eine <xref:System.ArgumentException>.  
+-   Wenn ein regulärer Ausdruck einen Rückverweis auf eine nicht definierte Gruppennummer enthält, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus.  
   
- Wenn die Mehrdeutigkeit ein Problem darstellt, können Sie mithilfe der `\k<` *Namen* `>` Notation, die eindeutig ist und nicht mit oktalen Zeichencodes verwechselt werden. Auf ähnliche Weise sind hexadezimale Codes wie z.B. `\xdd` eindeutig und können nicht mit Rückverweisen verwechselt werden.  
+ Wenn die Mehrdeutigkeit ein Problem ist, können Sie die Notation `\k<`*name*`>` verwenden. Sie ist eindeutig und kann nicht mit oktalen Zeichencodes verwechselt werden. Auf ähnliche Weise sind hexadezimale Codes wie z.B. `\xdd` eindeutig und können nicht mit Rückverweisen verwechselt werden.  
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(\w)\1` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|Beschreibung|  
+|Element|description|  
 |-------------|-----------------|  
 |`(\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zur ersten Erfassungsgruppe.|  
 |`\1`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der ersten Erfassungsgruppe identisch ist.|  
@@ -73,14 +76,14 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  `\k'` *name* `'`  
   
- wobei *Name* der Name einer Erfassungsgruppe ist, die im Muster eines regulären Ausdrucks definiert ist. Wenn *Namen* nicht im Muster regulären Ausdrucks definiert ist, tritt ein Analysefehler auf und löst das Modul für reguläre Ausdrücke eine <xref:System.ArgumentException>.  
+ wobei *Name* der Name einer Erfassungsgruppe ist, die im Muster eines regulären Ausdrucks definiert ist. Wenn *name* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus.  
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(?<char>\w)\k<char>` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|Beschreibung|  
+|Element|description|  
 |-------------|-----------------|  
-|`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen, und weisen diese einer Erfassungsgruppe mit dem Namen `char`.|  
-|`\k<char>`|Das nächste Zeichen, die als Wert des ist, entsprechen den `char` Erfassungsgruppe.|  
+|`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zu einer Erfassungsgruppe mit dem Namen `char`|  
+|`\k<char>`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der `char`-Erfassungsgruppe identisch ist|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -95,17 +98,17 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  Das folgende Beispiel enthält ein Muster für reguläre Ausdrücke, `(?<1>a)(?<1>\1b)*`, das die Gruppe namens „\1“ neu definiert. Die folgende Tabelle beschreibt jedes Muster im regulären Ausdruck.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
-|`(?<1>a)`|Übereinstimmung mit den Zeichen "a", und weisen Sie das Ergebnis der Erfassungsgruppe mit dem Namen `1`.|  
-|`(?<1>\1b)*`|Übereinstimmung mit 0 oder 1 Vorkommen der Gruppe "mit dem Namen" `1` zusammen mit einem "b", und weisen Sie das Ergebnis der Erfassungsgruppe mit dem Namen `1`.|  
+|`(?<1>a)`|Übereinstimmung mit dem Zeichen „a“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
+|`(?<1>\1b)*`|Übereinstimmung mit null oder einem Vorkommen der Gruppe `1` zusammen mit einem „b“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  Beim Vergleich des regulären Ausdrucks mit der Eingabezeichenfolge („aababb“) führt das Modul für reguläre Ausdrücke die folgenden Vorgänge aus:  
   
-1.  Begonnen wird am Anfang der Zeichenfolge, und „a“ wird erfolgreich mit dem Ausdruck `(?<1>a)` abgeglichen. Der Wert, der die `1` -Gruppe ist jetzt "a".  
+1.  Begonnen wird am Anfang der Zeichenfolge, und „a“ wird erfolgreich mit dem Ausdruck `(?<1>a)` abgeglichen. Der Wert der Gruppe `1` ist nun „a“.  
   
 2.  Es wird zum zweiten Zeichen gewechselt, und die Zeichenfolge „ab“ wird erfolgreich mit dem Ausdruck `\1b` bzw. „ab“ abgeglichen. Anschließend wird `\1` das Ergebnis „ab“ zugewiesen.  
   
@@ -113,9 +116,9 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  In diesem Beispiel ist `*` ein Schleifenquantifizierer – er wird wiederholt ausgewertet, bis das Modul für reguläre Ausdrücke keine Entsprechung für das Muster finden kann, das es definiert. Quantifizierer, die in Schleifen durchlaufen werden, löschen keine Gruppendefinitionen.  
   
- Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird anhand des Musters des regulären Ausdrucks veranschaulicht `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, die wie folgt definiert:  
+ Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird durch das Muster des regulären Ausdrucks `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` veranschaulicht, das folgendermaßen definiert ist:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|  
 |`(\p{Lu}{2})`|Übereinstimmung mit zwei Großbuchstaben. Dies ist die erste Erfassungsgruppe.|  

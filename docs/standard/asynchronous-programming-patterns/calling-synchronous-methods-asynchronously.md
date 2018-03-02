@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Asynchrones Aufrufen von synchronen Methoden
 .NET Framework ermöglicht es, jede Methode auch asynchron aufzurufen. Hierzu definieren Sie einen Delegaten mit der gleichen Signatur wie die Methode, die Sie aufrufen möchten. Die Common Language Runtime definiert für diesen Delegaten automatisch eine `BeginInvoke` -Methode und eine `EndInvoke` -Methode mit den entsprechenden Signaturen.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Sie können das von <xref:System.IAsyncResult> zurückgegebene `BeginInvoke` abrufen, um zu ermitteln, wann der asynchrone Aufruf beendet wurde, und dann `EndInvoke`abrufen.  
   
--   Sie können einen Delegaten für eine Rückrufmethode an `BeginInvoke`übergeben. Die Methode wird bei Beendigung des asynchronen Aufrufs für einen <xref:System.Threading.ThreadPool> -Thread ausgeführt. Die Rückrufmethode ruft die `EndInvoke`-Methode auf.  
+-   Sie können einen Delegaten für eine Rückrufmethode an `BeginInvoke` übergeben. Die Methode wird bei Beendigung des asynchronen Aufrufs für einen <xref:System.Threading.ThreadPool> -Thread ausgeführt. Die Rückrufmethode ruft die `EndInvoke`-Methode auf.  
   
 > [!IMPORTANT]
 >  Unabhängig von der Vorgehensweise wird immer `EndInvoke` aufgerufen, um den asynchronen Aufruf abzuschließen.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
  Bei Verwendung eines <xref:System.Threading.WaitHandle>kann vor oder nach Abschluss des asynchronen Aufrufs eine weitere Verarbeitung erfolgen. Dies ist jedoch nur vor dem Abrufen der Ergebnisse über den Aufruf von `EndInvoke` möglich.  
   
 > [!NOTE]
->  Das Wait-Handle wird nicht automatisch geschlossen, wenn Sie `EndInvoke`aufrufen. Wenn Sie alle Verweise auf das Wait-Handle freigeben, werden Systemressourcen frei, sobald das Wait-Handle von der Garbage Collection zurückgefordert wird. Um die Systemressourcen unmittelbar nach der Verwendung des Wait-Handles freizugeben, löschen Sie es, indem Sie die <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>-Methode aufrufen. Garbage Collection arbeitet effizienter, wenn verwerfbare Objekte explizit entfernt werden.  
+>  Das Wait-Handle wird nicht automatisch geschlossen, wenn Sie `EndInvoke` aufrufen. Wenn Sie alle Verweise auf das Wait-Handle freigeben, werden Systemressourcen frei, sobald das Wait-Handle von der Garbage Collection zurückgefordert wird. Um die Systemressourcen unmittelbar nach der Verwendung des Wait-Handles freizugeben, löschen Sie es, indem Sie die <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>-Methode aufrufen. Garbage Collection arbeitet effizienter, wenn verwerfbare Objekte explizit entfernt werden.  
   
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
  Hinweise zum Beispiel:  
   
--   Die `threadId` Parameter `TestMethod` ist ein `out` Parameter ([`<Out>` `ByRef` in Visual Basic), sodass sein Eingabewert niemals von verwendet wird `TestMethod`. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.  
+-   Der `threadId`-Parameter von `TestMethod` ist ein `out`-Parameter ([`<Out>` `ByRef` in Visual Basic). Deshalb wird sein Eingabewert niemals von `TestMethod` verwendet. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.  
   
 -   Die an `BeginInvoke` übergebenen Zustandsinformationen bestehen aus einer Formatzeichenfolge, die von der Rückrufmethode zum Formatieren einer Ausgabemeldung verwendet wird. Da sie als <xref:System.Object>-Typ übergeben werden, müssen die Zustandsinformationen vor der Verwendung in den geeigneten Typ umgewandelt werden.  
   

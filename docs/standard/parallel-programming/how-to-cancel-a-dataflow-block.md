@@ -1,12 +1,8 @@
 ---
 title: 'Gewusst wie: Abbrechen eines Datenflussblocks'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,38 +12,39 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4d6fbde31cd4b4b5d0c6404b8baf23230f2bda77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Gewusst wie: Abbrechen eines Datenflussblocks
 Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivieren. In diesem Beispiel wird Windows Forms verwendet, um anzuzeigen, wo in einer Datenflusspipeline Arbeitsaufgaben aktiv sind, und um die Auswirkungen eines Abbruchs zu verdeutlichen.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
-> [!TIP]
->  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>-Namespace) ist nicht in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enthalten. Öffnen Sie zum Installieren des <xref:System.Threading.Tasks.Dataflow>-Namespace das Projekt in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wählen Sie im Menü "Projekt" die Option **NuGet-Pakete verwalten** aus, und suchen Sie online nach dem `Microsoft.Tpl.Dataflow` -Paket.  
-  
-### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
+## <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
 1.  Erstellen Sie ein C#- oder Visual Basic-**Windows Forms**-Anwendungsprojekt. In den folgenden Schritten wird das Projekt `CancellationWinForms` benannt.  
   
-2.  Im Formular-Designer für das Hauptformular "Form1.cs" ("Form1.vb" [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), Hinzufügen einer <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
+2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
-3.  Hinzufügen einer <xref:System.Windows.Forms.ToolStripButton> die Steuerung an die <xref:System.Windows.Forms.ToolStrip> Steuerelement. Festlegen der <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Eigenschaft <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft, um **Arbeitsaufgaben hinzufügen**.  
+3.  Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Arbeitselemente hinzufügen** fest.  
   
-4.  Fügen Sie eine zweite <xref:System.Windows.Forms.ToolStripButton> die Steuerung an die <xref:System.Windows.Forms.ToolStrip> Steuerelement. Festlegen der <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Eigenschaft, um <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft, um **"Abbrechen"**, und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> Eigenschaft `False`.  
+4.  Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
   
-5.  Fügen Sie vier <xref:System.Windows.Forms.ToolStripProgressBar> -Objekte und die <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
+5.  Fügen Sie vier <xref:System.Windows.Forms.ToolStripProgressBar> -Objekte zum <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
 ## <a name="creating-the-dataflow-pipeline"></a>Erstellen der Datenflusspipeline  
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflusspipeline erstellen, die Arbeitsaufgaben verarbeitet und Statusanzeigen aktualisiert.  
   
-#### <a name="to-create-the-dataflow-pipeline"></a>So erstellen Sie die Datenflusspipeline  
+### <a name="to-create-the-dataflow-pipeline"></a>So erstellen Sie die Datenflusspipeline  
   
 1.  Fügen Sie dem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   
@@ -71,25 +68,25 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
      [!code-csharp[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#4)]
      [!code-vb[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#4)]  
   
- Da sich die `incrementProgress`- und `decrementProgress`-Datenflussblöcke auf die Benutzeroberfläche auswirken, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Während der Erstellung hierzu diese Objekte bieten jeweils eine <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> Objekt mit der <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> -Eigenschaftensatz auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da der `Form1`-Konstruktor über den Benutzeroberflächenthread aufgerufen wird, werden die Aktionen für den `incrementProgress`- und den `decrementProgress`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
+ Da sich die `incrementProgress`- und `decrementProgress`-Datenflussblöcke auf die Benutzeroberfläche auswirken, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Um dies zu erreichen, stellen diese Objekte während der Erstellung ein <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>-Objekt bereit, für das die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>-Eigenschaft auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> festgelegt ist. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da der `Form1`-Konstruktor über den Benutzeroberflächenthread aufgerufen wird, werden die Aktionen für den `incrementProgress`- und den `decrementProgress`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
   
- In diesem Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> Eigenschaft, wenn sie die Elemente der Pipeline erstellt. Da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> Eigenschaft bricht dauerhaft Dataflow-Ausführung melden Block ab, die gesamte Pipeline muss neu erstellt werden, nachdem der Benutzer bricht den Vorgang ab und dann möchte mehr Arbeitsaufgaben in die Pipeline hinzufügen. Ein Beispiel für eine alternative Möglichkeit zum Abbrechen eines Datenflussblocks, die erlaubt, dass nach dem Abbrechen eines Vorgangs andere Arbeit ausgeführt wird, finden Sie unter [Exemplarische Vorgehensweise: Verwenden eines Datenflusses in einer Windows Forms-Anwendung](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ In diesem Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festgelegt, wenn sie die Elemente der Pipeline erstellt. Da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks dauerhaft abbricht, muss die gesamte Pipeline neu erstellt werden, wenn der Benutzer den Vorgang abbricht und anschließend weitere Arbeitsaufgaben zur Pipeline hinzufügen möchte. Ein Beispiel für eine alternative Möglichkeit zum Abbrechen eines Datenflussblocks, die erlaubt, dass nach dem Abbrechen eines Vorgangs andere Arbeit ausgeführt wird, finden Sie unter [Exemplarische Vorgehensweise: Verwenden eines Datenflusses in einer Windows Forms-Anwendung](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Verbinden der Datenflusspipeline mit der Benutzeroberfläche  
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflusspipeline mit der Benutzeroberfläche verbinden. Sowohl das Erstellen der Pipeline als auch das Hinzufügen von Arbeitsaufgaben zur Pipeline werden vom Ereignishandler für die Schaltfläche **Arbeitselemente hinzufügen** gesteuert. Der Abbruch wird durch die Schaltfläche **Abbrechen** initiiert. Wenn der Benutzer auf eine dieser Schaltflächen klickt, wird die entsprechende Aktion auf asynchrone Weise initiiert.  
   
-#### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>So verbinden Sie die Datenflusspipeline mit der Benutzeroberfläche  
+### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>So verbinden Sie die Datenflusspipeline mit der Benutzeroberfläche  
   
-1.  Erstellen Sie auf dem Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignis für die **Add Work Items** Schaltfläche.  
+1.  Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis der Schaltfläche **Arbeitselemente hinzufügen**.  
   
-2.  Implementieren der <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignis für die **Add Work Items** Schaltfläche.  
+2.  Implementieren Sie das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis für die Schaltfläche **Arbeitselemente hinzufügen**.  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3.  Erstellen Sie auf dem Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignishandler für das **"Abbrechen"** Schaltfläche.  
+3.  Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für den <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignishandler der Schaltfläche **Abbrechen**.  
   
-4.  Implementieren der <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignishandler für das **"Abbrechen"** Schaltfläche.  
+4.  Implementieren Sie den <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignishandler für die Schaltfläche **Abbrechen**.  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
@@ -103,8 +100,6 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
  Die folgende Abbildung zeigt die ausgeführte Anwendung.  
   
  ![Windows Forms-Anwendung](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
-  
-## <a name="robust-programming"></a>Stabile Programmierung  
-  
+
 ## <a name="see-also"></a>Siehe auch  
  [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

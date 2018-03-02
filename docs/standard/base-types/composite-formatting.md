@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 Die Funktion für die kombinierte Formatierung in .NET Framework verwendet als Eingabe eine Liste von Objekten und eine kombinierte Formatzeichenfolge. Eine kombinierte Formatzeichenfolge besteht aus festgelegtem Text mit indizierten Platzhaltern, so genannten Formatelementen, die den Objekten in der Liste entsprechen. Der Formatierungsvorgang liefert eine Ergebniszeichenfolge, die sich aus dem ursprünglichen festgelegten Text und der Zeichenfolgendarstellung der Objekte in der Liste zusammensetzt.  
@@ -49,7 +52,7 @@ Die Funktion für die kombinierte Formatierung in .NET Framework verwendet als 
 -   Die <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode, die eine Informationsmethode in Ablaufverfolgungslistener schreibt.  
   
 ## <a name="composite-format-string"></a>Kombinierte Formatzeichenfolge  
- Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Das Feature für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.  
+ Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Die Funktion für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.  
   
  Betrachten Sie das folgende <xref:System.String.Format%2A>-Codefragment:  
   
@@ -87,7 +90,7 @@ Die Funktion für die kombinierte Formatierung in .NET Framework verwendet als 
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Formatzeichenfolgen-Komponente  
- Die optionale Komponente *Formatzeichenfolge* ist eine Formatzeichenfolge, die für den formatierten Objekttyp geeignet ist. Geben Sie eine standardmäßige oder benutzerdefinierte numerische Formatierungszeichenfolge, wenn das entsprechende Objekt ein numerischer Wert ist eine standardmäßige oder benutzerdefinierte Datums- und Uhrzeitangabe Formatzeichenfolge ist das entsprechende Objekt ein <xref:System.DateTime> -Objekt, oder ein [Enumerationsformatzeichenfolge](../../../docs/standard/base-types/enumeration-format-strings.md), wenn das entsprechende Objekt ein Enumerationswert ist. Wenn *Formatzeichenfolge* nicht festgelegt ist, wird der allgemeine Formatbezeichner („G“) für einen numerischen, Datums- und Uhrzeit- oder Enumerationstyp verwendet. Der Doppelpunkt ist erforderlich, wenn *Formatzeichenfolge* angegeben wird.  
+ Die optionale Komponente *Formatzeichenfolge* ist eine Formatzeichenfolge, die für den formatierten Objekttyp geeignet ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte numerische Formatzeichenfolge an, wenn das entsprechende Objekt ein numerischer Wert ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit an, wenn das entsprechende Objekt ein <xref:System.DateTime>-Objekt ist. Geben Sie eine [Enumerationsformatzeichenfolge](../../../docs/standard/base-types/enumeration-format-strings.md) an, wenn das entsprechende Objekt ein Enumerationswert ist. Wenn *Formatzeichenfolge* nicht festgelegt ist, wird der allgemeine Formatbezeichner („G“) für einen numerischen, Datums- und Uhrzeit- oder Enumerationstyp verwendet. Der Doppelpunkt ist erforderlich, wenn *Formatzeichenfolge* angegeben wird.  
   
  Die folgende Tabelle listet Typen oder Kategorien von Typen in der .NET Framework-Klassenbibliothek auf, die einen vordefinierten Satz von Formatzeichenfolgen unterstützen, und stellt Links zu Themen bereit, die die unterstützten Formatzeichenfolgen auflisten. Beachten Sie, dass die Zeichenfolgenformatierung ein erweiterbarer Mechanismus ist, der es ermöglicht, neue Formatzeichenfolgen für alle vorhandenen Typen zu definieren und einen Satz von Formatzeichenfolgen zu definieren, der von einem anwendungsdefinierten Typ unterstützt wird. Weitere Informationen finden Sie unter den Themen zur <xref:System.IFormattable>-Schnittstelle und <xref:System.ICustomFormatter>-Schnittstelle.  
   
@@ -126,7 +129,7 @@ Die Funktion für die kombinierte Formatierung in .NET Framework verwendet als 
   
 1.  Wenn der zu formatierende Wert `null` ist, wird eine leere Zeichenfolge ("") zurückgegeben.  
   
-2.  Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Übergibt die Methode des Formatelements *"FormatString"* Wert, wenn vorhanden, oder `null` ist dies nicht der Fall, zusammen mit den <xref:System.IFormatProvider> Implementierung.  
+2.  Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Sie übergibt den *formatString*-Wert des Formatelements, sofern vorhanden, oder andernfalls `null` zusammen mit der <xref:System.IFormatProvider>-Implementierung an die Methode.  
   
 3.  Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge*-Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
   

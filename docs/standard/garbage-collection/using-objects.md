@@ -16,19 +16,22 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fd78c2f99ca5c8ffe3c753e158ceba3e0c458c5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 47ff64cab098425c5369773f792d586b65658d0f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Verwenden von Objekten, die IDisposable implementieren
 
-Die common Language Runtime Garbagecollector gibt den Arbeitsspeicher, die von verwalteten Objekten verwendet, aber Typen, die nicht verwaltete Ressourcen verwenden, implementieren die <xref:System.IDisposable> Schnittstelle, damit diese nicht verwalteten Ressourcen freigegeben werden zugeordneten Arbeitsspeicher kann. Wenn Sie ein Objekt, das <xref:System.IDisposable> implementiert, nicht mehr verwenden, sollten Sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung des Objekts aufrufen. Dazu haben Sie zwei Möglichkeiten:  
+Der Garbage Collector der Common Language Runtime gibt den Speicher frei, der von verwalteten Objekten verwendet wird. Typen jedoch, die nicht verwaltete Ressourcen verwenden, implementieren die <xref:System.IDisposable>-Schnittstelle, damit der Speicher, der diesen nicht verwalteten Ressourcen zugeordnet ist, freigegeben werden kann. Wenn Sie ein Objekt, das <xref:System.IDisposable> implementiert, nicht mehr verwenden, sollten Sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung des Objekts aufrufen. Dazu haben Sie zwei Möglichkeiten:  
   
 * Verwenden der `using`-Anweisung in C# oder der `Using`-Anweisung in Visual Basic.  
   
@@ -48,7 +51,7 @@ Beachten Sie Folgendes: Obwohl die <xref:System.IO.StreamReader>-Klasse die <xre
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-Die C#- `using` Anweisung können Sie mehrere Ressourcen in einer einzigen Anweisung abrufen intern entspricht dies geschachtelten also auch `using` Anweisungen. Im folgenden Beispiel werden zwei <xref:System.IO.StreamReader>-Objekte instanziiert, um den Inhalt von zwei verschiedenen Dateien zu lesen.  
+Mit der `using`-Anweisung in C# können Sie auch mehrere Ressourcen in einer einzigen Anweisung abrufen. Intern entspricht dies geschachtelten `using`-Anweisungen. Im folgenden Beispiel werden zwei <xref:System.IO.StreamReader>-Objekte instanziiert, um den Inhalt von zwei verschiedenen Dateien zu lesen.  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
@@ -60,12 +63,12 @@ Anstatt einen `try/finally`-Block in einer `using`-Anweisung zu umschließen, ha
   
 * Um ein Objekt zu instanziieren, das <xref:System.IDisposable> implementiert, dessen Bereich für den Block, in dem es deklariert ist, nicht lokal ist.  
   
-Das folgende Beispiel ist ähnlich wie im vorherigen Beispiel identisch, jedoch verwendet eine `try/catch/finally` Block zu instanziieren, verwenden und Freigeben einer <xref:System.IO.StreamReader> -Objekt, und ausgelöste Ausnahmen behandelt die <xref:System.IO.StreamReader> Konstruktor und die zugehörige <xref:System.IO.StreamReader.ReadToEnd%2A> Methode. Beachten Sie, dass der Code im `finally`-Block überprüft, ob das Objekt, das <xref:System.IDisposable> implementiert, nicht `null` ist, bevor die <xref:System.IDisposable.Dispose%2A>-Methode aufgerufen wird. Wird dies nicht ausgeführt, kann es zu einer <xref:System.NullReferenceException>-Ausnahme zur Laufzeit kommen.  
+Das folgende Beispiel ähnelt dem vorhergehenden, es wird jedoch ein `try/catch/finally`-Block verwendet, um ein <xref:System.IO.StreamReader>-Objekt zu instanziieren, zu verwenden und zu verwerfen, und um alle Ausnahmen zu behandeln, die von dem <xref:System.IO.StreamReader>-Konstruktor und dessen <xref:System.IO.StreamReader.ReadToEnd%2A>-Methode ausgelöst werden. Beachten Sie, dass der Code im `finally`-Block überprüft, ob das Objekt, das <xref:System.IDisposable> implementiert, nicht `null` ist, bevor die <xref:System.IDisposable.Dispose%2A>-Methode aufgerufen wird. Wird dies nicht ausgeführt, kann es zu einer <xref:System.NullReferenceException>-Ausnahme zur Laufzeit kommen.  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Sie können dieses grundlegende Muster befolgen, wenn Sie implementieren möchten oder müssen eine `try/finally` blockiert werden, da Ihre Programmiersprache unterstützt eine `using` Anweisung jedoch direkte Aufrufe zulässt die <xref:System.IDisposable.Dispose%2A> Methode. 
+Sie können dieses grundlegende Muster beibehalten, wenn Sie einen `try/finally`-Block implementieren möchten oder müssen, da Ihre Programmiersprache eine `using`-Anweisung nicht unterstützt, jedoch direkte Aufrufe der <xref:System.IDisposable.Dispose%2A>-Methode erlaubt. 
   
 ## <a name="see-also"></a>Siehe auch
 

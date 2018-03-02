@@ -16,15 +16,18 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Gewusst wie: Schreiben einer einfachen Parallel.For-Schleife
 Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode veranschaulichen. Im ersten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>-Methodenüberladung und im zweiten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>-Überladung verwendet. Dies beiden Überladungen sind die einfachsten Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode. Sie können diese beiden Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode verwenden, wenn keiner der folgenden Vorgänge erforderlich ist: Abbrechen der Schleife, vorzeitiges Beenden der Schleifeniterationen oder Beibehalten eines threadlokalen Zustands.  
@@ -49,7 +52,7 @@ Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Paral
  Wenn Code, einschließlich Schleifen, parallelisiert wird, besteht ein wichtiges Ziel darin, die Prozessoren so viel wie möglich zu nutzen, ohne den Punkt für die Parallelisierung zu überschreiten, ab dem der Aufwand für die parallele Verarbeitung jegliche Leistungsvorteile negiert. In diesem speziellen Beispiel wird nur die äußere Schleife parallelisiert, weil in der inneren Schleife nicht sehr viel Arbeit ausgeführt wird. Die Kombination aus einer kleinen Menge von Arbeit und unerwünschten Cacheeffekten kann zu Leistungseinbußen in geschachtelten parallelen Schleifen führen. Daher ist eine Parallelisierung der äußeren Schleife die beste Möglichkeit, die Vorteile der Parallelität in den meisten Systemen zu maximieren.  
   
 ## <a name="the-delegate"></a>Der Delegat  
- Der dritte Parameter dieser Überladung von <xref:System.Threading.Tasks.Parallel.For%2A> ist ein Delegat des Typs `Action<int>` in C# oder `Action(Of Integer)` in Visual Basic. Ein `Action`-Delegat gibt unabhängig davon, ob er keinen, einen oder sechzehn Typparameter hat, immer "void" zurück. In Visual Basic wird das Verhalten eines `Action`-Delegaten mit einer `Sub`-Prozedur definiert. Im Beispiel wird ein Lambdaausdruck verwendet, um den Delegaten zu erstellen. Sie können den Delegaten jedoch auch auf andere Art und Weise erstellen. Weitere Informationen finden Sie unter [Lambda-Ausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Der dritte Parameter dieser Überladung von <xref:System.Threading.Tasks.Parallel.For%2A> ist ein Delegat des Typs `Action<int>` in C# oder `Action(Of Integer)` in Visual Basic. Ein `Action`-Delegat gibt unabhängig davon, ob er keinen, einen oder sechzehn Typparameter hat, immer "void" zurück. In Visual Basic wird das Verhalten eines `Action`-Delegaten mit einer `Sub`-Prozedur definiert. Im Beispiel wird ein Lambdaausdruck verwendet, um den Delegaten zu erstellen. Sie können den Delegaten jedoch auch auf andere Art und Weise erstellen. Weitere Informationen finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="the-iteration-value"></a>Der Iterationswert  
  Der Delegat hat einen einzelnen Eingabeparameter, dessen Wert der aktuellen Iteration entspricht. Dieser Iterationswert wird von der Runtime bereitgestellt, und sein Startwert ist der Index des ersten Elements im Segment (Partition) der Quelle, die im aktuellen Thread verarbeitet wird.  
@@ -68,7 +71,7 @@ Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Paral
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Kopieren Sie diesen Code in ein Visual Studio 2010-Projekt.  
+-   Kopieren Sie diesen Code, und fügen Sie ihn in ein Visual Studio 2010-Projekt ein.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.Tasks.Parallel.For%2A>  

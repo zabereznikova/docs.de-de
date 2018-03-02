@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Globalisierung
 Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Benutzeroberflächen und regionale Daten für Benutzer verschiedener Kulturen unterstützen. Bevor Sie mit der Entwurfsphase beginnen, sollten Sie festlegen, welche Kulturen die App unterstützen soll. Auch wenn eine App standardmäßig auf eine einzige Kultur oder Region ausgerichtet ist, kann Sie so entworfen und geschrieben werden, dass sie leicht auf Benutzer in anderen Kulturen oder Regionen ausgeweitet werden kann.  
@@ -36,11 +39,11 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
  In den folgenden Abschnitten werden einige zu beachtende Probleme erläutert sowie bewährte Methoden zur Behandlung von Zeichenfolgen, Daten- und Uhrzeitwerten sowie numerischen Werten in einer globalisierten App vorgestellt.  
   
--   [Behandlung von Zeichenfolgen](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
+-   [Arbeiten mit Zeichenfolgen](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
   
-    -   [Unicode intern verwenden](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
+    -   [Interne Verwendung von Unicode](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
   
-    -   [Verwenden Sie Ressourcendateien](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
+    -   [Verwenden von Ressourcendateien](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
     -   [Suchen und Vergleichen von Zeichenfolgen](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
@@ -48,17 +51,17 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
     -   [Ordnen und Sortieren von Zeichenfolgen](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
-    -   [Zeichenfolgenverkettung vermeiden](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
+    -   [Vermeiden von Zeichenfolgenverkettung](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
 -   [Arbeiten mit Datumsangaben und Zeiten](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
-    -   [Beibehalten von Datums- und Uhrzeitangaben](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
+    -   [Beibehalten von Datums- und Zeitangaben](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [Anzeigen von Datumsangaben und Zeitangaben](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [Anzeigen von Datums- und Zeitangaben](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [Serialisierung und Zeitzonen](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Serialisierung und Unterstützung von Zeitzonen](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [Ausführen von Datums- und Uhrzeitoperationen](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [Ausführen von arithmetischen Datums- und Uhrzeitoperationen](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
 -   [Arbeiten mit numerischen Werte](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
@@ -97,7 +100,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
  Die Verwendung von Ressourcendateien hat insbesondere dann Vorteile, wenn Sie eine lokalisierte App erstellen. Wenn Sie Ressourcen in Satellitenassemblys bereitstellen, wählt die Common Language Runtime automatisch eine der Kultur entsprechende Ressource anhand der aktuellen Kultur der Benutzeroberfläche aus, wie von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft definiert. Solange Sie eine entsprechende kulturspezifische Ressource bereitstellen und ein <xref:System.Resources.ResourceManager>-Objekt ordnungsgemäß instanziieren oder eine stark typisierte Ressourcenklasse verwenden, werden die Details zum Abrufen der entsprechenden Ressourcen von der Laufzeit behandelt.  
   
- Weitere Informationen zum Erstellen von Ressourcendateien, finden Sie unter [Ressourcendateien erstellen](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Informationen zum Erstellen und Bereitstellen von Satellitenassemblys finden Sie unter [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) und [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Weitere Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Informationen zum Erstellen und Bereitstellen von Satellitenassemblys finden Sie unter [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) und [Packen und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>Suchen und Vergleichen von Zeichenfolgen  
@@ -148,7 +151,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
 |----------------------------|----------------------|---------------------|  
 |.NET Framework 2.0|Alle Betriebssysteme|Unicode 4.1|  
 |.NET Framework 3.0|Alle Betriebssysteme|Unicode 4.1|  
-|.NET Framework 3,5|Alle Betriebssysteme|Unicode 4.1|  
+|.NET Framework 3.5|Alle Betriebssysteme|Unicode 4.1|  
 |.NET Framework 4|Alle Betriebssysteme|Unicode 5.0|  
 |.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
 |.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
@@ -182,7 +185,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 -   Die <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Methode, die eine Formatzeichenfolge enthält  
   
--   Die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) Funktion, wenn er mit Datumsangaben verwendet wird  
+-   Das Feature der [kombinierten Formatierung](../../../docs/standard/base-types/composite-formatting.md) bei der Verwendung mit Datumsangaben  
   
  Im folgenden Beispiel werden Daten zum Sonnenaufgang und Sonnenuntergang für den 11. Oktober 2012 angezeigt. Die aktuelle Kultur wird zuerst auf Kroatisch (Kroatien) und dann auf Englisch (Großbritannien) festgelegt. In beiden Fällen werden die Datums- und Uhrzeitangaben im entsprechenden Format für die jeweilige Kultur angezeigt.  
   
@@ -213,7 +216,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
 ### <a name="serialization-and-time-zone-awareness"></a>Serialisierung und Unterstützung von Zeitzonen  
  Ein Datums- und Uhrzeitwert kann über mehrere Interpretationen verfügen, von der allgemeinen Uhrzeit ("Die Läden öffnen am 2. Januar 2013 um 9:00 Uhr") bis zu einem bestimmten Zeitpunkt ("Geburtsdatum: 2. Januar 2013 6:32:00 Uhr"). Wenn ein Zeitwert einen bestimmten Zeitpunkt darstellt und aus einem serialisierten Wert wiederhergestellt wird, sollten Sie sicherstellen, dass er den gleichen Zeitpunkt unabhängig vom geografischen Ort oder der Zeitzone des Benutzers repräsentiert.  
   
- Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Es speichert ein einzelner lokaler Datums- und Zeitwert als Zeichenfolge in drei [Standardformaten](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" für generelles Datum, lange Zeit, "s" für sortierbares Datum/Uhrzeit und "o" für Roundtrips Datum/Uhrzeit) sowie im Binärformat.  
+ Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Ein einzelner lokaler Datums- und Uhrzeitwert wird als Zeichenfolge in drei [Standardformaten](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) („G“ für generelles Datum, lange Zeit, „s“ für sortierbare(s) Datum/Uhrzeit und „o“ für Roundtrip für Datum/Uhrzeit) sowie im Binärformat gespeichert.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -269,7 +272,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
 ### <a name="performing-date-and-time-arithmetic"></a>Ausführen von arithmetischen Datums- und Uhrzeitoperationen  
  Der <xref:System.DateTime>- und der <xref:System.DateTimeOffset>-Typ unterstützen arithmetische Operationen. Sie können die Differenz zwischen zwei Datumswerten berechnen oder bestimmte Zeitintervalle zu einem Datumswert addieren oder davon subtrahieren. Jedoch werden bei arithmetischen Operationen für Datums- und Uhrzeitwerte keine Zeitzonen oder Regeln zur Anpassung der Zeitzone berücksichtigt. Daher kann eine Datums- und Uhrzeitarithmetik für Werte, die Zeitpunkte darstellen, fehlerhafte Ergebnisse zurückgeben.  
   
- Beispielsweise erfolgt die Umstellung von der pazifischen Normalzeit auf die pazifische Sommerzeit am zweiten Sonntag im März. Im Jahr 2013 ist dies der 10. März. Wie im folgenden Beispiel wird gezeigt, wenn Sie das Datum und Uhrzeit, 48 Stunden nach dem 9. März 2013 um 10:30 Uhr auf einem System in der Zeitzone Pacific Standard nimmt das Ergebnis, 11 März 2013 um 10:30 Uhr, nicht den Beteiligten Zeitunterschied berücksichtigt.  
+ Beispielsweise erfolgt die Umstellung von der pazifischen Normalzeit auf die pazifische Sommerzeit am zweiten Sonntag im März. Im Jahr 2013 ist dies der 10. März. Wenn Sie wie im folgenden Beispiel gezeigt auf einem System in der Zeitzone Pacific Standard Time Datum und Uhrzeit 48 Stunden nach dem 9. März 2013 um 10:30 Uhr berechnen, wird beim Ergebnis (11. März 2013 um 10:30 Uhr) nicht der beteiligte Zeitunterschied berücksichtigt.  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -287,7 +290,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- Weitere Informationen finden Sie unter [Ausführen von arithmetischen Operationen mit Datumsangaben und Uhrzeiten](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
+ Weitere Informationen finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>Verwenden kulturabhängiger Namen für Datumselemente  
  Ihre App muss möglicherweise den Namen des Monats oder des Wochentags anzeigen. Hierzu wird normalerweise ein Code wie der folgende verwendet.  
@@ -297,7 +300,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
  Allerdings gibt dieser Code immer die Namen der Wochentage auf Englisch zurück. Code, der den Namen des Monats extrahiert, ist oft noch weniger flexibel. Oft wird von einem Zwölf-Monats-Kalender mit Namen von Monaten in einer bestimmten Sprache ausgegangen.  
   
- Mithilfe von [benutzerdefinierten Formatbezeichner für Datum und Uhrzeit-Formatzeichenfolgen](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) oder die Eigenschaften der der <xref:System.Globalization.DateTimeFormatInfo> Objekt ist ganz einfach zum Extrahieren von Zeichenfolgen, die die Namen von Tagen der Woche oder des Monats, in der Kultur des Benutzers, widerspiegeln, wie im folgenden Beispiel veranschaulicht. Die aktuelle Kultur wird in Französisch (Frankreich) geändert, und die Namen des Wochentags und des Monats werden für den 1. Juli 2013 angezeigt.  
+ Durch [benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) oder die Eigenschaften des <xref:System.Globalization.DateTimeFormatInfo>-Objekts können Zeichenfolgen, die die Namen von Wochentagen oder Monaten in der Kultur des Benutzers darstellen, leicht extrahiert werden. Dies wird im folgenden Beispiel veranschaulicht. Die aktuelle Kultur wird in Französisch (Frankreich) geändert, und die Namen des Wochentags und des Monats werden für den 1. Juli 2013 angezeigt.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 -   Die `ToString(String)`-Methode eines die oft ausgegebene Befehlszeilen  numerischen Typs, der eine Formatzeichenfolge als Argument enthält  
   
--   Die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) Funktion, wenn er mit numerischen Werten verwendet wird  
+-   Das Feature der [kombinierten Formatierung](../../../docs/standard/base-types/composite-formatting.md) bei der Verwendung mit numerischen Werten  
   
  Im folgenden Beispiel wird die Durchschnittstemperatur pro Monat in Paris, Frankreich, angezeigt. Zuerst wird die aktuelle Kultur auf Französisch (Frankreich) festgelegt, bevor die Daten anzeigt werden. Anschließend wird die Kultur auf Englisch (USA) festgelegt. In beiden Fällen werden die Monatsnamen und Temperaturen im entsprechenden Format für die jeweilige Kultur angezeigt. Beachten Sie, dass die zwei Kulturen verschiedene Dezimaltrennzeichen beim Temperaturwert verwenden. Beachten Sie außerdem, dass im Beispiel die benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge "MMMM" verwendet wird, um den vollständigen Monatsnamen anzuzeigen, und dass in der Ergebniszeichenfolge ausreichend Platz für den Monatsnamen zugeordnet wird, indem die Länge des längsten Monatsnamens im <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>-Array ermittelt wird.  
   
@@ -374,7 +377,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 -   .NET Framework unterstützt Ersatzkulturen. Dadurch ist es möglich, eine neue benutzerdefinierte Kultur zu definieren, die bestehende Standardkulturen ergänzt oder vollständig ersetzt.  
   
--   Der Benutzer kann kulturspezifische Einstellungen anpassen, mithilfe der **Region und Sprache** app in der Systemsteuerung. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das er erwartet.  
+-   Der Benutzer kann kulturspezifische Einstellungen über die App **Region und Sprache** in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das er erwartet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  

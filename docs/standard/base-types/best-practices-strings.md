@@ -1,5 +1,5 @@
 ---
-title: "Bewährte Methoden für die Verwendung von Zeichenfolgen in .NET"
+title: "Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Bewährte Methoden für die Verwendung von Zeichenfolgen in .NET
-<a name="top"></a>.NET bietet umfangreiche Unterstützung für die Entwicklung von lokalisierten und globalisierten Anwendungen und erleichtert es die Konventionen der aktuellen Kultur oder einer bestimmten Kultur anwenden bei allgemeinen Vorgängen wie Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.  
+# <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
+<a name="top"></a> .NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Vorgänge das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.  
   
- In diesem Thema untersucht die Sortierung, Vergleichsoperatoren und Schreibweise Methoden in .NET, stellt Vorschläge zum Auswählen einer geeigneten Methode für die Behandlung von Zeichenfolgen und bietet weitere Informationen zur Behandlung von Zeichenfolgen-Methoden. Er wird außerdem untersucht, wie formatierte Daten, z. B. numerische Daten und Datums-/Uhrzeitdaten, für die Anzeige und Speicherung behandelt werden.  
+ In diesem Thema werden die Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen in .NET untersucht. Darüber hinaus werden Empfehlungen zum Auswählen einer entsprechenden Zeichenfolgen-Verarbeitungsmethode gegeben und weitere Informationen dazu bereitgestellt. Er wird außerdem untersucht, wie formatierte Daten, z. B. numerische Daten und Datums-/Uhrzeitdaten, für die Anzeige und Speicherung behandelt werden.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Verwenden Sie die <xref:System.String.Compare%2A?displayProperty=nameWithType>- und <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methoden zum Sortieren von Zeichenfolgen, und nicht, um eine Überprüfung auf Gleichheit durchzuführen.  
   
--   Verwenden Sie kulturabhängige Formatierung, um Daten, die keine Zeichenfolge sind, z. B. Zahlen und Datumsangaben, auf einer Benutzeroberfläche anzuzeigen. Verwenden Sie Formatierung mit der invarianten Kultur, um Daten, die keine Zeichenfolge sind, im Zeichenfolgenformat beizubehalten.  
+-   Verwenden Sie kulturabhängige Formatierung, um Daten, die keine Zeichenfolge sind, z. B. Zahlen und Datumsangaben, auf einer Benutzeroberfläche anzuzeigen. Verwenden Sie Formatierung mit der invarianten Kultur, um Daten, die keine Zeichenfolge sind, im Zeichenfolgenformat beizubehalten.  
   
  Vermeiden Sie folgende Vorgehensweisen bei der Verwendung von Zeichenfolgen:  
   
@@ -86,13 +89,13 @@ ms.lasthandoff: 10/18/2017
   
 -   Verwenden Sie nicht kulturabhängige Formatierung, um numerische Daten oder Datums-/Uhrzeitdaten im Zeichenfolgenformat beizubehalten.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="specifying_string_comparisons_explicitly"></a>   
 ## <a name="specifying-string-comparisons-explicitly"></a>Explizites Angeben von Zeichenfolgenvergleichen  
  Die Methoden zum Bearbeiten von Zeichenfolgen in .NET werden i.d.R. überladen. Während einige Überladungen normalerweise Standardwerte akzeptieren, geben andere Überladungen exakt an, wie Zeichenfolgen verglichen oder bearbeitet werden sollen. Methoden, die keine Standardwerte verwenden, enthalten i. d. R einen Parameter vom Typ <xref:System.StringComparison>. Dabei handelt es sich um eine Enumeration, die explizit Regeln für Zeichenfolgenvergleiche anhand von Kultur und Schreibweise angibt. In der folgenden Tabelle werden die Member der <xref:System.StringComparison> -Enumeration beschrieben.  
   
-|StringComparison-Member|Beschreibung|  
+|StringComparison-Member|description|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Führt einen Vergleich mit der aktuellen Kultur unter Beachtung der Groß- und Kleinschreibung durch.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Führt einen Vergleich mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung durch.|  
@@ -123,7 +126,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Strings.BestPractices#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#2)]
  [!code-vb[Conceptual.Strings.BestPractices#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#2)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Details zum Zeichenfolgenvergleich  
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Überladungen.  
   
--   Die <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter.  
+-   Die <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter  
   
--   Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter.  
+-   Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter  
   
 -   <xref:System.String.IndexOf%2A?displayProperty=nameWithType>-Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison>-Parameter aufweisen.  
   
@@ -160,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  Wenn nicht linguistische Zeichenfolgendaten linguistisch interpretiert werden, oder wenn Zeichenfolgendaten in einer bestimmten Kultur mit den Konventionen einer anderen Kultur interpretiert werden, können offensichtliche und nur schwer erkennbare Fehler auftreten. Kanonisches Beispiel ist das Problem mit dem Zeichen "I" im Türkischen.  
   
- In beinahe allen lateinischen Alphabetarten,  einschließlich des englischen (USA) Alphabets, ist das Zeichen "i" (\u0069) die Kleinschreibungsvariante des Zeichens "I" (\u0049). Diese Regel zur Groß- und Kleinschreibung wird von Entwicklern, die in den entsprechenden Kulturen programmieren, leicht als Standard zugrunde gelegt. Das türkische Alphabet ("tr-TR") enthält jedoch ein "I" mit einem Punkt ("İ" bzw. \u0130), welches den Großbuchstaben des Zeichens "i" darstellt. Ferner verfügt Türkisch auch über ein kleines "i ohne Punkt ("ı" bzw. \u0131), dessen Entsprechung als Großbuchstabe das Zeichen "I" ist. Die Kultur Aserbaidschanisch (az-AZ) weist ein analoges Verhalten auf.  
+ In beinahe allen lateinischen Alphabetarten,  einschließlich des englischen (USA) Alphabets, ist das Zeichen "i" (\u0069) die Kleinschreibungsvariante des Zeichens "I" (\u0049). Diese Regel zur Groß- und Kleinschreibung wird von Entwicklern, die in den entsprechenden Kulturen programmieren, leicht als Standard zugrunde gelegt. Das türkische Alphabet („tr-TR“) enthält jedoch ein „I“ mit einem Punkt („İ“ bzw. \u0130), welches den Großbuchstaben des Zeichens „i“ darstellt. Ferner verfügt Türkisch auch über ein kleines „i ohne Punkt“ („ı“ bzw. \u0131), dessen Entsprechung als Großbuchstabe das Zeichen „I“ ist. Die Kultur Aserbaidschanisch (az-AZ) weist ein analoges Verhalten auf.  
   
  Annahmen über die Großschreibung von "i" oder die Kleinschreibung von "I" sind daher nicht für alle Kulturen gleichermaßen gültig. Wenn Sie die Standardüberladungen für Zeichenfolgenvergleichsroutinen verwenden, weisen diese je nach der zugrunde liegenden Kultur Unterschiede auf. Bei einem Vergleich nicht linguistischer Daten kann die Verwendung der Standardüberladungen zu unerwünschten Ergebnissen führen. Dies wird durch den folgenden Versuch veranschaulicht, einen Vergleich der Zeichenfolgen "file" und "FILE" ohne Beachtung der Groß- und Kleinschreibung durchzuführen.  
   
@@ -230,11 +233,11 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
   
- Wenn sie Dateinamen, Cookies oder andere Elemente interpretieren, die eine Kombination wie "å" enthalten können, bieten Ordinalvergleiche immer noch das transparenteste und am besten geeignete Verhalten an.  
+ Wenn sie Dateinamen, Cookies oder andere Elemente interpretieren, die eine Kombination wie „å“ enthalten können, bieten Ordinalvergleiche immer noch das transparenteste und am besten geeignete Verhalten an.  
   
  Insgesamt verfügt die invariante Kultur nur über sehr wenige Eigenschaften, die für einen Vergleich hilfreich sind. Sie führt Vergleiche mit linguistischer Relevanz durch und kann daher keine vollständige symbolische Äquivalenz garantieren, eignet sich jedoch nicht unbedingt für die Anzeige in einer beliebigen Kultur. Einer der wenigen Gründe, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> für Vergleiche zu verwenden, besteht darin, sortierte Daten für die kulturübergreifend einheitliche Anzeige beizubehalten. Wenn beispielsweise eine große Datendatei mit einer Liste sortierter Anzeigebezeichner einer Anwendung angehört, würde das Hinzufügen von Elementen zu dieser Liste einen Einfügevorgang mit invarianter Sortierung erfordern.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="choosing_a_stringcomparison_member_for_your_method_call"></a>   
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Auswählen eines StringComparison-Members für den Methodenaufruf  
@@ -244,10 +247,10 @@ ms.lasthandoff: 10/18/2017
 |----------|--------------|-----------------------------------------------------|  
 |Interne Bezeichner, die die Groß- und Kleinschreibung beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung beachten.<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung beachten.|Ein nicht linguistischer Bezeichner mit exakt übereinstimmenden Bytes.|<xref:System.StringComparison.Ordinal>|  
 |Interne Bezeichner, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Dateipfade.<br /><br /> Registrierungsschlüssel und -werte.<br /><br /> Umgebungsvariablen.<br /><br /> Ressourcenbezeichner (z. B. Handlenamen).<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung nicht beachten.|Ein nicht linguistischer Bezeichner, bei dem die Groß- und Kleinschreibung keine Rolle spielt; insbesondere für Daten, die in den meisten Systemdiensten von Windows gespeichert werden.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> - oder - <br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> - oder - <br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
 ## <a name="common-string-comparison-methods-in-net"></a>Allgemeine Methoden zum Zeichenfolgenvergleich in .NET  
@@ -301,7 +304,7 @@ ms.lasthandoff: 10/18/2017
   
  Wenn Sie die <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>-Methode oder die <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>-Methode aufrufen und eine Zeichenfolge übergeben, die in der aktuellen Instanz gesucht werden soll, empfiehlt es sich, eine Überladung aufrufen, die den <xref:System.StringComparison>-Typ explizit angibt. Mit den Überladungen, die ein <xref:System.Char> -Argument enthalten, können Sie keinen <xref:System.StringComparison> -Typ angeben.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="methods_that_perform_string_comparison_indirectly"></a>   
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Methoden für den indirekten Zeichenfolgenvergleich  
@@ -345,7 +348,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Strings.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
  [!code-vb[Conceptual.Strings.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="Formatted"></a>   
 ## <a name="displaying-and-persisting-formatted-data"></a>Anzeigen und Beibehalten von formatierten Daten  

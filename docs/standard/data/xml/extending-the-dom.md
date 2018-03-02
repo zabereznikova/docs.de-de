@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Erweitern des DOM
-Microsoft .NET Framework enthält einen Basisgruppe an Klassen, die eine Implementierung des XML-Dokument Objekt Model (DOM) bereitstellt. Die <xref:System.Xml.XmlNode>-Klasse und deren abgeleitete Klassen stellen Methoden und Eigenschaften zum Navigieren, Abfragen und Ändern des Inhalts und der Struktur von XML-Dokumenten bereit.  
+Microsoft .NET Framework enthält einen Basisgruppe an Klassen, die eine Implementierung des XML-DOM (Document Object Model) bereitstellt. Die <xref:System.Xml.XmlNode>-Klasse und deren abgeleitete Klassen stellen Methoden und Eigenschaften zum Navigieren, Abfragen und Ändern des Inhalts und der Struktur von XML-Dokumenten bereit.  
   
  Wenn XML-Inhalte mit einem DOM in den Speicher geladen werden, entalten die erstellten Knoten Informationen wie Knotenname, Knotentyp usw. Es kann durchaus vorkommen, dass Sie bestimmte Knoteninformationen benötigen, die von den Basisklassen nicht bereitgestellt werden. Sie möchten beispielsweise eventuell die Zeilennummer und die Position des Knotens wissen. In diesem Fall können Sie von den vorhandenen DOM-Klassen neue Klassen ableiten und zusätzliche Funktionalitäten hinzufügen.  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  Der Prozess der Ereignisbehandlung läuft in den abgeleiteten Klassen genauso ab wie in den urspünglichen DOM-Klassen.  
   
- Weitere Informationen zur Behandlung von Ereignissen Knoten finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Weitere Informationen zur Ereignisbehandlung bei Knoten finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>Standardattribute und die CreateElement-Methode  
- Wenn Sie die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode in einer abgeleiteten Klasse überschreiben, werden keine Standardattribute hinzugefügt, wenn Sie während der Bearbeitung des Dokuments neue Elemente erstellen. Dieses Problem besteht nur während der Bearbeitung. Da die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode für das Hinzufügen von Standardattributen zu einer <xref:System.Xml.XmlDocument>-Klasse verantwortlich ist, müssen Sie die Funktionalität in der <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode codieren. Wenn Sie eine <xref:System.Xml.XmlDocument>-Klasse laden, die Standardattribute enthält, werden diese korrekt behandelt. Weitere Informationen zu Standardattributen finden Sie unter [Erstellen von neuen Attributen für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+ Wenn Sie die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode in einer abgeleiteten Klasse überschreiben, werden keine Standardattribute hinzugefügt, wenn Sie während der Bearbeitung des Dokuments neue Elemente erstellen. Dieses Problem besteht nur während der Bearbeitung. Da die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode für das Hinzufügen von Standardattributen zu einer <xref:System.Xml.XmlDocument>-Klasse verantwortlich ist, müssen Sie die Funktionalität in der <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode codieren. Wenn Sie eine <xref:System.Xml.XmlDocument>-Klasse laden, die Standardattribute enthält, werden diese korrekt behandelt. Weitere Informationen zu Standardattributen finden Sie unter [Erstellen neuer Attribute für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

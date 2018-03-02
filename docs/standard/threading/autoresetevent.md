@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], AutoResetEvent class
 - AutoResetEvent class
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 69d16e8c6491b4c66ab5a5452762e73172ebbb77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 71933d0be804fdf68b0dc602902343f2d88b8c82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
-Die <xref:System.Threading.AutoResetEvent> -Klasse stellt ein lokales Wait-Handle-Ereignis, das automatisch zurückgesetzt, wenn nach der Freigabe eines einzelnen wartenden Threads signalisiert, dar. Diese Klasse stellt einen Sonderfall ihrer Basisklasse <xref:System.Threading.EventWaitHandle>. Informationen zur Verwendung und zu den Features von Ereignissen für automatisches Zurücksetzen finden Sie in der Dokumentation zu [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md).  
+Die <xref:System.Threading.AutoResetEvent>-Klasse stellt ein lokales Wait-Handleereignis dar, das, sofern es den Zustand „signalisiert“ aufweist, automatisch zurückgesetzt wird, nachdem ein einzelner wartender Thread freigegeben wurde. Diese Klasse stellt einen Sonderfall ihrer Basisklasse <xref:System.Threading.EventWaitHandle> dar. Informationen zur Verwendung und zu den Features von Ereignissen für automatisches Zurücksetzen finden Sie in der Dokumentation zu [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md).  
   
- Ein <xref:System.Threading.AutoResetEvent> Objekt wird automatisch vom System zurückgesetzt zu nicht signalisierten nach der Freigabe eines einzelnen wartenden Threads. Wenn sich keine Threads in Warteposition befinden, verbleibt das Ereignisobjekt im signalisierten Zustand. <xref:System.Threading.AutoResetEvent>entspricht einem Win32- `CreateEvent` aufzurufen, Angeben von `false` für die `bManualReset` Argument.  
+ Ein <xref:System.Threading.AutoResetEvent>-Objekt wird nach der Freigabe eines einzelnen wartenden Threads vom System automatisch auf den Zustand „nicht signalisiert“ zurückgesetzt. Wenn sich keine Threads in Warteposition befinden, verbleibt das Ereignisobjekt im signalisierten Zustand. <xref:System.Threading.AutoResetEvent> entspricht einem Win32-`CreateEvent`-Aufruf, wobei `false` für das `bManualReset`-Argument angegeben wird.  
   
- Ein Beispiel, verwendet <xref:System.Threading.AutoResetEvent>, finden Sie unter [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Ein Beispiel, in dem <xref:System.Threading.AutoResetEvent> verwendet wird, finden Sie unter [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.ManualResetEvent>  

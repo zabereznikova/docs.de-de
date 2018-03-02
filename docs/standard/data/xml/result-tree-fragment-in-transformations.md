@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1a4b585fe34a841061f8e5bab7cb18a58f53cfe8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04e23f39f522fca7f69aa86be7036320a5698a60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Ergebnisstrukturfragment in Transformationen
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Finden Sie unter [mithilfe der Klasse "XslCompiledTransform"](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) für Weitere Informationen.  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Ergebnisstrukturfragmente sind lediglich spezielle Knotengruppentypen. Für sie können dieselben Funktionen ausgeführt werden wie für Knotengruppen. Außerdem können Ergebnisstrukturfragmente mit der `node-set()`-Funktion in Knotengruppen konvertiert und anschließend überall verwendet werden, wo eine Knotengruppe verwendet werden kann.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: "Boolean" (boolescher Wert), "string" (Zeichenfolge), "number" (Zahl) oder "node set" (Knotengruppe). Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.  
   
- Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der W3C-Spezifikation unter www.w3.org/XSLT, Abschnitt 11.1, "Result Tree Fragments", bis Abschnitt 11.6, "Passing Parameters to Templates", erörtert. Darüber hinaus werden in Abschnitt 1, "Introduction", Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.  
+ Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der W3C-Spezifikation unter www.w3.org/XSLT, Abschnitt 11.1, „Result Tree Fragments“, bis Abschnitt 11.6, „Passing Parameters to Templates“, erörtert. Darüber hinaus werden in Abschnitt 1, "Introduction", Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.  
   
  Ein Ergebnisstrukturfragment verhält sich im Grunde wie eine Knotengruppe mit lediglich einem einzelnen Stammknoten. Die übrigen zurückgegebenen Knoten sind jedoch untergeordnete Knoten. Zur programmgesteuerten Anzeige der untergeordneten Knoten kopieren Sie das Ergebnisstrukturfragment mithilfe des `<xsl:copy-of>`-Elements in die Ergebnisstruktur. Beim Ausführen des copy-of-Vorgangs werden auch alle untergeordneten Knoten der Reihe nach in die Ergebnisstruktur kopiert. Erst wenn `copy` oder `copy-of` verwendet wird, ist ein Ergebnisstrukturfragment Teil der Ergebnisstruktur oder der Transformationsausgabe.  
   
@@ -202,4 +205,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XPath.XPathNodeIterator>  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  [XSLT-Transformationen mit der XslTransform-Klasse](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XslTransform-Klasse implementiert die XSLT-Prozessor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen
 In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltweit einsatzfähigen Anwendungen beschrieben.  
@@ -57,7 +60,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
   
 9. Testen Sie die Funktionsfähigkeit der Anwendung in internationalen Betriebssystemen und mit internationalen Daten.  
   
-10. Wenn eine Sicherheitsentscheidung auf dem Ergebnis eines Zeichenfolgenvergleichs oder der Änderung der Groß-/Kleinschreibung beruht, führen Sie in der Anwendung eine kulturunabhängige Operation aus. Auf diese Weise stellen Sie sicher, dass das Ergebnis nicht vom Wert von `CultureInfo.CurrentCulture` beeinflusst wird. Finden Sie im Abschnitt "Zeichenfolge vergleichen, verwenden die aktuelle Kultur" [bewährte Methoden für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md) für ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenoperationen können Vergleiche zu inkonsistenten Ergebnissen führen.  
+10. Wenn eine Sicherheitsentscheidung auf dem Ergebnis eines Zeichenfolgenvergleichs oder der Änderung der Groß-/Kleinschreibung beruht, führen Sie in der Anwendung eine kulturunabhängige Operation aus. Auf diese Weise stellen Sie sicher, dass das Ergebnis nicht vom Wert von `CultureInfo.CurrentCulture` beeinflusst wird. Im Abschnitt „Zeichenfolgenvergleiche mit der aktuellen Kultur“ im Artikel [Bewährte Methoden für die Verwendung von Zeichenfolgen in .NET](../../../docs/standard/base-types/best-practices-strings.md) finden Sie ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenvergleiche zu inkonsistenten Ergebnissen führen können.  
   
 ## <a name="localization-best-practices"></a>Empfohlene Vorgehensweise für die Lokalisierung  
   
@@ -73,15 +76,15 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
   
 6.  Vermeiden Sie in der Anwendung die Verwendung von Bildern und Symbolen, die Text enthalten. Das Lokalisieren dieser Texte ist teuer.  
   
-7.  Für die Zeichenfolgen sollte auf der Benutzeroberfläche viel Platz vorhanden sein, In einigen Sprachen sind für manche Ausdrücke 50 bis 75 % mehr Platz als in anderen Sprachen erforderlich.  
+7.  Für die Erweiterung der Zeichenfolgen sollte auf der Benutzeroberfläche viel Platz vorhanden sein. In einigen Sprachen sind für manche Ausdrücke 50 bis 75 % mehr Platz als in anderen Sprachen erforderlich.  
   
 8.  Verwenden Sie die <xref:System.Resources.ResourceManager?displayProperty=nameWithType>-Klasse, um Ressourcen basierend auf der Kultur abzurufen.  
   
-9. Visual Studio verwenden, um Windows Forms-Dialogfelder zu erstellen, damit sie lokalisiert werden können, mit der [Windows Forms Resource Editor (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Windows Forms-Dialogfelder dürfen nicht manuell codiert werden.  
+9. Verwenden Sie Visual Studio zum Erstellen von Windows Forms-Dialogfeldern, sodass diese mit dem [Windows Forms Resource Editor (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) lokalisiert werden können. Windows Forms-Dialogfelder dürfen nicht manuell codiert werden.  
   
 10. Es empfiehlt sich, eine professionelle Lokalisierung (Übersetzung) anfertigen zu lassen.  
   
-11. Eine vollständige Beschreibung des Erstellens und lokalisierens von Ressourcen, finden Sie unter [Ressourcen in Anwendungen](../../../docs/framework/resources/index.md).  
+11. Eine vollständige Beschreibung des Erstellens und Lokalisierens von Ressourcen finden Sie unter [Ressourcen in Anwendungen](../../../docs/framework/resources/index.md).  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>Empfohlene Vorgehensweise für die Globalisierung von ASP.NET-Anwendungen  
   
@@ -99,9 +102,9 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
   
 4.  Geben Sie die Werte für das requestEncoding-Attribut, das responseEncoding-Attribut, das fileEncoding-Attribut, das culture-Attribut und das uiCulture-Attribut an den folgenden drei Stellen in der ASP.NET-Anwendung an:  
   
-    -   Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [ \<Globalization >-Element](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [\<globalization>-Element](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
-    -   In einer Seitenanweisung. Wenn sich eine Anwendung auf einer Seite befindet, wurde die Datei bereits gelesen. Daher können für fileEncoding und requestEncoding keine Werte mehr festgesetzt werden. Nur für uiCulture, Culture und responseEncoding können in einer Seitendirektive Werte angegeben werden.  
+    -   In einer Seitenanweisung. Wenn sich eine Anwendung auf einer Seite befindet, wurde die Datei bereits gelesen. Daher können für fileEncoding und requestEncoding keine Werte mehr festgesetzt werden. Nur für uiCulture, Culture und responseEncoding können in einer Seitenanweisung Werte angegeben werden.  
   
     -   Programmgesteuert im Anwendungscode. Diese Einstellung kann auf Anforderung geändert werden. Wie bei der Seitendirektive ist es bei Erreichen des Anwendungscodes bereits zu spät für die Festlegung von Werten für fileEncoding und requestEncoding. Nur uiCulture, Culture und responseEncoding können im Anwendungscode angegeben werden.  
   

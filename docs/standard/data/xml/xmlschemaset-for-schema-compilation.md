@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -254,9 +257,9 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  Das <xref:System.Xml.Schema.XmlSchemaSet> versucht, ein Schema für den `http://www.contoso.com`-Namespace durch Laden aus der URL `http://www.contoso.com/schema.xsd` zu importieren. Im Importschema sind nur die Schemadeklaration und die im Schemadokument deklarierten Typen verfügbar, obwohl im `http://www.contoso.com` andere Schemadokumente für den <xref:System.Xml.Schema.XmlSchemaSet>-Namespace vorhanden sind. Wenn die `schema.xsd`-Datei nicht unter der URL `http://www.contoso.com/schema.xsd` gefunden werden kann, wird kein Schema für den `http://www.contoso.com`-Namespace in das Importschema importiert.  
   
 ## <a name="validating-xml-documents"></a>Validierung von XML-Dokumenten  
- XML-Dokumente können anhand von Schemata in einem <xref:System.Xml.Schema.XmlSchemaSet> validiert werden. Sie validieren ein XML-Dokument, indem Sie der <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts ein Schema hinzufügen oder indem Sie der <xref:System.Xml.Schema.XmlSchemaSet>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Objekts ein <xref:System.Xml.XmlReaderSettings> hinzufügen. Das <xref:System.Xml.XmlReaderSettings>-Objekt wird anschließend von der <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse verwendet, um ein <xref:System.Xml.XmlReader>-Objekt zu erstellen und um das XML-Dokument zu validieren.  
+ XML-Dokumente können anhand von Schemata in einem <xref:System.Xml.Schema.XmlSchemaSet> validiert werden. Sie validieren ein XML-Dokument, indem Sie der <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts ein Schema hinzufügen oder indem Sie der <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts eine <xref:System.Xml.Schema.XmlSchemaSet>-Klasse hinzufügen. Das <xref:System.Xml.XmlReaderSettings>-Objekt wird anschließend von der <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse verwendet, um ein <xref:System.Xml.XmlReader>-Objekt zu erstellen und um das XML-Dokument zu validieren.  
   
- Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>, finden Sie unter [Validierung eines XML-Schema (XSD) mit "XmlSchemaSet"](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
@@ -266,5 +269,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- ["XmlSchemaSet" als eine Schemacache](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Validierung von XML-Schemas (XSD) mit "XmlSchemaSet"](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+ [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

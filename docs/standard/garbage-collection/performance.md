@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 <a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Debuggen mit SOS  
- Sie können den [Windows-Debugger (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) verwenden, um Objekte auf dem verwalteten Heap zu überprüfen.  
+ Sie können den [Windows-Debugger (WinDbg)](/windows-hardware/drivers/debugger/index) verwenden, um Objekte auf dem verwalteten Heap zu überprüfen.  
   
  Um WinDbg zu installieren, installieren Sie die Debugtools für Windows von der [WDK- und Entwicklertool-Website](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
@@ -422,7 +425,7 @@ ms.lasthandoff: 10/18/2017
   
      Wenn der verwaltete Heap groß ist, kann die Ausführung von **dumpheap** eine Weile dauern.  
   
-     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Beispiel:  
+     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Zum Beispiel:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -571,7 +574,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Der folgende Befehl gibt den freien Platz im Bereich der Generation 0 aus:  
   
-     **! Dumpheap-Geben Sie kostenlose - Stat 0x49521f8c 49e05d04**  
+     **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
      Daraus ergibt sich folgendes Ergebnis.  
   

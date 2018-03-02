@@ -3,45 +3,36 @@ title: "Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)"
 description: "Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können."
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
-ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
-Ab C# 7 unterstützt C# Verweisrückgabewerte (ref-Rückgaben). Mit einem Verweisrückgabewert kann eine Methode einen Verweis auf ein Objekt statt einen Wert an eine aufrufende Funktion zurückgeben. Die aufrufende Funktion kann dann wählen, ob sie das zurückgegebene Objekt behandelt, als wäre es als Wert oder als Verweis zurückgegeben worden. Ein als Verweis zurückgegebener Wert, den die aufrufende Funktion als Verweis statt als Wert behandelt, ist ein lokaler ref-Wert.
+Ab C# 7 unterstützt C# Verweisrückgabewerte (ref-Rückgaben). Mit einem Verweisrückgabewert kann eine Methode einen Verweis auf eine Variable statt eines Werts an eine aufrufende Funktion zurückgeben. Die aufrufende Funktion kann dann wählen, ob sie die zurückgegebene Variable behandelt, als wäre sie als Wert oder als Verweis zurückgegeben worden. Die aufrufende Funktion kann eine neue Variable erstellen, die selbst einen Verweis auf den zurückgegebenen Wert (als lokaler Verweis bezeichnet) darstellt.
 
 ## <a name="what-is-a-reference-return-value"></a>Was ist ein Verweisrückgabewert?
 
-Die meisten Entwickler sind mit dem Übergeben eines Arguments *als Verweis* an eine aufgerufene Methode vertraut. Die Argumentliste einer aufgerufenen Methode umfasst einen als Verweis übergebenen Wert, und alle durch die aufgerufene Methode am Wert vorgenommenen Änderungen werden an die aufrufende Funktion zurückgegeben. Ein *Verweisrückgabewert* ist das Gegenteil:
+Die meisten Entwickler sind mit dem Übergeben eines Arguments *als Verweis* an eine aufgerufene Methode vertraut. Die Argumentliste einer aufgerufenen Methode umfasst eine als Verweis übergebene Variable, und alle durch die aufgerufene Methode am Wert vorgenommenen Änderungen werden von der aufrufenden Funktion überwacht. Ein *Verweisrückgabewert* bedeutet, dass eine Methode einen *Verweis* (oder Alias) an einige Variablen zurückgibt, deren Geltungsbereich die Methode umfasst und deren Lebensdauer über die Rückgabe der Methode hinausgehen muss. Änderungen am Methodenrückgabewert durch die aufrufende Funktion werden auf die Variable angewendet, die von der Methode zurückgegeben wird.
 
-- Bei dem Rückgabewert der aufgerufenen Methode handelt es sich um einen Verweis statt um ein Argument, das an sie übergeben wurde.
+Die Deklaration der Rückgabe eines *Verweisrückgabewerts* durch eine Methode weist darauf hin, dass die Methode einen Alias an eine Variable zurückgibt. Das Entwurfsziel dahinter besteht häufig darin, dem aufrufenden Code über den Alias Zugriff auf diese Variable sowie die Möglichkeit zu deren Änderung zu gewähren. Daraus folgt, dass vom Verweis zurückgegebene Methoden nicht den Rückgabetyp `void` aufweisen dürfen.
 
-- Statt der aufgerufenen Methode kann die aufrufende Funktion den von der Methode zurückgegebenen Wert ändern.
+Es gibt einige Einschränkungen für den Ausdruck, den eine Methode als Verweisrückgabewert zurückgeben kann. Dazu gehören:
 
-- Anstelle von Änderungen am Argument, die im Zustand des Objekts auf der aufrufenden Funktion wiedergegeben werden, werden Änderungen durch die aufrufende Funktion am Rückgabewert der Methode im Zustand des Objekts wiedergegeben, dessen Methode aufgerufen wurde.
+- Der Rückgabewert muss eine Lebensdauer aufweisen, die über die Ausführung der Methode hinausgeht. Mit anderen Worten: Er darf in der Methode, die diesen zurückgibt, keine lokale Variable sein. Es kann sich dabei um eine Instanz oder ein statisches Feld einer Klasse oder um ein Argument handeln, das an die Methode übergeben wurde. Beim Versuch, eine lokale Variable zurückzugeben, tritt der Compilerfehler CS8168 „Cannot return local 'obj' by reference because it is not a ref local.“ (Der lokale Wert „obj“ kann nicht als Verweis zurückgegeben werden, da er kein lokaler ref-Wert ist.) auf.
 
-Verweisrückgabewerte können kompakteren Code erzeugen sowie einem Objekt die Möglichkeit geben, nur die einzelnen Datenelemente wie ein Arrayelement verfügbar zu machen, die für die aufrufende Funktion von Interesse sind. Dadurch wird die Wahrscheinlichkeit geringer, dass die aufrufende Funktion den Zustand des Objekts versehentlich ändert.
+- Der Rückgabewert darf nicht das `null`-Literal sein. Beim Versuch, `null` zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
-Es gibt einige Einschränkungen für den Wert, den eine Methode als Rückgabewert zurückgeben kann. Dazu gehören:
-
-- Der Rückgabewert kann nicht `void` sein. Bei dem Versuch, eine Methode mit einem `void`-Verweisrückgabewert zu definieren, tritt der Compilerfehler CS1547 „Das void-Schlüsselwort kann in diesem Kontext nicht verwendet werden.“ auf.
+   Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit null ist (nicht instanziiert) oder ein [Nullable-Typ](../nullable-types/index.md) für einen Werttyp darstellt.
  
-- Der zurückgegebene Wert darf keine lokale Variable in der Methode sein, die ihn zurückgibt; er muss über einen Bereich verfügen, der außerhalb der Methode liegt, die ihn zurückgibt. Es kann sich dabei um eine Instanz oder ein statisches Feld einer Klasse oder um ein Argument handeln, das an die Methode übergeben wurde. Beim Versuch, eine lokale Variable zurückzugeben, tritt der Compilerfehler CS8168 „Cannot return local 'obj' by reference because it is not a ref local.“ (Der lokale Wert „obj“ kann nicht als Verweis zurückgegeben werden, da er kein lokaler ref-Wert ist.) auf.
-
-- Der Rückgabewert kann nicht `null` sein. Beim Versuch, `null` zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
-
-   Wenn eine Methode mit einer ref-Rückgabe einen NULL-Wert zurückgeben muss, können Sie entweder einen NULL-Wert (nicht instanziiert) für einen Verweistyp oder einen [Nullable-Typ](../nullable-types/index.md) für einen Werttyp zurückgeben.
- 
-- Der zurückgegebene Wert darf keine Konstante, kein Enumerationsmember und keine Eigenschaft einer `class` oder `struct` sein. Beim Versuch, diese zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
+- Der Rückgabewert darf keine Konstante, kein Enumerationsmember, nicht der by-value-Rückgabewert einer Eigenschaft und keine Methode einer `class` oder `struct` sein. Beim Versuch, diese zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
 Darüber hinaus sind Verweisrückgabewerte bei asynchronen Methoden nicht erlaubt, da eine asynchrone Methode etwas zurückgeben könnte, bevor die Ausführung abgeschlossen und ihr Rückgabewert bekannt ist.
  
@@ -53,7 +44,7 @@ Sie definieren einen ref-Rückgabewert, indem Sie dem Rückgabetyp der Methodens
 public ref Person GetContactInformation(string fname, string lname);
 ```
 
-Darüber hinaus muss vor dem Namen des Objekts, das durch jede [return](../../language-reference/keywords/return.md)-Anweisung im Methodentext zurückgegeben wird, das Schlüsselwort [ref](../../language-reference/keywords/ref.md) stehen. Beispielsweise gibt die folgende `return`-Anweisung ein `Person`-Objekt mit dem Namen `p` als Verweis zurück:
+Darüber hinaus muss vor dem Namen des Objekts, das durch jede [return](../../language-reference/keywords/return.md)-Anweisung im Methodentext zurückgegeben wird, das Schlüsselwort [ref](../../language-reference/keywords/ref.md) stehen. Beispielsweise gibt die folgende `return`-Anweisung einen Verweis auf ein `Person`-Objekt mit dem Namen `p` zurück:
 
 ```csharp
 return ref p;
@@ -61,25 +52,40 @@ return ref p;
 
 ## <a name="consuming-a-ref-return-value"></a>Verarbeiten eines ref-Rückgabewerts
 
-Eine aufrufende Funktion kann einen ref-Rückgabewert auf zwei Weisen behandeln:
+Der Verweisrückgabewert ist ein Alias für eine andere Variable im Bereich der aufgerufenen Methode. Sie können jede Verwendung der Verweisrückgabe als Verwendung der Variable interpretieren, für die diese als Alias fungiert:
 
-- Als gewöhnlicher Wert, der von einer Methode als Wert zurückgegeben wurde. Die aufrufende Funktion kann sich dazu entscheiden, zu ignorieren, dass es sich bei dem Rückgabewert um einen Verweisrückgabewert handelt. In diesem Fall werden die Änderungen an dem vom Methodenaufruf zurückgegebenen Wert im Zustand des aufgerufenen Typs nicht wiedergegeben. Wenn es sich beim zurückgegebenen Wert um einen Werttyp handelt, werden die Änderungen an dem vom Methodenaufruf zurückgegebenen Wert im Zustand des aufgerufenen Typs nicht wiedergegeben.
+- Wenn Sie den jeweiligen Wert zuweisen, weisen Sie der Variable, für die diese als Alias fungiert, einen Wert zu.
+- Wenn Sie dessen Wert lesen, lesen Sie den Wert der Variable, für die diese als Alias fungiert.
+- Wenn Sie diesen *nach Verweis* zurückgeben, geben Sie einen Alias für diese Variable zurück.
+- Wenn Sie ihn *nach Verweis* an eine andere Methode übergeben, übergeben Sie einen Verweis auf die Variable, für die diese als Alias fungiert.
+- Wenn Sie einen Alias für einen [lokalen Verweis](#ref-local) erstellen, erstellen Sie einen neuen Alias für diese Variable.
 
-- Als Verweisrückgabewert. Die aufrufende Funktion muss die Variable, der der Verweisrückgabewert zugewiesen ist, als eine [lokale ref-Variable](#ref-local) definieren, und alle Änderungen an dem vom Methodenaufruf zurückgegebenen Wert werden im Zustand des aufgerufenen Typs wiedergegeben. 
 
 ## <a name="ref-locals"></a>Lokale ref-Variablen
 
-Um den Verweisrückgabewert als Verweis behandeln zu können, muss die aufrufende Funktion den Wert mithilfe des Schlüsselworts `ref` als *lokale ref-Variable* deklarieren. Wenn beispielsweise der von der `Person.GetContactInfomation`-Methode zurückgegebene Wert als Verweis anstatt als Wert bearbeitet werden soll, erscheint der Methodenaufruf folgendermaßen:
+Nehmen Sie an, dass die `GetContactInformation`-Methode als Verweisrückgabe deklariert ist:
+
+```csharp
+public ref Person GetContactInformation(string fname, string lname)
+```
+
+Eine by-value-Zuweisung liest den Wert einer Variable und weist diesen einer neuen Variable zu:
+
+```csharp
+Person p = contacts.GetContactInformation("Brandie", "Best");
+```
+
+Die vorangehende Zuweisung deklariert `p` als lokale Variable. Der ursprüngliche Wert wird durch Lesen des Rückgabewerts kopiert, der von `GetContactInformation` zurückgegeben wurde. Keine der zukünftigen Zuweisungen zu `p` ändern den Wert der von `GetContactInformation` zurückgegebenen Variable. Die Variable `p` fungiert nicht mehr als Alias für die zurückgegebene Variable.
+
+Sie deklarieren eine *lokale Verweisvariable*, um den Alias in den ursprünglichen Wert zu kopieren. In der folgenden Zuweisung ist `p` ein Alias für die von `GetContactInformation` zurückgegebene Variable.
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet wird. Wenn nicht beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 „Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden.“ auf. 
- 
-Spätere Änderungen am von der Methode zurückgegebenen `Person`-Objekt werden im `contacts`-Objekt wiedergegeben.
+Die nachfolgende Verwendung von `p` ist mit der Verwendung der von `GetContactInformation` zurückgegebenen Variable identisch, da `p` ein Alias für diese Variable darstellt. Durch Änderungen an `p` wird auch die von `GetContactInformation` zurückgegebene Variable geändert.
 
-Wenn `p` nicht mithilfe des `ref`-Schlüsselworts als eine lokale ref-Variable definiert wird, werden die von der aufrufenden Funktion vorgenommenen Änderungen an `p` nicht im `contacts`-Objekt wiedergegeben.
+Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet wird. Wenn nicht beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 „Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden.“ auf. 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref-Rückgaben und lokale ref-Variablen: ein Beispiel
 

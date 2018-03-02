@@ -17,20 +17,23 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d052c865a554977ce5c8b0a347337d9d9b92fc57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8efdef82cf98f4f1758cb941dc4610ebf575490c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-raise-and-consume-events"></a>Gewusst wie: Auslösen und Behandeln von Ereignissen
 Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen gearbeitet wird. Sie schließen Beispiele für den <xref:System.EventHandler>-Delegaten, den <xref:System.EventHandler%601>-Delegaten und einen benutzerdefinierten Delegaten ein, um Ereignisse mit und ohne Daten zu veranschaulichen.  
   
- Die Beispiele verwenden die beschriebenen Konzepte der [Ereignisse](../../../docs/standard/events/index.md) Artikel.  
+ In den Beispielen werden die im Artikel [Ereignisse](../../../docs/standard/events/index.md) beschriebenen Konzepte verwendet.  
   
 ## <a name="example"></a>Beispiel  
  Im ersten Beispiel wird das Auslösen und Nutzen eines Ereignisses ohne Daten dargestellt. Es ist eine Klasse namens `Counter` enthalten, die über ein Ereignis namens `ThresholdReached` verfügt. Dieses Ereignis wird ausgelöst, wenn ein Leistungsindikatorwert einem Schwellenwert entspricht oder diesen überschreitet. Der <xref:System.EventHandler>-Delegat wird dem Ereignis zugeordnet, da keine Ereignisdaten bereitgestellt werden.  

@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung. Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
@@ -32,9 +35,9 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
   
  Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zum Steuern des Programmablaufs verwendet werden, ein Sicherheitsnetz bereit:  
   
--   Ein <xref:System.Threading.ThreadAbortException> in einem Thread ausgelöst wird, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.  
+-   In einem Thread wird eine <xref:System.Threading.ThreadAbortException> ausgelöst, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.  
   
--   Ein <xref:System.AppDomainUnloadedException> in einem Thread ausgelöst wird, da entladen die Anwendungsdomäne, in dem der Thread ausgeführt wird.  
+-   In einem Thread wird eine <xref:System.AppDomainUnloadedException> ausgelöst, da die Anwendungsdomäne, in der der Thread ausgeführt wird, entladen wird.  
   
 -   Die Common Language Runtime oder ein Hostprozess beendet den Thread durch Auslösen einer internen Ausnahme.  
   
@@ -56,7 +59,7 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
   
 -   In einem Threadpoolthread gibt es keine unbehandelten Ausnahmen. Wenn eine Aufgabe eine Ausnahme auslöst, die sie nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus, und gibt den Thread an den Threadpool zurück.  
   
--   Solche vorhanden ist, wie eine nicht behandelte Ausnahme in einem Thread mit erstellt die <xref:System.Threading.Thread.Start%2A> Methode der <xref:System.Threading.Thread> Klasse. Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.  
+-   In einem Thread, der mit der <xref:System.Threading.Thread.Start%2A>-Methode der <xref:System.Threading.Thread>-Klasse behandelt wird, gibt es keine unbehandelten Ausnahmen. Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.  
   
 -   In einem Finalizerthread gibt keine unbehandelten Ausnahmen. Wenn ein Finalizer eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und lässt den Finalizerthread dann die Ausführung von Finalizern fortsetzen.  
   
@@ -69,7 +72,7 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
   
 -   Strukturieren Sie den Code so um, dass der Thread beim Empfang eines Signals ordnungsgemäß beendet wird.  
   
--   Verwenden der <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Methode, um den Thread abzubrechen.  
+-   Verwenden Sie die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode, um den Thread abzubrechen.  
   
 -   Wenn ein Thread angehalten werden muss, um die Prozessbeendigung fortzusetzen, machen Sie den Thread zu einem Hintergrundthread, damit er beim Prozessende automatisch beendet wird.  
   

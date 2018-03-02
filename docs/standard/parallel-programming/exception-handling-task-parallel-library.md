@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, exceptions
+helpviewer_keywords:
+- tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e62498376d321d8ff22a53315b9d5f18a8865056
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-handling-task-parallel-library"></a>Ausnahmebehandlung (Task Parallel Library)
-Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutzercode ausgelöst werden, werden zurück zum aufrufenden Thread geleitet. Hiervon ausgenommen sind bestimmte Szenarios, die weiter unten in diesem Thema beschrieben werden. Ausnahmen werden weitergegeben, wenn Sie eine der statischen verwenden oder die Instanz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` Methoden und Behandlung dieser schließen Sie den Aufruf in einer `try` / `catch` Anweisung. Wenn eine Aufgabe das übergeordnete Element angefügter untergeordneter Aufgaben ist oder wenn Sie auf mehrere Aufgaben warten, können mehrere Ausnahmen ausgelöst werden.  
+Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutzercode ausgelöst werden, werden zurück zum aufrufenden Thread geleitet. Hiervon ausgenommen sind bestimmte Szenarios, die weiter unten in diesem Thema beschrieben werden. Ausnahmen werden weitergegeben, wenn Sie die statische oder instanzbasierte <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>- oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` -Methode verwenden. Zur Behandlung dieser Ausnahmen schließen Sie den Aufruf in eine `try`/`catch`-Anweisung ein. Wenn eine Aufgabe das übergeordnete Element angefügter untergeordneter Aufgaben ist oder wenn Sie auf mehrere Aufgaben warten, können mehrere Ausnahmen ausgelöst werden.  
   
- Um alle Ausnahmen zurück an den aufrufenden Thread zu leiten, schließt die Aufgabeninfrastruktur diese in eine <xref:System.AggregateException> -Instanz ein. Die <xref:System.AggregateException> -Ausnahme verfügt über eine <xref:System.AggregateException.InnerExceptions%2A> -Eigenschaft, die aufgelistet werden kann, um alle ursprünglich ausgelösten Ausnahmen zu analysieren und jede Ausnahme einzeln zu behandeln (bzw. nicht zu behandeln). Sie können auch die ursprünglichen Ausnahmen behandeln, indem die <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> Methode.  
+ Um alle Ausnahmen zurück an den aufrufenden Thread zu leiten, schließt die Aufgabeninfrastruktur diese in eine <xref:System.AggregateException> -Instanz ein. Die <xref:System.AggregateException> -Ausnahme verfügt über eine <xref:System.AggregateException.InnerExceptions%2A> -Eigenschaft, die aufgelistet werden kann, um alle ursprünglich ausgelösten Ausnahmen zu analysieren und jede Ausnahme einzeln zu behandeln (bzw. nicht zu behandeln). Sie können die ursprünglichen Ausnahmen ebenfalls mithilfe der <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methode behandeln.  
   
  Auch wenn nur eine Ausnahme ausgelöst wurde, wird diese in eine <xref:System.AggregateException> -Ausnahme eingeschlossen, wie im nachfolgenden Beispiel veranschaulicht.  
   
@@ -35,7 +39,7 @@ Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutz
   
  Unbehandeltes Ausnahmen vermeiden Sie, indem Sie nur die <xref:System.AggregateException> erfassen und die inneren Ausnahmen nicht beachten. Hiervon wird jedoch abgeraten, da dies dem Erfassen des grundlegenden <xref:System.Exception> -Typs in nicht parallelen Szenarios entspricht. Wenn Sie eine Ausnahme erfassen, ohne Maßnahmen zu deren Behandlung zu ergreifen, weist das Programm ggf. einen unbestimmten Zustand auf.  
   
- Wenn nicht aufgerufen werden soll die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` -Methode für den Abschluss einer Aufgabe warten, können Sie auch Abrufen der <xref:System.AggregateException> Ausnahme für die Aufgabe <xref:System.Threading.Tasks.Task.Exception%2A> -Eigenschaft wie im folgenden Beispiel gezeigt. Weitere Informationen finden Sie im Abschnitt [Beachten von Ausnahmen mit der Task.Exception-Eigenschaft](#ExceptionProp) dieses Themas.  
+ Wenn Sie die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>- oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`-Methode nicht aufrufen möchten, um auf den Abschluss einer Aufgabe zu warten, können Sie auch die <xref:System.AggregateException>-Ausnahme der <xref:System.Threading.Tasks.Task.Exception%2A>-Eigenschaft der Aufgabe abrufen, wie im folgenden Beispiel dargestellt. Weitere Informationen finden Sie im Abschnitt [Beachten von Ausnahmen mit der Task.Exception-Eigenschaft](#ExceptionProp) dieses Themas.  
   
  [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
  [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]  
@@ -48,12 +52,12 @@ Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutz
 >  Wenn "Nur eigenen Code" aktiviert ist, unterbricht Visual Studio die Ausführung in einigen Fällen in der Zeile, die die Ausnahme auslöst, und eine Fehlermeldung zu einer nicht vom Benutzercode behandelten Ausnahme wird angezeigt. Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den folgenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Um zu verhindern, dass Visual Studio die Ausführung beim ersten Fehler unterbricht, deaktivieren Sie das Kontrollkästchen **Nur eigenen Code** unter **Extras, Optionen, Debugging, Allgemein**.  
   
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Angefügte untergeordnete Aufgaben und geschachtelte AggregateExceptions  
- Wenn eine Aufgabe über eine angefügte untergeordnete Aufgabe verfügt, die eine Ausnahme auslöst, wird diese Ausnahme in <xref:System.AggregateException> eingeschlossen, bevor sie an die übergeordnete Aufgabe weitergegeben wird, die diese Ausnahme in eine eigene <xref:System.AggregateException> einschließt und sie anschließend an den aufrufenden Thread zurückgibt. In solchen Fällen die <xref:System.AggregateException.InnerExceptions%2A> Eigenschaft von der <xref:System.AggregateException> am abgefangenen Ausnahme die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` oder <xref:System.Threading.Tasks.Task.WaitAny%2A> oder <xref:System.Threading.Tasks.Task.WaitAll%2A> Methode enthält mindestens <xref:System.AggregateException> -Instanzen bestehen, nicht die ursprünglichen Ausnahmen, die den Fehler verursacht hat. Geschachtelt zu vermeiden, dass zum Durchlaufen <xref:System.AggregateException> Ausnahmen, die Sie verwenden die <xref:System.AggregateException.Flatten%2A> Methode, um alle Entfernen der geschachtelten <xref:System.AggregateException> Ausnahmen, damit die <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> -Eigenschaft die ursprünglichen Ausnahmen enthält. Im folgenden Beispiel werden geschachtelte <xref:System.AggregateException> -Instanzen vereinfacht und in nur einen Schleife behandelt.  
+ Wenn eine Aufgabe über eine angefügte untergeordnete Aufgabe verfügt, die eine Ausnahme auslöst, wird diese Ausnahme in <xref:System.AggregateException> eingeschlossen, bevor sie an die übergeordnete Aufgabe weitergegeben wird, die diese Ausnahme in eine eigene <xref:System.AggregateException> einschließt und sie anschließend an den aufrufenden Thread zurückgibt. In solchen Fällen enthält die <xref:System.AggregateException.InnerExceptions%2A>-Eigenschaft der <xref:System.AggregateException>-Ausnahme, die bei den Methoden <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` oder <xref:System.Threading.Tasks.Task.WaitAny%2A> oder <xref:System.Threading.Tasks.Task.WaitAll%2A> abgefangen wird, eine oder mehrere <xref:System.AggregateException>-Instanzen und nicht die ursprünglichen Ausnahmen, die den Fehler verursacht haben. Um eine Iteration geschachtelter <xref:System.AggregateException>-Ausnahmen zu vermeiden, können Sie mit der <xref:System.AggregateException.Flatten%2A>-Methode alle geschachtelten <xref:System.AggregateException>-Ausnahmen entfernen, sodass die <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType>-Eigenschaft die ursprünglichen Ausnahmen enthält. Im folgenden Beispiel werden geschachtelte <xref:System.AggregateException> -Instanzen vereinfacht und in nur einen Schleife behandelt.  
   
  [!code-csharp[TPL_Exceptions#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
  [!code-vb[TPL_Exceptions#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]  
   
- Können Sie auch die <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> Methode, um die inneren Ausnahmen von mehreren rethrow <xref:System.AggregateException> Instanzen, die von mehreren Aufgaben in einem einzelnen ausgelöst <xref:System.AggregateException> Instanz, wie im folgenden Beispiel gezeigt.  
+ Sie können auch die <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType>-Methode verwenden, um die inneren Ausnahmen von mehreren <xref:System.AggregateException>-Instanzen erneut auszulösen, die von mehreren Aufgaben in einer einzelnen <xref:System.AggregateException>-Instanz ausgelöst wurden, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[TPL_Exceptions#13](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions2.cs#13)]
  [!code-vb[TPL_Exceptions#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions2.vb#13)]  
@@ -73,14 +77,14 @@ Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutz
  [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]  
   
 ## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Filtern von inneren Ausnahmen mithilfe der Handle-Methode  
- Mit der <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methode können Sie Ausnahmen filtern, die ohne weitere Logik als "behandelt" definiert werden können. Im Benutzerdelegaten, der an die <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> -Methode, können Sie den Ausnahmetyp Überprüfen seiner <xref:System.Exception.Message%2A> -Eigenschaft oder beliebige andere Informationen, mit denen Sie bestimmen, ob es keine Auswirkungen. Alle Ausnahmen, die für die der Delegat zurückgegeben `false` erneut ausgelöst werden, in einem neuen <xref:System.AggregateException> Instanz unmittelbar nach dem die <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> -Methode zurückkehrt.  
+ Mit der <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methode können Sie Ausnahmen filtern, die ohne weitere Logik als "behandelt" definiert werden können. Im Benutzerdelegaten, der an die <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType>-Methode weitergegeben wird, können Sie den Ausnahmetyp, seine <xref:System.Exception.Message%2A>-Eigenschaft oder beliebige andere Informationen analysieren und ermitteln, ob die Ausnahme keine Auswirkungen zeigt. Alle Ausnahmen, für die der Delegat `false` zurückgibt, werden in einer neuen <xref:System.AggregateException>-Instanz erneut ausgelöst, sobald die <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methode zurückkehrt.  
   
- Im folgende Beispiel entspricht funktional dem ersten Beispiel in diesem Thema, das jede Ausnahme überprüft die <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> Auflistung.  Dieser Ausnahmehandler ruft stattdessen die <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> datenquellenmethodenobjekt für jede Ausnahme und die einzige-Methodenobjekt Ausnahmen, die nicht `CustomException` Instanzen.  
+ Das folgende Beispiel ist zum ersten Beispiel dieses Themas funktional äquivalent, das jede Ausnahme in der <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType>-Auflistung untersucht.  Dieser Ausnahmehandler ruft stattdessen das <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methodenobjekt für jede Ausnahme auf und löst nur die Ausnahmen erneut aus, die keine `CustomException`-Instanzen sind.  
   
  [!code-csharp[TPL_Exceptions#26](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handlemethod21.cs#26)]
  [!code-vb[TPL_Exceptions#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handlemethod21.vb#26)]  
   
- Folgender Ausdruck ist ein vollständiges Beispiel, verwendet der <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> -Methode zum Bereitstellen von spezielle Behandlung für eine <xref:System.UnauthorizedAccessException> Ausnahme beim Auflisten von Dateien.  
+ Nachfolgend finden Sie ein vollständigeres Beispiel, das die <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>-Methode verwendet, um beim Auflisten von Dateien für eine <xref:System.UnauthorizedAccessException>-Ausnahme eine besondere Behandlung zu bieten.  
   
  [!code-csharp[TPL_Exceptions#12](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions.cs#12)]
  [!code-vb[TPL_Exceptions#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions.vb#12)]  
