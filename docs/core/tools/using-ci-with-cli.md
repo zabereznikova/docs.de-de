@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 
@@ -44,7 +45,7 @@ Das Installationsskript ist automatisiert, sodass es zu Beginn des Buildvorgangs
 
 ## <a name="ci-setup-examples"></a>Beispiele für die CI-Einrichtung
 
-In diesem Abschnitt wird die manuelle Einrichtung unter Verwendung eines PowerShell- oder Bash-Skripts erläutert, und es werden verschiedene SaaS-CI-Lösungen (Software-as-a-Service) beschrieben. Die behandelten SaaS-CI-Lösungen sind [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [Visual Studio Team Services Build](https://www.visualstudio.com/docs/build/overview).
+In diesem Abschnitt wird die manuelle Einrichtung unter Verwendung eines PowerShell- oder Bash-Skripts erläutert, und es werden verschiedene SaaS-CI-Lösungen (Software-as-a-Service) beschrieben. Die behandelten SaaS-CI-Lösungen sind [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [Visual Studio Team Services Build](https://docs.microsoft.com/vsts/build-release/index).
 
 ### <a name="manual-setup"></a>Manuelle Einrichtung
 
@@ -155,7 +156,7 @@ Verwenden Sie einen dieser Ansätze, um Visual Studio Team Services (VSTS) zum E
 1. Führen Sie das Skript aus dem Schritt für die [manuelle Einrichtung](#manual-setup) unter Verwendung Ihrer Befehle aus.
 1. Erstellen Sie einen Build aus verschiedenen integrierten VSTS-Buildtasks, die zur Verwendung der .NET Core-Tools konfiguriert sind.
 
-Beide Ansätze sind gültige Vorgehensweisen. Mithilfe eines Skripts zur manuellen Einrichtung kontrollieren Sie, welche Version der Tools abgerufen wird, weil Sie die Tools im Rahmen des Builds herunterladen. Der Build wird aus einem Skript ausgeführt, das Sie erstellen müssen. In diesem Thema wird nur die manuelle Option behandelt. Weitere Informationen zum Erstellen eines Builds mit VSTS-Buildtasks finden Sie im VSTS-Thema [Continuous integration and deployment](https://www.visualstudio.com/docs/build/overview) (Continuous Integration und Continuous Deployment).
+Beide Ansätze sind gültige Vorgehensweisen. Mithilfe eines Skripts zur manuellen Einrichtung kontrollieren Sie, welche Version der Tools abgerufen wird, weil Sie die Tools im Rahmen des Builds herunterladen. Der Build wird aus einem Skript ausgeführt, das Sie erstellen müssen. In diesem Thema wird nur die manuelle Option behandelt. Weitere Informationen zum Erstellen eines Builds mit VSTS-Buildtasks finden Sie im VSTS-Thema [Continuous integration and deployment](https://docs.microsoft.com/vsts/build-release/index) (Continuous Integration und Continuous Deployment).
 
 Um ein Skript für ein manuelles Setup in VSTS zu verwenden, erstellen Sie eine neue Builddefinition und geben das Skript an, das für den Buildschritt ausgeführt werden soll. Dies wird mithilfe der VSTS-Benutzeroberfläche erreicht:
 
@@ -177,7 +178,7 @@ Um ein Skript für ein manuelles Setup in VSTS zu verwenden, erstellen Sie eine 
 
 ## <a name="orchestrating-the-build"></a>Orchestrieren des Builds
 
-In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools herunterladen und verschiedene CI-Dienst konfigurieren, ohne darauf einzugehen, wie Sie Ihren Code mit .NET Core orchestrieren oder *tatsächlich einen Build erstellen*. Die Auswahl bei der Strukturierung des Buildprozesses hängt von vielen Faktoren ab, die hier nicht allgemein abgedeckt werden können. Erkunden Sie die Ressourcen und Beispiele in der Dokumentation von [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [VSTS](https://www.visualstudio.com/docs/build/overview), um weitere Informationen zur Orchestrierung Ihrer Builds mit jeder Technologie zu erhalten.
+In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools herunterladen und verschiedene CI-Dienst konfigurieren, ohne darauf einzugehen, wie Sie Ihren Code mit .NET Core orchestrieren oder *tatsächlich einen Build erstellen*. Die Auswahl bei der Strukturierung des Buildprozesses hängt von vielen Faktoren ab, die hier nicht allgemein abgedeckt werden können. Erkunden Sie die Ressourcen und Beispiele in der Dokumentation von [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [VSTS](https://docs.microsoft.com/vsts/build-release/index), um weitere Informationen zur Orchestrierung Ihrer Builds mit jeder Technologie zu erhalten.
 
 Bei der Strukturierung des Buildprozesses für .NET Core-Code unter Verwendung der .NET Core-Tools können zwei allgemeine Ansätze verfolgt werden: die direkte Verwendung von MSBuild oder die Verwendung von .NET Core-Befehlszeilenbefehlen. Sie sollten den verwendeten Ansatz danach auswählen, wie vertraut Sie mit dem jeweiligen Ansatz sind und welche Kompromisse Sie in Bezug auf die Komplexität eingehen möchten. Mit MSBuild können Sie Ihren Buildprozess in Form von Tasks und Zielen beschrieben, Sie müssen jedoch die MSBuild-Projektdateisyntax beherrschen. Die Verwendung von .NET Core-Befehlszeilentools ist möglicherweise einfacher, erfordert aber, dass Sie Orchestrierungslogik in einer Skriptsprache wie `bash` oder PowerShell schreiben.
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Implementieren von Wertobjekten
 
@@ -136,7 +136,7 @@ Obenstehend wurde erläutert, wie Sie ein Wertobjekt in Ihrem Domänenmodell def
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Hintergrund und ältere Ansätze zur Verwendung von EF Core 1.1
 
-Hintergrundinformation: Mit EF Core 1.0 und 1.1 konnten Sie keine [komplexen Typen](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) verwenden, die in EF 6.x im herkömmlichen .NET Framework definiert sind. Aus diesem Grund mussten Sie ein Wertobjekt als EF-Entität mit einem ID-Feld speichern, wenn Sie EF Core 1.0 oder 1.1 verwenden. Anschließend konnten Sie die ID ausblenden, um eine Ähnlichkeit zum Wertobjekt ohne Identität herzustellen, und um deutlich zu machen, dass die Identität eines Wertobjekts im Domänenmodell nicht von Bedeutung ist. Die ID konnte ausgeblendet werden, indem sie als [Schatteneigenschaft](https://docs.microsoft.com/ef/core/modeling/shadow-properties ) verwendet wurde. Da diese Konfiguration zum Ausblenden der ID im Modell in der EF-Infrastruktur eingerichtet ist, würde Ihr Domänenmodell diese durchschauen.
+Hintergrundinformation: Mit EF Core 1.0 und 1.1 konnten Sie keine [komplexen Typen](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) verwenden, die in EF 6.x im herkömmlichen .NET Framework definiert sind. Aus diesem Grund mussten Sie ein Wertobjekt als EF-Entität mit einem ID-Feld speichern, wenn Sie EF Core 1.0 oder 1.1 verwenden. Anschließend konnten Sie die ID ausblenden, um eine Ähnlichkeit zum Wertobjekt ohne Identität herzustellen, und um deutlich zu machen, dass die Identität eines Wertobjekts im Domänenmodell nicht von Bedeutung ist. Die ID konnte ausgeblendet werden, indem sie als [Schatteneigenschaft](https://docs.microsoft.com/ef/core/modeling/shadow-properties ) verwendet wurde. Da diese Konfiguration zum Ausblenden der ID im Modell in der EF-Infrastruktur eingerichtet ist, würde Ihr Domänenmodell diese durchschauen.
 
 In der ersten Version von eShopOnContainers (.NET Core 1.1) wurde die von der EF Core-Infrastruktur verlangte versteckte ID wie folgt auf DbContext-Ebene implementiert. Dafür wurde die Fluent-API im Infrastrukturprojekt verwendet. Daher wurde die ID für das Domänenmodell ausgeblendet, sie war aber weiterhin in der Infrastruktur vorhanden.
 
@@ -168,7 +168,7 @@ Das eigene Entitätstypenfeature wurde schon mit Version 2.0 von EF Core hinzuge
 Auf den ersten Blick scheint es, als verfüge ein eigener Typ im Domänenmodell nicht über eine Identität.
 Die Identität des eigenen Typs befindet sich allerdings im Hintergrund, und die Eigenschaft zur Besitzernavigation ist Teil dieser Identität.
 
-Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf diese beschränkt. Sie besteht aus drei Hauptkomponenten: 
+Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf diese beschränkt. Sie besteht aus drei Hauptkomponenten:
 
 - Der Identität des Besitzers
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

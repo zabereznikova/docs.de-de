@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -421,7 +421,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\w+`|Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von einem Leerzeichen.|  
 |`\d{1,2},`|Finden Sie eine Entsprechung für entweder eine oder zwei Dezimalstellen, gefolgt von einem Leerstellenzeichen und einem Komma.|  
 |`\d{4}\b`|Finden Sie eine Entsprechung für vier Dezimalstellen, und beenden Sie die Übereinstimmung an einer Wortgrenze.|  
-|`(?<!(Saturday&#124;Sunday) )`|Wenn der Übereinstimmung etwas anderes als die Zeichenfolgen "Samstag" oder "Sonntag" (gefolgt von einem Leerzeichen) vorangestellt wird, ist die Übereinstimmung erfolgreich.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Wenn der Übereinstimmung etwas anderes als die Zeichenfolgen "Samstag" oder "Sonntag" (gefolgt von einem Leerzeichen) vorangestellt wird, ist die Übereinstimmung erfolgreich.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Nicht zurückverfolgende Teilausdrücke  

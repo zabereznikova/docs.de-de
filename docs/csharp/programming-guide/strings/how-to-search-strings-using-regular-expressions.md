@@ -2,20 +2,21 @@
 title: "Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken (C#-Programmierhandbuch)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken (C#-Programmierhandbuch)
 Die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klasse kann zum durchsuchen von Zeichenfolgen verwendet werden. Diese Suchvorgänge können sehr simpel sein oder voll von regulären Ausdrücken profitieren. Im Folgenden finden Sie zwei Beispiele für das Durchsuchen von Zeichenfolgen mit der <xref:System.Text.RegularExpressions.Regex>-Klasse. Weitere Informationen hierzu finden Sie unter [Reguläre Ausdrücke von .NET Framework](https://msdn.microsoft.com/library/hs600312).  

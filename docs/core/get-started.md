@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
@@ -30,8 +31,8 @@ Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schri
 * [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md): Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
 * [Erstellen einer Visual Basic-Hello World-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit Visual Basic und Visual Studio 2017 erstellen, debuggen und veröffentlichen. 
 * [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md): Erfahren Sie, wie Sie eine in Visual Basic geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
-* [Erste Schritte mit Visual Studio Code mithilfe von C# und .NET Core auf Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://www.visualstudio.com/products/code-vs), Microsofts einfachen, plattformübergreifenden Code-Editor, installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core zu erstellen.
-* [Get Started with .NET Core and Visual Studio 2017 (Erste Schritte mit .NET Core and Visual Studio 2017)](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio 2017](https://www.visualstudio.com/), Microsofts vollausgestattete IDE, installieren und nutzen können, um Ihre erste plattformübergreifende Konsolenanwendung in .NET Core zu erstellen.
+* [Erste Schritte mit Visual Studio Code mithilfe von C# und .NET Core auf Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://code.visualstudio.com/), Microsofts einfachen, plattformübergreifenden Code-Editor, installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core zu erstellen.
+* [Get Started with .NET Core and Visual Studio 2017 (Erste Schritte mit .NET Core and Visual Studio 2017)](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsofts vollausgestattete IDE, installieren und nutzen können, um Ihre erste plattformübergreifende Konsolenanwendung in .NET Core zu erstellen.
 * [Erste Schritte mit .NET Core mit Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md) ‒ Verwenden Sie irgendeinen Code-Editor mit der [ plattformübergreifenden .NET Core-Befehlszeilenschnittstelle (CLI)](tools/index.md).
 
 Finden Sie unter dem Thema [Prerequisites for Windows development (erforderliche Komponenten für Windows-Entwicklung)](windows-prerequisites.md) eine Liste der unterstützten Windows-Versionen.

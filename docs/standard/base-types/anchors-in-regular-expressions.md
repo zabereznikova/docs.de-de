@@ -28,11 +28,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Anker in regulären Ausdrücken
 <a name="top"></a> Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anker verwenden, durchsucht das Modul für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anker aufgeführt.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von mindestens einem Wortzeichen. Dies ist die vierte Erfassungsgruppe.|  
 |`,`|Entsprechung für ein Komma finden.|  
 |`\s\d{4}`|Suchen Sie nach einer Übereinstimmung mit einem von vier Dezimalzahlen gefolgten Leerzeichen.|  
-|(-`(\d{4}&#124;present))?`|Suchen Sie nach einer Übereinstimmung mit 0 (Null) oder einem Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present". Dies ist die sechste Erfassungsgruppe. Diese Gruppe enthält auch eine siebte Erfassungsgruppe.|  
+|<code>(-(\d{4}&#124;present))?</code>|Suchen Sie nach einer Übereinstimmung mit 0 (Null) oder einem Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present". Dies ist die sechste Erfassungsgruppe. Diese Gruppe enthält auch eine siebte Erfassungsgruppe.|  
 |`,?`|Suchen Sie nach einer Übereinstimmung mit 0 (null) oder einem Komma.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen, 0 (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie 0 (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen, 0 (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie 0 (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.|  
   
  [Zurück zum Anfang](#top)  
   
