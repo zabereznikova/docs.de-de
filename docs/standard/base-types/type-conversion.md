@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 <a name="top"></a> Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  
@@ -62,9 +62,9 @@ ms.lasthandoff: 12/23/2017
   
 -   Der `Explicit`-Operator, der die verfügbaren einschränkenden Konvertierungen zwischen Typen definiert. Weitere Informationen finden Sie im Abschnitt [Explizite Konvertierung mit dem Explicit-Operator](#explicit_conversion_with_the_explicit_operator).  
   
--   Die <xref:System.IConvertible>-Schnittstelle, die Konvertierungen in die einzelnen .NET Framework-Basisdatentypen definiert. Weitere Informationen finden Sie im Abschnitt [Die IConvertible-Schnittstelle](#the_iconvertible_interface).  
+-   Die <xref:System.IConvertible>-Schnittstelle, die Konvertierungen in die einzelnen .NET Framework-Basisdatentypen definiert. Weitere Informationen finden Sie unter [Die IConvertible-Schnittstelle](#the_iconvertible_interface).  
   
--   Die <xref:System.Convert>-Klasse, die einen Satz von Methoden bereitstellt, mit denen die Methoden in der <xref:System.IConvertible>-Schnittstelle implementiert werden. Weitere Informationen finden Sie im Abschnitt [Die Convert-Klasse](#Convert).  
+-   Die <xref:System.Convert>-Klasse, die einen Satz von Methoden bereitstellt, mit denen die Methoden in der <xref:System.IConvertible>-Schnittstelle implementiert werden. Weitere Informationen finden Sie unter [Die Convert-Klasse](#Convert).  
   
 -   Die <xref:System.ComponentModel.TypeConverter>-Klasse, die eine Basisklasse ist, die für die Unterstützung der Konvertierung eines angegebenen Typs in einen beliebigen anderen Typ erweitert werden kann. Weitere Informationen finden Sie im Abschnitt [Die TypeConverter-Klasse](#the_typeconverter_class).  
   

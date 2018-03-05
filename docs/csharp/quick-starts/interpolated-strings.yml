@@ -11,11 +11,11 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection
   nextTutorialTitle: Sammlungen in C#
-  ms.openlocfilehash: 56c7cf5f6ce0c5db27ba43eeaffd9eb2e08f8c8a
-  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+  ms.openlocfilehash: 6f2bb18298ec41c8ccf634035059940342cbc82c
+  ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/01/2018
+  ms.lasthandoff: 02/19/2018
 items:
 - durationInMinutes: 2
   content: "In diesem Schnellstart wird erläutert, wie Sie interpolierte Zeichenfolgen in C# verwenden können, um Werte in eine einzige Ausgabezeichenfolge interaktiv einzufügen. Verwenden Sie Ihren Browser zum Schreiben von C#-Code. Dort werden Ihnen unmittelbar die Ergebnisse der Kompilierung und Ausführung Ihres Codes angezeigt. In diesem Schnellstart sind einige Lektionen enthalten, bei denen Zeichenfolgen verkettet, Werte in Zeichenfolgen eingefügt und auf verschiedene Arten formatiert werden.\n"

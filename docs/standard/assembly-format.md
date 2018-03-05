@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="net-assembly-file-format"></a>.NET-Assemblydateiformat
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 01/05/2018
 
 > Jede CLI-Komponente enthält die Metadaten für Deklarationen, Implementierungen und Verweisen, die für diese Komponente spezifisch sind. Darum werden die komponentenspezifischen Metadaten als Komponentenmetadaten und die resultierende Komponente als selbstbeschreibend bezeichnet – laut ECMA 335 I.9.1, „Components and assemblies“ (Komponenten und Assemblys).
 
-Das Format ist als ECMA 335 vollständig spezifiziert und standardisiert. Alle .NET-Compiler und -Runtimes verwenden dieses Format. Das Vorhandensein eines dokumentierten und unregelmäßig aktualisierten Binärformats ist ein großer Vorteil (wenn nicht gar eine Voraussetzung) für die Interoperabilität gewesen. Das Format wurde zuletzt wesentlich 2005 (.NET 2.0) zur Aufnahme von Generika und Prozessorarchitektur aktualisiert.
+Das Format ist als [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) vollständig spezifiziert und standardisiert. Alle .NET-Compiler und -Runtimes verwenden dieses Format. Das Vorhandensein eines dokumentierten und unregelmäßig aktualisierten Binärformats ist ein großer Vorteil (wenn nicht gar eine Voraussetzung) für die Interoperabilität gewesen. Das Format wurde zuletzt wesentlich 2005 (.NET 2.0) zur Aufnahme von Generika und Prozessorarchitektur aktualisiert.
 
 Das Format ist agnostisch gegenüber CPU und Betriebssystem. Es wurde als Teil von .NET-Implementierungen verwendet, die auf viele Chips und CPUs abzielen. Trotz seines Windows-Erbes ist das Format unter jedem Betriebssystem implementierbar. Das wohl wichtigste Argument für die Betriebssysteminteroperabilität ist, dass die meisten Werte im Little-Endian-Format gespeichert werden. Es besteht keine bestimmte Affinität zur Zeigergröße des Computers (z.B. 32-Bit, 64-Bit).
 

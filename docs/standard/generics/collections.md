@@ -1,7 +1,7 @@
 ---
-title: Generische Auflistungen in .NET Framework
+title: Generische Auflistungen in .NET
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,27 +13,25 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>Generische Auflistungen in .NET Framework
-Dieses Thema enthält eine Übersicht über die generischen Auflistungsklassen und andere generischen Typen in .NET Framework.  
-  
-## <a name="generic-collections-in-the-net-framework"></a>Generische Auflistungen in .NET Framework  
- Die Klassenbibliothek von .NET Framework enthält eine Reihe generischer Auflistungsklassen im <xref:System.Collections.Generic>- und im <xref:System.Collections.ObjectModel>-Namespace. Weitere Informationen zu diesen Klassen finden Sie unter [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md).  
+# <a name="generic-collections-in-net"></a>Generische Auflistungen in .NET
+
+ Die Klassenbibliothek von .NET enthält eine Reihe generischer Auflistungsklassen in den Namespaces <xref:System.Collections.Generic> und <xref:System.Collections.ObjectModel>. Ausführliche Informationen zu diesen Klassen finden Sie unter [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  Viele der generischen Auflistungstypen sind direkte Entsprechungen nicht generischer Typen. <xref:System.Collections.Generic.Dictionary%602> ist eine generische Version von <xref:System.Collections.Hashtable>. Sie verwendet die generische Struktur <xref:System.Collections.Generic.KeyValuePair%602> für die Enumeration anstelle von <xref:System.Collections.DictionaryEntry>.  
@@ -51,7 +49,7 @@ Dieses Thema enthält eine Übersicht über die generischen Auflistungsklassen u
  Die generische <xref:System.Nullable%601>Struktur ermöglicht es Ihnen, die Werttypen so zu verwenden, als ob ihnen `null` zugewiesen werden könnte. Dies kann nützlich sein, wenn Datenbankabfragen verwendet werden, für die möglicherweise Felder fehlen, die Werttypen enthalten. Der generische Typparameter kann ein beliebiger Werttyp sein.  
   
 > [!NOTE]
->  In C# muss <xref:System.Nullable%601> nicht explizit verwendet werden, da die Sprache eine Syntax für NULL-fähige Typen hat.  
+>  In C# und Visual Basic muss <xref:System.Nullable%601> nicht explizit verwendet werden, weil die Sprache eine Syntax für NULL-fähige Typen umfasst. Siehe [Nullable-Typen (C#-Programmierhandbuch)](../../csharp/programming-guide/nullable-types/index.md) und [Auf NULL festlegbare Werttypen (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   

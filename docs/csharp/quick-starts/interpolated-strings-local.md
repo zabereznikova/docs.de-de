@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
@@ -144,9 +144,9 @@ Wenn Sie eine negative Zahl für die Feldbreite eingeben, wird das Feld linksbü
 Entfernen Sie die negativen Vorzeichen der interpolierten Ausdrücke `{"Author",-25}` und `{title.Key,-25}`, und führen Sie das Beispiel erneut aus.
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 Diesmal sind die Informationen zum Autor rechtsbündig ausgerichtet.

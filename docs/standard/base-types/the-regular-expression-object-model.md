@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  

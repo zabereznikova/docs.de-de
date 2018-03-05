@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -212,7 +212,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
 -   Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind. Typisierte Verweise werden in .NET Framework von der <xref:System.TypedReference>-Klasse dargestellt.  
   
- Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` darauf anwenden. Weitere Informationen finden Sie im Abschnitt [Das CLSCompliantAttribute-Attribut](#CLSAttribute).  
+ Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` darauf anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#CLSAttribute).  
   
  Im folgenden Beispiel wird das Problem der CLS-Kompatibilität in einer Methodensignatur und in der Instanziierung des generischen Typs veranschaulicht. Dabei wird eine `InvoiceItem`-Klasse mit einer Eigenschaft vom Typ <xref:System.UInt32>, einer Eigenschaft vom Typ `Nullable(Of UInt32)` und einem Konstruktor mit Parametern vom Typ <xref:System.UInt32> sowie `Nullable(Of UInt32)` definiert. Sie erhalten vier Compilerwarnungen, wenn Sie versuchen, das Beispiel zu kompilieren.  
   
