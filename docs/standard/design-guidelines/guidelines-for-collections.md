@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen einige gemeinsame Eigenschaften haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt wird nur Typen, die eine oder beide dieser Schnittstellen implementieren, die Auflistungen werden berücksichtigt.  
@@ -31,7 +31,7 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen 
   
  **X nicht** verwenden <xref:System.Collections.ArrayList> oder <xref:System.Collections.Generic.List%601> in öffentlichen APIs.  
   
- Diese Typen sind Datenstrukturen, die in der internen Implementierung, die in öffentlichen APIs nicht verwendet werden soll. `List<T>`ist optimiert für Leistung und Energieverbrauch auf Kosten eines erhöhten Voraussichten-APIs und Flexibilität. Wenn Sie zurückkehren, z. B. `List<T>`, nicht jemals werden können, um Benachrichtigungen zu empfangen, wenn Clientcode auf die Auflistung ändert. Darüber hinaus `List<T>` viele Elemente wie z. B. macht <xref:System.Collections.Generic.List%601.BinarySearch%2A>, nicht nützlich oder in vielen Szenarien anwendbar sind. In den folgenden beiden Abschnitten werden die Typen (Abstraktionen) entwickelt, die speziell zur Verwendung in öffentlichen APIs beschrieben.  
+ Diese Typen sind Datenstrukturen, die in der internen Implementierung, die in öffentlichen APIs nicht verwendet werden soll. `List<T>` ist optimiert für Leistung und Energieverbrauch auf Kosten eines erhöhten Voraussichten-APIs und Flexibilität. Wenn Sie zurückkehren, z. B. `List<T>`, nicht jemals werden können, um Benachrichtigungen zu empfangen, wenn Clientcode auf die Auflistung ändert. Darüber hinaus `List<T>` viele Elemente wie z. B. macht <xref:System.Collections.Generic.List%601.BinarySearch%2A>, nicht nützlich oder in vielen Szenarien anwendbar sind. In den folgenden beiden Abschnitten werden die Typen (Abstraktionen) entwickelt, die speziell zur Verwendung in öffentlichen APIs beschrieben.  
   
  **X nicht** verwenden `Hashtable` oder `Dictionary<TKey,TValue>` in öffentlichen APIs.  
   
@@ -61,7 +61,7 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen 
   
  **Führen Sie ✓** verwenden <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, eine Unterklasse von `ReadOnlyCollection<T>`, oder in seltenen Fällen `IEnumerable<T>` für Eigenschaften oder des Rückgabewerts darstellen schreibgeschützten Auflistungen Werte.  
   
- Im Allgemeinen verwenden `ReadOnlyCollection<T>`. Wenn sie einige Anforderungen nicht erfüllt (z. B. der Sammlung muss nicht implementiert `IList`), verwenden Sie durch die Implementierung eine benutzerdefinierte Sammlung `IEnumerable<T>`, `ICollection<T>`, oder `IList<T>`. Wenn Sie eine benutzerdefinierte schreibgeschützte Auflistung implementieren, implementieren `ICollection<T>.ReadOnly` "false" zurückgibt.  
+ Im Allgemeinen verwenden `ReadOnlyCollection<T>`. Wenn sie einige Anforderungen nicht erfüllt (z. B. der Sammlung muss nicht implementiert `IList`), verwenden Sie durch die Implementierung eine benutzerdefinierte Sammlung `IEnumerable<T>`, `ICollection<T>`, oder `IList<T>`. Wenn Sie eine benutzerdefinierte schreibgeschützte Auflistung implementieren, implementieren `ICollection<T>.IsReadOnly` zurückzugebenden `true`.  
   
  In Fällen, in denen sind Sie sicher, dass das einzige Szenario, die jemals unterstützen möchten Vorwärtscursor Iteration ist, können Sie einfach `IEnumerable<T>`.  
   
@@ -135,7 +135,7 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen 
   
  Angenommen, eine schreibgeschützte Auflistung von Zeichenfolgen aufgerufen werden `ReadOnlyStringCollection`.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
  *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
