@@ -22,21 +22,24 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80661b24c35742b57a98b51fe055b0df05b34cad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung des Moduls für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich das Modul für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
   
 > [!NOTE]
->  Im Allgemeinen wird ein Modul Automaton NFA (Nondeterministic Finite) wie das Modul für reguläre Ausdrücke .NET die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke für den Entwickler.  
+>  Bei einem NFA-Modul (Nondeterministic Finite Automaton) wie dem .NET-Modul für reguläre Ausdrücke liegt die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke im Allgemeinen beim Entwickler.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
  Wenn das Muster eines regulären Ausdrucks keine optionalen Quantifizierer oder Alternierungskonstrukte enthält, entspricht die maximale Anzahl von Vergleichen, die für die Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge erforderlich sind, ungefähr der Anzahl der Zeichen in der Eingabezeichenfolge. In diesem Fall verwendet das Modul für reguläre Ausdrücke 19 Vergleiche, um mögliche Übereinstimmungen in dieser Zeichenfolge mit 13 Zeichen zu identifizieren.  Mit anderen Worten, das Modul für reguläre Ausdrücke wird zeitlich annähernd linear ausgeführt, wenn es keine optionalen Quantifizierer oder Alternierungskonstrukte enthält.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Rückverfolgung mit optionalen Quantifizierern oder Alternierungskonstrukten  
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/21/2017
   
  Bei einer Rückverfolgung erfordert das Abgleichen des regulären Ausdrucksmusters mit der Eingabezeichenfolge, die 55 Zeichen lang ist, 67 Vergleichsoperationen. Wenn das Muster des regulären Ausdrucks einen verzögerten Quantifizierer (`*?(es)`) enthält, sind für den Abgleich mit dem regulären Ausdruck interessanterweise weitere Vergleiche erforderlich. In diesem Fall muss keine Rückverfolgung vom Ende der Zeichenfolge bis zum "r" in "expressions" erfolgen, sondern das Modul für reguläre Ausdrücke würde eine Rückverfolgung bis zum Anfang der Zeichenfolge ausführen, um eine Übereinstimmung mit "Es" zu finden. Hierfür wären 113 Vergleiche erforderlich. Wenn das Muster eines regulären Ausdrucks ein einzelnes Alternierungskonstrukt oder einen einzelnen optionalen Quantifizierer enthält, ist die Anzahl der zum Abgleichen eines Musters erforderlichen Vergleichsoperationen im Allgemeinen mehr als doppelt so hoch wie die Anzahl der Zeichen in der Eingabezeichenfolge.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="backtracking_with_nested_optional_quantifiers"></a>   
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Rückverfolgung mit geschachtelten optionalen Quantifizierern  
@@ -125,13 +128,13 @@ ms.lasthandoff: 11/21/2017
   
 -   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 3 zurück. Es wird ermittelt, dass zwei zusätzliche "a"-Zeichen vorhanden sind, die einer zusätzlichen Erfassungsgruppe zugewiesen werden sollen. Allerdings schlägt die Überprüfung des Zeichenfolgenendes fehl. Anschließend kehrt das Modul zur Übereinstimmung 3 zurück und versucht, die zwei zusätzlichen "a"-Zeichen in zwei zusätzlichen Erfassungsgruppen abzugleichen. Die Überprüfung des Zeichenfolgenendes schlägt weiterhin fehl. Diese fehlgeschlagenen Übereinstimmungen erfordern 12 Vergleiche. Bisher wurden insgesamt 25 Vergleiche ausgeführt.  
   
- Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis das Modul für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt, wird dieser Vergleich eine O (2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei  *n*  ist die Anzahl der Zeichen in der Eingabezeichenfolge. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
+ Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis das Modul für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um ein O(2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="controlling_backtracking"></a>   
 ## <a name="controlling-backtracking"></a>Steuern der Rückverfolgung  
- Mithilfe der Rückverfolgung können Sie leistungsstarke, flexible reguläre Ausdrücke erstellen. Wie allerdings im vorangegangenen Abschnitt erläutert, sind diese Vorteile u. U. mit einer inakzeptabel schlechten Leistung verknüpft. Um eine übermäßige Rückverfolgung zu verhindern, sollten Sie ein Timeoutintervall definieren, wenn Sie ein <xref:System.Text.RegularExpressions.Regex> -Objekt instanziieren oder eine statische Methode für Übereinstimmungen mit regulären Ausdrücken aufrufen. Dies wird im nächsten Abschnitt erläutert. Darüber hinaus unterstützt .NET drei Sprachelemente regulärer Ausdrücke, das Zurückverfolgen einschränken oder unterdrücken und komplexe reguläre Ausdrücke bei nur wenigen oder gar keinen Leistungseinbußen unterstützen: [nicht zurückverfolgende Teilausdrücke](#Nonbacktracking), [Lookbehindassertionen](#Lookbehind), und [Lookaheadassertionen](#Lookahead). Weitere Informationen zu den einzelnen Sprachelementen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Mithilfe der Rückverfolgung können Sie leistungsstarke, flexible reguläre Ausdrücke erstellen. Wie allerdings im vorangegangenen Abschnitt erläutert, sind diese Vorteile u. U. mit einer inakzeptabel schlechten Leistung verknüpft. Um eine übermäßige Rückverfolgung zu verhindern, sollten Sie ein Timeoutintervall definieren, wenn Sie ein <xref:System.Text.RegularExpressions.Regex> -Objekt instanziieren oder eine statische Methode für Übereinstimmungen mit regulären Ausdrücken aufrufen. Dies wird im nächsten Abschnitt erläutert. Darüber hinaus unterstützt .NET drei Sprachelemente für reguläre Ausdrücke, die das Zurückverfolgen einschränken oder unterdrücken und komplexe reguläre Ausdrücke bei nur wenigen oder gar keinen Leistungseinbußen unterstützen: [nicht zurückverfolgende Teilausdrücke](#Nonbacktracking), [Lookbehindassertionen](#Lookbehind) und [Lookaheadassertionen](#Lookahead). Weitere Informationen zu den einzelnen Sprachelementen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
@@ -158,7 +161,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Lookbehind"></a>   
 ### <a name="lookbehind-assertions"></a>Lookbehindassertionen  
- .NET enthält zwei Sprachelemente, `(?<=` *Teilausdruck* `)` und `(?<!` *Teilausdruck*`)`, die bzw. den vorherigen Zeichen entsprechen in der Eingabezeichenfolge. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar vor dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
+ .NET enthält zwei Sprachelemente, `(?<=`*Teilausdruck*`)` und `(?<!`*Teilausdruck*`)`, die mit dem bzw. den vorherigen Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar vor dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
   
  `(?<=` *Teilausdruck* `)` ist eine positive Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen mit *Teilausdruck*übereinstimmen. `(?<!`*Teilausdruck*`)` ist eine negative Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookbehindassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des vorherigen Teilausdrucks ist.  
   
@@ -169,7 +172,7 @@ ms.lasthandoff: 11/21/2017
   
  Das erste Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -180,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -190,7 +193,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>Lookaheadassertionen  
- .NET enthält zwei Sprachelemente, `(?=` *Teilausdruck* `)` und `(?!` *Teilausdruck*`)`, entsprechen den nächsten Zeichen oder Zeichen in der die Eingabezeichenfolge. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar nach dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
+ .NET enthält zwei Sprachelemente, `(?=`*Teilausdruck*`)` und `(?!`*Teilausdruck*`)`, die mit dem bzw. den nächsten Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar nach dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
   
  `(?=` *Teilausdruck* `)` ist eine positive Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen mit *Teilausdruck*übereinstimmen. `(?!`*Teilausdruck*`)` ist eine negative Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookaheadassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des nächsten Teilausdrucks ist.  
   
@@ -201,7 +204,7 @@ ms.lasthandoff: 11/21/2017
   
  Das erste Muster für reguläre Ausdrücke `^(([A-Z]\w*)+\.)*[A-Z]\w*$`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`([A-Z]\w*)+\.`|Übereinstimmung mit einem Buchstaben (A-Z), gefolgt von keinem oder mehreren Wortzeichen (einmaliges oder mehrmaliges Vorkommen), gefolgt von einem Punkt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -211,7 +214,7 @@ ms.lasthandoff: 11/21/2017
   
  Das zweite Muster für reguläre Ausdrücke `^((?=[A-Z])\w+\.)*[A-Z]\w*$`verwendet eine positive Lookaheadassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`(?=[A-Z])`|Lookahead zum ersten Zeichen und die Suche nach Übereinstimmungen fortsetzen, wenn es sich um einen Buchstaben (A-Z) handelt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -220,10 +223,10 @@ ms.lasthandoff: 11/21/2017
 |`[A-Z]\w*`|Übereinstimmung mit einem Buchstaben, gefolgt von keinem oder mehreren Wortzeichen.|  
 |`$`|Ende des Abgleichs am Ende der Eingabezeichenfolge.|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)  
+ [Reguläre Ausdrücke in .NET](../../../docs/standard/base-types/regular-expressions.md)  
  [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
  [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  

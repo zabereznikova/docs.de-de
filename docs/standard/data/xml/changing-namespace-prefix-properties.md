@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ce6e4b705188b9c1d0949703991633e3f450689
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3cb0db0fbffa5f42fb09f29da2976727451e3741
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-namespace-prefix-properties"></a>Ändern der Eigenschaften von Namespacepräfixen
-Die **XmlNode** -Klasse ermöglicht es Ihnen, die einem bestimmten Knoten zugeordnete Namespacepräfix ändern. Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  
+Mit der **XmlNode**-Klasse können Sie das Namespacepräfix ändern, das mit einem bestimmten Knoten verknüpft ist. Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -71,7 +74,7 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Wenn die Struktur in eine Zeichenfolge als Folge des Aufrufs zum beibehalten wurde **Doc. InnerXml**, `xmlns:a='123'` Attribut wurde hinzugefügt, um den Namespace des erhalten die `test` Element. Er war `'123'` und bleibt `'123'`.  
+ Wenn die Struktur als Folge des Aufrufs von **doc.InnerXml** in Form einer Zeichenfolge erhalten blieb, wurde das `xmlns:a='123'`-Attribut hinzugefügt, damit der Namespace des `test`-Elements beibehalten wird. Er war und bleibt `'123'`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

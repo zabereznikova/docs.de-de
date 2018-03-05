@@ -18,21 +18,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
@@ -42,7 +45,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
  Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail`-Methode die <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType>-Methode mit dem regulären Ausdruck `(@)(.+)$` auf, um den Domänennamen von der E-Mail-Adresse zu trennen. Der dritte Parameter ist ein <xref:System.Text.RegularExpressions.MatchEvaluator> -Delegat, der die Methode darstellt, die den gefundenen Text verarbeitet und ersetzt. Das Muster des regulären Ausdrucks wird wie folgt interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`(@)`|Das "@"-Zeichen wird als Übereinstimmung verwendet. Dies ist die erste Erfassungsgruppe.|  
 |`(.+)`|Ein- oder mehrmalige Übereinstimmung mit beliebigem Zeichen. Dies ist die zweite Erfassungsgruppe.|  
@@ -59,11 +62,11 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
  In diesem Beispiel kann das Muster des regulären Ausdrucks ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` wie in der folgenden Tabelle dargestellt interpretiert werden. Beachten Sie, dass der reguläre Ausdruck mit dem Flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> kompiliert wurde.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Starten Sie den Vergleich am Beginn der Zeichenfolge.|  
 |`(?(")`|Ermittelt, ob es sich beim ersten Zeichen um ein Anführungszeichen handelt. `(?(")` ist der Anfang eines Alternierungskonstrukts.|  
-|`(?("")("".+?(?<!\\)""@)`|Wenn es sich beim ersten Zeichen um ein Anführungszeichen handelt, wird ein öffnendes Anführungszeichen als Übereinstimmung verwendet, dem mindestens ein beliebiges Zeichen und ein schließendes Anführungszeichen folgen. Das schließende Anführungszeichen müssen nicht durch einen umgekehrten Schrägstrich vorangestellt werden (\\). `(?<!` ist der Anfang einer negativen Lookbehindassertion mit einer Breite von Null. Die Zeichenfolge muss mit einem "@"-Zeichen enden.|  
+|`(?("")("".+?(?<!\\)""@)`|Wenn es sich beim ersten Zeichen um ein Anführungszeichen handelt, wird ein öffnendes Anführungszeichen als Übereinstimmung verwendet, dem mindestens ein beliebiges Zeichen und ein schließendes Anführungszeichen folgen. Dem schließenden Anführungszeichen darf kein umgekehrter Schrägstrich (\\) vorangestellt sein. `(?<!` ist der Anfang einer negativen Lookbehindassertion mit einer Breite von Null. Die Zeichenfolge muss mit einem "@"-Zeichen enden.|  
 |`&#124;(([0-9a-z]`|Wenn es sich beim ersten Zeichen um kein Anführungszeichen handelt, wird ein beliebiges Buchstabenzeichen von a bis z oder A bis Z (die Groß-/Kleinschreibung wird nicht beachtet) oder ein beliebiges numerisches Zeichen von 0 bis 9 als Übereinstimmung verwendet.|  
 |`(\.(?!\.))`|Wenn es sich beim nächsten Zeichen um einen Punkt handelt, wird dieser als Übereinstimmung verwendet. Wenn es sich um keinen Punkt handelt, wird bis zum nächsten Zeichen weitergesucht und der Vergleich fortsetzt. `(?!\.)` ist eine negative Lookaheadassertion mit einer Breite von 0 (Null), die verhindert, dass im lokalen Teil einer E-Mail-Adresse zwei aufeinander folgende Punkte enthalten sind.|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Wenn es sich beim nächsten Zeichen um keinen Punkt handelt, wird ein beliebiges Wortzeichen oder eines der folgenden Zeichen als Übereinstimmung verwendet: -!#$%'*+=?^`{}&#124;~.|  
@@ -72,7 +75,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
 |`(?<=[0-9a-z])`|Die Suche wird fortgesetzt, wenn es sich bei dem Zeichen, das dem @-Zeichen vorausgeht, ist, um eines der Zeichen A bis Z, a bis z oder 0 bis 9 handelt. Das `(?<=[0-9a-z])` -Konstrukt definiert eine positive Lookbehindassertion mit einer Breite von 0 (Null).|  
 |`(?(\[)`|Überprüfen Sie, ob es sich bei dem Zeichen, das @ folgt, um eine eckige Klammer links handelt.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Wenn es sich um eine eckige Klammer links handelt, wird die eckige Klammer links als Übereinstimmung verwendet, der eine IP-Adresse (vier Gruppen aus einer bis drei Ziffern, jeweils durch einen Punkt getrennt) und eine eckige Klammer rechts folgen.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Wenn das Zeichen, das @ folgt keine öffnende eckige Klammer Übereinstimmung ein alphanumerisches Zeichen mit einem Wert von A-Z, a-Z oder 0-9, gefolgt von keinem oder mehreren Vorkommen eines Bindestrichs, gefolgt, von 0 (null) oder ein alphanumerisches Zeichen, die mit einem Wert von A-Z, a-Z oder 0-9 , gefolgt von einem Punkt. Dieses Muster kann ein- oder mehrmals wiederholt werden und der Domänenname der obersten Ebene muss darauf folgen.|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Wenn es sich bei dem Zeichen, das @ folgt, um keine öffnende eckige Klammer handelt, wird ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 als Übereinstimmung verwendet, dem null oder mehr Vorkommen eines Bindestrichs und kein oder ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 sowie ein Punkt folgen. Dieses Muster kann ein- oder mehrmals wiederholt werden und der Domänenname der obersten Ebene muss darauf folgen.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Der Domänenname der obersten Ebene muss mit einem alphanumerischen Zeichen (a-z, A-Z und 0-9) beginnen und enden. Er kann außerdem 0 bis 22 ASCII-Zeichen enthalten, die entweder alphanumerische Zeichen oder Bindestriche sind.|  
 |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
   

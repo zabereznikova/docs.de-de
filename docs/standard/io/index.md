@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -155,7 +155,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie im Windows Developer Center unter [Schnellstart: Lesen und Schreiben einer Datei](http://go.microsoft.com/fwlink/p/?LinkId=243072).  
+ Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>E/A und Sicherheit  
  Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
