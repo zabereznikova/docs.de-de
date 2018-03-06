@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Innere Schleife Entwicklungsworkflow für Docker-apps
 
@@ -123,7 +123,7 @@ In der dockerfile-Datei müssen Sie auch weisen Docker an, den TCP-Port zu über
 
 Es gibt andere Zeilen Konfiguration, die Sie in die dockerfile-Datei je nach Sprache/Framework, die Sie verwenden, die hinzufügen können, damit Docker weiß, wie die app ausgeführt werden kann. Sie benötigen beispielsweise die ENTRYPOINT-Zeile mit \["Dotnet", "MyCustomMicroservice.dll"\] eine app .NET Core ausgeführt wird, obwohl Sie mehrere Varianten abhängig von der Ansatz zum Erstellen und führen Sie den Dienst verwenden können. Wenn Sie verwenden das SDK und Dotnet CLI erstellen und Ausführen der app .NET, wäre es etwas anders. Entscheidend ist, dass die ENTRYPOINT-Zeile plus zusätzliche Zeilen je nach der Sprachplattform unterschiedlich sind, die Sie für Ihre Anwendung auswählen.
 
-**Weitere Informationen** finden Sie Informationen zum Erstellen von Docker-Images für .NET Core-Anwendungen, <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Weitere Informationen** finden Sie Informationen zum Erstellen von Docker-Images für .NET Core-Anwendungen, <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Wechseln Sie zu, um weitere Informationen zur Erstellung Ihrer eigenen Abbilder [https://docs.docker.com/engine/ \Lernprogramme/Dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ Visual Studio-Code unterstützt Debuggen Docker, wenn Sie Node.js und anderen Pl
 
 Sie können auch .NET Core-Container in Docker Debuggen bei Verwendung von Visual Studio, wie im nächsten Abschnitt beschrieben.
 
-**Weitere Informationen:** wechseln Sie zu, um weitere Informationen zum Debuggen von Node.js-Docker-Containern <https://blog.docker.com/2016/07/live-debugging-docker/> und [https://blogs.msdn.microsoft.com/ \ Benutzer\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Weitere Informationen:** wechseln Sie zu, um weitere Informationen zum Debuggen von Node.js-Docker-Containern <https://blog.docker.com/2016/07/live-debugging-docker/> und [https://blogs.msdn.microsoft.com/ \ Benutzer\_Ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-Hover-Conditional-Breakpoints-Node-js-Mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

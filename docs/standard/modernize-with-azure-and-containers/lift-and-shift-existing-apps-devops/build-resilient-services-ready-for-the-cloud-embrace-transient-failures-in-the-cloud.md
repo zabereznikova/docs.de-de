@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Resilienter Dienste bereit, für die Cloud zu erstellen: vorübergehende Fehler in der Cloud zu nutzen 
 
@@ -19,7 +19,7 @@ Als Stabilität wird die Fähigkeit zum Wiederherstellen nach Fehlern und zum Fo
 
 Die Anwendung ist für die Cloud bereit, wenn mindestens ein Modell softwarebasierten resilienzgrad, anstatt eine Hardware-basiertes Modell implementiert. Ihre Cloud-Anwendung muss die teilfehler nutzen, die sicherlich stattfinden. Sie müssen zum Entwerfen, oder gestalten Sie teilweise die Anwendung auf, wenn Sie Stabilität bei erwarteten teilfehler erzielen möchten. Es sollten so entworfen werden, zu bewältigen teilfehler, z. B. vorübergehende Netzwerkausfälle und Knoten oder virtuellen Computern in der Cloud abstürzt. Sogar Container verschoben werden, auf einen anderen Knoten innerhalb eines Clusters Orchestrator können kurze Ausfälle in der Anwendung verursachen.
 
-## <a name="handling-partial-failure"></a>Behandlung von teilweise fehlerhaft.
+## <a name="handling-partial-failure"></a>Behandeln von Teilfehlern
 
 In einer Cloud-basierten Anwendung ist eine partielle allgegenwärtigen Ausfallrisiko vorhanden. Z. B. fehlschlagen, eine einzelne Website-Instanz oder einen Container, oder es möglicherweise nicht verfügbar oder nicht reagierenden für kurze Zeit. Alternativ dazu können Sie einen einzelnen virtuellen Computer oder Server stürzt möglicherweise ab.
 
@@ -47,15 +47,13 @@ Gewusst wie: Implementieren von Strategien für die Behandlung von teilfehler in
 
 -   **Implementieren robusten Kommunikation zum partiellen Fehler behandeln**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **Entity Framework Connection Resiliency und Wiederholungslogik (Version 6 und höher)**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **Der Anwendungsblock für die Behandlung vorübergehender Fehler**
-
-<!-- -->
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 

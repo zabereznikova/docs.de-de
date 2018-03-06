@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische abrufen gestarteten (Übersicht) 
 
@@ -47,7 +47,7 @@ Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModern
 
 In dieser exemplarischen Vorgehensweise können Sie die ursprüngliche Implementierung von zwei Beispiel Legacyanwendungen untersuchen. Beide Beispiel-apps haben eine monolithische Architektur und mithilfe des klassischen ASP.NET erstellt wurden. Eine Anwendung basiert auf ASP.NET 4.x MVC; die zweite Anwendung basiert auf ASP.NET 4.x Web Forms. Beide Anwendungen sind der [eShopModernizing GitHub-Repository](https://github.com/dotnet-architecture/eShopModernizing).
 
-Sie können beide beispielapps containerize, ähnlich wie die können die Klassisches containerize [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) (WCF)-Anwendung als eine desktop-Anwendung verwendet wird. Ein Beispiel finden Sie unter [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Sie können beide beispielapps containerize, ähnlich wie die können die Klassisches containerize [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) (WCF)-Anwendung als eine desktop-Anwendung verwendet wird. Ein Beispiel finden Sie unter [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
 
 ### <a name="goals"></a>Ziele
 
@@ -59,7 +59,7 @@ Abbildung 5 – 1 zeigt die einfachen Szenarios, die ursprüngliche Legacyanwend
 
 > ![Einfache Architektur-Szenario für die ursprüngliche Legacyanwendungen](./media/image5-1.png)
 >
-> **Abbildung 5 – 1.** Einfache Architektur-Szenario für die ursprüngliche Legacyanwendungen
+> **Abbildung 5-1.** Einfache Architektur-Szenario für die ursprüngliche Legacyanwendungen
 
 Aus Sicht der Business-Domäne bieten beide apps den gleichen Katalog Verwaltungsfunktionen. Mitglieder des Teams Enterprise Shopping würde die app anzeigen und Bearbeiten des Produktkatalogs verwenden. Abbildung 5 – 2 zeigt die anfänglichen app Screenshots.
 
@@ -97,7 +97,7 @@ Mithilfe von Windows-Containern um Bereitstellung der vorhandenen .NET-Anwendung
 
 Das Ziel dieser exemplarischen Vorgehensweise werden Ihnen mehrere Optionen für eine vorhandene .NET Framework-Anwendung containerizing anzeigen. Sie haben folgende Möglichkeiten:
 
--   Containerize Ihrer Anwendung mit [Visual Studio 2017-Tools für Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (Visual Studio-2017 oder höhere Versionen).
+-   Containerize Ihrer Anwendung mit [Visual Studio 2017-Tools für Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio-2017 oder höhere Versionen).
 
 -   Containerize Ihrer Anwendung durch manuelles Hinzufügen von einer [dockerfile-Datei](https://docs.docker.com/engine/reference/builder/), und klicken Sie dann mit der [Docker-Befehlszeilenschnittstelle](https://docs.docker.com/engine/reference/commandline/cli/).
 
@@ -163,7 +163,7 @@ In dieser exemplarischen Vorgehensweise werden mehrere Szenarien behandelt.
 
 ![Bereitstellen Sie in einer Azure-VM von CI-CD-Pipelines in Visual Studio Team Services](./media/image5-6.png)
 
-> **Abbildung 5 bis 6.** Bereitstellen Sie in einer Azure-VM von CI-CD-Pipelines in Visual Studio Team Services
+> **Abbildung 5-6.** Bereitstellen Sie in einer Azure-VM von CI-CD-Pipelines in Visual Studio Team Services
 
 ### <a name="azure-vms-for-windows-containers"></a>Azure-VMs für Windows-Container
 
