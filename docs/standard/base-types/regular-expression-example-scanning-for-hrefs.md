@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für reguläre Ausdrücke: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
@@ -54,7 +54,7 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
 |`=`|Sucht nach dem Gleichheitszeichen.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /><br /> –   Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.<br />–   Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /> <ul><li><p>Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li><li><p>Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li></ul>|  
 |`(?<1>[^"']*)`|Weist der Erfassungsgruppe namens `1` null oder mehr Vorkommen eines beliebigen Zeichens außer Anführungszeichen oder Apostroph zu.|  
 |`"(?<1>\S+)`|Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.|  
   

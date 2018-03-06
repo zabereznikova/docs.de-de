@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
@@ -273,7 +273,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |Muster|description|  
 |-------------|-----------------|  
 |`(a\1`|Entweder „a“ zusammen mit dem Wert der ersten Erfassungsgruppe abgleichen...|  
-|`&#124;(?(1)`|… oder testen, ob die erste Erfassungsgruppe definiert wurde. (Beachten Sie, dass das `(?(1)`-Konstrukt keine Erfassungsgruppe definiert.)|  
+|<code>&#124;(?(1)</code>|… oder testen, ob die erste Erfassungsgruppe definiert wurde. (Beachten Sie, dass das `(?(1)`-Konstrukt keine Erfassungsgruppe definiert.)|  
 |`\1))`|Wenn die erste Erfassungsgruppe vorhanden ist, deren Wert abgleichen. Wenn die Gruppe nicht vorhanden ist, gleicht die Gruppe <xref:System.String.Empty?displayProperty=nameWithType> ab.|  
   
  Der erste reguläre Ausdruck versucht, dieses Muster zwischen null- und zweimal abzugleichen; der zweite Ausdruck genau zweimal. Da das erste Muster die minimale Anzahl von Erfassungen mit der ersten Erfassung von <xref:System.String.Empty?displayProperty=nameWithType> erreicht, wird es nie wiederholt, um `a\1` abzugleichen. Der `{0,2}`-Quantifizierer erlaubt nur leere Übereinstimmungen in der letzten Iteration. Im Gegensatz dazu gleicht der zweite reguläre Ausdruck „a“ ab, weil `a\1` ein zweites Mal ausgewertet wird; die Mindestanzahl von Iterationen (2) zwingt das Modul nach einer leeren Übereinstimmung zur Wiederholung.  

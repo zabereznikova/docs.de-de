@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 <a name="top"></a> Das Modul für reguläre Ausdrücke in .NET ist ein leistungsstarkes Tool mit vollem Funktionsumfang, das Texte auf Grundlage von Musterübereinstimmungen verarbeitet, anstatt Literaltext zu vergleichen und nach Übereinstimmungen mit diesem zu suchen. In den meisten Fällen wird die Suche nach Musterabgleichen schnell und effizient ausgeführt. Gelegentlich kann das Modul für reguläre Ausdrücke jedoch sehr langsam wirken. In Extremfällen kann auch der Eindruck entstehen, dass das Modul nicht mehr reagiert, wenn für die Verarbeitung relativ kleiner Eingaben mehrere Stunden oder sogar Tage benötigt werden.  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
-|`(\r?\n)&#124;,?\s)`|Übereinstimmung mit entweder keinem oder einem Wagenrücklaufzeichen gefolgt von einem Zeilenumbruchzeichen oder mit keinem oder einem Komma gefolgt von einem Leerzeichen.|  
-|`(\w+((\r?\n)&#124;,?\s))*`|Übereinstimmung mit keinem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gefolgt von entweder keinem oder einem Wagenrücklaufzeichen und einem Zeilenumbruchzeichen oder von keinem oder einem Komma gefolgt von einem Leerzeichen.|  
+|<code>(\r?\n)&#124;,?\s)</code>|Übereinstimmung mit entweder keinem oder einem Wagenrücklaufzeichen gefolgt von einem Zeilenumbruchzeichen oder mit keinem oder einem Komma gefolgt von einem Leerzeichen.|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|Übereinstimmung mit keinem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gefolgt von entweder keinem oder einem Wagenrücklaufzeichen und einem Zeilenumbruchzeichen oder von keinem oder einem Komma gefolgt von einem Leerzeichen.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`[.?:;!]`|Übereinstimmung mit einem Punkt, Fragezeichen, Doppelpunkt, Semikolon oder Ausrufezeichen.|  
   
