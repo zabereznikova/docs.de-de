@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Erste Schritte mit f# in Visual Studio-Code mit Ionide
 
-Sie können schreiben f# [Visual Studio Code](https://code.visualstudio.com) mit der [Ionide-Plug-Ins](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), um eine plattformübergreifende, einfache IDE problembehandlungserlebnis mit IntelliSense und grundlegenden Code Refactorings abzurufen.  Besuchen Sie [Ionide.io](http://ionide.io) Weitere Informationen zu den Plug-in-Suite.
+Sie können schreiben f# [Visual Studio Code](https://code.visualstudio.com) mit der [Ionide-Plug-Ins](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), um eine plattformübergreifende, einfache IDE problembehandlungserlebnis mit IntelliSense und grundlegenden Code Refactorings abzurufen.  Besuchen Sie [Ionide.io](https://ionide.io) Weitere Informationen zu den Plug-in-Suite.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -39,9 +39,9 @@ Wenn Sie nicht Visual Studio installieren möchten, gehen Sie folgendermaßen vo
 2. Installieren Sie das Windows SDK für Ihr Betriebssystem aus:
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. Installieren der [Microsoft Build 2015-Tools](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  Sie müssen möglicherweise auch installieren [Microsoft Build Tools 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
 
@@ -65,9 +65,9 @@ C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
 
 Ionide erkennt automatisch dem Compiler und Tools, aber wenn aus irgendeinem Grund nicht (z. B. Visual f#-Tools in einem anderen Verzeichnis installiert wurden), können Sie manuell den enthaltenden Ordner hinzufügen (`...\Microsoft SDKs\F#\4.0`) zu Ihrem Pfad.
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-Auf MacOS, Ionide verwendet [Mono](http://www.mono-project.com).  Die einfachste Möglichkeit zum Installieren von Mono auf MacOS erfolgt über Homebrew.  Geben Sie einfach die folgenden in Ihrem Terminal:
+Auf MacOS, Ionide verwendet [Mono](https://www.mono-project.com).  Die einfachste Möglichkeit zum Installieren von Mono auf MacOS erfolgt über Homebrew.  Geben Sie einfach die folgenden in Ihrem Terminal:
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-Unter Linux verwendet Ionide auch [Mono](http://www.mono-project.com).  Wenn Sie auf Debian oder Ubuntu nutzen, können Sie Folgendes verwenden:
+Unter Linux verwendet Ionide auch [Mono](https://www.mono-project.com).  Wenn Sie auf Debian oder Ubuntu nutzen, können Sie Folgendes verwenden:
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ Sie können Visual Studio-Code aus der [code.visualstudio.com](https://code.visu
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Nur-Plug-In für f#-Unterstützung in Visual Studio-Code ist erforderlich [Ionide Fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Sie können jedoch auch installieren [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) und die abzurufenden [gefälschte](http://fsharp.github.io/FAKE/) unterstützen und [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) abzurufenden [Paket](https://fsprojects.github.io/Paket/) unterstützen.  GEFÄLSCHTE und Paket zusätzliche F#-Community-Tools zum Erstellen von Projekten und Verwalten von Abhängigkeiten, bzw. sind.
+Nur-Plug-In für f#-Unterstützung in Visual Studio-Code ist erforderlich [Ionide Fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Sie können jedoch auch installieren [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) und die abzurufenden [gefälschte](https://fake.build/) unterstützen und [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) abzurufenden [Paket](https://fsprojects.github.io/Paket/) unterstützen.  GEFÄLSCHTE und Paket zusätzliche F#-Community-Tools zum Erstellen von Projekten und Verwalten von Abhängigkeiten, bzw. sind.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Erstellen eines ersten Projekts mit Ionide
 
@@ -121,7 +121,7 @@ Wählen Sie "f#: Neues Projekt" durch erreichen **EINGABETASTE**, dem gelangen S
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-Es wird eine Vorlage für einen bestimmten Typ von Projekt ausgewählt.  Es gibt einige Optionen, wie ein [FsLab](http://fslab.org) Vorlage für Data Science oder [Suave](https://suave.io) Vorlage für das Web zu programmieren.  In diesem Artikel verwendet die `classlib` Vorlage so hervorzuheben, und drücken Sie **EINGABETASTE**.  Sie gelangen Sie dann den folgenden Schritt aus:
+Es wird eine Vorlage für einen bestimmten Typ von Projekt ausgewählt.  Es gibt einige Optionen, wie ein [FsLab](https://fslab.org) Vorlage für Data Science oder [Suave](https://suave.io) Vorlage für das Web zu programmieren.  In diesem Artikel verwendet die `classlib` Vorlage so hervorzuheben, und drücken Sie **EINGABETASTE**.  Sie gelangen Sie dann den folgenden Schritt aus:
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ Wenn Sie den vorherigen Schritt Schritte befolgt haben, sollten Sie Visual Studi
 Diese Vorlage generiert ein paar Dinge, die Sie hilfreich finden:
 
 1. Die f#-Projekt selbst, darunter die `ClassLibraryDemo` Ordner.
-2. Die richtige Verzeichnisstruktur für das Hinzufügen von Paketen über [ `Paket` ](http://fsprojects.github.io/Paket/).
-3. Ein plattformübergreifendes Buildskript mit [ `FAKE` ](http://fsharp.github.io/FAKE/).
+2. Die richtige Verzeichnisstruktur für das Hinzufügen von Paketen über [ `Paket` ](https://fsprojects.github.io/Paket/).
+3. Ein plattformübergreifendes Buildskript mit [ `FAKE` ](https://fake.build/).
 4. Die `paket.exe` ausführbare Datei die fetch Pakete und Abhängigkeiten für Sie beheben kann.
 5. Ein `.gitignore` Datei, wenn Sie dieses Projekt Git-basierten Datenquellen-Steuerelement hinzufügen möchten.
 
@@ -235,9 +235,9 @@ In den vorherigen Abschnitten in diesem Artikel veranschaulicht einen allgemeine
 
 Der nächste Schritt im REPL-driven Development ist für das Verschieben von Arbeitscode in einer f#-Implementierungsdatei.  Es kann dann vom F#-Compiler in eine Assembly kompiliert werden, die ausgeführt werden können.
 
-Um zu beginnen, öffnen Sie `ClassLibraryDemo.fs`.  Sie werden bemerken, dass Code dort bereits in vorhanden ist.  Fahren Sie fort und löschen Sie die Definition der Klasse, aber belassen Sie unbedingt die [`namespace`](../language-reference/namespaces.md) Deklaration oben.
+Um zu beginnen, öffnen Sie `ClassLibraryDemo.fs`.  Sie werden bemerken, dass Code dort bereits in vorhanden ist.  Fahren Sie fort und löschen Sie die Definition der Klasse, aber belassen Sie unbedingt die [ `namespace` ](../language-reference/namespaces.md) Deklaration oben.
 
-Als Nächstes erstellen Sie ein neues [`module`](../language-reference/modules.md) aufgerufen `PigLatin` , und kopieren Sie die `toPigLatin` Funktion als solche hinein:
+Als Nächstes erstellen Sie ein neues [ `module` ](../language-reference/modules.md) aufgerufen `PigLatin` , und kopieren Sie die `toPigLatin` Funktion als solche hinein:
 
 [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
@@ -307,4 +307,4 @@ Weitere Informationen zu F#- und die Funktionen der Programmiersprache Auschecke
 
 [Namespaces](../language-reference/namespaces.md)
 
-[Ionide-von VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)
+[Ionide-VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)
