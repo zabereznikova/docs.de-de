@@ -24,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anweisungen sollen Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) ist die neueste Version. Sie wird unter Windows XP und Windows Server 2003 unterstützt. Es ist in [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) und [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) enthalten.
+Die vorliegende Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) ist die neueste Version. Sie wird unter Windows XP und Windows Server 2003 nicht unterstützt. Die Version ist in [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) und in [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) enthalten.
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
