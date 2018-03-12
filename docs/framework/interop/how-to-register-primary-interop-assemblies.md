@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40414f39a1b84e7d07086d0634898de5171db590
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26455be1d6d5879041b9ccb397bfc94a04390a64
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Gewusst wie: Registrieren primärer Interop-Assemblys
 Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).  
@@ -53,11 +55,11 @@ Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Sc
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die primäre Interop-Assembly `CompanyA.UtilLib.dll` registriert.  
   
-```  
+```console  
 regasm CompanyA.UtilLib.dll  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Programming with Primary Interop Assemblies (Programmieren mit primären Interop-Assemblys)](http://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
- [Suchen von primären Interop-Assemblys](http://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
- [Verteilen primärer Interop-Assemblys](http://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265)
+ [Programming with Primary Interop Assemblies (Programmieren mit primären Interop-Assemblys)](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
+ [Suchen von primären Interop-Assemblys](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [Verteilen primärer Interop-Assemblys](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))

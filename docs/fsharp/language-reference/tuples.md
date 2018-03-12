@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Tupel
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperation mit c# Tupel
 
-C#-7 eingeführt Tupel in der Sprache an.  Tupel in c# und sind Strukturen und Struktur Tupel in f# gleich sind.  Wenn Sie mit zusammenarbeiten müssen müssen c# Tupel verwendet, Sie Struktur Tupel.
+C#-7 eingeführt Tupel in der Sprache an.  Tupel in C# geschrieben sind Strukturen und Struktur Tupel in f# entsprechen.  Wenn Sie mit c# zusammenarbeiten müssen, müssen Sie die Struktur Tupel verwenden.
 
 Dies ist einfach.  Angenommen Sie, Sie verfügen über ein Tupel an eine C#-Klasse übergeben und dann verwenden das Ergebnis, das auch ein Tupel ist:
 

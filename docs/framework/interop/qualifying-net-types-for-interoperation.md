@@ -2,7 +2,8 @@
 title: "Qualifizieren von .NET-Typen für die Interoperation"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -15,12 +16,13 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a05330a6834b4775e62b7b55aee03526b2a9bbda
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f08f2de4a8f402b2c9c41908aa4bcfe2730fef5
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualifizieren von .NET-Typen für die Interoperation
 Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügbar zu machen, beachten Sie zur Entwurfszeit die Anforderungen von Com-Interop. Verwaltete Typen (Klassen, Schnittstellen, Strukturen und Enumerationen) lassen sich nahtlos in COM-Typen integrieren, wenn Sie die folgenden Richtlinien einhalten:  
@@ -54,6 +56,6 @@ Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügb
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Einführung in die Klassenschnittstelle](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Einführung in die Klassenschnittstelle](https://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024(v=vs.100))  
  [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
