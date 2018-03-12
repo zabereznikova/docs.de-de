@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategien zum Beheben von Teilfehlern
 
@@ -31,7 +31,7 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
 **Fallbacks bereitstellen:** Bei diesem Ansatz führt der Clientprozess Fallbacklogik aus, wenn eine Anforderung fehlschlägt: Es werden z.B. zwischengespeicherte Daten oder ein Standardwert zurückgegeben. Dieser Ansatz eignet sich für Abfragen und ist bei Updates oder Befehlen komplexer.
 
-**Anzahl der Anforderungen in der Warteschlange begrenzen:** Clients sollten eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Clientmicroservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, sind weitere Anforderungen zwecklos, und diese Versuche lösen sofort einen Fehler aus. Im Hinblick auf die Implementierung kann diese Anforderung mithilfe der [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead)-Richtlinie aus Polly erfüllt werden. Dieser Ansatz ist im Wesentlichen eine Parallelisierungsdrosselung mit [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) als Implementierung. Er lässt außerdem eine „Warteschlange“ außerhalb des Bulkheads zu. Sie können zu viele Ladevorgänge vor der Ausführung bereits proaktiv verhindern, z.B. wenn Kapazität ausgelastet ist. Die Antwort auf bestimmte Fehlerszenarios wird dann schneller gesendet, als ein Trennschalter reagieren würde, da ein Trennschalter auf Fehler wartet. Das BulkheadPolicy-Objekt in Polly gibt an, wie voll der Bulkhead und die Warteschlange sind, und bietet Überlaufereignisse an, damit er auch für die automatisierte horizontale Skalierung verwendet werden kann.
+**Anzahl der Anforderungen in der Warteschlange begrenzen:** Clients sollten eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Clientmicroservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, sind weitere Anforderungen zwecklos, und diese Versuche lösen sofort einen Fehler aus. Im Hinblick auf die Implementierung kann diese Anforderung mithilfe der [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead)-Richtlinie aus Polly erfüllt werden. Dieser Ansatz ist im Wesentlichen eine Parallelisierungsdrosselung mit <xref:System.Threading.SemaphoreSlim> als Implementierung. Er lässt außerdem eine „Warteschlange“ außerhalb des Bulkheads zu. Sie können zu viele Ladevorgänge vor der Ausführung bereits proaktiv verhindern, z.B. wenn Kapazität ausgelastet ist. Die Antwort auf bestimmte Fehlerszenarios wird dann schneller gesendet, als ein Trennschalter reagieren würde, da ein Trennschalter auf Fehler wartet. Das BulkheadPolicy-Objekt in Polly gibt an, wie voll der Bulkhead und die Warteschlange sind, und bietet Überlaufereignisse an, damit er auch für die automatisierte horizontale Skalierung verwendet werden kann.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -47,7 +47,7 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 -   **Entwerfen robuster Anwendungen für Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **Behandeln vorübergehender Fehler**
+-   **Behandlung vorübergehender Fehler**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 

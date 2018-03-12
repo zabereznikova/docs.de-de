@@ -4,14 +4,15 @@ description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrieren von relationalen Datenbanken in azure
 
@@ -21,7 +22,7 @@ In Azure können Sie Ihrer Datenbankserver aufzurüsten direkt zu IaaS-VMs (pure
 
 ![Datenbank-Migrationspfade in Azure](./media/image3-1.png)
 
-> **Abbildung 3 minus 1.** Datenbank-Migrationspfade in Azure
+> **Abbildung 3-1.** Datenbank-Migrationspfade in Azure
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Wenn zum Migrieren zu Azure SQL-Datenbank verwaltete Instanz
 
@@ -35,27 +36,27 @@ Eine Organisation, die in einer hochgradig regulierte Branche arbeitet und die I
 
 Verwaltete Instanz in Azure SQL-Datenbank weist folgende Merkmale auf:
 
--   Die Sicherheitsisolation über Virtuellenetzwerk in Azure
+- Die Sicherheitsisolation über Virtuellenetzwerk in Azure
 
--   -Oberfläche Anwendungskompatibilität mit diesen Features:
+- -Oberfläche Anwendungskompatibilität mit diesen Features:
 
-    -   SQL Server-Agent und SQL Server Profiler
+  - SQL Server-Agent und SQL Server Profiler
 
-    -   Datenbankübergreifende Verweise und Abfragen, SQL CLR, Replikation, Change Data Capture (CDC) und Service Broker
+  - Datenbankübergreifende Verweise und Abfragen, SQL CLR, Replikation, Change Data Capture (CDC) und Service Broker
 
--   Datenbank-Größen bis zu 35 TB
+- Datenbank-Größen bis zu 35 TB
 
--   Minimale Ausfallzeit Migration mit diesen Features:
+- Minimale Ausfallzeit Migration mit diesen Features:
 
-    -   Migration-Dienst von Azure-Datenbank
+  - Migration-Dienst von Azure-Datenbank
 
-    -   Systemeigene Sicherung und-Wiederherstellung und des Protokollversands
+  - Systemeigene Sicherung und-Wiederherstellung und des Protokollversands
 
 Beim Migrieren von vorhandenen Anwendungsdatenbanken zu Azure SQL-Datenbank, bietet das Modell für die verwaltete Instanz mit diesen Funktionen nahezu 100 % der Vorteile der Paas für SQL Server. Verwaltete Instanz ist eine SQL Server-Umgebung, in dem Sie auf Instanzebene Funktionen weiterhin ohne Entwurf der Anwendung ändern zu müssen.
 
 Verwaltete Instanz ist wahrscheinlich die beste Anpassung für Unternehmen, die derzeit verwendeten SQL Server und die Flexibilität bei der die Netzwerksicherheit in der Cloud erfordern. Es ist, verfügen Sie über ein virtuelles privates Netzwerk für Ihre SQL-Datenbanken.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Wenn zum Migrieren zu Azure SQL-Datenbank 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Wenn zum Migrieren zu Azure SQL-Datenbank
 
 Wie bereits erwähnt, ist die standardmäßige Azure SQL-Datenbank ein vollständig verwalteter, relationale DBaaS. SQL-Datenbank verwaltet derzeit Millionen von Produktionsdatenbanken, 38 Rechenzentren auf der ganzen Welt. Unterstützt eine Breite Palette von Anwendungen und arbeitsauslastungen, von der Verwaltung einfacher Transaktionsdaten, in der datenintensivste, unternehmenswichtige Anwendungen, die erweiterte Datenverarbeitung auf globaler Ebene erfordern driving.
 
@@ -65,19 +66,19 @@ Azure SQL-Datenbank ist nur intelligent Cloud-Datenbankdienst, der für app-Entw
 
 Azure SQL-Datenbank bietet folgende Vorteile:
 
--   Integrierte Intelligenz (Machine Learning), die die lernt und passt sich an Ihre app
+- Integrierte Intelligenz (Machine Learning), die die lernt und passt sich an Ihre app
 
--   Bereitstellung der Datenbank bei Bedarf
+- Bereitstellung der Datenbank bei Bedarf
 
--   Einen Bereich von Angeboten, die für alle Arbeitslasten
+- Einen Bereich von Angeboten, die für alle Arbeitslasten
 
--   Verfügbarkeit von 99,99 % SLA, keine Wartung
+- Verfügbarkeit von 99,99 % SLA, keine Wartung
 
--   Geografische Replikation und Restore-Dienste für den Datenschutz
+- Geografische Replikation und Restore-Dienste für den Datenschutz
 
--   Azure SQL Database Point in Time Restore-Funktion
+- Azure SQL Database Point in Time Restore-Funktion
 
--   Kompatibilität mit SQL Server 2016, einschließlich Hybrid und migration
+- Kompatibilität mit SQL Server 2016, einschließlich Hybrid und migration
 
 Die standardmäßige Azure SQL-Datenbank ist näher an die PaaS als verwaltete Instanz in Azure SQL-Datenbank. Sie sollten, verwenden Sie wenn möglich, da Sie weitere Vorteile aus einer verwalteten Cloud erhalten. Allerdings Azure SQL-Datenbank verfügt über einige wesentliche Unterschiede von regulären und einer lokalen SQL Server-Instanzen. Je nach Anforderungen für die vorhandene Anwendung-Datenbankserver und Enterprise-Anforderungen und Richtlinien kann es nicht die beste Wahl sein, bei der Planung Ihrer Migrations in die Cloud.
 
@@ -108,23 +109,23 @@ Weitere Informationen zum Migrieren von Datenbanken mithilfe von Azure-Datenbank
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Wählen Sie eine Cloud SQL Server-Option: Azure SQL-Datenbank (PaaS) oder SQL Server auf virtuellen Azure-Computer (IaaS)**
+- **Wählen Sie eine Cloud SQL Server-Option: Azure SQL-Datenbank (PaaS) oder SQL Server auf virtuellen Azure-Computer (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **In der Cloud mit Azure SQL DB verwaltete Instanz und Datenbank-Migration-Dienst schneller abrufen**
+- **In der Cloud mit Azure SQL DB verwaltete Instanz und Datenbank-Migration-Dienst schneller abrufen**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **SQL Server-Datenbank-Migration zu SQL-Datenbank in der cloud**
+- **SQL Server-Datenbank-Migration zu SQL-Datenbank in der cloud**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Azure SQL-Datenbank**
+- **Azure SQL-Datenbank**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **SQL Server auf virtuellen Computern**
+- **SQL Server auf virtuellen Computern**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

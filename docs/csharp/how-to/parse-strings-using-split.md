@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von „String.Split“ (C#-Anleitung)
 
@@ -51,9 +51,9 @@ Aufeinander folgende Instanzen einer beliebigen Trennlinie geben die leere Zeich
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen.
+Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip) herunterladen.
 
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../programming-guide/index.md)  
  [Zeichenfolgen](../programming-guide/strings/index.md)  
- [Reguläre Ausdrücke von .NET Framework](https://msdn.microsoft.com/library/hs600312)
+ [Reguläre Ausdrücke von .NET](../../standard/base-types/regular-expressions.md)

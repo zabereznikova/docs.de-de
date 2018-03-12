@@ -4,14 +4,15 @@ description: Vorhandene .NET Anwendungen mit dem Azure-Cloud und Windows-Contain
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Heben Sie und verschieben Sie vorhandene apps Azure IaaS
 
@@ -27,7 +28,7 @@ Abbildung 2: 1 positioniert Cloud-Infrastruktur einsatzfähige Anwendungen, in d
 
 > **Abbildung 2-1.** Positionieren von Cloud-Infrastruktur einsatzfähige Anwendungen
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Warum migrieren Sie vorhandene .NET-Webanwendungen auf Azure IaaS 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Warum migrieren Sie vorhandene .NET-Webanwendungen auf Azure IaaS
 
 Der Hauptgrund für die Migration in die Cloud, sogar auf eine anfängliche IaaS-Ebene ist, Reduzierung der Kosten zu erreichen. Mithilfe von weitere verwalteten Infrastrukturdiensten kann Ihrer Organisation ihre Investitionen in Hardware-Wartung, Server oder VM-Bereitstellung und Bereitstellung und infrastrukturverwaltung senken.
 
@@ -39,7 +40,7 @@ Es ist auch deutlich geworden, dass Anwendungen sind einfacher zu aktualisieren 
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Wann zu IaaS statt nach PaaS migriert
 
-In den nächsten Abschnitten wird erläutert, Cloudfähige DevOps-Anwendungen, die größtenteils PaaS-Plattformen und Services basieren. Diese apps bieten Ihnen die meisten Vorteile in die Cloud migrieren.
+In den nächsten Abschnitten erläutert Cloudfähige DevOps-Anwendungen, die größtenteils PaaS-Plattformen und Services basieren. Diese apps bieten Ihnen die meisten Vorteile in die Cloud migrieren.
 
 Ermitteln Sie Ziel ist es einfach, bestehende Anwendungen in der Cloud zu verschieben, zuerst vorhandene Anwendungen, die erfordern beträchtliche Änderungen in Azure App Service ausgeführt. Diese apps sollte die erste Kandidaten sein.
 
@@ -53,15 +54,15 @@ Migration zur Cloud muss nicht schwierig sein. Aber viele Organisationen für de
 
 [Azure migrieren](https://aka.ms/azuremigrate) ist ein neuer Dienst, der die Leitfäden, Einblicke und Mechanismen zur Unterstützung bei der Migration zu Azure erforderlich bereitstellt. Azure migrieren bietet:
 
--   Ermittlung und Bewertung der lokalen virtuellen Computern
+- Ermittlung und Bewertung der lokalen virtuellen Computern
 
--   Integrierte Abhängigkeit-Zuordnung für die vertrauenswürdige Ermittlung von Anwendungen mit mehreren Ebenen
+- Integrierte Abhängigkeit-Zuordnung für die vertrauenswürdige Ermittlung von Anwendungen mit mehreren Ebenen
 
--   Intelligent Rightsizing auf virtuellen Azure-Computern
+- Intelligent Rightsizing auf virtuellen Azure-Computern
 
--   Kompatibilität mit Richtlinien für das Wiederherstellen der potenziellen Probleme reporting
+- Kompatibilität mit Richtlinien für das Wiederherstellen der potenziellen Probleme reporting
 
--   Integration mit Azure-Datenbankverwaltungsdienst für die Ermittlung von Datenbanken und migration
+- Integration mit Azure-Datenbankverwaltungsdienst für die Ermittlung von Datenbanken und migration
 
 Azure migrieren, können Sie sichergehen, die Ihre arbeitsauslastungen mit minimaler Auswirkung auf das Geschäft migrieren und wie erwartet in Azure ausgeführt werden können. Mit den richtigen Tools und Anleitungen erreichen Sie maximalen Rentabilität, kritische Leistung sicherzustellen und Zuverlässigkeit Anforderungen erfüllt sind.
 
@@ -85,23 +86,23 @@ Abbildung 2 – 3 zeigt die Ausführung von mehreren VM-Migrationen mithilfe von
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Datenblatt zu Azure migrieren**
+- **Datenblatt zu Azure migrieren**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure Migrate**
+- **Azure Migrate**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **Migrieren Sie zu Azure Site Recovery**
+- **Migrieren Sie zu Azure Site Recovery**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Azure Site Recovery-Dienst im Überblick**
+- **Azure Site Recovery-Dienst im Überblick**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **Migrieren von VMs in AWS auf Azure VMs**
+- **Migrieren von VMs in AWS auf Azure VMs**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 

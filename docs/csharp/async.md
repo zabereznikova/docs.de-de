@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -269,4 +269,5 @@ Ein empfohlenes Ziel ist das vollständige oder nahezu vollständige Erreichen [
 ## <a name="other-resources"></a>Weitere Ressourcen
 
 * [Async ausführlich](../standard/async-in-depth.md) enthält weitere Informationen zur Funktionsweise von Aufgaben.
+* [Asynchrone Programmierung mit Async und Await (C#)](../csharp/programming-guide/concepts/async/index.md)
 * Lucian Wischiks [sechs wichtige Tipps für Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) ist eine hervorragende Ressource für asynchrone Programmierung

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes Modul zum Abgleich regulärer Ausdrücke, das ein herkömmliches NFA-Modul (Nondeterministic Finite Automaton) beinhaltet, wie es beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Modulen (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Modulen für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einem herkömmlichen NFA-Modul implementiert werden.  
@@ -55,7 +55,7 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
      Die gierigen und verzögerten Versionen dieses regulären Ausdrucks werden der folgenden Tabelle entsprechend definiert.  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |`.+` (gieriger Quantifizierer)|Sucht nach mindestens einem Vorkommen eines beliebigen Zeichens. Dadurch sucht das Modul für reguläre Ausdrücke nach einer Übereinstimmung mit der gesamten Zeichenfolge und führt dann bei Bedarf die Rückverfolgung aus, um im Rest des Musters eine Übereinstimmung zu finden.|  
     |`.+?` (träger Quantifizierer)|Sucht nach mindestens einem Vorkommen eines beliebigen Zeichens, jedoch so wenigen wie möglich.|  
@@ -71,7 +71,7 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
      Der reguläre Ausdruck `\b[A-Z]+\b(?=\P{P})` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
     |`[A-Z]+`|Sucht ein- oder mehrmals nach einer Übereinstimmung mit einem beliebigen Buchstabenzeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -87,7 +87,7 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
      Das Muster für reguläre Ausdrücke `\b(?!non)\w+\b` wird entsprechend der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
     |`(?!non)`|Lookahead, um sicherzustellen, dass die aktuelle Zeichenfolge nicht mit „non“ beginnt. Andernfalls wird keine Übereinstimmung gefunden.|  
@@ -103,12 +103,12 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
      Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |`^`|Beginnt den Abgleich am Anfang einer Zeile.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Sucht nach 0 oder 1 Vorkommen der Zeichenfolge `<PRIVATE>`, gefolgt von einem Leerzeichen. Weist die Übereinstimmung der Erfassungsgruppe `Pvt` zu.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Wenn die Erfassungsgruppe `Pvt` vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der ersten Erfassungsgruppe zu.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.|  
     |`\r?$`|Gleicht das Ende einer Zeile oder das Ende der Zeichenfolge ab.|  
   
      Weitere Informationen zur bedingten Auswertung finden Sie unter [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -141,11 +141,11 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
      Der reguläre Ausdruck `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` wird entsprechend der Darstellung in der folgenden Tabelle definiert.  
   
-    |Muster|Beschreibung|  
+    |Muster|description|  
     |-------------|-----------------|  
     |`^`|Beginnt die Suche am Anfang der Zeichenfolge.|  
     |`[A-Z0-9]`|Übereinstimmung mit beliebigem numerischen oder alphanumerischen Zeichen. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Übereinstimmung mit null oder mehr Vorkommen eines beliebigen Wortzeichens oder eines der folgenden Zeichen: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, `, {, }, &#124; oder ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Übereinstimmung mit null oder mehr Vorkommen eines beliebigen Wortzeichens oder eines der folgenden Zeichen:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124; oder ~.|  
     |`(?<=[A-Z0-9])`|Lookbehind für vorheriges Zeichen, das numerisch oder alphanumerisch sein muss. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
     |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
   
@@ -153,7 +153,7 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informationen über die Verwendung der Rückverfolgung bei regulären Ausdrücken, um mit Verzweigungen nach alternativen Übereinstimmungen zu suchen.|  
 |[Kompilierung und Wiederverwendung](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informationen zum Kompilieren und Wiederverwenden regulärer Ausdrücke mit dem Ziel der Leistungsverbesserung.|  
@@ -163,5 +163,5 @@ Das .NET Framework-Modul für reguläre Ausdrücke ist ein zurückverfolgendes M
 |[Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md)|Codebeispiele, die die Verwendung regulärer Ausdrücke in üblichen Anwendungen veranschaulichen.|  
 |[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

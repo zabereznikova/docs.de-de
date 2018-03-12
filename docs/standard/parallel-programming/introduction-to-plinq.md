@@ -21,15 +21,15 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d14f82fa73400695faad49f010e6ef52a14dd9e3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="introduction-to-plinq"></a>Einführung in PLINQ
 ## <a name="what-is-a-parallel-query"></a>Was ist eine parallele-Abfrage?  
- Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) wurde in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] eingeführt.  Sie kennzeichnet ein einheitliches Modell für die typsichere Abfrage beliebiger <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>- Datenquellen in einer typsicheren Weise. LINQ to Objects ist der Name für LINQ-Abfragen von Auflistungen im Arbeitsspeicher, z. B. <xref:System.Collections.Generic.List%601>, und Arrays. Dieser Artikel setzt Grundkenntnisse über LINQ voraus. Weitere Informationen finden Sie unter [LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) wurde in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] eingeführt.  Sie kennzeichnet ein einheitliches Modell für die typsichere Abfrage beliebiger <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>- Datenquellen in einer typsicheren Weise. LINQ to Objects ist der Name für LINQ-Abfragen von Auflistungen im Arbeitsspeicher, z. B. <xref:System.Collections.Generic.List%601>, und Arrays. Dieser Artikel setzt Grundkenntnisse in LINQ voraus. Weitere Informationen finden Sie unter [LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  Parallel LINQ (PLINQ) ist eine parallele Implementierung des LINQ-Musters. Eine PLINQ-Abfrage entspricht weitgehend einer nicht parallelen LINQ to Objects-Abfrage. PLINQ-Abfragen werden, ebenso wie sequenzielle [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]-Abfragen, auf alle <xref:System.Collections.IEnumerable>- oder <xref:System.Collections.Generic.IEnumerable%601>-Datenquellen im Arbeitsspeicher angewendet und weisen eine verzögerte Ausführung auf, d. h. sie werden erst ausgeführt, wenn die Abfrage aufgelistet wird. Der Hauptunterschied besteht darin, dass PLINQ versucht, alle Prozessoren im System vollständig auszuschöpfen. PLINQ partitioniert hierzu die Datenquelle in Segmente und führt dann die Abfrage für jedes Segment parallel in separaten Arbeitsthreads und auf mehreren Prozessoren aus. In vielen Fällen bedeutet eine parallele Ausführung, dass die Abfrage deutlich schneller ausgeführt wird.  
   

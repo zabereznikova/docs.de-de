@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
   
- Das Tool <legacyBold>xsltc.exe</legacyBold> ist Bestandteil von Visual Studio 2008. Weitere Informationen finden Sie im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=89463).  
+ Das Tool „xsltc.exe“ ist Bestandteil von Visual Studio. Weitere Informationen finden Sie bei den [Visual Studio-Downloads](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis:** Beim Kompilieren im Debugmodus kann sich die XSLT-Leistung spürbar verringern.|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |`/nologo`|Unterdrückt die Anzeige der Compilercopyrightmeldung.|  
-|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] kompiliert die Assembly für die 64-Bit-CLR (Common Language Runtime) auf einem Computer mit einem [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist die Standardeinstellung.|  
+|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] kompiliert die Assembly für Ausführung durch die 64-Bit-CLR (Common Language Runtime) auf einem Computer mit einem [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist die Standardeinstellung.|  
 |`/out:` `assemblyName`|Gibt den Namen der Assembly an, die ausgegeben wird. Der Assemblyname entspricht standardmäßig dem Namen des Hauptstylesheets bzw. des ersten Stylesheets, falls es mehrere Stylesheets gibt.<br /><br /> Wenn das Stylesheet Skripts enthält, werden die Skripts in einer separaten Assembly gespeichert. Die Namen der Skriptassemblys werden auf der Grundlage des Namens der Hauptassembly generiert. Wenn Sie z. B. als Assemblynamen <legacyBold>CustOrders.dll</legacyBold> angegeben haben, wird die erste Skriptassembly <legacyBold>CustOrders_Script1.dll</legacyBold> genannt.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Gibt an, ob `document()`-Funktionen, XSLT-Skripts oder Dokumenttypdefinitionen (DTD) im Stylesheet zugelassen sind.<br /><br /> In der Standardeinstellung werden DTD, die `document()`-Funktion und Skripts nicht unterstützt.|  
 |`@` `file`|Ermöglicht die Angabe einer Datei, die Compileroptionen enthält.|  

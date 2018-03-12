@@ -4,16 +4,18 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af9457552a71e4cb5cffe95ce1f33ccfa227268a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Übertragen und Verschieben vorhandener Apps (DevOps)
+
 > Vision: Übertragen und Verschieben vorhandener .NET Framework-Anwendungen in Anwendungen, die „Bereit für Cloud-DevOps“ sind, um Ihre Bereitstellungsagilität wesentlich zu verbessern, sodass Sie schneller liefern und die Bereitstellungskosten für Apps senken können.
 
 Um die Vorteile der Cloud und neuer Technologien wie Container nutzen zu können, sollten Sie Ihre vorhandenen .NET-Anwendungen zumindest teilweise modernisieren. Letztlich wird die Modernisierung Ihrer Unternehmensanwendungen Ihre Gesamtbetriebskosten (Total Cost of Ownership) senken.

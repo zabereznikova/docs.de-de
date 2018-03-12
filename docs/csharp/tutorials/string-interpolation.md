@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C# #
 
-Die Zeichenfolgeninterpolation ermöglicht, dass Platzhalter in einer Zeichenfolge durch den Wert einer Zeichenfolgenvariablen ersetzt werden. Vor C# 6 wurde dies mit `System.String.Format` realisiert. Dies funktioniert gut, aber da dabei nummerierte Platzhalter verwendet werden, kann es schwieriger zu lesen und detaillierter sein.
+Die Zeichenfolgeninterpolation ermöglicht, dass Platzhalter in einer Zeichenfolge durch den Wert einer Zeichenfolgenvariablen ersetzt werden. Vor C# 6 wurde dies mit <xref:System.String.Format%2A?displayProperty=nameWithType> realisiert. Dies funktioniert gut, aber da dabei nummerierte Platzhalter verwendet werden, kann es schwieriger zu lesen und detaillierter sein.
 
 In anderen Programmiersprachen ist die Zeichenfolgeninterpolation bereits seit einer Weile integriert. Zum Beispiel in PHP:
 
@@ -42,7 +42,7 @@ Nachdem Sie alle Tools installiert haben, erstellen Sie eine neue .NET Core-Anwe
 dotnet new console
 ```
 
-Dieser Befehl erstellt ein neues .NET Core-Projekt mit einer Projektdatei, *interpolated.csproj*, und einer Quellcodedatei, *Program.cs*. Sie müssen `dotnet restore` ausführen, um die Abhängigkeiten wiederherzustellen, die zum Kompilieren dieses Projekts erforderlich sind.
+Dieser Befehl erstellt ein neues .NET Core-Projekt mit der Projektdatei *interpolated.csproj* und der Quellcodedatei *Program.cs*. Sie müssen `dotnet restore` ausführen, um die Abhängigkeiten wiederherzustellen, die zum Kompilieren dieses Projekts erforderlich sind.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Verwenden Sie zum Ausführen des Programms `dotnet run`. Es sollte „Hello, Wor
 
 ## <a name="intro-to-string-interpolation"></a>Einführung zur Zeichenfolgeninterpolation
 
-Mit `System.String.Format` geben Sie „Platzhalter“ in einer Zeichenfolge an, die von den Parametern ersetzt werden, die auf die Zeichenfolge folgen. Zum Beispiel:
+Mit <xref:System.String.Format%2A?displayProperty=nameWithType> geben Sie „Platzhalter“ in einer Zeichenfolge an, die von den Argumenten ersetzt werden, die auf die Zeichenfolge folgen. Zum Beispiel:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>So funktioniert die Zeichenfolgeninterpolation
 
-Hinter den Kulissen wird diese Zeichenfolgeninterpolations-Syntax vom Compiler in String.Format übersetzt. So können Sie [das Gleiche tun, was Sie bereits mit String.Format getan haben](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+Hinter den Kulissen wird diese Zeichenfolgeninterpolations-Syntax vom Compiler in `String.Format` übersetzt. So können Sie [das Gleiche tun, was Sie bereits mit `String.Format` getan haben](../../standard/base-types/formatting-types.md).
 
 Sie können z.B. auffüllen und numerisch formatieren:
 
@@ -96,7 +96,7 @@ Der obige Code würde folgende Ausgabe ergeben:
 1004       6,227.77
 ```
 
-Wenn der Name einer Variablen nicht gefunden wird, wird ein Kompilierzeitfehler generiert.
+Wenn der Name einer Variablen nicht gefunden werden kann, wird ein Kompilierzeitfehler generiert.
 
 Zum Beispiel:
 
@@ -114,14 +114,12 @@ Wenn Sie dies kompilieren, erhalten Sie Fehlermeldungen:
 
 ## <a name="localization-and-internationalization"></a>Lokalisierung und Internationalisierung
 
-Eine interpolierte Zeichenfolge unterstützt `IFormattable` und `FormattableString`, was für die Internationalisierung nützlich sein kann.
+Eine interpolierte Zeichenfolge unterstützt <xref:System.IFormattable?displayProperty=nameWithType> und <xref:System.FormattableString?displayProperty=nameWithType>, was für die Internationalisierung nützlich sein kann.
 
-Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur. Um eine andere Kultur zu verwenden, können Sie sie in `IFormattable` umwandeln.
-
-Zum Beispiel:
+Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur. Um eine andere Kultur zu verwenden wandeln Sie eine interpolierte Zeichenfolge in `IFormattable` um. Zum Beispiel:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Schlussbemerkung 
 
-In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine präzisere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Verwendungen.
+In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine kompaktere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Einsatzzwecke. Weitere Informationen finden Sie im Thema [Interpolierte Zeichenfolgen](../../csharp//language-reference/keywords/interpolated-strings.md).

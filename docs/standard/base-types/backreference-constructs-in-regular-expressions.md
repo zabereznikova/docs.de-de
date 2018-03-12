@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  
@@ -43,7 +43,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  `\` *number*  
   
- wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt.  
+ wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt. Wenn darüber hinaus *number* eine Erfassungsgruppe an einer bestimmten Ordnungsposition identifiziert, dieser Erfassungsgruppe jedoch ein anderer Name als die zugehörige Ordnungsposition zugewiesen wurde, löst der Parser für reguläre Ausdrücke ebenfalls eine <xref:System.ArgumentException> aus. 
   
  Beachten Sie die Mehrdeutigkeit zwischen oktalen Escapesequenzen (z.B. `\16`) und `\`*number*-Rückverweisen mit der gleichen Notation. Diese Mehrdeutigkeit wird wie folgt aufgelöst:  
   
@@ -87,12 +87,24 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- Beachten Sie, dass *Name* auch die Zeichenfolgendarstellung einer Zahl sein kann. Im folgenden Beispiel werden mit dem regulären Ausdruck `(?<2>\w)\k<2>` doppelte Wortzeichen in einer Zeichenfolge gesucht.  
+
+## <a name="named-numeric-backreferences"></a>Benannte numerische Rückverweise
+
+In einem benannten Rückverweis mit `\k` kann *name* auch die Zeichenfolgendarstellung einer Zahl sein. Im folgenden Beispiel werden mit dem regulären Ausdruck `(?<2>\w)\k<2>` doppelte Wortzeichen in einer Zeichenfolge gesucht. In diesem Fall definiert das Beispiel eine Erfassungsgruppe, die explizit als „2“ benannt wurde. Der Rückverweis wurde entsprechend ebenfalls „2“ genannt. 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+Wenn *name* die Zeichenfolgendarstellung einer Zahl ist und keine Erfassungsgruppe diesen Namen trägt, ist `\k<`*name*`>` das Gleiche wie der Rückverweis `\`*number*, wobei *number* die Ordnungsposition der Erfassung ist. Im folgenden Beispiel gibt es eine einzige Erfassungsgruppe namens `char`. Das Rückverweiskonstrukt referenziert die Gruppe als `\k<1>`. Wie die Ausgabe des Beispiels zeigt, ist der Aufruf von <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> erfolgreich, weil `char` die erste Erfassungsgruppe ist.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassungsgruppe an dieser Position explizit ein numerischer Name zugewiesen wurde, kann der Parser für reguläre Ausdrücke die Erfassungsgruppe nicht anhand ihrer Ordnungsposition identifizieren. Stattdessen löst der Parser eine <xref:System.ArgumentException> aus. Die einzige Erfassungsgruppe im folgenden Beispiel wurde „2“ genannt. Da das `\k`-Konstrukt verwendet wird, um einen Rückverweis namens „1“ zu definieren, kann der Parser für reguläre Ausdrücke die erste Erfassungsgruppe nicht identifizieren und löst eine Ausnahme aus.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>Übereinstimmende Rückverweise  
  Ein Rückverweis bezieht sich auf die aktuellste Definition einer Gruppe (beim Abgleichen von links nach rechts die am weitesten links befindliche Definition). Wenn eine Gruppe mehrere Erfassungen durchführt, bezieht sich ein Rückverweis auf die aktuellste Erfassung.  
   

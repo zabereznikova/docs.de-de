@@ -2,7 +2,8 @@
 title: ref (C#-Referenz)
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -82,19 +83,19 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- Vor jeder `return`-Anweisung in der Methode. Zum Beispiel:
+- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Zum Beispiel:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-In der Reihenfolge für den Aufrufer zum Ändern des Zustands des Objekts, den Verweis zurückzugeben Wert muss gespeichert werden, um eine Variable, die als explizit definiert ist ein [Ref lokale](#ref-locals). 
+Zum Ändern des Zustands des Objekts durch den Aufrufer muss der Verweisrückgabewert in einer Variable gespeichert werden, die explizit als [lokale ref-Variable](#ref-locals) definiert ist. 
 
 Ein Beispiel finden Sie unter [Beispiel für ref-Rückgaben und lokale ref-Variablen](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Lokale ref-Variablen
 
-Eine lokale ref-Variable wird verwendet, um auf Werte zu verweisen, die mit `ref return` zurückgegeben werden.  Eine lokale ref-Variable muss initialisiert und einem ref-Rückgabewert zugewiesen werden. Jede Änderung am Wert der lokalen ref-Variable wird im Zustand des Objekts wiedergegeben, dessen Methode den Wert als Verweis zurückgegeben hat.
+Eine lokale ref-Variable wird verwendet, um auf Werte zu verweisen, die mit `return ref` zurückgegeben werden.  Eine lokale ref-Variable muss initialisiert und einem ref-Rückgabewert zugewiesen werden. Jede Änderung am Wert der lokalen ref-Variable wird im Zustand des Objekts wiedergegeben, dessen Methode den Wert als Verweis zurückgegeben hat.
 
 Eine lokale ref-Variable wird mithilfe des `ref`-Schlüsselworts vor der Variablendeklaration definiert sowie unmittelbar vor dem Aufruf der Methode, die den Wert als Verweis zurückgibt. 
 

@@ -4,14 +4,15 @@ description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Aktualisieren Sie Ihre apps mit Überwachung und Telemetrie
 
@@ -37,7 +38,7 @@ Sie können Protokollanalyse zuzugreifen, über das OMS-Portal oder Azure-Portal
 
 Die [Container Überwachung Lösung](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) Protokollanalyse hilft Ihnen beim Anzeigen und Verwalten Ihrer Docker und Windows-Container-Hosts in einem zentralen Ort. Die Lösung zeigt, welche Container sind ausgeführt werden, welche Container-Abbild, der sie ausgeführt und auf dem Container ausgeführt werden. Sehen Sie ausführliche Überwachungsinformationen, einschließlich Befehlen, die mit Containern verwendet werden. Sie können auch Container zur Problembehandlung anzeigen und Durchsuchen zentrale Protokolle ohne Remoteanzeige Docker oder Windows-Hosts an. Sie können Container suchen, die laut und verbrauchende übermäßig viele Ressourcen auf einem Host möglicherweise. Darüber hinaus können Sie die zentrale CPU, Arbeitsspeicher, Speicher und Netzwerkauslastung und Leistungsinformationen für Container anzeigen. Auf Computern unter Windows können Sie zentralisieren und vergleichen Sie die Protokolle von Windows Server, Hyper-V und Docker-Containern. Die Lösung unterstützt die folgenden Container Orchestrators:
 
--   Docker Punktschwarms
+-   Docker Swarm
 
 -   DC/OS
 

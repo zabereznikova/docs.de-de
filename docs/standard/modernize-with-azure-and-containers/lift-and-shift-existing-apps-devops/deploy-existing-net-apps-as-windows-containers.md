@@ -4,20 +4,21 @@ description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen von vorhandenen .NET apps wie Windows-Container
 
 Bereitstellungen, die auf Windows-Containern basieren gelten für Cloud-optimierte Anwendungen, systemeigenen Cloud-Anwendungen und DevOps Cloudfähige Anwendungen zur Verfügung.
 
-In diesem Handbuch und in den folgenden Abschnitten, konzentrieren wir uns auf die mithilfe von Windows-Container für *DevOps Cloudfähige* Anwendungen, wenn Sie heben und verschieben vorhandene Anwendungen für .NET.
+Der Schwerpunkt in diesem Handbuch und in den folgenden Abschnitten ist mithilfe von Windows-Container für *DevOps Cloudfähige* Anwendungen, wenn Sie heben und verschieben vorhandene Anwendungen für .NET.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Was sind Container? (Linux- oder Windows)
 
@@ -41,7 +42,7 @@ In Windows-Containern ist der Prozess von Anwendungspaketen vollständig automat
 
 Eine große Anzahl von Organisationen werden vorhandene monolithische Anwendungen aus den folgenden Gründen containerizing:
 
--   **Release Flexibilität durch verbesserte Bereitstellung**. Container bieten einen konsistente Bereitstellung Vertrag zwischen Entwicklungs- und Vorgänge. Wenn Sie Container verwendet werden, hören Sie keinen Entwickler sagen, "Funktionsweise auf meinem Computer Warum nicht in der Produktion?" Sie können einfach z. B. "Als Container ausführen, damit es in der produktionsumgebung ausgeführt werden." Die verpackte Anwendung, mit seinen Abhängigkeiten kann in jeder Container basierenden Umgebung ausgeführt werden. Es wird wie beabsichtigt war, führen Sie alle Bereitstellungsziele verwenden (Dev, QA, staging, Produktion) ausgeführt. Container zu den meisten Frictions vermeiden, wenn sie von einer Phase auf das nächste wird die Bereitstellung erheblich verbessert verschieben, und Sie können schneller anzubieten.
+-   **Release Flexibilität durch verbesserte Bereitstellung**. Container bieten einen konsistente Bereitstellung Vertrag zwischen Entwicklungs- und Vorgänge. Wenn Sie Container verwendet werden, hören Sie keinen Entwickler sagen, "Funktionsweise auf meinem Computer Warum nicht in der Produktion?" Sie können einfach z. B. "Als Container ausführen, damit sie in der produktionsumgebung ausgeführt werden soll." Die verpackte Anwendung, mit seinen Abhängigkeiten kann in jeder Container basierenden Umgebung ausgeführt werden. Es wird wie beabsichtigt war, führen Sie alle Bereitstellungsziele verwenden (Dev, QA, staging, Produktion) ausgeführt. Container zu den meisten Frictions vermeiden, wenn sie von einer Phase auf das nächste wird die Bereitstellung erheblich verbessert verschieben, und Sie können schneller anzubieten.
 
 -   **Reduzierung der Kosten**. Container führen senkt die Kosten, entweder durch die Konsolidierung und Entfernen von vorhandener Hardware oder Anwendungen auf eine höhere Dichte pro Einheit der Hardware ausgeführt wird.
 
@@ -57,7 +58,7 @@ Erhebliche Verbesserungen in Flexibilität und Portabilität Steuerelement führ
 
 ![](./media/image6.png)
 
-> **Abbildung 4 bis 6.** Docker stellt Container auf allen Ebenen der hybridcloud
+> **Abbildung 4 bis 6.** Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
 An eine Person mit virtuellen Computern vertraut Container scheinen außerordentlich ähnlich sein. Ein Container ein Betriebssystem ausgeführt wird, verfügt über ein Dateisystem und kann über ein Netzwerk, wie eine physische oder virtuelle Computersystem zugegriffen werden. Allerdings unterscheiden sich die Technologie und Konzepte hinter Container völlig von virtuellen Computern. Aus Sicht des ein Entwickler muss ein Container mehr wie ein einzelner Prozess behandelt werden. Tatsächlich ist ein Container einen einzigen Einstiegspunkt für einen Prozess.
 
@@ -83,7 +84,7 @@ Angesichts die Vielfalt der Betriebssysteme, die durch Docker als auch die Unter
 
 Für Windows können Sie Windows Server Core oder Windows Nano Server verwenden. Diese Windows-Versionen bieten unterschiedliche Eigenschaften (z. B. IIS im Vergleich zu einem selbst gehosteten Webserver wie Kestrel), die möglicherweise von .NET Framework oder .NET Core-Anwendungen benötigt werden.
 
-Für Linux sind-Distributionen mehrere verfügbar und in der offiziellen .NET Docker-Images (z. B. Debian) unterstützten.
+Für Linux sind mehrere Distributionen (z.B. Debian) verfügbar und werden in offiziellen .NET Docker-Images unterstützt.
 
 Abbildung 4-7 zeigt die Versionen des Betriebssystems, die abhängig von der app-Version von .NET Framework ausgerichtet werden können.
 
