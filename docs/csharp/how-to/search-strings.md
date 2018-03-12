@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -41,15 +41,15 @@ Die Methoden <xref:System.String.IndexOf%2A> und <xref:System.String.LastIndexOf
 
 ## <a name="finding-specific-text-using-regular-expressions"></a>Suchen nach einem bestimmten Text mithilfe von regulären Ausdrücken
 
-Die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klasse kann zum Durchsuchen von Zeichenfolgen verwendet werden. Die Komplexität dieser Suchvorgänge reicht von sehr einfachen bis hin zu komplizierten Textmustern.
+Die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klasse kann zum durchsuchen von Zeichenfolgen verwendet werden. Die Komplexität dieser Suchvorgänge reicht von sehr einfachen bis hin zu komplizierten Textmustern.
 
 Das folgende Codebeispiel sucht nach dem Wort „the“ oder „their“ in einem Satz, die Groß-/Kleinschreibung wird ignoriert. Die statische Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> führt die Suche aus. Die zu durchsuchende Zeichenfolge und ein Suchmuster werden an die Methode übergeben. In diesem Fall gibt ein drittes Argument an, dass die Groß-/Kleinschreibung nicht beachtet werden soll. Weitere Informationen finden Sie unter <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 Das Suchmuster beschreibt den Text, nach dem Sie suchen. In der folgenden Tabelle werden die einzelnen Elemente des Suchmusters beschrieben. (In der Tabelle unten wird ein einzelnes `\`-Zeichen verwendet. Dieses muss in einer C#-Zeichenfolge durch das Escapezeichen `\\` ersetzt werden.)
 
-| Muster  | Bedeutung     |
+| pattern  | Bedeutung     |
 | -------- |-------------|
-| the      | Findet den Text „the“. |
+| Verbindung im Abschnitt      | Findet den Text „the“. |
 | (eir)?   | Findet 0 oder 1 Vorkommen von „eir“. |
 | \s       | Findet ein Leerzeichen.    |
   
@@ -60,9 +60,9 @@ Das Suchmuster beschreibt den Text, nach dem Sie suchen. In der folgenden Tabell
 
 ## <a name="does-a-string-follow-a-pattern"></a>Folgt eine Zeichenfolge einem Muster?
 
-Der folgende Code verwendet reguläre Ausdrücke, um das Format jeder Zeichenfolge in einem Array zu überprüfen. Für die Überprüfung ist erforderlich, dass jede Zeichenfolge die Form einer Telefonnummer aufweist, in der drei Gruppen von Ziffern durch Bindestriche getrennt sind, wobei die ersten beiden Gruppen je drei Ziffern enthalten und die dritte Gruppe vier Ziffern umfasst. Das Suchmuster verwendet den regulären Ausdruck `^\\d{3}-\\d{3}-\\d{4}$`. Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).
+Der folgende Code verwendet reguläre Ausdrücke, um das Format jeder Zeichenfolge in einem Array zu überprüfen. Für die Überprüfung ist erforderlich, dass jede Zeichenfolge die Form einer Telefonnummer aufweist, in der drei Gruppen von Ziffern durch Bindestriche getrennt sind, wobei die ersten beiden Gruppen je drei Ziffern enthalten und die dritte Gruppe vier Ziffern umfasst. Das Suchmuster verwendet den regulären Ausdruck `^\\d{3}-\\d{3}-\\d{4}$`. Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| Muster  | Bedeutung                             |
+| pattern  | Bedeutung                             |
 | -------- |-------------------------------------|
 | ^        | Findet den Anfang der Zeichenfolge. |
 | \d{3}    | Findet genau 3 Ziffernzeichen.  |

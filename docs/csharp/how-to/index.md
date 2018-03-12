@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -55,7 +55,7 @@ Diese Artikel helfen Ihnen bei der Arbeit mit Datensammlungen.
 Zeichenfolgen sind der grundlegende Datentyp für das Anzeigen oder Bearbeiten von Text. Diese Artikel veranschaulichen gängige Vorgehensweisen zu Zeichenfolgen.
 
 - [Vergleichen von Zeichenfolgen](../programming-guide/strings/how-to-compare-strings.md).
-- [Ändern des Inhalts einer Zeichenfolge](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Ändern des Inhalts einer Zeichenfolge](modify-string-contents.md).
 - [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Benutzen von `String.Split` zum Trennen von Zeichenfolgen](parse-strings-using-split.md).
 - [Vereinen von mehreren Zeichenfolgen](concatenate-multiple-strings.md).

@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 <a name="top"></a> Alternierungskonstrukte ändern einen regulären Ausdruck, um Entweder-Oder-Vergleiche oder eine bedingte Übereinstimmung zuzulassen. .NET unterstützt drei Alternierungskonstrukte:  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
+ Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
 |Muster|description|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
-|`(?<n2>\d{2}-)*`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2`als Namen an.|  
+|`(?<n2>\d{2}-)?`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2`als Namen an.|  
 |`(?(n2)`|Prüfen, ob `n2` in der Eingabezeichenfolge abgeglichen wurde.|  
 |`)\d{7}`|Wenn `n2` abgeglichen wurde, stimmen sieben Dezimalstellen überein.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Wenn `n2` nicht abgeglichen wurde, stimmen drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen überein.|  
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
- Eine Variante dieses Beispiels, die eine nummerierte Gruppe statt einer benannten Gruppe verwendet, wird im folgenden Beispiel gezeigt. Das entsprechende Muster des regulären Ausdrucks lautet `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ Eine Variante dieses Beispiels, die eine nummerierte Gruppe statt einer benannten Gruppe verwendet, wird im folgenden Beispiel gezeigt. Das entsprechende Muster des regulären Ausdrucks lautet `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

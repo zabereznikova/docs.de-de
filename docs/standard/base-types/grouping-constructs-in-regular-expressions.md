@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -393,7 +393,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |Muster|description|  
 |-------------|-----------------|  
 |`\d{2}`|Entsprechung für zwei Dezimalstellen finden.|  
-|`{?<=\b20)`|Die Übereinstimmung wird fortgesetzt, wenn den zwei Dezimalstellen die Dezimalstellen "20" bei einer Wortgrenze vorangestellt sind.|  
+|`(?<=\b20)`|Die Übereinstimmung wird fortgesetzt, wenn den zwei Dezimalstellen die Dezimalstellen "20" bei einer Wortgrenze vorangestellt sind.|  
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
   
  Positive Lookbehindassertions mit einer Breite von Null werden auch verwendet, um das Zurückverfolgen einzuschränken, wenn die letzten Zeichen in einer Erfassungsgruppe eine Teilmenge der Zeichen sein müssen, die dem Muster eines regulären Ausdrucks dieser Gruppe entsprechen. Wenn beispielsweise eine Gruppe alle aufeinander folgenden Wortzeichen erfasst, können Sie mit einer positiven Lookaheadassertion mit einer Breite von Null anfordern, dass das letzte Zeichen alphabetisch ist.  
