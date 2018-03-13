@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -40,7 +41,7 @@ Wenn Sie das heruntergeladenen Beispiel mit einer Dateisystemverteilung verwende
 
 ## <a name="create-a-template-from-a-project"></a>Erstellen einer Vorlage aus einem Projekt
 
-Verwenden Sie ein vorhandenes Projekt, von dem Sie wissen, dass es ordnungsgemäß kompiliert und ausgeführt wird, oder erstellen Sie ein neues Konsolen-App-Projekt in einem Ordner auf Ihrer Festplatte. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents/Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
+Verwenden Sie ein vorhandenes Projekt, von dem Sie wissen, dass es ordnungsgemäß kompiliert und ausgeführt wird, oder erstellen Sie ein neues Konsolen-App-Projekt in einem Ordner auf Ihrer Festplatte. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents\Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
 
 1. Fügen Sie dem Stamm des Projekts einen Ordner mit dem Namen *.template.config* hinzu.
 1. Erstellen Sie im Ordner *.template.config* eine *template.json*-Datei, um Ihre Vorlage zu konfigurieren. Weitere Informationen und Memberdefinitionen für die *template.json*-Datei finden Sie unter [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](../tools/custom-templates.md#templatejson) und im [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Verpacken der Vorlage in ein NuGet-Paket
 
-1. Erstellen Sie einen Ordner für das NuGet-Paket. Im Tutorial ist der Name des Ordners *GarciaSoftware.ConsoleTemplate.CSharp*, und der Ordner wird im Ordner *Documents/NuGetTemplates* des Benutzerprofils erstellt. Erstellen Sie im neuen Vorlagenordner einen Ordner mit dem Namen *content* für die Projektdateien.
+1. Erstellen Sie einen Ordner für das NuGet-Paket. Im Tutorial ist der Name des Ordners *GarciaSoftware.ConsoleTemplate.CSharp*, und der Ordner wird im Ordner *Documents\NuGetTemplates* des Benutzerprofils erstellt. Erstellen Sie im neuen Vorlagenordner einen Ordner mit dem Namen *content* für die Projektdateien.
 1. Kopieren Sie den Inhalt des Projektordners gemeinsam mit seiner Datei *.template.config/template.json* in den Ordner *content*, den Sie erstellt haben.
 1. Fügen Sie neben dem *content*-Ordner eine [*NUSPEC*-Datei](/nuget/create-packages/creating-a-package) ein. Die NUSPEC-Datei ist eine XML-Manifestdatei, die den Inhalt eines Paktes beschreibt und den Erstellungsprozess des NuGet-Pakets vorantreibt.
    
@@ -102,10 +103,10 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
    </package>
    ```
 
-1. [Erstellen Sie das Paket](/nuget/create-packages/creating-a-package#creating-the-package) mit dem Befehl `nuget pack <PATH_TO_NUSPEC_FILE>`. Der folgende Befehl geht davon aus, dass der Ordner, der die NuGet-Objekte enthält, sich unter *C:/Benutzer/\<USER>/Dokumente/Vorlagen/GarciaSoftware.ConsoleTemplate.CSharp/* befindet. Egal wo Sie den Ordner auf Ihrem System platzieren, der `nuget pack`-Befehl nimmt den Pfad der *NUSPEC*-Datei an:
+1. [Erstellen Sie das Paket](/nuget/create-packages/creating-a-package#creating-the-package) mit dem Befehl `nuget pack <PATH_TO_NUSPEC_FILE>`. Der folgende Befehl geht davon aus, dass sich der Ordner, der die NuGet-Objekte enthält, unter \\C:\Benutzer\\<BENUTZER>\Dokumente\Vorlagen\GarciaSoftware.ConsoleTemplate.CSharp\* befindet. Egal wo Sie den Ordner auf Ihrem System platzieren, der `nuget pack`-Befehl nimmt den Pfad der *NUSPEC*-Datei an:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Veröffentlichen des Pakets auf nuget.org
@@ -119,7 +120,7 @@ Um Ihr NuGet-Paket zu veröffentlichen, befolgen Sie die Anweisungen unter [Crea
 Um die Vorlage auf der *NUPKG*-Datei, die Sie erstellt haben, zu installieren, verwenden Sie den `dotnet new`-Befehl mit der `-i|--install`-Option,und stellen Sie den Pfad zur *NUPKG*-Datei bereit:
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Installieren einer Vorlage aus einem NuGet-Paket, das auf nuget.org gespeichert ist
@@ -187,14 +188,14 @@ Um eine Vorlage zu verteilen, speichern Sie den Projektvorlagenordner auf Ihrem 
 Im Tutorial wird davon ausgegangen, dass die Projektvorlage im Ordner *Documents/Templates* des Benutzerprofils gespeichert ist. Installieren Sie von diesem Speicherort aus die Vorlage mit dem folgenden Befehl, wobei Sie \<BENUTZER> durch den Namen des Benutzerprofils ersetzen.
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Erstellen eines neuen Projekts aus der Vorlage
 
 Nachdem die Vorlage aus dem Dateisystem installiert wurde, verwenden Sie sie, indem Sie den `dotnet new <TEMPLATE>`-Befehl aus dem Verzeichnis ausführen, in das die Ausgabe des Vorlagenmoduls eingefügt werden soll (es sei denn, Sie verwenden die `-o|--output`-Option, um ein spezifisches Verzeichnis anzugeben). Weitere Informationen finden Sie unter [`dotnet new`-Optionen](~/docs/core/tools/dotnet-new.md#options): Geben Sie die Kurzform des Namens der Vorlage für den `dotnet new`-Befehl an.
 
-Erstellen Sie aus einem neuen Projektordner, der unter *C:/Benutzer/\<BENUTZER>/Dokumente/Projekte/MeineKonsolenanwendung* erstellt wurde, ein Projekt aus der `garciaconsole`-Vorlage:
+Erstellen Sie aus einem neuen Projektordner, der unter *C:\Benutzer\\\<BENUTZER>\Dokumente\Projekte\MeineKonsolenanwendung* erstellt wurde, ein Projekt aus der `garciaconsole`-Vorlage:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Deinstallieren der Vorlage
 
-Wenn Die die Vorlage in Ihrem Dateisystem unter *C:/Benutzer/\<BENUTZER>/Dokumente/Vorlagen/GarciaSoftware.ConsoleTemplate.CSharp* erstellt haben, deinstallieren Sie sie mit dem `-u|--uninstall`-Schalter und dem Pfad des Vorlagenordners:
+Wenn Sie die Vorlage in Ihrem Dateisystem unter *C:\Benutzer\\\<BENUTZER>\Dokumente\Vorlagen\GarciaSoftware.ConsoleTemplate.CSharp* erstellt haben, deinstallieren Sie sie mit `-u|--uninstall` und dem Pfad des Vorlagenordners:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Um die Vorlage aus Ihrem lokalen Dateisystem zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:/Users/\<BENUTZER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, jedoch nicht *./GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
+> Um die Vorlage aus Ihrem lokalen Dateisystem zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:\Benutzer\\\<BENUTZER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*, jedoch nicht *.\GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
 > Schließen Sie darüber hinaus keinen letzten abschließenden Schrägstrich in den Vorlagenpfad Ihres Verzeichnisses ein.
 
 ## <a name="see-also"></a>Siehe auch

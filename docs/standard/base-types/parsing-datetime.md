@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a17c96a03a35fcc4eb12e188dbc79d8d48153fb7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -64,7 +64,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTi
 > Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
-> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) als auch für [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#]((https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) oder [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) herunterladen.
+> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) als auch für [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) und [Visual Basic](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) herunterladen.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -83,7 +83,7 @@ Auch wenn Sie Überladungen der <xref:System.DateTime.Parse%2A>-Methode zur Anga
  
 ## <a name="parseexact"></a>ParseExact
 
-Die Methode <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konvertiert eine Zeichenfolge in ein <xref:System.DateTime>-Objekt, wenn es einem der angegebenen Zeichenfolgenmuster entspricht. Wird eine Zeichenfolge an diese Methode übergeben, die nicht dem angegebenen Format entspricht, wird eine <xref:System.FormatException> ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine Kombination der benutzerdefinierten Formatbezeichner angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).  
+Die Methode <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konvertiert eine Zeichenfolge in ein <xref:System.DateTime>-Objekt, wenn es einem der angegebenen Zeichenfolgenmuster entspricht. Wird eine Zeichenfolge an diese Methode übergeben, die nicht dem angegebenen Format entspricht, wird eine <xref:System.FormatException> ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine Kombination der benutzerdefinierten Formatbezeichner angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).  
 
 Im folgenden Codebeispiel wird die <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode an ein zu analysierendes Zeichenfolgenobjekt übergeben, gefolgt von einem Formatbezeichner und einem <xref:System.Globalization.CultureInfo>-Objekt. Diese <xref:System.DateTime.ParseExact%2A>-Methode kann nur Zeichenfolgen analysieren, die dem langen Datumsmuster in der Kultur `en-US` entsprechen.  
 

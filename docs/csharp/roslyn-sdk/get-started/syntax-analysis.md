@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -73,7 +73,7 @@ Sie können die Knoten in einer Syntaxstruktur auf zwei Arten untersuchen. Sie k
 
 ### <a name="manual-traversal"></a>Manuelles Durchlaufen
 
-Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Beispielrepository](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Die Syntaxstrukturtypen verwenden Vererbung, um die verschiedenen Syntaxelemente zu beschreiben, die an verschiedenen Positionen im Programm gültig sind. Bei der Verwendung dieser APIs müssen häufig Eigenschaften oder Sammlungsmember in bestimmte abgeleitete Typen umgewandelt werden. In den folgenden Beispielen sind die Zuweisung und die Umwandlung separate Anweisungen, bei denen explizit typisierte Variablen verwendet werden. Sie können den Code lesen, um die Rückgabetypen der API und den Laufzeittyp der zurückgegebenen Objekte zu sehen. In der Praxis ist es eher üblich, implizit typisierte Variablen zu verwenden und die Typen der zu untersuchenden Objekte mithilfe von API-Namen zu beschreiben.
@@ -103,7 +103,7 @@ In der Regel würden Sie die Struktur durchlaufen, um mehr über den Code zu erf
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Dieser Member ist eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Er repräsentiert alle Elemente im Bereich der `namespace Hello World`-Deklaration. Fügen Sie folgenden Code hinzu, um zu ermitteln, welche Knoten im `HelloWorld`-Namespace deklariert sind:
+Dieser Member ist eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Er repräsentiert alle Elemente im Bereich der `namespace HelloWorld`-Deklaration. Fügen Sie folgenden Code hinzu, um zu ermitteln, welche Knoten im `HelloWorld`-Namespace deklariert sind:
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>Abfragemethoden
 
-Zusätzlich zum Durchlaufen von Strukturen können Sie die Syntaxstruktur auch mithilfe der in <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> definierten Abfragemethoden untersuchen. Diese Methoden werden Ihnen vertraut vorkommen, wenn Sie XPath kennen. Sie können diese Methoden mit LINQ verwenden, um Elemente in einer Struktur schnell zu finden. <xref:Microsoft.CodeAnalysis.SyntaxNode> weist Abfragemethoden wie z.B. <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> und <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes> auf.
+Zusätzlich zum Durchlaufen von Strukturen können Sie die Syntaxstruktur auch mithilfe der in <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> definierten Abfragemethoden untersuchen. Diese Methoden werden Ihnen vertraut vorkommen, wenn Sie XPath kennen. Sie können diese Methoden mit LINQ verwenden, um Elemente in einer Struktur schnell zu finden. <xref:Microsoft.CodeAnalysis.SyntaxNode> weist Abfragemethoden wie z.B. <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> und <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A> auf.
 
 Sie können diese Abfragemethoden verwenden, um anstelle des Navigierens in der Struktur das Argument für die `Main`-Methode zu suchen. Fügen Sie am Ende Ihrer `Main`-Methode folgenden Code hinzu:
 
@@ -163,7 +163,7 @@ Dieses Beispiel implementiert einen <xref:Microsoft.CodeAnalysis.CSharp.CSharpSy
 
 Erstellen Sie ein neues **Stand-Alone Code Analysis Tool**-Projekt für C#, und nennen Sie es **SyntaxWalker**.
 
-Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart). Das Beispiel in GitHub enthält beide in diesem Tutorial beschriebenen Projekte.
+Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Das Beispiel in GitHub enthält beide in diesem Tutorial beschriebenen Projekte.
 
 Wie im vorherigen Beispiel können Sie eine Zeichenfolgenkonstante definieren, die den Text des Programms enthält, das Sie analysieren möchten:
 
@@ -171,7 +171,7 @@ Wie im vorherigen Beispiel können Sie eine Zeichenfolgenkonstante definieren, d
 
 Dieser Quelltext enthält `using`-Direktiven, die an vier Stellen verteilt sind: auf Dateiebene, im Namespace der obersten Ebene und in den beiden geschachtelten Namespaces. Dieses Beispiel zeigt ein grundlegendes Szenario für die Verwendung der <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>-Klasse zum Abfragen von Code. Es wäre sehr umständlich, jeden Knoten in der Stammsyntaxstruktur besuchen zu müssen, um using-Deklarationen zu finden. Stattdessen erstellen Sie eine abgeleitete Klasse und überschreiben die Methoden, die nur aufgerufen werden, denn der aktuelle Knoten in der Struktur eine using-Direktive ist. Ihr Besucher führt keine Aktionen für einen andern Knotentyp aus. Diese Einzelmethode untersucht jede der `using`-Anweisungen und erstellt eine Sammlung der Namespaces, die sich nicht im `System`-Namespace befinden. Sie erstellen einen <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>, der alle `using`-Anweisungen untersucht, und zwar nur die `using`-Anweisungen.
 
-Nachdem Sie jetzt den Programmtext definieren haben, müssen Sie eine `SyntaxTree` erstellen und das Stammelement dieser Struktur abrufen:
+Nachdem Sie den Programmtext definieren haben, müssen Sie eine `SyntaxTree` erstellen und das Stammelement dieser Struktur abrufen:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
@@ -198,23 +198,23 @@ Zum Schluss müssen Sie zwei Codezeilen hinzufügen, um den `UsingCollector` zu 
 Kompilieren Sie das Projekt, und führen Sie es aus. Die folgende Ausgabe wird angezeigt:
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

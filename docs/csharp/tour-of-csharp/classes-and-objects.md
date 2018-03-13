@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 97559a6e7b24f4a61b49dd4f050747a6d0ccbda0
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -74,7 +74,7 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
 * `private`
     - Der Zugriff ist auf diese Klasse beschränkt.
 * `private protected`
-    - Zugriff eingeschränkt auf die enthaltende Klasse oder Klassen abgeleitet aus dem enthaltenden Typ innerhalb die gleiche assembly
+    - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die vom enthaltenden Typ in der gleichen Assembly abgeleitet werden.
 
 ## <a name="type-parameters"></a>Typparameter
 
