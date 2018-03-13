@@ -267,6 +267,7 @@
 ### [Verketten von Zeichenfolgen](csharp/how-to/concatenate-multiple-strings.md)
 ### [Gewusst wie konvertieren einer Zeichenfolge in einen DateTime-Wert](standard/base-types/parsing-datetime.md)
 ### [Suchen von Zeichenfolgen](csharp/how-to/search-strings.md)
+### [Ändern von Zeichenfolgeninhalten](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform-SDK (Roslyn APIs)](csharp/roslyn-sdk/)
 ## [C#-Programmierhandbuch](csharp/programming-guide/)
