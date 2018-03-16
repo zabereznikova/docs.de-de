@@ -4,17 +4,17 @@ description: Untersuchen Sie einige der wichtigsten Funktionen der Programmiersp
 keywords: Visual f#, f#, funktionalen Programmierung, .NET tour
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Überblick [F#] #
 
@@ -22,20 +22,13 @@ Die beste Möglichkeit, Weitere Informationen zu f# wird zum Lesen und Schreiben
 
 Werden zwei primäre Begriffe in F# erläutert werden: Funktionen und Typen.  Diese Tour werden Funktionen der Sprache hervorzuheben, die in diesen beiden Konzepten fallen.
 
-## <a name="how-to-run-the-code-samples"></a>Gewusst wie: Ausführen der Codebeispiele
-
->[!NOTE]
-Werden zwei Optionen zum Ausführen der Codebeispiele [wiederholen Sie den F#-](http://www.tryfsharp.org/Create) (erfordert Silverlight) und [f# für Azure-Notebooks](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) in Microsoft Azure.
-
-Führen Sie diese Codebeispiele am schnellsten ist die Verwendung [f# Interactive](tutorials/fsharp-interactive/index.md).  Einfach in den Codebeispielen, kopieren und einfügen, und führen sie es.  Alternativ können Sie ein Projekt zu kompilieren und führen Sie den Code als Konsolenanwendung einrichten.  Finden Sie unter der [Einstieg in die](./get-started/index.md) Abschnitt, um mehr zu erfahren.
-
 ## <a name="functions-and-modules"></a>Funktionen und Module
 
 Sind die grundlegenden Teile eines F#-Programms ***Funktionen*** organisierte ***Module***.  [Funktionen](language-reference/functions/index.md) Arbeit auf Eingaben, Ausgaben erzeugen auszuführen, und sie werden unter organisiert [Module](language-reference/modules.md), der die primäre Methode, die Sie gruppieren Punkte in F# erläutert werden.  Sie definiert sind, mithilfe der [ `let` Bindung](language-reference/functions/let-bindings.md), dem Benennen Sie der Funktion und ihre Argumente zu definieren.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`Bindungen sind auch an, wie Sie einen Wert an einen ähnlichen Namen, einer Variablen in anderen Sprachen wie binden.  `let`Bindungen sind ***unveränderlichen*** standardmäßig, d. h., sobald ein Wert oder eine Funktion mit einem Namen gebunden wird, es geändert werden kann direkte.  Dies steht im Gegensatz zu Variablen in anderen Sprachen, von denen sind ***änderbare***, d. h., deren Werte kann geändert werden zu einem beliebigen Zeitpunkt zeitlich.  Wenn Sie eine änderbare Bindung benötigen, können Sie `let mutable ...` Syntax.
+`let` Bindungen sind auch an, wie Sie einen Wert an einen ähnlichen Namen, einer Variablen in anderen Sprachen wie binden.  `let` Bindungen sind ***unveränderlichen*** standardmäßig, d. h., sobald ein Wert oder eine Funktion mit einem Namen gebunden wird, es geändert werden kann direkte.  Dies steht im Gegensatz zu Variablen in anderen Sprachen, von denen sind ***änderbare***, d. h., deren Werte kann geändert werden zu einem beliebigen Zeitpunkt zeitlich.  Wenn Sie eine änderbare Bindung benötigen, können Sie `let mutable ...` Syntax.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
