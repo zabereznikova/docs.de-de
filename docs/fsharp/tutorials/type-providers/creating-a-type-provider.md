@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Lernprogramm: Erstellen eines Typanbieters
 
@@ -22,11 +22,11 @@ Der typanbietermechanismus in f# ist ein wesentlicher Bestandteil der Unterstüt
 
 Der f#-Ökosystem enthält einen Bereich von Typanbieter für Datendienste für häufig verwendete Internet und in Unternehmen. Zum Beispiel:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) enthält Typanbieter für JSON, XML, CSV und HTML-Formate Dokument
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) enthält Typanbieter für JSON, XML, CSV und HTML-Formate Dokument.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) stark typisierten Zugriff auf die SQL-Datenbanken über einen Objekt-Zuordnung und f# LINQ-Abfragen für diese Datenquellen bietet.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) verfügt über einen Satz der Typanbieter für com, eine Ansammlung Zeit überprüft Einbetten von T-SQL in F# erläutert werden.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) hat ein Satz von Typanbieter für den Zeitpunkt der Kompilierung überprüft Einbetten von T-SQL in F# erläutert werden.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist eine ältere Typanbieter für die Verwendung nur mit .NET Framework-Programmierung für den Zugriff auf Datendienste für SQL, Entity Framework, OData und WSDL.
 
@@ -62,7 +62,7 @@ Typanbieter sind für Situationen geeignet, in denen das Schema zur Laufzeit und
 
 ## <a name="a-simple-type-provider"></a>Ein einfacher Typanbieter
 
-In diesem Beispiel wird Samples.HelloWorldTypeProvider ähnelt den Beispielen in der `examples` Verzeichnis die [f# Typ Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
+In diesem Beispiel wird Samples.HelloWorldTypeProvider, ähnlich wie in den Beispielen in der `examples` Verzeichnis die [f# Typ Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-Zur Verwendung dieses Anbieters öffnen Sie eine separate Instanz von Visual Studio 2012, erstellen Sie ein F#-Skript, und fügen Sie einen Verweis an den Anbieter aus dem Skript anschließend mit #r wie im folgenden Code dargestellt:
+Zur Verwendung dieses Anbieters öffnen Sie eine separate Instanz von Visual Studio, erstellen Sie ein F#-Skript, und fügen Sie einen Verweis an den Anbieter aus dem Skript anschließend mit #r wie im folgenden Code dargestellt:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ Die Möglichkeit, Typanbieter durch statische Daten zu parametrisieren, eröffne
 
 ### <a name="type-checked-regex-provider"></a>Typgeprüfter Regex-Anbieter
 
-Angenommen, Sie möchten einen Typanbieter für reguläre Ausdrücke implementieren, der die .NET-Bibliotheken von `System.Text.RegularExpressions.Regex` in einer Schnittstelle umschließt, die zur Laufzeit die folgenden Garantien bereitstellt:
+Angenommen, Sie möchten einen Typanbieter für reguläre Ausdrücke implementieren, der die .NET-Bibliotheken von <xref:System.Text.RegularExpressions.Regex> in einer Schnittstelle umschließt, die zur Laufzeit die folgenden Garantien bereitstellt:
 
 - Überprüfen, ob ein regulärer Ausdruck gültig ist.
 
 - Bereitstellen benannter Eigenschaften für Übereinstimmungen, die auf vorhandenen Gruppennamen im regulären Ausdruck basieren.
 
-In diesem Abschnitt wird erläutert, wie Sie mit Typanbietern einen `RegExProviderType`-Typ erstellen, in dem über das reguläre Ausdrucksmuster Parameter erstellt werden, um die zuvor genannten Funktionen bereitzustellen. Der Compiler meldet einen Fehler, wenn das angegebene Muster ungültig ist, und der Typanbieter kann die Gruppen aus dem Muster extrahieren und sie bei Übereinstimmungen als benannte Eigenschaften verfügbar machen. Wenn Sie einen Typanbieter entwerfen, sollten Sie berücksichtigen, in welcher Form die API den Endbenutzern zur Verfügung gestellt wird und wie der Entwurf in .NET-Code übersetzt wird. Im folgenden Beispiel wird gezeigt, wie eine solche API verwendet wird, um die Komponenten einer Ortskennzahl zu ermitteln:
+In diesem Abschnitt wird erläutert, wie Sie mit Typanbietern einen `RegexTyped`-Typ erstellen, in dem über das reguläre Ausdrucksmuster Parameter erstellt werden, um die zuvor genannten Funktionen bereitzustellen. Der Compiler meldet einen Fehler, wenn das angegebene Muster ungültig ist, und der Typanbieter kann die Gruppen aus dem Muster extrahieren und sie bei Übereinstimmungen als benannte Eigenschaften verfügbar machen. Wenn Sie einen Typanbieter entwerfen, sollten Sie berücksichtigen, in welcher Form die API den Endbenutzern zur Verfügung gestellt wird und wie der Entwurf in .NET-Code übersetzt wird. Im folgenden Beispiel wird gezeigt, wie eine solche API verwendet wird, um die Komponenten einer Ortskennzahl zu ermitteln:
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ Beachten Sie die folgenden Punkte:
 
 - Der `RegexTyped`-Konstruktor führt zu einem Aufruf des Regex-Konstruktors und übergibt als Muster das statische Argument.
 
-- Die Ergebnisse der `Match`-Methode werden durch den `System.Text.RegularExpressions.Match`-Standardtyp dargestellt.
+- Die Ergebnisse der `Match`-Methode werden durch den <xref:System.Text.RegularExpressions.Match>-Standardtyp dargestellt.
 
 - Für jede benannte Gruppe wird eine bereitgestellte Eigenschaft erzeugt, und bei einem Zugriff auf die Eigenschaft wird ein Indexer verwendet, um eine `Groups`-Auflistung der Übereinstimmungen abzurufen.
 
@@ -552,7 +552,7 @@ Beachten Sie die folgenden Punkte:
 
 - Sie verwenden `obj` als Basistyp der Methode. Für die Laufzeitdarstellung dieses Typs wird jedoch ein `Regex`-Objekt verwendet, wie im folgenden Beispiel gezeigt.
 
-- Der Aufruf des `Regex`-Konstruktors löst eine `System.ArgumentException` aus, wenn ein regulärer Ausdruck ungültig ist. Der Compiler fängt diese Ausnahme ab und gibt im Visual Studio-Editor oder zur Kompilierzeit eine Fehlermeldung an den Benutzer aus. Diese Ausnahme ermöglicht es, reguläre Ausdrücke zu überprüfen, ohne die Anwendung ausführen zu müssen.
+- Der Aufruf des `Regex`-Konstruktors löst eine <xref:System.ArgumentException> aus, wenn ein regulärer Ausdruck ungültig ist. Der Compiler fängt diese Ausnahme ab und gibt im Visual Studio-Editor oder zur Kompilierzeit eine Fehlermeldung an den Benutzer aus. Diese Ausnahme ermöglicht es, reguläre Ausdrücke zu überprüfen, ohne die Anwendung ausführen zu müssen.
 
 Der oben definierte Typ ist bisher wenig nützlich, da er noch keine sinnvollen Methoden oder Eigenschaften enthält. Fügen Sie zuerst eine statische `IsMatch`-Methode hinzu:
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-Anschließend fügen Sie dem Match-Typ für jede Gruppe eine Eigenschaft hinzu. Zur Laufzeit wird eine Übereinstimmung als `System.Text.RegularExpressions.Match`-Wert dargestellt, sodass das Zitat, das die Eigenschaft definiert, die indizierte `System.Text.RegularExpressions.Match.Groups`-Eigenschaft verwenden muss, um die entsprechende Gruppe abzurufen.
+Anschließend fügen Sie dem Match-Typ für jede Gruppe eine Eigenschaft hinzu. Zur Laufzeit wird eine Übereinstimmung als <xref:System.Text.RegularExpressions.Match>-Wert dargestellt, sodass das Zitat, das die Eigenschaft definiert, die indizierte <xref:System.Text.RegularExpressions.Match.Groups>-Eigenschaft verwenden muss, um die entsprechende Gruppe abzurufen.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ Häufig sollen mithilfe von Typanbietern APIs bereitgestellt werden, die nicht n
 Als einfaches Beispiel soll ein Typanbieter für den Zugriff auf wissenschaftliche Daten im CSV-Format (Comma Separated Value) betrachtet werden. In diesem Abschnitt wird davon ausgegangen, dass die CSV-Dateien eine Kopfzeile gefolgt von den Gleitkommadaten enthalten, wie in der folgenden Tabelle gezeigt:
 
 
-```
-|Distance (meter)|Time (second)|
+|Abstand (Meter)|Zeit (Sekunden)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 In diesem Abschnitt wird erläutert, wie Sie einen Typ bereitstellen, mit dem Sie Zeilen mit einer `Distance`-Eigenschaft vom Typ `float<meter>` und einer `Time`-Eigenschaft vom Typ `float<second>` abrufen können. Der Einfachheit halber wird Folgendes vorausgesetzt:
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 In diesem Fall sollte der Compiler diese Aufrufe ähnlich wie im folgenden Beispiel konvertieren:
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ Diese Versionen werden verwendet, um Typenräume zu erstellen, die erst bei Beda
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>Arraytypen und Instanziierungen von generischen Typ bereit
 
-Sie können bereitgestellte Member (deren Signaturen Arraytypen, byref-Typen und Instanziierungen von generischen Typen enthalten) erstellen, indem Sie die normalen Typen `MakeArrayType`, `MakePointerType` und `MakeGenericType` einer beliebigen Instanz von System.Type verwenden, einschließlich `ProvidedTypeDefinitions`.
+Sie stellen bereitgestellte Member (deren Signaturen enthalten Arraytypen, Byref-Typen und Instanziierungen von generischen Typen) mithilfe der normalen `MakeArrayType`, `MakePointerType`, und `MakeGenericType` auf jeder Instanz von <xref:System.Type>, einschließlich `ProvidedTypeDefinitions`.
 
-Hinweis: In einigen Fällen möglicherweise verwenden Sie das Hilfsprogramm in `ProvidedTypeBuilder.MakeGenericType`.  Finden Sie weitere Details der Typ Anbieter-SDK-Dokumentation.
+> [!NOTE]
+> In einigen Fällen müssen Sie möglicherweise verwenden Sie das Hilfsprogramm in `ProvidedTypeBuilder.MakeGenericType`.  Finden Sie unter der [Typ Anbieter-SDK-Dokumentation](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) Weitere Details.
 
 ### <a name="providing-unit-of-measure-annotations"></a>Bereitstellen von Maßeinheiten als Anmerkung
 
@@ -1096,12 +1095,12 @@ Jede Verwendung der Member von bereitgestellten Typen kann eine Ausnahme auslös
 
 #### <a name="providing-generated-types"></a>Bereitstellen von generierten Typen
 
-Bisher wurde in diesem Dokument erläutert, wie gelöschte Typen bereitgestellt werden. Sie können den Typanbietermechanismus in F# auch verwenden, um generierte Typen bereitzustellen, die als echte .NET-Typdefinitionen in das Programm des Benutzers übernommen werden. Auf generierte bereitgestellte Typen müssen Sie über die Typdefinition verweisen.
+Dieses Dokument wurde bisher zum Bereitstellen von gelöschter Typen erläutert. Sie können den Typanbietermechanismus in F# auch verwenden, um generierte Typen bereitzustellen, die als echte .NET-Typdefinitionen in das Programm des Benutzers übernommen werden. Auf generierte bereitgestellte Typen müssen Sie über die Typdefinition verweisen.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 Der Hilfscode „ProvidedTypes-0.2“, der Teil des Releases 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
