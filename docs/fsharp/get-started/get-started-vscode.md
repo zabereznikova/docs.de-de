@@ -1,90 +1,61 @@
 ---
-title: Erste Schritte mit f# in Visual Studio-Code mit Ionide
+title: Erste Schritte mit f# in Visual Studio-Code
 description: Informationen Sie zum Verwenden von f# mit Visual Studio-Code und der Ionide-Plug-in-Suite.
 keywords: Visual f#, f#, funktionalen Programmierung, .NET, Visual Studio-Code von Vscode, Ionide
 author: cartermp
 ms.author: phcart
-ms.date: 09/28/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Erste Schritte mit f# in Visual Studio-Code mit Ionide
+# <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit f# in Visual Studio-Code
 
-Sie können schreiben f# [Visual Studio Code](https://code.visualstudio.com) mit der [Ionide-Plug-Ins](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), um eine plattformübergreifende, einfache IDE problembehandlungserlebnis mit IntelliSense und grundlegenden Code Refactorings abzurufen.  Besuchen Sie [Ionide.io](https://ionide.io) Weitere Informationen zu den Plug-in-Suite.
+Sie können schreiben f# [Visual Studio Code](https://code.visualstudio.com) mit der [Ionide-Plug-in](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), um eine hervorragende plattformübergreifende, einfache IDE (Integrade Development-Umgebung) Erfahrung mit IntelliSense und basic-Code Refactorings.  Besuchen Sie [Ionide.io](http://ionide.io) Weitere Informationen zu den Plug-in-Suite.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-F#-4.0 oder höher muss auf dem Computer mit Ionide installiert sein.
+Benötigen Sie [Git installiert](https://git-scm.com/download) und verfügbar in Ihrem Pfad zu der Projektvorlagen im Ionide verwenden.  Sie können überprüfen, ob es ordnungsgemäß, durch Eingabe installiert ist `git --version` an der Eingabeaufforderung ein und drücken **EINGABETASTE**.
 
-Darüber hinaus benötigen Sie [Git installiert](https://git-scm.com/download) und verfügbar in Ihrem Pfad zu der Projektvorlagen im Ionide verwenden.  Sie können überprüfen, ob es ordnungsgemäß, durch Eingabe installiert ist `git` an einen Befehl prompt.and drücken **EINGABETASTE**.
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-### <a name="windows"></a>Windows
-
-Wenn Sie auf Windows nutzen, haben Sie zwei Optionen für die Installation von f#.
-
-Wenn Sie Visual Studio bereits installiert haben und keine f#, können Sie [Installieren von Visual F#-Tools](get-started-visual-studio.md#installing-f).  Dadurch werden die erforderlichen Komponenten zum Schreiben, kompilieren und Ausführen von f#-Code installiert.
-
-Wenn Sie nicht Visual Studio installieren möchten, gehen Sie folgendermaßen vor:
-
-1. Installieren Sie [.NET Framework 4.5 oder höher](https://www.microsoft.com/en-US/download/details.aspx?id=30653) , wenn Sie Windows 7 ausführen.  Wenn Sie Windows 8 oder höher verwenden, müssen Sie nicht dies tun.
-
-2. Installieren Sie das Windows SDK für Ihr Betriebssystem aus:
-
-    * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
-
-3. Installieren der [Microsoft Build 2015-Tools](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  Sie müssen möglicherweise auch installieren [Microsoft Build Tools 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
-
-4. Installieren der [Visual f#-Tools](https://www.microsoft.com/en-us/download/details.aspx?id=48179).
-
-Auf 64-Bit-Windows befinden, dem Compiler und Tools hier:
-
-```
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Auf 32-Bit-Windows befinden sich die Compilertools hier:
-
-```
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Ionide erkennt automatisch dem Compiler und Tools, aber wenn aus irgendeinem Grund nicht (z. B. Visual f#-Tools in einem anderen Verzeichnis installiert wurden), können Sie manuell den enthaltenden Ordner hinzufügen (`...\Microsoft SDKs\F#\4.0`) zu Ihrem Pfad.
-
-### <a name="macos"></a>macOS
-
-Auf MacOS, Ionide verwendet [Mono](https://www.mono-project.com).  Die einfachste Möglichkeit zum Installieren von Mono auf MacOS erfolgt über Homebrew.  Geben Sie einfach die folgenden in Ihrem Terminal:
+Ionide verwendet [Mono](http://www.mono-project.com).  Die einfachste Möglichkeit zum Installieren von Mono auf MacOS erfolgt über Homebrew.  Geben Sie einfach die folgenden in Ihrem Terminal:
 
 ```
 brew install mono
 ```
 
-### <a name="linux"></a>Linux
+Außerdem müssen Sie installieren die [.NET Core SDK](https://www.microsoft.com/net/download).
 
-Unter Linux verwendet Ionide auch [Mono](https://www.mono-project.com).  Wenn Sie auf Debian oder Ubuntu nutzen, können Sie Folgendes verwenden:
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+Unter Linux verwendet Ionide auch [Mono](https://www.mono-project.com). Wenn Sie auf Debian oder Ubuntu nutzen, können Sie Folgendes verwenden:
 
 ```
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
+Außerdem müssen Sie installieren die [.NET Core SDK](https://www.microsoft.com/net/download).
+
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+
+Wenn Sie auf Windows nutzen, müssen Sie [Installieren von Visual Studio mit Unterstützung für f#](get-started-visual-studio.md#installing-f). Hiermit werden die erforderlichen Komponenten zum Schreiben, kompilieren und Ausführen von f#-Code installiert.
+
+Außerdem müssen Sie installieren die [.NET Core SDK](https://www.microsoft.com/net/download/).
+
+---
+
 ## <a name="installing-visual-studio-code-and-the-ionide-plugin"></a>Installieren von Visual Studio-Code und die Ionide-Plug-in
 
-Sie können Visual Studio-Code aus der [code.visualstudio.com](https://code.visualstudio.com) Website.  Es gibt zwei Möglichkeiten, um das Plug-in Ionide finden, danach:
+Sie können Visual Studio-Code aus der [code.visualstudio.com](https://code.visualstudio.com) Website. Es gibt zwei Möglichkeiten, um das Plug-in Ionide finden, danach:
 
 1. Verwenden Sie die Palette-Befehl (STRG + UMSCHALT + P ist die unter Windows, ⌘ + UMSCHALT + P auf MacOS, STRG + UMSCHALT + P unter Linux), und geben Sie Folgendes:
 
@@ -96,7 +67,7 @@ Sie können Visual Studio-Code aus der [code.visualstudio.com](https://code.visu
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Nur-Plug-In für f#-Unterstützung in Visual Studio-Code ist erforderlich [Ionide Fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Sie können jedoch auch installieren [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) und die abzurufenden [gefälschte](https://fake.build/) unterstützen und [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) abzurufenden [Paket](https://fsprojects.github.io/Paket/) unterstützen.  GEFÄLSCHTE und Paket zusätzliche F#-Community-Tools zum Erstellen von Projekten und Verwalten von Abhängigkeiten, bzw. sind.
+Nur-Plug-In für f#-Unterstützung in Visual Studio-Code ist erforderlich [Ionide Fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Sie können jedoch auch installieren [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) und die abzurufenden [gefälschte](https://fsharp.github.io/FAKE/) unterstützen und [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) abzurufenden [Paket](https://fsprojects.github.io/Paket/) unterstützen. GEFÄLSCHTE und Paket zusätzliche F#-Community-Tools zum Erstellen von Projekten und Verwalten von Abhängigkeiten, bzw. sind.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Erstellen eines ersten Projekts mit Ionide
 
@@ -139,7 +110,7 @@ Diese Vorlage generiert ein paar Dinge, die Sie hilfreich finden:
 
 1. Die f#-Projekt selbst, darunter die `ClassLibraryDemo` Ordner.
 2. Die richtige Verzeichnisstruktur für das Hinzufügen von Paketen über [ `Paket` ](https://fsprojects.github.io/Paket/).
-3. Ein plattformübergreifendes Buildskript mit [ `FAKE` ](https://fake.build/).
+3. Ein plattformübergreifendes Buildskript mit [ `FAKE` ](https://fsharp.github.io/FAKE/).
 4. Die `paket.exe` ausführbare Datei die fetch Pakete und Abhängigkeiten für Sie beheben kann.
 5. Ein `.gitignore` Datei, wenn Sie dieses Projekt Git-basierten Datenquellen-Steuerelement hinzufügen möchten.
 
@@ -219,7 +190,7 @@ Im Text der Funktion sehen Sie zwei verschiedene Teilen:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. Ein [`if.then.else`](../language-reference/conditional-expressions-if-then-else.md) welche überprüft, ob das erste Zeichen ein Vokal, und einen Rückgabewert aus der Eingabezeichen erstellt nach dem ersten Zeichen je Ausdruck wurde ein Vokal oder nicht:
+2. Ein [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) welche überprüft, ob das erste Zeichen ein Vokal, und einen Rückgabewert aus der Eingabezeichen erstellt nach dem ersten Zeichen je Ausdruck wurde ein Vokal oder nicht:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
@@ -227,7 +198,7 @@ Der Fluss der `toPigLatin` daher:
 
 Überprüfen Sie, ob das erste Zeichen des eingegebenen Worts ein Vokal ist.  Wenn dies der Fall, fügen Sie am Ende des Worts "Yay".  Andernfalls verschieben Sie das erste Zeichen bis zum Ende des Worts, und fügen Sie "Weg" hinzu.
 
-Letzte Gemeinsamkeit zu diesem Beachten Sie: Es ist keine explizite Anweisung Rückgabe aus der Funktion im Gegensatz zu vielen weiteren Sprachen an es.  Dies liegt daran f# ausdrucksbasiert ist, und der letzte Ausdruck im Text einer Funktion der Rückgabewert ist.  Da `if.then.else` ist selbst ein Ausdruck, der Hauptteil der `then` Block oder im Textteil der `else` Block wird je nach den Eingabewert zurückgegeben werden.
+Letzte Gemeinsamkeit zu diesem Beachten Sie: Es ist keine explizite Anweisung Rückgabe aus der Funktion im Gegensatz zu vielen weiteren Sprachen an es.  Dies liegt daran f# ausdrucksbasiert ist, und der letzte Ausdruck im Text einer Funktion der Rückgabewert ist.  Da `if..then..else` ist selbst ein Ausdruck, der Hauptteil der `then` Block oder im Textteil der `else` Block wird je nach den Eingabewert zurückgegeben werden.
 
 ## <a name="moving-your-script-code-into-the-implementation-file"></a>Verschieben Sie den Skriptcode in der Implementierungsdatei
 
