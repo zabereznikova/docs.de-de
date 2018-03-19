@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  

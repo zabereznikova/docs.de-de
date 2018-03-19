@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Endpunktadresse wird im [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft für die Authentifizierung des Endpunkts durch andere Endpunkte, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaften enthält, die eventuelle weitere SOAP-Header definieren, die für das Erreichen des Diensts erforderlich sind. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
   
 ## <a name="uri-structure-of-an-address"></a>URI-Struktur einer Adresse  
- Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Der URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint setzt sich beispielsweise aus folgenden vier Teilen zusammen:  
+ Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Angenommen, die vier Teile des URIS http://www.fabrikam.com:322/mathservice.svc/secureEndpoint kann wie folgt aufgeschlüsselt werden:  
   
 -   Schema: http:  
   
@@ -86,7 +88,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 </system.serviceModel>  
 ```  
   
- Im vorangehenden Beispiel sind net.tcp://payroll.myorg.com:8000 und http://shipping.myorg.com:8000 die einzigen Basisadressen (für die entsprechenden Schemas), die übergeben werden.  
+ Im vorangehenden Beispiel TCP://Payroll.myorg.com: 8000 und http://shipping.myorg.com:8000 sind die einzigen Basisadressen für die jeweiligen Schemata, die übergeben werden.  
   
  Der `baseAddressPrefixFilter` unterstützt keine Platzhalter.  
   

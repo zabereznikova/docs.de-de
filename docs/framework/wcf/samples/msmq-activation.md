@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet die `netMsmqBinding` und basiert auf der [bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) Beispiel. In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  
@@ -29,11 +31,11 @@ Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Ac
 > [!NOTE]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  \<Installationslaufwerk >: \WF_WCF_Samples  
+>  \<InstallDrive>:\WF_WCF_Samples  
 >   
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" und [!INCLUDE[wf](../../../../includes/wf-md.md)] Beispiele für [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] alle herunterladen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  \<Installationslaufwerk >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
+>  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
  Windows Process Activation Service (WAS), der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../../includes/lserver-md.md)], stellt IIS-ähnliche Features bereit, die zuvor nur für HTTP-basierte Anwendungen zur Verfügung standen, die Nicht-HTTP-Protokolle verwenden. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet die Schnittstelle des Listeneradapters, um Aktivierungsanforderungen weiterzugeben, die über die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützten Nicht-HTTP-Protokolle, wie etwa TCP, Named Pipes und MSMQ, empfangen wurden. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.  
   

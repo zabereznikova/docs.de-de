@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema werden Überlegungen zur Versionsverwaltung in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vorgestellt.  
@@ -110,7 +112,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Ähnlich wie bei der Versionsverwaltung für Datenverträge umfasst die Versionsverwaltung für Dienstverträge auch das Hinzufügen, Ändern und Entfernen von Vorgängen.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Angeben von Name, Namespace und Aktion  
- Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standardnamespace ist "http://tempuri.org" und die Aktion eines Vorgangs "http://tempuri.org/contractname/methodname". Es wird empfohlen, dass Sie ausdrücklich einen Namen und einen Namespace für den Dienstvertrag angeben sowie eine Aktion für jeden Vorgang, um die Verwendung von "http://tempuri.org" zu vermeiden und um zu verhindern, dass die Schnittstellen- und Methodennamen im Dienstvertrag verfügbar gemacht werden.  
+ Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standardnamespace ist "http://tempuri.org", und jeder Vorgang Aktion ist "http://tempuri.org/contractname/methodname". Es wird empfohlen, dass Sie einen Namen und Namespace-URI für den Dienstvertrag und eine Aktion für jeden Vorgang mit vermeiden explizit angeben "http://tempuri.org" und zu verhindern, dass die Schnittstellen- und Methodennamen im Vertrag für den Dienst verfügbar gemacht wird.  
   
 ### <a name="adding-parameters-and-operations"></a>Hinzufügen von Parametern und Vorgängen  
  Beim Hinzufügen von Vorgängen, die vom Dienst verfügbar gemacht werden, handelt es sich um eine nicht unterbrechende Änderung, da die vorhandenen Clients diese neuen Vorgänge nicht berücksichtigen müssen.  
@@ -136,7 +138,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Bei Änderungen an der Endpunktadresse und -bindung handelt es sich um unterbrechende Änderungen, solange die Clients die neue Endpunktadresse oder -bindung nicht dynamisch erkennen können. Ein Mechanismus zur Implementierung dieser Funktion ist die Verwendung einer UDDI-Registrierung sowie des UDDI-Aufrufmusters, bei der ein Client versucht, mit einem Endpunkt zu kommunizieren und im Falle eines Scheiterns eine bekannte UDDI-Registrierung für die aktuellen Endpunktdaten abfragt. Der Client verwendet dann die Adresse und die Bindung aus diesen Metadaten, um mit dem Endpunkt zu kommunizieren. Wenn diese Kommunikation erfolgreich ist, speichert der Client die Adress- und Bindungsinformationen für eine spätere Verwendung zwischen.  
   
 ## <a name="routing-service-and-versioning"></a>Routingdienst und Versionsverwaltung  
- Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)]der WCF-Routingdienst finden Sie unter [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die dienstversionsverwaltung finden Sie unter [How To: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)] der WCF-Routingdienst finden Sie unter [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die dienstversionsverwaltung finden Sie unter [How To: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Anhang  
  Die allgemeine Richtlinie für die Datenvertrags-Versionsverwaltung im Falle der strengen Versionsverwaltung besagt, dass Datenverträge als unveränderlich behandelt werden und neue Verträge erstellt werden, wenn Änderungen erforderlich sind. Für jeden neuen Datenvertrag muss eine neue Klasse erstellt werden. Deshalb ist ein Mechanismus erforderlich, mit dem vermieden wird, dass bereits vorhandener Code, der für die alte Datenvertragsklasse geschrieben wurde, für die neue Datenvertragsklasse neu geschrieben werden muss.  

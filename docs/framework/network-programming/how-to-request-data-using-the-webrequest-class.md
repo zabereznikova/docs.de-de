@@ -17,16 +17,17 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 463a59444d3f93e5560e149033fd845ac8cbe62d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Gewusst wie: Anfordern von Daten mithilfe der WebRequest-Klasse
 Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, z.B. einer Webseite oder Webdatei. Die Ressource muss von einem URI identifiziert werden.  
@@ -92,7 +93,7 @@ Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von
 5.  Zum Abrufen des Datenstroms, der die vom Server gesendeten Antwortdaten enthält, rufen Sie die Methode <xref:System.Net.HttpWebResponse.GetResponseStream%2A> der **WebResponse** auf.  
   
     ```csharp  
-    Stream dataStream = response.GetResponseStream ();  
+    Stream dataStream = response.GetResponseStream();  
     ```  
   
     ```vb  
@@ -121,28 +122,28 @@ namespace Examples.System.Net
 {  
     public class WebRequestGetExample  
     {  
-        public static void Main ()  
+        public static void Main()  
         {  
             // Create a request for the URL.   
-            WebRequest request = WebRequest.Create (  
+            WebRequest request = WebRequest.Create(  
               "http://www.contoso.com/default.html");  
             // If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials;  
             // Get the response.  
-            WebResponse response = request.GetResponse ();  
+            WebResponse response = request.GetResponse();  
             // Display the status.  
             Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
             // Get the stream containing content returned by the server.  
-            Stream dataStream = response.GetResponseStream ();  
+            Stream dataStream = response.GetResponseStream();  
             // Open the stream using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader (dataStream);  
+            StreamReader reader = new StreamReader(dataStream);  
             // Read the content.  
-            string responseFromServer = reader.ReadToEnd ();  
+            string responseFromServer = reader.ReadToEnd();  
             // Display the content.  
-            Console.WriteLine (responseFromServer);  
+            Console.WriteLine(responseFromServer);  
             // Clean up the streams and the response.  
-            reader.Close ();  
-            response.Close ();  
+            reader.Close();  
+            response.Close();  
         }  
     }  
 }  

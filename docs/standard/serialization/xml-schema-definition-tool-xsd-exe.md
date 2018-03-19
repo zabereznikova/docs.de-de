@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 Das XML Schema Definition-Tool (Xsd.exe) generiert XML-Schema- oder Common Language Runtime-Klassen aus XDR-, XML- und XSD-Dateien oder aus Klassen in einer Laufzeitassembly.  
@@ -47,7 +47,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Option|Beschreibung|  
 |------------|-----------------|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/ o**[**utputdir**]**:***Verzeichnis*|Gibt das Verzeichnis für Ausgabedateien an. Dieses Argument kann nur einmal angegeben werden. Der Standardwert ist das aktuelle Verzeichnis.|  
+|**/o**[**utputdir**]**:***directory*|Gibt das Verzeichnis für Ausgabedateien an. Dieses Argument kann nur einmal angegeben werden. Der Standardwert ist das aktuelle Verzeichnis.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/P[arameters]:** *file.xml*|Liest Optionen für verschiedene Operationsmodi aus der angegebenen XML-Datei. Die Kurzform ist '/p:'. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".|  
   
@@ -63,12 +63,12 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/e**[**lement**]**:***Element*|Gibt das Element im Schema an, für das Code generiert werden soll. In der Standardeinstellung werden für alle Elemente Typen erstellt. Sie können dieses Argument mehrmals angeben.|  
+|**/e**[**lement**]**:***element*|Gibt das Element im Schema an, für das Code generiert werden soll. In der Standardeinstellung werden für alle Elemente Typen erstellt. Sie können dieses Argument mehrmals angeben.|  
 |**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten Typen, um die Datenbindung zu ermöglichen. Die Kurzform ist `/edb`.|  
 |**/enableLinqDataSet**|(Kurzform: `/eld`.) Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md). Weitere Informationen zur LINQ-Verwendung finden Sie unter [LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Generiert Felder anstelle von Eigenschaften. Standardmäßig werden Eigenschaften generiert.|  
-|**/l**[**anguage**]**:***Sprache*|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|  
-|**/n**[**amespace**]**:***Namespace*|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|  
+|**/l**[**anguage**]**:***language*|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|  
+|**/n**[**amespace**]**:***namespace*|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|  
 |**/nologo**|Unterdrückt das Banner.|  
 |**/order**|Generiert explizite Reihenfolgebezeichner für alle Abschnittsmember.|  
 |**/o[ut]:** *Verzeichnisname*|Gibt das Ausgabeverzeichnis an, in dem die Dateien gespeichert werden sollen. Der Standardwert ist das aktuelle Verzeichnis.|  
@@ -78,7 +78,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/t**[**ype**]**:***Typname*|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|  
+|**/t**[**ype**]**:***typename*|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angezeigt.  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Klassen nach XSD  
  Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert das von `System.Xml.Serialization.XmlSerializer`verwendete XML-Format.  
   
- Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zur veröffentlichten XML-Schemadefinition oder dem XML-Standard finden Sie unter http://w3.org.  
+ Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zu den XML-Schemadefinition Vorschlag oder XML-Standard, finden Sie unter http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Festlegen von Optionen mit einer XML-Datei  
  Mithilfe des `/parameters`-Schalters können Sie eine einzelne XML-Datei angeben, durch die verschiedene Optionen festgelegt werden. Welche Optionen Sie festlegen können, richtet sich danach, wie Sie das Tool XSD.exe verwenden. Zu den möglichen Optionen gehören das Generieren von Schemas oder Codedateien sowie das Generieren von Codedateien, die `DataSet`-Funktionen umfassen. So können Sie z.&#160;B. das `<assembly\>`-Element auf den Namen einer ausführbaren Datei (.exe) oder Typbibliothek (.dll) festlegen, wenn Sie ein Schema generieren. Dies gilt jedoch nicht für das Generieren von Codedateien. Die folgende XML veranschaulicht die Verwendung des `<generateSchemas\>`-Elements mit einer angegebenen ausführbaren Datei:  

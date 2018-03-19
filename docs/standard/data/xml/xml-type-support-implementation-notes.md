@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>Implementierungshinweise zur XML-Typunterstützung
 In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beachten müssen.  
@@ -37,14 +37,14 @@ In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beach
  Es folgt eine Beschreibung möglicher Konflikte zwischen CLR-Datentypen und XML-Datentypen und ihrer Behandlung.  
   
 > [!NOTE]
->  Das `xs`-Präfix wird dem Namespace-URI http://www.w3.org/2001/XMLSchema zugeordnet.  
+>  Die `xs` Präfix zugeordnet ist die http://www.w3.org/2001/XMLSchema und Namespace-URI.  
   
 ### <a name="systemtimespan-and-xsduration"></a>"System.TimeSpan" und "xs:duration"  
  Der `xs:duration`-Typ ist insofern partiell geordnet, als dass es Intervalle gibt, die verschieden, aber äquivalent sind. Dies bedeutet, dass für Werte von Typ `xs:duration` gilt, dass ein Monat (P1M) kleiner als 32 Tage (P32D), größer als 27 Tage (P27D) und äquivalent zu 28, 29 oder 30 Tagen ist.  
   
  Die <xref:System.TimeSpan>-Klasse unterstützt diese partielle Ordnung nicht. Für ein Jahr und einen Monat wird eine bestimmte Anzahl von Tagen (365 bzw. 30) festgelegt.  
   
- Weitere Informationen über den `xs:duration`-Typ finden Sie im W3C XML Schema Part 2: Datatypes Recommendation unter http://www.w3.org/TR/xmlschema-2/.  
+ Weitere Informationen zu den `xs:duration` finden Sie unter der W3C XML Schema Part 2: Datatypes Recommendation unter http://www.w3.org/TR/xmlschema-2/.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>"xs:time", Typen für das gregorianische Datum und "System.DateTime"  
  Wenn einem `xs:time`-Wert ein <xref:System.DateTime>-Objekt zugeordnet wird, wird das <xref:System.DateTime.MinValue>-Feld zur Initialisierung der Datumseigenschaften des <xref:System.DateTime>-Objekts (z. B. <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> oder <xref:System.DateTime.Day%2A>) mit dem kleinsten möglichen <xref:System.DateTime>-Wert verwendet.  

@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
@@ -34,7 +34,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
   
  In der folgenden Tabelle werden die für das resultierende Schema möglichen hergeleiteten Typen aufgeführt.  
   
-|Einfacher Typ|description|  
+|Einfacher Typ|Beschreibung|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Ganze Zahlen im Bereich von -128 bis 127.|  
@@ -54,7 +54,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 |Uhrzeit|Das W3C-Format für time.|  
 |date|Die Werte für Jahreszahlen sind auf einen Bereich von 0001 bis 9999 beschränkt.|  
 |gYearMonth|Das gregorianische Monats- und Zeitformat von W3C.|  
-|Zeichenfolge|Ein oder mehrere Unicode-Zeichen.|  
+|string|Ein oder mehrere Unicode-Zeichen.|  
   
 ## <a name="type-promotion"></a>Typerweiterung  
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse überprüft Attribut- und Elementwerte der Reihenfolge nach. Wenn Werte festgestellt werden, wird der am weitesten eingeschränkte Typ ohne Vorzeichen hergeleitet. Wenn für ein Attribut oder ein Element ein Typ hergeleitet wurde und einer neuer Wert festgestellt wird, der nicht mit dem aktuell hergeleiteten Typ übereinstimmt, wird der hergeleitete Typ auf einen neuen Typ heraufgestuft. Dieser Typ entspricht sowohl dem aktuell hergeleiteten Typ als auch dem neuen Wert. Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse berücksichtigt beim Heraufstufen hergeleiteter Typen vorherige Werte.  
@@ -75,10 +75,10 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
   
  Wenn der erste `attr2`-Wert festgestellt wird, wird der Typ von `attr2` auf der Grundlage des Werts `unsignedByte` als `0` hergeleitet. Wenn der zweite `attr2`-Wert festgestellt wird, wird der Typ auf der Grundlage des aktuell hergeleiteten Typs `string` und des aktuellen Werts `unsignedByte` auf `true` heraufgestuft, da die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse beim Heraufstufen des hergeleiteten Typs vorherige Werte berücksichtigt. Wenn jedoch beide Instanzen von `attr2` im selben XML-Dokument und nicht, wie im Beispiel oben dargestellt, in zwei unterschiedlichen Dokumenten festgestellt worden wären, wäre `attr2` als `boolean` hergeleitet worden.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorierte Attribute aus dem http://www.w3.org/2001/XMLSchema-instance-Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignoriert die Attribute aus der http://www.w3.org/2001/XMLSchema-instance Namespace  
  Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
-|Attribut|description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`xsi:type`|Wenn ein Element mit der Angabe `xsi:type` festgestellt wird, wird `xsi:type` ignoriert.|  
 |`xsi:nil`|Wenn ein Element mit einem `xsi:nil`-Attribut festgestellt wird, weist dessen Elementdeklaration im hergeleiteten Schema den Wert `nillable="true"` auf. Ein Element, dessen `xsi:nil`-Attribut auf `true` festgelegt wurde, darf keine untergeordneten Elemente besitzen.|  

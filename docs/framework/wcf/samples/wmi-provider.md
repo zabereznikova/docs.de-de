@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider"></a>WMI-Anbieter
 Dieses Beispiel veranschaulicht, wie Daten aus [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten mithilfe des in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] integrierten WMI-Anbieters (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) zur Laufzeit erfasst werden. Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird. Das Beispiel aktiviert den WMI-Anbieter für die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und veranschaulicht, wie zum Sammeln von Daten aus der `ICalculator` -Dienst zur Laufzeit.  
@@ -43,7 +45,7 @@ Dieses Beispiel veranschaulicht, wie Daten aus [!INCLUDE[indigo1](../../../../in
  Wenn einem Dienst WMI-Objekte hinzugefügt werden, können zusammen mit den Informationen des integrierten WMI-Anbieters auch benutzerdefinierte Informationen preisgegeben werden. Dies wird durchgeführt, indem das Schema des Diensts mithilfe der Anwendung "Installutil.exe" in WMI veröffentlicht wird. Eine Anleitung dazu und ausführlichere Informationen finden Sie in den Anweisungen zum Einrichten am Ende dieses Themas.  
   
 ## <a name="accessing-wmi-information"></a>Zugreifen auf WMI-Informationen  
- Auf WMI-Daten kann auf mehreren Wegen zugegriffen werden. Microsoft stellt WMI-APIs für Skripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]-Anwendungen, C++-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp) bereit.  
+ Auf WMI-Daten kann auf mehreren Wegen zugegriffen werden. Microsoft stellt WMI-APIs für Skripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] Anwendungen, C++-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
  In diesem Beispiel werden zwei Javaskripts verwendet: das eine zum Auflisten der auf dem Computer ausgeführten Dienste mit einigen ihrer Eigenschaften und das andere zum Anzeigen benutzerdefinierter WMI-Daten. Das Skript öffnet eine Verbindung zum WMI-Anbieter, analysiert Daten und zeigt die erfassten Daten an.  
   
@@ -136,7 +138,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Veröffentlichen Sie das Dienstschema in WMI, indem Sie die Datei InstallUtil.exe (die sich standardmäßig unter "%WINDIR%\Microsoft.NET\Framework\v4.0.30319" befindet) für die Datei service.dll im Hostingverzeichnis ausführen. Dieser Schritt muss nur dann ausgeführt werden, wenn an der Datei service.dll Änderungen vorgenommen wurden. Weitere Informationen finden Sie unter "Bereitstellen von Verwaltungsinformationen durch Instrumentieren von Anwendungen" unter "http://msdn2.microsoft.com/library/ms186147.aspx" im Abschnitt "Vorgehensweise: Veröffentlichen des Schemas für eine instrumentierte Anwendung in WMI".  
+3.  Veröffentlichen Sie das Dienstschema in WMI, indem Sie die Datei InstallUtil.exe (die sich standardmäßig unter "%WINDIR%\Microsoft.NET\Framework\v4.0.30319" befindet) für die Datei service.dll im Hostingverzeichnis ausführen. Dieser Schritt muss nur dann ausgeführt werden, wenn an der Datei service.dll Änderungen vorgenommen wurden. Weitere Informationen finden Sie unter Bereitstellen von Verwaltungsinformationen durch Instrumentieren von Anwendungen an: http://msdn2.microsoft.com/library/ms186147.aspx im Abschnitt "Vorgehensweise: Veröffentlichen der Schema zu WMI für ein instrumentierte Anwendung".  
   
 4.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

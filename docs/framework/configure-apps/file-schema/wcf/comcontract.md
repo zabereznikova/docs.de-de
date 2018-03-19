@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8fa70ba3cf8e66411812b84821e80772c9930f7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Gibt einen Dienstvertrag für die COM+-Integration an.  
   
- \<System. ServiceModel >  
-\<ComContracts >  
+ \<system.ServiceModel>  
+\<comContracts>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,7 +83,7 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
 |comContracts|Enthält eine Auflistung von `comContract`-Elementen.|  
   
 ## <a name="remarks"></a>Hinweise  
- COM+-integrationsdienstverträge sind aktuell auf den Namespace "http://tempuri.org" beschränkt und Vertragsname wird von der unterstützenden COM-Schnittstelle abgeleitet. Sie können Alternativen aber angeben, indem Sie den `comContracts`-Abschnitt und das `comContract`-Element in der Konfigurationsdatei verwenden. Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
+ COM+-integrationsdienstverträge sind aktuell auf beschränkt die "http://tempuri.org"-Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstelle abgeleitet wird. Sie können Alternativen aber angeben, indem Sie den `comContracts`-Abschnitt und das `comContract`-Element in der Konfigurationsdatei verwenden. Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
   
 ```xml  
 <comContracts>  
@@ -105,6 +107,6 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<ComContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [Integrieren von COM+-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

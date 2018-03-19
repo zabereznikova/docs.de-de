@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
 > [!NOTE]
@@ -54,7 +56,7 @@ Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabsc
   
  Wenn der Inhalt eines Textbereichs durchlaufen werden muss, ist eine Reihe von Hintergrundschritten erforderlich, um die <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> -Methode erfolgreich auszuführen.  
   
-1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um eine Mehrdeutigkeit in Situationen zu beseitigen, in denen ein Textbereich die <xref:System.Windows.Automation.Text.TextUnit> -Grenzen überschreitet, z. B. „{Die U}RL [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet“, wobei „{“ und „}“ die Endpunkte des Textbereichs darstellen.  
+1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst <xref:System.Windows.Automation.Text.TextUnit> Grenzen: z. B. "{die U} RL [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
   
 2.  Der resultierende Bereich wird im <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> zurück an den Anfang der angeforderten <xref:System.Windows.Automation.Text.TextUnit> -Grenze verschoben.  
   
@@ -79,14 +81,14 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 ### <a name="hyperlink"></a>Link  
  **Beispiel 1: Ein Textbereich, der einen eingebetteten Textlink enthält**  
   
- {Die URL [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet}.  
+ {Die URL [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet}.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge „Die URL http://www.microsoft.com ist in den Text eingebettet“ zurück.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge "die URL http://www.microsoft.com ist in den Text eingebettet".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt ein <xref:System.Windows.Automation.AutomationElement> zurück, das das Linksteuerelement darstellt.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetChildren` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, der „http://www.microsoft.com“ darstellt.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetChildren` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, "http://www.microsoft.com".|  
   
  **Beispiel 2: Ein Textbereich, der einen eingebetteten Textlink nur teilweise enthält**  
   
@@ -100,7 +102,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
   
  **Beispiel 3: ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält einen eingebetteten Textlink, der nicht Teil des im Textbereich enthalten ist.**  
   
- {Die URL} [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet.  
+ {Die URL} [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
