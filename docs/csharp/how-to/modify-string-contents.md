@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C# #
 
 In diesem Artikel werden verschiedene Methoden zum Erzeugen einer `string` durch Modifizieren einer vorhandenen `string` erläutert. Alle diese gezeigten Methoden geben das Ergebnis der Modifizierung als neues `string`-Objekt zurück. Um dies deutlich zu machen, wird das Ergebnis in den Beispielen als neue Variable gespeichert. Dann können Sie sich sowohl die ursprüngliche `string` als auch die `string` ansehen, die durch die Modifizierung beim Ausführen jedes Beispiels entsteht.
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 In diesem Artikel werden mehrere Methoden aufgezeigt. Sie können vorhandenen Text ersetzen. Sie können nach Mustern suchen und übereinstimmenden Text durch anderen Text ersetzen. Sie können Zeichenfolgen als Zeichensequenzen behandeln. Sie können zudem Hilfsmethoden verwenden, die Leerräume entfernen. Sie sollten sich für die Methoden entscheiden, die am besten zu Ihrem Szenario passen.
 

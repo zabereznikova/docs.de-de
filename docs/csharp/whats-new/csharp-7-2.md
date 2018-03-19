@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: db22c9251fa5e9f5a9cb66af6ec8b193b88e0eb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -31,7 +31,7 @@ Die neuen Sprachfeatures in diesem Release umfassen:
   - Positionelle Argumente können auf benannte Argumente folgen.
 * [Führende Unterstriche in numerischen Literalen](#leading-underscores-in-numeric-literals)
   - Numerische Literale dürfen jetzt führende Unterstriche vor aufgeführten Stellen aufweisen.
-* [`private protected`-Zugriffsmodifizierer](#private-protected)
+* [`private protected`-Zugriffsmodifizierer](#private-protected-access-modifier)
   - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
 
 ## <a name="reference-semantics-with-value-types"></a>Verweissemantik mit Werttypen
