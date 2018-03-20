@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>Methoden #
 
@@ -87,11 +87,11 @@ Sie können eine Methode aufrufen, indem Sie sowohl Positionsargumente als auch 
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>Geerbte und überschriebene Methoden ##
 
-Zusätzlich zu den Elementen, die ausdrücklich in einem Typ definiert werden, erbt ein Typ Member, die in seiner Basisklasse definiert wurden. Da alle Typen im System verwalteten Typs direkt oder indirekt von erben die <xref:System.Object> Klasse erben, alle Typen seiner Elemente, wie z. B. <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, und <xref:System.Object.ToString>. Im folgenden Beispiel wird eine `Person`-Klasse definiert, zwei `Person`-Objekte instanziiert, und es wird die `Person.Equals`-Methode aufgerufen, um zu bestimmen, ob die zwei Objekte gleich sind. Jedoch ist die `Equals`-Methode nicht in der `Person`-Klasse definiert; sie wird von <xref:System.Object> vererbt.
+Zusätzlich zu den Elementen, die ausdrücklich in einem Typ definiert werden, erbt ein Typ Member, die in seiner Basisklasse definiert wurden. Da alle Typen im verwalteten Typsystem direkt oder indirekt von der <xref:System.Object>-Klasse erben, erben alle Typen ihre Member, z.B. <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> und <xref:System.Object.ToString>. Im folgenden Beispiel wird eine `Person`-Klasse definiert, zwei `Person`-Objekte instanziiert, und es wird die `Person.Equals`-Methode aufgerufen, um zu bestimmen, ob die zwei Objekte gleich sind. Jedoch ist die `Equals`-Methode nicht in der `Person`-Klasse definiert; sie wird von <xref:System.Object> vererbt.
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-Typen können geerbte Member überschreiben, indem das Schlüsselwort `override` verwendet und eine Implementierung für die überschriebene Methode bereitgestellt wird. Die Signatur der Methode muss mit der die überschriebene Methode identisch sein. Im folgende Beispiel ähnelt der vorherigen Abfrage, mit dem Unterschied, dass es überschreibt die <xref:System.Object.Equals(System.Object)> Methode. (Sie überschreibt auch die <xref:System.Object.GetHashCode>-Methode, da die zwei Methoden konsistente Ergebnisse bereitstellen sollen)
+Typen können geerbte Member überschreiben, indem das Schlüsselwort `override` verwendet und eine Implementierung für die überschriebene Methode bereitgestellt wird. Die Signatur der Methode muss mit der überschriebenen Methode identisch sein. Das folgende Beispiel ähnelt dem vorherigen Beispiel, außer dass es die Methode <xref:System.Object.Equals(System.Object)> überschreibt. (Sie überschreibt auch die <xref:System.Object.GetHashCode>-Methode, da die zwei Methoden konsistente Ergebnisse bereitstellen sollen)
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -118,7 +118,7 @@ Im folgenden Beispiel wird eine Klasse (die ein Verweistyp ist) mit dem Namen `S
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Übergeben von Parametern durch einen Verweis ###
 
-Sie übergeben einen Parameter durch einen Verweis, wenn Sie den Wert eines Arguments in einer Methode ändern möchten und diese Änderung berücksichtigen wollen, wenn das Steuerelement der aufrufenden Methode zurückgegeben wird. Verwenden Sie das Schlüsselwort `ref` oder `out`, um einen Parameter als Verweis zu übergeben.
+Sie übergeben einen Parameter durch einen Verweis, wenn Sie den Wert eines Arguments in einer Methode ändern möchten und diese Änderung berücksichtigen wollen, wenn das Steuerelement der aufrufenden Methode zurückgegeben wird. Verwenden Sie das Schlüsselwort [`ref`](language-reference/keywords/ref.md) oder [`out`](language-reference/keywords/out-parameter-modifier.md), um einen Parameter pro Verweis zu übergeben. Außerdem können Sie einen Wert pro Verweis übergeben, um das Kopieren und Änderungen zu vermeiden, wenn Sie das Schlüsselwort [`in`](language-reference/keywords/in-parameter-modifier.md) verwenden.
 
 Das folgende Beispiel ist identisch mit dem vorherigen Beispiel, außer dass der Wert durch einen Verweis an die `ModifyValue`-Methode übergeben wird. Wenn der Wert des Parameters in der `ModifyValue`-Methode verändert wird, wird die Wertänderung berücksichtigt, wenn das Steuerelement dem Aufrufer zurückgegeben wird.
 
@@ -195,7 +195,7 @@ Um einen von einer Methode zurückgegebenen Wert zu verwenden, kann die aufrufen
 
 Die Verwendung einer lokalen Variablen, in diesem Fall `result`, zum Speichern eines Werts ist optional. Es kann die Lesbarkeit des Codes verbessern, oder es kann notwendig sein, wenn Sie den ursprünglichen Wert des Arguments für den gesamten Gültigkeitsbereich der Methode speichern müssen.
 
-Manchmal möchten Sie, dass Ihre Methode mehr als einen Wert zurückgibt. Ab mit C#-7.0 können Sie dies einfach mithilfe von *Tupeltypen* und *Tupelliteralen* erledigen. Der Tupeltyp definiert die Datentypen der Elemente des Tupels. Tupelliterale stellen die tatsächlichen Werte des zurückgegebenen Tupels bereit. Im folgenden Beispiel `(string, string, string, int)` definiert die Tupeltyp, der von zurückgegeben wird die `GetPersonalInfo` Methode. Der `(per.FirstName, per.MiddleName, per.LastName, per.Age)`-Ausdruck ist das Tupelliteral. Die Methode gibt den ersten, mittleren und letzten Namen zusammen mit dem Alter eines `PersonInfo`-Objekts zurück.
+Manchmal möchten Sie, dass Ihre Methode mehr als einen Wert zurückgibt. Ab mit C#-7.0 können Sie dies einfach mithilfe von *Tupeltypen* und *Tupelliteralen* erledigen. Der Tupeltyp definiert die Datentypen der Elemente des Tupels. Tupelliterale stellen die tatsächlichen Werte des zurückgegebenen Tupels bereit. Im folgenden Beispiel definiert `(string, string, string, int)` den Tupeltyp, der durch die `GetPersonalInfo`-Methode zurückgegeben wird. Der `(per.FirstName, per.MiddleName, per.LastName, per.Age)`-Ausdruck ist das Tupelliteral. Die Methode gibt den ersten, mittleren und letzten Namen zusammen mit dem Alter eines `PersonInfo`-Objekts zurück.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -263,13 +263,13 @@ Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/a
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
 
-Eine asynchrone Methode kann den Rückgabetyp haben <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, oder `void`. Der Rückgabetyp `void` wird hauptsächlich zum Definieren von Ereignishandlern verwendet, wobei ein `void`-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die `void` zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen abfangen, die die Methode auslöst. Mit der Veröffentlichung von C# 7 wird es diese Einschränkung gelockert, damit eine asynchrone Methode [jeden aufgabenähnlichen Typ zurückgeben](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md) kann.
+Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder `void` haben. Der Rückgabetyp `void` wird hauptsächlich zum Definieren von Ereignishandlern verwendet, wobei ein `void`-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die `void` zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen abfangen, die die Methode auslöst. Mit der Veröffentlichung von C# 7 wird es diese Einschränkung gelockert, damit eine asynchrone Methode [jeden aufgabenähnlichen Typ zurückgeben](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md) kann.
 
 Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode, die eine Rückgabeanweisung besitzt, die eine ganze Zahl zurückgibt. Da es sich um eine async-Methode handelt, muss die Methodendeklaration einen `Task<int>`-Rückgabetyp haben. Da der Rückgabetyp `Task<int>` ist, ergibt die Auswertung des `await`-Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende `int result = await delayTask`-Anweisung veranschaulicht.
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Mit einer asynchronen Methode können keine [ref](language-reference/keywords/ref.md)- oder [out](language-reference/keywords/out.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
+Mit einer asynchronen Methode können keine [in](language-reference/keywords/in-parameter-modifier.md)-, [ref](language-reference/keywords/ref.md)- oder [out](language-reference/keywords/out-parameter-modifier.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
  Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](async.md), [Ablaufsteuerung in asynchronen Programmen](programming-guide/concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](programming-guide/concepts/async/async-return-types.md).
 
@@ -290,7 +290,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get`-Accessorschlüsselwort.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iteratoren ##
+## <a name="iterators"></a>Iterators ##
 
 Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
 
@@ -305,6 +305,7 @@ Weitere Informationen finden Sie unter [Iteratoren](programming-guide/concepts/i
 [Vererbung](programming-guide/classes-and-structs/inheritance.md)   
 [Abstrakte und versiegelte Klassen und Klassenmember](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out.md)   
+[out](language-reference/keywords/out-parameter-modifier.md)   
 [ref](language-reference/keywords/ref.md)   
+[in](language-reference/keywords/in-parameter-modifier.md)   
 [Übergeben von Parametern](programming-guide/classes-and-structs/passing-parameters.md)

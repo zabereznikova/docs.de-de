@@ -13,16 +13,16 @@ ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
 Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer eines Objekts erscheint eine Eigenschaft wie ein Feld; der Zugriff auf die Eigenschaft erfordert dieselbe Syntax. Für den Implementierer einer Klasse, besteht eine Eigenschaft aus einem oder zwei Codeblöcken, die einen [get](../../../csharp/language-reference/keywords/get.md)-Accessor und/oder einen [set](../../../csharp/language-reference/keywords/set.md)-Accessor darstellen. Der Codeblock für den `get`-Accessor wird ausgeführt, wenn die Eigenschaft gelesen wird; der Codeblock für den `set`-Accessor wird ausgeführt, wenn der Eigenschaft ein neuer Wert zugewiesen wird. Eine Eigenschaft ohne einen `set`-Accessor ist schreibgeschützt. Eine Eigenschaft ohne einen `get`-Accessor ist lesegeschützt. Eine Eigenschaft, die beide Accessoren umfasst, ermöglicht Lese-/ Schreibzugriff.  
   
- Im Gegensatz zu Feldern, werden Eigenschaften nicht als Variablen klassifiziert. Aus diesem Grund können Sie Eigenschaften nicht als [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md)-Parameter übergeben.  
+ Im Gegensatz zu Feldern, werden Eigenschaften nicht als Variablen klassifiziert. Aus diesem Grund können Sie Eigenschaften nicht als [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)-Parameter übergeben.  
   
  Eigenschaften sind vielseitig verwendbar: Sie können Daten überprüfen, bevor sie eine Änderung zulassen. Sie können Daten in einer Klasse transparent verfügbar machen, in denen die Daten in Wirklichkeit von einer anderen Quelle abgerufen werden, z.B. einer Datenbank. Sie können eine Aktion ausführen, wenn Daten geändert werden, z.B. ein Ereignis auslösen, oder den Wert anderer Felder verändern.  
   
@@ -49,11 +49,11 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- Der `get` -Accessor kann wahlweise verwendet werden, um den Wert des Felds zurückzugeben oder den Wert des Felds zunächst zu berechnen und dann zurückzugeben. Zum Beispiel:  
+ Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Zum Beispiel:  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
- Im vorherigen Codesegment wird der Wert NA zurückgegeben, wenn Sie der `Name` -Eigenschaft keinen Wert zuweisen.  
+ Im vorherigen Codesegment, wenn Sie der `Name`-Eigenschaft keinen Wert zuweisen, wird der Wert NA zurückgegeben.  
   
 ## <a name="the-set-accessor"></a>Der set-Accessor  
  Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../../csharp/language-reference/keywords/void.md) ist. Er verwendet einen impliziten Parameter mit dem Namen `value`, dessen Typ der Typ der Eigenschaft ist. Im folgenden Beispiel wird ein `set`-Accessor der `Name`-Eigenschaft hinzugefügt.  
@@ -67,19 +67,19 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
  Das Verwenden des impliziten Parameternamens, `value`, für die Deklaration einer lokalen Variablen in einem `set`-Accessor ist ein Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Eigenschaften können gekennzeichnet werden, als `public`, `private`, `protected`, `internal`, `protected internal` oder `private protected`. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Eigenschaft zugreifen können. Die `get`- und `set`-Accessoren für die gleiche Eigenschaft haben möglicherweise verschiedene Zugriffsmodifizierer. Z.B. kann `get` möglicherweise `public` sein, um den schreibgeschützten Zugriff von außerhalb des Typs zu ermöglichen, und `set` kann möglicherweise `private` oder `protected` sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Eigenschaften können als `public`, `private`, `protected`, `internal`, `protected internal` oder `private protected` gekennzeichnet werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Eigenschaft zugreifen können. Die `get`- und `set`-Accessoren für die gleiche Eigenschaft haben möglicherweise verschiedene Zugriffsmodifizierer. Z.B. kann `get` möglicherweise `public` sein, um den schreibgeschützten Zugriff von außerhalb des Typs zu ermöglichen, und `set` kann möglicherweise `private` oder `protected` sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Eine Eigenschaft kann mithilfe des `static` -Schlüsselworts als statische Eigenschaft deklariert werden. Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Eine Eigenschaft kann als statische Eigenschaft deklariert werden, mithilfe des `static`-Schlüsselworts. Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
- Eine Eigenschaft kann mithilfe des [virtual](../../../csharp/language-reference/keywords/virtual.md) -Schlüsselworts als virtuelle Eigenschaft gekennzeichnet werden. Dies ermöglicht es abgeleiteten Klassen, das Eigenschaftsverhalten mithilfe des [override](../../../csharp/language-reference/keywords/override.md) -Schlüsselworts zu überschreiben. Weitere Informationen zu diesen Optionen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+ Ein Ereignis kann mithilfe des [virtual](../../../csharp/language-reference/keywords/virtual.md)-Schlüsselworts als virtuelles Ereignis gekennzeichnet werden. Dies ermöglicht abgeleiteten Klassen, das Ereignisverhalten mithilfe des [override](../../../csharp/language-reference/keywords/override.md)-Schlüsselworts zu überschreiben. Weitere Informationen zu diesen Optionen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
- Eine Eigenschaft, die eine virtuelle Eigenschaft überschreibt, kann auch [sealed](../../../csharp/language-reference/keywords/sealed.md) (verschlossen) sein, wodurch angegeben wird, dass sie für abgeleitete Klassen nicht mehr virtuell ist. Schließlich kann eine Eigenschaft als [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt) deklariert werden. Dies bedeutet, dass es keine Implementierung in der Klasse gibt, und abgeleitete Klassen müssen eine eigene Implementierung schreiben. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Ein Ereignis, das ein virtuelles Ereignis überschreibt, kann auch [sealed](../../../csharp/language-reference/keywords/sealed.md)(verschlossen) sein, was angibt, dass es für abgeleitete Klassen nicht mehr virtuell ist. Schließlich kann eine Eigenschaft als [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt) deklariert werden. Dies bedeutet, dass es keine Implementierung in der Klasse gibt, und abgeleitete Klassen müssen eine eigene Implementierung schreiben. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 > [!NOTE]
 >  Das Verwenden eines [virtual](../../../csharp/language-reference/keywords/virtual.md)(virtuell)-, [abstract](../../../csharp/language-reference/keywords/abstract.md)(abstrakt)- oder [override](../../../csharp/language-reference/keywords/override.md)(außer Kraft setzen)- Modifizierers für einen Accessor einer [statischen](../../../csharp/language-reference/keywords/static.md) Eigenschaft ist ein Fehler.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel stellt Instanz-, statische und schreibgeschützte Eigenschaften dar. Es nimmt den über die Tastatur eingegebenen Namen des Mitarbeiters entgegen, zählt den Wert von `NumberOfEmployees` um 1 hoch und zeigt Name und Nummer des Mitarbeiters an.  
+ Dieses Beispiel zeigt,Instanz-, statische- und schreibgeschützte Eigenschaften. Dieser Parameter akzeptiert den Namen des Mitarbeiters auf der Tastatur, Inkremente `NumberOfEmployees` durch 1, und zeigt den Mitarbeiternamen und die Nummer an.  
   
  [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   

@@ -2,17 +2,18 @@
 title: Iteratoren (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 Ein *Iterator* kann verwendet werden, um Auflistungen wie Listen und Arrays schrittweise durchzugehen.  
@@ -344,7 +345,7 @@ public class Stack<T> : IEnumerable<T>
   
  Es muss eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in den Rückgabetyp des Iterators vorhanden sein.  
   
- In C# kann eine Iteratormethode nicht die Parameter `ref` oder `out` aufweisen.  
+ In C# kann eine Iteratormethode nicht die Parameter `in`, `ref` oder `out` aufweisen.  
   
  In C# ist „yield“ kein reserviertes Wort, und es hat nur besondere Bedeutung, wenn es vor den Schlüsselwörtern `return` und `break` verwendet wird.  
   

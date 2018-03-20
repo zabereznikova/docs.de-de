@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -37,7 +37,7 @@ Da in der Microsoft-Dokumentation bereits eine Einführung in EF Core verfügbar
 -   **Erste Schritte mit ASP.NET Core MVC und Entity Framework Core mithilfe von Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext Class (DbContext-Klasse)**
+-   **DbContext-Klasse**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
 -   **Vergleichen von EF Core und EF 6.x**
@@ -240,13 +240,13 @@ Beachten Sie, dass eine Verwendung der Singleton-Lebensdauer für das Repository
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Repository- und Arbeitseinheitsmuster in einer ASP.NET MVC-Anwendung)**
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Muster „Repository“ und „Arbeitseinheit“ in eine ASP.NET MVC-Anwendung)**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain**
+-   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Implementierungsstrategien für das Muster „Repository“ mit Entity Framework, Dapper und Chain**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (Vergleichen von ASP.NET Core IoC-Container-Servicelebensdauern mit Autofac IoC-Container-Instanzbereichen)**
+-   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (Vergleichen der Lebensdauer von Containerdiensten mit ASP.NET Core IoC und von Autofac IoC-Containerinstanzbereichen**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Tabellenzuordnung
@@ -330,7 +330,7 @@ Der Code im Beispiel zeigt einige explizite Deklarationen und Zuordnungen. EF Co
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Der Hi/Lo-Algorithmus in EF Core
 
-Ein interessanter Aspekt des Codes im vorherigen Beispiel ist die Tatsache, dass er den [Hi/Lo-Algorithmus](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) als Schlüsselgenerierungsstrategie verwendet.
+Ein interessanter Aspekt des Codes im vorherigen Beispiel ist die Tatsache, dass er den [Hi/Lo-Algorithmus](https://vladmihalcea.com/the-hilo-algorithm/) als Schlüsselgenerierungsstrategie verwendet.
 
 Der Hi/Lo-Algorithmus ist nützlich, wenn Sie eindeutige Schlüssel benötigen. Der Hi/Lo-Algorithmus weist im Wesentlichen Tabellenzeilen eindeutige Bezeichner zu, muss die Zeile aber nicht unverzüglich in der Datenbank speichern. Dadurch können Sie die Bezeichner sofort verwenden – wie bei regulären sequenziellen Datenbank-IDs.
 
@@ -457,22 +457,22 @@ Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, 
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Zuordnung zu einer Tabelle**
+-   **Tabellenzuordnung**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo to generate keys with Entity Framework Core**
+-   **Use HiLo to generate keys with Entity Framework Core (Verwenden von HiLo zum Generieren von Schlüsseln mit Entity Framework Core)**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Dahinter liegende Felder**
+-   **Backing Fields (Unterstützungsfelder)**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Encapsulated Collections in Entity Framework Core**
+-   **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Schatteneigenschaften**
+-   **Shadow Properties (Schatteneigenschaften)**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **The Specification pattern**
+-   **The Specification pattern (Das Spezifikationsmuster)**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
     
 

@@ -2,20 +2,21 @@
 title: Zeigertypen (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 In einem unsicheren Kontext kann ein Typ sowohl ein Zeigertyp als auch ein Werttyp oder Verweistyp sein. Eine Zeigertypdeklaration erfolgt in einer der folgenden Formen:  
@@ -37,7 +38,7 @@ void* identifier; //allowed but not recommended
   
  Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../../csharp/language-reference/keywords/object.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.  
   
- Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Beispiel:  
+ Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Zum Beispiel:  
   
 ```  
 int* p1, p2, p3;   // Ok  
@@ -48,7 +49,7 @@ int *p1, *p2, *p3;   // Invalid in C#
   
  Der Wert der Zeigervariablen vom Typ `myType*` ist die Adresse einer Variablen vom Typ `myType`. Im Folgenden finden Sie Beispiele für Zeigertypdeklarationen:  
   
-|Beispiel|Beschreibung|  
+|Beispiel|description|  
 |-------------|-----------------|  
 |`int* p`|`p` ist ein Zeiger auf einen ganzzahligen Wert.|  
 |`int** p`|`p` ist ein Zeiger auf einen Zeiger auf einen ganzzahligen Wert.|  
@@ -113,11 +114,11 @@ Console.ReadLine();
   
  Ein Zeiger kann den Wert `null` annehmen. Die Anwendung des Dereferenzierungsoperators auf einen NULL-Zeiger führt zu einem in der Implementierung definierten Verhalten.  
   
- Beachten Sie, dass die Übergabe von Zeigern zwischen Methoden zu nicht definiertem Verhalten führen kann. Dies betrifft zum Beispiel die Rückgabe eines Zeigers an eine lokale Variable als Out-Parameter, Ref-Parameter oder als Funktionsergebnis. Wenn der Zeiger in einem fixed-Block festgelegt wurde, ist die Variable, auf die der Zeiger verweist, möglicherweise nicht fixiert.  
+ Beachten Sie, dass die Übergabe von Zeigern zwischen Methoden zu nicht definiertem Verhalten führen kann. Ziehen Sie eine Methode in Betracht, die einen Zeiger auf eine lokale Variable als einen `in`-, `out`- oder `ref`-Parameter oder als Funktionsergebnis zurückgibt. Wenn der Zeiger in einem fixed-Block festgelegt wurde, ist die Variable, auf die der Zeiger verweist, möglicherweise nicht fixiert.  
   
  In der folgenden Tabelle werden die Operatoren und Anweisungen aufgelistet, die in einem unsicheren Kontext auf Zeiger angewendet werden können.  
   
-|Operator/Anweisung|Verwendung|  
+|Operator/Anweisung|Mit|  
 |-------------------------|---------|  
 |*|Führt eine Zeigerdereferenzierung aus.|  
 |->|Greift über einen Zeiger auf einen Member einer Struktur zu.|  

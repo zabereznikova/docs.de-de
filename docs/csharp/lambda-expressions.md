@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Lambdaausdrücke #
 
 Ein *Lambdaausdruck* ist ein Codeblock (bzw. ein Ausdrucks- oder ein Anweisungsblock), der wie ein Objekt behandelt wird. Er kann als Argument an eine Methode übergeben werden, und er kann auch von Methodenaufrufen zurückgegeben werden. Lambdaausdrücke finden bei folgenden Aktionen Anwendung:
 
-- Übergeben dem Code, ist für asynchrone Methoden ausgeführt werden, z. B. <xref:System.Threading.Tasks.Task.Run(System.Action)>.
+- Bei der Übergabe von Code, der als asynchrone Methode ausgeführt wird, wie z.B. <xref:System.Threading.Tasks.Task.Run(System.Action)>.
 
 - Bei [LINQ-Abfrageausdrücken](linq/index.md).
 
 - Bei Erstellen von [Ausdrucksbaumstrukturen](expression-trees-building.md).
 
-Lambdaausdrücke sind Code, der entweder als Delegat oder als eine Ausdrucksbaumstruktur repräsentiert werden kann, die an einen Delegat kompiliert. Der genaue Delegattyp eines Lambdaausdrucks hängt von dessen Parametern und Rückgabewert ab. Lambdaausdrücke, die keinen Wert zurückgeben, korrespondieren mit einem bestimmten `Action`-Delegat, abhängig von der Anzahl seiner Parameter. Lambdaausdrücke, die keinen Wert zurückgeben, entsprechen einem bestimmten `Func`-Delegat, abhängig von der Anzahl seiner Parameter. Beispielsweise entspricht ein Lambda-Ausdruck, der über zwei Parameter verfügt, aber keinen Wert zurückgibt ein <xref:System.Action%602> delegieren. Ein Lambda-Ausdruck, der über einen Parameter verfügt und einen Wert zurückgibt entspricht <xref:System.Func%602> delegieren.
+Lambdaausdrücke sind Code, der entweder als Delegat oder als eine Ausdrucksbaumstruktur repräsentiert werden kann, die an einen Delegat kompiliert. Der genaue Delegattyp eines Lambdaausdrucks hängt von dessen Parametern und Rückgabewert ab. Lambdaausdrücke, die keinen Wert zurückgeben, korrespondieren mit einem bestimmten `Action`-Delegat, abhängig von der Anzahl seiner Parameter. Lambdaausdrücke, die keinen Wert zurückgeben, entsprechen einem bestimmten `Func`-Delegat, abhängig von der Anzahl seiner Parameter. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat, aber keinen Wert zurückgibt, entspricht einem <xref:System.Action%602>-Delegat. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat, aber keinen Wert zurückgibt, entspricht einem <xref:System.Func%602>-Delegat.
 
 Ein Lambdaausdruck verwendet `=>`, den [Lambdadeklarationsoperator](language-reference/operators/lambda-operator.md), um die Parameterliste des Lambdas von dessen ausführbarem Code zu trennen. Zum Erstellen eines Lambdaausdrucks geben Sie Eingabeparameter (falls vorhanden) auf der linken Seite des Lambdaoperators an und stellen den Ausdrucks- oder Anweisungsblock auf die andere Seite. Beispielsweise gibt der Einzelzeilen-Lambdaausdruck `x => x * x` einen Parameter an, der `x` heißt und das Quadrat des Werts von `x` zurückgibt. Dieser Ausdruck kann einem Delegattyp zuwiesen werden, wie im folgenden Beispiel dargestellt:
 
@@ -96,7 +96,7 @@ Weitere Informationen zum Support für Tupel in C# finden Sie unter [C# Tuple ty
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas mit Standardabfrageoperatoren ##
 
-LINQ, u. a. die Objekte in anderen Implementierungen weisen einen Eingabeparameter, die, deren Typ wird, von der <xref:System.Func%601> -Familie generischer Delegaten. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func`-Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Betrachten Sie beispielsweise die <xref:System.Func%601> Delegaten, deren Syntax lautet:
+LINQ to Objects haben, neben anderen Implementierungen, einen Eingabeparameter, dessen Typ Teil der <xref:System.Func%601>-Familie generischer Delegate ist. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func`-Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Berücksichtigen z.B. den <xref:System.Func%601>-Delegaten, dessen Syntax wie folgt lautet:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -108,7 +108,7 @@ Hier ist `int` ein Eingabeparameter, und `bool` ist der Rückgabewert. Der Rück
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-Sie können auch einen Lambda-Ausdruck angeben, wenn der Argumenttyp ist ein <xref:System.Linq.Expressions.Expression%601>, z. B. in den Standardabfrageoperatoren, die in definiert werden die <xref:System.Linq.Queryable> Typ. Geben Sie bei einer <xref:System.Linq.Expressions.Expression%601> Argument der Lambda-Ausdruck in eine Ausdrucksbaumstruktur kompiliert wird. In folgendem Beispiel wird der Standardabfrageoperator [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) verwendet.
+Sie können einen Lambdaausdruck auch dann angeben, wenn der Argumenttyp <xref:System.Linq.Expressions.Expression%601> ist, beispielsweise in den Standardabfrageoperatoren, die in Typ <xref:System.Linq.Queryable> definiert sind. Wenn Sie ein <xref:System.Linq.Expressions.Expression%601>-Argument angeben, wird der Lambdaausdruck in eine Ausdrucksbaumstruktur kompiliert. In folgendem Beispiel wird der Standardabfrageoperator [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) verwendet.
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -150,7 +150,7 @@ Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](pro
 
 - Variablen, die in einem Lambda-Ausdruck eingeführt wurden, sind in der äußeren Methode nicht sichtbar.
 
-- Ein Lambda-Ausdruck kann einen `ref` - oder `out` -Parameter nicht direkt von einer einschließenden Methode erfassen.
+- Ein Lambdaausdruck kann einen `in`-, `ref`- oder `out`-Parameter nicht direkt von einer einschließenden Methode erfassen.
 
 - Eine return-Anweisung in einem Lambda-Ausdruck bewirkt keine Rückgabe durch die einschließende Methode.
 
@@ -158,6 +158,6 @@ Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](pro
 
 ## <a name="see-also"></a>Siehe auch ##
 
-[LINQ (Language Integrated Query)](../standard/using-linq.md)   
+[LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](../standard/using-linq.md)   
 [Anonyme Methoden](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [Ausdrucksbaumstrukturen](expression-trees.md)

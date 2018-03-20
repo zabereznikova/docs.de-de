@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 <a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Mustervergleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Verwenden Sie Einzeilenmodus, in dem der Punkt (.) den einzelnen Zeichen entspricht (anstatt allen Zeichen mit Ausnahme von `\n`). Weitere Informationen finden Sie unter [Einzeilenmodus](#Singleline).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Unbenannte Gruppen nicht erfassen Die einzigen gültigen Erfassungen sind explizit benannte oder nummerierte Gruppen in der Form `(?<`*Name*`>` *Teilausdruck*`)`. Weitere Informationen finden Sie unter [Nur explizite Erfassungen](#Explicit).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Nicht verfügbar|Kompiliert den regulären Ausdruck in eine Assembly. Weitere Informationen hierzu finden Sie unter [Kompilierte reguläre Ausdrücke](#Compiled).|  
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Schließt Leerstellen ohne Escapezeichen vom Muster aus und aktiviert Kommentare nach einem Nummernzeichen (`#`). Weitere Informationen finden Sie unter [Leerzeichen ignorieren](#Whitespace).|  
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Schließt Leerstellen ohne Escapezeichen vom Muster aus und aktiviert Kommentare nach einem Nummernzeichen (`#`). Weitere Informationen finden Sie im Abschnitt [Ignorieren von Leerzeichen](#Whitespace).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Nicht verfügbar|Ändert die Suchrichtung. Die Suche wird von rechts nach links und nicht von links nach rechts durchgeführt. Weitere Informationen finden Sie unter [Rechts-nach-Links-Modus](#RightToLeft).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Nicht verfügbar|ECMAScript-kompatibles Verhalten für den Ausdruck aktivieren. Weitere Informationen finden Sie unter [ECMAScript-Vergleichsverhalten](#ECMAScript).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Nicht verfügbar|Ignoriert kulturelle Unterschiede in der Sprache. Weitere Informationen finden Sie unter [Vergleiche mit der invarianten Kultur](#Invariant).|  
@@ -285,7 +285,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Leerzeichen in einer Zeichenklasse werden stets literal interpretiert. Der reguläre Ausdruck `[ .,;:]` findet z. B. ein einzelnes Leerstellenzeichen, Punkt, Komma, Semikolon oder einen Doppelpunkt.  
   
--   Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` unzulässig. Das Muster eines regulären Ausdrucks `\d{1. 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
+-   Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` nicht zulässig. Das Muster eines regulären Ausdrucks `\d{1. 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
   
 -   Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:  
   

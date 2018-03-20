@@ -2,21 +2,22 @@
 title: Partielle Klassen und Methoden (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 Es ist möglich, die Definition einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder einer [Struktur](../../../csharp/language-reference/keywords/struct.md), einer [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) oder einer Methode auf zwei oder mehr Quelldateien aufzuteilen. Jede Quelldatei enthält einen Abschnitt der Typ- oder Methodendefinition. Die Teile werden bei der Kompilierung der Anwendung miteinander kombiniert.  
@@ -112,9 +113,9 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
   
          Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
-## <a name="example-1"></a>Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>description  
  Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`CoOrds`) in einer partiellen Klassendefinition deklariert, und der Member (`PrintCoOrds`) wird in einer anderen partiellen Klassendefinition deklariert.  
   
 ### <a name="code"></a>Code  
@@ -122,7 +123,7 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
   
 ## <a name="example-2"></a>Beispiel 2  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>description  
  Im folgenden Beispiel wird gezeigt, dass Sie auch partielle Strukturen und Schnittstellen entwickeln können.  
   
 ### <a name="code"></a>Code  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Partielle Methodendeklarationen müssen mit dem Kontextschlüsselwort [partial](../../../csharp/language-reference/keywords/partial-type.md) beginnen, und die Methode muss [void](../../../csharp/language-reference/keywords/void.md) zurückgeben.  
   
--   Partielle Methoden können [ref](../../../csharp/language-reference/keywords/ref.md)-Parameter, aber keine [out](../../../csharp/language-reference/keywords/out.md)-Parameter besitzen.  
+-   Partielle Methoden können [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)- oder [ref](../../../csharp/language-reference/keywords/ref.md)-Parameter, aber keine [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)-Parameter besitzen.  
   
 -   Partielle Methoden sind implizit [privat](../../../csharp/language-reference/keywords/private.md) und können daher nicht [virtuell](../../../csharp/language-reference/keywords/virtual.md) sein.  
   

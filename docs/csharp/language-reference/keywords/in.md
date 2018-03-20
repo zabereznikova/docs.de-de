@@ -1,6 +1,6 @@
 ---
 title: in (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 02/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,24 +10,23 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.assetid: 52032838-0a38-476e-b4d5-94b59141952f
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 56824b21da416aecb9b00b46f2817b3d0fba2be2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8c45427a99756006799d1dca42841ef09b9ed8e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-c-reference"></a>in (C#-Referenz)
-Das kontextbezogene Schlüsselwort `in` wird in drei Kontexten verwendet:  
+
+Das kontextabhängige Schlüsselwort `in` wird in vier Kontexten verwendet:  
   
--   [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisungen  
-  
--   [join-Klauseln](../../../csharp/language-reference/keywords/join-clause.md) in Abfrageausdrücken  
-  
--   [generische Typparameter](../../../csharp/language-reference/keywords/in-generic-modifier.md) in generischen Schnittstellen und Delegaten  
+-   [generische Typparameter](in-generic-modifier.md) in generischen Schnittstellen und Delegaten
+-   Als [Parametermodifizierer](in-parameter-modifier.md), mit dem Sie ein Argument an eine Methode nach Verweis anstatt nach Wert übergeben können.
+-   [foreach](foreach-in.md)-Anweisungen
+-   [join-Klauseln](join-clause.md) in LINQ-Abfrageausdrücken
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)
+ [C#-Schlüsselwörter](index.md)  
+ [C#-Referenz](../index.md)
