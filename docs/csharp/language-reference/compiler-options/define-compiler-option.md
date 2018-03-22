@@ -15,7 +15,7 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
@@ -57,9 +57,9 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.    
+1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Geben Sie auf der Registerkarte **Build** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein. Wenn Sie z.B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
+2.  Geben Sie auf der Registerkarte **Erstellen** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein. Wenn Sie z.B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   

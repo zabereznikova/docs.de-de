@@ -8,7 +8,8 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
