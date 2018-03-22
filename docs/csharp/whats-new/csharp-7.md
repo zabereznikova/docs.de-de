@@ -1,6 +1,6 @@
 ---
-title: "Neues in C# 7 – Leitfaden für C#"
-description: "Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache."
+title: Neues in C# 7 – Leitfaden für C#
+description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
 keywords: C#, .NET, .NET Core, neueste Funktionen, Neues
 author: BillWagner
 ms.author: wiwagn
@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="whats-new-in-c-7"></a>Neues in C# 7
 
@@ -122,7 +122,7 @@ Tupel auf diese Weise zu verwenden, bietet mehrere Vorteile:
 
 * Sie sparen sich die Arbeit, ein `class` oder ein `struct` zu erstellen, das den zurückgegebenen Typ definiert. 
 * Sie müssen keinen neuen Typ erstellen.
-* Die Verbesserungen der Sprache beseitigen die Notwendigkeit, die <xref:System.Tuple.Create``1(``0)>-Methoden aufzurufen.
+* Durch die Verbesserungen der Sprache ist es nicht länger notwendig, die <xref:System.Tuple.Create``1(``0)>-Methoden aufzurufen.
 
 Die Deklaration der Methode liefert die Namen für die Felder des Tupels, das zurückgegeben wird. Wenn Sie die Methode aufrufen, ist der Rückgabewert ein Tupel mit den Feldern `Max` und `Min`:
 

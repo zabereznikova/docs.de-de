@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer (C#-Programmierhandbuch)"
+title: 'Gewusst wie: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer (C#-Programmierhandbuch)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,20 +8,20 @@ ms.topic: article
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Gewusst wie: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer (C#-Programmierhandbuch)
-Eine <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> Methode akzeptiert zwei Parameter: einen für den Schlüssel und einen für den Wert. Beim Initialisieren akzeptiert eine <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add`-Methode mehrere Parameter. Jeder Satz von Parametern muss wie im folgenden Beispiel in Klammern eingeschlossen sein.  
+Eine <xref:System.Collections.Generic.Dictionary`2> enthält eine Sammlung von Schlüssel-Wert-Paaren. Die <xref:System.Collections.Generic.Dictionary`2.Add*>-Methode nimmt zwei Parameter an, einen für den Schlüssel und einen für den Wert. Um eine <xref:System.Collections.Generic.Dictionary`2>-Klasse oder eine beliebige Sammlung zu initialisieren, deren `Add`-Methode mehrere Parameter annimmt, schließen Sie einen Satz von Parametern in Klammern ein, so wie im folgenden Beispiel dargestellt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel zeigt einen <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName`.  
+ Im folgenden Codebeispiel wird <xref:System.Collections.Generic.Dictionary`2> mit Instanzen vom Typ `StudentName` initialisiert.  
   
  [!code-csharp[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
