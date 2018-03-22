@@ -1,18 +1,18 @@
 ---
 title: 'Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats
-Beim Schreiben einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Anwendung, die ein X.509-Zertifikat zur Authentifizierung verwendet, ist es häufig erforderlich, im Zertifikat gefundene Ansprüche anzugeben. Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> -Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> -Methode verwenden. Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich. Öffnen Sie zuerst in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Siehe [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Suchen Sie dann, wie hier beschrieben, ein entsprechendes Zertifikat, und kopieren Sie seinen Fingerabdruck (oder andere Anspruchswerte).  
+Beim Schreiben einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Anwendung, die ein X.509-Zertifikat zur Authentifizierung verwendet, ist es häufig erforderlich, im Zertifikat gefundene Ansprüche anzugeben. Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> -Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> -Methode verwenden. Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich. Öffnen Sie zuerst in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Siehe [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Suchen Sie dann, wie hier beschrieben, ein entsprechendes Zertifikat, und kopieren Sie seinen Fingerabdruck (oder andere Anspruchswerte).  
   
  Wenn Sie ein Zertifikat für die Dienstauthentifizierung verwenden, ist es wichtig, den Wert der Spalte **Ausgestellt für** zu notieren (die erste Spalte in der Konsole). Beim Verwenden von SSL (Secure Sockets Layer) als Transportsicherheit wird als eine der ersten Überprüfungen der URI (Uniform Resource Identifier) der Basisadresse des Dienstes mit dem Wert **Ausgestellt für** verglichen. Die Werte müssen übereinstimmen, sonst wird die Authentifizierungsvorgang angehalten.  
   
@@ -33,7 +33,7 @@ Beim Schreiben einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -An
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>So rufen Sie den Fingerabdruck eines Zertifikats ab  
   
-1.  Öffnen Sie in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Siehe [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
+1.  Öffnen Sie in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Siehe [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
   
 2.  Klicken Sie im linken Bereich des Fensters **Konsolenstamm** auf **Zertifikate (Lokaler Computer)**.  
   

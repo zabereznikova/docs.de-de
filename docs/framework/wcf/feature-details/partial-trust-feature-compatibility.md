@@ -1,19 +1,21 @@
 ---
-title: "Funktionskompatibilität für teilweise Vertrauenswürdigkeit"
-ms.custom: 
+title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Wenn die Anwendung als voll vertrauenswürdige Anwendung bereitgestellt wird, stellen Sie sicher, dass die Benutzer die Sicherheitseinstellungen für den Codezugriff nicht dahingehend ändern können, dass die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden kann. Wenn sie dies können, dann wird das Verhalten nicht ausgeführt, und es wird keine Ausnahme ausgelöst. Um dies sicherzustellen, finden Sie unter der **Levelfinal** -Option [Caspol.exe (Code Access Security Policy-Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] eines üblichen Verhaltens finden Sie unter [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)sein.  
+ [!INCLUDE[crexample](../../../../includes/crexample-md.md)] eines üblichen Verhaltens finden Sie unter [Vorgehensweise: Endpunkte im Unternehmen sperren](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)sein.  
   
 ## <a name="configuration"></a>Konfiguration  
  Bis auf eine Ausnahme kann teilweise vertrauenswürdiger Code nur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte in der lokalen `app.config` -Datei laden. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte laden zu können, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Abschnitte in der Datei machine.config oder in einer Stammdatei web.config verweisen, ist die Berechtigung ConfigurationPermission(Unrestricted) erforderlich. Ohne diese Berechtigung führen Verweise auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme, wenn die Konfiguration geladen wird.  
