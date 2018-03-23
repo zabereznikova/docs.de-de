@@ -1,24 +1,26 @@
 ---
 title: Allgemeine Schemaauflistungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
 Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbietern für .NET Framework implementierten Schemaauflistungen. Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben. In diesen Auflistungen werden alle erforderlichen Spalten beschrieben. Anbieter können ggf. zusätzliche Spalten hinzufügen. So fügen beispielsweise `SqlClient` und `OracleClient` der Auflistung der Einschränkungen "ParameterName" hinzu.  
@@ -41,7 +43,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|Der reguläre Ausdruck, der den Trennzeichen zum Trennen der Bestandteile in einem zusammengesetzten Bezeichner entspricht. Z. B. "\\." (für SQLServer) oder "@&#124; \\." (für Oracle).<br /><br /> Ein zusammengesetzter Bezeichner wird in der Regel, wie z. B. für einen Datenbankobjektnamen verwendet wird: "Pubs.dbo.Authors" oder pubs@dbo.authors.<br /><br /> Verwenden Sie für SQL Server, den regulären Ausdruck "\\.". Verwenden Sie für OracleClient "@&#124; \\.".<br /><br /> Verwenden Sie Catalog_name_separator für ODBC.<br /><br /> Verwenden Sie DBLITERAL_CATALOG_SEPARATOR oder DBLITERAL_SCHEMA_SEPARATOR für OLE DB.|  
+|CompositeIdentifierSeparatorPattern|string|Der reguläre Ausdruck, der den Trennzeichen zum Trennen der Bestandteile in einem zusammengesetzten Bezeichner entspricht. Z. B. "\\." (für SQLServer) oder "@&#124;\\." (für Oracle).<br /><br /> Ein zusammengesetzter Bezeichner wird in der Regel, wie z. B. für einen Datenbankobjektnamen verwendet wird: "Pubs.dbo.Authors" oder pubs@dbo.authors.<br /><br /> Verwenden Sie für SQL Server, den regulären Ausdruck "\\.". Verwenden Sie für OracleClient "@&#124;\\.".<br /><br /> Verwenden Sie Catalog_name_separator für ODBC.<br /><br /> Verwenden Sie DBLITERAL_CATALOG_SEPARATOR oder DBLITERAL_SCHEMA_SEPARATOR für OLE DB.|  
 |DataSourceProductName|string|Der Name des Produkts, auf das durch den Anbieter zugegriffen wird, z. B. "Oracle" oder "SQLServer".|  
 |DataSourceProductVersion|string|Gibt die Version des Produkts, auf das durch den Anbieter zugegriffen wird, im systemeigenen Format der Datenquellen an, nicht im Microsoft-Format.<br /><br /> In einigen Fällen sind die Werte von "DataSourceProductVersion" und "DataSourceProductVersionNormalized" identisch. Bei OLE DB und ODBC sind diese Werte immer identisch, da sie in der zugrunde liegenden systemeigenen API demselben Funktionsaufruf zugeordnet sind.|  
 |DataSourceProductVersionNormalized|string|Eine normalisierte Version der Datenquelle, damit sie mithilfe von `String.Compare()` verglichen werden kann. Das Format ist für alle Versionen des Anbieters konsistent, um zu verhindern, dass Version 10 zwischen Version 1 und Version 2 einsortiert wird.<br /><br /> Beispielsweise verwendet der Oracle-Anbieter ein Format von "nn.nn.nn.nn.nn" für die normalisierte Version, wodurch eine Oracle 8i-Datenquelle "08.01.07.04.01" zurück. SQL Server verwendet das typische Format von Microsoft "nn.nn.nnnn".<br /><br /> In einigen Fällen sind die Werte von DataSourceProductVersion und DataSourceProductVersionNormalized identisch. Bei OLE DB und ODBC sind diese Werte immer identisch, da sie in der zugrunde liegenden systemeigenen API demselben Funktionsaufruf zugeordnet sind.|  
@@ -53,10 +55,10 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 |ParameterMarkerPattern|string|Ein regulärer Ausdruck, der einer Parametermarkierung entspricht. Er verfügt (sofern vorhanden) über einen Wert, der dem Parameternamen entspricht.<br /><br /> Wenn beispielsweise benannte Parameter mit einem vorangestellten "@" unterstützt werden, das in den Parameternamen eingeschlossen wird, lautet die Zeichenfolge "(@[A-Za-z0-9_$#]*)".<br /><br /> Jedoch wenn benannte Parameter unterstützt werden, mit einer ":" wie das vorangestellten Zeichen, und es ist nicht Teil des Parameternamens, wäre dies: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Wenn die Datenquelle keine benannten Parameter unterstützt, lautet die Zeichenfolge einfach "?".|  
 |ParameterNameMaxLength|int|Die maximale Länge eines Parameternamens in Zeichen. In Visual Studio werden im Falle der Unterstützung von Parameternamen 30 Zeichen als Mindestwert für die maximale Länge erwartet.<br /><br /> Wenn benannte Parameter von der Datenquelle nicht unterstützt werden, gibt diese Eigenschaft Null (0) zurück.|  
 |ParameterNamePattern|string|Ein regulärer Ausdruck, der den gültigen Parameternamen entspricht. Je nach Datenquelle sind die Regeln bezüglich der für Parameternamen zulässigen Zeichen verschieden.<br /><br /> In Visual Studio wird im Falle der Unterstützung von Parameternamen erwartet, dass die Zeichen "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" die in jedem Fall unterstützte Gruppe von für Parameternamen gültigen Zeichen darstellen.|  
-|QuotedIdentifierPattern|string|Ein regulärer Ausdruck, der einem Bezeichner in Anführungszeichen entspricht und über einen Wert verfügt, der den Bezeichner ohne Anführungszeichen darstellt. Beispielsweise, wenn die Datenquelle doppelte Anführungszeichen Bezeichner in Anführungszeichen verwendet, wäre dies: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|string|Ein regulärer Ausdruck, der einem Bezeichner in Anführungszeichen entspricht und über einen Wert verfügt, der den Bezeichner ohne Anführungszeichen darstellt. Beispielsweise, wenn die Datenquelle doppelte Anführungszeichen Bezeichner in Anführungszeichen verwendet, wäre dies: "(([^\\"]&#124;\\"\\") *) ".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Gibt an, ob die Groß- und Kleinschreibung bei Bezeichnern in Anführungszeichen berücksichtigt werden muss.|  
 |StatementSeparatorPattern|string|Ein regulärer Ausdruck, der dem Trennzeichen für Anweisungen entspricht.|  
-|StringLiteralPattern|string|Ein regulärer Ausdruck, der einem Zeichenfolgenliteral entspricht und über einen Wert verfügt, der das Literal darstellt. Beispielsweise, wenn die Datenquelle einfache Anführungszeichen verwendet, um Zeichenfolgen zu identifizieren, wäre dies: "(" ([^'] &#124; ") *')"'|  
+|StringLiteralPattern|string|Ein regulärer Ausdruck, der einem Zeichenfolgenliteral entspricht und über einen Wert verfügt, der das Literal darstellt. Beispielsweise, wenn die Datenquelle einfache Anführungszeichen verwendet, um Zeichenfolgen zu identifizieren, wäre dies: "('([^']&#124;'') *") ""|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Gibt an, welche SQL-Joinanweisungen von der Datenquelle unterstützt werden.|  
   
 ## <a name="datatypes"></a>DataTypes  

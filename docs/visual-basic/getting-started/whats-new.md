@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -34,6 +34,9 @@ Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-bas
 
 Visual Basic 15.3   
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Informationen zu neuen Funktionen finden Sie unter [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic / Visual Studio .NET 2015   
 Informationen zu neuen Funktionen finden Sie unter [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ Mit Visual Basic 2017 wurde Unterstützung für das Unterstrichzeichen (`_`) als
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Um den Unterstrich als vorangestelltes Trennzeichen verwenden zu können, müssen Sie Ihrer Visual Basic-Projektdatei (*.vbproj) das folgende Element hinzufügen:
+Um das Unterstrich-Zeichen als führende Trennzeichen zu verwenden, müssen Sie Visual Basic-Projekt das folgende Element hinzufügen (\*.vbproj) Datei:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Um den Unterstrich als vorangestelltes Trennzeichen verwenden zu können, müsse
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Rückschluss auf Tupelnamen](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Benannte Tupel Typrückschluss**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic den Namen der Typelelemente von den entsprechenden Variablennamen ab. Sie müssen ein Tupelelement nicht explizit benennen. In folgendem Beispiel werden Rückschlüsse verwendet, um ein Tupel mit drei benannten Elementen, `state`, `stateName` und `capital`, zu erstellen.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Zusätzliche Compilerschalter**  
+
+Visual Basic-Befehlszeilencompiler jetzt unterstützt die [ **- Refout** ](../reference/command-line-compiler/refout-compiler-option.md) und [ **- Refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) -Compileroptionen zur Steuerung der Ausgabe von Verweisassemblys. **-Refout** definiert das Ausgabeverzeichnis die Verweisassembly und **- Refonly** gibt an, dass nur eine Verweisassembly von Kompilierung ausgegeben werden.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Tupel](../programming-guide/language-features/data-types/tuples.md)
+[**Tupel**](../programming-guide/language-features/data-types/tuples.md)
 
 Tupel sind einfache Datenstrukturen, die am häufigsten für die Rückgabe von mehreren Werten aus einem einzelnen Methodenaufruf verwendet werden. Für gewöhnlich müssen Sie eine der folgenden Aktionen durchführen, um mehrere Werte aus einer Methode zurückzugeben:
 

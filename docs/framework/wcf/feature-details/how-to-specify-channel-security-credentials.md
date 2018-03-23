@@ -1,24 +1,26 @@
 ---
-title: "Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit"
-ms.custom: 
+title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
 Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten. Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste fordern vom Client die Angabe von Anmeldeinformationen für Authentifizierung und Autorisierung. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client können diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angegeben werden. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einer COM-Anwendung kann die <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle zum Angeben von Anmeldeinformationen verwendet werden. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  

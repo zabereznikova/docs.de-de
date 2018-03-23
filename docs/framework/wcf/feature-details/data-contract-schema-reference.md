@@ -1,34 +1,34 @@
 ---
 title: Datenvertrags-Schemareferenz
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer-Zuordnungen  
- Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Serialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Datenvertrags-Serialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
   
@@ -51,7 +51,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Alle Anmerkungen (außer den in diesem Dokument beschriebenen) werden ignoriert.  
   
-### <a name="xsschema-attributes"></a>\<xs: Schema >: Attribute  
+### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
 |Attribut|DataContract|  
 |---------------|------------------|  
@@ -60,10 +60,10 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault auf "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".|  
 |`finalDefault`|Ignoriert.|  
 |`Id`|Ignoriert.|  
-|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Dies darf nicht der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization sein.|  
+|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht mit der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Ignoriert.|  
   
-### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -83,7 +83,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 ### <a name="general-information"></a>Allgemeine Informationen  
  Jeder komplexe Typ \<xs: complexType > wird einem Datenvertrag zugeordnet.  
   
-### <a name="xscomplextype-attributes"></a>\<xs: complexType >: Attribute  
+### <a name="xscomplextype-attributes"></a>\<xs:complexType>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -94,7 +94,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`mixed`|Muss den Wert false aufweisen (Standardwert)|  
 |`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A`ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&amp;#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
   
-### <a name="xscomplextype-contents"></a>\<xs: complexType >: Inhalt  
+### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -213,7 +213,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`keyref`|Ignoriert.|  
 |(leer)|Unterstützt.|  
   
- \*Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
+ \* Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierungsdetail: Wenn der `xs:element` -Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
   
@@ -223,7 +223,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 ## <a name="simple-types---xssimpletype"></a>Einfache Typen – \<simpleType >  
   
-### <a name="xssimpletype-attributes"></a>\<simpleType >: Attribute  
+### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -231,7 +231,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`id`|Ignoriert.|  
 |`name`|Unterstützt, wird dem Namen des Datenvertrags zugeordnet.|  
   
-### <a name="xssimpletype-contents"></a>\<simpleType >: Inhalt  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -239,7 +239,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`list`|Unterstützt. Wird Flagenumerationsdatenverträgen zugeordnet. Siehe den Abschnitt `xs:simpleType` -Listen.|  
 |`union`|Unzulässig.|  
   
-### <a name="xsrestriction"></a>\<xs: restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   Einschränkungen komplexer Typen werden nur für base="`xs:anyType`" unterstützt.  
   
@@ -247,7 +247,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
   
-### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
+### <a name="xsrestriction-attributes"></a>\<xs:restriction>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -342,17 +342,17 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs: List >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu. Andere `xs:list` -Variationen werden nicht unterstützt.  
   
-### <a name="xslist-attributes"></a>\<xs: List >: Attribute  
+### <a name="xslist-attributes"></a>\<xs:list>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
 |`itemType`|Unzulässig.|  
 |`id`|Ignoriert.|  
   
-### <a name="xslist-contents"></a>\<xs: List >: Inhalt  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -450,14 +450,14 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<complexContent >: Attribute  
+### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
 |`id`|Ignoriert.|  
 |`mixed`|Muss den Wert false aufweisen.|  
   
-### <a name="xscomplexcontent-contents"></a>\<complexContent >: Inhalt  
+### <a name="xscomplexcontent-contents"></a>\<xs:complexContent>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>|  
   
 ## <a name="iserializable-types-mapping"></a>Zuordnung von ISerializable-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable`-Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Zum Beispiel ordnet der `DataContractSerializer` <xref:System.Exception> dem folgenden XSD-Typ im Namespace http://schemas.datacontract.org/2004/07/System zu.  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> die folgenden XSD-Typ in der http://schemas.datacontract.org/2004/07/System Namespace.  
   
 ```xml  
 <xs:complexType name="Exception">  

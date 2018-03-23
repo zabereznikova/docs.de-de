@@ -1,24 +1,26 @@
 ---
 title: Entity SQL-Referenz
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-bezogene Referenzthemen. Dieses Thema fasst zusammen und gruppiert die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Operatoren nach Kategorie.  
@@ -60,9 +62,9 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.|  
 |[< (Kleiner als)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck kleiner als der rechte Ausdruck ist.|  
 |[<= (kleiner als oder gleich)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob der linke Ausdruck kleiner oder gleich dem rechten Ausdruck ist.|  
-|[&#91; NICHT &#93; ZWISCHEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Ermittelt, ob der Ergebniswert eines Ausdrucks in einem angegebenen Bereich liegt.|  
+|[&AMP;#91;NICHT&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Ermittelt, ob der Ergebniswert eines Ausdrucks in einem angegebenen Bereich liegt.|  
 |[!= (Ungleich)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Vergleicht zwei Ausdrücke, um zu ermitteln, ob sich der linke Ausdruck vom rechten Ausdruck unterscheidet.|  
-|[&#91; NICHT &#93; MÖGEN](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Ermittelt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt.|  
+|[&AMP;#91;NICHT&AMP;#93; WIE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Ermittelt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Logische Operatoren und CASE-Ausdrucksoperatoren  
  Logische Operatoren testen den Wahrheitswert einer Bedingung. Der CASE-Ausdruck wertet eine Reihe von booleschen Ausdrücken aus, um das Ergebnis zu bestimmen. In der folgenden Tabelle sind die CASE-Ausdrucksoperatoren und die logischen Operatoren aufgeführt.  
@@ -71,7 +73,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |--------------|-----------------|  
 |[& & (Logisches AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|Logisches AND.|  
 |[! (Logisches NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|Logisches 'NOT'|  
-|[&#124; &#124; (Logisches OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Logisches OR.|  
+|[&#124;&#124;(Logisches OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Logisches OR.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Wertet eine Reihe von booleschen Ausdrücken aus, um das Ergebnis zu bestimmen.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Das Ergebnis einer [Wenn](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) -Klausel, wenn sie auf "true" ausgewertet wird.|  
   
@@ -92,7 +94,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtert bedingt von einer Abfrage zurückgegebene Daten.|  
   
 ## <a name="reference-operators"></a>Verweisoperatoren  
- Ein Verweis ist ein logischer Zeiger (Fremdschlüssel) auf eine bestimmte Entität in einer bestimmten Entitätenmenge. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]unterstützt folgenden Operatoren zum Erstellen, löschen und Navigieren von verweisen.  
+ Ein Verweis ist ein logischer Zeiger (Fremdschlüssel) auf eine bestimmte Entität in einer bestimmten Entitätenmenge. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt folgenden Operatoren zum Erstellen, löschen und Navigieren von verweisen.  
   
 |Operator|Mit|  
 |--------------|---------|  
@@ -109,7 +111,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extrahiert ein Element aus einer mehrwertigen Auflistung.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Gibt eine Auflistung der vom Abfrageausdruck auf der linken Seite des EXCEPT-Operanden zurückgegebenen und unterschiedlichen Werte zurück, die nicht zusätzlich vom Abfrageausdruck auf der rechten Seite des EXCEPT-Operanden zurückgegeben werden.|  
-|[&#91; NICHT &#93; VORHANDEN IST](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Bestimmt, ob eine Auflistung leer ist.|  
+|[&AMP;#91;NICHT&AMP;#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Bestimmt, ob eine Auflistung leer ist.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Konvertiert eine Auflistung von Auflistungen in eine vereinfachte Auflistung.|  
 |[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Gibt eine Auflistung aller unterschiedlicher Werte zurück, die sowohl vom Abfrageausdruck auf der linken als auch dem auf der rechten Seite des INTERSECT-Operands zurückgegeben werden.|  
@@ -118,7 +120,7 @@ Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Fasst die Ergebnisse von zwei oder mehr Abfragen in einer Auflistung zusammen.|  
   
 ## <a name="type-operators"></a>Typoperatoren  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]enthält die Vorgänge, die denen der Typ eines Ausdrucks (Werts) erstellt, abgefragt und bearbeitet werden. In der folgenden Tabelle sind Operatoren aufgeführt, die zum Arbeiten mit Typen verwendet werden.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] enthält die Vorgänge, die denen der Typ eines Ausdrucks (Werts) erstellt, abgefragt und bearbeitet werden. In der folgenden Tabelle sind Operatoren aufgeführt, die zum Arbeiten mit Typen verwendet werden.  
   
 |Operator|Mit|  
 |--------------|---------|  

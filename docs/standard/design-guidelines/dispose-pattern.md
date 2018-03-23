@@ -1,12 +1,12 @@
 ---
 title: Dispose-Muster
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dispose method
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -59,9 +59,9 @@ Alle Programme abrufen eine oder mehrere Systemressourcen, z. B. Arbeitsspeicher
   
  Beispielsweise sollte das Muster für Typen, die Speichern von nicht verwalteten Arbeitsspeicher implementiert werden. Die [finalisierbaren Typen](#finalizable_types) Abschnitt wird erläutert, Richtlinien, die im Zusammenhang mit der Finalizer zu implementieren.  
   
- **✓ GGF.** für Klassen, dass selbst aufnehmen, nicht verwalteten Ressourcen oder verwerfbare Objekte sind jedoch wahrscheinlich Untertypen, die das grundlegende Dispose-Muster implementieren.  
+ **· ERWÄGEN SIE** die Implementierung des grundlegenden Dispose-Musters bei Klassen, die selbst keine verwalteten Ressourcen oder verwerfbaren Objekte enthalten, aber Untertypen umfassen können, die dies tun.  
   
- Ein hervorragendes Beispiel dafür ist die <xref:System.IO.Stream?displayProperty=nameWithType> Klasse. Obwohl eine abstrakte Basisklasse, die alle Ressourcen enthalten ist, nicht, die meisten seiner Unterklassen ausführen, und aus diesem Grund dieses Muster implementiert.  
+ Ein hervorragendes Beispiel dafür ist die <xref:System.IO.Stream?displayProperty=nameWithType> -Klasse. Während es sich hierbei um eine abstrakte Basisklasse handelt, die keinerlei Ressourcen enthält, tun dies die meisten ihrer Unterklassen. Aus diesem Grund implementiert sie das Dispose-Muster.  
   
 <a name="basic_pattern"></a>   
 ## <a name="basic-dispose-pattern"></a>Grundlegende Dispose-Muster  
