@@ -1,35 +1,34 @@
 ---
-title: "Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)'
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="b24d2-102">Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b24d2-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
-<span data-ttu-id="b24d2-103">Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft.</span><span class="sxs-lookup"><span data-stu-id="b24d2-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="b24d2-104">Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:</span><span class="sxs-lookup"><span data-stu-id="b24d2-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="2ad80-102">Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ad80-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
+<span data-ttu-id="2ad80-103">Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft.</span><span class="sxs-lookup"><span data-stu-id="2ad80-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="2ad80-104">Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:</span><span class="sxs-lookup"><span data-stu-id="2ad80-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
--   <span data-ttu-id="b24d2-105">`MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b24d2-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="b24d2-106">In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="b24d2-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
+-   <span data-ttu-id="2ad80-105">`MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="2ad80-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="2ad80-106">In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="2ad80-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
--   <span data-ttu-id="b24d2-107">`Add`: Die Quelldatei, die die Methode `Add` enthält.</span><span class="sxs-lookup"><span data-stu-id="b24d2-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="b24d2-108">Sie gibt die Summe ihrer Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="b24d2-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="b24d2-109">Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="b24d2-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
+-   <span data-ttu-id="2ad80-107">`Add`: Die Quelldatei, die die Methode `Add` enthält.</span><span class="sxs-lookup"><span data-stu-id="2ad80-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="2ad80-108">Sie gibt die Summe ihrer Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="2ad80-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="2ad80-109">Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="2ad80-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
--   <span data-ttu-id="b24d2-110">`Mult`: Der Quellcode, der die Methode `Multiply` enthält.</span><span class="sxs-lookup"><span data-stu-id="b24d2-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="b24d2-111">Er gibt die Summe seiner Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="b24d2-111">It returns the product of its parameters.</span></span> <span data-ttu-id="b24d2-112">Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="b24d2-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
+-   <span data-ttu-id="2ad80-110">`Mult`: Der Quellcode, der die Methode `Multiply` enthält.</span><span class="sxs-lookup"><span data-stu-id="2ad80-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="2ad80-111">Er gibt die Summe seiner Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="2ad80-111">It returns the product of its parameters.</span></span> <span data-ttu-id="2ad80-112">Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="2ad80-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
--   <span data-ttu-id="b24d2-113">`TestCode`: Die Datei, die die Methode `Main` enthält.</span><span class="sxs-lookup"><span data-stu-id="b24d2-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="b24d2-114">Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="b24d2-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
+-   <span data-ttu-id="2ad80-113">`TestCode`: Die Datei, die die Methode `Main` enthält.</span><span class="sxs-lookup"><span data-stu-id="2ad80-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="2ad80-114">Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="2ad80-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b24d2-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b24d2-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2ad80-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2ad80-115">Example</span></span>  
   
 ```vb  
 ' File: Add.vb   
@@ -88,45 +87,45 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- <span data-ttu-id="b24d2-116">Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet.</span><span class="sxs-lookup"><span data-stu-id="b24d2-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="b24d2-117">Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert.</span><span class="sxs-lookup"><span data-stu-id="b24d2-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="b24d2-118">Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.</span><span class="sxs-lookup"><span data-stu-id="b24d2-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
+ <span data-ttu-id="2ad80-116">Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet.</span><span class="sxs-lookup"><span data-stu-id="2ad80-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="2ad80-117">Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert.</span><span class="sxs-lookup"><span data-stu-id="2ad80-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="2ad80-118">Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.</span><span class="sxs-lookup"><span data-stu-id="2ad80-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- <span data-ttu-id="b24d2-119">Beachten Sie, dass die `Imports` Anweisung am Anfang der Datei ermöglicht es Ihnen, die nicht qualifizierten Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:</span><span class="sxs-lookup"><span data-stu-id="b24d2-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
+ <span data-ttu-id="2ad80-119">Beachten Sie, dass die `Imports` Anweisung am Anfang der Datei ermöglicht es Ihnen, die nicht qualifizierten Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:</span><span class="sxs-lookup"><span data-stu-id="2ad80-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
 ```  
   
- <span data-ttu-id="b24d2-120">Andernfalls müssen Sie die vollqualifizierten Namen wie folgt verwenden:</span><span class="sxs-lookup"><span data-stu-id="b24d2-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
+ <span data-ttu-id="2ad80-120">Andernfalls müssen Sie die vollqualifizierten Namen wie folgt verwenden:</span><span class="sxs-lookup"><span data-stu-id="2ad80-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```vb  
 UtilityMethods.MultiplyClass.Multiply(num1, num2)  
 ```  
   
-## <a name="execution"></a><span data-ttu-id="b24d2-121">Ausführung</span><span class="sxs-lookup"><span data-stu-id="b24d2-121">Execution</span></span>  
- <span data-ttu-id="b24d2-122">Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:</span><span class="sxs-lookup"><span data-stu-id="b24d2-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
+## <a name="execution"></a><span data-ttu-id="2ad80-121">Ausführung</span><span class="sxs-lookup"><span data-stu-id="2ad80-121">Execution</span></span>  
+ <span data-ttu-id="2ad80-122">Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:</span><span class="sxs-lookup"><span data-stu-id="2ad80-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b24d2-123">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="b24d2-123">Compiling the Code</span></span>  
- <span data-ttu-id="b24d2-124">Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="b24d2-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2ad80-123">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="2ad80-123">Compiling the Code</span></span>  
+ <span data-ttu-id="2ad80-124">Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="2ad80-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- <span data-ttu-id="b24d2-125">Die [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) Compileroption teilt dem Compiler mit einer DLL-Datei anstelle einer EXE-Datei auszugeben.</span><span class="sxs-lookup"><span data-stu-id="b24d2-125">The [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="b24d2-126">Die [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) gefolgt von einem Dateinamen (Compileroption) wird verwendet, um den DLL-Dateinamen angeben.</span><span class="sxs-lookup"><span data-stu-id="b24d2-126">The [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="b24d2-127">Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.</span><span class="sxs-lookup"><span data-stu-id="b24d2-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
+ <span data-ttu-id="2ad80-125">Die [-Ziel (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) Compileroption teilt dem Compiler mit einer DLL-Datei anstelle einer EXE-Datei auszugeben.</span><span class="sxs-lookup"><span data-stu-id="2ad80-125">The [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="2ad80-126">Die [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) gefolgt von einem Dateinamen (Compileroption) wird verwendet, um den DLL-Dateinamen angeben.</span><span class="sxs-lookup"><span data-stu-id="2ad80-126">The [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="2ad80-127">Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.</span><span class="sxs-lookup"><span data-stu-id="2ad80-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
   
- <span data-ttu-id="b24d2-128">Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:</span><span class="sxs-lookup"><span data-stu-id="b24d2-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
+ <span data-ttu-id="2ad80-128">Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:</span><span class="sxs-lookup"><span data-stu-id="2ad80-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- <span data-ttu-id="b24d2-129">Die Compileroption **/out** weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`) an.</span><span class="sxs-lookup"><span data-stu-id="b24d2-129">The **/out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="b24d2-130">Diese Compileroption ist optional.</span><span class="sxs-lookup"><span data-stu-id="b24d2-130">This compiler option is optional.</span></span> <span data-ttu-id="b24d2-131">Die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption) gibt an, die DLL-Dateien, die dieses Programm verwendet.</span><span class="sxs-lookup"><span data-stu-id="b24d2-131">The [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
+ <span data-ttu-id="2ad80-129">Die **-out** -Compileroption teilt dem Compiler mit eine EXE-Datei ausgeben und gibt den Namen der Ausgabedatei (`TestCode.exe`).</span><span class="sxs-lookup"><span data-stu-id="2ad80-129">The **-out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="2ad80-130">Diese Compileroption ist optional.</span><span class="sxs-lookup"><span data-stu-id="2ad80-130">This compiler option is optional.</span></span> <span data-ttu-id="2ad80-131">Die [-Verweis (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption) gibt an, die DLL-Dateien, die dieses Programm verwendet.</span><span class="sxs-lookup"><span data-stu-id="2ad80-131">The [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
   
- <span data-ttu-id="b24d2-132">Weitere Informationen zum Erstellen von der Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="b24d2-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
+ <span data-ttu-id="2ad80-132">Weitere Informationen zum Erstellen von der Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="2ad80-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b24d2-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b24d2-133">See Also</span></span>  
- [<span data-ttu-id="b24d2-134">Programmierkonzepte</span><span class="sxs-lookup"><span data-stu-id="b24d2-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="b24d2-135">Assemblys und der globale Assemblycache (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b24d2-135">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="b24d2-136">Erstellen einer Klasse zum Halten von DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="b24d2-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a><span data-ttu-id="2ad80-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ad80-133">See Also</span></span>  
+ [<span data-ttu-id="2ad80-134">Programmierkonzepte</span><span class="sxs-lookup"><span data-stu-id="2ad80-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="2ad80-135">Assemblys und der globale Assemblycache (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ad80-135">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="2ad80-136">Erstellen einer Klasse zum Halten von DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="2ad80-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
