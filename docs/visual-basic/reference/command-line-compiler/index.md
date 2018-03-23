@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 1a2f03a62488b746b623b7ead94c122b40178a97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic-Befehlszeilencompiler
 
 Die Visual Basic-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Dieser Abschnitt enthält Beschreibungen für die Visual Basic-Compileroptionen.
 
-Jede Compileroption ist in zwei Varianten verfügbar:-Option und/Option. Die Dokumentation zu Visual Basic zeigt nur das Formular/Option.
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

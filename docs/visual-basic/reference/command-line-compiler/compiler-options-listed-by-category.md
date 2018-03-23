@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic-Compileroptionen nach Kategorien sortiert
-Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Es folgt eine Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilen-Compileroptionen (nach Funktionskategorie sortiert).  
+Die Visual Basic-Befehlszeilencompiler dient als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Im folgenden finden eine Liste der Visual Basic-Befehlszeilencompiler Optionen nach Funktionskategorie sortiert.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>Compiler-Ausgabe  
   
@@ -45,6 +47,8 @@ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet ein
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Gibt eine Ausgabedatei an.|  
+|[/refonly](refonly-compiler-option.md)|Gibt nur eine Verweisassembly an.|
+|[/refout](refout-compiler-option.md)|Gibt den Ausgabepfad der Verweisassembly an.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Gibt das Format der Ausgabe an.|  
   
 ## <a name="net-assemblies"></a>Assemblys für .NET  
@@ -113,7 +117,7 @@ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet ein
 |[@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Legt eine Antwortdatei fest.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Gibt die Basisadresse einer DLL an.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler gemeldet werden sollen.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler von der Visual Basic-Compiler gemeldet werden sollen.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Informiert den Windows-Kernel, ob eine bestimmte ausführbare Datei ASLR mit hoher Entropie (Address Space Layout Randomization, Zufällige Anordnung des Layouts des Adressraums) unterstützt.|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse enthält die `Sub Main` Prozedur beim Start verwendet.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Führen Sie die Kompilierung nicht mit Vbc.rsp durch.|  
@@ -130,6 +134,6 @@ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet ein
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic Compileroptionen in alphabetischer Reihenfolge](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Introduction to the Project Designer (Einführung in den Projekt-Designer)](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introduction to the Project Designer (Einführung in den Projekt-Designer)](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)
