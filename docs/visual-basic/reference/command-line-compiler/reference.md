@@ -1,10 +1,10 @@
 ---
-title: /reference (Visual Basic)
-ms.date: 07/20/2015
+title: -Verweis (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+# <a name="-reference-visual-basic"></a>-Verweis (Visual Basic)
 Bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys dem Projekt zur Verfügung, das Sie gerade kompilieren.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/reference:fileList  
+-reference:fileList  
 ' -or-  
-/r:fileList  
+-r:fileList  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -49,24 +48,24 @@ Bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys dem Pro
   
 -   Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Verwendung [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) an das Verzeichnis, in dem eine oder mehrere der Assemblyverweise befindet.  
+ Verwendung [- Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) an das Verzeichnis, in dem eine oder mehrere der Assemblyverweise befindet.  
   
  Für den Compiler an, das Erkennen eines Typs in einer Assembly (nicht in einem Modul) muss er gezwungen, den Typ aufzulösen. Ein Beispiel dafür, wie Sie dabei vorgehen können ist eine Instanz des Typs zu definieren. Weitere Möglichkeiten sind verfügbar, Typnamen in einer Assembly für den Compiler aufzulösen. Wenn Sie von einem Typ in einer Assembly erben, wird z. B. der Typnamen klicken Sie dann an den Compiler bezeichnet.  
   
- Die Antwortdatei "vbc.rsp", der Verweise häufig verwendet [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys, wird standardmäßig verwendet. Verwenden Sie `/noconfig` , wenn Sie nicht, dass den Compiler "vbc.rsp" zu verwenden möchten.  
+ Die Antwortdatei "vbc.rsp", der Verweise häufig verwendet [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys, wird standardmäßig verwendet. Verwenden Sie `-noconfig` , wenn Sie nicht, dass den Compiler "vbc.rsp" zu verwenden möchten.  
   
- Die Kurzform von `/reference` ist `/r`.  
+ Die Kurzform von `-reference` ist `/r`.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert die Quelldatei `Input.vb` und Verweisassemblys aus `Metad1.dll` und `Metad2.dll`, um `Out.exe` zu produzieren.  
+ Der folgende Befehl kompiliert die Quelldatei `Input.vb` und verweisen auf Assemblys von `Metad1.dll` und `Metad2.dll` erzeugt `Out.exe`.  
   
-```  
-vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
+```console
+vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

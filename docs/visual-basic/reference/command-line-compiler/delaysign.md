@@ -1,48 +1,47 @@
 ---
-title: /delaysign
-ms.date: 07/20/2015
+title: -delaysign
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - delaysign compiler option [Visual Basic]
-- /delaysign compiler option [Visual Basic]
+- -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b4d29f99d0c375eebee0f477720cb9a22172dddb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: d659e97f3b3a360456a1fcdaa9756934bb096334
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="delaysign"></a>/delaysign
+# <a name="-delaysign"></a>-delaysign
 Gibt an, ob die Assembly vollständig oder teilweise signiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/delaysign[+ | -]  
+-delaysign[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  `+` &#124; `-`  
- Dies ist optional. Verwenden Sie `/delaysign-`, wenn die Assembly vollständig signiert werden soll. Verwendung `/delaysign+` Wenn Sie den öffentlichen Schlüssel in der Assembly und reservierte Speicherplatz für den signierten Hash platzieren möchten. Die Standardeinstellung ist `/delaysign-`.  
+ Dies ist optional. Verwenden Sie `-delaysign-`, wenn die Assembly vollständig signiert werden soll. Verwendung `-delaysign+` Wenn Sie den öffentlichen Schlüssel in der Assembly und reservierte Speicherplatz für den signierten Hash platzieren möchten. Die Standardeinstellung ist `-delaysign-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `/delaysign` Option hat keine Auswirkung, wenn nicht mit [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) oder [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+ Die `-delaysign` Option hat keine Auswirkung, wenn nicht mit [- Keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) oder [- Keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
  Wenn Sie eine vollständig signierte Assembly anfordern, wird vom Compiler der Hash der Datei mit dem Manifest (Assemblymetadaten) erstellt und mit dem privaten Schlüssel signiert. Die sich ergebende digitale Signatur wird in der Datei mit dem Manifest gespeichert. Wenn eine Assembly verzögert signiert wird, wird der Compiler nicht berechnen und speichern die Signatur, sondern reserviert Speicherplatz in der Datei, damit die Signatur später hinzugefügt werden kann.  
   
- Z. B. durch Verwendung `/delaysign+`, ein Entwickler in einer Organisation kann verteilen, ohne Vorzeichen Testversionen einer Assembly, die Tester mit dem globalen Assemblycache zu registrieren und verwenden können. Bei der Arbeit für die Assembly abgeschlossen ist, kann für private Schlüssel der Organisation verantwortliche Person die Assembly vollständig signieren. Diese Aufgliederung schützt private Schlüssel der Organisation vor Offenlegung, während alle es Entwicklern ermöglicht, auf die Assemblys zu arbeiten.  
+ Z. B. durch Verwendung `-delaysign+`, ein Entwickler in einer Organisation kann verteilen, ohne Vorzeichen Testversionen einer Assembly, die Tester mit dem globalen Assemblycache zu registrieren und verwenden können. Bei der Arbeit für die Assembly abgeschlossen ist, kann für private Schlüssel der Organisation verantwortliche Person die Assembly vollständig signieren. Diese Aufgliederung schützt private Schlüssel der Organisation vor Offenlegung, während alle es Entwicklern ermöglicht, auf die Assemblys zu arbeiten.  
   
  Finden Sie unter [erstellen und Verwenden von Assemblys](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) für Weitere Informationen zum Signieren einer Assemblys.  
   
-### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Zum Festlegen von/delaysign / in Visual Studio integrierte Entwicklungsumgebung  
+### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>-Delaysign in der integrierten Visual Studio-Entwicklungsumgebung fest  
   
 1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
@@ -52,6 +51,6 @@ Gibt an, ob die Assembly vollständig oder teilweise signiert wird.
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
+ [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

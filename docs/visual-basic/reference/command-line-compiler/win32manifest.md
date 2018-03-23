@@ -1,32 +1,31 @@
 ---
-title: /win32manifest (Visual Basic)
-ms.date: 07/20/2015
+title: -win32manifest (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a46641181c3ff66882468f8372bb97c3a49a8462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="win32manifest-visual-basic"></a>/win32manifest (Visual Basic)
+# <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/win32manifest: fileName  
+-win32manifest: fileName  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -39,19 +38,19 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
  Standardmäßig bettet der Visual Basic-Compiler ein Anwendungsmanifest, das eine angeforderte Ausführungsebene asInvoker angibt. Das Manifest erstellt in demselben Ordner, in dem die ausführbare Datei wird erstellt, in der Regel der Ordner "bin\Debug" oder "bin\Release" bei der Verwendung von Visual Studio. Verwenden Sie diese Option den Namen der Datei angeben, wenn Sie ein benutzerdefiniertes Manifest, z. B. zum Festlegen einer angeforderte Ausführungsebene HighestAvailable oder RequireAdministrator, angeben möchten.  
   
 > [!NOTE]
->  Diese Option und die [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) Option schließen sich gegenseitig. Wenn Sie versuchen, die beide Optionen in derselben Befehlszeile verwenden, erhalten Sie einen Buildfehler.  
+>  Diese Option und die [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) Option schließen sich gegenseitig. Wenn Sie versuchen, die beide Optionen in derselben Befehlszeile verwenden, erhalten Sie einen Buildfehler.  
   
  Eine Anwendung ohne Anwendungsmanifest, das eine angeforderte Anwendungsebene angibt, unterliegt der Datei- und Registrierungsvirtualisierung unter der Benutzerkontensteuerung in Windows Vista. Weitere Informationen zur Netzwerkvirtualisierung finden Sie unter [ClickOnce-Bereitstellung unter Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
  Ihre Anwendung unterliegen Virtualisierung aus, wenn eine der folgenden Bedingungen zutrifft:  
   
-1.  Verwenden Sie die `/nowin32manifest` Option, und Sie bieten kein Manifests in einem späteren Schritt der Erstellung oder als Teil einer Windows-Ressourcendatei (res) mithilfe der `/win32resource` Option.  
+1.  Verwenden Sie die `-nowin32manifest` Option, und Sie bieten kein Manifests in einem späteren Schritt der Erstellung oder als Teil einer Windows-Ressourcendatei (res) mithilfe der `-win32resource` Option.  
   
 2.  Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
   
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erstellt eine Standard MANIFEST-Datei und speichert sie zusammen mit der ausführbaren Datei in den Debug- oder Releaseverzeichnissen. Sie können anzeigen oder bearbeiten Sie die Datei "Standard" app.manifest "durch Klicken auf **UAC-Einstellungen anzeigen** auf die **Anwendung** Registerkarte im Projekt-Designer. Weitere Informationen finden Sie unter [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Sie können das Anwendungsmanifest als benutzerdefinierte Postbuildschritt oder als Teil einer Win32-Ressourcendatei bereitstellen, mit der `/nowin32manifest` Option. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dies verhindert, dass der Compiler erstellt und eine Standard-Manifest in die PE-Datei einbetten.  
+ Sie können das Anwendungsmanifest als benutzerdefinierte Postbuildschritt oder als Teil einer Win32-Ressourcendatei bereitstellen, mit der `-nowin32manifest` Option. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dies verhindert, dass der Compiler erstellt und eine Standard-Manifest in die PE-Datei einbetten.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt dem Standard-Manifest, dass die Visual Basic-Compiler in eine PE-Datei eingefügt.  
@@ -75,4 +74,4 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/NoWin32Manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+ [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

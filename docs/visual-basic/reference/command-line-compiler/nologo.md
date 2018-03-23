@@ -1,10 +1,10 @@
 ---
-title: /nologo (Visual Basic)
-ms.date: 07/20/2015
+title: -Nologo (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -12,35 +12,34 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3c2c7e7a111a3763d7463f67c2d984955da33bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 8e5eb9db7af861a8439b47adb8f5e515331fae6e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="nologo-visual-basic"></a>/nologo (Visual Basic)
+# <a name="-nologo-visual-basic"></a>-Nologo (Visual Basic)
 Unterdrückt die Anzeige der Copyrightinformationen und informationsmeldungen während der Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Angabe von `/nologo`, der Compiler eine Copyrightinformationen nicht angezeigt. In der Standardeinstellung ist `/nologo` nicht aktiv.  
+ Bei Angabe von `-nologo`, der Compiler eine Copyrightinformationen nicht angezeigt. In der Standardeinstellung ist `-nologo` nicht aktiv.  
   
 > [!NOTE]
->  Die `/nologo` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
+>  Die `-nologo` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `T2.vb` und Copyrightinformationen nicht angezeigt.  
   
-```  
-vbc /nologo t2.vb  
+```console
+vbc -nologo t2.vb  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

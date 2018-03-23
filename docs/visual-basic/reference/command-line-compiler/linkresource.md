@@ -1,10 +1,10 @@
 ---
-title: /linkresource (Visual Basic)
-ms.date: 07/20/2015
+title: -Linkresource (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /linkresource compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e51f844695985485210a1e4bedfef7ac968326c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 33b84631e0c09521a6f4ff9e06b2a80e0885862e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="linkresource-visual-basic"></a>/linkresource (Visual Basic)
+# <a name="-linkresource-visual-basic"></a>-Linkresource (Visual Basic)
 Erstellt einen Link zu einer verwalteten Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/linkresource:filename[,identifier[,public|private]]  
+-linkresource:filename[,identifier[,public|private]]  
 ' -or-  
-/linkres:filename[,identifier[,public|private]]  
+-linkres:filename[,identifier[,public|private]]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -39,31 +38,31 @@ Erstellt einen Link zu einer verwalteten Ressource.
  Erforderlich. Die Ressourcendatei mit der Assembly verknüpfen. Wenn der Dateiname ein Leerzeichen enthält, setzen Sie den Namen in Anführungszeichen ("").  
   
  `identifier`  
- Dies ist optional. Der logische Name für die Ressource. Der Name, der verwendet wird, um die Ressource zu laden. Der Standardwert ist der Name der Datei. Optional können Sie angeben, ob die Datei öffentlich oder privat in das Assemblymanifest, z. B.: `/linkres:filename.res,myname.res,public`. Standardmäßig `filename` in der Assembly öffentlich ist.  
+ Dies ist optional. Der logische Name für die Ressource. Der Name, der verwendet wird, um die Ressource zu laden. Der Standardwert ist der Name der Datei. Optional können Sie angeben, ob die Datei öffentlich oder privat in das Assemblymanifest, z. B.: `-linkres:filename.res,myname.res,public`. Standardmäßig `filename` in der Assembly öffentlich ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `/linkresource` Option bettet die Ressourcendatei in der Ausgabedatei nicht; verwenden Sie die `/resource` Option aus, um dies zu tun.  
+ Die `-linkresource` Option bettet die Ressourcendatei in der Ausgabedatei nicht; verwenden Sie die `-resource` Option aus, um dies zu tun.  
   
- Die `/linkresource` Option muss eine von der `/target` Optionen außer `/target:module`.  
+ Die `-linkresource` Option muss eine von der `-target` Optionen außer `-target:module`.  
   
  Wenn `filename` ist ein [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcendatei erstellt haben, z. B. durch die [Resgen.exe (Resource File Generator)](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oder in der Entwicklungsumgebung können sie Zugriff mit Membern in der <xref:System.Resources> Namespace. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Verwenden Sie den Zugriff auf alle anderen Ressourcen zur Laufzeit die Methoden, die mit `GetManifestResource` in die <xref:System.Reflection.Assembly> Klasse.  
   
  Der Dateiname kann ein beliebiges Dateiformat aufweisen. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
   
- Die Kurzform von `/linkresource` ist `/linkres`.  
+ Die Kurzform von `-linkresource` ist `-linkres`.  
   
 > [!NOTE]
->  Die `/linkresource` Option ist nicht verfügbar in der Visual Studio-Entwicklungsumgebung, steht er nur, wenn Sie über die Befehlszeile kompilieren.  
+>  Die `-linkresource` Option ist nicht verfügbar in der Visual Studio-Entwicklungsumgebung, steht er nur, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `In.vb` und Links zu Ressourcendatei `Rf.resource`.  
+ Der folgende code kompiliert `in.vb` und Links zu Ressourcendatei `rf.resource`.  
   
-```  
-vbc /linkresource:rf.resource in.vb  
+```console  
+vbc -linkresource:rf.resource in.vb  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [/ Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+ [-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-Ressource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

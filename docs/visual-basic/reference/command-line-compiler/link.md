@@ -1,10 +1,10 @@
 ---
-title: /link (Visual Basic)
-ms.date: 07/20/2015
+title: -Link (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -16,24 +16,23 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: effaeae48bdeb1dfd0f8cda31fedf2436e7deaca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="link-visual-basic"></a>/link (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/link:fileList  
+-link:fileList  
 ' -or-  
-/l:fileList  
+-l:fileList  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -43,16 +42,16 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
 |`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Option `/link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+ Die Option `-link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
- Die Option `/link` ist besonders nützlich, wenn Sie COM-Interop verwenden. Sie können COM-Typen einbetten, sodass für Ihre Anwendung keine primäre Interopassembly (PIA) auf dem Zielcomputer mehr erforderlich ist. Die Option `/link` weist den Compiler an, die COM-Typinformationen aus der Interopassembly, auf die verwiesen wird, in den resultierenden kompilierten Code einzubetten. Der COM-Typ wird durch den CLSID (GUID)-Wert identifiziert. Dadurch kann Ihre Anwendung auf einem Zielcomputer ausgeführt werden, auf dem die gleichen COM-Typen mit den gleichen CLSID-Werten installiert sind. Anwendungen, die Microsoft Office automatisieren, sind ein gutes Beispiel. Da Anwendungen wie Office in der Regel den gleichen CLSID-Wert in den verschiedenen Versionen behalten, kann die Anwendung die COM-Typen, auf die verwiesen wird, verwenden, wenn .NET Framework 4 oder höher auf dem Zielcomputer installiert ist und die Anwendung Methoden, Eigenschaften oder Ereignisse verwendet, die in den COM-Typen, auf die verwiesen wird, enthalten sind.  
+ Die Option `-link` ist besonders nützlich, wenn Sie COM-Interop verwenden. Sie können COM-Typen einbetten, sodass für Ihre Anwendung keine primäre Interopassembly (PIA) auf dem Zielcomputer mehr erforderlich ist. Die Option `-link` weist den Compiler an, die COM-Typinformationen aus der Interopassembly, auf die verwiesen wird, in den resultierenden kompilierten Code einzubetten. Der COM-Typ wird durch den CLSID (GUID)-Wert identifiziert. Dadurch kann Ihre Anwendung auf einem Zielcomputer ausgeführt werden, auf dem die gleichen COM-Typen mit den gleichen CLSID-Werten installiert sind. Anwendungen, die Microsoft Office automatisieren, sind ein gutes Beispiel. Da Anwendungen wie Office in der Regel den gleichen CLSID-Wert in den verschiedenen Versionen behalten, kann die Anwendung die COM-Typen, auf die verwiesen wird, verwenden, wenn .NET Framework 4 oder höher auf dem Zielcomputer installiert ist und die Anwendung Methoden, Eigenschaften oder Ereignisse verwendet, die in den COM-Typen, auf die verwiesen wird, enthalten sind.  
   
- Die Option `/link` bettet nur Schnittstellen, Strukturen und Delegaten ein. Das Einbetten von COM-Klassen wird nicht unterstützt.  
+ Die Option `-link` bettet nur Schnittstellen, Strukturen und Delegaten ein. Das Einbetten von COM-Klassen wird nicht unterstützt.  
   
 > [!NOTE]
 >  Wenn Sie eine Instanz eines eingebetteten COM-Typs in Ihrem Code erstellen, müssen Sie die Instanz mithilfe der entsprechenden Schnittstelle erstellen. Der Versuch, eine Instanz eines eingebetteten COM-Typs mit der Co-Klasse zu erstellen, verursacht einen Fehler.  
   
- Fügen Sie zum Festlegen der Option `/link` in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`-Eigenschaft auf **true** fest. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
+ Fügen Sie zum Festlegen der Option `-link` in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`-Eigenschaft auf **true** fest. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
   
  Wenn Sie eine Verknüpfung mit einer COM-Assembly (Assembly A) erstellen, die selbst auf eine andere COM-Assembly (Assembly B) verweist, müssen Sie auch eine Verknüpfung mit Assembly B erstellen, wenn eine der folgenden Aussagen zutrifft:  
   
@@ -60,11 +59,11 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
   
 -   Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Verwendung [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) an das Verzeichnis, in dem eine oder mehrere der Assemblyverweise befindet.  
+ Verwendung [- Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) an das Verzeichnis, in dem eine oder mehrere der Assemblyverweise befindet.  
   
- Wie die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption), die `/link` -Compileroption verwendet die Datei "vbc.rsp" Antwort, die Verweise häufig verwendet [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys. Verwenden Sie die [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Compileroption, wenn Sie nicht, dass den Compiler die Datei "vbc.rsp" zu verwenden möchten.  
+ Wie die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption), die `-link` -Compileroption verwendet die Datei "vbc.rsp" Antwort, die Verweise häufig verwendet [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys. Verwenden Sie die [- Noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Compileroption, wenn Sie nicht, dass den Compiler die Datei "vbc.rsp" zu verwenden möchten.  
   
- Die Kurzform von `/link` ist `/l`.  
+ Die Kurzform von `-link` ist `-l`.  
   
 ## <a name="generics-and-embedded-types"></a>Generika und eingebettete Typen  
  In den folgenden Abschnitten werden die Einschränkungen bei der Verwendung von generischen Typen in Anwendungen, die Interop-Typen einbetten, beschrieben.  
@@ -86,17 +85,17 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert die Quelldatei `OfficeApp.vb` und Verweisassemblys aus `COMData1.dll` und `COMData2.dll`, um `OfficeApp.exe` zu produzieren.  
+ Die folgende Befehlszeile kompiliert die Quelldatei `OfficeApp.vb` und verweisen auf Assemblys von `COMData1.dll` und `COMData2.dll` erzeugt `OfficeApp.exe`.  
   
-```vb  
-vbc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
+```console  
+vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
+ [-Verweis (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

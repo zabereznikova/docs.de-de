@@ -1,50 +1,50 @@
 ---
-title: /optioninfer
+title: -optioninfer
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
-- /optioninfer
+- -optioninfer
 helpviewer_keywords:
 - -optioninfer compiler option [Visual Basic]
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: df01fccd7276f0ec759065306ad3614d735f89ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="optioninfer"></a>/optioninfer
+# <a name="-optioninfer"></a>-optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/optioninfer[+ | -]  
+-optioninfer[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Dies ist optional. Geben Sie `/optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `/optioninfer-` zu blockieren. Die `/optioninfer` -Option ohne angegebenen Wert entspricht dem `/optioninfer+`. Der Standardwert, wenn die `/optioninfer` Switch nicht vorhanden ist, ist auch `/optioninfer+`. Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.|  
+|`+` &#124; `-`|Dies ist optional. Geben Sie `-optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `-optioninfer-` zu blockieren. Die `-optioninfer` -Option ohne angegebenen Wert entspricht dem `-optioninfer+`. Der Standardwert, wenn die `-optioninfer` Switch nicht vorhanden ist, ist auch `-optioninfer+`. Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.|  
   
 > [!NOTE]
->  Sie können die `/noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `/optioninfer-`.  
+>  Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `-optioninfer-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Quellcodedatei enthält eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md), überschreibt die Anweisung die `/optioninfer` Befehlszeilencompiler-Einstellung.  
+ Wenn die Quellcodedatei enthält eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md), überschreibt die Anweisung die `-optioninfer` Befehlszeilencompiler-Einstellung.  
   
-### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Festlegen von / Optioninfer in der Visual Studio-IDE  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>-Optioninfer in der Visual Studio-IDE festlegen  
   
 1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
@@ -53,15 +53,15 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  
   
-```  
-vbc /optioninfer+ test.vb  
+```console
+vbc -optioninfer+ test.vb  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
  [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  

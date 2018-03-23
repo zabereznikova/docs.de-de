@@ -1,35 +1,34 @@
 ---
-title: /vbruntime
-ms.date: 07/20/2015
+title: -vbruntime
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbruntime
-- /vbruntime
+- -vbruntime
 helpviewer_keywords:
 - vbruntime compiler option [Visual Basic]
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dda8ea7285a748bac53e30af8bd7a60099fe7411
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: e6c6529fabddc75fb6ac751e0314011f05db7869
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="vbruntime"></a>/vbruntime
+# <a name="-vbruntime"></a>-vbruntime
 Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-/vbruntime:{ - | + | * | path }  
+-vbruntime:{ - | + | * | path }  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -46,14 +45,14 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
  Kompilieren Sie mit einem Verweis auf die angegebene Bibliothek (DLL).  
   
 ## <a name="remarks"></a>Hinweise  
- Die `/vbruntime` (Compileroption) können Sie angeben, dass der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll. Wenn Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren, werden Fehler oder Warnungen auf Code oder Sprache Konstrukten protokolliert, die einen Aufruf an eine Visual Basic-Laufzeit-Hilfsprogramm zu generieren. (Ein *Visual Basic-Laufzeit-Hilfsprogramm* ist eine Funktion, die in "Microsoft.VisualBasic.dll", die zur Laufzeit zum Ausführen einer bestimmten Sprache semantische aufgerufen wird.)  
+ Die `-vbruntime` (Compileroption) können Sie angeben, dass der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll. Wenn Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren, werden Fehler oder Warnungen auf Code oder Sprache Konstrukten protokolliert, die einen Aufruf an eine Visual Basic-Laufzeit-Hilfsprogramm zu generieren. (Ein *Visual Basic-Laufzeit-Hilfsprogramm* ist eine Funktion, die in "Microsoft.VisualBasic.dll", die zur Laufzeit zum Ausführen einer bestimmten Sprache semantische aufgerufen wird.)  
   
- Die `/vbruntime+` Option führt zum gleichen Verhalten, das auftritt, wenn kein `/vbruntime` -Schalter angegeben ist. Können Sie die `/vbruntime+` Option aus, um die vorherigen überschreiben `/vbruntime` Switches.  
+ Die `-vbruntime+` Option führt zum gleichen Verhalten, das auftritt, wenn kein `-vbruntime` -Schalter angegeben ist. Können Sie die `-vbruntime+` Option aus, um die vorherigen überschreiben `-vbruntime` Switches.  
   
- Die meisten Objekte von der `My` Typ sind nicht verfügbar, wenn Sie verwenden die `/vbruntime-` oder `vbruntime:``path` Optionen.  
+ Die meisten Objekte von der `My` Typ sind nicht verfügbar, wenn Sie verwenden die `-vbruntime-` oder `-vbruntime:path` Optionen.  
   
 ## <a name="embedding-visual-basic-runtime-core-functionality"></a>Einbetten von Visual Basic-Laufzeit-Kernfunktionalität  
- Die `/vbruntime*` Option ermöglicht es Ihnen, ohne einen Verweis auf eine Laufzeitbibliothek kompiliert werden. Stattdessen ist Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in der Benutzerassembly eingebettet. Sie können diese Option verwenden, wenn Ihre Anwendung auf Plattformen ausgeführt wird, die der Visual Basic-Laufzeit nicht enthalten.  
+ Die `-vbruntime*` Option ermöglicht es Ihnen, ohne einen Verweis auf eine Laufzeitbibliothek kompiliert werden. Stattdessen ist Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in der Benutzerassembly eingebettet. Sie können diese Option verwenden, wenn Ihre Anwendung auf Plattformen ausgeführt wird, die der Visual Basic-Laufzeit nicht enthalten.  
   
  Die folgenden Elemente für die Common Language Runtime eingebettet werden:  
   
@@ -65,44 +64,44 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
   
 -   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>-Methode  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbBack> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbCr> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbCrLf> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbLf> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbNewLine> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbNullChar> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbNullString> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbTab> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>Konstante  
+-   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Konstante  
   
 -   Einige Objekte von der `My` Typ  
   
- Wenn Sie mit: Kompilieren Sie die `/vbruntime*` Option und dem Code verweist auf ein Element aus der Visual Basic-Laufzeitbibliothek, die nicht mit der Kernfunktionalität eingebettet ist, gibt der Compiler einen Fehler, der angibt, dass der Member nicht verfügbar ist.  
+ Wenn Sie mit: Kompilieren Sie die `-vbruntime*` Option und dem Code verweist auf ein Element aus der Visual Basic-Laufzeitbibliothek, die nicht mit der Kernfunktionalität eingebettet ist, gibt der Compiler einen Fehler, der angibt, dass der Member nicht verfügbar ist.  
   
 ## <a name="referencing-a-specified-library"></a>Verweis auf eine angegebene Bibliothek  
  Sie können die `path` Argument mit einem Verweis auf eine benutzerdefinierte Laufzeitbibliothek anstelle des standardmäßigen Visual Basic-Laufzeitbibliothek kompiliert.  
   
- Wenn der Wert für die `path` -Argument einen vollqualifizierten Pfad zu einer DLL ist, verwendet der Compiler diese Datei als der Common Language Runtime-Bibliothek. Wenn der Wert für die `path` -Argument keinen vollqualifizierten Pfad zu einer DLL, Visual Basic-Compiler sucht zuerst nach der angegebenen DLL im aktuellen Ordner. Sucht dann in den Pfad, die Sie angegeben haben die [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) -Compileroption. Wenn die `/sdkpath` -Compileroption nicht verwendet wird, sucht des Compilers nach der angegebenen DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Wenn der Wert für die `path` -Argument einen vollqualifizierten Pfad zu einer DLL ist, verwendet der Compiler diese Datei als der Common Language Runtime-Bibliothek. Wenn der Wert für die `path` -Argument keinen vollqualifizierten Pfad zu einer DLL, Visual Basic-Compiler sucht zuerst nach der angegebenen DLL im aktuellen Ordner. Sucht dann in den Pfad, die Sie angegeben haben die [- Sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) -Compileroption. Wenn die `-sdkpath` -Compileroption nicht verwendet wird, sucht des Compilers nach der angegebenen DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `/vbruntime` Option aus, um mit einem Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.  
+ Das folgende Beispiel zeigt, wie Sie die `-vbruntime` Option aus, um mit einem Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.  
   
-```  
-vbc /vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
+```console
+vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic Core – neue Kompilierungsmodus in Visual Studio 2010 SP1](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+ [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

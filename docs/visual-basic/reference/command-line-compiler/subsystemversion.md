@@ -1,35 +1,34 @@
 ---
-title: /subsystemversion (Visual Basic)
-ms.date: 07/20/2015
+title: -Subsystemversion (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8330896f890febc4d9f8627715fdd55a8f341f0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 9369f87f62bd2f481c543f6cdbb3344ac841193e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="subsystemversion-visual-basic"></a>/subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-Subsystemversion (Visual Basic)
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
   
 > [!NOTE]
->  Verwenden Sie zum Angeben des Subsystems selbst die Compileroption [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
+>  Verwenden Sie zum Angeben des Subsystems die Compileroption [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Syntax  
   
 ```vb  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -47,12 +46,12 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 |Windows XP|5.01|  
 |Windows Server 2003|5.02|  
 |Windows Vista|6.00|  
-|Windows 7|6.01|  
+|Windows 7|6.01|  
 |Windows Server 2008|6.01|  
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
- Der Standardwert der Compileroption **/subsystemversion** hängt von den Bedingungen in der folgenden Liste ab:  
+ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingungen in der folgenden Liste ab:  
   
 -   Der Standardwert ist 6,02, wenn jede Compileroption in der folgenden Liste festgelegt ist:  
   
@@ -60,14 +59,14 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
   
     -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
+    -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
 -   Beim Verwenden von MSBuild ist der Standardwert 6,00, indem Sie [!INCLUDE[net_v45](~/includes/net-v45-md.md)] als Ziel setzen, und Sie haben keine der Compileroptionen festgelegt, die zuvor in der Liste angegeben wurden.  
   
 -   Der Standardwert ist 4,00, wenn keine der vorherigen Bedingungen TRUE ist.  
   
 ## <a name="setting-this-option"></a>Festlegen dieser Option  
- Festlegen der **/subsystemversion** -Compileroption in Visual Studio müssen Sie öffnen die VBPROJ-Datei und geben Sie einen Wert für die `SubsystemVersion` Eigenschaft in der MSBuild-XML. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).  
+ Festlegen der **- Subsystemversion** -Compileroption in Visual Studio müssen Sie öffnen die VBPROJ-Datei und geben Sie einen Wert für die `SubsystemVersion` Eigenschaft in der MSBuild-XML. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 
   

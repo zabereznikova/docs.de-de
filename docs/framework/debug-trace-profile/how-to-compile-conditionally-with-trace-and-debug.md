@@ -1,12 +1,13 @@
 ---
 title: 'Gewusst wie: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Gewusst wie: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
 Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufverfolgungsausgabe als auch die Debugausgabe im Ausgabefenster von Visual Studio angezeigt. Allerdings müssen Sie Ihre instrumentierten Anwendungen mit aktivierter **TRACE**-Compilerdirektive kompilieren, um Ablaufverfolgungsfunktionen in eine bereitgestellte Anwendung aufzunehmen. Dadurch kann der Ablaufverfolgungscode in die Releaseversion der Anwendung kompiliert werden. Wenn Sie die **TRACE**-Anweisung nicht aktivieren, wird der gesamte Ablaufverfolgungscode bei der Kompilierung ignoriert und nicht in den ausführbaren Code aufgenommen, den Sie bereitstellen.  
@@ -59,9 +61,9 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
      Beispielsweise wird der Ablaufverfolgungscode in eine kompilierte ausführbare Datei aufgenommen, wenn die folgende Compileranweisung über die Befehlszeile eingegeben wird:  
   
-     Für Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     Für Visual Basic: **Vbc-r:System.dll -d: TRACE = "true" -d: DEBUG = FALSE MyApplication.vb**  
   
-     Für C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     Für c#: **csc-r:System.dll -d: TRACE -d: DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Lassen Sie einen Leerraum zwischen den Dateinamen, um mehr als eine Anwendungsdatei zu kompilieren, z.B. **MyApplication1.vb MyApplication2.vb MyApplication3.vb** oder **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
     |---------------|-------------|  
     |`vbc`|Visual Basic-Compiler|  
     |`csc`|C#-Compiler|  
-    |`/r:`|Verweist auf eine externe Assembly (EXE oder DLL)|  
-    |`/d:`|Definiert ein Symbol für bedingte Kompilierung|  
+    |`-r:`|Verweist auf eine externe Assembly (EXE oder DLL)|  
+    |`-d:`|Definiert ein Symbol für bedingte Kompilierung|  
   
     > [!NOTE]
     >  Sie müssen TRACE oder DEBUG mit Großbuchstaben schreiben. Geben Sie an der Eingabeaufforderung `vbc /?` (für Visual Basic) oder `csc /?` (für C#) ein, um weitere Informationen zu den Befehlen zur bedingten Kompilierung anzuzeigen. Weitere Informationen finden Sie unter [Erstellen von der Befehlszeile aus](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) oder [Aufrufen des Befehlszeilencompilers](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -95,14 +97,14 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
 ### <a name="to-disable-tracing-or-debugging"></a>So deaktivieren Sie die Ablaufverfolgung oder das Debuggen  
   
-1.  Löschen Sie die Compileranweisung aus dem Quellcode.  
+Löschen Sie die Compileranweisung aus dem Quellcode.  
   
-     \- oder –  
+\- oder –  
   
-2.  Kommentieren Sie die Compileranweisung aus.  
+Kommentieren Sie die Compileranweisung aus.  
   
-    > [!NOTE]
-    >  Wenn Sie kompilieren möchten, können Sie entweder **Erstellen** aus dem Menü **Erstellen** auswählen oder die Befehlszeilenmethode verwenden, allerdings ohne Eingabe von **d:** zum Definieren der Symbole für bedingte Kompilierung.  
+> [!NOTE]
+>  Wenn Sie kompilieren möchten, können Sie entweder **Erstellen** aus dem Menü **Erstellen** auswählen oder die Befehlszeilenmethode verwenden, allerdings ohne Eingabe von **d:** zum Definieren der Symbole für bedingte Kompilierung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  

@@ -1,12 +1,13 @@
 ---
 title: 'Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements
 Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von benutzerdefinierten Windows Forms-Steuerelementen. Ein einfache Steuerelement entwickelt, die in dieser exemplarischen Vorgehensweise können Sie die Ausrichtung des seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geändert werden. Es löst keine Ereignisse aus oder behandelt sie.  
@@ -50,7 +52,7 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Wenn Sie eine Eigenschaft, die die visuelle Darstellung des Steuerelements ändert festlegen, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode, um das Steuerelement neu gezeichnet werden. <xref:System.Windows.Forms.Control.Invalidate%2A>wird in der Basisklasse definiert <xref:System.Windows.Forms.Control>.  
+     Wenn Sie eine Eigenschaft, die die visuelle Darstellung des Steuerelements ändert festlegen, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode, um das Steuerelement neu gezeichnet werden. <xref:System.Windows.Forms.Control.Invalidate%2A> wird in der Basisklasse definiert <xref:System.Windows.Forms.Control>.  
   
 3.  Überschreiben Sie die geschützte <xref:System.Windows.Forms.Control.OnPaint%2A> Methode geerbt von <xref:System.Windows.Forms.Control> Renderinglogik auf das Steuerelement bereitstellen. Wenn Sie nicht außer Kraft setzen <xref:System.Windows.Forms.Control.OnPaint%2A>, das Steuerelement wird nicht in der Lage, sich selbst zu zeichnen. Im folgenden Codefragment der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode zeigt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geerbt von <xref:System.Windows.Forms.Control> mit der Ausrichtung, die gemäß der `alignmentValue` Feld.  
   
@@ -70,12 +72,12 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
   
     2.  Kompilieren Sie den Quellcode in eine Assembly, und speichern Sie sie im Verzeichnis der Anwendung. Führen Sie hierfür den folgenden Befehl in dem Verzeichnis aus, das die Quelldatei enthält.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          Die Compileroption `/t:library` benachrichtigt den Compiler, dass es sich bei der erstellten Assembly um eine Bibliothek handelt (nicht um eine ausführbare Assembly). Die Option `/out` gibt den Pfad und den Namen der Assembly an. Die Option `/r` gibt den Namen der Assembly an, auf die durch Ihren Code verwiesen wird. In diesem Beispiel erstellen Sie eine private Assembly, die ausschließlich von Ihren Anwendungen verwendet werden kann. Daher müssen Sie sie im Verzeichnis der Anwendung speichern. Weitere Informationen über das Packen und Bereitstellen eines Steuerelements für die Verteilung finden Sie unter [Bereitstellung](../../../../docs/framework/deployment/index.md).  
@@ -94,19 +96,19 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
   
 2.  Kompilieren Sie den Quellcode in eine ausführbare Assembly, indem Sie den folgenden Befehl im Verzeichnis ausführen, das die Quelldatei enthält.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll ist die Assembly, die die Klasse enthält `FirstControl`. Diese Assembly muss sich im gleichen Verzeichnis befinden wie die Quelldatei für das Formular, das auf sie zugreift („SimpleForm.cs“ oder „SimpleForms.vb“).  
   
 3.  Führen Sie „SimpleForm.exe“ mit dem folgenden Befehl aus.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   
