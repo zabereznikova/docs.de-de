@@ -1,24 +1,26 @@
 ---
-title: "Objektmodell für WCF-Web-HTTP-Programmierung"
-ms.custom: 
+title: Objektmodell für WCF-Web-HTTP-Programmierung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
 Das WCF-Web-HTTP-Programmiermodell ermöglicht Entwicklern, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Webdienste durch grundlegende HTTP-Anforderungen ohne SOAP verfügbar zu machen. Das WCF-Web-HTTP-Programmiermodell wird zusätzlich zum vorhandenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell erstellt. Mit diesem Modell werden folgende Klassen definiert:  
@@ -108,7 +110,7 @@ Das WCF-Web-HTTP-Programmiermodell ermöglicht Entwicklern, [!INCLUDE[indigo1](.
  Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-*-Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Finden Sie unter [wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) ein Beispiel.  
   
 ## <a name="security"></a>Sicherheit  
- Da das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, ist die einzige Möglichkeit zur Absicherung eines auf dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell basierenden Webdiensts das Verfügbarmachen des Diensts mithilfe von SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Einrichten von SSL mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Da das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, ist die einzige Möglichkeit zur Absicherung eines auf dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell basierenden Webdiensts das Verfügbarmachen des Diensts mithilfe von SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Einrichten von SSL mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.WebHttpBinding>  

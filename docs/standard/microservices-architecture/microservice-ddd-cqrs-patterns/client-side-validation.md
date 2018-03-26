@@ -1,6 +1,6 @@
 ---
-title: "Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)"
+title: Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
@@ -35,23 +35,23 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
--   **Validate Text Input and Show Errors (Überprüfen der Texteingabe und Anzeigen von Fehlern)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validieren von Text Eingabe- und Fehler anzeigen**
+    [*https://developer.xamarin.com/recipes/ios/standard\_Steuerelemente/Text\_Feld/Überprüfen von\_Eingabe-/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (Prüfungsrückruf)**
+-   **Validierungsrückruf**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Prüfung in ASP.NET Core-Apps
 
--   **Rick Anderson. Adding validation (Hinzufügen einer Validierung)**
+-   **Rick Anderson. Hinzufügen einer Validierung**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Angular 2-Formularprüfung) ****
+-   **Ado Kukic. Angular 2 Formularvalidierung** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (Formularprüfung)**
+-   **Formularvalidierung**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Prüfung** Breeze-Dokumentation

@@ -1,28 +1,30 @@
 ---
-title: "Größenänderungsoptionen im DataGrid-Steuerelement"
-ms.custom: 
+title: Größenänderungsoptionen im DataGrid-Steuerelement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Größenänderungsoptionen im DataGrid-Steuerelement
 Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Controls.DataGrid> passt sich. Die <xref:System.Windows.Controls.DataGrid>, und einzelne Zeilen und Spalten in der <xref:System.Windows.Controls.DataGrid>, kann festgelegt werden, automatisch auf ihren Inhalt angepasst, oder auf bestimmte Werte festgelegt werden. Wird standardmäßig die <xref:System.Windows.Controls.DataGrid> vergrößern und verkleinern Sie die Größe seines Inhalts angepasst wird.  
@@ -54,7 +56,7 @@ Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Contr
   
 ## <a name="sizing-rows-and-row-headers"></a>Größenanpassung von Zeilen und Zeilenheader  
   
-### <a name="datagrid-rows"></a>DataGrid-Zeilen  
+### <a name="datagrid-rows"></a>DataGrid Rows  
  Wird standardmäßig ein <xref:System.Windows.Controls.DataGrid> Zeile <xref:System.Windows.FrameworkElement.Height%2A> -Eigenschaftensatz auf <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" in XAML), und die Zeilenhöhe wird erweitert, um die Größe ihrer Inhalte. Die Höhe aller Zeilen in der <xref:System.Windows.Controls.DataGrid> können angegeben werden, indem die <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> Eigenschaft. Benutzer können die Zeilenhöhe durch Ziehen der Zeile Header Trennblättern ändern.  
   
 ### <a name="datagrid-row-headers"></a>DataGrid-Zeilenheader  

@@ -1,24 +1,26 @@
 ---
 title: UriTemplate und UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.  
@@ -98,13 +100,13 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 -   "Schuh / {Bereitschaftsboots} / *"  
   
--   "Schuh Boot /? X = 2"  
+-   "shoe/boat?x=2"  
   
 -   "Schuh / {Bereitschaftsboots}? x = {Bett}"  
   
 -   "Schuh/{Boot}?x={Bett}&y=band"  
   
--   "? x = {Schuh}"  
+-   "?x={shoe}"  
   
 -   "Schuh?x=3&y={var}  
   
@@ -140,7 +142,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
 -   /{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
   
 ### <a name="matching-and-compound-path-segments"></a>Zuordnung und zusammengesetzte Pfadsegmente  
- Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Beispielsweise ist in der Vorlagenzeichenfolge: "Adressen / {State}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert. Diese Vorlage würde eine URL wie "http://example.com/Washington.Redmond" überein, aber es wird auch eine URL wie "http://example.com/Washington.Redmond.Microsoft" überein. In letzterem Fall enthält die State-Variable "Washington" und die City-Variable "Redmond.Microsoft". In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die die "zusätzlichen" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B.: "Adressen / {Bundesland} / {Stadt}.  
+ Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Beispielsweise ist in der Vorlagenzeichenfolge: "Adressen / {State}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert. Diese Vorlage würde eine URL entsprechen, z. B. "http://example.com/Washington.Redmond"aber wird auch eine URL wie"http://example.com/Washington.Redmond.Microsoft". In letzterem Fall enthält die State-Variable "Washington" und die City-Variable "Redmond.Microsoft". In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die die "zusätzlichen" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B.: "Adressen / {Bundesland} / {Stadt}.  
   
 ### <a name="named-wildcard-segments"></a>Benannte Platzhaltersegmente  
  Bei einem benannten Platzhaltersegment handelt es sich um ein beliebiges Pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen "*" beginnt. Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  

@@ -1,24 +1,26 @@
 ---
 title: Tools
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Tools
 In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Tools generiert werden.  
@@ -27,8 +29,8 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
   
 |Ressourcencode|Ressourcenzeichenfolge|  
 |-------------------|---------------------|  
-|ParametersTarget|\<Enum >|  
-|ParametersToolConfig|\<ConfigFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Der angegebene Pfad ist ungültig. Überprüfen Sie das angegebene Argument.|  
 |ParametersReference|\<Dateipfad >|  
 |WrnCannotLoadConfigFileForValidation|Ein Fehler ist während der Verarbeitung der vom angegebenen Speicherort geladenen Konfigurationsdatei aufgetreten. Dienste, die in dieser Konfigurationsdatei definiert werden, können nicht überprüft werden.|  
@@ -79,7 +81,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |HelpCodeGenerationCategory|-= CODE-GENERIERUNG =-|  
 |RetreivingMetadataWithMexAndDisco|Es wird versucht, Metadaten vom angegebenen Speicherort mithilfe von WS-Metadata Exchange oder DISCO herunterzuladen.|  
 |ErrGeneralSchemaValidation|Bei der Überprüfung von XML-Schemas, die während des Exports generiert wurden, ist ein Fehler aufgetreten.|  
-|ParametersDirectory|\<Verzeichnis >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Es kann kein Typ für den angegebenen Wert geladen werden, der an die angegebene Option übergeben wurde. Stellen Sie sicher, dass die Assembly, zu der dieser Typ gehört, mit der angegebenen Option angegeben wird.|  
 |ErrOptionModeConflict|Die angegebene Option kann nicht mit der angegebenen Option verwendet werden, da sie unterschiedliche Ausgabetypen voraussetzen.|  
 |ErrIsNotAnAssembly|Die angegebene Datei kann nicht als Assembly geladen werden. Überprüfen Sie, ob diese Datei eine .NET-Assembly ist.|  
@@ -98,7 +100,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |ErrDirectoryNotFound|Das angegebene Verzeichnis kann nicht gefunden werden. Überprüfen Sie, dass das Verzeichnis vorhanden ist und dass Sie die entsprechenden Berechtigungen haben, es zu lesen.|  
 |ErrUnableToLoadFile|Die angegebene Datei kann nicht gelesen werden.|  
 |ErrNoFilesFound|Der angegebene Eingabepfad scheint nicht auf vorhandene Dateien zu verweisen.|  
-|ParametersConfig|\<ConfigFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Der angegebene Eingabepfad scheint ein Verzeichnis zu sein. Es müssen entweder URLs oder Dateipfade eingegeben werden.|  
 |HelpConfig|Weist die Tools an, eine Konfigurationsdatei mit dem bereitgestellten Namen zu generieren. Standard: output.config.|  
 |ErrSingleUseSwitch|Die angegebene Option kann nicht mehrmals angegeben werden.|  
@@ -123,9 +125,9 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |ErrInvalidTarget|Das angegebene Ziel ist ungültig, wenn es mit der angegebenen Option angegeben wird. Die unterstützten Ziele werden angegeben.|  
 |ErrPathTooLong|Der resultierende Pfad ist zu lang. Überprüfen Sie die angegebenen Argumente.|  
 |HelpCommonOptionsCategory|-= ALLGEMEINE OPTIONEN =-|  
-|ParametersServiceName|\<ServiceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Es wurden keine gültigen Eingabedateien angegeben. Geben Sie entweder Metadatendokumente oder Assemblydateien an.|  
-|ParametersLanguage|\<Language >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|Beim Lesen der Metadaten aus einem der geladenen Dokumente ist ein Fehler aufgetreten. Der Dokumentbezeichner wird angegeben.|  
 |ErrConflictingInputs|Das angegebene Eingabeargument verursacht Konflikte mit der angegebenen Eingabe, da sie unterschiedliche Verwendungsarten des Tools voraussetzen.|  
 |WrnUnableToLoadContractForValidation|Beim Laden eines Vertragstyps ist ein Fehler aufgetreten. Der Typ und die Details werden angegeben.|  
@@ -136,7 +138,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |GeneratingFiles|Generieren von Dateien...|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Ein ungültiger Wert wurde an die angegebene Option übergeben. Der angegebene Zielnamespace kann nicht, wie angegeben, mehreren CLR-Namespaces zugeordnet werden.|  
 |ErrCouldNotLoadReferenceAssemblyAt|Die angegebene Referenzassembly kann nicht geladen werden.|  
-|ParametersOut|\<Datei >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|Verwenden Sie zum Generieren von Verträgen aus den Schemas die angegebene Option.|  
 |ErrUnableToLoadInputConfig|Die angegebene Konfigurationsdatei kann nicht geladen werden.|  
 |ErrUnexpectedDelimiter|Ein ungültiges Argumenttrennzeichen (':' oder '=') kann die Option nicht starten.|  

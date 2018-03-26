@@ -1,6 +1,6 @@
 ---
-title: "Domänenereignisse. Entwurf und Implementierung"
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Domänenereignisse, Entwurf und Implementierung"
+title: Domänenereignisse. Entwurf und Implementierung
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Domänenereignisse, Entwurf und Implementierung
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -76,7 +76,7 @@ Wie Abbildung 9-15 zeigt, können Sie ausgehend vom selben Domänenereignis mehr
 
 **Abbildung 9-15**. Behandlung mehrerer Aktionen pro Domäne
 
-Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null oder  *n*  Mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
+Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ist möglicherweise ein Ereignis Domäne verarbeitet die 0 (null) oder *n* erreicht, da Wenn von mehreren Empfängern oder Ereignishandler mit einem anderen Zweck für jeden Handler empfangen werden können.
 
 Dank der Möglichkeit einer offenen Anzahl von Handlern pro Domänenereignis können Sie ohne Auswirkungen auf den aktuellen Code viele weitere Domänenregeln hinzufügen. Das Implementieren der folgenden Geschäftsregel, die unmittelbar nach einem Ereignis ausgeführt werden muss, kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen wenigen oder auch nur einem Ereignishandler:
 
@@ -337,37 +337,37 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Greg Young. What is a Domain Event (Was ist ein Domänenereignis)?**
+-   **Greg Young. Was ist ein Ereignis Domäne?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Domain Events and Eventual Consistency (Domänenereignisse und „Eventual Consistency“)**
+-   **Jan Stenberg. Ereignisse der Domäne und eventuelle Konsistenz**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard. A better domain events pattern (Ein besseres Domänenereignismuster)**
+-   **Jimmy Bogard. Eine bessere Domäne Ereignisse-Muster**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Aggregate zusammenarbeiten lassen)**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. Effektive aggregieren Entwurf Teil II: Ausführenden Aggregate arbeiten zusammen**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_Artikel/Vernon\_2011\_2. Pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)**
+-   **Jimmy Bogard. Stärkung Ihrer Domäne: Domain-Ereignisse**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tony Truong. Domain Events Pattern Example (Beispiel eines Domänenereignismusters)**
+-   **Tony Truong. Beispiel für ein Muster Domäne Ereignis**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen von vollständig gekapselten Domänenmodellen)**
+-   **Udi Dahan. Vorgehensweise: Erstellen Sie vollständig gekapselt Domänenmodelle**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Domain Events – Take 2 (Domänenereignisse – Teil 2)**
+-   **Udi Dahan. Erstellen einer Domäne Ereignisse – 2**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Domain Events – Salvation (Domänenereignisse – Rettung)**
+-   **Udi Dahan. Domain-Ereignisse – Rettung**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Don't publish Domain Events, return them! (Domänenereignisse nicht veröffentlichen, sondern zurückgeben!)**
+-   **Jan Kronquist. Nicht veröffentlichen von Ereignissen der Domäne, zurückgeben!**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures (Domänenereignisse im Vergleich zu Integrationsereignissen in DDD und Microservicearchitekturen)**
+-   **Cesar de la Torre. Domain Events vs. DDD und Microservices Architekturen-Integrationsereignisse**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

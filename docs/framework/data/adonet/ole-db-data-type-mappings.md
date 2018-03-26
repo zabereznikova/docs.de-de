@@ -1,24 +1,26 @@
 ---
 title: OLE DB-Datentypzuordnungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB-Datentypzuordnungen
 In folgender Tabelle ist der abgeleitete [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ für Datentypen vom .NET Framework-Datenanbieter für ADO und OLE DB (<xref:System.Data.OleDb>) dargestellt. Die typisierten Accessormethoden für den <xref:System.Data.OleDb.OleDbDataReader> sind ebenfalls aufgeführt.  
@@ -58,7 +60,7 @@ In folgender Tabelle ist der abgeleitete [!INCLUDE[dnprdnshort](../../../../incl
 |adUserDefined|DBTYPE_UDT|wird nicht unterstützt||  
 |adVarNumeric|DBTYPE_VARNUMERIC|wird nicht unterstützt||  
   
- \*Für den OLE DB-Datentypen `DBTYPE_IUNKNOWN` und `DBTYPE_IDISPATCH`, der Objektverweis ist eine gemarshallte Darstellung des Zeigers.  
+ \* Für den OLE DB-Datentypen `DBTYPE_IUNKNOWN` und `DBTYPE_IDISPATCH`, der Objektverweis ist eine gemarshallte Darstellung des Zeigers.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

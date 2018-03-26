@@ -1,12 +1,13 @@
 ---
-title: "Sammlungstypen in Datenverträgen"
-ms.custom: 
+title: Sammlungstypen in Datenverträgen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
@@ -38,7 +40,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Zusätzliche Anforderungen für Sammlungstypen, wie das Aufweisen einer Methode mit dem Namen `Add` und eines Standardkonstruktors, werden in den folgenden Abschnitten im Detail besprochen. Dies stellt sicher, dass Sammlungstypen sowohl serialisiert als auch deserialisiert sein können. Das bedeutet, dass einige Sammlungen nicht direkt unterstützt werden, z. B. die generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (da sie über keinen Standardkonstruktor verfügt). Informationen zum Umgehen dieser Einschränkungen finden Sie im Abschnitt "Verwenden von Sammlungsschnittstellentypen und schreibgeschützten Sammlungen" weiter unten in diesem Thema.  
   
- Die in Sammlungen enthaltenen Typen müssen Datenvertragstypen oder anderweitig serialisierbar sein. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Die in Sammlungen enthaltenen Typen müssen Datenvertragstypen oder anderweitig serialisierbar sein. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu gültigen und ungültigen Sammlungen sowie Informationen zum Serialisieren von Sammlungen finden Sie in den Informationen zum Serialisieren von Sammlungen im Abschnitt "Erweiterte Sammlungsregeln" dieses Themas.  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Referenzierter Typ|Vom referenzierten Typ implementierte Schnittstelle|Beispiel|Typ behandelt als|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oder<br /><br /> `MyType<T> : IDictionary` , wobei T=`int`|Geschlossenes generisches `IDictionary<object,object>`|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>`wobei T =`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>`wobei T =`int`, U =`float`, V =`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>`wobei Z =`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>` wobei T =`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>` wobei T =`int`, U =`float`, V =`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>` wobei Z =`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
 |Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>`, wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
 |Offen generisch (zwei Parameter)|Generisches <xref:System.Collections.Generic.IDictionary%602>, offen, verwendet beide generischen Parametern des Typs in der Reihenfolge, in der sie angezeigt werden.|`MyType<K,V> : IDictionary<K,V>`, K und V beide offen|Offen generisch (z. B. `IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Sammlungsbenennung  
  Im Folgenden finden Sie eine Liste von Regeln für die Sammlungsbenennung:  
   
--   Der Standardnamespace für alle Datenverträge für Wörterbuchsammlungen sowie für Datenverträge für Listensammlungen, die primitive Typen enthalten, lautet http://schemas.microsoft.com/2003/10/Serialization/Arrays, es sei denn, er wurde von "Namespace" überschrieben. Typen, die integrierten XSD-Typen zugeordnet werden, sowie `char`-, `Timespan`- und `Guid` -Typen, gelten zu diesem Zweck als primitive Typen.  
+-   Der Standardnamespace für alle Wörterbuch Auflistung von Datenverträgen sowie für die Liste Auflistung von Datenverträgen, die primitive Typen enthalten ist http://schemas.microsoft.com/2003/10/Serialization/Arrays sofern er nicht von Namespace. Typen, die integrierten XSD-Typen zugeordnet werden, sowie `char`-, `Timespan`- und `Guid` -Typen, gelten zu diesem Zweck als primitive Typen.  
   
 -   Der Standardnamespace für Sammlungstypen, die nicht primitive Typen enthalten, ist der gleiche wie der Namespace für die Datenverträge des in der Sammlung enthaltenen Typs, sofern er nicht von "Namespace" überschrieben wurde.  
   

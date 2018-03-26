@@ -1,24 +1,26 @@
 ---
-title: "Handbuch für die Interoperabilität von Webdienstprotokollen"
-ms.custom: 
+title: Handbuch für die Interoperabilität von Webdienstprotokollen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird eine Vielzahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. In diesem Thema finden Sie eine Liste mit Webdienstprotokollen, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert werden. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
@@ -26,7 +28,7 @@ Von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird eine Vielzahl v
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Von WCF implementierte Webdienstprotokolle  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet mithilfe der Vertragsfunktion Unterstützung für Webdienst-Infrastrukturprotokolle (Web Services, WS) über Channel und Webdienstanwendungen. Die Interoperabilität von Anwendungsprotokollen wird mithilfe von XML Schema Description Language 1.0 (XSD) und Web Services Description Language (WSDL) 1.1 erzielt.  
   
- Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezifikationen bereitgestellt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanäle bieten Unterstützung für eine Reihe von WS -\* infrastrukturprotokollen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanäle werden mithilfe von Bindungselementen konfiguriert. In den folgenden Tabellen enthalten eine vollständige Liste der WS-\* infrastrukturprotokollen implementiert, die von verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungselementen.  
+ Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezifikationen bereitgestellt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Kanäle bieten Unterstützung für eine Reihe von WS -\* infrastrukturprotokollen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanäle werden mithilfe von Bindungselementen konfiguriert. In den folgenden Tabellen enthalten eine vollständige Liste der WS-\* infrastrukturprotokollen implementiert, die von verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungselementen.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   

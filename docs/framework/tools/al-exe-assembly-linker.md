@@ -1,12 +1,13 @@
 ---
 title: Al.exe (Assembly Linker-Tool)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Al.exe
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: "37"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
@@ -46,7 +48,7 @@ al sources options
 
 Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
-| Quelle | description |
+| Quelle | Beschreibung |
 | ------ | ----------- |
 |`file`[,`target`]|Kopiert den Inhalt von `file` (ein Modul) in die als `target` angegebene Datei. Nach dem Kopieren wird `target` von *Al.exe* in eine Assembly kompiliert.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Bettet die durch `file` angegebene Ressource in das Image ein, das das Assemblymanifest enthält. Der Inhalt von `file` wird von *Al.exe* in das portierbare ausführbare Image (PE, Portable Executable) kopiert.<br /><br /> Der `name`-Parameter ist ein interner Bezeichner für die Ressource. Standardmäßig sind Ressourcen in der Assembly öffentlich (d. h. für andere Assemblys sichtbar). Durch Angeben von `private` können Sie verhindern, dass die Ressource für andere Assemblys sichtbar ist.<br /><br /> Wenn es sich bei `file` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise durch den [Resource File Generator (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern in <xref:System.Resources> möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`*-Methoden in <xref:System.Reflection.Assembly>, um zur Laufzeit auf die Ressource zuzugreifen.<br /><br /> Wenn nur Ressourcendateien an *Al.exe* übergeben werden, handelt es sich bei der Ausgabedatei um eine Satellitenressourcenassembly.|
@@ -54,7 +56,7 @@ Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
 Sie können die folgenden Optionen (`options`) angeben. Die Angabe von **/out** ist obligatorisch.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/algid:** `id`|Legt einen Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei, die das Assemblymanifest enthält, fest. Standardmäßig wird der Algorithmus "CALG_SHA1" verwendet. Informationen zu anderen Algorithmen finden Sie unter "ALG_ID" in der Platform SDK-Dokumentation. Für das erste Release von .NET Framework sind nur "CALG_SHA1" und "CALG_MD5" gültig.<br /><br /> Die Hashwerte werden in der Dateitabelle des Assemblymanifests gespeichert. Bei der Installation und beim Laden werden die Dateien der Assembly anhand ihrer Hashwerte überprüft.<br /><br /> Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) im Quellcode für ein beliebiges Modul angeben.|
 |**/base[address]:** `addr`|Legt die Adresse fest, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird. Das Laden von Anwendungen kann beschleunigt werden, wenn nicht das Betriebssystem die DLLs im Prozessbereich verschiebt, sondern die Basisadresse der DLLs angegeben wird.|
@@ -98,7 +100,7 @@ Verwenden Sie das [Global Assembly Cache-Tool (*Gacutil.exe*)](../../../docs/fra
 
 In der folgende Tabelle werden die durch *Al.exe* generierten Fehler aufgelistet.
 
-| Fehler | description |
+| Fehler | Beschreibung |
 | ----- | ----------- |
 |al1001|Interner Compilerfehler.<br /><br /> Versuchen Sie festzustellen, ob *Al.exe* einen Fehler verursacht, weil unerwartete Syntax nicht analysiert werden kann. Wenden Sie sich dann an Produktsupport von Microsoft.|
 |al1002|Nicht genügend Arbeitsspeicher<br /><br /> *Al.exe* steht nicht genügend Arbeitsspeicher zur Verfügung. Die Anwendung wurde beendet. Vergrößern Sie den verfügbaren Arbeitsspeicher.|

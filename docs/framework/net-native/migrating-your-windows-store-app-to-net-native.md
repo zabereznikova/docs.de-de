@@ -1,24 +1,26 @@
 ---
 title: Migrieren der Windows Store-App auf .NET Native
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrieren der Windows Store-App auf .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] stellt eine statische Kompilierung von Anwendungen im Windows Store oder auf dem Computer des Entwicklers bereit. Dies unterscheidet sich von der dynamischen Kompilierung für Windows Store-Apps durch den JIT-Compiler (Just-in-Time) oder den [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) auf dem Gerät. Trotz der Unterschiede versucht [!INCLUDE[net_native](../../../includes/net-native-md.md)] , die Kompatibilität mit den [.NET für Windows Store-Apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)beizubehalten. Zum größten Teil funktioniert das, was für die .NET für Windows Store-Apps funktioniert, auch für [!INCLUDE[net_native](../../../includes/net-native-md.md)].  In einigen Fällen können jedoch Verhaltensänderungen auftreten. Dieses Dokument erläutert die Unterschiede zwischen den standardmäßigen .NET für Windows Store-Apps und [!INCLUDE[net_native](../../../includes/net-native-md.md)] in den folgenden Bereichen:  
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Die <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Methode analysiert ordnungsgemäß Zeichenfolgen mit kurzen Datumsangaben im [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Sie behält allerdings keine Kompatibilität mit den Änderungen der Datums- und Uhrzeitanalyse bei, die in den Microsoft Knowledge Base-Artikeln [KB2803771](http://support.microsoft.com/kb/2803771) und [KB2803755](http://support.microsoft.com/kb/2803755)beschrieben werden.  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` ist korrekt gerundet [!INCLUDE[net_native](../../../includes/net-native-md.md)]. In einigen Versionen der CLR wird die resultierende Zeichenfolge abgeschnitten und nicht gerundet.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` ist korrekt gerundet [!INCLUDE[net_native](../../../includes/net-native-md.md)]. In einigen Versionen der CLR wird die resultierende Zeichenfolge abgeschnitten und nicht gerundet.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient-Unterschiede  
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>wird unterstützt, löst eine Ausnahme in einigen Szenarien, z. B. wenn er mit verwendet wird aber [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) oder Byref-Varianten.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> wird unterstützt, löst eine Ausnahme in einigen Szenarien, z. B. wenn er mit verwendet wird aber [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) oder Byref-Varianten.  
   
  Veraltete APIs für [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) unterstützen Folgendes:  
   

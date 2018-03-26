@@ -1,12 +1,13 @@
 ---
 title: Pfadmarkupsyntax
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen in WPF Übersicht](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird detailliert beschrieben, die leistungsfähigere und komplexere Mini Sprache Sie den Pfad angeben können Geometrien kürzer mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry- und PathFigureCollection-Minisprachen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]stellt zwei Klassen, die Mini-Sprachen zum Beschreiben von geometrische Pfade bereitstellen: <xref:System.Windows.Media.StreamGeometry> und <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zwei Klassen, die Mini-Sprachen zum Beschreiben von geometrische Pfade bereitstellen: <xref:System.Windows.Media.StreamGeometry> und <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Verwenden Sie die <xref:System.Windows.Media.StreamGeometry> Mini Sprache beim Festlegen einer Eigenschaft vom Typ <xref:System.Windows.Media.Geometry>, wie z. B. die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> oder die <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft ein <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel wird die Attributsyntax zum Erstellen einer <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen
   
 |StreamGeometry XAML-Attributverwendung|  
 |-----------------------------------------|  
-|`<`*Objekt* *Eigenschaft* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  Die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Syntax für das Attribut ein <xref:System.Windows.Media.PathFigureCollection> besteht aus mindestens Abbildung Beschreibungen.  
   
 |PathFigureCollection XAML-Attributverwendung|  
 |-----------------------------------------------|  
-|`<`*Objekt* *Eigenschaft* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *Objekt* *Eigenschaft* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> Füllungsregel.<br />-   `F1`Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> Füllungsregel.<br /><br /> Wenn Sie diesen Befehl auslassen, verwendet der Unterpfad das Standardverhalten, also <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> Füllungsregel.<br />-   `F1` Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> Füllungsregel.<br /><br /> Wenn Sie diesen Befehl auslassen, verwendet der Unterpfad das Standardverhalten, also <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
 |*figureDescription*|Eine aus einem Move-Befehl, Draw-Befehl und einem optionalen Close-Befehl bestehende Figur.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Ein Move-Befehl, der den Startpunkt der Figur angibt. Finden Sie unter der [Befehl verschieben](#themovecommand) Abschnitt.|  
 |*drawCommands*|Mindestens ein Draw-Befehl, der den Inhalt der Figur beschreibt. Finden Sie unter der [Draw-Befehle](#drawcommands) Abschnitt.|  
@@ -95,7 +97,7 @@ Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen
  Sie geben jeden Befehl unter Verwendung eines Großbuchstabens oder eines Kleinbuchstabens ein: Großbuchstaben geben absolute Werte an, und Kleinbuchstaben geben relative Werte an: Die Kontrollpunkte für dieses Segment sind abhängig vom Endpunkt des vorherigen Beispiels. Wenn Sie mehrere Befehle vom gleichen Typ nacheinander eingeben möchten, können Sie die doppelte Befehlseintrag auslassen; beispielsweise `L 100,200 300,400` entspricht `L 100,200 L 300,400`. Die folgende Tabelle beschreibt die **verschieben** und **zeichnen** Befehle.  
   
 ### <a name="line-command"></a>Line-Befehl  
- Erstellt eine gerade Linie zwischen dem aktuellen Punkt und dem angegebenen Endpunkt. `l 20 30`und `L 20,30` sind Beispiele für gültige **Zeile** Befehle.  
+ Erstellt eine gerade Linie zwischen dem aktuellen Punkt und dem angegebenen Endpunkt. `l 20 30` und `L 20,30` sind Beispiele für gültige **Zeile** Befehle.  
   
 |Syntax|  
 |------------|  
@@ -149,7 +151,7 @@ Großbuchstabe `V` gibt an, dass `y` ist ein absoluter Wert; einen Kleinbuchstab
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Der Punkt, bis zu dem die Kurve gezeichnet wird.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>Quadratische Bézier-Kurve-Befehl  
- Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt mit dem angegebenen Kontrollpunkt (`controlPoint`). `q 100,200 300,200`ist ein Beispiel für einen gültigen quadratische Bézier-Kurve-Befehl.  
+ Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt mit dem angegebenen Kontrollpunkt (`controlPoint`). `q 100,200 300,200` ist ein Beispiel für einen gültigen quadratische Bézier-Kurve-Befehl.  
   
 |Syntax|  
 |------------|  

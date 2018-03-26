@@ -1,6 +1,6 @@
 ---
 title: Entwerfen der Persistenzebene der Infrastruktur
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen der Persistenzebene der Infrastruktur"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen der Persistenzebene der Infrastruktur
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
@@ -138,35 +138,35 @@ In den nächsten Abschnitten wird erläutert, wie das Spezifikationsmuster mit E
 
 ### <a name="the-repository-pattern"></a>Das Repositorymuster
 
--   **Edward Hieatt und Rob Mee. Repository pattern (Repositorymuster).**
+-   **Edward Hieatt und Rob Mee. Repositorymuster.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **The Repository pattern (Das Repositorymuster)**
+-   **Das Repositorymuster**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction (Repositorymuster: Eine Datenpersistenzabstraktion)**
+-   **Repositorymuster: Eine Daten persistenzabstraktion**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Buch, in dem das Repositorymuster thematisiert wird) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Book; enthält eine Erläuterung der des Repositorymusters) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Arbeitseinheitsmuster
 
--   **Martin Fowler. Unit of Work pattern (Arbeitseinheitsmuster).**
+-   **Martin Fowler. Die Einheit der Arbeit Muster.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Repository- und Arbeitseinheitsmuster in einer ASP.NET MVC-Anwendung)**
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Muster „Repository“ und „Arbeitseinheit“ in eine ASP.NET MVC-Anwendung)**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Das Spezifikationsmuster
 
--   **The Specification pattern (Das Spezifikationsmuster).**
+-   **Die Spezifikation-Muster.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain-Driven Design. Addison-Wesley. S. 224.**
 
--   **Specifications (Spezifikationen). Martin Fowler**
+-   **Specifications (Spezifikationen). Smell**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]

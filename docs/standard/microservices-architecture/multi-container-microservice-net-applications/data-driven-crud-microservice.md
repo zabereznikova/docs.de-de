@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Erstellen eines einfachen datengesteuerten CRUD-Microservice"
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Erstellen eines einfachen datengesteuerten CRUD-Microservice
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -293,13 +293,13 @@ Dieser Mechanismus für die Versionsverwaltung ist einfach und richtet sich nach
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy**
+-   **Scott Hanselman. ASP.NET Core RESTful-Web-API-versionsverwaltung leicht gemacht**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Versionsverwaltung einer RESTful-Web-API**
+-   **Eine RESTful-Web-API-versionsverwaltung**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST**
+-   **Roy Fielding. Versionsverwaltung, Hypermedia und REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generieren von Swagger-Beschreibungsmetadaten aus Ihrer ASP.NET Core-Web-API 
@@ -310,7 +310,7 @@ Das Herzstück von Swagger ist die Swagger-Spezifikation, bei der es sich um API
 
 Die Spezifikation bildet die Grundlage für die OpenAPI Specification (OAS) und wird in einer offenen, transparenten und vernetzten Community entwickelt, um das Definieren von RESTful-Schnittstellen zu standardisieren.
 
-Die Spezifikation definiert die Struktur, wie ein Service ermittelt werden kann und wie seine Funktionen interpretiert werden. Weitere Informationen, einschließlich eines Web-Editors und Beispielen für Swagger-Spezifikationen von Firmen wie Spotify, Uber, Slack und Microsoft finden Sie auf der Webseite von Swagger (<http://swagger.io>).
+Die Spezifikation definiert die Struktur, wie ein Service ermittelt werden kann und wie seine Funktionen interpretiert werden. Weitere Informationen einschließlich einer Web-Editor und Beispiele der Swagger-Spezifikationen von Unternehmen wie sich von Spotify, Uber, Flaute und Microsoft, finden Sie unter der Swagger-Website (<http://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Gründe für die Verwendung von Swagger
 
@@ -415,7 +415,7 @@ Es ist wirklich so einfach. Und da die Generierung automatisch erfolgt, wachsen 
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **ASP.NET Core-Web-API-Hilfeseiten mit Swagger**
+-   **Swagger-API unterstützen ASP.NET-Webseiten mit**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

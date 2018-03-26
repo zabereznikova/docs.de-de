@@ -1,32 +1,34 @@
 ---
-title: "Übersicht über WPF-Globalisierung und -Lokalisierung"
-ms.custom: 
+title: Übersicht über WPF-Globalisierung und -Lokalisierung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschränken Sie damit auch Ihre potentielle Kundenbasis auf einen Bruchteil der 6,5 Milliarden Einwohner unseres Planeten. Wenn Ihre Anwendung eine globale Zielgruppe erreichen soll, ist die kostengünstige Lokalisierung Ihres Produktes eine der besten und effizientesten Möglichkeiten, mehr Kunden zu erreichen.  
   
- Diese Übersicht enthält Globalisierung und Lokalisierung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Unter Globalisierung versteht man den Entwurf und die Entwicklung von Anwendungen, die an verschiedenen Orten funktionieren. So unterstützt Globalisierung z.B. lokalisierte Benutzeroberflächen und regionale Daten für Benutzer in unterschiedlichen Kulturen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]globalisierten Design stellt Funktionen bereit, einschließlich der automatischen Layouts, Satellitenassemblys sowie lokalisierten Attributen und kommentieren.
+ Diese Übersicht enthält Globalisierung und Lokalisierung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Unter Globalisierung versteht man den Entwurf und die Entwicklung von Anwendungen, die an verschiedenen Orten funktionieren. So unterstützt Globalisierung z.B. lokalisierte Benutzeroberflächen und regionale Daten für Benutzer in unterschiedlichen Kulturen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] globalisierten Design stellt Funktionen bereit, einschließlich der automatischen Layouts, Satellitenassemblys sowie lokalisierten Attributen und kommentieren.
   
  Unter Lokalisierung versteht man die Übersetzung von Anwendungsressourcen in lokalisierte Versionen für die jeweiligen von der Anwendung unterstützten Kulturen. Wenn Sie lokalisieren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], verwenden Sie die APIs in der <xref:System.Windows.Markup.Localizer> Namespace. Diese APIs Power der [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016) Befehlszeilentool. Informationen zum Erstellen und Verwenden von LocBaml finden Sie unter [Lokalisieren einer Anwendung](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).    
   
@@ -65,7 +67,7 @@ Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschr
   
 -   Lokalisierungsattribute verwenden, um die Lokalisierung statt selektiv auslassen steuern <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften für Elemente. Finden Sie unter [Lokalisierungsattribute und Kommentare](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md) für Weitere Informationen.  
   
--   Verwendung **Msbuild/t: updateuid** und **/t: checkuid** hinzufügen und überprüfen Sie <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften in Ihrem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Verwendung <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften zum Nachverfolgen von Änderungen zwischen Entwicklungs- und Lokalisierung. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>Eigenschaften können Sie die neue entwicklungsänderungen zu lokalisieren. Wenn Sie manuell hinzufügen <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], der Vorgang ist in der Regel mühsam und weniger genau.  
+-   Verwendung **Msbuild/t: updateuid** und **/t: checkuid** hinzufügen und überprüfen Sie <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften in Ihrem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Verwendung <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften zum Nachverfolgen von Änderungen zwischen Entwicklungs- und Lokalisierung. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften können Sie die neue entwicklungsänderungen zu lokalisieren. Wenn Sie manuell hinzufügen <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], der Vorgang ist in der Regel mühsam und weniger genau.  
   
     -   Bearbeiten oder ändern Sie nicht <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften nach dem Starten der Lokalisierung.  
   
@@ -134,9 +136,9 @@ Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschr
   
  `<Grid x:Uid="Grid_1">`  
   
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>Eigenschaften werden in Reihenfolge für benötigt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Lokalisierung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ordnungsgemäß funktioniert.  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften werden in Reihenfolge für benötigt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Lokalisierung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ordnungsgemäß funktioniert.  
   
- Sie werden verwendet, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Lokalisierung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zum Nachverfolgen von Änderungen zwischen der Entwicklungs- und Lokalisierung von der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>Eigenschaften ermöglichen es Ihnen, eine neuere Version des merge der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mit einer älteren Lokalisierung von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Sie fügen eine <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaft durch Ausführen von **Msbuild/t: updateuid RunDialog.csproj** in eine Befehlsshell. Dies ist die empfohlene Methode zum Hinzufügen von <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften, da sie manuell hinzufügen, in der Regel zeitaufwändig und weniger genau ist. Sie können überprüfen, <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften sind richtig festgelegt durch Ausführen von **Msbuild/t: checkuid RunDialog.csproj**.  
+ Sie werden verwendet, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Lokalisierung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zum Nachverfolgen von Änderungen zwischen der Entwicklungs- und Lokalisierung von der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften ermöglichen es Ihnen, eine neuere Version des merge der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mit einer älteren Lokalisierung von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Sie fügen eine <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaft durch Ausführen von **Msbuild/t: updateuid RunDialog.csproj** in eine Befehlsshell. Dies ist die empfohlene Methode zum Hinzufügen von <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften, da sie manuell hinzufügen, in der Regel zeitaufwändig und weniger genau ist. Sie können überprüfen, <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Eigenschaften sind richtig festgelegt durch Ausführen von **Msbuild/t: checkuid RunDialog.csproj**.  
   
  Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] strukturiert ist, mithilfe der <xref:System.Windows.Controls.Grid> Steuerelement, das ist ein nützlich-Steuerelement für die Vorteile des automatischen Layouts in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Beachten Sie, dass das Dialogfeld in drei Zeilen und fünf Spalten unterteilt ist. Keiner der die Zeilen- und Spaltendefinitionen hat eine feste Größe; Daher wird die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente, die in jeder Zelle positioniert werden können, erhöht sich anpassen und Größe verkleinert, bei der Lokalisierung.  
   
@@ -168,7 +170,7 @@ Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschr
   
  `</Resource>`  
   
- Die `RunIcon.JPG` muss nicht lokalisiert werden, da es für alle Kulturen angezeigt werden soll. `Localizable`wird festgelegt, um `false` , damit es weiterhin in der sprachneutralen Hauptassembly die Satellitenassembly ist. Der Standardwert aller nicht kompilierbaren Ressourcen ist `Localizable` festgelegt `true`.  
+ Die `RunIcon.JPG` muss nicht lokalisiert werden, da es für alle Kulturen angezeigt werden soll. `Localizable` wird festgelegt, um `false` , damit es weiterhin in der sprachneutralen Hauptassembly die Satellitenassembly ist. Der Standardwert aller nicht kompilierbaren Ressourcen ist `Localizable` festgelegt `true`.  
   
  **Lokalisieren des Dialogfelds „Ausführen”**  
   

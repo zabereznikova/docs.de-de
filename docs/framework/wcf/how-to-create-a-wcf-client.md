@@ -1,19 +1,19 @@
 ---
 title: 'Gewusst wie: Erstellen eines Windows Communication Foundation-Clients'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -48,7 +48,7 @@ Dies ist die vierte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
   
 3.  Fügen Sie einen Verweis auf System.ServiceModel auf das Projekt "gettingstartedclient", indem Sie mit der rechten Maustaste die **Verweis** Ordner unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer und wählen **hinzufügen** Verweis. In der **Verweis hinzufügen** Dialogfeld wählen **Framework** auf der linken Seite des Dialogfelds. Geben Sie im Textfeld Assemblys suchen`System.ServiceModel` ein. Wählen Sie im mittleren Abschnitt des Dialogfelds **System.ServiceModel**, klicken Sie auf die **hinzufügen** aus, und klicken Sie auf die **schließen** Schaltfläche. Speichern Sie die Projektmappe, indem Sie auf die **alle speichern** Schaltfläche unterhalb des Hauptmenüs.  
   
-4.  Als Nächstes fügen Sie einen Dienstverweis auf den Rechnerdienst hinzu. Zuvor müssen Sie die GettingStartedHost-Konsolenanwendung starten. Nachdem der Host ausgeführt wird können den Ordner "Verweise" unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer mit der rechten Maustaste und wählen Sie Dienstverweis hinzufügen, und geben in der folgenden URL in das Adressfeld ein, der das Dialogfeld "Dienstverweis hinzufügen": HYPERLINK "http:/ / Localhost:8000/ServiceModelSamples/Service "http://localhost: 8000/ServiceModelSamples/Service, und klicken Sie auf die **Go** Schaltfläche. Anschließend wird im Listenfeld Dienste der CalculatorService angezeigt. Doppelklicken Sie auf CalculatorService, um den Dienst zu erweitern und die vom Dienst implementierten Dienstverträge anzuzeigen. Lassen Sie den Standardnamespace unverändert ist, und klicken Sie auf die **OK** Schaltfläche.  
+4.  Als Nächstes fügen Sie einen Dienstverweis auf den Rechnerdienst hinzu. Zuvor müssen Sie die GettingStartedHost-Konsolenanwendung starten. Nachdem der Host ausgeführt wird können den Ordner "Verweise" unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer mit der rechten Maustaste und wählen Sie Dienstverweis hinzufügen, und geben in der folgenden URL in das Adressfeld ein, der das Dialogfeld "Dienstverweis hinzufügen": HYPERLINK "http://Localhost:8000/ServiceModelSamples/Service“ http://localhost:8000/ServiceModelSamples/Service und klicken Sie auf die **Go** Schaltfläche. Anschließend wird im Listenfeld Dienste der CalculatorService angezeigt. Doppelklicken Sie auf CalculatorService, um den Dienst zu erweitern und die vom Dienst implementierten Dienstverträge anzuzeigen. Lassen Sie den Standardnamespace unverändert ist, und klicken Sie auf die **OK** Schaltfläche.  
   
      Wenn Sie mit Visual Studio einen Verweis auf einen Dienst hinzufügen, wird im Projektmappen-Explorer unter dem GettingStartedClient-Projekt unter dem Ordner Dienstverweise ein neuer Eintrag angezeigt.  Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool eine Quellcodedatei und die Datei "App.config" generiert werden.  
   

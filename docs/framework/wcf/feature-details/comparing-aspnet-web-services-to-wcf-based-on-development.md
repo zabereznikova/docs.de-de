@@ -1,24 +1,26 @@
 ---
 title: Vergleichen von ASP.NET-Webdiensten mit WCF auf Grundlage der Entwicklung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Vergleichen von ASP.NET-Webdiensten mit WCF auf Grundlage der Entwicklung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] besitzt eine ASP.NET-Kompatibilitätsmodusoption, mit der die Programmierung und Konfiguration von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen entsprechend den ASP.NET-Webdiensten und das Imitieren von deren Verhalten ermöglicht wird. In den folgenden Abschnitten werden ASP.NET-Webdienste und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgehend von den Anforderungen der Anwendungsentwicklung mithilfe beider Technologien verglichen.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  In diesem Beispiel erfahren Sie, wie Adressen für mindestens ein Transportprotokoll bei der Erstellung von <xref:System.ServiceModel.ServiceHost> angegeben werden. Diese Adressen werden als Basisadressen bezeichnet.  
   
- Die für einen beliebigen Endpunkt eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts angegebene Adresse ist eine Adresse, die relativ zu einer Basisadresse des Endpunkthosts ist. Der Host kann über eine Basisadresse für jedes Kommunikationstransportprotokoll verfügen. In der Beispielkonfiguration in der vorangegangenen Konfigurationsdatei verwendet die für den Endpunkt gewählte <xref:System.ServiceModel.BasicHttpBinding> HTTP als Transportprotokoll, sodass die Adresse des Endpunkts (`EchoService`) relativ zur HTTP-Basisadresse des Hosts ist. Im Fall des Hosts im vorhergehenden Beispiel lautet die HTTP-Basisadresse http://www.contoso.com:8000/. Für einen in IIS oder WAS gehosteten Dienst ist die Basisadresse die URL der Dienstdatei des Diensts.  
+ Die für einen beliebigen Endpunkt eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts angegebene Adresse ist eine Adresse, die relativ zu einer Basisadresse des Endpunkthosts ist. Der Host kann über eine Basisadresse für jedes Kommunikationstransportprotokoll verfügen. In der Beispielkonfiguration in der vorangegangenen Konfigurationsdatei verwendet die für den Endpunkt gewählte <xref:System.ServiceModel.BasicHttpBinding> HTTP als Transportprotokoll, sodass die Adresse des Endpunkts (`EchoService`) relativ zur HTTP-Basisadresse des Hosts ist. Im Fall des Hosts im vorhergehenden Beispiel, ist die HTTP-Basisadresse http://www.contoso.com:8000/. Für einen in IIS oder WAS gehosteten Dienst ist die Basisadresse die URL der Dienstdatei des Diensts.  
   
  Nur in IIS oder WAS gehostete Dienste, die ausschließlich mit HTTP als Transportprotokoll konfiguriert sind, können zum Verwenden der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-ASP.NET-Kompatibilitätsmodusoption veranlasst werden. Das Aktivieren dieser Option erfordert die folgenden Schritte.  
   
