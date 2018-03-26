@@ -1,38 +1,39 @@
 ---
 title: 'Gewusst wie: Erstellen einer Liste von Elementen'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: c97f2fa5b20deeebc90cad3d7cc732d056242be4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="6ddd8-102">Gewusst wie: Erstellen einer Liste von Elementen</span><span class="sxs-lookup"><span data-stu-id="6ddd8-102">How to: Create a List of Items</span></span>
-<span data-ttu-id="6ddd8-103">Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse.</span><span class="sxs-lookup"><span data-stu-id="6ddd8-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="6ddd8-104">Die Liste soll das Thema unterstützen [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span><span class="sxs-lookup"><span data-stu-id="6ddd8-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="6ddd8-105">Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt.</span><span class="sxs-lookup"><span data-stu-id="6ddd8-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="6ddd8-106">Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.</span><span class="sxs-lookup"><span data-stu-id="6ddd8-106">The code defines the items in the list of students by using object initializers.</span></span>  
+# <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="a84bf-102">Gewusst wie: Erstellen einer Liste von Elementen</span><span class="sxs-lookup"><span data-stu-id="a84bf-102">How to: Create a List of Items</span></span>
+<span data-ttu-id="a84bf-103">Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse.</span><span class="sxs-lookup"><span data-stu-id="a84bf-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="a84bf-104">Die Liste soll das Thema unterstützen [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span><span class="sxs-lookup"><span data-stu-id="a84bf-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="a84bf-105">Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt.</span><span class="sxs-lookup"><span data-stu-id="a84bf-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="a84bf-106">Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.</span><span class="sxs-lookup"><span data-stu-id="a84bf-106">The code defines the items in the list of students by using object initializers.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6ddd8-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6ddd8-107">Example</span></span>  
- <span data-ttu-id="6ddd8-108">Wenn Sie mit der exemplarischen Vorgehensweise arbeiten, können Sie diesen Code für die Datei "Module1.vb" des Projekts verwenden, die hier erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="6ddd8-108">If you are working on the walkthrough, you can use this code for the Module1.vb file of the project that is created there.</span></span> <span data-ttu-id="6ddd8-109">Ersetzen Sie einfach die mit *** markierten Zeilen in der `Main`-Methode durch die Abfragen und Abfrageausführungen, die in der exemplarischen Vorgehensweise bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="6ddd8-109">Just replace the lines marked with **** in the `Main` method with the queries and query executions that are provided in the walkthrough.</span></span>  
+## <a name="example"></a><span data-ttu-id="a84bf-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a84bf-107">Example</span></span>  
+ <span data-ttu-id="a84bf-108">Wenn Sie mit der exemplarischen Vorgehensweise arbeiten, können Sie diesen Code für die Datei "Module1.vb" des Projekts verwenden, die hier erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="a84bf-108">If you are working on the walkthrough, you can use this code for the Module1.vb file of the project that is created there.</span></span> <span data-ttu-id="a84bf-109">Ersetzen Sie einfach die mit \*\*\* markierten Zeilen in der `Main`-Methode durch die Abfragen und Abfrageausführungen, die in der exemplarischen Vorgehensweise bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="a84bf-109">Just replace the lines marked with **** in the `Main` method with the queries and query executions that are provided in the walkthrough.</span></span>  
   
  [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="6ddd8-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ddd8-110">See Also</span></span>  
- [<span data-ttu-id="6ddd8-111">Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ddd8-111">Walkthrough: Writing Queries in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- [<span data-ttu-id="6ddd8-112">Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ddd8-112">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [<span data-ttu-id="6ddd8-113">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="6ddd8-113">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [<span data-ttu-id="6ddd8-114">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ddd8-114">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [<span data-ttu-id="6ddd8-115">LINQ</span><span class="sxs-lookup"><span data-stu-id="6ddd8-115">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [<span data-ttu-id="6ddd8-116">Abfragen</span><span class="sxs-lookup"><span data-stu-id="6ddd8-116">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)
+## <a name="see-also"></a><span data-ttu-id="a84bf-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a84bf-110">See Also</span></span>  
+ [<span data-ttu-id="a84bf-111">Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a84bf-111">Walkthrough: Writing Queries in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [<span data-ttu-id="a84bf-112">Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a84bf-112">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="a84bf-113">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="a84bf-113">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="a84bf-114">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a84bf-114">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="a84bf-115">LINQ</span><span class="sxs-lookup"><span data-stu-id="a84bf-115">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="a84bf-116">Abfragen</span><span class="sxs-lookup"><span data-stu-id="a84bf-116">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

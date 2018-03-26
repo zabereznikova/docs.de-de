@@ -1,1 +1,1 @@
-<span data-ttu-id="f9ea3-101">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="f9ea3-101">Windows 8.1</span></span>
+<span data-ttu-id="00d2e-101">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="00d2e-101">Windows 8.1</span></span>

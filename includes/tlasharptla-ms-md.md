@@ -1,1 +1,1 @@
-<span data-ttu-id="51a22-101">Microsoft</span><span class="sxs-lookup"><span data-stu-id="51a22-101">Microsoft</span></span>
+<span data-ttu-id="c3ce3-101">Microsoft</span><span class="sxs-lookup"><span data-stu-id="c3ce3-101">Microsoft</span></span>

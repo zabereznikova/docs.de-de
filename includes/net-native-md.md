@@ -1,1 +1,1 @@
-<span data-ttu-id="3bd79-101">.NET systemeigen</span><span class="sxs-lookup"><span data-stu-id="3bd79-101">.NET Native</span></span>
+<span data-ttu-id="2f64f-101">.NET systemeigen</span><span class="sxs-lookup"><span data-stu-id="2f64f-101">.NET Native</span></span>

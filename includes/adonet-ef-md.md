@@ -1,1 +1,1 @@
-<span data-ttu-id="95164-101">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="95164-101">Entity Framework</span></span>
+<span data-ttu-id="7cf54-101">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="7cf54-101">Entity Framework</span></span>
