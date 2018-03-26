@@ -40,7 +40,7 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 4.  Hinzufügen `bindingNamespace=``http://Microsoft.ServiceModel.Samples` dem endpunkttag in der Datei App.config für den Dienst.  
   
-5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (), um die Funktion des Diensts zu überprüfen.  
+5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (http://localhost:8000/ServiceModelSamples/Service) um die Funktion des Diensts zu überprüfen.  
   
 6.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   

@@ -1,20 +1,20 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Hyperlink control type
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Xansky
 ms.author: mhopkins
 manager: markl
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/19/2018
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Ja|Alle Linksteuerelemente müssen das Invoke-Muster unterstützen.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Variabel|Linksteuerelemente sollten das Value-Steuerelementmuster unterstützen, wenn der Link für den Benutzer nutzbare und sinnvolle Informationen enthält.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Beispiel: „http://www...“|Eine URL für eine Internet- oder Intranetadresse ist ein Beispiel für einen Link, der für den Benutzer sinnvolle Informationen enthält. Ein programmgesteuerter Link ist dagegen nur für eine Anwendung sinnvoll und wird für die Value-Eigenschaft nicht empfohlen.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Beispiel: "http://www...."|Eine URL für eine Internet- oder Intranetadresse ist ein Beispiel für einen Link, der für den Benutzer sinnvolle Informationen enthält. Ein programmgesteuerter Link ist dagegen nur für eine Anwendung sinnvoll und wird für die Value-Eigenschaft nicht empfohlen.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
