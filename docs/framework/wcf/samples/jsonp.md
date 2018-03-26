@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  Öffnen Sie die Projektmappe für das JSONP-Beispiel.  
   
-2.  Drücken Sie F5, um die HYPERLINK "Http://localhost:26648/JSONPClientPage.aspx" Http://localhost:26648/JSONPClientPage.aspx im Browser zu starten.  
+2.  Drücken Sie F5, um die HYPERLINK "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx im Browser zu starten.  
   
 3.  Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Address" mit Werten aufgefüllt werden.  Diese Werte wurden von einem Aufruf des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts angegeben, nachdem der Browser das Rendern der Seite beendet hat.
