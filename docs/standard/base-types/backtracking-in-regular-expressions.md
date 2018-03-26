@@ -1,12 +1,12 @@
 ---
-title: "Backtracking in regulären Ausdrücken"
-ms.custom: 
+title: Backtracking in regulären Ausdrücken
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -30,10 +30,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung des Moduls für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich das Modul für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 3 zurück. Es wird ermittelt, dass zwei zusätzliche "a"-Zeichen vorhanden sind, die einer zusätzlichen Erfassungsgruppe zugewiesen werden sollen. Allerdings schlägt die Überprüfung des Zeichenfolgenendes fehl. Anschließend kehrt das Modul zur Übereinstimmung 3 zurück und versucht, die zwei zusätzlichen "a"-Zeichen in zwei zusätzlichen Erfassungsgruppen abzugleichen. Die Überprüfung des Zeichenfolgenendes schlägt weiterhin fehl. Diese fehlgeschlagenen Übereinstimmungen erfordern 12 Vergleiche. Bisher wurden insgesamt 25 Vergleiche ausgeführt.  
   
- Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis das Modul für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um ein O(2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
+ Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis das Modul für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt, wird dieser Vergleich eine O (2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* ist die Anzahl der Zeichen in der Eingabezeichenfolge. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
   
  [Zurück zum Anfang](#top)  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/01/2018
   
  Das erste Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/01/2018
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -204,7 +204,7 @@ ms.lasthandoff: 02/01/2018
   
  Das erste Muster für reguläre Ausdrücke `^(([A-Z]\w*)+\.)*[A-Z]\w*$`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`([A-Z]\w*)+\.`|Übereinstimmung mit einem Buchstaben (A-Z), gefolgt von keinem oder mehreren Wortzeichen (einmaliges oder mehrmaliges Vorkommen), gefolgt von einem Punkt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 02/01/2018
   
  Das zweite Muster für reguläre Ausdrücke `^((?=[A-Z])\w+\.)*[A-Z]\w*$`verwendet eine positive Lookaheadassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`(?=[A-Z])`|Lookahead zum ersten Zeichen und die Suche nach Übereinstimmungen fortsetzen, wenn es sich um einen Buchstaben (A-Z) handelt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -226,7 +226,7 @@ ms.lasthandoff: 02/01/2018
  [Zurück zum Anfang](#top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reguläre Ausdrücke in .NET](../../../docs/standard/base-types/regular-expressions.md)  
+ [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)  
  [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
  [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
