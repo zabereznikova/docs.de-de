@@ -1,11 +1,11 @@
 ---
 title: Netzwerkprogrammierung in .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Einführung in austauschbare Protokolle](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Beschreibt, wie auf eine Internetressource ohne Berücksichtigung des benötigten Zugriffsprotokolls zugegriffen werden kann.  
   
@@ -94,7 +96,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
  Links zu herunterladbaren Beispielen für Netzwerkprogrammierung, in denen Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> verwendet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Net?displayProperty=nameWithType>  
  Stellt für viele der Protokolle, die gegenwärtig in Netzwerken verwendet werden, eine einfache Programmierschnittstelle bereit. Die Klassen <xref:System.Net.WebRequest?displayProperty=nameWithType> und <xref:System.Net.WebResponse?displayProperty=nameWithType> in diesem Namespace sind die Grundlage für austauschbare Protokolle.  
   
@@ -144,6 +146,8 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  Stellt Unterstützung für die Konfiguration der Authentifizierung mit erweitertem Schutz für Anwendungen zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
+
+ [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Netzwerkbeispiele für .NET in der MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

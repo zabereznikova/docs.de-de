@@ -1,6 +1,6 @@
 ---
 title: .NET Core-Tutorials
-description: "Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen."
+description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>.NET Core-Tutorials
 
@@ -30,7 +31,7 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Testen einer Klassenbibliothek](testing-library-with-visual-studio.md)
 - [Nutzen einer Klassenbibliothek](consuming-library-with-visual-studio.md)
 - [Erstellen einer vollständigen C#-.NET Core-Projektmappe unter Windows](using-on-windows-full-solution.md)
-- [NoSQL-Tutorial: Erstellen einer DocumentDB-C#-Konsolenanwendung unter .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: Erste Schritte mit der SQL-API und .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
 
