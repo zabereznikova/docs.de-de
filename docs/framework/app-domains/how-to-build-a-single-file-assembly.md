@@ -1,12 +1,13 @@
 ---
 title: 'Gewusst wie: Erstellen einer Einzeldateiassembly'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,84 +21,85 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80fa584a21a3bdfb9392021959d777139daafd04
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="05612-102">Gewusst wie: Erstellen einer Einzeldateiassembly</span><span class="sxs-lookup"><span data-stu-id="05612-102">How to: Build a Single-File Assembly</span></span>
-<span data-ttu-id="05612-103">Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="05612-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="05612-104">Sie können Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] verwenden, um eine Einzeldateiassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="05612-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="05612-105">Standardmäßig erstellt der Compiler eine Assemblydatei mit einer „.exe“-Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="05612-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  
+# <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="e546f-102">Gewusst wie: Erstellen einer Einzeldateiassembly</span><span class="sxs-lookup"><span data-stu-id="e546f-102">How to: Build a Single-File Assembly</span></span>
+<span data-ttu-id="e546f-103">Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="e546f-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="e546f-104">Sie können Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] verwenden, um eine Einzeldateiassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e546f-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="e546f-105">Standardmäßig erstellt der Compiler eine Assemblydatei mit einer „.exe“-Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="e546f-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]<span data-ttu-id="05612-106"> für C# und Visual Basic kann nur genutzt werden, um Einzeldateiassemblys zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="05612-106"> for C# and Visual Basic can be used only to create single-file assemblies.</span></span> <span data-ttu-id="05612-107">Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] für Visual C++ verwenden.</span><span class="sxs-lookup"><span data-stu-id="05612-107">If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.</span></span>  
+>  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]<span data-ttu-id="e546f-106"> für C# und Visual Basic kann nur genutzt werden, um Einzeldateiassemblys zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e546f-106"> for C# and Visual Basic can be used only to create single-file assemblies.</span></span> <span data-ttu-id="e546f-107">Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] für Visual C++ verwenden.</span><span class="sxs-lookup"><span data-stu-id="e546f-107">If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.</span></span>  
   
- <span data-ttu-id="05612-108">Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Befehlszeilencompiler erstellen.</span><span class="sxs-lookup"><span data-stu-id="05612-108">The following procedures show how to create single-file assemblies using command-line compilers.</span></span>  
+ <span data-ttu-id="e546f-108">Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Befehlszeilencompiler erstellen.</span><span class="sxs-lookup"><span data-stu-id="e546f-108">The following procedures show how to create single-file assemblies using command-line compilers.</span></span>  
   
-### <a name="to-create-an-assembly-with-an-exe-extension"></a><span data-ttu-id="05612-109">So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung</span><span class="sxs-lookup"><span data-stu-id="05612-109">To create an assembly with an .exe extension</span></span>  
+### <a name="to-create-an-assembly-with-an-exe-extension"></a><span data-ttu-id="e546f-109">So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung</span><span class="sxs-lookup"><span data-stu-id="e546f-109">To create an assembly with an .exe extension</span></span>  
   
-1.  <span data-ttu-id="05612-110">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="05612-110">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="e546f-110">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="e546f-110">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="05612-111">\<*compilerbefehl*> \<*modulname*></span><span class="sxs-lookup"><span data-stu-id="05612-111">\<*compiler command*> \<*module name*></span></span>  
+     <span data-ttu-id="e546f-111">\<*compilerbefehl*> \<*modulname*></span><span class="sxs-lookup"><span data-stu-id="e546f-111">\<*compiler command*> \<*module name*></span></span>  
   
-     <span data-ttu-id="05612-112">In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="05612-112">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span>  
+     <span data-ttu-id="e546f-112">In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="e546f-112">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- <span data-ttu-id="05612-113">Das folgende Beispiel erstellt eine Assembly namens `myCode.exe` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="05612-113">The following example creates an assembly named `myCode.exe` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="e546f-113">Das folgende Beispiel erstellt eine Assembly namens `myCode.exe` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="e546f-113">The following example creates an assembly named `myCode.exe` from a code module called `myCode`.</span></span>  
   
-```csharp  
+```console
 csc myCode.cs  
 ```  
-  
-```vb  
+
+```console
 vbc myCode.vb  
 ```  
   
-#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a><span data-ttu-id="05612-114">So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung und geben den Namen der Ausgabedatei an</span><span class="sxs-lookup"><span data-stu-id="05612-114">To create an assembly with an .exe extension and specify the output file name</span></span>  
+#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a><span data-ttu-id="e546f-114">So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung und geben den Namen der Ausgabedatei an</span><span class="sxs-lookup"><span data-stu-id="e546f-114">To create an assembly with an .exe extension and specify the output file name</span></span>  
   
-1.  <span data-ttu-id="05612-115">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="05612-115">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="e546f-115">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="e546f-115">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="05612-116">\<*compilerbefehl*> **/out:**\<*dateiname*> \<*modulname*></span><span class="sxs-lookup"><span data-stu-id="05612-116">\<*compiler command*> **/out:**\<*file name*> \<*module name*></span></span>  
+     <span data-ttu-id="e546f-116">\<*compilerbefehl*> **/out:**\<*dateiname*> \<*modulname*></span><span class="sxs-lookup"><span data-stu-id="e546f-116">\<*compiler command*> **/out:**\<*file name*> \<*module name*></span></span>  
   
-     <span data-ttu-id="05612-117">In diesem Befehl ist *compilerbefehl* der Compilerbefehl für die in Ihrem Codemodul verwendete Sprache, *dateiname* ist der Name der Ausgabedatei und *modulname* der Name des Codemodul, das in die Assembly kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="05612-117">In this command, *compiler command* is the compiler command for the language used in your code module, *file name* is the output file name, and *module name* is the name of the code module to compile into the assembly.</span></span>  
+     <span data-ttu-id="e546f-117">In diesem Befehl ist *compilerbefehl* der Compilerbefehl für die in Ihrem Codemodul verwendete Sprache, *dateiname* ist der Name der Ausgabedatei und *modulname* der Name des Codemodul, das in die Assembly kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="e546f-117">In this command, *compiler command* is the compiler command for the language used in your code module, *file name* is the output file name, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- <span data-ttu-id="05612-118">Das folgende Beispiel erstellt eine Assembly namens `myAssembly.exe` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="05612-118">The following example creates an assembly named `myAssembly.exe` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="e546f-118">Das folgende Beispiel erstellt eine Assembly namens `myAssembly.exe` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="e546f-118">The following example creates an assembly named `myAssembly.exe` from a code module called `myCode`.</span></span>  
   
-```csharp  
-csc /out:myAssembly.exe myCode.cs  
+```console  
+csc -out:myAssembly.exe myCode.cs  
 ```  
   
-```vb  
-vbc /out:myAssembly.exe myCode.vb  
+```console
+vbc -out:myAssembly.exe myCode.vb  
 ```  
   
-## <a name="creating-library-assemblies"></a><span data-ttu-id="05612-119">Erstellen von Bibliothekassemblys</span><span class="sxs-lookup"><span data-stu-id="05612-119">Creating Library Assemblies</span></span>  
- <span data-ttu-id="05612-120">Eine Bibliotheksassembly ist ähnlich wie eine Klassenbibliothek.</span><span class="sxs-lookup"><span data-stu-id="05612-120">A library assembly is similar to a class library.</span></span> <span data-ttu-id="05612-121">Sie enthält Typen, die von anderen Assemblys verwiesen werden, jedoch besitzt sie keinen Einstiegspunkt zum Starten der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="05612-121">It contains types that will be referenced by other assemblies, but it has no entry point to begin execution.</span></span>  
+## <a name="creating-library-assemblies"></a><span data-ttu-id="e546f-119">Erstellen von Bibliothekassemblys</span><span class="sxs-lookup"><span data-stu-id="e546f-119">Creating Library Assemblies</span></span>  
+ <span data-ttu-id="e546f-120">Eine Bibliotheksassembly ist ähnlich wie eine Klassenbibliothek.</span><span class="sxs-lookup"><span data-stu-id="e546f-120">A library assembly is similar to a class library.</span></span> <span data-ttu-id="e546f-121">Sie enthält Typen, die von anderen Assemblys verwiesen werden, jedoch besitzt sie keinen Einstiegspunkt zum Starten der Ausführung.</span><span class="sxs-lookup"><span data-stu-id="e546f-121">It contains types that will be referenced by other assemblies, but it has no entry point to begin execution.</span></span>  
   
-#### <a name="to-create-a-library-assembly"></a><span data-ttu-id="05612-122">So erstellen Sie eine Bibliotheksassembly</span><span class="sxs-lookup"><span data-stu-id="05612-122">To create a library assembly</span></span>  
+#### <a name="to-create-a-library-assembly"></a><span data-ttu-id="e546f-122">So erstellen Sie eine Bibliotheksassembly</span><span class="sxs-lookup"><span data-stu-id="e546f-122">To create a library assembly</span></span>  
   
-1.  <span data-ttu-id="05612-123">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="05612-123">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="e546f-123">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="e546f-123">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="05612-124">\<*compilerbefehl*> **/t:library** \<*modulname*></span><span class="sxs-lookup"><span data-stu-id="05612-124">\<*compiler command*> **/t:library** \<*module name*></span></span>  
+     <span data-ttu-id="e546f-124">\<*Compilerbefehl*> **/t:library** \<*Modulname*></span><span class="sxs-lookup"><span data-stu-id="e546f-124">\<*compiler command*> **-t:library** \<*module name*></span></span>  
   
-     <span data-ttu-id="05612-125">In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="05612-125">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span> <span data-ttu-id="05612-126">Sie können auch andere Compileroptionen verwenden, z.B. die Option **/out:**.</span><span class="sxs-lookup"><span data-stu-id="05612-126">You can also use other compiler options, such as the **/out:** option.</span></span>  
+     <span data-ttu-id="e546f-125">In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="e546f-125">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span> <span data-ttu-id="e546f-126">Sie können auch andere Compileroptionen verwenden, z.B. die Option **-out:**.</span><span class="sxs-lookup"><span data-stu-id="e546f-126">You can also use other compiler options, such as the **-out:** option.</span></span>  
   
- <span data-ttu-id="05612-127">Das folgende Beispiel erstellt eine Bibliotheksassembly namens `myCodeAssembly.dll` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="05612-127">The following example creates a library assembly named `myCodeAssembly.dll` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="e546f-127">Das folgende Beispiel erstellt eine Bibliotheksassembly namens `myCodeAssembly.dll` aus einem Codemodul namens `myCode`.</span><span class="sxs-lookup"><span data-stu-id="e546f-127">The following example creates a library assembly named `myCodeAssembly.dll` from a code module called `myCode`.</span></span>  
   
-```csharp  
-csc /out:myCodeLibrary.dll /t:library myCode.cs  
+```console  
+csc -out:myCodeLibrary.dll -t:library myCode.cs  
 ```  
   
-```vb  
-vbc /out:myCodeLibrary.dll /t:library myCode.vb  
+```console
+vbc -out:myCodeLibrary.dll -t:library myCode.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="05612-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="05612-128">See Also</span></span>  
- [<span data-ttu-id="05612-129">Erstellen von Assemblys</span><span class="sxs-lookup"><span data-stu-id="05612-129">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
- [<span data-ttu-id="05612-130">Mehrfachdateiassemblys</span><span class="sxs-lookup"><span data-stu-id="05612-130">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
- [<span data-ttu-id="05612-131">Gewusst wie: Erstellen einer Mehrfachdateiassembly</span><span class="sxs-lookup"><span data-stu-id="05612-131">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [<span data-ttu-id="05612-132">Programmieren mit Assemblys</span><span class="sxs-lookup"><span data-stu-id="05612-132">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="e546f-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e546f-128">See Also</span></span>  
+ [<span data-ttu-id="e546f-129">Erstellen von Assemblys</span><span class="sxs-lookup"><span data-stu-id="e546f-129">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ [<span data-ttu-id="e546f-130">Mehrfachdateiassemblys</span><span class="sxs-lookup"><span data-stu-id="e546f-130">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [<span data-ttu-id="e546f-131">Gewusst wie: Erstellen einer Mehrfachdateiassembly</span><span class="sxs-lookup"><span data-stu-id="e546f-131">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [<span data-ttu-id="e546f-132">Programmieren mit Assemblys</span><span class="sxs-lookup"><span data-stu-id="e546f-132">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
