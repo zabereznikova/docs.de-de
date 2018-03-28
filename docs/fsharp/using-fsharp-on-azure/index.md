@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 
@@ -69,14 +69,14 @@ Azure Storage kann auch in Verbindung mit Azure Functions über die deklarative 
 * [Implementing Spark Apps in F# using Mobius (Implementieren von Spark-APps in F# mit Mobius)](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
 * [Example F# Spark Apps using Mobius (Beispiel einer F#-Spark-App mithilfe von Mobius)](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>Verwenden von Azure DocumentDB mit f# #
+## <a name="using-azure-cosmos-db-with-f"></a>Verwenden von Azure-Cosmos-DB mit f# #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) ist ein NoSQL-Dienst für hochverfügbare, global verteilte Apps.
+[Azure Cosmos-DB](https://azure.microsoft.com/services/cosmos-db) ist ein NoSQL-Dienst für hoch verfügbare, Global verteilten apps.
 
-Azure DocumentDB kann mit F# auf zwei Arten verwendet werden:
+Azure Cosmos-Datenbank kann auf zwei Arten mit f# verwendet werden:
 
-1. Durch die Erstellung von Azure Functions mit F#, die auf Änderungen in DocumentDB-Sammlungen reagieren oder diese verursachen. (Weitere Informationen finden Sie unter [DocumentDB-Bindungen in Azure Functions](/azure/azure-functions/functions-bindings-documentdb)) oder
-2. Mithilfe der [.NET SDK für Azure](/azure/documentdb/documentdb-get-started-quickstart). Beachten Sie, dass diese Beispiele in C# geschrieben sind.
+1. Durch die Erstellung von Azure-Funktionen in f# die reagieren oder dazu führen, dass Änderungen an Azure Cosmos-DB-Sammlungen. Finden Sie unter [Azure Cosmos-DB-Bindungen für Azure-Funktionen](/azure/azure-functions/functions-bindings-cosmosdb), oder
+2. Mithilfe der [Azure Cosmos DB .NET SDK für die SQL-API](/azure/cosmos-db/sql-api-sdk-dotnet). Die Beispiele sind in C# geschrieben.
 
 ## <a name="using-azure-event-hubs-with-f"></a>Verwenden von Azure Event Hubs mit f# #
 
@@ -119,7 +119,7 @@ Timer können in F# implementiert und in Azure durch einen [Timerauslöser in Az
 
 Azure-VMs können programmgesteuert bereitgestellt und von F#-Skripts mithilfe der Microsoft.Azure.Management-Pakete und APIs verwaltet werden. Bespiele finden Sie unter [Erste Schritte mit den Verwaltungsbibliotheken für .NET](https://msdn.microsoft.com/library/dn722415.aspx) und [Azure Resource Manager-Bereitstellung im Vergleich zur klassischen Bereitstellung: Grundlegendes zu Bereitstellungsmodellen und zum Status von Ressourcen](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Auch andere Azure-Ressourcen können möglicherweise auch von f#-Skripts bereitgestellt und verwaltet werden, die über die gleichen Komponenten verfügen. Beispielsweise können Sie Speicherkonten erstellen, Azure Cloud Services bereitstellen, Azure DocumentDB-Instanzen erstellen und Azure Notification Hubs programmgesteuert von F#-Skripts verwalten.
+Auch andere Azure-Ressourcen können möglicherweise auch von f#-Skripts bereitgestellt und verwaltet werden, die über die gleichen Komponenten verfügen. Z. B. können Sie Speicherkonten erstellen, Bereitstellen von Azure Cloud Services, Azure-Cosmos-DB-Instanzen erstellen und programmgesteuert verwalten von Azure Notification Hubs von F#-Skripts.
 
 Die Verwendung von F#-Skripts zum Bereitstellen und Verwalten von Ressourcen ist normalerweise nicht notwendig. Beispielsweise können Azure-Ressourcen möglicherweise auch direkt von JSON-Vorlagebeschreibungen bereitgestellt werden, die parametrisiert werden können. Informationen, einschließlich Beispiele wie die [Azure-Schnellstartvorlagen](https://azure.microsoft.com/documentation/templates/), finden Sie unter [Bewährte Methoden für das Erstellen von Azure Resource Manager-Vorlagen](/azure/azure-resource-manager/resource-manager-template-best-practices).
 

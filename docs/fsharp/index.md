@@ -1,6 +1,6 @@
 ---
-title: "Leitfaden für F#"
-description: "Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für f#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird."
+title: Leitfaden für F#
+description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für f#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
@@ -54,11 +54,14 @@ F# ist zur Steigerung der Produktivität im Wesentlichen. Die toolunterstützung
 
 [Erste Schritte mit f# mit der .NET Core-CLI](get-started/get-started-command-line.md) , wenn Sie die Befehlszeilentools verwenden möchten.
 
+[Erste Schritte mit F#- und Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) für die mobile-Programmierung mit f#.
+
 ## <a name="references"></a>Verweise
 
 [F#-Sprachreferenz](language-reference/index.md) ist die offizielle, eine umfassende Referenz für alle F#-Funktionen. Jeder Artikel erklärt die Syntax und zeigt Codebeispiele. Die Filterleiste können im Inhaltsverzeichnis Sie um bestimmte Artikeln zu suchen.
 
 [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) ist die API-Referenz für die f#-Kernbibliothek.
+
 
 ## <a name="additional-guides"></a>Zusätzliche Anleitungen
 
