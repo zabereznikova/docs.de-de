@@ -1,5 +1,5 @@
 ---
-title: "Modifizierer für in-Parameter (C#-Verweis)"
+title: Modifizierer für in-Parameter (C#-Verweis)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -60,7 +60,10 @@ Sie können keines der Schlüsselwörter `in`, `ref` und `out` für die folgende
   
 - Iterator-Methoden, die eine [yield return](../../../csharp/language-reference/keywords/yield.md)- oder `yield break`-Anweisung enthalten.  
 
-In der Regel deklarieren Sie `in`-Argumente, damit keine Kopiervorgänge durchgeführt werden müssen, die für das Übergeben von Argumenten nach Werten notwendig sind. Dies ist besonders nützlich, wenn Argumente Strukturen oder Arrays mit Strukturen darstellen.
+In der Regel deklarieren Sie `in`-Argumente, damit keine Kopiervorgänge durchgeführt werden müssen, die für das Übergeben von Argumenten nach Werten notwendig sind. Dies ist vor allem nützlich, wenn Argumente Werttypen wie Strukturen sind, bei denen Kopiervorgänge aufwendiger sind als Übergaben per Verweis.
+
+> [!WARNING]
+>  `in`-Parameter können noch ressourcenintensiver sein, wenn sie falsch verwendet werden. Der Compiler merkt es möglicherweise nicht, wenn Membermethoden den Status der Struktur ändern. Wenn der Compiler nicht sicherstellen kann, dass das Objekt nicht geändert wird, erstellt er defensiv eine Kopie und ruft damit Memberverweise auf. Alle etwaigen Änderungen werden an der Defensivkopie vorgenommen. Es gibt zwei Möglichkeiten, um diese Kopien zu vermeiden: das Übergeben von `in`-Parametern als `in`-Argumente oder das Definieren von Strukturen als `readonly struct`.
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ In der Regel deklarieren Sie `in`-Argumente, damit keine Kopiervorgänge durchge
  [C#-Referenz](../../../csharp/language-reference/index.md)  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Methodenparameter](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Methodenparameter](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Verweissemantik mit Werttypen](../../../csharp/reference-semantics-with-value-types.md)

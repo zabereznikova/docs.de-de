@@ -1,6 +1,6 @@
 ---
 title: Entwerfen der Microserviceanwendungsschicht und Web-API
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen der Microserviceanwendungsschicht und Web-API"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen der Microserviceanwendungsschicht und Web-API
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Entwerfen der Microserviceanwendungsschicht und Web-API
 
@@ -29,7 +29,7 @@ Bei SOLID-Prinzipien handelt es sich um wichtige Techniken, die in jeder moderne
 
 -   das Liskovsche Substitutionsprinzip
 
--   das Prinzip der Umkehrtrennung (Inversion Segregation)
+-   das Schnittstellentrennungsprinzip
 
 -   das Prinzip der Abhängigkeitsumkehr (Dependency Inversion)
 
@@ -46,10 +46,10 @@ Ein weiteres Handbuch wäre erforderlich, um SOLID ausführlich zu behandeln. Di
 -   **SOLID: Fundamental OOP Principles(SOLID: grundlegende OOP-Prinzipien)**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection pattern (IoC-Container und das Dependency Injection-Muster)**
+-   **Inversion of Control Containers and the Dependency Injection pattern (Die Umkehrung von Steuerelementcontainern und das Dependency Injection-Muster)**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. New is Glue („New“ hält besser)**
+-   **Steve Smith. New is glue („New“ ist klebrig)**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 

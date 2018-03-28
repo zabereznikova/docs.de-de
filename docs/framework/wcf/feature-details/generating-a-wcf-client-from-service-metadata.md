@@ -33,7 +33,7 @@ In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe 
   
 -   DISCO-Anforderung (mithilfe der [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET Web Services) an die angegebene Adresse.  
   
- Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird durch die Aneinanderreihung von Benutzername, "@" und vollqualifiziertem Domänennamen (FQDN) gebildet. Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung mit der folgenden Fehlermeldung: **der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
+ Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird durch die Aneinanderreihung von Benutzername, "\@" und vollqualifiziertem Domänennamen (FQDN) gebildet. Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung mit der folgenden Fehlermeldung: **der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  

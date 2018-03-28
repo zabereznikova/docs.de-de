@@ -1,12 +1,8 @@
 ---
-title: "Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit"
-ms.custom: 
+title: Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung eines <xref:System.DateTime>-Werts oder eines <xref:System.DateTimeOffset>-Werts, der sich aus einem Formatierungsvorgang ergibt. Sie kann auch die Darstellung eines Datums- und Uhrzeitwerts definieren, der in einem Analysevorgang erforderlich ist, um die Zeichenfolge erfolgreich in ein Datum und eine Uhrzeit zu konvertieren. Benutzerdefinierte Formatzeichenfolgen bestehen aus einem oder mehreren benutzerdefinierten Formatbezeichnern für Datum und Uhrzeit. Alle Zeichenfolgen, bei denen es sich nicht um [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) handelt, werden als benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit interpretiert.  
@@ -101,7 +97,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 |"/"|Das Datumstrennzeichen.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*Zeichenfolge*"<br /><br /> '*Zeichenfolge*'|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|Definiert das nächste Zeichen als benutzerdefinierten Formatbezeichner.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von einzelnen benutzerdefinierten Formatbezeichnern](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|Das Escapezeichen.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals) und [Verwenden des Escapezeichens](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|Das Escapezeichen \|<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals) und [Verwenden des Escapezeichens](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |Jedes andere Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  In den folgenden Abschnitten finden Sie weitere Informationen zu den einzelnen benutzerdefinierten Formatbezeichnern für Datum- und Uhrzeit. Sofern nicht anders angegeben, erzeugen die einzelnen Bezeichner eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird.  
@@ -614,7 +610,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
  Der benutzerdefinierte Formatbezeichner ":" stellt das Trennzeichen für Zeitangaben dar, mit dem zwischen Stunden und Minuten unterschieden werden kann. Das entsprechende lokalisierte Trennzeichen für Zeitangaben wird aus der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur oder der angegebenen Kultur abgerufen.  
   
 > [!NOTE]
->  Um das Trennzeichen für Zeitangaben für ein bestimmtes Datum und eine Uhrzeit-Zeichenfolge zu ändern, geben Sie das Trennzeichen in ein Zeichenfolgenliteral-Trennzeichen. Z. B. die benutzerdefinierte Formatzeichenfolge `hh'_'dd'_'ss` erzeugt eine Ergebniszeichenfolge, die in dem "_" (Unterstrich) immer als Trennzeichen verwendet wird. Um das Trennzeichen für Zeitangaben für alle Termine für eine Kultur zu ändern, ändern Sie entweder Sie den Wert der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType>-Eigenschaft für die aktuelle Kultur, oder instanziieren Sie ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, weisen Sie das Zeichen der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>-Eigenschaft zu, und rufen Sie eine Überladung der Formatierungsmethode auf, die einen <xref:System.IFormatProvider>-Parameter enthält.  
+>  Um das Trennzeichen für Zeitangaben für ein bestimmtes Datum und eine Uhrzeit-Zeichenfolge zu ändern, geben Sie das Trennzeichen in ein Zeichenfolgenliteral-Trennzeichen. Die benutzerdefinierte Formatzeichenfolge `hh'_'dd'_'ss` erzeugt z.B. eine Ergebniszeichenfolge, in der \_ (Unterstrich) immer als Trennzeichen verwendet wird. Um das Trennzeichen für Zeitangaben für alle Termine für eine Kultur zu ändern, ändern Sie entweder Sie den Wert der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType>-Eigenschaft für die aktuelle Kultur, oder instanziieren Sie ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, weisen Sie das Zeichen der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>-Eigenschaft zu, und rufen Sie eine Überladung der Formatierungsmethode auf, die einen <xref:System.IFormatProvider>-Parameter enthält.  
   
  Wenn der Formatbezeichner ":" allein verwendet wird, d. h. ohne andere benutzerdefinierte Formatbezeichner, wird er als Standardformatbezeichner für Datum und Uhrzeit interpretiert, und eine <xref:System.FormatException> wird ausgelöst. Weitere Informationen zur Verwendung eines einzelnen Formatbezeichners finden Sie unter [Verwenden von einzelnen benutzerdefinierten Formatbezeichnern](#UsingSingleSpecifiers) weiter unten in diesem Thema.  
   
@@ -694,7 +690,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 ### <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung  
  Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge, die viele der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit enthält. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.  
   
- Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Constructor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
+ Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften  
  Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Geben Sie für den <xref:System.IFormatProvider>-Parameter ein <xref:System.Globalization.CultureInfo>-Objekt an, das eine Kultur oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt darstellt.  

@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Web-Anwendungsarchitektur
-description: Innovative Webanwendungen mit ASP.NET Core und Microsoft Azure konzipiert | Allgemeine Web-Anwendungsarchitektur
+title: Häufig verwendete Webanwendungsarchitekturen
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Azure | Häufig verwendete Webanwendungsarchitekturen
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -11,222 +11,222 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/23/2017
 ---
-#<a name="common-web-application-architectures"></a>Allgemeine Web-Anwendungsarchitektur
+#<a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
-> "Wenn Sie, dass guten Architektur aufwändig ist glauben, wiederholen Sie den fehlerhaften Architektur."  
-> _-Brian Agenturen Foote und Joseph Yoder_
+> „Wenn Sie denken, dass eine gute Architektur viel Geld kostet, dann haben Sie noch nicht mit einer schlechten gearbeitet.“  
+> _– Brian Foote und Joseph Yoder_
 
 ## <a name="summary"></a>Zusammenfassung
 
-Den meisten herkömmliche-.NET-Anwendungen bereitgestellt werden als einzelne Einheiten, die für eine ausführbare Datei oder eine einzelne Webanwendung, die in einer einzelnen IIS-Appdomain ausgeführt wird. Dies ist das einfachste Bereitstellungsmodell und viele interne und kleinere öffentliche Anwendungen sehr gut dient. Allerdings vorteilhaft, selbst wenn dieser Einheit der Bereitstellung, die meisten nicht-trivialen Geschäftsanwendungen eine logische Trennung in mehreren Ebenen.
+Die meisten herkömmlichen .NET-Anwendungen werden als einzelne Einheiten bereitgestellt, die einer ausführbaren Datei oder einer Webanwendung entsprechen, die innerhalb einer IIS-Anwendungsdomäne ausgeführt wird. Dabei handelt es sich um das wohl einfachste Bereitstellungsmodell, das sich gut für interne und kleinere öffentliche Anwendungen eignet. Allerdings eignet sich für die meisten wichtigen Geschäftsanwendungen sogar mit dieser einzelnen Bereitstellungseinheit die logische Unterteilung in mehrere Schichten.
 
-## <a name="what-is-a-monolithic-application"></a>Was ist eine Anwendung aufgrund eines monolithischen?
+## <a name="what-is-a-monolithic-application"></a>Was sind monolithische Anwendungen?
 
-Eine Anwendung aufgrund eines monolithischen ist vollständig eigenständige, im Hinblick auf das Verhalten ist. Es möglicherweise mit anderen Diensten oder Datenspeichern im Verlauf seiner Vorgänge interagieren, aber der Kern des Verhaltens in einem eigenen Prozess ausgeführt wird, und die gesamte Anwendung in der Regel als einzelne Einheit bereitgestellt wird. Wenn eine solche Anwendung horizontal skalieren muss, wird die gesamte Anwendung in der Regel auf mehreren Servern oder virtuellen Computern dupliziert werden.
+Monolithische Anwendungen sind in Bezug auf ihr Verhalten vollkommen unabhängig. Sie interagieren zwar möglichweise mit anderen Diensten oder Datenspeichern, während sie Vorgänge ausführen, aber der Hauptbestandteil ihres Verhaltens liegt in ihren eigenen Prozessen, und die gesamte Anwendung wird in der Regel als einzelne Einheit bereitgestellt. Wenn eine solche Anwendung eine horizontale Skalierung vornehmen muss, wird in der Regel die gesamte Anwendung auf mehreren Servern oder virtuellen Computern dupliziert.
 
-## <a name="all-in-one-applications"></a>: 1-Anwendungen
+## <a name="all-in-one-applications"></a>All-in-One-Anwendungen
 
-Der kleinste darstellbare Zahl von Projekten für eine Anwendungsarchitektur ist eine. In dieser Architektur ist die gesamte Logik der Anwendung in einem einzelnen Projekt enthalten sind, in einer einzelnen Assembly kompiliert und als einzelne Einheit bereitgestellt.
+Jede Anwendungsarchitektur muss mindestens ein Projekt umfassen. In dieser Architektur ist die gesamte Logik der Anwendung in nur einem Projekt enthalten. Außerdem wird sie in nur eine Assembly kompiliert und als einzelne Einheit bereitgestellt.
 
-Ein neues Projekt für ASP.NET Core beginnt, ob in Visual Studio oder über die Befehlszeile erstellt als eine einfache "all-in-One" Monolith. Er enthält alle des Verhaltens der Anwendung, einschließlich der Präsentations-, Geschäftslogik- und Data Access-Logik. Abbildung 5 – 1 zeigt die Dateistruktur Einzelprojekt--App.
+Wenn ein neues ASP.NET Core-Projekt erstellt wird, stellt dieses anfangs immer einen All-in-One-Monolith dar. Dabei macht es keinen Unterschied, ob es über Visual Studio oder die Befehlszeile erstellt wird. Dieser Monolith enthält das gesamte Verhalten der Anwendung, einschließlich der Darstellungs-, Geschäfts- und Datenzugriffslogik. In Abbildung 5-1 wird die Dateistruktur einer App dargestellt, die aus einem Projekt besteht.
 
-**Abbildung 5 – 1.** Ein einzelnes Projekt ASP.NET Core-app
+**Abbildung 5-1.** Eine ASP.NET Core-App, die nur aus einem Projekt besteht
 
 ![](./media/image5-1.png)
 
-In einem einzelnen Projekt Szenario erfolgt die Abgrenzung von Problemen durch die Verwendung von Ordnern. Die Standardvorlage enthält separate Ordner für MVC-Muster Aufgaben der Modelle, Ansichten und Controllern sowie zusätzliche Ordner für Daten und Dienste. In dieser Anordnung Präsentation Details in den Ordner Views so weit wie möglich eingeschränkt sein, und Data Access-Implementierungsdetails sollte auf Klassen, die im Ordner "Daten" beibehalten beschränkt sein. Geschäftslogik muss sich im Dienste und Klassen im Ordner Models befinden.
+Wenn eine App nur aus einem Projekt besteht, wird das Prinzip „Separation of Concerns“ durch die Verwendung von Ordnern unterstützt. Die Standardvorlage enthält separate Ordner für Verantwortlichkeiten von MVC-Mustern für Modelle, Ansichten und Controller sowie zusätzliche Ordner für Daten und Dienste. Wenn Sie diese Vorlage verwenden, sollten Darstellunsgdetails weitestgehend auf den Ansichtenordner (Views) beschränkt sein, und Implementierungsdetails zum Datenzugriff sollten auf Klassen beschränkt sein, die im Datenordner (Data) gespeichert werden. Die Geschäftslogik sollte in Diensten und Klassen gespeichert sein, die im Modellordner (Models) enthalten sind.
 
-Die monolithische Einzelprojekt--Lösung umfasst einige Nachteile, zwar einfach. Mit zunehmender Größe und Komplexität des Projekts wird die Anzahl der Dateien und Ordner sowie vergrößert werden fortgesetzt. UI-Probleme (Modelle, Ansichten, Controller) befinden sich in mehrere Ordner, in denen nicht in alphabetischer Reihenfolge gruppiert werden. Dieses Problem schlimmer nur, wenn zusätzliche Konstrukte für den UI-Ebene, z. B. Filter oder ModelBinders, in die eigenen Ordner hinzugefügt werden. Geschäftslogik wird zwischen Ordnern Modelle und Dienste verschoben, und es gibt keine deutlich wird, welche die Klassen, in welchen Ordnern auf welche anderen abhängen sollten. Diese mangelnde Organisation auf Projektebene führt häufig zu [Spaghetti Code](http://deviq.com/spaghetti-code/).
+Diese monolithische Projektmappe, die aus nur einem Projekt besteht, ist zwar sehr einfach strukturiert, weist aber auch einige Nachteile auf. Wenn der Umfang des Projekts ausgeweitet wird, entstehen auch immer mehr Dateien und Ordner. Elemente, die die Benutzeroberfläche betreffen (z.B. Modelle, Ansichten und Controller), sind in unterschiedlichen Ordnern gespeichert, die nicht gemeinsam in alphabetischer Reihenfolge sortiert sind. Dieses Problem wird noch größer, wenn zusätzliche Konstrukte auf Benutzeroberflächenebene wie Filter oder ModelBinders-Elemente zu ihren jeweiligen Ordnern hinzugefügt werden. Die Geschäftslogik ist auf die Modell- und Dienstordner (Models und Services) aufgeteilt, und es gibt keinen Anhaltspunkt dafür, welche Klassen in welchen Ordnern von welchen anderen Elementen abhängig sein sollen. Dadurch, dass auf Projektebene keine Sortierung vorgenommen wird, wird der Code häufig unübersichtlich, und es entsteht sogenannter [Spaghetticode](http://deviq.com/spaghetti-code/).
 
-Um diese Probleme zu beheben, Anwendungen häufig weiterentwickelt in Projektmappen mit mehreren Projekten, in dem jedes Projekt in einer bestimmten befinden gilt *Ebene* der Anwendung.
+Um diese Probleme zu umgehen, greifen Entwickler häufig auf die Möglichkeit zurück, Anwendungen in Projektmappen mit mehreren Projekten auszuweiten. In diesen Projektmappen ist dann jedes Projekt auf einer bestimmten *Schicht* einer Anwendung gespeichert.
 
-## <a name="what-are-layers"></a>Welche Ebenen sind?
+## <a name="what-are-layers"></a>Was sind Schichten?
 
-Eine Möglichkeit zum Verwalten dieser Komplexität werden wie Anwendungen Komplexität zunehmen, die Anwendung gemäß seiner Zuständigkeiten oder Bedenken zusammensetzen. Dies folgt die Trennung von Anliegen-Prinzip und gewährleisten eine wachsende Codebasis organisiert, sodass Entwickler leicht finden können, in denen bestimmte Funktionen implementiert wird. Mehrschicht-Architektur bietet eine Reihe von Vorteilen außerhalb der Organisation nur Code, jedoch an.
+Wenn eine Anwendung immer komplexer wird, können Sie dagegen vorgehen, indem Sie sie anhand ihrer Zuständigkeiten und Aufgaben aufteilen. Dieses Prinzip wird als „Separation of Concerns“ (Trennung von Belangen“ bezeichnet und hilft Ihnen dabei, die Codebasis zu ordnen, damit Sie problemlos feststellen können, an welcher Stelle bestimmte Funktionen implementiert wurden. Die Strukturierung Ihres Codes ist aber nicht der einzige Vorteil einer aus Schichten bestehenden Architektur.
 
-Indem Code in Ebenen organisiert, kann die allgemeine Low-Level-Funktionen in der gesamten Anwendung wiederverwendet werden. Die Wiederverwendung ist nützlich, da es bedeutet, dass weniger Code geschrieben werden muss und es der Anwendung auf eine einzelne Implementierung, befolgen das Prinzip TROCKENEN standardisieren ermöglichen kann.
+Wenn Sie Code in Schichten unterteilen, können häufig verwendete grundlegende Funktionen in der gesamten Anwendung wiederverwendet werden. Dies hat den Vorteil, dass Sie weniger Code schreiben müssen und die Anwendung für eine Implementierung standardisiert wird, was dem Don‘t Repeat Yourself-Prinzip entspricht.
 
-Mit einer mehrstufigen Architektur können Anwendungen Einschränkungen erzwingen, für die Ebenen mit anderen Ebenen kommunizieren können. Dadurch wird um die Kapselung zu erzielen. Wenn eine Ebene geändert oder ersetzt wird, sollte nur diese Ebenen, die Arbeit mit beeinträchtigt werden. Durch die Begrenzung der abhängen Ebenen an, auf denen andere Ebenen, die Auswirkungen von Änderungen gemindert werden können, sodass eine einzelne Änderung keine Auswirkungen auf die gesamte Anwendung hat.
+Wenn eine Architektur aus Schichten besteht, können Anwendungen Einschränkungen für die Kommunikation zwischen den einzelnen Schichten erzwingen. Dies erleichtert die Kapselung. Wenn eine Schicht geändert oder ersetzt wird, sollten nur die Schichten betroffen sein, die mit dieser zusammenarbeiten. Wenn Sie einschränken, welche Schichten voneinander abhängig sind, können die Auswirkungen von Änderungen verringert werden, sodass eine einzige Änderung nicht die gesamte Anwendung betrifft.
 
-Ebenen (und Kapselung) erleichtern Funktionen innerhalb der Anwendung zu ersetzen. Z. B. eine Anwendung möglicherweise zunächst eine eigene SQL Server-Datenbank für Persistenz verwenden, sondern kann später zu einer Strategie für die Cloud-basierten Persistenz, hinter einer Web-API verwenden, oder auswählen. Wenn die Anwendung ordnungsgemäß seine dauerhaftigkeitsimplementierung innerhalb einer logischen Ebene gekapselt ist, könnte, dass bestimmte SQL Server-Ebene durch eine neue Implementierung der gleichen öffentlichen Schnittstelle ersetzt werden.
+Schichten (und die Kapselung) vereinfachen das Ersetzen von Funktionen innerhalb der Anwendung. Möglicherweise verwendet z.B. eine Anwendung anfangs ihre eigene SQL Server-Datenbank als Persistenzspeicher. Sie können sich dann später aber immer noch dafür entscheiden, eine cloudbasierte Persistenzstrategie oder eine Web-API zu verwenden. Wenn die Anwendungen ihre Persistenzimplementierungen innerhalb einer logischen Schicht kapseln, kann diese SQL Server-spezifische Schicht durch eine neue Implementierung derselben öffentlichen Schnittstelle ersetzt werden.
 
-Zusätzlich zu das Potenzial der Auslagerung Implementierungen als Antwort auf zukünftige Änderungen der Anforderungen erleichtern Anwendungsebenen auch Implementierungen für Testzwecke austauschen. Anstatt Tests schreiben, die für die Ebene um echte Daten bzw. den UI-Ebene der Anwendung ausgeführt werden, können diese Ebenen zum Zeitpunkt der Test mit gefälschten Implementierungen ersetzt werden, die bekannte Antworten auf Anforderungen zu bieten. In der Regel dadurch Tests viel einfacher schreiben und viel schneller ausführen, Vergleich für die Ausführung der tests erneut real Anwendungsinfrastruktur.
+Neben der Möglichkeit, Implementierungen auszutauschen, um möglichen zukünftigen Änderungen von Anforderungen vorzubeugen, können diese mithilfe von Anwendungsschichten auch zu Testzwecken ausgetauscht werden. Die Schichten können während der Tests durch falsche Implementierungen ersetzt werden, die bekannte Antworten auf Anforderungen bereitstellen, sodass Sie keine Tests mehr schreiben müssen, die mit der echten Daten- oder Benutzeroberflächenschicht der Anwendung arbeiten. Dadurch können Tests einfacher geschrieben und im Vergleich zu Tests der echten Infrastruktur der Anwendung schneller ausgeführt werden.
 
-Logische Anordnung ist ein gängiges Verfahren zum Verbessern der Organisation des Codes im Enterprise-softwareanwendungen, und es gibt mehrere Möglichkeiten, die in denen Code in Ebenen organisiert werden kann.
+Das Erstellen logischer Schichten ist eine häufig verwendete Technik zum Verbessern der Strukturierung von Code in Unternehmensanwendungen. Es gibt mehrere Möglichkeiten, Code in Schichten zu strukturieren.
 
 > [!NOTE]
-> *Ebenen* logische Trennung innerhalb der Anwendung darstellen. Falls bei der Anwendungslogik physisch separaten Servern oder Prozesse verteilt wird, diese separaten physischen Bereitstellungsziele bezeichnet als *Ebenen*. Es ist möglich und recht häufig vorkommt, damit eine N-Ebenen-Anwendung, die auf einer einzelnen Ebene bereitgestellt wird.
+> *Schichten* stellen eine logische Unterteilung aller Bestandteile einer App dar. Wenn die Anwendungslogik physisch auf separate Server oder Prozesse verteilt wird, werden diese separaten Bereitstellunsgsziele als *Ebenen* bezeichnet. Die Verwendung einer Anwendung mit mehreren Schichten, die für eine einzelne Schicht bereitgestellt wird, ist möglich und wird häufig angewandt.
 
-## <a name="traditional-n-layer-architecture-applications"></a>Herkömmliche "N-Ebene" Architektur Anwendungen
+## <a name="traditional-n-layer-architecture-applications"></a>Traditionelle Architektur einer Anwendung mit mehreren Schichten
 
-Die am häufigsten verwendete Organisation der Anwendungslogik in Ebenen er die in Abbildung 5 – 2 dargestellt.
+In Abbildung 5-2 wird die am häufigsten verwendete Unterteilung einer Anwendungslogik in Schichten dargestellt.
 
-**Abbildung 5-2.** Typische Anwendungsebenen.
+**Abbildung 5-2.** Typische Anwendungsschichten
 
 ![](./media/image5-2.png)
 
-Diese Ebenen werden als Benutzeroberfläche, häufig abgekürzt BLL (Business Logic Layer) und Datenzugriffsschicht (Data Access Layer). Mit dieser Architektur, stellen Benutzer Anforderungen über die Benutzeroberfläche der Ebene nur mit der BLL interagiert. Die BLL kann wiederum die DAL für zugriffsanforderungen Daten aufrufen. Die Benutzeroberflächenebene nicht nehmen alle Anforderungen an die DAL direkt, noch sollte sie interagieren mit Persistenz direkt über andere Mittel. Entsprechend sollte die BLL nur Persistenz interagieren mit der DAL durchlaufen. Auf diese Weise ist jede Ebene einen eigenen bekannten verantwortlich.
+Diese Schichten werden häufig mit den englischen Abkürzungen UI für User Interface (Benutzeroberfläche), BLL für Business Logic Layer (Schicht der Geschäftslogik) und DAL für Data Access Layer (Schicht für den Datenzugriff) bezeichnet. Wenn diese Architektur verwendet wird, senden Benutzer Anforderungen über die Benutzeroberflächenschicht, die nur mit der BLL interagiert. Die BLL kann wiederum die DAL für Anforderungen hinsichtlich des Datenzugriffs aufrufen. Die UI-Schicht sollte keine direkten Anforderungen an die DAL senden oder direkt mithilfe anderer Methoden mit der Persistenz interagieren. Gleichzeitig sollte die BLL nur über die DAL mit der Persistenz interagieren. Auf diese Weise wird jeder Schicht eine individuelle bekannte Verantwortlichkeit zugewiesen.
 
-Ein Nachteil dieses Ansatzes herkömmlichen Strukturlayout ist, dass die Kompilierung Abhängigkeiten von oben nach unten ausgeführt. D. h. hängt die Benutzeroberflächenebene die BLL, abhängig von der DAL. Dies bedeutet, dass die BLL, der in der Regel die wichtigste Programmlogik in der Anwendung enthält, abhängige auf "Details" Data Access-Implementierung (und häufig auf das Vorhandensein einer Datenbank). Testen von Geschäftslogik in einer solchen Architektur ist häufig schwierig ist, erfordern eine Testdatenbank. Das Prinzip der Abhängigkeit Umkehrung kann verwendet werden, um dieses Problem zu beheben, wie Sie im nächsten Abschnitt sehen.
+Dieser traditionelle Ansatz zum Erstellen von Schichten hat allerdings den Nachteil, dass Abhängigkeiten zur Kompilierzeit von oben nach unten ausgeführt werden. Das heißt, die UI-Schicht ist von der BLL abhängig, die wiederum von der DAL abhängig ist. Das wiederum bedeutet, dass die BLL, die in der Regel die wichtigste Logik innerhalb der Anwendung aufweist, von den Implementierungsdetails zum Datenzugriff abhängig ist (und dadurch häufig auch eine Datenbank benötigt). Das Testen einer Geschäftslogik in einer Architektur wie dieser gestaltet sich häufig als schwierig und erfordert eine Testdatenbank. Sie können dieses Problem wie im nächsten Abschnitt beschrieben mit dem Dependency Inversion-Prinzip angehen.
 
-Abbildung 5 – 3 zeigt eine beispiellösung, die Unterbrechung von der Anwendung in drei Projekte durch Verantwortung (oder Ebene).
+In Abbildung 5-3 wird eine Projektmappe als Beispiel dargestellt, in der die Anwendung anhand von Zuständigkeiten bzw. Schichten in drei Projekte unterteilt wird.
 
-**Abbildung 5-3.** Eine einfache monolithischen Anwendung mit drei Projekte.
+**Abbildung 5-3.** Eine einfache monolithische Anwendung mit drei Projekten
 
 ![](./media/image5-3.png)
 
-Obwohl diese Anwendung mehrere Projekte zu organisatorischen Zwecken verwendet wird, wird weiterhin als einzelne Einheit bereitgestellt und seinen Clients als eine einzelne Web-app mit ihm interagieren. Dies ermöglicht sehr einfachen Bereitstellungsverfahrens. Abbildung 5-4 zeigt, wie eine solche Anwendung möglicherweise mit Windows Azure gehostet.
+Obwohl diese Anwendung aus Strukturierungsgründen mehrere Projekte verwendet, wird sie als einzelne Einheit bereitgestellt und ihre Clients interagieren mit ihr wie mit einer einzelnen Web-App. Dies vereinfacht die Bereitstellung. In Abbildung 5-4 wird dargestellt, wie eine solche App unter Verwendung von Windows Azure gehostet werden kann.
 
 ![](./media/image5-4.png)
 
-**Abbildung 5-4.** Einfache Bereitstellung von Azure-Web-App
+**Abbildung 5-4.** Einfache Bereitstellung einer Azure-Web-App
 
-Wie die Anwendung muss wachsen, möglicherweise komplexen und robusten bereitstellungslösungen erforderlich. Abbildung 5 – 5 zeigt ein Beispiel für eine komplexere Bereitstellungsplan, der zusätzliche Funktionen unterstützt.
+Wenn die Anforderungen an eine App höher werden, ist möglicherweise eine komplexere und robustere Bereitstellungslösung erforderlich. In Abbildung 5-5 ist ein Beispiel einer komplexeren Bereitstellung dargestellt, die mehrere zusätzliche Funktionen unterstützt.
 
 ![](./media/image5-5.png)
 
-**Abbildung 5 bis 5.** Bereitstellen von einer Web-app in Azure App Service
+**Abbildung 5-5.** Bereitstellen einer Web-App in Azure App Service
 
-Intern wird dieses Projekt Organisation in mehrere Projekte, die basierend auf Verantwortung die Verwaltbarkeit der Anwendung verbessert.
+Innerhalb der Anwendung verbessert diese Unterteilung in mehrere Projekte anhand von Zuständigkeiten deren Verwaltbarkeit.
 
-Diese Einheit kann Skalierbarkeit für Cloud-basierte bei Bedarf nutzen oder skalieren skaliert werden. Zentrales Skalieren bedeutet das Hinzufügen von zusätzlichen CPU, Arbeitsspeicher, Speicherplatz auf dem Datenträger oder andere Ressourcen auf den Servern, hosten Ihre app. Horizontales Skalieren bedeutet, ob diese physische oder virtuelle Computer sind solche Server zusätzliche Instanzen hinzufügen. Wenn Ihre app über mehrere Instanzen gehostet wird, ist ein Lastenausgleich zum Zuweisen von Anforderungen auf individuellen app-Instanzen verwendet.
+Diese Einheit kann zentral oder horizontal hochskaliert werden, um die cloudbasierte bedarfsgesteuerte Skalierbarkeit zu nutzen. Beim zentralen Hochskalieren werden zusätzliche CPU, zusätzlicher Arbeitsspeicher, zusätzlicher Speicherplatz auf dem Datenträger oder andere Ressourcen zu dem Server bzw. den Servern hinzugefügt, der bzw. die Ihre App hosten. Beim horizontalen Hochskalieren werden zusätzliche Instanzen der Server hinzugefügt. Dabei macht es keinen Unterschied, ob es sich um physische Server oder virtuelle Computer handelt. Wenn Ihre App auf mehreren Instanzen gehostet wird, wird ein Lastenausgleich vorgenommen, um individuellen App-Instanzen Anforderungen zuzuweisen.
 
-Die einfachste Vorgehensweise zum Skalieren einer Webanwendung in Azure besteht darin, in der Anwendungsverzeichnis App Service-Plan manuell skalieren zu konfigurieren. Abbildung 5 bis 6 zeigen den entsprechenden Azure-Dashboard-Bildschirm, um konfigurieren, wie viele Instanzen eine app betreuen.
+Der einfachste Ansatz zum Skalieren einer Webanwendung in Azure ist das manuelle Konfigurieren einer Skalierung im App Service-Plan der Anwendung. In Abbildung 5-6 wird die Anzeige des Azure-Dashboards dargestellt, über die Sie konfigurieren können, wie viele Instanzen einer App zugrunde liegen.
 
 ![](./media/image5-6.png)
 
-**Abbildung 5 bis 6.** Skalierung in Azure App Service-Plan.
+**Abbildung 5-6.** Skalieren des App Service-Plans in Azure
 
-## <a name="clean-architecture"></a>Bereinigen der Architektur
+## <a name="clean-architecture"></a>Clean Architecture
 
-Anwendungen, die die Abhängigkeit Umkehrung Prinzip sowie Driven Design (DDD) Prinzipien folgen tendenziell eine ähnliche Architektur ankommen. Diese Architektur ist im Laufe der Jahre viele Namen. Einer der ersten Namen wurde Sechseckige Architektur verteilter Transaktionen, gefolgt von Ports und Adaptern. Udate wird als genannten wurden die [Onion Architektur](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) oder [bereinigen Architektur](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Es ist dieser Nachname Clean-Architektur, die als Grundlage zum Beschreiben der in diesem e-Book-Architektur verwendet wird.
+Anwendungen, die den Prinzipien Dependency Inversion und Domain-Driven Design (DDD) folgen, weisen alle eine ähnliche Architektur auf. Diese Architektur wurde in den vergangenen Jahren unterschiedlich benannt. Zuerst wurde diese Architektur als „Hexagonal Architecture“ bezeichnet. Darauf folgte der Begriff „Ports-and-Adapters“. Heutzutage spricht man aber eher von [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) bzw. [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). In diesem E-Book wird der Begriff „Clean Architecture“ als Grundlage zum Beschreiben dieser Architektur verwendet.
 
 > [!NOTE]
-> Der Begriff, den bereinigen Architektur auf Anwendungen angewendet werden können, die mit DDD Prinzipien auch auf solche, die nicht erstellt werden, mit DDD erstellt werden. Im Fall der erste Wert diese Kombination kann bezeichnet werden als "Clean DDD Architecture".
+> Die Clean Architecture kann sowohl für Anwendungen erstellt werden, die dem DDD-Prinzip folgen, als auch für Anwendungen, die diesem nicht entsprechen. Wenn das DDD-Prinzip angewendet wird, kann die Architektur als „Clean DDD Architecture“ bezeichnet werden.
 
-Clean-Architektur setzt das Geschäftsmodell Logik und die Anwendung in der Mitte der Anwendung. Anstatt von Geschäftslogik, die Datenzugriff oder Bedenken Infrastruktur abhängig sind, wird diese Abhängigkeit invertiert: Infrastruktur und die Implementierung richten sich nach den Kern der Anwendung. Dies erfolgt durch die Definition von Abstraktionen oder Schnittstellen, in der Anwendung, die dann durch die in die Infrastrukturebene definierten Typen implementiert werden. Eine gängige Methode der Visualisierung dieser Architektur ist eine Reihe von konzentrische Kreise, ähnlich wie eine Onion verwenden. Abbildung 5 X zeigt ein Beispiel für diese Art der Darstellung von Architektur.
+In der Clean Architecture sind die Geschäftslogik und das Anwendungsmodell im Kern der Anwendung enthalten. Es wird dann das Prinzip Dependency Inversion angewendet, bei dem die Geschäftslogik nicht mehr vom Datenzugriff oder anderen Aufgaben, die die Infrastruktur betreffen, abhängig ist. Stattdessen sind die Informationen zur Infrastruktur und Implementierung vom Anwendungskern abhängig. Dafür werden Abstraktionen oder Schnittstellen im Anwendungskern definiert und anschließend anhand von Typen implementiert, die in der Infrastrukturschicht definiert werden. Diese Architektur wird häufig in Kreisringen dargestellt, die dem Aufbau einer Zwiebel ähneln. In Abbildung 5-X wird ein Beispiel dargestellt, mit dem die Architektur dargestellt werden kann.
 
 ![](./media/image5-7.png)
 
-**Abbildung 5-7.** Bereinigen Sie die Architektur; Onion anzeigen
+**Abbildung 5-7.** Clean Architecture: „Zwiebelansicht“
 
-In diesem Diagramm bedroht werden Abhängigkeiten in Richtung der innersten Kreis. Daher sehen Sie sich, dass der Anwendung-Core (die den Namen aus seiner Position im Kern dieses Diagramm annimmt) keine anderen Anwendungsebenen abhängt. Sind Sie sehr zentriert Entitäten und die Schnittstellen der Anwendungsverzeichnis aus. Nur außerhalb, jedoch noch in der Anwendung Core sind Domänendienste, die in der Regel in der inneren Kreis definierte Schnittstellen implementieren. Außerhalb der Anwendung Core richten sich die Benutzeroberfläche und den infrastrukturschichten auf Anwendung Core, jedoch nicht auf anderen (unbedingt).
+In diesem Diagramm beziehen sich alle Abhängigkeiten auf den inneren Kreisring, also auf den Anwendungskern. Der Anwendungskern verfügt also nicht über Abhängigkeiten von anderen Anwendungsschichten. Die Entitäten und Schnittstellen der Anwendung stehen im Mittelpunkt. Domänendienste, die in der Regel Schnittstellen implementieren, die im inneren Kreisring definiert sind, befinden sich am äußeren Rand des Anwendungskerns. Außerhalb des Anwendungskerns sind sowohl die Benutzeroberfläche als auch die Infrastrukturschichten zwar vom Anwendungskern, aber nicht (unbedingt) voneinander abhängig.
 
-Abbildung 5 X herkömmlicheren horizontale Ebenendiagramm, die die Abhängigkeit zwischen der Benutzeroberfläche und anderen Ebenen besser wiedergibt.
+In Abbildung 5-X wird ein herkömmlicheres horizontales Schichtendiagramm dargestellt, das die Abhängigkeit zwischen Benutzeroberfläche und anderen Schichten besser darstellt.
 
 ![](./media/image5-8.png)
 
-**Abbildung 5 bis 8.** Bereinigen Sie die Architektur; horizontale Ebene anzeigen
+**Abbildung 5-8.** Clean Architecture: Ansicht mit horizontalen Schichten
 
-Beachten Sie, dass das ausgefüllte Pfeile Kompilierzeit Abhängigkeiten darstellen, während der gestrichelte Pfeil stellt eine Abhängigkeit nur das Laufzeitmodul dar. Verwenden die clean-Architektur, die Benutzeroberflächenebene funktioniert mit Schnittstellen, die in der Anwendung zum Zeitpunkt der Kompilierung definiert und im Idealfall sollte kein Kenntnis von den Implementierungstypen definiertes in die Infrastrukturebene. Zur Laufzeit jedoch werden diese Implementierungstypen für die app ausgeführt wird, benötigt, damit er vorhanden und bis zu der Anwendung Core Schnittstellen über Abhängigkeitsinjektion kabelgebundenen sein muss.
+Beachten Sie, dass die Pfeile mit durchgezogener Linie Abhängigkeiten zur Kompilierzeit darstellen. Die Pfeile mit gestrichelten Linien stellen Abhängigkeiten dar, die nur zur Laufzeit bestehen. Unter Verwendung der Clean Architecture funktioniert die UI-Schicht nur mit Schnittstellen, die zur Kompilierzeit im Anwendungskern definiert werden. Im Idealfall sollten diese außerdem nicht über Informationen zu den in der Infrastrukturschicht definierten Implementierungstypen verfügen. Zur Laufzeit sind diese Implementierungstypen jedoch erforderlich, damit die App ausgeführt werden kann. Daher müssen Sie definiert und über Dependency Injection mit den Schnittstellen des Anwendungskerns verbunden sein.
 
-Abbildung 5 – 9 zeigt eine ausführlichere Ansicht eines ASP.NET Core der Architektur einer Anwendung nach dieser Empfehlungen erstellt.
+In Abbildung 5-9 wird eine detailliertere Ansicht der Architektur einer ASP.NET Core-Anwendung dargestellt, die anhand dieser Empfehlungen erstellt wurde.
 
-![ASPNET Kernarchitektur](./media/image5-9.png)
+![ASP.NET Core-Architektur](./media/image5-9.png)
 
-**Abbildung 5 bis 9.** ASP.NET Core-Architekturdiagramm bereinigen Architektur befolgen.
+**Abbildung 5-9.** Diagramm der ASP.NET Core-Architektur, die dem Prinzip der Clean Architecture folgt
 
-Da das Kernstück der Anwendung nicht von Infrastruktur abhängig ist, ist es sehr einfach, automatisierte Komponententests für diese Ebene zu schreiben. Zahlen 5 bis 10 und 5 bis 11 zeigen an, wie die Tests in dieser Architektur passen.
+Da der Anwendungskern nicht von der Infrastrukturschicht abhängig ist, ist es leicht, automatisierte Komponententests für diese Schicht zu schreiben. In den Abbildungen 5-10 und 5-11 wird dargestellt, wie Tests mit dieser Architektur in Einklang gebracht werden können.
 
 ![UnitTestCore](./media/image5-10.png)
 
-**Abbildung 5 bis 10.** UnitTests Application Core isoliert.
+**Abbildung 5-10.** Isolierter Komponententest des Anwendungskerns
 
 ![IntegrationTests](./media/image5-11.png)
 
-**Abbildung 5-11.** Integrationstests Infrastruktur Implementierungen mit externen Abhängigkeiten.
+**Abbildung 5-11.** Integrationstest von Infrastrukturimplementierungen mit externen Abhängigkeiten
 
-Da die Benutzeroberflächenebene für Typen, die in der Infrastructure-Projekt definiert direkte Abhängigkeit besitzt, ist es ebenso sehr einfach out Implementierungen, entweder testen zu vereinfachen oder als Reaktion auf die sich ändernden anwendungsanforderungen ausgetauscht werden. ASP.NET Core des integrierten Verwendung von und Unterstützung für Abhängigkeitsinjektion macht diese Architektur die am besten geeignete Möglichkeit, die Struktur nicht triviale monolithischen Anwendungen.
+Da die UI-Schicht nicht über direkte Abhängigkeiten von im Infrastrukturprojekt definierten Typen verfügt, können Implementierungen leicht ausgetauscht werden. Dadurch kann das Testen vereinfacht werden, oder sich ändernde Anwendungsanforderungen lassen sich leichter umsetzen. Durch die in ASP.NET Core integrierte Verwendung von und Unterstützung für Dependency Injection eignet sich diese Architektur besonders gut zum Strukturieren wichtiger monolithischer Anwendungen.
 
-Für monolithischen Anwendungen werden alle Projekte Anwendung Kern, der Infrastruktur und der Benutzeroberfläche als eine einzelne Anwendung ausgeführt. Die Common Language Runtime-Anwendungsarchitektur sieht möglicherweise etwas wie Abbildung 5 – 12.
+Bei monolithischen Anwendungen werden Projekte für den Anwendungskern, die Infrastruktur und die Benutzeroberfläche als eine einzelne Anwendung ausgeführt. Die Anwendungsarchitektur zur Laufzeit sieht in etwa wie in Abbildung 5-12 dargestellt aus.
 
-![ASPNET Kernarchitektur 2](./media/image5-12.png)
+![ASP.NET Core-Architektur 2](./media/image5-12.png)
 
-**Abbildung 5 – 12.** Ein Beispiel ASP.NET Core-app-Runtime-Architektur.
+**Abbildung 5-12.** Beispiel für die Laufzeitarchitektur einer ASP.NET Core-App
 
-### <a name="organizing-code-in-clean-architecture"></a>Organisieren von Code in Clean-Architektur
+### <a name="organizing-code-in-clean-architecture"></a>Strukturieren von Code anhand des Clean Architecture-Prinzips
 
-In einer Projektmappe bereinigen Architektur hat jedes Projekt löschen Aufgaben. Als solche in jedem Projekt angelegt werden, bestimmte Typen gehören, und finden Sie häufig Ordnern, die auf diese Typen in das entsprechende Projekt entspricht.
+In einer gemäß der Clean Architecture erstellten Projektmappe verfügt jedes Projekt über klare Zuständigkeiten. Daher gehören zu jedem Projekt bestimmte Typen, und häufig entsprechen Ordner im jeweiligen Projekt diesen Typen.
 
-Den Kern der Anwendung enthält die Geschäftsmodell, das Entitäten, Diensten und Schnittstellen enthält. Zu diesen Schnittstellen gehören Abstraktionen für Vorgänge, die anhand von Infrastruktur, z. B. den Datenzugriff, Dateisystemzugriff, Netzwerkaufrufe usw. gesucht werden soll. In einigen Fällen müssen Diensten oder Schnittstellen definiert, die auf dieser Ebene mit nicht-Entitätstypen arbeiten, die keine Abhängigkeiten auf der Benutzeroberfläche oder Infrastruktur haben. Diese können als einfache Daten übertragen Objekte (DTOs) definiert werden.
+Der Anwendungskern enthält das Geschäftsmodell, das wiederum Entitäten, Dienste und Schnittstellen umfasst. Diese Schnittstellen umfassen Abstraktionen für Vorgänge, die unter Verwendung der Infrastruktur ausgeführt werden. Damit sind z.B. der Datenzugriff, der Zugriff auf Dateisysteme und Netzwerkaufrufe gemeint. Gelegentlich müssen für diese Schicht installierte Dienste und Schnittstellen mit Typen zusammenarbeiten, bei denen es sich nicht um Entitäten handelt und die nicht von der Benutzeroberfläche oder der Infrastruktur abhängig sind. Diese Dienste und Schnittstellen können als einfache Datentransferobjekte (Data Transfer Objects, DTOs) definiert sein.
 
-> ### <a name="application-core-types"></a>Core Anwendungstypen
-> -   Entitäten (Business Modellklassen, die beibehalten werden)
+> ### <a name="application-core-types"></a>Typen des Anwendungskerns
+> -   Entitäten (Klassen von Geschäftsmodellen, die dauerhaft gespeichert werden)
 > -   Schnittstellen
 > -   Dienste
 > -   DTOs
 
-Infrastructure-Projekt enthält in der Regel Data Access-Implementierungen. In einer typischen Webanwendung ASP.NET Core umfasst dies Entity Framework DbContext, alle EF-Core-Migrationen, die definiert wurden und Datenzugriffsklassen-Implementierung. Die gängigste Methode zum abstrahieren Datenzugriffscode Implementierung wird durch Verwendung von der [Repository Entwurfsmuster](http://deviq.com/repository-pattern/).
+Das Infrastrukturprojekt umfasst in der Regel Implementierungen für den Datenzugriff. In einer herkömmlichen ASP.NET Core-Webanwendung umfasst dies die Entity Framework-DbContext-Klasse, jegliche EF Core-Migrationen, die definiert wurden, und Klassen für Implementierungen des Datenzugriffs. Die beste Möglichkeit, Implementierungscode für den Datenzugriff zu implementieren, stellt das [Entwurfsmuster Repository](http://deviq.com/repository-pattern/) dar.
 
-Zusätzlich zu den Data Access-Implementierungen sollte das Infrastruktur-Projekt Implementierungen von Diensten enthalten, die mit der Infrastruktur Bedenken interagieren muss. Diese Dienste sollten in den Kern der Anwendung definierte Schnittstellen implementieren und haben deshalb Infrastruktur sollte einen Verweis auf das Projekt Application Core.
+Das Infrastrukturprojekt sollte neben Implementierungen für den Datenzugriff Implementierungen von Diensten enthalten, die mit verschiedenen Bestandteilen der Infrastruktur interagieren. Diese Dienste sollten im Anwendungskern definierte Schnittstellen implementierten. Daher sollte im Infrastrukturprojekt ein Verweis auf das Anwendungskernprojekt enthalten sein.
 
-> ### <a name="infrastructure-types"></a>Infrastrukturtypen
-> -   EF Core Typen ("DbContext", "Migration")
-> -   Datenzugriff Implementierungstypen (Repositorys)
-> -   Infrastruktur-spezifische Dienste ("FileLogger", SmtpNotifier usw.).
+> ### <a name="infrastructure-types"></a>Typen der Infrastruktur
+> -   EF Core-Typen (DbContext, Migrationen)
+> -   Implementierungstypen für den Datenzugriff (Repositorys)
+> -   Infrastrukturspezifische Dienste (FileLogger, SmtpNotifier etc.)
 
-Die Benutzeroberflächenebene in einer ASP.NET-MVC-Anwendung Core werden den Einstiegspunkt für die Anwendung, und es werden ein ASP.NET Core MVC-Projekt. Dieses Projekt sollte die Anwendung Core-Projekt verweist, und die Typen sollten mit Infrastruktur ausschließlich über Schnittstellen, die in der Anwendung Core definiert interagieren. Keine direkte Instanziierung von (oder statische Aufrufe) Ebene Infrastrukturtypen in der Benutzeroberflächenebene zugelassen werden sollte.
+Die UI-Schicht in einer ASP.NET Core MVC-Anwendung stellt den Einstiegspunkt für die Anwendung dar und fungiert als ein ASP.NET Core MVC-Projekt. Dieses Projekt sollte auf das Anwendungskernprojekt verweisen, und dessen Typen sollten ausschließlich über im Anwendungskern definierte Schnittstellen mit der Infrastruktur interagieren. In der UI-Schicht sollten keine direkte Instanziierung oder statische Aufrufe von Typen von Infrastrukturschichten zugelassen werden.
 
-> ### <a name="ui-layer-types"></a>Benutzeroberflächentypen-Ebene
+> ### <a name="ui-layer-types"></a>Typen der UI-Schicht
 > -   Controller
 > -   Filter
 > -   Ansichten
 > -   ViewModels
-> -   Start
+> -   Startup
 
-Die Startklasse ist verantwortlich für das Konfigurieren der Anwendung und verknüpft Implementierungstypen zu Schnittstellen, sodass Abhängigkeitsinjektion zur Laufzeit ordnungsgemäß funktioniert.
+Die Startup-Klasse ist für das Konfigurieren von Anwendungen und für das Verknüpfen von Implementierungstypen mit Schnittstellen zuständig. Dadurch kann zur Laufzeit erfolgreich Dependency Injection angewendet werden.
 
 > [!NOTE]
-> Damit die Abhängigkeitsinjektion in ConfigureServices in der Startup.cs-Datei des Projekts Benutzeroberfläche zu verknüpfen, müssen das Projekt ggf. Infrastructure-Projekt zu verweisen. Diese Abhängigkeit kann am einfachsten mithilfe eines benutzerdefinierten DI-Containers entfernt werden. Der einfachste Ansatz werden im Rahmen dieses Beispiels können die UI-Projekt, in das Infrastruktur-Projekt zu verweisen.
+> Wenn Sie Dependency Injection in ConfigureServices in der Startup.cs-Datei des UI-Projekts durchführen möchten, muss das Projekt möglicherweise auf das Infrastrukturprojekt verweisen. Diese Abhängigkeit kann problemlos mithilfe eines benutzerdefinierten Dependency Injection-Containers entfernt werden. Im Hinblick auf das hier aufgeführte Beispiel ist es die einfachste Lösung, wenn Sie zulassen, dass das UI-Projekt auf das Infrastrukturprojekt verweist.
 
-## <a name="monolithic-applications-and-containers"></a>Aufgrund eines monolithischen Anwendungen und Container 
+## <a name="monolithic-applications-and-containers"></a>Monolithische Anwendungen und Container 
 
-Sie können einen einfachen und monolithischen Bereitstellung-basierten Web-Anwendung oder Dienst erstellen und als einen Container bereitstellen. In der Anwendung möglicherweise nicht aufgrund eines monolithischen jedoch in mehrere Bibliotheken, Komponenten oder Ebenen organisiert werden. Extern ist es einem einzelnen Container wie einen einzelnen Prozess, einzelne Webanwendung oder einzelnen Dienst.
+Sie können eine einzelne, monolithisch bereitgestellte Webanwendung oder einen Webdienst erstellen und als Container bereitstellen. Die Anwendung ist in ihrem Inneren möglicherweise nicht monolithisch strukturiert, sondern in mehrere Bibliotheken, Komponenten oder Schichten unterteilt. Extern ist sie ein einzelner Container – z.B. ein einzelner Prozess, eine einzelne Webanwendung oder ein einzelner Dienst.
 
-Um dieses Modell zu verwalten, stellen Sie einen einzelnen Container, um die Anwendung darzustellen. Wenn skaliert werden sollen, fügen Sie einfach zusätzliche Kopien mit vorangestelltem einen Lastenausgleich hinzu. Die Einfachheit stammen aus eine einzelne Bereitstellung in einem einzelnen Container oder virtuellen Computer verwalten.
+Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um dieses Modell zu verwalten. Fügen Sie zum Skalieren einfach weitere Kopien mit einem vorangestellten Lastenausgleich hinzu. Die Einfachheit stammt aus der Verwaltung einer einzelnen Bereitstellung in einem einzelnen Container oder virtuellen Computer.
 
 ![](./media/image5-13.png)
 
-Sie können mehrere Komponenten-Bibliotheken oder interne Ebenen innerhalb jeder Container einschließen, wie in Abbildung 5 X dargestellt. Folgt jedoch die Container-Prinzip des *"ein Container ist dabei, ein und in einem Prozess*", das monolithische Muster ist möglicherweise ein Konflikt.
+Sie können, wie in Abbildung 5-X veranschaulicht, mehrere Komponenten, Bibliotheken oder interne Schichten in jeden Container einschließen. Allerdings kann dieses monolithische Muster zu einem Konflikt mit dem Containerprinzip *Jeder Container hat nur eine Aufgabe, die er in einem Prozess ausführt* führen.
 
-Der Nachteil dieses Ansatzes stammen, wenn/die Anwendung wächst, erfordern sie skalieren. Wenn die gesamte Anwendung skaliert, ist es nicht tatsächlich ein Problem aufgetreten. In den meisten Fällen sind jedoch einige Teile der Anwendung, dass die Drossel Punkte, Skalierung, erfordern, während andere Komponenten sind kleiner verwendet.
+Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. In den meisten Fällen stellen jedoch nur einige Teile der Anwendung Engpässe dar, die eine Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
 
-Verwenden Sie das Standard-e-Commerce-Beispiel; Was müssen Sie wahrscheinlich skalieren ist die Komponente der Informationen. Viele weitere Kunden durchsuchen Produkte, als sie erwerben. Verwenden Sie die Zahlung Pipeline verwenden mehr Kunden Warenkorb. Weniger Kunden Hinzufügen von Kommentaren oder ihre Bestellung Verlauf anzeigen. Und Sie wahrscheinlich nur eine Handvoll Mitarbeiter in einer einzelnen Region, die den Inhalt und Marketingkampagnen verwalten müssen. Durch zentrales Skalieren der aufgrund eines monolithischen Entwurfs, wird der gesamte Code mehrmals bereitgestellt.
+Wenn Sie das gewöhnliche eCommerce-Beispiel verwenden, müssen Sie sehr wahrscheinlich die Komponente für die Produktinformationen skalieren. Viele Kunden suchen Produkte erst und kaufen sie anschließend. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Und Sie haben möglicherweise nur eine Handvoll Mitarbeiter in einer bestimmten Region, die den Inhalt und die Marketingkampagnen verwalten müssen. Wenn der monolithische Entwurf skaliert wird, wird der gesamte Code mehrmals bereitgestellt.
 
-Zusätzlich zu der Skala erfordern alles Problem, Änderungen an einer einzelnen Komponente vollständige ein erneuter Test die gesamte Anwendung und eine vollständige erneute Bereitstellung aller Instanzen.
+Zusätzlich zu dem Problem, dass alle Komponenten skaliert werden müssen, erfordern Änderungen einer einzelnen Komponente einen erneuten Test der gesamten Anwendung und eine vollständige erneute Bereitstellung aller Instanzen.
 
-Aufgrund eines monolithischen Ansatz ist, und viele Organisationen mit dieser Architektur Ansatz entwickeln. Viele haben genügend Ergebnisse gut anzumelden, während andere Grenzwerte aktiviert sind. Viele entwickelt ihre Anwendungen in diesem Modell, da die Tools und Infrastruktur für Waren zu schwierig dienstorientierte Architektur (SOA) zu erstellen, und sie die Notwendigkeit - sehen haben nicht, bis vergrößert die app wurde. Wenn Sie, dass Sie die Grenzwerte des monolithischen Ansatzes auftreten feststellen, kann die Aufteilung der app auf Container und Microservices besser genutzt werden, damit ein logischen als Nächstes sein.
+Der monolithische Ansatz wird häufig verwendet, und viele Organisationen arbeiten mit dieser Architektur. Viele von ihnen erzielen damit akzeptable Ergebnisse, aber andere stoßen an ihre Grenzen. Viele Unternehmen haben ihre Anwendungen unter Verwendung dieses Modells entworfen, da Tools und Infrastruktur schon seit Jahren zu komplex für die Erstellung einer dienstorientierten Architektur (SOA) sind. Sie haben die Notwendigkeit nicht erkannt, etwas zu ändern — bis die Anwendung gewachsen ist. Wenn Sie an die Grenzen des monolithischen Ansatzes stoßen, ist der nächste logische Schritt das Aufteilen der App, damit diese Container und Microservices besser nutzen kann.
 
 ![](./media/image5-14.png)
 
-Bereitstellen von monolithischen Anwendungen in Microsoft Azure kann mithilfe von dedizierten virtuellen Computern für jede Instanz erreicht werden. Mit [Azure VM-Skalierungsgruppen](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), können Sie die virtuellen Computer problemlos skalieren. [Azure App-Dienste](https://azure.microsoft.com/services/app-service/) monolithische Anwendungen ausführen können, und Instanzen problemlos zu skalieren, ohne den VMs verwalten zu müssen. Azure App-Dienste können einzelne Instanzen von Docker-Containern ebenfalls ausführen, Vereinfachung der Bereitstellungsstatus. Mit Docker, können Sie eine einzelne virtuelle Maschine als Docker-Host bereitstellen und Ausführen mehrerer Instanzen. Der Azure-Lastenausgleich, können wie in Abbildung 5-14 gezeigt, Sie Skalierung verwalten.
+Monolithische Anwendungen in Microsoft Azure können mithilfe von dedizierten VMs für jede Instanz bereitgestellt werden. Sie können die VMs problemlos skalieren, wenn Sie [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) verwenden. [Azure App Service](https://azure.microsoft.com/services/app-service/) kann auch monolithische Anwendungen ausführen und Instanzen problemlos skalieren, ohne dass die VMs verwaltet werden müssen. Azure App Services kann ebenfalls einzelne Instanzen von Docker-Containern ausführen, was die Bereitstellung vereinfacht. Wenn Sie Docker verwenden, können Sie eine einzelne VM als Docker-Host bereitstellen und mehrere Instanzen ausführen. Wenn Sie wie in Abbildung 5-14 dargestellt den Azure Balancer verwenden, können Sie die Skalierung verwalten.
 
-Mit herkömmlichen Bereitstellung Techniken kann die Bereitstellung für die verschiedenen Hosts verwaltet werden. Die Docker-Hosts verwaltet werden können, mit Befehlen wie **"Docker run"** manuell oder durch die Automatisierung ausgeführt, z. B. pipelines Continuous Delivery (CD).
+Die Bereitstellung auf den verschiedenen Hosts kann mit herkömmlichen Bereitstellungsverfahren verwaltet werden. Docker-Hosts können manuell mit Befehlen wie **docker run** oder durch Automatisierung, z.B. Pipelines für Continuous Delivery (CD), verwaltet werden.
 
-### <a name="monolithic-application-deployed-as-a-container"></a>Aufgrund eines monolithischen Anwendung, die als Container bereitgestellt
+### <a name="monolithic-application-deployed-as-a-container"></a>Monolithische Anwendung, die als Container bereitgestellt wird
 
-Es sind Vorteile der Verwendung von Containern monolithischen anwendungsbereitstellungen zu verwalten. Skalieren die Instanzen von Containern ist wesentlich schneller und einfacher als die Bereitstellung zusätzlicher VMs. Selbst wenn die VM-Skalierungsgruppen verwenden, um virtuelle Computer zu skalieren, Zeit dauern, bis diese Instanz. Wenn als app-Instanzen bereitgestellt wird, wird die Konfiguration der app im Rahmen des virtuellen Computers verwaltet.
+Das Verwenden von Containern zur Verwaltung monolithischer Anwendungsbereitstellungen hat einige Vorteile. Das Skalieren von Containerinstanzen ist wesentlich schneller und einfacher als die Bereitstellung zusätzlicher VMs. Auch wenn VM Scale Sets verwendet wird, um VMs zu skalieren, nimmt deren Instanziierung viel Zeit in Anspruch. Wenn die App-Konfiguration als App-Instanz bereitgestellt wird, wird diese als Teil der VM verwaltet.
 
-Bereitstellen von Updates, wie Docker-Images ist wesentlich schneller und Netzwerk effizient. Docker-Images beginnen in der Regel in Sekunden, die Befehlseingabe Rollouts. Beendet eine Instanz der Docker ist genauso einfach wie das Ausgeben einer **Docker Stop** Befehl ein, in der Regel in weniger als einer Sekunde abschließen.
+Die Bereitstellung von Updates, wie Docker-Images, ist wesentlich schneller und effizienter im Netzwerk. Docker-Images starten in der Regel in Sekunden, wodurch Rollouts beschleunigt werden. Das Löschen einer Docker-Instanz ist genauso einfach wie das Ausführen eines **docker stop**-Befehls und in der Regel in weniger als einer Sekunde abgeschlossen.
 
-Wie Container entwurfsbedingt grundsätzlich unveränderlich sind, müssen Sie nie fehlerhafte VMs zu kümmern, während der Update-Skripts vergessen haben möglicherweise für einige bestimmte Konfiguration oder die Datei Links auf dem Datenträger zu berücksichtigen.
+Da Container unveränderlich sind, müssen Sie sich keine Gedanken über beschädigte VMs machen. Es kann allerdings vorkommen, das Updateskripts bestimmte Konfigurationen oder restliche Dateien auf einem Datenträger erfassen.
 
-Während monolithischen apps von Docker in Sub-Systeme, die skaliert werden kann die aufgrund eines monolithischen Anwendung unterbrechen profitieren können, entwickelt und einzeln bereitgestellt werden möglicherweise Ihre Einstiegspunkt außerhalb des Bereichs des Microservices.
+Docker kann sich im Hinblick auf monolithische Apps zwar als sinnvoll erweisen. Wenn aber die monolithische Anwendung in Subsysteme unterteilt wird, die skaliert, entwickelt und einzeln bereitgestellt werden können, lohnt es sich möglicherweise, wenn Sie sich mit Microservices vertraut machen.
 
-> ### <a name="references--common-web-architectures"></a>Verweise – allgemeine Web-Architekturen
-> - **Die Clean-Architektur**  
+> ### <a name="references--common-web-architectures"></a>Ressourcen: Häufig verwendete Webarchitekturen
+> - **Clean Architecture**  
 > <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Die Onion-Architektur**  
+> - **Onion Architecture**  
 > <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Das Repositorymuster**  
+> - **The Repository Pattern (Das Muster „Repository“)**  
 > <http://deviq.com/repository-pattern/>
-> - **Bereinigen der Architektur Lösung-Beispiel**  
+> - **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Architektur Microservices e-Book** <http://aka.ms/MicroservicesEbook>
+> - **E-Book zum Entwerfen von Microservices** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Vorherigen] (architektonische principles.md) [weiter] (Common-Client-Side-Web-technologies.md)
+[Zurück] (architectural-principles.md) [Weiter] (common-client-side-web-technologies.md)

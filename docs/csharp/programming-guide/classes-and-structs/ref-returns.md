@@ -1,6 +1,6 @@
 ---
-title: "Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)"
-description: "Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können."
+title: Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)
+description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 Die nachfolgende Verwendung von `p` ist mit der Verwendung der von `GetContactInformation` zurückgegebenen Variable identisch, da `p` ein Alias für diese Variable darstellt. Durch Änderungen an `p` wird auch die von `GetContactInformation` zurückgegebene Variable geändert.
 
-Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet wird. Wenn nicht beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 „Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden.“ auf. 
+Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet wird. 
+
+Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht dies die Leistung, da ein möglicherweise aufwendiger Kopiervorgang vermieden wird. In der folgenden Anweisung wird z.B. gezeigt, wie ein lokaler Verweiswert definiert wird, mit dem auf einen Wert verwiesen wird.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Wert im zweiten Beispiel verwendet wird. Wenn nicht in beiden Beispielen beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden) auf. 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref-Rückgaben und lokale ref-Variablen: ein Beispiel
 
@@ -101,4 +109,5 @@ Ohne Unterstützung für Verweisrückgabewerte wird ein solcher Vorgang in der R
  
 ## <a name="see-also"></a>Siehe auch
 
-[ref (C#-Referenz)](../../language-reference/keywords/ref.md)
+[ref (C#-Referenz)](../../language-reference/keywords/ref.md)  
+[Verweissemantik mit Werttypen](../../../csharp/reference-semantics-with-value-types.md)

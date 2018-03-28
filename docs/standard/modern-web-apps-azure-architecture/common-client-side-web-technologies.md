@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Client Side Web-Technologien
-description: Innovative Webanwendungen mit ASP.NET Core und Azure Architekt | Allgemeine Client Side Web-Technologien
+title: Allgemeine clientseitige Webtechnologien
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allgemeine clientseitige Webtechnologien
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
@@ -11,83 +11,83 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/23/2017
 ---
-# <a name="common-client-side-web-technologies"></a>Allgemeine Client Side Web-Technologien
+# <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
-> "Websites sollte guten von innen nach"und"out."  
-> _- Paul Cookson_
+> „Websites sollten auf der Oberfläche und in ihrem Inneren gut aussehen.“  
+> _– Paul Cookson_
 
 ## <a name="summary"></a>Zusammenfassung
 
-ASP.NET Core-Anwendungen sind Webanwendungen,, und sie i. d. r. abhängig sind, auf die clientseitige webtechnologien wie HTML, CSS und JavaScript. Durch die Trennung von des Inhalts der Seite (HTML) über das Layout und formatieren (CSS) und sein Verhalten (über JavaScript), können komplexe Web-apps das Prinzip der Trennung von Bereichen nutzen. Zukünftige Änderungen an der Struktur, Entwurf, oder das Verhalten der Anwendung können problemlos weitere vorgenommen werden, wenn diese Probleme nicht ineinander greifen sind.
+ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf clientseitigen Webtechnologien wie HTML, CSS oder JavaScript auf. Indem der Inhalt der Seite (die HTML) vom Layout und Format (das CSS) und dessen Verhalten (über JavaScript) getrennt wird, können komplexe Web-Apps dem Prinzip der Separation of Concerns folgen. Die Struktur, das Design und das Verhalten der Anwendung können so unkomplizierter angepasst werden, da sie nicht miteinander verknüpft sind.
 
-HTML und CSS sind relativ stabilen JavaScript mithilfe der Anwendungsframeworks und Dienstprogramme Entwickler zum Erstellen von webbasierten Anwendungen arbeiten, wird mit breakneck Geschwindigkeit weiterentwickelt. In diesem Kapitel prüft einige Arten, die von Webentwicklern im Rahmen der Entwicklung von Anwendungen, wie eine allgemeine Übersicht über das Drehmoment und reagieren clientseitige Bibliotheken enthält JavaScript verwendet wird.
+Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern bei der Anwendungsentwicklung verwendet wird. Darüber hinaus wird ein allgemeiner Überblick über die clientseitigen Bibliotheken „Angular“ und „React“ gegeben.
 
 ## <a name="html"></a>HTML
 
-HTML (HyperText Markup Language) ist die standardmäßige Markupsprache, die zum Erstellen von Webseiten und Web-Apps verwendet. Die Elemente bilden die Bausteine der Seiten, formatierten Text, Bilder, Formulareingaben und andere Strukturen darstellt. Wenn ein Browser an eine URL anfordert, ob eine Seite oder eine Anwendung abrufen, ist also zuerst zurückgegebenen ein HTML-Dokument. HTML-Dokument verweisen oder zusätzliche Informationen über den Aussehen und Layout in Form von CSS oder Verhalten in Form von JavaScript enthalten.
+HTML (Hypertext Markup Language) ist die Standardmarkupsprache zum Erstellen von Webseiten und -anwendungen. Ihre Bestandteile bilden die Grundlage der Seiten und stehen für formatierten Text, Bilder, Formeingaben und andere Strukturen. Wenn ein Browser eine Anforderung an eine URL durchführt, egal ob es sich dabei um das Abrufen einer Seite oder einer Anwendung handelt, ist die erste Rückgabe ein HTML-Dokument. Dieses HTML-Dokument kann auf zusätzliche Informationen zu seinem Aussehen und Layout (in Form von CSS) oder Verhalten (in Form von JavaScript) verweisen oder diese beinhalten.
 
 ## <a name="css"></a>CSS
 
-CSS (Cascading Style Sheets) wird verwendet, um das Aussehen und Layout der HTML-Elemente zu steuern. CSS-Formatvorlagen können direkt auf ein HTML-Element angewendet, definiert separat auf derselben Seite oder in einer separaten Datei definiert und werden auf der Seite verwiesen wird. Stile kaskadiert werden basierend auf deren Verwendung auf einem angegebenen HTML-Element. Z. B. ein Stil kann möglicherweise für das gesamte Dokument angewendet, aber würde überschrieben werden, indem ein Format, das auf ein bestimmtes Element angewendet. Ebenso würde eine Formatvorlage elementspezifischen durch einen Stil außer Kraft gesetzt werden, die auf eine CSS-Klasse angewendet, die auf das Element angewendet wurde, die wiederum von einer im Format für eine bestimmte Instanz des jeweiligen Elements (über seine Id) überschrieben werden würde. Abbildung 6 – 1
+CSS (Cascading Stylesheet) wird verwendet, um das Aussehen und Layout eines HTML-Elements anzugeben. CSS-Formate können direkt auf ein HTML-Element angewendet werden, das separat auf der gleichen Seite angegeben wird, oder das in einer anderen Datei angegeben wird, auf die von der Seite verwiesen wird. Formate werden auf Grundlage ihrer Verwendung zum Auswählen eines HTML-Elements weitergegeben. Ein Format kann z.B. für ein ganzes Dokument gelten, kann aber von einem Format überschrieben werden, das für ein bestimmtes Element gilt. Ebenso wird ein elementspezifisches Format von einem Format überschrieben, das für eine CSS-Klasse gilt, die auf das Element angewendet wurde. Dieses Format wird wiederum von einem Format überschrieben, das auf eine bestimmte Instanz dieses Elements angewendet wird (über dessen ID). Abbildung 6–1
 
-**Abbildung 6 – 1.** Besonderheit der CSS-Regeln in der Reihenfolge.
+**Abbildung 6–1**. CSS-Genauigkeitsregeln, aufsteigend.
 
 ![](./media/image6-1.png)
 
-Es wird empfohlen, damit Stile in eigenen separaten Stylesheet-Dateien und mit konsistente und wiederverwendbare Stile in der Anwendung implementiert Auswahl basierende cascading. Platzieren Stilregeln in HTML sollte vermieden werden, und Anwenden von Stilen auf bestimmte einzelne Elemente (anstelle von ganze Klassen von Elementen oder Elementen, die eine bestimmte CSS-Klasse, die auf sie angewendet wurden) muss sich auf die Ausnahme, die nicht die Regel.
+Es wird empfohlen, Formate in getrennten Stylesheetdateien zu speichern und das auswahlbasierte Weitergeben zu verwenden, um konsistente und wiederverwendbare Formate innerhalb der Anwendung zu verwenden. Vermeiden Sie Formatregeln in HTML. Wenden Sie nur in Ausnahmefällen Formate auf einzelne Elemente an (statt auf ganze Klassen von Elementen oder auf Elemente, auf die eine bestimmte CSS-Klasse angewendet wurde).
 
 ### <a name="css-preprocessors"></a>CSS-Präprozessoren
 
-CSS-Stylesheets fehlender Unterstützung für bedingte Logik, Variablen und andere Programmiersprachenfeatures. Große Stylesheets gehören daher häufig viele Wiederholung, wie die gleiche Farbe, Schriftart oder andere Einstellungen auf viele verschiedene Variationen von HTML-Elemente und CSS-Klassen angewendet wird. CSS-Präprozessoren können Ihre Stylesheets, befolgen Sie die [TROCKENEN Prinzip](http://deviq.com/don-t-repeat-yourself/) durch Hinzufügen von Unterstützung für Variablen und Logik.
+CSS-Stylesheets unterstützen keine bedingte Logik, Variablen oder andere Programmiersprachenfeatures. Deshalb beinhalten große Stylesheets oft viele Wiederholungen, da die gleiche Farbe, Schriftart oder eine andere Einstellung auf verschiedene Varianten von HTML-Elementen und CSS-Klassen angewendet wird. CSS-Präprozessoren tragen dazu bei, dass Ihre Stylesheets dem [DRY-Prinzip](http://deviq.com/don-t-repeat-yourself/) treu bleiben, indem sie Unterstützung für Variablen und Logik hinzufügen.
 
-Die am häufigsten verwendeten CSS-Präprozessoren sind Sass und kleiner. Beide CSS erweitern und sind abwärtskompatibel ist, was bedeutet, dass eine einfache CSS-Datei eine gültige Sass oder LESS-Datei ist. Sass basiert auf Ruby und JavaScript-basiertes liegt, und sowohl in der Regel als Teil des lokalen Entwicklungs-Prozesses ausgeführt. Beide Befehl Zeile tools verfügbar, als auch integrierte Unterstützung in Visual Studio für sie ausgeführt haben, verwenden von Gulp oder Grunt-Aufgaben.
+Die bekanntesten CSS-Präprozessoren sind Sass und LESS. Beide erweitern CSS und stellen Rückwärtskompatibilität bereit. Das bedeutet, dass eine CSS-Datei eine gültige Sass- oder LESS-Datei ist. Sass basiert auf Ruby und LESS auf JavaScript. Beide werden normalerweise im Rahmen Ihres lokalen Entwicklungsprozesses ausgeführt. Beide verfügen über Befehlszeilentools. Visual Studio verfügt über integrierte Unterstützung für ihre Ausführung mithilfe von Gulp- und Grunt-Tasks.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript ist eine dynamische, interpretiert Programmiersprache, die in der ECMAScript-Sprachspezifikation standardisiert wurde. Es ist der Programmiersprache ab, der im Web. Wie CSS kann JavaScript als Attribute in den HTML-Elementen als Blöcke des Skripts innerhalb einer Seite oder in separaten Dateien definiert werden. Genau wie CSS wurde in der Regel empfohlen, JavaScript in separate Dateien organisieren halten getrennt so weit wie möglich aus dem HTML-Code finden Sie auf den einzelnen Webseiten oder Sichten.
+JavaScript ist eine dynamische, interpretierte Programmiersprache, die in der ECMAScript-Sprachspezifikation standardisiert wurde. JavaScript ist die Programmiersprache des Internets. Ähnlich wie CSS kann JavaScript als Attribute innerhalb von HTML-Elementen, als Skriptblöcke auf einer Seite oder in separaten Dateien definiert werden. Genauso wie bei CSS wird auch hier empfohlen, dass Sie JavaScript in separaten Dateien strukturieren, sodass es so weit wie möglich von der HTML getrennt bleibt, die sich auf Webseiten oder in Anwendungsansichten befindet.
 
-Bei der Arbeit mit JavaScript in der Webanwendung stehen einige Aufgaben, die Sie häufig ausführen müssen:
+Wenn Sie JavaScript in Ihrer Webanwendung verwenden, müssen Sie zumeist folgende Aufgaben ausführen:
 
--   Ein HTML-Element auswählen und Abrufen von und/oder aktualisieren den Wert
+-   Sie müssen ein HTML-Element auswählen und dieses abrufen und/oder dessen Wert aktualisieren.
 
--   Abfragen einer Web-API für Daten
+-   Sie müssen eine Web-API abfragen, um Daten zu erhalten.
 
--   Senden eines Befehls an einer Web-API (und reagieren auf einen Rückruf mit Ergebnis)
+-   Sie müssen einen Befehl an eine Web-API senden (und auf einen Rückruf mit ihrem Ergebnis reagieren).
 
--   Überprüfung wird durchgeführt
+-   Sie müssen eine Validierung durchführen.
 
-Sie können diese Aufgaben mit JavaScript allein ausführen, aber viele Bibliotheken vorhanden sein, um diese Aufgaben zu vereinfachen. Einer der ersten und die meisten dieser Bibliotheken erfolgreichen ist jQuery, der weiterhin eine beliebte Wahl für diese Aufgaben auf Webseiten vereinfacht werden. JQuery für Single Page Applications (SPAs) stellt keine viele der gewünschten Funktionen bereit, mit denen Angular und reagieren zu können.
+Diese Aufgaben können Sie alle mit JavaScript alleine durchführen, aber es gibt viele Bibliotheken, die Ihnen den Vorgang erleichtern. Eine der ersten und erfolgreichsten Bibliotheken ist jQuery, die immer noch sehr beliebt ist, wenn es darum geht, diese Aufgaben auf Webseiten zu erleichtern. jQuery bietet für Single-Page-Webanwendungen (SPAs) nur wenige der erwünschten Features, die von den Bibliotheken „Angular“ und „React“ bereitgestellt werden.
 
-### <a name="legacy-web-apps-with-jquery"></a>Ältere Web-Apps mit jQuery
+### <a name="legacy-web-apps-with-jquery"></a>Legacy-Webanwendungen mit jQuery
 
-Obwohl der alten durch JavaScript-Framework-Standards, weiterhin jQuery eine sehr häufig verwendete Bibliothek zum Arbeiten mit HTML/CSS, und Erstellen von Anwendungen, die AJAX-Aufrufe auf Web-APIs ausführen. Allerdings jQuery auf der Ebene des Browser-Dokumentobjektmodells (DOM) arbeitet und bietet standardmäßig nur eine imperative, anstatt deklarativen Modell.
+Obwohl jQuery für JavaScript-Verhältnisse schon sehr alt ist, ist sie immer noch eine häufig verwendete Bibliothek beim Verwenden von HTML/CSS und beim Erstellen von Anwendungen, die AJAX-Aufrufe an Web-APIs durchführen. jQuery funktioniert auf Ebene des Dokumentobjektmodells (DOM) des Browsers und bietet nur ein imperatives statt eines deklarativen Modells.
 
-Angenommen Sie, dass wenn ein Textfeld Wert 10 überschreitet, ein Element auf der Seite sichtbar gemacht werden soll. In jQuery würde dies in der Regel implementiert werden durch einen Ereignishandler mit Code, der Wert des Textfelds untersuchen, und legen Sie die Sichtbarkeit des Zielelements basierend auf diesem Wert würde zu schreiben. Dies ist eine imperative codebasierte Ansatz. Ein anderes Framework möglicherweise stattdessen Databinding verwenden, um die Sichtbarkeit des Elements deklarativ auf den Wert des Textfelds zu binden. Dies ist kein notwendig Code schreiben zu müssen, aber stattdessen nur erfordert ergänzen die Elemente, die an Daten binden von Attributen. Seite Clientverhalten komplexere wachsen, nähert Datenbindung häufig in einfachere Lösung mit weniger Code und Komplexität bedingter Ergebnis.
+Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird, wenn der Wert eines Textfelds höher als 10 ist. Dies sollte in jQuery normalerweise durch das Schreiben eines Ereignishandlers implementiert werden. Dazu wird Code benötigt, der den Wert des Textfelds untersucht und die Sichtbarkeit des Zielelements basierend auf diesem Wert ändert. Dabei handelt es sich um eine imperative, codebasierte Herangehensweise. In einem anderen Framework wird möglicherweise die Datenbindung verwendet, um die Sichtbarkeit von Elementen deklarativ an den Wert des Textfelds zu binden. Dazu ist das Schreiben von Code nicht nötig. Allerdings müssen Sie stattdessen die betreffenden Elemente mit Datenbindungsattributen versehen. Mit steigender Komplexität des clientseitigen Verhaltens gewährleisten Herangehensweisen, die die Datenbindung einsetzen, oft einfachere Lösungen mit weniger Code und weniger bedingter Komplexität.
 
-### <a name="jquery-vs-a-spa-framework"></a>jQuery Vs ein SPA-Framework
+### <a name="jquery-vs-a-spa-framework"></a>Vergleich: jQuery und ein SPA-Framework
 
-| **Factor** | **jQuery** | **Angular**|
+| **Aspekt** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| Das DOM abstrahiert | **Ja** | **Ja** |
+| Abstraktion des DOM | **Ja** | **Ja** |
 | AJAX-Unterstützung | **Ja** | **Ja** |
-| Deklarative Datenbindung | **No** | **Ja** |
-| Routing von MVC-Stil | **No** | **Ja** |
-| Textvorlagen | **No** | **Ja** |
-| Deep-Link-Routing | **No** | **Ja** |
+| Deklarative Datenbindung | **Nein** | **Ja** |
+| MVC-Routing | **Nein** | **Ja** |
+| Vorlagen | **Nein** | **Ja** |
+| Deep-Link-Routing | **Nein** | **Ja** |
 
-Die meisten Funktionen, die jQuery systemintern fehlt, können durch das Hinzufügen von anderen Bibliotheken hinzugefügt werden. Eine SPA-Framework, z. B. Angular bietet jedoch diese Funktionen auf eine Weise mehr integrierte, da es mit allen von ihnen Bedenken vom Beginn entworfen wurde. JQuery ist auch eine sehr imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen, um macht nichts mit jQuery müssen. Ein Großteil der Arbeit und Funktionen, die SPA-Frameworks stellen deklarativ möglich, erfordern keine tatsächlichen Code geschrieben werden.
+Die meisten Features, die jQuery fehlen, können durch andere Bibliotheken hinzugefügt werden. Ein SPA-Framework wie Angular stellt diese Features einfacher bereit, da diese von Anfang an bei dessen Entwicklung berücksichtigt wurden. Zudem ist jQuery eine sehr imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen müssen, um Vorgänge mit jQuery durchführen zu können. Die meiste Arbeit und die meisten Funktionen, die von SPA-Frameworks bereitgestellt werden, können deklarativ durchgeführt werden, sodass kein Code geschrieben werden muss.
 
-Binden von Daten ist ein hervorragendes Beispiel für dieses. In jQuery dauert es in der Regel nur eine Codezeile zum Abrufen des Werts ein DOM-Element oder Wert des Elements festgelegt. Allerdings müssen Sie zum Schreiben des Codes jederzeit müssen Sie den Wert des Elements zu ändern und in einigen Fällen wird dies in mehrere Funktionen auf einer Seite auftreten. Ein anderes häufiges Beispiel ist die Sichtbarkeit von Elementen. In jQuery möglicherweise vielen verschiedene Quellen, Schreiben Sie Code steuern möchten, ob bestimmte Elemente sichtbar waren. In jedem dieser Fälle, wenn die Datenbindung verwenden würde kein Code geschrieben werden müssen. Binden Sie einfach den Wert oder die Sichtbarkeit des betreffenden Elemente eine *Viewmodel* auf der Seite "sowie die Änderungen, würde Viewmodel automatisch in den gebundenen Elementen wiedergegeben werden.
+Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elementes oder mehrerer Elemente an ein *Anzeigemodell* auf der Seite, und dann werden Änderungen des Ansichtsmodells automatisch bei den gebundenen Elementen widergespiegelt.
 
-### <a name="angular-spas"></a>Angular SPAs
+### <a name="angular-spas"></a>Angular-SPAs
 
-AngularJS wurde schnell mit einer der weltweit am häufigsten verwendeten JavaScript-Frameworks. Mit Angular 2 neu das Team, erstellt das Framework von Grund auf neu einrichten (mit [TypeScript](https://www.typescriptlang.org/)) und von AngularJS an einfach Angular umbenannt. Derzeit weiterhin auf Version 4, Angular eine robuste Framework zum Erstellen von Single Page Applications.
+AngularJS ist schnell zu einem der beliebtesten JavaScript-Frameworks der Welt geworden. In Angular 2 hat das Team das Framework komplett neu gestaltet (mit [TypeScript](https://www.typescriptlang.org/)). Seitdem ist der Name nicht mehr AngularJS, sondern nur noch Angular. Angular – Version 4 ist die aktuelle Version – ist weiterhin ein widerstandsfähiges Framework zum Erstellen von Single-Page-Webanwendungen.
 
-Angular-Anwendungen werden von Komponenten erstellt. Komponenten mit speziellen Objekte kombinieren, HTML-Vorlagen und einen Teil der Seite zu steuern. Eine einfache Komponente aus der Angular Docs wird hier gezeigt:
+Angular-Anwendungen setzen sich aus Komponenten zusammen. Komponenten vereinen HTML-Vorlagen mit besonderen Objekten und steuern einen Teil der Seite. Hier sehen Sie eine einfache Komponente aus der Angular-Dokumentation:
 
 ```js
 import { Component } from '@angular/core';
@@ -100,21 +100,21 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Komponenten werden definiert über die @Component Decorator-Funktion, die in den Metadaten über die Komponente akzeptiert. Die Datenauswahl (Eigenschaft) identifiziert die Id des Elements auf der Seite, in diese Komponente angezeigt werden soll. Die Template-Eigenschaft ist eine einfache HTML-Vorlage, die einen Platzhalter, der an die Name-Eigenschaft der Komponente enthält, definiert in der letzten Zeile entspricht.
+Komponenten werden mit der Decorator-Funktion @Component definiert, die Metadaten zur Komponente beinhaltet. Die selector-Eigenschaft gibt die ID des Elements auf der Seite an, auf der die Komponente angezeigt wird. Die template-Eigenschaft ist eine einfache HTML-Vorlage, die einen Platzhalter enthält, der für die name-Eigenschaft des Elements steht, die in der letzten Zeile definiert wird.
 
-Arbeiten mit Komponenten und Vorlagen, anstelle von DOM-Elemente können auf einer höheren Ebene der Abstraktion und mit weniger insgesamt Code als apps ausgeführt wird, nur für JavaScript (auch als "Vanille JS" bezeichnet) verwenden oder mit jQuery Angular-apps arbeiten. Angular erzwingt auch einige Reihenfolge auf wie Ihre clientseitige Skriptdateien organisiert. Gemäß der Konvention verwenden Angular-apps eine gemeinsame Ordnerstruktur mit-Modul und die Komponente Skriptdateien, die sich in einem app-Ordner befindet. Angular Skripts erstellen, bereitstellen und testen die app befinden sich in der Regel in einem übergeordneten Ordner dürfte.
+Da Angular-Anwendungen mit Komponenten und Vorlagen statt mit DOM-Elementen arbeiten, ist ihr Grad an Abstraktion höher, und sie erfordern insgesamt weniger Code als Apps, die nur mit JavaScript (auch als „Vanilla JS“ bezeichnet) oder jQuery geschrieben wurden. Außerdem sorgt Angular für einen gewissen Grad an Ordnung bei der Organisation Ihrer clientseitigen Skriptdateien. Gemäß der Konvention verwenden Angular-Apps eine gemeinsame Ordnerstruktur, wobei sich Modul- und Komponentenskriptdateien in einem App-Ordner befinden. Angular-Skripts zum Erstellen, Bereitstellen und Testen der App befinden sich normalerweise in einem Ordner auf einer höheren Ebene.
 
-Angular nutzt auch hervorragende Tools Befehlszeilenschnittstelle (CLI). Erste Schritte mit Angular Entwicklung lokal (vorausgesetzt, Sie haben bereits Git und Npm installiert) besteht aus Klonen einfach ein Repository aus GitHub und Ausführung \`installieren Sie Npm\` und \`Npm Start\`. Darüber hinaus wird Angular eigene CLI-Tool kann Projekte erstellen, Dateien hinzufügen und Ihnen dabei helfen zu testen, Bündelung und Bereitstellungsaufgaben geliefert. Die CLI tooling Zweckmäßigkeit macht Angular insbesondere mit ASP.NET Core, welche hervorragende CLI unterstützen auch Funktionen kompatibel.
+Angular setzt CLI-Tools (Befehlszeilenschnittstelle) optimal ein. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn man davon ausgeht, dass sie git und npm bereit installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und \`npm install\` und \`npm start\` ausführen. Darüber hinaus ist ein eigenes CLI-Tool im Lieferumfang von Angular enthalten, mit dem Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Toolfähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das auch CLI-Unterstützung beinhaltet.
 
-Microsoft hat eine Anwendung Verweis entwickelt [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), darunter eine Angular SPA-Implementierung. Diese app enthält Angular-Module zum Verwalten von des Onlineshops Warenkorb Warenkorb, laden und Anzeigen von Elementen aus seinem Katalog und zum Behandeln von Reihenfolge erstellen. Sie können anzeigen, und Laden Sie die beispielanwendung aus [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+Microsoft hat die Beispielanwendung [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
 
-### <a name="react"></a>reagieren
+### <a name="react"></a>React
 
-Im Gegensatz zu Angular, die eine vollständige bietet Model-View-Controller Muster Implementierung reagieren nur mit Sichten betroffen ist. Es ist ein Framework, nur eine Bibliothek nicht um eine SPA zu erstellen, müssen Sie zusätzliche Bibliotheken zu nutzen.
+Im Gegensatz zu Angular, das eine vollständige Implementierung des MVC-Musters bereitstellt, befasst React sich nur mit Ansichten. React ist kein Framework, sondern lediglich eine Bibliothek, sodass Sie zum Erstellen einer SPA zusätzliche Bibliotheken benötigen.
 
-Einer der wichtigsten Funktionen des reagieren ist die Verwendung eines virtuellen DOM Virtuelle DOM bietet mehrere Vorteile, einschließlich Leistung (virtuelle DOM kann optimieren welche Teile des tatsächlichen DOM aktualisiert werden müssen) und die Prüfbarkeit (es muss in einen Browser testen reagieren und seine Interaktionen mit der virtuellen DOM haben) reagieren.
+Eines der wichtigsten Features von React ist das virtuelle DOM. Das virtuelle DOM in React hat mehrere Vorteile, u.a. bei der Leistung (das virtuelle DOM optimiert, welche Teile des DOM tatsächlich aktualisiert werden müssen) und bei der Testbarkeit (es wird kein Browser zum Testen von React und dessen Interaktionen mit seinem virtuellen DOM benötigt).
 
-Reagieren ist auch in mit HTML Zusammenarbeit ungewöhnlich. Anstatt eine strikte Trennung zwischen Code und Markup (durch Verweise auf JavaScript im HTML-Attribute angezeigt werden, z. B.), zu reagieren wird als JSX HTML direkt in die JavaScript-Code hinzugefügt. JSX ist HTML-ähnliche Syntax, die auf reinen JavaScript kompiliert werden kann. Zum Beispiel:
+Außerdem arbeitet React auf ungewöhnliche Weise mit HTML. Statt einer strikten Trennung zwischen Code und Markup (mit möglichen Verweisen auf JavaScript in HTML-Attributen), fügt React HTML direkt als JSX in seinen JavaScript-Code ein. JSX ist eine Syntax ähnlich wie HTML, die zu reinem JavaScript kompiliert werden kann. Zum Beispiel:
 
 ```js
 <ul>
@@ -124,51 +124,51 @@ Reagieren ist auch in mit HTML Zusammenarbeit ungewöhnlich. Anstatt eine strikt
 </ul>
 ```
 
-Wenn Sie bereits über JavaScript kennen, sollte das Erlernen von reagieren einfach sein. Es gibt keine fast so viel Lernkurve oder spezielle Syntax als mit dem Angular oder anderen beliebten Bibliotheken sind.
+Wenn Sie bereits mit JavaScript vertraut sind, sollte das Erlernen von React unkompliziert sein. Sie müssen sich bei Weitem nicht so viel Wissen oder besondere Syntax aneignen wie bei Angular oder anderen beliebten Bibliotheken.
 
-Befindet sich eine vollständigen Framework reagieren nicht, sollten Sie in der Regel, andere Bibliotheken behandeln kann Angaben wie routing, web-API-Aufrufe und abhängigkeitsverwaltung. Das gute ist, Sie können die besten Bibliothek auswählen, für jedes dieser, aber der Nachteil ist, müssen Sie alle diese Entscheidungen zu machen, und stellen Sie sicher, dass alle den ausgewählten Bibliotheken aufeinander abgestimmt, wenn Sie fertig sind. Gegebenenfalls einen guten Ausgangspunkt können Sie ein Starterkit wie Slingshot zu reagieren, die einen Satz von kompatiblen Bibliotheken zusammen mit reagieren prepackages.
+Da es sich bei React nicht um ein vollständiges Framework handelt, sollten sich andere Bibliotheken um Routing, Web-API-Aufrufe und die Abhängigkeitsverwaltung kümmern. Der Vorteil besteht darin, dass Sie sich so die beste Bibliothek für jede dieser Aufgaben aussuchen können. Der Nachteil besteht allerdings darin, dass sie sich aktiv mit diesen Entscheidungen auseinandersetzen und sicherstellen müssen, dass die ausgewählten Bibliotheken gut miteinander funktionieren. Wenn Sie einen guten Ausgangspunkt haben möchten, können Sie ein Starter Kit wie React Slingshot verwenden, in dem mehrere kompatible Bibliotheken gemeinsam mit React vorverpackt sind.
 
-### <a name="choosing-a-spa-framework"></a>Auswählen einer SPA-Framework
+### <a name="choosing-a-spa-framework"></a>Entscheidung für ein SPA-Framework
 
-Bei Berücksichtigung der JavaScript-Framework zur Unterstützung Ihrer SPA am besten geeignet ist, Bedenken Sie Folgendes:
+Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am besten unterstützt, beachten Sie besonders die folgenden Aspekte:
 
--   Liegt das Team mit der das Framework und die abhängigen Elemente (einschließlich TypeScript in einigen Fällen) vertraut?
+-   Kennt sich Ihr Team mit dem Framework und dessen Abhängigkeiten aus (dies umfasst in einigen Fällen auch TypeScript)?
 
--   Wie opinionated ist das Framework, und stimmen Sie mit der Standardmethode Dinge zu erledigen?
+-   Wie „eigenwillig“ ist das Framework, und passt sein Standardverhalten zu Ihren Bedürfnissen?
 
--   Ist er (oder eine Begleit-Bibliothek) aller Funktionen enthalten, die Ihre app benötigt?
+-   Enthält es (oder eine zugehörige Bibliothek) alle Features, die Ihre App benötigt?
 
--   Ist umfassend beschrieben?
+-   Ist eine ausführliche Dokumentation vorhanden?
 
--   Wie aktiv der Community ist? Erstellt neue Projekte erstellen, werden mit der sie?
+-   Wie aktiv ist seine Community? Werden damit neue Projekte erstellt?
 
--   Wie aktiv Hashteams Core ist? Werden Probleme werden aufgelöst werden, und neue Versionen werden regelmäßig geliefert?
+-   Wie aktiv ist das Kernteam? Werden Probleme behoben und regelmäßig neue Versionen veröffentlicht?
 
-JavaScript-Frameworks weiterhin mit breakneck Geschwindigkeit entwickeln. Verwenden Sie die oben aufgeführten sind, können Sie das Risiko der Entscheidung für eines Framework, dem Sie später bedauern müssen wird abhängig von Überlegungen. Wenn Sie das Risiko besonders Mengen sind, sollten Sie ein Framework, das bieten die Unterstützung für kommerzielle und/oder wird durch ein großes Unternehmen entwickelt werden.
+JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheiden Sie sich anhand der oben aufgelisteten Fragen für ein geeignetes Framework. Wenn es sein kann, dass sich ein Framework für Sie schnell als ungeeignet herausstellt, entscheiden Sie sich für ein Framework, dass kommerziellen Support anbietet und/oder von einem großen Unternehmen entwickelt wird.
 
-> ### <a name="references--client-web-technologies"></a>Verweise – Client-Web-Technologien
+> ### <a name="references--client-web-technologies"></a>Ressourcen: Clientseitige Webtechnologien
 > - **HTML und CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Im Vergleich zur sass LESS**  
+> - **Vergleich von Sass und LESS**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
-> - **Formatieren von ASP.NET Core-Apps mit einem niedrigeren Sass und Schriftart Awesome**  
+> - **Formatieren von Apps mit LESS, Sass und Font Awesome**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
-> - **Die clientseitige-Entwicklung in ASP.NET Core**  
+> - **Clientseitige Entwicklung in ASP.NET Core**  
 > <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
 > <https://jquery.com/>
-> - **jQuery vs AngularJS**  
+> - **jQuery vs. AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
 > <https://facebook.github.io/react/>
-> - **Slingshot reagieren**  
+> - **React Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
-> - **Vs Angular 2 Vergleich reagieren**  
+> - **Vergleich von React und Angular 2**  
 > <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **5 bewährte JavaScript-Frameworks von 2017**  
+> - **5 Best JavaScript Frameworks of 2017 (Die 5 besten JavaScript-Frameworks 2017)**  
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Vorherigen] (Allgemeine-Web-Anwendung-architectures.md) [weiter] (Develop-asp-net-core-mvc-apps.md)
+[Zurück] (common-web-application-architectures.md) [Weiter] (develop-asp-net-core-mvc-apps.md)

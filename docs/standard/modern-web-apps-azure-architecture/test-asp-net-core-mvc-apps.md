@@ -1,6 +1,6 @@
 ---
 title: Testen von ASP.NET Core MVC-Apps
-description: Innovative Webanwendungen mit ASP.NET Core und Azure Architekt | Testen von ASP.NET Core MVC-Apps
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Testen von ASP.NET Core MVC-Apps
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
@@ -11,36 +11,36 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
-> _"Wenn Sie Komponententests für das Produkt nicht mögen, wird nicht sehr wahrscheinlich Ihre Kunden möchten, entweder testen."_
-> _ - Anonyme -
+> _„Wenn es Ihnen nicht gefällt, Komponententests für Ihr Produkt auszuführen, ist es sehr wahrscheinlich, dass es Ihren Kunden auch nicht gefallen wird.“_
+> – Anonym
 
 ## <a name="summary"></a>Zusammenfassung
 
-Software von beliebiger Komplexität kann auf unerwartete Weise als Reaktion auf Änderungen fehlschlagen. Daher ist die Tests nach Änderungen für alle Spalten mit Ausnahme der unbedeutendsten (oder am wenigsten wichtigen) Anwendungen erforderlich. Manuelle Tests ist der langsamste, mindestens zuverlässige Weise über die teuersten zum Testen von Software. Wenn Anwendungen nicht getestet werden können konzipiert wurden, kann es leider die einzige Möglichkeit, die verfügbar sein. Architekturprinzipien angeordnet, Folgendes in Kapitel X geschriebene Anwendungen sollten Einheit getestet werden können, und ASP.NET Core Anwendungen automatisierte Integration und Funktionstests ebenfalls unterstützt.
+Software von beliebiger Komplexität kann aufgrund von Änderungen auf unerwartete Weisen fehlschlagen. Daher ist es erforderlich, Anwendungen auf Änderungen zu testen, mit Ausnahme von unbedeutenden (bzw. weniger wichtigen) Anwendungen. Manuelle Tests sind die langsamste, unzuverlässigste und aufwendigste Möglichkeit zum Testen von Software. Leider können diese die einzige verfügbare Methode sein, wenn Anwendungen nicht dafür entworfen wurden, testbar zu sein. Anwendungen, die nach den folgenden, in Kapitel X beschriebenen Architekturprinzipien geschrieben wurden, sollten mit Komponententests testbar sein, und ASP.NET Core-Anwendungen sollten zusätzlich die automatisierte Integration und Funktionstests unterstützen.
 
 ## <a name="kinds-of-automated-tests"></a>Arten von automatisierten Tests
 
-Es gibt viele Arten von automatisierten Tests für softwareanwendungen. Die einfachste niedrigste Ebene Test hat den Komponententest. Auf einer etwas höheren Ebene sind bei der Integration und funktionale Tests vorhanden. Andere Arten von Tests, z. B. UI-Tests, Auslastungstests, Belastungstests und Feuerprobe durch sind nicht Gegenstand dieses Dokuments.
+Es gibt viele Arten von automatisierten Tests für Softwareanwendungen. Der einfachste, spezifischste Test ist der Komponententest. Integrationstests und Funktionstests sind etwas allgemeiner. Andere Arten von Tests werden in dieser Dokumentation nicht behandelt, z.B. UI-Tests, Auslastungstests, Belastungstests und Buildakzeptanztests.
 
 ### <a name="unit-tests"></a>Komponententests
 
-Ein Komponententest testet ein einzelnes Teil der Logik Ihrer Anwendung. Eine kann weitere beschreiben sie durch einige der Aufgaben, die dies nicht der Fall auflisten. Ein Komponententest Testen nicht, wie der Code funktioniert mit Abhängigkeiten oder Infrastruktur – welche Integrationstests sind. Ein Komponententest nicht die Framework-Code geschrieben wird, auf Testen – Sie davon ausgehen er funktioniert oder, wenn Sie es finden nicht, einen Fehler, und code dieses Problem zu umgehen. Ein Komponententest wird vollständig im Arbeitsspeicher und im Prozess ausgeführt. Es ist nicht mit dem Dateisystem, das Netzwerk oder eine Datenbank kommunizieren. Komponententests sollte nur den Code zu testen.
+Ein Komponententest überprüft einen einzelnen Teil der Logik Ihrer Anwendung. Man kann diesen Test genauer beschreiben, indem man aufführt, was er nicht umfasst. Ein Komponententest überprüft nicht, wie Ihr Code mit Abhängigkeiten oder Infrastruktur interagiert. Dafür gibt es Integrationstests. Ein Komponententest überprüft nicht das Framework, auf dem Ihr Code geschrieben wurde. Sie sollten davon ausgehen, dass dieses funktioniert. Wenn es nicht funktioniert, melden Sie den Fehler und schreiben eine Problemumgehung. Komponententests werden vollständig im Arbeitsspeicher und im Prozess ausgeführt. Sie kommunizieren nicht mit dem Dateisystem, dem Netzwerk oder einer Datenbank. Komponententests sollten Ihren Code nur überprüfen.
 
-Komponententests, die aufgrund der Tatsache, dass sie nur eine einzelne Einheit des Codes, ohne externe Abhängigkeiten testen sollte äußerst schnell ausgeführt werden. Daher sollten Sie von Testsammlungen aus Hunderten von Komponententests in wenigen Sekunden ausführen können. Führen Sie sie häufig, idealerweise vor jeder Push eine freigegebene Quellcodeverwaltungs-Repository und sicherlich mit jedem Build automatisierte auf dem Buildserver.
+Aufgrund der Tatsache, dass Komponententests nur eine einzelne Komponente Ihres Codes überprüfen und über keine externen Abhängigkeiten verfügen, werden diese sehr schnell ausgeführt. Daher sollten Sie eine Testsammlung aus Hunderten von Komponententests in wenigen Sekunden ausführen können. Führen Sie diese regelmäßig aus, im Idealfall vor jedem Push an ein öffentliches Repository für die Quellcodeverwaltung und insbesondere vor jedem automatisierten Buildvorgang auf Ihrem Buildserver.
 
 ### <a name="integration-tests"></a>Integrationstests
 
-Zwar eine gute Idee, Code zu kapseln, der Interaktion mit Infrastrukturkomponenten, wie Datenbanken und Dateisysteme, noch müssen Teil des Codes, und Sie sollten es zu testen. Darüber hinaus sollten Sie sicherstellen, dass die Ebenen des Codes interagieren, wie Sie erwarten, wenn Ihre Anwendung Abhängigkeiten vollständig aufgelöst werden. Dies ist der Verantwortung des Integrationstests. Integrationstests tendenziell langsamer und schwieriger als Komponententests, die eingerichtet sein, da sie häufig externe Abhängigkeiten sowie Infrastruktur abhängig sind. Daher sollten Sie vermeiden, testen die Aufgaben aus, die Tests bei Komponententests in Integrationstests werden konnte. Wenn Sie ein bestimmtes Szenario mit einem Komponententest testen können, sollten Sie es mit einem Komponententest testen. Wenn Sie nicht möglich ist, sollten Sie einen Integrationstest verwenden.
+Obwohl es eine gute Idee ist, Code zu kapseln, der mit Infrastruktur interagiert (z.B. Datenbanken und Dateisysteme), wird ein Teil des Codes übrig bleiben, den Sie wahrscheinlich testen möchten. Darüber hinaus sollten Sie sicherstellen, dass die Schichten Ihres Codes wie erwartet interagieren, wenn die Abhängigkeiten Ihrer Anwendung vollständig aufgelöst werden. Hierfür sind Integrationstests verantwortlich. Integrationstests sind langsamer und schwieriger einzurichten als Komponententests, da sie oft von externen Abhängigkeiten und Infrastrukturen abhängig sind. Daher sollten Sie es vermeiden, Szenarios zu testen, die Tests mit Komponententests in Integrationstests darstellen könnten. Wenn Sie ein bestimmtes Szenario mit einem Komponententest testen können, sollten Sie dieses Szenario mit einem Komponententest testen. Wenn dies nicht möglich ist, sollten Sie einen Integrationstest verwenden.
 
-Integrationstests müssen häufig komplexere Setup- und teardownvorgänge Prozeduren als Komponententests. Beispielsweise benötigen ein Integrationstest, der für eine tatsächliche Datenbank geht eine Möglichkeit zum Zurückgeben der Datenbank in einen bekannten Zustand vor jedem Test ausführen. Wenn neue Tests hinzugefügt werden, und das Datenbankschema Produktion weiterentwickelt, diese Tests Skripts erfolgen tendenziell in Größe und Komplexität wachsen. In zahlreiche großen Systemen ist es unpraktisch, vollständige Auflistungen von Integrationstests auf Entwicklerarbeitsstationen ausgeführt wird, vor dem Einchecken von Änderungen an den freigegebenen Datenquellen-Steuerelements. In diesen Fällen können die Integrationstests erfolgreich auf einem Build-Server ausgeführt werden.
+Integrationstests verfügen meistens über komplexere Setup- und Nachbereitungsprozeduren als Komponententests. Ein Integrationstest, der beispielsweise auf eine Datenbank angewendet wird, benötigt eine Möglichkeit, die Datenbank in einen bekannten Zustand zurückzusetzen, bevor jeder Test ausgeführt wird. Wenn neue Tests hinzugefügt werden und das Datenbankschema für die Produktion sich weiterentwickelt, werden die Testskripts größer und komplexer. In vielen großen Systemen ist es unpraktisch, vollständige Testsammlungen auf den Arbeitsstationen von Entwicklern auszuführen, bevor Änderungen in die Quellcodeverwaltung eingetragen werden. In diesen Fällen können Integrationstests auf einem Buildserver ausgeführt werden.
 
-Die Implementierungsklasse LocalFileImageService implementiert die Logik zum Abrufen und Zurückgeben einer Bilddatei Bytes aus einem bestimmten Ordner eine Id zugewiesen:
+Die Implementierungsklasse „LocalFileImageService“ implementiert die Logik zum Abrufen und Zurückgeben von Bytes einer Bilddatei aus einem bestimmten Ordner, dem eine ID zugewiesen wurde:
 
 ```cs
 public class LocalFileImageService : IImageService
@@ -61,49 +61,49 @@ public class LocalFileImageService : IImageService
 
 ### <a name="functional-tests"></a>Funktionstests
 
-Integrationstests werden geschrieben, aus der Perspektive des Entwicklers, um sicherzustellen, dass einige Komponenten des Systems ordnungsgemäß zusammenwirken. Funktionstests werden geschrieben, aus der Perspektive des Benutzers, und überprüfen die Richtigkeit des Systems basierend auf den Anforderungen. Der folgende Auszug bietet Analogie zum sind im Wesentlichen Funktionstests, im Vergleich zu Komponententests:
+Integrationstests werden aus der Perspektive des Entwicklers geschrieben, um sicherzustellen, dass einige der Systemkomponenten ordnungsgemäß interagieren. Funktionstests werden aus der Perspektive des Benutzers geschrieben, um die Richtigkeit des Systems basierend auf den Anforderungen sicherzustellen. Der folgende Auszug bietet eine nützliche Analogie zum Vergleich von Funktionstests und Komponententests:
 
-> "Oft die Entwicklung eines Systems ist auf die Erstellung eines Hauses Statusmodul vergleichbar. Während diese Analogie nicht ganz richtig ist, können wir ihn im Rahmen der Unterschied zwischen Einheit und Funktionstests erweitern. UnitTests erfolgt analog zur ein Erstellen von Inspektor ein Haus Konstruktion Website besuchen. Er konzentriert sich auf die verschiedenen internen Systemen des Hauses, die Grundlage, Abfassung, für die elektrische Sanitär- und usw. Er stellt sicher, dass die Teile des Hauses werden voll funktionsfähig und sicher, d. h. das Erstellen von Code zu erfüllen (Tests). Funktionstests in diesem Szenario sind vergleichbar mit dem Hauseigentümer derselben Konstruktion Website besuchen. Er wird davon ausgegangen, dass die internen Systemen entsprechend verhält, dass das Erstellen von Inspektor seine Aufgabe ausgeführt wird. Die Hauseigentümer konzentriert sich darauf, was er z. B. in diesem Haus Gültigkeitsdauer kann. Er hat Bedenken hinsichtlich des Hauses wie sieht, sind die verschiedenen Räumen eine angenehme Größe und passt die House der Familie muss, sind die Fenster an eine gute Stelle zum Abfangen von Sun morgen. Die Hauseigentümer wird auf die House Funktionstests ausführen. Er verfügt über die Sicht des Benutzers. Erstellen von Inspektor ausführt Komponententests auf die House. Er verfügt über die Perspektive des."
+> „Oft wird das Entwickeln eines Systems mit dem Erbauen eines Hauses verglichen. Auch wenn diese Analogie nicht ganz richtig ist, können wir sie verwenden, um den Unterschied zwischen Komponententests und Funktionstests besser zu verstehen. Komponententests entsprechen einem Bauinspektor, der die Baustelle eines Hauses begutachtet. Er konzentriert sich auf die verschiedenen internen Systeme des Hauses, also das Gebäudefundament, den Rohbau, die Stromversorgung, die sanitären Einrichtungen, usw. Er stellt sicher (überprüft), dass die einzelnen Teile des Hauses voll funktionsfähig und sicher sind, d.h., dass sie der Bauordnung entsprechen. Funktionstests entsprechen in diesem Szenario dem Hauseigentümer, der ebenfalls diese Baustelle besucht. Er geht davon aus, dass die internen Systeme funktionieren und der Bauinspektor seine Arbeit macht. Der Hauseigentümer konzentriert sich darauf, wie es sein wird, in diesem Haus zu leben. Er kümmert sich zum Beispiel darum, wie das Haus aussieht, ob die verschiedenen Räume die passende Größe haben, ob das Haus den Bedürfnissen einer Familie gerecht wird, und ob die Fenster eine gute Ausrichtung dafür haben, die Morgensonne herein zu lassen. Der Hauseigentümer führt Funktionstests am Haus durch. Seine Perspektive ist die des Benutzers. Der Bauinspektor führt Komponententests am Haus durch. Seine Perspektive ist die des Entwicklers.“
 
-Quelle: [Komponententests im Vergleich zu Funktionstests](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Quelle: [Unit Testing versus Functional Tests (Vergleich von Komponententests und Funktionstests)](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
-Ich bin sagen löschen "als Entwickler ein Fehler auf zwei Arten: Sie erstellen das, was falsche oder das falsche, was Sie erstellen." Komponententests stellen Sie sicher, dass Sie der Sache rechts erstellen; Funktionstests stellen Sie sicher, dass Sie das richtige erstellt werden.
+Unter Entwicklern sagt man gern: „Als Entwickler machen wir zwei Fehler: wir erstellen falsch, oder wir erstellen das Falsche.“ Mit Komponententests stellen Sie sicher, dass Sie richtig erstellen. Funktionstests stellen sicher, dass Sie das Richtige erstellen.
 
-Da Funktionstests auf Systemebene ausgeführt werden, können sie ein gewisses Maß an UI-Automatisierung verlangen. Wie Integrationstests arbeiten sie in der Regel mit irgendeine Testinfrastruktur ebenfalls. Dadurch sind sie langsamer und anfälliger als Einheit und Integration Tests. Sie müssen nur so viele Funktionstests, da Sie überzeugt ist das System verhält, als Benutzer erwarten, dass sein müssen.
+Da Funktionstest auf der Systemebene ausgeführt werden, erfordern sie ein gewisses Maß an Automatisierung der Benutzeroberfläche. Wie Integrationstests arbeiten auch die Funktionstests in der Regel mit einer Art Testinfrastruktur. Dadurch werden sie langsamer und anfälliger für Fehler als Komponententests und Integrationstests. Sie sollten nur so viele Funktionstests anwenden, wie Sie benötigen, um sich sicher zu sein, dass das System sich so verhält, wie Benutzer es erwarten würden.
 
-### <a name="testing-pyramid"></a>Testen der Pyramide
+### <a name="testing-pyramid"></a>Testpyramide
 
-Smell geschrieben wurde, zu der Tests Pyramide, ein die Beispiel für die in Abbildung 9 – 1 angezeigt wird.
+Martin Fowler schrieb über die Testpyramide. Ein Beispiel dafür wird in Abbildung 9–1 dargestellt.
 
 ![](./media/image9-1.png)
 
-Abbildung 9 – 1 Pyramide testen
+Abbildung 9–1: Testpyramide
 
-Die verschiedenen Ebenen der Pyramide und ihre relativen Größen darstellen, verschiedene Arten von Tests und wie viele für Ihre Anwendung geschrieben werden soll. Wie Sie sehen können, ist die Empfehlung eine große Basis von Komponententests, die durch eine kleinere Ebene von Integrationstests, mit dem eine noch kleinere Ebene der Funktionstests unterstützt. Jede Ebene sollte idealerweise nur Tests enthalten, die auf einer niedrigeren Ebene nicht ordnungsgemäß ausgeführt werden kann. Wenn Sie entscheiden, welche Art von Tests benötigen Sie für ein bestimmtes Szenario möchten, sollten Sie Bedenken der Pyramide testen.
+Die verschiedenen Schichten der Pyramide und ihre Größen stellen verschiedene Arten von Tests dar, und wie viele davon Sie für Ihre Anwendung schreiben sollten. Wie Sie sehen können, wird empfohlen, eine große Basis aus Komponententests zu verwenden, die von einer kleineren Menge von Integrationstests und einer noch kleineren Menge von Funktionstests unterstützt wird. Im Idealfall sollte jede Schicht nur aus Tests bestehen, die auf niedrigeren Schichten nicht ordnungsgemäß ausgeführt werden können. Behalten Sie die Testpyramide im Hinterkopf, wenn Sie sich entscheiden, welche Art von Test Sie für ein bestimmtes Szenario benötigen.
 
 ### <a name="what-to-test"></a>Den Testgegenstand
 
-Ein häufig auftretendes Problem für Entwickler, die für das Schreiben automatisierter Tests unerfahrenen stammt mit, was Sie testen. Ein guter Ausgangspunkt ist bedingten Logik zu testen. Eine beliebige Stelle stehen Ihnen eine Methode mit dem Verhalten, die Änderungen auf einer bedingten Anweisung basieren (If-else wechseln, usw.), Sie muss sich mindestens eine Reihe von Tests geschaltet wird, die das richtige Verhalten für bestimmte Bedingungen zu bestätigen. Wenn der Code fehlerbedingungen aufweist, ist es hilfreich, zumindest ein Test für die "zufriedene Path" durch den Code (mit keine Fehler) und mindestens ein Test für die "sad-Path" (mit Fehlern oder untypische Ergebnisse) zu schreiben, um zu bestätigen, dass Ihre Anwendung verhält sich wie erwartet bei Fehlern. Schließlich versucht, darauf konzentrieren, testen die Aufgaben aus, die ausgeführt werden können, statt die schwerpunktmäßige Darstellung Metriken wie Code Coverage. Weitere Code Coverage ist in der Regel kleiner, besser. Schreiben einer Methode sehr komplex und Ihre geschäftskritischen einige weitere Tests ist jedoch in der Regel eine bessere Verwendung von Zeit als das Schreiben von Tests für den Auto-Eigenschaften, um Tests Code Coverage Metriken zu verbessern.
+Herauszufinden, was getestet werden sollte, ist ein häufiges Problem für Entwickler, die noch unerfahren im Schreiben von automatisierten Tests sind. Ein guter Startpunkt ist das Testen der bedingten Logik. An jeder Stelle, an der eine Methode mit einem Verhalten vorhanden ist, das auf einer Bedingungsanweisung basiert (if-else, switch, usw.), sollten Sie ein paar Tests erstellen, die das richtige Verhalten für bestimmte Bedingungen überprüfen. Wenn Ihr Code über Fehlerbedingungen verfügt, sollten Sie mindestens einen Test für den „besten Pfad“ durch den Code (ohne Fehler) und einen Test für den „schlechtesten Pfad“ (mit Fehlern und ungewohnten Ergebnissen) verwenden, um sicherzustellen, dass Ihre Anwendung auf Fehler wie erwartet reagiert. Letztendlich sollten Sie sich darauf konzentrieren, Dinge zu testen, die fehlschlagen können, anstatt sich auf Metriken wie Code Coverage zu konzentrieren. Allgemein ist mehr Code Coverage besser als zu wenig. Allerdings können Sie Ihre Zeit sinnvoller nutzen, wenn Sie ein paar weitere Tests für eine komplexe und unternehmenskritische Methode schreiben, anstatt Tests für Auto-Eigenschaften zu schreiben, um die Code Coverage-Metrik zu verbessern.
 
-## <a name="organizing-test-projects"></a>Organisieren von Projekten für Tests
+## <a name="organizing-test-projects"></a>Organisieren von Testprojekten
 
-Testprojekte können organisiert werden, jedoch für Sie am besten. Es ist eine gute Idee, trennen die Tests nach Typ (Komponententest, Integrationstest), und was sie (durch Projekt durch den Namespace) testen. Ob diese Trennung von Ordnern in einem einzelnen Testprojekt anlegen und mehrere Testprojekte besteht aus ist eine Entscheidung auf. Ein Projekt ist am einfachsten, allerdings bei großen Projekten mit vielen Tests oder um leichter verschiedene Gruppen von Tests ausführen, sollten Sie mehrere verschiedene Testprojekte haben. Viele Teams organisieren Testprojekte, die basierend auf das Projekt, das sie testen, das was für Anwendungen mit mehr als ein paar Projekte zu einer großen Anzahl von Testprojekte, führen kann, insbesondere dann, wenn Sie weiterhin diese Aufgliedern nach, welche Art von Tests in jedem Projekt sind. Ein Kompromiss-Ansatz ist, haben ein Projekt pro Art von Tests pro Anwendung, die Ordner in der Testprojekte, um die zu testenden Projekt (und -Klasse) anzugeben.
+Sie können Testprojekte so organisieren, wie es für Sie am besten funktioniert. Es kann hilfreich sein, Tests je nach Typ (Komponententest, Integrationstest) und Testsubjekt (Projekt, Namespace) voneinander zu trennen. Ob diese Trennung aus Ordnern in einem einzelnen Testprojekt oder mehreren Testprojekten besteht, ist eine Entwurfsentscheidung. Ein einzelnes Projekt ist am einfachsten. Für ein großes Projekt mit vielen Tests sollten Sie mehrere verschiedene Testprojekte besitzen, um verschiedene Testgruppen einfacher ausführen zu können. Viele Teams organisieren Ihre Testprojekte basierend auf dem Projekt, das sie überprüfen. Dies resultiert bei Anwendungen mit einer größeren Anzahl von Projekten in einer großen Anzahl von Testprojekten, insbesondere dann, wenn Sie diese immer noch nach der Art von Tests in jedem Projekt sortieren. Ein Kompromiss für diesen Ansatz ist, ein Projekt mit Ordnern in den Testprojekten pro Art von Test für jede Anwendung zu besitzen, die das Projekt und die Klasse angeben, die geprüft werden.
 
-Eine gängige Methode ist die Anwendungsprojekte in einem Ordner "Src", und die Anwendung Testprojekte in einem parallelen "tests" Ordner zu organisieren. Sie können übereinstimmende Projektmappenordner in Visual Studio erstellen, wenn Sie diese Organisation nützlich sein.
+Eine gängige Methode ist, die Anwendungsprojekte in einem SRC-Ordner und die Testprojekte der Anwendung im parallelen Ordner „Tests“ zu organisieren. Sie können entsprechende Projektmappenordner in Visual Studio anlegen, wenn Sie diese Organisierung hilfreich finden.
 
 ![](./media/image9-2.png)
 
-Abbildung 9-2-Test-Organisation in der Projektmappe
+Abbildung 9–2: Organisierung der Tests in Ihrer Projektmappe
 
-Sie können unabhängig davon, welche Testframework gewünscht. Das Framework xUnit gut funktioniert und was ist alle Tests ASP.NET Core und EF Core geschrieben werden. Sie können ein xUnit Testprojekt in Visual Studio mithilfe der Vorlage angezeigt, in Abbildung 9 – 3 oder über die CLI mit neuen Xunit Dotnet hinzufügen.
+Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework funktioniert gut und wird für alle Tests für ASP.NET Core und EF Core verwendet. Mit der in Abbildung 9–3 gezeigten Vorlage können Sie ein xUnit-Testprojekt in Visual Studio oder über die CLI mithilfe des Befehls „dotnet new xunit“ hinzufügen.
 
 ![](./media/image9-3.png)
 
-Abbildung 9 – 3 hinzufügen ein xUnit Testprojekt in Visual Studio.
+Abbildung 9–3: xUnit-Testprojekt in Visual Studio hinzufügen
 
-### <a name="test-naming"></a>Testen Sie die Benennung
+### <a name="test-naming"></a>Benennung von Tests
 
-Sie sollten die Tests auf konsistente Weise, mit Namen benennen, die angeben, was bewirkt, dass jeder Test. Ein Ansatz besteht darin, die erfolgreich waren werden Namen von Testklassen gemäß der Klasse und Methode, die sie testen möchten. Führt dies zu viele kleine Testklassen, allerdings vereinfacht extrem verdeutlichen, was jeder Test für zuständig ist. Mit dem Test-Klassennamen, der zum Identifizieren der Klasse und die zu testende Methode einrichten kann der Methodennamen für den Test verwendet werden, zum Festlegen des Verhaltens, das getestet wird. Dazu gehören das erwartete Verhalten und Eingaben oder Annahmen, die dieses Verhalten ergeben sollten. Einige Beispielnamen Test:
+Sie sollten Ihren Tests konsistente Namen zuweisen, die angeben, was jeder Test bewirkt. Ein effektiver Ansatz ist, Testklassen nach der Klasse und Methode zu benennen, die sie testen. Dies resultiert in vielen kleinen Testklassen, verdeutlicht jedoch, wofür jeder Test zuständig ist. Mit dem eingerichteten Testklassennamen zum Identifizieren der Klasse und Methode, die getestet werden, kann der Testmethodenname dafür verwendet werden, das zu testende Verhalten anzugeben. Dies sollte das erwartete Verhalten und alle Eingaben oder Annahmen einschließen, die dieses Verhalten verursachen. Beispiele für Testnamen:
 
 -   CatalogControllerGetImage.CallsImageServiceWithId
 
@@ -113,27 +113,27 @@ Sie sollten die Tests auf konsistente Weise, mit Namen benennen, die angeben, wa
 
 -   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
-Eine Variante dieses Ansatzes endet jeder Test-Klassennamen in "Sollte" und die Zeitformen geringfügig geändert:
+Eine Variante dieses Ansatzes beendet jeden Testklassennamen mit „Should“ und ändert die Zeitform:
 
--   CatalogControllerGetImage**sollten**. **Rufen Sie**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**sollten**. **Protokoll**WarningGivenImageMissingException
+-   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
-Einige Teams finden naming Ansatz klarer, jedoch etwas ausführlicher. In jedem Fall verwenden Sie eine Benennungskonvention, die einen Einblick in das Verhalten von Testserver bereitstellt, wenn eine oder mehrere Tests fehlschlagen, aus deren Namen ersichtlich ist welchen Fällen fehlschlugen. Vermeiden Sie benennen Sie Tests vaguely, z. B. ControllerTests.Test1, da diese kein Wert bieten, wenn Sie sie in Testergebnisse finden Sie unter.
+Einige Teams finden den zweiten Ansatz für die Benennung klarer, obwohl er etwas ausführlicher ist. In jedem Fall sollten Sie versuchen, eine Namenskonvention zu verwenden, die einen Einblick zum Verhalten des Tests bietet, damit klar ist, welche Fälle fehlschlagen. Vermeiden Sie ungenaue Namen, z.B. „ControllerTests.Test1“, da diese keine Informationen bieten, wenn diese in den Testergebnissen angezeigt werden.
 
-Wenn Sie eine Benennungskonvention befolgen, wie die gezeigte, die viele kleine Testklassen erzeugt, ist es eine gute Idee, um die Tests unter Verwendung von Ordnern und Namespaces anzuordnen. Abbildung 9 – 4 zeigt eine Möglichkeit zum Organisieren von Tests nach dem Ordner, in mehrere Testprojekte.
+Wenn Sie eine Namenskonvention befolgen, die viele kleine Testklassen produziert, wie eine der oben genannten, empfiehlt es sich, Ihre Tests auch mit Ordnern und Namespaces zu sortieren. Abbildung 9–4 veranschaulicht einen Ansatz zum Organisieren von Tests mit Ordnern in mehreren Testprojekten.
 
 ![](./media/image9-4.png)
 
-**Abbildung 9 – 4.** Organisieren von Testklassen Ordner basierend auf der Klasse getestet wird.
+**Abbildung 9–4** Organisieren von Testklassen in Ordnern, basierend auf der Klasse, die getestet wird.
 
-Natürlich, wenn eine bestimmte Anwendung-Klasse verfügt über zahlreiche Methoden, die zu testenden (und daher viele Testklassen), kann es sich, platzieren Sie diese in einen Ordner für die Anwendungsklasse einzubinden. Diese Organisation ist, unterscheidet sich nicht, wie Sie Dateien in Ordnern an anderer Stelle organisieren können. Wenn Sie über mehr als drei oder vier Dateien in einem Ordner mit vielen anderen Dateien beziehen, ist es oft hilfreich, die sie in ihren eigenen Unterordner verschieben.
+Wenn viele Methoden (d.h. auch viele Testklassen) in einer Anwendungsklasse getestet werden sollen, kann es sinnvoll sein, diese in einem Ordner zu platzieren, der zu der Anwendungsklasse gehört. Diese Organisierung gleicht der Organisierung von Dateien in Ordnern. Wenn mehr als drei oder vier zusammengehörende Dateien in einem Ordner mit vielen anderen Dateien vorhanden sind, empfiehlt es sich, für diese einen Unterordner anzulegen.
 
-## <a name="unit-testing-aspnet-core-apps"></a>Einheit Testen von ASP.NET Core-Apps
+## <a name="unit-testing-aspnet-core-apps"></a>Komponententests bei ASP.NET Core-Apps
 
-In einer gut entworfenen ASP.NET Core-Anwendung wird ein Großteil der Komplexität und Geschäftslogik in Geschäftseinheiten und eine Vielzahl von Diensten gekapselt werden. Die ASP.NET Core MVC-app selbst mit seiner Controller, Filter, Viewmodels und Ansichten, müssen normalerweise nur sehr wenige Komponententests. Viele der Funktionen einer bestimmten Aktion liegt außerhalb der Aktionsmethode selbst. Testen, ob routing ordnungsgemäß funktioniert oder globalen Fehlerbehandlung, kann nicht mit einem Komponententest effektiv erfolgen. Ebenso alle, einschließlich modellvalidierung und Authentifizierung und Autorisierungsfilter, nicht mit Komponententests getestet. Ohne diese Quellen des Verhaltens sollte die meisten Aktionsmethoden Trivial "klein", delegieren den Großteil der Arbeit bei Diensten, die unabhängig von der Controller getestet werden können, die sie verwendet.
+In einer gut entworfenen ASP.NET Core-Anwendung ist der Großteil der Komplexitäts- und Geschäftslogik in Geschäftselementen und einer Vielzahl von Diensten gekapselt. Die ASP.NET Core MVC-App selbst sollte mitsamt ihrer Controller, Filter, ViewModels und Ansichten nur wenige Komponententests benötigen. Viele der Funktionen einer bestimmten Aktion befinden sich außerhalb der Aktionsmethode. Ob das Routing oder die globale Fehlerbehandlung ordnungsgemäß funktioniert, kann mit einem Komponententest nicht effektiv geprüft werden. Ebenso können alle Filter, einschließlich der Modellvalidierung und die Authentifizierung sowie die Autorisierungsfilter nicht mit Komponententests geprüft werden. Ohne diese Quellen für Verhalten sollten die meisten Aktionsmethoden unbedeutend klein sein und das meiste Ihrer Arbeit an Dienste delegieren, die unabhängig vom Controller geprüft werden, der sie verwendet.
 
-In einigen Fällen müssen Sie für die Umgestaltung in Code bestellen Komponententest. Dies umfasst das häufig Abstraktionen identifizieren und mithilfe der Abhängigkeitsinjektion zu die Abstraktion im Code zugreifen, die Sie testen möchten, anstatt direkt auf die Infrastruktur Codierung. Betrachten Sie beispielsweise diese einfache Aktion-Methode für das Anzeigen von Bildern aus:
+In manchen Fällen müssen Sie Ihren Code umgestalten, um einen Komponententest durchführen zu können. Dies umfasst häufig das Identifizieren von Abstraktionen und die Verwendung von Abhängigkeitsinjektionen, um auf den Code zuzugreifen, den Sie testen möchten, anstatt direkt auf die Infrastruktur zu codieren. Ziehen Sie zum Beispiel die folgende einfache Aktionsmethode zum Anzeigen von Bildern in Betracht:
 
 ```cs
 [HttpGet("[controller]/pic/{id}")]
@@ -146,9 +146,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Komponententests, die diese Methode nur schwer von seiner direkte Abhängigkeit System.IO.File, erfolgt die verwendet wird, aus dem Dateisystem gelesen. Sie können dieses Verhalten, um sicherzustellen, dass sie erwartungsgemäß funktioniert, aber mit echten Dateien, die auf diese Weise wird ein Integrationstest testen. Beachten Sie können nicht testen diese Methode Route – sehen Sie, wie Sie dies in Kürze mit getestet durchführen.
+Wegen der direkten Abhängigkeit von „System.IO.File“, die diese Methode zum Lesen aus dem Dateisystem verwendet, ist es schwer, Komponententests für sie durchzuführen. Sie können dieses Verhalten testen, um sicherzustellen, dass es wie erwartet funktioniert. Wenn Sie dies jedoch mit echten Dateien durchführen, handelt es sich um einen Integrationstest. Beachten Sie, dass Sie die Route dieser Methode nicht testen können. Wie Sie diese mit einem Funktionstest testen können, wird im Folgenden erläutert.
 
-Wenn Sie nicht direkt Komponententest das Systemverhalten für die Datei, und Sie können nicht die Route testen, besteht was testen? Auch nach der Umgestaltung um Komponententests zu ermöglichen, werden Sie möglicherweise einige Testfälle und fehlende Verhalten, z. B. Fehlerbehandlung feststellen. Wie funktioniert die Methode? Wenn Sie eine Datei nicht gefunden wird Was muss dabei vorgehen? In diesem Beispiel sieht die umgestaltete Methode:
+Wenn Sie keinen direkten Komponententest für das Verhalten des Dateisystems und die Route durchführen können, gibt es dennoch Tests, die Sie durchführen sollten. Nach dem Refactoring zum Ermöglichen von Komponententests werden Ihnen möglicherweise Testfälle und fehlendes Verhalten auffallen, wie z.B. die Problembehandlung. Wie reagiert die Methode, wenn eine Datei nicht gefunden werden kann? Wie sollte sie reagieren? In diesem Beispiel sieht die umgestaltete Methode wie folgt aus:
 
 ```cs
 [HttpGet("[controller]/pic/{id}")\]
@@ -168,9 +168,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Die \_Protokollierung und \_ImageService werden sowohl als Abhängigkeiten eingefügt. Nun können Sie testen, dass dieselbe Id, die an die Aktionsmethode übergeben wird, übergeben, wird die \_ImageService, und die resultierenden Bytes werden als Teil der FileResult zurückgegeben. Sie können auch testen, dass die Protokollierung von Anzeigefehlern wie erwartet erfolgt und ein NotFound Ergebnis zurückgegeben wird, wenn das Bild ist nicht vorhanden ist, vorausgesetzt, dass dies wichtig Anwendungsverhalten (d. h. nicht nur temporäre Code vom Entwickler hinzugefügt, um ein Problem zu diagnostizieren) ist. Die eigentliche Datei Logik in einem separaten Implementierung Dienst verschoben wurde, und wurde erweitert wurde, um eine anwendungsspezifische-Ausnahme für den Fall einer fehlenden Datei zurück. Sie können diese Implementierung unabhängig voneinander und testen, verwenden einen Integrationstest.
+Sowohl \_logger als auch \_imageService werden als Abhängigkeiten eingefügt. Sie können nun prüfen, ob dieselbe ID, die an die Aktionsmethode übergeben wird, an \_imageService übergeben wird, und ob die resultierenden Bytes als Teil von FileResult zurückgegeben werden. Sie können auch überprüfen, ob die Fehlerprotokollierung ordnungsgemäß erfolgt, und ob das Ergebnis „NotFound“ zurückgegeben wird, wenn das Bild fehlt, vorausgesetzt, dass dies wichtig für das Verhalten der Anwendung ist (d.h., dass dies nicht nur temporärer Code ist, der vom Entwickler hinzugefügt wurde, um ein Problem zu diagnostizieren). Die eigentliche Dateilogik wurde in einen separaten Implementierungsdienst verschoben und wurde erweitert, damit sie im Fall einer fehlenden Datei eine anwendungsspezifische Ausnahme zurückgibt. Mit einem Integrationstest können Sie diese Implementierung unabhängig testen.
 
-## <a name="integration-testing-aspnet-core-apps"></a>Integration Testen von ASP.NET Core-Apps
+## <a name="integration-testing-aspnet-core-apps"></a>Integrationstests bei ASP.NET Core-Apps
 
 ```cs
     }
@@ -182,9 +182,9 @@ Die \_Protokollierung und \_ImageService werden sowohl als Abhängigkeiten einge
 }
 ```
 
-Dieser Dienst verwendet die IHostingEnvironment ebenso wie der Code hat, bevor es in einem separaten Dienst umgestaltet wurde CatalogController. Da dies der einzige Code im Controller, die IHostingEnvironment verwendet wurde, wurde diese Abhängigkeit vom Konstruktor des CatalogController entfernt.
+Dieser Dienst verwendet „IHostingEnvironment“ auf dieselbe Weise wie der CatalogController-Code, bevor dieser in einen separaten Dienst umgestaltet wurde. Da dies der einzige Code im Controller war, der „IHostingEnvironment“ verwendet hat, wurde diese Abhängigkeit vom Konstruktor von CatalogController entfernt.
 
-Um zu testen, dass dieser Dienst ordnungsgemäß funktioniert, müssen Sie eine bekannte Test Image erstellt, und stellen Sie sicher, dass der Dienst eine bestimmte Eingaben zurückgegeben. Sie sollten darauf achten nicht zur Verwendung von Pseudoobjekten auf das Verhalten, die Sie tatsächlich (in diesem Fall aus dem Dateisystem lesen) testen möchten. Pseudoobjekte sind jedoch immer noch nützlich zum Einrichten von Integrationstests möglicherweise. In diesem Fall können Sie IHostingEnvironment modellieren, damit seine ContentRootPath auf den Ordner verweist, die für die Test-Image verwendet werden sollen. Die vollständige arbeiten Integration Testklasse wird hier gezeigt:
+Zum Überprüfen, ob dieser Dienst ordnungsgemäß funktioniert, müssen Sie eine bekannte Testbilddatei erstellen und sicherstellen, dass der Dienst diese bei einer bestimmten Eingabe zurückgibt. Achten Sie darauf, keine Pseudoobjekte für das Verhalten zu verwenden, das Sie überprüfen möchten (in diesem Fall das Lesen aus dem Dateisystem). Allerdings können Pseudoobjekte beim Einrichten von Integrationstests nützlich sein. In diesem Fall können Sie „IHostingEnvironment“ modellieren, damit „ContentRootPath“ auf den Ordner verweist, den Sie für Ihr Testbild verwenden möchten. Die vollständige funktionsfähige Integrationstestklasse wird im Folgenden dargestellt:
 
 ```cs
 public class LocalFileImageServiceGetImageBytesById
@@ -222,11 +222,11 @@ public class LocalFileImageServiceGetImageBytesById
 ```
 
 > [!NOTE]
-> dass der Test selbst sehr einfache – ist ist der Großteil des Codes erforderlich, das System konfigurieren und Erstellen von der Testinfrastruktur (in diesem Fall kann eine tatsächliche Datei vom Datenträger gelesen werden). Dies ist typisch für Integrationstests, die häufig komplexen Setup als Komponententests in Anspruch nehmen.
+> Beachten Sie, dass der Test selbst sehr einfach ist. Der Großteil des Codes ist erforderlich, um das System zu konfigurieren und die Testinfrastruktur zu erstellen (in diesem Fall eine tatsächliche Datei, die vom Datenträger gelesen werden soll). Das ist typisch für Integrationstests, die meistens eine komplexere Einrichtung beanspruchen als Komponententests.
 
-## <a name="functional-testing-aspnet-core-apps"></a>Funktionale Testen von ASP.NET Core-Apps
+## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests bei ASP.NET Core-Apps
 
-Für ASP.NET Core-Anwendungen erleichtert die TestServer-Klasse Funktionstests relativ zum Schreiben. Sie konfigurieren einen TestServer verwenden eine WebHostBuilder, ebenso wie Sie normalerweise für Ihre Anwendung. Diese WebHostBuilder muss konfiguriert werden, wie Ihre echten Anwendungshost, aber Sie können ändern, dass alle Aspekte des Zertifikats, die testen vereinfachen. In den meisten Fällen, müssen Sie wiederverwenden der gleichen TestServer für viele Testfälle, damit Sie es in eine wiederverwendbare-Methode (möglicherweise in einer Basisklasse) kapseln können:
+Die TestServer-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren einen TestServer mit WebHostBuilder so, wie Sie es normalerweise für Ihre Anwendung tun würden. Dieser WebHostBuilder sollte wie der echte Host Ihrer Anwendung konfiguriert werden. Sie können jedoch alle Aspekte ändern, die das Testen erleichtern. In den meisten Fällen können Sie denselben TestServer für viele Testfälle wiederverwenden. Sie können Ihn also in einer wiederverwendbaren Methode kapseln (z.B. in einer Basisklasse):
 
 ```cs
 public abstract class BaseWebTest
@@ -253,7 +253,7 @@ public abstract class BaseWebTest
 }
 ```
 
-GetProjectPath-Methode gibt einfach den physischen Pfad zum Webprojekt (Download-Beispielprojektmappe) zurück. Die WebHostBuilder gibt in diesem Fall einfach, wobei die Inhalte-Stamm für die Webanwendung und verweist auf die gleiche Startup-Klasse, die die echte Webanwendung verwendet. Um mit dem TestServer arbeiten, verwenden Sie der System.Net.HttpClient als Standardtyp, um Anforderungen zu stellen. TestServer macht eine hilfreiche CreateClient-Methode, die einen vorkonfigurierten Client, der bereitstellt für die Anforderungen an die Anwendung auf dem TestServer senden bereit ist. Verwenden Sie diesen Client (Legen Sie auf den geschützten \_Client-Element auf der Basis Test oben) beim Funktionstests für die ASP.NET Core-Anwendung zu schreiben:
+Die Methode „GetProjectPath“ gibt den physischen Pfad zum Webprojekt zurück (Beispielprojektmappe herunterladen). In diesem Fall gibt der WebHostBuilder nur an, wo sich der Inhaltsstamm für die Webanwendung befindet und verweist auf dieselbe Startup-Klasse, die die echte Webanwendung verwendet. Verwenden Sie den Standardtyp „System.Net.HttpClient“, um mit dem TestServer zu arbeiten und Anforderungen an diesen zu stellen. TestServer stellt eine nützliche CreateClient-Methode zur Verfügung, die einen vorkonfigurierten Client bereitstellt, der bereit dazu ist, Anforderungen an die Anwendung zu senden, die auf dem TestServer ausgeführt wird. Verwenden Sie diesen Client (im Basistest oben auf den geschützten Member \_client festgelegt) zum Schreiben von Funktionstests für Ihre ASP.NET Core-Anwendung:
 
 ```cs
 public class CatalogControllerGetImage : BaseWebTest
@@ -277,7 +277,7 @@ public class CatalogControllerGetImage : BaseWebTest
 }
 ```
 
-Diese funktionale Tests ausführt, die vollständige Aufrufliste zur ASP.NET Core MVC-Anwendung, einschließlich aller Middleware, Filter, Bindern usw., die vorhanden sein können. Überprüft, ob eine angegebene Route ("/ Katalog/Pic/1") gibt das erwartete Bytearray für eine Datei an einem bekannten Speicherort. Es tut ohne einen echten Webserver einrichten zu müssen, und vermeidet also ein Großteil der unzulänglichen, bei denen unter Verwendung einer echten Server zum Testen (z. B. bei Problemen mit Firewalleinstellungen) auftreten kann. Funktionstests, die für den TestServer ausgeführt sind normalerweise langsamer als Integration und Komponententests, aber wesentlich schneller durchführt als Tests, die über das Netzwerk an einen Test-Webserver ausführen würden.
+Dieser Funktionstest führt den gesamten ASP.NET Core MVC-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder, usw., die verfügbar sind. Er überprüft, ob die angegebene Route (im Beispiel oben „/catalog/pic/1“) das erwartete Bytearray für eine Datei an einem bekannten Speicherort zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden.
 
 >[!div class="step-by-step"]
-[Vorherigen] (Work-with-data-in-asp-net-core-apps.md) [weiter] (Development-Prozess-für-azure.md)
+[Zurück] (work-with-data-in-asp-net-core-apps.md) [Weiter] (development-process-for-azure.md)

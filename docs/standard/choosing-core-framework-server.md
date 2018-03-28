@@ -1,19 +1,19 @@
 ---
-title: "Wahl zwischen .NET Core und .NET Framework für Server-Apps"
-description: "Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellung einer Server-App in .NET."
+title: Wahl zwischen .NET Core und .NET Framework für Server-Apps
+description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellung einer Server-App in .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -79,6 +79,7 @@ In den meisten Fällen müssen Sie Ihre vorhandenen Anwendungen nicht zu .NET Co
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Notwendigkeit von .NET-Bibliotheken von Drittanbietern oder NuGet-Paketen, die für .NET Core nicht verfügbar sind
 
 Aktuell können Sie die schnelle Integration vom .NET Standard in Bibliotheken beobachten. Mit .NET Standard können Sie Code in allen .NET-Implementierungen einschließlich .NET Core freigeben. Mit .NET Standard 2.0 ist das sogar noch einfacher:
+
 - Die API-Oberfläche ist deutlich größer. 
 - Der .NET Framework-Kompatibilitätsmodus wurde eingeführt. Mit diesem Kompatibilitätsmodus können .NET Standard- bzw. .NET Core-Projekte auf .NET Framework-Bibliotheken verweisen. Im Blogbeitrag [Announcing .NET Standard 2.0 (Ankündigung: .NET Standard 2.0)](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) finden Sie weitere Informationen zum Kompatibilitätsmodus.
 
@@ -90,9 +91,9 @@ Einige .NET Framework-Technologien sind in .NET Core nicht verfügbar. Mögliche
 
 * ASP.NET-Web Forms-Anwendungen: ASP.NET-Web Forms ist nur in .NET Framework verfügbar. ASP.NET Core kann nicht für ASP.NET-Web Forms verwendet werden. Eine Integration von ASP.NET-.Web Forms in .NET Core ist nicht geplant.
 
-* ASP.NET Web Pages-Anwendungen: ASP.NET Web Pages ist nicht in ASP.NET Core enthalten. Die [Razor-Seiten](/aspnet/core/mvc/razor-pages/) von ASP.NET Core ähneln Web Pages.
+* ASP.NET Web Pages-Anwendungen: ASP.NET Web Pages ist nicht in ASP.NET Core enthalten. Die [Razor Pages](/aspnet/core/mvc/razor-pages/) von ASP.NET Core ähneln Web Pages.
 
-* Implementierung von ASP.NET SignalR-Server/-Client. Aktuell ist ASP.NET SignalR für ASP.NET Core nicht verfügbar (weder Client noch Server). ASP.NET Core SignalR ist für ASP.NET Core 2.1 geplant. Weitere Informationen finden Sie unter [ASP.NET Core Schedule and Roadmap (Zeitplan und Meilensteinplan für ASP.NET Core)](https://github.com/aspnet/Home/wiki/Roadmap). Die Vorschau ist für die GitHub-Repositorys sowohl für die [Serverseite](https://github.com/aspnet/SignalR-Server) als auch für die [Clientbibliotheken](https://github.com/aspnet/SignalR-Client-Net) verfügbar.
+* Implementierung von ASP.NET SignalR-Server/-Client. Aktuell ist [ASP.NET SignalR](https://github.com/aspnet/SignalR) in der Vorschauversion mit ASP.NET Core 2.1 verfügbar.
 
 * Implementierung von WCF-Diensten. Auch wenn WCF-Dienste über eine [WCF-Clientbibliothek](https://github.com/dotnet/wcf) von .NET Core genutzt werden, ist die WCF-Serverimplementierung aktuell nur in .NET Framework verfügbar. Dieses Szenario ist nicht Bestandteil der derzeitigen Pläne für .NET Core, wird jedoch für die Zukunft in Betracht gezogen.
 

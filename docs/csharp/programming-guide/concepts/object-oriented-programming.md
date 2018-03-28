@@ -2,17 +2,18 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.  
@@ -95,7 +96,7 @@ struct SampleStruct
  So definieren Sie ein Feld  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,8 +234,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse zugegriffen werden.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder in einer abgeleiteten Klasse zugegriffen werden.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.|  
-|[interne geschützt](../../../csharp/language-reference/keywords/protected-internal.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden.|  
-|[geschützt privat](../../../csharp/language-reference/keywords/private-protected.md)|Der Typ oder Member kann von Code in der gleichen Klasse oder in einer abgeleiteten Klasse innerhalb der Assembly Basisklasse zugegriffen werden.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Auf den Typ oder Member kann nur über Code in der gleichen Klasse, in einer abgeleiteten Klasse oder innerhalb der Basisklassenassembly zugegriffen werden.|  
   
  Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  So definieren Sie eine generische Klasse  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

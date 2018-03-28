@@ -1,6 +1,6 @@
 ---
 title: Architekturprinzipien
-description: Innovative Webanwendungen mit ASP.NET Core und Azure Architekt | Architekturprinzipien
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -11,114 +11,114 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
 ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/29/2018
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
-> "Wenn Generatoren Gebäude erstellt die Möglichkeit Programmierer schrieb Programme aus, und die erste Woodpecker, die kamen würde Civilization zerstört."  
+> „Wenn Architekten Gebäude so bauen würden, wie Programmierer Programme erstellen, würde der erste Specht, der auftauchen würde, die Zivilisation zerstören.“  
 > _\- Gerald Weinberg_
 
 ## <a name="summary"></a>Zusammenfassung
 
-Sie sollten zu entwickeln und Entwerfen von softwarelösungen mit Verwaltbarkeit. Die Prinzipien, die in diesem Abschnitt können Sie gegen architekturbezogene Entscheidungen Systeminstallation, bei der sauberen, leicht verwaltbare Anwendungen führt. Im Allgemeinen werden dieser Prinzipien durch führen Sie bei der Erstellung von Anwendungen aus diskreten Komponenten, die nicht eng an anderen Teilen der Anwendung verknüpft sind, sondern vielmehr, kommunizieren über explizite Schnittstellen oder messaging-Systeme.
+Sie sollten Softwarelösungen mit der Verwaltbarkeit im Hinterkopf entwickeln und entwerfen. Die Prinzipien, die in diesem Artikel erläutert werden, können Ihnen bei Entscheidungen bezüglich der Architektur helfen, wodurch Sie ordentliche und verwaltbare Anwendungen erstellen können. Im Allgemeinen begleiten Sie diese Prinzipien in Richtung der Erstellung von Anwendungen aus einzelnen Komponenten, die nicht eng an andere Teile Ihrer Anwendung gebunden sind, sondern die eher über explizite Schnittstellen oder Nachrichtensysteme kommunizieren.
 
 ## <a name="common-design-principles"></a>Allgemeine Entwurfsprinzipien
 
-### <a name="separation-of-concerns"></a>Trennung von Anliegen
+### <a name="separation-of-concerns"></a>Separation of Concerns
 
-Ist ein Leitprinzip beim Entwickeln von **Trennung von Anliegen**. Dieses Prinzip bestätigt, dass Software getrennt werden, sollten basierend auf den Arten von Arbeitsschritten, die er ausführt. Betrachten Sie beispielsweise eine Anwendung, enthält die Logik zum Identifizieren von wichtige Elemente, die dem Benutzer angezeigt und formatiert diese Elemente auf eine bestimmte Weise zu noch deutlicher zu machen. Das Verhalten, die verantwortlich für die Wahl, welche Elemente formatieren verbleiben soll, getrennt von das Verhalten, die verantwortlich für das die Elemente formatieren, da dies separate Aspekte sind, die nur zufällig miteinander verknüpft sind.
+Ein Leitprinzip beim Entwickeln ist das **Separation of Concerns**. Dieses Prinzip macht geltend, dass Software basierend auf der Arbeit, die von dieser ausgeführt wird, getrennt werden soll. Ein Beispiel hierfür ist eine Anwendung, die Logik zur Identifizierung von wichtigen Elementen enthält, die dem Benutzer angezeigt werden sollen, und die diese Elemente in einer Art und Weise formatiert, sodass diese auffälliger werden. Das Verhalten, das dafür verantwortlich ist, welche Elemente formatiert werden, sollte vom für das Formatieren der Elemente verantwortliche Verhalten getrennt werden, da dies separate Aspekte sind, die nur zufällig miteinander in Verbindung stehen.
 
-Anwendungen können architektonisch, logisch erstellt werden, um dieses Prinzip folgen, durch die Trennung von Business Kernverhalten von Infrastruktur und Benutzer Schnittstelle Logik. Im Idealfall sollten Geschäftsregeln und Geschäftslogik in einem separaten Projekt befinden, das nicht von anderen Projekten in der Anwendung abhängig sollten. Dadurch wird sichergestellt, dass das Geschäftsmodell einfach ist testen und ohne wird auf niedriger Ebene Implementierungsdetails eng gekoppelt weiterentwickeln können. Trennung von Anliegen ist eine wichtige Überlegung hinter der Verwendung von Ebenen Anwendungsarchitektur.
+Anwendungen können – architektonisch gesehen – logisch erstellt werden, um diesen Prinzipien zu folgen, indem das grundlegende Geschäftsverhalten von der Infrastruktur und der Logik der Benutzeroberfläche getrennt wird. Im Idealfall sollten sich Geschäftsregeln und Logik in einem separaten Projekt befinden, das nicht von anderen Projekten in der Anwendung abhängig sein darf. Dadurch kann sichergestellt werden, dass das Geschäftsmodell einfach zu testen ist und sich entwickeln kann, ohne eng an Details der untergeordneten Implementierung geknüpft zu sein. Die Separation of Concerns spielt im Hinblick auf die Verwendung von Schichten in Anwendungsarchitekturen eine wichtige Rolle.
 
 ### <a name="encapsulation"></a>Kapselung
 
-Verschiedene Teile einer Anwendung die zu verwendende **Kapselung** , anderen Teilen der Anwendung zu isolieren. Anwendungskomponenten und Ebenen sollte Anpassen ihrer interne Implementierung ohne Unterbrechung ihrer Mitarbeiter als externe Verträge nicht verletzt werden. Richtige Verwendung von Kapselung hilft zu erreichen, lose Kopplung und Modularität bei Anwendungs-Designs, da Objekte und Pakete mit alternative Implementierungen ersetzt werden können, solange die gleiche Schnittstelle beibehalten wird.
+Unterschiedliche Teile einer Anwendung müssen die **Kapselung** verwenden, um sie von anderen Teile der Anwendung zu isolieren. Anwendungskomponenten und -schichten sollten ihre interne Implementierung anpassen können, ohne dass Fehler bei ihren Komponenten verursacht werden, solange nicht gegen externe Verträge verstoßen wird. Durch die ordnungsgemäße Verwendung der Kapselung kann die lose Kopplung und Modularität in Anwendungsdesigns erreicht werden, da Objekte und Pakete durch alternative Implementierung ersetzt werden können, solange dieselbe Schnittstelle beibehalten wird.
 
-In Klassen erfolgt für die Kapselung von außerhalb der Zugriff auf den internen Zustand der Klasse beschränken. Wenn externer Akteur den Zustand des Objekts ändern möchte, sollten sie über ein klar definierte Funktion (oder Setter für eine Eigenschaft) Aufgabe ausführen, statt später durch direkten Zugriff auf den privaten Status des Objekts. Ebenso sollten Anwendungskomponenten und Anwendungen selbst genau definierte Schnittstellen für ihre Mitarbeiter verwenden, statt ihren Status direkt geändert werden, sodass verfügbar machen. Dadurch werden interne Anwendungsentwurf, stetig weiterentwickelt werden, ohne dass dadurch Projektmitarbeiter, sodass unterbrochen wird so lange die öffentliche Verträge verwaltet werden.
+In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen Zustand der Klasse von außerhalb. Wenn ein Akteur von außerhalb den Zustand des Objekts manipulieren will, sollte dies durch eine klar definierte Funktion (oder einen Eigenschaftensetter) erfolgen und nicht über den Direktzugriff auf den privaten Zustand des Objekts. Anwendungskomponenten und Anwendungen selbst müssen ebenso klar definierte Schnittstellen für die Verwendung durch ihre Komponenten vorweisen und nicht zulassen, dass ihr Zustand direkt geändert werden kann. Dadurch kann das interne Design der Anwendung über einen Zeitraum weiterentwickelt werden, ohne dass die Sorge besteht, dass durch diese Aktion Fehler bei Komponenten auftritt, solange die öffentlichen Verträge bestehen.
 
-### <a name="dependency-inversion"></a>Die Umkehrung der Abhängigkeit
+### <a name="dependency-inversion"></a>Abhängigkeitsumkehr
 
-Die Richtung der Beziehung innerhalb der Anwendung sollte in die Richtung der Abstraktion, nicht Implementierungsdetails. Die meisten Anwendungen werden geschrieben, sodass Abhängigkeit zur Kompilierungszeit in Richtung der laufzeitausführung fließen. Dadurch wird ein direkter Abhängigkeitsdiagramm erzeugt. D. h. wenn Modul ein Aufrufe eine Funktion im Modul B, der aufgerufen wird, eine Funktion im C-Modul, und Kompilieren Zeit ein werden von B, die von C abhängig ist abhängig, wie in Abbildung 4 – 1 gezeigt.
+Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Laufzeitausführung geht. Dadurch wird ein direktes Abhängigkeitsdiagramm erzeugt. Das bedeutet, dass wenn Modul A eine Funktion in Modul B aufruft, das wiederum eine Funktion in Funktion C aufruft, hängt die Kompilierzeit von A von B ab, dessen Kompilierzeit wiederum von C abhängt, so wie in Abbildung 4-1 dargestellt.
 
 ![](./media/image4-1.png)
 
-**Abbildung 4-1.** Direkte Abhängigkeitsdiagramm angezeigt.
+**Abbildung 4-1.** Diagramm der direkten Abhängigkeit
 
-Anwenden des Prinzips der Abhängigkeit Umkehrung A zum Aufrufen von Methoden für eine Abstraktion, die B implementiert, wodurch für eine aufzurufende B zur Laufzeit, ermöglicht jedoch für B, um eine Schnittstelle abhängig von gesteuert ein zum Zeitpunkt der Kompilierung (also *invertieren* die typische Abhängigkeit zur Kompilierungszeit). Zur Laufzeit der Fluss der Ausführung des Programms bleibt unverändert, aber die Einführung von Schnittstellen bedeutet, dass verschiedene Implementierungen dieser Schnittstellen leicht eingesteckt werden können.
+Durch die Anwendung des Prinzips der Abhängigkeitsumkehr kann A Methoden auf einer Abstraktion abrufen, die von B implementiert wird. So kann B von A zur Laufzeit aufgerufen werden, jedoch kann B von einer Schnittstelle abhängig sein, die von A zur Kompilierzeit kontrolliert wird (das bedeutet, dass die typische Kompilierzeitabhängigkeit *umgekehrt* wird). Der Ablauf der Programmausführung bleibt zur Laufzeit unverändert, jedoch bedeutet die Einführung von Schnittstellen, dass unterschiedliche Implementierungen dieser Schnittstellen einfach mit eingeschlossen werden können.
 
 ![](./media/image4-2.png)
 
-**Abbildung 4-2.** Invertierte Abhängigkeitsdiagramm.
+**Abbildung 4-2**. Diagramm der umgekehrten Abhängigkeit
 
-**Die Umkehrung der Abhängigkeit** ist ein wesentlicher Bestandteil des lose verbundene Anwendungen erstellen, da Implementierungsdetails auf hängen, und Implementieren der höheren Ebene Abstraktionen, anstatt den umgekehrten geschrieben werden können. Die resultierenden Anwendungen werden daher einfach zu testender, modulare und verwaltbar. Das Geübte *Abhängigkeitsinjektion* erfolgt gemäß das Prinzip der Abhängigkeit Umkehrung möglich.
+Die **Abhängigkeitsumkehrung** ist ein wichtiger Bestandteil beim Erstellen von lose gekoppelten Anwendungen, da die Implementierungsdetails so geschrieben werden können, dass sie von übergeordneten Abstraktionen abhängig sind und diese implementieren, anstatt andersherum. Die sich daraus ergebenden Anwendungen können besser getestet werden, sind modular und deshalb auch besser verwaltbar. Die Methode der *Abhängigkeitsinjektion* wird durch das nachfolgende Prinzip der Abhängigkeitsumkehrung ermöglicht.
 
-### <a name="explicit-dependencies"></a>Expliziten Abhängigkeiten
+### <a name="explicit-dependencies"></a>Explizite Abhängigkeiten
 
-**Klassen und Methoden sollten explizit zusammenarbeitenden Objekte erfordern, die sie benötigen, um richtig zu funktionieren.** Klassenkonstruktoren bieten die Möglichkeit für Klassen, die Dinge identifizieren benötigten damit in einem gültigen Zustand ist und ordnungsgemäß funktioniert. Wenn Sie Klassen definiert haben, erstellt und aufgerufen werden kann, aber die funktioniert nur ordnungsgemäß, wenn bestimmte globalen oder Infrastruktur Komponenten vorhanden sind, werden diese Klassen werden *unehrlichen* mit ihren Clients. Der Konstruktor Vertrag ist mitteilen, dass der Client, den es nur benötigt, um die Dinge angegebene (möglicherweise nichts, wenn die Klasse nur einen Standardkonstruktor verwendet wird), aber dann zur Laufzeit, die er das Objekt wird etwas anderes wirklich benötigt.
+**Methoden und Klassen sollten explizit alle benötigten zusammenarbeitenden Objekte erfordern, um ordnungsgemäß zu funktionieren.** Damit Klassen sich in einem gültigen Zustand befinden bzw. ordnungsgemäß funktionieren können, bieten Klassenkonstruktoren die Möglichkeit, dass Klassen die dafür benötigen Elemente identifizieren können. Wenn Sie Klassen identifizieren, die konstruiert und aufgerufen werden können, die jedoch nur ordnungsgemäß funktionieren, wenn bestimmte globale Komponenten bzw. Komponenten der Infrastruktur vorhanden sind, sind diese Klassen Ihren Kunden gegenüber *unehrlich*. Der Konstruktorvertrag sagt aus, dass der Kunde nur die angegebenen Elemente benötigt (wenn möglich auch nichts, wenn die Klasse nur einen Standardkonstruktor verwendet), aber zur Laufzeit wird angegeben, dass das Objekt etwas anderes benötigt.
 
-Gemäß das Prinzip der expliziten Abhängigkeiten sind die Klassen und Methoden wird ehrlich mit ihren Clients zu, was sie benötigen, um zu funktionieren. Dadurch wird Ihr Code Weitere selbstdokumentierend und die Codierung Verträge Benutzerfreundlicher, da Benutzer stammen, die vertrauen, solange sie bieten, was in der Form der Methode erforderlich ist oder Parameter des Konstruktors, die Objekte, mit der Sie arbeiten, verhält sich ordnungsgemäß zur Laufzeit.
+Durch Befolgen des expliziten Abhängigkeitsprinzips sind Ihre Klassen und Methoden gegenüber den Kunden ehrlich, wenn es um die Elemente geht, die sie benötigen, um ordnungsgemäß zu arbeiten. Dadurch dokumentiert Ihr Code vermehrt selbst, und Ihr Codierungsvertrag wird benutzerfreundlicher, da Benutzer größeres Vertrauen in dem Zusammenhang entwickeln, dass wenn sie das bereitstellen, was für Methoden oder Konstruktorparameter erforderlich ist, sich die Objekte, mit denen sie arbeiten, zur Laufzeit ordnungsgemäß verhalten.
 
-### <a name="single-responsibility"></a>Einzelne Verantwortung
+### <a name="single-responsibility"></a>Die einzige Verantwortung (Single Responsibility)
 
-Das Prinzip der einzigen Verantwortung eines objektorientierten Entwurfs betrifft, aber kann auch als eine architektonische Prinzip Trennung von Anliegen ähnlich betrachtet werden. Sie gibt an, dass Objekte nur eine Verantwortung sollte und dass sie, nur ein Grund zum Ändern aufweisen sollen. Insbesondere ist die einzige Situation, in der das Objekt geändert werden soll, wenn die Art und Weise, in der er seine Aufgaben ausführt, die aktualisiert werden muss. Nach diesem Prinzip hilft Ihnen bei der mehr erzeugen lose gekoppelten und modulare Systeme seit vielen Arten von Verhalten können implementiert werden als neue Klassen und nicht durch Hinzufügen von zusätzlichen dafür verantwortlich, vorhandene Klassen. Hinzufügen von neuen Klassen ist immer sicherer als die vorhandene Klassen ändern, da kein Code noch hängt von den neuen Klassen.
+Das Prinzip der einzigen Verantwortung gilt für ein objektorientiertes Design, kann aber auch als Architekturprinzip ähnlich der Separation of Concerns angesehen werden. Es besagt, dass Objekte nur eine Verantwortung haben dürfen und dass sie nur einen Grund für eine Änderung haben dürfen. Dies bedeutet, dass das Objekt nur dann geändert werden muss, wenn die Art und Weise, wie es seine einzige Aufgabe durchführt, aktualisiert werden muss. Wenn Sie dieses Prinzip befolgen, können Sie mehr lose gekoppelte und modulare Systeme erstellen, da viele Teile des neuen Verhalten als neue Klassen implementiert werden können, und so wird vorhandenen Klassen keine zusätzliche Verantwortung hinzugefügt. Das Hinzufügen neuer Klassen ist immer sicherer als das Ändern vorhandener Klassen, da noch kein Code von den neuen Klassen abhängig ist.
 
-In einer Anwendung aufgrund eines monolithischen können dem Prinzip der einzelnen Verantwortung auf hoher Ebene auf die Ebenen in der Anwendung angewendet werden. Präsentation Verantwortung sollte in der Benutzeroberfläche Project bleiben, während Daten zugreifen sollten Verantwortung innerhalb eines Projekts Infrastruktur beibehalten werden. Geschäftslogik sollten im Anwendungsprojekt Core beibehalten werden, wo es leicht getestet werden und unabhängig von anderen Aufgaben weiterentwickeln kann.
+In einer monolithischen Anwendung können wir das Prinzip der einzigen Verantwortung allgemein auf die Schichten in der Anwendung anwenden. Die Präsentationsverantwortung muss im Benutzeroberflächenprojekt verbleiben, während die Datenzugriffsverantwortung innerhalb eine Infrastrukturprojekts beibehalten werden sollte. Geschäftslogik sollte im Anwendungskernprojekt verbleiben, wo sie einfach getestet werden kann und sich unabhängig von anderen Verantwortungen entwickeln kann.
 
-Wenn dieses Prinzip ist auf die Anwendungsarchitektur angewendet und ausgeführt, um einen logischen Endpunkt, erhalten Sie Microservices. Eine bestimmte Microservice sollte eine einzelne Verantwortung verfügen. Wenn Sie das Verhalten eines Systems erweitern müssen, ist es normalerweise besser zu diesem Zweck durch Hinzufügen von zusätzlichen Microservices anstatt durch Verantwortung mit einer vorhandenen Arbeitsaufgabe hinzufügen.
+Wenn dieses Prinzip auf die Anwendungsarchitektur angewendet wird und bis zu ihrem logischen Endpunkt reicht, erhalten Sie Microservices. Ein bestimmter Microservice muss über eine einzige Verantwortung verfügen. Wenn Sie das Verhalten eines Systems erweitern müssen, ist es in der Regel am besten, dies durch Hinzufügen von zusätzlichen Microservices zu tun, anstatt Verantwortung zu einem vorhandenen Verhalten hinzuzufügen.
 
-[Erfahren Sie mehr über Microservices-Architektur](http://aka.ms/MicroservicesEbook)
+[Weitere Informationen zur Microservicearchitektur](http://aka.ms/MicroservicesEbook)
 
-### <a name="dont-repeat-yourself-dry"></a>Wiederholen Sie nicht selbst (DIREKTSIGNAL)
+### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
-Angeben des Verhaltens in Bezug auf einen bestimmten Konzepts an mehreren Stellen, da dies eine häufige Ursache der Fehler ist, ist die Anwendung vermeiden. Zu einem späteren Zeitpunkt wird eine Änderung im Anforderungen erforderlich, Ändern dieses Verhalten und die Wahrscheinlichkeit, dass mindestens eine Instanz des Verhaltens wird nicht aktualisiert werden, führt zu inkonsistentem Verhalten des Systems.
+Die Anwendung sollte kein Verhalten angeben, das mit einem bestimmten Konzept in mehreren Bereichen im Zusammenhang steht, da dies eine bekannte Fehlerquelle ist. An einem bestimmten Punkt erfordert eine Änderung der Verantwortung die Änderung dieses Verhaltens, und die Wahrscheinlichkeit, dass bei zumindest einer Instanz des Verhaltens das Update fehlschlägt, führt zu inkonsistentem Verhalten des Systems.
 
-Anstatt Duplizierung Logik kapseln Sie es in ein Programmiermodell. Stellen Sie die Autorität für die einzelne über dieses Verhalten zu erstellen und haben eine andere Komponente der Anwendung, die dieses Verhalten des neuen Konstrukts erforderlich ist.
+Kapseln Sie die Logik in einem Programmierungskonstrukt anstatt sie zu duplizieren. Machen Sie dieses Konstrukt zur einzelnen Autorität über dieses Verhalten. Ein anderer Teil der Anwendung, die dieses Verhalten erfordert, verwendet dann dieses neue Konstrukt.
 
 > [!NOTE]
-> Vermeiden Sie das Binden von Verhalten, die nur zufällig wiederkehrende ist. Z. B. nur verwendet werden, weil beide zwei unterschiedliche Konstanten den gleichen Wert aufweisen, impliziert dies nicht, dass Sie nur eine Konstante ist, haben sollten, wenn grundsätzlich auf unterschiedliche Dinge sie verweisen.
+> Verknüpfen Sie keine Verhaltensmuster, die sich nur durch Zufall wiederholen. Auch wenn zwei unterschiedliche Konstanten über den gleichen Wert verfügen, bedeutet das nicht, dass Sie nur eine Konstante besitzen dürfen, wenn diese sich konzeptuell gesehen auf unterschiedliche Dinge beziehen.
 
-### <a name="persistence-ignorance"></a>Persistenz Unkenntnis
+### <a name="persistence-ignorance"></a>Ignorieren der Persistenz
 
-**Persistenz Unkenntnis** (PI) bezieht sich auf Typen, die beibehalten werden müssen, aber deren Code ist nicht betroffen, durch die Auswahl der Persistenz-Technologie. Solche Typen in .NET werden manchmal als Plain Old CLR Objects (POCOs), bezeichnet, da sie nicht von einer bestimmten Basisklasse zu erben oder eine bestimmte Schnittstelle implementieren müssen. Persistenz Unkenntnis ist hilfreich, da die gleichen Geschäftsmodell in mehrerer Hinsicht bietet zusätzliche Flexibilität bei der Anwendung beibehalten werden kann. Persistenz-Optionen können im Laufe der Zeit aus einer Datenbank-Technologie in eine andere ändern oder weitere Formen der Persistenz können zusätzlich zu den mit dem Start der Anwendung erforderlich sein (z. B. bei Verwendung einer Redis-Cache oder Azure DocumentDb zusätzlich zu einer relationale Datenbank).
+Das **Ignorieren der Persistenz** (Persistence Ignorance, PI) bezieht sich auf Typen, die beibehalten werden müssen, deren Code jedoch von der Wahl der Persistenztechnologie nicht beeinflusst wird. Solche Typen werden in .NET häufig als „Plain Old CLR Objects“ (POCOs) bezeichnet, da sie nicht von einer bestimmten Basisklasse erben oder eine bestimmte Schnittstelle implementieren müssen. Das Ignorieren der Persistenz ist wertvoll, weil das Geschäftsmodell so auf unterschiedliche Weise beibehalten werden kann, wodurch zusätzliche Flexibilität für die Anwendung garantiert werden kann. Die Wahl der Persistenz kann sich mit der Zeit von einer Datenbanktechnologie zur anderen ändern, oder es sind möglicherweise zusätzliche Persistenzformen entsprechend der Komponente, mit der die Anwendung gestartet wurde, erforderlich(z.B. mithilfe eines Redis-Caches oder Azure DocumentDB zusätzlich zu einer relationalen Datenbank).
 
 Einige Beispiele für Verstöße gegen dieses Prinzip:
 
 -   Eine erforderliche Basisklasse
 
--   Eine erforderliche Schnittstelle-Implementierung
+-   Eine erforderliche Schnittstellenimplementierung
 
--   Klassen, die verantwortlich für das Speichern von sich selbst (z. B. den aktiven Datensatz-Muster)
+-   Klassen, die für die Speicherung von sich selbst verantwortlich sind (wie etwa das „Active Record“-Muster)
 
--   Erforderliche Standardkonstruktor
+-   Erforderlicher Standardkonstruktor
 
--   Eigenschaften erfordern virtual-Schlüsselwort
+-   Eigenschaften, die ein virtuelles Schlüsselwort erfordern
 
--   Persistenz-spezifische erforderliche Attribute
+-   Für die Persistenz spezifische erforderliche Attribute
 
-Die Anforderung, dass Klassen Änderungen an den oben genannten Funktionen oder Verhalten haben fügt Kopplung zwischen den Typen beibehalten werden und die Auswahl der Persistenz-Technologie, weshalb es schwieriger, neue Daten für Zugriffsmethoden in der Zukunft zu verwenden.
+Die Anforderung, dass Klassen über eines der oben genannten Features oder Verhalten verfügen müssen hat zur Folge, dass die Kopplung zwischen Typen beibehalten werden muss, sowie die Wahl der Persistenztechnologie. So wird es schwieriger, zukünftig neue Strategien für den Datenzugriff zu realisieren.
 
-### <a name="bounded-contexts"></a>Gebundene Kontexte
+### <a name="bounded-contexts"></a>Kontextgrenzen
 
-**Begrenzt die Kontexte** werden von einem zentralen Muster im Driven Design. Sie bieten eine Möglichkeit bewältigt Fortschritts Komplexität in großen Anwendungen oder Organisationen, durch die in separaten konzeptionelle Module unterteilen. Jedes konzeptionellen Modul darstellt, klicken Sie dann einen Kontext, der von anderen Kontexten getrennt ist (also begrenzt), und können unabhängig voneinander weiterentwickelt. Jede gebundene Kontext sollte idealerweise für Konzepte darin einen eigenen Namen auswählen und exklusiven Zugriff haben sollten, um einen eigenen Persistenzspeicher.
+**Kontextgrenzen** stellen ein zentrales Muster im domänengesteuerten Design dar. Sie bieten die Möglichkeit, mit der Komplexität in großen Anwendungen und Organisation umzugehen, indem eine Aufteilung in einzelne konzeptuelle Module erfolgt. Jedes konzeptuelle Modul stellt einen Kontext dar, der von anderen Kontexten getrennt (also gebunden) ist und sich unabhängig entwickeln kann. Jede Kontextgrenze sollte idealerweise ihre eigenen Namen für interne Konzepte auswählen und über exklusiven Zugriff auf den eigenen persistenten Speicher verfügen können.
 
-Zumindest sollten einzelne Webanwendungen bemühen, werden ihre eigenen gebundene Kontext, mit ihren eigenen Persistenzspeicher für ihr Geschäftsmodell, statt eine Datenbank mit anderen Anwendungen gemeinsam nutzen. Kommunikation zwischen den Kontexten gebundene tritt auf, über die programmgesteuerten Schnittstellen, anstatt über eine freigegebene Datenbank, die Geschäftslogik ermöglicht, und platzieren Sie Ereignisse werden als Reaktion auf Änderungen, die stattfinden. Begrenzt Kontexten Zuordnung eng an Microservices, die idealerweise auch als ihre eigenen einzelne gebundene Kontexte implementiert werden.
+Anstatt eine Datenbank mit anderen Anwendungen zu teilen, sollten einzelne Webanwendungen darin bestrebt sein, mindestens die eigene Kontextgrenze darzustellen, mit eigenem persistenten Speicher für ihr Geschäftsmodell. Die Kommunikation zwischen Kontextgrenzen erfolgt über Programmschnittstellen und nicht über eine freigegebene Datenbank. So können Geschäftslogik und Ereignisse als Reaktion auf auftretende Änderungen erfolgen. Kontextgrenzen sind Microservices eng zugeordnet. Diese sind ebenso ideal als ihre eigenen individuellen Kontextgrenzen implementiert.
 
-> ### <a name="references--modern-web-applications"></a>Verweise – moderner Webanwendungen
-> - Trennung von Anliegen  
+> ### <a name="references--modern-web-applications"></a>Ressourcen: Moderne Webanwendungen
+> - **Separation of Concerns**  
 > <http://deviq.com/separation-of-concerns/>
 > - **Kapselung** <http://deviq.com/encapsulation/>
-> - **Abhängigkeit Umkehrung Prinzip**  
+> - **Das Prinzip der Abhängigkeitsumkehr (Dependency Inversion)**  
 > <http://deviq.com/dependency-inversion-principle/>
 > - **Prinzip der expliziten Abhängigkeiten**  
 > <http://deviq.com/explicit-dependencies-principle/>
-> - **Nicht selbst wiederholen**  
+> - **Don't Repeat Yourself**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - Persistenz Unkenntnis  
+> - **Ignorieren der Persistenz**  
 > <http://deviq.com/persistence-ignorance/>
-> - **Gebundene Kontext**  
+> - **Kontextgrenze**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
-[Vorherigen] (Choose-between-traditional-web-and-single-page-apps.md) [weiter] (Common-Web-Anwendung-architectures.md)
+[Zurück] (choose-between-traditional-web-and-single-page-apps.md) [Weiter] (common-web-application-architectures.md)

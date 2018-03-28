@@ -1,6 +1,6 @@
 ---
 title: .NET-Standard
-description: "Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird."
+description: Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird.
 keywords: .NET Standard, PCL, .NET
 author: mairaw
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -38,7 +38,7 @@ In der folgenden Tabelle sind alle Versionen von .NET Standard und die unterstü
 [!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Gehen Sie folgendermaßen vor, um die höchste Version von .NET Standard zu suchen, die Sie als Ziel verwenden können:
-1. Suchen Sie die Zeile, die die .NET-Implementierung enthält, die Sie ausführen möchten.
+1. Suchen Sie die Zeile, die die .NET-Implementierung angibt, die Sie ausführen möchten.
 2. Suchen Sie in dieser Zeile die Spalte, in der Ihre Version angegeben ist (von rechts nach links).
 3. Die Spaltenüberschrift gibt die .NET Standard-Version an, die Ihr Ziel unterstützt (alle niedrigeren .NET Standard-Versionen werden ebenfalls unterstützt).
 4. Wiederholen Sie diesen Vorgang für jede Plattform, die als Ziel verwendet werden soll. Wenn Sie mehrere Zielplattformen verwenden, sollten Sie die kleinste unterstützten Versionen auswählen. Wenn Sie .NET Standard z.B. auf .NET Framework 4.5 und .NET Core 1.0 ausführen möchten, ist die höchste .NET Standard-Version, die Sie verwenden können, .NET Standard 1.1.

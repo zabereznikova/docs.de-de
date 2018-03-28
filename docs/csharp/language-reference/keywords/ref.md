@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -27,7 +27,7 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 
 - In einer Methodensignatur, um einen Wert an den Aufrufer als Verweis zurückzugeben. Weitere Informationen finden Sie unter [Verweisrückgabewerte](#reference-return-values).
 
-- In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert lokal als Verweis, den der Aufrufer ändern möchte, gespeichert wird. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
+- In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert, den der Aufrufer ändern möchte, lokal als Verweis gespeichert ist oder dass eine lokale Variable auf einen anderen Wert per Verweis zugreift. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
 
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 
@@ -109,7 +109,13 @@ Die folgende Anweisung definiert z.B. eine lokale ref-Variable, die von der Meth
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Beachten Sie, dass das `ref`-Schlüsselwort an beiden Stellen verwendet werden muss. Andernfalls generiert der Compiler den Fehler CS8172 „Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden“. 
+Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht dies die Leistung, da ein möglicherweise aufwendiger Kopiervorgang vermieden wird. In der folgenden Anweisung wird z.B. gezeigt, wie ein lokaler Verweiswert definiert wird, mit dem auf einen Wert verwiesen wird.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Beachten Sie, dass das `ref`-Schlüsselwort in beiden Beispielen an beiden Stellen verwendet werden muss. Andernfalls generiert der Compiler den Fehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden). 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Beispiel für ref-Rückgaben und lokale ref-Variablen
 
