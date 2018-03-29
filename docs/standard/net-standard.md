@@ -134,17 +134,17 @@ Sehen Sie sich den Satz von PCL-Profilen an, die mit dem .NET-Standard kompatibe
 
 | PCL-Profil | .NET-Standard | PCL-Plattformen
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1,1           | .NET Framework 4.5, Windows 8
-| Profile31   | 1,0           | Windows 8.1, Windows Phone Silverlight 8.1
+| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
+| Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
 | Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profile49   | 1,0           | .NET Framework 4.5, Windows Phone Silverlight 8
+| Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
-| Profile84   | 1,0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
 | Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
-| Profile157  | 1,0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile259  | 1,0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+| Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
 
 ## <a name="targeting-net-standard"></a>Festlegen von .NET Standard als Ziel
