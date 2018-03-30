@@ -1,9 +1,9 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: 
+hide_bc: true
 title: .NET-Dokumentation
-description: "Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr."
+description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
 ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
