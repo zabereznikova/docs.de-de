@@ -46,6 +46,7 @@
       "build_source_folder": ".",
       "build_output_subfolder": ".",
       "locale": "de-de",
+      "xref_query_tags": ["/uwp/api"],
       "monikers": [
         "netframework-4.5.1",
         "netframework-4.5.2",
@@ -146,16 +147,6 @@
       "branch": "master",
       "branch_mapping": {
         "live": "live"
-      }
-    },
-    {
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
-      "branch": "live",
-      "branch_mapping": {
-        "master": "master",
-        "live": "live",
-        "live-sxs" : "live"
       }
     }
   ],
