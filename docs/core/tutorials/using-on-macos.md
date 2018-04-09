@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit .NET Core unter Mac OS
-description: "Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code."
+description: Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code.
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-Die `Thing`-Klasse enthält eine öffentliche Methode, `Get`, die die Summe zweier Zahlen durch Konvertierung der Summe in eine Zeichenfolge zurückgibt, die anschließend in eine ganze Zahl serialisiert wird. Hierbei werden verschiedene moderne C#-Features verwendet, wie etwa [`using static`-Direktiven](../../csharp/language-reference/keywords/using-static.md), [Ausdruckskörpermitglieder](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) und [interpolierte Zeichenfolgen](../../csharp/language-reference/keywords/interpolated-strings.md).
+Die `Thing`-Klasse enthält eine öffentliche Methode, `Get`, die die Summe zweier Zahlen durch Konvertierung der Summe in eine Zeichenfolge zurückgibt, die anschließend in eine ganze Zahl serialisiert wird. Hierbei werden verschiedene moderne C#-Features wie etwa [`using static`-Anweisungen](../../csharp/language-reference/keywords/using-static.md), [Ausdruckskörpermember](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) und [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) verwendet.
 
 Erstellen Sie die Bibliothek mithilfe des [`dotnet build`](../tools/dotnet-build.md)-Befehls. Dadurch wird eine integrierte *library.dll*-Datei unter *golden/library/bin/Debug/netstandard1.4* erstellt.
 

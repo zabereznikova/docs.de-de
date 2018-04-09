@@ -1,6 +1,6 @@
 ---
-title: "Tutorial „Interpolierte Zeichenfolgen“: Lokale C#-Schnellstarts"
-description: "In diesem Schnellstart über interpolierte Zeichenfolgen schreiben Sie C#-Code, um das Ergebnis eines Ausdrucks in eine größere Zeichenfolge einzufügen."
+title: 'Tutorial „Interpolierte Zeichenfolgen“: Lokale C#-Schnellstarts'
+description: In diesem Schnellstart über interpolierte Zeichenfolgen schreiben Sie C#-Code, um das Ergebnis eines Ausdrucks in eine größere Zeichenfolge einzufügen.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
@@ -166,5 +166,4 @@ Sie haben den Schnellstart für interpolierte Zeichenfolgen abgeschlossen.
     
 Sie können mit dem Schnellstart [Arrays und Auflistungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen zum Arbeiten mit interpolierten Zeichenfolgen finden Sie im Artikel [Interpolierte Zeichenfolgen](../language-reference/keywords/interpolated-strings.md) in der C#-Referenz.
-
+Weitere Informationen zu interpolierten Zeichenfolgen finden Sie im Artikel [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) in der C#-Referenz.

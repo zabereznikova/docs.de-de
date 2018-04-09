@@ -1,5 +1,5 @@
 ---
-title: "Standardmäßige Zahlenformatzeichenfolgen"
+title: Standardmäßige Zahlenformatzeichenfolgen
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 Standardformatzeichenfolgen für Zahlen werden für die Formatierung allgemeiner numerischer Typen verwendet. Eine Standardformatzeichenfolge für Zahlen besitzt das Format `Axx`, wobei:  
@@ -48,7 +48,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  
 - Dem .NET-Feature für die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md), die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird. Die Funktion für kombinierte Formatierung ermöglicht es Ihnen, die Zeichenfolgendarstellung mehrerer Datenelemente in eine einzelne Zeichenfolge einzuschließen, die Feldbreite anzugeben und die Zahlen in einem Feld auszurichten. Weitere Informationen finden Sie unter [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Interpolierten Zeichenfolgen](../../csharp/language-reference/keywords/interpolated-strings.md) in C# und Visual Basic, die im Vergleich zu Zeichenfolgen im kombinierten Format eine vereinfachte Syntax bereitstellen.
+- [Interpolierten Zeichenfolgen](../../csharp/language-reference/tokens/interpolated.md) in C# und Visual Basic, die im Vergleich zu Zeichenfolgen im kombinierten Format eine vereinfachte Syntax bereitstellen.
  
 > [!TIP]
 >  Sie können das [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)herunterladen, eine Anwendung, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können.  
@@ -89,6 +89,8 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Die Zeichenfolge kann als `formatString`-Argument in einem interpolierten Ausdruckselement einer interpolierten Zeichenfolge bereitgestellt werden. Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) der C#-Referenz oder im Artikel [Interpolierte Zeichenfolgen](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) in der Visual Basic-Referenz.  
   
  Die folgenden Abschnitte enthalten ausführliche Informationen zu den einzelnen numerischen Standardformatzeichenfolgen.  
   

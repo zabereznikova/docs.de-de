@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |Thema|description|  
 |-----------|-----------------|  
 |[Gewusst wie: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
-|[Gewusst wie: Verketten von mehreren Zeichenfolgen](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Veranschaulicht Methoden zum Kombinieren mehrerer Zeichenfolgen in einer Zeichenfolge zur Kompilier- und Laufzeit.|  
-|[Gewusst wie: Vergleichen von Zeichenfolgen](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Zeigt, wie Ordinalzahlenvergleiche von Zeichenfolgen durchgeführt werden|  
+|[Gewusst wie: Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
 |[Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von String.Split](../../how-to/parse-strings-using-split.md)|Enthält ein Codebeispiel, das veranschaulicht, wie Sie die `String.Split`-Methode zum Analysieren von Zeichenfolgen verwenden|  
 |[Vorgehensweise: Suchen von Zeichenfolgen](../../how-to/search-strings.md)|Erläutert, wie Sie mit der Suche Zeichenfolgen nach spezifischem Text oder spezifischen Mustern durchsuchen können.|  
 |[Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  

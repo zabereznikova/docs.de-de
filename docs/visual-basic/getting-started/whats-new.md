@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -81,7 +81,7 @@ Mit Visual Basic 2017 wurde Unterstützung für das Unterstrichzeichen (`_`) als
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Um das Unterstrich-Zeichen als führende Trennzeichen zu verwenden, müssen Sie Visual Basic-Projekt das folgende Element hinzufügen (\*.vbproj) Datei:
+Um den Unterstrich als vorangestelltes Trennzeichen verwenden zu können, müssen Sie Ihrer Visual Basic-Projektdatei (\*.vbproj) das folgende Element hinzufügen:
 
 ```xml
 <PropertyGroup>
@@ -91,15 +91,15 @@ Um das Unterstrich-Zeichen als führende Trennzeichen zu verwenden, müssen Sie 
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[**Benannte Tupel Typrückschluss**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Rückschluss auf benannte Tupel**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic den Namen der Typelelemente von den entsprechenden Variablennamen ab. Sie müssen ein Tupelelement nicht explizit benennen. In folgendem Beispiel werden Rückschlüsse verwendet, um ein Tupel mit drei benannten Elementen, `state`, `stateName` und `capital`, zu erstellen.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-**Zusätzliche Compilerschalter**  
+**Zusätzliche Compileroptionen**  
 
-Visual Basic-Befehlszeilencompiler jetzt unterstützt die [ **- Refout** ](../reference/command-line-compiler/refout-compiler-option.md) und [ **- Refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) -Compileroptionen zur Steuerung der Ausgabe von Verweisassemblys. **-Refout** definiert das Ausgabeverzeichnis die Verweisassembly und **- Refonly** gibt an, dass nur eine Verweisassembly von Kompilierung ausgegeben werden.
+Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[**-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +154,7 @@ Weitere Informationen finden Sie unter [Verweisrückgabewerte](../programming-gu
 [nameof](../../csharp/language-reference/keywords/nameof.md)  
  Sie können den nicht qualifizierten Zeichenfolgennamen eines Typs oder Members zur Verwendung in einer Fehlermeldung ohne Hartcodierung einer Zeichenfolge abrufen.  Dadurch bleibt der Code bei der Umgestaltung korrekt.  Diese Funktion eignet sich auch zum Einbinden von MVC-Links (Model-View-Controller) und das Auslösen von Ereignissen durch geänderte Eigenschaften.  
   
-[Zeichenfolgeninterpolation](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Zeichenfolgeninterpolation](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Sie können Ausdrücke für die Zeichenfolgeninterpolierung zum Erstellen von Zeichenfolgen verwenden.  Ein Ausdruck für eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die Ausdrücke enthält.  Eine interpolierte Zeichenfolge ist in Bezug auf die Argumente leichter zu verstehen als eine [Zusammengesetzte Formatierung](../../standard/base-types/composite-format.md).  
   
 [Memberzugriff und Indizierung mit NULL-Bedingung](../../csharp/language-reference/operators/null-conditional-operators.md)  

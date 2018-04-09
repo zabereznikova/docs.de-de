@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer „Hallo Welt“-Anwendung mit .NET Core und Visual Basic in Visual Studio 2017"
+title: Erstellen einer „Hallo Welt“-Anwendung mit .NET Core und Visual Basic in Visual Studio 2017
 description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung in Visual Basic erstellen.
 keywords: .NET Core, .NET Core-Konsolenanwendung, Visual Studio 2017
 author: rpetrusha
@@ -12,11 +12,11 @@ dev_langs:
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c3775fccf8d6e7c544cbd0b05df7043752e8bef9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017
 
@@ -70,7 +70,7 @@ Erweitern Sie Ihre Anwendung, um die Benutzer aufzufordern, seinen oder ihren Na
 
    ![Visual Studio-Programmdatei mit aktualisierter Main-Methode](./media/vb-with-visual-studio/codewindow.png)
 
-   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `currentDate` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../csharp/language-reference/keywords/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
+   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `currentDate` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
 
 1. Kompilieren Sie das Programm durch Auswählen von **Erstellen** > **Projektmappe erstellen**.
 

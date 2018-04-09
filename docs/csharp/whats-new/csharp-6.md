@@ -1,5 +1,5 @@
 ---
-title: Was ist neu in C#-6 - C#-Handbuch
+title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 keywords: .NET, .NET Core
 author: BillWagner
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -56,7 +56,7 @@ Die Syntax für automatisch implementierte Eigenschaften (in der Regel als „Au
 
 Diese einfache Syntax beschränkte die Arten der Entwürfe, die Sie mithilfe von Auto-Eigenschaften unterstützen konnten. C# 6 verbessert die Funktionen der Auto-Eigenschaften, damit Sie sie in mehr Szenarios verwenden können. Sie müssen nicht so oft auf die ausführlichere Syntax zum Deklarieren und Bearbeiten des Unterstützungsfeld von Hand zurückgreifen.
 
-Die neue Syntax zielt Szenarien für schreibgeschützte Eigenschaften und für die Initialisierung der Variablen Speichers hinter eine Auto-Eigenschaft ab.
+Die neue Syntax eignet sich in Szenarios für schreibgeschützte Eigenschaften sowie jene zum Initialisieren des Speichers der Variable hinter einer Auto-Eigenschaft.
 
 ### <a name="read-only-auto-properties"></a>Schreibgeschützte Auto-Eigenschaften
 
@@ -105,17 +105,17 @@ Mit C# 6 können Sie einen Anfangswert für den von einer Auto-Eigenschaft verwe
 
 Der `Grades`-Member wird initialisiert, wo er deklariert ist. Dies erleichtert die einmalige Ausführung der Initialisierung. Die Initialisierung ist Teil der Eigenschaftendeklaration, was es einfacher macht, die Speicherzuweisung mit der öffentlichen Schnittstelle für `Student`-Objekte gleichzustellen.
 
-Eigenschaft-Initialisierer können hier mit Lese-/Schreibeigenschaften als auch schreibgeschützte Eigenschaften, wie dargestellt verwendet werden.
+Eigenschafteninitialisierer können wie im Folgenden dargestellt mit Lese-/Schreibeigenschaften sowie mit schreibgeschützten Eigenschaften verwendet werden.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Ausdruckskörper-Funktionsmember
 
-Der Text von vielen Member, die wir schreiben, besteht aus nur einer Anweisung, die als Ausdruck dargestellt werden kann. Sie können diese Syntax reduzieren, indem Sie stattdessen einen Ausdruckskörpermember schreiben. Dies funktioniert für schreibgeschützte Eigenschaften und Methoden. Das Außerkraftsetzen von `ToString()` ist z.B. oft eine gute Wahl:
+Der Text von vielen Member, die wir schreiben, besteht aus nur einer Anweisung, die als Ausdruck dargestellt werden kann. Sie können diese Syntax reduzieren, indem Sie stattdessen einen Ausdruckskörpermember schreiben. Dies funktioniert für Methoden und schreibgeschützte Eigenschaften. Das Außerkraftsetzen von `ToString()` ist z.B. oft eine gute Wahl:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-Sie können auch Eigenschaften schreibgeschützt sind und Mitglieder Ausdruck ohne Text verwenden:
+Sie können auch Ausdruckskörpermember in schreibgeschützten Eigenschaften verwenden:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -128,7 +128,7 @@ Ihr Code wird mit <xref:System.Math.Sin%2A>, <xref:System.Math.Sqrt%2A> und ande
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-Nun können Sie beliebige statische Methoden in der <xref:System.Math>-Klasse verwenden, ohne die <xref:System.Math>-Klasse zu qualifizieren. Die <xref:System.Math>-Klasse ist ein hervorragender Anwendungsfall für dieses Feature, da keine Instanzenmethoden enthalten sind. Sie können auch `using static` zum Importieren von statischen Methoden einer Klasse für eine Klasse verwenden, die jeweils über statische Methoden und Instanzenmethoden verfügt. Ist eines der nützlichsten Beispiele <xref:System.String>:
+Nun können Sie beliebige statische Methoden in der <xref:System.Math>-Klasse verwenden, ohne die <xref:System.Math>-Klasse zu qualifizieren. Die <xref:System.Math>-Klasse ist ein hervorragender Anwendungsfall für dieses Feature, da keine Instanzenmethoden enthalten sind. Sie können auch `using static` zum Importieren von statischen Methoden einer Klasse für eine Klasse verwenden, die jeweils über statische Methoden und Instanzenmethoden verfügt. Eines der nützlichsten Beispiele ist <xref:System.String>:
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -209,17 +209,17 @@ Wenn gewährleistet werden kann, dass die linke Seite nur einmal ausgewertet wir
 
 ## <a name="string-interpolation"></a>Zeichenfolgeninterpolierung
 
-C# 6 enthält neue Syntax für die Zusammensetzung von Zeichenfolgen aus einer Formatzeichenfolge und Ausdrücken, die evaluiert werden können, um andere Zeichenfolgenwerte auszugeben.
+C# 6 enthält eine neue Syntax für die Zusammensetzung von Zeichenfolgen aus einer Formatzeichenfolge und aus Ausdrücken, die mit dem Ziel evaluiert werden, andere Zeichenfolgenwerte auszugeben.
 
 In der Vergangenheit mussten Sie positionelle Parameter in einer Methode wie `string.Format` verwenden:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Mit C# 6 hilft Ihnen die neue Zeichenfolgeninterpolation dabei, die Ausdrücke in die Formatzeichenfolge einzubetten. Stellen sie ganz einfach `$` vor die Zeichenfolge:
+Ab C# 6 hilft Ihnen das neue Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) dabei, die Ausdrücke in die Formatzeichenfolge einzubetten. Stellen sie ganz einfach `$` vor die Zeichenfolge:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-In diesem ersten Beispiel werden Variablenausdrücke für die ersetzten Ausdrücke verwendet. Sie können diese Syntax erweitern, damit Sie jeden beliebigen Ausdruck verwenden können Sie können z.B. den Notendurchschnitt eines Studenten als Teil der Interpolation berechnen:
+In diesem ersten Beispiel werden Eigenschaftsausdrücke für die ersetzten Ausdrücke verwendet. Sie können diese Syntax erweitern, damit Sie jeden beliebigen Ausdruck verwenden können Sie können z.B. den Notendurchschnitt eines Studenten als Teil der Interpolation berechnen:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ Sie bemerken vielleicht, dass die Ausgabe von `Grades.Average()`, die im vorheri
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-Die vorhergehende Codezeile wird den Wert für `Grades.Average()` als Gleitkommazahl mit zwei Dezimalstellen formatieren.
+Die vorherige Codezeile formatiert den Wert für `Grades.Average()` als Gleitkommazahl mit zwei Dezimalstellen.
 
 Der `:` wird immer als Trennlinie zwischen dem Ausdruck, der formatiert wird, und der Formatzeichenfolge interpretiert. Dies kann zu Problemen führen, wenn Ihr Ausdruck einen `:` anders verwendet, z.B. ein bedingter Operator:
 
@@ -249,22 +249,17 @@ Es ist viel mehr zur Veranschaulichung der Breite der Funktion gedacht. Jeder C#
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Zeichenfolgeninterpolation und bestimmte Kulturen
 
-Alle Beispiele aus dem vorherigen Abschnitt werden die Zeichenfolgen mithilfe der aktuellen Kultur und Sprache auf dem Computer formatieren, auf dem der Code ausgeführt wird. Häufig müssen Sie die Zeichenfolge formatieren, die unter Verwendung einer bestimmten Kultur erstellt wurde.
-Das Objekt, das von einer Zeichenfolgeninterpolation stammt, ist ein Typ, der über eine implizite Konvertierung entweder in <xref:System.String> oder in <xref:System.FormattableString> verfügt.
+Alle Beispiele aus dem vorherigen Abschnitt formatieren die Zeichenfolgen mithilfe der aktuellen Kultur und Sprache auf dem Computer, auf dem der Code ausgeführt wird. Häufig müssen Sie die Zeichenfolge formatieren, die unter Verwendung einer bestimmten Kultur erstellt wurde.
+Hierbei nutzen Sie die Tatsache, dass das Objekt, das durch die Zeichenfolgeninterpolation erstellt wurde, implizit in <xref:System.FormattableString> konvertiert werden kann.
 
-Der <xref:System.FormattableString>-Typ enthält die Formatzeichenfolge sowie die Ergebnisse der Auswertung der Argumente, bevor sie in Zeichenfolgen konvertiert werden. Sie können öffentliche Methoden von <xref:System.FormattableString> verwenden, um die Kultur anzugeben, wenn Sie eine Zeichenfolge formatieren. Im Folgenden wird z.B. eine Zeichenfolge mit deutsch als Sprache und Kultur erstellt. (Dazu wird das Zeichen „,“ für das Dezimaltrennzeichen sowie das Zeichen „.“ als Tausendertrennzeichen verwendet.)
+Die <xref:System.FormattableString>-Instanz enthält die Formatzeichenfolge sowie die Ergebnisse der Auswertung der Ausdrücke, bevor sie in Zeichenfolgen konvertiert werden. Sie können öffentliche Methoden von <xref:System.FormattableString> verwenden, um die Kultur anzugeben, wenn Sie eine Zeichenfolge formatieren. Im folgenden Beispiel wird mit der deutschen Kultur eine Zeichenfolge erstellt. Dazu wird das Zeichen „,“ für das Dezimaltrennzeichen sowie das Zeichen „.“ als Tausendertrennzeichen verwendet.
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> Das obige Beispiel wird in .NET Core-Version 1.0.1 nicht unterstützt. Es wird nur in .NET Framework unterstützt.
-
-Im Allgemeinen erstellen Ausdrücke für die Zeichenfolgeninterpolation Zeichenfolgen als Ausgabe. Wenn Sie mehr Kontrolle über die Kultur haben möchten, die zum Formatieren der Zeichenfolge verwendet wird, können Sie eine bestimmte Ausgabe angeben.  Wenn dies eine Funktion ist, die Sie oft benötigen, können Sie bequeme Methoden als Erweiterungsmethoden erstellen, um einfaches Formatieren mit bestimmten Kulturen zuzulassen.
+Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md).
 
 ## <a name="exception-filters"></a>Ausnahmefilter
 

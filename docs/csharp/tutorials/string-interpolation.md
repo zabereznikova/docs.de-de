@@ -1,5 +1,5 @@
 ---
-title: "Zeichenfolgeninterpolation – C#"
+title: Zeichenfolgeninterpolation – C#
 description: Erfahren Sie, wie die Zeichenfolgeninterpolation in C# 6 funktioniert.
 keywords: .NET, .NET Core, C#, Zeichenfolge
 author: mgroves
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C# #
 
@@ -122,4 +122,4 @@ Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur. U
 
 ## <a name="conclusion"></a>Schlussbemerkung 
 
-In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine kompaktere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Einsatzzwecke. Weitere Informationen finden Sie im Thema [Interpolierte Zeichenfolgen](../../csharp//language-reference/keywords/interpolated-strings.md).
+In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine kompaktere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Einsatzzwecke. Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation](../../csharp//language-reference/tokens/interpolated.md).

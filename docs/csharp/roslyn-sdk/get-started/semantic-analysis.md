@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit der semantischen Analyse
-description: "Dieses Tutorial bietet einen Überblick über die Arbeit mit semantischen Analysen mithilfe des .NET Compiler SDK."
+description: Dieses Tutorial bietet einen Überblick über die Arbeit mit semantischen Analysen mithilfe des .NET Compiler SDK.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Erste Schritte mit der semantischen Analyse
 
 Bei diesem Tutorial wird davon ausgegangen, dass Sie mit der Syntax-API vertraut sind. Der Artikel [Erste Schritte mit der Syntaxanalyse](syntax-analysis.md) bietet eine Einführung zu diesem Thema.
 
 Im vorliegenden Tutorial erkunden Sie die APIs für **Symbol** und **Bindung**. Diese APIs bieten Informationen zur _semantischen Bedeutung_ eines Programms. Sie ermöglichen es Ihnen, Fragen zu den Typen zu stellen und zu beantworten, die durch ein Symbol in Ihrem Programm dargestellt werden.
+
+Die Installation des **SDK für die .NET Compiler Platform** ist erforderlich.
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Grundlegendes zu Kompilierungen und Symbolen
 
@@ -31,9 +35,6 @@ Ebenso wie <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>
 ## <a name="querying-symbols"></a>Abfragen von Symbolen
 
 In diesem Tutorial betrachten wir noch einmal das Hello World-Programm. Diesmal fragen Sie die Symbole im Programm ab, um zu verstehen, welche Typen durch diese Symbole repräsentiert werden. Sie fragen die Typen in einem Namespace ab und lernen, wie Sie die verfügbaren Methoden in einem Typ finden.
-
-> [!IMPORTANT]
-> Für die folgenden Beispiele muss das **.NET Compiler SDK** als Teil von Visual Studio 2017 installiert sein. Das .NET Compiler SDK wird in der Workload **Visual Studio-Erweiterungsentwicklung** als letzte optionale Komponente aufgeführt. Ohne diese Komponente lassen sich die Vorlagen nicht installieren.
 
 Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

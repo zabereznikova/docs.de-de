@@ -1,6 +1,6 @@
 ---
 title: Eigenschaften
-description: "Erfahren Sie mehr über C#-Eigenschaften, die Funktionen für die Validierung, berechnete Werte, die verzögerte Auswertung und Benachrichtigungen für Eigenschaftsänderungen umfassen."
+description: Erfahren Sie mehr über C#-Eigenschaften, die Funktionen für die Validierung, berechnete Werte, die verzögerte Auswertung und Benachrichtigungen für Eigenschaftsänderungen umfassen.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -149,7 +149,7 @@ public class Person
 
 Nun, kann auf die `FirstName`-Eigenschaft von einem beliebigen Code zugegriffen werden, aber es kann nur von einem anderem Code in der `Person`-Klasse zugewiesen werden.
 
-Sie können einen restriktiven Zugriffsmodifizierer zum set- oder get-Accessor hinzufügen. Jeder Zugriffsmodifizierer, den Sie auf den einzelnen Accessor platzieren, muss eingeschränkter sein als der Zugriffsmodifizierer für die Eigenschaftsdefinition. Das Obige ist zulässig, da die `FirstName`-Eigenschaft `public` ist, aber der set-Accessor ist `private`. Sie können keine `private`-Eigenschaft mit einem `public`-Accessor deklarieren. Eigenschaftsdeklarationen können ebenfalls deklariert werden `protected`, `internal`, `protected internal`, `private protected` oder sogar `private`.   
+Sie können einen restriktiven Zugriffsmodifizierer zum set- oder get-Accessor hinzufügen. Jeder Zugriffsmodifizierer, den Sie auf den einzelnen Accessor platzieren, muss eingeschränkter sein als der Zugriffsmodifizierer für die Eigenschaftsdefinition. Das Obige ist zulässig, da die `FirstName`-Eigenschaft `public` ist, aber der set-Accessor ist `private`. Sie können keine `private`-Eigenschaft mit einem `public`-Accessor deklarieren. Eigenschaftendeklarationen können ebenfalls als `protected`, `internal`, `protected internal`, `private protected` oder sogar `private` deklariert werden.   
 
 Es ist auch zulässig, den restriktiveren Modifizierer auf dem `get`-Accessor zu platzieren. Sie verfügen z.B. über eine `public`-Eigenschaft, schränken jedoch den `get`-Accessor auf `private` ein. Dieses Szenario wird in der Praxis nur selten ausgeführt.
 
@@ -193,9 +193,9 @@ public class Person
 }
 ```
 
-Im Beispiel oben wird die Syntax *Zeichenfolgeninterpolation* verwendet, um die formatierte Zeichenfolge für den vollständigen Namen zu erstellen.
+Im Beispiel oben wird das Feature [Zeichenfolgeninterpolation](../csharp/language-reference/tokens/interpolated.md) verwendet, um die formatierte Zeichenfolge für den vollständigen Namen zu erstellen.
 
-Sie können auch *Ausdruckskörpermember* verwenden, das eine kompaktere Möglichkeit zum Erstellen der berechneten `FullName`-Eigenschaft bietet:
+Sie können auch *Ausdruckskörpermember* verwenden, was eine kompaktere Möglichkeit zum Erstellen der berechneten `FullName`-Eigenschaft darstellt:
 
 ```csharp
 public class Person
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-*Ausdruckskörpermember* verwenden die Syntax *Lambda-Ausdruck* zum Definieren einer Methode, die einen einzelnen Ausdruck enthält. Hier gibt dieser Ausdruck den vollständigen Namen für das Person-Objekt zurück.
+*Ausdruckskörpermember* verwenden die Syntax von *Lambdaausdrücken* zum Definieren einer Methode, die einen einzelnen Ausdruck enthält. Hier gibt dieser Ausdruck den vollständigen Namen für das Person-Objekt zurück.
 
 ### <a name="lazy-evaluated-properties"></a>Verzögert ausgewertete Eigenschaften
 

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial „Auflistungen in C#“: Lokale C#-Schnellstarts"
+title: 'Tutorial „Auflistungen in C#“: Lokale C#-Schnellstarts'
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C#-Schnellstart: Auflistungen
 
@@ -54,7 +54,7 @@ Ersetzen Sie `<name>` durch Ihren eigenen Namen. Speichern Sie **Program.cs**. G
 
 Sie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Schnellstarts kennengelernt haben, um die Liste zu durchlaufen.
 
-Der Code zum Anzeigen von Namen nutzt **interpolierte Zeichenfolgen**.  Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A>-Methode aufgerufen haben.
+Im Code zum Anzeigen von Namen wird das Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) genutzt.  Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A>-Methode aufgerufen haben.
 
 Setzen wir nun unsere Forschungen fort.
 

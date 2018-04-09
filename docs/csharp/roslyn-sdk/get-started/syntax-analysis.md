@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit der Syntaxanalyse (Roslyn-APIs)
-description: "Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen."
+description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -43,6 +43,10 @@ Die Syntax-API erstellt eine Baumstruktur, deren Stamm die Kompilierungseinheit 
 
 Diese kurze Beschreibung bietet einen Überblick über die Art der Informationen, auf die Sie mithilfe der Syntax-API zugreifen können. Die Syntax-API ist nichts anderes als eine formale API, die die vertrauten Codekonstrukte beschreibt, die Sie aus C# kennen. Sie bietet Informationen zur Formatierung des Codes, z.B. zu Zeilenumbrüchen, Leerräumen und Einzügen. Mit diesen Informationen können Sie den Code genau so darstellen, wie er von Programmierern oder dem Compiler geschrieben und gelesen wird. Dank dieser Struktur gewinnt der Quellcode eine ganz neue Bedeutungsebene, auf der Sie interagieren können. Sie sehen nicht nur Zeichenfolgen, sondern Daten, die die Struktur eines C#-Programms repräsentieren.
 
+Installieren Sie zunächst das **SDK für die .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Grundlegendes zu Syntaxstrukturen
 
 Verwenden Sie die Syntax-API zur Analyse der Struktur von C#-Code. Die **Syntax-API** stellt die Parser, die Syntaxstrukturen und die Hilfsprogramme zur Verfügung, die Sie zum Analysieren und Konstruieren von Syntaxstrukturen benötigen. So können Sie im Code nach bestimmten Syntaxelementen suchen oder den Code für ein Programm lesen.
@@ -67,9 +71,6 @@ Sie können zwar in einer Codedatei mithilfe der Syntax-APIs alles finden, in de
 ## <a name="traversing-trees"></a>Durchlaufen von Strukturen
 
 Sie können die Knoten in einer Syntaxstruktur auf zwei Arten untersuchen. Sie können die Struktur durchlaufen und jeden einzelnen Knoten untersuchen oder Abfragen für bestimmte Elemente oder Knoten ausführen.
-
-> [!IMPORTANT]
-> Für die folgenden Beispiele muss das **.NET Compiler Platform SDK** als Teil von Visual Studio 2017 installiert sein. Das .NET Compiler SDK wird in der Workload **Visual Studio-Erweiterungsentwicklung** als letzte optionale Komponente aufgeführt. Ohne diese Komponente lassen sich die Vorlagen nicht installieren.
 
 ### <a name="manual-traversal"></a>Manuelles Durchlaufen
 

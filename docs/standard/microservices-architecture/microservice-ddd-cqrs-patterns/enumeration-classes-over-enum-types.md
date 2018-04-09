@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Enumerationsklassen anstelle von Enumerationstypen
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von Enumerationsklassen anstelle von Enumerationstypen"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 
@@ -32,8 +32,8 @@ Der Microservice für Bestellungen in eShopOnContainers stellt wie im Folgenden 
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {
@@ -114,10 +114,10 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Enum’s are evil—update (Enumerationen sind schlecht – Update)**
+-   **Enum’s are evil—update (Warum Sie auf Enumerationen verzichten sollten (aktualisierte Version))**
     [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman. How Enums Spread Disease — And How To Cure It (Wie Enumerationen Probleme verbreiten und wie diese behoben werden können)**
+-   **Daniel Hardman. How Enums Spread Disease – And How To Cure It (Warum Enumerationen für Probleme sorgen und wie Sie diese vermeiden)**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
 -   **Jimmy Bogard. Enumeration classes (Enumerationsklassen)**
@@ -126,7 +126,7 @@ public class CardType : Enumeration
 -   **Steve Smith. Enum Alternatives in C# (Alternativen zu Enumerationen in C#)**
     [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Basisklassen für Enumerationen in eShopOnContainers)[*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Die Basisklasse „Enumeration“ in eShopOnContainers)[*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
 -   **CardType.cs**. Beispielklasse für Enumerationen in eShopOnContainers.
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)

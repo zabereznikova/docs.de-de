@@ -1,6 +1,6 @@
 ---
-title: "Erweiterungen des CSPROJ-Formats für .NET Core"
-description: "Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core"
+title: Erweiterungen des CSPROJ-Formats für .NET Core
+description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 keywords: Referenz, CSPROJ, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -255,7 +255,7 @@ Dieser Boolesche Werte gibt an, ob die Buildausgabeassemblys in die *.nupkg*-Dat
 Dieser Boolesche Wert gibt an, ob alle Elemente, die über einen `Content`-Typ verfügen, automatisch im resultierenden Paket enthalten sind. Die Standardeinstellung ist `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
-Gibt den Ordner an, in dem die Ausgabeassemblys positioniert werden. Die Ausgabeassemblys (und andere Ausgabedateien) werden in ihre jeweiligen Frameworkordner kopiert.
+Gibt den Ordner an, in dem die Ausgabeassemblys abgelegt werden. Die Ausgabeassemblys (und andere Ausgabedateien) werden in ihre jeweiligen Frameworkordner kopiert.
 
 ### <a name="contenttargetfolders"></a>ContentTargetFolders
 Diese Eigenschaft gibt den Standardspeicherort an, an dem alle Inhaltsdateien gespeichert werden sollten, wenn `PackagePath` für sie nicht angegeben ist. Der Standardwert ist „content;contentFiles“.

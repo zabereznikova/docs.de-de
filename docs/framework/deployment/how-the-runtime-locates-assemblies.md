@@ -1,12 +1,13 @@
 ---
 title: So sucht Common Language Runtime nach Assemblys
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Name der Assembly, auf die verwiesen wird.  
   
--   Das `privatePath`-Attribut des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements, bei dem es sich um die benutzerdefinierte Liste von Unterverzeichnissen unter dem Stammspeicherort handelt. Dieser Speicherort kann in der Anwendungskonfigurationsdatei und in verwaltetem Code mithilfe der <xref:System.AppDomain.AppendPrivatePath%2A>-Eigenschaft für eine Anwendungsdomäne festgelegt werden. Im Fall der Festlegung in verwaltetem Code wird zuerst der `privatePath` des verwalteten Codes und daraufhin der in der Anwendungskonfigurationsdatei angegebene Pfad überprüft.  
+-   Das `privatePath`-Attribut des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements, bei dem es sich um die benutzerdefinierte Liste von Unterverzeichnissen unter dem Stammspeicherort handelt. Dieser Speicherort kann in der Anwendungskonfigurationsdatei und in verwaltetem Code mithilfe der <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType>-Eigenschaft für eine Anwendungsdomäne festgelegt werden. Im Fall der Festlegung in verwaltetem Code wird zuerst der `privatePath` des verwalteten Codes und daraufhin der in der Anwendungskonfigurationsdatei angegebene Pfad überprüft.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Überprüfen der Anwendungsbasis- und Kulturverzeichnisse  
  Die Common Language Runtime beginnt mit der Überprüfung immer in der Anwendungsbasis, die entweder eine URL oder das Stammverzeichnis der Anwendung auf einem Computer ist. Wird die Assembly, auf die verwiesen wird, in der Anwendungsbasis nicht gefunden und stehen keine Informationen zur Kultur bereit, durchsucht die Common Language Runtime alle Unterverzeichnisse mit diesem Assemblynamen. Zu den überprüften Verzeichnissen gehören:  
@@ -224,7 +226,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Name der Assembly, auf die verwiesen wird: myAssembly  
   
--   Stammverzeichnis der Anwendung: http://www.code.microsoft.com  
+-   Webanwendungs-Stammverzeichnis: http://www.code.microsoft.com  
   
 -   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Element in der Konfigurationsdatei: bin  
   
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Weitere überprüfte Speicherorte  
  Der Speicherort einer Assembly kann auch mithilfe des aktuellen Bindungskontexts ermittelt werden. Dieses Verfahren kommt besonders häufig bei Verwendung der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> -Methode und in Szenarien mit COM-Interop zum Einsatz. Wenn eine Assembly die <xref:System.Reflection.Assembly.LoadFrom%2A> -Methode verwendet, um auf eine andere Assembly zu verweisen, wird der Speicherort der aufrufenden Assembly als Hinweis auf den Speicherort der Assembly angesehen, auf die verwiesen wird. Bei gefundener Übereinstimmung wird diese Assembly geladen. Besteht keine Übereinstimmung, setzt die Common Language Runtime die Suche mit der entsprechenden Semantik fort und fordert Windows Installer auf, die Assembly zur Verfügung zu stellen. Wenn keine Assembly zur Verfügung gestellt wird, die mit der Bindungsanforderung übereinstimmt, wird eine Ausnahme ausgelöst. Bei der Ausnahme handelt es sich um eine <xref:System.TypeLoadException> in verwaltetem Code, sofern auf einen Typ verwiesen wurde, oder um eine <xref:System.IO.FileNotFoundException> , sofern die geladene Assembly nicht gefunden wurde.  
   
- Wenn beispielsweise "Assembly1" auf "Assembly2" verweist und "Assembly1" von "http://www.code.microsoft.com/utils" heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von "Assembly2.dll" angesehen. Die Common Language Runtime überprüft dann "http://www.code.microsoft.com/utils/Assembly2.dll" und "http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll", um die Assembly zu finden. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
+ Wenn beispielsweise „Assembly1“ auf „Assembly2“ verweist und „Assembly1“ von http://www.code.microsoft.com/utils heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von „Assembly2.dll“ angesehen. Die Runtime sucht in http://www.code.microsoft.com/utils/Assembly2.dll und http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll nach der Assembly. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

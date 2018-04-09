@@ -1,6 +1,6 @@
 ---
 title: Arbeiten mit LINQ
-description: "In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden."
+description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -313,7 +313,7 @@ Und um das Ganze abzuschließen, erstellen wir einen Typ zur Darstellung der Kar
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Dieser Typ verwendet *automatisch implementierte, schreibgeschützte Eigenschaften*, die im Konstruktor festgelegt werden und danach nicht mehr geändert werden können. Er verwendet auch die neue Funktion der *Zeichenfolgeninterpolation*, mit der sich die Zeichenfolgenausgabe einfacher formatieren lässt.
+Dieser Typ verwendet *automatisch implementierte, schreibgeschützte Eigenschaften*, die im Konstruktor festgelegt werden und danach nicht mehr geändert werden können. Er verwendet auch das Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md), mit dem sich die Zeichenfolgenausgabe einfacher formatieren lässt.
 
 Aktualisieren Sie die Abfrage zum Generieren des anfänglichen Kartenstapels so, dass der neue Typ verwendet wird:
 

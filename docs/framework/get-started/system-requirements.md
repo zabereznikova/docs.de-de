@@ -1,6 +1,6 @@
 ---
-title: "Systemanforderungen für .NET Framework"
-description: "Finden Sie heraus, was die Anforderungen der Hardware, des Betriebssystems und der Software sind, um .NET Framework 4.5 und höhere Versionen zu installieren."
+title: Systemanforderungen für .NET Framework
+description: Finden Sie heraus, was die Anforderungen der Hardware, des Betriebssystems und der Software sind, um .NET Framework 4.5 und höhere Versionen zu installieren.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
@@ -35,13 +35,7 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 Für Entwicklungsumgebungen, in denen Apps für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
 
-> [!IMPORTANT]
-> Alle .NET Framework-Versionen ab .NET Framework 4 sind direkte Updates, d.h. eine einzelne 4.x-Version kann auf einem System vorhanden sein.
-> Darüber hinaus sind bestimmte .NET Framework-Versionen auf einigen Versionen des Windows-Betriebssystems vorinstalliert. Dies bedeutet Folgendes:
->
-> * Ist bereits eine höhere Version auf dem Computer installiert, können Sie keine vorherige 4.x-Version installieren.
-> * Wenn auf dem Betriebssystem bereits eine .NET-Version installiert wird, können Sie keine vorherige 4.x-Version auf dem gleichen Computer installieren.
-> * Wenn Sie eine höhere Version installieren, müssen Sie zuerst die vorherige Version deinstallieren.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Downloadinformationen und Links finden Sie unter [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).
 

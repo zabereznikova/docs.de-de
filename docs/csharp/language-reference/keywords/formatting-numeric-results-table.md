@@ -2,7 +2,8 @@
 title: Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
@@ -10,21 +11,21 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
-Sie können die numerischen Ergebnisse mithilfe der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode oder der <xref:System.Console.Write%2A?displayProperty=nameWithType>- oder <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>-Methode formatieren, durch die `String.Format` aufgerufen wird. Das Format wird mithilfe von Formatzeichenfolgen angegeben. Die folgende Tabelle enthält die unterstützen Standardformatzeichenfolgen. Die Formatzeichenfolge nimmt die folgende Form an: `Axx`, wobei `A` der Formatbezeichner und `xx` die Genauigkeitsangabe ist. Der Formatbezeichner steuert den Formatierungstyp, der auf den numerischen Wert angewendet wird. Die Genauigkeitsangabe steuert die Anzahl signifikanter Stellen oder Dezimalstellen der formatierten Ausgabe. Der Wert der Genauigkeitsangabe liegt im Bereich 0–99.  
+Sie können numerische Ergebnisse mithilfe der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode, durch die Methoden <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, die `String.Format` aufrufen, oder durch die [Zeichenfolgeninterpolation](../tokens/interpolated.md) formatieren. Das Format wird mithilfe von Formatzeichenfolgen angegeben. Die folgende Tabelle enthält die unterstützen Standardformatzeichenfolgen. Die Formatzeichenfolge nimmt die folgende Form an: `Axx`, wobei `A` der Formatbezeichner und `xx` die Genauigkeitsangabe ist. Der Formatbezeichner steuert den Formatierungstyp, der auf den numerischen Wert angewendet wird. Die Genauigkeitsangabe steuert die Anzahl signifikanter Stellen oder Dezimalstellen der formatierten Ausgabe. Der Wert der Genauigkeitsangabe liegt im Bereich 0–99.  
   
- Weitere Informationen zu standardmäßigen und benutzerdefinierten Formatierungszeichenfolgen finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md). Weitere Informationen zur `String.Format`-Methode finden Sie unter <xref:System.String.Format%2A?displayProperty=nameWithType>.  
+ Weitere Informationen zu standardmäßigen und benutzerdefinierten Formatierungszeichenfolgen finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md).
   
-|Formatbezeichner|Beschreibung|Beispiele|Ausgabe|  
+|Formatbezeichner|description|Beispiele|Ausgabe|  
 |----------------------|-----------------|--------------|------------|  
 |C oder c|Währung|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
 |D oder d|Decimal|Console.Write("{0:D5}", 25);|00025|  
