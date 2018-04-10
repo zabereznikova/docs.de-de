@@ -1,6 +1,6 @@
 ---
 title: F# Interactive-Referenz (fsi.exe)
-description: "Erfahren Sie, wie f# Interactive (fsi.exe) interaktiv Ausführungsintervall f#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet wird."
+description: Erfahren Sie, wie f# Interactive (fsi.exe) interaktiv Ausführungsintervall f#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet wird.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

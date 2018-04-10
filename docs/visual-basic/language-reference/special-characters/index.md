@@ -2,7 +2,8 @@
 title: Sonderzeichen (Visual Basic-Referenz)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet

@@ -1,5 +1,5 @@
 ---
-title: "Einführung in die Microsoft-Plattform und -Tools für Container-Apps"
+title: Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE

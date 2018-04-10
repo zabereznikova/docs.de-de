@@ -1,6 +1,6 @@
 ---
 title: Generika (F#)
-description: "Informationen Sie zum Verwenden von f# generische Funktionen und Typen, bei die ermöglichen es Ihnen, Code zu schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code zu wiederholen."
+description: Informationen Sie zum Verwenden von f# generische Funktionen und Typen, bei die ermöglichen es Ihnen, Code zu schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code zu wiederholen.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

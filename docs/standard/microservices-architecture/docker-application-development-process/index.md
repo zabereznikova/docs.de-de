@@ -1,6 +1,6 @@
 ---
-title: "Entwicklungsprozess für auf Docker-basierende Anwendungen"
-description: ".NET Microservices-Architektur für .NET-Containeranwendungen | Entwicklungsprozess für auf Docker-basierende Anwendungen"
+title: Entwicklungsprozess für auf Docker-basierende Anwendungen
+description: .NET Microservices-Architektur für .NET-Containeranwendungen | Entwicklungsprozess für auf Docker-basierende Anwendungen
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

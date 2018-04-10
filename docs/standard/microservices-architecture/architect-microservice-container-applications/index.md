@@ -1,6 +1,6 @@
 ---
 title: Architekturcontainer und auf Microservice basierende Anwendungen
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Architekturcontainer und auf Microservice basierende Anwendungen"
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Architekturcontainer und auf Microservice basierende Anwendungen
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

@@ -1,5 +1,5 @@
 ---
-title: "Übertragen und Verschieben vorhandener Apps (DevOps)"
+title: Übertragen und Verschieben vorhandener Apps (DevOps)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
 author: CESARDELATORRE
 ms.author: wiwagn

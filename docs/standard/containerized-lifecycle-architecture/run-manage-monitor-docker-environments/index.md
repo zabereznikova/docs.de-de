@@ -1,5 +1,5 @@
 ---
-title: "Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen"
+title: Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE

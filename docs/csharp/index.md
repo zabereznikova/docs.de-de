@@ -1,6 +1,6 @@
 ---
-title: "Leitfaden für C#"
-description: "Erfahren Sie, wie der C#-Leitfaden Ihnen dabei helfen kann, Detailkenntnisse über C# zu erhalten, unabhängig davon, ob Sie ein neuer Entwickler oder ein Experte sind."
+title: Leitfaden für C#
+description: Erfahren Sie, wie der C#-Leitfaden Ihnen dabei helfen kann, Detailkenntnisse über C# zu erhalten, unabhängig davon, ob Sie ein neuer Entwickler oder ein Experte sind.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

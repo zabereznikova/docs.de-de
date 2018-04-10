@@ -1,6 +1,6 @@
 ---
 title: Ausnahmebehandlung (F#)
-description: "Grundlagen der Ausnahmebehandlung in F# erläutert werden, und enthält Links zu Ausnahmebehandlung Ausdrücke und Funktionen."
+description: Grundlagen der Ausnahmebehandlung in F# erläutert werden, und enthält Links zu Ausnahmebehandlung Ausdrücke und Funktionen.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

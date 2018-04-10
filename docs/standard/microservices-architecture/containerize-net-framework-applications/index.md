@@ -1,6 +1,6 @@
 ---
 title: Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern"
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
