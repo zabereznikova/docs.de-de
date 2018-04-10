@@ -1,5 +1,5 @@
 ---
-title: "Einführung in den Docker-Anwendungslebenszyklus"
+title: Einführung in den Docker-Anwendungslebenszyklus
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE

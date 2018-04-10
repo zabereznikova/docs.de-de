@@ -1,6 +1,6 @@
 ---
 title: Funktionen (F#)
-description: "Informationen Sie zu Funktionen in F# erläutert werden und wie f# üblichen Konstrukte der funktionalen Programmierung unterstützt."
+description: Informationen Sie zu Funktionen in F# erläutert werden und wie f# üblichen Konstrukte der funktionalen Programmierung unterstützt.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

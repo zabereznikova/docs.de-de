@@ -1,6 +1,6 @@
 ---
 title: F#-Sprachreferenz
-description: "Finden Sie F#-Sprache Funktionsinformationen aus dieser Referenz in sprachtoken, Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen."
+description: Finden Sie F#-Sprache Funktionsinformationen aus dieser Referenz in sprachtoken, Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

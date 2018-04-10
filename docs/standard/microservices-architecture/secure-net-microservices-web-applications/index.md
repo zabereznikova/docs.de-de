@@ -1,6 +1,6 @@
 ---
 title: Sichern von .NET-Microservices und Webanwendungen
-description: ".NET Microservices-Architektur für .NET-Containeranwendungen | Sichern von .NET-Microservices und Webanwendungen"
+description: .NET Microservices-Architektur für .NET-Containeranwendungen | Sichern von .NET-Microservices und Webanwendungen
 keywords: Docker, Microservices, ASP.NET, Container
 author: mjrousos
 ms.author: wiwagn

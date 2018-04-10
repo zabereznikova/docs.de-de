@@ -1,6 +1,6 @@
 ---
 title: Typanbieter
-description: "Erfahren Sie, wie ein f#-Typanbieter für eine Komponente handelt, die Typen, Eigenschaften und Methoden zur Verwendung in Ihren Programmen bereitstellt."
+description: Erfahren Sie, wie ein f#-Typanbieter für eine Komponente handelt, die Typen, Eigenschaften und Methoden zur Verwendung in Ihren Programmen bereitstellt.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

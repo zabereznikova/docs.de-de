@@ -1,5 +1,5 @@
 ---
-title: "Neues in C# – Leitfaden für C#"
+title: Neues in C# – Leitfaden für C#
 description: Wie sich die C#-Programmiersprache weiterentwickelt
 keywords: C#, neueste Funktionen, Neues, Roslyn
 author: BillWagner

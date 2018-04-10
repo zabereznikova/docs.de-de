@@ -1,6 +1,6 @@
 ---
-title: "Implementieren von widerstandsfähigen Anwendungen"
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren von widerstandsfähigen Anwendungen"
+title: Implementieren von widerstandsfähigen Anwendungen
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren von widerstandsfähigen Anwendungen
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

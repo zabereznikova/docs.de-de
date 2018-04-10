@@ -1,6 +1,6 @@
 ---
 title: Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren"
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; Element'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -94,6 +91,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Zurücksetzen auf den Standardwert Tls12, Tls11, Tls SystemDefault TLS-Versionen wird deaktiviert.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Deaktiviert die serverseitige Benachrichtigungen SslStream TLS.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Steuert, ob die [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) einige Steuerzeichen, die auf der Grundlage der Standards ECMAScript V6 und V8 serialisiert. Weitere Informationen finden Sie unter [Entschärfung: Serialisierung von Steuerzeichen mit dem DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Steuert, ob die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützt mehrere Korrekturen oder nur eine einzelne Anpassung für eine Zeitzone. Wenn `true`, verwendet der <xref:System.TimeZoneInfo> Geben Sie zum Serialisieren und Deserialisieren von Datums-und Uhrzeitdaten; andernfalls wird die <xref:System.TimeZone> -Typ, der mehrere Anpassungsregeln nicht unterstützt.|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Steuert, ob die <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Konstruktor legt des neuen Objekts <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> Eigenschaft mit einem vorhandenen Objektverweis. Weitere Informationen finden Sie unter [Entschärfung: ClaimsIdentity-Konstruktor](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Steuert, ob der Versuch, wiederverwenden ein <xref:System.Security.Cryptography.AesCryptoServiceProvider> Entschlüsselungsmethode löst eine <xref:System.Security.Cryptography.CryptographicException>. Weitere Informationen finden Sie unter AesCryptoServiceProvider Entschlüsselungsmethode eine wieder verwendbare transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform) bietet.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Steuerelemente, ob der Wert von der [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) Eigenschaft ist ein [IntPtr](xref:System.IntPtr) , stellt die Speicheradresse eines Fensters behandeln, oder ob es ein Fensterhandle (HWND) ist. Weitere Informationen finden Sie unter [Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET Framework 4.7|   
@@ -109,6 +107,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Steuert, ob beim Start des Diensts ausgelöste Ausnahmen an den Aufrufer des weitergegeben werden die <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> Methode.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Bestimmt, ob Windows Presentation Foundation einen alte-Algorithmus wendet (`true`) oder einen neuen Algorithmus (`false`) beim Reservieren von Speicherplatz für \*-Spalten. Weitere Informationen finden Sie unter [Entschärfung: Platzzuweisung an mit Stern gekennzeichnete Spalten durch das Rastersteuerelement](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Steuert, ob ein Selektor oder Tabstopp steuern immer den Wert der seine ausgewählte Value-Eigenschaft, die vor dem Auslösen der Auswahl aktualisiert das geänderte Ereignis.|.NET Framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|Bestimmt, ob die DPI-Änderungen in einem pro-System (Wert `false`) oder pro-Monitor (Wert `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|"OPTS" aus dem Code, der eine benutzerdefinierte ermöglicht <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> -Implementierung, die Nachrichten sicher filtern, ohne eine Ausnahme auszulösen bei der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> -Methode aufgerufen wird. Weitere Informationen finden Sie unter [Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Bestimmt, ob ein optionales `WM_POINTER`-Basis Touch/Tablettstift-Stapel in WPF-Anwendungen aktiviert ist. Weitere Informationen finden Sie unter [Entschärfung: zeigerbasierten Touch- und Tablettstift-Unterstützung](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Steuert, ob eine Vorgängerversion [NullReferenceException](xref:System.NullReferenceException) wird ausgelöst, anstatt die Ausnahme, die die Ursache der Ausnahme genauer gesagt gibt an (z. B. eine [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) oder eine [ FileNotFoundException](xref:System.IO.FileNotFoundException). Es dient zur Verwendung von Code, von denen abhängt Behandlung der [NullReferenceException](xref:System.NullReferenceException). | .NET Framework 4.7 |

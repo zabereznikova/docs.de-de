@@ -1,7 +1,7 @@
 ---
-title: "Einführung in C# - Leitfaden für C#"
+title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
-keywords: ".NET, .NET Core, C#, C# Primer, Leitfaden für C#"
+keywords: .NET, .NET Core, C#, C# Primer, Leitfaden für C#
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

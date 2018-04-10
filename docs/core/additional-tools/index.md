@@ -1,6 +1,6 @@
 ---
-title: "Zusätzliche Tools für .NET Core"
-description: "Eine Übersicht über zusätzliche Tools, die die .NET Core-Funktionalität unterstützen und erweitern."
+title: Zusätzliche Tools für .NET Core
+description: Eine Übersicht über zusätzliche Tools, die die .NET Core-Funktionalität unterstützen und erweitern.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

@@ -1,6 +1,6 @@
 ---
-title: "Erste Schritte – Leitfaden für C#"
-description: "Entdecken Sie kurze, einfache Tutorials, die Sie schnell in C#-Konzepte und das Schreiben von .NET Core-Anwendungen einführen."
+title: Erste Schritte – Leitfaden für C#
+description: Entdecken Sie kurze, einfache Tutorials, die Sie schnell in C#-Konzepte und das Schreiben von .NET Core-Anwendungen einführen.
 keywords: C#, erste Schritte, erwerben, installieren
 helpviewer_keywords:
 - Visual C#, getting started
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C# #
 
@@ -43,10 +43,6 @@ Folgende Themen sind verfügbar:
    Visual Studio Code ist ein kostenloser Code-Editor zum Entwickeln und Debuggen moderner Cloud- und Webanwendungen. Er unterstützt IntelliSense und ist für Linux, macOS und Windows verfügbar.
 
    Dieses Thema zeigt, wie Sie eine einfache „Hello World“-Anwendung mit Visual Studio Code und .NET Code erstellen und ausführen.
-
-* [Zusätzliche Ressourcen für Visual C#-Programmierer](additional-resources.md)
-
-   Bietet Links zu Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftretenden Problemen finden.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

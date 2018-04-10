@@ -1,20 +1,20 @@
 ---
 title: Arithmetische Operatoren (F#)
-description: "Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache f# verfügbar sind."
+description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache f# verfügbar sind.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 75ddcfa3-564e-4382-80a3-f9da73d0f0ea
-ms.openlocfilehash: 237b97c24f207b3a9b4661d66f029f1b18b8fec7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f11e77457bed40cff081a73181689610871e654
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
@@ -25,21 +25,21 @@ In der folgenden Tabelle werden die binären arithmetischen Operatoren, die für
 
 |Binärer operator|Notizen|
 |---------------|-----|
-|`+`(außerdem plus)|Deaktiviert. Möglichen Überlauf bei Zahlen addiert werden und die Summe überschreitet den maximalen Absolutwert vom Typ unterstützt.|
-|`-`(Subtraktion, minus)|Deaktiviert. Mögliche Unterlauf Bedingung bei Typen ohne Vorzeichen subtrahiert werden, oder wenn Gleitkommawerte zu klein, um nach dem Typ dargestellt werden sind.|
-|`*`(Multiplikation, wie oft)|Deaktiviert. Möglichen Überlauf bei Zahlen multipliziert werden, und das Produkt überschreitet den maximalen Absolutwert vom Typ unterstützt.|
-|`/`(Division, dividiert durch)|Division durch Null festgelegt, wird eine <xref:System.DivideByZeroException> für ganzzahlige Typen. Für Gleitkommatypen, Division durch 0 (null) erhalten Sie spezielle Gleitkommawerte `+Infinity` oder `-Infinity`. Es ist auch eine mögliche Unterlauf Bedingung, wenn eine Gleitkommazahl vom Typ dargestellt werden zu klein ist.|
-|`%`(Modulo, mod)|Gibt den Rest einer Division zurück. Die Vorzeichen des Ergebnisses werden das Vorzeichen des ersten Operanden identisch.|
-|`**`(um die Leistungsfähigkeit von Potenzierung)|Möglicher Überlauf, wenn das Ergebnis den maximalen Absolutwert für den Typ überschreitet.<br /><br />Der Potenzierungsoperator kann nur mit Gleitkomma-Datentypen.|
+|`+` (außerdem plus)|Deaktiviert. Möglichen Überlauf bei Zahlen addiert werden und die Summe überschreitet den maximalen Absolutwert vom Typ unterstützt.|
+|`-` (Subtraktion, minus)|Deaktiviert. Mögliche Unterlauf Bedingung bei Typen ohne Vorzeichen subtrahiert werden, oder wenn Gleitkommawerte zu klein, um nach dem Typ dargestellt werden sind.|
+|`*` (Multiplikation, wie oft)|Deaktiviert. Möglichen Überlauf bei Zahlen multipliziert werden, und das Produkt überschreitet den maximalen Absolutwert vom Typ unterstützt.|
+|`/` (Division, dividiert durch)|Division durch Null festgelegt, wird eine <xref:System.DivideByZeroException> für ganzzahlige Typen. Für Gleitkommatypen, Division durch 0 (null) erhalten Sie spezielle Gleitkommawerte `+Infinity` oder `-Infinity`. Es ist auch eine mögliche Unterlauf Bedingung, wenn eine Gleitkommazahl vom Typ dargestellt werden zu klein ist.|
+|`%` (Rest, Rem)|Gibt den Rest einer Division zurück. Die Vorzeichen des Ergebnisses werden das Vorzeichen des ersten Operanden identisch.|
+|`**` (um die Leistungsfähigkeit von Potenzierung)|Möglicher Überlauf, wenn das Ergebnis den maximalen Absolutwert für den Typ überschreitet.<br /><br />Der Potenzierungsoperator kann nur mit Gleitkomma-Datentypen.|
 
 ## <a name="summary-of-unary-arithmetic-operators"></a>Zusammenfassung der unäre arithmetische Operatoren
 In der folgenden Tabelle zusammengefasst, die unäre arithmetische Operatoren, die für Ganzzahl- und Gleitkommatypen verfügbar sind.
 
 
-|Ein unäroperator|Notizen|
+|Ein unäroperator|Hinweise|
 |--------------|-----|
-|`+`(positiv)|Kann auf jeden arithmetischen Ausdruck angewendet werden. Die Vorzeichen des Werts wird nicht geändert werden.|
-|`-`(Negation, negativ)|Kann auf jeden arithmetischen Ausdruck angewendet werden. Ändert die Vorzeichen des Werts an.|
+|`+` (positiv)|Kann auf jeden arithmetischen Ausdruck angewendet werden. Die Vorzeichen des Werts wird nicht geändert werden.|
+|`-` (Negation, negativ)|Kann auf jeden arithmetischen Ausdruck angewendet werden. Ändert die Vorzeichen des Werts an.|
 Das Verhalten bei einem Überlauf oder Unterlauf für ganzzahlige Typen ist umfließt. Dies bewirkt, dass ein falsches Ergebnis. Ganzzahlüberlauf ist ein potenziell schwerwiegendes Problem hin, das Sicherheitsprobleme verursachen können, wenn die Software nicht geschrieben wird, um es zu berücksichtigen. Wenn dies ein Problem für Ihre Anwendung ist, erwägen Sie checked-Operatoren in `Microsoft.FSharp.Core.Operators.Checked`.
 
 
@@ -50,14 +50,14 @@ Gleitkommazahlen sollten nie direkt für gleich, verglichen werden, da die IEEE-
 
 
 
-|Operator|Notizen|
+|Operator|Hinweise|
 |--------|-----|
-|`=`(Gleichheit, gleich)|Dies ist kein Zuweisungsoperator. Es wird nur für den Vergleich verwendet. Dies ist ein generischer Operator.|
-|`>`(größer als)|Dies ist ein generischer Operator.|
-|`<`(kleiner als)|Dies ist ein generischer Operator.|
-|`>=`(größer als oder gleich)|Dies ist ein generischer Operator.|
-|`<=`(kleiner als oder gleich)|Dies ist ein generischer Operator.|
-|`<>`(ungleich)|Dies ist ein generischer Operator.|
+|`=` (Gleichheit, gleich)|Dies ist kein Zuweisungsoperator. Es wird nur für den Vergleich verwendet. Dies ist ein generischer Operator.|
+|`>` (größer als)|Dies ist ein generischer Operator.|
+|`<` (kleiner als)|Dies ist ein generischer Operator.|
+|`>=` (größer als oder gleich)|Dies ist ein generischer Operator.|
+|`<=` (kleiner als oder gleich)|Dies ist ein generischer Operator.|
+|`<>` (ungleich)|Dies ist ein generischer Operator.|
 
 ## <a name="overloaded-and-generic-operators"></a>Überladene und generische Operatoren
 Alle in diesem Thema erläuterten Operatoren werden definiert, der **Microsoft.FSharp.Core.Operators** Namespace. Einige Operatoren sind mit statisch aufgelösten Typparametern definiert. Dies bedeutet, dass einzelne Definitionen für jeden bestimmten Typ, der mit diesem Operator funktioniert vorhanden sind. Alle unären und binären arithmetische und bitweise Operatoren werden in dieser Kategorie. Die Vergleichsoperatoren sind generisch, und funktioniert daher mit einem beliebigen Typ, nicht nur mit primitiven arithmetischen Typen. Unterscheidungs-Union und Datensatztypen haben eigene benutzerdefinierten Implementierungen, die von f#-Compiler generiert werden. Verwenden Sie die Methode, Klassentypen <xref:System.Object.Equals%2A>.

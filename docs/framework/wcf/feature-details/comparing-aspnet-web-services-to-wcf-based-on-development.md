@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Vergleichen von ASP.NET-Webdiensten mit WCF auf Grundlage der Entwicklung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] besitzt eine ASP.NET-Kompatibilitätsmodusoption, mit der die Programmierung und Konfiguration von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen entsprechend den ASP.NET-Webdiensten und das Imitieren von deren Verhalten ermöglicht wird. In den folgenden Abschnitten werden ASP.NET-Webdienste und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgehend von den Anforderungen der Anwendungsentwicklung mithilfe beider Technologien verglichen.  
@@ -187,7 +187,7 @@ public class LineItem
   
 -   Da die nicht öffentlichen Member der Typen in XML serialisiert werden können, gelten für <xref:System.Runtime.Serialization.DataContractSerializer> weniger Einschränkungen bezüglich der Vielfalt der .NET-Typen, die in XML serialisiert werden können. Insbesondere ist eine Übersetzung in XML-Typen wie <xref:System.Collections.Hashtable> möglich, mit denen die <xref:System.Collections.IDictionary>-Schnittstelle implementiert wird. <xref:System.Runtime.Serialization.DataContractSerializer> ist mit einer weitaus höheren Wahrscheinlichkeit in der Lage, die Instanzen eines beliebigen zuvor vorhandenen .NET-Typs in XML zu serialisieren, ohne entweder die Definition des Typs ändern oder einen Wrapper dafür entwickeln zu müssen.  
   
--   Da <xref:System.Runtime.Serialization.DataContractSerializer> auf die nicht öffentlichen Member eines Typs zugreifen kann, ist im Gegensatz zu <xref:System.Xml.Serialization.XmlSerializer> zudem volle Vertrauenswürdigkeit erforderlich. Die Codezugriffsberechtigung für volle Vertrauenswürdigkeit ermöglicht vollständigen Zugriff auf alle Ressourcen eines Computers, auf die mithilfe der Anmeldeinformationen, unter denen der Code ausgeführt wird, zugegriffen wird. Verwenden Sie diese Optionen mit Bedacht, da vollständig vertrauenswürdiger Code auf alle Ressourcen auf dem Computer zugreift.  
+-   Da <xref:System.Runtime.Serialization.DataContractSerializer> auf die nicht öffentlichen Member eines Typs zugreifen kann, ist im Gegensatz zu <xref:System.Xml.Serialization.XmlSerializer> zudem volle Vertrauenswürdigkeit erforderlich. Codezugriffsberechtigung volle Vertrauenswürdigkeit ermöglicht vollständigen Zugriff auf alle Ressourcen auf einem Computer, der mit den Anmeldeinformationen, unter denen der Code ausgeführt wird, zugegriffen werden kann. Diese Option sollte mit Vorsicht verwendet werden, wie voll vertrauenswürdiger Code auf alle Ressourcen auf dem Computer zugreift.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> bietet einige Unterstützung für Versionsverwaltung:  
   
@@ -195,7 +195,7 @@ public class LineItem
   
     -   Wenn mit einem Datenvertrag die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle implementiert wird, kann <xref:System.Runtime.Serialization.DataContractSerializer> das Übergeben von Membern gestattet werden, die in neueren Versionen eines Datenvertrags durch Anwendungen mit älteren Versionen des Vertrags definiert sind.  
   
- Ungeachtet aller Unterschiede ist das XML, in das <xref:System.Xml.Serialization.XmlSerializer> standardmäßig einen Typ serialisiert, semantisch identisch mit dem XML, in das <xref:System.Runtime.Serialization.DataContractSerializer> einen Typ serialisiert, vorausgesetzt, dass der Namespace für das XML explizit definiert ist. Die folgende Klasse, die über Attribute für die Verwendung mit beiden Serialisierungsprogrammen verfügt, wird von <xref:System.Xml.Serialization.XmlSerializer> und <xref:System.Runtime.Serialization.DataContractAttribute> in ein semantisch identisches XML übersetzt:  
+ Ungeachtet aller Unterschiede ist das XML, in das <xref:System.Xml.Serialization.XmlSerializer> standardmäßig einen Typ serialisiert, semantisch identisch mit dem XML, in das <xref:System.Runtime.Serialization.DataContractSerializer> einen Typ serialisiert, vorausgesetzt, dass der Namespace für das XML explizit definiert ist. Die folgende Klasse, die Attribute für die Verwendung mit beiden Serialisierungsprogrammen verfügt, wird in von semantisch identisches XML übersetzt die <xref:System.Xml.Serialization.XmlSerializer> und durch die <xref:System.Runtime.Serialization.DataContractAttribute>:  
   
 ```  
 [Serializable]  
@@ -212,7 +212,7 @@ public class LineItem
 }  
 ```  
   
- Das Windows Software Development Kit (SDK) enthält ein Befehlszeilentool namens der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Das Tool xsd.exe mit ASP.NET-Webdiensten verwendet wie Svcutil.exe kann Definitionen von .NET-Typen für die Daten aus XML-Schema generieren. Bei den Typen handelt es sich um Datenverträge, sofern <xref:System.Runtime.Serialization.DataContractSerializer> XML in dem vom XML-Schema definierten Format ausgeben kann; andernfalls sind sie für die Serialisierung mithilfe von <xref:System.Xml.Serialization.XmlSerializer> vorgesehen. Mit dem Tool Svcutil.exe kann auch das XML-Schema aus Datenverträgen generiert werden (unter Verwendung von `/dataContractOnly`).  
+ Das Windows Software Development Kit (SDK) enthält ein Befehlszeilentool namens der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Das Tool xsd.exe mit ASP.NET-Webdiensten verwendet wie Svcutil.exe kann Definitionen von .NET-Typen für die Daten aus XML-Schema generieren. Bei den Typen handelt es sich um Datenverträge, sofern <xref:System.Runtime.Serialization.DataContractSerializer> XML in dem vom XML-Schema definierten Format ausgeben kann; andernfalls sind sie für die Serialisierung mithilfe von <xref:System.Xml.Serialization.XmlSerializer> vorgesehen. Svcutil.exe kann auch ein XML-Schema aus Datenverträgen generieren, mit dessen `dataContractOnly` wechseln.  
   
 > [!NOTE]
 >  Obgleich <xref:System.Xml.Serialization.XmlSerializer> von ASP.NET-Webdiensten verwendet wird und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-ASP.NET-Kompatibilitätsmodus das Imitieren des Verhaltens der ASP.NET-Webdienste ermöglicht wird, schränkt die ASP.NET-Kompatibilitätsoption nicht die Verwendung von <xref:System.Xml.Serialization.XmlSerializer> ein. <xref:System.Runtime.Serialization.DataContractSerializer> kann nach wie vor verwendet werden, während die Dienste im ASP.NET-Kompatibilitätsmodus ausgeführt werden.  

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 
@@ -121,7 +121,7 @@ Azure-VMs können programmgesteuert bereitgestellt und von F#-Skripts mithilfe d
 
 Auch andere Azure-Ressourcen können möglicherweise auch von f#-Skripts bereitgestellt und verwaltet werden, die über die gleichen Komponenten verfügen. Z. B. können Sie Speicherkonten erstellen, Bereitstellen von Azure Cloud Services, Azure-Cosmos-DB-Instanzen erstellen und programmgesteuert verwalten von Azure Notification Hubs von F#-Skripts.
 
-Die Verwendung von F#-Skripts zum Bereitstellen und Verwalten von Ressourcen ist normalerweise nicht notwendig. Beispielsweise können Azure-Ressourcen möglicherweise auch direkt von JSON-Vorlagebeschreibungen bereitgestellt werden, die parametrisiert werden können. Informationen, einschließlich Beispiele wie die [Azure-Schnellstartvorlagen](https://azure.microsoft.com/documentation/templates/), finden Sie unter [Bewährte Methoden für das Erstellen von Azure Resource Manager-Vorlagen](/azure/azure-resource-manager/resource-manager-template-best-practices).
+Die Verwendung von F#-Skripts zum Bereitstellen und Verwalten von Ressourcen ist normalerweise nicht notwendig. Beispielsweise können Azure-Ressourcen möglicherweise auch direkt von JSON-Vorlagebeschreibungen bereitgestellt werden, die parametrisiert werden können. Informationen, einschließlich Beispiele wie die [Azure-Schnellstartvorlagen](https://azure.microsoft.com/resources/templates/), finden Sie unter [Bewährte Methoden für das Erstellen von Azure Resource Manager-Vorlagen](/azure/azure-resource-manager/resource-manager-template-best-practices).
 
 ## <a name="other-resources"></a>Weitere Ressourcen
 

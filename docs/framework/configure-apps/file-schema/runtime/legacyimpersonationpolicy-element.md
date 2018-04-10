@@ -1,12 +1,13 @@
 ---
 title: '&lt;LegacyImpersonationPolicy&gt; Element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a50ad06026b6ef2f819abefc22016aee29f8ab5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;LegacyImpersonationPolicy&gt; Element
 Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, unabhängig von den Floweinstellungen für den Ausführungskontext im aktuellen Thread.  
   
  \<configuration>  
-\<Common Language Runtime >  
-\<LegacyImpersonationPolicy >  
+\<runtime>  
+\<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,8 +55,8 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>Arbeitsabläufe über asynchrone Punkte, die abhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread. Dies ist die Standardeinstellung.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>nicht über asynchrone Punkte übergeben, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> Arbeitsabläufe über asynchrone Punkte, die abhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread. Dies ist die Standardeinstellung.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte übergeben, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -93,8 +95,8 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
   
  ASP.NET standardmäßig deaktiviert den Ablauf Identitätswechsel in aspnet.config-Datei mit den folgenden Konfigurationseinstellungen:  
   
-```  
-configuration>  
+``` xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  

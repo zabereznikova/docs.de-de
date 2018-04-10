@@ -1,6 +1,6 @@
 ---
 title: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
-description: "Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Einführung"
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Einführung
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

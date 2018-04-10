@@ -1,24 +1,26 @@
 ---
 title: Verbindungszeichenfolgen-Syntax
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -42,7 +44,7 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md).  
-  
+
 ## <a name="windows-authentication"></a>Windows-Authentifizierung  
  Es wird empfohlen, mithilfe der Windows-Authentifizierung (auch bezeichnet als *integrierte Sicherheit von*) zur Verbindung mit Datenquellen, die sie unterstützen. Die in der Verbindungszeichenfolge zu verwendende Syntax richtet sich nach dem Datenanbieter. In der folgenden Tabelle wird die Syntax der Windows-Authentifizierung dargestellt, die bei .NET Framework-Datenanbietern verwendet wird.  
   
@@ -57,9 +59,13 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 >  Wenn der `Integrated Security=true`-Anbieter verwendet wird, wird bei `OleDb` eine Ausnahme ausgelöst.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient-Verbindungszeichenfolgen  
- Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge wird in der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Eigenschaft dokumentiert. Mit der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>-Eigenschaft können Sie eine Verbindungszeichenfolge für eine SQL Server-Datenbank abrufen oder festlegen. Wenn Sie eine Verbindung mit einer früheren Version von SQL Server herstellen müssen, müssen Sie den .NET Framework-Datenanbieter für OLE DB verwenden (<xref:System.Data.OleDb>). Für die meisten Schlüsselwörter in Verbindungszeichenfolgen gibt es bei den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften passende Entsprechungen.  
-  
- Jede der folgenden Syntaxformen verwenden Windows-Authentifizierung zum Herstellen der **AdventureWorks** Datenbank auf einem lokalen Server.  
+Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge wird in der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Eigenschaft dokumentiert. Mit der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>-Eigenschaft können Sie eine Verbindungszeichenfolge für eine SQL Server-Datenbank abrufen oder festlegen. Wenn Sie eine Verbindung mit einer früheren Version von SQL Server herstellen müssen, müssen Sie den .NET Framework-Datenanbieter für OLE DB verwenden (<xref:System.Data.OleDb>). Für die meisten Schlüsselwörter in Verbindungszeichenfolgen gibt es bei den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften passende Entsprechungen.  
+
+> [!IMPORTANT]
+>  Die Standardeinstellung für die `Persist Security Info` -Schlüsselwort ist `false`. Wenn die Einstellung in `true` bzw. `yes` geändert wird, sind sicherheitsrelevante Informationen, die über diese Verbindung übertragen werden, wie Benutzer-ID und Kennwort, nicht mehr sicher. Behalten Sie `Persist Security Info` festgelegt `false` um sicherzustellen, dass es sich bei eine nicht vertrauenswürdige Quelle keinen Zugriff auf sicherheitsrelevante Informationen in Verbindungszeichenfolgen.  
+
+### <a name="windows-authentication-with-sqlclient"></a>Windows-Authentifizierung mit SqlClient 
+ Jede der folgenden Syntaxformen verwendet Windows-Authentifizierung zum Herstellen der **AdventureWorks** Datenbank auf einem lokalen Server.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>SQL Server-Anmeldungen  
+### <a name="sql-server-authentication-with-sqlclient"></a>SQL Server-Authentifizierung mit SqlClient   
  Zum Herstellen einer Verbindung mit SQL Server ist vorzugsweise die Windows-Authentifizierung zu verwenden. Wenn jedoch die SQL Server-Authentifizierung erforderlich ist, verwenden Sie zum Angeben eines Benutzernamens und Kennworts die im Folgenden beschriebene Syntax. In diesem Beispiel werden der Benutzername und das Kennwort durch Sternchen dargestellt.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  Die Standardeinstellung für die `Persist Security Info` -Schlüsselwort ist `false`. Wenn die Einstellung in `true` bzw. `yes` geändert wird, sind sicherheitsrelevante Informationen, die über diese Verbindung übertragen werden, wie Benutzer-ID und Kennwort, nicht mehr sicher. Behalten Sie `Persist Security Info` festgelegt `false` um sicherzustellen, dass es sich bei eine nicht vertrauenswürdige Quelle keinen Zugriff auf sicherheitsrelevante Informationen in Verbindungszeichenfolgen.  
-  
- Um eine Verbindung mit einer benannten Instanz von SQL Server herzustellen, verwenden Sie die *Servername\Instanzname* Syntax.  
+
+Wenn Sie eine Verbindung mit Azure SQL-Datenbank oder Azure SQL Data Warehouse herstellen, und geben Sie einen Benutzernamen im Format `user@servername`, stellen Sie sicher, dass die `servername` Wert in der Anmeldung entspricht den Wert für `Server=`.
+
+> [!NOTE]
+>  Das Angeben der Windows-Authentifizierung hat Vorrang vor SQL Server-Anmeldungen. Wenn Sie sowohl die integrierte Sicherheit aktivieren als auch einen Benutzernamen und ein Kennwort angeben, werden Benutzername und Kennwort ignoriert, und die Windows-Authentifizierung wird verwendet.  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Herstellen einer Verbindung mit einer benannten Instanz von SQL Server
+Um eine Verbindung mit einer benannten Instanz von SQL Server herzustellen, verwenden Sie die *Servername\Instanzname* Syntax.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>-Eigenschaft von `SqlConnectionStringBuilder` auf den Instanznamen festlegen. Die <xref:System.Data.SqlClient.SqlConnection.DataSource%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnection>-Objekts ist schreibgeschützt.  
-  
-> [!NOTE]
->  Das Angeben der Windows-Authentifizierung hat Vorrang vor SQL Server-Anmeldungen. Wenn Sie sowohl die integrierte Sicherheit aktivieren als auch einen Benutzernamen und ein Kennwort angeben, werden Benutzername und Kennwort ignoriert, und die Windows-Authentifizierung wird verwendet.  
+ 
+Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>-Eigenschaft von `SqlConnectionStringBuilder` auf den Instanznamen festlegen. Die <xref:System.Data.SqlClient.SqlConnection.DataSource%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnection>-Objekts ist schreibgeschützt.  
   
 ### <a name="type-system-version-changes"></a>Änderungen an der Typsystemversion  
  Das `Type System Version`-Schlüsselwort in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> gibt die clientseitige Darstellung von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Typen an. Weitere Informationen zum <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Schlüsselwort finden Sie unter `Type System Version`.  
@@ -160,8 +166,7 @@ Jet OLEDB:System Database=|DataDirectory|\System.mdw;"
 >  Die Angabe des Speicherorts der Systemdatenbank in der Verbindungszeichenfolge ist nicht erforderlich, wenn die Access-/Jet-Datenbank ungesichert ist. Die Sicherheit ist standardmäßig deaktiviert, sodass alle Benutzer eine Verbindung als integrierter Admin-Benutzer mit einem leeren Kennwort herstellen. Selbst wenn die Sicherheit auf Benutzerebene ordnungsgemäß implementiert ist, bleibt eine Jet-Datenbank durch Angriffe verwundbar. Aufgrund der inhärenten Schwäche des dateibasierten Sicherheitsschemas von Access-/Jet-Datenbanken wird davon abgeraten, in solchen Datenbanken sicherheitsrelevante Informationen zu speichern.  
   
 ### <a name="connecting-to-excel"></a>Herstellen einer Verbindung mit Excel  
- Für die Verbindung mit einer Excel-Arbeitsmappe wird der Microsoft Jet-Anbieter verwendet. In der folgenden Verbindungszeichenfolge werden mit dem Schlüsselwort `Extended Properties` Excel-spezifische Eigenschaften festgelegt. 
-          HDR=Yes; gibt an, dass die erste Zeile Spaltennamen und keine Daten enthält, und IMEX=1; weist den Treiber an, miteinander vermischte Datenspalten immer als Text zu lesen.  
+ Für die Verbindung mit einer Excel-Arbeitsmappe wird der Microsoft Jet-Anbieter verwendet. In der folgenden Verbindungszeichenfolge werden mit dem Schlüsselwort `Extended Properties` Excel-spezifische Eigenschaften festgelegt. HDR=Yes; gibt an, dass die erste Zeile Spaltennamen und keine Daten enthält, und IMEX=1; weist den Treiber an, miteinander vermischte Datenspalten immer als Text zu lesen.  
   
 ```  
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=""Excel 8.0;HDR=Yes;IMEX=1""  

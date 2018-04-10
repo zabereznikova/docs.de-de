@@ -1,6 +1,6 @@
 ---
-title: ".NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen"
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Titelei"
+title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Titelei
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

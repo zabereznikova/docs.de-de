@@ -1,6 +1,6 @@
 ---
-title: "Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)"
-description: "Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI)."
+title: Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
+description: Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI).
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

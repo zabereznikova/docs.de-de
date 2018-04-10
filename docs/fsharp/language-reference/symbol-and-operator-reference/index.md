@@ -4,17 +4,17 @@ description: Informationen Sie zu den Symbolen und Operatoren, die in der Progra
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -34,9 +34,9 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`"""`|[Zeichenfolgen](../strings.md)|Begrenzt eine wörtliche Textzeichenfolge. Unterscheidet sich insofern von `@"..."`, dass Sie mit einem einfachen Anführungszeichen in der Zeichenfolge ein Anführungszeichen angeben können.|
 |`#`|[Compileranweisungen](../compiler-directives.md)<br /><br />[Flexible Typen](../flexible-types.md)|<ul><li>Präfix für eine Präprozessor- oder Compilerdirektive, z. B. `#light`.<br /></li><li>Gibt bei Verwendung mit einem Typ einen *flexiblen Typ* an, der auf einen Typ oder einen seiner abgeleiteten Typen verweist.<br /></li><ul/>|
 |`$`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird intern für bestimmte vom Compiler generierte Variablen- und Funktionsnamen verwendet.<br /></li><ul/>|
-|`%`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Zitieren von Code](../code-quotations.md)|<ul><li>Berechnet den ganzzahligen Modulo.<br /></li><li>Wird beim Splicing von Ausdrücken in typisierte Codequotationen verwendet.<br /></li><ul/>|
+|`%`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Zitieren von Code](../code-quotations.md)|<ul><li>Berechnet den ganzzahligen Rest einer.<br /></li><li>Wird beim Splicing von Ausdrücken in typisierte Codequotationen verwendet.<br /></li><ul/>|
 |`%%`|[Zitieren von Code](../code-quotations.md)|<ul><li>Wird beim Splicing von Ausdrücken in nicht typisierte Codequotationen verwendet.<br /></li><ul/>|
-|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Modulo, wenn die rechte Seite ein Typ ist, der einen Null-Wert zulässt.<br /></li><ul/>|
+|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Rest einer an, wenn die rechte Seite dem nullable-Typ ist.<br /></li><ul/>|
 |`&`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Berechnet die Adresse eines änderbaren Werts, der bei der Interoperation mit anderen Sprachen verwendet werden kann.<br /></li><li>Wird in AND-Mustern verwendet.<br /></li><ul/>|
 |`&&`|[Boolesche Operatoren](boolean-operators.md)|<ul><li>Berechnet die boolesche AND-Operation.<br /></li><ul/>|
 |`&&&`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Berechnet die bitweise AND-Operation.<br /></li><ul/>|
@@ -127,7 +127,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |--------|-------------|
 |`as`|Rechts|
 |`when`|Rechts|
-|<code>&#124;</code>(senkrechter Strich)|Links|
+|<code>&#124;</code> (senkrechter Strich)|Links|
 |`;`|Rechts|
 |`let`|Nicht assoziativ|
 |`function`, `fun`, `match`, `try`|Nicht assoziativ|
@@ -138,7 +138,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`or`, <code>&#124;&#124;</code>|Links|
 |`&`, `&&`|Links|
 |`:>`, `:?>`|Rechts|
-|`!=`*Op*, `<` *Op*, `>` *Op*, `=`, <code>&#124;</code> *Op*, `&`  *Op*,`&`<br /><br />(einschließlich `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Links|
+|`!=`*Op*, `<` *Op*, `>` *Op*, `=`, <code>&#124;</code> *Op*, `&` *Op* , `&`<br /><br />(einschließlich `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Links|
 |`^`*op*<br /><br />(einschließlich `^^^`)|Rechts|
 |`::`|Rechts|
 |`:?`|Nicht assoziativ|
@@ -146,7 +146,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`*`*op*, `/`*op*, `%`*op*|Links|
 |`**`*op*|Rechts|
 |`f x` (Funktionsanwendung)|Links|
-|<code>&#124;</code>(Musterübereinstimmung)|Rechts|
+|<code>&#124;</code> (Musterübereinstimmung)|Rechts|
 |Präfixoperatoren (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Links|
 |`.`|Links|
 |`f(x)`|Links|

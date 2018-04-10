@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-caps.latest.revision: 
+caps.latest.revision: 31
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1fdf37e1bfc57bf850b332f167e57d3e05d23e78
@@ -28,7 +28,7 @@ Bietet eine praktische Syntax, die den ordnungsgemäßen Einsatz von <xref:Syste
 ## <a name="remarks"></a>Hinweise  
  <xref:System.IO.File> und <xref:System.Drawing.Font> sind Beispiele für verwaltete Typen, die auf nicht verwaltete Ressourcen zugreifen (in diesem Fall Dateihandles und Gerätekontexte). Es gibt viele andere Arten von nicht verwalteten Ressourcen und Klassenbibliothekstypen, die sie einschließen. Alle Typen dieser Art müssen die <xref:System.IDisposable>-Schnittstelle implementieren.  
   
-Wenn die Lebensdauer eines `IDisposable`-Objekts auf eine einzelne Methode beschränkt ist, sollten Sie es in einer `using`-Anweisung deklarieren und instanziieren. Die `using`-Anweisung ruft die Methode <xref:System.IDisposable.Dispose%2A> ordnungsgemäß für das Objekt auf. Wenn Sie sie, wie vorher gezeigt, verwenden, führt dies auch dazu, dass das Objekt den gültigen Bereich verlässt, sobald <xref:System.IDisposable.Dispose%2A> aufgerufen wird. Innerhalb des `using`-Blocks ist das Objekt schreibgeschützt und kann nicht geändert oder neu zugewiesen werden.  
+Wenn die Lebensdauer des ein `IDisposable` Objekt auf eine einzelne Methode beschränkt ist, sollten Sie deklarieren und instanziieren Sie ihn in eine `using` Anweisung. Die `using`-Anweisung ruft die Methode <xref:System.IDisposable.Dispose%2A> ordnungsgemäß für das Objekt auf. Wenn Sie sie, wie vorher gezeigt, verwenden, führt dies auch dazu, dass das Objekt den gültigen Bereich verlässt, sobald <xref:System.IDisposable.Dispose%2A> aufgerufen wird. Innerhalb des `using`-Blocks ist das Objekt schreibgeschützt und kann nicht geändert oder neu zugewiesen werden.  
   
  Die `using`-Anweisung stellt sicher, dass <xref:System.IDisposable.Dispose%2A> aufgerufen wird, auch wenn eine Ausnahme ausgelöst wird, während Sie die Methode für das Objekt aufrufen. Sie können das gleiche Ergebnis erzielen, indem Sie das Objekt in einen Try-Block einfügen und dann `using` in einem Finally-Block aufrufen; so wird die <xref:System.IDisposable.Dispose%2A>-Anweisung vom Compiler übersetzt. Das vorherige Codebeispiel wird zur Kompilierzeit auf den folgenden Code erweitert (beachten Sie die zusätzlichen geschweiften Klammern zum Erstellen des eingeschränkten Gültigkeitsbereichs für das Objekt):  
   

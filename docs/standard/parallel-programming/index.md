@@ -1,28 +1,28 @@
 ---
 title: Parallele Programmierung in .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parallel-programming-in-net"></a>Parallele Programmierung in .NET
 Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne (d. h. CPUs), die die gleichzeitige Ausführung mehrerer Threads ermöglichen. Schon in naher Zukunft werden Computer vermutlich über deutlich mehr Kerne verfügen. Um sowohl aktuelle als auch künftige Hardware nutzen zu können, kann der Code parallelisiert werden, um die Arbeit über mehrere Prozessoren zu verteilen. Früher erforderte die Parallelisierung Änderungen von Threads und Sperren auf niedriger Ebene. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] verbessern die Unterstützung für parallele Programmierung, indem sie eine neue Laufzeit, neue Klassenbibliothekstypen und neue Diagnosetools bereitstellen. Durch diese Funktionen wird die parallele Entwicklung vereinfacht, sodass sie effizienten, differenzierten und skalierbaren parallelen Code in einer natürlichen Sprache schreiben können, ohne direkt mit Threads oder dem Threadpool arbeiten zu müssen. Die folgende Abbildung stellt in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] eine allgemeine Übersicht der parallelen Programmierarchitektur bereit.  
@@ -43,5 +43,5 @@ Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne
 |[Weitere Informationen](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Stellt Links zu zusätzlichen Dokumentationen und Beispielressourcen für parallele Programmierung in .NET Framework bereit.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](http://go.microsoft.com/fwlink/?LinkID=185142)  
+ [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222)  
  [Beispiele für die parallele Programmierung mit .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
