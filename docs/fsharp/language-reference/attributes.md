@@ -1,6 +1,6 @@
 ---
 title: Attribute (F#)
-description: "Erfahren Sie, wie f# Attribute ermöglichen, dass Metadaten auf ein Programmiermodell angewendet werden soll."
+description: Erfahren Sie, wie f# Attribute ermöglichen, dass Metadaten auf ein Programmiermodell angewendet werden soll.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart

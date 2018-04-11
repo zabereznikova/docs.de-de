@@ -1,6 +1,6 @@
 ---
-title: "Asynchrone Programmierung in F# erläutert werden."
-description: "Erfahren Sie, wie asynchrone Programmierung f# über ein Programmiermodell auf Sprachebene durchgeführt wird, die einfach zu verwenden und natürliche Sprache ist."
+title: Asynchrone Programmierung in F# erläutert werden.
+description: Erfahren Sie, wie asynchrone Programmierung f# über ein Programmiermodell auf Sprachebene durchgeführt wird, die einfach zu verwenden und natürliche Sprache ist.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

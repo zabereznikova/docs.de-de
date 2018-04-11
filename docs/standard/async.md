@@ -1,6 +1,6 @@
 ---
-title: "Async (Übersicht)"
-description: "Erfahren Sie mehr über die asynchrone Programmierung als eine wichtige Technik, mit der E/A-Blockierung und gleichzeitige Vorgänge auf mehreren Kernen direkt behandelt werden können."
+title: Async (Übersicht)
+description: Erfahren Sie mehr über die asynchrone Programmierung als eine wichtige Technik, mit der E/A-Blockierung und gleichzeitige Vorgänge auf mehreren Kernen direkt behandelt werden können.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
