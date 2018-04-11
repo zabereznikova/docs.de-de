@@ -1,5 +1,5 @@
 ---
-title: "Attribute – C#"
+title: Attribute – C#
 description: Erfahren Sie, wie Attribute in C# funktionieren.
 keywords: .NET, .NET Core, C#, Attribute
 author: mgroves

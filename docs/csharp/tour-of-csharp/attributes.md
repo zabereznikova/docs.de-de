@@ -1,5 +1,5 @@
 ---
-title: "C#-Attribute – Überblick über C#"
+title: C#-Attribute – Überblick über C#
 description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C#
 keywords: .NET, csharp
 author: BillWagner

@@ -1,6 +1,6 @@
 ---
-title: "Leitfaden für die .NET-Plattform"
-description: "Erfahren Sie mehr über die .NET-Plattform."
+title: Leitfaden für die .NET-Plattform
+description: Erfahren Sie mehr über die .NET-Plattform.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9b4ae0f845d3e290df66b85548b697d9be002a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e363eac2c26e51ccd880227fe56c619f8c39aea3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-guide"></a>Leitfaden für .NET
 
@@ -68,4 +68,4 @@ Schauen Sie sich zusätzlich auch die Leitfäden zu den drei Hauptprogrammierspr
 
 ## <a name="api-reference"></a>API-Referenz
 
-Schauen Sie sich die [.NET-API-Referenz](../../api/index.md) an, um mehr über die verfügbaren APIs herauszufinden.
+In der [.NET-API-Referenz](../../api/index.md) finden Sie die gesamte Auswahl verfügbarer APIs.
