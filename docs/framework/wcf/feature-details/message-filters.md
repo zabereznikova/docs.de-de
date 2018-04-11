@@ -1,28 +1,28 @@
 ---
 title: Nachrichtenfilter
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>Nachrichtenfilter
 Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <xref:System.ServiceModel.Dispatcher.MessageFilter>-Implementierungen, die bestimmte Abschnitte einer Nachricht überprüfen, z. B. Adresse, Endpunktname oder eine bestimmte XPath-Anweisung. Wenn keiner der von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bereitgestellten Nachrichtenfilter Ihren Anforderungen entspricht, können Sie einen benutzerdefinierten Filter erstellen, indem Sie eine neue Implementierung der <xref:System.ServiceModel.Dispatcher.MessageFilter>-Basisklasse erstellen.  
@@ -38,14 +38,14 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
   
 |Filtertyp|Beschreibung|Bedeutung der Filterdaten|Beispielfilter|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Aktion|Verwendet die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Klasse, um eine Übereinstimmung für Nachrichten zu erzielen, die eine bestimmte Aktion enthalten.|Die Aktion, nach der gefiltert werden soll.|\<Filtername = "action1" FilterType = "Action" unter "filterdata" = "http://namespace/contract/operation" / >|  
-|EndpointAddress|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` mit Nachrichten, die mit einer bestimmten Adresse übereinstimmen.|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<Filtername = "address1" FilterType = "EndpointAddress" unter "filterdata" = "http://host/vdir/s.svc/b" / >|  
-|EndpointAddressPrefix|Verwendet die <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` Nachrichten mit einem bestimmten Adresspräfix übereinstimmen.|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<Filtername = "prefix1" FilterType = "EndpointAddressPrefix" unter "filterdata" = "http://host/" / >|  
-|Und|Verwendet die <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>-Klasse, die vor der Rückgabe immer beide Bedingungen auswertet.|"filterdata" wird nicht verwendet. Stattdessen filter1 und "filter2" haben die Namen der entsprechenden Nachrichtenfilter (ebenfalls in der Tabelle), die ausgeführt werden **AND**Ed zusammen.|\<Filtername = "and1" FilterType = "Und" filter1 = "filter2"address1"" = "action1" / >|  
-|Benutzerdefiniert|Ein benutzerdefinierter Typ, der die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das customType-Attribut ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<Filtername = "custom1" FilterType = "Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" unter "filterdata" = "Benutzerdefinierte Daten" / >|  
-|EndpointName|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>-Klasse, um für Nachrichten basierend auf dem Namen des Dienstendpunkts, an dem diese empfangen wurden, eine Übereinstimmung zu erzielen.|Der Name des Dienstendpunkts, z. B.: "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<Filtername = "stock1" FilterType = "Endpoint" unter "filterdata" = "SvcEndpoint" / >|  
-|MatchAll|Verwendet die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse. Dieser Filter führt für alle eingehenden Nachrichten zu Übereinstimmungen.|"filterData" wird nicht verwendet. Dieser Filter führt immer zu Übereinstimmungen mit allen Nachrichten.|\<Filtername = "matchAll1" FilterType = "MatchAll" / >|  
-|XPath|Verwendet die <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>-Klasse, um für bestimmte XPath-Abfragen in der Nachricht Übereinstimmungen zu ermitteln.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<Filtername = "XPath1" FilterType = "XPath" unter "filterdata" = "//ns:element" / >|  
+|Aktion|Verwendet die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Klasse, um eine Übereinstimmung für Nachrichten zu erzielen, die eine bestimmte Aktion enthalten.|Die Aktion, nach der gefiltert werden soll.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` mit Nachrichten, die mit einer bestimmten Adresse übereinstimmen.|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|Verwendet die <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` Nachrichten mit einem bestimmten Adresspräfix übereinstimmen.|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|And|Verwendet die <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>-Klasse, die vor der Rückgabe immer beide Bedingungen auswertet.|"filterdata" wird nicht verwendet. Stattdessen filter1 und "filter2" haben die Namen der entsprechenden Nachrichtenfilter (ebenfalls in der Tabelle), die ausgeführt werden **AND**Ed zusammen.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Benutzerdefiniert|Ein benutzerdefinierter Typ, der die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das customType-Attribut ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>-Klasse, um für Nachrichten basierend auf dem Namen des Dienstendpunkts, an dem diese empfangen wurden, eine Übereinstimmung zu erzielen.|Der Name des Dienstendpunkts, z. B.: "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|Verwendet die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse. Dieser Filter führt für alle eingehenden Nachrichten zu Übereinstimmungen.|"filterData" wird nicht verwendet. Dieser Filter führt immer zu Übereinstimmungen mit allen Nachrichten.|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|Verwendet die <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>-Klasse, um für bestimmte XPath-Abfragen in der Nachricht Übereinstimmungen zu ermitteln.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  Im folgenden Beispiel werden Filtereinträge definiert, die die Nachrichtenfilter „XPath“, „EndpointName“ und „PrefixEndpointAddress“ verwenden. Dieses Beispiel veranschaulicht außerdem die Verwendung eines benutzerdefinierten Filters für die Einträge RoundRobinFilter1 und RoundRobinFilter2.  
   
@@ -76,15 +76,15 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
   
 |Präfix|Namespace|  
 |------------|---------------|  
-|s11|http://schemas.xmlsoap.org/soap/envelope (möglicherweise in englischer Sprache)|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
 |s12|http://www.w3.org/2003/05/soap-envelope|  
 |wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
-|wsa10|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
+|wsa10|http://www.w3.org/2005/08/addressing|  
 |sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- Wenn Sie wissen, dass Sie in den XPath-Abfragen einen bestimmten Namespace verwenden, können Sie diesen der Namespacetabelle zusammen mit einem eindeutigen Namespacepräfix hinzufügen und das Präfix statt des vollständigen Namespaces in XPath-Abfragen verwenden. Das folgende Beispiel definiert ein Präfix "Custom" für den Namespace "http://my.custom.namespace", klicken Sie dann in der XPath-Abfrage unter "filterdata" verwendet wird.  
+ Wenn Sie wissen, dass Sie in den XPath-Abfragen einen bestimmten Namespace verwenden, können Sie diesen der Namespacetabelle zusammen mit einem eindeutigen Namespacepräfix hinzufügen und das Präfix statt des vollständigen Namespaces in XPath-Abfragen verwenden. Das folgende Beispiel definiert ein Namespacepräfix "Custom" für den Namespace "http://my.custom.namespace", die dann in der XPath-Abfrage unter "filterdata" verwendet wird.  
   
 ```xml  
 <namespaceTable>  
