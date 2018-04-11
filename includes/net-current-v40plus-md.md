@@ -1,1 +1,1 @@
-<span data-ttu-id="05616-101">Verfügbar seit 4</span><span class="sxs-lookup"><span data-stu-id="05616-101">Available since 4</span></span>
+<span data-ttu-id="efbe3-101">Verfügbar seit 4</span><span class="sxs-lookup"><span data-stu-id="efbe3-101">Available since 4</span></span>
