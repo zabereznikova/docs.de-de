@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -74,7 +74,7 @@ Sie können die Knoten in einer Syntaxstruktur auf zwei Arten untersuchen. Sie k
 
 ### <a name="manual-traversal"></a>Manuelles Durchlaufen
 
-Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Die Syntaxstrukturtypen verwenden Vererbung, um die verschiedenen Syntaxelemente zu beschreiben, die an verschiedenen Positionen im Programm gültig sind. Bei der Verwendung dieser APIs müssen häufig Eigenschaften oder Sammlungsmember in bestimmte abgeleitete Typen umgewandelt werden. In den folgenden Beispielen sind die Zuweisung und die Umwandlung separate Anweisungen, bei denen explizit typisierte Variablen verwendet werden. Sie können den Code lesen, um die Rückgabetypen der API und den Laufzeittyp der zurückgegebenen Objekte zu sehen. In der Praxis ist es eher üblich, implizit typisierte Variablen zu verwenden und die Typen der zu untersuchenden Objekte mithilfe von API-Namen zu beschreiben.
@@ -164,7 +164,7 @@ Dieses Beispiel implementiert einen <xref:Microsoft.CodeAnalysis.CSharp.CSharpSy
 
 Erstellen Sie ein neues **Stand-Alone Code Analysis Tool**-Projekt für C#, und nennen Sie es **SyntaxWalker**.
 
-Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Das Beispiel in GitHub enthält beide in diesem Tutorial beschriebenen Projekte.
+Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). Das Beispiel in GitHub enthält beide in diesem Tutorial beschriebenen Projekte.
 
 Wie im vorherigen Beispiel können Sie eine Zeichenfolgenkonstante definieren, die den Text des Programms enthält, das Sie analysieren möchten:
 

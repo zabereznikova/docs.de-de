@@ -1,6 +1,6 @@
 ---
 title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -307,31 +307,31 @@ Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` leer ist, sprich ihre Auskommen
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Modeling document data for NoSQL databases (Modellierung von Dokumentdaten für NoSQL-Datenbanken)**
+-   **Modellieren von Dokumentdaten für NoSQL-Datenbanken**
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store? (Der ideale DDD-Aggregatspeicher?)**
+-   **Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store? (Was ist der ideale DDD-Aggregatspeicher?)**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
--   **Introduction to Azure Cosmos DB: API for MongoDB (Einführung in Azure Cosmos DB: API für MongoDB)** 
+-   **Einführung in Azure Cosmos DB: MongoDB-API** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal (Azure Cosmos DB: Erstellen einer MongoDB-API-Web-App mit .NET und dem Azure-Portal)** 
+-   **Azure Cosmos DB: Erstellen einer Web-App mit einer MongoDB-API mit .NET und dem Azure-Portal** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
--   **Use the Azure Cosmos DB Emulator for local development and testing (Verwenden des Azure Cosmos DB-Emulators für lokale Entwicklungsarbeiten und Tests)** 
+-   **Verwenden des Azure Cosmos DB-Emulators für lokale Entwicklungsarbeiten und Tests** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
 
--   **Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)** 
+-   **Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
 
--   **The Cosmos DB Emulator Docker image (Windows Container) (Das Docker-Image im Cosmos DB-Emulator (Windows-Container))** 
+-   **The Cosmos DB Emulator Docker image (Das Docker-Image des Cosmos DB-Emulators) (Windows Container)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
 
--   **The MongoDB Docker image (Linux and Windows Container) (Das MongoDB-Docker-Image (Linux- und Windows-Container))** 
+-   **The MongoDB Docker image (Das MongoDB-Docker-Image) (Linux- und Windows-Container)** 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
--   **Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account (Verwenden von MongoChef (Studio 3T) mit Azure Cosmos DB: API für MongoDB-Konto)** 
+-   **Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account (Verwenden von Studio 3T mit Azure Cosmos DB: Verwenden eines MongoDB-API-Kontos)** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 

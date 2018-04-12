@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>Arbeiten mit der Syntax
 
@@ -25,7 +25,7 @@ Die **Syntaxstruktur** ist eine grundlegende Datenstruktur, die von Compiler-API
 
 Syntaxstrukturen sind die primär verwendete Struktur für Kompilierung, Codeanalyse, Bindung, Refactoring, IDE-Funktionen und Codegenerierung. Kein Teil des Quellcodes kann verstanden werden, ohne zunächst als eines von vielen bekannten strukturellen Sprachelementen identifiziert und kategorisiert worden zu sein. 
 
-Syntaxstrukturen verfügen über drei wichtige Attribute. Das erste Attribut ist, dass Syntaxstrukturen alle Quellinformationen in voller Genauigkeit enthalten. Das bedeutet, dass die Syntaxstruktur jede Information aus dem Quelltext, jedes grammatische Konstrukt, jedes lexikalische Token und alles, was dazwischen liegt, enthält, einschließlich Leerzeichen, Kommentare und Präprozessordirektiven. Zum Beispiel wird jedes Literal, das in der Quelle erwähnt wird, so dargestellt, wie es eingegeben wurde. Die Syntaxstrukturen stellen Fehler im Quellcode auch dar, wenn das Programm unvollständig oder falsch formatiert ist, indem es übersprungene oder fehlende Token in der Syntaxstruktur anzeigt.  
+Syntaxstrukturen verfügen über drei wichtige Attribute. Das erste Attribut ist, dass Syntaxstrukturen alle Quellinformationen in voller Genauigkeit enthalten. Das bedeutet, dass die Syntaxstruktur jede Information aus dem Quelltext, jedes grammatische Konstrukt, jedes lexikalische Token und alles, was dazwischen liegt, enthält, einschließlich Leerzeichen, Kommentaren und Präprozessordirektiven. Zum Beispiel wird jedes Literal, das in der Quelle erwähnt wird, so dargestellt, wie es eingegeben wurde. Die Syntaxstrukturen stellen Fehler im Quellcode auch dar, wenn das Programm unvollständig oder falsch formatiert ist, indem es übersprungene oder fehlende Token in der Syntaxstruktur anzeigt.  
 
 Dadurch wird das zweite Attribut von Syntaxstrukturen ermöglicht. Eine Syntaxstruktur, die von dem Parser abgerufen wurde, kann den genauen Text erzeugen, aus dem sie ausgelesen wurde. Es ist möglich, die im Knoten verankerte Textdarstellung der Teilstruktur aus einem beliebigen Syntaxknoten zu erhalten. Das bedeutet, dass Syntaxstrukturen dazu verwendet werden können, Quelltext zu Erstellen und zu Bearbeiten. Durch das Erstellen einer Struktur erstellen Sie gleichzeitig auch den entsprechenden Text, und durch das Bearbeiten einer Syntaxstruktur (d.h. das Erstellen einer neuen Struktur durch das Ändern einer vorhandenen Struktur) nehmen Sie Änderungen am Text vor. 
 
@@ -69,7 +69,7 @@ Im Gegensatz zu Syntaxknoten und Token haben Syntaxtrivia keine übergeordneten 
 
 Alle Knoten, Token und Trivia kennen ihre Position im Quelltext und die Anzahl der von ihnen enthaltenen Zeichen. Eine Position im Text wird von einer 32-Bit-Ganzzahl, also einem nullbasierten `char`-Index, dargestellt. Ein <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Objekt ist eine Anfangsposition und eine Anzahl von Zeichen, die jeweils beide als ganze Zahl dargestellt werden. Wenn <xref:Microsoft.CodeAnalysis.Text.TextSpan> die Länge 0 (null) hat, bezieht es sich auf eine Position zwischen zwei Zeichen.
 
-Jeder Knoten verfügt über zwei <xref:Microsoft.CodeAnalysis.Text.TextSpan> Eigenschaften: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> und <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Jeder Knoten verfügt über zwei <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Eigenschaften: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> und <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> bezeichnet die Textspanne vom ersten Token in der Unterstruktur des Knotens bis zum Ende des letzten Tokens. Diese Spanne umfasst keine führenden oder nachgestellten Trivia.
 
@@ -89,7 +89,7 @@ Der Anweisungsknoten im Block verfügt über eine Spanne, die von einzelnen senk
 
 ## <a name="kinds"></a>Kind-Eigenschaften
 
-Alle Knoten, Token und Trivia über die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> vom Typ <xref:System.Int32?displayProperty=nameWithType>, die das genaue Syntax-Element identifiziert, das dargestellt wird. Dieser Wert kann in eine sprachspezifische Enumeration umgewandelt werden; jede Programmiersprache, C# oder VB, verfügt über eine einzelne `SyntaxKind`-Enumeration (jeweils <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> und <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), die alle möglichen Knoten, Token und Trivia in der Grammatik auflistet. Diese Konvertierung kann automatisch ausgeführt werden, durch den Zugriff auf die <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> Erweiterungsmethoden.
+Alle Knoten, Token und Trivia über die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> vom Typ <xref:System.Int32?displayProperty=nameWithType>, die das genaue Syntax-Element identifiziert, das dargestellt wird. Dieser Wert kann in eine sprachspezifische Enumeration umgewandelt werden; jede Programmiersprache, C# oder VB, verfügt über eine einzelne `SyntaxKind`-Enumeration (jeweils <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> und <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), die alle möglichen Knoten, Token und Trivia in der Grammatik auflistet. Diese Konvertierung kann automatisch erfolgen, indem Sie auf die Erweiterungsmethoden <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> zugreifen.
 
 Die <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind>-Eigenschaft ermöglicht einfache Mehrdeutigkeitsvermeidung für Syntaxknotentypen, die die gleiche Knotenklasse nutzen. Für Token und Trivia ist diese Eigenschaft die einzige Möglichkeit, verschiedene Elementtypen voneinander zu unterscheiden. 
 
