@@ -400,7 +400,7 @@ Die meisten Web-APIs sollten ein tokenbasiertes Authentifizierungssystem impleme
 
 ## <a name="client-communication"></a>Clientkommunikation
 
-ASP.NET Core-Apps können nicht nur Seiten bereitstellen und über Web-APIs auf Anforderungen für Daten antworten, sondern auch direkt mit verbundenen Clients kommunizieren. Für diese ausgehende Kommunikation können verschiedene Transporttechnologien verwendet werden, wobei am häufigsten die Technologie WebSockets verwendet wird. Bei ASP.NET Core SignalR handelt es sich um eine Bibliothek, die die Funktion zur Kommunikation zwischen Server und Client für Ihre Anwendungen vereinfacht. SignalR unterstützt verschiedene Transporttechnologien, einschließlich WebSockets, und nimmt dem Entwickler einen Großteil der Implementierungsdetails ab.
+ASP.NET Core-Apps können nicht nur Seiten bereitstellen und über Web-APIs auf Anforderungen für Daten antworten, sondern auch direkt mit verbundenen Clients kommunizieren. Für diese ausgehende Kommunikation können verschiedene Transporttechnologien verwendet werden, wobei am häufigsten die Technologie WebSockets verwendet wird. Bei ASP.NET Core SignalR handelt es sich um eine Bibliothek, mit der Sie Ihren Anwendungen leicht Funktionen für die Echtzeitkommunikation zwischen Server und Client hinzufügen können. SignalR unterstützt verschiedene Transporttechnologien, einschließlich WebSockets, und nimmt dem Entwickler einen Großteil der Implementierungsdetails ab.
 
 ASP.NET Core SignalR wird derzeit entwickelt und wird mit dem nächsten Release von ASP.NET Core veröffentlicht. Es sind derzeit allerdings andere [Open-Source-WebSockets-Bibliotheken](https://github.com/radu-matei/websocket-manager) verfügbar.
 
