@@ -1,12 +1,9 @@
 ---
-title: "Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung"
-ms.custom: 
+title: 'Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b97f73e93ad0ef8d9def596361ac68e93ae5e6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
@@ -133,7 +130,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4" />  
+                        version="1.2.3.4"   
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -182,7 +179,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
      Auch hier ist `myresource.res` der Name der Ressourcendatei mit der eingebetteten Ressource.  
   
 ## <a name="see-also"></a>Siehe auch  
- [COM-Interop ohne Registrierung](../../../docs/framework/interop/registration-free-com-interop.md)  
- [Anforderungen für die registrierungsfreie COM-Interop](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [Konfigurieren von Com_komponenten für die Aktivierung ohne Registrierung](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](http://go.microsoft.com/fwlink/?LinkId=158812)
+ [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
+ [Anforderungen für die registrierungsfreie COM-Interop](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
+ [Konfigurieren von COM-Komponenten für die registrierungsfreie Aktivierung](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://msdn.microsoft.com/library/ms973915.aspx)

@@ -1,9 +1,9 @@
 ---
-title: '#<a name="ifthenelse-directives"></a>If... ... #Else-Direktiven'
-ms.date: 07/20/2015
+title: '#If... ... #Else-Direktiven'
+ms.date: 04/11/2018
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.#EndIf
@@ -22,14 +22,13 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 77757e441ae937aa86122f237e839d1005644409
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 884c7ed6f0a346f2d35f01006cea23e47907d13f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else-Anweisung
 Bedingt kompiliert ausgewählten Blöcke von Visual Basic-Code.  
@@ -67,14 +66,29 @@ Bedingt kompiliert ausgewählten Blöcke von Visual Basic-Code.
  Unabhängig von dem Ergebnis der Auswertung, werden alle Ausdrücke ausgewertet, mit `Option Compare Binary`. Die `Option Compare` Anweisung wirkt sich nicht auf Ausdrücke in `#If` und `#ElseIf` Anweisungen.  
   
 > [!NOTE]
->  Keine einzeilige Form der `#If`, `#Else`, `#ElseIf`, und `#End If` Direktiven vorhanden ist. Kein anderer Code kann auf derselben Zeile wie die Direktiven angezeigt werden.  
-  
-## <a name="example"></a>Beispiel  
+>  Keine einzeilige Form der `#If`, `#Else`, `#ElseIf`, und `#End If` Direktiven vorhanden ist. Kein anderer Code kann auf derselben Zeile wie die Direktiven angezeigt werden. 
+
+Die Anweisungen innerhalb eines Blocks für die bedingte Kompilierung müssen vollständige logische Anweisungen sein. Z. B. nicht möglich, nur die Attribute einer Funktion, bedingt zu kompilieren, aber Sie können die Funktion zusammen mit seiner Attribute bedingt deklarieren:
+
+```vb
+   #If DEBUG Then
+   <WebMethod()>
+   Public Function SomeFunction() As String
+   #Else
+   <WebMethod(CacheDuration:=86400)>
+   Public Function SomeFunction() As String
+   #End If
+```
+
+## <a name="example"></a>Beispiel
  Dieses Beispiel verwendet die `#If...Then...#Else` Konstrukt, um festzustellen, ob bestimmte Anweisungen zu kompilieren.  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  
- [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+[#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  
+[If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+[Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
+<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+
+

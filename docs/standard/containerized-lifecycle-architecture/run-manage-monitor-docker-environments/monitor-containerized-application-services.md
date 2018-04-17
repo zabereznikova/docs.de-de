@@ -1,18 +1,18 @@
 ---
-title: "Überwachen von Datenvolumes Anwendungsdienste"
+title: Überwachen von Datenvolumes Anwendungsdienste
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von Datenvolumes Anwendungsdienste
 
@@ -42,10 +42,10 @@ Beim Ausführen der [Application Insights Docker Bild](https://hub.docker.com/r/
 
 Folgen Sie den Anweisungen in den Artikeln in der folgenden Liste dargestellt, um eine Application Insights-Ressource zu erstellen. Azure-Portal wird das notwendige Skript erstellt werden.
 
--   **Überwachen von Docker-Anwendungen im Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Überwachen von Docker-Anwendungen im Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Application Insights Docker-Image auf Docker Hub und Github:**  
-[https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) und <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) und <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Richten Sie Application Insights für ASP.NET aus:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,7 +97,7 @@ Abbildung 6 – 3: Leistungsmetriken Docker-Hosts gezeigt, die von Operations Ma
 
 Speichern von Abfragen ist auch eine standard-Funktion im Operations Management Suite und ermöglicht Ihnen Abfragen nützlich gefunden haben und die Erkennung von Trends in Ihrem System beibehalten.
 
-**Weitere Informationen** Informationen zum Installieren und konfigurieren die Docker Container-Lösung in gefunden [Operations Management Suite](http://microsoft.com/oms), wechseln Sie zu <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
+**Weitere Informationen** Informationen zum Installieren und konfigurieren die Docker Container-Lösung in gefunden [Operations Management Suite](http://microsoft.com/oms), wechseln Sie zu <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
 [Vorherigen] (Verwalten von-Production-Docker-environments.md) [weiter] (.. /Key-takeaways/Index.MD)

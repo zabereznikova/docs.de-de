@@ -1,20 +1,20 @@
 ---
-title: Status und die Daten in Docker-Anwendungen
+title: Zustand und Daten in Docker-Anwendungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>Status und die Daten in Docker-Anwendungen
+# <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
 Ein primitiver Typ, der Container ist Unveränderlichkeit. Im Vergleich zu einem virtuellen Computer nicht Container nicht mehr als einem häufiger eintreten angezeigt. Ein virtuellen Computer möglicherweise nicht in verschiedenen Formen von inaktiver Prozesse überladene CPU oder einen Datenträger voll oder fehlerhaft gemeldet. Noch, wir erwarten, dass des virtuelle Computers verfügbar sein und RAID-Laufwerke sind inzwischen, um sicherzustellen, dass das Laufwerk Fehlern Daten zu verwalten.
 
@@ -36,7 +36,7 @@ Zum Verwalten von permanenten Daten in Docker-Anwendungen stehen allgemeine Lös
 
 Datenvolumes sind speziell vorgesehen, Verzeichnisse in einem oder mehreren Containern, die umgehen der [Union Dateisystem](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Datenvolumes dienen zum Verwalten von Daten, unabhängig von den Lebenszyklus des Containers. Docker löscht daher nie automatisch Volumes, wenn Sie einen Container zu entfernen und auch nicht werden "Sammeln von Garbage"-Volumes, die von einem Container nicht mehr verwiesen werden. Das Hostbetriebssystem können durchsuchen und bearbeiten die Daten in beliebigen Volumes frei, dies ist nur ein weiterer Grund für die Datenvolumes nur selten zu verwenden.
 
-Ein [Volume Datencontainer](https://docs.docker.com/v1.8/userguide/dockervolumes/) stellt eine Verbesserung gegenüber regulären von Datenvolumes. Es ist im Wesentlichen eine ruhende Container, der eine oder mehrere Datenvolumes darin erstellt werden, (wie zuvor beschrieben) enthalten ist. Die Data-Volume-Container bietet Zugriff auf Container, von einem zentralen Bereitstellungspunkt. Der Vorteil dieser Methode des Zugriffs ist, dass sie den Speicherort der ursprünglichen Daten, machen dem Datencontainer logischen Bereitstellungspunkt abstrahiert. Darüber hinaus können den Zugriff auf die Container-Datenvolumen erstellt und zerstört werden, während die Daten in einem dedizierten Container persistent bleiben "Application"-Container.
+Ein [Volume Datencontainer](https://docs.docker.com/v1.8/userguide/dockervolumes/) stellt eine Verbesserung gegenüber regulären von Datenvolumes. Es ist im Wesentlichen eine ruhende Container, der eine oder mehrere Datenvolumes darin erstellt werden, (wie zuvor beschrieben) enthalten ist. Der Datenvolumecontainer bietet Zugriff auf Container von einem zentralen Bereitstellungspunkt aus. Der Vorteil dieser Methode des Zugriffs ist, dass sie den Speicherort der ursprünglichen Daten, machen dem Datencontainer logischen Bereitstellungspunkt abstrahiert. Darüber hinaus können den Zugriff auf die Container-Datenvolumen erstellt und zerstört werden, während die Daten in einem dedizierten Container persistent bleiben "Application"-Container.
 
 Abbildung 4-5 zeigt, dass es sich bei regulären Docker Volumes auf Speicher aus den Containern selbst, aber innerhalb der physischen Host-Server-VM-Grenzen platziert werden können. *Docker Volumes nicht die Möglichkeit, ein Volume aus einem Host/Server-VM in eine andere verwendet haben*.
 

@@ -1,12 +1,9 @@
 ---
 title: Runtime Callable Wrapper (RCW)
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -15,23 +12,23 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc92f169851680465f33170290d865be8426a53d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
 Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
   
  Die Common Language Runtime erstellt genau einen RCW für jedes COM-Objekt, unabhängig von der Anzahl der vorhandenen Verweise auf das Objekt. Die Common Language Runtime verwaltet für jedes Objekt einen einzelnen RCW pro Prozess.  Wenn Sie einen RCW in einer Anwendungsdomäne oder einem Apartment erstellen und anschließend einen Verweis an eine andere Anwendungsdomäne oder ein anderes Apartment übergeben, wird ein Proxy für das erste Objekt verwendet.  Wie die folgende Abbildung zeigt, kann eine beliebige Anzahl verwalteter Clients auf die COM-Objekte verweisen, welche die Schnittstellen "INew" und "INewer" verfügbar machen.  
   
- ![RCW](../../../docs/framework/interop/media/rcw.gif "rcw")  
+ ![RCW](./media/rcw.gif "rcw")  
 Zugriff auf COM-Objekte über den RCW  
   
  Mithilfe von Metadaten, die aus einer Typbibliothek abgeleitet werden, erstellt die Common Language Runtime sowohl das aufzurufende COM-Objekt als auch einen Wrapper für dieses Objekt. Jeder RCW verwaltet einen Cache von Schnittstellenzeigern auf das umschlossene COM-Objekt. Ist der RCW nicht länger erforderlich, wird der jeweilige Verweis auf das COM-Objekt freigegeben. Die Common Language Runtime führt eine Garbage Collection für den RCW durch.  
@@ -41,9 +38,9 @@ Zugriff auf COM-Objekte über den RCW
  Der Standardwrapper erzwingt integrierte Marshallregeln. Wenn beispielsweise ein .NET-Client einen Zeichenfolgetyp als Teil eines Arguments an ein nicht verwaltetes Objekt übergibt, konvertiert der Wrapper die Zeichenfolge in einen BSTR-Typ. Gibt das COM-Objekt seinem verwalteten Aufrufer einen BSTR zurück, erhält der Aufrufer eine Zeichenfolge. Sowohl der Client als auch der Server senden und empfangen auf diese Weise Daten, die ihnen jeweils vertraut sind. Andere Typen erfordern keine Konvertierung. Ein Standardwrapper überträgt z. B. eine ganze Zahl von 4 Byte zwischen verwaltetem und nicht verwaltetem Code immer ohne Typkonvertierung.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshallen von ausgewählten Schnittstellen  
- Die Hauptaufgabe des RCW ([Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)) besteht darin, die Unterschiede zwischen den verwalteten und nicht verwalteten Programmiermodellen unsichtbar zu machen. Um einen nahtlosen Übergang zu gewährleisten, beansprucht der RCW ausgewählte COM-Schnittstellen, ohne diese für den .NET-Client verfügbar zu machen. Dies ist in der folgenden Abbildung dargestellt.  
+ Die Hauptaufgabe des RCW ([Runtime Callable Wrapper](runtime-callable-wrapper.md)) besteht darin, die Unterschiede zwischen den verwalteten und nicht verwalteten Programmiermodellen unsichtbar zu machen. Um einen nahtlosen Übergang zu gewährleisten, beansprucht der RCW ausgewählte COM-Schnittstellen, ohne diese für den .NET-Client verfügbar zu machen. Dies ist in der folgenden Abbildung dargestellt.  
   
- ![RCW mit Schnittstellen](../../../docs/framework/interop/media/rcwwithinterfaces.gif "rcwwithinterfaces")  
+ ![RCW mit Schnittstellen](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
 COM-Schnittstellen und der RCW  
   
  Ein RCW, der als früh gebundenes Objekt erstellt wurde, stellt einen bestimmten Typ dar. Dieser implementiert die Schnittstellen für das COM-Objekt und macht die Methoden, Eigenschaften und Ereignisse der Schnittstellen des Objekts verfügbar. In der Abbildung macht der RCW die Schnittstelle „INew“ verfügbar, beansprucht jedoch die Schnittstellen **IUnknown** und **IDispatch**. Darüber hinaus macht der RCW dem .NET-Client alle Member der Schnittstelle "INew" verfügbar.   
@@ -66,8 +63,8 @@ COM-Schnittstellen und der RCW
 |**IEnumVARIANT**|Aktiviert COM-Typen, die die Behandlung von Enumerationen als Auflistungen unterstützen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [COM-Wrapper](../../../docs/framework/interop/com-wrappers.md)  
- [Marshallen von ausgewählten Schnittstellen](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [COM-Wrapper](com-wrappers.md)  
+ [Marshallen von ausgewählten Schnittstellen](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [COM Callable Wrapper](com-callable-wrapper.md)  
+ [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

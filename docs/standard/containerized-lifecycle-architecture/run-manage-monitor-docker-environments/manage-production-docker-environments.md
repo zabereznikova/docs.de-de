@@ -1,18 +1,18 @@
 ---
 title: Verwalten Sie Docker produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten Sie Docker produktionsumgebungen
 
@@ -31,11 +31,11 @@ Tabelle 6 – 1: Docker-Verwaltungstools
 
 | Verwaltungstools      | Beschreibung           | Verwandte orchestrators |
 |-----------------------|-----------------------|-----------------------|
-| Containerdienst\(UI-Verwaltung in Azure-Portal) | [Containerdienst](https://azure.microsoft.com/en-us/services/container-service/) bietet eine lassen sich leichter ermitteln können gestartet [ein Container-Clusters in Azure bereitstellen](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) basierend auf beliebte Orchestrators wie Mesosphere DC/OS, Kubernetes und Docker Containerhostclustern. <br /><br /> Containerdienst wird die Konfiguration von diesen Plattformen optimiert. Sie müssen nur auswählen, die Größe, die Anzahl der Hosts und die Auswahl der Orchestrator-Tools, und Containerdienst behandelt alles andere. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Punktschwarms |
+| Containerdienst\(UI-Verwaltung in Azure-Portal) | [Containerdienst](https://azure.microsoft.com/en-us/services/container-service/) bietet eine lassen sich leichter ermitteln können gestartet [ein Container-Clusters in Azure bereitstellen](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) basierend auf beliebte Orchestrators wie Mesosphere DC/OS, Kubernetes und Docker Containerhostclustern. <br /><br /> Containerdienst wird die Konfiguration von diesen Plattformen optimiert. Sie müssen nur auswählen, die Größe, die Anzahl der Hosts und die Auswahl der Orchestrator-Tools, und Containerdienst behandelt alles andere. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Universelle Steuerungsebene Docker\(einer lokalen oder Cloud) | [Universelle Steuerungsebene Docker](https://docs.docker.com/v1.11/ucp/overview/) der Unternehmensklasse Cluster Management-Lösung von Docker ist. Sie hilft bei der gesamte Cluster aus einer einzelnen Stelle zu verwalten. <br /><br /> Universelle Steuerungsebene Docker ist Bestandteil des kommerziellen Produkts, die mit dem Namen Docker Rechenzentrum ein, der Docker Containerhostclustern, universelle Steuerungsebene Docker und Docker Trusted Registry bereitstellt. <br /><br /> Docker Datacenter installierten lokalen sein oder von einer öffentlichen Cloud wie Azure bereitgestellt. | Docker Containerhostclustern\(von Containerdienst unterstützt) |
 | Docker Cloud\(auch bekannt als Tutum, Cloud SaaS) | [Docker Cloud](https://docs.docker.com/docker-cloud/) ist ein gehosteter Verwaltungsdienst (SaaS), die Funktionen der Orchestrierung und einen Docker-Registrierung mit Builds und Tests Einrichtungen für Dockerized Anwendungsbilder, Tools helfen Ihnen beim Einrichten und Verwalten der Hostinfrastruktur des bereitstellt und Bereitstellungsfeatures zum Automatisieren der Bilder für Ihre konkrete Infrastruktur bereitstellen. Sie können Ihr Konto SaaS Docker Cloud für Ihre Infrastruktur in Container-Dienst mit einem Docker Containerhostclustern Cluster verbinden. | Docker Containerhostclustern\(von Containerdienst unterstützt) |
 | Mesosphere Marathon\(einer lokalen oder Cloud) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) ist eine Plattform für das Container Produktions-Grade der Orchestrierung und der Planer für Mesosphere des DC/OS und Apache Mesos. <br /><br /> Generische Vergleich funktioniert mit Mesos (DC/OS basiert auf Apache Mesos) steuern lang ausgeführte Dienste und stellt eine [Weboberfläche für die Verwaltung von Prozess- und Container](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Es bietet ein Web-UI-Verwaltungstool | Mesosphere DC/OS\(basierend auf Apache Mesos; vom Containerdienst unterstützt) |
-| Google Kubernetes | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) orchestriert, plant und -Cluster-Infrastruktur umfasst. Es ist eine Open-Source-Plattform für die Automatisierung der Bereitstellung, Skalierung und Vorgänge des Anwendungscontainer über Clustern der Hosts, Container-orientierte Infrastruktur bereitgestellt. | Google Kubernetes\(von Containerdienst unterstützt) |
+| Google-Kubernetes | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) orchestriert, plant und -Cluster-Infrastruktur umfasst. Es ist eine Open-Source-Plattform für die Automatisierung der Bereitstellung, Skalierung und Vorgänge des Anwendungscontainer über Clustern der Hosts, Container-orientierte Infrastruktur bereitgestellt. | Google Kubernetes\(von Containerdienst unterstützt) |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

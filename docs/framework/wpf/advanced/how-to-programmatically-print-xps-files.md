@@ -1,13 +1,9 @@
 ---
 title: 'Gewusst wie: Programmgesteuertes Drucken von XPS-Dateien'
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +12,28 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Gewusst wie: Programmgesteuertes Drucken von XPS-Dateien
 Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A> Methode zum Drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien ohne Öffnen einer <xref:System.Windows.Controls.PrintDialog> oder im Prinzip alle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] überhaupt.  
   
- Sie können auch drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien mit vielen <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>. Weitere Informationen dazu finden Sie unter [Drucken eines XPS-Dokuments](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
+ Sie können auch drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien mit vielen <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>. Weitere Informationen dazu finden Sie unter [Drucken eines XPS-Dokuments](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
   
- Eine andere Möglichkeit der Druckfunktion von [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ist die Verwendung der <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> oder <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> Methoden die <xref:System.Windows.Controls.PrintDialog> Steuerelement. Weitere Informationen finden Sie unter [Aufrufen eines Druckdialogfelds](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
+ Eine andere Möglichkeit der Druckfunktion von [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ist die Verwendung der <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> oder <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> Methoden die <xref:System.Windows.Controls.PrintDialog> Steuerelement. Weitere Informationen finden Sie unter [Aufrufen eines Druckdialogfelds](how-to-invoke-a-print-dialog.md).  
   
 ## <a name="example"></a>Beispiel  
  Die wichtigsten Schritte zur Verwendung des drei-Parameters <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode lauten wie folgt. Im folgenden Beispiel werden Details.  
   
-1.  Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. (Weitere Informationen zu XPSDrv finden Sie unter [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md).)  
+1.  Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. (Weitere Informationen zu XPSDrv finden Sie unter [Übersicht über das Drucken](printing-overview.md).)  
   
 2.  Wenn es sich bei dem Drucker nicht um einen XPSDrv-Drucker handelt, legen Sie das Apartment des Threads auf Singlethread fest.  
   
@@ -54,7 +49,7 @@ Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A>
   
  Das Beispiel beginnt durch Instanziierung entsprechend einer <xref:System.Threading.Thread> Objekt und zur Übergabe an eine **PrintXPS** -Methode, wie die <xref:System.Threading.ThreadStart> Parameter. (Die **PrintXPS**-Methode wird später im Beispiel definiert.) Danach wird der Thread auf ein Singlethreadapartment festgelegt. Mit dem verbleibenden Code der `Main`-Methode wird der neue Thread gestartet.  
   
- In diesem Beispiel geht es im Wesentlichen um die `static`**BatchXPSPrinter.PrintXPS**-Methode. Nach dem Erstellen eines Druckerservers und einer Druckwarteschlange wird der Benutzer von der Methode aufgefordert, ein Verzeichnis anzugeben, das [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien enthält. Nachdem überprüft wurde, ob das Verzeichnis vorhanden ist und XPS-Dateien enthält, fügt die Methode jede dieser Dateien der Druckwarteschlange hinzu. Das Beispiel setzt voraus, dass der Drucker nicht-XPSDrv, ist, damit wir übergeben `false` auf den letzten Parameter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode. Aus diesem Grund überprüft die Methode das [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Markup in der Datei, bevor sie versucht, es in die Seitenbeschreibungssprache des Druckers umzuwandeln. Wenn die Validierung fehlschlägt, wird eine Ausnahme ausgelöst. Im Beispielcode wird die Ausnahme abgefangen, der Benutzer wird darüber informiert, und anschließend wird die nächste [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Datei verarbeitet.  
+ In diesem Beispiel geht es im Wesentlichen um die `static`**BatchXPSPrinter.PrintXPS**-Methode. Nach dem Erstellen eines Druckerservers und einer Druckwarteschlange wird der Benutzer von der Methode aufgefordert, ein Verzeichnis anzugeben, das [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien enthält. Nach dem validieren, die das Verzeichnis vorhanden ist und die Präsenz des \*XPS-Dateien darin, die Methode fügt jede dieser Dateien in der Druckerwarteschlange. Das Beispiel setzt voraus, dass der Drucker nicht-XPSDrv, ist, damit wir übergeben `false` auf den letzten Parameter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode. Aus diesem Grund überprüft die Methode das [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Markup in der Datei, bevor sie versucht, es in die Seitenbeschreibungssprache des Druckers umzuwandeln. Wenn die Validierung fehlschlägt, wird eine Ausnahme ausgelöst. Im Beispielcode wird die Ausnahme abgefangen, der Benutzer wird darüber informiert, und anschließend wird die nächste [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Datei verarbeitet.  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
@@ -69,7 +64,7 @@ Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A>
   
  Diese folgende Warnung aus können Sie durch Übergabe `true` als letzten Parameter der <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> ohne eine Ausnahme aus, da  *\<PseudoXPSPrinter für eine >* ist keine notfallwiederherstellungstopologie XPSDrv-Drucker auslösen.  
   
- **Hinweis** Der Einfachheit halber gilt im oben stehenden Beispiel das Vorhandensein der Dateinamenserweiterung XPS als Beleg dafür, dass es sich bei einer Datei um eine [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Datei handelt. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien müssen diese Erweiterung jedoch nicht haben. [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3) ist eine Möglichkeit, eine Datei auf [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Gültigkeit zu testen.  
+ **Hinweis** zur Vereinfachung verwendet das obige Beispiel das Vorhandensein einer \*XPS Erweiterung verwendet werden wie die Tests, der eine Datei ist [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien müssen diese Erweiterung jedoch nicht haben. [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) ist eine Möglichkeit, eine Datei auf [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Gültigkeit zu testen.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Printing.PrintQueue>  
@@ -77,8 +72,8 @@ Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A>
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [Drucken eines XPS-Dokuments](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [Verwaltete und nicht verwaltetes Threading](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
- [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Drucken eines XPS-Dokuments](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
+ [Verwaltete und nicht verwaltetes Threading](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
+ [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [Dokumente in WPF](documents-in-wpf.md)  
+ [Übersicht über das Drucken](printing-overview.md)

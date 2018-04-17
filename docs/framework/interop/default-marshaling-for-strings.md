@@ -1,12 +1,9 @@
 ---
-title: "Standardmäßiges Marshalling für Zeichenfolgen"
-ms.custom: 
+title: Standardmäßiges Marshalling für Zeichenfolgen
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10f2c0e0e61190f571ae5bd4998f54d128448296
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-strings"></a>Standardmäßiges Marshalling für Zeichenfolgen
 Die <xref:System.String?displayProperty=nameWithType>-Klasse und die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse weisen ein ähnliches Marshallingverhalten auf.  
@@ -41,7 +38,8 @@ Die <xref:System.String?displayProperty=nameWithType>-Klasse und die <xref:Syste
   
 -   [Zeichenfolgenpuffer mit fester Länge](#cpcondefaultmarshalingforstringsanchor3)  
   
-<a name="cpcondefaultmarshalingforstringsanchor1"></a>   
+<a name="cpcondefaultmarshalingforstringsanchor1"></a>
+
 ## <a name="strings-used-in-interfaces"></a>In Schnittstellen verwendete Zeichenfolgen  
  In der folgenden Tabelle werden die Marshallingoptionen für den String-Datentyp aufgelistet, wenn dieser als Methodenargument an nicht verwalteten Code gemarshallt wird. Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut stellt mehrere <xref:System.Runtime.InteropServices.UnmanagedType>-Enumerationswerte zum Marshallen von Zeichenfolgen an COM-Schnittstellen bereit.  
   
@@ -65,12 +63,12 @@ void PassStringRef1(ref String s);
 void PassStringRef2([MarshalAs(UnmanagedType.BStr)]ref String s);  
 void PassStringRef3([MarshalAs(UnmanagedType.LPStr)]ref String s);  
 void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);  
-);  
-```  
-  
- Im folgenden Beispiel ist die entsprechende Schnittstelle dargestellt, die in einer Typbibliothek beschrieben wird.  
-  
-```  
+);
+```
+
+Im folgenden Beispiel ist die entsprechende Schnittstelle dargestellt, die in einer Typbibliothek beschrieben wird.
+
+```
 […]  
 interface IStringWorker : IDispatch {  
 HRESULT PassString1([in] BSTR s);  
@@ -81,10 +79,11 @@ HRESULT PassStringRef1([in, out] BSTR *s);
 HRESULT PassStringRef2([in, out] BSTR *s);  
 HRESULT PassStringRef3([in, out] LPStr *s);  
 HRESULT PassStringRef4([in, out] LPWStr *s);  
-);  
-```  
-  
-<a name="cpcondefaultmarshalingforstringsanchor5"></a>   
+);
+```
+
+<a name="cpcondefaultmarshalingforstringsanchor5"></a>
+
 ## <a name="strings-used-in-platform-invoke"></a>Im Plattformaufruf verwendete Zeichenfolgen  
  Der Plattformaufruf kopiert Zeichenfolgenargumente, wobei das .NET Framework-Format (Unicode) in das nicht verwaltete Plattformformat konvertiert wird. Zeichenfolgen sind unveränderlich und werden bei Rückgabe des Aufrufs nicht aus dem nicht verwalteten Speicher in den verwalteten Speicher zurückkopiert.  
   
@@ -119,9 +118,9 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-```  
-  
-```csharp  
+```
+
+```csharp
 class StringLibAPI {  
 [DllImport("StringLib.Dll")]  
 public static extern void PassLPStr([MarshalAs(UnmanagedType.LPStr)]  
@@ -162,7 +161,7 @@ String s);
   
 ### <a name="type-library-representation"></a>Darstellung der Typbibliothek  
   
-```  
+```
 struct StringInfoA {  
    char *    f1;  
    char      f2[256];  
@@ -271,7 +270,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Direktionale Attribute](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopieren und Fixieren](../../../docs/framework/interop/copying-and-pinning.md)
+ [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)  
+ [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)  
+ [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopieren und Fixieren](copying-and-pinning.md)

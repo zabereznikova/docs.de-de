@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines Typanbieters (F#)'
+title: 'Lernprogramm: Erstellen eines Typanbieters (f#)'
 description: Erfahren Sie, wie eigene f#-Typanbieter in f# 3.0 zu erstellen, indem mehrere einfache Typanbieter, um die grundlegenden Konzepte veranschaulicht untersuchen.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>Lernprogramm: Erstellen eines Typanbieters
+# <a name="tutorial-create-a-type-provider"></a>Lernprogramm: Erstellen eines Typanbieters
 
 Der typanbietermechanismus in f# ist ein wesentlicher Bestandteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F# erläutert werden, finden Sie unter [Typanbieter](index.md).
 

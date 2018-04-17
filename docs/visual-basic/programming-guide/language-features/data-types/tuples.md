@@ -1,10 +1,10 @@
 ---
 title: Tupel in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Tupel (Visual Basic)
 
@@ -80,7 +80,7 @@ Feld die Ableitung von Namen schlägt fehl, Visual Basic wird nicht generiert ei
 
 Ein Visual Basic-Tupel ist ein Werttyp, der eine Instanz einer von der eine **System.ValueTuple** generische Typen. Z. B. die `holiday` im vorherigen Beispiel definierte Tupel ist eine Instanz der <xref:System.ValueTuple%603> Struktur. Es wurde entwickelt, um einen einfachen Container für Daten werden. Da das Tupel zielt darauf ab, um es einfach, um ein Objekt mit mehreren Datenelementen erstellen können, fehlen einige der Funktionen, die möglicherweise eine benutzerdefinierte Struktur. Dazu gehören:
 
-- Kundenelemente. Sie können nicht Ihre eigenen Eigenschaften, Methoden oder Ereignisse für ein Tupel definieren.
+- Benutzerdefinierte Elemente. Sie können nicht Ihre eigenen Eigenschaften, Methoden oder Ereignisse für ein Tupel definieren.
 
 - Überprüfung. Die Daten, die Felder zugewiesen sind, kann nicht überprüft werden.
 

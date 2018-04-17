@@ -1,13 +1,9 @@
 ---
 title: 'Gewusst wie: Verweisen auf .NET-Typen in COM'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - cpp
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b452dd686286ba0ddf648ee532e67a0c121f66eb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3ac4308230f29067f358a45fd7f882abe6e41b96
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Gewusst wie: Verweisen auf .NET-Typen in COM
 Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM und .NET Framework. Microsoft Visual Basic-Clients können ein .NET-Objekt im Objektkatalog anzeigen. Dort werden Objektmethoden und –syntax sowie Eigenschaften und Felder in gleicher Weise angegeben wie für ein beliebiges anderes COM-Objekt.  
@@ -55,7 +50,7 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Aufrufen eines.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)  
+ [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)  
+ [Aufrufen eines.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

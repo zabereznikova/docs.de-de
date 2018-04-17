@@ -1,18 +1,18 @@
 ---
 title: Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a8778fe4cbf08467f89a46c57f2970dd98934dd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1bef0acc4a01a035a02c726800a643e0bcbdfde6
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 

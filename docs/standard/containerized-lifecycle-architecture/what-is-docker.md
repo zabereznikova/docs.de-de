@@ -1,18 +1,18 @@
 ---
 title: Was ist Docker?
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -30,11 +30,11 @@ Zum Hosten von Containern in entwicklungsumgebungen, und geben Sie zusätzliche 
 
 Auszuführende [Windows-Containern](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), es gibt zwei Arten von Laufzeiten:
 
--   **Windows Server-Container** dieser Laufzeit bietet Anwendungsisolation mittels einer isolationstechnologie für Prozesse und Namespaces. Windows Server-Container teilt sich einen Kernel mit dem containerhost und allen Container, die auf dem Host ausgeführt.
+-   **Windows Server-Container** dieser Laufzeit bietet Anwendungsisolation mittels einer isolationstechnologie für Prozesse und Namespaces. Ein Windows Server-Container teilt sich einen Kernel mit dem Containerhost und allen Containern, die auf dem Host ausgeführt werden.
 
--   **Hyper-V-Container** erstreckt sich auf die Isolierung durch Windows Server-Container, indem jeder Container in einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des containerhosts nicht gemeinsam mit Hyper-V-Container, eine bessere Isolierung bereitstellen.
+-   **Hyper-V-Container** erstreckt sich auf die Isolierung durch Windows Server-Container, indem jeder Container in einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Containerhosts nicht für den Hyper-V-Container freigegeben, was die Isolierung verbessert.
 
-Die Images für diese Container werden auf die gleiche Weise erstellt und sind funktional gleich. Der Unterschied besteht darin, wie der Container aus dem Image erstellt wird – einen zusätzlichen Parameter erfordert ein Hyper-V-Container ausgeführt wird. Weitere Informationen finden Sie unter [Hyper-V-Container](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+Die Images für diese Container werden auf die gleiche Weise erstellt und sind funktional gleich. Der Unterschied besteht darin, wie der Container aus dem Image erstellt wird – einen zusätzlichen Parameter erfordert ein Hyper-V-Container ausgeführt wird. Weitere Informationen finden Sie unter [Windows-Container](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Vergleich von Docker-Containern mit virtuellen Computern
 
@@ -44,7 +44,7 @@ Da Container wesentlich weniger Ressourcen benötigen (z. B. sie ist nicht erfor
 
 Als Nebeneffekt des auf den gleichen Kernel ausgeführt wird erzielen Sie weniger Isolation als virtuelle Computer.
 
-Der Hauptzweck eines Bilds ist, dass der Umgebung (Abhängigkeiten) die gleiche über verschiedene Bereitstellungen vereinfacht. Dies bedeutet, dass Sie auf Ihrem Computer debuggen und dann mit der gleichen Umgebung sichergestellt, dass auf einen anderen Computer bereitstellen können.
+Der Hauptzweck eines Images ist, die Umgebung (Abhängigkeiten) in verschiedene Bereitstellungen anzugleichen. Das bedeutet, dass Sie sie auf Ihrem Computer debuggen und sie dann auf einem anderen Computer bereitstellen können, wenn dieselbe Umgebung gewährleistet ist.
 
 Ein Container-Abbild ist eine Möglichkeit zum Verpacken einer Anwendung oder einem Dienst und zuverlässige und reproduzierbare Weise bereitstellen. In dieser Hinsicht Docker nicht nur eine Technologie, es ist auch eine Philosophie und einen Prozess.
 
@@ -56,4 +56,4 @@ Abbildung 1 bis 3: Vergleich der traditionellen VMs in Docker-Containern
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (Docker-terminology.md)
+[Zurück] (index.md) [Weiter] (docker-terminology.md)

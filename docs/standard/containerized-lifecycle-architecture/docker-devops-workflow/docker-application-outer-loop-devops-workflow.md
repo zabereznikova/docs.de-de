@@ -1,18 +1,18 @@
 ---
-title: "Schritte in der äußeren Schleife DevOps-Workflow für einen Docker-Anwendung"
+title: Schritte in der äußeren Schleife DevOps-Workflow für einen Docker-Anwendung
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte in der äußeren Schleife DevOps-Workflow für einen Docker-Anwendung
 
@@ -110,13 +110,13 @@ Eine einfache Möglichkeit zum Erstellen einer davon ist Docker verwenden, um ei
 
 **Weitere Informationen** , lesen Weitere Informationen zum Zusammenstellen einer Visual Studio Team Services Docker CI pipeline und Anzeigen von exemplarischen Vorgehensweisen, finden Sie auf den folgenden Websites:
 
-Ausführen eines Visual Studio Team Services-Agents als einen Docker-Container: [https://hub.docker.com/r/ \ Microsoft/Vsts-Agent /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Ausführen eines Visual Studio Team Services-Agents als einen Docker-Container: [ https://hub.docker.com/r/\ Microsoft/Vsts-Agent /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 VSTS Docker-Erweiterung: <https://aka.ms/vstsdockerextension>
 
 Erstellen von .NET Core-Linux-Docker-Images mit Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Erstellen eine Linux-basierten Dienst Visual Studio Team build-Computer mit Unterstützung für Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Erstellen einen Linux-basierten Dienst Visual Studio Team Buildcomputer mit Docker-Unterstützung: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>Integrieren Sie, testen Sie und validieren Sie multicontainer Docker-Anwendungen
 
@@ -220,7 +220,7 @@ Abbildung 5 – 11: Bereitstellen von Docker Aufgabe Definition Bereitstellen vo
 
 **Weitere Informationen** Weitere Informationen finden Sie Informationen zu CD Pipeline mit Visual Studio Team Services als auch Docker an, auf den folgenden Websites:
 
-Visual Studio Team Services-Erweiterung für Docker und Azure-Container-Dienst: [https://aka.ms/ \ Vstsdockerextension](https://aka.ms/vstsdockerextension)
+Visual Studio Team Services-Erweiterung für Docker und Azure-Container-Dienst: [ https://aka.ms/\ Vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Azure-Container-Dienst: <https://aka.ms/azurecontainerservice>
 

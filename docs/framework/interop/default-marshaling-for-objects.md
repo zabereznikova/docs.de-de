@@ -1,13 +1,9 @@
 ---
 title: Standardmäßiges Marshalling für Objekte
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Standardmäßiges Marshalling für Objekte
 Parameter und Felder, die als <xref:System.Object?displayProperty=nameWithType> typisiert sind, können für nicht verwalteten Code als einer der folgenden Typen verfügbar gemacht werden:  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Marshalling von ByRef-Varianten  
  Obwohl Varianten selbst durch einen Wert oder durch einen Verweis übergeben werden können, kann das **VT_BYREF**-Flag auch mit einem beliebigen Varianttyp verwendet werden, um anzugeben, dass die Inhalte der Variante durch Verweis und nicht durch einen Wert übergeben werden. Der Unterschied zwischen dem Marshalling von Varianten durch einen Verweis und dem Marshalling von Varianten mit eingerichtetem **VT_BYREF**-Flag kann verwirrend sein. Die folgende Abbildung stellt die Unterschiede dar.  
   
- ![Variant passed on the stack (An den Stapel übergebene Variante)](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Variant passed on the stack (An den Stapel übergebene Variante)](./media/interopvariant.gif "interopvariant")  
 Durch einen Wert und durch einen Verweis übergebene Varianten  
   
  **Standardmäßiges Verhalten beim Marshalling von Objekten und Varianten durch einen Wert**  
@@ -342,7 +337,7 @@ Durch einen Wert und durch einen Verweis übergebene Varianten
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objekt**  *o*|Nur, wenn sich der Typ nicht geändert hat.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Direktionale Attribute](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopieren und Fixieren](../../../docs/framework/interop/copying-and-pinning.md)
+ [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)  
+ [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)  
+ [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopieren und Fixieren](copying-and-pinning.md)

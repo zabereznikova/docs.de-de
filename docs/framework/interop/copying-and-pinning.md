@@ -1,12 +1,9 @@
 ---
 title: Kopieren und Fixieren
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>Kopieren und Fixieren
 Beim Marshalling von Daten kann der Interop-Marshaller die gemarshallten Daten kopieren oder fixieren. Beim Kopieren der Daten wird eine Kopie der Daten aus einem Speicherort an einem anderen Speicherort abgelegt. Die folgende Abbildung veranschaulicht die Unterschiede zwischen dem Kopieren eines Werttyps und dem Kopieren eines Typs, der als Verweis von einem verwalteten Speicher zu einem nicht verwalteten Speicher übergeben wird.  
   
- ![Wert und Verweis als übergebener Werttyp](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![Wert und Verweis als übergebener Werttyp](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 Wert und Verweis als übergebener Werttyp  
   
  Als Wert übergebene Methodenargumente werden in einen nicht verwalteten Code als Werte im Stapel gemarshallt. Der Kopiervorgang wird direkt ausgeführt. Als Verweis übergebene Argumente werden als Zeiger im Stapel übergeben. Auch Verweistypen werden als Wert und als Verweis übergebenen. Die folgende Abbildung zeigt, dass als Wert übergebene Verweistypen entweder kopiert oder fixiert werden.  
   
- ![COM-Interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![COM-Interop](./media/interopmarshalpin.gif "interopmarshalpin")  
 Wert und Verweis als übergebener Verweistyp  
   
  Beim Fixieren werden die Daten vorübergehend an ihrem aktuellen Speicherort gesperrt. Dadurch können sie nicht vom Garbage Collector der Common Language Runtime verschoben werden. Der Marshaller fixiert die Daten, um den Aufwand beim Kopieren zu reduzieren und die Leistung zu verbessern. Ob Daten während des Marshallingvorgangs kopiert oder fixiert werden, wird durch den Datentyp bestimmt.  Beim Marshalling für Objekte, wie z.B. <xref:System.String>, werden die Daten automatisch fixiert. Sie können jedoch mithilfe der <xref:System.Runtime.InteropServices.GCHandle>-Klasse den Speicher auch manuell fixieren.  
   
 ## <a name="formatted-blittable-classes"></a>Formatierte blitfähige Klassen  
- Formatierte [blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert) und eine allgemeine Darstellung der Daten im verwalteten und im nicht verwalteten Speicher. Wenn diese Typen gemarshallt werden müssen, wird ein Zeiger auf das Objekt im Heap direkt an den Aufgerufenen übergeben. Der Aufgerufene kann den Inhalt des Speicherorts ändern, auf den der Zeiger verweist.  
+ Formatierte [blitfähige](blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert) und eine allgemeine Darstellung der Daten im verwalteten und im nicht verwalteten Speicher. Wenn diese Typen gemarshallt werden müssen, wird ein Zeiger auf das Objekt im Heap direkt an den Aufgerufenen übergeben. Der Aufgerufene kann den Inhalt des Speicherorts ändern, auf den der Zeiger verweist.  
   
 > [!NOTE]
 >  Der Aufgerufene kann den Speicherinhalt ändern, wenn der Parameter als Ausgabe- oder Ein-/Ausgabeparameter markiert ist. Im Gegensatz dazu sollte der Aufgerufene den Inhalt nicht ändern, wenn der Parameter zum Marshallen als Eingabeparameter festgelegt ist. Dies ist die Standardeinstellung für formatierte blitfähige Typen. Das Ändern von Eingabeobjekten kann zu Problemen führen, wenn die gleiche Klasse in eine Typbibliothek exportiert und auch für apartmentübergreifende Aufrufe verwendet wird.  
   
 ## <a name="formatted-non-blittable-classes"></a>Formatierte nicht blitfähige Klassen  
- Formatierte [nicht blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert), doch die Daten werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt. Unter den folgenden Bedingungen kann eine Umwandlung der Daten erforderlich sein:  
+ Formatierte [nicht blitfähige](blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert), doch die Daten werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt. Unter den folgenden Bedingungen kann eine Umwandlung der Daten erforderlich sein:  
   
 -   Wenn eine nicht blitfähige Klasse als Wert gemarshallt wird, erhält der Aufgerufene einen Zeiger auf eine Kopie der Datenstruktur.  
   
@@ -87,7 +84,7 @@ Wert und Verweis als übergebener Verweistyp
  Wenn ein <xref:System.Text.StringBuilder?displayProperty=nameWithType> als Wert übergeben wird, übergibt der Marshaller dem Aufrufer direkt einen Verweis auf den internen Puffer von **StringBuilder**. Aufrufer und Aufgerufener müssen bei der Größe des Puffers übereinstimmen. Der Aufrufer ist für das Erstellen von **StringBuilder** in einer angemessenen Länge zuständig. Der Aufgerufene muss die erforderlichen Vorsichtsmaßnahmen treffen, um einen Pufferüberlauf zu verhindern. **StringBuilder** stellt eine Ausnahme zu der Regel dar, dass als Wert übergebene Verweistypen standardmäßig als Eingabeparameter übergeben werden. Es wird immer als Ein-/Ausgabeparameter übergeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Speicherverwaltung mit der Interop-Marshaller](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Direktionale Attribute](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+ [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)  
+ [Speicherverwaltung mit der Interop-Marshaller](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)

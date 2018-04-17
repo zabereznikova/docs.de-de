@@ -1,13 +1,9 @@
 ---
 title: Standardmarshallingverhalten
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  Wenn Sie die Methode jedoch als einen Prototyp zum Plattformaufruf definieren, jeden **BSTR**-Typ durch einen <xref:System.String>-Typ ersetzen und `MethodOne` aufrufen, versucht die Common Language Runtime `b` zweimal freizugeben. Sie können das Marshalling-Verhalten ändern, indem Sie <xref:System.IntPtr>-Typen anstelle von **Zeichenfolgen**typen verwenden.  
   
- Zur Laufzeit wird immer die **CoTaskMemFree**-Methode zum Freigeben von Speicher verwendet. Wenn der Speicher, mit dem Sie arbeiten, nicht der **CoTaskMemAlloc**-Methode zugeordnet wurde, müssen Sie **IntPtr** verwenden und den Speicher manuell mit der geeigneten Methode freigeben. Ebenso können Sie in Situationen, in denen der Speicher niemals freigegeben werden soll, wie bei Verwendung der **GetCommandLine**-Funktion von Kernel32.dll, die einen Zeiger auf den Kernelspeicher zurückgibt, verhindern, dass Speicher automatisch freigegeben wird. Details zum manuellen Freigeben von Speicher finden Sie unter [Beispiel für Puffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Zur Laufzeit wird immer die **CoTaskMemFree**-Methode zum Freigeben von Speicher verwendet. Wenn der Speicher, mit dem Sie arbeiten, nicht der **CoTaskMemAlloc**-Methode zugeordnet wurde, müssen Sie **IntPtr** verwenden und den Speicher manuell mit der geeigneten Methode freigeben. Ebenso können Sie in Situationen, in denen der Speicher niemals freigegeben werden soll, wie bei Verwendung der **GetCommandLine**-Funktion von Kernel32.dll, die einen Zeiger auf den Kernelspeicher zurückgibt, verhindern, dass Speicher automatisch freigegeben wird. Details zum manuellen Freigeben von Speicher finden Sie unter [Beispiel für Puffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Standardmäßiges Marshalling für Klassen  
- Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Übergeben von Klassen an COM  
  Wenn eine verwaltete Klasse an COM übergeben wird, umschließt der Interop-Marshaller die Klasse automatisch mit einem COM-Proxy und übergibt die vom Proxy erstellte Klassenschnittstelle an den COM-Methodenaufruf. Der Proxy delegiert dann alle Aufrufe der Klassenschnittstelle zurück an das verwaltete Objekt. Der Proxy macht zudem auch weitere Schnittstellen verfügbar, die von der Klasse nicht explizit implementiert werden. Der Proxy implementiert automatisch Schnittstellen wie **IUnknown** und **IDispatch** für die Klasse.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Standardmäßiges Marshalling für Werttypen  
- Die meisten Werttypen, wie ganze Zahlen und Gleitkommazahlen, sind [blitfähig](../../../docs/framework/interop/blittable-and-non-blittable-types.md) und müssen nicht gemarshallt werden. Andere, [nicht blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Typen werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt und müssen gemarshallt werden. Wieder andere Typen erfordern eine explizite, über die Grenzen der Interoperation hinausgehende Formatierung.  
+ Die meisten Werttypen, wie ganze Zahlen und Gleitkommazahlen, sind [blitfähig](blittable-and-non-blittable-types.md) und müssen nicht gemarshallt werden. Andere, [nicht blitfähige](blittable-and-non-blittable-types.md) Typen werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt und müssen gemarshallt werden. Wieder andere Typen erfordern eine explizite, über die Grenzen der Interoperation hinausgehende Formatierung.  
   
  Dieses Thema enthält die folgenden Informationen zu formatierten Werttypen:  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Kopieren und Fixieren](../../../docs/framework/interop/copying-and-pinning.md)  
- [Standardmäßiges Marshalling für Arrays](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Standardmäßiges Marshalling für Objekte](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Standardmäßiges Marshalling für Zeichenfolgen](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)  
+ [Kopieren und Fixieren](copying-and-pinning.md)  
+ [Standardmäßiges Marshalling für Arrays](default-marshaling-for-arrays.md)  
+ [Standardmäßiges Marshalling für Objekte](default-marshaling-for-objects.md)  
+ [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)

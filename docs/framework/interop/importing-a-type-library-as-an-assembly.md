@@ -1,13 +1,13 @@
 ---
 title: Importieren einer Typbibliothek als Assembly
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im Gegensatz dazu erzeugen CLS-kompatible Compiler Typmetadaten in einer Assembly. Die zwei Quellen von Typinformationen sind sehr unterschiedlich. In diesem Thema werden Techniken zum Generieren von Metadaten aus einer Typbibliothek beschrieben. Die sich ergebende Assembly wird Interop-Assembly genannt, und die darin enthaltenen Typinformationen erlauben .NET Framework-Anwendungen die Verwendung von COM-Typen.  
@@ -55,7 +55,7 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
 -   Visual Studio  
   
-     Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [How to: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) und [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3).  
+     Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [How to: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) und [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
   
 -   [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -92,4 +92,4 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
  [Bereitstellen einer Interop-Anwendung](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
  [Gewusst wie: Generieren von Interop-Assemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
+ [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

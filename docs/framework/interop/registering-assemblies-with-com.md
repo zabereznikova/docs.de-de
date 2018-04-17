@@ -1,12 +1,9 @@
 ---
 title: Registrieren von Assemblys mit COM
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -14,19 +11,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
-Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
+Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
   
  Eine verwaltete Komponente muss in der Windows-Registrierung registriert sein, damit sie von einem COM-Client aktiviert werden kann. Die folgende Tabelle zeigt die Schlüssel, die Regasm.exe der Windows-Registrierung in der Regel hinzufügt. (000000 steht hier für den tatsächlichen GUID-WERT.)  
   
@@ -53,7 +51,7 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
  Für den Unterschlüssel `InprocServer32` wird statt einer traditionellen Bibliothek der COM-Typen ein Verweis auf die Datei „Mscoree.dll“ angezeigt. So wird angegeben, dass die Common Language Runtime das verwaltete Objekt erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Gewusst wie: Verweisen auf .NET-Typen in COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [Aufrufen eines.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)  
+ [Gewusst wie: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)  
+ [Aufrufen eines.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

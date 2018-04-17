@@ -1,12 +1,9 @@
 ---
 title: Erstellen von Prototypen in verwaltetem Code
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
-In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
   
  Bevor Sie auf eine nicht verwaltete DLL-Funktion in verwaltetem Code zugreifen können, müssen Sie den Namen der Funktion sowie den Namen der DLL kennen, die diese exportiert. Mit diesen Informationen können Sie damit beginnen, die verwaltete Definition für eine nicht verwaltete Funktion zu schreiben, die in einer DLL implementiert ist. Darüber hinaus können Sie die Art und Weise anpassen, in der die Funktion durch Plattformaufrufe erstellt wird und die Daten zur und von der Funktion gemarshallt werden.  
   
@@ -44,7 +42,7 @@ In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zu
 >  Funktionen der Win32-API, die eine Zeichenfolge reservieren, ermöglichen es Ihnen, die Zeichenfolge mithilfe einer Methode wie `LocalFree` freizugeben. Der Plattformaufruf behandelt solche Parameter unterschiedlich auf andere Weise. Für Plattformaufrufe verwenden Sie einen Parameter vom Typ `IntPtr` anstelle des Typs `String`. Verwenden Sie von der <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>-Klasse bereitgestellte Methoden, um den Typ manuell in eine Zeichenfolge zu konvertieren und die Zeichenfolge dann manuell freizugeben.  
   
 ## <a name="declaration-basics"></a>Grundlagen der Deklaration  
- Verwaltete Definitionen für nicht verwaltete Funktionen hängen von der Sprache ab, wie Sie in den folgenden Beispielen erkennen können. Ausführlichere Codebeispiele finden Sie unter [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md).  
+ Verwaltete Definitionen für nicht verwaltete Funktionen hängen von der Sprache ab, wie Sie in den folgenden Beispielen erkennen können. Ausführlichere Codebeispiele finden Sie unter [Beispiele für Plattformaufrufe](platform-invoke-examples.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -231,11 +229,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Angeben eines Einstiegspunktes](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Festlegen eines Zeichensatzes](../../../docs/framework/interop/specifying-a-character-set.md)  
- [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Plattformaufrufsicherheit](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [Identifizieren von Funktionen in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+ [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
+ [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)  
+ [Festlegen eines Zeichensatzes](specifying-a-character-set.md)  
+ [Beispiele für Plattformaufrufe](platform-invoke-examples.md)  
+ [Plattformaufrufsicherheit](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)  
+ [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)  
+ [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)

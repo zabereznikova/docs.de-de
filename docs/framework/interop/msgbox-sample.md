@@ -1,12 +1,9 @@
 ---
 title: MsgBox-Beispiel
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b14ee9c435d36e8d6a49cbfb29a57365bcd42d6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26c72ee918db48bcbdf0ce912e12d20a0719f85b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msgbox-sample"></a>MsgBox-Beispiel
 Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Parameter übergeben werden und wann das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>-Feld, das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld und das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>-Feld zu verwenden sind.  
@@ -41,7 +38,7 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
   
  In diesem Beispiel enthält die `LibWrap`-Klasse einen verwalteten Prototyp für jede nicht verwaltete Funktion, die durch die `MsgBoxSample`-Klasse aufgerufen wird. Die verwalteten Prototypmethoden `MsgBox`, `MsgBox2` und `MsgBox3` verfügen über unterschiedliche Deklarationen für ein und dieselbe nicht verwaltete Funktion.  
   
- Die Deklaration für `MsgBox2` erzeugt eine falsche Ausgabe im Meldungsfeld, da der als ANSI angegebene Zeichentyp nicht mit dem Einstiegspunkt `MessageBoxW` übereinstimmt, der dem Namen der Unicode-Funktion entspricht. Die Deklaration für `MsgBox3` erzeugt einen Übereinstimmungsfehler zwischen den Feldern **EntryPoint**, **CharSet** und **ExactSpelling**. Die `MsgBox3` -Methode löst bei ihrem Aufruf eine Ausnahme aus. Ausführliche Informationen zur Benennung von Zeichenfolgen und zum Namensmarshallen finden Sie unter [Specifying a Character Set (Angeben eines Zeichensatzes)](../../../docs/framework/interop/specifying-a-character-set.md).  
+ Die Deklaration für `MsgBox2` erzeugt eine falsche Ausgabe im Meldungsfeld, da der als ANSI angegebene Zeichentyp nicht mit dem Einstiegspunkt `MessageBoxW` übereinstimmt, der dem Namen der Unicode-Funktion entspricht. Die Deklaration für `MsgBox3` erzeugt einen Übereinstimmungsfehler zwischen den Feldern **EntryPoint**, **CharSet** und **ExactSpelling**. Die `MsgBox3` -Methode löst bei ihrem Aufruf eine Ausnahme aus. Ausführliche Informationen zur Benennung von Zeichenfolgen und zum Namensmarshallen finden Sie unter [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Deklarieren von Prototypen  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]
@@ -54,8 +51,8 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Marshallen von Zeichenfolgen](../../../docs/framework/interop/marshaling-strings.md)  
- [Datentypen für Plattformaufruf](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Standardmäßiges Marshalling für Zeichenfolgen](../../../docs/framework/interop/default-marshaling-for-strings.md)  
- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Specifying a Character Set (Angeben eines Zeichensatzes)](../../../docs/framework/interop/specifying-a-character-set.md)
+ [Marshallen von Zeichenfolgen](marshaling-strings.md)  
+ [Datentypen für Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)  
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)  
+ [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md)

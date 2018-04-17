@@ -1,33 +1,33 @@
 ---
 title: Was ist die Windows Communication Foundation?
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 
+caps.latest.revision: 51
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zum Erstellen von dienstorientierten Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zur Erstellung dienstorientierter Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
   
 -   Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 02/14/2018
   
 -   **Mehrfache Transporte und Codierungen**  
   
-     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode ist das Senden von textcodierten SOAP-Nachrichten mit dem HyperText Transfer Protocol (HTTP) zur Verwendung im World Wide Web. Alternativ können Sie mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Nachrichten über TCP, Named Pipes oder MSMQ senden. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] indem Sie unterstützten Transporten und Codierungen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
+     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode Text codiert SOAP-Nachrichten über das HyperText Transfer-Protokoll (HTTP) für die Verwendung im World Wide Web gesendet wird. Alternativ können Sie mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Nachrichten über TCP, Named Pipes oder MSMQ senden. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] indem Sie unterstützten Transporten und Codierungen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt zuverlässige Nachrichtenaustausch mit zuverlässigen Sitzungen über WS-Reliable Messaging implementiert und mithilfe von MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Unterstützung von zuverlässigen Nachrichten und Nachrichten in Warteschlangen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt den zuverlässigen Nachrichtenaustausch mit per WS-Reliable Messaging implementierten zuverlässigen Sitzungen und der Verwendung von MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Unterstützung von zuverlässigen Nachrichten und Nachrichten in Warteschlangen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finden Sie unter [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Permanente Nachrichten**  
   
