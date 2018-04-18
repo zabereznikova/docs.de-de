@@ -1,6 +1,6 @@
 ---
 title: '&amp;-Operator (C#-Referenz)'
-ms.date: 07/20/2015
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eceee8e01ba46f65c6b182a40d14e62aaba5dd53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f26305bfa1e8c9ba45493ad2ab4937d554590911
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="amp-operator-c-reference"></a>Operator &amp; (C#-Referenz)
-Der Operator & kann entweder als unärer oder als binärer Operator funktionieren.  
+# <a name="amp-operator-c-reference"></a>&amp;-Operator (C#-Referenz)
+Der `&`-Operator kann entweder als unärer oder als binärer Operator funktionieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Der unäre Operator & gibt die Adresse des Operanden zurück (erfordert [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Kontext).  
+ Der unäre `&`-Operator gibt die Adresse des Operanden zurück (erfordert [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Kontext).  
   
- Binäre &-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet & die bitweise logische AND-Operation der Operanden. Für `bool`-Operanden berechnet & die logische AND-Operation seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn beide Operanden `true` sind.  
+ Binäre `&`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet & die bitweise logische AND-Operation der Operanden. Für `bool`-Operanden berechnet & die logische AND-Operation seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn beide Operanden `true` sind.  
   
- Der `&`-Operator wertet beide Operanden unabhängig vom Wert des ersten aus. Zum Beispiel:  
+ Im Gegensatz zum [bedingten AND-Operator](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&` wertet der binäre `&`-Operator beide Operatoren unabhängig vom Wert des ersten Operators aus. Zum Beispiel:  
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
