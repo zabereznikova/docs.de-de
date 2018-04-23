@@ -1,22 +1,24 @@
 ---
-title: "Übersicht über bidirektionale Features in WPF"
-ms.custom: 
+title: Übersicht über bidirektionale Features in WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -217,7 +219,7 @@ Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../.
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Die Ersetzungsmethode wird basierend auf der Anzahl Kultur bestimmt <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> Eigenschaft. Dies ist die Standardeinstellung.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Wenn die Kultur eine Kultur Arabisch oder Farsi ist, gibt es an, dass die Ziffern für den Kontext abhängig sind.  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Wenn die Kultur eine Kultur Arabisch oder Persisch ist, gibt es an, dass die Ziffern für den Kontext abhängig sind.  
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Zahlen werden immer als Europäischen Ziffern gerendert.  
   
