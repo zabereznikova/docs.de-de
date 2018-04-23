@@ -1,6 +1,6 @@
 ---
-title: "Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac"
-description: "Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösung, die eine wiederverwendbare Bibliothek und Komponententests enthält."
+title: Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
+description: Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösung, die eine wiederverwendbare Bibliothek und Komponententests enthält.
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
@@ -11,17 +11,17 @@ ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d8f89af14167e57b7f1b3b1d6ddce5cae8f6446
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 
 Visual Studio für Mac bietet eine umfassende integrierte Entwicklungsumgebung (IDE) für die Entwicklung von .NET Core-Anwendungen. Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösung, die eine wiederverwendbare Bibliothek und Komponententests enthält.
 
-Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbegriff und eine Textzeichenfolge vom Benutzer akzeptiert, das Vorkommen des Suchbegriffs in der Zeichenfolge mit einer Methode in einer Klassenbibliothek zählt und das Ergebnis an den Benutzer zurückgibt. Die Lösung umfasst auch Komponententests für die Klassenbibliothek als Einführung in die Konzepte der testgesteuerten Entwicklung (Test-Driven Development, TDD). Wenn Sie das Tutorial lieber mit einem vollständigen Beispiel durchlaufen möchten, laden Sie die [Beispielprojektmappe](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter) herunter. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbegriff und eine Textzeichenfolge vom Benutzer akzeptiert, das Vorkommen des Suchbegriffs in der Zeichenfolge mit einer Methode in einer Klassenbibliothek zählt und das Ergebnis an den Benutzer zurückgibt. Die Lösung umfasst auch Komponententests für die Klassenbibliothek als Einführung in die Konzepte der testgesteuerten Entwicklung (Test-Driven Development, TDD). Wenn Sie das Tutorial lieber mit einem vollständigen Beispiel durchlaufen möchten, laden Sie die [Beispielprojektmappe](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter) herunter. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Ihr Feedback wird sehr geschätzt. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:

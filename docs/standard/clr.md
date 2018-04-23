@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 .NET Framework stellt eine als Common Language Runtime bezeichnete Laufzeitumgebung bereit, die Code ausführt und Dienste für die Erleichterung des Entwicklungsprozesses bereitstellt.  
@@ -71,8 +71,8 @@ ms.lasthandoff: 01/19/2018
   
 |.NET Framework-Version|Enthält CLR-Version|  
 |----------------------------|--------------------------|  
-|1,0|1,0|  
-|1,1|1,1|  
+|1.0|1.0|  
+|1.1|1.1|  
 |2.0|2.0|  
 |3.0|2.0|  
 |3.5|2.0|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[Der verwaltete Ausführungsprozess](../../docs/standard/managed-execution-process.md)|Enthält eine Beschreibung der Schritte, die erforderlich sind, um die Vorteile der Common Language Runtime nutzen zu können.|  
 |[Automatische Speicherverwaltung](../../docs/standard/automatic-memory-management.md)|Erläutert, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.|  
-|[NIB: Übersicht über .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Beschreibt die wichtigsten Konzepte von .NET Framework, z. B. das allgemeine Typsystem, sprachübergreifende Interoperabilität, verwaltete Ausführung, Anwendungsdomänen und Assemblys.|  
+|[NIB: Übersicht über .NET Framework](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Beschreibt die wichtigsten Konzepte von .NET Framework, z. B. das allgemeine Typsystem, sprachübergreifende Interoperabilität, verwaltete Ausführung, Anwendungsdomänen und Assemblys.|  
 |[Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)|Enthält eine Beschreibung der Deklaration, Verwendung und Verwaltung von Typen in der Laufzeit für die Unterstützung einer sprachübergreifenden Integration.|  
   
 ## <a name="see-also"></a>Siehe auch  

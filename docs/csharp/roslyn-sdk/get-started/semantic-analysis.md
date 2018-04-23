@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Erste Schritte mit der semantischen Analyse
 
@@ -36,7 +36,7 @@ Ebenso wie <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>
 
 In diesem Tutorial betrachten wir noch einmal das Hello World-Programm. Diesmal fragen Sie die Symbole im Programm ab, um zu verstehen, welche Typen durch diese Symbole repräsentiert werden. Sie fragen die Typen in einem Namespace ab und lernen, wie Sie die verfügbaren Methoden in einem Typ finden.
 
-Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
+Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Repository](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Die Syntaxstrukturtypen verwenden Vererbung, um die verschiedenen Syntaxelemente zu beschreiben, die an verschiedenen Positionen im Programm gültig sind. Bei der Verwendung dieser APIs müssen häufig Eigenschaften oder Sammlungsmember in bestimmte abgeleitete Typen umgewandelt werden. In den folgenden Beispielen sind die Zuweisung und die Umwandlung separate Anweisungen, bei denen explizit typisierte Variablen verwendet werden. Sie können den Code lesen, um die Rückgabetypen der API und den Laufzeittyp der zurückgegebenen Objekte zu sehen. In der Praxis ist es eher üblich, implizit typisierte Variablen zu verwenden und die Typen der zu untersuchenden Objekte mithilfe von API-Namen zu beschreiben.

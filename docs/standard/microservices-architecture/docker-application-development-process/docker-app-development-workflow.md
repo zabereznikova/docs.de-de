@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -107,7 +107,7 @@ Durch Verwendung eines offiziellen .NET Image-Repositorys von Docker-Hub mit ein
 
 Das folgende Beispiel veranschaulicht eine Dockerfile-Beispieldatei für einen ASP.NET Core-Container.
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0
   
 ARG source
@@ -296,7 +296,7 @@ Wenn die Anwendung nur über einen einzelnen Container verfügt, können Sie sie
 
 Sie können einen Docker-Container mit dem Befehl „docker run“, wie in Abbildung 5-9 dargestellt, ausführen:
 
-```
+```console
   docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
@@ -405,7 +405,7 @@ Darüber hinaus müssen Sie Schritt 2 (Hinzufügen von Docker-Unterstützung in 
 
 [Windows-Container](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) ermöglichen es Ihnen, Ihre vorhandenen Windows-Anwendungen in Docker-Images zu konvertieren und diese mit den gleichen Tools wie den Rest des Docker-Ökosystems bereitzustellen. Um Windows-Container zu verwenden, führen Sie PowerShell-Befehle in der Dockerfile-Datei aus, was im folgenden Beispiel gezeigt wird:
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
   
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
@@ -417,7 +417,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 In diesem Fall wird ein Windows Server Core-Basisimage (FROM-Einstellung) verwendet und IIS wird mit einem PowerShell-Befehl ausgeführt (RUN-Einstellung). Auf ähnliche Weise können Sie auch PowerShell-Befehle verwenden, um zusätzliche Komponenten wie ASP.NET 4.x, .NET 4.6 oder andere Windows-Software einzurichten. Der folgende Befehl in einer Dockerfile-Datei richtet z.B. ASP.NET 4.5 ein:
 
-```
+```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

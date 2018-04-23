@@ -1,12 +1,12 @@
 ---
-title: "Auswählen einer Auflistungsklasse"
-ms.custom: 
+title: Auswählen einer Auflistungsklasse
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
 Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein falscher Typ kann die Verwendung der Auflistung einschränken. Vermeiden Sie im Allgemeinen die Verwendung der Typen im <xref:System.Collections>-Namespace - es sei denn, Ihr Ziel ist ausdrücklich .NET Framework, Version 1.1. Die generischen und parallelen Versionen der Auflistungen sind vorzuziehen, weil sie größere Typsicherheit und andere Optimierungen aufweisen.  
@@ -85,7 +85,7 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
     -   Darüber hinaus können Sie eine beliebige generische Auflistungsklasse im <xref:System.Collections.Generic>-Namespace als stark typisierte Zeichenfolgenauflistungen verwenden, indem Sie die Klasse <xref:System.String> für ihre generischen Typargumente angeben.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects und PLINQ  
- Mit der LINQ to Objects-Funktion können Entwickler LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, wenn der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [LINQ-zu-Objekte](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ Mit der LINQ to Objects-Funktion können Entwickler LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, wenn der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [LINQ-zu-Objekte](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
  PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

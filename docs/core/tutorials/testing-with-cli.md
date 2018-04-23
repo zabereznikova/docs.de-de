@@ -1,6 +1,6 @@
 ---
 title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
-description: "In diesem Tutorial wird das Organisieren und Testen von .NET Core-Projekten von der Befehlszeile aus erläutert."
+description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-Projekten von der Befehlszeile aus erläutert.
 keywords: .NET, .NET Core, Komponententests, .NET Core-CLI, xUnit
 author: cartermp
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.workload: dotnetcore
-ms.openlocfilehash: 4b8728a175d67cc532866d4de41d412e459f0291
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c68b7cb7dac069093e2e849543c5b5c21b4ffe3a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
@@ -52,7 +53,7 @@ Projekte, die Dateien logisch in Ordner gruppieren, sind einfach zu navigieren u
 
 ### <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Sie können für die folgenden Schritte entweder mithilfe des [NewTypes Pets-Beispiels](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) durchführen oder Ihre eigenen Dateien und Ordner erstellen. Die Typen werden logisch in einer Ordnerstruktur organisiert, die das spätere Hinzufügen zusätzlicher Typen erlaubt. Tests werden ebenso logisch in Ordnern platziert, wobei später weitere Tests durchgeführt werden können.
+Sie können für die folgenden Schritte entweder mithilfe des [NewTypes Pets-Beispiels](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) durchführen oder Ihre eigenen Dateien und Ordner erstellen. Die Typen werden logisch in einer Ordnerstruktur organisiert, die das spätere Hinzufügen zusätzlicher Typen erlaubt. Tests werden ebenso logisch in Ordnern platziert, wobei später weitere Tests durchgeführt werden können.
 
 In diesem Beispiel sind zwei Typen enthalten, `Dog` und `Cat`, mit deren Hilfe die allgemeine Schnittstelle `IPet` implementiert wird. Ihr Ziel für das `NewTypes`-Projekt ist es, die auf Haustiere (pets) bezogenen Typen in einem *Pets*-Ordner zu organisieren. Wenn andere Typen später hinzugefügt werden, z.B. *WildAnimals*, werden sie im *NewTypes*-Ordner neben dem *Pets*-Ordner platziert. Der *WildAnimals*-Ordner kann womöglich Tierarten enthalten, die keine Haustiere sind, z.B. die Typen `Squirrel` und `Rabbit`. Dadurch, dass Typen hinzugefügt werden, bleibt das Projekt organisiert. 
 
