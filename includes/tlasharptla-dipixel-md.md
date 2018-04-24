@@ -1,1 +1,0 @@
-Geräteunabhängige Einheit (1/96 Zoll)

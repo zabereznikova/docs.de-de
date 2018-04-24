@@ -1,1 +1,0 @@
-Weitere Informationen zur Meldung, die diese Klasse darstellt, erhalten Sie in Abschnitt 13 der folgenden Spezifikation: [Web Services Federation Language (WS-Federation) Version 1.2](http://go.microsoft.com/fwlink/?LinkID=210152) (http://go.microsoft.com/fwlink/?LinkID=210152).

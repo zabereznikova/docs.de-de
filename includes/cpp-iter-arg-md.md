@@ -1,1 +1,0 @@
-Der Typ eines Elements in der kontrollierten Sequenz.

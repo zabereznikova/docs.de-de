@@ -1,1 +1,0 @@
-Geräteunabhängige Bitmap (device-independent bitmap, DIB)

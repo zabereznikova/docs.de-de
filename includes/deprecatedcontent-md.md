@@ -1,1 +1,0 @@
-In diesem Material werden veraltete Typen und Namespaces erläutert. Weitere Informationen finden Sie unter [Veraltete Typen in Windows Workflow Foundation 4.5](http://aka.ms/wfdeprecatedtypes).
