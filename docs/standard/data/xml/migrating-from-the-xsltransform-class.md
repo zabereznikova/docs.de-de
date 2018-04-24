@@ -1,29 +1,29 @@
 ---
 title: Migrieren von der XslTransform-Klasse
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 964e2de7258f4849de01e4fbeae330d009710289
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wartet mit einer umgestalteten XSLT-Architektur auf. Die <xref:System.Xml.Xsl.XslTransform>-Klasse wurde durch die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ersetzt.  
@@ -119,11 +119,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>MSXML-Funktionen  
  Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wurde um die Unterstützung für zusätzliche MSXML-Funktionen erweitert. In der folgenden Liste werden die neuen oder verbesserten Funktionen aufgeführt:  
   
--   msxsl:node-set: Bei <xref:System.Xml.Xsl.XslTransform> musste das Argument der [node-set-Funktion](http://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) ein Ergebnisstrukturfragment sein. Bei <xref:System.Xml.Xsl.XslCompiledTransform> ist dies nicht erforderlich.  
+-   msxsl:node-set: Bei <xref:System.Xml.Xsl.XslTransform> musste das Argument der [node-set-Funktion](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) ein Ergebnisstrukturfragment sein. Bei <xref:System.Xml.Xsl.XslCompiledTransform> ist dies nicht erforderlich.  
   
 -   msxsl:version: Diese Funktion wird in <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt.  
   
--   XPath-Erweiterungsfunktionen: die [ms:string-compare-Funktion](http://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc-Funktion](http://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri-Funktion](http://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name-Funktion](http://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number-Funktion](http://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date-Funktion](http://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) und [ms:format-time Funktion](http://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) werden jetzt unterstützt.  
+-   XPath-Erweiterungsfunktionen: die [ms:string-compare-Funktion](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc-Funktion](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri-Funktion](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name-Funktion](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number-Funktion](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date-Funktion](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) und [ms:format-time Funktion](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) werden jetzt unterstützt.  
   
 -   Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden von <xref:System.Xml.Xsl.XslCompiledTransform> nicht als systemeigene Funktionen unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.  
   

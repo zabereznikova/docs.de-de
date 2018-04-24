@@ -1,6 +1,6 @@
 ---
 title: Was ist verwalteter Code?
-description: "Bei verwaltetem Code handelt es sich um Code, dessen Ausführung von einer Runtime verwaltet wird, der Common Language Runtime (CLR)."
+description: Bei verwaltetem Code handelt es sich um Code, dessen Ausführung von einer Runtime verwaltet wird, der Common Language Runtime (CLR).
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>Was ist „verwalteter Code“?
 
 Bei der Arbeit mit .NET Framework begegnen Sie häufig dem Begriff „verwalteter Code“. In diesem Dokument wird erläutert, was dieser Begriff bedeutet, und es werden zusätzliche Informationen dazu bereitgestellt.
 
-Sehr einfach ausgedrückt, ist verwalteter Code genau das, was der Name besagt: Code, dessen Ausführung von einer Runtime verwaltet wird. In diesem Fall wird die betreffende Runtime als **Common Language Runtime** oder CLR bezeichnet, unabhängig von der Implementierung ([Mono](http://www.mono-project.com/) oder .NET Framework oder .NET Core). Die CLR übernimmt die Aufgabe, den verwalteten Code in Computercode zu kompilieren und dann auszuführen. Darüber hinaus bietet die Common Language Runtime mehrere wichtige Dienste wie die automatische Arbeitsspeicherverwaltung, Sicherheitsgrenzen, Typsicherheit usw.
+Sehr einfach ausgedrückt, ist verwalteter Code genau das, was der Name besagt: Code, dessen Ausführung von einer Runtime verwaltet wird. In diesem Fall wird die betreffende Runtime als **Common Language Runtime** oder CLR bezeichnet, unabhängig von der Implementierung ([Mono](https://www.mono-project.com/) oder .NET Framework oder .NET Core). Die CLR übernimmt die Aufgabe, den verwalteten Code in Computercode zu kompilieren und dann auszuführen. Darüber hinaus bietet die Common Language Runtime mehrere wichtige Dienste wie die automatische Arbeitsspeicherverwaltung, Sicherheitsgrenzen, Typsicherheit usw.
 
 Vergleichen Sie dies mit der Art und Weise, auf die Sie ein C-/C++-Programm ausführen, dem sogenannten „nicht verwalteten Code“. Im nicht verwalteten Bereich ist der Programmierer für nahezu alles zuständig. Das tatsächliche Programm ist im Wesentlichen eine Binärdatei, die vom Betriebssystem in den Arbeitsspeicher geladen und gestartet wird. Alles Übrige, von der Arbeitsspeicherverwaltung bis hin zu den Sicherheitsaspekten, liegt in der Verantwortung des Programmierers.
 

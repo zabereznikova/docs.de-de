@@ -1,6 +1,6 @@
 ---
 title: Iterators
-description: "Erfahren Sie, wie integrierte C#-Iteratoren verwendet werden und wie Sie eigene benutzerdefinierte Iteratormethoden erstellen können."
+description: Erfahren Sie, wie integrierte C#-Iteratoren verwendet werden und wie Sie eigene benutzerdefinierte Iteratormethoden erstellen können.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 403a286e9b1168b9e913b3cb2764e7fe262017d4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="iterators"></a>Iterators
 
@@ -29,7 +29,7 @@ Sie erstellen auch Iteratormethoden, die einen Iterator für die Elemente dieser
 
 Die Programmiersprache C# bietet Funktionen für diese beiden Szenarien. Dieser Artikel enthält eine Übersicht über diese Funktionen.
 
-Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. [Hier](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) können Sie das vollständige Beispiel für dieses Thema anzeigen oder herunterladen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. [Hier](https://github.com/dotnet/samples/blob/master/csharp/iterators) können Sie das vollständige Beispiel für dieses Thema anzeigen oder herunterladen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Durchlaufen mit foreach
 

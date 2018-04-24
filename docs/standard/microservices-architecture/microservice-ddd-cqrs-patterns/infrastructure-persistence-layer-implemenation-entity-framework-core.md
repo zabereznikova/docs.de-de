@@ -1,6 +1,6 @@
 ---
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
-description: ".NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core"
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -342,7 +342,7 @@ Der Hi/Lo-Algorithmus beschreibt einen Mechanismus für das Generieren sicherer 
 
 -   Er generiert einen visuell lesbaren Bezeichner (im Gegensatz zu Techniken, die GUIDs zu verwenden).
 
-EF Core unterstützt wie im vorigen Beispiel gezeigt [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) mit der ForSqlServerUseSequenceHiLo-Methode.
+EF Core unterstützt wie im vorigen Beispiel gezeigt [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) mit der ForSqlServerUseSequenceHiLo-Methode.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Zuordnen von Feldern anstelle von Eigenschaften
 
@@ -467,7 +467,7 @@ Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, 
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Shadow Properties (Schatteneigenschaften)**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

@@ -1,6 +1,6 @@
 ---
 title: '.NET Compiler Platform SDK: Konzepte und Objektmodell'
-description: "In dieser Übersicht erhalten Sie die nötigen Hintergrundinformationen, damit Sie effektiv mit dem .NET Compiler SDK arbeiten können. Erfahren Sie mehr über API-Ebenen, die wichtigsten beteiligten Typen und das gesamte Objektmodell."
+description: In dieser Übersicht erhalten Sie die nötigen Hintergrundinformationen, damit Sie effektiv mit dem .NET Compiler SDK arbeiten können. Erfahren Sie mehr über API-Ebenen, die wichtigsten beteiligten Typen und das gesamte Objektmodell.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Verstehen des .NET Compiler Platform SDK-Modells
 
@@ -22,15 +22,15 @@ Compiler verarbeiten den von Ihnen geschriebenen Code, indem sie sich an strenge
 
 Das .NET Compiler Platform SDK stellt Ihnen als Consumer die Codeanalyse des Compilers für C# und Visual Basic zur Verfügung, indem es eine API-Ebene bereitstellt, die eine traditionelle Compilerpipeline nachahmt.
 
-![Schritte der Compilerpipeline, die Quellcode in Objektcode verarbeitet](media/compiler-pipeline.png)
+![Schritte der Compilerpipeline, die Quellcode in Objektcode verarbeitet](media/compiler-api-model/compiler-pipeline.png)
 
 Jede Phase dieser Pipeline stellt eine separate Komponente dar. Zunächst wird in der Analysephase Quelltext in Token zerlegt und analysiert, sodass eine Syntax entsteht, die der Grammatik der Sprache entspricht. Dann werden in der Deklarationsphase die Quelle und importierte Metadaten analysiert, sodass sie benannte Symbole formen. In der Bindungsphase werden Bezeichner im Code Symbolen zugeordnet. Zuletzt werden in der Ausgabephase Assemblys mit sämtlichen Informationen ausgegeben, die vom Compiler erstellt wurden.
 
-![Über die API der Compilerpipeline wird Zugriff auf sämtliche Schritte gewährt, die Bestandteil der Compilerpipeline sind.](media/compiler-pipeline-api.png)
+![Über die API der Compilerpipeline wird Zugriff auf sämtliche Schritte gewährt, die Bestandteil der Compilerpipeline sind.](media/compiler-api-model/compiler-pipeline-api.png)
 
 Für jede dieser Phasen stellt das .NET Compiler Platform SDK ein Objektmodell zur Verfügung, das Zugriff auf die Informationen zu der jeweiligen Phase gewährt. In der Analysephase wird eine Syntaxstruktur zur Verfügung gestellt, in der Deklarationsphase eine hierarchische Symboltabelle, in der Bindungsphase das Ergebnis der semantischen Analyse des Compilers, und die Ausgabephase besteht aus einer API, die IL-Bytecode erstellt.
 
-![Die über die Compiler-API zugänglichen Sprachdienste bei jedem Schritt der Compilerpipeline](media/compiler-pipeline-lang-svc.png)
+![Die über die Compiler-API zugänglichen Sprachdienste bei jedem Schritt der Compilerpipeline](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Jeder Compiler vereint diese Komponenten zu einem End-to-End-Objekt.
 
@@ -40,7 +40,7 @@ Bei diesen APIs handelt es sich um dieselben, die von Visual Studio verwendet we
 
 Das .NET-Compiler SDK besteht aus zwei Hauptebenen von APIs: Compiler-APIs und Arbeitsbereich-APIs.
 
-![Die API-Ebenen, die von den APIs der Compilerpipeline dargestellt werden](media/api-layers.png)
+![Die API-Ebenen, die von den APIs der Compilerpipeline dargestellt werden](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>Compiler-APIs
 

@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
-Klassenbibliotheken sind das Konzept der [freigegebenen Bibliothek](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) für .NET. Sie können damit nützliche Funktionalität auf Module verteilen, die von mehreren Anwendungen verwendet werden können. Sie können auch verwendet werden, um Funktionalität zu laden, die beim Start der Anwendung nicht benötigt wird bzw. nicht bekannt ist. Klassenbibliotheken werden mithilfe des [.NET Assembly-Dateiformats](assembly-format.md) beschriebenen.
+Klassenbibliotheken sind das Konzept der [freigegebenen Bibliothek](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) für .NET. Sie können damit nützliche Funktionalität auf Module verteilen, die von mehreren Anwendungen verwendet werden können. Sie können auch verwendet werden, um Funktionalität zu laden, die beim Start der Anwendung nicht benötigt wird bzw. nicht bekannt ist. Klassenbibliotheken werden mithilfe des [.NET Assembly-Dateiformats](assembly-format.md) beschriebenen.
 
 Es gibt drei Arten von Klassenbibliotheken, die Sie verwenden können:
 
@@ -43,7 +43,7 @@ Portable Bibliotheken werden auf mehreren .NET-Implementierungen unterstützt. S
 
 Wenn Sie eine portable Bibliothek erstellen, wählen Sie eine Plattformkonfiguration. Dabei handelt es sich um den Satz von Plattformen, die Sie unterstützen müssen (z.B. .NET Framework 4.5 +, Windows Phone 8.0 +). Je höher die Zahl der Plattformen ist, für deren Unterstützung Sie sich entscheiden, desto weniger APIs und Plattformannahmen sind möglich, der kleinste gemeinsame Nenner. Dieses Merkmal erscheint vielleicht auf den ersten Blick verwirrend, da Benutzer häufig denken: „Mehr ist besser“ und dann feststellen müssen, dass eine höhere Zahl unterstützter Plattformen zu weniger verfügbaren APIs führt.
 
-Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifischer Bibliotheken aus einer Quelle (mit bedingten Kompilierungsdirektiven) zu portablen Bibliotheken gewechselt. Es gibt [mehrere Ansätze](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) für den Zugriff auf plattformspezifische Funktionalität in portablen Bibliotheken, wobei das [Lockvogelangebot](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) im Moment das gängigste Verfahren ist.
+Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifischer Bibliotheken aus einer Quelle (mit bedingten Kompilierungsdirektiven) zu portablen Bibliotheken gewechselt. Es gibt [mehrere Ansätze](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) für den Zugriff auf plattformspezifische Funktionalität in portablen Bibliotheken, wobei das [Lockvogelangebot](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) im Moment das gängigste Verfahren ist.
 
 ### <a name="net-standard-class-libraries"></a>.NET Standard-Klassenbibliotheken
 

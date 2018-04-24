@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
-ms.translationtype: MT
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
@@ -32,7 +33,7 @@ Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der 
 
 -   Führen Sie automatisierte Tests als Teil Ihrer Buildpipeline in Visual Studio Team Services aus.
 
--   Visual Studio Team Services kann den Lebenszyklus von DevOps mit der Bereitstellung in mehreren Umgebungen straffen, nicht nur für Produktionsumgebungen, sondern auch für Tests, einschließlich A/B-Experimente, [Canary Releases](http://martinfowler.com/bliki/CanaryRelease.html) usw.
+-   Visual Studio Team Services kann den Lebenszyklus von DevOps mit der Bereitstellung in mehreren Umgebungen straffen, nicht nur für Produktionsumgebungen, sondern auch für Tests, einschließlich A/B-Experimente, [Canary Releases](https://martinfowler.com/bliki/CanaryRelease.html) usw.
 
 -   Organisationen können Docker-Container aus privaten Images, die in der Azure Container Registry gespeichert sind, zusammen mit allen Abhängigkeiten von Azure-Komponenten (Daten, PaaS usw.) mithilfe von Azure Resource Manager-Vorlagen und -Tools bereitstellen, die schon jetzt problemlos eingesetzt werden.
 

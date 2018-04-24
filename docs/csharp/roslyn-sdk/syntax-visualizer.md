@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -28,16 +28,17 @@ Die **Syntaxschnellansicht** ermöglicht die Untersuchung der Syntaxstruktur fü
 
 Dieser Befehl öffnet die Syntaxschnellansicht als unverankertes Toolfenster. Wenn Sie kein Code-Editor-Fenster geöffnet haben, ist die Anzeige leer, wie in der folgenden Abbildung dargestellt. 
 
-![Das Toolfenster der Syntaxschnellansicht](media/syntax-visualizer.png)
+![Das Toolfenster der Syntaxschnellansicht](media/syntax-visualizer/syntax-visualizer.png)
 
 Docken Sie dieses Toolfenster an einem geeigneten Ort innerhalb von Visual Studio an, z.B. an die linke Seite. Die Schnellansicht zeigt Informationen über die aktuelle Codedatei.
 
 Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Sie können entweder ein VB- oder ein C#-Projekt erstellen. Wenn Visual Studio die Haupt-Codedatei für dieses Projekt öffnet, zeigt die Schnellansicht die entsprechende Syntaxstruktur an. Sie können eine beliebige C#-/VB-Datei in dieser Instanz von Visual Studio öffnen, und die Schnellansicht zeigt die Syntaxstruktur dieser Datei an. Wenn Sie mehrere Codedateien in Visual Studio geöffnet haben, zeigt die Schnellansicht die Syntaxstruktur für die derzeit aktive Codedatei (die Codedatei, die über den Tastaturfokus verfügt) an.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Visualisieren einer C#-Syntaxstruktur](media/visualize-csharp.png)
+![Visualisieren einer C#-Syntaxstruktur](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![Visualisieren einer VB-Syntaxstruktur](media/visualize-visual-basic.png)
+![Visualisieren einer VB-Syntaxstruktur](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 Wie in den vorherigen Abbildungen dargestellt wird, zeigt das Schnellansichts-Toolfenster die Syntaxstruktur oben und ein Eigenschaftenraster unten an. Das Eigenschaftenraster zeigt die Eigenschaften des Elements an, das derzeit in der Struktur ausgewählt ist, einschließlich .NET-*Typ* und *Art* (SyntaxKind) des Elements.
@@ -60,13 +61,18 @@ Unterbrechen Sie die Eingabe, nachdem Sie `Console.` eingegeben haben. Die Struk
 
 Klicken Sie mit der rechten Maustaste auf ein beliebiges Element in der Struktur, und klicken Sie auf **Gerichtetes Syntax-Diagramm anzeigen**. 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 Die Schnellansicht zeigt eine grafische Darstellung des Teilbaums, der von dem ausgewählten Element abstammt. Versuchen Sie diese Schritte für den **MethodDeclaration**-Knoten, der der `Main()`-Methode im C#-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
-![C#-Syntaxdiagramm](media/csharp-syntax-graph.png)
+![C#-Syntaxdiagramm](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode im vorangehenden VB-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
-![VB-Syntaxdiagramm](media/visual-basic-syntax-graph.png)
+![VB-Syntaxdiagramm](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 Der Syntaxdiagramm-Viewer verfügt über eine Option zum Anzeigen seines Farbschemas. Sie können auch mit dem Mauszeiger auf einzelne Elemente im Syntaxdiagramm zeigen, um die Eigenschaften des jeweiligen Elements anzuzeigen.
 
@@ -74,7 +80,7 @@ Sie können Syntaxdiagramme für verschiedene Elemente in der Struktur wiederhol
 
 So sieht das Docking-Layout für die Verwendung mit dem Schnellansichts-Toolfenster und dem Syntaxdiagramm aus:
 
-![Ein Docking-Layout für Schnellansichts- und Syntaxdiagrammfenster](media/docking-layout.png)
+![Ein Docking-Layout für Schnellansichts- und Syntaxdiagrammfenster](media/syntax-visualizer/docking-layout.png)
 
 Bei einem Setup mit zwei Monitoren kann das Syntaxdiagramm auch auf einen zweiten Monitor gelegt werden.
 
@@ -84,19 +90,19 @@ Die Syntaxschnellansicht ermöglicht die rudimentäre Überprüfung von Symbolen
 
 Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Art = Methode**.
 
-![Symboleigenschaften](media/symbol-properties.png)
+![Symboleigenschaften](media/syntax-visualizer/symbol-properties.png)
 
 Versuchen Sie **View TypeSymbol (if any)** (TypeSymbol anzeigen (sofern vorhanden)) für den gleichen **AddExpression**-Knoten. Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung aktualisiert und zeigt an, dass der Typ des gewählten Ausdrucks `Int32` ist.
 
-![Eigenschaften von TypeSymbol](media/type-symbol-properties.png)
+![Eigenschaften von TypeSymbol](media/syntax-visualizer/type-symbol-properties.png)
 
 Versuchen Sie **View Converted TypeSymbol (if any)** (Konvertiertes TypeSymbol anzeigen (sofern vorhanden)) für den gleichen **AddExpression**-Knoten. Das aktualisierte Eigenschaftenraster zeigt an, dass zwar der Typ des Ausdrucks `Int32` ist, der konvertierte Typ des Ausdrucks aber `Double` ist, wie in der folgenden Abbildung gezeigt. Dieser Knoten beinhaltet konvertierte TypeSymbol-Eigenschaften, da der `Int32`-Ausdruck in einem Kontext erscheint, in dem er zu `Double` konvertiert werden muss. Diese Konvertierung erfüllt den `Double`-Typ für die Variable `x` auf der linken Seite des Zuweisungsoperators.
 
-![Eigenschaften von TypeSymbol (konvertiert)](media/converted-type-symbol-properties.png)
+![Eigenschaften von TypeSymbol (konvertiert)](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 Versuchen Sie als Letztes **View Constant Value (if any)** (Konstanten Wert anzeigen (sofern vorhanden)) für den gleichen **AddExpression**-Knoten. Das Eigenschaftenraster zeigt an, dass der Wert des Ausdrucks eine kompilierte Zeitkonstante mit dem Wert `2` ist.
 
-![Ein konstanter Wert](media/constant-value.png)
+![Ein konstanter Wert](media/syntax-visualizer/constant-value.png)
 
 Das vorherige Beispiel kann auch in VB repliziert werden. Geben Sie `Dim x As Double = 1 + 1` in einer VB-Datei ein. Wählen Sie den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den entsprechenden **AddExpression**-Knoten in der Schnellansicht hervor. Wiederholen Sie die vorherigen Schritte für **AddExpression**, und Sie sollten identische Ergebnisse erhalten.
 
@@ -114,15 +120,15 @@ End Module
 
 Dieser Code führt einen Alias mit dem Namen `C` ein, der dem Typ `System.Console` am Anfang der Datei zugeordnet ist und verwendet diesen Alias in `Main()`. Wählen Sie die Verwendung dieses Alias aus, der `C` in `C.WriteLine()`, innerhalb der `Main()`-Methode. Die Schnellansicht wählt den entsprechenden **IdentifierName**-Knoten in der Schnellansicht aus. Klicken Sie mit der rechten Maustaste auf diesen Knoten, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)**. Das Eigenschaftenraster zeigt an, dass dieser Bezeichner an den Typ `System.Console` gebunden ist, wie in der nachfolgenden Abbildung gezeigt:
 
-![Symboleigenschaften](media/symbol-visual-basic.png)
+![Symboleigenschaften](media/syntax-visualizer/symbol-visual-basic.png)
 
 Versuchen Sie **View AliasSymbol (if any)** (AliasSymbol anzeigen (sofern vorhanden)) für den gleichen **IdentifierName**-Knoten. Das Eigenschaftenraster zeigt an, dass der Bezeichner ein Alias mit dem Namen `C` ist, der an das Ziel `System.Console` gebunden ist. Mit anderen Worten: Das Eigenschaftenraster liefert Informationen in Bezug auf das **AliasSymbol**, das zum Bezeichner `C` gehört.
 
-![AliasSymbol-Eigenschaften](media/alias-symbol.png)
+![AliasSymbol-Eigenschaften](media/syntax-visualizer/alias-symbol.png)
 
 Untersuchen Sie das Symbol auf deklarierten Typ, Methode, Eigenschaft. Wählen Sie den entsprechenden Knoten in der Schnellansicht aus, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)**. Wählen Sie die Methode `Sub Main()`, einschließlich des Textkörpers der Methode. Klicken Sie auf **Symbol anzeigen (sofern vorhanden)** für den entsprechenden **SubBlock**-Knoten in der Schnellansicht. Das Eigenschaftenraster zeigt, dass das **MethodSymbol** für diesen **SubBlock** den Namen `Main` mit Rückgabetyp `Void` hat.
 
-![Symbol für eine Methodendeklaration anzeigen](media/method-symbol.png)
+![Symbol für eine Methodendeklaration anzeigen](media/syntax-visualizer/method-symbol.png)
 
 Die obengenannten Beispiele können problemlos in C# nachgestellt werden. Geben Sie `using C = System.Console;` anstelle von `Imports C = System.Console` für den Alias ein. Die vorhergehenden Schritte in C# ergeben identische Ergebnisse im Schnellansichtsfenster.
 

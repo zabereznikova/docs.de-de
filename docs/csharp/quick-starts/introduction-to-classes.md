@@ -1,5 +1,5 @@
 ---
-title: "Tutorial „Einführung in Klassen“: Lokale C#-Schnellstarts"
+title: 'Tutorial „Einführung in Klassen“: Lokale C#-Schnellstarts'
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Einführung in Klassen
 
@@ -215,6 +215,6 @@ Geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie „stecken geblieben“ sind, sehen Sie sich die Quelle für diesen Schnellstart [in unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/) an.
+Wenn Sie „stecken geblieben“ sind, sehen Sie sich die Quelle für diesen Schnellstart [in unserem GitHub-Repository](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/) an.
 
 Herzlichen Glückwunsch, Sie haben nun alle unsere Schnellstarts absolviert. Wenn Sie mehr lernen möchten, nutzen Sie unsere [Tutorials](../tutorials/index.md).

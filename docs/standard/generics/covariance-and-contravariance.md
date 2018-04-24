@@ -1,12 +1,12 @@
 ---
 title: Kovarianz und Kontravarianz in Generika
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 595b637ac12b6ecd8633bb8f48a54d722bc84f49
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generika
 <a name="top"></a> Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/12/2018
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Varianz in generischen und nicht generischen Delegaten  
  Im obigen Code passt die Signatur von `MyMethod` exakt zur Signatur des erstellten generischen Delegaten `Func<Base, Derived>` (`Func(Of Base, Derived)` in Visual Basic). Das Beispiel zeigt, dass dieser generische Delegat in Variablen oder Methodenparametern mit weiter abgeleiteten Parametertypen und weniger abgeleiteten Rückgabetypen gespeichert werden kann, solange alle Delegattypen aus dem generischen Delegattyp <xref:System.Func%602>erstellt werden.  
   
- Dies ist ein wichtiger Punkt. Kovarianz und Kontravarianz haben in den Typparametern generischer Delegaten ähnliche Auswirkungen wie bei der normalen Delegatbindung (siehe [Varianz in Delegaten](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Die Varianz bei der Delegatbindung funktioniert jedoch bei allen Delegattypen und nicht nur bei generischen Delegattypen, die über variante Typparameter verfügen. Darüber hinaus kann durch die Varianz bei der Delegatbindung eine Methode an einen beliebigen Delegaten gebunden werden, der restriktivere Parametertypen und einen weniger restriktiven Rückgabetyp verwendet, wohingegen die Zuweisung generischer Delegaten nur funktioniert, wenn beide Delegattypen aus der gleichen generischen Typdefinition erstellt wurden.  
+ Dies ist ein wichtiger Punkt. Kovarianz und Kontravarianz haben in den Typparametern generischer Delegaten ähnliche Auswirkungen wie bei der normalen Delegatbindung (siehe [Varianz in Delegaten](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Die Varianz bei der Delegatbindung funktioniert jedoch bei allen Delegattypen und nicht nur bei generischen Delegattypen, die über variante Typparameter verfügen. Darüber hinaus kann durch die Varianz bei der Delegatbindung eine Methode an einen beliebigen Delegaten gebunden werden, der restriktivere Parametertypen und einen weniger restriktiven Rückgabetyp verwendet, wohingegen die Zuweisung generischer Delegaten nur funktioniert, wenn beide Delegattypen aus der gleichen generischen Typdefinition erstellt wurden.  
   
  Im folgenden Beispiel werden die kombinierten Effekte von Varianz in der Delegatbindung und Varianz bei generischen Typparametern veranschaulicht. Im Beispiel wird eine Typhierarchie definiert, die drei Typen beinhaltet, vom am wenigsten abgeleiteten Typ (`Type1`) bis zum am weitesten abgeleiteten Typ (`Type3`). Bei der normalen Delegatbindung wird die Varianz verwendet, um eine Methode mit dem Parametertyp `Type1` und dem Rückgabetyp `Type3` an einen generischen Delegaten mit dem Parametertyp `Type2` und dem Rückgabetyp `Type2`zu binden. Der resultierende generische Delegat wird anschließend einer anderen Variablen zugewiesen, deren generischer Delegattyp einen Parameter vom Typ `Type3` und den Rückgabetyp `Type1`hat. Hierbei werden Kovarianz und Kontravarianz generischer Typparameter verwendet. Bei der zweiten Zuweisung müssen sowohl der Variablentyp als auch der Delegattyp mit der gleichen generischen Typdefinition erstellt werden, in diesem Fall <xref:System.Func%602>.  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 03/12/2018
   
  In Visual Basic und C# müssen die Regeln zum Verwenden von kovarianten und kontravarianten Typparametern eingehalten werden, und es ist nicht möglich, Kovarianz- und Kontravarianzkennzeichnungen zu den Typparametern anderer Typen als Schnittstellen- und Delegattypen hinzuzufügen. Der [MSIL-Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) führt keine solchen Überprüfungen aus, es wird aber eine <xref:System.TypeLoadException> ausgelöst, wenn Sie versuchen, einen Typ zu laden, der gegen die Regeln verstößt.  
   
- Weitere Informationen und einen Beispielcode finden Sie unter [Varianz in generischen Schnittstellen](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Weitere Informationen und einen Beispielcode finden Sie unter [Varianz in generischen Schnittstellen](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
   
  [Zurück zum Anfang](#top)  
   
@@ -201,4 +201,4 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>Siehe auch  
  [Kovarianz und Kontravarianz (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [Kovarianz und Kontravarianz (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Varianz bei Delegaten](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+ [Varianz bei Delegaten](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

@@ -1,6 +1,6 @@
 ---
-title: "Arbeiten mit dem Arbeitsbereichsmodell für .NET Compiler Platform SDK"
-description: "In dieser Übersicht werden die Typen vorgestellt, die Sie zum Abfragen und Bearbeiten von Arbeitsbereichen und Projekten für Ihren Code verwenden."
+title: Arbeiten mit dem Arbeitsbereichsmodell für .NET Compiler Platform SDK
+description: In dieser Übersicht werden die Typen vorgestellt, die Sie zum Abfragen und Bearbeiten von Arbeitsbereichen und Projekten für Ihren Code verwenden.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>Arbeiten mit einem Arbeitsbereich
 
@@ -40,7 +40,7 @@ Dokumente sind ebenfalls Bestandteile des gesamten nicht veränderbaren Projektm
 
 Im folgenden Diagramm wird deutlich, in welcher Beziehung der Arbeitsbereich zu der Hostumgebung und den Tools steht und wie Bearbeitungen vorgenommen werden.
 
-![Die Beziehungen zwischen verschiedenen Elementen eines Arbeitsbereichs, der Projekte und Quelldateien enthält](media/workspace-obj-relations.png)
+![Die Beziehungen zwischen verschiedenen Elementen eines Arbeitsbereichs, der Projekte und Quelldateien enthält](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Zusammenfassung
 

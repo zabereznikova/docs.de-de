@@ -1,6 +1,6 @@
 ---
-title: "Native Interoperabilität"
-description: "Erfahren Sie, wie Sie eine Verknüpfung mit nativen Komponenten in .NET herstellen."
+title: Native Interoperabilität
+description: Erfahren Sie, wie Sie eine Verknüpfung mit nativen Komponenten in .NET herstellen.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>Native Interoperabilität
 
@@ -26,7 +26,7 @@ In diesem Dokument werden alle drei Möglichkeiten für „native Interoperabili
 Es gibt einige Gründe für das Aufrufen von nativem Code:
 
 *   Im Lieferumfang von Betriebssystemen ist eine große Anzahl von APIs enthalten, die in den verwalteten Klassenbibliotheken nicht vorhanden sind. Ein gutes Beispiel hierfür ist der Zugriff auf Hardware- oder Betriebssystem-Verwaltungsfunktionen.
-*   Die Kommunikation mit anderen Komponenten, die über ABIs im C-Format (native ABIs) verfügen oder diese erstellen können. Hierzu gehört beispielsweise Java-Code, der über die [Java Native Interface (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) verfügbar gemacht wird, oder eine beliebige andere verwaltete Sprache, die eine native Komponente erstellen kann.
+*   Die Kommunikation mit anderen Komponenten, die über ABIs im C-Format (native ABIs) verfügen oder diese erstellen können. Hierzu gehört beispielsweise Java-Code, der über die [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) verfügbar gemacht wird, oder eine beliebige andere verwaltete Sprache, die eine native Komponente erstellen kann.
 *   Unter Windows werden für den Großteil der installierten Software (z.B. Microsoft Office-Suite) COM-Komponenten registriert, die ihre Programme darstellen und den Entwicklern deren Automatisierung oder Verwendung ermöglichen. Auch hierfür ist native Interoperabilität erforderlich.
 
 Natürlich deckt die obige Liste nicht alle möglichen Situationen und Szenarios ab, in denen ein Entwickler eine Schnittstelle mit nativen Komponenten benötigt. Die .NET-Klassenbibliothek verwendet zum Beispiel die Unterstützung für native Interoperabilität, um eine große Anzahl ihrer APIs zu implementieren, z.B. die Unterstützung und Bearbeitung der Konsole, Dateisystemzugriff und mehr. Es ist jedoch unbedingt zu beachten, dass es eine Option gibt, wenn man sie benötigen sollte.
@@ -340,6 +340,6 @@ Die `StatClass`-Klasse stellt eine Struktur dar, die vom `stat`-Systemaufruf auf
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 
-*   [PInvoke.NET-Wiki](http://www.pinvoke.net) ist eine ausgezeichnete Wiki-Seite mit Informationen zu gängigen Win32-APIs und deren Aufruf.
+*   [PInvoke.NET-Wiki](https://www.pinvoke.net/) ist eine ausgezeichnete Wiki-Seite mit Informationen zu gängigen Win32-APIs und deren Aufruf.
 *   [P/Invoke auf MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Mono-Dokumentation zu P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [Mono-Dokumentation zu P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

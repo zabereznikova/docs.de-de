@@ -9,11 +9,11 @@ ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -42,7 +42,7 @@ In den folgenden Abschnitten werden die zuvor genannten Gründe für eine Entsch
 
 Wenn Ihre Anwendung (Web/Dienst) auf mehreren Plattformen ausgeführt werden muss (Windows, Linux und macOS), verwenden Sie .NET Core.
 
-.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) für Windows und macOS. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editors von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editors von Drittanbietern rufen IntelliSense mit [OmniSharp](http://www.omnisharp.net/) ab. Da Sie die [.NET Core-Befehlszeilentools](../core/tools/index.md) direkt verwenden können, die für alle unterstützten Plattformen verfügbar sind, ist ein Code-Editor überflüssig.
+.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) für Windows und macOS. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editors von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editors von Drittanbietern rufen IntelliSense mit [OmniSharp](https://www.omnisharp.net/) ab. Da Sie die [.NET Core-Befehlszeilentools](../core/tools/index.md) direkt verwenden können, die für alle unterstützten Plattformen verfügbar sind, ist ein Code-Editor überflüssig.
 
 ### <a name="microservices-architecture"></a>Microservicearchitektur
 
@@ -50,7 +50,7 @@ Durch eine Microservicearchitektur ist eine dienstübergreifende Kombination aus
 
 Es stehen viele verschiedene Infrastrukturplattformen zur Verfügung. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) wurde für große und komplexe Microservicesysteme entwickelt. [Azure App Service](https://azure.microsoft.com/services/app-service/) ist eine gute Wahl bei zustandslosen Microservices. Auf Docker basierende Alternativen zu Microservices sind – wie im Abschnitt [Container](#containers) erläutert – mit allen Arten von Microserviceimplementierungen kompatibel. All diese Plattformen unterstützen .NET Core und eignen sich daher ideal zum Hosten Ihrer Microservices.
 
-Weitere Informationen zur Microservicearchitektur finden Sie unter [.NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md).
+Weitere Informationen zur Microservicearchitektur finden Sie unter .NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md).
 
 ### <a name="containers"></a>Container
 

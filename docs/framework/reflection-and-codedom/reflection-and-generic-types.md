@@ -1,12 +1,13 @@
 ---
 title: Reflektion und generische Typen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>Reflektion und generische Typen
 <a name="top"></a> Aus Sicht der Reflektion besteht der Unterschied zwischen einem generischen und einem normalen Typ darin, dass ein generischer Typ mit einem Typparameterset (bei einer generischen Typdefinition) oder mit Typargumenten (bei einem konstruierten Typ) verknüpft ist. Auf dieselbe Art unterscheidet sich eine generische Methode von einer normalen Methode.  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>Ist dies ein generischer Typ oder eine generische Methode?  
- Verwenden Sie beim Überprüfen eines unbekannten durch eine Instanz der <xref:System.Type>-Klasse dargestellten Typs die <xref:System.Type.IsGenericType%2A> -Eigenschaft, um zu ermitteln, ob es sich beim unbekannten Typ um einen generischen Typ handelt. Die Eigenschaft gibt `true` zurück, wenn es sich um einen generischen Typ handelt. Verwenden Sie dementsprechend beim Überprüfen einer unbekannten durch eine Instanz der <xref:System.Reflection.MethodInfo> -Klasse dargestellten Methode die <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> -Eigenschaft, um zu ermitteln, ob es sich bei der unbekannten Methode um eine generische Methode handelt.  
+ Verwenden Sie beim Überprüfen eines unbekannten durch eine Instanz der <xref:System.Type>-Klasse dargestellten Typs die <xref:System.Type.IsGenericType%2A> -Eigenschaft, um zu ermitteln, ob es sich beim unbekannten Typ um einen generischen Typ handelt. Die Eigenschaft gibt `true` zurück, wenn es sich um einen generischen Typ handelt. Verwenden Sie dementsprechend beim Überprüfen einer unbekannten durch eine Instanz der <xref:System.Reflection.MethodInfo> -Klasse dargestellten Methode die <xref:System.Reflection.MethodBase.IsGenericMethod%2A> -Eigenschaft, um zu ermitteln, ob es sich bei der unbekannten Methode um eine generische Methode handelt.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>Ist dies eine generische Typ- oder Methodendefinition?  
- Mit der <xref:System.Type.IsGenericTypeDefinition%2A> -Eigenschaft können Sie bestimmen, ob ein <xref:System.Type> -Objekt eine generische Typdefinition darstellt, und mit der <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> -Methode, ob ein <xref:System.Reflection.MethodInfo> -Objekt eine generische Methodendefinition darstellt.  
+ Mit der <xref:System.Type.IsGenericTypeDefinition%2A> -Eigenschaft können Sie bestimmen, ob ein <xref:System.Type> -Objekt eine generische Typdefinition darstellt, und mit der <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> -Methode, ob ein <xref:System.Reflection.MethodInfo> -Objekt eine generische Methodendefinition darstellt.  
   
  Generische Typ- und Methodendefinitionen sind Vorlagen, aus denen instanziierbare Typen erstellt werden. Generische Typen in der .NET Framework-Klassenbibliothek wie <xref:System.Collections.Generic.Dictionary%602>sind generische Typdefinitionen.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Ist der Typ bzw. die Methode offen oder geschlossen?  
- Ein generischer Typ oder eine generische Methode ist geschlossen, wenn alle Typparameter, u. a. Typparameter aller einschließenden Typen durch instanziierbare Typen ersetzt wurden. Sie können nur eine Instanz eines generischen Typs erstellen, wenn er geschlossen ist. Die <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> -Eigenschaft gibt `true` zurück, wenn ein Typ offen ist. Bei Methoden erfüllt die <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> -Methode die gleiche Funktion.  
+ Ein generischer Typ oder eine generische Methode ist geschlossen, wenn alle Typparameter, u. a. Typparameter aller einschließenden Typen durch instanziierbare Typen ersetzt wurden. Sie können nur eine Instanz eines generischen Typs erstellen, wenn er geschlossen ist. Die <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> -Eigenschaft gibt `true` zurück, wenn ein Typ offen ist. Bei Methoden erfüllt die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> -Methode die gleiche Funktion.  
   
  [Zurück zum Anfang](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>Invarianten  
- Eine Tabelle der invarianten Bedingungen für allgemeine Begriffe in Reflektion für generische Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Weitere Begriffe, die im Zusammenhang mit generischen Methoden stehen, finden Sie unter <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>.  
+ Eine Tabelle der invarianten Bedingungen für allgemeine Begriffe in Reflektion für generische Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Weitere Begriffe, die im Zusammenhang mit generischen Methoden stehen, finden Sie unter <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
   
  [Zurück zum Anfang](#top)  
   

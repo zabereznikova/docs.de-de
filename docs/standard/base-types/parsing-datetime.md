@@ -1,6 +1,6 @@
 ---
 title: 'Gewusst wie: Konvertieren von Zeichenfolgen in DateTime-Objekte'
-description: "Lernen Sie Techniken zum Analysieren von Zeichenfolgen kennen, die Datums- und Uhrzeitwerte repräsentieren, um ein DateTime-Objekt aus der Datums- und Uhrzeitzeichenfolge zu erstellen."
+description: Lernen Sie Techniken zum Analysieren von Zeichenfolgen kennen, die Datums- und Uhrzeitwerte repräsentieren, um ein DateTime-Objekt aus der Datums- und Uhrzeitzeichenfolge zu erstellen.
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -64,7 +64,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTi
 > Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
-> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) als auch für [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) und [Visual Basic](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) herunterladen.
+> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) als auch für [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) und [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip) herunterladen.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

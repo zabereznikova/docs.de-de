@@ -1,6 +1,6 @@
 ---
 title: Kommunikation in einer Microservicearchitektur
-description: ".NET-Microservicearchitektur für .NET-Containeranwendungen | Kommunikation in einer Microservicearchitektur"
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Kommunikation in einer Microservicearchitektur
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -25,7 +25,7 @@ Es gibt nicht eine, sondern mehrere Lösungen. Bei einer Lösung werden die Unte
 
 Bei einer auf Microservices basierenden Anwendung handelt es sich um ein verteiltes System, das in mehreren Prozessen oder Services ausgeführt wird und normalerweise sogar mehrere Server oder Hosts übergreift. Jede Dienstinstanz ist in der Regel ein Prozess. Daher müssen Dienste bei der Interaktion ein prozessinternes Kommunikationsprotokoll wie HTTP, AMQP oder ein Binärprotokoll wie TCP verwenden. Welches Protokoll verwendet wird, hängt von der Art des jeweiligen Diensts ab.
 
-Die Microservice-Community unterstützt den Ansatz „[smart endpoints and dumb pipes](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)“ (intelligente Endpunkte und dumme Pipes). Dieses Motto unterstützt einen Entwurf, der zwischen Microservices möglichst entkoppelt und innerhalb eines einzelnen Microservices möglichst kohäsiv ist. Wie zuvor erläutert wurde, verfügt jeder Microservice über seine eigenen Daten und seine eigene Domänenlogik. Die Microservices, die eine End-to-End-Anwendung erstellen, sind jedoch in der Regel einfach choreografiert, indem REST-Kommunikationen statt komplexer Protokolle wie WS-\* und flexible, ereignisgesteuerte Kommunikationen statt zentralisierter Geschäftsprozessorchestratoren verwendet werden.
+Die Microservice-Community unterstützt den Ansatz „[smart endpoints and dumb pipes](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)“ (intelligente Endpunkte und dumme Pipes). Dieses Motto unterstützt einen Entwurf, der zwischen Microservices möglichst entkoppelt und innerhalb eines einzelnen Microservices möglichst kohäsiv ist. Wie zuvor erläutert wurde, verfügt jeder Microservice über seine eigenen Daten und seine eigene Domänenlogik. Die Microservices, die eine End-to-End-Anwendung erstellen, sind jedoch in der Regel einfach choreografiert, indem REST-Kommunikationen statt komplexer Protokolle wie WS-\* und flexible, ereignisgesteuerte Kommunikationen statt zentralisierter Geschäftsprozessorchestratoren verwendet werden.
 
 Die zwei häufig verwendeten Protokolle sind HTTP-Anforderung/-Antwort mit Ressourcen-APIs (bei den meisten Abfragen) und asynchrones Lightweight-Messaging, das bei der Kommunikation von Updates mehrere Microservices übergreifend zum Einsatz kommt. In den folgenden Abschnitten werden diese Protokolle näher erläutert.
 
@@ -43,7 +43,7 @@ Auf der zweiten Achse wird definiert, ob die Kommunikation über einen einzelnen
 
 -   Einzelner Empfänger. Jede Anforderung muss von genau einem Empfänger oder Dienst verarbeitet werden. Ein Beispiel für diese Kommunikation ist das [Befehlsmuster](https://en.wikipedia.org/wiki/Command_pattern).
 
--   Mehrere Empfänger. Jede Anforderung kann von 0 (null) bis hin zu mehreren Empfängern verarbeitet werden. Dieser Kommunikationstyp muss asynchron sein. Ein Beispiel hierfür ist der Mechanismus [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern), der in Mustern wie der [ereignisgesteuerten Architektur](http://microservices.io/patterns/data/event-driven-architecture.html) verwendet wird. Diese basiert bei der Verteilung von Datenaktualisierungen über Ereignisse zwischen mehreren Microservices auf einer Ereignisbusschnittstelle oder einem Nachrichtenbroker; sie wird in der Regel über einen Service Bus oder ein mit [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) vergleichbares Artefakt unter Verwendung von [Themen und Abonnements](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) implementiert.
+-   Mehrere Empfänger. Jede Anforderung kann von 0 (null) bis hin zu mehreren Empfängern verarbeitet werden. Dieser Kommunikationstyp muss asynchron sein. Ein Beispiel hierfür ist der Mechanismus [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern), der in Mustern wie der [ereignisgesteuerten Architektur](https://microservices.io/patterns/data/event-driven-architecture.html) verwendet wird. Diese basiert bei der Verteilung von Datenaktualisierungen über Ereignisse zwischen mehreren Microservices auf einer Ereignisbusschnittstelle oder einem Nachrichtenbroker; sie wird in der Regel über einen Service Bus oder ein mit [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) vergleichbares Artefakt unter Verwendung von [Themen und Abonnements](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) implementiert.
 
 Eine auf Microservices basierende Anwendung verwendet häufig eine Kombination aus diesen Kommunikationstypen. Am häufigsten wird als Kommunikationstyp die Kommunikation über einzelne Empfänger mit einem synchronen Protokoll wie HTTP/HTTPS verwendet, wenn ein regulärer HTTP-Dienst der Web-API aufgerufen wird. Zudem verwenden Microservices für die asynchrone Kommunikation zwischen Microservices in der Regel Messagingprotokolle.
 
@@ -91,15 +91,15 @@ Wenn ein Client die Kommunikation über Anforderungen/Antworten verwendet, setzt
 
 Ein beliebter Architekturstil für die Kommunikation über Anforderungen/Antworten ist [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Dieser Ansatz basiert auf dem [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)-Protokoll, das HTTP-Verben wie GET, POST und PUT umfasst, und ist eng daran gekoppelt. REST ist bei der Erstellung von Diensten der am häufigsten verwendete Architekturstil für die Kommunikation. Sie können REST-Dienste implementieren, wenn Sie ASP.NET Core Web-API-Dienste entwickeln.
 
-Die Verwendung von HTTP-REST-Diensten als Ihre Interface Definition Language hat einen Mehrwert. Wenn Sie beispielsweise [Swagger-Metadaten](http://swagger.io/) für die Beschreibung Ihrer Dienst-API verwenden, können Sie Tools verwenden, die Client-Stubs generieren. Diese können Ihre Dienste direkt erkennen und verwenden.
+Die Verwendung von HTTP-REST-Diensten als Ihre Interface Definition Language hat einen Mehrwert. Wenn Sie beispielsweise [Swagger-Metadaten](https://swagger.io/) für die Beschreibung Ihrer Dienst-API verwenden, können Sie Tools verwenden, die Client-Stubs generieren. Diese können Ihre Dienste direkt erkennen und verwenden.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **Martin Fowler. Richardson Maturity Model.** Eine Beschreibung des REST-Modells.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Die offizielle Website.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Auf HTTP basierende Push- und Echtzeitkommunikation
 

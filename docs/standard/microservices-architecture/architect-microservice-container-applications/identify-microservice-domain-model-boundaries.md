@@ -1,6 +1,6 @@
 ---
-title: "Identifizieren von Domänenmodellgrenzen für Microservices"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Identifizieren von Domänenmodellgrenzen für Microservices"
+title: Identifizieren von Domänenmodellgrenzen für Microservices
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Identifizieren von Domänenmodellgrenzen für Microservices
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identifizieren von Domänenmodellgrenzen für Microservices
 
 Beim Identifizieren von Modellgrenzen und -größen für einzelne Microservices geht es nicht so sehr darum, eine möglichst kleinteilige Gliederung zu finden, wenngleich Sie sich um möglichst kleine Microservices bemühen sollten. Vielmehr geht es darum, dass Sie geleitet von Ihrem Wissen über die Domäne eine möglichst sinnvolle Gliederung vornehmen. Dabei liegt der Schwerpunkt nicht auf der Größe, sondern auf Unternehmensfunktionen. Ferner ist für einen bestimmten Bereich der Anwendung aufgrund einer großen Anzahl von Abhängigkeiten möglicherweise eine klare Kohäsion gefordert, was einen einzelnen Microservice erforderlich macht. Kohäsion stellt eine Möglichkeit der Gliederung oder Gruppierung von Microservices dar. Letztlich sollten Sie die Größe Ihres Microservices immer wieder anpassen, je mehr Wissen über die Domäne Sie erlangen. Die Suche nach der richtigen Größe ist kein einmaliger Vorgang.
 
-[Sam Newman](http://samnewman.io/), ein anerkannter Befürworter von Microservices und Autor von [Microservices: Konzeption und Design](http://samnewman.io/books/building_microservices/), weist darauf hin, dass Microservices auf Basis des bereits vorgestellten Konzepts von Kontextgrenzen (Teil des domänengesteuertes Designs) konzipiert und entworfen werden sollten. Eine Kontextgrenze kann aus mehreren physischen Diensten bestehen, aber nicht umgekehrt.
+[Sam Newman](https://samnewman.io/), ein anerkannter Befürworter von Microservices und Autor von [Microservices: Konzeption und Design](https://samnewman.io/books/building_microservices/), weist darauf hin, dass Microservices auf Basis des bereits vorgestellten Konzepts von Kontextgrenzen (Teil des domänengesteuertes Designs) konzipiert und entworfen werden sollten. Eine Kontextgrenze kann aus mehreren physischen Diensten bestehen, aber nicht umgekehrt.
 
 Ein Domänenmodell mit bestimmten Domänenentitäten kommt in einer konkreten Kontextgrenze oder in einem konkreten Microservice zum Tragen. Eine Kontextgrenze schränkt die Anwendbarkeit eines Domänenmodells ein und vermittelt den Mitgliedern des Entwicklerteams ein klares und einheitliches Verständnis davon, welche Teile kohäsiv sein müssen und welche unabhängig voneinander entwickelt werden können. Dieselben Ziele gelten für Microservices.
 

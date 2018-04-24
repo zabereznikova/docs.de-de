@@ -1,6 +1,6 @@
 ---
 title: Zielframeworks
-description: "Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken."
+description: Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken.
 author: richlander
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>Zielframeworks
 
@@ -141,4 +141,4 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die für diese Zielframework
 [.NET Core-Versionskontrolle](~/docs/core/versions/index.md)  
 [dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)  
 [GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)  
-[Frameworkprofile in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+[Frameworkprofile in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

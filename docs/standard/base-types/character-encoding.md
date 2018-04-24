@@ -1,12 +1,12 @@
 ---
 title: Zeichencodierung in .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
@@ -70,7 +70,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
 > [!NOTE]
 >  Gemäß Unicode-Standard werden jedem Zeichen aller unterstützten Skripts ein Codepunkt (eine Zahl) und ein Name zugewiesen. Das Zeichen "A" wird beispielsweise durch den Codepunkt U+0041 und den Namen "LATIN CAPITAL LETTER A" dargestellt. Die UTF (Unicode-Transformation Format)-Codierungen definieren Möglichkeiten, diesen Codepunkt in eine Abfolge aus einem oder mehreren Bytes zu codieren. Ein Unicode-Datencodierungsschema vereinfacht die Entwicklung weltweit einsetzbarer Anwendungen, da es die Darstellung von Zeichen aus beliebigen Zeichensätzen in einer Codierung ermöglicht. Anwendungsentwickler müssen nicht mehr das Codierungsschema verfolgen, das für die Erstellung von Zeichen für eine bestimmte Sprache oder ein Schreibsystem verwendet wurde, und die Daten können länderübergreifend auf allen Systemen verwendet werden, ohne beschädigt zu werden.  
 >   
->  .NET unterstützt drei Codierungen, die durch den Unicode-Standard definiert sind: UTF-8, UTF-16 und UTF-32. Weitere Informationen finden Sie im Unicode-Standard auf der [Unicode-Homepage](http://www.unicode.org/).  
+>  .NET unterstützt drei Codierungen, die durch den Unicode-Standard definiert sind: UTF-8, UTF-16 und UTF-32. Weitere Informationen finden Sie im Unicode-Standard auf der [Unicode-Homepage](https://www.unicode.org/).  
   
  Sie können Informationen über alle in .NET verfügbaren Codierungen abrufen, indem Sie die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>-Methode aufrufen. .NET unterstützt die in der folgenden Tabelle aufgelisteten Zeichencodierungssysteme.  
   
@@ -157,7 +157,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  Strategien mit ähnlichen Zeichen variieren für unterschiedliche Codepages. Beispielsweise werden bei einigen Codepages lateinische Zeichen in voller Breite den gängigeren halbbreiten lateinischen Zeichen zugeordnet. Bei anderen Codepages hingegen erfolgt diese Zuordnung nicht. Selbst bei einer aggressiven Strategie mit ähnlichen Zeichen besteht in einigen Codierungen für manche Zeichen keine denkbare Zuordnung. Ein chinesisches ideografisches Zeichen hat z. B. keine angemessene Zuordnung in der Codepage 1252. Im diesem Fall wird eine Ersatzzeichenfolge verwendet. Standardmäßig handelt es sich bei dieser Zeichenfolge um ein einzelnes QUESTION MARK (Fragezeichen, U+003F).  
   
 > [!NOTE]
->  Strategien mit ähnlichen Zeichen sind nicht detailliert dokumentiert. Einige Codepages sind jedoch auf der Website des [Unicode-Konsortiums](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) dokumentiert. Lesen Sie die **readme.txt**-Datei in diesem Ordner, um zu erfahren, wie die Zuordnungsdateien interpretiert werden.
+>  Strategien mit ähnlichen Zeichen sind nicht detailliert dokumentiert. Einige Codepages sind jedoch auf der Website des [Unicode-Konsortiums](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) dokumentiert. Lesen Sie die **readme.txt**-Datei in diesem Ordner, um zu erfahren, wie die Zuordnungsdateien interpretiert werden.
   
  Im folgenden Beispiel wird die Codepage 1252 (Windows-Codepage für westeuropäische Sprachen) verwendet, um eine Zuordnung mit ähnlichen Zeichen und deren Nachteile zu veranschaulichen. Die <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType>-Methode wird verwendet, um ein Codierungsobjekt für Codepage 1252 abzurufen. Standardmäßig wird eine Zuordnung mit ähnlichen Zeichen für nicht unterstützte Unicode-Zeichen verwendet. Im Beispiel wird eine Zeichenfolge instanziiert, die drei durch Leerzeichen getrennte Nicht-ASCII-Zeichen enthält: CIRCLED LATIN CAPITAL LETTER S (eingekreister lateinischer Großbuchstabe S, U+24C8), SUPERSCRIPT FIVE (hochgestellte Fünf, U+2075) und INFINITY (Unendlichkeit, U+221E). Die Ausgabe im Beispiel zeigt, dass die drei ursprünglichen Nicht-Leerzeichen bei der Codierung der Zeichenfolge durch QUESTION MARK (Fragezeichen, U+003F), DIGIT FIVE (Ziffer Fünf, U+0035) und DIGIT EIGHT (Ziffer Acht, U+0038) ersetzt. Insbesondere DIGIT EIGHT (Ziffer Acht) ist ein ungeeigneter Ersatz für das nicht unterstützte INFINITY-Zeichen (Unendlichkeit), und QUESTION MARK (Fragezeichen) weist darauf hin, dass für das ursprüngliche Zeichen keine Zuordnung verfügbar war.  
   
