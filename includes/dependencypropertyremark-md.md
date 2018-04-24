@@ -1,0 +1,1 @@
+Durch Auflösen einer entsprechenden Abhängigkeitseigenschaft greifen Sie indirekt auf jede öffentliche Eigenschaft und jedes öffentliche Ereignis dieses Typs zu. Diese Abhängigkeitseigenschaft ist das öffentliche statische Feld mit dem Namen **XProperty** oder **XEvent**, wobei X die entsprechende Eigenschaft ist.

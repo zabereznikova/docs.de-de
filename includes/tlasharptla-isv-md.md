@@ -1,0 +1,1 @@
+unabhängiger Softwarehersteller (independent software vendor, ISV)
