@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Umgang mit komplexen Geschäftsabläufen in einem Microservice mit DDD- und CQRS-Mustern
 
@@ -37,41 +37,41 @@ DDD ist ein umfangreiches Thema, bei dem es einen umfangreichen Satz von Ressour
 
 ##### <a name="ddd-domain-driven-design"></a>Domänengesteuertes Design (Domain-Driven Design, DDD)
 
--   **Eric Evans. Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   **Eric Evans. Domänensprache**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Martin Fowler. Domain-Driven Design**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   **Martin Fowler. Domänengesteuertes Design (Domain-Driven Design, DDD)**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Jimmy Bogard. Strengthening your domain: a primer**
+-   **Jimmy Bogard. Strengthening your domain: Domain Events (Erweiterung des Domänenmodells durch Domänenereignisse)**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>DDD-Bücher
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software)**
     [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
+-   **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries (Referenz zum domänengesteuerten Design: Definitionen und Musterzusammenfassungen)**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design**
+-   **Vaughn Vernon. Implementing Domain-Driven Design (Implementieren des domänengesteuerten Designs)**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Vaughn Vernon. Domain-Driven Design Distilled**
+-   **Vaughn Vernon. Domain-Driven Design Distilled (Domänengesteuertes Design: Überblick)**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
--   **Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
+-   **Jimmy Nilsson. Applying Domain-Driven Design and Patterns (Anwenden von domänengesteuertem Design und Mustern)**
     [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
--   **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
+-   **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET (Leitfaden zur domänenorientierten Architektur mit n Ebenen mit .NET)**
     [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
 
--   **Abel Avram and Floyd Marinescu. Domain-Driven Design Quickly**
+-   **Abel Avram and Floyd Marinescu. Domain-Driven Design Quickly (Schnelles domänengesteuertes Design)**
     [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
 
 DDD-Training
 
--   **Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals**
+-   **Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals (Grundlagen des domänengesteuerten Designs)**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 
