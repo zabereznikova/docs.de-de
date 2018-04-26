@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-caps.latest.revision: 
+caps.latest.revision: 33
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f1088221a96d0176f08b4c01044e20ab6238fc13
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C#-Compileroptionen)
 Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C#-Sprachspezifikation enthalten ist.  
@@ -36,7 +36,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
   
 |Option|Bedeutung|  
 |------------|-------------|  
-|default|Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann. <sup id="TDefault">[Default](#FDefault)</sup>| 
+|default|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Hauptversion, die unterstützen werden kann. <sup id="TDefault">[Default](#FDefault)</sup>| 
 |ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003-C# (1.0/1.1) enthalten ist <sup id="TISO1">[ISO1](#FISO1)</sup>|  
 |ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist <sup id="TCS3">[CS3](#FCS3)</sup>|
@@ -64,7 +64,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaftenseite** des Projekts.  
+1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
 2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   

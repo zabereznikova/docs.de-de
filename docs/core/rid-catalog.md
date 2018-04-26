@@ -1,17 +1,18 @@
 ---
 title: .NET Core Runtime-ID-Katalog (RID)
-description: "Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden."
+description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -19,7 +20,7 @@ RID ist die Kurzform für *Runtime-ID* (Laufzeitbezeichner). Mithilfe von RID-We
 Sie werden von .NET-Paketen verwendet, um plattformspezifische Ressourcen in NuGet-Paketen darzustellen. Die folgenden Werte sind Beispiele für RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` oder `osx.10.12-x64`.
 Für die Pakete mit nativen Abhängigkeiten legt die RID fest, auf welchen Plattformen das Paket wiederhergestellt werden kann.
 
-RIDs können im `<RuntimeIdentifier>`-Element der Projektdatei festgelegt werden. Sie können auch über die Option `--runtime` mit den folgenden [.NET Core-CLI-Befehlen](./tools/index.md) verwendet werden:
+Eine einzelne RID kann im `<RuntimeIdentifier>`-Element Ihrer Projektdatei festgelegt werden. Mehrere RIDs können als Liste mit Semikolon als Trennzeichen im `<RuntimeIdentifiers>`-Element der Projektdatei definiert werden. Sie können auch über die Option `--runtime` mit den folgenden [.NET Core-CLI-Befehlen](./tools/index.md) verwendet werden:
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

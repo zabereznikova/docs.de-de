@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Durchsuchen von Zeichenfolgen (Leitfaden für C#)"
+title: 'Vorgehensweise: Durchsuchen von Zeichenfolgen (Leitfaden für C#)'
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -51,7 +51,7 @@ Das Suchmuster beschreibt den Text, nach dem Sie suchen. In der folgenden Tabell
 | -------- |-------------|
 | Verbindung im Abschnitt      | Findet den Text „the“. |
 | (eir)?   | Findet 0 oder 1 Vorkommen von „eir“. |
-| \s       | Findet ein Leerzeichen.    |
+| \s       | Findet Zeichen für Leerraum.    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
@@ -77,7 +77,7 @@ Der folgende Code verwendet reguläre Ausdrücke, um das Format jeder Zeichenfol
 
 Dieses einzelne Suchmuster findet alle gültigen Zeichenfolgen. Reguläre Ausdrücke eignen sich besser zum Suchen nach Mustern oder zum Überprüfen von Zeichenfolgen anhand eines Musters als für einzelne Zeichenfolgen.
 
-Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip) herunterladen.
+Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) herunterladen.
 
 ## <a name="see-also"></a>Siehe auch  
 

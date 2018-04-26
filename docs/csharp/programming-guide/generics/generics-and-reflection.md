@@ -2,20 +2,21 @@
 title: Generische Typen und Reflektion (C#-Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generische Typen und Reflektion (C#-Programmierhandbuch)
 Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur Laufzeit verfügt, können Sie die Reflektion zum Abrufen von Informationen über generische Typen genauso wie für nicht generische Typen verwenden. Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,15 +39,15 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
 |<xref:System.Type.DeclaringMethod%2A>|Gibt die generische Methode, die den aktuellen generischen Typparameter definiert, oder null zurück, wenn der Typparameter nicht von einer generischen Methode definiert wurde|  
 |<xref:System.Type.MakeGenericType%2A>|Ersetzt die Typparameter der aktuellen generischen Typdefinition durch die Elemente eines Arrays von Typen und gibt ein <xref:System.Type>-Objekt zurück, das den resultierenden konstruierten Typ darstellt.|  
   
- Zusätzlich wurden neue Member zur <xref:System.Reflection.MethodInfo>-Klasse hinzugefügt, um Laufzeitinformationen für generische Methoden zu ermöglichen. Eine Liste der invarianten Bedingungen für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie unter den Hinweisen zur Eigenschaft <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
+ Zusätzlich ermöglichen neue Member der <xref:System.Reflection.MethodInfo>-Klasse Laufzeitinformationen für generische Methoden. Eine Liste der invarianten Bedingungen für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie unter den Hinweisen zur Eigenschaft <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
 |System.Reflection.MemberInfo-Membername|Beschreibung|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Gibt TRUE zurück, wenn eine Methode generisch ist|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Gibt TRUE zurück, wenn eine Methode generisch ist|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Gibt ein Array von Type-Objekten zurück, die die Typargumente einer konstruierten generischen Methode oder die Typparameter einer generischen Methodendefinition darstellen|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Gibt die zugrunde liegende generische Methodendefinition für die aktuelle konstruierte Methode zurück|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Gibt TRUE zurück, wenn die Methode oder einer ihrer einschließenden Typen Typparameter enthält, für die keine bestimmten Typen angegeben wurden|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Gibt TRUE zurück, wenn die aktuelle <xref:System.Reflection.MethodInfo> die Definition eines generischen Typs darstellt|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Gibt TRUE zurück, wenn die Methode oder einer ihrer einschließenden Typen Typparameter enthält, für die keine bestimmten Typen angegeben wurden|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Gibt TRUE zurück, wenn die aktuelle <xref:System.Reflection.MethodInfo> die Definition eines generischen Typs darstellt|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Ersetzt die Typparameter der aktuellen generischen Methodendefinition durch die Elemente eines Arrays von Typen und gibt ein <xref:System.Reflection.MethodInfo>-Objekt zurück, das die sich ergebende konstruierte Methode darstellt.|  
   
 ## <a name="see-also"></a>Siehe auch  

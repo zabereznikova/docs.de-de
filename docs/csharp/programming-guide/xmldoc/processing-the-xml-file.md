@@ -1,21 +1,22 @@
 ---
-title: "Verarbeiten der XML-Datei (C# Programmierhandbuch)"
+title: Verarbeiten der XML-Datei (C# Programmierhandbuch)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten-/Reflektionselement identifizieren, für das die Dokumentation gilt.  
@@ -24,11 +25,11 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
  Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
--   Die Zeichenfolge darf keinen Leerraum enthalten.  
+-   Es befindet sich kein Leerraum in der Zeichenfolge.  
   
 -   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:  
   
-    |Zeichen|Beschreibung|  
+    |Zeichen|description|  
     |---------------|-----------------|  
     |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch cref-Verweise hinzugefügt werden.|  
     |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|  
@@ -74,7 +75,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
 -   Nur für Konvertierungsoperatoren („op_Implicit“ und „op_Explicit“) wird der Rückgabewert der Methode als ~ gefolgt vom Rückgabewert codiert, wie weiter oben gezeigt.  
   
--   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Beispiel:  
+-   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Ein auf ein Objekt angewendeter  
   
      `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
   
@@ -87,5 +88,5 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [/ doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

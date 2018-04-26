@@ -3,16 +3,16 @@ title: Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windo
 description: Informationen zum Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8.
 author: rlander
 ms.author: mairaw
-ms.date: 11/27/2017
+ms.date: 03/30/2018
 ms.topic: article
 ms.prod: .net-framework
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 09c4f81da76bb6608c3e579c442cf686ffab1688
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
@@ -23,6 +23,10 @@ Möglicherweise wird .NET Framework 3.5 zum Ausführen einer App auf Windows 10,
 Wenn Sie versuchen, eine App auszuführen, die .NET Framework 3.5 erfordert, wird möglicherweise das folgende Konfigurationsdialogfeld angezeigt. Wählen Sie **Feature installieren** aus, um .NET Framework 3.5 zu aktivieren. Für diese Option ist eine Internetverbindung erforderlich.
 
 ![Dialogfeld für die Installation .NET Framework](./media/dotnet-framework-installation-dialog.jpg)
+
+### <a name="why-am-i-getting-this-pop-up"></a>Warum wird mir dieses Popup angezeigt?
+
+.NET Framework wurde von Microsoft erstellt und bietet eine Umgebung zur Ausführung von Anwendungen. Es stehen verschiedene Versionen zur Verfügung. Viele Unternehmen entwickeln ihre Apps zur Ausführung mit .NET Framework, und diese Apps sind für eine bestimmte Version entworfen. Wenn Sie dieses Popup sehen, versuchen Sie, eine Anwendung auszuführen, für die .NET Framework 3.5 erforderlich ist, aber diese Version ist auf Ihrem Computer nicht installiert.
 
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>Aktivieren von .NET Framework 3.5 in der Systemsteuerung
 
@@ -40,4 +44,4 @@ Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für d
 
 Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907, 0x800f081f oder 0x800F0922 auf. In diesem Fall finden Sie unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) Informationen zur Problemlösung.
 
-Wenn bei den im vorherigen Artikel beschriebenen Methoden ein Fehler auftritt oder keine Internetverbindung besteht, müssen Sie das Windows-Installationsmedium verwenden. Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework 3.5 mit der Abbildverwaltung für die Bereitstellung (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Erstellen eines Installationsmediums für Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Wenn Sie das Installationsproblem weiterhin nicht lösen können oder keine Internetverbindung zur Verfügung steht, können Sie versuchen, die Installation über Ihr Windows-Installationsmedium durchzuführen. Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework 3.5 mit der Abbildverwaltung für die Bereitstellung (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Erstellen eines Installationsmediums für Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
