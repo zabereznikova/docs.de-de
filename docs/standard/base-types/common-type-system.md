@@ -1,12 +1,12 @@
 ---
 title: Allgemeines Typsystem
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4660e8764c429f526e05e8e7b6c44bd30c4172c1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -331,6 +331,6 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 -   Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
- [.NET-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [.NET API-Browser](/dotnet/api)  
  [Common Language Runtime](../../../docs/standard/clr.md)  
  [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)
