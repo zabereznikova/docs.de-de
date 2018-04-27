@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,32 +20,33 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="c8403-102">Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="c8403-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="c8403-103">Häufige Aufgaben bei der Anwendungsentwicklung-Steuerelemente hinzufügen und Entfernen von Steuerelementen aus jedem Containersteuerelement in Ihren Formularen werden (z. B. die <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.GroupBox> Steuerelement oder sogar auf dem Formular selbst).</span><span class="sxs-lookup"><span data-stu-id="c8403-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="c8403-104">Zur Entwurfszeit können Steuerelemente direkt auf ein Panel oder Gruppenfeld gezogen werden.</span><span class="sxs-lookup"><span data-stu-id="c8403-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="c8403-105">Zur Laufzeit verwalten diese Steuerelemente eine `Controls`-Auflistung, die protokolliert, welche Steuerelemente darauf platziert werden.</span><span class="sxs-lookup"><span data-stu-id="c8403-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="87ec6-102">Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="87ec6-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="87ec6-103">Häufige Aufgaben bei der Anwendungsentwicklung-Steuerelemente hinzufügen und Entfernen von Steuerelementen aus jedem Containersteuerelement in Ihren Formularen werden (z. B. die <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.GroupBox> Steuerelement oder sogar auf dem Formular selbst).</span><span class="sxs-lookup"><span data-stu-id="87ec6-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="87ec6-104">Zur Entwurfszeit können Steuerelemente direkt auf ein Panel oder Gruppenfeld gezogen werden.</span><span class="sxs-lookup"><span data-stu-id="87ec6-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="87ec6-105">Zur Laufzeit verwalten diese Steuerelemente eine `Controls`-Auflistung, die protokolliert, welche Steuerelemente darauf platziert werden.</span><span class="sxs-lookup"><span data-stu-id="87ec6-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c8403-106">Das folgende Codebeispiel gilt für jedes Steuerelement, das eine Auflistung von Steuerelementen verwaltet.</span><span class="sxs-lookup"><span data-stu-id="c8403-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+>  <span data-ttu-id="87ec6-106">Das folgende Codebeispiel gilt für jedes Steuerelement, das eine Auflistung von Steuerelementen verwaltet.</span><span class="sxs-lookup"><span data-stu-id="87ec6-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="c8403-107">So fügen Sie ein Steuerelement programmgesteuert zu einer Auflistung hinzu</span><span class="sxs-lookup"><span data-stu-id="c8403-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="87ec6-107">So fügen Sie ein Steuerelement programmgesteuert zu einer Auflistung hinzu</span><span class="sxs-lookup"><span data-stu-id="87ec6-107">To add a control to a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="c8403-108">Erstellen Sie eine Instanz des Steuerelements, das hinzugefügt werden soll.</span><span class="sxs-lookup"><span data-stu-id="c8403-108">Create an instance of the control to be added.</span></span>  
+1.  <span data-ttu-id="87ec6-108">Erstellen Sie eine Instanz des Steuerelements, das hinzugefügt werden soll.</span><span class="sxs-lookup"><span data-stu-id="87ec6-108">Create an instance of the control to be added.</span></span>  
   
-2.  <span data-ttu-id="c8403-109">Legen Sie die Eigenschaften des neuen Steuerelements fest.</span><span class="sxs-lookup"><span data-stu-id="c8403-109">Set properties of the new control.</span></span>  
+2.  <span data-ttu-id="87ec6-109">Legen Sie die Eigenschaften des neuen Steuerelements fest.</span><span class="sxs-lookup"><span data-stu-id="87ec6-109">Set properties of the new control.</span></span>  
   
-3.  <span data-ttu-id="c8403-110">Fügen Sie der `Controls`-Auflistung des übergeordneten Elements das Steuerelement hinzu.</span><span class="sxs-lookup"><span data-stu-id="c8403-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3.  <span data-ttu-id="87ec6-110">Fügen Sie der `Controls`-Auflistung des übergeordneten Elements das Steuerelement hinzu.</span><span class="sxs-lookup"><span data-stu-id="87ec6-110">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="c8403-111">Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Instanz von der <xref:System.Windows.Forms.Button> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="c8403-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="c8403-112">Erfordert ein Formular mit einem <xref:System.Windows.Forms.Panel> -Steuerelement, und dass die Ereignisbehandlungsmethode für die Schaltfläche erstellt wird, `NewPanelButton_Click`, ist bereits vorhanden.</span><span class="sxs-lookup"><span data-stu-id="c8403-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="87ec6-111">Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Instanz von der <xref:System.Windows.Forms.Button> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="87ec6-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="87ec6-112">Erfordert ein Formular mit einem <xref:System.Windows.Forms.Panel> -Steuerelement, und dass die Ereignisbehandlungsmethode für die Schaltfläche erstellt wird, `NewPanelButton_Click`, ist bereits vorhanden.</span><span class="sxs-lookup"><span data-stu-id="87ec6-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -75,13 +77,13 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="c8403-113">So entfernen Sie Steuerelemente programmgesteuert aus einer Auflistung</span><span class="sxs-lookup"><span data-stu-id="c8403-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="87ec6-113">So entfernen Sie Steuerelemente programmgesteuert aus einer Auflistung</span><span class="sxs-lookup"><span data-stu-id="87ec6-113">To remove controls from a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="c8403-114">Entfernen Sie den Ereignishandler aus dem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="c8403-114">Remove the event handler from the event.</span></span> <span data-ttu-id="c8403-115">Verwenden Sie in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] das Schlüsselwort [RemoveHandler-Anweisung](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) und in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] den [Operator -= (C#-Referenz)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="c8403-115">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
+1.  <span data-ttu-id="87ec6-114">Entfernen Sie den Ereignishandler aus dem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="87ec6-114">Remove the event handler from the event.</span></span> <span data-ttu-id="87ec6-115">In Visual Basic verwenden die [RemoveHandler-Anweisung](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) Schlüsselwort in Visual c# verwenden das [=-Operator (C#-Referenz)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="87ec6-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
   
-2.  <span data-ttu-id="c8403-116">Verwenden Sie die Methode `Remove`, um das gewünschte Steuerelement aus der `Controls`-Auflistung des Panels zu löschen.</span><span class="sxs-lookup"><span data-stu-id="c8403-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2.  <span data-ttu-id="87ec6-116">Verwenden Sie die Methode `Remove`, um das gewünschte Steuerelement aus der `Controls`-Auflistung des Panels zu löschen.</span><span class="sxs-lookup"><span data-stu-id="87ec6-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3.  <span data-ttu-id="c8403-117">Rufen Sie die <xref:System.Windows.Forms.Control.Dispose%2A> Methode, um alle vom Steuerelement verwendeten Ressourcen freizugeben.</span><span class="sxs-lookup"><span data-stu-id="c8403-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3.  <span data-ttu-id="87ec6-117">Rufen Sie die <xref:System.Windows.Forms.Control.Dispose%2A> Methode, um alle vom Steuerelement verwendeten Ressourcen freizugeben.</span><span class="sxs-lookup"><span data-stu-id="87ec6-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -111,6 +113,6 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8403-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c8403-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="87ec6-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="87ec6-118">See Also</span></span>  
  <xref:System.Windows.Forms.Panel>  
- [<span data-ttu-id="c8403-119">Panel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c8403-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+ [<span data-ttu-id="87ec6-119">Panel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="87ec6-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

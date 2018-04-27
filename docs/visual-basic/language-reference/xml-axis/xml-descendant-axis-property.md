@@ -2,8 +2,8 @@
 title: XML-Nachfolgerachseneigenschaft (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -16,76 +16,76 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0f3c42b5134b058c010ca4c7a5ee7c24627c65fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1dc5fe1addb089f3de9b4d5054f34a578b491fb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="38bd0-102">XML-Nachfolgerachseneigenschaft (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38bd0-102">XML Descendant Axis Property (Visual Basic)</span></span>
-<span data-ttu-id="38bd0-103">Bietet Zugriff auf die Nachfolger: ein <xref:System.Xml.Linq.XElement> -Objekt, ein <xref:System.Xml.Linq.XDocument> -Objekt, das eine Auflistung von <xref:System.Xml.Linq.XElement> Objekte oder eine Auflistung von <xref:System.Xml.Linq.XDocument> Objekte.</span><span class="sxs-lookup"><span data-stu-id="38bd0-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
+# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="6cee6-102">XML-Nachfolgerachseneigenschaft (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6cee6-102">XML Descendant Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="6cee6-103">Bietet Zugriff auf die Nachfolger: ein <xref:System.Xml.Linq.XElement> -Objekt, ein <xref:System.Xml.Linq.XDocument> -Objekt, das eine Auflistung von <xref:System.Xml.Linq.XElement> Objekte oder eine Auflistung von <xref:System.Xml.Linq.XDocument> Objekte.</span><span class="sxs-lookup"><span data-stu-id="6cee6-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38bd0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38bd0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cee6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6cee6-104">Syntax</span></span>  
   
 ```  
 object...<descendant>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="38bd0-105">Teile</span><span class="sxs-lookup"><span data-stu-id="38bd0-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="6cee6-105">Teile</span><span class="sxs-lookup"><span data-stu-id="6cee6-105">Parts</span></span>  
  `object`  
- <span data-ttu-id="38bd0-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="38bd0-106">Required.</span></span> <span data-ttu-id="38bd0-107">Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="38bd0-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
+ <span data-ttu-id="6cee6-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6cee6-106">Required.</span></span> <span data-ttu-id="6cee6-107">Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="6cee6-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
- <span data-ttu-id="38bd0-108">...<</span><span class="sxs-lookup"><span data-stu-id="38bd0-108">...<</span></span>  
- <span data-ttu-id="38bd0-109">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="38bd0-109">Required.</span></span> <span data-ttu-id="38bd0-110">Kennzeichnet den Anfang einer untergeordneten Achseneigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="38bd0-110">Denotes the start of a descendant axis property.</span></span>  
+ <span data-ttu-id="6cee6-108">...<</span><span class="sxs-lookup"><span data-stu-id="6cee6-108">...<</span></span>  
+ <span data-ttu-id="6cee6-109">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6cee6-109">Required.</span></span> <span data-ttu-id="6cee6-110">Kennzeichnet den Anfang einer untergeordneten Achseneigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="6cee6-110">Denotes the start of a descendant axis property.</span></span>  
   
  `descendant`  
- <span data-ttu-id="38bd0-111">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="38bd0-111">Required.</span></span> <span data-ttu-id="38bd0-112">Name der untergeordneten Knoten des Formulars den Zugriff auf [`prefix``:`]`name`.</span><span class="sxs-lookup"><span data-stu-id="38bd0-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
+ <span data-ttu-id="6cee6-111">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6cee6-111">Required.</span></span> <span data-ttu-id="6cee6-112">Name der untergeordneten Knoten des Formulars den Zugriff auf [`prefix``:`]`name`.</span><span class="sxs-lookup"><span data-stu-id="6cee6-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
   
-|<span data-ttu-id="38bd0-113">Segment</span><span class="sxs-lookup"><span data-stu-id="38bd0-113">Part</span></span>|<span data-ttu-id="38bd0-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="38bd0-114">Description</span></span>|  
+|<span data-ttu-id="6cee6-113">Segment</span><span class="sxs-lookup"><span data-stu-id="6cee6-113">Part</span></span>|<span data-ttu-id="6cee6-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6cee6-114">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|<span data-ttu-id="38bd0-115">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="38bd0-115">Optional.</span></span> <span data-ttu-id="38bd0-116">XML-Namespacepräfix für den untergeordneten Knoten.</span><span class="sxs-lookup"><span data-stu-id="38bd0-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="38bd0-117">Muss ein globaler XML-Namespace, die mithilfe von definiert ist ein `Imports` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="38bd0-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
-|`name`|<span data-ttu-id="38bd0-118">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="38bd0-118">Required.</span></span> <span data-ttu-id="38bd0-119">Lokale Name des untergeordneten Knotens.</span><span class="sxs-lookup"><span data-stu-id="38bd0-119">Local name of the descendant node.</span></span> <span data-ttu-id="38bd0-120">Finden Sie unter [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="38bd0-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
+|`prefix`|<span data-ttu-id="6cee6-115">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="6cee6-115">Optional.</span></span> <span data-ttu-id="6cee6-116">XML-Namespacepräfix für den untergeordneten Knoten.</span><span class="sxs-lookup"><span data-stu-id="6cee6-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="6cee6-117">Muss ein globaler XML-Namespace, die mithilfe von definiert ist ein `Imports` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="6cee6-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="6cee6-118">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6cee6-118">Required.</span></span> <span data-ttu-id="6cee6-119">Lokale Name des untergeordneten Knotens.</span><span class="sxs-lookup"><span data-stu-id="6cee6-119">Local name of the descendant node.</span></span> <span data-ttu-id="6cee6-120">Finden Sie unter [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="6cee6-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- <span data-ttu-id="38bd0-121">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="38bd0-121">Required.</span></span> <span data-ttu-id="38bd0-122">Kennzeichnet das Ende einer untergeordneten Achseneigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="38bd0-122">Denotes the end of a descendant axis property.</span></span>  
+ <span data-ttu-id="6cee6-121">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6cee6-121">Required.</span></span> <span data-ttu-id="6cee6-122">Kennzeichnet das Ende einer untergeordneten Achseneigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="6cee6-122">Denotes the end of a descendant axis property.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38bd0-123">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="38bd0-123">Return Value</span></span>  
- <span data-ttu-id="38bd0-124">Eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="38bd0-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6cee6-123">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="6cee6-123">Return Value</span></span>  
+ <span data-ttu-id="6cee6-124">Eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="6cee6-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="38bd0-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="38bd0-125">Remarks</span></span>  
- <span data-ttu-id="38bd0-126">Sie können eine XML-Achseneigenschaft Nachfolgerknoten anhand des Namens aus den Zugriff auf eine <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument> -Objekt, oder aus einer Auflistung von <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument> Objekte.</span><span class="sxs-lookup"><span data-stu-id="38bd0-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="38bd0-127">Mit dem XML- `Value` Eigenschaft, um den Wert des ersten untergeordneten Knotens in der zurückgegebenen Auflistung zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="38bd0-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="38bd0-128">Weitere Informationen finden Sie unter [XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="38bd0-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6cee6-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6cee6-125">Remarks</span></span>  
+ <span data-ttu-id="6cee6-126">Sie können eine XML-Achseneigenschaft Nachfolgerknoten anhand des Namens aus den Zugriff auf eine <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument> -Objekt, oder aus einer Auflistung von <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument> Objekte.</span><span class="sxs-lookup"><span data-stu-id="6cee6-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="6cee6-127">Mit dem XML- `Value` Eigenschaft, um den Wert des ersten untergeordneten Knotens in der zurückgegebenen Auflistung zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="6cee6-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="6cee6-128">Weitere Informationen finden Sie unter [XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="6cee6-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
- <span data-ttu-id="38bd0-129">Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Compiler konvertiert die untergeordneten Achseneigenschaften in Aufrufe der <xref:System.Xml.Linq.XContainer.Descendants%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="38bd0-129">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
+ <span data-ttu-id="6cee6-129">Visual Basic-Compiler konvertiert die untergeordneten Achseneigenschaften in Aufrufe an die <xref:System.Xml.Linq.XContainer.Descendants%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="6cee6-129">The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
   
-## <a name="xml-namespaces"></a><span data-ttu-id="38bd0-130">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="38bd0-130">XML Namespaces</span></span>  
- <span data-ttu-id="38bd0-131">Der Name in einer untergeordneten Achseneigenschaft können nur XML-Namespaces, die global deklariert, mit der `Imports` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="38bd0-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="38bd0-132">Es können keine XML-Namespaces, die lokal in XML-Elementliteralen deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="38bd0-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="38bd0-133">Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="38bd0-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
+## <a name="xml-namespaces"></a><span data-ttu-id="6cee6-130">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="6cee6-130">XML Namespaces</span></span>  
+ <span data-ttu-id="6cee6-131">Der Name in einer untergeordneten Achseneigenschaft können nur XML-Namespaces, die global deklariert, mit der `Imports` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="6cee6-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="6cee6-132">Es können keine XML-Namespaces, die lokal in XML-Elementliteralen deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="6cee6-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="6cee6-133">Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="6cee6-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="38bd0-134">Beispiel</span><span class="sxs-lookup"><span data-stu-id="38bd0-134">Example</span></span>  
- <span data-ttu-id="38bd0-135">Im folgende Beispiel wird gezeigt, wie Zugriff auf den Wert des ersten untergeordneten Knotens mit dem Namen `name` und die Werte aller Nachfolgerknoten namens `phone` aus der `contacts` Objekt.</span><span class="sxs-lookup"><span data-stu-id="38bd0-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="6cee6-134">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6cee6-134">Example</span></span>  
+ <span data-ttu-id="6cee6-135">Im folgende Beispiel wird gezeigt, wie Zugriff auf den Wert des ersten untergeordneten Knotens mit dem Namen `name` und die Werte aller Nachfolgerknoten namens `phone` aus der `contacts` Objekt.</span><span class="sxs-lookup"><span data-stu-id="6cee6-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
   
  [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
- <span data-ttu-id="38bd0-136">Durch diesen Code wird folgender Text angezeigt:</span><span class="sxs-lookup"><span data-stu-id="38bd0-136">This code displays the following text:</span></span>  
+ <span data-ttu-id="6cee6-136">Durch diesen Code wird folgender Text angezeigt:</span><span class="sxs-lookup"><span data-stu-id="6cee6-136">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
  `Home Phone = 206-555-0144`  
   
-## <a name="example"></a><span data-ttu-id="38bd0-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="38bd0-137">Example</span></span>  
- <span data-ttu-id="38bd0-138">Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix.</span><span class="sxs-lookup"><span data-stu-id="38bd0-138">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="38bd0-139">Es verwendet dann das Namespacepräfix ein XML-literal erstellt und auf den Wert des ersten untergeordneten Knotens mit dem qualifizierten Namen zugreifen `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="38bd0-139">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="6cee6-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6cee6-137">Example</span></span>  
+ <span data-ttu-id="6cee6-138">Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix.</span><span class="sxs-lookup"><span data-stu-id="6cee6-138">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="6cee6-139">Es verwendet dann das Namespacepräfix ein XML-literal erstellt und auf den Wert des ersten untergeordneten Knotens mit dem qualifizierten Namen zugreifen `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="6cee6-139">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
   
  [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
- <span data-ttu-id="38bd0-140">Durch diesen Code wird folgender Text angezeigt:</span><span class="sxs-lookup"><span data-stu-id="38bd0-140">This code displays the following text:</span></span>  
+ <span data-ttu-id="6cee6-140">Durch diesen Code wird folgender Text angezeigt:</span><span class="sxs-lookup"><span data-stu-id="6cee6-140">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a><span data-ttu-id="38bd0-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38bd0-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6cee6-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6cee6-141">See Also</span></span>  
  <xref:System.Xml.Linq.XElement>  
- [<span data-ttu-id="38bd0-142">XML-Achseneigenschaften</span><span class="sxs-lookup"><span data-stu-id="38bd0-142">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [<span data-ttu-id="38bd0-143">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="38bd0-143">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="38bd0-144">Erstellen von XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="38bd0-144">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [<span data-ttu-id="38bd0-145">Namen von deklarierten XML-Elementen und Attributen</span><span class="sxs-lookup"><span data-stu-id="38bd0-145">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+ [<span data-ttu-id="6cee6-142">XML-Achseneigenschaften</span><span class="sxs-lookup"><span data-stu-id="6cee6-142">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="6cee6-143">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="6cee6-143">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="6cee6-144">Erstellen von XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6cee6-144">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="6cee6-145">Namen von deklarierten XML-Elementen und Attributen</span><span class="sxs-lookup"><span data-stu-id="6cee6-145">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

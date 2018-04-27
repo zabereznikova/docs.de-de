@@ -1,41 +1,42 @@
 ---
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="c078f-102">Verwenden eines benutzerdefinierten Ausdrucks-Editors</span><span class="sxs-lookup"><span data-stu-id="c078f-102">Using a Custom Expression Editor</span></span>
-<span data-ttu-id="c078f-103">Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="c078f-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="c078f-104">Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:</span><span class="sxs-lookup"><span data-stu-id="c078f-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
+# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="2a174-102">Verwenden eines benutzerdefinierten Ausdrucks-Editors</span><span class="sxs-lookup"><span data-stu-id="2a174-102">Using a Custom Expression Editor</span></span>
+<span data-ttu-id="2a174-103">Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="2a174-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="2a174-104">Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:</span><span class="sxs-lookup"><span data-stu-id="2a174-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
   
--   <span data-ttu-id="c078f-105">Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer.</span><span class="sxs-lookup"><span data-stu-id="c078f-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="c078f-106">Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="c078f-106">This functionality must be provided because the default [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] expression editor cannot be used in rehosted applications.</span></span>  
+-   <span data-ttu-id="2a174-105">Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer.</span><span class="sxs-lookup"><span data-stu-id="2a174-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="2a174-106">Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="2a174-106">This functionality must be provided because the default [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] expression editor cannot be used in rehosted applications.</span></span>  
   
--   <span data-ttu-id="c078f-107">Zur Vereinfachung der Ausdrucksbearbeitungsumgebung z. B. für Wirtschaftsanalysten, sodass diese nicht die Arbeit mit [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] oder [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Ausdrücken lernen müssen.</span><span class="sxs-lookup"><span data-stu-id="c078f-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or deal with [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] expressions.</span></span>  
+-   <span data-ttu-id="2a174-107">Vereinfachen Sie den Ausdruck Ihnen Bearbeitungsfunktionen für Wirtschaftsanalysten, sodass sie nicht, z. B. beim Erlernen von Visual Basic oder Visual Basic-Ausdrücke behandeln benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="2a174-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
   
- <span data-ttu-id="c078f-108">Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="c078f-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
+ <span data-ttu-id="2a174-108">Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="2a174-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
   
-1.  <span data-ttu-id="c078f-109">Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="c078f-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="c078f-110">Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.</span><span class="sxs-lookup"><span data-stu-id="c078f-110">This interface manages the creation and destruction of expression editors.</span></span>  
+1.  <span data-ttu-id="2a174-109">Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2a174-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="2a174-110">Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.</span><span class="sxs-lookup"><span data-stu-id="2a174-110">This interface manages the creation and destruction of expression editors.</span></span>  
   
-2.  <span data-ttu-id="c078f-111">Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="c078f-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="c078f-112">Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.</span><span class="sxs-lookup"><span data-stu-id="c078f-112">This interface implements the UI for expression editing UI.</span></span>  
+2.  <span data-ttu-id="2a174-111">Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2a174-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="2a174-112">Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.</span><span class="sxs-lookup"><span data-stu-id="2a174-112">This interface implements the UI for expression editing UI.</span></span>  
   
-3.  <span data-ttu-id="c078f-113">Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.</span><span class="sxs-lookup"><span data-stu-id="c078f-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
+3.  <span data-ttu-id="2a174-113">Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.</span><span class="sxs-lookup"><span data-stu-id="2a174-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="c078f-114">Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek</span><span class="sxs-lookup"><span data-stu-id="c078f-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
- <span data-ttu-id="c078f-115">Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="c078f-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="2a174-114">Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek</span><span class="sxs-lookup"><span data-stu-id="2a174-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
+ <span data-ttu-id="2a174-115">Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="2a174-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -81,7 +82,7 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- <span data-ttu-id="c078f-116">Im Folgenden finden Sie den Code für eine `MyExpressionEditorInstance`-Klasse zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="c078f-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
+ <span data-ttu-id="2a174-116">Im Folgenden finden Sie den Code für eine `MyExpressionEditorInstance`-Klasse zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="2a174-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -231,8 +232,8 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="c078f-117">Veröffentlichen eines benutzerdefinierten Ausdrucks-Editors in einem WPF-Projekt</span><span class="sxs-lookup"><span data-stu-id="c078f-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
- <span data-ttu-id="c078f-118">Dieser Code zeigt, wie der Designer in einer [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Anwendung neu gehostet wird und wie der `MyEditorService`-Dienst erstellt und veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="c078f-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="c078f-119">Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="c078f-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="2a174-117">Veröffentlichen eines benutzerdefinierten Ausdrucks-Editors in einem WPF-Projekt</span><span class="sxs-lookup"><span data-stu-id="2a174-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
+ <span data-ttu-id="2a174-118">Dieser Code zeigt, wie der Designer in einer [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Anwendung neu gehostet wird und wie der `MyEditorService`-Dienst erstellt und veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="2a174-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="2a174-119">Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="2a174-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
   
 ```  
 using System.Windows;  
@@ -285,10 +286,10 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a><span data-ttu-id="c078f-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c078f-120">Notes</span></span>  
- <span data-ttu-id="c078f-121">Bei Verwendung einer **ExpressionTextBox** Steuerelement in einem benutzerdefinierten Aktivitätsdesigner ist es nicht erforderlich, erstellen und Zerstören von Ausdrucks-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> Methoden die <xref:System.Activities.Presentation.View.IExpressionEditorService> Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="c078f-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="c078f-122">Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.</span><span class="sxs-lookup"><span data-stu-id="c078f-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
+### <a name="notes"></a><span data-ttu-id="2a174-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2a174-120">Notes</span></span>  
+ <span data-ttu-id="2a174-121">Bei Verwendung einer **ExpressionTextBox** Steuerelement in einem benutzerdefinierten Aktivitätsdesigner ist es nicht erforderlich, erstellen und Zerstören von Ausdrucks-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> Methoden die <xref:System.Activities.Presentation.View.IExpressionEditorService> Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2a174-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="2a174-122">Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.</span><span class="sxs-lookup"><span data-stu-id="2a174-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c078f-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c078f-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2a174-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a174-123">See Also</span></span>  
  <xref:System.Activities.Presentation.View.IExpressionEditorService>  
  <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [<span data-ttu-id="c078f-124">Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner</span><span class="sxs-lookup"><span data-stu-id="c078f-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [<span data-ttu-id="2a174-124">Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner</span><span class="sxs-lookup"><span data-stu-id="2a174-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
