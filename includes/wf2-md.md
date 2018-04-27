@@ -1,1 +1,0 @@
-<span data-ttu-id="bc47e-101">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="bc47e-101">Windows Workflow Foundation</span></span>
