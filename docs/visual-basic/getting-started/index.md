@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
@@ -55,10 +55,10 @@ Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen
  Bietet Links zu Seiten mit Einführungen in die objektorientierte Programmierung und beschreibt das Erstellen eigener Objekte sowie das Verwenden der Objekte zum Vereinfachen der Codierung  
   
  [Beispiele](../../visual-basic/sample-applications.md)  
- Links zu Beispielcode in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Hier werden Links zu Beispielcode in Visual Basic aufgeführt.  
   
  [Exemplarische Vorgehensweisen](../../visual-basic/walkthroughs.md)  
- Stellt eine Liste von Hilfeseiten bereit, die Aspekte der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache veranschaulichen.  
+ Außerdem erhalten Sie eine Liste von Hilfeseiten, die Aspekte von Visual Basic veranschaulichen.  
   
  [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
  Erläutert, wie Sie Support erhalten und Feedback geben können  
@@ -66,7 +66,7 @@ Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen
  [Visual Studio](/visualstudio/)  
  Links zur [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Dokumentation.  
   
- [C#](../../csharp/index.md): Enthält Links zur Dokumentation der Anwendungsentwicklung mit [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md): Listet Links zur Dokumentation der Anwendungsentwicklung mit Visual Basic auf.  
   
  [Visual C++](/cpp/)  
  Enthält Links zur Visual C++-Dokumentation  

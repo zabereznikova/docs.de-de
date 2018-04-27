@@ -23,16 +23,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: ca56291e31526a6295c4a44f930e294d71b72488
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
   
- Informationen zur Ereignisbehandlung bei [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps finden Sie unter [Übersicht über Ereignisse und Routingereignisse (Windows Store-Apps)](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
+ Informationen zur Ereignisbehandlung bei Windows 8.x Store-Apps finden Sie unter [Events and routed events overview (Übersicht über Ereignisse und Routingereignisse)](/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Ereignisse  
  Ein Ereignis ist eine Meldung, die von einem Objekt gesendet wird, um das Auftreten einer Aktion zu signalisieren. Die Aktion kann durch Benutzerinteraktion, wie das Anklicken einer Schaltfläche, verursacht werden, oder sie kann durch eine andere Programmlogik, wie das Ändern eines Eigenschaftswerts, ausgelöst werden. Das Objekt, von dem das Ereignis ausgelöst wird, wird als *Ereignissender* bezeichnet. Dem Ereignissender ist nicht bekannt, welches Objekt oder welche Methode die ausgelösten Ereignisse empfangen (behandeln) wird. Das Ereignis ist in der Regel ein Member des Ereignissenders. Beispielsweise ist das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis ein Member der Klasse <xref:System.Web.UI.WebControls.Button>, und das <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>-Ereignis ist ein Member der Klasse, von der die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementiert wird.  

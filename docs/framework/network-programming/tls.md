@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -78,7 +78,7 @@ Der Rest dieses Artikels ist nicht relevant, wenn .NET Framework 4.7 oder höher
 
 ### <a name="for-tcp-sockets-networking"></a>Für TCP-Socketnetzwerke
 
-<xref:System.Net.Security.SslStream> wird bei Verwendung von .NET Framework 4.7 oder höheren Versionen standardmäßig auf die Vorgabe des Betriebssystems gesetzt, welches das beste Sicherheitsprotokoll und die beste Version auswählt. Damit standardmäßig die beste Wahl des Betriebssystems übernommen wird, verwenden Sie möglichst nicht die Methodenüberladungen von <xref:System.Net.Security.SslStream>, die einen expliziten <xref:System.Security.Authentication.SslProtocols>-Parameter übernehmen. Andernfalls übergeben Sie <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Die Verwendung von <xref:System.Security.Authentication.SslProtocols.Default> wird nicht empfohlen. Durch die Einstellung `SslProtocols.Default` wird die Verwendung von SSL 3.0 /TLS 1.0 erzwungen und TLS 1.2 nicht genutzt.
+<xref:System.Net.Security.SslStream> wird bei Verwendung von .NET Framework 4.7 oder höheren Versionen standardmäßig auf die Vorgabe des Betriebssystems gesetzt, welches das beste Sicherheitsprotokoll und die beste Version auswählt. Damit standardmäßig die beste Wahl des Betriebssystems übernommen wird, verwenden Sie möglichst nicht die Methodenüberladungen von <xref:System.Net.Security.SslStream>, die einen expliziten <xref:System.Security.Authentication.SslProtocols>-Parameter übernehmen. Andernfalls übergeben Sie <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Die Verwendung von <xref:System.Security.Authentication.SslProtocols.Default> wird nicht empfohlen. Durch die Einstellung `SslProtocols.Default` wird die Verwendung von SSL 3.0/TLS 1.0 erzwungen und TLS 1.2 nicht genutzt.
 
 Legen Sie (bei HTTP-Netzwerken) keinen Wert für die <xref:System.Net.ServicePointManager.SecurityProtocol>-Eigenschaft fest.
 
@@ -114,7 +114,7 @@ Wenn Sie **keine** benutzerdefinierte Bindung verwenden **und** Ihre WCF-Bindung
 
 Überprüfen Sie Ihren Code, um sicherzustellen, dass Sie keine bestimmte TLS- oder SSL-Version verwenden, wie in den folgenden Abschnitten beschrieben:
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Für .NET Framework 4.6 bis 4.6.2 und ohne WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Für .NET Framework 4.6 bis 4.6.2 und ohne WCF
 
 Setzen Sie den `DontEnableSystemDefaultTlsVersions` `AppContext`-Switch auf `false`. Siehe [Konfigurieren der Sicherheit über AppContext-Switches](#configuring-security-via-appcontext-switches).
 
@@ -124,7 +124,7 @@ Sie müssen die neuesten Betriebssystempatches installieren. Siehe [Sicherheitsu
 
 Das WCF-Framework wählt automatisch das höchste bis TLS 1.2 verfügbare Protokoll, es sei denn, Sie konfigurieren explizit eine Protokollversion. Weitere Informationen finden Sie im vorhergehenden Abschnitt [Für WCF-TCP-Transport unter Berücksichtigung der Transportsicherheit mit Zertifikatanmeldeinformationen](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.1 und ohne WFC
+### <a name="for-net-framework-35---451-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.1 und ohne WCF
 
 Es wird empfohlen, ein Upgrade Ihrer App auf .NET Framework 4.7 oder höher auszuführen. Wenn Sie kein Upgrade ausführen können, gehen Sie wie folgt vor. Möglicherweise tritt irgendwann in Ihrer Anwendung ein Fehler auf, bis Sie ein Upgrade auf .NET Framework 4.7 oder höher ausgeführt haben.
 

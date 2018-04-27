@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
@@ -40,7 +40,7 @@ Für das Schreiben von Analysetools und Codefehlerbehebungen gibt es drei Haupts
 
 ## <a name="enforce-team-coding-standards"></a>Erzwingen von Codierungsstandards im Team
 
-Viele Teams verfügen über Codierungsstandards, die durch Code Reviews bei anderen Teammitgliedern erzwungen werden. Die Effizienz dieses Prozesses kann durch Analysetools und Codefehlerbehebungen um ein Vielfaches erhöht werden. Code Reviews erfolgen, wenn ein Entwickler seine Arbeit mit anderen Mitgliedern des Teams teilt. In der Regel hat er viel Zeit für die Fertigstellung eines neuen Features verbracht, bevor er Kommentare erhält. Dabei können Wochen vergehen, in denen er Gewohnheiten stärkt, die nicht den Praktiken des Teams entsprechen.
+Viele Teams verfügen über Codierungsstandards, die durch Code Reviews bei anderen Teammitgliedern erzwungen werden. Die Effizienz dieses Prozesses kann durch Analysetools und Codefehlerbehebungen um ein Vielfaches erhöht werden. Code Reviews erfolgen, wenn ein Entwickler seine Arbeit mit anderen Mitgliedern des Teams teilt. In der Regel hat er viel Zeit in die Fertigstellung eines neuen Features investiert, bevor er Kommentare erhält. Dabei können Wochen vergehen, in denen er Gewohnheiten stärkt, die nicht den Praktiken des Teams entsprechen.
 
 Während ein Entwickler Codes schreibt, werden Analysetools ausgeführt. Er erhält ein unmittelbares Feedback, das ihn direkt dazu animiert, dem Leitfaden zu folgen. Sobald er mit der Prototyperstellung beginnt, schafft er so Gewohnheiten zum Schreiben von konformen Codes. Wenn ein Review für das Feature durchgeführt werden kann, wurden sämtliche Standardrichtlinien erzwungen.
 
@@ -73,7 +73,7 @@ In diesen vier Themenbereichen erfahren Sie mehr über die Konzepte im .NET Comp
  - [Arbeiten mit der Semantik](work-with-semantics.md)
  - [Arbeiten mit einem Arbeitsbereich](work-with-workspace.md)
  
-Installieren Sie zunächst das **.NET Compiler Platform SDK**:
+Installieren Sie zunächst das **SDK für die .NET Compiler Platform**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 

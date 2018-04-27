@@ -1,6 +1,6 @@
 ---
-title: "Musterabgleich – Leitfaden für C#"
-description: "Erfahren Sie mehr über Musterabgleichausdrücke in C#."
+title: Musterabgleich – Leitfaden für C#
+description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Musterabgleich #
 
@@ -112,27 +112,27 @@ Zuletzt können Sie einen `null`-case hinzufügen, um sicherzustellen, dass das 
 
 Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstante `null` im Muster keinen Typ besitzt, aber in jeden Verweis- oder Nullable-Typ konvertiert werden kann. Statt `null` in einen beliebigen Typ zu konvertieren, definiert die Sprache, dass ein `null`-Wert keinem Typmuster entspricht, unabhängig Typ zur Kompilierzeit der Variablen. Dieses Verhalten macht das neue `switch`-basierte Typmuster konsistent mit der `is`-Anweisung: `is`-Anweisungen geben stets `false` zurück, wenn der überprüfte Wert `null` ist. Außerdem ist es einfacher: Nachdem Sie den Typ überprüft haben, ist keine zusätzliche NULL-Überprüfung erforderlich. Das erkennen Sie daran, dass in keinem der Case-Blocks oben genannten Beispiele NULL-Überprüfungen durchgeführt werden: Sie sind schlicht nicht erforderlich, da der Abgleich des Typmusters einen Wert ungleich NULL garantiert.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`Deklarationen in `case` Ausdrücke
+## <a name="var-declarations-in-case-expressions"></a>`var`-Deklarationen in `case`-Ausdrücken
 
-Die Einführung von `var` als einer der Ausdrücke Übereinstimmung neue Regeln zur Musterübereinstimmung eingeführt.
+Mit der Einführung von `var` als Übereinstimmungsausdruck werden neue Regeln für den Musterabgleich eingeführt.
 
-Die erste Regel ist, die die `var` Deklaration folgt den Typ "normal" Rückschlussregeln: der Typ werden von den statischen Typ des Switch-Ausdrucks abgeleitet wird. Von dieser Regel übereinstimmt immer mit dem Typ.
+Die erste Regel lautet, dass die `var`-Deklaration den normalen Typrückschlussregeln entspricht: Der Typ wird als statischer Typ des switch-Ausdrucks abgeleitet. Dieser Regel entsprechend stimmt der Typ immer überein.
 
-Die zweite Regel ist, die eine `var` Deklaration keine Überprüfung auf null, der andere Typ Muster Ausdrücke enthalten. Bedeutet, dass die Variable kann null sein und eine null-Prüfung ist in diesem Fall erforderlich.
+Die zweite Regel lautet, dass eine `var`-Deklaration keine NULL-Überprüfung umfasst, die in anderen Typmusterausdrücken enthalten ist. Dies bedeutet, dass die Variable NULL sein kann, und eine NULL-Überprüfung ist in diesem Fall erforderlich.
 
-Diese zwei Regeln bedeuten, dass in vielen Fällen eine `var` Deklaration in einem `case` Ausdruck übereinstimmt, die gleichen Bedingungen wie eine `default` Ausdruck.
-Da jeder Fall nicht standardmäßiger bevorzugt wird die `default` Fall die `default` Fall werden nie ausgeführt.
+Diese zwei Regeln bedeuten, dass in vielen Fällen eine `var`-Deklaration in einem `case`-Ausdruck dieselben Bedingungen erfüllt wie ein `default`-Ausdruck.
+Weil nicht standardmäßige Fälle dem `default`-case vorgezogen werden, wird der `default`-case nie ausgeführt.
 
 > [!NOTE]
-> Der Compiler gibt keine Warnung in diesen Fällen, in denen eine `default` Fall geschrieben wurde, aber nie ausgeführt. Dies ist konsistent mit aktuellen `switch` Anweisung Verhalten, in denen alle möglichen Fälle eingestellt wurden.
+> Der Compiler gibt keine Warnung in Fällen aus, in denen ein `default`-case geschrieben, aber nie ausgeführt wurde. Dies entspricht dem aktuellen Verhalten der `switch`-Anweisung, bei der alle möglichen Fälle aufgelistet werden.
 
-Die dritte Regel führt verwendet, in denen eine `var` Fall kann nützlich sein. Stellen Sie sich vor, dass Sie einen Mustervergleich ausführen, wobei die Eingabe eine Zeichenfolge ist und Sie bekannter Befehl Werten gesucht werden. Sie können Folgendes schreiben:
+Die dritte Regel führt Verwendungen ein, in denen ein `var`-case nützlich sein kann. Angenommen, Sie führen einen Musterabgleich durch, bei dem die Eingabe eine Zeichenfolge ist und Sie nach bekannten Befehlswerten suchen. Sie könnten etwa folgenden Code schreiben:
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-Die `var` Fall Übereinstimmungen `null`, die leere Zeichenfolge oder eine Zeichenfolge, die nur Leerzeichen enthält. Beachten Sie, die der obige Code verwendet die `?.` Operator, um sicherzustellen, dass keine versehentlich ausgelöst wird, eine <xref:System.NullReferenceException>. Die `default` -Fall verarbeitet, andere Zeichenfolgenwerte, die vom Befehlsparser für diesen nicht verstanden werden.
+Der `var`-case entspricht `null`, der leeren Zeichenfolge oder einer beliebigen Zeichenfolge, die nur Leerraum enthält. Beachten Sie, dass im vorstehenden Code der `?.`-Operator verwendet wird, um sicherzustellen, dass nicht versehentlich eine <xref:System.NullReferenceException> ausgelöst wird. Der `default`-case behandelt alle anderen Zeichenfolgenwerte, die nicht von diesem Befehlsparser verstanden werden.
 
-Dies ist ein Beispiel, in dem sollten Sie in Betracht ziehen einer `var` case-Ausdruck, der sich von einem `default` Ausdruck.
+Dies ist ein Beispiel, bei dem Sie einen `var`-case-Ausdruck erwägen können, der sich von einem `default`-Ausdruck unterscheidet.
 
 ## <a name="conclusions"></a>Zusammenfassung
 

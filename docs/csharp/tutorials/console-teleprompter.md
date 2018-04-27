@@ -10,33 +10,40 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.openlocfilehash: dba6125dd359a47115b0f363a081dc000ce29e6a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="console-application"></a>Konsolenanwendung
 
-## <a name="introduction"></a>Einführung
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
-*   Grundlagen der .NET Core-Befehlszeilenschnittstelle (CLI)
-*   Die Struktur einer C#-Konsolenanwendung
-*   Konsolen-E/A
-*   Grundlagen der Datei-E/A-APIs in .NET Core
-*   Grundlagen des taskbasierten asynchronen Programmiermodells in .NET Core
 
-Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole wird so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten < oder > drücken.
+- Grundlagen der .NET Core-Befehlszeilenschnittstelle (CLI)
+- Die Struktur einer C#-Konsolenanwendung
+- Konsolen-E/A
+- Grundlagen der Datei-E/A-APIs in .NET
+- Grundlagen des taskbasierten asynchronen Programmiermodells in .NET
 
-In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an. 
+Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole ist so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten < oder > drücken.
+
+In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an.
+
 ## <a name="prerequisites"></a>Erforderliche Komponenten
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. 
+
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen.
+Sie müssen Ihren bevorzugten Code-Editor installieren.
+
 ## <a name="create-the-application"></a>Erstellen der Anwendung
+
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
-Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur Ausführung der einfachen Hello World-Anwendung durch. Geben Sie nach dem Erstellen der Anwendung `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) an der Eingabeaufforderung. Mit diesem Befehl wird der Prozess zur NuGet-Paketwiederherstellung ausgeführt. NuGet ist ein .NET-Paket-Manager. Mit diesem Befehl werden alle fehlenden abhängigen Komponenten für Ihr Projekt heruntergeladen. Da es sich um ein neues Projekt handelt, ist keine der abhängigen Komponenten vorhanden, deshalb wird zunächst das .NET Core-Framework heruntergeladen. Nach diesem ersten Schritt, Sie müssen nur auszuführende `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) Wenn Sie neue abhängigen Pakete hinzufügen oder aktualisieren Sie die Versionen eine Ihrer Abhängigkeiten. Bei diesem Vorgang wird auch die Projektsperrdatei (project.lock.json) in Ihrem Projektverzeichnis erstellt. Diese Datei bietet Unterstützung beim Verwalten der Projektabhängigkeiten. Sie enthält den lokalen Speicherort für alle Projektabhängigkeiten. Sie müssen nicht die Datei im Datenquellen-Steuerelements abgelegt. Es wird generiert, wenn Sie ausführen `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)). 
+Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur Ausführung der einfachen Hello World-Anwendung durch. Geben Sie nach dem Erstellen der Anwendung den Befehl `dotnet restore` an der Eingabeaufforderung ein. Mit diesem Befehl wird der Prozess zur NuGet-Paketwiederherstellung ausgeführt. NuGet ist ein .NET-Paket-Manager. Mit diesem Befehl werden alle fehlenden abhängigen Komponenten für Ihr Projekt heruntergeladen. Da es sich um ein neues Projekt handelt, ist keine der abhängigen Komponenten vorhanden, deshalb wird zunächst das .NET Core-Framework heruntergeladen. Nach diesem ersten Schritt müssen Sie `dotnet restore` nur ausführen, wenn Sie neue abhängige Pakete hinzufügen oder die Versionen abhängiger Komponenten aktualisieren.
 
-Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird das Buildmodul ausgeführt und die ausführbare Datei für Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird das Buildmodul ausgeführt und die ausführbare Datei für Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
 
 Der gesamte Code für die einfache Hello World-Anwendung ist in „Program.cs“ enthalten. Öffnen Sie diese Datei mit Ihrem bevorzugten Text-Editor. Wir werden jetzt die ersten Änderungen vornehmen.
 Am Anfang der Datei sehen Sie eine using-Anweisung:
@@ -45,16 +52,17 @@ Am Anfang der Datei sehen Sie eine using-Anweisung:
 using System;
 ```
 
-Diese Anweisung informiert den Compiler, dass alle Typen aus dem `System`-Namespace im Gültigkeitsbereich liegen. Wie andere objektorientierte Sprachen, die Sie vielleicht schon verwendet haben, verwendet C# Namespaces, um Typen zu organisieren. Dieses Hello World-Programm funktioniert genauso. Sie können sehen, dass das Programm im `ConsoleApplication`-Namespace enthalten ist. Dies ist kein besonders aussagekräftiger Name, ändern Sie ihn deshalb in `TeleprompterConsole`:
+Diese Anweisung informiert den Compiler, dass alle Typen aus dem `System`-Namespace im Gültigkeitsbereich liegen. Wie andere objektorientierte Sprachen, die Sie vielleicht schon verwendet haben, verwendet C# Namespaces, um Typen zu organisieren. Dieses Hello World-Programm funktioniert genauso. Sie können sehen, dass das Programm in den Namespace eingeschlossen ist, wobei der Name auf dem des aktuellen Verzeichnisses basiert. Für dieses Tutorial ändern wir den Namen des Namespace in `TeleprompterConsole`:
 
 ```csharp
 namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Lesen und Ausgeben der Datei
-Das erste hinzuzufügende Feature ist die Möglichkeit zum Lesen einer Textdatei und zum Anzeigen des gesamten Texts in der Konsole. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung. Wenn Sie Informationen dazu erhalten möchten, wie Sie die Beispiel-App für dieses Thema herunterladen, finden Sie Anweisungen im Thema [Beispiele und Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Fügen Sie als Nächstes die folgenden Methoden in Ihre Program-Klasse ein (rechts neben der `Main`-Methode):
+Das erste hinzuzufügende Feature ist die Möglichkeit zum Lesen einer Textdatei und zum Anzeigen des gesamten Texts in der Konsole. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung. Wenn Sie Informationen dazu erhalten möchten, wie Sie die Beispiel-App für dieses Thema herunterladen, finden Sie Anweisungen im Thema [Beispiele und Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+Fügen Sie als Nächstes die folgende Methode in Ihre `Program`-Klasse ein (rechts neben der `Main`-Methode):
 
 ```csharp
 static IEnumerable<string> ReadFrom(string file)
@@ -77,27 +85,28 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-Die `IEnumerable<T>`-Schnittstelle ist im `System.Collections.Generic`-Namespace definiert. Die <xref:System.IO.File>-Klasse ist im `System.IO`-Namespace definiert.
+Die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle ist im <xref:System.Collections.Generic>-Namespace definiert. Die <xref:System.IO.File>-Klasse ist im <xref:System.IO>-Namespace definiert.
 
-Diese Methode ist ein besonderer Typ von C#-Methode, der als *Enumeratormethode* bezeichnet wird. Enumeratormethoden geben Sequenzen zurück, die verzögert ausgewertet werden. Dies bedeutet, dass jedes Element in der Sequenz dann generiert wird, wenn es vom Code angefordert wird, der die Sequenz verarbeitet. Enumeratormethoden sind Methoden, die mindestens eine `yield return`-Anweisung enthalten. Das von der `ReadFrom`-Methode zurückgegebene Objekt enthält den Code zum Generieren aller Elemente in der Sequenz. In diesem Beispiel umfasst dies das Einlesen der nächsten Textzeile aus der Quelldatei und die Rückgabe dieser Zeichenfolge. Jedes Mal, wenn der aufrufende Code die nächste Zeile aus der Sequenz anfordert, liest der Code die nächste Zeile aus der Textdatei und gibt sie zurück. Wenn die Datei vollständig gelesen wurde, gibt die Sequenz an, dass keine weiteren Elemente vorhanden sind.
+Diese Methode ist ein besonderer Typ von C#-Methode, der als *Iteratormethode* bezeichnet wird. Enumeratormethoden geben Sequenzen zurück, die verzögert ausgewertet werden. Dies bedeutet, dass jedes Element in der Sequenz dann generiert wird, wenn es vom Code angefordert wird, der die Sequenz verarbeitet. Enumeratormethoden sind Methoden, die mindestens eine [`yield return`](../language-reference/keywords/yield.md)-Anweisung enthalten. Das von der `ReadFrom`-Methode zurückgegebene Objekt enthält den Code zum Generieren aller Elemente in der Sequenz. In diesem Beispiel umfasst dies das Einlesen der nächsten Textzeile aus der Quelldatei und die Rückgabe dieser Zeichenfolge. Jedes Mal, wenn der aufrufende Code die nächste Zeile aus der Sequenz anfordert, liest der Code die nächste Zeile aus der Textdatei und gibt sie zurück. Wenn die Datei vollständig gelesen wurde, gibt die Sequenz an, dass keine weiteren Elemente vorhanden sind.
 
-Es gibt zwei weitere C#-Syntaxelemente, die möglicherweise neu für Sie sind. Die `using`-Anweisung in dieser Methode verwaltet die Ressourcenbereinigung. Die Variable, die in der `using`-Anweisung initialisiert wird – in diesem Beispiel `reader` –, muss die `IDisposable`-Schnittstelle implementieren. Die <xref:System.IDisposable>-Schnittstelle definiert eine einzige Methode, `Dispose`, die aufgerufen werden muss, wenn die Ressource freigegeben werden soll. Der Compiler generiert diesen Aufruf, wenn die Ausführung die schließende geschweifte Klammer der `using`-Anweisung erreicht. Der vom Compiler generierte Code stellt sicher, dass die Ressource selbst dann freigegeben wird, wenn der Code im durch die using-Anweisung definierten Block eine Ausnahme auslöst.
+Es gibt zwei weitere C#-Syntaxelemente, die möglicherweise neu für Sie sind. Die [`using`](../language-reference/keywords/using-statement.md)-Anweisung in dieser Methode verwaltet die Ressourcenbereinigung. Die Variable, die in der `using`-Anweisung initialisiert wird – in diesem Beispiel `reader` –, muss die <xref:System.IDisposable>-Schnittstelle implementieren. Diese Schnittstelle definiert eine einzige Methode, `Dispose`, die aufgerufen werden muss, wenn die Ressource freigegeben werden soll. Der Compiler generiert diesen Aufruf, wenn die Ausführung die schließende geschweifte Klammer der `using`-Anweisung erreicht. Der vom Compiler generierte Code stellt sicher, dass die Ressource selbst dann freigegeben wird, wenn der Code im durch die using-Anweisung definierten Block eine Ausnahme auslöst.
 
-Die `reader`-Variable wird mit dem `var`-Schlüsselwort definiert. `var` definiert eine *implizit typisierte lokale Variable*. Dies bedeutet, dass der Typ der Variablen durch den Kompilierzeittyp des Objekts bestimmt wird, das der Variablen zugewiesen ist. Hier können, die den Rückgabewert ist der <xref:System.IO.File.OpenText(System.String)> Methode, die eine <xref:System.IO.StreamReader> Objekt.
- 
-Füllen wir jetzt den Code in der `Main`-Methode, um die Datei zu lesen: 
+Die `reader`-Variable wird mit dem `var`-Schlüsselwort definiert. [`var`](../language-reference/keywords/var.md) definiert eine *implizit typisierte lokale Variable*. Dies bedeutet, dass der Typ der Variablen durch den Kompilierzeittyp des Objekts bestimmt wird, das der Variablen zugewiesen ist. Hier ist dies der Rückgabewert der <xref:System.IO.File.OpenText(System.String)>-Methode, bei dem es sich um ein <xref:System.IO.StreamReader>-Objekt handelt.
+
+Füllen wir jetzt den Code in der `Main`-Methode, um die Datei zu lesen:
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
 foreach (var line in lines)
 {
-    Console.WriteLine(line); 
+    Console.WriteLine(line);
 }
 ```
 
-Führen Sie das Programm aus (Sie verwenden hierzu `dotnet run`, und jede Zeile wird einzeln an der Konsole ausgegeben).  
+Führen Sie das Programm (unter Verwendung von `dotnet run`) aus. Jede Zeile wird einzeln an der Konsole ausgegeben.
 
 ## <a name="adding-delays-and-formatting-output"></a>Hinzufügen von Verzögerungen und Formatieren der Ausgabe
+
 Der Text wird momentan zu schnell ausgegeben, um ihn laut mitzulesen. Jetzt müssen Sie Verzögerungen in der Ausgabe hinzufügen. Zu Beginn erstellen Sie einen Teil des grundlegenden Codes, der eine asynchrone Verarbeitung ermöglicht. Auf diese ersten Schritte folgen jedoch einige Antimuster. Die Antimuster werden in Kommentaren erläutert, die Sie im Code hinzufügen, und der Code wird in späteren Schritten aktualisiert.
 
 Dieser Abschnitt umfasst zwei Schritte. Zunächst aktualisieren Sie die Iteratormethode, um anstelle von ganzen Zeilen einzelne Wörter zurückzugeben. Dies wird durch diese Änderungen erreicht. Ersetzen Sie die `yield return line;`-Anweisung durch den folgenden Code:
@@ -125,18 +134,18 @@ if (!string.IsNullOrWhiteSpace(line))
 }
 ```
 
-Die `Task`-Klasse ist im `System.Threading.Tasks`-Namespace enthalten, deshalb müssen Sie diese `using`-Anweisung am Anfang der Datei hinzufügen:
+Die <xref:System.Threading.Tasks.Task>-Klasse ist im <xref:System.Threading.Tasks>-Namespace enthalten, deshalb müssen Sie diese `using`-Anweisung am Anfang der Datei hinzufügen:
 
 ```csharp
 using System.Threading.Tasks;
 ```
 
-Führen Sie das Beispiel aus, und überprüfen Sie die Ausgabe. Jetzt folgt nach der Ausgabe jedes Worts eine Pause von 200 ms. Die angezeigte Ausgabe ist jedoch fehlerhaft, weil der Quelltext mehrere Zeilen umfasst, die mehr als 80 Zeichen ohne Zeilenumbruch aufweisen. Der Text ist möglicherweise schwer zu lesen, wenn er ohne Umbrüche angezeigt wird. Dieses Problem kann einfach gelöst werden. Sie verfolgen einfach die Länge jeder Zeile nach und generieren immer dann eine neue Zeile, wenn die Zeilenlänge einen bestimmten Schwellenwert überschreitet. Deklarieren Sie nach der Deklaration von `words` eine lokale Variable, die die Zeilenlänge enthält:
+Führen Sie das Beispiel aus, und überprüfen Sie die Ausgabe. Jetzt folgt nach der Ausgabe jedes Worts eine Pause von 200 ms. Die angezeigte Ausgabe ist jedoch fehlerhaft, weil der Quelltext mehrere Zeilen umfasst, die mehr als 80 Zeichen ohne Zeilenumbruch aufweisen. Der Text ist möglicherweise schwer zu lesen, wenn er ohne Umbrüche angezeigt wird. Dieses Problem kann einfach gelöst werden. Sie verfolgen einfach die Länge jeder Zeile nach und generieren immer dann eine neue Zeile, wenn die Zeilenlänge einen bestimmten Schwellenwert überschreitet. Deklarieren Sie nach der Deklaration von `words` in der `ReadFrom`-Methode eine lokale Variable, die die Zeilenlänge enthält:
 
 ```csharp
 var lineLength = 0;
 ```
- 
+
 Fügen Sie dann nach der `yield return word + " ";`-Anweisung (vor der schließenden geschweiften Klammer) den folgenden Code hinzu:
 
 ```csharp
@@ -147,10 +156,11 @@ if (lineLength > 70)
     lineLength = 0;
 }
 ```
- 
+
 Führen Sie das Beispiel aus. Jetzt sollten Sie in der Lage sein, den Text im festgelegten Tempo laut mitzulesen.
 
 ## <a name="async-tasks"></a>Asynchrone Tasks
+
 Zuletzt fügen Sie den Code hinzu, mit dem in einem Task die Ausgabe asynchron geschrieben wird, während in einem weiteren Task Eingaben vom Benutzer gelesen werden, um ggf. die Geschwindigkeit der Textanzeige zu erhöhen oder zu verringern. Hierzu sind einige Schritte erforderlich, damit Sie am Ende über alle benötigten Aktualisierungen verfügen.
 Im ersten Schritt erstellen Sie eine asynchrone <xref:System.Threading.Tasks.Task>-Rückgabemethode, die den Code repräsentiert, den Sie bisher zum Lesen und Anzeigen der Datei erstellt haben.
 
@@ -160,10 +170,10 @@ Fügen Sie diese Methode zu Ihrer `Program`-Klasse hinzu (diese stammt aus dem K
 private static async Task ShowTeleprompter()
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(200);
         }
@@ -182,6 +192,9 @@ ShowTeleprompter().Wait();
 ```
 
 Hier führt der Code in `Main` einen asynchronen Wartevorgang aus. Sie sollten nach Möglichkeit anstelle eines synchronen Wartevorgangs immer den `await`-Operator verwenden. In der `Main`-Methode einer Konsolenanwendung kann der `await`-Operator jedoch nicht verwendet werden. Dies würde dazu führen, dass die Anwendung beendet wird, bevor alle Tasks abgeschlossen sind.
+
+> [!NOTE]
+> Wenn Sie C# 7.1 oder höher verwenden, können Sie Konsolenanwendungen mit der [`async` `Main`-Methode](../whats-new/csharp-7-1.md#async-main) erstellen.
 
 Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben < und > zu überwachen. Hier ist die Methode, die Sie für diesen Task hinzufügen:
 
@@ -210,8 +223,8 @@ private static async Task GetInput()
 Hiermit wird ein Lambda-Ausdruck zur Darstellung eines <xref:System.Action>-Delegaten erstellt. Mit diesem wird ein Schlüssel aus der Konsole gelesen und eine lokale Variable geändert, die die Verzögerung beim Drücken der Tasten < oder > durch den Benutzer repräsentiert. Diese Methode verwendet <xref:System.Console.ReadKey> zum Blockieren und wartet darauf, dass der Benutzer eine Taste drückt.
 
 Um dieses Feature abzuschließen, müssen Sie eine neue `async Task`-Rückgabemethode erstellen, die beide Tasks (`GetInput` und `ShowTeleprompter`) startet und außerdem die von diesen Tasks gemeinsam verwendeten Daten verwaltet.
- 
-Es muss eine neue Klasse erstellt werden, mit der die von diesen zwei Tasks gemeinsam verwendeten Daten verarbeitet werden können. Diese Klasse enthält zwei öffentliche Eigenschaften: die Verzögerung und ein Flag, mit dem angegeben wird, dass die Datei vollständig gelesen wurde:
+
+Es muss eine neue Klasse erstellt werden, mit der die von diesen zwei Tasks gemeinsam verwendeten Daten verarbeitet werden können. Diese Klasse enthält zwei öffentliche Eigenschaften: die Verzögerung und ein Flag `Done`, mit dem angegeben wird, dass die Datei vollständig gelesen wurde:
 
 ```csharp
 namespace TeleprompterConsole
@@ -230,17 +243,24 @@ namespace TeleprompterConsole
                 DelayInMilliseconds = newDelay;
             }
         }
+
+        public bool Done { get; private set; }
+
+        public void SetDone()
+        {
+            Done = true;
+        }
     }
 }
 ```
 
-Platzieren Sie diese Klasse in einer neuen Datei, und fügen Sie diese Klasse in den `TeleprompterConsole`-Namespace ein (wie oben gezeigt). Sie benötigen außerdem eine `using static`-Anweisung, damit Sie ohne die Namen der übergeordneten Klasse oder des Namespace auf die `Min`- und `Max`-Methode verweisen können. Eine `using static`-Anweisung importiert die Methoden einer Klasse. Dies steht in Kontrast zu den bisher verwendeten `using`-Anweisungen, die alle Klassen aus einem Namespace importiert haben.
+Platzieren Sie diese Klasse in einer neuen Datei, und fügen Sie diese Klasse in den `TeleprompterConsole`-Namespace ein (wie oben gezeigt). Sie benötigen außerdem eine `using static`-Anweisung, damit Sie ohne die Namen der übergeordneten Klasse oder des Namespace auf die `Min`- und `Max`-Methode verweisen können. Eine [`using static`](../language-reference/keywords/using-static.md)-Anweisung importiert die Methoden einer Klasse. Dies steht in Kontrast zu den bisher verwendeten `using`-Anweisungen, die alle Klassen aus einem Namespace importiert haben.
 
 ```csharp
 using static System.Math;
 ```
 
-Ein weiteres neues Sprachfeature ist die `lock`-Anweisung. Mit dieser Anweisung wird sichergestellt, dass zu jedem Zeitpunkt nur ein einziger Thread in diesem Codeabschnitt vorhanden sein kann. Wenn sich ein Thread im gesperrten Abschnitt befindet, müssen andere Threads warten, bis der erste Thread diesen Abschnitt verlässt. Die `lock`-Anweisung verwendet ein Objekt, das den gesperrten Abschnitt schützt. Diese Klasse verwendet ein Standardidiom, um ein privates Objekt in der Klasse zu sperren.
+Ein weiteres neues Sprachfeature ist die [`lock`](../language-reference/keywords/lock-statement.md)-Anweisung. Mit dieser Anweisung wird sichergestellt, dass zu jedem Zeitpunkt nur ein einziger Thread in diesem Codeabschnitt vorhanden sein kann. Wenn sich ein Thread im gesperrten Abschnitt befindet, müssen andere Threads warten, bis der erste Thread diesen Abschnitt verlässt. Die `lock`-Anweisung verwendet ein Objekt, das den gesperrten Abschnitt schützt. Diese Klasse verwendet ein Standardidiom, um ein privates Objekt in der Klasse zu sperren.
 
 Im nächsten Schritt müssen Sie die `ShowTeleprompter`- und `GetInput`-Methoden zur Verwendung des neuen `config`-Objekts aktualisieren. Schreiben Sie einen finalen `Task`, der die `async`-Methode zurückgibt, um beide Tasks zu starten und den Vorgang zu beenden, sobald der erste Task beendet wird:
 
@@ -255,7 +275,7 @@ private static async Task RunTeleprompter()
 }
 ```
 
-Eine neue Methode hier besteht die <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> aufrufen. Hiermit wird ein `Task` erstellt, der abgeschlossen wird, sobald einer der Tasks in dieser Argumentliste beendet ist.
+Die neue Methode hier ist der <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])>-Aufruf. Hiermit wird ein `Task` erstellt, der abgeschlossen wird, sobald einer der Tasks in dieser Argumentliste beendet ist.
 
 Im nächsten Schritt müssen Sie die `ShowTeleprompter`- und `GetInput`-Methoden zur Verwendung des neuen `config`-Objekts aktualisieren:
 
@@ -276,7 +296,6 @@ private static async Task ShowTeleprompter(TelePrompterConfig config)
 
 private static async Task GetInput(TelePrompterConfig config)
 {
-
     Action work = () =>
     {
         do {
@@ -297,22 +316,9 @@ Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `Telepro
 RunTeleprompter().Wait();
 ```
 
-Zum Abschluss müssen Sie die `SetDone`-Methode hinzufügen und die `Done`-Eigenschaft in die `TelePrompterConfig`-Klasse einfügen:
-
-```csharp
-public bool Done => done;
-
-private bool done;
-
-public void SetDone()
-{
-    done = true;    
-}
-```
-
 ## <a name="conclusion"></a>Schlussbemerkung
+
 In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden.
-Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung des taskbasierten asynchronen Programmiermodells vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
- 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
+
+Weitere Informationen zur Datei-E/A finden Sie im Thema [Datei- und Stream-E/A](../../standard/io/index.md). Weitere Informationen zu dem in diesem Tutorial verwendeten asynchronen Programmiermodell finden sie in den Themen [Aufgabenbasierte asynchrone Programmierung](../..//standard/parallel-programming/task-based-asynchronous-programming.md) und [Asynchrone Programmierung](../async.md).

@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -98,7 +98,7 @@ Die folgenden Eigenschaften fassen zusammen, wodurch das vorherige Beispiel sich
   
     -   `void`, wenn Sie einen asynchronen Ereignishandler schreiben.  
 
-    -   Andere Typen verfügen über eine `GetAwaiter`-Methode (ab C# 7).
+    -   Jeder andere Typ, der über eine `GetAwaiter`-Methode verfügt (ab C# 7.0).
   
      Weitere Informationen finden Sie im Abschnitt [Rückgabetypen und Parameter](#BKMK_ReturnTypesandParameters).  
   
@@ -179,7 +179,7 @@ Sie geben <xref:System.Threading.Tasks.Task%601> als Rückgabetyp an, wenn die M
   
 Sie verwenden <xref:System.Threading.Tasks.Task> als Rückgabetyp, wenn die Methode keine return-Anweisung hat oder über eine return-Anweisung verfügt, die keinen Operanden zurückgibt.  
 
-Ab C# 7 können Sie auch andere Rückgabetypen angeben, vorausgesetzt, dass dieser Typ eine `GetAwaiter`-Methode enthält. Ein Beispiel eines solchen Typs ist <xref:System.Threading.Tasks.ValueTask%601>. Er ist im NuGet-Paket [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) verfügbar.
+Ab C# 7.0 können Sie auch andere Rückgabetypen angeben, vorausgesetzt, dieser Typ enthält eine `GetAwaiter`-Methode. Ein Beispiel eines solchen Typs ist <xref:System.Threading.Tasks.ValueTask%601>. Er ist im NuGet-Paket [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) verfügbar.
   
  Im folgenden Beispiel wird gezeigt, wie Sie eine Methode deklarieren und aufrufen, die <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> zurückgibt.  
   
