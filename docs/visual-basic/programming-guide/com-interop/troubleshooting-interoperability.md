@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Problembehandlung bei Interoperabilität (Visual Basic)
 Wenn Sie COM- und des verwalteten Codes der Zusammenwirken der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], können Sie eine oder mehrere der folgenden Probleme auftreten.  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  Sie können Informationen wie die fehlerbeschreibung, HRESULT und die Quelle der COM-Fehler untersuchen des Inhalts des Ausnahmeobjekts finden.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX-Steuerelement-Probleme  
- Die meisten ActiveX-Steuerelemente, die mit Visual Basic 6.0 arbeiten werden mit Visual Basic .NET arbeiten, ohne Probleme. Die wichtigsten Ausnahmen sind Container oder Steuerelemente, die visuell andere Steuerelemente enthalten. Einige Beispiele für ältere Steuerelemente, die mit nicht ordnungsgemäß funktionieren [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] lauten wie folgt:  
+ Die meisten ActiveX-Steuerelemente, die mit Visual Basic 6.0 arbeiten werden mit Visual Basic .NET arbeiten, ohne Probleme. Die wichtigsten Ausnahmen sind Container oder Steuerelemente, die visuell andere Steuerelemente enthalten. Einige Beispiele für ältere Steuerelemente, die mit Visual Studio nicht korrekt funktionieren sind wie folgt:  
   
 -   Microsoft Forms 2.0-Frame-Steuerelement  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan Registerkarten-Steuerelement  
   
- Es gibt nur wenige problemumgehungen für nicht unterstützte ActiveX-Steuerelement-Probleme. Sie können vorhandene Steuerelementen zu migrieren [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Wenn Sie den ursprünglichen Quellcode besitzen. Überprüfen Sie andernfalls können Sie mit dem Softwareanbieter für aktualisiert. NET-kompatiblen Versionen von Steuerelementen ersetzen unterstützt ActiveX-Steuerelemente.  
+ Es gibt nur wenige problemumgehungen für nicht unterstützte ActiveX-Steuerelement-Probleme. Sie können vorhandene Steuerelemente zu Visual Studio migrieren, wenn Sie den ursprünglichen Quellcode besitzen. Überprüfen Sie andernfalls können Sie mit dem Softwareanbieter für aktualisiert. NET-kompatiblen Versionen von Steuerelementen ersetzen unterstützt ActiveX-Steuerelemente.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Übergeben von ReadOnly-Eigenschaften der Steuerelemente ByRef  
  Visual Basic .NET in einigen Fällen löst COM-Fehler, z. B. "Fehler 0x800A017F CTL_E_SETNOTSUPPORTED", wenn übergeben werden `ReadOnly` Eigenschaften von einigen älteren ActiveX-Steuerelementen als `ByRef` Parameter anderer Prozeduren. Ähnliche Prozeduraufrufe aus Visual Basic 6.0 lösen keine Fehler, und die Parameter werden behandelt, als ob Sie sie als Wert übergeben. Die Visual Basic .NET Fehlermeldung gibt an, dass Sie versuchen, eine Eigenschaft zu ändern, die über keine Eigenschaft `Set` Prozedur.  

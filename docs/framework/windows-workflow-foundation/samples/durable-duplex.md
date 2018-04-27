@@ -1,29 +1,30 @@
 ---
 title: Permanenter Duplex
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>Permanenter Duplex
-In diesem Beispiel wird veranschaulicht, wie permanenter Duplexnachrichtenaustausch mithilfe der Messagingaktivitäten in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird. Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
+Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- In diesem Beispiel werden zwei mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementierte [!INCLUDE[wf2](../../../../includes/wf2-md.md)]-Dienste für einen permanenten Duplexnachrichtenaustausch konfiguriert. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und eine Korrelation zwischen verwenden [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
+ In diesem Beispiel zwei [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dienste mithilfe von Windows Workflow Foundation implementiert sind so konfiguriert, dass einen permanenter duplexnachrichtenaustausch haben. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und eine Korrelation zwischen verwenden [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
   
  Der erste Dienst (Service1.xamlx) sendet eine Anforderung an den zweiten Dienst (Service2.xamlx), einige Arbeiten zu erledigen. Sobald die Arbeit abgeschlossen ist, sendet Service2.xamlx eine Benachrichtigung an Service1.xamlx zurück, um anzugeben, dass die Arbeit abgeschlossen ist. Eine Konsolenanwendung für Workflows richtet die Warteschlangen ein, die die Dienste überwachen, und sendet die ursprüngliche Startnachricht, um Service1.xamlx zu aktivieren. Sobald Service1.xamlx die Benachrichtigung von Service2.xamlx empfangen hat, dass die angeforderte Arbeit abgeschlossen ist, speichert Service1.xamlx das Ergebnis in einer XML-Datei. Während des Wartens auf die Rückrufmeldung behält Service1.xamlx den Instanzzustand mit dem standardmäßigen <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> bei. Service2.xamlx behält den Instanzzustand als Teil des Abschlusses der von Service1.xamlx angeforderten Arbeit bei.  
   
@@ -154,7 +155,7 @@ In diesem Beispiel wird veranschaulicht, wie permanenter Duplexnachrichtenaustau
   
 4.  Führen Sie das Beispiel aus.  
   
-    1.  Wechseln Sie zu http://localhost/private/durableduplex/service1.xamlx und http://localhost/private/durableduplex/service2.xamlx, um sicherzustellen, dass beide Dienste ausgeführt werden.  
+    1.  Navigieren Sie zu http://localhost/private/durableduplex/service1.xamlx und http://localhost/private/durableduplex/service2.xamlx um sicherzustellen, dass beide Dienste ausgeführt werden.  
   
     2.  Drücken Sie F5, um DurableDuplexClient auszuführen.  
   

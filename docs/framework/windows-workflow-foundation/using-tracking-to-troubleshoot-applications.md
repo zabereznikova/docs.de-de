@@ -1,29 +1,30 @@
 ---
 title: Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
-[!INCLUDE[wf](../../../includes/wf-md.md)] ermöglicht es Ihnen, workflowbezogene Informationen zu verfolgen, um Details zur Ausführung einer [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Anwendung oder eines WF-Diensts zu erhalten. [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Hosts können Workflowereignisse während der Ausführung einer Workflowinstanz erfassen. Wenn der Workflow Fehler oder Ausnahmen generiert, können Sie mithilfe der Details aus der [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Überwachung Probleme bei der Verarbeitung behandeln.  
+Windows Workflow Foundation (WF) können Sie verfolgen, workflowbezogene Informationen, um Details in die Ausführung eines Windows Workflow Foundation-Anwendung oder Dienst zu gewähren. Windows Workflow Foundation-Hosts können Workflowereignisse während der Ausführung einer Workflowinstanz erfassen. Wenn der Workflow Fehler oder Ausnahmen generiert, können Sie die Windows Workflow Foundation-Details zur Problembehandlung bei deren Verarbeitung nachverfolgt.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Problembehandlung von WF mit der WF-Überwachung  
- Um Fehler bei der Verarbeitung einer [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Aktivität zu erkennen, können Sie die Überwachung mit einem Überwachungsprofil aktivieren, das eine Abfrage nach einem <xref:System.Activities.Tracking.ActivityStateRecord> mit dem Status "Faulted" durchführt. Die entsprechende Abfrage ist im folgenden Code angegeben.  
+ Um Fehler bei der Verarbeitung einer Windows Workflow Foundation-Aktivität zu erkennen, können Sie Aktivieren der nachverfolgung mit einem Überwachungsprofil, das eine Abfrage für ein <xref:System.Activities.Tracking.ActivityStateRecord> mit dem Status der Faulted. Die entsprechende Abfrage ist im folgenden Code angegeben.  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- Wenn in einer Workflowinstanz eine nicht behandelte Ausnahme auftritt, wird ein <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>-Objekt ausgegeben, wenn die [!INCLUDE[wf2](../../../includes/wf2-md.md)]-Überwachung aktiviert wurde.  
+ Wenn eine Workflowinstanz eine nicht behandelte Ausnahme trifft eine <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> Objekt wird ausgegeben, wenn die Windows Workflow Foundation-Überwachung aktiviert wurde.  
   
- Dieser Überwachungsdatensatz enthält die Fehlerdetails in Form des Ausnahmestapels. Er weist Details der Fehlerquelle auf (z. B. die Aktivität), die zur nicht behandelten Ausnahme geführt hat. Um Fehlerereignisse von [!INCLUDE[wf2](../../../includes/wf2-md.md)] zu abonnieren, aktivieren Sie das Überwachen durch Hinzufügen eines Überwachungsteilnehmers. Konfigurieren Sie diesen Teilnehmer mit einem Überwachungsprofil, das `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> und `WorkflowInstanceQuery (state="UnhandledException")` abfragt.  
+ Dieser Überwachungsdatensatz enthält die Fehlerdetails in Form des Ausnahmestapels. Er verfügt über die Details der Quelle des Fehlers (z. B. die Aktivität), die einen Fehler verursacht, und in der nicht behandelten Ausnahme geführt hat. Um Fehlerereignisse aus einer Windows Workflow Foundation zu abonnieren, aktivieren Sie Überwachung, indem ein Nachverfolgungsteilnehmer hinzugefügt. Konfigurieren Sie diesen Teilnehmer mit einem Überwachungsprofil, das `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> und `WorkflowInstanceQuery (state="UnhandledException")` abfragt.  
   
  Wenn die Überwachung mit dem ETW-Überwachungsteilnehmer aktiviert wurde, werden die Fehlerereignisse an eine ETW-Sitzung ausgegeben. Die Ereignisse können mit der Ereignisanzeige angezeigt werden. Diese finden Sie unter dem Knoten **Ereignisanzeige -> Anwendungen und Dienstprotokolle -> Microsoft -> Windows -> Anwendungsserver-Anwendungen** im analytischen Kanal.  
   

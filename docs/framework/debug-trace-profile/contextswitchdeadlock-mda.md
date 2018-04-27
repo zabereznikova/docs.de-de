@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock-MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock-MDA
 Der `contextSwitchDeadlock`-MDA (Managed Debugging Assistant, Assistent für das verwaltete Debuggen) wird aktiviert, wenn während eines versuchten COM-Kontextübergangs ein Deadlock erkannt wird.  
@@ -54,7 +56,7 @@ Der `contextSwitchDeadlock`-MDA (Managed Debugging Assistant, Assistent für das
  Um festzustellen, ob der MDA fälschlicherweise aktiviert wurde, deaktivieren Sie alle Haltepunkte, starten Sie die Anwendung neu, und führen Sie sie ohne Unterbrechung aus. Wenn der MDA nicht aktiviert wird, war die erste Aktivierung wahrscheinlich falsch. Deaktivieren Sie in diesem Fall den MDA, um eine Störung der Debugsitzung zu vermeiden.  
   
 > [!NOTE]
->  Dieser MDA befindet sich im Standardsatz für [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] und höhere Versionen. Wenn in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] der Hostprozess aktiviert ist, können Sie MDAs, die sind im Standardsatz befinden, nicht deaktivieren. Der Hostprozess wird standardmäßig aktiviert, sodass er explizit deaktiviert werden muss. Informationen zum Deaktivieren von MDAs finden Sie unter "Bereitstellen und Aufheben der Bereitstellung von MDAs" in [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Dieser MDA befindet sich im Standardsatz für [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] und höhere Versionen. Wenn der Hostprozess in Visual Studio aktiviert ist, kann nicht MDAs, die in der Standardeinstellung festgelegt werden. Der Hostprozess wird standardmäßig aktiviert, sodass er explizit deaktiviert werden muss. Informationen zum Deaktivieren von MDAs finden Sie unter "Bereitstellen und Aufheben der Bereitstellung von MDAs" in [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Auflösung  
  Befolgen Sie die COM-Regeln hinsichtlich der STA-Meldungsweiterleitung.  

@@ -1,29 +1,30 @@
 ---
-title: "Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmers"
-ms.custom: 
+title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmers'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmers
-Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführung. Die Workflowlaufzeit gibt Überwachungsdatensätze aus, die Ereignisse im Workflow- und Aktivitätslebenszyklus, Lesezeichenwiederaufnahmen und Fehler beschreiben. Diese Überwachungsdatensätze werden von den Überwachungsteilnehmern genutzt. [!INCLUDE[wf](../../../includes/wf-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Überwachungsdatensätze als ETW (Ereignisablaufverfolgung für Windows)-Ereignisse schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben. In diesem Schritt des Lernprogramms wird beschrieben, wie ein benutzerdefinierter Überwachungsteilnehmer und ein Nachverfolgungsprofil erstellt werden, die die Ausgabe von `WriteLine`-Aktivitäten aufzeichnen, damit sie dem Benutzer angezeigt werden können.  
+Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführung. Die Workflowlaufzeit gibt Überwachungsdatensätze aus, die Ereignisse im Workflow- und Aktivitätslebenszyklus, Lesezeichenwiederaufnahmen und Fehler beschreiben. Diese Überwachungsdatensätze werden von den Überwachungsteilnehmern genutzt. Windows Workflow Foundation (WF) enthält einen standardmäßigen Überwachungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse Ereignis Ereignisablaufverfolgung für Windows (ETW) schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben. In diesem Schritt des Lernprogramms wird beschrieben, wie ein benutzerdefinierter Überwachungsteilnehmer und ein Nachverfolgungsprofil erstellt werden, die die Ausgabe von `WriteLine`-Aktivitäten aufzeichnen, damit sie dem Benutzer angezeigt werden können.  
   
 > [!NOTE]
 >  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie die vorherigen Themen abgeschlossen haben. Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) – Lernprogramm für erste Schritte](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
   
 -   [So erstellen und Ausführen der Anwendung](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>So erstellen den benutzerdefinierten Überwachungsteilnehmer  
+###  <a name="BKMK_CustomTrackingParticipant"></a> So erstellen den benutzerdefinierten Überwachungsteilnehmer  
   
 1.  Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **Klasse**. Typ `StatusTrackingParticipant` in der **Namen** ein, und klicken Sie auf **hinzufügen**.  
   
@@ -114,7 +115,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
   
      Wenn kein Nachverfolgungsprofil angegeben ist, wird das standardmäßige Nachverfolgungsprofil verwendet. Wenn das standardmäßige Nachverfolgungsprofil verwendet wird, werden Überwachungsdatensätze für alle `ActivityStates` ausgegeben. Da Text während des Lebenszyklus der `WriteLine`-Aktivität nur einmal aufgezeichnet werden muss, extrahieren wir nur den Text des `ActivityStates.Executing`-Zustands. In [das Überwachungsprofil erstellen und registrieren den Überwachungsteilnehmer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), ein Überwachungsprofil erstellt, der angibt, dass nur `WriteLine` `ActivityStates.Executing` Nachverfolgungsdatensätze werden ausgegeben.  
   
-###  <a name="BKMK_TrackingProfile"></a>Erstellen das Überwachungsprofil und registrieren den Überwachungsteilnehmer  
+###  <a name="BKMK_TrackingProfile"></a> Erstellen das Überwachungsprofil und registrieren den Überwachungsteilnehmer  
   
 1.  Mit der rechten Maustaste **WorkflowHostForm** in **Projektmappen-Explorer** , und wählen Sie **Code anzeigen**.  
   
@@ -235,7 +236,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>Zum Anzeigen der Überwachungsinformationen  
+###  <a name="BKMK_DisplayTracking"></a> Zum Anzeigen der Überwachungsinformationen  
   
 1.  Mit der rechten Maustaste **WorkflowHostForm** in **Projektmappen-Explorer** , und wählen Sie **Code anzeigen**.  
   
@@ -330,7 +331,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>So erstellen und Ausführen der Anwendung  
+###  <a name="BKMK_BuildAndRun"></a> So erstellen und Ausführen der Anwendung  
   
 1.  Drücken Sie STRG+UMSCHALT+B, um die Anwendung zu erstellen.  
   

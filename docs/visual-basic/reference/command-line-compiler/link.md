@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
@@ -51,7 +51,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
 > [!NOTE]
 >  Wenn Sie eine Instanz eines eingebetteten COM-Typs in Ihrem Code erstellen, müssen Sie die Instanz mithilfe der entsprechenden Schnittstelle erstellen. Der Versuch, eine Instanz eines eingebetteten COM-Typs mit der Co-Klasse zu erstellen, verursacht einen Fehler.  
   
- Fügen Sie zum Festlegen der Option `-link` in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`-Eigenschaft auf **true** fest. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
+ Festlegen der `-link` option in Visual Studio einen Assemblyverweis hinzu, und legen die `Embed Interop Types` Eigenschaft **"true"**. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
   
  Wenn Sie eine Verknüpfung mit einer COM-Assembly (Assembly A) erstellen, die selbst auf eine andere COM-Assembly (Assembly B) verweist, müssen Sie auch eine Verknüpfung mit Assembly B erstellen, wenn eine der folgenden Aussagen zutrifft:  
   

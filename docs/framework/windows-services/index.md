@@ -24,14 +24,14 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="developing-windows-service-applications"></a>Entwickeln von Windows-Dienstanwendungen
-Mithilfe von Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder der Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist. Diese Art von Anwendung wird einen Windows-Dienst aufgerufen. Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.  
+Mithilfe von Microsoft Visual Studio oder Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist. Diese Art von Anwendung wird einen Windows-Dienst aufgerufen. Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.  
   
 > [!WARNING]
 >  Die Windows-Dienstvorlage für C++ war nicht in Visual Studio 2010 enthalten. Um ein Windows-Dienst zu erstellen, können Sie entweder einen Dienst erstellen, in verwaltetem Code in Visual c# oder Visual Basic, die mit vorhandenen C++-Code ggf. zusammenarbeiten kann, oder Sie können einen Windows-Dienst in systemeigenem C++ erstellen, mit der [ATL-Projekt-Assistent](/cpp/atl/reference/atl-project-wizard).  

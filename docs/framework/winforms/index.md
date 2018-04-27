@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
-Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen. Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten. Zu diesem Zweck stellt [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ihnen sowohl eine integrierte Entwicklungsumgebung (IDE) zur Verfügung, in der Sie beim Schreiben von Code unterstützt werden, sowie eine Vielzahl von Steuerelementen, die mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] geschrieben wurden. Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.  
+Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen. Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten. Zu diesem Zweck Visual Studio bietet Ihnen eine integrierte Entwicklungsumgebung (IDE), und die Zustellung erleichtern das Schreiben von Code sowie eine Vielzahl von Steuerelementen geschrieben wurden, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

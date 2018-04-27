@@ -1,27 +1,29 @@
 ---
 title: Planen der Anwendungsleistung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Planen der Anwendungsleistung
 Der Erfolg der Leistungsziele zu erreichen, hängt davon ab, wie gut Ihre Leistungsstrategie entwickeln. Die Planung ist die erste Phase in einem Produkt zu entwickeln. Dieses Thema beschreibt einige sehr einfache Regeln für das Entwickeln einer Strategie für die gute Leistung.  
@@ -36,12 +38,12 @@ Der Erfolg der Leistungsziele zu erreichen, hängt davon ab, wie gut Ihre Leistu
  Behalten Sie immer den Zyklus messen, untersuchen, während der Anwendungsentwicklungszyklus optimieren/korrigieren. Vom Anfang bis zum Ende des Entwicklungszyklus müssen Sie die Leistung Ihrer Anwendung in eine zuverlässige und stabile Umgebung messen. Vermeiden Sie die Variabilität durch externe Faktoren verursacht. Beim Testen der Leistung sollten Sie z. B. Deaktivieren von Antiviren- oder automatische Updates wie SMS, damit keine Leistungseinbußen Testergebnisse. Nachdem Sie die Leistung Ihrer Anwendung gemessen haben, müssen Sie die Änderungen zu identifizieren, die die größte Leistungssteigerung führt. Nachdem Sie Ihre Anwendung geändert haben, starten Sie den Zyklus erneut.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Stellen Sie einen iterativen Prozess für die Leistungsoptimierung  
- Sie sollten die relative Kosten der einzelnen Funktionen kennen, die Sie verwenden möchten. Beispielsweise die Verwendung von Reflektion im [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] ist im Allgemeinen Leistung rechenintensiven im Hinblick auf die Computerressourcen, daher würden mit Bedacht verwendet werden sollen. Dies bedeutet nicht die Verwendung von Reflektion zu vermeiden, nur, dass Sie darauf achten, die Erfüllung der leistungsanforderungen Ihrer Anwendung mit den Anforderungen der Leistung der Funktionen zu verteilen, die Sie verwenden werden soll.  
+ Sie sollten die relative Kosten der einzelnen Funktionen kennen, die Sie verwenden möchten. Beispielsweise ist die Verwendung von Reflektion in Microsoft .NET Framework im Allgemeinen ressourcenintensiv im Hinblick auf die Computerressourcen, daher würden mit Bedacht verwendet werden sollen. Dies bedeutet nicht die Verwendung von Reflektion zu vermeiden, nur, dass Sie darauf achten, die Erfüllung der leistungsanforderungen Ihrer Anwendung mit den Anforderungen der Leistung der Funktionen zu verteilen, die Sie verwenden werden soll.  
   
 ## <a name="build-towards-graphical-richness"></a>Grafische Reichhaltigkeit ergeben  
  Eine wichtige Verfahren zum Erstellen eines skalierbaren Ansatzes für das erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Leistung der Anwendung ist das grafische Umfang und Komplexität zu erstellen. Beginnen Sie immer mit der geringsten rechenintensiven leistungsressourcen um zu Ihrem Szenarioziele zu erreichen. Nachdem Sie diese Ziele erreichen, mithilfe von weitere rechenintensiven Leistungsfunktionen, beachten Sie Ihre Szenarioziele Beibehaltung für Grafik Reichhaltigkeit erstellen. Beachten Sie, dass [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist eine sehr umfangreiche Plattform und sehr umfangreiche Grafikfeatures bereitstellt. Mit rechenintensiven Leistungsfunktionen ohne nachzudenken kann die gesamtleistung der Anwendungsleistung negativ beeinträchtigt werden.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente sind grundsätzlich erweiterbar werden umfassende Anpassung ihrer Darstellung, ihr Steuerelementverhalten nicht ändern können. Durch die Nutzung von Formatvorlagen, Datenvorlagen und Steuerelementvorlagen, können Sie erstellen und inkrementell weiterentwickelt ein anpassbares [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , die passt sich an Ihren leistungsanforderungen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Steuerelemente sind grundsätzlich erweiterbar werden umfassende Anpassung ihrer Darstellung, ihr Steuerelementverhalten nicht ändern können. Durch die Nutzung von Formatvorlagen, Datenvorlagen und Steuerelementvorlagen, können Sie erstellen und inkrementell weiterentwickelt ein anpassbares [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , die passt sich an Ihren leistungsanforderungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

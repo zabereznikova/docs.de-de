@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
 Ein Visual Basic-Projekt besteht aus einem oder mehreren separaten Quelldateien. Während des Prozesses, der als Kompilierung bezeichnet wird, werden diese Dateien in einem Paket zusammengefasst – eine einzelne ausführbare Datei, die als eine Anwendung ausgeführt werden kann.  
   
- Visual Basic bietet einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Der Befehlszeilencompiler eignet sich für Situationen, in dem Sie den vollständigen Satz von Funktionen der IDE nicht benötigen – z. B. Wenn Sie mithilfe von oder Schreiben von für Computer mit begrenztem Arbeitsspeicher oder Speicherplatz.  
+ Visual Basic bietet einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Der Befehlszeilencompiler eignet sich für Situationen, in dem Sie den vollständigen Satz von Funktionen der IDE nicht benötigen – z. B. Wenn Sie mithilfe von oder Schreiben von für Computer mit begrenztem Arbeitsspeicher oder Speicherplatz.  
   
-  Zum Kompilieren von Quelldateien in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, wählen Sie die **erstellen** Befehl die **erstellen** Menü.  
+  Um Quelldateien in der Visual Studio-IDE zu kompilieren, wählen Sie die **erstellen** Befehl die **erstellen** Menü.  
   
 > [!TIP]
 >  Wenn Sie über die Visual Studio-IDE Projektdateien erstellen, können Sie Informationen zum zugehörigen anzeigen **Vbc** Befehl und seine Switches im Ausgabefenster angezeigt. Öffnen Sie zum Anzeigen dieser Informationen die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild-Projektbuilds Ausgabe Ausführlichkeit** auf **Normal** oder ein höheres Maß an Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  

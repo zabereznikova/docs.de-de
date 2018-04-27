@@ -1,31 +1,32 @@
 ---
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
-In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[wf](../../../../includes/wf-md.md)]-Nachverfolgung in einem Workflowdienst aktiviert und die Überwachungsereignisse in der Ereignisablaufverfolgung für Windows (ETW) ausgegeben werden. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.  
+Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgen und die Überwachungsereignisse im Ereignis Ereignisablaufverfolgung für Windows (ETW). In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.  
   
  Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der Eingabedaten der Eingabevariablen zu und gibt den Umkehrwert an den Client zurück. Wenn die Eingabedaten 0 betragen, tritt eine nicht behandelte Ausnahme aufgrund einer Division durch 0 (null) auf, aufgrund der der Workflow abgebrochen wird. Wenn die Nachverfolgung aktiviert ist, wird der Fehlerdatensatz an ETW ausgegeben, sodass der Fehler später behoben werden kann. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Das Überwachungsprofil ist in der Datei "Web.config" definiert und für den ETW-Überwachungsteilnehmer als Konfigurationsparameter bereitgestellt. Der ETW-Überwachungsteilnehmer ist in der Datei "Web.config" des Workflowdiensts konfiguriert und wird auf den Dienst als Dienstverhalten angewendet. In diesem Beispiel zeigen Sie die Überwachungsereignisse im Ereignisprotokoll mithilfe der Ereignisanzeige an.  
   
 ## <a name="workflow-tracking-details"></a>Workflowüberwachungsdetails  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] stellt eine Überwachungsinfrastruktur bereit, um die Ausführung einer Workflowinstanz nachzuverfolgen. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.  
+ Windows Workflow Foundation bietet eine Überwachungsinfrastruktur, um die Ausführung einer Workflowinstanz nachzuverfolgen. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.  
   
 |Komponente|Beschreibung|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[wf](../../../../inclu
   
 3.  Drücken Sie F5, um die Projektmappe auszuführen.  
   
-     Standardmäßig überwacht der Dienst Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
+     Der Dienst ist empfangsbereit standardmäßig an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  Öffnen Sie den WCF-Testclient mit [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].  
   
@@ -65,7 +66,7 @@ In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[wf](../../../../inclu
   
 5.  Wählen Sie im WCF-Testclient **Dienst hinzufügen** aus der **Datei** Menü.  
   
-     Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standard lautet "http://localhost:53797/SampleWorkflowService.xamlx".  
+     Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist http://localhost:53797/SampleWorkflowService.xamlx.  
   
 6.  Öffnen Sie die Ereignisanzeige.  
   

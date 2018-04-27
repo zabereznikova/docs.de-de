@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
@@ -3068,7 +3068,7 @@ Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehle
  Bietet ein Forum für Fragen und Probleme mit einem Upgrade auf Visual Basic und die Arbeit mit Interoperabilitätsfunktionen.  
   
  [Visual Basic-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Umgebung.  
+ Bietet ein Forum für Fragen zum Arbeiten in der Visual Studio-Umgebung.  
   
  [Allgemeines zu Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
  Bietet ein Forum für Fragen und Probleme mit Visual Basic, die in anderen Foren nicht diskutiert werden.  

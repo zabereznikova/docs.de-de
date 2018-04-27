@@ -1,24 +1,26 @@
 ---
 title: Einfacher AJAX-Dienst
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b2bf20c0a98f0571780e5af45c32f8062450d88
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d50d9054da934a50ea02340481c7592e4756306e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basic-ajax-service"></a>Einfacher AJAX-Dienst
 In diesem Beispiel wird die Verwendung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zum Erstellen eines einfachen AJAX-Diensts (ASP.NET Asynchronous JavaScript and XML) beschrieben. Ein AJAX-Dienst ist ein Dienst, auf den Sie durch die Verwendung eines JavaScript-Codes über einen Webbrowserclient zugreifen können. Der Dienst nutzt das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut, um sicherzustellen, dass der Dienst auf HTTP GET-Anforderungen antwortet und für die Verwendung von JSON-Daten (JavaScript Object Notation) für Antworten konfiguriert ist.  
@@ -29,24 +31,23 @@ In diesem Beispiel wird die Verwendung von [!INCLUDE[indigo1](../../../../includ
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Im folgenden Code wird das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut auf den `Add`-Vorgang angewandt, um sicherzustellen, dass der Dienst auf HTTP GET-Anforderungen antwortet. Der Einfachheit halber nutzt der Code GET (Sie können eine HTTP GET-Anforderung von jedem Webbrowser aus erstellen). Sie können GET auch verwenden, um Caching zu aktivieren. Bei Fehlen des `WebGetAttribute`-Attributs ist die Standardeinstellung HTTP POST.  
-  
-```  
-[ServiceContract(Namespace = "SimpleAjaxService")]  
-public interface ICalculator  
-{  
-  
-    [WebGet]  
-    double Add(double n1, double n2);  
-    //Other operations omitted…  
-}  
-```  
-  
- Die SVC-Beispieldatei verwendet <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, wodurch dem Dienst ein <xref:System.ServiceModel.Description.WebScriptEndpoint>-Standardendpunkt hinzugefügt wird. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert. Dies bedeutet, dass die Adresse des Diensts http://localhost/ServiceModelSamples/service.svc lautet und keine Suffixe außer dem Vorgangsnamen aufweist.  
-  
-```  
-<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>  
-```  
-  
+
+```csharp
+[ServiceContract(Namespace = "SimpleAjaxService")]
+public interface ICalculator
+{
+    [WebGet]
+    double Add(double n1, double n2);
+    //Other operations omitted…
+}
+```
+
+ Die SVC-Beispieldatei verwendet <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, wodurch dem Dienst ein <xref:System.ServiceModel.Description.WebScriptEndpoint>-Standardendpunkt hinzugefügt wird. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert. Dies bedeutet, dass die Adresse des Diensts http://localhost/ServiceModelSamples/service.svc, mit Ausnahme des Vorgangsnamens keine zusätzlichen Suffixe.  
+
+```svc
+<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
+```
+
  Der <xref:System.ServiceModel.Description.WebScriptEndpoint> ist so vorkonfiguriert, dass von einer ASP.NET AJAX-Clientseite aus auf den Dienst zugegriffen werden kann. Im folgenden Abschnitt in der Datei Web.config können zusätzliche Konfigurationsänderungen am Endpunkt vorgenommen werden. Wenn keine zusätzlichen Änderungen erforderlich sind, kann der Abschnitt entfernt werden.  
   
 ```xml  
@@ -60,36 +61,36 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- Der <xref:System.ServiceModel.Description.WebScriptEndpoint> legt das Standarddatenformat für den Dienst auf JSON anstelle von XML fest. Um den Dienst aufzurufen, navigieren Sie zu http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200, nachdem Sie die Setup- und Buildanweisungen weiter unten in diesem Thema abgeschlossen haben. Diese Testfunktion wird durch die Verwendung einer HTTP GET-Anforderung aktiviert.  
+ Der <xref:System.ServiceModel.Description.WebScriptEndpoint> legt das Standarddatenformat für den Dienst auf JSON anstelle von XML fest. Navigieren Sie zum Aufrufen des Diensts zu http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 nach Fertigstellen des einrichten und Buildschritte weiter unten in diesem Thema. Diese Testfunktion wird durch die Verwendung einer HTTP GET-Anforderung aktiviert.  
   
  Die Clientwebseite SimpleAjaxClientPage.aspx enthält ASP.NET-Code zum Aufrufen des Diensts, wenn der Benutzer auf eine der Vorgangsschaltflächen auf der Seite klickt. Das `ScriptManager`-Steuerelement wird verwendet, um dem Dienst durch JavaScript einen Proxy verfügbar zu machen.  
-  
-```  
+
+```aspx-csharp
 <asp:ScriptManager ID="ScriptManager" runat="server">  
     <Services>  
         <asp:ServiceReference Path="service.svc" />  
     </Services>  
 </asp:ScriptManager>  
-```  
-  
+```
+
  Der lokale Proxy wird instanziiert, und Vorgänge werden mit dem folgenden JavaScript-Code aufgerufen.  
-  
-```  
+
+```javascript
 // Code for extracting arguments n1 and n2 omitted…  
 // Instantiate a service proxy  
 var proxy = new SimpleAjaxService.ICalculator();  
 // Code for selecting operation omitted…  
 proxy.Add(parseFloat(n1), parseFloat(n2), onSuccess, onFail, null);  
-```  
-  
+```
+
  Ist der Dienstaufruf erfolgreich, ruft der Code einen `onSuccess`-Handler auf, und das Ergebnis des Vorgangs wird in einem Textfeld angezeigt.  
-  
-```  
+
+```javascript
 function onSuccess(mathResult){  
      document.getElementById("result").value = mathResult;  
-}  
-```  
-  
+}
+```
+
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   

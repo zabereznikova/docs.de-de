@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Erstellen der Windows Communication Foundation-Beispiele
 Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt werden können, mithilfe von Visual Studio 2010 oder mit der **Msbuild** Befehl über die Befehlszeile. In diesem Thema werden beide Vorgehensweisen beschrieben.  
@@ -39,9 +39,9 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt w
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
   
-1.  Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 oder Windows Server 2008 R2 verwenden und [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ausführen, müssen Sie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Startmenü auf des Symbol, und klicken Sie dann auf **als Administrator ausführen**.  
+1.  Bei Verwendung von [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 oder Windows Server 2008 R2 und Ausführung [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], müssen Sie Visual Studio mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Startmenü auf des Symbol, und klicken Sie dann auf **als Administrator ausführen**.  
   
-2.  Aus der **Datei** Menü in Visual Studio, klicken Sie auf **öffnen**, klicken Sie dann auf **Projekt/Projektmappe**. Wechseln Sie zu dem sprachspezifischen Unterverzeichnis in dem Verzeichnis, in dem Sie das Beispiel installiert haben, und klicken Sie auf das Symbol der SLN-Datei, um die Projektmappe in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zu öffnen.  
+2.  Aus der **Datei** Menü in Visual Studio, klicken Sie auf **öffnen**, klicken Sie dann auf **Projekt/Projektmappe**. Navigieren Sie zum sprachspezifischen Unterverzeichnis unter dem Verzeichnis, in dem Sie das Beispiel installiert, und doppelklicken Sie auf das Symbol der SLN-Datei zum Öffnen der Projektmappe in Visual Studio.  
   
 3.  In der **erstellen** klicken Sie im Menü **Projektmappe neu erstellen**. Die Clientprogrammdateien werden im Verzeichnis client\bin erstellt, und die Dienstprogrammdateien werden im Verzeichnis service\bin erstellt. Wenn der Dienst in IIS gehostet wird, werden die Dienstprogrammdateien auch in das Verzeichnis \servicemodelsamples und dessen Unterverzeichnis \bin kopiert.  
   

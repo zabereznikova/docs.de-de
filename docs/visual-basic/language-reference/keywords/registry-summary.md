@@ -2,24 +2,24 @@
 title: 'Registrierung: Zusammenfassung (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1e57ac4650eb625ce2eb18e092024ac40607d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4163fbb1bd429442badfa429034d34133f825898
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="registry-summary-visual-basic"></a>Registrierung: Zusammenfassung (Visual Basic)
-Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
+Visual Studio-Programmiersprachen-Schlüsselwörter und Member der Laufzeitbibliothek nach ihrem Zweck organisiert sind, und verwenden.  
   
  Die Verwendung der `My`-Funktion ermöglicht bei Registrierungsoperationen mehr Produktivität und Leistung als diese Elemente. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   

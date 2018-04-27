@@ -1,24 +1,26 @@
 ---
 title: WCF-Testclient (WcfTestClient.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Testclient (WcfTestClient.exe) ist ein GUI-Tool, mit dem Benutzer Testparameter eingeben, die Eingabe an den Dienst senden und die zurückgesendete Antwort des Diensts anzeigen können. Zusammen mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensthost ermöglicht er einen problemlosen Diensttest.  
@@ -172,9 +174,9 @@ Der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Testclient (WcfTestClie
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients  
  Sie können den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient auf einem der folgenden Wege schließen:  
   
--   Auf der **Datei** Menü klicken Sie auf **beenden**. Alternativ können Sie in der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Testclient im Hauptfenster, klicken Sie auf **schließen**. Bei beiden Vorgängen wird auch der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst-Auto-Host geschlossen und der [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Debuggingvorgang beendet, wenn der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient durch [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] gestartet wurde.  
+-   Auf der **Datei** Menü klicken Sie auf **beenden**. Alternativ können Sie in der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Testclient im Hauptfenster, klicken Sie auf **schließen**. Beide der genannten Aktionen auch Herunterfahren [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst-Auto-Host und zu beenden, die das Debuggen von Visual Studio zu verarbeiten, falls [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Testclient von Visual Studio gestartet wurde.  
   
--   Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich, und klicken Sie dann auf **beenden.** Dadurch werden der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst-Auto-Host und der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient geschlossen und der [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Debuggenvorgang wird beendet.  
+-   Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich, und klicken Sie dann auf **beenden.** Dies debuggenvorgang [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst-Auto-Host und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Testclient und nicht länger auf das Visual Studio debuggen verarbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

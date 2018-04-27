@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="buffered-receive"></a>Gepuffertes Empfangen
-In diesem Beispiel wird veranschaulicht, wie die gepufferte Empfangsfunktion in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird. Die gepufferte Empfangsfunktion ermöglicht es dem Workflowautor, einen Workflow zu erstellen, ohne sich Gedanken über die Reihenfolge zu machen, in der Nachrichten empfangen werden. Die gepufferte Empfangsfunktion puffert Nachrichten lokal und übermittelt sie, wenn der Workflow zum Empfang bereit ist.  
+Dieses Beispiel veranschaulicht das Einrichten und konfigurieren die gepufferte Empfangsfunktion in Windows Workflow Foundation (WF). Die gepufferte Empfangsfunktion ermöglicht es dem Workflowautor, einen Workflow zu erstellen, ohne sich Gedanken über die Reihenfolge zu machen, in der Nachrichten empfangen werden. Die gepufferte Empfangsfunktion puffert Nachrichten lokal und übermittelt sie, wenn der Workflow zum Empfang bereit ist.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge unter Verwendung der gepufferten Empfangsfunktion mit Messagingaktivitäten.  

@@ -1,24 +1,26 @@
 ---
-title: "Warteschlangen für unzustellbare Meldungen"
-ms.custom: 
+title: Warteschlangen für unzustellbare Meldungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -50,21 +52,21 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
  Die Clientanwendung kann die Nachrichten in der Warteschlange für unzustellbare Nachrichten lesen und entweder versuchen, diese erneut zu senden, oder den Fehler beheben, der dazu führte, dass die Nachricht in der Warteschlange für unzustellbare Nachrichten abgelegt wurde, und die Nachricht dann senden. Im Beispiel zeigt der Client eine Fehlermeldung an.  
   
  Der Dienstvertrag lautet `IOrderProcessor`, wie im folgenden Beispielcode gezeigt.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Der Dienstcode in diesem Beispiel wird mit der die [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Die Kommunikation mit dem Dienst findet innerhalb des Bereichs der Transaktion statt. Der Dienst liest die Nachrichten in der Warteschlange, führt den Vorgang aus und zeigt anschließend die Ergebnisse des Vorgangs an. Die Anwendung erstellt auch eine Warteschlange für unzustellbare Nachrichten.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Die Konfiguration des Clients gibt eine kurze Zeitspanne an, während derer die Nachricht den Dienst erreichen muss. Wenn die Nachricht innerhalb der festgelegten Zeitspanne nicht übermittelt werden kann, läuft die Nachricht ab und wird in die Warteschlange für unzustellbare Nachrichten verschoben.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  Die Warteschlange für unzustellbare Nachrichten ist eine Clientwarteschlange und befindet sich lokal zum Clientwarteschlangen-Manager.  
   
  Die Implementierung des Dienst für unzustellbare Nachrichten überprüft die Ursache für die fehlgeschlagene Zustellung und ergreift Abhilfemaßnahmen. Die Ursache für die fehlgeschlagene Zustellung wird in zwei Enumerationen, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> und <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>, aufgezeichnet. Sie können die <xref:System.ServiceModel.Channels.MsmqMessageProperty> vom <xref:System.ServiceModel.OperationContext> abrufen, wie im folgenden Beispiel dargestellt:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Nachrichten in der Warteschlange für unzustellbare Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet. Wenn der Dienst für unzustellbare Nachrichten Nachrichten aus der Warteschlange liest, findet daher die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanalebene die fehlende Übereinstimmung bei den Endpunkten und verteilt die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für unzustellbare Nachrichten empfangen. Um Nachrichten zu empfangen, die an einen anderen Endpunkt adressiert sind, wird im `ServiceBehavior` ein Adressfilter für alle Adressen angegeben. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für unzustellbare Nachrichten gelesen werden, erfolgreich zu verarbeiten.  
   
  In diesem Beispiel sendet der Dienst für unzustellbare Nachrichten die Nachricht erneut, wenn die Ursache für die Unzustellbarkeit eine Überschreitung des Zeitlimits war. Bei allen anderen Ursachen wird ein Zustellungsfehler angezeigt, wie im folgenden Beispielcode dargestellt:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  Im folgenden Beispiel wird die Konfiguration für eine unzustellbare Nachricht veranschaulicht:  
   
 ```xml  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-Doc
 Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
@@ -46,7 +46,7 @@ Verarbeitet Dokumentationskommentare zu einer XML-Datei.
   
 -   Elemente, z. B. ein Feld [Ereignis](../../../visual-basic/language-reference/statements/event-statement.md), [Eigenschaft](../../../visual-basic/language-reference/statements/property-statement.md), [Funktion](../../../visual-basic/language-reference/statements/function-statement.md), oder [Unterroutine](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Verwenden Sie die generierte XML-Datei mit den [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) feature, lassen Sie den Dateinamen der XML-Datei der Assembly identisch sein, Sie unterstützen möchten. Stellen Sie sicher, dass die XML-Datei im gleichen Verzeichnis wie die Assembly, damit bei der Assembly verwiesen wird die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] -Projekt die XML-Datei befindet sich ebenfalls. XML-Dokumentationsdateien sind nicht erforderlich, damit IntelliSense funktioniert für Code in einem Projekt oder in Projekten, die von einem Projekt verwiesen wird.  
+ Verwenden Sie die generierte XML-Datei mit dem Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) feature, lassen Sie den Dateinamen der XML-Datei der Assembly identisch sein, Sie unterstützen möchten. Stellen Sie sicher, dass die XML-Datei im gleichen Verzeichnis wie die Assembly ist, wenn die Assembly in Visual Studio-Projekt verwiesen wird, sowie die XML-Datei gefunden wird. XML-Dokumentationsdateien sind nicht erforderlich, damit IntelliSense funktioniert für Code in einem Projekt oder in Projekten, die von einem Projekt verwiesen wird.  
   
  Wenn beim Kompilieren mit `/target:module`, die XML-Datei enthält die Tags `<assembly></assembly>`. Diese Tags Geben Sie den Namen der Datei, die das Assemblymanifest für die Ausgabedatei der Kompilierung enthält.  
   

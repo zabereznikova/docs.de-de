@@ -1,24 +1,25 @@
 ---
-title: "Anpassen der verfügbaren Objekte in \"My\" (Visual Basic)"
+title: Anpassen der verfügbaren Objekte in "My" (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
-In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte sind aktiviert, indem Sie des Projekts `_MYTYPE` Konstante für bedingte Kompilierung. Die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] (Integrated Development Environment, IDE) behält die `_MYTYPE` Konstante für bedingte Kompilierung für ein Projekt mit dem Typ des Projekts synchronisiert.  
+In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte sind aktiviert, indem Sie des Projekts `_MYTYPE` Konstante für bedingte Kompilierung. Die Visual Studio Umgebung IDE (Integrated Development) behält die `_MYTYPE` Konstante für bedingte Kompilierung für ein Projekt mit dem Typ des Projekts synchronisiert.  
   
 ## <a name="predefined-mytype-values"></a>Vordefinierte _MYTYPE-Werte  
  Verwenden Sie die `/define` Compileroption zum Festlegen der `_MYTYPE` Konstante für bedingte Kompilierung. Beim Angeben von Ihrem eigenen Wert für die `_MYTYPE` konstant ist, müssen Sie den Zeichenfolgenwert in umgekehrter Schrägstrich/Anführungszeichen einschließen (\\") Sequenzen. Beispielsweise können Sie Folgendes verwenden:  
@@ -36,7 +37,7 @@ In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte sind 
 |Web|"Web"|  
 |Websteuerelementbibliothek|"WebControl"|  
 |Windows-Anwendung|"WindowsForms"|  
-|Beim Starten mit benutzerdefinierten Windows-Anwendung`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Beim Starten mit benutzerdefinierten Windows-Anwendung `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Windows-Steuerelementbibliothek|"Windows"|  
 |Windows-Dienst|"Console"|  
 |Empty|"Empty"|  
@@ -49,14 +50,14 @@ In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte sind 
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|Nicht definiert|"Windows"|TRUE|  
+|"Console"|"Console"|"Windows"|Nicht definiert|"Windows"|true|  
 |"Custom"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
 |"Empty"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
-|"Web"|Nicht definiert|"Web"|FALSE|"Web"|FALSE|  
-|"WebControl"|Nicht definiert|"Web"|FALSE|"Web"|TRUE|  
+|"Web"|Nicht definiert|"Web"|false|"Web"|false|  
+|"WebControl"|Nicht definiert|"Web"|false|"Web"|true|  
 |"Windows" oder ""|"Windows"|"Windows"|Nicht definiert|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|TRUE|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
  Standardmäßig nicht definierte Konstanten für bedingte Kompilierung in aufgelöst `FALSE`. Beim Kompilieren des Projekts, um das Standardverhalten überschreiben, können Sie Werte für die nicht definierten Konstanten angeben.  
   

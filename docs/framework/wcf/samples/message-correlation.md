@@ -1,24 +1,26 @@
 ---
 title: Nachrichtenkorrelation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
 Dieses Beispiel zeigt, wie eine MSMQ-Anwendung (Message Queuing) eine MSMQ-Nachricht an einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst senden kann und wie Nachrichten zwischen Sender- und Empfängeranwendungen in einem Anforderungs/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. c  
@@ -28,8 +30,8 @@ Dieses Beispiel zeigt, wie eine MSMQ-Anwendung (Message Queuing) eine MSMQ-Nachr
  Der `IOrderProcessor`-Dienstvertrag definiert einen unidirektionalen Dienstvorgang, der für die Verwendung mit Warteschlangen geeignet ist. Eine MSMQ-Nachricht verfügt über keinen Aktionsheader, d h. es ist nicht möglich, verschiedene MSMQ-Nachrichten Vorgangsverträgen automatisch zuzuordnen. Deshalb kann es in diesem Fall nur einen Vorgangsvertrag geben. Wenn Sie mehrere Vorgangsverträge in dem Dienst definieren möchten, muss die Anwendung Informationen darüber bereitstellen, anhand welchen Headers in der MSMQ-Nachricht (z. B. die Bezeichnung oder die CorrelationID) entschieden werden kann, welcher Vorgangsvertrag verteilt werden soll. Dies wird dargestellt, der [benutzerdefinierter Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
  Die MSMQ-Nachricht enthält auch keine Informationen darüber, welche Header den verschiedenen Parametern des Vorgangsvertrags zugeordnet sind. Daher kann sich im Vorgangsvertrag nur ein Parameter befinden. Der Parameter ist vom Typ <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` die zugrunde liegende MSMQ-Nachricht enthält. Der Typ "T" in der `MsmqMessage<T>`-Klasse stellt die Daten dar, die in den MSMQ-Nachrichtentext serialisiert sind. In diesem Beispiel wird der `PurchaseOrder`-Typ zum MSMQ-Nachrichtentext serialisiert.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Der Dienstvorgang verarbeitet die Bestellung und zeigt den Inhalt der Bestellung und deren Status im Dienstkonsolenfenster an. Das <xref:System.ServiceModel.OperationBehaviorAttribute> konfiguriert, dass der Vorgang in eine Transaktion mit der Warteschlange eingetragen wird und dass die Transaktion als abgeschlossen gekennzeichnet wird, wenn der Vorgang zurückkehrt. Die `PurchaseOrder` enthält die Bestellungsdetails, die vom Dienst verarbeitet werden müssen.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  Der Dienst verwendet einen benutzerdefinierten `OrderResponseClient`-Client zum Senden der MSMQ-Nachricht an die Warteschlange. Da die Anwendung, die die Nachricht empfängt und verarbeitet, keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]- sondern eine MSMQ-Anwendung ist, besteht zwischen den beiden Anwendungen kein implizierter Dienstvertrag. Deshalb kann in diesem Szenario kein Proxy mit dem Tool Svcutil.exe erstellt werden.  
   
  Der benutzerdefinierte Proxy ist im Wesentlichen bei allen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen gleich, die die `msmqIntegrationBinding`-Bindung zum Senden von Nachrichten verwenden. Im Gegensatz zu anderen Proxys enthält dieser keinen Bereich von Dienstvorgängen. Es ist nur ein Sende-Nachricht-Vorgang.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Integrationstransports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst <xref:System.Messaging>-Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um sie andernfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  Die MSMQ-Warteschlange, an die die Bestellanforderungen gesendet werden, wird im Abschnitt "appSettings" in der Konfigurationsdatei angegeben. Die Client- und Dienstendpunkte werden im Abschnitt "system.serviceModel" der Konfigurationsdatei definiert. Beide geben die `msmqIntegrationbinding`-Bindung an.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  Die Clientanwendung verwendet <xref:System.Messaging>, um eine permanente und Transaktionsnachricht an die Warteschlange zu senden. Der Text der Nachricht enthält die Bestellung.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  Die MSMQ-Warteschlange, aus der die Bestellantworten empfangen werden, wird in einem appSettings-Abschnitt der Konfigurationsdatei angegeben, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  Die Clientanwendung speichert die `messageID` der Bestellungsanforderungsnachricht, die sie an den Dienst sendet, und wartet auf eine Antwort vom Dienst. Sobald in der Warteschlange eine Antwort eingeht, korreliert der Client diese mit der Bestellnachricht, die er mit der `correlationID`-Eigenschaft der Nachricht gesendet hat, die die `messageID` der Bestellnachricht enthält, die der Dienst ursprünglich an den Dienst gesendet hat.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, dass der Dienst Nachrichten vom Client empfängt und eine Antwort an den Client zurücksendet. Der Client zeigt die vom Dienst empfangene Antwort an. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 > [!NOTE]

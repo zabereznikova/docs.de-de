@@ -16,14 +16,14 @@ ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c02e95573d0ba894bf68510219bd66965fc234fc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Gewusst wie: Reduzieren und Ausblenden von Codeabschnitten (Visual Basic)
-Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und blenden Sie Codeabschnitte im Visual Basic-Dateien. Die `#Region` Richtlinie ermöglicht die Angabe einen Block mit Code, den Sie erweitern können oder reduzieren bei Verwendung der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Code-Editor. Die Möglichkeit, um ausgewählten Code auszublenden, sind die Dateien, besser verwaltbare und einfacher zu lesen. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).  
+Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und blenden Sie Codeabschnitte im Visual Basic-Dateien. Die `#Region` Richtlinie ermöglicht die Angabe einen Block mit Code, den Sie erweitern können oder reduzieren bei Verwendung von Visual Studio Code-Editor. Die Möglichkeit, um ausgewählten Code auszublenden, sind die Dateien, besser verwaltbare und einfacher zu lesen. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).  
   
  `#Region` Direktiven unterstützen Codesemantik-Block, wie z. B. `#If...#End If`. Dies bedeutet, dass sie nicht in einem Block beginnen und enden in einer anderen; Anfang und Ende müssen im selben Block sein. `#Region` Richtlinien werden nicht innerhalb von Funktionen unterstützt.  
   

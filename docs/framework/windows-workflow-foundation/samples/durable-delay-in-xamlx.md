@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>Permanente Verzögerung in XAMLX
 In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.  
@@ -37,7 +37,7 @@ In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwen
   
  Die xamlx-Datei ist ein Workflowdienst, der in Visual Studio gehostet wird. Visual Studio verwendet Cassini, die einen Workflowdienst zum Hosten mithilfe des Workflows.  
   
- Neben dem Hosten des Workflows verwaltet der Workflowdiensthost die Workflowinstanzen durch Laden und Entladen. Um eine Instanz der [!INCLUDE[wf](../../../../includes/wf-md.md)]-Definition (auf dem Workflowdiensthost) zu starten, legen Sie einen Client fest, der eine Nachricht an die <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow sendet. Die <xref:System.ServiceModel.Activities.Receive>-Eigenschaft von <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> ist auf `true` festgelegt, sodass eine neue Instanz des Workflows erstellt werden kann, sobald eine Nachricht empfangen wird.  
+ Neben dem Hosten des Workflows verwaltet der Workflowdiensthost die Workflowinstanzen durch Laden und Entladen. Um eine Instanz von der Windows Workflow Foundation (WF)-Definition (auf dem Workflowdiensthost) zu starten, legen Sie einen Client, der eine Nachricht sendet die <xref:System.ServiceModel.Activities.Receive> Aktivität im Workflow. Die <xref:System.ServiceModel.Activities.Receive>-Eigenschaft von <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> ist auf `true` festgelegt, sodass eine neue Instanz des Workflows erstellt werden kann, sobald eine Nachricht empfangen wird.  
   
  Während der Initialisierung wird der Konfigurationsdatei, die den Workflowdiensthost angibt, unter dem eine Instanz in den Persistenzspeicher (Datenbank) entladen werden soll, ein Verhalten zum Entladen von Instanzen hinzugefügt. Für dieses Beispiel wird die Instanz entladen, unmittelbar nachdem der Workflow in den Leerlauf eintritt (wenn die Verzögerung ausgelöst wird).  
   

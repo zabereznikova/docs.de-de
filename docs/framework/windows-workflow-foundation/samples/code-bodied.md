@@ -1,23 +1,24 @@
 ---
 title: Code-Bodied
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="code-bodied"></a>Code-Bodied
 Dieser Abschnitt enthält benutzerdefinierte, im Code deklarativ erstellte Aktivitätsbeispiele.  
@@ -39,7 +40,7 @@ Dieser Abschnitt enthält benutzerdefinierte, im Code deklarativ erstellte Aktiv
  In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Activities.CodeActivity> entwickelt wird, die <xref:System.Activities.AsyncCodeActivityContext> verwendet, um Arbeiten asynchron außerhalb des Workflows auszuführen. 
   
  [Benutzerdefinierte Aktivität „Hello World“](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- In diesem Beispiel werden mehrere Hauptfunktionen von [!INCLUDE[wf](../../../../includes/wf-md.md)] veranschaulicht, einschließlich der Erstellung einer einfachen benutzerdefinierten Aktivität.  
+ Dieses Beispiel zeigt mehrere Hauptfunktionen von Windows Workflow Foundation (WF), einschließlich Informationen zum Erstellen einer einfachen benutzerdefinierten Aktivität.  
   
  [Dynamische Argumente](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
  In diesem Beispiel wird veranschaulicht, wie eine Aktivität implementiert wird, deren Argumente statt vom Autor vom Consumer der Aktivität definiert werden.

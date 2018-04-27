@@ -1,28 +1,30 @@
 ---
-title: "Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests"
-ms.custom: 
+title: Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementieren von Benutzeroberflächenautomatisierung  
- Wie bereits erwähnt benötigen Testtools und Entwickler ohne das vereinheitlichte, von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zur Verfügung gestellte Modell Framework-spezifische Informationen, um Eigenschaften und Verhalten von Steuerelementen in diesem Framework verfügbar zu machen. Da in [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] -Betriebssystemen verschiedene Benutzeroberflächen-Frameworks zum gleichen Zeitpunkt vorhanden sein können, einschließlich [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]und [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], kann das Testen mehrerer Anwendungen mit ähnlich scheinenden Steuerelementen eine schwierige Aufgabe sein. In der folgenden Tabelle werden beispielsweise Framework-spezifische Eigenschaftennamen, die zum Abrufen des einem Schaltflächen-Steuerelement zugeordneten Namens (oder Texts) erforderlich sind, und die entsprechende einzelne, gleichwertige [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft aufgeführt.  
+ Wie bereits erwähnt benötigen Testtools und Entwickler ohne das vereinheitlichte, von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zur Verfügung gestellte Modell Framework-spezifische Informationen, um Eigenschaften und Verhalten von Steuerelementen in diesem Framework verfügbar zu machen. Da es verschiedene Benutzeroberflächen-Frameworks zum gleichen Zeitpunkt innerhalb der Windows-Betriebssystemen vorhanden sein können, einschließlich [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], und [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], können sie eine schwierige Aufgabe Testen mehrerer Anwendungen mit Steuerelementen, die ähnlich scheinenden sein . In der folgenden Tabelle werden beispielsweise Framework-spezifische Eigenschaftennamen, die zum Abrufen des einem Schaltflächen-Steuerelement zugeordneten Namens (oder Texts) erforderlich sind, und die entsprechende einzelne, gleichwertige [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft aufgeführt.  
   
 |Steuerelementtyp der Benutzeroberflächenautomatisierung|Benutzeroberflächen-Framework|Framework-spezifische Eigenschaft|Benutzeroberflächenautomatisierungs-Eigenschaft|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

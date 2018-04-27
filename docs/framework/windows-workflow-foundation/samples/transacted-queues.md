@@ -1,26 +1,27 @@
 ---
 title: Transaktive Warteschlangen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>Transaktive Warteschlangen
-In diesem Beispiel wird veranschaulicht, wie Warteschlangen und Transaktionen in [!INCLUDE[wf](../../../../includes/wf-md.md)] integriert werden, um zuverlässige und skalierbare Dienste zu erstellen. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  
+Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und Transaktionen in Windows Workflow Foundation (WF), zuverlässige und skalierbare Dienste zu erstellen. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> und inhaltsbasierte Korrelation.  

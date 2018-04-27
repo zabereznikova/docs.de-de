@@ -1,24 +1,26 @@
 ---
-title: "Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung"
-ms.custom: 
+title: 'Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ee558542eacede87ca29acf965491c965b6c4c63
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung
 
@@ -66,7 +68,7 @@ Eine Kopie der Quelle dieses Beispiels, finden Sie unter [zuverlässige WS-Sitzu
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil.exe* generiert auch die Konfiguration für den Client, verwendet die <xref:System.ServiceModel.WSHttpBinding> Klasse. Benennen Sie die Konfigurationsdatei *"App.config"* Verwendung [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].
+1. *Svcutil.exe* generiert auch die Konfiguration für den Client, verwendet die <xref:System.ServiceModel.WSHttpBinding> Klasse. Benennen Sie die Konfigurationsdatei *"App.config"* bei Verwendung von Visual Studio.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 

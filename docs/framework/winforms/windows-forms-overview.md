@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über Windows Forms"
-ms.custom: 
+title: Übersicht über Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Übersicht über Windows Forms
 Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intelligenten Clientanwendungen, die wichtigsten Funktionen der Windows Forms-Programmierung und die Verwendung von Windows Forms zur Erstellung von intelligenten Clients, die die Anforderungen moderner Unternehmen und Endbenutzer erfüllen.  
@@ -30,7 +32,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
  Windows Forms dient der Entwicklung von intelligenten Clients. *Intelligente Clients* sind grafisch anspruchsvolle Anwendungen, die einfach bereitgestellt und aktualisiert werden können. Darüber hinaus kann eine intelligente Clientanwendung sowohl im Online- als auch im Offlinebetrieb verwendet werden und bietet gegenüber herkömmlichen Windows-Anwendungen erhöhte Sicherheit beim Zugriff auf lokale Computerressourcen.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken  
- Windows Forms ist die Technologie zur Erstellung intelligenter Clients für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dieser Satz verwalteter Bibliotheken erleichtert allgemeine Anwendungsaufgaben, z. B. Lese- und Schreibzugriffe auf das Dateisystem. Mit einer Entwicklungsumgebung wie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] können Sie intelligente Windows Forms-Clientanwendungen erstellen, die Informationen anzeigen, Benutzer zur Eingabe von Daten auffordern oder über ein Netzwerk mit Remotecomputern kommunizieren.  
+ Windows Forms ist die Technologie zur Erstellung intelligenter Clients für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dieser Satz verwalteter Bibliotheken erleichtert allgemeine Anwendungsaufgaben, z. B. Lese- und Schreibzugriffe auf das Dateisystem. Wenn Sie eine Entwicklungsumgebung wie Visual Studio verwenden, können Sie Windows Forms intelligenten Clientanwendungen, die Informationen anzeigen, die Eingabe von Benutzer anfordern und die Kommunikation mit Remotecomputern erstellen, über ein Netzwerk.  
   
  In Windows Forms stellt ein *Formular* eine visuelle Oberfläche dar, auf der Informationen für den Benutzer angezeigt werden. In der Regel erstellen Sie Windows Forms-Anwendungen, indem Sie Steuerelemente in Formulare einfügen und Antworten auf Benutzeraktionen, wie Maus- und Tastatureingaben, entwickeln. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.  
   
@@ -40,7 +42,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
   
  Windows Forms verfügt über komplexe Steuerelemente für die Benutzeroberfläche, mit denen Features aus Anwendungen wie Microsoft Office emuliert werden können. Mit dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement und dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie Symbolleisten und Menüs erstellen, die Texte und Bilder, Untermenüs oder weitere Steuerelemente enthalten, z. B. Textfelder und Kombinationsfelder.  
   
- Mit dem Windows Forms-Designer von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] können Sie Windows Forms-Anwendungen direkt im Drag & Drop-Verfahren erstellen. Wählen Sie Steuerelemente einfach mit dem Mauszeiger aus, und fügen Sie sie an der gewünschten Stelle im Formular ein. Der Designer stellt Tools wie Rasterlinien und Ausrichtungslinien bereit, um das Anordnen von Steuerelementen zu erleichtern. Unabhängig davon, ob Sie mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] arbeiten oder über die Befehlszeile kompilieren, können Sie die Steuerelemente <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> verwenden, um mit geringem Zeitaufwand komplexe Formularlayouts zu erstellen.  
+ Mit dem Visual Studio Drag & Drop-Windows Forms-Designer können Sie Windows Forms-Anwendungen problemlos erstellen. Wählen Sie Steuerelemente einfach mit dem Mauszeiger aus, und fügen Sie sie an der gewünschten Stelle im Formular ein. Der Designer stellt Tools wie Rasterlinien und Ausrichtungslinien bereit, um das Anordnen von Steuerelementen zu erleichtern. Und, ob Sie mithilfe von Visual Studio oder über die Befehlszeile kompilieren, können Sie die <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> Steuerelemente zum Erstellen erweiterter Formularlayouts weniger Zeit.  
   
  Schließlich enthält der <xref:System.Drawing>-Namespace zum Erstellen eigener Benutzeroberflächenelemente eine Vielzahl von Klassen, um Linien, Kreise und andere Formen direkt auf einem Formular zu zeichnen.  
   
@@ -64,7 +66,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
   
  Mit dem Datenquellenfenster können datengebundene Steuerelemente problemlos erstellt werden. In diesem Fenster werden die Datenquellen in Ihrem Projekt angezeigt, z. B. Datenbanken, Webdienste oder Objekte. Zum Erstellen datengebundener Steuerelemente können Sie Elemente aus diesem Fenster auf Formulare im Projekt ziehen. Darüber hinaus können Sie auch bestehende Steuerelemente an Daten binden, indem Sie Objekte aus dem Datenquellenfenster auf bestehende Steuerelemente ziehen.  
   
- Ein weiterer Datenbindungstyp, der in Windows Forms verwaltet werden kann, lautet *Einstellungen*. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, sowie Benutzereinstellungen wie Standardspeicherorte von Dateien erhalten. Die Funktion "Anwendungseinstellungen" trägt diesen Anforderungen Rechnung und stellt eine einfache Möglichkeit dar, beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Nachdem Sie die Einstellungen mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem Code-Editor definiert haben, werden diese im XML-Format gespeichert und zur Laufzeit automatisch in den Arbeitsspeicher eingelesen.  
+ Ein weiterer Datenbindungstyp, der in Windows Forms verwaltet werden kann, lautet *Einstellungen*. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, sowie Benutzereinstellungen wie Standardspeicherorte von Dateien erhalten. Die Funktion "Anwendungseinstellungen" trägt diesen Anforderungen Rechnung und stellt eine einfache Möglichkeit dar, beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Nachdem Sie diese Einstellungen mithilfe von Visual Studio oder einem Code-Editor definiert haben, werden die Einstellungen als XML beibehalten und automatisch zur Laufzeit in den Arbeitsspeicher eingelesen.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Hilfe beim Anzeigen und Bearbeiten von Daten  
  Ausführliche Informationen zur Verwendung dieser Features finden Sie in den folgenden Hilfethemen.  
@@ -77,7 +79,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
 |Verwenden von Anwendungseinstellungen|[Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
- Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Mithilfe der [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Technologie können Sie Anwendungen in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] mit ein paar einfachen Klicks bereitstellen und Benutzern eine URL zur Verfügung stellen, die auf die Anwendung im Internet verweist. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in der Anwendung und stellt sicher, dass die Anwendung auf dem Clientcomputer ordnungsgemäß installiert ist.  
+ Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Bei Verwendung der [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Technologie, Sie können Anwendungen in Visual Studio mit nur wenigen Klicks bereitstellen und geben Sie Ihre Benutzer mit einer URL verweist auf die Anwendung im Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in der Anwendung und stellt sicher, dass die Anwendung auf dem Clientcomputer ordnungsgemäß installiert ist.  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden können. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll, fügt [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] im Menü **Start** des Benutzers einen Link zur Anwendung hinzu. Der Benutzer kann die Anwendung dann auch ohne die URL öffnen.  
   

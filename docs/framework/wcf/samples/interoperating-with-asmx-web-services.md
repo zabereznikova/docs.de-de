@@ -1,24 +1,26 @@
 ---
 title: Zusammenwirken mit ASMX-Webdiensten
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fa28637ad4ffdc2652c4c925208cd699134579a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Zusammenwirken mit ASMX-Webdiensten
 In diesem Beispiel wird veranschaulicht, wie eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientanwendung in einem vorhandenen ASMX-Webdienst integriert wird.  
@@ -30,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie eine [!INCLUDE[indigo1](../../../..
   
  Die im folgenden Beispielcode dargestellte ASMX-Webdienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück.  
   
-```  
+```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class CalculatorService : System.Web.Services.WebService  
     {  
@@ -57,7 +59,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Wie in der Konfiguration angegeben, kann auf den Dienst unter http://localhost/servicemodelsamples/service.asmx von einem Client auf dem gleichen Computer zugegriffen werden. Für Clients auf Remotecomputern muss für den Dienstzugriff statt localhost ein vollqualifizierter Domänenname angegeben werden.  
+ Wie konfiguriert ist, kann den Dienst zugegriffen werden, am http://localhost/servicemodelsamples/service.asmx von einem Client auf demselben Computer. Für Clients auf Remotecomputern muss für den Dienstzugriff statt localhost ein vollqualifizierter Domänenname angegeben werden.  
   
  Kommunikation erfolgt über ein Client generiert werden, indem Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Der Client ist in der Datei "generatedClient.cs" enthalten. Der ASMX-Dienst muss zur Generierung des Proxycodes verfügbar sein, da dieser zum Abrufen der aktualisierten Metadaten verwendet wird. Führen Sie den folgenden Befehl an einer Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren.  
   
@@ -78,7 +80,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
   
  Die Clientimplementierung erstellt eine Instanz des generierten Clients. Der generierte Client kann dann für die Kommunikation mit dem Dienst verwendet werden.  
   
-```  
+```csharp  
 // Create a client.  
 CalculatorServiceSoapClient client = new CalculatorServiceSoapClient();  
   

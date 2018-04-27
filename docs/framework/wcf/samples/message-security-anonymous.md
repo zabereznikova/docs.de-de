@@ -1,28 +1,28 @@
 ---
-title: "Nachrichtensicherheit – anonym"
-ms.custom: 
+title: Nachrichtensicherheit – anonym
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 
+caps.latest.revision: 52
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6f3ac3ba51939f319d1d0e98265d7867233f2b6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-anonymous"></a>Nachrichtensicherheit – anonym
 Das Beispiel "Nachrichtensicherheit – anonym" zeigt, wie eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung implementiert wird, die Sicherheit auf Nachrichtenebene ohne Clientauthentifizierung verwendet, aber Serverauthentifizierung mithilfe des Serverzertifikats X.509 erfordert. Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt. Dieses Beispiel basiert auf der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel. Dieses Beispiel besteht aus einem Clientkonsolenprogramm (.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
@@ -31,8 +31,8 @@ Das Beispiel "Nachrichtensicherheit – anonym" zeigt, wie eine [!INCLUDE[indigo
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Dieses Beispiel fügt einen neuen Vorgang zur Rechnerschnittstelle hinzu, der `True` zurückgibt, wenn der Client nicht authentifiziert wurde.  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public bool IsCallerAnonymous()  
@@ -42,8 +42,8 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-```  
-  
+```
+
  Der Dienst macht einen einzigen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit einer Konfigurationsdatei (Web.conf) definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer `wsHttpBinding`-Bindung konfiguriert. Der Standardsicherheitsmodus für die `wsHttpBinding`-Bindung ist `Message`. Das `clientCredentialType`-Attribut ist auf `None` festgelegt.  
   
 ```xml  
@@ -123,8 +123,8 @@ public class CalculatorService : ICalculator
  Das Beispiel setzt den <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> für die Authentifizierung des Dienstzertifikats auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust>. Dies erfolgt in der Datei "App.config" des Clients im Abschnitt `behaviors`. Wenn sich das Zertifikat also im Speicher für vertrauenswürdige Personen des Benutzers befindet, wird es als vertrauenswürdig eingestuft wird, ohne dass eine Validierung der Ausstellerkette des Zertifikats erfolgt. Diese Einstellung wird hier der Einfachheit halber verwendet. So kann das Beispiel ausgeführt werden, ohne dass Zertifikate erforderlich sind, die von einer Zertifizierungsstelle ausgestellt wurden. Diese Einstellung ist weniger sicher als die Standardeinstellung ChainTrust. Die aus dieser Einstellung resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor `PeerOrChainTrust` im Produktionscode verwendet wird.  
   
  Die Clientimplementierung Fügt einen Aufruf der `IsCallerAnonymous` Methode, und andernfalls unterscheidet sich nicht von der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
-  
-```  
+
+```csharp
 // Create a client with a client endpoint configuration.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -145,8 +145,8 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ```  
@@ -166,7 +166,7 @@ Press <ENTER> to terminate client.
   
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -190,7 +190,7 @@ Press <ENTER> to terminate client.
   
      Die folgenden Zeilen in der Batchdatei Setup.bat sorgen dafür, dass das Serverzertifikat, das im Speicher LocalMachine gespeichert ist, für das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Arbeitsprozesskonto verfügbar ist.  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -218,7 +218,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Die Setupbatchdatei ist dafür gedacht, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung festgelegt.  
   
-3.  Überprüfen Sie den Zugriff auf den Dienst, indem Sie in einem Browser die Adresse http://localhost/servicemodelsamples/service.svc eingeben.  
+3.  Überprüfen des Zugriffs auf den Dienst mithilfe eines Browsers durch Eingabe der Adresse http://localhost/servicemodelsamples/service.svc.  
   
 4.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   

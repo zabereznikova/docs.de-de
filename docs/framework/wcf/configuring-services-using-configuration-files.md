@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Das Konfigurieren eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diensts mit einer Konfigurationsdatei bietet Ihnen eine flexible Möglichkeit, die Endpunkt- und Dienstverhaltensdaten zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit anzugeben. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
@@ -37,9 +37,9 @@ Das Konfigurieren eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Di
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config und App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwendet das Konfigurationssystem System.Configuration des [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Namespaces.  
   
- Verwenden Sie für die Konfiguration eines Diensts in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]entweder die Konfigurationsdatei Web.config oder App.config, um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
+ Konfiguration eines Diensts in Visual Studio, verwenden Sie eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
   
- In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]werden die gültigen Konfigurationseinstellungen in einer Datei namens App.config gespeichert. Der tatsächlich für die Konfigurationsdatei verwendete Name hängt vom Assemblynamen ab. Einer Assembly mit dem Namen "Cohowinery.exe" ist beispielsweise die Konfigurationsdatei namens "Cohowinery.exe.config" zugeordnet. Sie müssen jedoch nur die Datei App.config ändern. An dieser Datei vorgenommene Änderungen werden bei der Kompilierung automatisch an die tatsächliche Anwendungskonfigurationsdatei weitergegeben.  
+ In Visual Studio wird die Datei "App.config" zum Erstellen der Datei für die endgültige Konfiguration verwendet. Der tatsächlich für die Konfigurationsdatei verwendete Name hängt vom Assemblynamen ab. Einer Assembly mit dem Namen "Cohowinery.exe" ist beispielsweise die Konfigurationsdatei namens "Cohowinery.exe.config" zugeordnet. Sie müssen jedoch nur die Datei App.config ändern. An dieser Datei vorgenommene Änderungen werden bei der Kompilierung automatisch an die tatsächliche Anwendungskonfigurationsdatei weitergegeben.  
   
  Bei Verwendung einer App.config-Datei führt das Konfigurationssystem den Inhalt dieser Datei mit dem Inhalt der Datei Machine.config zusammen, sobald die Anwendung gestartet und die Konfiguration übernommen wird. Dieser Mechanismus ermöglicht es, computerweite Einstellungen in der Datei Machine.config zu definieren. Die Datei App.config kann verwendet werden, um Einstellungen in der Datei Machine.config zu überschreiben. Sie können Einstellungen in der Datei Machine.config aber auch sperren, sodass diese verwendet werden. Im Fall der Datei Web.config führt das Konfigurationssystem den Inhalt aller Web.config-Dateien in allen Verzeichnissen zur schließlich verwendeten Konfiguration im Anwendungsverzeichnis zusammen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Konfiguration und der Priorität der Einstellungen finden Sie in den Themen des <xref:System.Configuration> -Namespaces.  
   

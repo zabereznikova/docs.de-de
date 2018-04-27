@@ -1,36 +1,38 @@
 ---
-title: "Übersicht über LINQ to DataSet"
-ms.custom: 
+title: Übersicht über LINQ to DataSet
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Übersicht über LINQ to DataSet
 Das <xref:System.Data.DataSet> ist eine der am meisten verwendeten Komponenten von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es ist eines der Schlüsselelemente des nicht verbundenen Programmierungsmodells, auf dem [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] basiert, und versetzt Sie in die Lage, Daten aus unterschiedlichen Datenquellen explizit zwischenzuspeichern. Für die Darstellungsebene arbeitet das <xref:System.Data.DataSet> eng mit GUI-Steuerelementen für die Datenbindung zusammen. Für die mittlere Ebene stellt es einen Cache bereit, in dem die relationale Form von Daten zwischengespeichert wird, und es bietet Dienste für die schnelle und einfache Navigation in Abfragen und Hierarchien. Ein gängiges Verfahren verwendet, um die Anzahl der Anforderungen für eine Datenbank zu verringern, ist die Verwendung der <xref:System.Data.DataSet> für das caching in der mittleren Ebene. Betrachten Sie beispielsweise einen datengesteuerten [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung. Ein beträchtlicher Teil der Anwendung weist keine häufigen Änderungen auf und bleibt auch über Sitzungsgrenzen hinweg und bei verschiedenen Benutzern unverändert. Diese Daten können im Arbeitsspeicher des Webservers abgelegt werden, wodurch sich die Zahl der Datenbankanfragen verringert und die Interaktionen des Benutzers beschleunigt werden. Ein weiterer nützlicher Aspekt, der die <xref:System.Data.DataSet> ist, dass eine Anwendung Teilmengen von Daten aus mindestens einer Datenquelle in Anwendungsraum einbinden können. Die Anwendung kann dann die Daten im Arbeitsspeicher bearbeiten, während die relationale Form erhalten bleibt.  
   
  Trotz seiner häufigen Verwendung sind die Abfragefunktionen des <xref:System.Data.DataSet> begrenzt. Zum Filtern und Sortieren kann die <xref:System.Data.DataTable.Select%2A>-Methode verwendet werden, und die Methoden <xref:System.Data.DataRow.GetChildRows%2A> und <xref:System.Data.DataRow.GetParentRow%2A> ermöglichen die Navigation in der Hierarchie. Für komplexere Dinge muss der Entwickler jedoch eine benutzerdefinierte Abfrage schreiben. Das Ergebnis sind häufig Anwendungen, deren Leistung zu wünschen übrig lässt und die sich schwer warten lassen.  
   
- Mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] können Daten, die in einem <xref:System.Data.DataSet>-Objekt zwischengespeichert sind, leichter und schneller abgefragt werden. Die entsprechenden Abfragen werden nicht als in den Anwendungscode eingebettete Zeichenfolgenliterale, sondern in der Programmiersprache selbst ausgedrückt. Dies bedeutet, dass Entwickler keine separate Abfragesprache erlernen müssen. Darüber hinaus [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ermöglicht [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Entwickler arbeiten produktiver, da die [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE bietet syntaxüberprüfung der Zeitpunkt der Kompilierung, statische Typisierung und IntelliSense-Unterstützung für [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kann auch für das Abfragen von Daten verwendet werden, die aus einer oder mehreren Datenquellen konsolidiert wurden. Dadurch werden viele Szenarios möglich, in denen ein gewisses Maß an Flexibilität für die Darstellung und Behandlung von Daten erforderlich ist. Diese Manipulationsmethode wird insbesondere bei der Erstellung von Berichterstellungs-, Analyse- und Business Intelligence-Anwendungen benötigt.  
+ Mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] können Daten, die in einem <xref:System.Data.DataSet>-Objekt zwischengespeichert sind, leichter und schneller abgefragt werden. Die entsprechenden Abfragen werden nicht als in den Anwendungscode eingebettete Zeichenfolgenliterale, sondern in der Programmiersprache selbst ausgedrückt. Dies bedeutet, dass Entwickler keine separate Abfragesprache erlernen müssen. Darüber hinaus [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ermöglicht Visual Studio-Entwicklern, produktivere Arbeitsweise, da der Visual Studio-IDE syntaxüberprüfung der Zeitpunkt der Kompilierung, statische Typisierung und IntelliSense-Unterstützung für bietet [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kann auch für das Abfragen von Daten verwendet werden, die aus einer oder mehreren Datenquellen konsolidiert wurden. Dadurch werden viele Szenarios möglich, in denen ein gewisses Maß an Flexibilität für die Darstellung und Behandlung von Daten erforderlich ist. Diese Manipulationsmethode wird insbesondere bei der Erstellung von Berichterstellungs-, Analyse- und Business Intelligence-Anwendungen benötigt.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Abfragen von "DataSets" mit LINQ to DataSet  
- Bevor Sie anfangen können, mit <xref:System.Data.DataSet> ein [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Objekt abzufragen, müssen Sie das <xref:System.Data.DataSet> auffüllen. Es gibt mehrere Möglichkeiten zum Laden von Daten in einem <xref:System.Data.DataSet>, z. B. mit der <xref:System.Data.Common.DataAdapter> Klasse oder [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Nach dem Laden der Daten in einem <xref:System.Data.DataSet> -Objekt, können Sie anfangen, es abzufragen. Das Formulieren von Abfragen mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ähnelt der Verwendung [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Abfrage anderer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]--fähiger Datenquellen. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]Abfragen können ausgeführt werden, für einzelne Tabellen in einer <xref:System.Data.DataSet> oder für mehr als eine Tabelle mit der <xref:System.Linq.Enumerable.Join%2A> und <xref:System.Linq.Enumerable.GroupJoin%2A> Standardabfrageoperatoren.  
+ Bevor Sie anfangen können, mit <xref:System.Data.DataSet> ein [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Objekt abzufragen, müssen Sie das <xref:System.Data.DataSet> auffüllen. Es gibt mehrere Möglichkeiten zum Laden von Daten in einem <xref:System.Data.DataSet>, z. B. mit der <xref:System.Data.Common.DataAdapter> Klasse oder [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Nach dem Laden der Daten in einem <xref:System.Data.DataSet> -Objekt, können Sie anfangen, es abzufragen. Das Formulieren von Abfragen mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ähnelt der Verwendung [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Abfrage anderer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]--fähiger Datenquellen. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfragen können ausgeführt werden, für einzelne Tabellen in einer <xref:System.Data.DataSet> oder für mehr als eine Tabelle mit der <xref:System.Linq.Enumerable.Join%2A> und <xref:System.Linq.Enumerable.GroupJoin%2A> Standardabfrageoperatoren.  
   
- [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]Abfragen sind für sowohl typisierte als auch nicht typisierte unterstützt <xref:System.Data.DataSet> Objekte. Wenn das <xref:System.Data.DataSet>-Schema zum Zeitpunkt der Anwendungskonzeptionierung bereits bekannt ist, wird empfohlen, mit einem typisierten <xref:System.Data.DataSet> zu arbeiten. In einem typisierten <xref:System.Data.DataSet> haben die Tabellen und Zeilen für jede Spalte typisierte Member, wodurch die Abfragen einfacher und lesbarer werden.  
+ [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfragen sind für sowohl typisierte als auch nicht typisierte unterstützt <xref:System.Data.DataSet> Objekte. Wenn das <xref:System.Data.DataSet>-Schema zum Zeitpunkt der Anwendungskonzeptionierung bereits bekannt ist, wird empfohlen, mit einem typisierten <xref:System.Data.DataSet> zu arbeiten. In einem typisierten <xref:System.Data.DataSet> haben die Tabellen und Zeilen für jede Spalte typisierte Member, wodurch die Abfragen einfacher und lesbarer werden.  
   
  Zusätzlich zu den Standardabfrageoperatoren implementiert in "System.Core.dll" [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fügt mehrere <xref:System.Data.DataSet>-spezifischen Erweiterungen, die Abfrage eines ganzen Satzes von erleichtern <xref:System.Data.DataRow> Objekte. Diese <xref:System.Data.DataSet>-spezifischen Erweiterungen enthalten Operatoren für den Vergleich von Zeilenfolgen sowie Methoden, die den Zugriff auf die Spaltenwerte einer <xref:System.Data.DataRow> ermöglichen.  
   

@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten (Visual Basic)
 Sie können aus Visual Basic-Klassen ableiten `Public` Klassen in COM-Objekte, einschließlich derer, die in früheren Versionen von Visual Basic erstellt. Die Eigenschaften und Methoden von Klassen geerbt von COM-Objekte können außer Kraft gesetzt oder überladen, ebenso wie die Eigenschaften und Methoden der anderen Basisklasse überschreiben oder überladen werden können. Vererbung von COM-Objekten ist nützlich, wenn Sie eine vorhandene Klassenbibliothek verfügen, die nicht neu kompiliert werden soll.  
@@ -81,7 +81,7 @@ Sie können aus Visual Basic-Klassen ableiten `Public` Klassen in COM-Objekte, e
     >  Obwohl Sie auch eine Klasse erstellt, die mit Visual Basic als COM-Objekt verfügbar gemacht werden können, ist kein "true" COM-Objekt und kann nicht in dieser exemplarischen Vorgehensweise verwendet werden. Weitere Informationen finden Sie unter [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Interop-Assemblys  
- Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die fungiert als Brücke zwischen nicht verwaltetem Code (z. B. ein COM-Objekt) und der verwaltete Code [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet. Die Interop-Assembly, die Visual Basic erstellt behandelt viele Details der Arbeit mit COM-Objekten, z. B. *Interop-Marshalling*, der Prozess der Verpackung Parametern und Rückgabewerten in äquivalente Typen wie verschoben werden und von COM-Objekten. Der Verweis in Visual Basic-Anwendung verweist auf die Interop-Assembly, nicht das eigentliche COM-Objekt.  
+ Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die fungiert als Brücke zwischen nicht verwaltetem Code (z. B. ein COM-Objekt) und verwaltetem Code von den Visual Studio verwendet. Die Interop-Assembly, die Visual Basic erstellt behandelt viele Details der Arbeit mit COM-Objekten, z. B. *Interop-Marshalling*, der Prozess der Verpackung Parametern und Rückgabewerten in äquivalente Typen wie verschoben werden und von COM-Objekten. Der Verweis in Visual Basic-Anwendung verweist auf die Interop-Assembly, nicht das eigentliche COM-Objekt.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Ein COM-Objekt mit Visual Basic 2005 und höheren Versionen verwenden  
   

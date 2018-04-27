@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zur Erstellung dienstorientierter Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Permanente Nachrichten**  
   
-     Bei einer permanenten Nachricht handelt es sich um eine Nachricht, die niemals aufgrund einer Unterbrechung der Kommunikation verloren geht. Die Nachrichten in einem Muster für permanente Nachrichten werden immer in einer Datenbank gespeichert. Wird die Verbindung unterbrochen, kann mit der Datenbank der Nachrichtenaustausch nach der erneuten Herstellung der Verbindung fortgesetzt werden. Sie können eine permanente Nachricht auch mit [!INCLUDE[wf](../../../includes/wf-md.md)]erstellen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Bei einer permanenten Nachricht handelt es sich um eine Nachricht, die niemals aufgrund einer Unterbrechung der Kommunikation verloren geht. Die Nachrichten in einem Muster für permanente Nachrichten werden immer in einer Datenbank gespeichert. Wird die Verbindung unterbrochen, kann mit der Datenbank der Nachrichtenaustausch nach der erneuten Herstellung der Verbindung fortgesetzt werden. Sie können auch eine permanente Meldung mithilfe der Windows Workflow Foundation (WF) erstellen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transaktionen**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF-Integration mit anderen Microsoft-Technologien  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ist eine flexible Plattform. Aufgrund der hohen Flexibilität wird [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auch in zahlreichen anderen Produkten von Microsoft eingesetzt. Durch Kenntnisse der Grundlagen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]besitzen Sie einen unmittelbaren Vorteil, wenn Sie auch eines dieser Produkte verwenden.  
   
- Die erste Technologie, die mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kombiniert wurde, war Windows Workflow Foundation (WF). Workflows vereinfachen die Anwendungsentwicklung durch die kapselnden Schritte im Workflow als "Aktivitäten". In der ersten Version von [!INCLUDE[wf2](../../../includes/wf2-md.md)]musste ein Entwickler einen Host für den Workflow erstellen. Die darauffolgende Version von [!INCLUDE[wf2](../../../includes/wf2-md.md)] war mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]kombiniert. Ein beliebiger Workflow kann seither leicht in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst gehostet werden. Wählen Sie hierzu in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]einfach WF/WCF als Projekttyp aus.  
+ Die erste Technologie, die mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kombiniert wurde, war Windows Workflow Foundation (WF). Workflows vereinfachen die Anwendungsentwicklung durch die kapselnden Schritte im Workflow als "Aktivitäten". In der ersten Version von Windows Workflow Foundation musste ein Entwickler einen Host für den Workflow zu erstellen. Die nächste Version von Windows Workflow Foundation integriert wurde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Ein beliebiger Workflow kann seither leicht in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst gehostet werden. Wählen Sie hierzu in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]einfach WF/WCF als Projekttyp aus.  
   
  Microsoft BizTalk Server R2 nutzt u. a. ebenfalls [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] als Kommunikationstechnologie. BizTalk wurde zum Empfangen und Umwandeln von Daten aus einem Standardformat in ein anderes entwickelt. Nachrichten müssen an den zentralen Posteingang der Anwendung gesendet werden, wo sie entweder per strikter Zuordnung oder mit einer der BizTalk-Funktionen (z. B. Workflowmodul) umgewandelt werden können. BizTalk kann nun den Line of Business (LOB)-Adapter von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwenden, um Nachrichten an den Posteingang zu senden.  
   

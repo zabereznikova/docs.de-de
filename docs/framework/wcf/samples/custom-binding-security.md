@@ -1,24 +1,26 @@
 ---
 title: Sicherheit mit benutzerdefinierten Bindungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94c43586606f42cca120ded59637a998d113d229
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4774e4ed6c5afc6e9c4af50e0663ffe8c0964b7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
 In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.  
@@ -56,16 +58,16 @@ In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer b
   
 ```xml  
 <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
+    <serviceBehaviors>  
+    <behavior name="CalculatorServiceBehavior">  
+        <serviceMetadata />  
+        <serviceDebug includeExceptionDetailInFaults="False" />  
+        <serviceCredentials>  
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
+        </serviceCredentials>  
+    </behavior>  
+    </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem Windows-Anmeldeinformationstyp. Dies ist der Standard-Anmeldeinformationstyp. Dies wird durch das `security`-Bindungselement umgesetzt. Sowohl der Client als auch der Dienst werden mithilfe von Sicherheitsfunktionen auf Nachrichtenebene authentifiziert, wenn der Kerberos-Authentifizierungsmechanismus verfügbar ist. Dies geschieht, wenn das Beispiel in der Active Directory-Umgebung ausgeführt wird. Ist der Kerberos-Authentifizierungsmechanismus nicht verfügbar, wird die NTLM-Authentifizierung verwendet. NTLM authentifiziert den Client für den Dienst, authentifiziert aber nicht den Dienst für den Client. Die `security` Bindungselement wird so konfiguriert, dass verwenden `SecureConversation``authenticationType`, was dazu führt, bei der Erstellung eine sicherheitssitzung auf dem Client und dem Dienst. Dies ist erforderlich, damit der Duplexvertrag des Diensts funktioniert.  
@@ -93,7 +95,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
      Das Zertifikat wird im Speicher CurrentUser für im Internet gehostete Dienste gespeichert.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

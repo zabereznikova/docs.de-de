@@ -1,24 +1,26 @@
 ---
 title: Bidirektionale Kommunikation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>Bidirektionale Kommunikation
 Dieses Beispiel veranschaulicht das Ausführen der transaktiven bidirektionalen Warteschlangenkommunikation über MSMQ. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -33,33 +35,33 @@ Dieses Beispiel veranschaulicht das Ausführen der transaktiven bidirektionalen 
  In diesem Beispiel wird die bidirektionale Kommunikation mit Warteschlangen veranschaulicht. Der Client sendet Bestellungen aus dem Bereich einer Transaktion an die Warteschlange. Der Dienst empfängt die Bestellungen, verarbeitet die Bestellungen und meldet an den Client den Status der Bestellung aus der Warteschlange innerhalb des Bereichs der Transaktion. Zur Vereinfachung der bidirektionalen Kommunikation verwenden sowohl der Client als auch der Dienst Warteschlangen für Bestellungen und den Auftragsstatus.  
   
  Der `IOrderProcessor`-Dienstvertrag definiert einen unidirektionalen Dienstvorgang, der für die Verwendung mit Warteschlangen geeignet ist. Der Dienstvorgang beinhaltet den Antwortendpunkt, an den der Auftragsstatus gesendet wird. Der Antwortendpunkt ist der URI der Warteschlange für die Rücksendung des Auftragsstatus an den Client. Die Anwendung für die Auftragsverarbeitung implementiert diesen Vertrag.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  Der Antwortvertrag für die Sendung des Auftragsstatus wird vom Client angegeben. Der Client implementiert den Auftragsstatusvertrag. Der Dienst verwendet den generierten Proxy dieses Vertrags, um den Auftragsstatus an den Client zurückzusenden.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  Der Dienstvorgang verarbeitet die übermittelte Bestellung. Das <xref:System.ServiceModel.OperationBehaviorAttribute> wird auf den Dienstvorgang angewendet, um die automatische Eintragung für eine Transaktion festzulegen, die für den Empfang der Nachricht aus der Warteschlange verwendet wird, und für die automatische Fertigstellung von Transaktionen, wenn der Dienstvorgang fertig gestellt wird. Die `Orders`-Klasse kapselt die Auftragsverarbeitungsfunktion. In diesem Fall fügt sie die Bestellung einem Wörterbuch hinzu. Die Transaktion, in der der Dienstvorgang eingetragen wurde, steht den Vorgängen in der `Orders`-Klasse zur Verfügung.  
   
  Der Dienstvorgang verarbeitet die übermittelte Bestellung und meldet dem Client den Status des Auftrags.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt System.ServiceModel der Konfigurationsdatei definiert.  
   
 > [!NOTE]
 >  Der Name der MSMQ-Warteschlange und die Endpunktadresse verwenden geringfügig abweichende Adressierungskonventionen. Im MSMQ-Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunktadresse gibt ein net.msmq:-Schema an und verwendet "localhost" als lokalen Computer sowie Schrägstriche im Pfad. Um in einer Warteschlange zu lesen, die auf einem Remotecomputer gehostet wird, ersetzen Sie "." und "localhost" durch den Namen des Remotecomputers.  
   
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel prüft der Dienst, ob die Warteschlange vorhanden ist, und erstellt sie gegebenenfalls. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy an den Dienst zu generieren.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Der Client erstellt eine Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der alle Nachrichten entweder erfolgreich sind oder fehlschlagen.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  Der Clientcode implementiert den `IOrderStatus`-Vertrag, um den Auftragsstatus vom Dienst zu empfangen. In diesem Fall druckt er den Auftragsstatus aus.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  Die Auftragsstatuswarteschlange wird in der `Main`-Methode erstellt. Die Clientkonfiguration beinhaltet die Dienstkonfiguration für den Auftragsstatus, um den Auftragsstatusdienst zu hosten, wie in der folgenden Beispielkonfiguration dargestellt.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  Der Dienst für dieses Beispiel erstellt eine Bindung im `OrderProcessorService`. Fügen Sie eine Codezeile hinzu, nachdem die Bindung instanziiert wurde, um den Sicherheitsmodus auf `None` festzulegen.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genutzt werden können, verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractImporter>-Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -154,7 +154,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
  Die `ReferencedTypes` Eigenschaft entspricht der **/reference** bei bestimmten Verwendungsarten des Vorgangs, der das Tool Svcutil.exe wechseln.  
   
 > [!NOTE]
->  Bei Verwendung von Svcutil.exe oder (in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) der **Hinzufügen eines Dienstverweises** verwenden, sind alle Typen der Datei MsCorLib.dll automatisch referenziert.  
+>  Bei Verwendung von Svcutil.exe oder (in Visual Studio) die **Hinzufügen eines Dienstverweises** verwenden, sind alle Typen der Datei MsCorLib.dll automatisch referenziert.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Importoptionen: Importieren von Nicht-DataContract-Schemas als IXmlSerializable-Typen  
  Der <xref:System.Runtime.Serialization.XsdDataContractImporter> unterstützt eine beschränkte Teilmenge des Schemas. Wenn nicht unterstützte Schemakonstrukte vorhanden sind (zum Beispiel XML-Attribute), schlägt der Importversuch mit einer Ausnahme fehl. Das Festlegen der <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` erweitert jedoch den unterstützten Schemabereich. Wenn `true` festgelegt ist, generiert der <xref:System.Runtime.Serialization.XsdDataContractImporter> Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren. Auf diese Weise wird der Direktzugriff auf die XML-Darstellung dieser Typen aktiviert.  

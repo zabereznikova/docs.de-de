@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea613d21cf7c8064938b94df3826e40caeecf3c3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="c-expressions"></a>C#-Ausdrücke
-Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden C#-Ausdrücke in [!INCLUDE[wf](../../../includes/wf-md.md)] unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, und Visual Basic-Workflowprojeke verwenden Visual Basic-Ausdrücke. Vorhandene [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, können unabhängig von der Projektsprache zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migieren und werden unterstützt. Dieses Thema bietet eine Übersicht über C#-Ausdrücke in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C#-Ausdrücke werden in Windows Workflow Foundation (WF) unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, und Visual Basic-Workflowprojeke verwenden Visual Basic-Ausdrücke. Vorhandene [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, können unabhängig von der Projektsprache zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migieren und werden unterstützt. Dieses Thema bietet eine Übersicht über C#-Ausdrücke in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
   
 ## <a name="using-c-expressions-in-workflows"></a>Verwenden von C#-Ausdrücken in Workflows  
   
@@ -40,7 +40,7 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden C#-Ausdrücke in 
 -   [Verwenden von C#-Ausdrücken in XAMLX-Workflowdiensten](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFServices)  
   
 ###  <a name="WFDesigner"></a> Mithilfe von C#-Ausdrücke im Workflow-Designer  
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden C#-Ausdrücke in [!INCLUDE[wf](../../../includes/wf-md.md)] unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, während von Visual Basic-Workflowprojekten Visual Basic-Ausdrücke verwendet werden. Um den gewünschten C#-Ausdruck anzugeben, geben Sie ihn in das Feld mit der Bezeichnung **Geben Sie einen C#-Ausdruck**. Die Bezeichnung wird im Eigenschaftenfenster angezeigt, wenn die Aktivität im Designer ausgewählt wird, oder in der Aktivität im Workflow-Designer. Im folgenden Beispiel sind zwei `WriteLine`-Aktivitäten in `Sequence` innerhalb von `NoPersistScope` enthalten.  
+ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C#-Ausdrücke werden in Windows Workflow Foundation (WF) unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, während von Visual Basic-Workflowprojekten Visual Basic-Ausdrücke verwendet werden. Um den gewünschten C#-Ausdruck anzugeben, geben Sie ihn in das Feld mit der Bezeichnung **Geben Sie einen C#-Ausdruck**. Die Bezeichnung wird im Eigenschaftenfenster angezeigt, wenn die Aktivität im Designer ausgewählt wird, oder in der Aktivität im Workflow-Designer. Im folgenden Beispiel sind zwei `WriteLine`-Aktivitäten in `Sequence` innerhalb von `NoPersistScope` enthalten.  
   
  ![Automatisch erstellte Sequenzaktivität](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   

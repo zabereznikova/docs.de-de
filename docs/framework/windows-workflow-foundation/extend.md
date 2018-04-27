@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06ee3a1e62320aef3b1a67afe5610b13a95de375
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1006b32d7a265c94753081eab7b2bd279ed3dbdf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extending-windows-workflow-foundation"></a>Erweitern der Windows Workflow Foundation
-Im folgenden Abschnitt wird beschrieben, wie [!INCLUDE[wf](../../../includes/wf-md.md)] mit benutzerdefinierten Aktivitäten und Designern in neu gehosteten Umgebungen außerhalb von [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] erweitert werden kann.  
+Im folgende Abschnitt wird beschrieben, wie zum Erweitern von Windows Workflow Foundation (WF) mit benutzerdefinierten Aktivitäten und Designern in neu gehosteten Umgebungen außerhalb [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  

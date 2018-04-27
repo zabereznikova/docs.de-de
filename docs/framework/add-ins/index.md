@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Add-Ins und Erweiterbarkeit
 <a name="top"></a> Add-Ins stellen erweiterte Funktionen oder Dienste für eine Hostanwendung bereit. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ein Programmiermodell bereit, mit dem Entwickler Add-Ins entwickeln und in ihrer Hostanwendung aktivieren können. Zu diesem Zweck erstellt das Modell eine Kommunikationspipeline zwischen dem Host und dem Add-In. Das Modell wird implementiert, indem die Typen in den Namespaces <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>und <xref:System.AddIn.Contract> verwendet werden.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  In der folgenden Abbildung ist die Pipeline dargestellt.  
   
- ![Hinzufügen &#45; im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Hinzufügen&#45;im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Add-In-Pipeline  
   
  Die Assemblys für diese Segmente müssen sich nicht in derselben Anwendungsdomäne befinden. Sie können ein Add-In in seine eigene neue Anwendungsdomäne, in eine vorhandene Anwendungsdomäne oder sogar in die Anwendungsdomäne des Hosts laden. Sie können mehrere Add-Ins in dieselbe Anwendungsdomäne laden. Dadurch können die Add-Ins Ressourcen und Sicherheitskontexte gemeinsam nutzen.  
@@ -116,13 +116,13 @@ Add-In-Pipeline
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Beschreibt die Kommunikationspipeline von Segmenten von der Hostanwendung zum Add-In. Enthält Codebeispiele in exemplarischen Vorgehensweisen. Darin wird beschrieben, wie Sie die Pipeline erstellen und Segmente für die Pipeline in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]bereitstellen.|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Beschreibt die Kommunikationspipeline von Segmenten von der Hostanwendung zum Add-In. Die Codebeispiele in exemplarischen Vorgehensweisen, die beschreiben, wie Sie die Pipeline erstellen und wie Sie Segmente für die Pipeline in Visual Studio bereitstellen.|  
 |[Anwendungsdomänen und Assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Beschreibt die Beziehung zwischen Anwendungsdomänen, die eine Isolationsgrenze zwecks Sicherheit, Zuverlässigkeit und Versionsverwaltung bereitstellen, und Assemblys.|  
   
  [Zurück zum Anfang](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.AddIn?displayProperty=nameWithType>  
   
  <xref:System.AddIn.Contract?displayProperty=nameWithType>  

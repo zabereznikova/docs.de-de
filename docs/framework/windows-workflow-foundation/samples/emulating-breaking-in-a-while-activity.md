@@ -1,34 +1,35 @@
 ---
-title: "Emulierungsunterbrechung in einer While-Aktivität"
-ms.custom: 
+title: Emulierungsunterbrechung in einer While-Aktivität
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emulierungsunterbrechung in einer While-Aktivität
 In diesem Beispiel wird veranschaulicht, wie der Schleifenmechanismus der folgenden Aktivitäten unterbrochen werden kann: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> und <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Dies ist hilfreich, da [!INCLUDE[wf](../../../../includes/wf-md.md)] keine Aktivität zur Unterbrechung der Ausführung dieser Schleifen umfasst.  
+ Dies ist hilfreich, da Windows Workflow Foundation (WF) keine Aktivität zur Unterbrechung der Ausführung dieser Schleifen umfasst enthält.  
   
 ## <a name="scenario"></a>Szenario  
  In dem Beispiel wird der erste zuverlässige Anbieter in einer Liste von Anbietern (Instanzen der `Vendor`-Klasse) gesucht. Jeder Anbieter verfügt über eine `ID`, einen `Name` und einen numerischen Zuverlässigkeitswert, der bestimmt, wie verlässlich der Anbieter ist. In dem Beispiel wird eine benutzerdefinierte Aktivität mit dem Namen `FindReliableVendor` erstellt, die zwei Eingabeparameter (eine Liste mit Anbietern und einem minimalen Zuverlässigkeitswert) empfängt und den ersten Anbieter der Liste zurückgibt, der eine Entsprechung für die angegebenen Kriterien darstellt.  
   
 ## <a name="breaking-a-loop"></a>Unterbrechen einer Schleife  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] umfasst keine Aktivität zur Unterbrechung einer Schleife. In dem Codebeispiel wird die Unterbrechung einer Schleife durch Verwendung einer <xref:System.Activities.Statements.If>-Aktivität und mehreren Variablen erzielt. Im Beispiel wird die <xref:System.Activities.Statements.While>-Aktivität unterbrochen, sobald die `reliableVendor`-Variable einem anderen Wert als `null` zugewiesen wird.  
+ Windows Workflow Foundation (WF) umfasst keine Aktivität zur Unterbrechung einer Schleife. In dem Codebeispiel wird die Unterbrechung einer Schleife durch Verwendung einer <xref:System.Activities.Statements.If>-Aktivität und mehreren Variablen erzielt. Im Beispiel wird die <xref:System.Activities.Statements.While>-Aktivität unterbrochen, sobald die `reliableVendor`-Variable einem anderen Wert als `null` zugewiesen wird.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine while-Schleife unterbrochen wird.  
   

@@ -1,24 +1,26 @@
 ---
 title: Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer Nachrichten in einem Dienst erfolgen soll. Dieses Beispiel basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird der `netMsmqBinding` verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -49,19 +51,19 @@ In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer
  Im Beispiel wird die Verwendung der `Move`-Disposition für die nicht verarbeitbare Nachricht veranschaulicht. `Move` führt dazu, dass die Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten verschoben wird.  
   
  Der Dienstvertrag ist `IOrderProcessor`, der einen unidirektionalen Dienst definiert, der für die Verwendung mit Warteschlangen geeignet ist.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Der Dienstvorgang zeigt eine Nachricht an, die angibt, dass der Auftrag verarbeitet wird. Zur Demonstration der Funktion für nicht verarbeitbare Nachrichten löst der Dienst `SubmitPurchaseOrder` eine Ausnahme auf, um die Transaktion bei einem zufälligen Aufruf des Diensts zurückzusetzen. Dadurch wird die Nachricht in die Warteschlange zurückgestellt. Schließlich wird die Nachricht als nicht verarbeitbar markiert. Die Konfiguration wird so festgelegt, dass die nicht verarbeitbare Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten verschoben wird.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  Die Dienstkonfiguration beinhaltet folgende Eigenschaften für nicht verarbeitbare Nachrichten: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` und `receiveErrorHandling`, wie in der folgenden Konfigurationsdatei gezeigt.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Nachrichten in der Warteschlange für potenziell schädliche Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet; dieser kann vom Dienst-Endpunkt für nicht verarbeitbare Nachrichten abweichen. Wenn der Dienst für nicht verarbeitete Nachrichten Nachrichten aus der Warteschlange liest, findet daher die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalschicht die fehlende Übereinstimmung bei den Endpunkten und verteilt die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für nicht verarbeitete Nachrichten empfangen. Damit die Nachricht empfangen wird, selbst wenn sie an einen anderen Endpunkt adressiert ist, muss `ServiceBehavior` zum Filtern von Adressen hinzugefügt werden, wobei das Übereinstimmungskriterium darin besteht, mit jedem Dienst-Endpunkt übereinzustimmen, an den die Nachricht adressiert ist. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für potenziell schädliche Nachrichten gelesen werden, erfolgreich zu verarbeiten.  
   
  Die Implementierung des Diensts für nicht verarbeitbare Nachrichten selbst weist große Ähnlichkeiten mit der Dienstimplementierung auf. Sie implementiert den Vertrag und verarbeitet die Aufträge. Hier das Codebeispiel.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  Im Gegensatz zum Auftragsverarbeitungsdienst, der Nachrichten aus der Auftragswarteschlange liest, liest der Dienst für nicht verarbeitbare Nachrichten Nachrichten aus der Unterwarteschlange für potenziell schädliche Nachrichten. Die Warteschlange für potenziell schädliche Nachrichten ist eine Unterwarteschlange der Hauptwarteschlange, trägt den Namen "poison" und wird automatisch von MSMQ generiert. Um darauf zuzugreifen, geben Sie den Namen der Hauptwarteschlange, gefolgt von ";" und dem Namen der Unterwarteschlange (in diesem Fall -"poison") an, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.  
   
-3.  Damit Meta Data Exchange funktionieren kann, registrieren Sie eine URL mit http-Bindung. Dazu muss der Dienst in einem Befehlsfenster auf Administratorebene ausgeführt werden. Andernfalls wird eine Ausnahme der folgenden Art ausgelöst: Unbehandelte Ausnahme: System.ServiceModel.AddressAccessDeniedException: HTTP URL http://+:8000/ServiceModelSamples/service/ nicht registrieren. Der Prozess weist keine Zugriffsrechte für diesen Namespace auf (Details finden Sie unter http://go.microsoft.com/fwlink/? LinkId=70353). ---> System.Net.HttpListenerException: Der Zugriff wird verweigert.  
+3.  Damit Meta Data Exchange funktionieren kann, registrieren Sie eine URL mit http-Bindung. Dazu muss der Dienst in einem Befehlsfenster auf Administratorebene ausgeführt werden. Andernfalls erhalten Sie eine Ausnahme wie z. B.: nicht behandelte Ausnahme: System.ServiceModel.AddressAccessDeniedException: HTTP URL nicht registrieren http://+:8000/ServiceModelSamples/service/. Der Prozess verfügt nicht über die Zugriffsrechte für diesen Namespace (siehe http://go.microsoft.com/fwlink/?LinkId=70353 Einzelheiten). ---> System.Net.HttpListenerException: Der Zugriff wird verweigert.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

@@ -1,0 +1,11 @@
+### <a name="incorrect-implementation-of-memberdescriptorequals"></a>Falsche Implementierung von MemberDescriptor.Equals
+
+|   |   |
+|---|---|
+|Details|Ursprünglich hat die &quot;Equals&quot;-Methode zwei verschiedene Zeichenfolgeneigenschaften der zu vergleichenden Objekte miteinander verglichen: den Kategorienamen und die Beschreibungszeichenfolge. Sie können das Problem beheben, indem Sie &quot;category&quot; bzw. &quot;description&quot; des ersten Objekts mit &quot;category&quot; bzw. &quot;description&quot; des zweiten Objekts miteinander vergleichen. Der Konfigurationswert MemberDescriptorEqualsReturnsFalseIfEquivalent kann auf TRUE festgelegt werden, um das neue Verhalten zu deaktivieren, wenn Sie Ihre Anwendung auf Version 4.6.2 ausrichten. Wenn Sie Ihre Anwendung auf eine ältere Framework-Version ausrichten, können Sie den Wert auf FALSE festlegen, um diesen Fehler zu beheben.|
+|Vorschlag|Wenn Ihre Anwendung von dem Wert MemberDescriptor.Equals abhängig ist, wird manchmal FALSE zurückgegeben, wenn ein Deskriptor einem anderen ähnelt und Sie Ihre Anwendung auf Version 4.6.2 von .NET Framework ausrichten möchten. Dann haben Sie die folgenden Optionen:<ol><li>Nehmen Sie Codeänderungen vor, um die Felder &quot;category&quot; und &quot;description&quot; manuell miteinander zu vergleichen, und führen Sie die Equals-Methode aus.</li><li>Sie können diese Änderung deaktivieren, indem Sie der app.config-Datei den folgenden Wert hinzufügen:</li></ol><pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Wenn Ihre Anwendung für .NET Framework 4.6.1 oder frühere Versionen konzipiert ist und Sie diese Änderung deaktivieren möchten, können Sie den Kompatibilitätsschalter auf FALSE festlegen, indem Sie der app.config-Datei den folgenden Wert hinzufügen:<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Bereich|Microsoft Edge|
+|Version|4.6.2|
+|Typ|Neuzuweisung|
+|Betroffene APIs|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|
+

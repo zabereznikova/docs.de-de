@@ -1,26 +1,27 @@
 ---
 title: Verwenden von WorkflowInvoker und WorkflowApplication
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Verwenden von WorkflowInvoker und WorkflowApplication
-[!INCLUDE[wf](../../../includes/wf-md.md)] bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md) und [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md) und [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Verwenden von WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> bietet ein Modell zum Ausführen eines Workflows, als ob es sich dabei um einen Methodenaufruf handeln würde. Um einen Workflow mit <xref:System.Activities.WorkflowInvoker> aufzurufen, rufen Sie die <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Methode auf, und übergeben Sie die Workflowdefinition des Workflows, der aufgerufen werden soll. In diesem Beispiel wird eine <xref:System.Activities.Statements.WriteLine>-Aktivität mit dem <xref:System.Activities.WorkflowInvoker>-Objekt aufgerufen.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
   
- <xref:System.Activities.WorkflowInvoker> stellt auch asynchrone Versionen der Aufrufmethode bereit. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> und <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> stellt auch asynchrone Versionen der Aufrufmethode bereit. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> und <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Festlegen der Eingabeargumente eines Workflows  
  Daten können mit einem Wörterbuch von Eingabeparametern, die nach Argumentname sortiert sind und so den Eingabeargumenten des Workflows zugeordnet werden können, in einen Workflow übergeben werden. In diesem Beispiel wird ein <xref:System.Activities.Statements.WriteLine>-Objekt aufgerufen, und der Wert für das zugehörige <xref:System.Activities.Statements.WriteLine.Text%2A>-Argument wird mit dem Wörterbuch von Eingabeparametern angegeben.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  Das <xref:System.Activities.WorkflowApplication>-Objekt und das <xref:System.Activities.WorkflowInvoker>-Objekt akzeptieren ein Wörterbuch mit Eingabeargumenten und geben ein Wörterbuch mit `out`-Argumenten zurück. Diese Wörterbuchparameter, Eigenschaften und Rückgabewerte haben den Typ `IDictionary<string, object>`. Die tatsächliche Instanz der Wörterbuchklasse, die übergeben wird, kann jede Klasse sein, die `IDictionary<string, object>` implementiert. In diesen Beispielen wird `Dictionary<string, object>` verwendet. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Wörterbücher finden Sie unter <xref:System.Collections.Generic.IDictionary%602> und <xref:System.Collections.Generic.Dictionary%602>.  
+>  Das <xref:System.Activities.WorkflowApplication>-Objekt und das <xref:System.Activities.WorkflowInvoker>-Objekt akzeptieren ein Wörterbuch mit Eingabeargumenten und geben ein Wörterbuch mit `out`-Argumenten zurück. Diese Wörterbuchparameter, Eigenschaften und Rückgabewerte haben den Typ `IDictionary<string, object>`. Die tatsächliche Instanz der Wörterbuchklasse, die übergeben wird, kann jede Klasse sein, die `IDictionary<string, object>` implementiert. In diesen Beispielen wird `Dictionary<string, object>` verwendet. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Wörterbücher finden Sie unter <xref:System.Collections.Generic.IDictionary%602> und <xref:System.Collections.Generic.Dictionary%602>.  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>Übergeben von Daten in einen ausgeführten Workflow mithilfe von Lesezeichen  
  Lesezeichen stellen den Mechanismus dar, mit dem eine Aktivität passiv abwarten kann, bis sie wieder aufgenommen wird. Sie sind außerdem ein Mechanismus für das Übergeben von Daten in eine ausgeführte Workflowinstanz. Wenn eine Aktivität auf Daten wartet, kann sie ein <xref:System.Activities.Bookmark>-Objekt erstellen und eine Rückrufmethode registrieren, die aufgerufen werden soll, wenn das <xref:System.Activities.Bookmark>-Objekt wieder aufgenommen wird, wie im folgenden Beispiel gezeigt.  

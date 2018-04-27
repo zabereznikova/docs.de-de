@@ -1,27 +1,29 @@
 ---
-title: "Implementieren von Geschäftslogik (LINQ to SQL)"
-ms.custom: 
+title: Implementieren von Geschäftslogik (LINQ to SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementieren von Geschäftslogik (LINQ to SQL)
 Der Begriff „Geschäftslogik“ bezieht sich in diesem Thema auf benutzerdefinierte Regeln oder Validierungstests, die auf Daten angewendet werden, bevor diese eingefügt, aktualisiert oder aus der Datenbank gelöscht werden. Der Begriff Geschäftslogik wird zeitweise synonym mit "Geschäftsregeln" oder "Domänenlogik" verwendet. In N-Tier-Anwendungen wird Geschäftslogik normalerweise als logische Ebene bezeichnet, die somit unabhängig von der Präsentationsebene oder Datenzugriffsebene geändert werden kann. Die Geschäftslogik kann von der Datenzugriffsebene aufgerufen werden, bevor oder nachdem Daten in der Datenbank aktualisiert, eingefügt oder gelöscht werden.  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- In Ihren Teil der Klasse schreiben Sie eine Implementierungsdefinition der Methode. In [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], nach dem eingeben `partial` wird IntelliSense für die Methodendefinitionen im anderen Teil der Klasse angezeigt.  
+ In Ihren Teil der Klasse schreiben Sie eine Implementierungsdefinition der Methode. In Visual Studio nach dem eingeben `partial` wird IntelliSense für die Methodendefinitionen im anderen Teil der Klasse angezeigt.  
   
 ```vb  
 Partial Public Class Customer  

@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
@@ -44,7 +44,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Die Aktionen, die im Einzelnen im Rahmen von Drag & Drop-Vorgängen ausgeführt werden, sind anwendungsspezifisch und werden oft durch den Kontext festgelegt.  Beispielsweise bewirkt das Ziehen einer Auswahl von Dateien von einem Ordner auf einen anderen auf dem gleichen Speichergerät standardmäßig ein Verschieben der Dateien, während die Dateien beim Ziehen von einer [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)]-Freigabe auf einen lokalen Ordner standardmäßig kopiert werden.  
   
- Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Das Ziehen und Ablegen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen und anderen [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]-Anwendungen wird ebenfalls in vollem Umfang unterstützt.  
+ Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Drag & Drop zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen und anderen Windows ist ebenfalls vollständig unterstützt.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können beliebige <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> an Drag & Drop-Vorgängen beteiligt sein. Die für Drag & Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Klassen <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> enthalten Aliase für die angefügten <xref:System.Windows.DragDrop>-Ereignisse, sodass ein geerbtes <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in der Liste der Klassenelemente als Basiselement aufgeführt wird. Die an diese Ereignisse angefügten Ereignishandler werden an das zugrundeliegende angefügte <xref:System.Windows.DragDrop>-Ereignis angefügt und empfangen die gleiche Instanz der Ereignisdaten. Weitere Informationen finden Sie beim <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>-Ereignis.  
   

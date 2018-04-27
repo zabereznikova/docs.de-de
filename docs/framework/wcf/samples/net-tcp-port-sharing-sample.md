@@ -1,24 +1,26 @@
 ---
 title: Beispiel zur Net.TCP-Portfreigabe
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Beispiel zur Net.TCP-Portfreigabe
 Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) zwischen Verbindungen mit mehreren Netzwerkanwendungen unterschieden, die auf demselben Computer ausgeführt werden. Wenn eine Anwendung einen Port überwacht, wird der gesamte TCP-Verkehr für diesen Port an die entsprechende Anwendung geleitet. Andere Anwendungen können nicht gleichzeitig an diesem Port lauschen.  
@@ -46,8 +48,8 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
   
 ## <a name="enabling-port-sharing"></a>Aktivieren der Portfreigabe  
  Im folgenden Code wird das Aktivieren der Portfreigabe auf dem Server veranschaulicht. Es wird eine Instanz des `ICalculator`-Diensts auf einem festen Port mit einem zufälligen URI-Pfad gestartet. Zwei Dienste können zwar denselben Port verwenden, ihre allgemeinen Endpunktadressen müssen jedoch eindeutig sein, damit der NetTcp-Portfreigabedienst Nachrichten an die richtige Anwendung weiterleiten kann.  
-  
-```  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,8 +61,8 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
+```
+
  Wenn die Portfreigabe aktiviert ist, können Sie den Dienst mehrmals ausführen, ohne dass es zu einem Konflikt aufgrund der Portnummer kommt. Wenn Sie den Code ändern, um die Portfreigabe zu deaktivieren, führt das Starten zweier Kopien des Diensts bei der zweiten Kopie zu einem Fehler mit einer <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
@@ -69,8 +71,8 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
  Sie können mithilfe des Testclients überprüfen, ob Nachrichten richtig an die Dienste weitergeleitet werden, die den Port gemeinsam verwenden.  
-  
-```  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,8 +114,8 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
+```
+
  Jede Instanz des Diensts gibt ihre eindeutige Nummer und Adresse aus. Wenn Sie service.exe ausführen, kann beispielsweise der folgende Text angezeigt werden:  
   
 ```  

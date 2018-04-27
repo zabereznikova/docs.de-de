@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
 In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtigungen zum Schutz von Ressourcen und Daten verwendet. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
@@ -39,7 +39,7 @@ In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtig
  Wenn eine Sicherheitseinschränkung auftritt, haben Sie zwei Möglichkeiten: Sie können die Berechtigung bestätigen (in der Annahme, dass diese der Anwendung gewährt wurde), oder Sie verwenden eine Version des Features, die für die Ausführung mit teilweiser Vertrauenswürdigkeit geschrieben wurde. In den folgenden Abschnitten wird der Zugriff auf Dateien, Datenbanken und die Registrierung aus Anwendungen erläutert, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden.  
   
 > [!NOTE]
->  Standardmäßig werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellungen von den entsprechenden Tools so generiert, dass diese auf den Computern , auf denen sie ausgeführt werden, volle Vertrauenswürdigkeit anfordern. Wenn Sie für eine höhere Sicherheit beim Ausführen teilweise Vertrauenswürdigkeit verwenden möchten, müssen Sie diese Standardeinstellung in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]-Tools (Mage.exe oder MageUI.exe) ändern. Weitere Informationen zu Windows Forms-Sicherheit sowie Informationen zum Ermitteln der für Ihre Anwendung geeigneten Vertrauensebene finden Sie unter [Sicherheit in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Standardmäßig werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellungen von den entsprechenden Tools so generiert, dass diese auf den Computern , auf denen sie ausgeführt werden, volle Vertrauenswürdigkeit anfordern. Wenn Sie sich dazu entschließen, die Vorteile der Erhöhung der Sicherheit bei teilweiser Vertrauenswürdigkeit ausgeführt werden sollen, müssen Sie diese Standardeinstellung in Visual Studio oder einem der Ändern der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] -Tools (Mage.exe oder MageUI.exe). Weitere Informationen zu Windows Forms-Sicherheit sowie Informationen zum Ermitteln der für Ihre Anwendung geeigneten Vertrauensebene finden Sie unter [Sicherheit in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dateizugriff  
  Der Zugriff auf Dateien und Ordner wird in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] über die <xref:System.Security.Permissions.FileIOPermission>-Klasse gesteuert. Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>. Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden. Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen. Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  

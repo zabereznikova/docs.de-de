@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: baa8846d339e87c121ece2678157c132035db07f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9644b1e25c8d1568a01434a587e4271b163a3f0b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation-Konfigurationsschema
-[!INCLUDE[wf](../../../../../includes/wf-md.md)]-Konfigurationselemente ermöglichen Ihnen, Workflowanwendungen zu konfigurieren. Für eine Workflowanwendung können Sie unter anderem Nachverfolgung und Ablaufverfolgung konfigurieren. Weitere Informationen zur Nach- und Ablaufverfolgung finden Sie unter [Workflow Tracking and Tracing (Nachverfolgung und Ablaufverfolgung für Workflows)](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Für Workflowdienste können Sie auch [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Konfigurationselemente verwenden. Weitere Informationen zu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] finden Sie unter [WCF Configuration Schema (WCF-Konfigurationsschema)](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+Windows Workflow Foundation (WF)-Konfigurationselemente ermöglichen es Ihnen zu workflowanwendungen konfigurieren. Für eine Workflowanwendung können Sie unter anderem Nachverfolgung und Ablaufverfolgung konfigurieren. Weitere Informationen zur Nach- und Ablaufverfolgung finden Sie unter [Workflow Tracking and Tracing (Nachverfolgung und Ablaufverfolgung für Workflows)](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Für Workflowdienste können Sie auch [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Konfigurationselemente verwenden. Weitere Informationen zu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] finden Sie unter [WCF Configuration Schema (WCF-Konfigurationsschema)](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  Da die Konfigurationsdateien als XML formatiert sind, müssen Sie mit XML vertraut sein, wenn Sie diese manuell in einem Texteditor bearbeiten möchten. Andernfalls treten möglicherweise Probleme auf, wie ein nicht gefundenes XML-Elementtag oder -attribut. Das liegt daran, dass bei XML-Elementtags und -attributen zwischen Groß- und Kleinschreibung unterschieden wird.  
   

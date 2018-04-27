@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über angefügte Eigenschaften"
-ms.custom: 
+title: Übersicht über angefügte Eigenschaften
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 Eine angefügte Eigenschaft ist ein von XAML definiertes Konzept. Eine angefügte Eigenschaft ist für die Verwendung als Typ einer globalen Eigenschaft vorgesehen, der in jedem Objekt festgelegt werden kann. In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] werden angefügte Eigenschaften in der Regel als eine spezielle Form der Abhängigkeitseigenschaft definiert, die nicht die herkömmliche Eigenschaft „Wrapper“ aufweist.  
@@ -67,7 +67,7 @@ Eine angefügte Eigenschaft ist ein von XAML definiertes Konzept. Eine angefügt
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Ein Beispiel für eine übergeordnete definierte angefügte Eigenschaft  
  Das häufigste Szenario, in dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eine angefügte Eigenschaft definiert: Wenn ein übergeordnetes Element eine Auflistung untergeordneter Elemente unterstützt und zusätzlich ein Verhalten implementiert, in dem die Einzelheiten des Verhaltens für jedes untergeordnete Element einzeln gemeldet werden.  
   
- <xref:System.Windows.Controls.DockPanel>definiert die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> angefügten Eigenschaft, und <xref:System.Windows.Controls.DockPanel> verfügt auf Klassenebene Code als Teil seiner Renderinglogik (insbesondere <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> und <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Ein <xref:System.Windows.Controls.DockPanel> Instanz immer überprüft, ob der unmittelbaren untergeordneten Elemente für einen Wert festgelegt haben <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Wenn dies der Fall ist, werden diese Werte zur Eingabe für die Renderinglogik, die auf das jeweilige untergeordnete Element angewendet wird. Geschachtelte <xref:System.Windows.Controls.DockPanel> Instanzen jeder behandeln eigene Sammlungen der unmittelbaren untergeordneten-Element, aber dieses Verhalten ist implementierungsspezifisch, wie <xref:System.Windows.Controls.DockPanel> Prozesse <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Werte. Es ist theoretisch möglich, angefügte Eigenschaften zu besitzen, die Elemente über das unmittelbar übergeordnete Element hinaus beeinflussen. Wenn die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> angefügten Eigenschaft festgelegt ist, auf ein Element, das keine <xref:System.Windows.Controls.DockPanel> übergeordneten Element zu reagieren, keine Fehlermeldung oder Ausnahme wird ausgelöst. Dies bedeutet, dass ein globale Eigenschaft-Wert festgelegt wurde, verfügt aber über keine aktuelle <xref:System.Windows.Controls.DockPanel> übergeordneten Element, das die Informationen verarbeiten konnte.  
+ <xref:System.Windows.Controls.DockPanel> definiert die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> angefügten Eigenschaft, und <xref:System.Windows.Controls.DockPanel> verfügt auf Klassenebene Code als Teil seiner Renderinglogik (insbesondere <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> und <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Ein <xref:System.Windows.Controls.DockPanel> Instanz immer überprüft, ob der unmittelbaren untergeordneten Elemente für einen Wert festgelegt haben <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Wenn dies der Fall ist, werden diese Werte zur Eingabe für die Renderinglogik, die auf das jeweilige untergeordnete Element angewendet wird. Geschachtelte <xref:System.Windows.Controls.DockPanel> Instanzen jeder behandeln eigene Sammlungen der unmittelbaren untergeordneten-Element, aber dieses Verhalten ist implementierungsspezifisch, wie <xref:System.Windows.Controls.DockPanel> Prozesse <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Werte. Es ist theoretisch möglich, angefügte Eigenschaften zu besitzen, die Elemente über das unmittelbar übergeordnete Element hinaus beeinflussen. Wenn die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> angefügten Eigenschaft festgelegt ist, auf ein Element, das keine <xref:System.Windows.Controls.DockPanel> übergeordneten Element zu reagieren, keine Fehlermeldung oder Ausnahme wird ausgelöst. Dies bedeutet, dass ein globale Eigenschaft-Wert festgelegt wurde, verfügt aber über keine aktuelle <xref:System.Windows.Controls.DockPanel> übergeordneten Element, das die Informationen verarbeiten konnte.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Angefügte Eigenschaften in Code  
@@ -106,7 +106,7 @@ Eine angefügte Eigenschaft ist ein von XAML definiertes Konzept. Eine angefügt
  Definieren Sie die angefügte Eigenschaft als Abhängigkeitseigenschaft durch Deklarieren einer `public` `static` `readonly` Feld des Typs <xref:System.Windows.DependencyProperty>. Definieren Sie dieses Feld mit dem Rückgabewert von der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode. Der Feldname muss mit dem Namen der angefügten Eigenschaft übereinstimmen, angefügt mit der Zeichenfolge `Property`, um dem geltenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Muster für die Benennung der identifizierenden Felder im Vergleich zu den Eigenschaften, die sie darstellen, zu folgen. Der angefügte Eigenschaftenanbieter muss auch die statische Methoden `Get`*PropertyName* und `Set`*PropertyName* als Accessoren für die angefügte Eigenschaft bereitstellen. Andernfalls führt dies dazu, dass das Eigenschaftensystem Ihre angefügte Eigenschaft nicht verwenden kann.  
   
 > [!NOTE]
->  Wenn Sie den Get-Accessor der angefügten Eigenschaft auslassen, wird die Datenbindung für die Eigenschaft in Entwurfstools, wie z.B. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] und Expression Blend, nicht funktionieren.  
+>  Wenn Sie Get-Accessor für die angefügte Eigenschaft nicht angeben, funktioniert die Datenbindung für die Eigenschaft nicht in den Entwurfstools, z. B. Visual Studio und Expression Blend.  
   
 #### <a name="the-get-accessor"></a>Der Get-Accessor  
  Die Signatur für den Accessor `Get`*PropertyName* muss Folgende sein:  

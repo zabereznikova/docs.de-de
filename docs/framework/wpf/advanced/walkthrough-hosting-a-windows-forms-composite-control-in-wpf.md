@@ -1,12 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f332461bd5abb5e3fca705a8a5fd363c3d33296
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe706e92223d868476ac438e98b16cf07bb21259
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code möglich effektiver mindestens wiederverwenden Teil des Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung statt sie von Grund auf neu zu schreiben. Das häufigste Szenario ist, wenn Sie über vorhandene verfügen [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Steuerelemente. In einigen Fällen können Sie vielleicht gar nicht mehr auf den Quellcode für diese Steuerelemente zugreifen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Stellt ein einfaches Verfahren zum Hosten von solche Steuerelemente in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Beispielsweise können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für den Großteil der Programmierung während des Hostens Ihre spezielle <xref:System.Windows.Forms.DataGridView> Steuerelemente.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code möglich effektiver mindestens wiederverwenden Teil des Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung statt sie von Grund auf neu zu schreiben. Das häufigste Szenario ist, wenn Sie die vorhandenen Windows Forms-Steuerelemente haben. In einigen Fällen können Sie vielleicht gar nicht mehr auf den Quellcode für diese Steuerelemente zugreifen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt ein einfaches Verfahren zum Hosten von solche Steuerelemente in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Beispielsweise können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für den Großteil der Programmierung während des Hostens Ihre spezielle <xref:System.Windows.Forms.DataGridView> Steuerelemente.  
   
- Diese exemplarische Vorgehensweise führt Sie schrittweise durch eine Anwendung, der als Host einer [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] zusammengesetztes Steuerelement zum Ausführen der Dateneingabe im eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Das zusammengesetzte Steuerelement ist in eine DLL verpackt. Dieses allgemeine Verfahren kann für komplexere Anwendungen und Steuerelemente erweitert werden. Diese exemplarische Vorgehensweise dient zur Darstellung und Funktionalität auf fast identisch sind [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Der Hauptunterschied besteht darin, dass das Hosting-Szenario umgekehrt ist.  
+ Diese exemplarische Vorgehensweise führt Sie schrittweise durch eine Anwendung, ein zusammengesetztes Windows Forms-Steuerelements zum Durchführen der Dateneingabe im hostet, eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Das zusammengesetzte Steuerelement ist in eine DLL verpackt. Dieses allgemeine Verfahren kann für komplexere Anwendungen und Steuerelemente erweitert werden. Diese exemplarische Vorgehensweise dient zur Darstellung und Funktionalität auf fast identisch sind [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Der Hauptunterschied besteht darin, dass das Hosting-Szenario umgekehrt ist.  
   
- Diese exemplarische Vorgehensweise ist in zwei Abschnitte unterteilt. Der erste Abschnitt beschreibt kurz die Implementierung der [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] zusammengesetztes Steuerelement. Im zweite Abschnitt wird ausführlich erläutert, wie zum Hosten des zusammengesetzten Steuerelements in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung, aus dem Steuerelement Ereignisse empfangen und Zugriff auf einige der Eigenschaften des Steuerelements.  
+ Diese exemplarische Vorgehensweise ist in zwei Abschnitte unterteilt. Der erste Abschnitt beschreibt kurz die Implementierung des zusammengesetzten Windows Forms-Steuerelements. Im zweite Abschnitt wird ausführlich erläutert, wie zum Hosten des zusammengesetzten Steuerelements in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung, aus dem Steuerelement Ereignisse empfangen und Zugriff auf einige der Eigenschaften des Steuerelements.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]  
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementieren des zusammengesetzten Windows Forms-Steuerelements  
- Die [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] zusammengesetztes Steuerelement verwendet, die in diesem Beispiel ist eine einfache Dateneingabe-Form. Dieses Formular erfasst den Namen und die Adresse des Benutzers und gibt diese Information unter Verwendung eines benutzerdefinierten Ereignisses an den Host zurück. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
+ In diesem Beispiel verwendete zusammengesetzte Windows Forms-Steuerelement ist eine einfache Dateneingabe-Form. Dieses Formular erfasst den Namen und die Adresse des Benutzers und gibt diese Information unter Verwendung eines benutzerdefinierten Ereignisses an den Host zurück. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
   
  ![Einfache Windows Forms-Steuerelemente](../../../../docs/framework/wpf/advanced/media/wfcontrol.gif "WFControl")  
 Zusammengesetztes Windows Forms-Steuerelement  
@@ -63,7 +65,7 @@ Zusammengesetztes Windows Forms-Steuerelement
   
 4.  Geben Sie für den Speicherort einen bequem benannten auf oberster Ebene Ordner ein, z. B. `WpfHostingWindowsFormsControl`. Sie werden die Host-Anwendung später in diesem Ordner ablegen.  
   
-5.  Klicken Sie auf **OK** zum Erstellen des Projekts. Das Standardprojekt enthält ein einzelnes Steuerelement mit dem Namen `UserControl1`.  
+5.  Klicken Sie auf **OK**, um das Projekt zu erstellen. Das Standardprojekt enthält ein einzelnes Steuerelement mit dem Namen `UserControl1`.  
   
 6.  Benennen Sie im Projektmappen-Explorer `UserControl1` auf `MyControl1`.  
   
@@ -154,7 +156,7 @@ Die vollständige Anwendung mit dem in der WPF-Anwendung eingebetteten Steuerele
   
 4.  Geben Sie für den Speicherort denselben Stammordner an, der das Projekt „MyControls” enthält.  
   
-5.  Klicken Sie auf **OK** zum Erstellen des Projekts.  
+5.  Klicken Sie auf **OK**, um das Projekt zu erstellen.  
   
  Sie müssen auch Verweise auf die DLL hinzufügen, enthält `MyControl1` und sonstigen Assemblys.  
   
@@ -167,7 +169,7 @@ Die vollständige Anwendung mit dem in der WPF-Anwendung eingebetteten Steuerele
 4.  Fügen Sie einen Verweis auf die WindowsFormsIntegration-Assembly mit die Namen WindowsFormsIntegration.dll hinzu.  
   
 ### <a name="implementing-the-basic-layout"></a>Implementieren des grundlegenden Layouts  
- Die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des Hosts wird die Anwendung in der Datei "MainWindow.xaml" implementiert. Diese Datei enthält [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Markup, definiert das Layout und hostet, den [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Steuerelement. Die Anwendung ist in drei Bereiche unterteilt:  
+ Die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des Hosts wird die Anwendung in der Datei "MainWindow.xaml" implementiert. Diese Datei enthält [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Markup, definiert das Layout und die Windows Forms-Steuerelement hostet. Die Anwendung ist in drei Bereiche unterteilt:  
   
 -   Die **Steuerelementeigenschaften** Bereich, der eine Auflistung von Optionsfeldern, die Sie verwenden können enthält, um verschiedene Eigenschaften des gehosteten Steuerelements zu ändern.  
   
@@ -193,9 +195,9 @@ Die vollständige Anwendung mit dem in der WPF-Anwendung eingebetteten Steuerele
   
  Das Hosting wird im XAML-Code von zwei Elementen behandelt:  
   
--   `WindowsFormsHost`Stellt die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element, das Ihnen zu Host ermöglicht eine [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] steuern, eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
+-   `WindowsFormsHost` Stellt die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element, das Sie zum Hosten eines Windows Forms-Steuerelements in ermöglicht eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
   
--   `mcl:MyControl1`, steht `MyControl1`, hinzugefügt wird, um die <xref:System.Windows.Forms.Integration.WindowsFormsHost> des Elements untergeordnete Sammlung. Folglich dies [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Steuerelement gerendert wird, als Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , und Sie können mit dem Steuerelement aus der Anwendung kommunizieren.  
+-   `mcl:MyControl1`, steht `MyControl1`, hinzugefügt wird, um die <xref:System.Windows.Forms.Integration.WindowsFormsHost> des Elements untergeordnete Sammlung. Daher diese Windows Forms-Steuerelement gerendert wird, als Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , und Sie können mit dem Steuerelement aus der Anwendung kommunizieren.  
   
 ### <a name="implementing-the-code-behind-file"></a>Implementieren der CodeBehind-Datei  
  Der Code-Behind-Datei "MainWindow.Xaml.vb" bzw. "MainWindow.Xaml.cs", enthält den prozeduralen Code, der die Funktionalität des implementiert die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] im vorherigen Abschnitt erläutert. Die Hauptaufgaben sind:  
@@ -229,7 +231,7 @@ using MyControls;
 ```  
   
 #### <a name="handling-the-onbuttonclick-event"></a>Behandeln des OnButtonClick-Ereignisses  
- `MyControl1`Löst das `OnButtonClick` Ereignis aus, wenn der Benutzer auf eine der Schaltflächen des Steuerelements klickt.  
+ `MyControl1` Löst das `OnButtonClick` Ereignis aus, wenn der Benutzer auf eine der Schaltflächen des Steuerelements klickt.  
   
  Fügen Sie der `MainWindow`-Klasse folgenden Code hinzu.  
   

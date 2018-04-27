@@ -1,24 +1,26 @@
 ---
 title: Abgewickelte MSMQ-Bindung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>Abgewickelte MSMQ-Bindung
 In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) durchgeführt wird.  
@@ -33,19 +35,19 @@ In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkom
  In diesem Beispiel sendet der Client einen Nachrichtenbatch aus dem Geltungsbereich einer Transaktion an den Dienst. Die an die Warteschlange gesendeten Nachrichten werden dann vom Dienst innerhalb des vom Dienst definierten Geltungsbereichs der Transaktion empfangen.  
   
  Der Dienstvertrag lautet `IOrderProcessor`, wie im folgenden Beispielcode gezeigt. Die Schnittstelle definiert einen unidirektionalen Dienst, der für die Verwendung mit Warteschlangen geeignet ist.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Das Dienstverhalten definiert ein Vorgangsverhalten, wobei `TransactionScopeRequired` auf `true` gesetzt ist. Auf diese Weise wird sichergestellt, dass alle Ressourcen-Manager, auf die diese Methode zugreift, denselben Geltungsbereich einer Transaktion verwenden, der auch zum Abrufen der Nachricht aus der Warteschlange verwendet wurde. Des Weiteren wird gewährleistet, dass die Nachricht an die Warteschlange zurückgegeben wird, wenn die Methode eine Ausnahme auslöst. Ohne Festlegung dieses Vorgangsverhaltens erstellt ein in der Warteschlange stehender Kanal eine Transaktion, um die Nachricht aus der Warteschlange zu lesen, und führt dafür automatisch vor der Verteilung einen Commit aus, sodass die Nachricht verloren geht, falls der Vorgang fehlschlägt. Das häufigste Szenario betrifft Dienstvorgänge, die sich in der Transaktion zum Lesen der Nachricht aus der Warteschlange eintragen, wie im folgenden Code veranschaulicht.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy an den Dienst zu generieren.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Der Name der MSMQ-Warteschlange wird im appSettings-Abschnitt der Konfigurationsdatei angegeben, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  Im Warteschlangennamen werden ein Punkt (.) für den lokalen Computer und umgekehrte Schrägstriche als Trennzeichen in der Pfadangabe verwendet, wenn die Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunkt verwendet die Warteschlangenadresse mit dem net.msmq-Schema, localhost zur Angabe des lokalen Computers und Schrägstriche in der Pfadangabe.  
   
  Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden. Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Um zu überprüfen, dass Transaktionen funktionieren, ändern Sie den Client, indem Sie den Geltungsbereich einer Transaktion, wie im folgenden Beispielcode gezeigt, kommentieren, die Projektmappe neu erstellen und den Client ausführen.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  Da die Transaktion nicht abgeschlossen wird, werden die Nachrichten nicht an die Warteschlange gesendet.  
   
  Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.  

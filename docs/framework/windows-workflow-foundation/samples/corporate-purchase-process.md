@@ -1,23 +1,24 @@
 ---
 title: Unternehmenseinkaufsprozess
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.  
@@ -58,7 +59,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Beschreibung des Vorgangs  
- In diesem Beispiel wird die Implementierung eines [!INCLUDE[wf](../../../../includes/wf-md.md)]-Programms veranschaulicht, mit dem Angebote verschiedener Anbieter für ein allgemeines Unternehmen erfasst werden.  
+ Dieses Beispiel zeigt eine Implementierung eines Windows Workflow Foundation (WF)-Programms Angebote von Anbietern für ein allgemeines Unternehmen sammeln.  
   
 1.  Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
   

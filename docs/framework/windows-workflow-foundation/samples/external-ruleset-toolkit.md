@@ -1,23 +1,24 @@
 ---
 title: Externes RuleSet-Toolkit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>Externes RuleSet-Toolkit
 Wenn Regeln innerhalb einer Workflowanwendung verwendet werden, sind die Regeln normalerweise ein Teil der Assembly. Bei einigen Szenarien möchten Sie die RuleSets eventuell getrennt von der Assembly aufbewahren, damit sie ohne erneutes Erstellen und Bereitstellen der Workflowassembly aktualisiert werden können. In diesem Beispiel können Sie RuleSets in einer Datenbank verwalten und bearbeiten und von einem Workflow zur Laufzeit auf diese RuleSets zugreifen. Dadurch ist es möglich, dass die ausgeführten Workflowinstanzen RuleSet-Änderungen automatisch integrieren.  
@@ -67,9 +68,9 @@ Wenn Regeln innerhalb einer Workflowanwendung verwendet werden, sind die Regeln 
   
  Abbildung 3: RuleSet-Editor  
   
- Hier wird das Editordialogfeld neu gehostet, das Teil des Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]-Add-Ins ist. Es stellt die gleiche Funktionalität bereit, einschließlich der Intellisense-Unterstützung. Die Regeln werden anhand eines Zieltyps (z. B. eines Workflows) erstellt, die dem RuleSet im Tool zugeordnet ist; Beim Klicken auf **Durchsuchen** in des Hauptdialogfelds der **Workflow/Type Selector** Dialogfeld wird angezeigt, wie in Abbildung 4 dargestellt.  
+ Dies ist eine neu gehostet, die Teil des Windows Workflow Foundation Visual Studio-add-Ins, im Dialogfeld-Editor. Es stellt die gleiche Funktionalität bereit, einschließlich der Intellisense-Unterstützung. Die Regeln werden anhand eines Zieltyps (z. B. eines Workflows) erstellt, die dem RuleSet im Tool zugeordnet ist; Beim Klicken auf **Durchsuchen** in des Hauptdialogfelds der **Workflow/Type Selector** Dialogfeld wird angezeigt, wie in Abbildung 4 dargestellt.  
   
- ![Workflow &#47; Geben Sie die Auswahl](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Workflow &#47;Auswahl](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Abbildung 4: Workflow/Type Selector  
   
@@ -83,7 +84,7 @@ Wenn Regeln innerhalb einer Workflowanwendung verwendet werden, sind die Regeln 
   
  Abbildung 5: Validierungsfehler  
   
- Aus der **Daten** Menü im Tool, Sie können RuleSets importieren und exportieren. Beim Klicken auf **Import**, ein Dateiauswahl-Dialogfeld wird angezeigt, in dem Sie eine rules-Datei auswählen können. Dies ist möglicherweise keine anfänglich in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] erstellte Datei. Die RULES-Datei sollte eine serialisierte `RuleDefinitions`-Instanz enthalten, die wiederum eine Auflistung der Bedingungen und RuleSets enthält. Das Tool verwendet keine Bedingungsauflistung, sondern das `RuleDefinitions`-RULES-Format, um eine Interaktion mit der [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]-Umgebung zu ermöglichen.  
+ Aus der **Daten** Menü im Tool, Sie können RuleSets importieren und exportieren. Beim Klicken auf **Import**, ein Dateiauswahl-Dialogfeld wird angezeigt, in dem Sie eine rules-Datei auswählen können. Dies kann oder möglicherweise eine Datei, die zunächst in Visual Studio erstellt. Die RULES-Datei sollte eine serialisierte `RuleDefinitions`-Instanz enthalten, die wiederum eine Auflistung der Bedingungen und RuleSets enthält. Das Tool verwendet keine der bedingungenauflistung es unterstützt jedoch die Verwendung der `RuleDefinitions` Rules-Format, um die Interaktion mit der Visual Studio-Umgebung ermöglichen.  
   
  Nach der Auswahl einer rules-Datei eine **RuleSet Selector** Dialogfeld wird angezeigt (siehe Abbildung 6). Mit dem Dialogfeld können Sie die RuleSets aus der Datei auswählen, die Sie importieren möchten (als Standard sind alle RuleSets angegeben). Die RuleSets in der RULES-Datei weisen keine Versionsnummern auf, da ihre Versionsverwaltung in einem WF-Projekt der Version der Assembly entspricht. Während des Importvorgangs weist das Tool automatisch die nächste verfügbare Hauptversionsnummer (die Sie nach dem Import ändern können); sehen Sie die zugewiesenen Versionsnummern werden in der **RuleSet Selector** Liste.  
   
@@ -141,7 +142,7 @@ Wenn Regeln innerhalb einer Workflowanwendung verwendet werden, sind die Regeln 
   
 9. Dem Workflowprojekt wird eine Anwendungskonfigurationsdatei hinzugefügt, um die Verbindungszeichenfolge für die vom Dienst zu verwendende Datenbank anzugeben. Dabei sollte es sich um dieselbe Verbindungszeichenfolge handeln, die vom RuleSet-Tool verwendet wird und die auf die Datenbank verweist, welche die RuleSet-Tabelle enthält.  
   
-10. Sie können jetzt das `RuleSetToolkitUsageSample`-Projekt so ausführen, wie Sie jede andere Workflowkonsolenanwendung ausführen würden. Drücken Sie F5 oder STRG+F5 innerhalb [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], oder führen Sie die Datei RuleSetToolkitUsageSample.exe aus.  
+10. Sie können jetzt das `RuleSetToolkitUsageSample`-Projekt so ausführen, wie Sie jede andere Workflowkonsolenanwendung ausführen würden. Drücken Sie F5 oder STRG + F5 in Visual Studio oder führen Sie die Datei RuleSetToolkitUsageSample.exe direkt aus.  
   
     > [!NOTE]
     >  Sie müssen das RuleSet-Tool schließen, um das Anwendungsbeispiel erneut zu kompilieren, da die Anwendungsbeispielassembly vom Tool geladen wird.

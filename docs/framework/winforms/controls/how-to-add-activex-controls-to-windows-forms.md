@@ -1,28 +1,30 @@
 ---
-title: "Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 940dd21fc48c23ce623280aab2c487db5810057c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2cedd71665dc098ca3a6a6bf43c74b2d3a11fe11
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms
 Während der Windows Forms-Designer zum Hosten von Windows Forms-Steuerelementen optimiert ist, können Sie auch ActiveX-Steuerelementen in Windows Forms platziert.  
@@ -39,7 +41,7 @@ Während der Windows Forms-Designer zum Hosten von Windows Forms-Steuerelementen
   
 -   Doppelklicken Sie auf das Steuerelement in der Toolbox.  
   
-     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]Fügt alle Verweise auf das Steuerelement in Ihrem Projekt hinzu. Weitere Informationen über die Dinge zu bedenken, wenn mithilfe von ActiveX-Steuerelementen in Windows Forms finden Sie unter [Überlegungen bei der ein ActiveX-Steuerelement in Windows Forms Hosting](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
+     Visual Studio fügt alle Verweise auf das Steuerelement im Projekt. Weitere Informationen über die Dinge zu bedenken, wenn mithilfe von ActiveX-Steuerelementen in Windows Forms finden Sie unter [Überlegungen bei der ein ActiveX-Steuerelement in Windows Forms Hosting](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
   
     > [!NOTE]
     >  Windows Forms ActiveX Control Importer (AxImp.exe) erstellt Ereignisargumente eines anderen Typs als beim Import von ActiveX-dynamic Link Librarys erwartet. Die Argumente von AxImp.exe erstellt werden wie die folgende: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`Wenn `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` wird erwartet. Denken Sie daran, dass diese Unregelmäßigkeit Code nicht verhindert wird, Normal zu funktionieren. Weitere Informationen finden Sie unter [Windows Forms ActiveX Control Importer-Tool (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  

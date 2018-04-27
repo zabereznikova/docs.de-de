@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
   
--   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.  
+-   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss bereitgestellt werden, da der standardmäßige Visual Studio-Ausdrucks-Editor im neu gehosteten Anwendungen verwendet werden kann.  
   
 -   Vereinfachen Sie den Ausdruck Ihnen Bearbeitungsfunktionen für Wirtschaftsanalysten, sodass sie nicht, z. B. beim Erlernen von Visual Basic oder Visual Basic-Ausdrücke behandeln benötigt werden.  
   

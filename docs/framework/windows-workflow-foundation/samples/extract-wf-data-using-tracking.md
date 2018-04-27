@@ -1,29 +1,30 @@
 ---
 title: Extrahieren von WF-Daten mithilfe der Nachverfolgung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extrahieren von WF-Daten mithilfe der Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwendet wird, um Workflowvariablen und Argumente aus Aktivitäten zu extrahieren. Außerdem wird auch das Hinzufügen von Bemerkungen zu Überwachungsdatensätzen sowie das Extrahieren der Datennutzlast innerhalb von benutzerdefinierten Überwachungsdatensätzen dargestellt. Im Beispiel wird der ETW-Überwachungsteilnehmer (Ereignisablaufverfolgung für Windows) zum Extrahieren von Daten aus dem Workflow verwendet.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] stellt die Überwachung bereit, um einen Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Zusammen mit den Workflowüberwachungsdatensätzen können Daten innerhalb der Workflowinstanz aus dem Workflow extrahiert werden. In der folgenden Liste sind die Typen von Daten aufgeführt, die aus Überwachungsdatensätzen extrahiert werden können:  
+ Windows Workflow Foundation (WF) ermöglicht die nachverfolgung, um einen Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Zusammen mit den Workflowüberwachungsdatensätzen können Daten innerhalb der Workflowinstanz aus dem Workflow extrahiert werden. In der folgenden Liste sind die Typen von Daten aufgeführt, die aus Überwachungsdatensätzen extrahiert werden können:  
   
 1.  Workflowvariablen in einer Aktivität und Überwachungsdatensätze während der Aktivitätsausführung.  
   

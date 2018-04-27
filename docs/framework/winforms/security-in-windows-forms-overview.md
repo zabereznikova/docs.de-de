@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über die Sicherheit in Windows Forms"
-ms.custom: 
+title: Übersicht über die Sicherheit in Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben wurde, hatte jeglicher Code, der auf dem Computer eines Benutzers ausgeführt wurde, dieselben Berechtigungen für Zugriffe auf Ressourcen, wie der Benutzer auf dem Computer hatte. Wenn der Benutzer beispielsweise berechtigt war, auf das Dateisystem zuzugreifen, war auch der Code berechtigt, auf das Dateisystem zuzugreifen. Wenn der Benutzer Zugriffsrechte für eine Datenbank hatte, konnte der Code ebenfalls auf diese Datenbank zugreifen. Diese Berechtigungen können für Code in ausführbaren Dateien akzeptabel sein, die der Benutzer explizit auf dem lokalen Computer installiert hat. Sie sind aber wahrscheinlich nicht für potenzielle Schadsoftware akzeptabel, der aus dem Internet oder einem lokalen Intranet stammt. Dieser Code darf nicht ohne Berechtigung auf Computerressourcen des Benutzers zugreifen können.  
@@ -60,7 +62,7 @@ Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben w
   
  Wenn Sie optionale Berechtigungen anfordern, müssen Sie Sicherheitsausnahmen behandeln, die generiert werden, wenn Ihre Anwendung eine Aktion durchführt, die Berechtigungen erfordert, die ihr nicht erteilt wurden. Durch ordnungsgemäße Behandlung der <xref:System.Security.SecurityException>-Instanz wird sichergestellt, dass Ihre Anwendung weiter ausgeführt werden kann. Ihre Anwendung kann die Ausnahme verwenden, um zu bestimmen, ob eine Funktion für den Benutzer deaktiviert werden sollte. Beispielsweise kann eine Anwendung die Menüoption **Speichern** deaktivieren, wenn die erforderliche Dateiberechtigung nicht gewährt wurde.  
   
- Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen bedacht haben. Ein Methodenaufruf, der in der Oberfläche harmlos aussieht, kann z. B. irgendwann während seiner Ausführung auf das Dateisystem zugreifen. Wenn Sie Ihre Anwendung nicht mit allen erforderlichen Berechtigungen bereitstellen, kann es passieren, dass sie in Tests beim Debuggen auf Ihrem Desktop einwandfrei ausgeführt wird, aber fehlschlägt, wenn sie bereitgestellt ist. Sowohl das [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK als auch [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] enthalten Tools, mit denen die für eine Anwendung erforderlichen Berechtigungen ermittelt werden können: das Befehlszeilentool "MT.exe" bzw. das Feature "Berechtigungen berechnen" von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen bedacht haben. Ein Methodenaufruf, der in der Oberfläche harmlos aussieht, kann z. B. irgendwann während seiner Ausführung auf das Dateisystem zugreifen. Wenn Sie Ihre Anwendung nicht mit allen erforderlichen Berechtigungen bereitstellen, kann es passieren, dass sie in Tests beim Debuggen auf Ihrem Desktop einwandfrei ausgeführt wird, aber fehlschlägt, wenn sie bereitgestellt ist. Sowohl die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK und [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] enthalten Tools für die eine Anwendung erforderlichen Berechtigungen: die MT.exe Befehl Befehlszeilentool und die Berechnung von Berechtigungen-Funktion von Visual Studio.  
   
  In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms beschrieben.  
   
@@ -86,12 +88,12 @@ Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben w
   
  Welche Technologie Sie wählen, hängt von Ihrer Bereitstellungsumgebung ab. Weitere Informationen finden Sie unter [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- In der Standardeinstellung werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen, die mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder den [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt werden, so konfiguriert, dass sie auf einem Clientcomputer ausgeführt werden können, der "Voll vertrauenswürdig" hat. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Hierzu können Sie entweder [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder das [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tool "MageUI.exe" verwenden, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von "MageUI.exe" finden Sie unter "Exemplarische Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung von der Befehlszeile aus".  Siehe auch [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Standardmäßig [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Anwendungen bereitgestellt, verwenden entweder Visual Studio oder die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tools (Mage.exe und MageUI.exe) sind so konfiguriert, dass auf einem Clientcomputer ausführen, voll vertrauenswürdig ist. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Hierzu können Sie entweder Visual Studio oder die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von "MageUI.exe" finden Sie unter "Exemplarische Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung von der Befehlszeile aus".  Siehe auch [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Weitere Informationen zu den Sicherheitsaspekten von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] und der Berechtigungserweiterung finden Sie unter [ClickOnce-Bereitstellung und -Sicherheit](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Testen der Anwendung  
- Wenn Sie Ihre Windows Forms-Anwendung mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bereitgestellt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren.  Siehe auch [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) oder [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Wenn Sie Ihre Windows Forms-Anwendung mithilfe von Visual Studio bereitgestellt haben, können Sie das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aus der Entwicklungsumgebung aktivieren.  Siehe auch [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) oder [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  

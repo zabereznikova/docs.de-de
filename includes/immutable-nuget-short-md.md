@@ -1,0 +1,1 @@
+**NuGet-Paket**: [System.Collections.Immutable](http://go.microsoft.com/fwlink/?LinkId=318047) ([Grundlegendes zu unveränderlichen Sammlungen und deren Installation](/dotnet/api/system.collections.immutable#Remarks))

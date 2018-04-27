@@ -1,26 +1,27 @@
 ---
 title: Optionen zum Hosten von Workflows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-hosting-options"></a>Optionen zum Hosten von Workflows
-Für die meisten [!INCLUDE[wf](../../../includes/wf-md.md)]-Beispiele werden Workflows verwendet, die in einer Konsolenanwendung gehostet werden. In der Praxis ist dies jedoch kein realistisches Workflowszenario. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
+Die meisten Windows Workflow Foundation (WF)-Beispiele verwenden die Workflows, die in einer Konsolenanwendung gehostet werden, dies ist jedoch einem realistischen Szenario für realen Workflows. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosten von Workflows in IIS mit Windows AppFabric  
  Das Verwenden von IIS mit AppFabric ist die bevorzugte Hostmethode für Workflows. Die Hostanwendung für Workflows mit AppFabric ist Windows Activation Service (WAS). Durch diesen Dienst wird nur die Abhängigkeit von "HTTP over IIS" entfernt.  

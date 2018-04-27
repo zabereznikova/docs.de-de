@@ -1,8 +1,9 @@
 ---
-title: "Bidirektionale Unterstützung für Windows Forms-Anwendungen"
+title: Bidirektionale Unterstützung für Windows Forms-Anwendungen
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
-Mit [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] können Sie Windows-basierte Anwendungen erstellen, die bidirektionale (von rechts nach links geschriebene) Sprachen wie Arabisch oder Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
+Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstellen, die bidirektionale (von rechts nach links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
   
 ## <a name="culture-support"></a>Kulturspezifische Unterstützung  
  Durch Einstellungen der Kultur und Benutzeroberflächenkultur wird festgelegt, wie Datums- und Zeitangaben, Währungen und andere Informationen in Anwendungen gehandhabt werden. Kultur und Benutzeroberflächenkultur werden für bidirektionale Sprachen genauso wie für andere Sprachen unterstützt.   Siehe auch [Kulturspezifische Klassen für globale Windows Forms und Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) oder [Kulturspezifische Klassen für globale Windows Forms und Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  

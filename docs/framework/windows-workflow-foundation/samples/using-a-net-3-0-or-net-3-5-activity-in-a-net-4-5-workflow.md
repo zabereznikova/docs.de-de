@@ -1,26 +1,27 @@
 ---
-title: "Verwenden einer .NET Framework 3.0- oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow"
-ms.custom: 
+title: Verwenden einer .NET Framework 3.0- oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c53fd4c-5dd0-4fb4-ab6b-111302629548
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05660c3dc91d9d7cdba506670f62711752d7d100
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64c0e4b6e84f442b6e34f0cbd442ae04e2a9d0b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-net-framework-30-or-net-framework-35-activity-in-a-net-framework-45-workflow"></a>Verwenden einer .NET Framework 3.0- oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow
-Die <xref:System.Activities.Statements.Interop>-Aktivität ermöglicht die Ausführung einer .NET Framework 3.0 [!INCLUDE[wf](../../../../includes/wf-md.md)]-Aktivität in einem [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]-Workflow. Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.Statements.Interop>-Aktivität verwendet wird, um eine Zeichenfolge als Argument an eine benutzerdefinierte [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]-Aktivität zu übergeben.  
+Die <xref:System.Activities.Statements.Interop> Aktivität können Sie für die Ausführung einer .NET Framework 3.0 Windows Workflow Foundation (WF)-Aktivität innerhalb einer [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Workflow. Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.Statements.Interop>-Aktivität verwendet wird, um eine Zeichenfolge als Argument an eine benutzerdefinierte [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]-Aktivität zu übergeben.  
   
 ## <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 In diesem Abschnitt werden die von Clientanwendungen ausgeführten Aktionen sowie das Konfigurieren, Erstellen und Verwenden eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Clients und das Sichern von Clientanwendungen erläutert.  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Wenn Sie die Verwendung einer <xref:System.ServiceModel.ClientBase%601>-Klasse darstellen möchten, nehmen Sie an, dass der folgende einfache Dienstvertrag von einer Dienstanwendung generiert wurde.  
   
 > [!NOTE]
->  Wird zum Erstellen des [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwendet, werden Objekte beim Hinzufügen eines Dienstverweises zum Projekt automatisch in den Objektkatalog geladen.  
+>  Wenn Sie Visual Studio verwenden, erstellen Sie Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client Objekte werden automatisch in den Objektkatalog geladen, beim Hinzufügen eines Dienstverweises zum Projekt.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Wird [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] nicht verwendet, prüfen Sie den generierten Vertragscode, um den Typ zu suchen, durch den <xref:System.ServiceModel.ClientBase%601> und die Dienstvertragsschnittstelle `ISampleService` erweitert werden. In diesem Fall entspricht der Typ dem folgenden Code:  
+ Wenn Sie Visual Studio nicht verwenden, überprüfen Sie den generierten Vertragscode, um den Typ zu suchen, die erweitert <xref:System.ServiceModel.ClientBase%601> und die dienstvertragsschnittstelle `ISampleService`. In diesem Fall entspricht der Typ dem folgenden Code:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

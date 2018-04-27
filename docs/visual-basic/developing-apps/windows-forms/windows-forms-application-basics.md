@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt werden. Sie können Visual Studio verwenden, um die mit Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
   
 ## <a name="designing-windows-forms-applications"></a>Entwerfen von Windows Forms-Anwendungen  
- Sie können Windows Forms und Windows-dienstanwendungen mit erstellen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Weitere Informationen finden Sie unter den folgenden Themen:  
+ Sie können Windows Forms- und Windows-dienstanwendungen mit Visual Studio erstellen. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Erste Schritte mit Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Enthält Informationen zum Erstellen und ein Programm Windows Forms bereit.  
    
@@ -32,7 +32,7 @@ Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows
 -   [Windows-Dienstanwendungen](../../../framework/windows-services/index.md). Enthält Themen, die erläutern, wie Windows-Dienste zu erstellen.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken  
- Windows Forms ist die Smartcard-Client-Komponente von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], einen Satz verwalteter Bibliotheken, die allgemeine Anwendungsaufgaben, z. B. Lesen und Schreiben in das Dateisystem zu ermöglichen. Verwenden einer Entwicklungsumgebung wie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], Sie können Windows Forms-Anwendungen, die Informationen anzeigen, die Eingabe von Benutzer anfordern und die Kommunikation mit Remotecomputern über ein Netzwerk erstellen.  
+ Windows Forms ist die Smartcard-Client-Komponente von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], einen Satz verwalteter Bibliotheken, die allgemeine Anwendungsaufgaben, z. B. Lesen und Schreiben in das Dateisystem zu ermöglichen. Verwenden einer Entwicklungsumgebung wie Visual Studio, können Sie erstellen Windows Forms-Anwendungen, die Informationen anzeigen, die Eingabe von Benutzer anfordern und die Kommunikation mit Remotecomputern über ein Netzwerk.  
   
  In Windows Forms ist ein Formular eine visuelle Oberfläche, die auf der Sie die Informationen für den Benutzer anzuzeigen. Im Allgemeinen erstellen Sie Windows Forms-Anwendungen durch Platzieren von Steuerelementen auf Formularen und Entwickeln von Antworten auf Benutzeraktionen, wie z. B. Mausklicks oder Tastatureingaben. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.  
   
@@ -44,7 +44,7 @@ Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows
   
  Windows Forms verfügt über komplexe Steuerelemente für die Benutzeroberfläche, mit denen Funktionen aus Anwendungen wie Microsoft Office emuliert werden können. Mithilfe der <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.MenuStrip> -Steuerelement, können Sie Symbolleisten und Menüs, die Text und Bilder enthalten, Untermenüs oder weitere Steuerelemente wie z. B. Textfelder und Kombinationsfelder erstellen.  
   
- Mit der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Drag-and-Drop-Forms-Designer können Sie problemlos Windows Forms-Anwendungen erstellen: Wählen Sie die Steuerelemente mit dem Mauszeiger einfach und ablegen, auf dem auf dem Formular werden sollen. Der Designer stellt Tools wie Rasterlinien und "Ausrichtungslinien" wird das Anordnen von Steuerelementen. Und gibt an, ob Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] oder Kompilierung in der Befehlszeile können Sie die <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> Steuerelemente zum Erstellen erweiterter komplexe Formularlayouts mit minimalem Aufwand.  
+ Mit dem Visual Studio Drag-and-Drop-Forms-Designer können Sie problemlos Windows Forms-Anwendungen erstellen: Wählen Sie die Steuerelemente mit dem Mauszeiger einfach und ablegen, auf dem auf dem Formular werden sollen. Der Designer stellt Tools wie Rasterlinien und "Ausrichtungslinien" wird das Anordnen von Steuerelementen. Und, ob Sie mithilfe von Visual Studio oder über die Befehlszeile kompilieren, können Sie die <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> Steuerelemente zum Erstellen erweiterter komplexe Formularlayouts mit minimalen Zeit- und Arbeitsaufwand.  
   
 ### <a name="custom-ui-elements"></a>Benutzerdefinierte Benutzeroberflächenelemente  
  Abschließend, wenn Sie eine eigene benutzerdefinierte UI-Elemente erstellen, müssen die <xref:System.Drawing> -Namespace enthält alle Klassen Sie Linien, Kreise und andere Formen direkt auf einem Formular zu rendern müssen.  
@@ -53,7 +53,7 @@ Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Erstellen einer neuen Windows Forms-Anwendung mit [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Erstellen einer neuen Windows Forms-Anwendung mit Visual Studio|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Erstellen von Grafiken mit <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Erstellen benutzerdefinierter Steuerelemente|[Vorgehensweise: Erben von der UserControl-Klasse](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows
  Sie können angeben, Erstellen von datengebundenen Steuerelementen, die leicht mit dem Fenster "Datenquellen", in dem Datenquellen wie Datenbanken, Webdienste und Objekte in Ihrem Projekt angezeigt. Zum Erstellen datengebundener Steuerelemente können Sie Elemente aus diesem Fenster auf Formulare im Projekt ziehen. Darüber hinaus können Sie auch bestehende Steuerelemente an Daten binden, indem Sie Objekte aus dem Datenquellenfenster auf bestehende Steuerelemente ziehen.  
   
 ### <a name="settings"></a>Einstellungen  
- Einen anderen Typ von datenbindungen, die Sie in Windows Forms verwalten können, ist Einstellungen. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, und behalten Sie benutzereinstellung Daten, wie Standardspeicherorte gespeicherten Dateien. Die Funktion "-Anwendungseinstellungen" trägt diesen Anforderungen Rechnung bietet eine einfache Möglichkeit zum beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Einmal definiert entweder [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] oder einem Code-Editor, diese Einstellungen als XML beibehalten und automatisch zur Laufzeit in den Arbeitsspeicher eingelesen werden.  
+ Einen anderen Typ von datenbindungen, die Sie in Windows Forms verwalten können, ist Einstellungen. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, und behalten Sie benutzereinstellung Daten, wie Standardspeicherorte gespeicherten Dateien. Die Funktion "-Anwendungseinstellungen" trägt diesen Anforderungen Rechnung bietet eine einfache Möglichkeit zum beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Sobald Sie mit Visual Studio oder einem Code-Editor definiert, werden diese Einstellungen als XML beibehalten und automatisch zur Laufzeit in den Arbeitsspeicher eingelesen.  
   
  Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen.  
   
@@ -78,7 +78,7 @@ Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows
 |Verwenden Sie das Fenster "Datenquellen"|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
- Nachdem Sie Ihre Anwendung geschrieben haben, müssen Sie es für Ihre Benutzer senden, damit sie installieren können, und führen Sie es auf dem eigenen Clientcomputer. Mithilfe der [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] -Technologie können Sie Anwendungen in bereitstellen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mithilfe von nur wenigen Klicks und Benutzern eine URL verweist auf die Anwendung im Web zur Verfügung stellen. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung, und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.  
+ Nachdem Sie Ihre Anwendung geschrieben haben, müssen Sie es für Ihre Benutzer senden, damit sie installieren können, und führen Sie es auf dem eigenen Clientcomputer. Mithilfe der [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] -Technologie können Sie Anwendungen in Visual Studio mit nur wenigen Klicks bereitstellen und Benutzern eine URL verweist auf die Anwendung im Web zur Verfügung stellen. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung, und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden können. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Fügt einen Link zur Anwendung des Benutzers **starten** Menü, damit der Benutzer es öffnen kann, ohne die URL.  
   

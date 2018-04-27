@@ -1,24 +1,26 @@
 ---
-title: "Imperativ für benutzerdefinierte Bindungen"
-ms.custom: 
+title: Imperativ für benutzerdefinierte Bindungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58116f11fc482792cb84023bd3e1c23fe9e94a55
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44bedc3290d9c10078806ed63a8c5ddfe9754801
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-imperative"></a>Imperativ für benutzerdefinierte Bindungen
 Dieses Beispiel veranschaulicht, wie ein imperativer Code geschrieben wird, um benutzerdefinierte Bindungen ohne Verwendung einer Konfigurationsdatei oder eines von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] generierten Clients zu definieren und zu verwenden. Dieses Beispiel kombiniert die Funktionen, die vom HTTP-Transport und dem zuverlässigen Sitzungskanal zur Verfügung gestellt werden, um eine zuverlässige HTTP-basierte Bindung zu erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.  
@@ -27,8 +29,8 @@ Dieses Beispiel veranschaulicht, wie ein imperativer Code geschrieben wird, um b
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Sowohl auf dem Client als auch im Dienst wird eine benutzerdefinierte Bindung erstellt, die zwei Bindungselemente enthält (Zuverlässige Sitzung und HTTP).  
-  
-```  
+
+```csharp
 ReliableSessionBindingElement reliableSession = new ReliableSessionBindingElement();  
 reliableSession.Ordered = true;  
   
@@ -37,32 +39,32 @@ httpTransport.AuthenticationScheme = System.Net.AuthenticationSchemes.Anonymous;
 httpTransport.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
   
 CustomBinding binding = new CustomBinding(reliableSession, httpTransport);  
-```  
+```
   
  Im Dienst wird die Bindung verwendet, indem dem ServiceHost ein Endpunkt hinzugefügt wird:  
-  
-```  
+
+```csharp
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
-```  
-  
+```
+
  Auf dem Client wird die Bindung von <xref:System.ServiceModel.ChannelFactory> verwendet, um einen Kanal zum Dienst zu erstellen:  
-  
-```  
+
+```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
 ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(binding, address);  
 ICalculator channel = channelFactory.CreateChannel();  
-```  
-  
+```
+
  Dieser Kanal wird dann dazu verwendet, mit dem Dienst zu interagieren:  
-  
-```  
+
+```csharp
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 double result = channel.Add(value1, value2);  
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-```  
-  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ```  

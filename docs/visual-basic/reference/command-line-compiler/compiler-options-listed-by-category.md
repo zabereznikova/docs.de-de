@@ -1,6 +1,6 @@
 ---
 title: Visual Basic-Compileroptionen nach Kategorien sortiert
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic-Compileroptionen nach Kategorien sortiert
-Die Visual Basic-Befehlszeilencompiler dient als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Im folgenden finden eine Liste der Visual Basic-Befehlszeilencompiler Optionen nach Funktionskategorie sortiert.  
+Die Visual Basic-Befehlszeilencompiler wird als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio bereitgestellt. Im folgenden finden eine Liste der Visual Basic-Befehlszeilencompiler Optionen nach Funktionskategorie sortiert.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ Die Visual Basic-Befehlszeilencompiler dient als Alternative zum Kompilieren von
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Gibt Zusatzinformationen während der Kompilierung aus.|  
 |`-modulename:<string>`|Geben Sie den Namen des Quellmoduls an|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Geben Sie eine Sprache für die Compilerausgabe an.|  
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Geben Sie eine Sprache für die Compilerausgabe an.|
   
 ## <a name="optimization"></a>Optimierung  
   
@@ -45,6 +45,7 @@ Die Visual Basic-Befehlszeilencompiler dient als Alternative zum Kompilieren von
 |Option|Zweck|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|  
+|[-deterministisch](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Bewirkt, dass den Compiler eine Assembly, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Gibt eine Ausgabedatei an.|  
 |[/refonly](refonly-compiler-option.md)|Gibt nur eine Verweisassembly an.|
@@ -89,7 +90,7 @@ Die Visual Basic-Befehlszeilencompiler dient als Alternative zum Kompilieren von
   
 |Option|Zweck|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Sprachversion angeben: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Erzwingt explizite Variablendeklaration.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Erzwingt strenge Typsemantik.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Gibt an, ob Zeichenfolgenvergleiche binär sein oder gebietsschemaspezifische Textsemantik verwenden sollen.|  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt in einer teilweise vertrauenswürdigen Umgebung eine eingeschränkte Teilmenge seiner Funktionalität. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  Damit die Ablaufverfolgungsdatei nicht mit doppelten Fehlermeldungen überflutet wird, deaktiviert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
 ## <a name="wcf-service-host"></a>WCF-Diensthost  
- Der[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensthost unterstützt keine teilweise vertrauenswürdigen Umgebungen. Wenn Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst in einer teilweise vertrauenswürdigen Umgebung verwenden möchten, dürfen Sie zur Erstellung des Diensts nicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienstbibliotheks-Projektvorlage in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] verwenden. Erstellen Sie stattdessen in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] eine neue Website, indem Sie die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienstwebsitevorlage auswählen, die den Dienst auf einem Webserver hosten kann, für den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] teilweise Vertrauenswürdigkeit unterstützt.  
+ Der[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensthost unterstützt keine teilweise vertrauenswürdigen Umgebungen. Wenn Sie verwenden möchten eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service unter teilweiser Vertrauenswürdigkeit, verwenden Sie nicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -dienstbibliotheksprojektvorlage in Visual Studio zur Erstellung des Diensts. Erstellen Sie stattdessen eine neue Website in Visual Studio durch Auswählen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Website Dienstvorlage, die den Dienst auf einem Webserver, auf dem hosten kann [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] teilweise Vertrauenswürdigkeit unterstützt.  
   
 ## <a name="other-limitations"></a>Weitere Einschränkungen  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird allgemein von den Sicherheitsüberlegungen eingeschränkt, die von der Hostanwendung auferlegt werden. Wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z.B. in einer XAML-Browseranwendung (XBAP) gehostet, gelten die XBAP-Einschränkungen, die unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](http://go.microsoft.com/fwlink/?LinkId=89138)beschrieben sind.  

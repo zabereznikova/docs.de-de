@@ -1,12 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 Binden einer Datenquelle an ein Steuerelement ist wichtig für das Bereitstellen von Benutzern mit Zugriff auf die zugrunde liegenden Daten, unabhängig davon, ob Sie sind [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in hybridanwendungen verwenden können, die beide enthalten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente.  
@@ -90,7 +92,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für das Bereitstellen
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Angeben des Formularlayouts  
- Das Layout des Formulars wird durch ein Raster mit drei Zeilen und drei Spalten definiert. <xref:System.Windows.Controls.Label>Steuerelemente werden bereitgestellt, um jede Spalte in der Customers-Tabelle zu identifizieren.  
+ Das Layout des Formulars wird durch ein Raster mit drei Zeilen und drei Spalten definiert. <xref:System.Windows.Controls.Label> Steuerelemente werden bereitgestellt, um jede Spalte in der Customers-Tabelle zu identifizieren.  
   
 #### <a name="to-set-up-the-grid-layout"></a>Einrichten des Rasterlayouts  
   
@@ -127,7 +129,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für das Bereitstellen
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Hinzufügen der Datenquelle zum Projekt  
- Mit [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], Sie können problemlos eine Datenquelle zu Ihrem Projekt hinzufügen. Bei diesem Vorgang wird dem Projekt ein stark typisiertes Dataset hinzugefügt. Mehrere andere Unterstützungsklassen, wie z.B. Tabellenadapter für jede der ausgewählten Tabellen, werden ebenfalls hinzugefügt.  
+ Mit Visual Studio können Sie problemlos eine Datenquelle zum Projekt hinzufügen. Bei diesem Vorgang wird dem Projekt ein stark typisiertes Dataset hinzugefügt. Mehrere andere Unterstützungsklassen, wie z.B. Tabellenadapter für jede der ausgewählten Tabellen, werden ebenfalls hinzugefügt.  
   
 #### <a name="to-add-the-data-source"></a>So fügen Sie die Datenquelle hinzu  
   

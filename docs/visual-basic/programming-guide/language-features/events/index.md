@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
-Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als eine Reihe von Prozeduren vorstellen, die nacheinander ausgeführt werden, doch sind die meisten Programme tatsächlich ereignisgesteuert. Das bedeutet, dass der Ausführungsablauf von externen Vorkommnissen bestimmt wird, die als *Ereignisse* bezeichnet werden.  
+Während Sie ein Visual Studio-Projekt als eine Reihe von Verfahren visualisieren können, die in einer Sequenz in Wirklichkeit ausgeführt, sind die meisten Programme ereignisgesteuert – d. h. den Fluss der Ausführung richtet sich nach externen Vorkommen aufgerufen *Ereignisse*.  
   
  Ein Ereignis ist ein Signal, das eine Anwendung darüber informiert, dass etwas Wichtiges geschehen ist. Wenn ein Benutzer beispielsweise auf ein Steuerelement in einem Formular klickt, löst das Formular ein `Click`-Ereignis aus und ruft eine Prozedur auf, die das Ereignis behandelt. Ereignisse ermöglichen zudem die Kommunikation zwischen separaten Tasks. Beispiel: Die Anwendung führt separat von der Hauptanwendung einen Sortiertask aus. Wenn ein Benutzer den Sortiervorgang abbricht, kann die Anwendung ein Cancel-Ereignis senden, das den Abbruch des Sortiervorgangs veranlasst.  
   

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Debuggen von Workflows
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bietet mehrere Optionen für das Debuggen ausgeführter Workflows über die Entwicklungsumgebung. Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  Das Debugging von Workflows unterstützt auch die Verwendung der Visual Studio-Infrastruktur zum Anfügen an einen Prozess. Dies ermöglicht es dem Workflowautor, einen Workflow zu debuggen, der in einer anderen Hostumgebung ausgeführt wird, z. B. in Internetinformationsdienste (IIS) 7.0.  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] Remotedebuggen, funktioniert genauso wie das Remotedebugging for andere Visual Studio-Komponenten. Informationen zur Verwendung des Remotedebuggens finden Sie unter [Vorgehensweise: Aktivieren von Remotedebuggen](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Remotedebuggen von Windows Workflow Foundation (WF), funktioniert genauso wie das Remotedebugging for andere Visual Studio-Komponenten. Informationen zur Verwendung des Remotedebuggens finden Sie unter [Vorgehensweise: Aktivieren von Remotedebuggen](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Wenn die workflowanwendung für die X86 diejenige Architektur und auf einem Computer unter einem 64-Bit-Betriebssystem gehostet wird, Remotedebuggen nicht verwendet werden, es sei denn, die Visual Studio auf dem Remotecomputer installiert ist oder das Ziel für die workflowanwendung in geändert wird **Beliebige CPU**.  

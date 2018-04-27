@@ -1,12 +1,13 @@
 ---
 title: Auf Datenbindung bezogene Schnittstellen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], data-binding interfaces
@@ -19,29 +20,30 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0e48ddc6f74d3c4e030bc953ac4f853660a00d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5278ccd34e556c33e4bc5c9f460573b399f265be
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interfaces-related-to-data-binding"></a>Auf Datenbindung bezogene Schnittstellen
 Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele verschiedene Datenstrukturen entsprechend den Bindungsanforderungen der Anwendung und der Daten erstellen, mit denen Sie arbeiten. Möglicherweise möchten Sie eigene Klassen erstellen, die Daten in Windows Forms bereitstellen oder verwenden. Diese Objekte können ein unterschiedliches Maß an Funktionalität und Komplexität bieten, von der Basisdatenbindung bis hin zur Bereitstellung der Unterstützung während der Entwurfszeit, Überprüfung von Fehlern, Benachrichtigung oder sogar Unterstützung für eine strukturierte Zurücksetzung der an den Daten selbst vorgenommenen Änderungen.  
   
 ## <a name="consumers-of-data-binding-interfaces"></a>Consumer von Datenbindungsschnittstellen  
- In den folgenden Abschnitten werden zwei Gruppen von Benutzeroberflächenobjekten beschrieben. Die erste Gruppe sind die Schnittstellen, die von Datenquellenautoren für Datenquellen implementiert werden. Diese Schnittstellen sollen von Datenquellenconsumern genutzt werden, die in den meisten Fällen Windows Forms-Steuerelemente oder Komponenten sind. Die zweite Gruppe bilden die Schnittstellen, die für die Verwendung durch Komponentenautoren vorgesehen sind. Komponentenautoren verwenden diese Schnittstellen, wenn sie eine Komponente erstellen, die die vom Windows Forms-Datenbindungsmodul zu nutzende Datenbindung unterstützt. Sie können diese Schnittstellen in Klassen im Zusammenhang mit dem Formular implementieren, um die Datenbindung zu aktivieren. Jeder Fall stellt eine Klasse dar, die eine Schnittstelle implementiert, die die Interaktion mit Daten ermöglicht. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Datenentwurfstools für die schnelle Anwendungsentwicklung (Rapid Application Development (RAD)) nutzen bereits die Vorteile dieser Funktionen.  
+ In den folgenden Abschnitten werden zwei Gruppen von Benutzeroberflächenobjekten beschrieben. Die erste Gruppe sind die Schnittstellen, die von Datenquellenautoren für Datenquellen implementiert werden. Diese Schnittstellen sollen von Datenquellenconsumern genutzt werden, die in den meisten Fällen Windows Forms-Steuerelemente oder Komponenten sind. Die zweite Gruppe bilden die Schnittstellen, die für die Verwendung durch Komponentenautoren vorgesehen sind. Komponentenautoren verwenden diese Schnittstellen, wenn sie eine Komponente erstellen, die die vom Windows Forms-Datenbindungsmodul zu nutzende Datenbindung unterstützt. Sie können diese Schnittstellen in Klassen im Zusammenhang mit dem Formular implementieren, um die Datenbindung zu aktivieren. Jeder Fall stellt eine Klasse dar, die eine Schnittstelle implementiert, die die Interaktion mit Daten ermöglicht. Visual Studio rapid Application Development, (RAD) Datenentwurfstools nutzen bereits zu dieser Funktionalität.  
   
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>Schnittstellen für die Implementierung von Datenquellenautoren  
  Die folgenden Schnittstellen sollen von Windows Forms-Steuerelementen genutzt werden:  
   
 -   <xref:System.Collections.IList>-Schnittstelle  
   
-     Eine Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle ist möglicherweise ein <xref:System.Array>, <xref:System.Collections.ArrayList>, oder <xref:System.Collections.CollectionBase>. Hierbei handelt es sich um indizierte Listen von Elementen des Typs <xref:System.Object>. Diese Listen müssen homogene Typen enthalten, da das erste Element des Index den Typ bestimmt. <xref:System.Collections.IList>wäre für die Bindung nur zur Laufzeit verfügbar.  
+     Eine Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle ist möglicherweise ein <xref:System.Array>, <xref:System.Collections.ArrayList>, oder <xref:System.Collections.CollectionBase>. Hierbei handelt es sich um indizierte Listen von Elementen des Typs <xref:System.Object>. Diese Listen müssen homogene Typen enthalten, da das erste Element des Index den Typ bestimmt. <xref:System.Collections.IList> wäre für die Bindung nur zur Laufzeit verfügbar.  
   
     > [!NOTE]
     >  Wenn Sie eine Liste von Geschäftsobjekten für die Bindung mit Windows Forms erstellen möchten, sollten Sie mit der <xref:System.ComponentModel.BindingList%601>. Die <xref:System.ComponentModel.BindingList%601> ist eine erweiterbare-Klasse, die primären für bidirektionale Windows Forms-Datenbindung erforderlichen Schnittstellen implementiert.  
@@ -111,7 +113,7 @@ Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele ver
   
 -   <xref:System.ComponentModel.IListSource>-Schnittstelle  
   
-     Eine Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle ermöglicht listenbasierte Bindung für nicht-List-Objekte. Die <xref:System.ComponentModel.IListSource.GetList%2A> Methode <xref:System.ComponentModel.IListSource> wird verwendet, um eine bindbare Liste von einem Objekt zurückzugeben, die nicht von erbt <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource>wird verwendet, durch die <xref:System.Data.DataSet> Klasse.  
+     Eine Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle ermöglicht listenbasierte Bindung für nicht-List-Objekte. Die <xref:System.ComponentModel.IListSource.GetList%2A> Methode <xref:System.ComponentModel.IListSource> wird verwendet, um eine bindbare Liste von einem Objekt zurückzugeben, die nicht von erbt <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource> wird verwendet, durch die <xref:System.Data.DataSet> Klasse.  
   
 -   <xref:System.ComponentModel.IRaiseItemChangedEvents>-Schnittstelle  
   
@@ -124,17 +126,17 @@ Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele ver
   
      Eine Komponente, implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle nutzt die Vorteile von Batchoptimierungen für das Festlegen von Eigenschaften und Co-abhängige Eigenschaften zu initialisieren. Die <xref:System.ComponentModel.ISupportInitialize> enthält zwei Methoden:  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>signalisiert, dass die objektinitialisierung beginnt.  
+    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> signalisiert, dass die objektinitialisierung beginnt.  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>signalisiert, dass es sich bei die objektinitialisierung beendet wird.  
+    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> signalisiert, dass es sich bei die objektinitialisierung beendet wird.  
   
 -   <xref:System.ComponentModel.ISupportInitializeNotification>-Schnittstelle  
   
      Eine Komponente, implementiert die <xref:System.ComponentModel.ISupportInitializeNotification> Schnittstelle auch implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle. Diese Schnittstelle bietet die Möglichkeit, anderen benachrichtigen <xref:System.ComponentModel.ISupportInitialize> Komponenten, dass die Initialisierung abgeschlossen ist. Die <xref:System.ComponentModel.ISupportInitializeNotification> Schnittstelle enthält zwei Elemente:  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>Gibt eine `boolean` Wert, der angibt, ob die Komponente initialisiert wird.  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> Gibt eine `boolean` Wert, der angibt, ob die Komponente initialisiert wird.  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized>Tritt auf, wenn <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> aufgerufen wird.  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> Tritt auf, wenn <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> aufgerufen wird.  
   
 -   <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle  
   

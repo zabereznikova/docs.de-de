@@ -1,26 +1,27 @@
 ---
-title: "Warten auf Eingabeaktivität"
-ms.custom: 
+title: Warten auf Eingabeaktivität
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>Warten auf Eingabeaktivität
-Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erstellt werden. [!INCLUDE[wf](../../../../includes/wf-md.md)] stellt keine Aktivität zur deklarativen Erstellung von Lesezeichen bereit. Wenn Sie daher in Ihrem Workflow ein Lesezeichen erstellen möchten, müssen Sie eine benutzerdefinierte Aktivität schreiben, die eines erstellt. Die in diesem Beispiel definierte `WaitForInput`-Aktivität stellt diese Funktionalität bereit, damit Benutzer Lesezeichen deklarativ innerhalb eines Workflows erstellen können.  
+Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erstellt werden. Windows Workflow Foundation (WF) bietet keine Aktivität zum deklarativen Erstellung von Lesezeichen. Wenn Sie daher in Ihrem Workflow ein Lesezeichen erstellen möchten, müssen Sie eine benutzerdefinierte Aktivität schreiben, die eines erstellt. Die in diesem Beispiel definierte `WaitForInput`-Aktivität stellt diese Funktionalität bereit, damit Benutzer Lesezeichen deklarativ innerhalb eines Workflows erstellen können.  
   
 ## <a name="projects-in-this-sample"></a>Projekte in diesem Beispiel  
   

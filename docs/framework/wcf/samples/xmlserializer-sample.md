@@ -1,24 +1,26 @@
 ---
 title: XMLSerializer-Beispiel
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer-Beispiel
 Dieses Beispiel veranschaulicht die Serialisierung und Deserialisierung von Typen, die mit dem <xref:System.Xml.Serialization.XmlSerializer> kompatibel sind. Der standardmäßige [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Formatierer ist die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse kann auch zum Serialisieren und Deserialisieren von Typen verwendet werden, wenn die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse nicht verwendet werden kann. Dies ist oft der Fall, wenn die präzise Steuerung von XML wichtig ist &#8211; beispielsweise, wenn es sich bei einem Datenelement um ein XML-Attribut und nicht um ein XML-Element handeln muss. Auch wird der <xref:System.Xml.Serialization.XmlSerializer> oft automatisch ausgewählt, wenn Clients für Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste erstellt werden.  
@@ -30,7 +32,7 @@ Dieses Beispiel veranschaulicht die Serialisierung und Deserialisierung von Type
   
  Das <xref:System.ServiceModel.ServiceContractAttribute> und das <xref:System.ServiceModel.XmlSerializerFormatAttribute> müssen wie im folgenden Beispielcode gezeigt auf die Schnittstelle angewendet werden.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface IXmlSerializerCalculator  
 {  
@@ -47,7 +49,7 @@ public interface IXmlSerializerCalculator
   
  Die öffentlichen Member der `ComplexNumber`-Klasse werden vom <xref:System.Xml.Serialization.XmlSerializer> als XML-Attribute serialisiert. Der <xref:System.Runtime.Serialization.DataContractSerializer> kann nicht zum Erstellen solcher XML-Instanzen verwendet werden.  
   
-```  
+```csharp  
 public class ComplexNumber  
 {  
     private double real;  
@@ -83,7 +85,7 @@ public class ComplexNumber
   
  Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück. Dabei werden Werte vom Typ `ComplexNumber` akzeptiert und zurückgegeben.  
   
-```  
+```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -97,7 +99,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
   
  Die Clientimplementierung verwendet ebenfalls komplexe Zahlen. Der Dienstvertrag und die Datentypen werden in der Quelldatei "generatedclient.cs", die bei einer generiert wurde definiert die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus Dienstmetadaten. Svcutil.exe kann erkennen, wenn ein Vertrag nicht mit dem <xref:System.Runtime.Serialization.DataContractSerializer> serialisierbar ist, und gibt in diesem Fall `XmlSerializable`-Typen aus. Wenn Sie die Verwendung des <xref:System.Xml.Serialization.XmlSerializer> erzwingen möchten, können Sie die Befehlsoption "/serializer:XmlSerializer" (XmlSerializer verwenden) an das Tool "Svcutil.exe" übergeben.  
   
-```  
+```csharp  
 // Create a client.  
 XmlSerializerCalculatorClient client = new  
                          XmlSerializerCalculatorClient();  

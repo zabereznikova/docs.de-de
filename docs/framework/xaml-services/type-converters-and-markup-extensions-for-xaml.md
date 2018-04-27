@@ -1,12 +1,13 @@
 ---
-title: "Typkonverter und Markuperweiterungen für XAML"
-ms.custom: 
+title: Typkonverter und Markuperweiterungen für XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typkonverter und Markuperweiterungen für XAML
 Typkonverter und Markuperweiterung sind zwei Techniken, mit denen XAML-Typsysteme und XAML-Writer Objektdiagrammkomponenten generieren. Obwohl sie einige gemeinsame Eigenschaften aufweisen, werden Typkonverter und Markuperweiterungen in einem XAML-Knotenstream unterschiedlich dargestellt. In dieser Dokumentation werden Typkonverter, Markuperweiterungen und ähnliche Konstrukte manchmal zusammenfassend als Wertkonverter bezeichnet.  
@@ -56,7 +58,7 @@ Typkonverter und Markuperweiterung sind zwei Techniken, mit denen XAML-Typsystem
  Weitere Informationen zu den Implementierungsmustern für Markuperweiterungen für XAML finden Sie unter [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Die Typen <xref:System.Windows.Markup.MarkupExtension> und <xref:System.Windows.Markup.ValueSerializer> befinden sich beide im <xref:System.Windows.Markup> -Namespace und nicht im <xref:System.Xaml> -Namespace. Dies bedeutet nicht, dass diese Typen entweder für WPF- oder [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] -Technologien spezifisch sind, die andernfalls CLR-Namespaces auffüllen, die die Zeichenfolge `Windows`enthalten. <xref:System.Windows.Markup.MarkupExtension> und <xref:System.Windows.Markup.ValueSerializer> befinden sich in der System.Xaml-Assembly und weisen keine spezifische Framework-Abhängigkeit auf. Diese Typen waren im CLR-Namespace für [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] vorhanden und bleiben im CLR-Namespace in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erhalten, um zu vermeiden, dass Verweise in vorhandenen WPF-Projekten getrennt werden. Weitere Informationen finden Sie unter [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  Die Typen <xref:System.Windows.Markup.MarkupExtension> und <xref:System.Windows.Markup.ValueSerializer> befinden sich beide im <xref:System.Windows.Markup> -Namespace und nicht im <xref:System.Xaml> -Namespace. Dies bedeutet nicht, dass diese Typen für die WPF- oder Windows Forms-Technologien spezifisch sind, die andernfalls CLR-Namespaces auffüllen, die die Zeichenfolge enthalten `Windows`. <xref:System.Windows.Markup.MarkupExtension> und <xref:System.Windows.Markup.ValueSerializer> befinden sich in der System.Xaml-Assembly und weisen keine spezifische Framework-Abhängigkeit auf. Diese Typen waren im CLR-Namespace für [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] vorhanden und bleiben im CLR-Namespace in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erhalten, um zu vermeiden, dass Verweise in vorhandenen WPF-Projekten getrennt werden. Weitere Informationen finden Sie unter [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Werte-Serialisierungsprogramme  

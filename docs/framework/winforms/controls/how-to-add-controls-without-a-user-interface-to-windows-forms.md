@@ -1,13 +1,13 @@
 ---
-title: "Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
 Nicht sichtbare Steuerelement (bzw. eine Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer keine und müssen daher nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Sobald ein Steuerelement auf der Komponentenleiste hinzugefügt wurde, können Sie wählen Sie die Komponente und seine Eigenschaften festlegen, wie jedem anderen Steuerelement im Formular.  
@@ -48,7 +48,7 @@ Nicht sichtbare Steuerelement (bzw. eine Komponente) bietet Funktionen für Ihre
   
      Die Komponente wird auf der Komponentenleiste angezeigt.  
   
- Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein gängiges Szenario, vor allem, da Komponenten nicht visuellen Ausdruck, im Gegensatz zu Steuerelemente verfügen, die über eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt wird. (Beachten Sie, dass [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] enthält eine Reihe von verschiedenen Zeitgeber; in diesem Fall verwenden Sie eine Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen über die verschiedenen Zeitgeber in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], finden Sie unter [Einführung in serverbasierte Zeitgeber](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein gängiges Szenario, vor allem, da Komponenten nicht visuellen Ausdruck, im Gegensatz zu Steuerelemente verfügen, die über eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt wird. (Beachten Sie, dass Visual Studio eine Anzahl von verschiedenen Zeitgeber enthält; in diesem Fall verwenden Sie eine Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen über die verschiedenen Zeitgeber in Visual Studio finden Sie unter [Einführung in serverbasierte Zeitgeber](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Komponenten haben häufig steuerelementspezifischen Eigenschaften, die für die Komponente, für die effiziente Ausführung festgelegt werden müssen. Im Fall von der <xref:System.Windows.Forms.Timer> folgenden Komponente, legen Sie die `Interval` Eigenschaft. Achten Sie darauf, beim Komponenten Ihrem Projekt hinzufügen, Sie die Eigenschaften für die jeweilige Komponente erforderlich legen.  

@@ -1,12 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Die Daten erneut zugegriffen wird, können Anwendungen die Daten aus dem Cache, die sie aus der Originalquelle stattdessen abrufen zu erzielen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.  
@@ -67,7 +69,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
   
 #### <a name="to-create-a-wpf-application"></a>So erstellen Sie eine WPF-Anwendung.  
   
-1.  Starten Sie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Starten Sie Visual Studio.  
   
 2.  In der **Datei** Menü klicken Sie auf **neu**, und klicken Sie dann auf **neues Projekt**.  
   
@@ -86,7 +88,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
   
 7.  Klicken Sie auf **OK**.  
   
-     Der WPF-Designer wird geöffnet, **Entwurf** anzeigen und die Datei "MainWindow.xaml" angezeigt. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]erstellt die **Mein Projekt** Ordner die Datei "Application.xaml" und die Datei "MainWindow.xaml".  
+     Der WPF-Designer wird geöffnet, **Entwurf** anzeigen und die Datei "MainWindow.xaml" angezeigt. Visual Studio erstellt die **Mein Projekt** Ordner die Datei "Application.xaml" und die Datei "MainWindow.xaml".  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Für .NET Framework und Hinzufügen eines Verweises auf die Caching-Assemblys  
  Standardmäßig ist Ziel der WPF-Anwendungen die [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Verwenden der <xref:System.Runtime.Caching> Namespace in einer WPF-Anwendung, die Anwendung muss Ziel der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (nicht die [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) und einen Verweis auf den Namespace enthalten.  
@@ -307,7 +309,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
   
      Zwischengespeicherte Inhalt aus der Textdatei wird in einem Meldungsfeld angezeigt. Beachten Sie den Zeitstempel der Datei.  
   
-3.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut**.**  
+3.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut **.**  
   
      Der Zeitstempel ist unverändert. Dies gibt an, dass zwischengespeicherte Inhalt angezeigt wird.  
   
@@ -317,7 +319,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
   
 5.  Öffnen Sie in einem Text-Editor die Textdatei, die Sie erstellt haben. Nehmen Sie Änderungen noch nicht.  
   
-6.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut**.**  
+6.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut **.**  
   
      Beachten Sie den Zeitstempel erneut ein.  
   

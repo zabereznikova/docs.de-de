@@ -1,24 +1,26 @@
 ---
 title: Sitzungen und Warteschlangen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Sitzungen und Warteschlangen
 Dieses Beispiel veranschaulicht, wie ein Satz zusammengehöriger Nachrichten bei der Kommunikation unter Verwendung von Warteschlangen über den MSMQ-Transport (Message Queuing) gesendet und empfangen wird. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -42,8 +44,8 @@ Dieses Beispiel veranschaulicht, wie ein Satz zusammengehöriger Nachrichten bei
  Im vorliegenden Beispiel sendet der Client im Rahmen einer Sitzung innerhalb des Bereichs einer einzigen Transaktion eine Reihe von Nachrichten an den Dienst.  
   
  Der Dienstvertrag ist `IOrderTaker`, der einen unidirektionalen Dienst definiert, der für die Verwendung mit Warteschlangen geeignet ist. Der in dem Vertrag im folgenden Beispielcode verwendete <xref:System.ServiceModel.SessionMode> zeigt an, dass die Nachrichten zu der Sitzung gehören.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  Der Dienst definiert Dienstvorgänge so, dass der erste Vorgang in einer Transaktion eingetragen, diese jedoch nicht automatisch abgeschlossen wird. Auch die nachfolgenden Vorgänge werden in derselben Transaktion eingetragen, die aber nicht automatisch abgeschlossen wird. Der letzte Vorgang in der Sitzung schließt die Transaktion automatisch ab. So wird die gleiche Transaktion für mehrere Vorgangsaufrufe im Dienstvertrag verwendet. Wenn einer der Vorgänge eine Ausnahme auslöst, wird ein Rollback der Transaktion ausgeführt und die Sitzung zurück in die Warteschlange gelegt. Nach erfolgreichem Abschluss des letzten Vorgangs wird ein Commit für die Transaktion ausgeführt. Der Dienst verwendet `PerSession` als <xref:System.ServiceModel.InstanceContextMode>, um sämtliche Nachrichten in einer Sitzung in derselben Instanz des Diensts zu empfangen.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst <xref:System.Messaging>-Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um sie andernfalls zu erstellen. Der Warteschlangenname wird mithilfe der <xref:System.Configuration.ConfigurationManager.AppSettings%2A>-Klasse aus der Konfigurationsdatei gelesen.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt system.serviceModel der Konfigurationsdatei definiert und gibt die `netMsmqBinding`-Bindung an.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  Der Client erstellt einen Geltungsbereich für die Transaktion. Alle Nachrichten in der Sitzung werden an die Warteschlange innerhalb des Transaktionsbereichs gesendet, wo sie als eine unteilbare Einheit behandelt werden, so dass sämtliche Nachrichten entweder erfolgreich sind oder fehlschlagen. Das Commit für die Transaktion wird durch Aufrufen von <xref:System.Transactions.TransactionScope.Complete%2A> ausgeführt.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Sie können für sämtliche Nachrichten in der Sitzung nur eine einzige Transaktion verwenden, und alle Nachrichten in der Sitzung müssen vor deren Commit gesendet werden. Wenn der Client geschlossen wird, wird auch die Sitzung geschlossen. Daher muss der Client geschlossen werden, bevor die Transaktion abgeschlossen ist, um alle Nachrichten in der Sitzung an die Warteschlange zu senden.  
   

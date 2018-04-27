@@ -1,27 +1,29 @@
 ---
-title: "Exemplarische Vorgehensweisen für WPF"
-ms.custom: 
+title: Exemplarische Vorgehensweisen für WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.  
@@ -52,7 +54,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht das Hosten eines Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> -Steuerelement in einer WPF-Anwendung.|  
-|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht das Hosten einer [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] -Dateneingabe zusammengesetztes Steuerelement in ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.|  
+|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht das Hosten eines Windows Forms-Dateneingabe zusammengesetzten Steuerelements in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.|  
 |[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Veranschaulicht, wie ein WPF-Dateneingabe zusammengesetztes Steuerelement in Windows Forms-Anwendung hosten.|  
 |[Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Veranschaulicht, wie WPF-Layout-Funktionen zu verwenden, um Windows Forms-Steuerelemente in einer hybridanwendung anzuordnen.|  
 |[Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veranschaulicht, wie die Datenbindung in hybridanwendungen, die Windows Forms und WPF-Steuerelemente enthalten.|  

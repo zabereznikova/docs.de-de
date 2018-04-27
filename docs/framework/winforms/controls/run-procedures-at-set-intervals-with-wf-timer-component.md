@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62cb416b311fd3c2c29f8ffc7c513fa6a9dfd8fe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b25f2ea86e58b7fe644f84412d1923fa761b82
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms
 In einigen Fällen möchten Sie möglicherweise eine Prozedur erstellen, die entweder in bestimmten Zeitintervallen bis zum Ende einer Schleife oder nach Ablauf eines festgelegten Zeitintervalls ausgeführt wird. Die <xref:System.Windows.Forms.Timer>-Komponente ermöglicht eine solche Prozedur.  
@@ -41,7 +43,7 @@ In einigen Fällen möchten Sie möglicherweise eine Prozedur erstellen, die ent
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>So führen Sie eine Prozedur in festgelegten Intervallen mit der Timer-Komponente aus  
   
-1.  Fügen Sie Ihrem Formular einen <xref:System.Windows.Forms.Timer> hinzu. Im folgenden Beispielabschnitt finden Sie eine Abbildung zur entsprechenden programmgesteuerten Vorgehensweise. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] unterstützt auch das Hinzufügen von Komponenten zu einem Formular. Siehe auch [wie: Hinzufügen Steuerelementen ohne Benutzeroberfläche zu Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Fügen Sie Ihrem Formular einen <xref:System.Windows.Forms.Timer> hinzu. Im folgenden Beispielabschnitt finden Sie eine Abbildung zur entsprechenden programmgesteuerten Vorgehensweise. Visual Studio verfügt auch über Unterstützung für das Hinzufügen von Komponenten zu einem Formular. Siehe auch [wie: Hinzufügen Steuerelementen ohne Benutzeroberfläche zu Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
   
 2.  Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft (in Millisekunden) für den Zeitgeber fest. Diese Eigenschaft bestimmt, in welchem Zeitabstand die Prozedur erneut ausgeführt werden soll.  
   

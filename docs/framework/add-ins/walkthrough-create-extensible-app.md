@@ -1,12 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein Add-in zu erstellen, das einfachen Rechnerfunktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen stellt es die grundlegende Funktionalität eines einer Pipeline und wie ein Add-in Dienste für einen Host bereitstellen kann.  
@@ -61,14 +63,14 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für diese exemplarische Vorgehensweise wird Folgendes benötigt:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Erstellen einer Visual Studio-Projektmappe  
- Verwenden Sie eine Projektmappe in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , die Projekte der Pipelinesegmente enthalten.  
+ Verwenden Sie eine Projektmappe in Visual Studio, um die Projekte der Pipelinesegmente enthalten.  
   
 #### <a name="to-create-the-pipeline-solution"></a>Zum Erstellen der Pipeline-Lösung  
   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], erstellen Sie ein neues Projekt mit dem Namen `Calc1Contract`. Basierend auf den **-Klassenbibliothek** Vorlage.  
+1.  Erstellen Sie in Visual Studio ein neues Projekt mit dem Namen `Calc1Contract`. Basierend auf den **-Klassenbibliothek** Vorlage.  
   
 2.  Nennen Sie die Projektmappe `CalculatorV1`.  
   
@@ -334,9 +336,9 @@ In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein A
     |Calc1AddInSideAdapter|MyApp\Pipeline\AddInSideAdapters|  
     |Calc1AddInView|MyApp\Pipeline\AddInViews|  
     |Calc1Contract|MyApp\Pipeline\Contracts|  
-    |Calc1Host|MyApp|  
+    |Calc1Host|"MyApp"|  
     |Calc1HostSideAdapter|MyApp\Pipeline\HostSideAdapters|  
-    |Calc1HVA|MyApp|  
+    |Calc1HVA|"MyApp"|  
   
     > [!NOTE]
     >  Wenn Sie sich entschieden, die Ordnerstruktur für die Pipeline in einem anderen Speicherort als den Anwendungsordner, müssen Sie die Pfade in der Tabelle aufgeführt sind, entsprechend ändern. Finden Sie in den Ausführungen des Pipeline-Directory-Anforderungen in [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  

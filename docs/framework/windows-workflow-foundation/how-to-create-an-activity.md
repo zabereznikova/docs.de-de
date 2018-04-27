@@ -1,26 +1,27 @@
 ---
-title: "Vorgehensweise: Erstellen einer Aktivität"
-ms.custom: 
+title: 'Vorgehensweise: Erstellen einer Aktivität'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Vorgehensweise: Erstellen einer Aktivität
 Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Die Ausführungslogik einer Aktivität kann in verwaltetem Code oder mithilfe anderer Aktivitäten implementiert werden. In diesem Thema wird veranschaulicht, wie zwei Aktivitäten erstellt werden. Die erste Aktivität ist eine einfache Aktivität, die die Ausführungslogik auf der Basis von Code implementiert. Die Implementierung der zweiten Aktivität wird mithilfe anderer Aktivitäten definiert. Diese Aktivitäten werden in den folgenden Schritten des Lernprogramms verwendet.  
@@ -41,10 +42,10 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
     > [!TIP]
     >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.  
   
-5.  Wählen Sie im Knoten **Installiert** die Option **Visual C#**und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus. Sicherstellen, dass **.NET Framework 4.5** ausgewählt ist, der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Version Dropdown-Liste. Wählen Sie **Aktivitätsbibliothek** aus der **Workflow** Liste. Typ `NumberGuessWorkflowActivities` in der **Namen** Feld, und klicken Sie dann auf **OK**.  
+5.  Wählen Sie im Knoten **Installiert** die Option **Visual C#** und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus. Sicherstellen, dass **.NET Framework 4.5** ausgewählt ist, der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Version Dropdown-Liste. Wählen Sie **Aktivitätsbibliothek** aus der **Workflow** Liste. Typ `NumberGuessWorkflowActivities` in der **Namen** Feld, und klicken Sie dann auf **OK**.  
   
     > [!NOTE]
-    >  Je nachdem, welche Programmiersprache als die primäre Sprache in konfigurierten [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], die **Visual C#-** oder **Visual Basic** Knoten möglicherweise nicht unter die **andere Sprachen**Knoten in der **installiert** Knoten.  
+    >  Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .  
   
 6.  Mit der rechten Maustaste **Activity1.xaml** in **Projektmappen-Explorer** , und wählen Sie **löschen**. Klicken Sie zur Bestätigung auf **OK** .  
   

@@ -1,12 +1,13 @@
 ---
-title: "Überlegungen zum Layout für das WindowsFormsHost-Element"
-ms.custom: 
+title: Überlegungen zum Layout für das WindowsFormsHost-Element
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,33 +17,34 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Überlegungen zum Layout für das WindowsFormsHost-Element
 In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element interagiert mit den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] unterstützen von unterschiedlichen – aber ähnlich, Logik für das Ändern der Größe und Positionierung von Elementen in einem Formular oder die Seite. Beim Erstellen einer Hybrid-Benutzeroberfläche (UI), der als Host [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] steuert in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element integriert, die zwei Layout-Schemas.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] unterstützen von unterschiedlichen – aber ähnlich, Logik für das Ändern der Größe und Positionierung von Elementen in einem Formular oder die Seite. Beim Erstellen einer Hybrid-Benutzeroberfläche (UI), der als Host [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] steuert in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element integriert, die zwei Layout-Schemas.  
   
 ## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>Unterschiede im Layout WPF und Windows Forms  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Auflösungsunabhängige Layout verwendet. Alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout Dimensionen mit angegeben *geräteunabhängige Pixel*. Eine geräteunabhängige Pixel ist eine 90-sechsten Zoll, Größe und Auflösung unabhängig erhalten Sie ähnliche Ergebnisse unabhängig davon, ob Sie einen Monitor 72 DPI-Einstellung oder einen Drucker 19.200 DPI-Einstellung gerendert werden.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Auflösungsunabhängige Layout verwendet. Alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout Dimensionen mit angegeben *geräteunabhängige Pixel*. Eine geräteunabhängige Pixel ist eine 90-sechsten Zoll, Größe und Auflösung unabhängig erhalten Sie ähnliche Ergebnisse unabhängig davon, ob Sie einen Monitor 72 DPI-Einstellung oder einen Drucker 19.200 DPI-Einstellung gerendert werden.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basiert auch auf *dynamisches Layout*. Dies bedeutet, dass ein Element der Benutzeroberfläche auf einem Formular oder die Seite entsprechend seinen Inhalt, dessen übergeordneten Layoutcontainer und der verfügbaren Bildschirmgröße anordnet. Dynamisches Layout erleichtert die Lokalisierung mittels automatischer Anpassung der Größe und Position von Elementen der Benutzeroberfläche, wenn die Zeichenfolgen, die sie enthalten Länge ändern.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] basiert auch auf *dynamisches Layout*. Dies bedeutet, dass ein Element der Benutzeroberfläche auf einem Formular oder die Seite entsprechend seinen Inhalt, dessen übergeordneten Layoutcontainer und der verfügbaren Bildschirmgröße anordnet. Dynamisches Layout erleichtert die Lokalisierung mittels automatischer Anpassung der Größe und Position von Elementen der Benutzeroberfläche, wenn die Zeichenfolgen, die sie enthalten Länge ändern.  
   
  Layout in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] geräteabhängige und wahrscheinlicher statisch ist. In der Regel [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente absolut positioniert sind, auf ein Formular mit Dimensionen in Hardware Pixeln angegeben. Allerdings [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] unterstützt einige dynamische Layoutfunktionen aus, wie in der folgenden Tabelle zusammengefasst.  
   
 |Layoutfunktion|Beschreibung|  
 |--------------------|-----------------|  
 |Automatisches Anpassen der Größe|Einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente ändern ihre Größe, damit ihr Inhalt ordnungsgemäß angezeigt. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
-|Verankern und Andocken|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Unterstützung von Steuerelementen positionieren und anpassen, die basierend auf den übergeordneten Container. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Verankern und Andocken|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Unterstützung von Steuerelementen positionieren und anpassen, die basierend auf den übergeordneten Container. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Automatische Skalierung|Containersteuerelemente Größe sich selbst und deren untergeordnete Elemente basierend auf der Auflösung des Ausgabegeräts oder die Größe, der die Standardschriftart des Containers in Pixel. Weitere Informationen finden Sie unter [automatische Skalierung in Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Layoutcontainern|Die <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel> Steuerelemente, Anordnen von deren untergeordneten Steuerelemente und Größe selbst nach deren Inhalt.|  
   
@@ -55,7 +57,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
   
 -   In den meisten Fällen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente keine proportionale Skalierung. Obwohl die gesamten Dimensionen des Steuerelements skaliert werden, können untergeordnete Steuerelemente und Komponenten des Steuerelements unter Umständen nicht wie erwartet skaliert werden. Diese Einschränkung hängt davon ab, in welcher Form das jeweilige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement eine Skalierung unterstützt. Darüber hinaus können Sie nicht skaliert [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente auf eine Größe von 0 Pixeln.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Steuerelemente unterstützen die automatische Skalierung, in dem das Formular automatisch selbst und seine Steuerelemente, die basierend auf der Größe der Schriftart angepasst wird. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche bewirkt eine Änderung des Schriftgrads keine Größenänderung des gesamten Layouts; einzelne Elemente können ihre Größe jedoch ggf. dynamisch anpassen.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente unterstützen die automatische Skalierung, in dem das Formular automatisch selbst und seine Steuerelemente, die basierend auf der Größe der Schriftart angepasst wird. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche bewirkt eine Änderung des Schriftgrads keine Größenänderung des gesamten Layouts; einzelne Elemente können ihre Größe jedoch ggf. dynamisch anpassen.  
   
 ### <a name="z-order"></a>Z-Reihenfolge  
  In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche können Sie die Z-Reihenfolge der Elemente ändern, um ihr Verhalten bei Überlappung zu steuern. Ein gehostetes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement wird in einem separaten HWND gezeichnet, befindet sich also immer über [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen.  
@@ -74,13 +76,13 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
   
  In allen anderen Fällen erfordern die Skalierung des Koordinatensystems. Das gehostete Steuerelement Größe nicht geändert werden. Stattdessen die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element versucht wird, um das gehostete Steuerelement und alle untergeordneten Steuerelemente skaliert werden. Da [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] vollständig unterstützt keine Skalierung, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element skaliert, um den Grad von bestimmten Steuerelementen unterstützt.  
   
- Überschreiben Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> Methode zum Bereitstellen von benutzerdefinierten Skalierungsverhalten für das gehostete [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Steuerelement.  
+ Überschreiben Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> Methode, um benutzerdefinierte Skalierungsverhalten für das gehostete Windows Forms-Steuerelement bereitzustellen.  
   
  Zusätzlich zum horizontalen, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element behandelt Rundung und Überlauf-Fälle an, wie in der folgenden Tabelle beschrieben.  
   
 |Konvertierungsproblem|Beschreibung|  
 |----------------------|-----------------|  
-|Runden|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]geräteunabhängige Pixel-Dimensionen werden als angegeben `double`, und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Hardware-Pixel-Dimensionen werden als angegeben `int`. In Fällen, in denen `double`-Basis Dimensionen werden in konvertiert `int`-Dimensionen basierend die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element verwendet standardmäßige Rundung, damit Bruchwerte kleiner als 0,5 auf 0 abgerundet werden.|  
+|Runden|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geräteunabhängige Pixel-Dimensionen werden als angegeben `double`, und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Hardware-Pixel-Dimensionen werden als angegeben `int`. In Fällen, in denen `double`-Basis Dimensionen werden in konvertiert `int`-Dimensionen basierend die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element verwendet standardmäßige Rundung, damit Bruchwerte kleiner als 0,5 auf 0 abgerundet werden.|  
 |Überlauf|Wenn die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element konvertiert aus `double` -Werte in `int` Werte, die einen Überlauf ist möglich. Werte, die größer sind als <xref:System.Int32.MaxValue> festgelegt <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Layout-bezogene Eigenschaften  
@@ -90,7 +92,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
  Änderungen am Layout im gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement an weitergegeben werden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout Updates auslösen. Die <xref:System.Windows.UIElement.InvalidateMeasure%2A> Methode <xref:System.Windows.Forms.Integration.WindowsFormsHost> wird sichergestellt, dass Änderungen am Layout im gehosteten Steuerelement dazu führen, dass die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutmodul ausgeführt.  
   
 ### <a name="continuously-sized-windows-forms-controls"></a>Fortlaufend angepasst Windows Forms-Steuerelementen  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Steuerelemente, die kontinuierliche Skalierung vollständig unterstützen, interagieren mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element verwendet die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> und <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Methoden wie gewohnt auf die geringere Abbildgröße und Anordnen der gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente, die kontinuierliche Skalierung vollständig unterstützen, interagieren mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element verwendet die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> und <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Methoden wie gewohnt auf die geringere Abbildgröße und Anordnen der gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.  
   
 ### <a name="sizing-algorithm"></a>Sizing-Algorithmus  
  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element verwendet das folgende Verfahren, um die Größe des gehosteten Steuerelements:  

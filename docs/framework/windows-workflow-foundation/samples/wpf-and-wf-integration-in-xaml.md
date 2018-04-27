@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>WPF- und WF-Integration in XAML
-In diesem Beispiel wird veranschaulicht, wie eine Anwendung zu erstellen, verwendet der Windows Presentation Foundation (WPF) und [!INCLUDE[wf](../../../../includes/wf-md.md)] Funktionen in einem einzigen XAML-Dokument. Hierfür wird in dem Beispiel [!INCLUDE[wf](../../../../includes/wf-md.md)] und XAML-Erweiterbarkeit verwendet.  
+Dieses Beispiel veranschaulicht, wie eine Anwendung erstellen, die Funktionen von Windows Presentation Foundation (WPF) und Windows Workflow Foundation (WF) in einem einzigen XAML-Dokument verwendet. Um dies zu erreichen, verwendet das Beispiel für Windows Workflow Foundation (WF) und die Verwendung von XAML-Erweiterbarkeit.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Die Datei ShowWindow.xaml führt eine Deserialisierung in eine <xref:System.Activities.Statements.Sequence>-Aktivität mit zwei Zeichenfolgenvariablen durch, die von den Aktivitäten der Sequenz bearbeitet werden: `ShowWindow` und `WriteLine`. Die <xref:System.Activities.Statements.WriteLine>-Aktivität gibt im Konsolenfenster den Ausdruck aus, den sie der <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaft zuweist. Die `ShowWindow`-Aktivität zeigt ein [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]-Fenster als Teil seiner Ausführungslogik an. Der <xref:System.Activities.ActivityContext.DataContext%2A> des Fensters schließt die in der Sequenz deklarierten Variablen ein. Die Steuerelemente des Fensters, die in der `ShowWindow`-Aktivität deklariert wurden, bearbeiten diese Variablen mithilfe der Datenbindung. Das Fenster enthält außerdem ein Schaltflächensteuerelement. Das `Click`-Ereignis für die Schaltfläche wird durch einen <xref:System.Activities.ActivityDelegate> behandelt, der als `MarkupExtension` bezeichnet wird und eine `CloseWindow`-Aktivität enthält. `MarkUpExtension` ruft die enthaltene Aktivität auf, die als Kontext alle durch `x:Name` gekennzeichneten Objekte sowie <xref:System.Activities.ActivityContext.DataContext%2A> des enthaltenden Fensters bereitstellt. Das `CloseWindow.InArgument<Window>` kann daher mit einem Ausdruck gebunden werden, der einen Verweis auf den Namen des Fensters enthält.  

@@ -1,24 +1,26 @@
 ---
-title: "Flüchtige Kommunikation unter Verwendung von Warteschlangen"
-ms.custom: 
+title: Flüchtige Kommunikation unter Verwendung von Warteschlangen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="volatile-queued-communication"></a>Flüchtige Kommunikation unter Verwendung von Warteschlangen
 In diesem Beispiel wird veranschaulicht, wie eine flüchtige Kommunikation unter Verwendung von Warteschlangen über Message Queuing (MSMQ)-Transport durchgeführt wird. In diesem Beispiel wird <xref:System.ServiceModel.NetMsmqBinding> verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -36,19 +38,19 @@ In diesem Beispiel wird veranschaulicht, wie eine flüchtige Kommunikation unter
 >  Sie können keine flüchtigen Nachrichten ohne Zusicherungen innerhalb des Bereichs einer Transaktion mit MSMQ senden. Sie müssen außerdem eine nicht transaktionale Warteschlange erstellen, um flüchtige Nachrichten zu senden.  
   
  Bei dem Dienstvertrag in diesem Beispiel handelt es sich um `IStockTicker`. Hier werden unidirektionale Dienste definiert, die für die Verwendung mit Warteschlangen am besten geeignet sind.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
-  
+```
+
  Der Dienstvorgang zeigt das Aktientickersymbol und den Preis an, wie im folgenden Beispielcode dargestellt:  
   
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -60,8 +62,8 @@ public class StockTickerService : IStockTicker
 ```  
   
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy für den Dienst zu generieren.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,8 +90,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt system.serviceModel der Konfigurationsdatei definiert und gibt die `netMsmqBinding`-Bindung an.  
   
 > [!NOTE]
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -129,8 +131,8 @@ public static void Main()
 ```  
   
  Da im Beispiel Nachrichten in der Warteschlange mithilfe einer nicht transaktionalen Warteschlange gesendet werden, können keine transaktiven Nachrichten an die Warteschlagen gesendet werden.  
-  
-```  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,8 +147,8 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.  
   
 ```  

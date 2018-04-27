@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter"
-ms.custom: 
+title: Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  Benutzeroberflächenautomatisierungs-Anbieter werden in zwei Kategorien unterteilt: clientseitige und serverseitige Anbieter.  
   
 ### <a name="client-side-providers"></a>Clientseitige Anbieter  
- Clientseitige Anbieter werden von Benutzeroberflächenautomatisierungs-Clients für die Kommunikation mit einer Anwendung implementiert, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht oder nicht vollständig unterstützt. Clientseitige Anbieter kommunizieren mit dem Server in der Regel durch Senden und Empfangen von [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] -Nachrichten über Prozessgrenzen hinweg.  
+ Clientseitige Anbieter werden von Benutzeroberflächenautomatisierungs-Clients für die Kommunikation mit einer Anwendung implementiert, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht oder nicht vollständig unterstützt. Clientseitige Anbieter kommunizieren in der Regel mit dem Server über Prozessgrenzen hinweg durch das Senden und Empfangen von Nachrichten von Windows.  
   
- Da Benutzeroberflächenautomatisierungs-Anbieter für Steuerelemente in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]-, [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]- oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Anwendungen im Rahmen des Betriebssystems bereitgestellt werden und Clientanwendungen selten eigene Anbieter implementieren müssen, werden sie in dieser Übersicht nicht weiter behandelt.  
+ Da Benutzeroberflächenautomatisierungs-Anbietern für Steuerelemente in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Anwendungen als Teil des Betriebssystems bereitgestellt werden und Clientanwendungen selten eigene Anbieter implementieren müssen in dieser Übersicht nicht behandelt Weitere an.  
   
 ### <a name="server-side-providers"></a>Serverseitiger Anbieter  
- Serverseitige Anbieter werden von benutzerdefinierten Steuerelementen oder durch Anwendungen implementiert, die auf einem anderen Benutzeroberflächenframework als [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]basieren.  
+ Serverseitige Anbieter werden implementiert, indem benutzerdefinierte Steuerelemente oder Anwendungen, die nicht auf ein Benutzeroberflächen-Framework basieren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Serverseitige Anbieter kommunizieren mit Clientanwendungen über Prozessgrenzen hinweg, indem sie Schnittstellen für das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kernsystem verfügbar machen, das wiederum Anforderungen von Clients bereitstellt.  
   

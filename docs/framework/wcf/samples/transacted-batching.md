@@ -1,24 +1,26 @@
 ---
 title: 'Transaktive Batchverarbeitung:'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Transaktive Batchverarbeitung:
 In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mithilfe von Message Queuing (MSMQ) veranschaulicht. Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion für durchgeführte Lesevorgänge in Kommunikation unter Verwendung von Warteschlangen.  
@@ -142,8 +144,8 @@ In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mith
  Das Dienstverhalten definiert ein Vorgangsverhalten, wobei `TransactionScopeRequired` auf `true` gesetzt ist. Auf diese Weise wird sichergestellt, dass alle Ressourcen-Manager, auf die diese Methode zugreift, denselben Geltungsbereich einer Transaktion verwenden, der auch zum Abrufen der Nachricht aus der Warteschlange verwendet wurde. In diesem Beispiel wird eine einfache Datenbank zum Speichern der in der Nachricht enthaltenen Bestellinformation verwendet werden. Des Weiteren wird durch den Transaktionsbereich gewährleistet, dass die Nachricht an die Warteschlange zurückgegeben wird, wenn die Methode eine Ausnahme auslöst. Ohne Festlegung dieses Vorgangsverhaltens erstellt ein in der Warteschlange stehender Kanal eine Transaktion, um die Nachricht aus der Warteschlange zu lesen, und führt automatisch vor der Verteilung der Nachricht dafür einen Commit aus, sodass die Nachricht verloren geht, falls der Vorgang fehlschlägt. Das häufigste Szenario betrifft Dienstvorgänge, die sich in der Transaktion eintragen, die zum Lesen der Nachricht aus der Warteschlange dient, wie im folgenden Code veranschaulicht.  
   
  Beachten Sie, dass `ReleaseServiceInstanceOnTransactionComplete` auf `false` gesetzt ist. Dies ist eine wichtige Anforderung für die Batchverarbeitung. Die Eigenschaft `ReleaseServiceInstanceOnTransactionComplete` für `ServiceBehaviorAttribute`gibt an, was nach Abschluss der Transaktion mit der Dienstinstanz geschehen soll. Standardmäßig wird die Dienstinstanz nach Abschluss der Transaktion freigegeben. Der wichtigste Aspekt bei der Batchverarbeitung ist die Verwendung einer einzelnen Transaktion zum Lesen und Verteilen einer großen Anazahl an Nachrichten in der Warteschlange. Die Freigabe des Diensts führt also zum Vorzeitigen Abschluss der Transaktion, wodurch der ganze Nutzen der Stapelverarbeitung hinfällig wird. Wenn diese Eigenschaft auf `true` gesetzt und transaktive Batchverarbeitung zum Endpunkt hinzugefügt wird, löst das Batchverarbeitungsverhalten eine Ausnahme aus.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  Die `Orders`-Klasse kapselt die Verarbeitung des Auftrags. Im Beispiel aktualisiert sie die Datenbank mit Bestellinformationen.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  Das Batchverarbeitungsverhalten und seine Konfiguration werden in der Dienstanwendungskonfiguration angegeben.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  Die Auswahl der Batchgröße hängt von Ihrer Anwendung ab. Wenn die Batchgröße zu klein ist, wird möglicherweise nicht die gewünschte Leistung erreicht. Andererseits kann auch eine zu große Batchgröße zu Leistungseinbußen führen. Beispielsweise könnte die Transaktion länger erhalten bleiben und die Datenbank sperren, oder die Transaktion könnte blockiert werden, was dazu führen könnte, dass der Batch zurückgesetzt wird und die Arbeit wiederholt werden muss.  
   
  Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden. Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt. Sie können eine rollende Ausgabe sehen, während Nachrichten in einen Batch eingelesen und verarbeitet werden.  
   
 ```  

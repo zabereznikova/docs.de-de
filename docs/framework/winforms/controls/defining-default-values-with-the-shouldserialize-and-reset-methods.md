@@ -1,12 +1,13 @@
 ---
 title: Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
-`ShouldSerialize`und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Eine der folgenden Mechanismen können im Designer die folgenden Funktionen:  
+`ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Eine der folgenden Mechanismen können im Designer die folgenden Funktionen:  
   
 -   Die Eigenschaft enthält visuellen Hinweis im Eigenschaftenbrowser an, wenn sie ihren Standardwert geändert wurde.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Verfügt eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert in der Deklaration der `Reset` -Option für diese Eigenschaft, klicken Sie im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster von Windows Forms-Designer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Verfügt eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert in der Deklaration der `Reset` -Option für diese Eigenschaft, klicken Sie im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster von Windows Forms-Designer in Visual Studio.  
   
- Designer, z. B. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] verwenden die `ShouldSerialize` *PropertyName* Methode zum Überprüfen, ob eine Eigenschaft ihren Standardwert geändert hat und Schreiben von Code in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere codegenerierung. Zum Beispiel:  
+ Designer wie Visual Studio verwendet die `ShouldSerialize` *PropertyName* Methode zum Überprüfen, ob eine Eigenschaft ihren Standardwert geändert hat und Schreiben von Code in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere Code die Generierung. Zum Beispiel:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

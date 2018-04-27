@@ -1,27 +1,29 @@
 ---
 title: Verwenden von WPF-Steuerelementen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8225447e6c0daa7894d622616131febb6ac82b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-wpf-controls"></a>Verwenden von WPF-Steuerelementen
 Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Forms-basierten Anwendungen verwenden. Obwohl diese zwei unterschiedliche Ansicht Technologien sind, zusammenarbeiten sie reibungslos.  
@@ -52,7 +54,7 @@ Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Form
  [Exemplarische Vorgehensweise: Formatieren von WPF-Inhalt](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
  Zeigt den Workflow zwischen Windows Forms-Designer und der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] zum Anwenden von Stilen auf Steuerelemente für Windows Presentation Foundation.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  Beschreibt eine Klasse, die zum Hosten von Windows Presentation Foundation-Steuerelementen in Windows Forms-basierten Anwendungen verwendet werden können.  
   
@@ -64,4 +66,4 @@ Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Form
  Beschreibt die Interoperation zwischen der Windows Presentation Foundation und Windows Forms-Technologien.  
   
  [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- Beschreibt das Entwerfen von Windows Presentation Foundation-Steuerelementen in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].
+ Beschreibt das Entwerfen von Windows Presentation Foundation-Steuerelemente in Visual Studio.

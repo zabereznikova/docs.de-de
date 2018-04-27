@@ -1,26 +1,27 @@
 ---
 title: Services1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f53c3ee686c4117a621eac43ede1035a83a08e46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="services"></a>Dienste
-Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../../../includes/wf-md.md)]-Dienstfunktionalität veranschaulicht wird.  
+Dieser Abschnitt enthält Links zu Beispielen, die Windows Workflow Foundation (WF)-Service-Funktionen zu veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Absolute Verzögerung](../../../../docs/framework/windows-workflow-foundation/samples/absolute-delay.md)  
@@ -42,7 +43,7 @@ Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../
  Veranschaulicht, wie verschiedene Benutzertypen in Messagingaktivitäten (WF-Dienste) verwendet werden können. Der Beispieldienst ist ein einfacher Dienst zur Kostengenehmigung und macht drei Vorgänge verfügbar.  
   
  [Permanenter Duplex](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- Veranschaulicht, wie permanenter Duplexnachrichtenaustausch mithilfe der Messagingaktivitäten in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird.  
+ Veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF).  
   
  [Inhaltsbasierte Korrelation](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  Veranschaulicht, wie die Messagingaktivitäten (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> und <xref:System.ServiceModel.Activities.ReceiveReply>) mit mehreren inhaltsbasierten Korrelationen und einer inhaltsbasierter Korrelation verwendet werden können.  
@@ -54,7 +55,7 @@ Dieser Abschnitt enthält Links zu Beispielen, in denen die [!INCLUDE[wf](../../
  Veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.  
   
  [Gepuffertes Empfangen](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
- Veranschaulicht, wie die gepufferte Empfangsfunktion in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird.  
+ Veranschaulicht das Einrichten und konfigurieren die gepufferte Empfangsfunktion in Windows Workflow Foundation (WF).  
   
  [XAML-Aktivierung](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
  Veranschaulicht, wie ein deklarativer Workflow in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] gehostet wird.  

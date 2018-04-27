@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Was&#39;s neu in Windows Workflow Foundation
-Zahlreiche Entwicklungsmuster früherer Versionen wurden für [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] überholt. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zahlreiche Entwicklungsmuster ändert sich von früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Workflowaktivitätsmodell  
  Statt der <xref:System.Workflow.Activities.SequentialWorkflowActivity>-Klasse oder der <xref:System.Workflow.Activities.StateMachineWorkflowActivity>-Klasse ist die Aktivität jetzt die Basiseinheit beim Erstellen eines Workflows. Die <xref:System.Activities.Activity>-Klasse stellt die Basisabstraktion des Workflowverhaltens bereit. Aktivitätsautoren können dann <xref:System.Activities.CodeActivity> für eine grundlegende benutzerdefinierte Aktivitätsfunktionalität oder <xref:System.Activities.NativeActivity> für eine benutzerdefinierte Aktivitätsfunktionalität, die alle zur Laufzeit verfügbaren Funktionen verwendet, implementieren. <xref:System.Activities.Activity> ist eine Klasse, die von aktivitätsautoren verwendet, um das neue Verhalten deklarativ im Hinblick auf andere express <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, oder <xref:System.Activities.DynamicActivity> -Objekte, ab, ob sie benutzerdefinierte entwickelt oder im enthalten sind die [integrierten Aktivität Bibliothek](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  

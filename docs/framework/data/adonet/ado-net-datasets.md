@@ -1,29 +1,31 @@
 ---
 title: ADO.NET-DataSets
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET-DataSets
 Das <xref:System.Data.DataSet>-Objekt spielt für die Unterstützung getrennter, verteilter Datenszenarien mit [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] eine zentrale Rolle. Die **DataSet** ist eine speicherresidente Darstellung von Daten, auf denen ein konsistentes relationales Programmiermodell unabhängig von der Datenquelle. Es kann mit mehreren und unterschiedlichen Datenquellen, mit XML-Daten oder zum Verwalten lokaler Anwendungsdaten verwendet werden. Die **DataSet** stellt einen vollständigen Satz von Daten, einschließlich verknüpfter Tabellen, Einschränkungen und Beziehungen zwischen Tabellen dar. Die folgende Abbildung zeigt die **DataSet** -Objektmodell.  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![Grafik zu ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet-Objektmodell  
   
  Die Methoden und Objekte in einem **DataSet** sind mit denen des relationalen Datenbankmodells konsistent.  
@@ -52,7 +54,7 @@ DataSet-Objektmodell
  Die **DataSet**, **DataTable**, und **DataColumn** alle verfügen über eine **"ExtendedProperties"** Eigenschaft. **Die "ExtendedProperties"** ist ein **PropertyCollection** platzieren können Sie benutzerdefinierte Informationen, z. B. die SELECT-Anweisung, die zum Erstellen des Resultsets verwendet wurde, oder die Uhrzeit, die Daten generiert wurde. Die **"ExtendedProperties"** Auflistung wird beibehalten, mit den Schemainformationen für die **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bietet LINQ-Funktionen für in einem Dataset gespeicherte nicht verbundene Daten. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]verwendet Standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Syntax und bietet syntaxüberprüfung der Zeitpunkt der Kompilierung, statische Typisierung und IntelliSense-Unterstützung, wenn Sie die [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bietet LINQ-Funktionen für in einem Dataset gespeicherte nicht verbundene Daten. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwendet Standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Syntax und syntaxüberprüfung der Zeitpunkt der Kompilierung, statische Typisierung und IntelliSense-Unterstützung bietet, wenn Sie Visual Studio-IDE.  
   
  Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

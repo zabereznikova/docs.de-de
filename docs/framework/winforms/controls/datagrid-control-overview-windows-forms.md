@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über das DataGrid-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das DataGrid-Steuerelement (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -137,7 +137,7 @@ In der folgenden Abbildung sind die im DataGrid-Steuerelement enthaltenen Objekt
   
  Spaltenformate werden mit Spalten in einem DataSet auf die gleiche Weise verknüpft wie Tabellenformate mit Datentabellen. So wie Sie für jede Tabelle jeweils nur ein Tabellenformat definieren können, kann auch in einem bestimmten Tabellenformat für jede Spalte nur ein Spaltenformat definiert werden. Diese Beziehung wird in der <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>-Eigenschaft der Spalte definiert.  
   
- Wenn Sie ein Tabellenformat ohne Spaltenformate erstellen, fügt [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Standardspaltenformate hinzu, wenn das Formular und das Raster zur Laufzeit erstellt werden. Wenn Sie jedoch ein Tabellenformat erstellen und diesem Spaltenformate hinzufügen, werden von [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] keine Spaltenformate erstellt. Außerdem müssen Sie Spaltenformate definieren und diesen den Zuordnungsnamen zuweisen, damit die gewünschten Spalten im Raster angezeigt werden.  
+ Wenn Sie ein Tabellenformat ohne Spaltenformate darauf erstellt haben, wird Visual Studio Standardspaltenformate hinzufügen, wenn das Formular und das Raster zur Laufzeit erstellt werden. Jedoch, wenn Sie ein Tabellenformat erstellt und die entsprechenden Spaltenformate hinzugefügt haben, wird Visual Studio nicht Spaltenformate erstellen. Außerdem müssen Sie Spaltenformate definieren und diesen den Zuordnungsnamen zuweisen, damit die gewünschten Spalten im Raster angezeigt werden.  
   
  Da Sie die im Raster enthaltenen Spalten angeben, indem Sie diesen ein Spaltenformat zuweisen, den Spalten jedoch kein Spaltenformat zugewiesen wurde, können Sie im DataSet Datenspalten einfügen, die nicht im Raster angezeigt werden. Da die Datenspalte jedoch im DataSet enthalten ist, können Sie die nicht angezeigten Daten programmgesteuert bearbeiten.  
   

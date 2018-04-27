@@ -1,24 +1,26 @@
 ---
 title: Standardbindung mit Transportsicherheit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2a65adbb908aded9f4124f473f0b298d573a521f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>Standardbindung mit Transportsicherheit
 Im folgenden Beispiel wird die Verwendung der SSL-Transportsicherheit mit der Standardbindung veranschaulicht. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.  
@@ -65,15 +67,14 @@ Im folgenden Beispiel wird die Verwendung der SSL-Transportsicherheit mit der St
 </system.serviceModel>  
 ```  
   
- Da das in diesem Beispiel verwendete Zertifikat ein mit "Makecert.exe" erstelltes Testzertifikat ist, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, in Ihrem Browser auf eine HTTPS:-Adresse wie https://localhost/servicemodelsamples/service.svc zuzugreifen. Damit der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client mit einem Testzertifikat arbeiten kann, wurde auf dem Client zusätzlicher Code hinzugefügt, um die Sicherheitswarnung zu unterdrücken. Dieser Code und die begleitende Klasse sind nicht notwendig, wenn echte Zertifikate verwendet werden.  
-  
-```  
+ Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine HTTPS-Zugriff: Adresse in Ihrem Browser wie z. B. https://localhost/servicemodelsamples/service.svc. Damit der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client mit einem Testzertifikat arbeiten kann, wurde auf dem Client zusätzlicher Code hinzugefügt, um die Sicherheitswarnung zu unterdrücken. Dieser Code und die begleitende Klasse sind nicht notwendig, wenn echte Zertifikate verwendet werden.  
+
+```csharp
 // This code is required only for test certificates such as those   
 // created by Makecert.exe.  
-PermissiveCertificatePolicy.Enact(  
-                           "CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
+```
+
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ```  

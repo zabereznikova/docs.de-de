@@ -16,11 +16,11 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce97bcb2dd0de774c1a82ae75ef5b83c02467edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Beim Schreiben in die Ausgabedatei kann nicht &#39; &lt;Filename&gt;&#39;: &lt;Fehler&gt;
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
@@ -41,7 +41,7 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 1.  Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2.  Wenn der Fehler weiterhin besteht, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erneut.  
+2.  Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio neu.  
   
 3.  Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
   

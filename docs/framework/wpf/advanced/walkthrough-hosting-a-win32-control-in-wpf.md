@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Code möglicherweise effektiver mindestens wiederverwenden Teil des Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendung, anstatt es vollständig neu zu schreiben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster auf eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite.  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementieren der Kommunikation zwischen dem Steuerelement und der Seite  
- Bearbeiten Sie das Steuerelement, durch Senden [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] Nachrichten. Das Steuerelement benachrichtigt Sie, wenn der Benutzer durch Senden von Benachrichtigungen an das Hostfenster mit ihm interagiert. Die [hosten ein Win32-ListBox-Steuerelement in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159998) Beispiel enthält eine Benutzeroberfläche, mehrere Beispiele für die Funktionsweise bereitstellt:  
+ Bearbeiten Sie das Steuerelement durch Windows-Meldungen senden. Das Steuerelement benachrichtigt Sie, wenn der Benutzer durch Senden von Benachrichtigungen an das Hostfenster mit ihm interagiert. Die [hosten ein Win32-ListBox-Steuerelement in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159998) Beispiel enthält eine Benutzeroberfläche, mehrere Beispiele für die Funktionsweise bereitstellt:  
   
 -   Der Liste ein Element hinzufügen.  
   

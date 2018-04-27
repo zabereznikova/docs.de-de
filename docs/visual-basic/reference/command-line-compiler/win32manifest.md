@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
@@ -48,7 +48,7 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
   
 2.  Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erstellt eine Standard MANIFEST-Datei und speichert sie zusammen mit der ausführbaren Datei in den Debug- oder Releaseverzeichnissen. Sie können anzeigen oder bearbeiten Sie die Datei "Standard" app.manifest "durch Klicken auf **UAC-Einstellungen anzeigen** auf die **Anwendung** Registerkarte im Projekt-Designer. Weitere Informationen finden Sie unter [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio erstellt eine Standardmanifestdatei und speichert ihn in den Verzeichnissen Debug- und zusammen mit der ausführbaren Datei. Sie können anzeigen oder bearbeiten Sie die Datei "Standard" app.manifest "durch Klicken auf **UAC-Einstellungen anzeigen** auf die **Anwendung** Registerkarte im Projekt-Designer. Weitere Informationen finden Sie unter [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Sie können das Anwendungsmanifest als benutzerdefinierte Postbuildschritt oder als Teil einer Win32-Ressourcendatei bereitstellen, mit der `-nowin32manifest` Option. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dies verhindert, dass der Compiler erstellt und eine Standard-Manifest in die PE-Datei einbetten.  
   

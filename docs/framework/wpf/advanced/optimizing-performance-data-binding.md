@@ -1,27 +1,29 @@
 ---
 title: 'Optimieren der Leistung: Datenbindung'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimieren der Leistung: Datenbindung
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden.  
@@ -34,7 +36,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ## <a name="how-data-binding-references-are-resolved"></a>So werden Datenbindungsverweise aufgelöst  
  Vor der Erläuterung von Problemen bei der Leistung der Datenbindung kann es sinnvoll sein, zu erfahren, wie das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindungsmodul Objektverweise für die Bindung auflöst.  
   
- Die Quelle eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung kann jedes [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekt sein. Sie können an Eigenschaften, Untereigenschaften oder Indexer eines [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekts binden. Die Bindungsverweise werden aufgelöst, indem Sie entweder [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] Reflektion oder ein <xref:System.ComponentModel.ICustomTypeDescriptor>. Dies sind drei Methoden zu Auflösung von Objektverweisen für die Bindung.  
+ Die Quelle eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung kann jedes [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekt sein. Sie können an Eigenschaften, Untereigenschaften oder Indexer eines [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekts binden. Die Bindungsverweise werden aufgelöst, mithilfe einer Microsoft .NET Framework-Reflektions- oder eine <xref:System.ComponentModel.ICustomTypeDescriptor>. Dies sind drei Methoden zu Auflösung von Objektverweisen für die Bindung.  
   
  In der ersten Methode verwenden Sie die Reflektion. In diesem Fall die <xref:System.Reflection.PropertyInfo> Objekt wird verwendet, um die Attribute der Eigenschaft zu ermitteln und ermöglicht den Zugriff auf die Eigenschaftenmetadaten. Bei Verwendung der <xref:System.ComponentModel.ICustomTypeDescriptor> -Schnittstelle, das Datenbindungsmodul mithilfe dieser Schnittstelle auf die Eigenschaftswerte zugreifen. Die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle ist besonders in Fällen, in dem das Objekt keinen statischen Satz von Eigenschaften.  
   
@@ -51,7 +53,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 |**Bindung einer Text-Eigenschaft an einen TextBlock**|**Bindungszeit (in ms)**|**Renderingzeit, einschließlich Bindung (in ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |An die Eigenschaft eines [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekts|115|314|  
-|Um eine Eigenschaft einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Objekt implementiert<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Um eine Eigenschaft einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Objekt implementiert <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Um eine <xref:System.Windows.DependencyProperty> von einem <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 |**Datenbindung der ItemsSource**|**Zeit für das Aktualisieren eines Elements (in ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Um eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> Objekt|1656|  
-|Um ein<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Um ein <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Bindung von IList an ItemsControl und nicht an IEnumerable  

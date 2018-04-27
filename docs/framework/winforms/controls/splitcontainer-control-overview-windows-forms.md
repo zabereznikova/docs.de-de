@@ -1,36 +1,36 @@
 ---
-title: "Übersicht über das SplitContainer-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das SplitContainer-Steuerelement (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Übersicht über das SplitContainer-Steuerelement (Windows Forms)
 Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind. Wenn sich der Mauszeiger über der Leiste befindet, ändert sich seine Form und zeigt an, dass die Leiste verschiebbar ist.  
   
 > [!IMPORTANT]
->  In der **Toolbox**, <xref:System.Windows.Forms.SplitContainer> steuern ersetzt die <xref:System.Windows.Forms.Splitter> Steuerelement, das in der vorherigen Version von war [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement ist dem <xref:System.Windows.Forms.Splitter>-Steuerelement vorzuziehen. Die <xref:System.Windows.Forms.Splitter> Klasse dient weiterhin in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für Kompatibilität mit vorhandenen Anwendungen, aber wir empfehlen Ihnen die Verwendung stark der <xref:System.Windows.Forms.SplitContainer> Steuerelement für neue Projekte.  
+>  In der **Toolbox**, <xref:System.Windows.Forms.SplitContainer> steuern ersetzt die <xref:System.Windows.Forms.Splitter> Steuerelement, das in der vorherigen Version von Visual Studio enthalten war. Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement ist dem <xref:System.Windows.Forms.Splitter>-Steuerelement vorzuziehen. Die <xref:System.Windows.Forms.Splitter> Klasse dient weiterhin in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für Kompatibilität mit vorhandenen Anwendungen, aber wir empfehlen Ihnen die Verwendung stark der <xref:System.Windows.Forms.SplitContainer> Steuerelement für neue Projekte.  
   
  Mit der <xref:System.Windows.Forms.SplitContainer> -Steuerelement, können Sie komplexe Benutzeroberflächen erstellen; häufig bestimmt die Auswahl in einem Fensterbereich, welche Objekte im anderen Fensterbereich angezeigt werden. Diese Anordnung eignet sich sehr gut für die Anzeige und das Durchsuchen von Informationen. Mit zwei Bereichen können Sie die Informationen in Bereichen aggregieren, und das Balken- oder "Splitter" erleichtert es Benutzern, die Größe der Bereiche ändern.  
   

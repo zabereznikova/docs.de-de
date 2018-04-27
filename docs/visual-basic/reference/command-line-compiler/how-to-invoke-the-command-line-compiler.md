@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)
-Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als MS-DOS, können Sie den Befehlszeilencompiler aufrufen. Wenn Sie über die standardmäßige Windows-Befehlszeile kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie entweder die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] -Eingabeaufforderung ein, oder ändern Sie die PATH-Umgebungsvariable. Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.  
+Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als MS-DOS, können Sie den Befehlszeilencompiler aufrufen. Wenn Sie über die standardmäßige Windows-Befehlszeile kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie die Visual Studio-Eingabeaufforderung verwenden oder ändern die PATH-Umgebungsvariable. Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als
   
 1.  Öffnen Sie den Programmordner Visual Studio-Tools in der Programmgruppe Microsoft Visual Studio.  
   
-2.  Sie können die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Befehlszeile aus, um den Compiler aus einem beliebigen Verzeichnis auf Ihrem Computer zugreifen, wenn Visual Studio installiert ist.  
+2.  Die Visual Studio-Eingabeaufforderung können Sie der Compiler aus einem beliebigen Verzeichnis auf Ihrem Computer zugreifen, wenn Visual Studio installiert ist.  
   
-3.  Aufrufen der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Eingabeaufforderung.  
+3.  Rufen Sie die Visual Studio-Eingabeaufforderung.  
   
 4.  Geben Sie an der Befehlszeile `vbc.exe` *Quelldateiname* und drücken Sie dann die EINGABETASTE.  
   

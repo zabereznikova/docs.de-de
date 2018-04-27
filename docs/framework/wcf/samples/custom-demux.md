@@ -1,24 +1,26 @@
 ---
 title: Benutzerdefinierter Demux
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Benutzerdefinierter Demux
 In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dienste, bei denen <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> besteht keine Einschränkung auf die Verwendung eines einzigen Dienstvorgangs aus, wie in der [Message Queuing Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  
@@ -26,8 +28,8 @@ In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedl
  Der Dienst ist in diesem Beispiel eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt.  
   
  Der Dienstvertrag ist `IOrderProcessor` und definiert einen unidirektionalen Dienst, der für die Verwendung mit Warteschlangen geeignet ist.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  Eine MSMQ-Nachricht besitzt keinen Aktionsheader. Es ist nicht möglich, Vorgangsverträgen unterschiedliche MSMQ-Nachrichten automatisch zuzuordnen. Deshalb kann es nur einen Vorgangsvertrag geben. Um diese Einschränkung zu umgehen, implementiert der Dienst die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>-Methode der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle. Die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>-Methode ermöglicht dem Dienst, einem bestimmten Dienstvorgang einen bestimmten Nachrichtenheader zuzuordnen. In diesem Beispiel wird den Dienstvorgängen der Bezeichnungsheader der Nachricht zugeordnet. Der `Name`-Parameter des Vorgangsvertrags legt fest, welcher Dienstvorgang für eine bestimmte Nachrichtenbezeichnung weitergeleitet werden muss. Wenn der Bezeichnungsheader der Nachricht z. B. "SubmitPurchaseOrder" enthält, wird der "SubmitPurchaseOrder"-Dienstvorgang aufgerufen.  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  Der Dienst muss die <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29>-Methode der <xref:System.ServiceModel.Description.IContractBehavior>-Schnittstelle implementieren, wie im folgenden Beispielcode dargestellt. Diese wendet den benutzerdefinierten `OperationSelector` auf die Dienstframework-Dispatchlaufzeit an.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Eine Nachricht muss den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> des Verteilers durchlaufen, bevor die Vorgangsauswahl erreicht wird. Standardmäßig wird eine Nachricht zurückgewiesen, wenn ihre Aktion auf keinem der vom Dienst implementierten Verträge gefunden werden kann. Um diese Prüfung zu vermeiden, implementieren wir ein <xref:System.ServiceModel.Description.IEndpointBehavior> namens `MatchAllFilterBehavior`, das es allen Nachrichten ermöglicht, den `ContractFilter` zu passieren, indem der <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> folgendermaßen angewendet wird.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  Wenn der Dienst eine Nachricht empfängt, wird der entsprechende Dienstvorgang mithilfe der Informationen im Bezeichnungsheader verteilt. Der Nachrichtentext wird in ein `PurchaseOrder`-Objekt deserialisiert, wie im folgenden Beispielcode dargestellt.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  Der Dienst ist selbst gehostet. Bei der Verwendung von MSMQ muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben.  
   
 > [!NOTE]

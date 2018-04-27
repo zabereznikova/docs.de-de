@@ -1,30 +1,32 @@
 ---
 title: WCF Visual Studio-Vorlagen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] verwenden können, um mühelos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste und entsprechende Anwendungen zu erstellen.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in Visual Studio, beim schnellen Erstellen verwenden können [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste und entsprechende Anwendungen.  
   
 ## <a name="using-the-wcf-templates"></a>Verwenden der WCF-Vorlagen  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Vorlagen aus [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] stellen eine grundlegende Klassenstruktur zur Dienstentwicklung bereit. Diese Vorlagen stellen genau genommen die grundlegenden Definitionen für den Dienstvertrag, den Datenvertrag, die Dienstimplementierung und die Konfiguration bereit. Mit diesen Vorlagen können Sie einen einfachen Dienst mit minimaler Codeinteraktion sowie einen Baustein für komplexere Dienste erstellen.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio-Vorlagen stellen eine grundlegende Klassenstruktur zur Dienstentwicklung bereit. Diese Vorlagen stellen genau genommen die grundlegenden Definitionen für den Dienstvertrag, den Datenvertrag, die Dienstimplementierung und die Konfiguration bereit. Mit diesen Vorlagen können Sie einen einfachen Dienst mit minimaler Codeinteraktion sowie einen Baustein für komplexere Dienste erstellen.  
   
 ### <a name="wcf-service-library-project-template"></a>WCF-Dienstbibliotheksprojektvorlage  
  Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -dienstbibliotheksprojektvorlage steht in das Dialogfeld Neues Projekt unter **Visual C# \WCF** und **Visual Basic\WCF**.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 -   Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei stellt die Grundelemente eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstmodells mit einer sicheren HTTP-Bindung bereit. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ist so konfiguriert, so, dass die Datei "App.config" als der Konfigurationsdatei für das Projekt erkannt wird, wenn er ausgeführt wird, mithilfe der [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
+>  Visual Studio ist so konfiguriert, dass die Datei "App.config" als der Konfigurationsdatei für das Projekt erkannt wird, bei der Ausführung mit der [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
   
 ### <a name="wcf-service-application-template"></a>Vorlage für WCF-Dienstanwendungen  
  Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Vorlage für Dienstanwendungen steht im Dialogfeld "Neues Projekt" unter **Visual C# \WCF** und **Visual Basic\WCF**.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Websitevorlage steht im Dialogfeld "Neues Projekt" unter **Visual C# \website\wcf-Dienst** und **Visual basic\website\wcf Site\WCF Service**. Dadurch werden die gleichen Dateien wie durch die Vorlage für WCF-Dienstanwendungen erstellt, diese werden aber wie für eine ASP.NET-Website organisiert. Die Ordner App_Code und App_Data werden erstellt.  
   
 ### <a name="wcf-service-item-template"></a>WCF-Dienstelementvorlage  
- Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstelementvorlage ist eine benutzerdefinierte Vorlage, über die Sie mühelos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste zu Ihren vorhandenen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Projekten hinzufügen können.  
+ Die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -dienstelementvorlage ist eine benutzerdefinierte Vorlage, die eine schnelle Möglichkeit zum Hinzufügen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienste für Ihre vorhandene Visual Studio-Projekte.  
   
  Diese Vorlage verwenden möchten, wechseln Sie zu der **Projektmappen-Explorer** Bereich mit der rechten Maustaste des Projektnamen, zeigen Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element** zum Starten der **neue hinzufügen Element** (Dialogfeld).  
   
@@ -70,15 +72,15 @@ ms.lasthandoff: 01/19/2018
  Eine Diensthostdatei (service1.svc) wird auch dann erstellt, wenn das vorhandene Projekt ein Webprojekt ist.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF-WF-Dienstprojektvorlage und Elementvorlage.  
- Mit diesen Vorlagen werden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste erstellt, die als Host für einen WF-Workflow fungieren. Auf diesen Workflow können Sie auf die gleiche Weise zugreifen wie auf einen Webdienst. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Typen des Workflows finden Sie unter [Windows Workflow Foundation Lernprogramme](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Erstellen von Workflowprojekten, finden Sie unter [Erstellen von Legacyworkflowprojekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Mit diesen Vorlagen werden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste erstellt, die als Host für einen WF-Workflow fungieren. Auf diesen Workflow können Sie auf die gleiche Weise zugreifen wie auf einen Webdienst. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Typen des Workflows finden Sie unter [Windows Workflow Foundation Lernprogramme](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Erstellen von Workflowprojekten, finden Sie unter [Erstellen von Legacyworkflowprojekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Designer ist reaktionsfreudiger, wenn Workflows des Typs XOML anstelle von Code-basierten Workflows verwendet werden. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
+ Visual Studio-Designer ist anpassbar Typs XOML Workflows verwendet werden stattdessen des Codes gravierende basierende. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Vorlage für WCF/Syndication-Dienstbibliotheken  
  Mit dieser Vorlage können Sie den Feed im RSS- oder ATOM-Format als [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst verfügbar machen. Weitere Informationen finden Sie unter [WCF Syndication](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Ändern der Adresse des Feeds  
- Die Syndication-Vorlage verwendet während der Ausführung Internet Explorer. Wenn Sie mit der rechten Maustaste des Projekts in **Projektmappen-Explorer** in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Option **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte, und Sie sehen die Standardadresse der die Vorlage. Internet Explorer versucht, den Feed unter dieser Adresse zu öffnen.  
+ Die Syndication-Vorlage verwendet während der Ausführung Internet Explorer. Wenn Sie mit der rechten Maustaste des Projekts in **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte, und Sie können die Standardadresse der sehen die Vorlage. Internet Explorer versucht, den Feed unter dieser Adresse zu öffnen.  
   
  Wenn Sie die Adresse des dem Feed ändern, müssen Sie auch ändern, auf die Adresse in der **Debuggen** Registerkarte. Andernfalls versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und dieser Versuch scheitert.  
   

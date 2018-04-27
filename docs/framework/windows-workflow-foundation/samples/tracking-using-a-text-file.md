@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Überwachen mit einer Textdatei
-In diesem Beispiel wird veranschaulicht, wie die Nachverfolgung von [!INCLUDE[wf](../../../../includes/wf-md.md)] erweitert wird, indem ein benutzerdefinierter Nachverfolgungsteilnehmer erstellt wird. Nachverfolgungsteilnehmer sind .NET Framework-Klassen, die Nachverfolgungsdatensätze von der Laufzeit empfangen, wenn sie ausgegeben werden. Sie können einen Nachverfolgungsteilnehmer erstellen, um die Nachverfolgungsereignisse zu dem Ziel zu transportieren, das für das Szenario erforderlich ist. Ein ETW-Nachverfolgungsteilnehmer (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) wird z. B. als Bestandteil von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bereitgestellt. Der Nachverfolgungsteilnehmer in diesem Beispiel schreibt die Datensätze in eine Textdatei im XML-Format.  
+Dieses Beispiel veranschaulicht, wie die Überwachung in Windows Workflow Foundation (WF) zu erweitern, indem ein benutzerdefinierter Nachverfolgungsteilnehmer erstellt. Nachverfolgungsteilnehmer sind .NET Framework-Klassen, die Nachverfolgungsdatensätze von der Laufzeit empfangen, wenn sie ausgegeben werden. Sie können einen Nachverfolgungsteilnehmer erstellen, um die Nachverfolgungsereignisse zu dem Ziel zu transportieren, das für das Szenario erforderlich ist. Ein ETW-Nachverfolgungsteilnehmer (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) wird z. B. als Bestandteil von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bereitgestellt. Der Nachverfolgungsteilnehmer in diesem Beispiel schreibt die Datensätze in eine Textdatei im XML-Format.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Um die Nützlichkeit und die Stabilität des Nachverfolgungsteilnehmers zu optimieren, müssen einige zusätzliche Schritte ausgeführt werden, damit der Nachverfolgungsteilnehmer ordnungsgemäß mit der Laufzeit verbunden wird. In der folgenden Tabelle werden die in diesem Beispiel verwendeten Klassen beschrieben, mit denen ein Nachverfolgungsteilnehmer erstellt wird, der bewährte Methoden einhält.  
@@ -66,7 +66,7 @@ In diesem Beispiel wird veranschaulicht, wie die Nachverfolgung von [!INCLUDE[wf
   
 5.  Der Browser zeigt die **StockPriceService** Seite, die die Wsdl-Adresse des lokalen Diensts enthält. Kopieren Sie diese Adresse.  
   
-     Ein Beispiel für die WSDL-Adresse des lokalen Diensts ist "http://localhost:65193/StockPriceService.xamlx?wsdl".  
+     Ein Beispiel für die Wsdl-Adresse des lokalen Diensts ist http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Wechseln Sie im [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] zum [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Ordner (der Standardinstallationsordner ist "%SystemDrive%\Programme\Microsoft Visual Studio 10.0"). Suchen Sie dann den Unterordner "Common7\IDE\".  
   

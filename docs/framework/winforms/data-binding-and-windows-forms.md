@@ -1,12 +1,13 @@
 ---
-title: "Datenbindung und Windows Forms"
-ms.custom: 
+title: Datenbindung und Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>Datenbindung und Windows Forms
 In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, sondern auch an beinahe alle Strukturen, die Daten enthalten. Sie können an ein Array von Werten binden, die Sie zur Laufzeit berechnen, aus einer Datei lesen oder aus den Werten anderer Steuerelemente ableiten.  
@@ -48,7 +50,7 @@ In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, son
   
 |Typ der Datenbindung|Beschreibung|  
 |--------------------------|-----------------|  
-|Einfache Datenbindung|Die Fähigkeit eines Steuerelements zur Bindung an ein einzelnes Datenelement, z. B. ein Wert in einer Spalte in einer Dataset-Tabelle. Dies ist der Bindungstyp, der für Steuerelemente, wie z. B. ein <xref:System.Windows.Forms.TextBox>-Steuerelement oder ein <xref:System.Windows.Forms.Label>-Steuerelement typisch ist. Diese Steuerelemente zeigen normalerweise nur einen einzelnen Wert an. Tatsächlich kann jede Eigenschaft eines Steuerelements an ein Feld in einer Datenbank gebunden werden. In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] wird dieses Feature umfassend unterstützt.<br /><br /> Weitere Informationen finden Sie unter:<br /><br /> -   [Auf Datenbindung bezogene Schnittstellen](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Vorgehensweise: Navigieren durch Daten in Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Vorgehensweise: erstellen ein einfach gebundenen Steuerelements in einem Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Einfache Datenbindung|Die Fähigkeit eines Steuerelements zur Bindung an ein einzelnes Datenelement, z. B. ein Wert in einer Spalte in einer Dataset-Tabelle. Dies ist der Bindungstyp, der für Steuerelemente, wie z. B. ein <xref:System.Windows.Forms.TextBox>-Steuerelement oder ein <xref:System.Windows.Forms.Label>-Steuerelement typisch ist. Diese Steuerelemente zeigen normalerweise nur einen einzelnen Wert an. Tatsächlich kann jede Eigenschaft eines Steuerelements an ein Feld in einer Datenbank gebunden werden. Es gibt umfassende Unterstützung für dieses Feature in Visual Studio.<br /><br /> Weitere Informationen finden Sie unter:<br /><br /> -   [Auf Datenbindung bezogene Schnittstellen](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Vorgehensweise: Navigieren durch Daten in Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Vorgehensweise: erstellen ein einfach gebundenen Steuerelements in einem Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Komplexe Datenbindung|Die Fähigkeit eines Steuerelements zur Bindung an mehr als ein Datenelement, in der Regel mehr als ein Datensatz in einer Datenbank. Komplexe Bindung wird auch als listenbasierte Bindung bezeichnet. Beispiele für Steuerelemente, die komplexe Bindung unterstützen, sind die Steuerelemente <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> und <xref:System.Windows.Forms.ComboBox>. Ein Beispiel für komplexe Datenbindung, finden Sie unter [Vorgehensweise: Binden eines Windows Forms-Kombinationsfeld oder der ListBox-Steuerelement an Daten](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>BindingSource-Komponente  

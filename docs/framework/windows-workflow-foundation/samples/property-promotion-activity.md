@@ -1,23 +1,24 @@
 ---
-title: "Aktivität zur Höherstufung einer Eigenschaft"
-ms.custom: 
+title: Aktivität zur Höherstufung einer Eigenschaft
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Aktivität zur Höherstufung einer Eigenschaft
 In diesem Beispiel wird eine End-to-End-Projektmappe bereitgestellt, mit der die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Funktion zur Höherstufung direkt in die Workflowerstellung integriert wird. Eine Auflistung von Konfigurationselementen, Workflowaktivitäten und Workflowerweiterungen wird bereitgestellt, um die Verwendung der Funktion zur Höherstufung zu vereinfachen. Außerdem enthält das Beispiel einen einfachen Workflow, mit dem die Verwendung dieser Auflistung veranschaulicht wird.  
@@ -109,7 +110,7 @@ go
  Die Reihenfolge der `promotedValue`-Elemente korreliert mit der Platzierung der höher gestuften Eigenschaften in der `InstancePromotedProperties`-Sicht. `Count` stellt das erste `promotedValue`-Element dar. Es wird daher der `Value1`-Spalte in der `InstancePromotedProperties`-Sicht zugeordnet. `LastIncrementedAt` stellt das zweite `promotedValue`-Element dar. Es wird daher der `Value2`-Spalte in der `InstancePromotedProperties`-Sicht zugeordnet.  
   
 #### <a name="using-the-promotevalue-activity"></a>Verwenden der PromoteValue-Aktivität  
- Untersuchen Sie die Datei CounterService.xamlx im [!INCLUDE[wf2](../../../../includes/wf2-md.md)]-Designer. Beachten Sie, dass die WF-Definition zwei spezielle Aktivitäten enthält: `PromoteValue<DateTime>` und `PromoteValue<Int32>`.  
+ Überprüfen Sie die Datei counterservice.xamlx im Windows Workflow Foundation-Designer. Beachten Sie, dass die WF-Definition zwei spezielle Aktivitäten enthält: `PromoteValue<DateTime>` und `PromoteValue<Int32>`.  
   
  Der `PromoteValue<Int32>`-Member der `Name`-Aktivität wurde als `Count` definiert. Dies entspricht dem ersten `promotedValue`-Element in der Konfiguration. `Value` wurde als `Counter`-Workflowvariable definiert. Wenn der Workflow gespeichert wird, wird die `Counter`-Workflowvariable als höher gestufte Eigenschaft in der `Value1`-Spalte der `InstancePromotedProperties`-Sicht gespeichert.  
   

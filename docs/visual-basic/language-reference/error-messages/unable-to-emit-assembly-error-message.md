@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Assembly kann nicht ausgegeben: &lt;Fehlermeldung&gt;
 Visual Basic-Compiler Ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf eine Assembly mit einem Manifest zu erstellen, mit der Linker in der Ausgabephase der Assemblyerstellung ein Fehler gemeldet.  
@@ -61,7 +61,7 @@ Visual Basic-Compiler Ruft den Assemblylinker (Al.exe, auch bekannt als Alink) a
   
      Verwenden Sie doppelte Anführungszeichen ("), wenn ein Pfad oder eine Datei Leerzeichen enthält.  
   
-6.  Fügen Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen .NET Assembly-Verweis auf die gerade von Ihnen erstellte Datei hinzu.  
+6.  Fügen Sie in Visual Studio einen .NET Framework-Assembly-Verweis auf die Datei, die Sie gerade erstellt haben.  
   
 ## <a name="see-also"></a>Siehe auch  
  

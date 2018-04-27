@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
@@ -48,7 +48,7 @@ Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly e
  Finden Sie unter [erstellen und Verwenden von Assemblys](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) für Weitere Informationen zum Signieren einer Assemblys.  
   
 > [!NOTE]
->  Die `-keyfile` Option ist nicht verfügbar in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwicklungsumgebung; ist verfügbar, nur, wenn Sie über die Befehlszeile kompilieren.  
+>  Die `-keyfile` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert die Quelldatei `Input.vb` und gibt eine Schlüsseldatei an.  
