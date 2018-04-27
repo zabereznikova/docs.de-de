@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Dokumentieren von Code mit XML (Visual Basic)
 Sie können den Code mithilfe von XML zu dokumentieren, in Visual Basic  
@@ -40,7 +40,7 @@ Sie können den Code mithilfe von XML zu dokumentieren, in Visual Basic
   
     -   Das `cref`-Attribut kann an jedes Tag angefügt werden, um einen Verweis auf ein Codeelement bereitzustellen. Der Compiler stellt sicher, dass diese Codeelement vorhanden ist. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus. Der Compiler berücksichtigt auch alle `Imports` Anweisungen bei der Suche für einen Typ beschrieben, die der `cref` Attribut.  
   
-    -   Die \<Zusammenfassung >-Tag wird verwendet, von IntelliSense im [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zusätzliche Informationen über einen Typ oder Member angezeigt.  
+    -   Die \<summary >-Tag wird von IntelliSense in Visual Studio verwendet, um weitere Informationen zu einem Typ oder Member anzuzeigen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen zum Erstellen einer XML-Datei mit dem Dokumentationskommentare finden Sie unter den folgenden Themen:  
