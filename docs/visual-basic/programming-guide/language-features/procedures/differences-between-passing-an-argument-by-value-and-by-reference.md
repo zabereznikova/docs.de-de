@@ -1,11 +1,12 @@
 ---
-title: "Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)"
-ms.custom: 
+title: Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3efd4f41184287cdcd3d499712a857bee997c1a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f733b4fd50612292c0c4ac7195304d99ae2dbea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
 Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jedes Argument einer zugrunde liegenden Programmierelement im aufrufenden Code. Sie können entweder den Wert dieses Elements zugrunde liegenden oder einen Verweis darauf übergeben. Dies bezeichnet man die *Übergabemechanismus*.  
   
 ## <a name="passing-by-value"></a>Übergeben als Wert  
- Sie übergeben ein Argument *nach Wert* durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition ab. Wenn Sie diese Option verwenden Übergabemechanismus [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kopiert den Wert des zugrunde liegenden Programmierelements in eine lokale Variable in der Prozedur. Der Code die Prozedur besitzt keinen Zugriff auf das zugrunde liegende Element nicht im aufrufenden Code.  
+ Sie übergeben ein Argument *nach Wert* durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition ab. Bei Verwendung dieses Übergabemechanismus kopiert Visual Basic den Wert des zugrunde liegenden Programmierelements in eine lokale Variable in der Prozedur. Der Code die Prozedur besitzt keinen Zugriff auf das zugrunde liegende Element nicht im aufrufenden Code.  
   
 ## <a name="passing-by-reference"></a>Übergeben als Verweis  
- Sie übergeben ein Argument *Verweisübergabe* durch Angabe der [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition ab. Wenn Sie diese Option verwenden Übergabemechanismus [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt die Prozedur einen direkten Verweis auf das zugrunde liegende Programmierelement im aufrufenden Code.  
+ Sie übergeben ein Argument *Verweisübergabe* durch Angabe der [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition ab. Bei Verwendung dieses Übergabemechanismus bietet Visual Basic im aufrufenden Code einen direkten Verweis auf das zugrunde liegende Programmierelement an der Prozedur.  
   
 ## <a name="passing-mechanism-and-element-type"></a>Übergabemechanismus und Elementtyp.  
- Die Wahl des Übergabemechanismus entspricht nicht der Klassifizierung des zugrunde liegenden Elementtyps. Übergeben als Wert oder als Verweis bezieht sich auf was [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] an den Prozedurcode bereitstellt. Ein Werttyp oder Verweistyp bezieht sich auf wie ein Programmierelement im Arbeitsspeicher gespeichert werden.  
+ Die Wahl des Übergabemechanismus entspricht nicht der Klassifizierung des zugrunde liegenden Elementtyps. Übergeben als Wert oder als Verweis bezieht sich auf was Visual Basic auf den Prozedurcode bereitstellt. Ein Werttyp oder Verweistyp bezieht sich auf wie ein Programmierelement im Arbeitsspeicher gespeichert werden.  
   
  Allerdings sind die Übergabemechanismus und Elementtyp verknüpft. Der Wert eines Verweistyps ist ein Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher. Dies bedeutet, dass wenn Sie einen Verweistyp als Wert übergeben, die Prozedurcode einen Zeiger auf die zugrunde liegenden Daten des Elements, verfügt, obwohl das zugrunde liegende Element selbst nicht darauf zugreifen kann. Wenn das Element eine Arrayvariable, z. B. Code der Prozedur keinen Zugriff auf die Variable selbst, jedoch Zugriff auf die Array-Elemente.  
   
@@ -42,7 +43,7 @@ Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jede
   
  Für eine änderbare Element wird in der folgenden Tabelle die Interaktion zwischen dem Elementtyp und dem Übergabemechanismus.  
   
-|Elementtyp|Übergeben`ByVal`|Übergeben`ByRef`|  
+|Elementtyp|Übergeben `ByVal`|Übergeben `ByRef`|  
 |------------------|--------------------|--------------------|  
 |Werttyp (enthält nur einen Wert)|Die Prozedur kann nicht die Variable oder eines seiner Member geändert werden.|Die Prozedur kann die Variable und ihre Member ändern.|  
 |Verweistyp (enthält einen Zeiger auf eine Klasse oder Struktur)|Die Prozedur die Variable kann nicht geändert werden, aber es kann Member der Instanz, auf der er zeigt, ändern.|Die Variable und die Member der Instanz, auf der er zeigt, kann die Prozedur ändern.|  

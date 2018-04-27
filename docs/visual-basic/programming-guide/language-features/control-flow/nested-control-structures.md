@@ -1,11 +1,12 @@
 ---
 title: Geschachtelte Steuerungsstrukturen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Geschachtelte Steuerungsstrukturen (Visual Basic)
 Sie fügen die Steueranweisungen in andere Steueranweisungen, z. B. ein `If...Then...Else` -Block in einem `For...Next` Schleife. Eine steuerungsanweisung, die innerhalb einer anderen Steueranweisung platziert gilt als *geschachtelte*.  
   
 ## <a name="nesting-levels"></a>Schachteln von Ebenen  
- Steuerungsstrukturen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können geschachtelt sein, um wie viele Ebenen wie gewünscht. Es ist üblich, geschachtelte Strukturen durch Festlegen von Einzügen für den Text jeder einzelnen besser lesbar zu machen. Die integrierte Entwicklungsumgebung (IDE)-Umgebung-Editor geschieht automatisch.  
+ Steuerungsstrukturen in Visual Basic können geschachtelt werden, um wie viele Ebenen wie gewünscht. Es ist üblich, geschachtelte Strukturen durch Festlegen von Einzügen für den Text jeder einzelnen besser lesbar zu machen. Die integrierte Entwicklungsumgebung (IDE)-Umgebung-Editor geschieht automatisch.  
   
  Im folgenden Beispiel wird die Prozedur `sumRows` addiert die positiven Elemente der einzelnen Zeilen der Matrix.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Grafisches Diagramm einer ungültigen Schachtelung](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Ungültige Schachtelung von für und mit Strukturen  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler erkennt solche überlappenden Steuerungsstrukturen und signalisiert einen Fehler während der Kompilierung.  
+ Visual Basic-Compiler erkennt diese überlappenden Steuerungsstrukturen und signalisiert einen Fehler während der Kompilierung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

@@ -1,10 +1,10 @@
 ---
 title: Namespaces in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces in Visual Basic
 Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können. Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.  
@@ -42,7 +42,7 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
 ## <a name="avoiding-name-collisions"></a>Vermeiden von Namenskonflikten  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Namespaces beheben ein Problem, das manchmal als *Namespacekonflikte*bezeichnet wird. Dabei wird die Entwicklung einer Klassenbibliothek durch die Verwendung ähnlicher Namen in einer anderen Bibliothek beeinträchtigt. Diese Konflikte mit vorhandenen Komponenten werden auch als *Namenskonflikte*bezeichnet.  
   
- Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Sollten Sie jedoch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> -Klasse im gleichen Projekt verwenden, müssen Sie einen vollqualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, meldet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Fehler, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
+ Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Sollten Sie jedoch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> -Klasse im gleichen Projekt verwenden, müssen Sie einen vollqualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, erzeugt Visual Basic eine Fehlermeldung, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  ![Namespace-Hierarchie](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "VaNamespaceHierarchy")  
   
- Standardmäßig enthält jede mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellte ausführbare Datei einen Namespace mit demselben Namen wie für das Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject`definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
+ Standardmäßig enthält jede ausführbare Datei, die Sie mit Visual Basic erstellen Sie einen Namespace mit dem gleichen Namen wie das Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject`definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
   
- Mehrere Assemblys können den gleichen Namen verwenden. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] behandelt sie als einen einzigen Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1`definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
+ Mehrere Assemblys können den gleichen Namen verwenden. Visual Basic behandelt sie als ein einzelner Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1`definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>Vollqualifizierte Namen  
  Vollqualifizierte Namen sind Objektverweise, denen der Name des Namespace vorangestellt ist, in dem das Objekt definiert ist. Sie können in anderen Projekten definierte Objekte verwenden, wenn Sie einen Verweis auf die Klasse erstellen (durch Auswahl von **Verweis hinzufügen** aus dem Menü **Projekt** ) und dann den vollqualifizierten Namen für das Objekt im Code verwenden. Das folgende Codefragment zeigt, wie Sie den vollqualifizierten Namen für ein Objekt aus dem Namespace eines anderen Projekts verwenden:  
@@ -69,7 +69,7 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Wenn Sie versuchen, `Class1` zu verwenden ohne diesen Namen voll zu qualifizieren, meldet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Fehler, dass der Name `Class1` mehrdeutig ist.  
+ Wenn Sie versuchen, verwenden Sie `Class1` ohne sie vollständig qualifizieren, erzeugt Visual Basic einer Fehlermeldung erhalten, den Namen `Class1` ist mehrdeutig.  
   
 ## <a name="namespace-level-statements"></a>Namespaceebenen-Anweisungen  
  Innerhalb eines Namespace können Sie Elemente wie Module, Schnittstellen, Klassen, Delegaten, Enumerationen, Strukturen und andere Namespaces definieren. Sie können keine Elemente wie Eigenschaften, Prozeduren, Variablen und Ereignisse auf Namespaceebene definieren. Diese Elemente müssen in Containern, beispielsweise in Modulen, Strukturen oder Klassen deklariert werden.  

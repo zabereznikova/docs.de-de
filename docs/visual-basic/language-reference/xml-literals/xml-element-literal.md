@@ -2,8 +2,8 @@
 title: XML-Elementliteral (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58b11c61253b199bdeeb2f373eed5f6a358b9e0e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML-Elementliteral (Visual Basic)
 
@@ -111,18 +111,18 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
  Sie können mit der Syntax des XML-Elementliterals erstellen <xref:System.Xml.Linq.XElement> Objekte in Ihrem Code.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen verwenden. Dieser Funktion können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm.  
+>  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen verwenden. Diese Funktion können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in ein Visual Basic-Programm.  
   
  Eingebettete Ausdrücke des Formulars `<%= exp %>` ermöglichen es Ihnen, einem XML-Elementliteral dynamische Informationen hinzugefügt. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert das XML-Elementliteral in Aufrufe an die <xref:System.Xml.Linq.XElement.%23ctor%2A> Konstruktor und, falls erforderlich, die <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Konstruktor.  
+ Visual Basic-Compiler konvertiert das XML-Elementliteral in Aufrufe an die <xref:System.Xml.Linq.XElement.%23ctor%2A> Konstruktor und, falls erforderlich, die <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Konstruktor.  
   
 ## <a name="xml-namespaces"></a>XML-Namespaces  
  XML-Namespacepräfixe sind nützlich, wenn Sie XML-Literale mit Elementen aus dem gleichen Namespace oft im Code zu erstellen. Können Sie globale XML-Namespacepräfixe verwenden, die Sie definieren, mit der `Imports` -Anweisung oder lokale Präfixe, die Sie definieren, mit der `xmlns:xmlPrefix="xmlNamespace"` Attributsyntax. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
  Gemäß den Bereichsregeln für XML-Namespaces haben lokale Präfixe Vorrang vor globalen Präfixen. Wenn ein XML-Literal einen XML-Namespace definiert, ist dieser Namespace nicht verfügbar für Ausdrücke, die in einem eingebetteten Ausdruck angezeigt werden. Die eingebettete Ausdruck kann nur die globalen XML-Namespace zugreifen.  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert jedes globale XML-Namespace, die von einem XML-literal in eine lokale Namespacedefinition im generierten Code verwendet wird. Globale XML-Namespaces, die nicht verwendet werden, erscheinen nicht im generierten Code.  
+ Visual Basic-Compiler konvertiert jedes globale XML-Namespace, der von einem XML-literal in eine lokale Namespacedefinition im generierten Code verwendet wird. Globale XML-Namespaces, die nicht verwendet werden, erscheinen nicht im generierten Code.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird gezeigt, wie ein einfaches XML-Element erstellt, die zwei geschachtelte leere Elemente.  

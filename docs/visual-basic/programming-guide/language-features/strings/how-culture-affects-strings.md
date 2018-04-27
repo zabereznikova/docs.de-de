@@ -1,27 +1,28 @@
 ---
 title: Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
-Diese Hilfeseite wird erläutert, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet kulturinformationen zum zeichenfolgenkonvertierungen und Vergleiche durchführen.  
+Diese Hilfeseite wird erläutert, wie Visual Basic kulturinformationen verwendet, zeichenfolgenkonvertierungen und Vergleiche durchführen.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Wenn kulturspezifische Zeichenfolgen verwenden  
  Sie sollten in der Regel verwenden kulturspezifische Zeichenfolgen für alle Daten, die angezeigt und von Benutzern zu lesen und für interne Daten für die Anwendung kulturinvariant unstrukturierte Zeichenfolgen verwenden.  
@@ -31,7 +32,7 @@ Diese Hilfeseite wird erläutert, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)
  Wenn die Anwendung das Datum mit einem zentralen Server hochlädt, sollten sie die Zeichenfolge entsprechend einer bestimmten Kultur, um Verwechslungen zwischen möglicherweise verschiedene Datumsformate zu verhindern formatieren.  
   
 ## <a name="culture-sensitive-functions"></a>Kulturabhängigen Funktionen  
- Alle der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zeichenfolgenkonvertierung Funktionen (mit Ausnahme der `Str` und `Val` Funktionen) Informationen zur Kultur der Anwendung verwenden, um sicherzustellen, dass die Konvertierungen und Vergleiche für die Kultur des geeignet sind, die Benutzer der Anwendung.  
+ Alle Visual Basic-zeichenfolgenkonvertierung Funktionen (mit Ausnahme von der `Str` und `Val` Funktionen) Informationen zur Kultur der Anwendung verwenden, um sicherzustellen, dass die Konvertierungen und Vergleiche für die Kultur der Anwendung geeignet sind Benutzer.  
   
  Der Schlüssel Verwendung erfolgreich zeichenfolgenkonvertierung Funktionen in Anwendungen, die auf Computern mit verschiedenen kultureinstellungen ausgeführt ist, zu verstehen, welche Funktionen eine bestimmte Kultur-Einstellung verwenden, und die aktuelle kultureinstellung verwenden. Beachten Sie, dass die Anwendung länderspezifischen Einstellungen werden standardmäßig die länderspezifischen Einstellungen des Betriebssystems geerbt werden, ein. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, und [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -64,7 +65,7 @@ Diese Hilfeseite wird erläutert, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)
   
 -   **Ermittelt, ob zwei anwendungsinterne Zeichenfolgen (i. d. r. aus Sicherheitsgründen) genau übereinstimmen.** Verwenden Sie die Vorgänge, die die aktuelle Kultur zu ignorieren.  
   
- Sie können beide Typen von Vergleichen mit Ausführen der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A> Funktion. Geben Sie den optionalen `Compare` Argument für den Typ des Vergleichs zu steuern: `Text` für die meisten ein- und Ausgaben `Binary` für genaue Übereinstimmungen zu ermitteln.  
+ Sie können beide Typen von Vergleichen mit der Visual Basic ausführen <xref:Microsoft.VisualBasic.Strings.StrComp%2A> Funktion. Geben Sie den optionalen `Compare` Argument für den Typ des Vergleichs zu steuern: `Text` für die meisten ein- und Ausgaben `Binary` für genaue Übereinstimmungen zu ermitteln.  
   
  Die `StrComp` Funktion gibt eine ganze Zahl, die die Beziehung zwischen den zwei verglichenen Zeichenfolgen basierend auf der Sortierreihenfolge angibt. Ein positiver Wert für das Ergebnis gibt an, dass die erste Zeichenfolge größer als die zweite Zeichenfolge ist. Ein negatives Ergebnis gibt an, die erste Zeichenfolge kleiner ist, und 0 (null) gibt an, die Zeichenfolgen auf Gleichheit.  
   
@@ -79,7 +80,7 @@ Diese Hilfeseite wird erläutert, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)
 |Wert für `comparisonType` Argument|Typ des Vergleichs|Empfohlene Verwendung|  
 |---|---|---|  
 |`Ordinal`|Vergleich basierend auf Zeichenfolgen Komponentenbytes.|Verwenden Sie diesen Wert für den Vergleich: Groß-/Kleinschreibung Bezeichner, die sicherheitsbezogenen Einstellungen oder andere nicht linguistische Bezeichner, bei denen die Bytes genau übereinstimmen müssen.|  
-|`OrdinalIgnoreCase`|Vergleich basierend auf Zeichenfolgen Komponentenbytes.<br /><br /> `OrdinalIgnoreCase`verwendet die invariante kulturinformationen zum bestimmen, wann zwei Zeichen in der Großschreibung unterscheiden.|Verwenden Sie diesen Wert für den Vergleich: Groß-/Kleinschreibung IDs, die sicherheitsbezogenen Einstellungen und in Windows gespeicherten Daten.|  
+|`OrdinalIgnoreCase`|Vergleich basierend auf Zeichenfolgen Komponentenbytes.<br /><br /> `OrdinalIgnoreCase` verwendet die invariante kulturinformationen zum bestimmen, wann zwei Zeichen in der Großschreibung unterscheiden.|Verwenden Sie diesen Wert für den Vergleich: Groß-/Kleinschreibung IDs, die sicherheitsbezogenen Einstellungen und in Windows gespeicherten Daten.|  
 |`CurrentCulture` oder `CurrentCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichenfolgen in der aktuellen Kultur.|Verwenden Sie diese Werte für den Vergleich: Daten, die angezeigt werden, für den Benutzer, die meisten Benutzereingaben und anderen Daten, die linguistische Interpretation erfordern.|  
 |`InvariantCulture` oder `InvariantCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichenfolgen in der invarianten Kultur.<br /><br /> Dies unterscheidet sich die `Ordinal` und `OrdinalIgnoreCase`, da die invariante Kultur Zeichen außerhalb des zulässigen Bereichs als entsprechende invarianten Zeichen behandelt.|Verwenden Sie diese Werte nur für den Vergleich dauerhafter Daten oder anzeigen linguistisch relevanter Daten, die eine feste Sortierreihenfolge erfordern.|  
   

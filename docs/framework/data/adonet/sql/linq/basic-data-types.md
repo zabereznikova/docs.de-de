@@ -1,35 +1,37 @@
 ---
 title: Grundlegende Datentypen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9249a98c8a6c60d51039b6348a41c4f5805865f0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e88767bd478b4b59e8c395473cfd8a36aaf68f3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basic-data-types"></a>Grundlegende Datentypen
 Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Transact-SQL übersetzt werden, unterstützt LINQ to SQL einen Großteil der integrierten Funktionen, die SQL Server für grundlegende Datentypen bereitstellt.  
   
 ## <a name="casting"></a>Umwandlung von Typen  
- Implizite und explizite Umwandlungen von einem CLR-Quell- in einen CLR-Zieltyp werden unterstützt, wenn in SQL Server eine ähnliche gültige Konvertierung existiert. Weitere Informationen zu CLR-Umwandlung, finden Sie unter [CType-Funktion](~/docs/visual-basic/language-reference/functions/ctype-function.md) ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und [als](~/docs/csharp/language-reference/keywords/as.md). Nach der Konvertierung passen Varianten das Verhalten der durchgeführten Operationen für einen CLR-Ausdruck an das Verhalten anderer CLR-Ausdrücke an, die auf natürliche Weise dem Zieltyp zugewiesen werden. Umwandlungen sind auch im Kontext der Vererbungszuordnung übersetzbar. Objekte können in spezifischere Entitätsuntertypen umgewandelt werden, damit auf ihre untertypspezifischen Daten zugegriffen werden kann.  
+ Implizite und explizite Umwandlungen von einem CLR-Quell- in einen CLR-Zieltyp werden unterstützt, wenn in SQL Server eine ähnliche gültige Konvertierung existiert. Weitere Informationen zu CLR-Umwandlung, finden Sie unter [CType-Funktion](~/docs/visual-basic/language-reference/functions/ctype-function.md) (Visual Basic) und [als](~/docs/csharp/language-reference/keywords/as.md). Nach der Konvertierung passen Varianten das Verhalten der durchgeführten Operationen für einen CLR-Ausdruck an das Verhalten anderer CLR-Ausdrücke an, die auf natürliche Weise dem Zieltyp zugewiesen werden. Umwandlungen sind auch im Kontext der Vererbungszuordnung übersetzbar. Objekte können in spezifischere Entitätsuntertypen umgewandelt werden, damit auf ihre untertypspezifischen Daten zugegriffen werden kann.  
   
 ## <a name="equality-operators"></a>Gleichheitsoperatoren  
  LINQ to SQL unterstützt die folgenden Gleichheitsoperatoren für grundlegende Datentypen in LINQ to SQL-Abfragen:  
   
--   Gleichheits- und Ungleichheitsoperator: Gleichheits- und Ungleichheitsoperatoren werden für numerische <xref:System.Boolean>-, <xref:System.DateTime>- und <xref:System.TimeSpan>-Typen unterstützt. Weitere Informationen zu den [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] Operatoren `=` und `<>`, finden Sie unter [Vergleichsoperatoren](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Weitere Informationen zu C#-Vergleichsoperatoren `==` und `!=`, finden Sie unter [==-Operator](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) und [! =-Operator](~/docs/csharp/language-reference/operators/not-equal-operator.md)bzw.  
+-   Gleichheits- und Ungleichheitsoperator: Gleichheits- und Ungleichheitsoperatoren werden für numerische <xref:System.Boolean>-, <xref:System.DateTime>- und <xref:System.TimeSpan>-Typen unterstützt. Weitere Informationen zu Visual Basic-Operatoren `=` und `<>`, finden Sie unter [Vergleichsoperatoren](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Weitere Informationen zu C#-Vergleichsoperatoren `==` und `!=`, finden Sie unter [==-Operator](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) und [! =-Operator](~/docs/csharp/language-reference/operators/not-equal-operator.md)bzw.  
   
 -   "Is"-Operator: Der `IS`-Operator verfügt über eine unterstützte Übersetzung, wenn Vererbungsmapping verwendet wird. Er kann anstelle der direkten Prüfung der Diskriminatorspalte verwendet werden, um festzulegen, ob ein Objekt einen bestimmten Typ aufweist. Er wird in eine Prüfung der Diskriminatorspalte übersetzt. Weitere Informationen zu den Visual Basic- und C#-Operatoren finden Sie unter [Is Operator](~/docs/visual-basic/language-reference/operators/is-operator.md) und [ist](~/docs/csharp/language-reference/keywords/is.md).  
   

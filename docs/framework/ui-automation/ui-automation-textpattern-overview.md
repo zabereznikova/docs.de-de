@@ -1,34 +1,36 @@
 ---
-title: "Übersicht über TextPattern für die Benutzeroberflächenautomatisierung"
-ms.custom: 
+title: Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Zu diesen Steuerelementen zählen unter underem [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Entsprechungen.  
+ In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Diese Steuerelemente enthalten, jedoch nicht beschränkt auf Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Entsprechungen.  
   
  Das Verfügbarmachen des Textinhalt eines Steuerelements wird erreicht, indem das <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster verwendet wird, das den Inhalt eines Textcontainer als Textstream darstellt. Zusätzlich erfordert <xref:System.Windows.Automation.TextPattern> , dass die <xref:System.Windows.Automation.Text.TextPatternRange> -Klasse unterstützt wird, um Format-und Stilattribute verfügbar zu machen. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt <xref:System.Windows.Automation.TextPattern> dadurch, dass es zusammenhängende oder mehrere unzusammenhängende Textabschnitte in einem Textcontainer mit einer Auflistung von <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - und <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkten darstellt. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt Funktionen wie Auswahl, Vergleich, Abruf und Durchlauf.  
   
@@ -121,7 +123,7 @@ ms.lasthandoff: 01/19/2018
  Eine Formatierungseigenschaft eines Textbereichs (z. B. <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> oder <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Degenerierter Bereich**  
- Ein degenerierter Bereich ist ein leerer Bereich bzw. ein Textbereich mit 0 (null) Zeichen. Im Zusammenhang mit TextPattern-Steuerelementmustern wird die Einfügemarke (bzw. das Systemeinfügezeichen) als degenerierter Bereich angesehen. Wenn kein Text ausgewählt ist, gibt <xref:System.Windows.Automation.TextPattern.GetSelection%2A> einen degenerierten Bereich an der Texteinfügemarke und <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> einen degenerierten Bereich als seinen Startpunkt zurück. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> und <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> können degenerierte Bereiche zurückgeben, wenn der Anbieter keine Textbereiche findet, die der angegebenen Bedingung entsprechen. Dieser degenerierte Bereich kann als Startpunkt im Textanbieter verwendet werden. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> und <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> geben keinen NULL-Verweis (`Nothing` in [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]) zurück, um zu verhindern, dass es Verwechslungen zwischen erkannten Bereichen und degenerierten Bereichen gibt.  
+ Ein degenerierter Bereich ist ein leerer Bereich bzw. ein Textbereich mit 0 (null) Zeichen. Im Zusammenhang mit TextPattern-Steuerelementmustern wird die Einfügemarke (bzw. das Systemeinfügezeichen) als degenerierter Bereich angesehen. Wenn kein Text ausgewählt ist, gibt <xref:System.Windows.Automation.TextPattern.GetSelection%2A> einen degenerierten Bereich an der Texteinfügemarke und <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> einen degenerierten Bereich als seinen Startpunkt zurück. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> und <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> können degenerierte Bereiche zurückgeben, wenn der Anbieter keine Textbereiche findet, die der angegebenen Bedingung entsprechen. Dieser degenerierte Bereich kann als Startpunkt im Textanbieter verwendet werden. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> und <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> einen null-Verweis zurückgeben (`Nothing` in Microsoft Visual Basic .NET).) um Verwechslungen zwischen erkannten Bereichen und degenerierten zu vermeiden.  
   
  **Eingebettetes Objekt**  
  Es gibt zwei Typen von eingebetteten Objekten im [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Textmodell. Diese umfassen textbasierte Inhaltselemente, z. B. Links oder Tabellen, und Steuerelemente, z. B. Bilder und Schaltflächen. Ausführlichere Informationen finden Sie unter [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  **Endpunkt**  
  Der absolute <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - oder <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Punkt eines Textbereichs in einem Textcontainer.  
   
- ![TextPatternRangeEndpoints &#40; Start- und endzei &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;beginnen und enden&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 Die folgende Abbildung veranschaulicht einen Start- und einen Endpunkt.  
   
  **Textbereich**  

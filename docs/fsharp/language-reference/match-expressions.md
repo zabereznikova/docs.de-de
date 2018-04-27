@@ -1,20 +1,18 @@
 ---
-title: "Vergleichsausdrücke (F#)"
+title: Vergleichsausdrücke (f#)
 description: Erfahren Sie, wie die Vergleichsausdruck [F#] Verzweigen gesteuert, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="match-expressions"></a>Vergleichsausdrücke
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Weitere Informationen zu Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke: das `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ Das folgende Beispiel veranschaulicht die Verwendung von Wächter einen numerisc
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Beachten Sie, weil andere Werte als Literale in das Muster nicht verwendet werden können, müssen Sie verwenden eine `when` -Klausel, wenn Sie einen Teil der Eingabe mit einem Wert vergleichen. Dies wird im folgenden Code veranschaulicht.
+Beachten Sie, weil andere Werte als Literale in das Muster nicht verwendet werden können, müssen Sie verwenden eine `when` -Klausel, wenn Sie einen Teil der Eingabe mit einem Wert vergleichen. Dies wird im folgenden Code gezeigt:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
+Beachten Sie, dass wenn eine union-Muster von Wächter abgedeckt wird, für der Wächter gilt **alle** der Muster, nicht nur die letzte Aktivität. Angenommen, den folgenden Code, den Wächter `when a > 12` gelten für beide `A a` und `B a`:
+
+```fsharp
+type Union =
+    | A of int
+    | B of int
+
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
+
+foo() // returns 42
+```
+
 ## <a name="see-also"></a>Siehe auch
 
-[F#-Sprachreferenz](index.md)
-
-[Aktive Muster](active-patterns.md)
-
-[Mustervergleich](pattern-matching.md)
+[F#-Sprachreferenz](index.md)  
+[Aktive Muster](active-patterns.md)  
+[Mustervergleich](pattern-matching.md)  

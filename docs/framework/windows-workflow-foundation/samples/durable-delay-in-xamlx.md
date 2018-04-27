@@ -1,23 +1,24 @@
 ---
-title: "Permanente Verzögerung in XAMLX"
-ms.custom: 
+title: Permanente Verzögerung in XAMLX
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>Permanente Verzögerung in XAMLX
 In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.  
@@ -34,7 +35,7 @@ In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwen
 ## <a name="discussion"></a>Diskussion  
  Der Beispielworkflow enthält zwei Meldungen zu einer lokalen Datei, die durch eine Verzögerung getrennt sind. Wenn die Verzögerung ausgelöst wird, wird der Workflow entladen und verbleibt 5 Sekunden im Workflowinstanzspeicher, bevor er erneut in den Speicher geladen wird.  
   
- Die XAMLX-Datei ist ein Workflowdienst, der in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] gehostet wird. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] verwendet Cassini, das einen Workflowdiensthost zum Hosten des Workflows nutzt.  
+ Die xamlx-Datei ist ein Workflowdienst, der in Visual Studio gehostet wird. Visual Studio verwendet Cassini, die einen Workflowdienst zum Hosten mithilfe des Workflows.  
   
  Neben dem Hosten des Workflows verwaltet der Workflowdiensthost die Workflowinstanzen durch Laden und Entladen. Um eine Instanz der [!INCLUDE[wf](../../../../includes/wf-md.md)]-Definition (auf dem Workflowdiensthost) zu starten, legen Sie einen Client fest, der eine Nachricht an die <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow sendet. Die <xref:System.ServiceModel.Activities.Receive>-Eigenschaft von <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> ist auf `true` festgelegt, sodass eine neue Instanz des Workflows erstellt werden kann, sobald eine Nachricht empfangen wird.  
   

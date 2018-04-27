@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Aufrufen einer Eigenschaftenprozedur (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
 Zum Aufrufen einer Eigenschaftenprozedur zum Speichern eines Werts in der Eigenschaft oder der Wert abgerufen. Eine Eigenschaft die gleiche Weise, die Sie Zugriff auf eine Variable zugegriffen.  
   
- Der Eigenschaft `Set` Prozedur speichert einen Wert ein, und die zugehörige `Get` Prozedur ruft den Wert ab. Allerdings sind Sie nicht explizit diese Prozeduren anhand des Namens aufrufen. Verwenden Sie die Eigenschaft in einer zuweisungsanweisung oder einen Ausdruck, wie würden Sie speichern oder des Werts einer Variablen abrufen. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Ruft die Eigenschaftenprozeduren.  
+ Der Eigenschaft `Set` Prozedur speichert einen Wert ein, und die zugehörige `Get` Prozedur ruft den Wert ab. Allerdings sind Sie nicht explizit diese Prozeduren anhand des Namens aufrufen. Verwenden Sie die Eigenschaft in einer zuweisungsanweisung oder einen Ausdruck, wie würden Sie speichern oder des Werts einer Variablen abrufen. Visual Basic ermöglicht die Aufrufe an die Eigenschaftenprozeduren.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>Aufrufen einer Eigenschaftenprozedur Get  
   

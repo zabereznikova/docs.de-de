@@ -1,25 +1,26 @@
 ---
-title: "Grundlagen zu Windows Forms-Anwendungen (Visual Basic)"
+title: Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
-Ein wichtiger Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt. Sie können Visual Studio verwenden, um die mit Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
+Ein wichtiger Teil von Visual Basic ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt werden. Sie können Visual Studio verwenden, um die mit Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
   
 ## <a name="designing-windows-forms-applications"></a>Entwerfen von Windows Forms-Anwendungen  
  Sie können Windows Forms und Windows-dienstanwendungen mit erstellen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Weitere Informationen finden Sie unter den folgenden Themen:  
@@ -52,9 +53,9 @@ Ein wichtiger Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist di
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Erstellen einer neuen Windows Forms-Anwendung mit[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Erstellen einer neuen Windows Forms-Anwendung mit [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Erstellen von Grafiken mit<xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Erstellen von Grafiken mit <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Erstellen benutzerdefinierter Steuerelemente|[Vorgehensweise: Erben von der UserControl-Klasse](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Anzeigen und Bearbeiten von Daten  
@@ -77,19 +78,19 @@ Ein wichtiger Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist di
 |Verwenden Sie das Fenster "Datenquellen"|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
- Nachdem Sie Ihre Anwendung geschrieben haben, müssen Sie es für Ihre Benutzer senden, damit sie installieren können, und führen Sie es auf dem eigenen Clientcomputer. Mithilfe der [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] -Technologie können Sie Anwendungen in bereitstellen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mithilfe von nur wenigen Klicks und Benutzern eine URL verweist auf die Anwendung im Web zur Verfügung stellen. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung, und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.  
+ Nachdem Sie Ihre Anwendung geschrieben haben, müssen Sie es für Ihre Benutzer senden, damit sie installieren können, und führen Sie es auf dem eigenen Clientcomputer. Mithilfe der [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] -Technologie können Sie Anwendungen in bereitstellen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mithilfe von nur wenigen Klicks und Benutzern eine URL verweist auf die Anwendung im Web zur Verfügung stellen. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung, und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden können. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Fügt einen Link zur Anwendung des Benutzers **starten** Menü, damit der Benutzer es öffnen kann, ohne die URL.  
   
- Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]erkennt, dass ein Update verfügbar ist und aktualisiert die Installation des Benutzers. zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.  
+ Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] erkennt, dass ein Update verfügbar ist und aktualisiert die Installation des Benutzers. zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.  
   
  Eine umfassende Einführung in [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] finden Sie unter [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen:  
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Bereitstellen einer Anwendung mit[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Bereitstellen einer Anwendung mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Update einer [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Verwalten der Sicherheit mit[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Verwalten der Sicherheit mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Andere Steuerelemente und Funktionen  
  In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus bedient sich Windows Forms des stabilen Sicherheitssystems von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], sodass Sie sicherere Anwendungen an Ihre Kunden freigeben.  

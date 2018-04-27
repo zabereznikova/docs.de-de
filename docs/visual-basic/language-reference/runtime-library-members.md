@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Member der Visual Basic-Laufzeitbibliothek
-Die `Microsoft.VisualBasic` -Namespace enthält Klassen, Module, Konstanten und Enumerationen, bilden die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Runtime-Bibliothek. Diese Bibliothek Member kann von Prozeduren, Eigenschaften und Konstante Werte, die Sie in Ihrem Code verwenden können. Jedes Modul und die Klasse stellt eine bestimmte Kategorie von Funktionen dar.  
+Die `Microsoft.VisualBasic` -Namespace enthält Klassen, Module, Konstanten und Enumerationen, die Visual Basic-Laufzeitbibliothek bilden. Diese Bibliothek Member kann von Prozeduren, Eigenschaften und Konstante Werte, die Sie in Ihrem Code verwenden können. Jedes Modul und die Klasse stellt eine bestimmte Kategorie von Funktionen dar.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection-Klasse  
   
@@ -197,7 +197,7 @@ Die `Microsoft.VisualBasic` -Namespace enthält Klassen, Module, Konstanten und 
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic-Konstanten und Enumerationen  
- Die `Microsoft.VisualBasic` Namespace stellt Konstanten und Enumerationen als Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Laufzeitbibliothek. Sie können diese Konstante Werte in Ihrem Code verwenden. Jeder Enumeration stellt eine bestimmte Kategorie von Funktionen dar. Weitere Informationen finden Sie unter [Konstanten und Enumerationen](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Die `Microsoft.VisualBasic` -Namespace stellt Konstanten und Enumerationen als Teil der Visual Basic-Laufzeitbibliothek bereit. Sie können diese Konstante Werte in Ihrem Code verwenden. Jeder Enumeration stellt eine bestimmte Kategorie von Funktionen dar. Weitere Informationen finden Sie unter [Konstanten und Enumerationen](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konstanten und Enumerationen](../../visual-basic/language-reference/constants-and-enumerations.md)  

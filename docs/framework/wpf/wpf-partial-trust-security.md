@@ -1,12 +1,13 @@
 ---
-title: "WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit"
-ms.custom: 
+title: WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
 <a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen sind nicht auf kritische Systemressourcen zugreifen. Da [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] im Browser gehostete Anwendungen über den Browser gestartet werden können, sollte eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] basiert auf beide [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Wird standardmäßig im Browser gehostete Anwendungen anfordern die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie aus dem Internet, dem lokalen Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Stellt eine Vielzahl von Support, um sicherzustellen, dass viele Funktionen wie möglich sicher kann und zusammen mit teilweiser Vertrauenswürdigkeit verwendet werden [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], bietet zusätzliche Unterstützung für die Programmierung mit teilweiser Vertrauenswürdigkeit.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Vielzahl von Support, um sicherzustellen, dass viele Funktionen wie möglich sicher kann und zusammen mit teilweiser Vertrauenswürdigkeit verwendet werden [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], bietet zusätzliche Unterstützung für die Programmierung mit teilweiser Vertrauenswürdigkeit.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Tabelle 1: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit sicher sind  
   
-|Bereich „Funktionen“|Funktion|  
+|Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
 |Allgemein|Browserfenster<br /><br /> Zugriff auf Ursprungswebsite<br /><br /> IsolatedStorage (beschränkt auf 512 KB)<br /><br /> UIAutomation-Anbieter<br /><br /> Befehle<br /><br /> Eingabemethoden-Editoren (Input Method Editors, IMEs)<br /><br /> Tablettstift und Freihandeingaben<br /><br /> Simuliertes Drag & Drop mit Ereignissen für Mausaufzeichnung und Bewegen<br /><br /> OpenFileDialog<br /><br /> XAML-Deserialisierung (über XamlReader.Load)|  
 |Webintegration|Download-Dialogfeld des Browsers<br /><br /> Vom Benutzer initiierte Navigation auf oberster Ebene<br /><br /> mailto:links<br /><br /> Uniform Resource Identifier-Parameter<br /><br /> HTTPWebRequest<br /><br /> In einem IFRAME gehosteter WPF-Inhalt<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe eines Frames<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe von WebBrowser<br /><br /> Webdienste (ASMX)<br /><br /> Webdienste (über Windows Communication Foundation)<br /><br /> Skripterstellung<br /><br /> Dokumentobjektmodell|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  Diese Tabelle enthält die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Funktionen auf hoher Ebene. Detaillierte Informationen, die [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] dokumentiert die Berechtigungen, die jedes Element im erforderlichen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](siehe [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (siehe [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
   
 -   Popups (siehe <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
  Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind  
   
-|Bereich „Funktionen“|Funktion|  
+|Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
 |Allgemein|Fenster (anwendungsdefinierte Fenster und Dialogfelder)<br /><br /> SaveFileDialog<br /><br /> Dateisystem<br /><br /> Zugriff auf die Registrierung<br /><br /> Drag & Drop<br /><br /> XAML-Serialisierung (über XamlWriter.Save)<br /><br /> UIAutomation-Clients<br /><br /> Zugriff auf das Quellcodefenster (HwndHost)<br /><br /> Vollständige Sprachunterstützung<br /><br /> Windows Forms-Interoperabilität|  
 |Visuelle Objekte|Bitmapeffekte<br /><br /> Bildcodierung|  
@@ -100,18 +102,18 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Das in der vorherigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce-Modell für vertrauenswürdige Bereitstellung entsprechen.  
   
- Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten mehrere Verfahren zum Verwalten von diesem Szenario.  
+ Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten mehrere Verfahren zum Verwalten von diesem Szenario.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Erkennen von Berechtigungen mit CAS  
- In einigen Situationen ist es möglich, für freigegebenen Code in Assemblys von sowohl eigenständige Anwendungen verwendet werden und [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Unabhängig davon, ob es eine bestimmte Berechtigung mit besitzt, kann die Anwendung erkennen [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] Sicherheit. Insbesondere können testen, ob es eine bestimmte Berechtigung, durch Aufrufen verfügt der <xref:System.Security.CodeAccessPermission.Demand%2A> -Methode für die Instanz der gewünschten Berechtigung. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
+ In einigen Situationen ist es möglich, für freigegebenen Code in Assemblys von sowohl eigenständige Anwendungen verwendet werden und [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Die Anwendung kann erkennen, und zwar unabhängig davon, ob es sich um eine bestimmte Berechtigung verfügt, mithilfe von Microsoft .NET Framework-Sicherheit. Insbesondere können testen, ob es eine bestimmte Berechtigung, durch Aufrufen verfügt der <xref:System.Security.CodeAccessPermission.Demand%2A> -Methode für die Instanz der gewünschten Berechtigung. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Wenn eine Anwendung keinen die gewünschte Berechtigung, den Aufruf von <xref:System.Security.CodeAccessPermission.Demand%2A> wird eine Sicherheitsausnahme ausgelöst. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted`Dieses Verhalten kapselt und gibt `true` oder `false` je nach Bedarf.  
+ Wenn eine Anwendung keinen die gewünschte Berechtigung, den Aufruf von <xref:System.Security.CodeAccessPermission.Demand%2A> wird eine Sicherheitsausnahme ausgelöst. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted` Dieses Verhalten kapselt und gibt `true` oder `false` je nach Bedarf.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Sinnvolle Herabstufung der Funktionalität  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
  Mithilfe von [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zum Überprüfen von Berechtigungen ist ein geeignetes Verfahren, wenn Sie auf der Basis eines pro-Berechtigung überprüfen müssen. Allerdings ist für dieses Verfahren das Abfangen von Ausnahmen als Teil der normalen Verarbeitung erforderlich, was grundsätzlich nicht empfehlenswert ist und Leistungsprobleme verursachen kann. Stattdessen, wenn Ihre [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] nur ausgeführt wird, in der Sandbox der Internetzone, können Sie die <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> Eigenschaft, die für "true" zurückgibt [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>unterscheidet sich nur, ob eine Anwendung in einem Browser ausgeführt wird, nicht die Gruppe von Berechtigungen einer Anwendung mit ausgeführt wird.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> unterscheidet sich nur, ob eine Anwendung in einem Browser ausgeführt wird, nicht die Gruppe von Berechtigungen einer Anwendung mit ausgeführt wird.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Verwalten von Berechtigungen  

@@ -1,11 +1,12 @@
 ---
 title: Strukturen und Klassen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strukturen und Klassen (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass beide Entitäten größtenteils die gleichen Funktionen unterstützen vereinheitlicht. Es gibt jedoch auch wichtige Unterschiede zwischen Strukturen und Klassen.  
+Visual Basic wird die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass beide Entitäten größtenteils die gleichen Funktionen unterstützen vereinheitlicht. Es gibt jedoch auch wichtige Unterschiede zwischen Strukturen und Klassen.  
   
  Klassen haben den Vorteil, Verweistypen – Übergabe eines Verweises ist effizienter als übergibt eine Strukturvariable mit allen zugehörigen Daten. Andererseits, erfordern Strukturen keine Zuordnung von Arbeitsspeicher auf dem globalen Heap.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Instanzen und Variablen  
  Da Strukturen Werttypen sind, wird jede Strukturvariable eine einzelne Struktur permanent gebunden. Jedoch Klassen Referenztypen sind, und eine Objektvariable auf verschiedene Klasseninstanzen, zu unterschiedlichen Zeitpunkten verweisen kann. Dieser Unterschied wirkt sich auf folgende Weise auf Ihre Nutzung von Strukturen und Klassen aus:  
   
--   **Die Initialisierung.** Eine Strukturvariable umfasst implizit eine Initialisierung der Elemente, die mit der Struktur parameterlosen Konstruktor. Aus diesem Grund `Dim s As struct1` entspricht `Dim s As struct1 = New struct1()`.  
+-   **die Initialisierung.** Eine Strukturvariable umfasst implizit eine Initialisierung der Elemente, die mit der Struktur parameterlosen Konstruktor. Aus diesem Grund `Dim s As struct1` entspricht `Dim s As struct1 = New struct1()`.  
   
 -   **Zuweisen von Variablen.** Wenn Sie eine Strukturvariable zu einem anderen zuweisen oder eine Strukturinstanz an eine Prozedur-Argument übergeben, werden die aktuellen Werte aller Variablen Elemente in die neue Struktur kopiert. Wenn Sie eine Objektvariable in einen anderen zuweisen oder eine Objektvariable an eine Prozedur übergeben, wird nur der Verweiszeiger kopiert.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Strukturelemente sind jedoch in ihrer eigenen Instanz isoliert. Änderungen an ihre Werte werden nicht wiedergegeben, in anderen Strukturvariablen, auch in anderen Instanzen des gleichen `Structure` Deklaration.  
   
--   **Auf Gleichheit.** Gleichheitstests eines der beiden Strukturen muss mit einem Test von Elementen ausgeführt werden. Zwei Objektvariablen können verglichen werden, mithilfe der <xref:System.Object.Equals%2A> Methode. <xref:System.Object.Equals%2A>Gibt an, ob zwei Variablen auf dieselbe Instanz verweisen.  
+-   **Auf Gleichheit.** Gleichheitstests eines der beiden Strukturen muss mit einem Test von Elementen ausgeführt werden. Zwei Objektvariablen können verglichen werden, mithilfe der <xref:System.Object.Equals%2A> Methode. <xref:System.Object.Equals%2A> Gibt an, ob zwei Variablen auf dieselbe Instanz verweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

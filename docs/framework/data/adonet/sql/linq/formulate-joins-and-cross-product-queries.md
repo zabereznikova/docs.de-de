@@ -1,56 +1,58 @@
 ---
-title: "Gewusst wie: Formulieren von Joins und produktübergreifenden Abfragen"
-ms.custom: 
+title: 'Gewusst wie: Formulieren von Joins und produktübergreifenden Abfragen'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468ee54b0936afcbb548249bc714ea4b04abd3de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Gewusst wie: Formulieren von Joins und produktübergreifenden Abfragen
 In den folgenden Beispielen wird gezeigt, wie Ergebnisse aus mehreren Tabellen kombiniert werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from` -Klausel in c#), die alle Bestellungen für Kunden aus London auszuwählen.  
+ Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From` -Klausel in Visual Basic (`from` -Klausel in c#), die alle Bestellungen für Kunden aus London auszuwählen.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Where` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`where` -Klausel in c#) für die Out-of-Stock filtern `Products` , deren `Supplier` befindet sich in den Vereinigten Staaten.  
+ Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Where` -Klausel in Visual Basic (`where` -Klausel in c#) für die Out-of-Stock filtern `Products` , deren `Supplier` befindet sich in den Vereinigten Staaten.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From`-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from`-Klausel in C#), um Mitarbeiter in Seattle herauszufiltern und deren Gebiete anzuzeigen.  
+ Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From` -Klausel in Visual Basic (`from` -Klausel in c#), um Mitarbeiter in Seattle herauszufiltern und deren Gebiete anzuzeigen.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) um mitarbeiterpaare herauszufiltern, in denen ein Mitarbeiter dem anderen untersteht und, in denen beide Mitarbeiter aus der gleichen sind `City`.  
+ Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Select` -Klausel in Visual Basic (`select` -Klausel in c#) um mitarbeiterpaare herauszufiltern, in denen ein Mitarbeiter dem anderen untersteht und, in denen beide Mitarbeiter aus der gleichen sind `City`.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Beispiel  
- Die folgenden [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] Beispiel sucht nach allen Kunden und Bestellungen wird sichergestellt, dass die Bestellungen den Kunden zugeordnet sind, und stellt sicher, dass für jeden Kunden in dieser Liste, ein Kontaktname angegeben wird.  
+ Im folgende Visual Basic-Beispiel sucht nach allen Kunden und Bestellungen, stellt sicher, dass die Bestellungen den Kunden zugeordnet werden und wird sichergestellt, dass für jeden Kunden in dieser Liste, ein Kontaktname angegeben wird.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   

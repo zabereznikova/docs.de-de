@@ -1,26 +1,27 @@
 ---
-title: "Aktivitäten zur Ablaufsteuerung in WF"
-ms.custom: 
+title: Aktivitäten zur Ablaufsteuerung in WF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>Aktivitäten zur Ablaufsteuerung in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] stellt mehrere Aktivitäten zum Steuern des Ausführungsflusses innerhalb eines Workflows bereit. Einige dieser Aktivitäten (z. B. `Switch` und `If`) implementieren Flusssteuerungsstrukturen ähnlich denen in Programmierumgebungen wie [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], während andere (z. B. `Pick`) neue Programmierungsstrukturen modellieren.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] stellt mehrere Aktivitäten zum Steuern des Ausführungsflusses innerhalb eines Workflows bereit. Einige dieser Aktivitäten (z. B. `Switch` und `If`) implementieren flusssteuerungsstrukturen ähnlich denen in programmierumgebungen wie z. B. Visual C#-, während andere (z. B. `Pick`) neue Programmierungsstrukturen modellieren.  
   
  Beachten Sie, dass Aktivitäten wie die Aktivitäten `Parallel` und `ParallelForEach` mehrere untergeordnete Aktivitäten für eine gleichzeitige Ausführung planen, bei einem Workflow jedoch nur ein einzelner Thread verwendet wird. Jede untergeordnete Aktivität in diesen Aktivitäten wird sequenziell ausgeführt, und nachfolgende Aktivitäten werden erst ausgeführt, wenn vorherige Aktivitäten beendet werden oder sich im Leerlauf befindet. Deshalb sind diese Aktivitäten sehr hilfreich bei Anwendungen, in denen sich die Ausführung mehrerer potenziell blockierender Aktivitäten überschneidet. Wenn keine der untergeordneten Aktivitäten in diesen Aktivitäten in den Leerlauf wechselt, wird eine `Parallel`-Aktivität auf dieselbe Weise wie eine `Sequence`-Aktivität ausgeführt, und eine `ParallelForEach`-Aktivität wird genau wie eine `ForEach`-Aktivität ausgeführt. Wenn jedoch asynchrone Aktivitäten (z. B. Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet werden) oder Messagingaktivitäten verwendet werden, geht die Steuerung auf die nächste Verzweigung über, während die untergeordnete Aktivität darauf wartet, dass ihre Nachricht empfangen oder ihre asynchrone Arbeit abgeschlossen wird.  
   

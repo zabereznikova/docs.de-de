@@ -1,11 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic
-Für die Erstellung neuer Anwendungen oder Komponenten, empfiehlt es sich um .NET Framework-Assemblys zu erstellen. Allerdings [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert es .NET Framework-Komponenten für COM verfügbar machen. Dadurch können Sie neue Komponenten für frühere Anwendung Sammlungen bereitstellen, die COM-Komponenten erfordern. Diese exemplarische Vorgehensweise veranschaulicht, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbar machen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Objekte als COM-Objekte, die mit und ohne die COM-Klassenvorlage.  
+Für die Erstellung neuer Anwendungen oder Komponenten, empfiehlt es sich um .NET Framework-Assemblys zu erstellen. Allerdings erleichtert Visual Basic auch .NET Framework-Komponenten für COM verfügbar machen. Dadurch können Sie neue Komponenten für frühere Anwendung Sammlungen bereitstellen, die COM-Komponenten erfordern. Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mithilfe von Visual Basic um verfügbar zu machen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Objekte als COM-Objekte, die mit und ohne die COM-Klassenvorlage.  
   
  Die einfachste Möglichkeit zum Verfügbarmachen von COM-Objekten wird mithilfe der Vorlage der COM-Klasse. Die COM-Klassenvorlage wird eine neue Klasse erstellt und konfiguriert anschließend das Projekt, um die Klasse und Interoperabilität Ebene als COM-Objekt zu generieren, und registrieren Sie ihn mit dem Betriebssystem.  
   
 > [!NOTE]
->  Obwohl Sie auch eine Klasse erstellt, die verfügbar machen können [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als COM-Objekt für nicht verwalteten Code verwenden, ist kein "true" COM-Objekt und kann nicht verwendet werden, indem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Weitere Informationen finden Sie unter [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+>  Obwohl Sie auch eine Klasse, die in Visual Basic erstellt wird, als für nicht verwalteten Code mit COM-Objekt verfügbar gemacht werden können, ist kein "true" COM-Objekt und kann nicht von Visual Basic verwendet werden. Weitere Informationen finden Sie unter [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,11 +42,11 @@ Für die Erstellung neuer Anwendungen oder Komponenten, empfiehlt es sich um .NE
   
 3.  Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü. Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
-4.  Wählen Sie **COM-Klasse** aus der **Vorlagen** aus, und klicken Sie dann auf **hinzufügen**. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fügt eine neue Klasse hinzu, und das neue Projekt für COM-Interop konfiguriert.  
+4.  Wählen Sie **COM-Klasse** aus der **Vorlagen** aus, und klicken Sie dann auf **hinzufügen**. Visual Basic fügt eine neue Klasse hinzu und konfiguriert das neue Projekt für COM-Interop.  
   
 5.  Fügen Sie Code, z. B. Eigenschaften, Methoden und Ereignisse, auf die COM-Klasse.  
   
-6.  Wählen Sie **erstellen "ClassLibrary1"** aus der **erstellen** Menü. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]erstellt die Assembly und das COM-Objekt mit dem Betriebssystem registriert.  
+6.  Wählen Sie **erstellen "ClassLibrary1"** aus der **erstellen** Menü. Visual Basic erstellt die Assembly und das COM-Objekt mit dem Betriebssystem registriert.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Erstellen von COM-Objekte, ohne die Vorlage für die COM-Klasse  
  Sie können auch eine COM-Klasse anstelle der COM-Klassenvorlage manuell erstellen. Dieses Verfahren ist hilfreich, bei der Arbeit von der Befehlszeile aus, oder wenn Sie besser steuern, wie COM-Objekte definiert werden soll.  
@@ -93,10 +94,10 @@ Für die Erstellung neuer Anwendungen oder Komponenten, empfiehlt es sich um .NE
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. Hinzufügen von Eigenschaften, Methoden und Ereignisse auf die Klasse, beenden ihn mit einer `End Class` Anweisung. Wählen Sie **Projektmappe** aus der **erstellen** Menü. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]erstellt die Assembly und das COM-Objekt mit dem Betriebssystem registriert.  
+9. Hinzufügen von Eigenschaften, Methoden und Ereignisse auf die Klasse, beenden ihn mit einer `End Class` Anweisung. Wählen Sie **Projektmappe** aus der **erstellen** Menü. Visual Basic erstellt die Assembly und das COM-Objekt mit dem Betriebssystem registriert.  
   
     > [!NOTE]
-    >  Die COM-Objekte, die Sie generieren mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann nicht verwendet werden, von anderen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anwendungen, da sie nicht auf "true" COM-Objekte sind. Versuche, Verweise auf diese COM-Objekte hinzuzufügen, werden ein Fehler ausgelöst. Weitere Informationen finden Sie unter [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Die COM-Objekte, die Sie mit Visual Basic generieren können nicht von anderen Visual Basic-Anwendungen verwendet werden, da sie nicht auf "true" COM-Objekte sind. Versuche, Verweise auf diese COM-Objekte hinzuzufügen, werden ein Fehler ausgelöst. Weitere Informationen finden Sie unter [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  

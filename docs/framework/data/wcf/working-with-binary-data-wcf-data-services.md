@@ -1,12 +1,13 @@
 ---
-title: "Arbeiten mit Binärdaten (WCF-Datendienste)"
-ms.custom: 
+title: Arbeiten mit Binärdaten (WCF-Datendienste)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Arbeiten mit Binärdaten (WCF-Datendienste)
 Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek ermöglicht es Ihnen, abrufen und Aktualisieren von Binärdaten aus einer [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in einem der folgenden Methoden:  
@@ -33,10 +35,10 @@ Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothe
   
 -   Als separater binärer Ressourcenstream. Dies ist die empfohlene Methode für den Zugriff auf BLOB-Daten (Binary Large Object), die ein Foto, Video oder einen beliebigen anderen Typ binär codierter Daten darstellen, und das Ändern dieser Daten.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementiert das streaming von Binärdaten mithilfe von HTTP gemäß der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bei diesem Mechanismus werden ist Binärdaten als Medienressource, die getrennt von behandelt jedoch im Zusammenhang mit einer Entität, die einen Medienlinkeintrag aufgerufen wird. Weitere Informationen finden Sie unter [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementiert das streaming von Binärdaten mithilfe von HTTP gemäß der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bei diesem Mechanismus werden ist Binärdaten als Medienressource, die getrennt von behandelt jedoch im Zusammenhang mit einer Entität, die einen Medienlinkeintrag aufgerufen wird. Weitere Informationen finden Sie unter [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Ein ausführliches Beispiel zum Erstellen einer [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] Clientanwendung, die binäre Bilddateien von downloads ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Dienst zum Speichern von Fotos von finden Sie im Beitrag [Data Services Streaming Provider-Reihe, Teil 2: Zugreifen auf einen Datenträger Vom Client Ressourcenstream](http://go.microsoft.com/fwlink/?LinkId=201637). Um den Beispielcode für den Stream fotostreaming-Datendienst im Blogbeitrag herunterzuladen, rufen Sie die [Streaming Photo Data Service Sample](http://go.microsoft.com/fwlink/?LinkId=198988) in der MSDN Code Gallery.  
+>  Ein ausführliches Beispiel zum Erstellen einer Windows Presentation Foundation (WPF)-Clientanwendung, die binäre Bilddateien von downloads ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Dienst zum Speichern von Fotos von finden Sie im Beitrag [Daten Services Streaming Provider Series-Webpart 2: Zugreifen auf einen Medienressourcenstream vom Client](http://go.microsoft.com/fwlink/?LinkId=201637). Um den Beispielcode für den Stream fotostreaming-Datendienst im Blogbeitrag herunterzuladen, rufen Sie die [Streaming Photo Data Service Sample](http://go.microsoft.com/fwlink/?LinkId=198988) in der MSDN Code Gallery.  
   
 ## <a name="entity-metadata"></a>Entitätsmetadaten  
  Eine Entität mit einem verknüpften Medienressourcenstream wird in den Metadaten des Datendiensts angegeben, indem das `HasStream`-Attribut auf einen Entitätstyp angewendet wird, bei dem es sich um den Medienlinkeintrag handelt. Im folgenden Beispiel die `PhotoInfo` Entität ist ein Medienlinkeintrag, die eine verwandte Medienressource, angegeben durch die `HasStream` Attribut.  
@@ -49,7 +51,7 @@ Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothe
  Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek stellt Methoden für den Zugriff auf binäre Ressourcenstreams von einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst aus bereit. Wenn Sie eine Medienressource herunterladen, können Sie entweder den URI der Medienressource verwenden oder einen binären Stream abrufen, der die Medienressource selbst enthält. Sie können Medienressourcendaten auch als binären Stream hochladen.  
   
 > [!TIP]
->  Ein ausführliches Beispiel zum Erstellen einer [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] Clientanwendung, die binäre Bilddateien von downloads ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Dienst zum Speichern von Fotos von finden Sie im Beitrag [Data Services Streaming Provider-Reihe, Teil 2: Zugreifen auf einen Datenträger Vom Client Ressourcenstream](http://go.microsoft.com/fwlink/?LinkId=201637). Um den Beispielcode für den Stream fotostreaming-Datendienst im Blogbeitrag herunterzuladen, rufen Sie die [Streaming Photo Data Service Sample](http://go.microsoft.com/fwlink/?LinkId=198988) in der MSDN Code Gallery.  
+>  Ein ausführliches Beispiel zum Erstellen einer Windows Presentation Foundation (WPF)-Clientanwendung, die binäre Bilddateien von downloads ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Dienst zum Speichern von Fotos von finden Sie im Beitrag [Daten Services Streaming Provider Series-Webpart 2: Zugreifen auf einen Medienressourcenstream vom Client](http://go.microsoft.com/fwlink/?LinkId=201637). Um den Beispielcode für den Stream fotostreaming-Datendienst im Blogbeitrag herunterzuladen, rufen Sie die [Streaming Photo Data Service Sample](http://go.microsoft.com/fwlink/?LinkId=198988) in der MSDN Code Gallery.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Abrufen des URI des binären Streams  
  Beim Abrufen bestimmter Medienressourcentypen wie Bildern und anderen Mediendateien ist es oft einfacher, den URI der Medienressource in der Anwendung zu verwenden, anstatt den binären Datenstrom selbst zu behandeln. Zum Abrufen des URI des zugehörigen Ressourcenstreams eines Medienlinkeintrags müssen Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Instanz aufrufen, von der die Entität nachverfolgt wird. Das folgende Beispiel zeigt, wie Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>-Methode aufrufen, um den URI eines Medienressourcenstreams abzurufen, mit dem auf dem Client ein neues Bild erstellt wird:  

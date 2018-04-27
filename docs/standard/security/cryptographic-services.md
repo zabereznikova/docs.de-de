@@ -1,12 +1,12 @@
 ---
 title: Kryptografische Dienste
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.  
   
-     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Finden Sie unter [NIB: Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) für Weitere Informationen.  
+     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Finden Sie unter [NIB: Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) für Weitere Informationen.  
   
 -   Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:  
   

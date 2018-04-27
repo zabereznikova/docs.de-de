@@ -2,8 +2,8 @@
 title: XML-Attributachseneigenschaft (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML-Attributachseneigenschaft (Visual Basic)
 Bietet Zugriff auf den Wert eines Attributs für ein <xref:System.Xml.Linq.XElement> Objekt oder auf das erste Element in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte.  
@@ -44,7 +44,7 @@ object.@<attribute>
  Erforderlich. Kennzeichnet den Anfang der Attribute Axis-Eigenschaft.  
   
  <  
- Dies ist optional. Kennzeichnet den Anfang des Namens des Attributs Wenn `attribute` ist kein gültiger Bezeichner in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Dies ist optional. Kennzeichnet den Anfang des Namens des Attributs Wenn `attribute` ist kein gültiger Bezeichner in Visual Basic.  
   
  `attribute`  
  Erforderlich. Der Name des Attributs des Formulars den Zugriff auf [`prefix`:]`name`.  
@@ -55,7 +55,7 @@ object.@<attribute>
 |`name`|Erforderlich. Lokale Attributname. Finden Sie unter [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Dies ist optional. Kennzeichnet das Ende des Namens des Attributs Wenn `attribute` ist kein gültiger Bezeichner in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Dies ist optional. Kennzeichnet das Ende des Namens des Attributs Wenn `attribute` ist kein gültiger Bezeichner in Visual Basic.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine Zeichenfolge, die den Wert der enthält `attribute`. Wenn der Attributname nicht vorhanden ist, `Nothing` wird zurückgegeben.  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  Bei Verweisen auf ein XML-Attribut mit dem @ Bezeichner, den Wert des Attributs als Zeichenfolge zurückgegeben, und Sie müssen nicht explizit angeben der <xref:System.Xml.Linq.XAttribute.Value%2A> Eigenschaft.  
   
- Die Benennungsregeln für XML-Attribute unterscheiden sich von den Benennungsregeln für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Bezeichner. Zugriff auf ein XML-Attribut mit dem Namen, der kein gültiger Visual Basic-Bezeichner ist, schließen Sie den Namen in spitzen Klammern (\< und >).  
+ Die Benennungsregeln für XML-Attribute unterscheiden sich von den Benennungsregeln für Visual Basic-Bezeichner. Zugriff auf ein XML-Attribut mit dem Namen, der kein gültiger Visual Basic-Bezeichner ist, schließen Sie den Namen in spitzen Klammern (\< und >).  
   
 ## <a name="xml-namespaces"></a>XML-Namespaces  
  Der Name in einem Attributachseneigenschaft können nur XML-Namespacepräfixe global deklariert werden, mithilfe der `Imports` Anweisung. Es können keine XML-Namespacepräfixe verwendet werden, die lokal innerhalb von XML-Elementliteralen deklariert wurden. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Spitze Klammer-Syntax zum Abrufen des Werts der XML-Attribut mit dem Namen `number-type`, der kein gültiger Bezeichner in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Im folgenden Beispiel wird die Spitze Klammer-Syntax zum Abrufen des Werts der XML-Attribut mit dem Namen `number-type`, ein gültiger Bezeichner in Visual Basic ist.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

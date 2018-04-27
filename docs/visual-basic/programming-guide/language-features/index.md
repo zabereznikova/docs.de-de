@@ -15,18 +15,18 @@ ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 620453d140e3d4ba2ee468e5bf087df6deb9aad4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
-In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], einer objektorientierten Programmiersprache, vorgestellt und erläutert. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
+In den folgenden Themen vorstellen und besprechen die grundlegenden Komponenten von Visual Basic, einer objektorientierten Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Visual Basic unterstützt wie jede moderne Programmiersprache eine Reihe von allgemeine Programmierungskonstrukte und Sprachelemente.  
   
- Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Die meisten Konstrukte ähneln denen in anderen Sprachen. Allerdings gibt es aufgrund der ereignisgesteuerten Natur von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einige feine Unterschiede.  
+ Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Während die meisten Konstrukte in anderen Sprachen vergleichbar sind, führt Visual Basic Charakter ereignisgesteuerte einige feine Unterschiede.  
   
- Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Sobald Sie mit den Grundlagen vertraut sind, können Sie mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] leistungsstarke Anwendungen erstellen.  
+ Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Nachdem Sie die Grundlagen verstanden haben, können Sie leistungsstarke Anwendungen, die mit Visual Basic erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -91,4 +91,4 @@ In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb
  Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
- Dieser Artikel enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmierung.
+ Enthält Referenzinformationen zu verschiedenen Aspekten von Visual Basic-Programmierung.

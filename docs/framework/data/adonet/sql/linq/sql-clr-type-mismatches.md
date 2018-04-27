@@ -1,27 +1,29 @@
 ---
 title: SQL-CLR-Typenkonflikte
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR-Typenkonflikte
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatisiert einen Großteil des Übersetzungsprozesses zwischen dem Objektmodell und SQL Server. Trotzdem verhindern einige Situationen die genaue Übersetzung. In den folgenden Abschnitten werden diese wichtigen Konflikte zwischen den CLR (Common Language Runtime)-Typen und den SQL Server-Datenbanktypen zusammengefasst. Finden Sie ausführliche Informationen zu spezifischer Typmappings und die zur funktionsübersetzung [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) und [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -53,7 +55,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Fester Länge Zeichentypen**. Transact-SQL unterscheidet zwischen Unicode- und nicht-Unicode-Kategorien und verfügt über drei verschiedene Typen in den einzelnen Kategorien: feste Länge `nchar` / `char`, variabler Länge `nvarchar` / `varchar`, und größeres `ntext` / `text`. Typen mit Zeichen fester Länge könnten zum Abrufen von Zeichen dem CLR-<xref:System.Char?displayProperty=nameWithType>-Typ zugeordnet werden. Hinsichtlich Konvertierung und Verhalten entsprechen sie jedoch nicht dem gleichen Typ.  
   
-    -   **Bit**. Obwohl die `bit`-Domäne die gleiche Anzahl von Werten aufweist wie `Nullable<Boolean>`, handelt es sich um verschiedene Typen. `Bit`übernimmt die Werte der `1` und `0` anstelle von `true` / `false`, und kann nicht als äquivalent zu booleschen Ausdrücken verwendet werden.  
+    -   **Bit**. Obwohl die `bit`-Domäne die gleiche Anzahl von Werten aufweist wie `Nullable<Boolean>`, handelt es sich um verschiedene Typen. `Bit` übernimmt die Werte der `1` und `0` anstelle von `true` / `false`, und kann nicht als äquivalent zu booleschen Ausdrücken verwendet werden.  
   
     -   **Zeitstempel**. Im Gegensatz zum CLR-<xref:System.TimeSpan?displayProperty=nameWithType>-Typ stellt der SQL Server-`TIMESTAMP`-Typ eine von der Datenbank erzeugte Zahl mit 8 Bytes dar, die für jedes Update eindeutig ist und nicht auf dem Unterschied zwischen <xref:System.DateTime>-Werten basiert.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  Im vorherigen Fall erhalten Sie bei der SQL-Erzeugung ein gleichwertiges Verhalten, die Übersetzung kann jedoch Ihre Absicht möglicherweise nicht korrekt widerspiegeln.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]administratorverbindungen werden nicht über C#- `null` oder [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` Vergleichssemantik auf SQL. Vergleichsoperatoren werden syntaktisch zu ihren SQL-Entsprechungen übersetzt. Die Semantik reflektiert SQL-Semantik, wie von den Server- oder Verbindungseinstellungen definiert. Die beiden NULL-Werte gelten bei den standardmäßigen SQL Server-Einstellungen als ungleich (obwohl Sie die Semantik über die Einstellungen ändern können). Dennoch berücksichtigt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Servereinstellungen in der Abfrageübersetzung.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] administratorverbindungen werden nicht über C#- `null` oder Visual Basic `nothing` Vergleichssemantik auf SQL. Vergleichsoperatoren werden syntaktisch zu ihren SQL-Entsprechungen übersetzt. Die Semantik reflektiert SQL-Semantik, wie von den Server- oder Verbindungseinstellungen definiert. Die beiden NULL-Werte gelten bei den standardmäßigen SQL Server-Einstellungen als ungleich (obwohl Sie die Semantik über die Einstellungen ändern können). Dennoch berücksichtigt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Servereinstellungen in der Abfrageübersetzung.  
   
  Ein Vergleich mit dem `null`-Literal (`nothing`-Literal) wird zur entsprechenden SQL-Version (`is null` oder `is not null`) übersetzt.  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Dieses Verhalten des `Like`-Operators gilt nur für C#, das `Like`-Schlüsselwort in Visual Basic ist unverändert.  
   
--   Der Überlauf wird in SQL stets geprüft, muss jedoch in C# (nicht jedoch in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) explizit angegeben werden, um Umbrüche zu vermeiden. Gegeben sind die Ganzzahlspalten C1, C2 und C3, wenn C1+C2 in C3 gespeichert wird (Update von T-Satz C3 = C1 + C2).  
+-   Überlauf in SQL stets geprüft wird, aber über in c# (nicht in Visual Basic) explizit angegeben werden um Umbrüche zu vermeiden. Gegeben sind die Ganzzahlspalten C1, C2 und C3, wenn C1+C2 in C3 gespeichert wird (Update von T-Satz C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL führt eine symmetrische arithmetische Rundung aus, während [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] unverzerrte Rundung (Banker's Rounding) verwendet. Weitere Informationen finden Sie im Knowledge Base-Artikel 196652.  
   
--   Standardmäßig wird in SQL die Groß- und Kleinschreibung bei Zeichenfolgenvergleichen für allgemeine Gebietsschemas nicht beachtet. In Visual Basic und C# wird die Groß-/Kleinschreibung beachtet. Beispiel: `s == "Food"` (`s = "Food"` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und `s == "Food"` können zu verschiedenen Ergebnissen führen, wenn `s` `food` lautet.  
+-   Standardmäßig wird in SQL die Groß- und Kleinschreibung bei Zeichenfolgenvergleichen für allgemeine Gebietsschemas nicht beachtet. In Visual Basic und C# wird die Groß-/Kleinschreibung beachtet. Beispielsweise `s == "Food"` (`s = "Food"` in Visual Basic) und `s == "Food"` können unterschiedliche Ergebnisse liefern, wenn `s` ist `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

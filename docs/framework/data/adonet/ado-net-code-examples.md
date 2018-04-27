@@ -1,23 +1,25 @@
 ---
-title: "Codebeispiele für ADO.NET"
+title: Codebeispiele für ADO.NET
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>Codebeispiele für ADO.NET
 In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe der folgenden ADO.NET-Technologien aus einer Datenbank abgerufen werden:
@@ -26,7 +28,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 
   - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
 
-  - [OleDb](#oledb) (`System.Data.OleDb`)
+  - [OLE DB](#oledb) (`System.Data.OleDb`)
 
   - [Odbc](#odbc) (`System.Data.Odbc`)
 
@@ -46,7 +48,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 In den folgenden Codeauflistungen wird veranschaulicht, wie Daten mit ADO.NET-Datenanbietern aus einer Datenbank abgerufen werden. Die Daten werden in einem `DataReader` zurückgegeben. Weitere Informationen finden Sie unter [Retrieving Data Using eines "DataReader"](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-Beim Code in diesem Beispiel wird davon ausgegangen, dass Sie eine Verbindung mit der `Northwind`-Beispieldatenbank unter Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] herstellen können. Durch den Code wird ein <xref:System.Data.SqlClient.SqlCommand>-Objekt erstellt, um Zeilen aus Produkttabelle auszuwählen. Es wird ein <xref:System.Data.SqlClient.SqlParameter>-Objekt hinzugefügt, um die Ergebnisse auf Zeilen zu beschränken, in denen der Einzelpreis höher als der angegebene Parameterwert ist, in diesem Fall also 5. Die <xref:System.Data.SqlClient.SqlConnection> wird geöffnet, in einem `using` blockieren, die sicherstellt, dass Ressourcen geschlossen und freigegeben werden, wenn der Code beendet wird. Im Code wird der Befehl mit einem <xref:System.Data.SqlClient.SqlDataReader>-Objekt ausgeführt. Die Ergebnisse werden im Konsolenfenster angezeigt.
+Der Code in diesem Beispiel wird davon ausgegangen, dass Sie eine Verbindung herstellen können die `Northwind` auf Microsoft SQL Server-Beispieldatenbank. Durch den Code wird ein <xref:System.Data.SqlClient.SqlCommand>-Objekt erstellt, um Zeilen aus Produkttabelle auszuwählen. Es wird ein <xref:System.Data.SqlClient.SqlParameter>-Objekt hinzugefügt, um die Ergebnisse auf Zeilen zu beschränken, in denen der Einzelpreis höher als der angegebene Parameterwert ist, in diesem Fall also 5. Die <xref:System.Data.SqlClient.SqlConnection> wird geöffnet, in einem `using` blockieren, die sicherstellt, dass Ressourcen geschlossen und freigegeben werden, wenn der Code beendet wird. Im Code wird der Befehl mit einem <xref:System.Data.SqlClient.SqlDataReader>-Objekt ausgeführt. Die Ergebnisse werden im Konsolenfenster angezeigt.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]

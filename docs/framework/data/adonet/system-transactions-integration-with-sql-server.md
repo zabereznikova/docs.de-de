@@ -1,36 +1,38 @@
 ---
 title: System.Transactions-Integration in SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions-Integration in SQL Server
 Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions> -Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Zusätzlich zu den Erweiterungen bei der Programmierbarkeit können <xref:System.Transactions> und [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte (lokale) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
   
- Ab [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 unterstützt <xref:System.Data.SqlClient> heraufstufbare Transaktionen beim Arbeiten mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff seitens des Entwicklers.  
+ Beginnend mit [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> unterstützt heraufstufbare Transaktionen beim Arbeiten mit SQL Server. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff seitens des Entwicklers.  
   
- Heraufstufbare Transaktionen sind nur verfügbar, wenn der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (`SqlClient`) mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]verwendet wird.  
+ Heraufstufbare Transaktionen sind nur verfügbar, wenn Sie verwenden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (`SqlClient`) mit SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Erstellen heraufstufbarer Transaktionen  
  Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im behandelt werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> Namespace. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
@@ -39,7 +41,7 @@ Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 
 >  In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  
   
 ## <a name="promotable-transaction-scenarios"></a>Szenarien für heraufstufbare Transaktionen  
- Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC (Microsoft Distributed Transaction Coordinator) verwaltet, der alle Ressourcen-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions> -Transaktion, die effektiv die Arbeit auf eine einzelne [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] -Transaktion delegiert. <xref:System.Transactions>, <xref:System.Data.SqlClient>und [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] koordinieren die Arbeit, die zur Behandlung der Transaktion erforderlich ist, und stufen sie bei Bedarf auf eine vollständig verteilte Transaktion hoch.  
+ Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC (Microsoft Distributed Transaction Coordinator) verwaltet, der alle Ressourcen-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions> Transaktion, die effektiv die Arbeit auf eine einfache SQL Server-Transaktion delegiert. <xref:System.Transactions>, <xref:System.Data.SqlClient>, und SQL Server koordinieren die Arbeit zur Behandlung der Transaktions auf eine vollständig verteilte Transaktion Stufen sie bei Bedarf.  
   
  Der Vorteil der Verwendung heraufstufbarer Transaktionen besteht darin, dass beim Öffnen einer Verbindung mit einer aktiven <xref:System.Transactions.TransactionScope> -Transaktion die Transaktion als kompakte Transaktion durchgeführt wird, wenn keine weiteren Verbindungen geöffnet sind und der zusätzliche Mehraufwand einer vollständig verteilten Transaktion vermieden werden kann.  
   

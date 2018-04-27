@@ -1,34 +1,36 @@
 ---
 title: 'Gewusst wie: Erkennen einer .NET Framework 3.0-Installation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6990ca4bff7c8756f8d7f25ff0153b3a5d41a4f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Gewusst wie: Erkennen einer .NET Framework 3.0-Installation
 Bevor Administratoren bereitstellen, können [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] Anwendungen auf einem System, sie müssen zunächst bestätigen, dass die [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] Common Language Runtime vorhanden ist. Dieses Thema enthält ein Skript geschrieben in HTML/JavaScript, die Administratoren verwenden können, um zu bestimmen, ob [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] auf einem System vorhanden ist.  
   
 > [!NOTE]
->  Ausführlichere Informationen zum Installieren, bereitstellen und Erkennen von der [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], finden Sie unter den Ausführungen im [Bereitstellen von Microsoft .NET Framework, Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
+>  Ausführlichere Informationen zur Installation bereitstellen und Erkennen von Microsoft .NET Framework finden Sie unter den Ausführungen im [Bereitstellen von Microsoft .NET Framework, Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Ermitteln Sie die Benutzer-Agent-Zeichenfolge ".NET CLR"  

@@ -1,23 +1,24 @@
 ---
-title: "Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer"
-ms.custom: 
+title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wurden viele neue Funktionen eingeführt, einschließlich einiger Erweiterungen für den Workflow-Designer. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.  
@@ -54,7 +55,7 @@ Mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[net_v45](../../../in
   
  Die folgende Bildschirmaufnahme zeigt eine `WriteLine`-Aktivität in `Body` von `NoPersistScope`.  
   
- ![Auto &#45; Surround Ablagespeicherort](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Automatische&#45;umschließen Dateiablage-Speicherort](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  Die folgende Bildschirmaufnahme zeigt die automatisch erstellte `Sequence`-Aktivität in `Body`, wenn eine zweite `WriteLine`-Komponente unterhalb der ersten abgelegt wird.  
   
@@ -75,7 +76,7 @@ Mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[net_v45](../../../in
  Mehrere ausgewählte Aktivitäten können auch im Designer gezogen und abgelegt und über das Kontextmenü bearbeitet werden.  
   
 ### <a name="outline-view-of-workflow-items"></a>Gliederungsansicht der Workflowelemente  
- Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungsansicht wird angezeigt, der **Dokumentgliederung** anzeigen. So öffnen Sie diese Ansicht in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], wählen Sie in der oberen Menüleiste **Ansicht**, **Weitere Fenster**, **Dokumentgliederung**, oder drücken Sie STRG + W + u Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.  
+ Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungsansicht wird angezeigt, der **Dokumentgliederung** anzeigen. Wählen Sie zum Öffnen dieser Sicht in Visual Studio in der oberen Menüleiste **Ansicht**, **Weitere Fenster**, **Dokumentgliederung**, oder drücken Sie STRG + W + u Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.  
   
  Der folgende Screenshot des abgeschlossenen Workflows aus dem [Lernprogramm für erste Schritte](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) zeigt die Gliederungsansicht ein sequenzieller Workflow.  
   
@@ -93,7 +94,7 @@ Mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[net_v45](../../../in
   
  Aktivitäten können auch auf Verbindungen zwischen Flussdiagrammknoten und -zuständen gezogen werden, um den Knoten automatisch zwischen zwei anderen Knoten einzufügen. Das folgende Bildschirmfoto zeigt die hervorgehobene Verbindungslinie, auf die Aktivitäten aus der Toolbox gezogen und abgelegt werden können.  
   
- ![Auto &#45; Insert behandeln zum Ablegen von Aktivitäten](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Automatische&#45;Handle zum Ablegen von Aktivitäten einfügen](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  Automatisches Verbinden und automatisches Einfügen werden im neu gehosteten Designer unterstützt.  
   
@@ -149,7 +150,7 @@ Mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[net_v45](../../../in
  Weitere Informationen zum Erstellen von Zustandsautomatworkflows, finden Sie unter [Zustandsautomatworkflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
   
 ### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung  
- Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es dem Entwickler, einen Vertrag zuerst im Code zu entwerfen und dann mit wenigen Klicks in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] automatisch eine Aktivitätsvorlage in der Toolbox zu generieren, die jeden Vorgang darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zum Entwickeln von Vertrag zuerst-Workflow, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, der einem vorhandenen Dienstvertrag nutzt](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ Tool für die Vertrag zuerst-Workflowentwicklung kann der Entwickler ein Vertrags in Code zuerst entwerfen und dann mit wenigen Klicks in Visual Studio generieren automatisch eine Aktivitätsvorlage in der Toolbox, die jeden Vorgang darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zum Entwickeln von Vertrag zuerst-Workflow, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, der einem vorhandenen Dienstvertrag nutzt](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  Die Vertrag zuerst-Workflowentwicklung wird im Workflow-Designer nicht unterstützt.

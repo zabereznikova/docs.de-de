@@ -1,23 +1,24 @@
 ---
 title: Einstellungsprozess
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
@@ -129,7 +130,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 |Benutzerdefinierte Nachverfolgung|Das Beispiel enthält einen benutzerdefinierten Überwachungsteilnehmer, mit dem der Verlauf eines `HiringRequestProcess` (welche Aktion wurde wann von wem ausgeführt) gespeichert wird. Der Quellcode ist im Ordner für die Überwachung von HiringRequestService gespeichert.|HiringRequestService|  
 |ETW-Überwachung|Die vom System bereitgestellte ETW-Überwachung wird in der Datei App.config im Dienst HiringRequestService konfiguriert.|HiringRequestService|  
 |Komposition von Aktivitäten|Die Prozessdefinition verwendet die freie Komposition von <xref:System.Activities.Activity>. Das Flussdiagramm enthält verschiedene aufeinanderfolgende sowie parallele Aktivitäten, die wiederum andere Aktivitäten enthalten usw.|HiringRequestService|  
-|Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601>wird verwendet, um im Posteingang des CEO und Personalvorständen parallel (wartet auf beiden Personalvorstände Genehmigungsschritt) zu registrieren.<br />-   <xref:System.Activities.Statements.Parallel>wird verwendet, um einige Bereinigungsaufgaben in den Abschluss- und Ablehnungsschritten führen.|HiringRequestService|  
+|Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601> wird verwendet, um im Posteingang des CEO und Personalvorständen parallel (wartet auf beiden Personalvorstände Genehmigungsschritt) zu registrieren.<br />-   <xref:System.Activities.Statements.Parallel> wird verwendet, um einige Bereinigungsaufgaben in den Abschluss- und Ablehnungsschritten führen.|HiringRequestService|  
 |Abbruch des Modells|Im Flussdiagramm wird mit <xref:System.Activities.Statements.CancellationScope> ein Abbruchverhalten erstellt (im vorliegenden Fall werden einige Bereinigungsaufgaben ausgeführt.).|HiringRequestService|  
 |Kundenpersistenzteilnehmer|Mit `HiringRequestPersistenceParticipant` werden Daten aus einer Workflowvariablen in einer Tabelle erfasst, die in der Personaldatenbank von Contoso gespeichert ist.|HiringRequestService|  
 |Workflowdienste|`ResumeRequestService` wird unter Verwendung von Workflowdiensten implementiert. Die Definition des Workflows sowie Informationen zum Dienst sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
@@ -141,13 +142,13 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 ## <a name="data-storage"></a>Datenspeicher  
  Die Daten werden in einer SQL Server-Datenbank mit dem Namen `ContosoHR` gespeichert. (Das Skript zum Erstellen der Datenbank befindet sich im Ordner `DbSetup`.) Workflowinstanzen werden in einer SQL Server-Datenbank mit dem Namen `InstanceStore` gespeichert. (Die Skripts zum Erstellen des Instanzspeichers sind Teil von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].)  
   
- Beide Datenbanken werden durch Ausführen des Skripts Setup.cmd an einer [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Eingabeaufforderung erstellt.  
+ Beide Datenbanken werden erstellt, indem Skript "Setup.cmd" aus einer Visual Studio-Eingabeaufforderung ausführen.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
   
 #### <a name="to-create-the-databases"></a>So erstellen Sie die Datenbanken  
   
-1.  Öffnen Sie eine [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Eingabeaufforderung.  
+1.  Öffnen Sie eine Visual Studio-Eingabeaufforderung.  
   
 2.  Navigieren Sie zum Beispielordner.  
   
@@ -157,7 +158,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 #### <a name="to-set-up-the-solution-for-execution"></a>So richten Sie die Projektmappe für die Ausführung ein  
   
-1.  Führen Sie [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] als Administrator aus. Öffnen Sie HiringRequest.sln.  
+1.  Führen Sie Visual Studio als Administrator aus. Öffnen Sie HiringRequest.sln.  
   
 2.  Mit der rechten Maustaste in der Projektmappe in **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.  
   
@@ -221,7 +222,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 ## <a name="troubleshooting"></a>Problembehandlung  
   
-1.  Vergewissern Sie sich, dass [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] mit Administratorrechten ausgeführt wird.  
+1.  Stellen Sie sicher, dass Sie Visual Studio mit Administratorrechten ausgeführt werden.  
   
 2.  Überprüfen Sie Folgendes, falls die Projektmappe nicht erstellt werden kann:  
   
@@ -237,7 +238,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
         2.  Mit der rechten Maustaste **Contoso** , und wählen Sie **Web-/Dienstverweise aktualisieren**.  
   
-        3.  Erstellen Sie die Projektmappe neu, indem Sie in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] STRG+UMSCHALT+B drücken.  
+        3.  Erstellen Sie die Projektmappe durch Drücken von STRG + UMSCHALT + B in Visual Studio neu.  
   
 ## <a name="uninstalling"></a>Deinstallieren  
   

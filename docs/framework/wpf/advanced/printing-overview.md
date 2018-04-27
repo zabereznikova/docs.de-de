@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über das Drucken"
-ms.custom: 
+title: Übersicht über das Drucken
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
-Mit [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] steht Anwendungsentwicklern, die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] verwenden, eine umfassende neue Druckreihen- und eine Drucksystemverwaltung [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zur Verfügung. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
+Mit Microsoft .NET Framework-Anwendungsentwickler [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] haben neue beruhende drucken und systemverwaltung [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -46,11 +48,11 @@ Mit [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] steh
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS-Druckpfad  
- Der [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]-Druckpfad ist ein neues [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Feature, das die Druckverarbeitung in [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]-Anwendungen neu definiert. Da [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] eine Sprache zur Dokumentdarstellung (wie etwa RTF), ein Druckerspoolerformat (wie etwa WMF) und eine Seitenbeschreibungssprache (wie etwa PCL oder Postscript) ersetzen kann, bleibt im neuen Druckpfad das [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Format von der Veröffentlichung der Anwendung bis zur abschließenden Verarbeitung im Druckertreiber oder -gerät erhalten.  
+ Die [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Druckpfad ist ein neues [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] -Funktion, die definiert, wie das Drucken in Windows-Anwendungen behandelt wird. Da [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] eine Sprache zur Dokumentdarstellung (wie etwa RTF), ein Druckerspoolerformat (wie etwa WMF) und eine Seitenbeschreibungssprache (wie etwa PCL oder Postscript) ersetzen kann, bleibt im neuen Druckpfad das [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Format von der Veröffentlichung der Anwendung bis zur abschließenden Verarbeitung im Druckertreiber oder -gerät erhalten.  
   
  Der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad baut auf dem [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckermodell (XPSDrv) auf, das für Entwickler eine Reihe von Vorzügen bereithält, wie etwa [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)]-Druck, verbesserte Farbunterstützung und erheblich gesteigerte Druckleistung. (Weitere Informationen zu XPSDrv finden Sie unter [Windows-Treiberentwicklungskit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
- Der Betrieb des Druckerspoolers ist für [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Dokumente im Wesentlichen gegenüber früheren Versionen von [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] unverändert. Er wurde jedoch verbessert und unterstützt nun über den vorhandenen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad hinaus auch den [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-Druckpfad. Der neue Druckpfad nutzt systemeigen eine [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Spooldatei. Zwar funktionieren für frühere Versionen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] erstellte Druckertreiber für den Benutzermodus weiterhin, für den [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad ist jedoch ein [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckertreiber (XPSDrv) erforderlich.  
+ Der Vorgang, der den Druckspooler für [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Dokumente ist im Wesentlichen dieselben wie in früheren Versionen von Windows. Er wurde jedoch verbessert und unterstützt nun über den vorhandenen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad hinaus auch den [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-Druckpfad. Der neue Druckpfad nutzt systemeigen eine [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Spooldatei. Zwar funktionieren für frühere Versionen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] erstellte Druckertreiber für den Benutzermodus weiterhin, für den [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad ist jedoch ein [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckertreiber (XPSDrv) erforderlich.  
   
  Die Vorzüge des [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfads sind erheblich und umfassen u.a.:  
   

@@ -1,28 +1,28 @@
 ---
 title: Hosting-Dienste
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-services"></a>Hosting-Dienste
 Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die ihn erstellt und seinen Kontext sowie seine Lebensdauer steuert. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienste können in jedem Windows-Prozess ausgeführt werden, der verwalteten Code unterstützt.  
@@ -34,12 +34,12 @@ Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die i
 ## <a name="hosting-options"></a>Hostingoptionen  
   
 #### <a name="self-hosting-in-a-managed-application"></a>Selbsthosting in einer verwalteten Anwendung  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste können in jeder verwalteten Anwendung gehostet werden. Dies ist die flexibelste Option, da hier die wenigste Infrastruktur bereitzustellen ist. Sie betten den Code für den Dienst in den verwalteten Anwendungscode ein und erstellen und öffnen dann eine Instanz von <xref:System.ServiceModel.ServiceHost> , um den Dienst zur Verfügung zu stellen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wie: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste können in jeder verwalteten Anwendung gehostet werden. Dies ist die flexibelste Option, da hier die wenigste Infrastruktur bereitzustellen ist. Sie betten den Code für den Dienst in den verwalteten Anwendungscode ein und erstellen und öffnen dann eine Instanz von <xref:System.ServiceModel.ServiceHost> , um den Dienst zur Verfügung zu stellen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Diese Option ermöglicht zwei gängige Szenarien: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste, die in einer Konsolenanwendung ausgeführt werden, und Rich&amp;#160;Client-Anwendungen, wie die auf [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] oder Windows&amp;#160;Forms (WinForms) basierenden Anwendungen. Einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst in einer Konsolenanwendung zu hosten, ist in der Regel während der Entwicklungsphase der Anwendung nützlich. Die Anwendung lässt sich dann einfach debuggen. Ablaufverfolgungsinformationen über die Anwendung lassen sich leichter ermitteln, um herauszufinden, was intern in der Anwendung vor sich geht. Zudem lässt sich die Anwendung dann einfacher an andere Speicherorte kopieren. Diese Hostingoption erleichtert es Rich&amp;#160;Client-Anwendungen, wie [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] - und WinForms-Anwendungen, mit der Außenwelt zu kommunizieren. Ein Beispiel dafür ist ein Peer-to-Peer-Kollaborationsclient, der [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] als Benutzeroberfläche nutzt und darüber hinaus als Host für einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst fungiert, der es anderen Clients ermöglicht, eine Verbindung mit ihm herzustellen und Daten auszutauschen.  
+ Diese Option ermöglicht zwei gängige Szenarien: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auf ausgeführten Anwendungsdienste konsolenanwendungen und rich-Client-Anwendungen, wie die basierend auf Windows Presentation Foundation (WPF) oder Windows Forms (WinForms). Einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst in einer Konsolenanwendung zu hosten, ist in der Regel während der Entwicklungsphase der Anwendung nützlich. Die Anwendung lässt sich dann einfach debuggen. Ablaufverfolgungsinformationen über die Anwendung lassen sich leichter ermitteln, um herauszufinden, was intern in der Anwendung vor sich geht. Zudem lässt sich die Anwendung dann einfacher an andere Speicherorte kopieren. Diese Hostingoption erleichtert es Rich&amp;#160;Client-Anwendungen, wie [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] - und WinForms-Anwendungen, mit der Außenwelt zu kommunizieren. Ein Beispiel dafür ist ein Peer-to-Peer-Kollaborationsclient, der [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] als Benutzeroberfläche nutzt und darüber hinaus als Host für einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst fungiert, der es anderen Clients ermöglicht, eine Verbindung mit ihm herzustellen und Daten auszutauschen.  
   
 #### <a name="managed-windows-services"></a>Verwaltete Windows-Dienste  
- Diese Hostingoption besteht in der Registrierung der Anwendungsdomäne (AppDomain), die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst als verwalteten Windows-Dienst (früher NT-Dienst genannt) hostet, sodass die Prozesslebensdauer des Diensts vom Dienststeuerungs-Manager für Windows gesteuert wird. Wie bei der Selbsthosting-Option muss auch bei diesem Typ von Hostumgebung ein Teil des Hostingcodes Bestandteil des Anwendungscodes sein. Der Dienst wird sowohl als Windows-Dienst als auch als [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst implementiert, indem er von der <xref:System.ServiceProcess.ServiceBase> -Klasse und von einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienstvertragsschnittstelle abgeleitet wird. Die <xref:System.ServiceModel.ServiceHost> -Instanz wird erstellt, mit einer überschriebenen <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> -Methode geöffnet und mit einer überschriebenen <xref:System.ServiceProcess.ServiceBase.OnStop> -Methode geschlossen. Außerdem muss eine Installerklasse implementiert werden, die von <xref:System.Configuration.Install.Installer> abgeleitet ist, damit das Programm mit dem Tool Installutil.exe als Windows-Dienst installiert werden kann. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Das Szenario, das durch die Hostingoption des verwalteten Windows-Diensts ermöglicht wird, besteht in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste (IIS) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.  
+ Diese Hostingoption besteht in der Registrierung der Anwendungsdomäne (AppDomain), die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst als verwalteten Windows-Dienst (früher NT-Dienst genannt) hostet, sodass die Prozesslebensdauer des Diensts vom Dienststeuerungs-Manager für Windows gesteuert wird. Wie bei der Selbsthosting-Option muss auch bei diesem Typ von Hostumgebung ein Teil des Hostingcodes Bestandteil des Anwendungscodes sein. Der Dienst wird sowohl als Windows-Dienst als auch als [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst implementiert, indem er von der <xref:System.ServiceProcess.ServiceBase> -Klasse und von einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienstvertragsschnittstelle abgeleitet wird. Die <xref:System.ServiceModel.ServiceHost> -Instanz wird erstellt, mit einer überschriebenen <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> -Methode geöffnet und mit einer überschriebenen <xref:System.ServiceProcess.ServiceBase.OnStop> -Methode geschlossen. Außerdem muss eine Installerklasse implementiert werden, die von <xref:System.Configuration.Install.Installer> abgeleitet ist, damit das Programm mit dem Tool Installutil.exe als Windows-Dienst installiert werden kann. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Das Szenario, das durch die Hostingoption des verwalteten Windows-Diensts ermöglicht wird, besteht in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste (IIS) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.  
   
 #### <a name="internet-information-services-iis"></a>IIS (Internet Information Services)  
  Die IIS-Hostingoption ist in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] integriert und nutzt die Features dieser Technologie, beispielsweise die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die nachrichtenbasierte Aktivierung. Unter den Betriebssystemen [!INCLUDE[wxp](../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ist dies die bevorzugte Lösung für das Hosten von Webdienstanwendungen, die stets verfügbar und weitgehend skalierbar sein müssen. IIS bietet zudem die integrierte Verwaltbarkeit, die Kunden von einem Serverprodukt für Unternehmen erwarten. Diese Hostingoption erfordert, dass IIS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Konfigurieren von IIS-Hosting für einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst finden Sie unter [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

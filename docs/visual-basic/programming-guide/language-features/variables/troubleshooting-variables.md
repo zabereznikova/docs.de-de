@@ -1,28 +1,29 @@
 ---
 title: Problembehandlung bei Variablen in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bf6d2a0c7318c12b3001a92a8aa06625b4edabb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6b14b3f48dbe9e74879d232966a07fa29bb1102c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Problembehandlung bei Variablen in Visual Basic
-Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbeit mit Variablen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]auftreten können.  
+Auf dieser Seite sind einige allgemeine Probleme, die auftreten können, bei der Arbeit mit Variablen in Visual Basic.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>Zugriff auf Member eines Objekts ist nicht möglich  
  Wenn Ihr Code versucht, auf eine Eigenschaft oder Methode eines Objekts zuzugreifen, können zwei Arten von Fehlern auftreten:  
@@ -41,7 +42,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbe
  Um auf alle Member eines Objekts einer bestimmten Klasse zugreifen zu können, deklarieren Sie die Objektvariable nach Möglichkeit als Typ der Klasse. Wenn Sie nicht möglich, z. B. Wenn Sie den Objekttyp zur Kompilierzeit nicht bekannt ist, müssen Sie festlegen `Option Strict` auf `Off` und deklarieren Sie die Variable in einer der [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md). So können der Variablen Objekte beliebigen Typs zugewiesen werden, und Sie sollten Maßnahmen ergreifen, um sicherzustellen, dass das aktuell zugewiesene Objekt einen zulässigen Typ hat. Sie können die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) um diese Entscheidung zu treffen.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Andere Komponenten können nicht auf die Variable zugreifen  
- Bei[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Namen wird die *Groß-/Kleinschreibung nicht beachtet*. Wenn zwei Namen sich nur in der Groß- und Kleinschreibung unterscheiden, interpretiert der Compiler sie als identisch. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
+ Visual Basic-Namen sind *Groß-/Kleinschreibung*. Wenn zwei Namen sich nur in der Groß- und Kleinschreibung unterscheiden, interpretiert der Compiler sie als identisch. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
   
  Allerdings verwendet die Common Language Runtime (CLR) die *Groß-/Kleinschreibung unterscheidende* Bindung. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in `abc`ändern, können andere Assemblys, die Ihre Klasse verwenden, nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
   
@@ -51,7 +52,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbe
  Um anderen Komponenten den Zugriff auf Ihre Variablen zu ermöglichen, behandeln Sie deren Namen so, als würde die Groß-/Kleinschreibung unterschieden. Stellen Sie beim Testen der Klasse oder des Moduls sicher, dass andere Assemblys sich gemäß Ihrer Erwartung an die Variablen binden. Nachdem Sie eine Komponente veröffentlicht haben, nehmen Sie keine Änderungen an vorhandenen Namen von Variablen vor, Ändern von Groß-/Kleinschreibung inbegriffen.  
   
 ## <a name="wrong-variable-being-used"></a>Falsche Variable wird verwendet  
- Wenn Sie über mehrere Variablen gleichen Namens verfügen, versucht der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Compiler, jeden Verweis auf diesen Namen aufzulösen. Wenn die Variablen über unterschiedliche Gültigkeitsbereiche verfügen, löst der Compiler einen Verweis auf die Deklaration mit dem engsten Gültigkeitsbereich auf. Wenn sie den gleichen Gültigkeitsbereich aufweisen, gelingt die Auflösung nicht, und der Compiler signalisiert einen Fehler. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Wenn Sie mehr als eine Variable mit dem gleichen Namen haben, versucht Visual Basic-Compiler, jeden Verweis auf diesen Namen aufzulösen. Wenn die Variablen über unterschiedliche Gültigkeitsbereiche verfügen, löst der Compiler einen Verweis auf die Deklaration mit dem engsten Gültigkeitsbereich auf. Wenn sie den gleichen Gültigkeitsbereich aufweisen, gelingt die Auflösung nicht, und der Compiler signalisiert einen Fehler. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ### <a name="correct-approach"></a>Richtige Vorgehensweise  
  Vermeiden Sie, Variablen mit gleichem Namen, aber unterschiedlichen Gültigkeitsbereichen zu verwenden. Wenn Sie andere Assemblys oder Projekte verwenden, vermeiden Sie so weit wie möglich die Verwendung von Namen, die in diesen externen Komponenten definiert werden. Wenn Sie über mehrere Variablen gleichen Namens verfügen, achten Sie darauf, jeden Verweis auf sie zu qualifizieren. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  

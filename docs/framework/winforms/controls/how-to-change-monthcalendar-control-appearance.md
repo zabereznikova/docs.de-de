@@ -1,12 +1,13 @@
 ---
-title: "Vorgehensweise: Ändern der MonthCalendar-Steuerelement in Windows Forms &#39; s Darstellung"
-ms.custom: 
+title: 'Vorgehensweise: Ändern des MonthCalendar-Steuerelements in Windows Forms&#39;s Darstellung'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +17,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d2a3f12368d5215f7fe7611aa2f06e6b0fb1192
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Vorgehensweise: Ändern der MonthCalendar-Steuerelement in Windows Forms &#39; s Darstellung
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Vorgehensweise: Ändern des MonthCalendar-Steuerelements in Windows Forms&#39;s Darstellung
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement ermöglicht es Ihnen, zum Anpassen der Darstellung des Kalenders in vielerlei Hinsicht. Sie können z. B. das Farbschema festlegen und Wochennummern und das aktuelle Datum ein- oder ausgeblendet werden sollen.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>So ändern Sie den Monatskalender Farbschema  
@@ -85,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement ermöglich
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Fügen Sie den folgenden Code in den Konstruktor der Form ein, um den Ereignishandler zu registrieren.  
+     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  

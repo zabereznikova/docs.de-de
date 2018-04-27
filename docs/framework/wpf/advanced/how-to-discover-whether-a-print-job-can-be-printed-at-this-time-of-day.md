@@ -1,12 +1,13 @@
 ---
 title: 'Gewusst wie: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Gewusst wie: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann
 Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie haben die Start- und Uhrzeit-Eigenschaften, die festgelegt werden können, um sie zu bestimmten Zeiten des Tages nicht verfügbar zu machen. Diese Funktion kann verwendet werden, einen Drucker, für die ausschließliche Verwendung von einer bestimmten Abteilung nach 17: 00 Uhr reservieren. Diese Abteilung müsste eine andere Warteschlange Wartung des Druckers als andere Abteilungen verwenden. Die Warteschlange für die anderen Abteilungen nach 17: 00 Uhr nicht verfügbar ist, festgelegt, während die Warteschlange für die Vorgabe Abteilung festgelegt werden konnte, werden jederzeit zur Verfügung stehen.  
   
  Darüber hinaus können nur innerhalb einer angegebenen Zeitspanne druckbaren werden Druckaufträge selbst festgelegt werden.  
   
- Die <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> Klassen verfügbar gemacht, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] bieten eine Möglichkeit zum Remote überprüfen, ob ein bestimmter Druckauftrag zum jetzigen Zeitpunkt auf einer bestimmten Warteschlange drucken kann.  
+ Die <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> Klassen verfügbar gemacht, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework bieten Sie eine Möglichkeit zum Remote überprüfen, ob ein bestimmter Druckauftrag zum jetzigen Zeitpunkt auf einer bestimmten Warteschlange drucken kann.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Beispiel, das bei einem Druckauftrag Problemdiagnose kann.  
@@ -79,7 +81,7 @@ Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie hab
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- Der **TimeConverter.ConvertToLocalHumanReadableTime** -Methode (im folgenden Codebeispiel dargestellt) verwendet keine mit eingeführten Methoden [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], sodass die Diskussion kurz ist. Die Methode wurde eine doppelte Konvertierungsaufgabe: Es muss eine ganze Zahl, die Minuten nach Mitternacht ausdrückt und konvertieren Sie ihn in eine lesbare Zeit und es muss in die lokale Zeit konvertieren. Erreicht wird dies durch Erstellen einer <xref:System.DateTime> -Objekt, das festgelegt wird, um Mitternacht UTC und anschließend verwendet der <xref:System.DateTime.AddMinutes%2A> Methode, um die Minuten hinzuzufügen, die an die Methode übergeben wurden. Dies gibt eine neue <xref:System.DateTime> auszudrücken, die ursprüngliche Uhrzeit, die an die Methode übergeben wurde. Die <xref:System.DateTime.ToLocalTime%2A> -Methode konvertiert diese dann in die Ortszeit.  
+ Die **TimeConverter.ConvertToLocalHumanReadableTime** -Methode (im folgenden Codebeispiel dargestellt) verwendet keine Methoden mit Microsoft .NET Framework eingeführt wurde, daher wird keine. Die Methode wurde eine doppelte Konvertierungsaufgabe: Es muss eine ganze Zahl, die Minuten nach Mitternacht ausdrückt und konvertieren Sie ihn in eine lesbare Zeit und es muss in die lokale Zeit konvertieren. Erreicht wird dies durch Erstellen einer <xref:System.DateTime> -Objekt, das festgelegt wird, um Mitternacht UTC und anschließend verwendet der <xref:System.DateTime.AddMinutes%2A> Methode, um die Minuten hinzuzufügen, die an die Methode übergeben wurden. Dies gibt eine neue <xref:System.DateTime> auszudrücken, die ursprüngliche Uhrzeit, die an die Methode übergeben wurde. Die <xref:System.DateTime.ToLocalTime%2A> -Methode konvertiert diese dann in die Ortszeit.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

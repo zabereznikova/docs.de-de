@@ -20,11 +20,11 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dae47988e27ed4b1a714943ce1fbffe3b815066b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c32ce34dc7d6cb662ebdb42a3d3431f8107687f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatoren und Ausdrücke in Visual Basic
 Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Codeelementen ausführt, die Werte halten. Wertelemente sind unter anderem Variablen, Konstanten, Literale, Eigenschaften, Rückgaben von `Function`- und `Operator`-Prozeduren sowie Ausdrücke.  
@@ -32,7 +32,7 @@ Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Co
  Ein *Ausdruck* ist eine Serie von Wertelementen, die mit Operatoren kombiniert sind, was einen neuen Wert ergibt. Die Operatoren werden auf den Wertelementen ausgeführt, indem Berechnungen, Vergleiche oder andere Vorgänge ausgeführt werden.  
   
 ## <a name="types-of-operators"></a>Arten von Operatoren  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt folgende Arten von Operatoren bereit:  
+ Visual Basic bietet die folgenden Typen von Operatoren:  
   
 -   [Arithmetische Operatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) führen bekannte Berechnungen auf numerischen Werten aus, einschließlich Verschieben der Bitmuster.  
   
@@ -69,7 +69,7 @@ Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Co
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- Im vorhergehenden Beispiel führt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Vorgänge im Ausdruck auf der rechten Seite des Zuweisungsoperators (`=`) aus und weist den ergebenden Wert dann der Variable `x` auf der linken Seite zu. Es gibt keine festgelegte Einschränkung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Jedoch ist es notwendig, die [Operatorrangfolge in Visual Studio](../../../../visual-basic/language-reference/operators/operator-precedence.md) zu verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
+ Im vorherigen Beispiel Visual Basic führt die Operationen im Ausdruck auf der rechten Seite des Zuweisungsoperators (`=`), dann weist den resultierenden Wert der Variablen `x` auf der linken Seite. Es gibt keine festgelegte Einschränkung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Jedoch ist es notwendig, die [Operatorrangfolge in Visual Studio](../../../../visual-basic/language-reference/operators/operator-precedence.md) zu verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
   
  Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005 (Operatorüberladung in Visual Basic 2005)](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

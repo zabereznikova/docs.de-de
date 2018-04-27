@@ -1,27 +1,29 @@
 ---
-title: "Häufig gestellte Fragen (FAQs)"
-ms.custom: 
+title: Häufig gestellte Fragen (FAQs)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -31,7 +33,7 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
 ## <a name="cannot-connect"></a>Es kann keine Verbindung hergestellt werden  
  F. Es kann keine Verbindung mit meiner Datenbank hergestellt werden.  
   
- A. Stellen Sie sicher, dass Ihre Verbindungszeichenfolge richtig ist und dass die [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]-Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ A. Stellen Sie sicher, dass Ihre Verbindungszeichenfolge richtig ist und dass die SQL Server-Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Änderungen an der Datenbank sind nicht vorhanden  
  F. Änderungen an den Daten in der Datenbank sind nicht mehr vorhanden, nachdem meine Anwendung erneut ausgeführt wurde.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Anbietermodell  
  F. Ist ein öffentliches Anbietermodell verfügbar?  
   
- A. Es ist kein öffentliches Anbietermodell verfügbar. Derzeit unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nur [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt SQL Server und [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] nur.  
   
 ## <a name="sql-injection-attacks"></a>SQL-Injection-Angriffe  
  F. Wie wird [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vor SQL-Injection-Angriffen geschützt?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Überprüfen Sie den <xref:System.Data.Linq.Mapping.UpdateCheck>-Standardwert (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), um zu bestimmen, ob dieses der richtige Wert für die Anwendung ist.  
   
     > [!CAUTION]
-    >  Wenn Sie [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Ihre Änderungen überschrieben werden.  
+    >  Bei Verwendung der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio Ihre Änderungen überschrieben werden.  
   
 ## <a name="aptca"></a>APTCA  
  F. Ist System.Data.Linq für die Verwendung durch teilweise vertrauenswürdigen Code markiert?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Sie sollten nicht versuchen, Instanzen von <xref:System.Data.Linq.DataContext> wiederzuverwenden. Jeder <xref:System.Data.Linq.DataContext> behält den Zustand (einschließlich eines Identitätscaches) für eine bestimmte Bearbeitungs-/Abfragesitzung bei. Um neue Instanzen auf Grundlage des aktuellen Zustands der Datenbank zu erhalten, verwenden Sie einen neuen <xref:System.Data.Linq.DataContext>.  
   
- Sie können weiterhin das zugrunde liegende Verbindungspooling von [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] verwenden. Weitere Informationen finden Sie unter [SQL Server Connection Pooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Sie können weiterhin das zugrunde liegende Verbindungspooling von [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] verwenden. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Zweiter DataContext wird nicht aktualisiert  
  F. Zum Speichern von Werten in der Datenbank wurde eine Instanz von <xref:System.Data.Linq.DataContext> verwendet. Die aktualisierten Werte werden aber von einem zweiten <xref:System.Data.Linq.DataContext> in derselben Datenbank nicht angezeigt. Die zweite <xref:System.Data.Linq.DataContext>-Instanz scheint zwischengespeicherte Werte zurückzugeben.  

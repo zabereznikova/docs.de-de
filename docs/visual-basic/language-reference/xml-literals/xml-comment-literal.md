@@ -2,8 +2,8 @@
 title: XML-Kommentarliteral (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5bb8c10c28a4ab864220c1b4ce4702622e55c92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML-Kommentarliteral (Visual Basic)
 Ein Zeichenfolgenliteral, eine <xref:System.Xml.Linq.XComment> Objekt.  
@@ -54,9 +54,9 @@ Ein Zeichenfolgenliteral, eine <xref:System.Xml.Linq.XComment> Objekt.
  Sie können eine Variable einem XML-Kommentarliteral zuweisen, oder kann in einem XML-Elementliteral eingeschlossen wird.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen verwenden. Dieser Funktion können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm.  
+>  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen verwenden. Diese Funktion können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in ein Visual Basic-Programm.  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Compiler konvertiert, das XML-Kommentarliteral zu einem Aufruf der <xref:System.Xml.Linq.XComment.%23ctor%2A> Konstruktor.  
+ Visual Basic-Compiler konvertiert die XML-Kommentarliteral in einen Aufruf der <xref:System.Xml.Linq.XComment.%23ctor%2A> Konstruktor.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt einen XML-Kommentar mit dem Text "This is einen Kommentar".  

@@ -1,30 +1,32 @@
 ---
 title: Visual Basic- und WPF-Ereignisbehandlung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
-Für die [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] Sprache insbesondere können Sie die sprachspezifischen `Handles` Instanzen, anstelle von Anfügen von Ereignishandlern mit Attributen oder mithilfe von Ereignishandlern zuzuordnende Schlüsselwort der <xref:System.Windows.UIElement.AddHandler%2A> Methode. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
+Für die Sprache für Microsoft Visual Basic .NET insbesondere können Sie die sprachspezifischen `Handles` Instanzen, anstelle von Anfügen von Ereignishandlern mit Attributen oder mithilfe von Ereignishandlern zuzuordnende Schlüsselwort der <xref:System.Windows.UIElement.AddHandler%2A> Methode. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Verwenden von „Handles“ in einer WPF-Anwendung  
  Die Ereignishandler, die über `Handles` mit Instanzen und Ereignissen verbunden sind, müssen alle innerhalb der partiellen Klassendefinition der Instanz definiert sein, die auch eine Anforderung für Ereignishandler darstellt, die über Attributwerte für Elemente zugewiesen werden. Sie können nur angeben, `Handles` für ein Element auf die Seite mit einer <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaftswert (oder [X: Name-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert). Grund hierfür ist, die <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellt die Instanzverweis, der erforderlich ist, unterstützt die *Instance.Event* erforderlich sind, indem Sie das Format der `Handles` Syntax. Das einzige Element, das für Verteilungsszenarien `Handles` ohne eine <xref:System.Windows.FrameworkContentElement.Name%2A> Verweis ist das Stammelement-Instanz, die die partielle Klasse definiert.  
@@ -45,7 +47,7 @@ Für die [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbn
  `Handles` kann keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt markiert sind. Stattdessen müssen Sie verwenden, Code, und rufen die `handledEventsToo` Überladung der <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  Verwenden Sie nicht die `Handles`-Syntax in [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)]-Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
+>  Verwenden Sie nicht die `Handles` Syntax in Visual Basic-Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>So implementiert WPF die „Handles“-Funktionalität  
  Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite kompiliert wird, deklariert die Zwischendatei `Friend` `WithEvents` Verweise auf jedes Element auf die Seite mit eine <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaftensatz (oder [X: Name-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert). Jede benannte Instanz ist potenziell ein Element, das an einem Handler mit `Handles` zugewiesen werden kann.  

@@ -1,11 +1,11 @@
 ---
 title: XML-Serialisierung mit XML-Webdiensten
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12ab7f98036f61b0d9100f99ba3fad2388f62210
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b07d86bbcc646141e067342d5e4340bdc4b39757
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML-Serialisierung mit XML-Webdiensten
-Bei der XML-Serialisierung handelt es sich um den durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse ausgeführten Transportmechanismus, der die Grundlage für die Architektur der XML-Webdienste ist. Zum Steuern des mit einem XML-Webdienst generierten XML-Streams können Sie sowohl die unter [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) als auch die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aufgelisteten Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Datei anwenden, die zum Erstellen eines XML-Webdiensts (ASMX) verwendet wurden. Weitere Informationen zum Erstellen von XML-Webdiensten finden Sie unter [Erstellen von XML-Webdiensten mit ASP.NET](http://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
+Bei der XML-Serialisierung handelt es sich um den durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse ausgeführten Transportmechanismus, der die Grundlage für die Architektur der XML-Webdienste ist. Zum Steuern des mit einem XML-Webdienst generierten XML-Streams können Sie sowohl die unter [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) als auch die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aufgelisteten Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Datei anwenden, die zum Erstellen eines XML-Webdiensts (ASMX) verwendet wurden. Weitere Informationen zum Erstellen von XML-Webdiensten finden Sie unter [Erstellen von XML-Webdiensten mit ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
   
 ## <a name="literal-and-encoded-styles"></a>Literalformat und codiertes Format  
- Der mit einem XML-Webdienst generierte XML-Stream kann entweder im Literalformat oder codiert formatiert werden, wie unter [Anpassen von SOAP-Nachrichten](http://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952) beschrieben. Daher wird die XML-Serialisierung durch zwei Gruppen von Attributen gesteuert. Die unter [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) aufgelisteten Attribute sind für die Steuerung von XML im Literalformat vorgesehen. Durch die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aufgeführten Attribute wird das codierte Format gesteuert. Durch die gezielte Anwendung dieser Attribute können Sie eine Anwendung so anpassen, dass sie eines dieser Formate oder beide Formate zurückgibt. Zudem können diese Attribute gegebenenfalls auch auf Rückgabewerte und Parameter angewendet werden.  
+ Der mit einem XML-Webdienst generierte XML-Stream kann entweder im Literalformat oder codiert formatiert werden, wie unter [Anpassen von SOAP-Nachrichten](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952) beschrieben. Daher wird die XML-Serialisierung durch zwei Gruppen von Attributen gesteuert. Die unter [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) aufgelisteten Attribute sind für die Steuerung von XML im Literalformat vorgesehen. Durch die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aufgeführten Attribute wird das codierte Format gesteuert. Durch die gezielte Anwendung dieser Attribute können Sie eine Anwendung so anpassen, dass sie eines dieser Formate oder beide Formate zurückgibt. Zudem können diese Attribute gegebenenfalls auch auf Rückgabewerte und Parameter angewendet werden.  
   
 ### <a name="example-of-using-both-styles"></a>Beispiel für die Verwendung beider Formate  
  Bei der Erstellung eines XML-Webdienstes können Sie beide Sätze von Attributen auf die Methoden anwenden. Im folgenden Codebeispiel enthält die Klasse `MyService` die beiden XML-Webdienstmethoden `MyLiteralMethod` und `MyEncodedMethod`. Beide Methoden führen dieselbe Funktion aus: Zurückgeben einer Instanz der `Order`-Klasse. In der `Order`-Klasse werden sowohl das <xref:System.Xml.Serialization.XmlTypeAttribute>-Attribut als auch das <xref:System.Xml.Serialization.SoapTypeAttribute>-Attribut auf das `OrderID`-Feld angewendet. Für beide Attribute wurden hierbei verschiedene Werte für die `ElementName`-Eigenschaft festgelegt.  

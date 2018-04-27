@@ -1,22 +1,23 @@
 ---
 title: Partitionieren von Daten (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>Partitionieren von Daten (Visual Basic)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
@@ -39,22 +40,22 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="skip"></a>Skip  
- Im folgenden Codebeispiel wird mit der `Skip` -Klausel in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , überspringen die ersten vier Zeichenfolgen in ein Array von Zeichenfolgen vor der Rückgabe der verbleibenden Zeichenfolgen im Array.  
+ Im folgenden Codebeispiel wird mit der `Skip` -Klausel in Visual Basic, überspringen die ersten vier Zeichenfolgen in ein Array von Zeichenfolgen vor der Rückgabe der verbleibenden Zeichenfolgen im Array.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Im folgenden Codebeispiel wird mit der `Skip While` -Klausel in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist, überspringen die Zeichenfolgen in einem Array, bei dem ersten Buchstaben der Zeichenfolge "a". Die übrigen Zeichenfolgen im Array werden zurückgegeben.  
+ Im folgenden Codebeispiel wird mit der `Skip While` -Klausel in Visual Basic, um die Zeichenfolgen in einem Array überspringen, wenn es sich bei der erste Buchstaben der Zeichenfolge ist "a". Die übrigen Zeichenfolgen im Array werden zurückgegeben.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Im folgenden Codebeispiel wird mit der `Take` -Klausel in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] um die ersten zwei Zeichenfolgen in ein Array von Zeichenfolgen zurückzugeben.  
+ Im folgenden Codebeispiel wird mit der `Take` -Klausel in Visual Basic, um die ersten zwei Zeichenfolgen in ein Array von Zeichenfolgen zurückzugeben.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Im folgenden Codebeispiel wird mit der `Take While` -Klausel in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf Zeichenfolgen aus einem Array zurück, während die Länge der Zeichenfolge fünf oder weniger beträgt.  
+ Im folgenden Codebeispiel wird mit der `Take While` -Klausel in Visual Basic, um Zeichenfolgen aus einem Array zurück, während die Länge der Zeichenfolge fünf oder weniger beträgt.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   

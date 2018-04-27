@@ -1,34 +1,36 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 Diese exemplarische Vorgehensweise führt Sie schrittweise durch den Prozess zum Erstellen einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] benutzerdefinierte Schaltfläche mit Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend funktioniert durch die Erstellung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , wird dann kompiliert, das ausführbare Programm vornehmen. Wenn Sie lieber mit arbeiten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] direkt, besteht ein anderes Exemplarische Vorgehensweise, die die gleiche Anwendung wie diese erstellt [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mit [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] anstatt Blend. Finden Sie unter [erstellen Sie eine Schaltfläche durch Verwendung von XAML-](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) für Weitere Informationen.  
+>  Microsoft Expression Blend funktioniert durch die Erstellung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , wird dann kompiliert, das ausführbare Programm vornehmen. Wenn Sie lieber mit arbeiten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] direkt, besteht ein anderes Exemplarische Vorgehensweise, die die gleiche Anwendung wie diese erstellt [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mit Visual Studio anstelle von Blend. Finden Sie unter [erstellen Sie eine Schaltfläche durch Verwendung von XAML-](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) für Weitere Informationen.  
   
  Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  
   
@@ -73,7 +75,7 @@ Diese exemplarische Vorgehensweise führt Sie schrittweise durch den Prozess zum
   
      ![Das Dialogfeld "Stilressource erstellen"](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     Für **Resource Name (Schlüssel)**Option **anwenden auf alle**.  Dies veranlasst das resultierende Stil und einem Schaltflächenvorlage auf alle Objekte angewendet, die Schaltflächen sind. Für **definieren in**Option **Anwendung**. Dies veranlasst das resultierende Stil und einem Schaltflächenvorlage Bereich über die gesamte Anwendung aufweisen. Wenn Sie die Werte in diesen beiden Felder festlegen, die Schaltflächenformat und Vorlage gelten für alle Schaltflächen in der gesamten Anwendung und keine der Schaltflächen, die Sie in der Anwendung zu erstellen, wird standardmäßig verwenden Sie diese Vorlage.  
+     Für **Resource Name (Schlüssel)** Option **anwenden auf alle**.  Dies veranlasst das resultierende Stil und einem Schaltflächenvorlage auf alle Objekte angewendet, die Schaltflächen sind. Für **definieren in**Option **Anwendung**. Dies veranlasst das resultierende Stil und einem Schaltflächenvorlage Bereich über die gesamte Anwendung aufweisen. Wenn Sie die Werte in diesen beiden Felder festlegen, die Schaltflächenformat und Vorlage gelten für alle Schaltflächen in der gesamten Anwendung und keine der Schaltflächen, die Sie in der Anwendung zu erstellen, wird standardmäßig verwenden Sie diese Vorlage.  
   
 ## <a name="edit-the-button-template"></a>Bearbeiten Sie die Schaltflächenvorlage  
  Sie haben jetzt ein Rechteck, das mit einer Schaltfläche geändert wurde. In diesem Abschnitt Sie die Vorlage der Schaltfläche ändern und weiter anpassen, wie er aussieht.  

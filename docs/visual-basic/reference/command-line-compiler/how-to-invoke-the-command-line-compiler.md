@@ -2,9 +2,10 @@
 title: 'Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)
 Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als MS-DOS, können Sie den Befehlszeilencompiler aufrufen. Wenn Sie über die standardmäßige Windows-Befehlszeile kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie entweder die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] -Eingabeaufforderung ein, oder ändern Sie die PATH-Umgebungsvariable. Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.  
@@ -54,7 +55,7 @@ Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als
   
 6.  Klicken Sie auf **OK** die Bearbeitungen bestätigt und die Dialogfelder zu schließen.  
   
-     Nachdem Sie der PATH-Umgebungsvariablen ändern, können Sie Ausführen den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler an der Windows-Eingabeaufforderung aus dem Verzeichnis auf dem Computer.  
+     Nachdem Sie die PATH-Umgebungsvariable ändern, können Sie Visual Basic-Compiler an der Windows-Eingabeaufforderung aus dem Verzeichnis auf dem Computer ausführen.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Zum Aufrufen des Compilers über die Windows-Eingabeaufforderung  
   

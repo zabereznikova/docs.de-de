@@ -1,23 +1,24 @@
 ---
-title: "Verwenden von Aktivitätsdelegaten"
-ms.custom: 
+title: Verwenden von Aktivitätsdelegaten
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Verwenden von Aktivitätsdelegaten
 Aktivitätsdelegaten ermöglichen es Aktivitätsautoren, Rückrufe mit bestimmten Signaturen verfügbar zu machen, für die Benutzer der Aktivität aktivitätsbasierte Handler bereitstellen können. Es sind zwei Typen von Aktivitätsdelegaten verfügbar: <xref:System.Activities.ActivityAction%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die keinen Rückgabewert haben, und <xref:System.Activities.ActivityFunc%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die einen Rückgabewert aufweisen.  
@@ -37,7 +38,7 @@ In den Beispielen in diesem Thema wird die Syntax zur Objektinitialisierung verw
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Objektinitialisierer, finden Sie unter [wie: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C#-Programmierhandbuch)](http://go.microsoft.com/fwlink/?LinkId=161015) und [wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Objektinitialisierer, finden Sie unter [wie: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C#-Programmierhandbuch)](http://go.microsoft.com/fwlink/?LinkId=161015) und [wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Im folgenden Beispiel wird eine <xref:System.Activities.Statements.TryCatch>-Aktivität in einem Workflow verwendet. Eine <xref:System.ApplicationException> wird vom Workflow ausgelöst und wird von einer <xref:System.Activities.Statements.Catch%601>-Aktivität behandelt. Der Handler für das <xref:System.Activities.Statements.Catch%601> aktivitätsaktion Aktivität ist eine <xref:System.Activities.Statements.WriteLine> Aktivität und die Ausnahmedetails werden dorthin mithilfe der `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -62,7 +63,7 @@ In den Beispielen in diesem Thema wird die Syntax zur Objektinitialisierung verw
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Um die `TextGenerator`-Aktivität mit der `WriteRandomText`-Aktivität zu verwenden, geben Sie diese als <xref:System.Activities.ActivityDelegate.Handler%2A>-Eigenschaft an.  
+ Um die `TextGenerator`-Aktivität mit der `WriteFillerText`-Aktivität zu verwenden, geben Sie diese als <xref:System.Activities.ActivityDelegate.Handler%2A>-Eigenschaft an.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

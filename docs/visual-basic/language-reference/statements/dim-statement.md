@@ -2,9 +2,10 @@
 title: Dim-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim-Anweisung (Visual Basic)
 Deklariert und reserviert Speicherplatz für eine oder mehrere Variablen.  
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Weitere Informationen zu Arrayliterale, finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Standarddatentypen und-Werte  
+##  <a name="default"></a> Standarddatentypen und-Werte  
  Die folgende Tabelle beschreibt die Ergebnisse der verschiedenen Kombinationen der Spezifizierung von Datentyp und Initialisierung in einer `Dim`-Anweisung.  
   
 |Datentyp angegeben?|Initialisierung angegeben?|Beispiel|Ergebnis|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Ja|Nein|`Dim qty As Integer`|Die Variable wird auf den Standardwert für den Datentyp initialisiert. Finden Sie in der Tabelle weiter unten in diesem Abschnitt.|  
 |Ja|Ja|`Dim qty  As Integer = 5`|Wenn der Datentyp der Initialisierung nicht in den angegebenen Datentyp konvertiert werden kann, tritt ein Fehler während der Kompilierung auf.|  
   
- Wenn Sie einen Datentyp angeben, aber Sie einen Initialisierer keine geben [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Variable auf den Standardwert für seinen Datentyp initialisiert. Die folgende Tabelle zeigt die Initialisierungswerte.  
+ Wenn Sie einen Datentyp angeben, aber Sie keine Initialisierer geben, initialisiert Visual Basic die Variable auf den Standardwert für seinen Datentyp. Die folgende Tabelle zeigt die Initialisierungswerte.  
   
 |Datentyp|Standardwert|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Prozedurdeklaration|Variable ist initialisiert|Variable beendet vorhandene|  
 |---|---|---|  
 |In einem Modul|Das erste Mal wird die Prozedur aufgerufen.|Wenn das Programm die Ausführung beendet.|  
-|In einer Klasse oder Struktur ist Prozedur`Shared`|Das erste Mal wird die Prozedur in einer bestimmten Instanz oder für die Klasse oder Struktur selbst aufgerufen|Wenn das Programm die Ausführung beendet.|  
-|Ist nicht in einer Klasse oder Struktur die Prozedur`Shared`|Das erste Mal wird die Prozedur in einer bestimmten Instanz aufgerufen.|Wenn die Instanz freigegeben wird, für die Garbagecollection (GC)|  
+|In einer Klasse oder Struktur ist Prozedur `Shared`|Das erste Mal wird die Prozedur in einer bestimmten Instanz oder für die Klasse oder Struktur selbst aufgerufen|Wenn das Programm die Ausführung beendet.|  
+|Ist nicht in einer Klasse oder Struktur die Prozedur `Shared`|Das erste Mal wird die Prozedur in einer bestimmten Instanz aufgerufen.|Wenn die Instanz freigegeben wird, für die Garbagecollection (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Attribute und -Modifizierern  
  Sie können Attribute nur für Membervariablen und nicht auf lokale Variablen anwenden. Ein Attribut trägt dazu bei Informationen zu den Metadaten der Assembly, die hat keine Bedeutung für die temporäre Speicherung, z. B. lokale Variablen.  

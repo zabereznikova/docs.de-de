@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 Das FILESTREAM-Speicherattribut wird für Binärdaten (BLOBs) verwendet, die in einer varbinary(max)-Spalte gespeichert sind. Vor FILESTREAM erforderte das Speichern von Binärdaten besondere Maßnahmen. Unstrukturierte Daten wie z. B. Textdokumente, Bilder und Videos werden häufig außerhalb der Datenbank gespeichert und sind daher schwieriger zu verwalten.  
@@ -28,13 +28,13 @@ Das FILESTREAM-Speicherattribut wird für Binärdaten (BLOBs) verwendet, die in 
 > [!NOTE]
 >  Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um mithilfe von SqlClient mit FILESTREAM-Daten zu arbeiten.  
   
- Wenn das FILESTREAM-Attribut für eine varbinary(max)-Spalte festgelegt ist, werden die Daten von [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] im lokalen NTFS-Dateisystem und nicht in der Datenbankdatei gespeichert. Obwohl die Speicherung separat erfolgt, können dieselben [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisungen verwendet werden, die für das Arbeiten mit in der Datenbank gespeicherten varbinary(max)-Daten unterstützt werden.  
+ Wenn das FILESTREAM-Attribut für eine varbinary(max)-Spalte festgelegt ist, werden die Daten von SQL Server im lokalen NTFS-Dateisystem und nicht in der Datenbankdatei gespeichert. Obwohl die Speicherung separat erfolgt, können dieselben [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisungen verwendet werden, die für das Arbeiten mit in der Datenbank gespeicherten varbinary(max)-Daten unterstützt werden.  
   
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient-Unterstützung für FILESTREAM  
- Der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Datenanbieter für [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], <xref:System.Data.SqlClient>, unterstützt das Lesen und Schreiben von FILESTREAM-Daten mithilfe der im <xref:System.Data.SqlTypes.SqlFileStream>-Namespace definierten <xref:System.Data.SqlTypes>-Klasse. `SqlFileStream` erbt von der <xref:System.IO.Stream>-Klasse, die Methoden zum Lesen und Schreiben der Datenströme bereitstellt. Beim Lesen aus einem Strom werden die Daten vom Strom in eine Datenstruktur übertragen, z. B. in ein Bytearray. Beim Schreiben werden die Daten von einer Datenstruktur in einen Strom übertragen.  
+ Die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, <xref:System.Data.SqlClient>, unterstützt das Lesen und Schreiben in die FILESTREAM-Daten mithilfe der <xref:System.Data.SqlTypes.SqlFileStream> in Klasse definiert die <xref:System.Data.SqlTypes> Namespace. `SqlFileStream` erbt von der <xref:System.IO.Stream>-Klasse, die Methoden zum Lesen und Schreiben der Datenströme bereitstellt. Beim Lesen aus einem Strom werden die Daten vom Strom in eine Datenstruktur übertragen, z. B. in ein Bytearray. Beim Schreiben werden die Daten von einer Datenstruktur in einen Strom übertragen.  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>Erstellen der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Tabelle  
- Mit den folgenden [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisungen wird eine Tabelle mit dem Namen "employees" erstellt und eine Datenzeile eingefügt. Wenn die FILESTREAM-Speicherung aktiviert wurde, kann diese Tabelle gemeinsam mit den folgenden Codebeispielen verwendet werden. Die Links zu den Ressourcen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation finden Sie am Ende dieses Themas.  
+### <a name="creating-the-sql-server-table"></a>Erstellen der SQL Server-Tabelle  
+ Mit den folgenden [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisungen wird eine Tabelle mit dem Namen "employees" erstellt und eine Datenzeile eingefügt. Wenn die FILESTREAM-Speicherung aktiviert wurde, kann diese Tabelle gemeinsam mit den folgenden Codebeispielen verwendet werden. Die Links zu Ressourcen in der Onlinedokumentation zu SQL Server befinden sich am Ende dieses Themas.  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  Ein weiteres Beispiel finden Sie unter [wie speichern und Abrufen von Binärdaten in einer FileStream-Spalte](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>Ressourcen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation  
- Die vollständige Dokumentation für FILESTREAM finden Sie in den folgenden Abschnitten der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+## <a name="resources-in-sql-server-books-online"></a>Ressourcen in der SQL Server-Onlinedokumentation.  
+ Die vollständige Dokumentation für FILESTREAM befindet sich in den folgenden Abschnitten in SQL Server-Onlinedokumentation.  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  

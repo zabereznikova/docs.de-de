@@ -1,27 +1,29 @@
 ---
 title: DataAdapter-Parameter
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b5cc66e1d2240450743afa8ca8aaa6efe94398d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600dd949ffbed5c1066f9e3c3d9cc09eb174a22e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter-Parameter
 Der <xref:System.Data.Common.DbDataAdapter> verfügt über vier Eigenschaften, die zum Abrufen von Daten aus einer Datenquelle und zum Aktualisieren der Daten in der Datenquelle verwendet werden: die <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A>-Eigenschaft gibt die Daten aus der Datenquelle zurück, und die Eigenschaften <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> und <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> dienen zum Verwalten von Änderungen in der Datenquelle. Die `SelectCommand`-Eigenschaft muss vor dem Aufrufen der `Fill`-Methode des `DataAdapter` festgelegt werden. Die Eigenschaft `InsertCommand`, `UpdateCommand` oder `DeleteCommand` (abhängig von der Art der Änderungen in der `Update`) muss vor dem Aufruf der `DataAdapter`-Methode des <xref:System.Data.DataTable> festgelegt werden. Wenn beispielsweise Zeilen hinzugefügt wurden, muss vor dem Aufrufen von `InsertCommand` das `Update` festgelegt werden. Wenn `Update` eine eingefügte, aktualisierte oder gelöschte Zeile verarbeitet, verwendet der `DataAdapter` die entsprechende `Command`-Eigenschaft, um die Aktion zu verarbeiten. Aktuelle Informationen zur geänderten Zeile werden über die `Command`-Auflistung an das `Parameters`-Objekt übergeben.  
@@ -36,7 +38,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquelle. Dieses Beispiel zeigt Platzhalter für eine SQL Server-Datenquelle. Verwenden Sie Fragezeichenplatzhalter (?) für <xref:System.Data.OleDb>-Parameter und <xref:System.Data.Odbc>-Parameter.  
   
- In diesem [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] beispielsweise die `CompanyName` Feld wird mit dem Wert des aktualisiert die `@CompanyName` Parameter für die Zeile, in dem `CustomerID` entspricht dem Wert von der `@CustomerID` Parameter. Die Parameter rufen Informationen aus dem geänderten Zeile mithilfe der <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> Eigenschaft von der <xref:System.Data.SqlClient.SqlParameter> Objekt. Im Folgenden finden Sie die Parameter für das vorherige Beispiel einer UPDATE-Anweisung. Der Code geht davon aus, dass die `adapter`-Variable für ein gültiges <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt steht.  
+ In diesem Beispiel Visual Basic die `CompanyName` Feld wird aktualisiert, mit dem Wert der `@CompanyName` Parameter für die Zeile, in dem `CustomerID` entspricht dem Wert von der `@CustomerID` Parameter. Die Parameter rufen Informationen aus dem geänderten Zeile mithilfe der <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> Eigenschaft von der <xref:System.Data.SqlClient.SqlParameter> Objekt. Im Folgenden finden Sie die Parameter für das vorherige Beispiel einer UPDATE-Anweisung. Der Code geht davon aus, dass die `adapter`-Variable für ein gültiges <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt steht.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -64,7 +66,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|Der Parameter verwendet den ursprünglichen Wert der Spalte.|  
 |`Proposed`|Der Parameter verwendet einen vorgeschlagenen Wert.|  
   
- Das `SqlClient`-Codebeispiel im nächsten Abschnitt definiert einen Parameter für einen <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, bei dem die `CustomerID`-Spalte als `SourceColumn` für die folgenden beiden Parameter verwendet wird: `@CustomerID` (`SET CustomerID = @CustomerID`) und `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Die `@CustomerID` -Parameter wird zum Aktualisieren der **CustomerID** Spalte auf den aktuellen Wert in der `DataRow`. Daher die `CustomerID` `SourceColumn` mit einer `SourceVersion` von `Current` verwendet wird. Die  *@OldCustomerID*  Parameter wird verwendet, um die aktuelle Zeile in der Datenquelle zu identifizieren. Da sich der passende Spaltenwert in der `Original`-Version der Zeile befindet, wird die gleiche `SourceColumn` (`CustomerID`) mit einer `SourceVersion` von `Original` verwendet.  
+ Das `SqlClient`-Codebeispiel im nächsten Abschnitt definiert einen Parameter für einen <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, bei dem die `CustomerID`-Spalte als `SourceColumn` für die folgenden beiden Parameter verwendet wird: `@CustomerID` (`SET CustomerID = @CustomerID`) und `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Die `@CustomerID` -Parameter wird zum Aktualisieren der **CustomerID** Spalte auf den aktuellen Wert in der `DataRow`. Daher die `CustomerID` `SourceColumn` mit einer `SourceVersion` von `Current` verwendet wird. Die *@OldCustomerID* Parameter wird verwendet, um die aktuelle Zeile in der Datenquelle zu identifizieren. Da sich der passende Spaltenwert in der `Original`-Version der Zeile befindet, wird die gleiche `SourceColumn` (`CustomerID`) mit einer `SourceVersion` von `Original` verwendet.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Verwenden von "SqlClient"-Parametern  
  Im folgenden Beispiel wird gezeigt, wie Sie einen <xref:System.Data.SqlClient.SqlDataAdapter> erstellen und für die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> <xref:System.Data.MissingSchemaAction.AddWithKey> festlegen können, um zusätzliche Schemainformationen aus der Datenbank abzurufen. Die Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> werden festgelegt, und die zugehörigen <xref:System.Data.SqlClient.SqlParameter>-Objekte werden der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzugefügt. Die Methode gibt ein `SqlDataAdapter`-Objekt zurück.  

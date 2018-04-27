@@ -1,23 +1,24 @@
 ---
 title: Scenario1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scenario"></a>Szenario
 Dieser Abschnitt enthält Beispiele für [!INCLUDE[wf](../../../../includes/wf-md.md)]-Szenarien.  
@@ -39,7 +40,7 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[wf](../../../../includes/wf-m
  Veranschaulicht, wie ein einfaches Szenario mit einer Stoppuhr mithilfe einer Kombination der <xref:System.Activities.Statements.Flowchart>-Aktivität und der <xref:System.Activities.Statements.Pick>-Aktivität implementiert wird.  
   
  [WPF- und WF-Integration in XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Veranschaulicht, wie eine Anwendung erstellt wird, die [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]-Funktionen und [!INCLUDE[wf](../../../../includes/wf-md.md)]-Funktionen in einem einzigen XAML-Dokument verwendet. Hierfür wird in dem Beispiel [!INCLUDE[wf](../../../../includes/wf-md.md)] und XAML-Erweiterbarkeit verwendet.  
+ Veranschaulicht, wie eine Anwendung erstellen, Windows Presentation Foundation (WPF verwendet) und [!INCLUDE[wf](../../../../includes/wf-md.md)] Funktionen in einem einzigen XAML-Dokument. Hierfür wird in dem Beispiel [!INCLUDE[wf](../../../../includes/wf-md.md)] und XAML-Erweiterbarkeit verwendet.  
   
  [Externes RuleSet-Toolkit](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Veranschaulicht, wie RuleSets in einer Datenbank verwaltet und bearbeitet werden und wie von einem Workflow zur Laufzeit auf diese RuleSets zugegriffen wird.

@@ -1,10 +1,10 @@
 ---
-title: "Objektlebensdauer: Erstellen und Zerstören von Objekten (Visual Basic)"
-ms.custom: 
+title: 'Objektlebensdauer: Erstellen und Zerstören von Objekten (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Objektlebensdauer: Erstellen und Zerstören von Objekten (Visual Basic)
 Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Initialisierungsaufgaben müssen häufig für neue Objekte ausgeführt werden, bevor sie verwendet werden. Gebräuchliche Initialisierungsaufgaben umfassen das Öffnen von Dateien, Verbinden mit Datenbanken und das Lesen von Werten von Registrierungsschlüsseln. Visual Basic steuert die Initialisierung neuer Objekte mit Prozeduren mit Namen *Konstruktoren* (spezielle Methoden, die Kontrolle über die Initialisierung zu ermöglichen).  
@@ -44,10 +44,10 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
  Nachdem ein Objekt den Gültigkeitsbereich verlässt, wird es von der common Language Runtime (CLR) freigegeben. Visual Basic steuert die Freigabe von Systemressourcen mit Prozeduren mit Namen *Destruktoren*. Konstruktoren und Destruktoren unterstützen gemeinsam die Erstellung stabiler und vorhersehbarer Klassenbibliotheken.  
   
 ## <a name="using-constructors-and-destructors"></a>Verwenden von Konstruktoren und Destruktoren  
- Konstruktoren und Destruktoren steuern die Erstellung und Zerstörung von Objekten. Die `Sub New`- und `Sub Finalize`-Prozeduren in Visual Basic initialisieren bzw. zerstören Objekte; sie ersetzen die `Class_Initialize`- und `Class_Terminate`-Methoden, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 und früheren Versionen verwendet wurden.  
+ Konstruktoren und Destruktoren steuern die Erstellung und Zerstörung von Objekten. Die `Sub New` und `Sub Finalize` -Prozeduren in Visual Basic initialisieren bzw. zerstören Objekte; sie ersetzen die `Class_Initialize` und `Class_Terminate` Methoden, die in Visual Basic 6.0 und früheren Versionen verwendet.  
   
 ### <a name="sub-new"></a>Sub New  
- Der `Sub New`-Konstruktor kann nur einmal während der Erstellung der Klasse ausgeführt werden. Es kann nicht als explizit an einer beliebigen Stelle aufgerufen werden, außer in der ersten Codezeile eines anderen Konstruktors von derselben Klasse oder von einer abgeleiteten Klasse. Weiterhin wird der Code in der `Sub New`-Methode immer vor jedem anderen Code in einer Klasse ausgeführt. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]und höhere Versionen implizit erstellen eine `Sub New` Konstruktor zur Laufzeit, wenn Sie nicht explizit definieren eine `Sub New` Prozedur für eine Klasse.  
+ Der `Sub New`-Konstruktor kann nur einmal während der Erstellung der Klasse ausgeführt werden. Es kann nicht als explizit an einer beliebigen Stelle aufgerufen werden, außer in der ersten Codezeile eines anderen Konstruktors von derselben Klasse oder von einer abgeleiteten Klasse. Weiterhin wird der Code in der `Sub New`-Methode immer vor jedem anderen Code in einer Klasse ausgeführt. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] und höhere Versionen implizit erstellen eine `Sub New` Konstruktor zur Laufzeit, wenn Sie nicht explizit definieren eine `Sub New` Prozedur für eine Klasse.  
   
  Um einen Konstruktor für eine Klasse zu erstellen, erstellen Sie eine Prozedur mit dem Namen `Sub New` an einer beliebigen Stelle in der Klassendefinition. Zum Erstellen eines parametrisierten Konstruktors legen Sie die Namen und Datentypen der Argumente von `Sub New` so fest, wie Sie die Argumente für eine beliebige andere Prozedur angeben würden, wie im folgenden Code:  
   
@@ -57,9 +57,9 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- Wenn Sie eine von einer anderen Klasse abgeleitete Klasse definieren, muss die erste Zeile eines Konstruktors ein Aufruf an den Konstruktor der Basisklasse sein, es sei denn die Basisklasse verfügt über einen zugreifbaren Konstruktor, der keine Parameter annimmt. Ein Aufruf der Basisklasse mit dem oben stehenden Konstruktor wäre zum Beispiel `MyBase.New(s)`. Andernfalls ist `MyBase.New` optional, und die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Laufzeit ruft sie implizit auf.  
+ Wenn Sie eine von einer anderen Klasse abgeleitete Klasse definieren, muss die erste Zeile eines Konstruktors ein Aufruf an den Konstruktor der Basisklasse sein, es sei denn die Basisklasse verfügt über einen zugreifbaren Konstruktor, der keine Parameter annimmt. Ein Aufruf der Basisklasse mit dem oben stehenden Konstruktor wäre zum Beispiel `MyBase.New(s)`. Andernfalls `MyBase.New` ist optional, und die Visual Basic-Laufzeit implizit aufgerufen.  
   
- Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`-Verfahren hinzufügen. `Sub New`lässt die Argumente, wenn als einen parametrisierten Konstruktor aufgerufen wird. Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.  
+ Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`-Verfahren hinzufügen. `Sub New` lässt die Argumente, wenn als einen parametrisierten Konstruktor aufgerufen wird. Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.  
   
 ### <a name="sub-finalize"></a>Sub Finalize  
  Vor der Freigabe von Objekten ruft die CLR automatisch die `Finalize`-Methode für das Objekt auf, das ein `Sub Finalize`-Verfahren definiert Die `Finalize`-Methode kann Code enthalten, der direkt vor der Zerstörung eines Objekts ausgeführt werden muss, z. B. Code zum Schließen von Dateien und Speichern von Zustandsinformationen.  Es gibt leichte Leistungseinbußen für die Ausführung von `Sub Finalize`, sodass Sie eine `Sub Finalize`-Methode nur definieren sollten, wenn Sie Objekte explizit freigeben müssen.  
@@ -69,13 +69,13 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
   
  Der `Finalize`-Destruktor ist eine geschützte Methode, die nur über die zugehörige Klasse oder über abgeleitete Klassen aufgerufen werden kann. Das System ruft `Finalize` automatisch auf, wenn ein Objekt zerstört wird, daher sollten Sie `Finalize` nicht explizit von außerhalb einer `Finalize`-Implementierung einer abgeleiteten Klasse aufrufen müssen.  
   
- Im Gegensatz zu `Class_Terminate`, das ausgeführt wird, sobald ein Objekt auf nichts festgelegt wurde, gibt es in der Regel eine Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert und wenn Visual Basic den `Finalize`-Destruktor aufruft. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]und höhere Versionen ermöglichen eine zweite Art Destruktor, <xref:System.IDisposable.Dispose%2A>, die explizit jederzeit aufrufen, um Ressourcen sofort freigegeben aufgerufen werden können.  
+ Im Gegensatz zu `Class_Terminate`, das ausgeführt wird, sobald ein Objekt auf nichts festgelegt wurde, gibt es in der Regel eine Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert und wenn Visual Basic den `Finalize`-Destruktor aufruft. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] und höhere Versionen ermöglichen eine zweite Art Destruktor, <xref:System.IDisposable.Dispose%2A>, die explizit jederzeit aufrufen, um Ressourcen sofort freigegeben aufgerufen werden können.  
   
 > [!NOTE]
 >  Eine `Finalize`-Destruktor sollte keine Ausnahmen auslösen, da die Anwendung sie nicht behandeln kann und sie das Beenden der Anwendung verursachen können.  
   
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Wie Neue und Finalize-Methoden in einer Klassenhierarchie arbeiten  
- Wenn eine Instanz einer Klasse erstellt wird, versucht die common Language Runtime (CLR), eine Prozedur mit dem Namen `New` auszuführen, wenn es in diesem Objekt vorhanden ist. `New`eine Art von Prozedur, die aufgerufen wird eine `constructor` wird verwendet, um neue Objekte zu initialisieren, bevor jedem anderen Code in einem Objekt ausgeführt wird. Ein `New`-Konstruktor kann verwendet werden, um Dateien zu öffnen, Verbindungen mit Datenbanken herzustellen, Variablen zu initialisieren und sich um andere Aufgaben zu kümmern, die ausgeführt werden, bevor ein Objekt verwendet werden kann.  
+ Wenn eine Instanz einer Klasse erstellt wird, versucht die common Language Runtime (CLR), eine Prozedur mit dem Namen `New` auszuführen, wenn es in diesem Objekt vorhanden ist. `New` eine Art von Prozedur, die aufgerufen wird eine `constructor` wird verwendet, um neue Objekte zu initialisieren, bevor jedem anderen Code in einem Objekt ausgeführt wird. Ein `New`-Konstruktor kann verwendet werden, um Dateien zu öffnen, Verbindungen mit Datenbanken herzustellen, Variablen zu initialisieren und sich um andere Aufgaben zu kümmern, die ausgeführt werden, bevor ein Objekt verwendet werden kann.  
   
  Wenn eine Instanz einer abgeleiteten Klasse erstellt wird, wird der `Sub New`-Konstruktor der Basisklasse zuerst ausgeführt, gefolgt von Konstruktoren in abgeleiteten Klassen. Dies geschieht, da die erste Codezeile in einem `Sub New`-Konstruktor die Syntax `MyBase.New()` verwendet, um den Konstruktor der Klasse direkt über sich selbst in der Klassenhierarchie aufzurufen. Der `Sub New`-Konstruktor wird dann für jede Klasse in der Klassenhierarchie aufgerufen, bis der Konstruktor für die Basisklasse erreicht wird. An dieser Stelle wird der Code im Konstruktor für die Basisklasse ausgeführt, gefolgt vom Code in jedem Konstruktor in allen abgeleiteten Klassen und der Code in den meisten abgeleiteten Klassen wird als letztes ausgeführt.  
   
@@ -88,7 +88,7 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
 ## <a name="idisposable-interface"></a>IDisposable-Schnittstelle  
  Klasseninstanzen steuern oft nicht von der CLR verwaltete Ressourcen, z. B. Windows-Handles und Datenbankverbindungen. Diese Ressourcen müssen in der `Finalize`-Methode der Klasse beseitigt werden, sodass sie freigegeben werden, wenn das Objekt vom Garbage Collector zerstört wird. Der Garbage Collector zerstört Objekte jedoch nur, wenn die CLR mehr freien Arbeitsspeicher erfordert. Dies bedeutet, dass die Ressourcen erst freigegeben werdn, nachdem das Objekt längst den Gültigkeitsbereich verlassen hat.  
   
- Zur Ergänzung der Garbagecollection können die Klassen einen Mechanismus für die aktive Verwaltung von Systemressourcen bereitstellen, wenn sie die <xref:System.IDisposable>-Schnittstelle implementieren. <xref:System.IDisposable>verfügt über eine Methode <xref:System.IDisposable.Dispose%2A>, welche Clients sollten nach Abschluss der Anweisungen mithilfe eines Objekts aufrufen. Sie können die <xref:System.IDisposable.Dispose%2A>-Methode verwenden, um Ressourcen sofort freizugeben und Aufgaben wie das Schließen von Dateien und Datenbankverbindungen durchzuführen. Im Gegensatz zum `Finalize`-Destruktor, wird die <xref:System.IDisposable.Dispose%2A>-Methode nicht automatisch aufgerufen. Clients einer Klasse müssen explizit <xref:System.IDisposable.Dispose%2A> aufrufen, wenn Ressourcen sofort freigegeben werden sollen.  
+ Zur Ergänzung der Garbagecollection können die Klassen einen Mechanismus für die aktive Verwaltung von Systemressourcen bereitstellen, wenn sie die <xref:System.IDisposable>-Schnittstelle implementieren. <xref:System.IDisposable> verfügt über eine Methode <xref:System.IDisposable.Dispose%2A>, welche Clients sollten nach Abschluss der Anweisungen mithilfe eines Objekts aufrufen. Sie können die <xref:System.IDisposable.Dispose%2A>-Methode verwenden, um Ressourcen sofort freizugeben und Aufgaben wie das Schließen von Dateien und Datenbankverbindungen durchzuführen. Im Gegensatz zum `Finalize`-Destruktor, wird die <xref:System.IDisposable.Dispose%2A>-Methode nicht automatisch aufgerufen. Clients einer Klasse müssen explizit <xref:System.IDisposable.Dispose%2A> aufrufen, wenn Ressourcen sofort freigegeben werden sollen.  
   
 ### <a name="implementing-idisposable"></a>Implementieren von IDisposable  
  Eine Klasse, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte diese Codeabschnitte enthalten:  

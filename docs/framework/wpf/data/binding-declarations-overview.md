@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über Bindungsdeklarationen"
-ms.custom: 
+title: Übersicht über Bindungsdeklarationen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 3fcc1b57f758abd2791bc6970c29300fd2fc0e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-declarations-overview"></a>Übersicht über Bindungsdeklarationen
 In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bindung erläutert.  
@@ -88,7 +88,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
 -   Im einfachsten Fall die <xref:System.Windows.Data.Binding.Path%2A> Eigenschaftswert ist der Name der Eigenschaft des Quellobjekts, das für die Bindung verwenden, z. B. `Path=PropertyName`.  
   
--   Untergeordnete Eigenschaften einer Eigenschaft können mit einer ähnlichen Syntax wie in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] angegeben werden. So legt zum Beispiel die Klausel `Path=ShoppingCart.Order` die Bindung für die untergeordnete `Order`-Eigenschaft des Objekts oder die `ShoppingCart`-Eigenschaft fest.  
+-   Untergeordnete Eigenschaften einer Eigenschaft können durch eine ähnliche Syntax wie c# angegeben werden. So legt zum Beispiel die Klausel `Path=ShoppingCart.Order` die Bindung für die untergeordnete `Order`-Eigenschaft des Objekts oder die `ShoppingCart`-Eigenschaft fest.  
   
 -   Um eine angefügte Eigenschaft zu binden, schließen Sie die angefügte Eigenschaft in Klammern ein. Z. B. zum Binden an die angefügte Eigenschaft <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, die Syntax lautet `Path=(DockPanel.Dock)`.  
   

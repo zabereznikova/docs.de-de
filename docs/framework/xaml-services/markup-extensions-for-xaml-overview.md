@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über Markuperweiterungen für XAML"
-ms.custom: 
+title: Übersicht über Markuperweiterungen für XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 464c5f547089d47906f2e227effe821357196c16
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  
@@ -33,7 +35,7 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
  Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:`-Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
   
 > [!NOTE]
->  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] -Projekt- und -Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei mithilfe dieser `x:` -Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
+>  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die Visual Studio-Projekt- und-Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` stellt das <xref:System.Type> -Objekt für den benannten Typ bereit. Diese Funktionalität wird am häufigsten in Mechanismen mit Verzögerungen verwendet, die einen zugrunde liegenden CLR-Typ und eine Typenableitung als Gruppierungsmoniker oder Bezeichner verwenden. WPF-Style und -Vorlagen und deren Verwendung von `TargetType` -Eigenschaften sind ein bestimmtes Beispiel. Weitere Informationen finden Sie unter [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md).  

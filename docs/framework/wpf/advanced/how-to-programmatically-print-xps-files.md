@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Gewusst wie: Programmgesteuertes Drucken von XPS-Dateien
 Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A> Methode zum Drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien ohne Öffnen einer <xref:System.Windows.Controls.PrintDialog> oder im Prinzip alle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] überhaupt.  
@@ -56,9 +56,9 @@ Können Sie eine Überladung des der <xref:System.Printing.PrintQueue.AddJob%2A>
   
  Wenn Sie einen XPSDrv-Drucker verwenden, können Sie den abschließenden Parameter auf `true` festlegen. Da [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] die Seitenbeschreibungssprache des Druckers ist, sendet die Methode in diesem Fall die Datei ohne Überprüfung oder Umwandlung in eine andere Seitenbeschreibungssprache an den Drucker. Wenn Sie unsicher zur Entwurfszeit sind, ob die Anwendung einen XPSDrv-Drucker verwenden werden, können Sie die Anwendung zu lesen sein ändern die <xref:System.Printing.PrintQueue.IsXpsDevice%2A> -Eigenschaft und die Verzweigung entsprechend ReadState.Initial.  
   
- Da unmittelbar nach der Veröffentlichung von [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] nur wenige XPSDrv-Drucker zur Verfügung stehen werden, müssen Sie Nicht-XPSDrv-Drucker ggf. als XPSDrv-Drucker tarnen. Fügen Sie hierzu auf dem Computer, der die Anwendung ausführt, im folgenden Registrierungsschlüssel die Datei „Pipelineconfig.xml“ zur Liste der Dateien hinzu:  
+ Da es ursprünglich nur wenige XPSDrv Drucker sofort nach der Veröffentlichung von stehen [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] und Microsoft .NET Framework müssen Sie möglicherweise einen XPSDrv-Drucker als XPSDrv-Drucker zu verbergen. Fügen Sie hierzu auf dem Computer, der die Anwendung ausführt, im folgenden Registrierungsschlüssel die Datei „Pipelineconfig.xml“ zur Liste der Dateien hinzu:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
  wobei *\<PseudoXPSPrinter>* für eine beliebige Druckwarteschlange steht. Der Computer muss anschließend neu gestartet werden.  
   

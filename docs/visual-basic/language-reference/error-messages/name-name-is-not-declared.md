@@ -1,9 +1,9 @@
 ---
-title: Name der &#39; &lt;Namen&gt;&#39; ist nicht deklariert
+title: Namen &#39; &lt;Namen&gt; &#39; ist nicht deklariert
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,23 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Name der &#39; &lt;Namen&gt;&#39; ist nicht deklariert
+# <a name="name-39ltnamegt39-is-not-declared"></a>Namen &#39; &lt;Namen&gt; &#39; ist nicht deklariert
 Eine Anweisung verweist auf ein Programmierelement, aber der Compiler ein Element mit genau diesem Namen kann nicht gefunden werden.  
   
  **Fehler-ID:** BC30451  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die Schreibweise des Namens in der verweisenden Anweisung. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Groß-/Kleinschreibung, wird jedoch eine andere Variante der Schreibweise als dem völlig anderen Namen betrachtet wird. Beachten Sie, dass der Unterstrich (`_`) Teil des Namens und daher Teil der Schreibweise ist.  
+1.  Überprüfen Sie die Schreibweise des Namens in der verweisenden Anweisung. Visual Basic unterscheidet Groß-/Kleinschreibung, aber eine andere Variante der Schreibweise als dem völlig anderen Namen betrachtet wird. Beachten Sie, dass der Unterstrich (`_`) Teil des Namens und daher Teil der Schreibweise ist.  
   
 2.  Überprüfen Sie, ob Sie den Memberzugriffsoperator (`.`) zwischen einem Objekt und seinem Member. Wenn Sie z. B. ein <xref:System.Windows.Forms.TextBox> -Steuerelement namens `TextBox1`besitzen, müssen Sie für den Zugriff auf dessen <xref:System.Windows.Forms.TextBoxBase.Text%2A> -Eigenschaft `TextBox1.Text`eingeben. Wenn Sie stattdessen `TextBox1Text`eingeben, haben Sie einen anderen Namen erstellt.  
   

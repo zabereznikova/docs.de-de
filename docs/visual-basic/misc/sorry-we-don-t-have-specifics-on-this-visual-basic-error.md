@@ -1,9 +1,10 @@
 ---
-title: "Leider können wir Stefan &#39; t Einzelheiten zu diesem Visual Basic-Fehler haben"
+title: Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,32 +3049,32 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Leider können wir Stefan &#39; t Einzelheiten zu diesem Visual Basic-Fehler haben
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
   
  [Visual Basic-Sprache](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachsyntax und -Compiler.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Visual Basic-Sprachsyntax und des Compilers.  
   
  [Visual Basic-Interop und -Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Bietet ein Forum für Fragen und Probleme beim Aktualisieren auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und für die Arbeit mit Interoperabilitätsfunktionen.  
+ Bietet ein Forum für Fragen und Probleme mit einem Upgrade auf Visual Basic und die Arbeit mit Interoperabilitätsfunktionen.  
   
  [Visual Basic-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
  Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Umgebung.  
   
  [Allgemeines zu Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme mit Visual Basic, die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Bietet ein Forum für Fragen und Probleme mit Visual Basic.  
   
  Siehe auch:  
  [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../visual-basic/getting-started/additional-resources.md)  

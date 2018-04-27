@@ -1,11 +1,12 @@
 ---
-title: "Überladungsauflösung (Visual Basic)"
-ms.custom: 
+title: Überladungsauflösung (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
-Wenn die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler erkennt einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert wird, der Compiler muss entscheiden, welche der Überladungen aufrufen. Dies geschieht durch die folgenden Schritte ausführen:  
+Stößt der Visual Basic-Compiler einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert ist, muss der Compiler die Überladung aufrufen, entscheiden. Dies geschieht durch die folgenden Schritte ausführen:  
   
-1.  **Für die Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
+1.  **Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
   
 2.  **Die Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als angegeben wird, werden im Aufruf beseitigt.  
   

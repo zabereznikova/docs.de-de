@@ -1,12 +1,13 @@
 ---
 title: Typbeziehungen in Abfrageoperationen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und müssen miteinander kompatibel sein. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ Teile einer LINQ-Abfrage
   
  Der Typ der Bereichsvariablen in der Abfrage muss mit dem Typ der Elemente in der Datenquelle kompatibel sein. Der Typ der Abfragevariablen muss kompatibel mit dem Sequenzelement definiert, der `Select` Klausel. Schließlich der Typ der Elemente der Sequenz auch muss kompatibel mit dem Typ des Loop-Steuerelementvariable, die verwendet wird die `For Each` -Anweisung, die die Abfrage ausgeführt wird. Diese starke Typisierung erleichtert die Identifizierung der Typfehler zur Kompilierzeit.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]erleichtert eine starke Typisierung durch Implementieren von lokaler Typrückschluss, auch bekannt als *implizite Typisierung*. Funktion wird im vorherigen Beispiel verwendet, und sehen Sie in der gesamten verwendet die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Beispiele und Dokumentation. Lokaler Typrückschluss erfolgt in Visual Basic einfach mithilfe einer `Dim` -Anweisung ohne eine `As` Klausel. Im folgenden Beispiel `city` stark typisiert ist, als Zeichenfolge.  
+ Visual Basic erleichtert eine starke Typisierung durch Implementieren von lokaler Typrückschluss, auch bekannt als *implizite Typisierung*. Funktion wird im vorherigen Beispiel verwendet, und sehen Sie in der gesamten verwendet die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Beispiele und Dokumentation. Lokaler Typrückschluss erfolgt in Visual Basic einfach mithilfe einer `Dim` -Anweisung ohne eine `As` Klausel. Im folgenden Beispiel `city` stark typisiert ist, als Zeichenfolge.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

@@ -1,11 +1,12 @@
 ---
-title: "Überlegungen zur Prozedurüberladung (Visual Basic)"
-ms.custom: 
+title: Überlegungen zur Prozedurüberladung (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Überlegungen zur Prozedurüberladung (Visual Basic)
 Wenn Sie eine Prozedur zu überladen, müssen Sie ein anderes verwenden *Signatur* für jede überladene Version. Dies bedeutet normalerweise, dass jede Version eine andere Parameterliste angeben muss. Weitere Informationen finden Sie unter "Andere Signatur" in [Prozedurüberladung](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie ein anderes verwenden *Signatu
 ## <a name="alternatives-to-overloaded-versions"></a>Alternativen zu überladenen Versionen  
  Alternativen zu überladenen Versionen haben manchmal insbesondere dann, wenn das Vorhandensein von Argumenten ist eine optionale oder deren Anzahl ist die Variable ein.  
   
- Beachten Sie, die optionalen Argumente werden nicht unbedingt von allen Sprachen unterstützt und Parameterarrays sind beschränkt auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Wenn Sie eine Prozedur schreiben, die wahrscheinlich in einem der anderen Sprachen geschriebenen Code aufgerufen werden, überladene bieten Versionen die größte Flexibilität.  
+ Bedenken Sie, dass optionale Argumente werden nicht unbedingt von allen Sprachen unterstützt, und Parameterarrays Visual Basic beschränkt sind. Wenn Sie eine Prozedur schreiben, die wahrscheinlich in einem der anderen Sprachen geschriebenen Code aufgerufen werden, überladene bieten Versionen die größte Flexibilität.  
   
 ### <a name="overloads-and-optional-arguments"></a>Überladungen und optionale Argumente  
  Wenn der aufrufende Code kann optional angeben oder ein oder mehrere Argumente auslassen, können Sie mehrere überladene Versionen definieren oder optionale Parameter verwenden.  
@@ -104,7 +105,7 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie ein anderes verwenden *Signatu
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implizite Überladungen für ParamArray-Parameter  
  Der Compiler betrachtet eine Prozedur mit einem [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter haben eine unendliche Anzahl von Überladungen, die in der aufrufende Code wie folgt an das Parameterarray übergibt sich dadurch voneinander unterscheiden:  
   
--   Eine Überladung für, wenn der aufrufende Code nicht Argument bereitgestellt der`ParamArray`  
+-   Eine Überladung für, wenn der aufrufende Code nicht Argument bereitgestellt der `ParamArray`  
   
 -   Eine Überladung für, wenn der aufrufende Code ein eindimensionales Array vom liefert die `ParamArray` Elementtyp.  
   

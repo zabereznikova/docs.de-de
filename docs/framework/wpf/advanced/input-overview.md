@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über die Eingabe"
-ms.custom: 
+title: Übersicht über die Eingabe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>Übersicht über die Eingabe
 <a name="introduction"></a> Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Subsystem bietet eine leistungsstarke [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] zum Abrufen von Eingabe von einer Vielzahl von Geräten, einschließlich Maus, Tastatur, Touchpad und Stift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  Die <xref:System.Windows.Input.Mouse> und <xref:System.Windows.Input.Keyboard> Klassen werden im weiteren Verlauf dieser Übersicht behandelt.  
   
 ### <a name="stylus-input"></a>Stifteingabe  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]verfügt über eine integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine beliebte von vorgenommen Stifteingabe der [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen können den Stift als Maus behandeln, indem Sie die Maus-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] verwenden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht jedoch auch eine Stift-Gertäteabstraktion verfügbar, die ein Modell ähnlich der Tastatur und der Maus verwendet.  Alle dem Stift zugehörigen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] enthalten den Begriff „Stylus“ (Stift oder Tablettstift).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über eine integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine beliebte von vorgenommen Stifteingabe der [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen können den Stift als Maus behandeln, indem Sie die Maus-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] verwenden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht jedoch auch eine Stift-Gertäteabstraktion verfügbar, die ein Modell ähnlich der Tastatur und der Maus verwendet.  Alle dem Stift zugehörigen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] enthalten den Begriff „Stylus“ (Stift oder Tablettstift).  
   
  Da der Stift als Maus fungieren kann, können Anwendungen, die nur die Mauseingabe unterstützen, noch immer ein gewisses Maß an automatischer Unterstützung für den Stift erhalten. Wenn der Stift auf diese Weise verwendet wird, bekommt die Anwendung die Gelegenheit, das entsprechende Stiftereignis zu behandeln und behandelt dann das entsprechende Mausereignis. Darüber hinaus sind Dienste auf höherer Ebene (z.B. Freihandeingabe) noch immer über die Stift-Geräteabstraktion verfügbar.  Weitere Informationen zur Freihandeingabe finden Sie unter [Erste Schritte mit Freihandeingaben](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>Behandeln von Eingabeereignissen  
- Um Eingaben für ein Element zu erhalten, muss ein Ereignishandler mit diesem speziellen Ereignis verknüpft sein.  In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ist dies einfach: Sie verweisen auf den Namen des Ereignisses als ein Attribut des Elements, das für dieses Ereignis überwacht.  Legen Sie anschließend den Wert des Attributs auf den Namen des Ereignishandlers, den Sie basierend auf einen Delegaten definieren, fest.  Der Ereignishandler muss z.B. in Code geschrieben werden, wie z.B. [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], und kann in einer CodeBehind-Datei eingeschlossen werden.  
+ Um Eingaben für ein Element zu erhalten, muss ein Ereignishandler mit diesem speziellen Ereignis verknüpft sein.  In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ist dies einfach: Sie verweisen auf den Namen des Ereignisses als ein Attribut des Elements, das für dieses Ereignis überwacht.  Legen Sie anschließend den Wert des Attributs auf den Namen des Ereignishandlers, den Sie basierend auf einen Delegaten definieren, fest.  Der Ereignishandler im Code, wie z. B. c# geschrieben werden muss und in einer Code-Behind-Datei enthalten sein kann.  
   
  Tastaturereignisse treten auf, wenn das Betriebssystem Tastaturaktionen meldet, die auftreten, während sich der Tastaturfokus auf einem Element befindet. Maus- und Stiftereignisse lassen sich in zwei Kategorien unterteilen: Ereignisse, die Änderungen der Zeigerposition relativ zum Element melden sowie Ereignisse, die Änderungen im Status der Geräteschaltflächen melden.  
   
@@ -330,7 +332,7 @@ Berührungs-und Bearbeitungsereignisse
 ### <a name="keyboard-focus"></a>Tastaturfokus  
  Der Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt.  Es kann nur ein Element auf dem gesamten Desktop geben, das über den Tastaturfokus verfügt.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], weist das Element, das über den Tastaturfokus verfügt <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  Die statische <xref:System.Windows.Input.Keyboard> Methode <xref:System.Windows.Input.Keyboard.FocusedElement%2A> gibt das Element, das derzeit über den Tastaturfokus verfügt.  
   
- Über den Tastaturfokus abgerufen werden kann, durch die TAB-Taste auf ein Element oder durch Klicken mit der Maus auf bestimmte Elemente, wie z. B. eine <xref:System.Windows.Controls.TextBox>.  Über den Tastaturfokus kann auch programmgesteuert mithilfe von abgerufen werden die <xref:System.Windows.Input.Keyboard.Focus%2A> Methode für die <xref:System.Windows.Input.Keyboard> Klasse.  <xref:System.Windows.Input.Keyboard.Focus%2A>versucht, das angegebene Element den Tastaturfokus erhalten.  Das von zurückgegebene Element <xref:System.Windows.Input.Keyboard.Focus%2A> ist das Element, das derzeit über den Tastaturfokus verfügt.  
+ Über den Tastaturfokus abgerufen werden kann, durch die TAB-Taste auf ein Element oder durch Klicken mit der Maus auf bestimmte Elemente, wie z. B. eine <xref:System.Windows.Controls.TextBox>.  Über den Tastaturfokus kann auch programmgesteuert mithilfe von abgerufen werden die <xref:System.Windows.Input.Keyboard.Focus%2A> Methode für die <xref:System.Windows.Input.Keyboard> Klasse.  <xref:System.Windows.Input.Keyboard.Focus%2A> versucht, das angegebene Element den Tastaturfokus erhalten.  Das von zurückgegebene Element <xref:System.Windows.Input.Keyboard.Focus%2A> ist das Element, das derzeit über den Tastaturfokus verfügt.  
   
  In der Reihenfolge nach einem Element den Tastaturfokus erhalten die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft und die <xref:System.Windows.UIElement.IsVisible%2A> Eigenschaften müssen festgelegt werden, um **"true"**.  Einige Klassen, z. B. <xref:System.Windows.Controls.Panel>, haben <xref:System.Windows.UIElement.Focusable%2A> festgelegt `false` standardmäßig; aus diesem Grund müssen unter Umständen zum Festlegen dieser Eigenschaft `true` ggf. für dieses Element den Fokus erhalten können.  
   
@@ -375,11 +377,11 @@ Berührungs-und Bearbeitungsereignisse
 ## <a name="commands"></a>Befehle  
  Befehle ermöglichen die Eingabebehandlung auf einer eher semantischeren Ebene als die Geräteeingabe.  Befehle sind einfache Direktive, wie etwa `Cut`, `Copy`, `Paste` oder `Open`.  Befehle sind nützlich für die Zentralisierung der Befehlslogik.  Denselben Befehl zugegriffen werden kann, aus einer <xref:System.Windows.Controls.Menu>auf eine <xref:System.Windows.Controls.ToolBar>, oder über eine Tastenkombination. Befehle stellen außerdem einen Mechanismus zum Deaktivieren von Steuerelementen bereit, wenn der Befehl nicht verfügbar ist.  
   
- <xref:System.Windows.Input.RoutedCommand>ist die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Implementierung von <xref:System.Windows.Input.ICommand>.  Wenn eine <xref:System.Windows.Input.RoutedCommand> ausgeführt wird, eine <xref:System.Windows.Input.CommandManager.PreviewExecuted> und ein <xref:System.Windows.Input.CommandManager.Executed> -Ereignis für das Befehlsziel, welche und aufwärts durch die Elementstruktur wie andere Eingaben ausgelöst werden.  Wenn ein Befehlsziel nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  Die Logik, die den Befehl ausführt angefügt ist eine <xref:System.Windows.Input.CommandBinding>.  Wenn ein <xref:System.Windows.Input.CommandManager.Executed> Ereignis erreicht eine <xref:System.Windows.Input.CommandBinding> für diesen Befehl, der <xref:System.Windows.Input.ExecutedRoutedEventHandler> auf die <xref:System.Windows.Input.CommandBinding> aufgerufen wird.  Dieser Handler führt die Aktion des Befehls aus.  
+ <xref:System.Windows.Input.RoutedCommand> ist die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Implementierung von <xref:System.Windows.Input.ICommand>.  Wenn eine <xref:System.Windows.Input.RoutedCommand> ausgeführt wird, eine <xref:System.Windows.Input.CommandManager.PreviewExecuted> und ein <xref:System.Windows.Input.CommandManager.Executed> -Ereignis für das Befehlsziel, welche und aufwärts durch die Elementstruktur wie andere Eingaben ausgelöst werden.  Wenn ein Befehlsziel nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  Die Logik, die den Befehl ausführt angefügt ist eine <xref:System.Windows.Input.CommandBinding>.  Wenn ein <xref:System.Windows.Input.CommandManager.Executed> Ereignis erreicht eine <xref:System.Windows.Input.CommandBinding> für diesen Befehl, der <xref:System.Windows.Input.ExecutedRoutedEventHandler> auf die <xref:System.Windows.Input.CommandBinding> aufgerufen wird.  Dieser Handler führt die Aktion des Befehls aus.  
   
  Weitere Informationen über Befehle finden Sie unter [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Stellt eine Bibliothek von allgemeinen Befehlen besteht aus <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, und <xref:System.Windows.Documents.EditingCommands>, oder Sie können eigene definieren.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine Bibliothek von allgemeinen Befehlen besteht aus <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, und <xref:System.Windows.Documents.EditingCommands>, oder Sie können eigene definieren.  
   
  Im folgende Beispiel wird gezeigt, wie zum Einrichten einer <xref:System.Windows.Controls.MenuItem> , wenn darauf geklickt wird aufgerufen der <xref:System.Windows.Input.ApplicationCommands.Paste%2A> Befehl die <xref:System.Windows.Controls.TextBox>davon ausgegangen, dass die <xref:System.Windows.Controls.TextBox> über den Tastaturfokus verfügt.  
   

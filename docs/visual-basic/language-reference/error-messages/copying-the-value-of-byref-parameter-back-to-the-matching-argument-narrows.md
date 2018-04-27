@@ -1,9 +1,9 @@
 ---
-title: Kopieren den Wert des &#39; ByRef &#39; Parameter &#39; &lt;Parametername&gt;&#39; wieder an das entsprechende Argument eingegrenzt vom Typ &#39;&lt; Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39;
+title: Kopieren den Wert der &#39;ByRef&#39; Parameter &#39; &lt;Parametername&gt; &#39; schränkt Sie zurück in das entsprechende Argument vom Typ &#39; &lt;Typname1&gt; &#39; Typ &#39; &lt;Typname2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,29 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18c72e56e4b2cc9c2251de2417a9f12a6688323f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Kopieren den Wert des &#39; ByRef &#39; Parameter &#39; &lt;Parametername&gt;&#39; wieder an das entsprechende Argument eingegrenzt vom Typ &#39;&lt; Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39;
+# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Kopieren den Wert der &#39;ByRef&#39; Parameter &#39; &lt;Parametername&gt; &#39; schränkt Sie zurück in das entsprechende Argument vom Typ &#39; &lt;Typname1&gt; &#39; Typ &#39; &lt;Typname2&gt;&#39;
 Eine Prozedur wird aufgerufen, mit der ein Argument, das auf den entsprechenden Parametertyp erweitert, und die Konvertierung aus dem Parameter an das Argument einschränkend.  
   
- Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren zum Konvertieren dieses Klassen- oder Strukturtyps in andere Typen definieren. Sie können auch Operatoren für die umgekehrte Konvertierung definieren, um dieser anderen Typen zurück in den Klassen- oder Strukturtyp zu konvertieren. Wenn Sie den Klassen- oder Strukturtyp in einem Prozeduraufruf verwenden, kann [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mithilfe dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.  
+ Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren zum Konvertieren dieses Klassen- oder Strukturtyps in andere Typen definieren. Sie können auch Operatoren für die umgekehrte Konvertierung definieren, um dieser anderen Typen zurück in den Klassen- oder Strukturtyp zu konvertieren. Wenn Sie den Klasse oder Struktur in einem Prozeduraufruf verwenden, können Visual Basic dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.  
   
- Wenn das Argument zu übergeben [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kopiert zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben. In diesem Fall muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nach Abschluss der Prozedur den Wert der lokalen Variablen zurück in das Argument im aufrufenden Code kopieren.  
+ Wenn das Argument zu übergeben [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), kopiert Visual Basic zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben. In diesem Fall müssen Visual Basic klicken Sie dann, wenn die Prozedur zurückgibt, den Wert den lokalen Variablen zurück in das Argument im aufrufenden Code kopieren.  
   
- Wenn ein `ByRef` -Argumentwert in die Prozedur kopiert wird und das Argument und der Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich. Wenn hingegen die Typen unterschiedlich sind, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Konvertierung in beide Richtungen ausführen. Wenn einer der Typen Ihr Klassen- oder Strukturtyp ist, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ihn sowohl in den als auch aus dem anderen Typ konvertieren. Wenn einer dieser Konvertierungen eine erweiternde Konvertierung handelt, kann die umgekehrte Konvertierung einschränkend.  
+ Wenn ein `ByRef` -Argumentwert in die Prozedur kopiert wird und das Argument und der Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich. Aber wenn die Typen unterschiedlich sind, müssen in beide Richtungen Visual Basic konvertieren. Wenn einer der Typen der Klasse oder Struktur-Typ ist, muss Visual Basic es sowohl aus dem anderen Typ konvertieren. Wenn einer dieser Konvertierungen eine erweiternde Konvertierung handelt, kann die umgekehrte Konvertierung einschränkend.  
   
  **Fehler-ID:** BC32053  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwenden Sie nach Möglichkeit ein aufrufendes Argument, das denselben Typ aufweist wie der Prozedurparameter, sodass [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] keine Konvertierung ausführen muss.  
+-   Verwenden Sie nach Möglichkeit ein aufrufendes Argument desselben Typs wie der Prozedurparameter ein, damit Visual Basic nicht Konvertierung ausführen muss.  
   
 -   Wenn Sie die Prozedur mit einem Argument aufrufen müssen, Typ sich vom Parametertyp unterscheidet, jedoch müssen nicht in das aufrufende Argument einen Wert zurückgeben, definieren Sie den Parameter als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anstelle von `ByRef`.  
   

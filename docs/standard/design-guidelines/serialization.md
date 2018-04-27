@@ -1,26 +1,26 @@
 ---
 title: Serialization1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 14b2f596245eb7f9cdcb9b3e30eeb100180cd793
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization"></a>Serialisierung
 Serialisierung ist der Prozess der Konvertierung eines Objekts in ein Format, das unmittelbar persistent gespeichert und transportiert werden kann. Sie können z. B. ein Objekt serialisieren, transportieren, über das Internet mithilfe von HTTP und deserialisiert es auf dem Zielcomputer.  
@@ -59,7 +59,7 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in ein Format, da
   
  Konstruktoren werden beim Deserialisieren von Objekten nicht aufgerufen. (Es sind Ausnahmen von der Regel. Konstruktoren von Auflistungen mit markiert <xref:System.Runtime.Serialization.CollectionDataContractAttribute> werden während der Deserialisierung aufgerufen.) Daher muss keine Logik, die während der normalen Erstellung ausgeführt wird als eines der serialisierungsrückrufe implementiert werden.  
   
- `OnDeserializedAttribute`ist das am häufigsten verwendeten Rückrufattribut. Weitere Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.  
+ `OnDeserializedAttribute` ist das am häufigsten verwendeten Rückrufattribut. Weitere Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.  
   
  **✓ GGF.** mithilfe der <xref:System.Runtime.Serialization.KnownTypeAttribute> auf konkrete Typen anzugeben, die verwendet werden soll, wenn eine komplexe Objektdiagramm deserialisieren.  
   
@@ -110,7 +110,7 @@ public class Person : ISerializable {
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  

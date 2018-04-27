@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Was&#39;s neu in Windows Workflow Foundation
 Zahlreiche Entwicklungsmuster früherer Versionen wurden für [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] überholt. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -66,4 +66,4 @@ Zahlreiche Entwicklungsmuster früherer Versionen wurden für [!INCLUDE[wf](../.
 -   Das Fortsetzen ausstehender Workflows kann jetzt mit dem <xref:System.Activities.Bookmark>-Objekt verwaltet werden.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Vereinfachte Erweiterung der WF-Designer-Umgebung  
- Der neue WF-Designer basiert auf [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] und stellt ein einfacheres Modell zum erneuten Hosten des WF-Designers außerhalb von Visual Studio sowie einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer bereit. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zu verwenden, wenn die WF-Designer außerhalb von Visual Studio erneutes hosten und bietet auch einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

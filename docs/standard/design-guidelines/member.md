@@ -1,12 +1,12 @@
 ---
-title: "Entwurfsrichtlinien für Member"
-ms.custom: 
+title: Entwurfsrichtlinien für Member
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f4e33735a934b1ac41c34ccb9698c172ada28e1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="member-design-guidelines"></a>Entwurfsrichtlinien für Member
 Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammenfassend als Mitglieder bezeichnet. Mitglieder werden letztlich von der Framework-Funktionalitäten an die Endbenutzer von einem Framework verfügbar gemacht wird.  
@@ -45,7 +45,7 @@ Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammenfas
  [Parameterentwurf](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

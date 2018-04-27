@@ -1,24 +1,26 @@
 ---
 title: Erstellen der Windows Communication Foundation-Beispiele
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Erstellen der Windows Communication Foundation-Beispiele
 Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt werden können, mithilfe von Visual Studio 2010 oder mit der **Msbuild** Befehl über die Befehlszeile. In diesem Thema werden beide Vorgehensweisen beschrieben.  
@@ -39,7 +41,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt w
   
 1.  Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 oder Windows Server 2008 R2 verwenden und [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ausführen, müssen Sie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Startmenü auf des Symbol, und klicken Sie dann auf **als Administrator ausführen**.  
   
-2.  Aus der **Datei** im Menü [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], klicken Sie auf **öffnen**, klicken Sie dann auf **Projekt/Projektmappe**. Wechseln Sie zu dem sprachspezifischen Unterverzeichnis in dem Verzeichnis, in dem Sie das Beispiel installiert haben, und klicken Sie auf das Symbol der SLN-Datei, um die Projektmappe in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zu öffnen.  
+2.  Aus der **Datei** Menü in Visual Studio, klicken Sie auf **öffnen**, klicken Sie dann auf **Projekt/Projektmappe**. Wechseln Sie zu dem sprachspezifischen Unterverzeichnis in dem Verzeichnis, in dem Sie das Beispiel installiert haben, und klicken Sie auf das Symbol der SLN-Datei, um die Projektmappe in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zu öffnen.  
   
 3.  In der **erstellen** klicken Sie im Menü **Projektmappe neu erstellen**. Die Clientprogrammdateien werden im Verzeichnis client\bin erstellt, und die Dienstprogrammdateien werden im Verzeichnis service\bin erstellt. Wenn der Dienst in IIS gehostet wird, werden die Dienstprogrammdateien auch in das Verzeichnis \servicemodelsamples und dessen Unterverzeichnis \bin kopiert.  
   
@@ -50,10 +52,10 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt w
  Die Batchdateien und Skripts Setup.exe und Cleanup.exe müssen an einer Visual Studio-Eingabeaufforderung ausgeführt werden. Einige Setup- und Cleanup-Dateien führen Aufgaben aus, für die Administratorrechte erforderlich sind. Sie müssen daher mit entsprechenden Rechten gestartet werden.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Wichtige Sicherheitsinformationen über Metadatenendpunkte  
- Um ein unbeabsichtigtes Veröffentlichen von möglicherweise vertraulichen Dienstmetadaten zu vermeiden, wird mit der Standardkonfiguration für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste die Metadatenveröffentlichung deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Um Ihnen das Experimentieren mit den Beispielen zu vereinfachen, wird in fast allen Beispielen ein ungesicherter Endpunkt zum Veröffentlichen von Metadaten verfügbar gemacht. Solche Endpunkte können für anonyme, nicht authentifizierte Benutzer möglicherweise verfügbar sein. Daher muss beim Bereitstellen solcher Endpunkte sorgfältig darauf geachtet werden, dass das Öffentlichmachen von Metadaten eines Diensts sachgerecht erfolgt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veröffentlichen von Dienstmetadaten, finden Sie unter der [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) Beispiel. Finden Sie unter der [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Sample ist ein Beispiel ein metadatenendpunkts zu sichern.  
+ Um ein unbeabsichtigtes Veröffentlichen von möglicherweise vertraulichen Dienstmetadaten zu vermeiden, wird mit der Standardkonfiguration für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste die Metadatenveröffentlichung deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Um Ihnen das Experimentieren mit den Beispielen zu vereinfachen, wird in fast allen Beispielen ein ungesicherter Endpunkt zum Veröffentlichen von Metadaten verfügbar gemacht. Solche Endpunkte können für anonyme, nicht authentifizierte Benutzer möglicherweise verfügbar sein. Daher muss beim Bereitstellen solcher Endpunkte sorgfältig darauf geachtet werden, dass das Öffentlichmachen von Metadaten eines Diensts sachgerecht erfolgt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Veröffentlichen von Dienstmetadaten, finden Sie unter der [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) Beispiel. Finden Sie unter der [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Sample ist ein Beispiel ein metadatenendpunkts zu sichern.  
   
 ## <a name="exception-handling"></a>Ausnahmebehandlung  
- Im Allgemeinen enthalten diese Beispiele keine Ausnahmebehandlung, damit der Code auf das Thema des jeweiligen Beispiels beschränkt werden kann. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ausnahmebehandlung, finden Sie unter der [Ausnahmen erwartet](../../../../docs/framework/wcf/samples/expected-exceptions.md) Beispiel.  
+ Im Allgemeinen enthalten diese Beispiele keine Ausnahmebehandlung, damit der Code auf das Thema des jeweiligen Beispiels beschränkt werden kann. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ausnahmebehandlung, finden Sie unter der [Ausnahmen erwartet](../../../../docs/framework/wcf/samples/expected-exceptions.md) Beispiel.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Neugenerieren von Clients und Konfiguration mit "Svcutil"  
  Sie können die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren von Clientcode und-Konfiguration für die meisten der Beispiele. Bei einigen Beispielen ist es erforderlich, die Konfiguration manuell zu bearbeiten. Wenn Sie beispielsweise mit Svcutil.exe die Konfiguration für ein Beispiel neu generieren, in dem Clientzertifikat-Anmeldeinformationen verwendet werden, müssen Sie die vorher konfigurierten Anmeldeinformationen manuell angeben. Einige Beispiele beeinflussen den generierten Code mithilfe bestimmter Optionen für Svcutil.exe. Diese Optionen sind dann in den jeweiligen Beispielthemen angegeben.  
@@ -74,7 +76,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt w
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Ersetzen Sie http://localhost:8000/ServiceModelSamples/service.svc/mex durch die Adresse des mex-Endpunkts des selbst gehosteten Diensts.  
+     Ersetzen Sie http://localhost:8000/ServiceModelSamples/service.svc/mex mit der Adresse des Mex-Endpunkt für den selbst gehosteten Dienst.  
   
      Verwenden Sie zum Generieren des Clients in Visual Basic den folgenden Befehl.  
   

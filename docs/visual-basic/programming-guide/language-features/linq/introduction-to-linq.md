@@ -1,11 +1,12 @@
 ---
-title: "Einführung in LINQ in Visual Basic"
-ms.custom: 
+title: Einführung in LINQ in Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bb55aecc1faafd812da212565a7a858c714e933
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 1f41252d6f28c7b2ffb459b3374833fde56393f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
-Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Abfragefunktionen hinzu und stellt einfache und leistungsstarke Funktionen zum Arbeiten mit allen Arten von Daten bereit. Statt eine Abfrage zum Verarbeiten an eine Datenbank zu senden oder für jede Art von zu suchenden Daten mit unterschiedlichen Abfragesyntaxarten zu arbeiten, werden von LINQ Abfragen als Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
+Language-Integrated Query (LINQ) Fügt Abfragefunktionen in Visual Basic und stellt einfache und leistungsstarke Funktionen bereit, bei der Arbeit mit allen Arten von Daten. Anstatt das Senden einer Abfrage mit einer Datenbank verarbeitet werden, oder Arbeiten mit unterschiedlichen Abfragesyntaxarten für jeden Typ von Daten, die Sie suchen, werden von LINQ Abfragen als Teil der Sprache Visual Basic eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
   
- LINQ können Sie zum Abfragen von Daten aus SQL Server-Datenbanken, XML, speicherinternen Arrays und Sammlungen, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Datasets oder beliebigen anderen Remotedatenquellen bzw. lokalen Daten Datenquellen, die LINQ unterstützen. Hierzu können Sie allgemeine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachelemente verwenden. Da Sie Ihre Abfragen in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache schreiben, werden die Abfrageergebnisse als stark typisierte Objekte zurückgegeben. Da diese Objekte IntelliSense unterstützen, können Sie Code schneller schreiben und Fehler in den Abfragen statt zur Laufzeit zur Kompilierungszeit abfangen. Sie können LINQ-Abfragen als Quelle für weitere Abfragen verwenden, um die Ergebnisse zu verfeinern. Außerdem können sie an Steuerelemente gebunden werden, sodass Benutzer die Ergebnisse Ihrer Abfragen einfach anzeigen und ändern können.  
+ LINQ können Sie zum Abfragen von Daten aus SQL Server-Datenbanken, XML, speicherinternen Arrays und Sammlungen, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Datasets oder beliebigen anderen Remotedatenquellen bzw. lokalen Daten Datenquellen, die LINQ unterstützen. Sie können mit allgemeinen Visual Basic-Sprachelemente verwenden. Da Ihre Abfragen in der Sprache Visual Basic geschrieben sind, werden die Abfrageergebnisse als stark typisierte Objekte zurückgegeben. Da diese Objekte IntelliSense unterstützen, können Sie Code schneller schreiben und Fehler in den Abfragen statt zur Laufzeit zur Kompilierungszeit abfangen. Sie können LINQ-Abfragen als Quelle für weitere Abfragen verwenden, um die Ergebnisse zu verfeinern. Außerdem können sie an Steuerelemente gebunden werden, sodass Benutzer die Ergebnisse Ihrer Abfragen einfach anzeigen und ändern können.  
   
  Das folgende Codebeispiel enthält beispielsweise eine LINQ-Abfrage, die eine Liste von Kunden aus einer Auflistung zurückgibt und diese abhängig von ihrem Standort gruppiert.  
   
@@ -58,27 +59,27 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
 -   [Wie und exemplarische Vorgehensweisen](#HowToAndWalkthroughTopics)  
   
-##  <a name="RunningtheExamples"></a>Ausführen der Beispiele  
+##  <a name="RunningtheExamples"></a> Ausführen der Beispiele  
  Um die Beispiele in der Einführung und im Abschnitt "Struktur einer LINQ-Abfrage" auszuführen, fügen Sie den folgenden Code ein, mit dem Listen von Kunden und Bestellungen zurückgegeben werden.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
-##  <a name="LINQProviders"></a>LINQ-Anbieter  
- Ein *LINQ-Anbieter* ordnet Ihre [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] LINQ-Abfragen mit der Datenquelle abgefragt wird. Wenn Sie eine LINQ-Abfrage schreiben, wird diese Abfrage vom Anbieter entgegengenommen und in Befehle übersetzt, die von der Datenquelle ausgeführt werden können. Weiterhin werden die Daten aus der Quelle vom Anbieter in die Objekte umgewandelt, die das Abfrageergebnis darstellen. Außerdem werden Objekte in Daten umgewandelt, wenn Sie Aktualisierungen an die Datenquelle senden.  
+##  <a name="LINQProviders"></a> LINQ-Anbieter  
+ Ein *LINQ-Anbieter* ordnet die Visual Basic LINQ-Abfragen mit der Datenquelle abgefragt wird. Wenn Sie eine LINQ-Abfrage schreiben, wird diese Abfrage vom Anbieter entgegengenommen und in Befehle übersetzt, die von der Datenquelle ausgeführt werden können. Weiterhin werden die Daten aus der Quelle vom Anbieter in die Objekte umgewandelt, die das Abfrageergebnis darstellen. Außerdem werden Objekte in Daten umgewandelt, wenn Sie Aktualisierungen an die Datenquelle senden.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enthält die folgenden LINQ-Anbieter.  
+ Visual Basic beinhaltet die folgenden LINQ-Anbieter.  
   
 |Anbieter|Beschreibung|  
 |---|---|  
-|LINQ to Objects|Mit dem Anbieter LINQ to Objects können Sie speicherinterne Auflistungen und Arrays abfragen. Wenn ein Objekt die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle unterstützt, können Sie es mit dem Anbieter LINQ to Objects abfragen.<br /><br /> Sie können den Anbieter LINQ to Objects aktivieren, indem Sie den <xref:System.Linq>-Namespace importieren, der standardmäßig in allen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Projekten importiert wird.<br /><br /> Weitere Informationen zu dem Anbieter LINQ to Objects, finden Sie unter [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ to SQL|Mit dem Anbieter LINQ to SQL können Sie Daten einer SQL Server-Datenbank abfragen und ändern. Dies erleichtert das Zuordnen des Objektmodells einer Anwendung zu den Tabellen und Objekten in einer Datenbank.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert die Arbeit mit LINQ to SQL durch den Object Relational Designer (O/R-Designer). Der Designer wird verwendet, um in einer Anwendung ein Objektmodell zu erstellen, das den Objekten in einer Datenbank entspricht. Der O/R-Designer auch bietet Funktionen zum Zuordnen gespeicherter Prozeduren und Funktionen der <xref:System.Data.Linq.DataContext> -Objekt, das Kommunikation mit der Datenbank verwaltet und Zustand für optimistische parallelitätsprüfungen speichert.<br /><br /> Weitere Informationen zu LINQ to SQL-Anbieter finden Sie unter [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Weitere Informationen zu den Object Relational Designer finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ to XML|Mit dem Anbieter LINQ to XML können Sie XML abfragen und ändern. Sie können speicherinternes XML ändern, oder Sie können XML aus einer Datei laden und in einer Datei speichern.<br /><br /> Darüber hinaus ermöglicht der Anbieter LINQ to XML XML-Literale und XML-Achseneigenschaften, mit denen Sie XML direkt im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Code schreiben können. Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ to Objects|Mit dem Anbieter LINQ to Objects können Sie speicherinterne Auflistungen und Arrays abfragen. Wenn ein Objekt die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle unterstützt, können Sie es mit dem Anbieter LINQ to Objects abfragen.<br /><br /> Sie können den Anbieter LINQ to Objects aktivieren, durch das Importieren der <xref:System.Linq> -Namespace, der standardmäßig für alle Visual Basic-Projekte importiert wird.<br /><br /> Weitere Informationen zu dem Anbieter LINQ to Objects, finden Sie unter [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
+|LINQ to SQL|Mit dem Anbieter LINQ to SQL können Sie Daten einer SQL Server-Datenbank abfragen und ändern. Dies erleichtert das Zuordnen des Objektmodells einer Anwendung zu den Tabellen und Objekten in einer Datenbank.<br /><br /> Visual Basic erleichtert die Arbeit mit LINQ to SQL durch einschließlich der Object Relational Designer (O/R-Designer). Der Designer wird verwendet, um in einer Anwendung ein Objektmodell zu erstellen, das den Objekten in einer Datenbank entspricht. Der O/R-Designer auch bietet Funktionen zum Zuordnen gespeicherter Prozeduren und Funktionen der <xref:System.Data.Linq.DataContext> -Objekt, das Kommunikation mit der Datenbank verwaltet und Zustand für optimistische parallelitätsprüfungen speichert.<br /><br /> Weitere Informationen zu LINQ to SQL-Anbieter finden Sie unter [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Weitere Informationen zu den Object Relational Designer finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to XML|Mit dem Anbieter LINQ to XML können Sie XML abfragen und ändern. Sie können speicherinternes XML ändern, oder Sie können XML aus einer Datei laden und in einer Datei speichern.<br /><br /> Darüber hinaus ermöglicht der Anbieter LINQ to XML XML-Literale und XML-Achseneigenschaften, mit die Sie XML direkt in Visual Basic-Code schreiben können. Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ to DataSet|Der Anbieter LINQ to DataSet können Sie Abfragen und Aktualisieren von Daten in eine [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Dataset. Sie können Anwendungen, die DataSets verwenden, die Leistungsfähigkeit von LINQ hinzufügen und so die Funktionen zum Abfragen, Aggregieren und Aktualisieren der Daten in Ihrem DataSet vereinfachen und erweitern.<br /><br /> Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-##  <a name="StructureOfALINQQuery"></a>Struktur einer LINQ-Abfrage  
+##  <a name="StructureOfALINQQuery"></a> Struktur einer LINQ-Abfrage  
  Eine LINQ-Abfrage, häufig als bezeichnet eine *-Abfrageausdruck*, besteht aus einer Kombination von Abfrageklauseln, die die Datenquellen und Iterationsvariablen für die Abfrage zu identifizieren. Ein Abfrageausdruck kann auch Anweisungen zum Sortieren, Filtern, Gruppieren und Verknüpfen sowie auf die Quelldaten anzuwendende Berechnungen enthalten. Die Abfrageausdruckssyntax ähnelt der Syntax von SQL. Deshalb werden Ihnen möglicherweise große Teile der Syntax vertraut vorkommen.  
   
- Ein Abfrageausdruck beginnt mit einer `From`-Klausel. Diese Klausel gibt die Quelldaten für eine Abfrage und die Variablen an, die verwendet werden, um sich auf die einzelnen Elemente der Quelldaten zu beziehen. Diese Variablen werden als *Bereichsvariablen* oder *Iterationsvariablen*. In Abfragen ist die `From`-Klausel erforderlich (mit Ausnahme von `Aggregate`-Abfragen, in denen die `From`-Klausel optional ist). Nachdem Sie den Bereich und die Quelle der Abfrage in der `From`-Klausel oder der `Aggregate`-Klausel angegeben haben, können Sie weitere Abfrageklauseln beliebig kombinieren, um die Abfrage zu verfeinern. Ausführliche Informationen über Abfrageklauseln finden Sie weiter unten in diesem Thema unter [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] LINQ-Abfrageoperatoren. In der folgenden Abfrage wird beispielsweise die Variable `customers` als eine Quellauflistung von Kundendaten identifiziert, außerdem eine Iterationsvariable mit dem Namen `cust`.  
+ Ein Abfrageausdruck beginnt mit einer `From`-Klausel. Diese Klausel gibt die Quelldaten für eine Abfrage und die Variablen an, die verwendet werden, um sich auf die einzelnen Elemente der Quelldaten zu beziehen. Diese Variablen werden als *Bereichsvariablen* oder *Iterationsvariablen*. In Abfragen ist die `From`-Klausel erforderlich (mit Ausnahme von `Aggregate`-Abfragen, in denen die `From`-Klausel optional ist). Nachdem Sie den Bereich und die Quelle der Abfrage in der `From`-Klausel oder der `Aggregate`-Klausel angegeben haben, können Sie weitere Abfrageklauseln beliebig kombinieren, um die Abfrage zu verfeinern. Ausführliche Informationen über Abfrageklauseln finden Sie weiter unten in diesem Thema unter Visual Basic LINQ-Abfrageoperatoren. In der folgenden Abfrage wird beispielsweise die Variable `customers` als eine Quellauflistung von Kundendaten identifiziert, außerdem eine Iterationsvariable mit dem Namen `cust`.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
@@ -98,10 +99,10 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
- Es gibt verschiedene weitere LINQ-Abfrageoperatoren, die Sie verwenden können, um leistungsstarke Abfrageausdrücke zu erstellen. Im nächsten Abschnitt dieses Themas werden die verschiedenen Abfrageklauseln erläutert, die Sie in einem Abfrageausdruck angeben können. Weitere Informationen zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Abfrageklauseln, finden Sie unter [Abfragen](../../../../visual-basic/language-reference/queries/queries.md).  
+ Es gibt verschiedene weitere LINQ-Abfrageoperatoren, die Sie verwenden können, um leistungsstarke Abfrageausdrücke zu erstellen. Im nächsten Abschnitt dieses Themas werden die verschiedenen Abfrageklauseln erläutert, die Sie in einem Abfrageausdruck angeben können. Ausführliche Informationen über Abfrageklauseln Visual Basic finden Sie unter [Abfragen](../../../../visual-basic/language-reference/queries/queries.md).  
   
-##  <a name="VisualBasicLINQQueryOperators"></a>Visual Basic LINQ-Abfrageoperatoren  
- Die Klassen im <xref:System.Linq>-Namespace und in den anderen Namespaces, die LINQ-Abfragen unterstützen, schließen Methoden ein, die Sie aufrufen können, um Abfragen auf Grundlage der Anforderungen Ihrer Anwendung zu erstellen und zu optimieren. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] schließt Schlüsselwörter für die am häufigsten verwendeten Abfrageklauseln ein, wie in der folgenden Tabelle beschrieben.  
+##  <a name="VisualBasicLINQQueryOperators"></a> Visual Basic LINQ-Abfrageoperatoren  
+ Die Klassen im <xref:System.Linq>-Namespace und in den anderen Namespaces, die LINQ-Abfragen unterstützen, schließen Methoden ein, die Sie aufrufen können, um Abfragen auf Grundlage der Anforderungen Ihrer Anwendung zu erstellen und zu optimieren. Visual Basic schließt Schlüsselwörter für die am häufigsten verwendeten Abfrageklauseln, wie in der folgenden Tabelle beschrieben.  
   
 |Begriff|Definition|  
 |---|---|  
@@ -120,7 +121,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
 |[Take-Klausel](../../../../visual-basic/language-reference/queries/take-clause.md)|Dies ist optional. Gibt eine angegebene Anzahl von zusammenhängenden Elementen vom Anfang einer Auflistung zurück. Zum Beispiel:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
 |[Take While-Klausel](../../../../visual-basic/language-reference/queries/take-while-clause.md)|Dies ist optional. Gibt Elemente in einer Auflistung zurück, solange eine angegebene Bedingung `true` ist, und überspringt dann die übrigen Elemente. Zum Beispiel:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
   
- Weitere Informationen zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Abfrageklauseln, finden Sie unter [Abfragen](../../../../visual-basic/language-reference/queries/queries.md).  
+ Ausführliche Informationen über Abfrageklauseln Visual Basic finden Sie unter [Abfragen](../../../../visual-basic/language-reference/queries/queries.md).  
   
  Sie können weitere LINQ-Abfragefunktionen verwenden, indem Sie die von LINQ bereitgestellten Member des Enumerable-Typs und des Queryable-Typs aufrufen. Sie können diese zusätzlichen Funktionen verwenden, indem Sie für das Ergebnis eines Abfrageausdrucks einen bestimmten Abfrageoperator aufrufen. Im folgenden Codebeispiel wird die <xref:System.Linq.Enumerable.Union%2A>-Methode verwendet, um die Ergebnisse von zwei Abfragen zu einem Abfrageergebnis zusammenzufassen. Mithilfe der <xref:System.Linq.Enumerable.ToList%2A>-Methode wird das Abfrageergebnis als generische Liste zurückgegeben.  
   
@@ -128,15 +129,15 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  Ausführliche Informationen über weitere LINQ-Funktionen finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
-##  <a name="ConnectingToADatabase"></a>Herstellen einer Verbindung mit einer Datenbank mit LINQ to SQL  
- In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] identifizieren Sie die SQL Server-Datenbankobjekte, auf die Sie zugreifen möchten (z. B. Tabellen, Ansichten und gespeicherte Prozeduren), mit einer LINQ to SQL-Datei. Eine LINQ to SQL-Datei hat die Erweiterung DBML.  
+##  <a name="ConnectingToADatabase"></a> Herstellen einer Verbindung mit einer Datenbank mit LINQ to SQL  
+ In Visual Basic identifizieren Sie die SQL Server-Datenbankobjekte wie Tabellen, Sichten und gespeicherte Prozeduren, die Sie mithilfe einer LINQ to SQL-Datei zugreifen möchten. Eine LINQ to SQL-Datei hat die Erweiterung DBML.  
   
  Wenn Sie eine gültige Verbindung mit einer SQL Server-Datenbank verfügen, können Sie fügen eine **LINQ to SQL-Klassen** Elementvorlage zum Projekt. Dadurch wird der Object Relational Designer (O/R-Designer) angezeigt. Der O/R-Designer können Sie die Elemente, die Sie in Ihren Code aus zugreifen möchten, ziehen die **Server-Explorer**/**Datenbank-Explorer** auf die Designeroberfläche. Die LINQ to SQL-Datei fügt dem Projekt ein <xref:System.Data.Linq.DataContext>-Objekt hinzu. Zu diesem Objekt gehören Eigenschaften und Auflistungen für die Tabellen und Ansichten, auf die Sie zugreifen möchten, sowie Methoden für die gespeicherten Prozeduren, die Sie aufrufen möchten. Sobald Sie die Änderungen an der LINQ to SQL-Datei (DBML-Datei) gespeichert haben, können Sie im Code auf diese Objekte zugreifen, indem Sie auf das <xref:System.Data.Linq.DataContext>-Objekt verweisen, das vom O/R-Designer definiert wird. Das <xref:System.Data.Linq.DataContext>-Objekt des Projekts wird auf Grundlage des Namens der LINQ to SQL-Datei benannt. Beispielsweise wird aus der LINQ to SQL-Datei Northwind.dbml ein <xref:System.Data.Linq.DataContext>-Objekt mit dem Namen `NorthwindDataContext` erstellt.  
   
  Beispiele mit Anleitungen finden Sie in [wie: Abfragen einer Datenbank](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md) und [wie: Aufrufen einer gespeicherten Prozedur](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md).  
   
-##  <a name="VisualBasicFeaturesThatSupportLINQ"></a>Visual Basic-Funktionen, die LINQ unterstützen  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enthält weitere wichtige Features, die die Verwendung von LINQ erleichtern und den Code reduzieren, den Sie zum Ausführen von LINQ-Abfragen schreiben müssen. Hierzu gehört Folgendes:  
+##  <a name="VisualBasicFeaturesThatSupportLINQ"></a> Visual Basic-Funktionen, die LINQ unterstützen  
+ Visual Basic enthält weitere wichtige Features, die die Verwendung von LINQ erleichtern und verringern Sie die Menge des Codes, die Sie zum Ausführen von LINQ-Abfragen schreiben müssen. Hierzu gehört Folgendes:  
   
 -   **Anonyme Typen**, die Ihnen das Erstellen eines neuen Typs basierend auf einem Abfrageergebnis ermöglichen.  
   
@@ -146,7 +147,7 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  Weitere Informationen finden Sie unter [Visual Basic-Funktionen, Unterstützung mit LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md).  
   
-##  <a name="QueryExecution"></a>Verzögerte und unmittelbare Abfrageausführung  
+##  <a name="QueryExecution"></a> Verzögerte und unmittelbare Abfrageausführung  
  Die Ausführung einer Abfrage ist getrennt von der Erstellung einer Abfrage. Nachdem eine Abfrage erstellt wurde, wird ihre Ausführung durch einen separaten Mechanismus ausgelöst. Eine Abfrage kann ausgeführt werden, sobald sie definiert ist (*unmittelbare Ausführung*), oder die Definition kann gespeichert und die Abfrage kann später ausgeführt werden (*verzögerte Ausführung*).  
   
  Wenn Sie eine Abfrage erstellen, wird die Abfrage selbst standardmäßig nicht sofort ausgeführt. Stattdessen wird die Abfragedefinition in der Variablen gespeichert, die auf das Abfrageergebnis verweist. Die Abfrage wird ausgeführt, wenn Sie später im Code auf die Abfrageergebnisvariable zugreifen (z. B. in einer `For…Next`-Schleife). Dieser Prozess wird als bezeichnet *verzögerte Ausführung*.  
@@ -157,8 +158,8 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  Weitere Informationen zur Ausführung von Abfragen finden Sie unter [Schreiben Ihrer ersten LINQ-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-##  <a name="XMLInVisualBasic"></a>XML in Visual Basic  
- Zu den XML-Features in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gehören XML-Literale und XML-Achseneigenschaften, mit denen Sie im Code XML einfach erstellen, abfragen, ändern sowie darauf zugreifen können. XML-Literale ermöglichen das direkte Schreiben von XML im Code. Der Visual Basic-Compiler behandelt das XML als Datenobjekt erster Klasse.  
+##  <a name="XMLInVisualBasic"></a> XML in Visual Basic  
+ Die XML-Funktionen in Visual Basic umfassen XML-Literale und XML-Achseneigenschaften, mit die Sie problemlos erstellen können, zugreifen, Abfragen und XML-Code in Ihrem Code zu ändern. XML-Literale ermöglichen das direkte Schreiben von XML im Code. Der Visual Basic-Compiler behandelt das XML als Datenobjekt erster Klasse.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein XML-Element erstellen, auf seine Unterelemente und Attribute zugreifen und die Inhalte des Elements mit LINQ abfragen.  
   
@@ -166,19 +167,19 @@ Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) fügt [!INCLUDE[
   
  Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).  
   
-##  <a name="RelatedResources"></a>Verwandte Ressourcen  
+##  <a name="RelatedResources"></a> Verwandte Ressourcen  
   
 |Thema|Beschreibung|  
 |---|---|  
-|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Beschreibt die XML-Features in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die abgefragt werden können und die Ihnen ermöglichen, XML in Ihrem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Code als Datenobjekte erster Klasse anzugeben.|  
-|[Abfragen](../../../../visual-basic/language-reference/queries/queries.md)|Stellt Referenzinformationen zu den in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbaren Abfrageklauseln bereit.|  
+|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Beschreibt die XML-Funktionen in Visual Basic, die abgefragt werden können und die Ihnen ermöglichen, XML als Datenobjekte in Visual Basic-Code enthalten.|  
+|[Abfragen](../../../../visual-basic/language-reference/queries/queries.md)|Enthält Referenzinformationen zu den Abfrageklauseln, die in Visual Basic verfügbar sind.|  
 |[LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to SQL.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to Objects.|  
 |[LINQ to ADO.NET (Portalseite)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Enthält Links zu allgemeinen Informationen, Programmieranleitungen und Beispiele zu LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to XML.|  
   
-##  <a name="HowToAndWalkthroughTopics"></a>Wie und exemplarische Vorgehensweisen  
+##  <a name="HowToAndWalkthroughTopics"></a> Wie und exemplarische Vorgehensweisen  
  [Gewusst wie: Abfragen einer Datenbank](how-to-query-a-database-by-using-linq.md)  
   
  [Gewusst wie: Aufrufen einer gespeicherten Prozedur](how-to-call-a-stored-procedure-by-using-linq.md)  

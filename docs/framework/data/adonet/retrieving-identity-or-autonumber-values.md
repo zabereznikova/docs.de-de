@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Abrufen von Identity- oder Autonumber-Werten
 Ein Primärschlüssel in einer relationalen Datenbank ist eine Spalte oder eine Kombination aus Spalten, die stets eindeutige Werte enthält. Wenn Sie den Primärschlüsselwert kennen, können Sie die Zeile lokalisieren, die den Wert enthält. Relationale Datenbankmodule, wie SQL Server, Oracle und Microsoft Access/Jet, unterstützen das Erstellen automatisch inkrementierender Spalten, die als Primärschlüssel verwendet werden können. Diese Werte werden vom Server generiert, wenn einer Tabelle Zeilen hinzugefügt werden. In SQL Server legen Sie die Identität einer Spalte fest, in Oracle erstellen Sie eine Sequenz, und in Microsoft Access erstellen Sie eine AutoWert-Spalte.  
@@ -35,7 +35,7 @@ Ein Primärschlüssel in einer relationalen Datenbank ist eine Spalte oder eine 
  Einige Datenbankmodule, z. B. das Microsoft Access Jet-Datenbankmodul, bieten keine Unterstützung für Ausgabeparameter und sind nicht in der Lage, mehrere Anweisungen in einem einzelnen Batch zu verarbeiten. Wenn Sie mit dem Jet-Datenbankmodul arbeiten, können Sie den neuen, für eine eingefügte Zeile generierten AutoWert-Wert abrufen, indem Sie in einem Ereignishandler für das `RowUpdated`-Ereignis des `DataAdapter` einen separaten SELECT-Befehl ausführen.  
   
 > [!NOTE]
->  Statt automatisch inkrementierende Werte zu verwenden, können Sie auch mit der <xref:System.Guid.NewGuid%2A>-Methode eines <xref:System.Guid>-Objekts eine GUID auf dem Clientcomputer generieren, die jedes Mal, wenn eine neue Zeile eingefügt wird, auf den Server kopiert werden kann. Die `NewGuid`-Methode generiert einen 16-Byte-Binärwert, der mit einem Algorithmus erstellt wird, der dafür sorgt, dass mit hoher Wahrscheinlichkeit kein Wert doppelt vorhanden ist. In einer SQL Server-Datenbank werden GUIDs in einer `uniqueidentifier`-Spalte gespeichert, die SQL Server automatisch mit der Transact-SQL-`NEWID()`-Funktion generieren kann. Die Verwendung einer GUID als Primärschlüssel kann zu Leistungseinbußen führen. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] unterstützt die `NEWSEQUENTIALID()`-Funktion, die eine sequenzielle GUID generiert, für die zwar keine globale Eindeutigkeit gewährleistet ist, die aber effizienter indiziert werden kann.  
+>  Statt automatisch inkrementierende Werte zu verwenden, können Sie auch mit der <xref:System.Guid.NewGuid%2A>-Methode eines <xref:System.Guid>-Objekts eine GUID auf dem Clientcomputer generieren, die jedes Mal, wenn eine neue Zeile eingefügt wird, auf den Server kopiert werden kann. Die `NewGuid`-Methode generiert einen 16-Byte-Binärwert, der mit einem Algorithmus erstellt wird, der dafür sorgt, dass mit hoher Wahrscheinlichkeit kein Wert doppelt vorhanden ist. In einer SQL Server-Datenbank werden GUIDs in einer `uniqueidentifier`-Spalte gespeichert, die SQL Server automatisch mit der Transact-SQL-`NEWID()`-Funktion generieren kann. Die Verwendung einer GUID als Primärschlüssel kann zu Leistungseinbußen führen. SQL Server bietet Unterstützung für die `NEWSEQUENTIALID()` -Funktion, die eine sequenzielle GUID generiert, nicht globale Eindeutigkeit gewährleistet ist, aber effizienter indiziert werden können.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Abrufen von SQL Server-Identitätsspaltenwerten  
  Wenn Sie mit Microsoft SQL Server arbeiten, können Sie eine gespeicherte Prozedur mit einem Ausgabeparameter erstellen, um den Identitätswert für eine eingefügte Zeile zu erhalten. In der folgenden Tabelle werden die drei Transact-SQL-Funktionen in SQL Server beschrieben, mit denen Werte aus Identitätsspalten abgerufen werden können.  

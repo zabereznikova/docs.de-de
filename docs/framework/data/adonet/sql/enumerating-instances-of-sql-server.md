@@ -1,36 +1,38 @@
 ---
-title: "Aufzählen von SQL Server-Instanzen (ADO.NET)"
-ms.custom: 
+title: Aufzählen von SQL Server-Instanzen (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7a47a3e342887a1dce3912a06ab49a88b7b9b615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Aufzählen von SQL Server-Instanzen (ADO.NET)
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] ermöglicht Anwendungen die Suche von [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Instanzen im aktuellen Netzwerk. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der verfügbaren im Netzwerk entspricht der Liste bereitgestellt, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, wird die Dropdown-Liste mit allen verfügbaren Servern erweitert Serverinstanzen die **Verbindung Eigenschaften** (Dialogfeld). Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
+SQL Server ermöglicht Anwendungen die Suche von SQL Server-Instanzen im aktuellen Netzwerk. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der verfügbaren im Netzwerk entspricht der Liste bereitgestellt, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, wird die Dropdown-Liste mit allen verfügbaren Servern erweitert Serverinstanzen die **Verbindung Eigenschaften** (Dialogfeld). Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
   
 > [!NOTE]
->  Wie bei den meisten Windows-Diensten wird auch hier empfohlen, den SQL-Browserdienst mit minimalen Berechtigungen auszuführen. Weitere Informationen zum SQL-Browserdienst und dessen Verwaltung finden Sie in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+>  Wie bei den meisten Windows-Diensten wird auch hier empfohlen, den SQL-Browserdienst mit minimalen Berechtigungen auszuführen. Weitere Informationen zum SQL-Browserdienst und dessen Verwaltung finden Sie in der Onlinedokumentation zu SQL Server.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Abrufen einer Enumeratorinstanz  
- Damit Sie die Tabelle mit den Informationen zu den verfügbaren [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Instanzen abrufen können, müssen Sie zunächst einen Enumerator abrufen. Hierzu verwenden Sie die freigegebene/statische <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A>-Eigenschaft:  
+ Damit Sie die Tabelle mit den Informationen zu den verfügbaren SQL Server-Instanzen abrufen können, müssen Sie zunächst einen Enumerator abrufen. Hierzu verwenden Sie die freigegebene/statische <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A>-Eigenschaft:  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -59,20 +61,20 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Name des Servers.|  
 |**InstanceName**|Name der Serverinstanz. Die Spalte bleibt leer, wenn der Server als Standardinstanz ausgeführt wird.|  
 |**IsClustered**|Gibt an, ob der Server Teil eines Clusters ist.|  
-|**Version**|Serverversion. Zum Beispiel:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Version**|Serverversion. Zum Beispiel:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQLServer 2012)|  
   
 ## <a name="enumeration-limitations"></a>Einschränkungen bei der Enumeration  
  Möglicherweise werden nicht immer alle verfügbaren Server aufgelistet. Der Umfang der Liste kann je nach Faktoren wie Timeouts und Datenverkehr im Netzwerk variieren. Daher kann die Liste bei zwei aufeinander folgenden Aufrufen unterschiedlich ausfallen. Es werden nur Server aufgelistet, die sich im gleichen Netzwerk befinden. Da Broadcastpakete i. d. R. von Routern nicht weitergeleitet werden, wird möglicherweise ein verfügbarer Server nicht aufgelistet. Dieses Verhalten ist bei jedem Aufruf gleich.  
   
- Zu den aufgelisteten Servern werden ggf. zusätzliche Informationen aufgeführt, z. B. `IsClustered` oder die Version. Dies ist davon abhängig, wie die Liste abgerufen wurde. Es werden ausführlichere Informationen angezeigt, wenn die Server über den [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Browserdienst aufgelistet werden. Bei Servern, die über die Windows-Infrastruktur ermittelt werden, wird nur der Name aufgeführt.  
+ Zu den aufgelisteten Servern werden ggf. zusätzliche Informationen aufgeführt, z. B. `IsClustered` oder die Version. Dies ist davon abhängig, wie die Liste abgerufen wurde. Es werden ausführlichere Informationen angezeigt, wenn die Server über den SQL Server-Browserdienst aufgelistet werden. Bei Servern, die über die Windows-Infrastruktur ermittelt werden, wird nur der Name aufgeführt.  
   
 > [!NOTE]
 >  Serverenumeration ist nur in vollständig vertrauenswürdigen Umgebungen verfügbar. Assemblys, die in einer nur teilweise vertrauenswürdigen Umgebung ausgeführt werden, können die Enumeration nicht verwenden. Dies gilt auch, wenn sie über die <xref:System.Data.SqlClient.SqlClientPermission>-Codezugriffssicherheitsberechtigung (CAS) verfügen.  
   
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] stellt Informationen für <xref:System.Data.Sql.SqlDataSourceEnumerator> mithilfe eines externen Windows-Diensts namens SQL-Browser bereit. Dieser Dienst ist in der Standardeinstellung aktiviert, kann vom Administrator jedoch deaktiviert werden. Dadurch wird die Serverinstanz für diese Klasse unsichtbar.  
+ SQL Server enthält Informationen für die <xref:System.Data.Sql.SqlDataSourceEnumerator> durch die Verwendung eines externen Windows-Diensts namens SQL-Browser. Dieser Dienst ist in der Standardeinstellung aktiviert, kann vom Administrator jedoch deaktiviert werden. Dadurch wird die Serverinstanz für diese Klasse unsichtbar.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Konsolenanwendung ruft Informationen zu allen sichtbaren [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Instanzen ab und zeigt die Informationen im Konsolenfenster an.  
+ Die folgende Konsolenanwendung ruft Informationen zu allen sichtbaren Instanzen von SQL Server ab und zeigt diese Informationen im Konsolenfenster an.  
   
 ```vb  
 Imports System.Data.Sql  

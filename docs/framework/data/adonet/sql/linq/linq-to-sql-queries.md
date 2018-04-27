@@ -1,24 +1,26 @@
 ---
 title: LINQ to SQL-Abfragen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8c32ff4040213ce73b78f7ea0f6d56e222d55b25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62e6252da06201e33d6f81f3160bee063272132f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL-Abfragen
 Sie definieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen, indem Sie die gleiche Syntax wie in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] verwenden. Der einzige Unterschied besteht darin, dass die in Abfragen referenzierten Objekte den Elementen in einer Datenbank zugeordnet werden. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -33,7 +35,7 @@ Sie definieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md
 |Element|LINQ-Abfrage|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage|  
 |----------|----------------|----------------------------------------------------------------------|  
 |Rückgabetyp der lokalen Variablen, die die Abfrage (für Abfragen, die Sequenzen zurückgeben) enthält|Generisches `IEnumerable`|Generisches `IQueryable`|  
-|Angeben der Datenquelle|Verwendet die `From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) oder `from` -Klausel (c#)|Gleiche Voraussetzung|  
+|Angeben der Datenquelle|Verwendet die `From` (Visual Basic) oder `from` -Klausel (c#)|Gleiche Voraussetzung|  
 |Filtern|Verwendet die `Where` / `where` Klausel|Gleiche Voraussetzung|  
 |Gruppieren|Verwendet die `Group…By` / `groupby` Klausel|Gleiche Voraussetzung|  
 |Auswählen (Projizieren)|Verwendet die `Select` / `select` Klausel|Gleiche Voraussetzung|  

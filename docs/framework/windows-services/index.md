@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>Entwickeln von Windows-Dienstanwendungen
 Mithilfe von Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder der Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist. Diese Art von Anwendung wird einen Windows-Dienst aufgerufen. Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.  
@@ -41,7 +41,7 @@ Mithilfe von Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder d
  Bietet einen Überblick über die Windows-dienstanwendungen, die Lebensdauer von einem Dienst und dienstanwendungen wie von anderen gängigen Arten des Projekts zu unterscheiden.  
   
  [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Enthält ein Beispiel zum Erstellen eines Diensts in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] und Visual c#.  
+ Enthält ein Beispiel zum Erstellen eines Diensts in Visual Basic und Visual c#.  
   
  [Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Erläutert die Sprachelemente in der Programmierung verwendet.  

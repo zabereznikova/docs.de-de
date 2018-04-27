@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c909cfe1b45a42aae91948917f310474575f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb4bac9208c03fd18e1904f58b247824d2c215da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)
 Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn es aufgerufen. Sie deklarieren jeden Parameter für eine Prozedur auf die gleiche Weise wie Sie eine Variable zu deklarieren, die den Namen und den Datentyp angibt. Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.  
@@ -48,19 +49,20 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
   
      Der erste Parameter akzeptiert eine `customer` -Objekt, und `updateCustomer` können direkt aktualisieren, die Variable übergeben, um `c` , da das Argument übergeben wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Die Prozedur kann nicht die Werte der beiden letzten Argumente nicht geändert werden, weil sie übergeben werden [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     Wenn der aufrufende Code keinen Wert für bereitstellt der `level` Parameter [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird auf den Standardwert 0.  
+     Wenn der aufrufende Code einen Wert für nicht angeben, ist die `level` Parameter, Visual Basic wird er auf den Standardwert 0.  
   
      Wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `Off`, `As` -Klausel ist optional, wenn Sie einen Parameter definieren. Jedoch wenn ein Parameter verwendet ein `As` -Klausel, alle muss verwenden. Wenn der Schalter für die typüberprüfung ist `On`, `As` -Klausel für jede Parameterdefinition erforderlich ist.  
   
-     Das Festlegen von Datentypen für alle Programmierelemente genannt *starke Typisierung*. Bei Festlegung `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erzwingt eine starke Typisierung. Dies wird dringend empfohlen, den folgenden Gründen empfohlen:  
+     Das Festlegen von Datentypen für alle Programmierelemente genannt *starke Typisierung*. Bei Festlegung `Option Strict On`, Visual Basic erzwingt eine starke Typisierung. Dies wird dringend empfohlen, den folgenden Gründen empfohlen:  
   
     -   Dadurch werden IntelliSense-Unterstützung für die Variablen und Parametern. Dadurch können Sie ihre Eigenschaften und andere Elemente anzeigen, während der Eingabe im Code.  
   
     -   Sie können den Compiler an, führen Sie die Überprüfung des Typs. Dadurch wird das Abfangen von Anweisungen, die zur Laufzeit aufgrund von Fehlern, z. B. Überlauf ausgeführt werden kann. Auch fängt Sie Aufrufe von Methoden für Objekte, die sie unterstützen.  
   
-    -   Es führt zu einer schnelleren Ausführung des Codes. Ein Grund dafür ist, dass Sie keinen Datentyp für ein Programmierelement angeben der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler weist er die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und anderen Datentypen, die Leistung wird reduziert.  
+    -   Es führt zu einer schnelleren Ausführung des Codes. Ein Grund dafür ist, dass wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und anderen Datentypen, die Leistung wird reduziert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
+
  [Verfahren](./index.md)  
  [Sub-Prozeduren](./sub-procedures.md)  
  [Function-Prozeduren](./function-procedures.md)  
@@ -69,4 +71,4 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
  [Rekursive Prozeduren](./recursive-procedures.md)  
  [Prozedurüberladung](./procedure-overloading.md)  
  [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Objektorientierte Programmierung](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Objektorientierte Programmierung (Visual Basic)](../../concepts/object-oriented-programming.md)  

@@ -2,8 +2,8 @@
 title: XML-Verarbeitungsanweisungsliteral (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ce0f2d0dff80072beefdb4f84643ea28e2cf165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d2df93a46d426358988b3ad7f3161c7ae0c7b9e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML-Verarbeitungsanweisungsliteral (Visual Basic)
 Ein Zeichenfolgenliteral, eine <xref:System.Xml.Linq.XProcessingInstruction> Objekt.  
@@ -59,9 +59,9 @@ Ein Zeichenfolgenliteral, eine <xref:System.Xml.Linq.XProcessingInstruction> Obj
  Sie können eine XML-Verarbeitungsanweisungsliteral einer Variablen zuweisen oder in einem XML-Dokumentliteral eingeschlossen wird.  
   
 > [!NOTE]
->  Ein XML-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen. Dadurch können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm.  
+>  Ein XML-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen. Dadurch können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in ein Visual Basic-Programm.  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert XML-Verarbeitungsanweisungsliteral in einen Aufruf der <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> Konstruktor.  
+ Visual Basic-Compiler konvertiert XML-Verarbeitungsanweisungsliteral in einen Aufruf der <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> Konstruktor.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine verarbeitungsanweisung, ein Stylesheet für ein XML-Dokument identifiziert.  

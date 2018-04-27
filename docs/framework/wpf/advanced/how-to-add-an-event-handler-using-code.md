@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Hinzufügen eines Ereignishandlers mithilfe von Code"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen eines Ereignishandlers mithilfe von Code'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e7627589ff7e422c4ad3cd7a37fdc14c8a9c9f4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Gewusst wie: Hinzufügen eines Ereignishandlers mithilfe von Code
 Dieses Beispiel zeigt, wie einen Ereignishandler mithilfe von Code ein Element hinzugefügt wird.  
@@ -34,7 +36,7 @@ Dieses Beispiel zeigt, wie einen Ereignishandler mithilfe von Code ein Element h
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird ein neues <xref:System.Windows.Controls.Button> auf eine Seite, die anfänglich in definiert ist [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Eine Code-Behind-Datei implementiert eine Ereignishandlermethode und fügt dann diese Methode als neuen Ereignishandler auf der <xref:System.Windows.Controls.Button>.  
   
- Die [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] Beispiel verwendet die `+=` Operator, um einen Handler, ein Ereignis zugewiesen. Dies ist der gleichen Operator, der verwendet wird, weisen Sie einen Handler im die [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Modell für die Ereignisbehandlung. [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]unterstützt nicht diesen Operator als Mittel zum Hinzufügen von Ereignishandlern. Es muss stattdessen eine der beiden folgenden Verfahren:  
+ Das C#-Beispiel verwendet die `+=` Operator, um einen Handler, ein Ereignis zugewiesen. Dies ist der gleichen Operator, der verwendet wird, weisen Sie einen Handler im die [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Modell für die Ereignisbehandlung. Microsoft Visual Basic unterstützt diesen Operator nicht als Mittel zum Hinzufügen von Ereignishandlern. Es muss stattdessen eine der beiden folgenden Verfahren:  
   
 -   Verwenden der <xref:System.Windows.UIElement.AddHandler%2A> -Methode, zusammen mit einem `AddressOf` -Operator, um auf die Ereignishandlerimplementierung verweisen.  
   

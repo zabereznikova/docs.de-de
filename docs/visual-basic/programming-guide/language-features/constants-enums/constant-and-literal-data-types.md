@@ -1,11 +1,12 @@
 ---
 title: Konstanten und literale Datentypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Konstanten und literale Datentypen (Visual Basic)
 Ein Literal ist ein Wert, der als selbst und nicht als Wert einer Variablen oder das Ergebnis eines Ausdrucks, z. B. die Zahl 3 oder die Zeichenfolge "Hello" ausgedrückt wird. Eine Konstante ist, einen aussagekräftigen Namen, der anstelle eines Literals und behält der gleiche Wert in der gesamten Anwendung, im Gegensatz zu einer Variablen, deren Wert sich ändern kann.  
@@ -53,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- Die folgende Tabelle zeigt die Zeichen und der einschließenden Typ Zeichen in verfügbar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Die folgende Tabelle zeigt die umschließenden Zeichen und Typzeichen, die in Visual Basic verfügbar.  
   
 |Datentyp|Einschließen von Zeichen|Angefügte Typzeichen|  
 |---|---|---|  

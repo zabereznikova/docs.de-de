@@ -1,26 +1,26 @@
 ---
-title: "Richtlinien für Auflistungen"
-ms.custom: 
+title: Richtlinien für Auflistungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: 
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 5a1bb81a23a180c3f7738d811398a5a45abd9122
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen einige gemeinsame Eigenschaften haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt wird nur Typen, die eine oder beide dieser Schnittstellen implementieren, die Auflistungen werden berücksichtigt.  
@@ -135,9 +135,9 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen 
   
  Angenommen, eine schreibgeschützte Auflistung von Zeichenfolgen aufgerufen werden `ReadOnlyStringCollection`.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  

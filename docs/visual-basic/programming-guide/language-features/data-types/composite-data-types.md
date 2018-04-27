@@ -1,11 +1,12 @@
 ---
 title: Zusammengesetzte Datentypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Zusammengesetzte Datentypen (Visual Basic)
-Zusätzlich zu den elementare Datentypen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitstellt, können Sie auch Elemente unterschiedlichen Typs erstellen assemblieren *zusammengesetzte Datentypen* wie z. B. Arrays, Strukturen und Klassen. Sie können zusammengesetzte Datentypen aus elementare Typen und aus anderen zusammengesetzten Typen erstellen. Sie können z. B. ein Array von Strukturelementen oder eine Struktur mit Arraymember definieren.  
+Zusätzlich zu den bereitgestellten elementarer Datentyp Typen Visual Basic können Sie auch Elemente unterschiedlichen Typs zu erstellen assemblieren *zusammengesetzte Datentypen* wie z. B. Arrays, Strukturen und Klassen. Sie können zusammengesetzte Datentypen aus elementare Typen und aus anderen zusammengesetzten Typen erstellen. Sie können z. B. ein Array von Strukturelementen oder eine Struktur mit Arraymember definieren.  
   
 ## <a name="data-types"></a>Datentypen  
  Ein zusammengesetzter Typ ist der Datentyp eines beliebigen Komponenten unterscheiden. Angenommen, ein Array von `Integer` Elemente weist nicht die `Integer` -Datentyp.  
@@ -35,7 +36,7 @@ Zusätzlich zu den elementare Datentypen [!INCLUDE[vbprvb](~/includes/vbprvb-md.
  Datentyp eines Arrays wird normalerweise mithilfe von Elementtyp, Klammern und Kommas nach Bedarf dargestellt. Z. B. ein eindimensionales Array vom `String` Elemente wird dargestellt als `String()`, und ein zweidimensionales Array von `Boolean` Elemente wird als `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Strukturtypen  
- Es gibt keinen universellen Datentyp, der alle Strukturen umfasst. Stattdessen stellt jede Definition einer Struktur einen eindeutigen Datentyp dar, auch wenn die beiden Strukturen identischer Elemente in derselben Reihenfolge definiert werden. Jedoch, wenn Sie zwei oder mehr Instanzen derselben Struktur erstellen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] betrachtet diese in den gleichen Datentyp sein.  
+ Es gibt keinen universellen Datentyp, der alle Strukturen umfasst. Stattdessen stellt jede Definition einer Struktur einen eindeutigen Datentyp dar, auch wenn die beiden Strukturen identischer Elemente in derselben Reihenfolge definiert werden. Allerdings berücksichtigt Visual Basic, wenn Sie zwei oder mehr Instanzen derselben Struktur erstellen, zu dem gleichen Datentyp aufweisen.  
   
 ## <a name="tuples"></a>Tupel
 

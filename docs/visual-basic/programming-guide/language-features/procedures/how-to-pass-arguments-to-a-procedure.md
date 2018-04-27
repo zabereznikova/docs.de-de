@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Übergeben von Argumenten an eine Prozedur (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Übergeben von Argumenten an eine Prozedur (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Gewusst wie: Übergeben von Argumenten an eine Prozedur (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, folgen Sie den Namen der Prozedur mit einer Argumentliste in Klammern. Geben Sie ein Argument für jeden erforderlichen Parameter der Prozedur definiert, und geben Sie optional Argumente für die `Optional` Parameter. Wenn Sie keine angeben einer `Optional` Parameter im Aufruf muss ein Komma, um seine Position in der Argumentliste zu markieren, wenn Sie nachfolgende Argumente angeben, sind enthalten.  
@@ -45,7 +46,7 @@ Wenn Sie eine Prozedur aufrufen, folgen Sie den Namen der Prozedur mit einer Arg
   
 5.  Wenn Sie ein Argument für weglassen ein `Optional` Parameter ein anderer Parameter nach ihm in der Parameterliste ist, können Sie die Stelle der ausgelassenes Argument markieren, durch ein zusätzliches Komma in der Argumentliste.  
   
-     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktion.  
+     Im folgenden Beispiel wird das Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktion.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ Wenn Sie eine Prozedur aufrufen, folgen Sie den Namen der Prozedur mit einer Arg
   
      Das zweite Komma in der Argumentliste markiert die Position des zweiten Arguments nicht angegeben, und die letzte Zeichenfolge übergeben wird, des optionalen dritten Parameters von `MsgBox`, dies ist der Text, der in der Titelleiste angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
+
  [Sub-Prozeduren](./sub-procedures.md)  
  [Function-Prozeduren](./function-procedures.md)  
  [Eigenschaftenprozeduren](./property-procedures.md)  
@@ -63,4 +65,4 @@ Wenn Sie eine Prozedur aufrufen, folgen Sie den Namen der Prozedur mit einer Arg
  [Rekursive Prozeduren](./recursive-procedures.md)  
  [Prozedurüberladung](./procedure-overloading.md)  
  [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Objektorientierte Programmierung](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Objektorientierte Programmierung (Visual Basic)](../../concepts/object-oriented-programming.md)  

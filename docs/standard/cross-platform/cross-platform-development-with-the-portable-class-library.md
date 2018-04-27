@@ -1,30 +1,30 @@
 ---
-title: "Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek"
-ms.custom: 
+title: Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  
@@ -38,7 +38,7 @@ Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilf
  Visual Studio bietet Ihnen Vorlagen für das Entwickeln mit der portablen Klassenbibliothek. Je nachdem, welche Visual Studio-Version Sie verwenden, können die verfügbaren Vorlagen und Menüs von den in diesem Artikel beschriebenen abweichen.  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) enthält Updates für die Vorlagen der portablen Klassenbibliothek. Wenn Sie eine frühere Version von Visual Studio und Visual Studio 2013 auf demselben Computer installiert haben, und anschließend installieren Sie Update 2, die Änderungen an der **Zielframework** Optionen gelten für beide Versionen von Visual Studio.  
+>  Visual Studio 2013 Update 2 enthält Updates für die Vorlagen der portablen Klassenbibliothek. Wenn Sie eine frühere Version von Visual Studio und Visual Studio 2013 auf demselben Computer installiert haben, und anschließend installieren Sie Update 2, die Änderungen an der **Zielframework** Optionen gelten für beide Versionen von Visual Studio.  
   
  In diesem Thema:  
   
@@ -59,10 +59,10 @@ Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilf
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010 Professional, Premium oder Ultimate|Ja, bei der Installation der [Tools für Portable Bibliotheken](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Visual Studio Express 2010-Versionen|Nein.|  
-|Visual Studio 2012 Professional, Premium oder Ultimate|Ja. Für Phone-Unterstützung installieren der [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.0-Unterstützung installieren der [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Visual Studio Express 2012-Versionen|Nein.|  
-|Visual Studio 2013 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.1-Unterstützung installieren [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 für Windows|Ja, bei der Installation der [neueste Version von Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), die Update 2 enthält, oder fügen [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.1-Unterstützung installieren der [neueste Version von Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
+|Visual Studio Community 2013 für Windows|Ja, bei der Installation der [neueste Version von Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), das Update 2 enthält.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Erstellen eines Projekts mit portablen Klassenbibliotheken  
@@ -129,7 +129,7 @@ Dialogfeld "Zielplattformen ändern" in Visual Studio 2012
 ## <a name="supported-features"></a>Unterstützte Funktionen  
  Die folgende Tabelle zeigt, welche Funktionen auf den verfügbaren Plattformen und in ihren Versionen unterstützt werden. In einigen Fällen hat Microsoft zum Release eines NuGet-Pakets Unterstützung hinzugefügt und dies vermerkt. Weitere Informationen zu NuGet-Paketen für .NET Framework finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
-|Funktion|.NET Framework|.NET Framework|.NET Framework|Windows Store|Windows Store|Windows Phone Store|Windows Phone Silverlight|Windows Phone Silverlight|Windows Phone Silverlight|Silverlight|Silverlight|Xbox 360|  
+|Feature|.NET Framework|.NET Framework|.NET Framework|Windows Store|Windows Store|Windows Phone Store|Windows Phone Silverlight|Windows Phone Silverlight|Windows Phone Silverlight|Silverlight|Silverlight|Xbox 360|  
 |-------------|--------------------|--------------------|--------------------|-------------------|-------------------|-------------------------|-------------------------------|-------------------------------|-------------------------------|-----------------|-----------------|--------------|  
 ||**4**|**4.0.3**|**4.5**|**8**|**8.1**|**8.1**|**7.5**|**8**|**8.1**|**4**|**5**||  
 |Kernbibliotheken|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|  
@@ -152,10 +152,10 @@ Dialogfeld "Zielplattformen ändern" in Visual Studio 2012
   
  ➊ Erfordert [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) Paket  
  ➋ Erfordert [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) Paket  
- ➌ Erfordert [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) Paket  
+ ➌ Erfordert [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Paket  
   
 > [!WARNING]
->  Sie können Fehler auftreten, wenn Sie verweisen die [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) und [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) Pakete von einer portablen Bibliothek, die von einer Windows Phone Silverlight 8.1-app verwendet. Weitere Informationen finden Sie unter [Plattformkompatibilität und Änderungen für Windows Phone Silverlight 8.1-apps](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Sie können Fehler auftreten, wenn Sie verweisen die [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) und [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Pakete von einer portablen Bibliothek, die von einer Windows Phone Silverlight 8.1-app verwendet. Weitere Informationen finden Sie unter [Plattformkompatibilität und Änderungen für Windows Phone Silverlight 8.1-apps](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Unterstützte Typen und Members  
@@ -197,7 +197,7 @@ Beispiel für Versionsinformationen
  Wenn Sie eine Windows Store- oder Windows Phone-App erstellen, die auf eine Assembly einer portablen Klassenbibliothek verweist, ist alles, was Sie zum Bereitstellen der App benötigen, im App-Paket enthalten und es sind keine weiteren Schritte erforderlich.  
   
 ### <a name="deploying-a-net-framework-app"></a>Bereitstellen einer .NET Framework-App  
- Wenn Sie eine .NET Framework-App bereitstellen, die auf eine Assembly einer portablen Klassenbibliothek verweist, müssen Sie eine Abhängigkeit von der richtigen Version von .NET Framework angeben. Durch die Angabe dieser Abhängigkeit stellen Sie sicher, dass die erforderliche Version mit der App installiert wird. Wenn Sie als .NET Framework 4 Ziel oder höher muss auf dem Computer mit .NET Framework 4 sein ein [aktualisieren](http://go.microsoft.com/fwlink/?LinkId=210824), Update 4.0.3 für .NET Framework 4 oder .NET Framework 4.5 installiert.  
+ Wenn Sie eine .NET Framework-App bereitstellen, die auf eine Assembly einer portablen Klassenbibliothek verweist, müssen Sie eine Abhängigkeit von der richtigen Version von .NET Framework angeben. Durch die Angabe dieser Abhängigkeit stellen Sie sicher, dass die erforderliche Version mit der App installiert wird. Wenn Sie als .NET Framework 4 Ziel oder höher muss auf dem Computer mit .NET Framework 4 sein ein [aktualisieren](https://www.microsoft.com/download/details.aspx?id=3556), Update 4.0.3 für .NET Framework 4 oder .NET Framework 4.5 installiert.  
   
 -   So erstellen Sie eine Abhängigkeit mit ClickOnce-Bereitstellung: In **Projektmappen-Explorer**, wählen Sie den Projektknoten für das Projekt, das Sie veröffentlichen möchten. (Dies ist das Projekt, mit dem auf das Projekt der portablen Klassenbibliothek verwiesen wird.) Wählen Sie in der Menüleiste **Projekt**, **Eigenschaften**, und wählen Sie dann die **veröffentlichen** Registerkarte. Auf der **veröffentlichen** Seite **Voraussetzungen**. Wählen Sie die erforderliche .NET Framework-Version (oder ein Update von .NET Framework 4) als erforderliche Komponente aus.  
   
@@ -217,9 +217,9 @@ Beispiel für Versionsinformationen
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

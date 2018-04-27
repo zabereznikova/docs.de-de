@@ -1,13 +1,13 @@
 ---
 title: Erstellen einer WPF-Anwendung (WPF)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] )-Anwendungen können als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-EXE-, -DLL-Datei oder als Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  Eine CodeDOM-Darstellung einer neuen Teilklasse wird erstellt und in den Ordner „obj\Release“ kopiert.  
   
- Außerdem wird eine sprachspezifische Codedatei für jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei generiert. Für eine „Page1.xaml“-Seite in einem [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]-Projekt wird z. B. eine Datei „Page1.g.vb“ generiert und für eine „Page1.xaml“-Seite in einem [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]-Projekt eine Datei „Page1.g.cs“. Das „.g“ im Dateinamen gibt an, dass die Datei generierten Code darstellt, der über eine Deklaration der partiellen Klasse für das Element der oberen Ebene der Markupdatei entspricht (z. B. `Page` oder `Window`). Die Klasse wird mit dem `partial`-Modifizierer in [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] (`Extends` in [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]) deklariert, um anzugeben, dass an einer anderen Stelle noch eine weitere Deklaration für die Klasse vorhanden ist, normalerweise in der CodeBehind-Datei „Page1.xaml.cs“.  
+ Außerdem wird eine sprachspezifische Codedatei für jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei generiert. Beispielsweise wird für eine Seite "Page1.xaml" in einem Visual Basic-Projekt, ein Page1.g.vb generiert; für eine Seite "Page1.xaml" in einem C#-Projekt wird eine Page1.g.cs generiert. Das „.g“ im Dateinamen gibt an, dass die Datei generierten Code darstellt, der über eine Deklaration der partiellen Klasse für das Element der oberen Ebene der Markupdatei entspricht (z. B. `Page` oder `Window`). Die Klasse wird deklariert, mit der `partial` in c# (`Extends` in Visual Basic) an eine andere Deklaration für die Klasse an anderer Stelle vorhanden ist, in der Regel in den Code-Behind-Datei Page1.xaml.cs.  
   
  Die partielle Klasse erstreckt sich von der entsprechenden Basisklasse (z. B. <xref:System.Windows.Controls.Page> für eine Seite) und implementiert die <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Windows.Markup.IComponentConnector> Schnittstelle verfügt über Methoden zum Initialisieren einer Komponente, und verbinden Sie Namen und Ereignissen für Elemente im Inhalt. Folglich sieht die Methodenimplementierung der generierten Codedatei folgendermaßen aus:  
   
@@ -137,7 +137,7 @@ End Sub
   
  Diese Manifestdateien werden stets für [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s erstellt. Für installierte Anwendungen werden sie nicht erstellt, sofern die `GenerateManifests`-Eigenschaft in der Projektdatei nicht mit dem Wert `true` angegeben wird.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]erhalten Sie zwei zusätzliche Berechtigungen über diese Berechtigungen, die typische Anwendungen für die Internetzone zugewiesen: <xref:System.Security.Permissions.WebBrowserPermission> und <xref:System.Security.Permissions.MediaPermission>. Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem deklariert diese Berechtigungen im Anwendungsmanifest.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] erhalten Sie zwei zusätzliche Berechtigungen über diese Berechtigungen, die typische Anwendungen für die Internetzone zugewiesen: <xref:System.Security.Permissions.WebBrowserPermission> und <xref:System.Security.Permissions.MediaPermission>. Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem deklariert diese Berechtigungen im Anwendungsmanifest.  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>Unterstützung für inkrementelle Builds  

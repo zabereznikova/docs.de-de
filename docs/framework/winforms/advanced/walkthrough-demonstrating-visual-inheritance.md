@@ -1,12 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -157,7 +159,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 7.  Wählen Sie die Private **Say Goodbye** Schaltfläche, und beachten Sie, dass keine Ziehpunkte sind. Darüber hinaus wird in der **Eigenschaften** Fenster die Eigenschaften dieser Schaltfläche werden abgeblendet, um anzugeben, kann nicht geändert werden.  
   
-8.  Bei Verwendung von [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:  
+8.  Wenn Sie Visual c# verwenden:  
   
     1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1** in der **InheritanceTest** Projekt, und wählen Sie dann **löschen**. Klicken Sie im angezeigten Meldungsfeld auf **OK** zu bestätigen.  
   
@@ -172,7 +174,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
 12. Drücken Sie F5, um die Anwendung auszuführen, und beobachten Sie das Verhalten des geerbten Formulars.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und Verwenden der **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und ändern Sie die `Inherits`-Anweisung (`:` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]). Weitere Informationen finden Sie unter [wie: erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und Verwenden der **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und ändern Sie die `Inherits` (`:` in Visual c#) Anweisung. Weitere Informationen finden Sie unter [wie: erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

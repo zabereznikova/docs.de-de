@@ -1,27 +1,29 @@
 ---
 title: Erstellen des Datendiensts
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 781def411214b0804cdc094c00b2f655b6c3823d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-data-service"></a>Erstellen des Datendiensts
 In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar machen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Feed, die auf die Beispieldatenbank Northwind basiert. Die Aufgabe umfasst die folgenden grundlegenden Schritte:  
@@ -35,16 +37,16 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
 4.  Aktivieren Sie den Zugriff auf den Datendienst.  
   
 > [!NOTE]
->  Die beim Durchführen dieser Aufgabe erstellte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendung wird auf dem von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bereitgestellten [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server ausgeführt. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server unterstützt nur Zugriff vom lokalen Computer. Um außerdem das Testen und die Problembehebung des Datendiensts während der Entwicklung zu vereinfachen, sollte die Anwendung, die den Datendienst hostet, möglicherweise mithilfe von Internetinformationsdienste (IIS) ausgeführt werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  Die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung, die Sie erstellen, wenn Sie diese Aufgabe ausgeführt wird, auf die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, die von Visual Studio bereitgestellt werden. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server unterstützt nur Zugriff vom lokalen Computer. Um außerdem das Testen und die Problembehebung des Datendiensts während der Entwicklung zu vereinfachen, sollte die Anwendung, die den Datendienst hostet, möglicherweise mithilfe von Internetinformationsdienste (IIS) ausgeführt werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 ### <a name="to-create-the-aspnet-web-application"></a>So erstellen Sie die ASP.NET-Webanwendung  
   
-1.  In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]auf die **Datei** klicken Sie im Menü **neu**, und wählen Sie dann **Projekt**.  
+1.  In Visual Studio auf die **Datei** klicken Sie im Menü **neu**, und wählen Sie dann **Projekt**.  
   
-2.  In der **neues Projekt** im Dialogfeld unter entweder [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] oder [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] wählen Sie die **Web** Vorlage, und wählen Sie dann **ASP.NET-Webanwendung**.  
+2.  In der **neues Projekt** (Dialogfeld), wählen Sie unter Visual Basic oder Visual C#-Option der **Web** Vorlage, und wählen Sie dann **ASP.NET-Webanwendung**.  
   
     > [!NOTE]
-    >  Wenn Sie [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer verwenden, müssen Sie anstelle einer neuen Webanwendung eine neue Website erstellen.  
+    >  Wenn Sie Visual Studio Web Developer verwenden, müssen Sie anstelle einer neuen Webanwendung eine neue Website erstellen.  
   
 3.  Typ `NorthwindService` als den Namen des Projekts.  
   
@@ -68,7 +70,7 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
   
 5.  Das Datenmodell mit der Datenbank zu verbinden, indem Sie einen der folgenden Schritte aus, und klicken Sie dann auf **Weiter**:  
   
-    -   Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen mit SQL Server-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=123631). Dieser [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Instanz muss die Northwind-Beispieldatenbank angefügt worden sein.  
+    -   Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen mit SQL Server-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.  
   
          \- oder –  
   
@@ -79,7 +81,7 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
 7.  Klicken Sie auf **Fertig stellen** um den Assistenten zu schließen.  
   
     > [!NOTE]
-    >  Das erstellte Datenmodell macht Fremdschlüsseleigenschaften von Entitätstypen verfügbar. Mit [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 erstellte Datenmodelle enthalten diese Fremdschlüsseleigenschaften nicht. Aus diesem Grund müssen Sie die Clientdatendienstklassen jeglicher Clientanwendungen aktualisieren, die für den Zugriff auf den mit [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 erstellten Northwind-Datendienst erstellt wurden, bevor Sie auf diese Version des Northwind-Datendiensts zugreifen.  
+    >  Das erstellte Datenmodell macht Fremdschlüsseleigenschaften von Entitätstypen verfügbar. Mit Visual Studio 2008 erstellte Datenmodelle enthalten diese Fremdschlüsseleigenschaften nicht. Aus diesem Grund müssen Sie die Clientdatendienstklassen jeglicher Clientanwendungen aktualisieren, die für den Zugriff auf den mit Visual Studio 2008 erstellten Northwind-Datendienst erstellt wurden, bevor Sie auf diese Version des Northwind-Datendiensts zugreifen.  
   
 ### <a name="to-create-the-data-service"></a>So erstellen Sie den Datendienst  
   
@@ -89,7 +91,7 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
   
 3.  Geben Sie den Namen des Diensts zu `Northwind`.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio erstellt das XML-Markup und die Codedateien für den neuen Dienst. In der Standardeinstellung wird das Fenster des Code-Editors geöffnet. In **Projektmappen-Explorer**, der Dienst müssen die Namen "Northwind", mit der Erweiterung. svc.cs oder. svc.vb.  
+     Visual Studio für StudioVisual erstellt das XML-Markup und Code für den neuen Dienst. In der Standardeinstellung wird das Fenster des Code-Editors geöffnet. In **Projektmappen-Explorer**, der Dienst müssen die Namen "Northwind", mit der Erweiterung. svc.cs oder. svc.vb.  
   
 4.  Ersetzen Sie im Code für den Datendienst in der Definition der Klasse, die den Datendienst definiert, den Kommentar `/* TODO: put your data source class name here */` durch den Typ des Entitätscontainers des Datenmodells, in diesem Fall `NorthwindEntities`. Die Klassendefinition sollte wie folgt aussehen:  
   
@@ -109,7 +111,7 @@ In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLU
     >  Jeder Client, der auf die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendung zugreifen kann, kann auch auf die vom Datendienst verfügbar gemachten Ressourcen zugreifen. Sie sollten in einem Produktionsdatendienst auch die Anwendung selbst sichern, um nicht autorisierten Zugriff auf Ressourcen zu verhindern. Weitere Informationen finden Sie unter [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Einen neuer Datendienst, die verfügbar gemacht wurde erfolgreich erstellt ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feed, die auf die Beispieldatenbank Northwind, und Sie basiert aktiviert haben Zugriff auf den Feed für Clients, die über Berechtigungen verfügen, auf die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung. Als Nächstes starten Sie den Datendienst aus [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] und greifen Sie auf die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed von einer HTTP-GET-Anforderungen über einen Webbrowser senden:  
+ Einen neuer Datendienst, die verfügbar gemacht wurde erfolgreich erstellt ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feed, die auf die Beispieldatenbank Northwind, und Sie basiert aktiviert haben Zugriff auf den Feed für Clients, die über Berechtigungen verfügen, auf die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webanwendung. Als Nächstes starten Sie den Datendienst aus Visual Studio und greifen auf den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed zu, indem Sie HTTP GET-Anforderungen über einen Webbrowser an die verfügbar gemachten Ressourcen senden:  
   
  [Zugreifen auf den Dienst mit einem Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   

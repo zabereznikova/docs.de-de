@@ -1,22 +1,23 @@
 ---
-title: "Aggregationsvorgänge (Visual Basic)"
-ms.custom: 
+title: Aggregationsvorgänge (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>Aggregationsvorgänge (Visual Basic)
 Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein einzelner Wert berechnet. Ein Beispiel für einen Aggregationsvorgang ist die Berechnung der durchschnittlichen Tagestemperatur aus den Tagestemperaturen eines Monats.  
@@ -42,12 +43,12 @@ Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein ein
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="average"></a>Average  
- Im folgenden Codebeispiel wird mit der `Aggregate Into Average` -Klausel in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Durchschnittstemperatur in ein Array von Zahlen berechnet, die Temperaturen darstellen.  
+ Im folgenden Codebeispiel wird mit der `Aggregate Into Average` -Klausel in Visual Basic die Durchschnittstemperatur in ein Array von Zahlen berechnet, die Temperaturen darstellen.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Anzahl  
- Im folgenden Codebeispiel wird mit der `Aggregate Into Count` -Klausel in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , die Anzahl der Werte in einem Array zu zählen, die größer als oder gleich 80 sind.  
+ Im folgenden Codebeispiel wird mit der `Aggregate Into Count` -Klausel in Visual Basic, die Anzahl der Werte in einem Array zu zählen, die größer als oder gleich 80 sind.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   

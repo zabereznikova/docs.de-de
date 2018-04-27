@@ -1,29 +1,30 @@
 ---
 title: Sonstige Datentypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Sonstige Datentypen (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]stellt mehrere Datentypen, die nicht auf Zahlen oder Zeichen ausgerichtet sind. Stattdessen verarbeiten sie spezielle Daten wie z. B. Ja/Nein-Werte, Datums-/Uhrzeitwerte und Objekt-Adressen.  
+Visual Basic bietet verschiedene Datentypen, die nicht auf Zahlen oder Zeichen ausgerichtet sind. Stattdessen verarbeiten sie spezielle Daten wie z. B. Ja/Nein-Werte, Datums-/Uhrzeitwerte und Objekt-Adressen.  
   
- Für eine Tabelle mit einer Seite-an-Seite-Vergleich, der die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Datentypen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Tabelle mit einer Seite-an-Seite-Vergleich der Visual Basic-Datentypen, finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="boolean-type"></a>Boolean-Typ  
  Die [booleschen Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ist ein Wert ohne Vorzeichen, die entweder als interpretiert wird `True` oder `False`. Die Breite hängt von der implementierenden Plattform ab. Wenn eine Variable Ja/Nein, oder ein/aus nur zwei Status Werte wie wahr/falsch, enthalten kann, deklarieren Sie es als `Boolean`.  

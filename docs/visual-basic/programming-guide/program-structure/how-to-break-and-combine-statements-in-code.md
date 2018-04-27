@@ -1,10 +1,10 @@
 ---
 title: 'Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
 Beim Schreiben von Code können Sie manchmal lange Anweisungen erstellen, die einer horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht der Code ausgeführt wird, es erschwert es für Sie oder andere Personen, den Code zu lesen, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen aufgeteilt.  
@@ -59,7 +59,7 @@ Beim Schreiben von Code können Sie manchmal lange Anweisungen erstellen, die ei
   
      Einen Kommentar kann nicht fortgesetzt werden, mithilfe einer Zeilenfortsetzungszeichen. Der Compiler untersuchen nicht die Zeichen in einen Kommentar für eine besondere Bedeutung. Für einen mehrzeiligen Kommentar, wiederholen Sie das Kommentarsymbol (`'`) in jeder Zeile.  
   
- Zwar wird empfohlen, platzieren jede Anweisung in einer separaten Zeile [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Außerdem können Sie mit mehreren Anweisungen in der gleichen Zeile platzieren.  
+ Obwohl jede Anweisung in einer eigenen Zeile platziert die empfohlene Methode ist, ermöglicht Visual Basic außerdem mehrere Anweisungen in der gleichen Zeile platziert.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Mehrere Anweisungen in der gleichen Zeile platzieren  
   

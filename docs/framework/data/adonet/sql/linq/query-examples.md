@@ -1,27 +1,29 @@
 ---
 title: Abfragebeispiele
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5b1681f609d8715167defcb1df57cc270b61e53a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-examples"></a>Abfragebeispiele
-Dieser Abschnitt enthält [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Beispiele und C#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen. Entwickler, die [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, finden viele weitere Beispiele in einer Beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Dieser Abschnitt enthält Visual Basic- und C#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *DB* wird häufig in Codebeispielen verwendet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation. *DB* wird davon ausgegangen, dass eine Instanz von einem *Northwind* -Klasse, die erbt <xref:System.Data.Linq.DataContext>.  

@@ -1,24 +1,26 @@
 ---
-title: "Transaktionen und Parallelität"
-ms.custom: 
+title: Transaktionen und Parallelität
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>Transaktionen und Parallelität
 Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehlen, die als Paket ausgeführt werden. Mit Transaktionen können Sie mehrere Operationen in einem Arbeitsschritt zusammenfassen. Wenn an einer Stelle in der Transaktion ein Fehler auftritt, kann für alle Updates ein Rollback zum Zustand vor der Transaktion ausgeführt werden.  
@@ -28,9 +30,9 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
 > [!NOTE]
 >  Transaktionen, an denen mehrere Ressourcen beteiligt sind, können die Parallelität senken, wenn Sperren zu lang gehalten werden. Halten Sie Transaktionen daher so kurz wie möglich.  
   
- Wenn an einer Transaktion mehrere Tabellen in derselben Datenbank oder auf demselben Server beteiligt sind, bieten explizite Transaktionen in gespeicherten Prozeduren oft eine bessere Leistung. Transaktionen in gespeicherten SQL Server-Prozeduren können Sie mithilfe der Transact-SQL-Anweisungen `BEGIN TRANSACTION`, `COMMIT TRANSACTION` und `ROLLBACK TRANSACTION` erstellen. Weitere Informationen dazu finden Sie in der SQL Server-Onlinedokumentation.  
+ Wenn an einer Transaktion mehrere Tabellen in derselben Datenbank oder auf demselben Server beteiligt sind, bieten explizite Transaktionen in gespeicherten Prozeduren oft eine bessere Leistung. Transaktionen in gespeicherten SQL Server-Prozeduren können Sie mithilfe der Transact-SQL-Anweisungen `BEGIN TRANSACTION`, `COMMIT TRANSACTION` und `ROLLBACK TRANSACTION` erstellen. Weitere Informationen dazu finden Sie in der SQL Server-Onlinedokumentation.  
   
- Transaktionen, an denen verschiedene Ressourcen-Manager beteiligt sind, z. B. Transaktionen zwischen [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] und Oracle, erfordern eine verteilte Transaktion.  
+ Transaktionen, die im Zusammenhang mit anderen Ressourcen-Manager, z. B. Transaktionen zwischen SQL Server und Oracle, erfordern eine verteilte Transaktion.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Lokale Transaktionen](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,7 +42,7 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  Beschreibt die Ausführung von verteilten Transaktionen in ADO.NET.  
   
  [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Beschreibt die <xref:System.Transactions>-Integration in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] zum Arbeiten mit verteilten Transaktionen.  
+ Beschreibt <xref:System.Transactions> Integration mit SQL Server für das Arbeiten mit verteilten Transaktionen.  
   
  [Vollständige Parallelität](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Beschreibt die vollständige und die eingeschränkte Parallelität und wie Sie auf Parallelitätsverletzungen testen können.  

@@ -1,11 +1,12 @@
 ---
-title: "Übergeben von Argumenten als Wert und als Verweis (Visual Basic)"
-ms.custom: 
+title: Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
-In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], können Sie ein Argument an eine Prozedur übergeben *nach Wert* oder *Verweisübergabe*. Dies bezeichnet man die *Übergabemechanismus*, und sie bestimmt, ob die Prozedur das Programmierelement zugrunde liegt das Argument im aufrufenden Code ändern kann. Der Prozedurdeklaration des Übergabemechanismus für jeden Parameter durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort.  
+In Visual Basic können Sie ein Argument an eine Prozedur übergeben *nach Wert* oder *Verweisübergabe*. Dies bezeichnet man die *Übergabemechanismus*, und sie bestimmt, ob die Prozedur das Programmierelement zugrunde liegt das Argument im aufrufenden Code ändern kann. Der Prozedurdeklaration des Übergabemechanismus für jeden Parameter durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort.  
   
 ## <a name="distinctions"></a>Unterschiede  
  Wenn ein Argument an eine Prozedur übergeben, achten Sie auf mehrere verschiedene Unterschiede, die miteinander interagieren:  
@@ -45,7 +46,7 @@ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], können Sie ein Argument an eine
   
 -   **Schutz**. Bei der Wahl zwischen den Mechanismen zwei übergeben, ist das wichtigste Kriterium das Offenlegen von Aufrufen der Variablen ändern. Der Vorteil der Übergabe eines Arguments `ByRef` darin, dass die Prozedur einen Wert an den aufrufenden Code über dieses Argument zurückgeben kann. Der Vorteil der Übergabe eines Arguments `ByVal` ist, dass es dadurch verhindert, dass eine Variable, die von der Prozedur geändert wird.  
   
--   **Leistung**. Obwohl es sich bei der Übergabemechanismus auf die Leistung des Codes auswirken kann, ist der Unterschied in der Regel nicht signifikante. Einzige Ausnahme hierbei ist ein Werttyp übergeben `ByVal`. In diesem Fall [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kopiert den gesamten Inhalt des Arguments. Aus diesem Grund für einen großen Werttyp z. B. eine Struktur, es kann effizienter sein zur Übergabe `ByRef`.  
+-   **Leistung**. Obwohl es sich bei der Übergabemechanismus auf die Leistung des Codes auswirken kann, ist der Unterschied in der Regel nicht signifikante. Einzige Ausnahme hierbei ist ein Werttyp übergeben `ByVal`. In diesem Fall kopiert Visual Basic den gesamten Inhalt des Arguments. Aus diesem Grund für einen großen Werttyp z. B. eine Struktur, es kann effizienter sein zur Übergabe `ByRef`.  
   
      Für Verweistypen ist nur die Zeiger auf die Daten kopiert (vier Bytes auf 32-Bit-Plattformen, 8 Bytes auf 64-Bit-Plattformen). Aus diesem Grund können Sie Argumente des Typs übergeben `String` oder `Object` als Wert ohne Leistungseinbußen.  
   
@@ -54,7 +55,7 @@ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], können Sie ein Argument an eine
   
  Wenn ein Parameter mit deklariert wird `ByRef`, der aufrufende Code kann erzwingen, dass den Mechanismus zum `ByVal` durch Einschließen von Name des Arguments in Klammern im Aufruf. Weitere Informationen finden Sie unter [wie: erzwingen, dass ein Argument als Wert übergeben werden](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Die Standardeinstellung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Argumenten als Wert übergeben wird.  
+ Der Standardwert in Visual Basic ist Argumenten als Wert übergeben.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Wenn ein Argument als Wert übergeben.  
   

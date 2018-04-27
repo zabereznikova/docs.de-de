@@ -1,27 +1,29 @@
 ---
 title: Konfigurieren von Parametern und Parameterdatentypen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeicherte Prozeduren zu übergeben, und ermöglichen so Typüberprüfungen und Validierungen. Im Unterschied zu Befehlstext wird die Parametereingabe als Literalwert und nicht als ausführbarer Code behandelt. Dies hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl, der die Sicherheit auf dem Server gefährdet, in eine SQL-Anweisung einschleust.  
@@ -90,7 +92,7 @@ Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeichert
 >  Beim Konvertieren von "decimal" in einen anderen Typ erhalten Sie nur eine annähernde Entsprechung, da der Wert auf die nächste Ganzzahl abgerundet wird. Wenn das Ergebnis der Konvertierung im Zieltyp nicht darstellbar ist, wird eine <xref:System.OverflowException> ausgelöst.  
   
 > [!NOTE]
->  Wenn Sie einen NULL-Parameterwert an den Server senden, muss nicht <xref:System.DBNull>, sondern `null` angegeben werden (`Nothing` in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). Der NULL-Wert im System ist ein leeres Objekt, das über keinen Wert verfügt. <xref:System.DBNull> wird zur Darstellung von NULL-Werten verwendet. Weitere Informationen zu NULL-Werten bei Datenbanken finden Sie unter [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`)+++ angeben. Der NULL-Wert im System ist ein leeres Objekt, das über keinen Wert verfügt. <xref:System.DBNull> wird zur Darstellung von NULL-Werten verwendet. Weitere Informationen zu NULL-Werten bei Datenbanken finden Sie unter [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Ableiten von Parameterinformationen  
  Parameter können auch mit der `DbCommandBuilder` -Klasse aus einer gespeicherten Prozedur abgeleitet werden. Sowohl die `SqlCommandBuilder` -Klasse als auch die `OleDbCommandBuilder` -Klasse stellen die statische Methode `DeriveParameters`bereit, die automatisch die Parameterauflistung eines Befehlsobjekts füllt, das Parameterinformationen aus einer gespeicherten Prozedur verwendet. Beachten Sie, dass `DeriveParameters` alle vorhandenen Parameterinformationen für den Befehl überschreibt.  

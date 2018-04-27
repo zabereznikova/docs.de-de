@@ -15,14 +15,14 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
-Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.  
+Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. In diesem Abschnitt werden einige der Probleme in Zusammenhang mit dem Erstellen und Verwenden von COM-Objekten mit Visual Basic behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  

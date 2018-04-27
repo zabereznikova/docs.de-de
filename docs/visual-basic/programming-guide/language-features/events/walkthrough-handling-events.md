@@ -1,11 +1,12 @@
 ---
 title: Behandlung von Ereignissen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veranschaulichen. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus der dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie das Behandeln von Ereignissen, die sie vorgenommen werden.  
   
- Die `Widget` Klasse-Beispiel verwendet die herkömmliche Ereignisbehandlung Anweisungen. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]stellt andere Techniken zum Arbeiten mit Ereignissen bereit. Als Übung, können Sie ändern, in diesem Beispiel verwendet die `AddHandler` und `Handles` Anweisungen.  
+ Die `Widget` Klasse-Beispiel verwendet die herkömmliche Ereignisbehandlung Anweisungen. Visual Basic bietet andere Techniken zum Arbeiten mit Ereignissen. Als Übung, können Sie ändern, in diesem Beispiel verwendet die `AddHandler` und `Handles` Anweisungen.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Behandlung des Ereignisses PercentDone der Widget-Klasse  
   
@@ -66,7 +67,7 @@ Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veransc
  Wenn der Benutzer klickt der **"Abbrechen"** Schaltfläche beim `LongTask` ausgeführt wird, die `Button2_Click` Ereignis ausgeführt wird, sobald der `DoEvents` -Anweisung erlaubt die Verarbeitung von Ereignissen auftreten. Der Variablen auf Klassenebene `mblnCancel` auf festgelegt ist `True`, und die `mWidget_PercentDone` Ereignis überprüft, und legt die `ByRef Cancel` Argument für `True`.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Herstellen einer Verbindung eine WithEvents-Variable auf ein Objekt  
- `Form1`ist nun eingerichtet, behandeln eine `Widget` Ereignisse des Objekts. Übrig bleibt zum Suchen einer `Widget` an einer beliebigen Stelle.  
+ `Form1` ist nun eingerichtet, behandeln eine `Widget` Ereignisse des Objekts. Übrig bleibt zum Suchen einer `Widget` an einer beliebigen Stelle.  
   
  Wenn Sie eine Variable deklarieren `WithEvents` zur Entwurfszeit kein Objekt zugeordnet ist. Ein `WithEvents` Variable ist, genau wie jede andere Objektvariable. Sie haben ein Objekt erstellt, und weisen Sie einen Verweis darauf mit der `WithEvents` Variable.  
   
@@ -80,7 +81,7 @@ Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veransc
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Wenn dieser Code ausgeführt wird, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellt eine `Widget` -Objekt und verbindet die zugehörigen Ereignisse auf die zugeordnete Ereignisprozeduren `mWidget`. Von diesem Zeitpunkt an, wenn die `Widget` löst seine `PercentDone` -Ereignis der `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
+ Wenn dieser Code ausgeführt wird, erstellt Visual Basic eine `Widget` -Objekt und verbindet die zugehörigen Ereignisse auf die zugeordnete Ereignisprozeduren `mWidget`. Von diesem Zeitpunkt an, wenn die `Widget` löst seine `PercentDone` -Ereignis der `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
   
 #### <a name="to-call-the-longtask-method"></a>Zum Aufrufen der LongTask-Methode  
   
@@ -90,7 +91,7 @@ Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veransc
   
  Bevor Sie die `LongTask` -Methode aufgerufen wird, wird die Bezeichnung zeigt den Prozentsatz der Fertigstellung initialisiert werden müssen, und der Klassenebene `Boolean` flag für das Abbrechen der Methodennamens festgelegt werden muss, `False`.  
   
- `LongTask`wird mit einer Aufgabendauer von 12,2 Sekunden aufgerufen. Die `PercentDone` Ereignis wird ausgelöst, einmal alle ein Drittel von einer Sekunde. Jedes Mal, die das Ereignis ausgelöst wird, die `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
+ `LongTask` wird mit einer Aufgabendauer von 12,2 Sekunden aufgerufen. Die `PercentDone` Ereignis wird ausgelöst, einmal alle ein Drittel von einer Sekunde. Jedes Mal, die das Ereignis ausgelöst wird, die `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
   
  Wenn `LongTask` erfolgt, `mblnCancel` wird getestet, um konsultieren `LongTask` normal beendet oder angehalten wurde, weil `mblnCancel` wurde festgelegt, um `True`. Der Prozentsatz der Fertigstellung wird nur im ersten Fall aktualisiert.  
   

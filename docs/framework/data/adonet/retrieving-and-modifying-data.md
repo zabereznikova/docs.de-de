@@ -1,24 +1,26 @@
 ---
-title: "Abrufen und Ändern von Daten in ADO.NET"
-ms.custom: 
+title: Abrufen und Ändern von Daten in ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle können Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder ein **"DataAdapter"** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **"DataAdapter"** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  
@@ -43,7 +45,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Enthält Themen, in denen beschrieben wird, wie lokale Transaktionen und verteilte Transaktionen ausgeführt werden und wie Sie mit vollständiger Parallelität arbeiten.  
   
  [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Enthält ein Beispiel für die Zuordnung der Werte für generiert eine **Identität** Spalte in einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Tabelle oder für eine **Autonumber** Feld in einer Microsoft Access-Tabelle auf eine Spalte einer eingefügten Zeile in einer Tabelle. Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
+ Enthält ein Beispiel für die Zuordnung der Werte für generiert eine **Identität** Spalte in einer SQL Server-Tabelle oder für eine **Autonumber** Feld in einer Microsoft Access-Tabelle auf eine Spalte einer eingefügten Zeile in einer Tabelle. Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
   
  [Abrufen von Binärdaten](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Beschreibt, wie zum Abrufen von Binärdaten oder große Datenstrukturen mit `CommandBehavior`.`SequentialAccess` So ändern Sie das Standardverhalten einer `DataReader`.  
@@ -67,7 +69,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Beschreibt die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Unterstützung für die asynchrone Programmierung.  
   
  [SqlClient-Streamingunterstützung](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Erläutert, wie Sie Anwendungen schreiben, die Daten aus [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] streamen, ohne sie vollständig in den Arbeitsspeicher zu laden.  
+ Erläutert, wie Sie Anwendungen, Streamen von Daten aus SQL Server schreiben, ohne sie vollständig in den Arbeitsspeicher geladen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

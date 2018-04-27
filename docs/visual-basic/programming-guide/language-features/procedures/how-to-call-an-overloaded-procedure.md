@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Aufrufen einer überladenen Prozedur (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Aufrufen einer überladenen Prozedur (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff5967c1b09ad59f249297b1cf0a4ed900faf4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5eca03de6b6dd2ca2b992196b1ae224f8fbf5068
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer überladenen Prozedur (Visual Basic)
 Der Vorteil der überladen einer Prozedur ist die Flexibilität des Aufrufs. Der aufrufende Code erhalten die Informationen, die sie an die Prozedur übergeben, und rufen Sie anschließend auf einen einzelnen Prozedurnamen, unabhängig davon, welche Argumente übergeben werden muss.  
@@ -32,7 +33,7 @@ Der Vorteil der überladen einer Prozedur ist die Flexibilität des Aufrufs. Der
   
 2.  Schreiben des Prozeduraufrufs auf normale Weise darstellen der Daten in der Argumentliste. Achten Sie darauf, dass die Argumente die Parameterliste in einer der Versionen für die Prozedur definierten übereinstimmen.  
   
-3.  Sie müssen keinen bestimmen, welche Version der Prozedur aufrufen. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]übergibt die Steuerung an die Version, die Ihre Argumentliste entspricht.  
+3.  Sie müssen keinen bestimmen, welche Version der Prozedur aufrufen. Visual Basic übergibt die Steuerung an die Version, die Ihre Argumentliste entspricht.  
   
      Im folgenden Beispiel wird die `post` Prozedur deklariert [wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md). Es ruft die Kunden-ID, bestimmt, ob es ist ein `String` oder ein `Integer`, und ruft dann in beiden Fällen das gleiche Verfahren.  
   

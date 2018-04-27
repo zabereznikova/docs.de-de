@@ -1,24 +1,24 @@
 ---
 title: Verarbeiten der XML-Datei (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d44f58951d99f1b4b551af75dc0a0e895e337e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86dae99f2d17a506a27cf491a76083df618ba27b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Verarbeiten der XML-Datei (Visual Basic)
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen zum Kennzeichnen von Code finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge zum Identifizieren der entsprechenden [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Metadaten/Reflektion-Element.  
@@ -34,12 +34,12 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 |Zeichen|Beschreibung|  
 |---|---|  
 |N|namespace<br /><br /> Ein Namespace können keine Dokumentationskommentare hinzugefügt, Sie können jedoch CREF-Verweise, sofern diese unterstützt wird.|  
-|T|Typ: `Class`, `Module`, `Interface`, `Structure`, `Enum`,`Delegate`|  
-|F|Feld:`Dim`|  
+|T|Typ: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|Feld: `Dim`|  
 |P|Eigenschaft: `Property` (einschließlich Standardeigenschaften)|  
-|M|Methode: `Sub`, `Function`, `Declare`,`Operator`|  
-|E|Ereignis:`Event`|  
-|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] generiert der Compiler Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
+|M|Methode: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|Ereignis: `Event`|  
+|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Visual Basic-Compiler generiert Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
   
 -   Der zweite Teil der `String` ist der vollqualifizierte Name des Elements, angefangen beim Stamm des Namespaces. Der Name des Elements, dessen einschließenden Typs und den Namespace werden durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt, durch das Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen aufweist. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
   

@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7f303f5b7a7b8675f7d322c6855f4273ebe826ff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist eine Komponente von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] Version 3.5, die eine Laufzeitinfrastruktur für die Verwaltung relationaler Daten als Objekte bereitstellt.  
@@ -30,9 +30,9 @@ ms.lasthandoff: 01/19/2018
   
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in der Programmiersprache des Entwicklers ausgedrückt ist. Wenn Sie die Anwendung ausführen, übersetzt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die sprachintegrierten Abfragen im Objektmodell in SQL und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] diese zurück in Objekte, die Sie mit Ihrer eigenen Programmiersprache bearbeiten können.  
   
- Entwickler, die mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] arbeiten, verwenden in der Regel [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], da diese Lösung eine Benutzerschnittstelle zur Implementierung zahlreicher Funktionen von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet.  
+ Entwickler, die in der Regel mithilfe von Visual Studio verwenden, die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], stellt eine Benutzeroberfläche zur Implementierung zahlreicher Funktionen von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Die Dokumentation zu dieser Version von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschreibt die grundlegenden Bausteine, Verfahren und Techniken zur Erstellung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen. Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](http://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Schließlich bietet das Whitepaper [LINQ to SQL: .NET Language-Integrated Query for Relational Data (LINQ to SQL: .NET Language-Integrated Query für Relational Data)](http://go.microsoft.com/fwlink/?LinkId=93205) ausführliche Informationen zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie sowie [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]- und C#-Codebeispiele.  
+ Die Dokumentation zu dieser Version von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschreibt die grundlegenden Bausteine, Verfahren und Techniken zur Erstellung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen. Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](http://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Schließlich die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) Details finden Sie im Whitepaper [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie Visual Basic- und C#-Codebeispiele.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -45,14 +45,14 @@ ms.lasthandoff: 01/19/2018
  Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Programmierung. Die Themen umfassen SQL-CLR-Typzuordnung, Übersetzung von Standardabfrageoperatoren und mehr.  
   
  [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- Bietet Links zu [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Beispielen und C#-Beispielen.  
+ Enthält Links zu Visual Basic- und C#-Beispielen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  Bietet eine Übersicht über [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Technologien.  
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Technologien für [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Benutzer.  
+ Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Technologien für Visual Basic-Benutzer.  
   
  [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  Links zum [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Portal.  

@@ -1,18 +1,19 @@
 ---
 title: Was ist mit der Cloud-optimierte Anwendungen?
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Was ist mit der Cloud-optimierte Anwendungen?"
+description: .NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Was ist mit der Cloud-optimierte Anwendungen?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Was ist mit der Cloud-optimierte Anwendungen?
 
@@ -72,7 +73,7 @@ Aber auch in Szenarien, in dem Microservices bieten eine leistungsstarke Funktio
 
 Aufgrund der Komplexität einer Microservices-Architektur sind nur für bestimmte Szenarien und bestimmte Anwendungstypen für Microservice-basierte Anwendungen geeignet. Dazu zählen große und komplexe Anwendungen, auf denen mehrere Subsysteme weiterentwickelt. In diesen Fällen lohnt es sich in einer komplexeren Softwarearchitektur für erhöhten langfristigen Flexibilität und eine effizientere Anwendungswartung investieren. Aber für weniger komplexe Szenarien ist es möglicherweise besser, einen Ansatz monolithischen Anwendung fortsetzen oder einfacher N-Tier fast erreicht wird.
 
-Als letzten Knoten, auch wenn bei diesem Vorgang werden Informationen zu diesem Konzept von betrachten Sie darf nicht mit Microservices in Ihren Anwendungen als "-Ansatz repräsentieren oder gar nichts*.*" Sie können erweitern und vorhandene monolithische Anwendungen durch Hinzufügen neuer, kleine Szenarien, die basierend auf Microservices weiterentwickeln. Sie müssen nicht von Grund auf neu, um erste Schritte mit einem Microservices Architekturkonzept starten. In der Tat empfohlen, dass Sie von der Verwendung einer vorhandenen monolithischen oder N-Tier-Anwendung durch Hinzufügen von neuen Szenarien weiterentwickeln. Schließlich können Sie die Anwendung in autonomen Komponenten oder Microservices unterteilen. Sie können die entwickelt, der aufgrund eines monolithischen-Anwendungen in eine Richtung Microservices, Schritt-für-Schritt starten.
+Als letzten Knoten, auch wenn bei diesem Vorgang werden Informationen zu diesem Konzept von betrachten Sie darf nicht mit Microservices in Ihren Anwendungen als "-Ansatz repräsentieren oder gar nichts *.*" Sie können erweitern und vorhandene monolithische Anwendungen durch Hinzufügen neuer, kleine Szenarien, die basierend auf Microservices weiterentwickeln. Sie müssen nicht von Grund auf neu, um erste Schritte mit einem Microservices Architekturkonzept starten. In der Tat empfohlen, dass Sie von der Verwendung einer vorhandenen monolithischen oder N-Tier-Anwendung durch Hinzufügen von neuen Szenarien weiterentwickeln. Schließlich können Sie die Anwendung in autonomen Komponenten oder Microservices unterteilen. Sie können die entwickelt, der aufgrund eines monolithischen-Anwendungen in eine Richtung Microservices, Schritt-für-Schritt starten.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Azure App Service-Verwendung für vorhandene .NET apps Modernisierung
 

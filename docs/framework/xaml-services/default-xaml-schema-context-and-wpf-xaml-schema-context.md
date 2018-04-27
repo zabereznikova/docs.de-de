@@ -1,24 +1,26 @@
 ---
 title: Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 Ein XAML-Schemakontext ist eine konzeptionelle Entität, die kennzeichnet, wie eine XAML-Produktion, die ein bestimmtes XAML-Vokabular verwendet interagiert mit dem Schreiben von Verhalten, z. B. wie Typmapping aufgelöst wird, wie Assemblys geladen werden, wie bestimmte Reader- und Writer-Objekt Einstellungen werden interpretiert. Dieses Thema beschreibt die Funktionen von .NET Framework-XAML-Dienste und die zugeordneten XAML-Standardschemakontext, die auf CLR-Typsystem basiert. Dieses Thema beschreibt auch das XAML-Schemakontext, der für WPF verwendet wird.  
@@ -35,7 +37,7 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die kennzeichnet, wie e
 ## <a name="wpf-xaml-schema-context"></a>WPF-XAML-Schemakontext  
  Der WPF XAML-Schemakontext ist in diesem Thema beschrieben werden, da die WPF-Implementierung eine interessante Abbildung die Arten von Funktionen bereitstellt, die durch die Implementierung eines nicht standardmäßigen XAML-Schemakontexts eingeführt werden kann. Darüber hinaus wird die Verwendung von XAML-Schema-Kontext-Konzept nicht sehr viel in der WPF-Dokumentation erläutert, die von WPF XAML behandelt; das Verhalten, das der XAML-Schemakontext kann möglicherweise nur vollständig verständlich, wenn mit einer Erläuterung der Funktionsweise der XAML-Standardschemakontext integriert. Der WPF XAML-Schemakontext implementiert das folgende Verhalten an.  
   
- **Überschreibt der Suche:** WPF verfügt über einige Inhaltsmodelle für XAML vorliegen von XAML-Content-Eigenschaften, die verwendet werden ohne <xref:System.Windows.Markup.ContentPropertyAttribute> attributiert. <xref:System.Xaml.XamlType.LookupContentProperty%2A>Außerkraftsetzungen für WPF dieses Verhalten zu implementieren.  
+ **Überschreibt der Suche:** WPF verfügt über einige Inhaltsmodelle für XAML vorliegen von XAML-Content-Eigenschaften, die verwendet werden ohne <xref:System.Windows.Markup.ContentPropertyAttribute> attributiert. <xref:System.Xaml.XamlType.LookupContentProperty%2A> Außerkraftsetzungen für WPF dieses Verhalten zu implementieren.  
   
  **Verzögerung für WPF-Ausdrücke:** WPF enthält mehrere Ausdrucksklassen, die einen Wert zu verzögern, bis ein Laufzeitkontext verfügbar ist. Vorlage-Erweiterung ist auch ein Common Language Runtime-Verhalten, das Deferral-Techniken abhängt.  
   
@@ -68,7 +70,7 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die kennzeichnet, wie e
     -   Wenn der Name in der Zuordnung nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`Dient zum [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] und [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` wird zum [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] und Windows Workflow Foundation.  
   
  Beachten Sie, die über Assemblyverweise `XamlBuildTask` immer vollständig qualifiziert sind.  
   

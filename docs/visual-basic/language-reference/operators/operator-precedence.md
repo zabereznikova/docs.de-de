@@ -1,10 +1,11 @@
 ---
-title: "Operatorrangfolge in Visual Basic"
+title: Operatorrangfolge in Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
 Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und in einem vorbestimmten Reihenfolge aufgelöst *Operatorrangfolge*.  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  Der erste Ausdruck wertet die Division 96 / 8 (Vortäuschen 12), und klicken Sie dann die Division 12 / 4, was in drei führt. Da der Compiler die Operationen für ergibt `n1` von links nach rechts, die Auswertung ist identisch, wenn diese Reihenfolge explizit angegeben wird, für die `n2`. Beide `n1` und `n2` Ergebnis von drei haben. Im Gegensatz dazu `n3` verfügt über ein Ergebnis von 48, da die Klammern den Compiler auszuwertende 8 zwingen / 4 erste.  
   
- Aufgrund dieses Verhaltens Operatoren gelten als *linksassoziativ* in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Aufgrund dieses Verhaltens Operatoren gelten als *linksassoziativ* in Visual Basic.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Überschreiben von Rangfolge und Assoziativität  
- Sie können Klammern verwenden, erzwingen Sie einige Teile eines Ausdrucks vor anderen ausgewertet werden soll. Dadurch kann die Reihenfolge der Rangfolge und Assoziativität von links auf die überschreiben. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]immer führt Vorgänge, die in Klammern vor den außerhalb eingeschlossen sind. Verwaltet jedoch innerhalb der Klammern gewöhnliche Rangfolge und Assoziativität, es sei denn, Sie mithilfe von Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können Klammern verwenden, erzwingen Sie einige Teile eines Ausdrucks vor anderen ausgewertet werden soll. Dadurch kann die Reihenfolge der Rangfolge und Assoziativität von links auf die überschreiben. Visual Basic führt immer Vorgänge, die in Klammern vor den außerhalb eingeschlossen sind. Verwaltet jedoch innerhalb der Klammern gewöhnliche Rangfolge und Assoziativität, es sei denn, Sie mithilfe von Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

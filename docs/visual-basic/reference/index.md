@@ -12,18 +12,18 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1bef4da309f5e281b4016912d4b0da8237db6ec0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference-visual-basic"></a>Referenz
-Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschiedene Aspekte der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmierung beziehen.  
+Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekten von Visual Basic-Programmierung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache.  
+ Enthält Referenzinformationen zu verschiedenen Aspekten der Sprache Visual Basic.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio-IDE-Programmen bietet.  
@@ -32,9 +32,9 @@ Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschied
  Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  [Visual Basic-Sprachspezifikation](../../visual-basic/reference/language-specification/index.md)  
- Enthält Links zur vollständigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
+ Enthält Links zu den vollständige Visual Basic-Sprachspezifikation, der ausführliche Informationen zu allen Aspekten der Sprache enthält.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Dieser Namespace enthält Klassen für die Visual Basic Power Packs-Steuerelemente. Visual Basic Power Packs-Steuerelemente sind zusätzliche Windows Forms-Steuerelemente.  
   

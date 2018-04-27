@@ -1,12 +1,13 @@
 ---
 title: Streaminganbieter (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -61,7 +63,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]ein Datendienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Ein Beispiel für einen Datendienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Reflektionsanbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Klasse, die den Entitätstyp im Reflektionsanbieter definiert, <xref:System.Data.Services.Common.HasStreamAttribute> hinzu.  
@@ -122,7 +124,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
     -   Eine binäre Eigenschaft, die eine Medienressource ist, sollte nicht im Datenmodell enthalten sein. Alle in einem Datenmodell zur Verfügung gestellten Eigenschaften werden im Eintrag in einem Antwortfeed zurückgegeben.  
   
-    -   Um die Leistung bei einem großen binären Datenstrom zu verbessern, empfiehlt es sich, eine benutzerdefinierte Datenstromklasse zu erstellen, um Binärdaten in der Datenbank zu speichern. Diese Klasse wird von der <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>-Implementierung zurückgegeben und sendet die Binärdaten in Blöcken an die Datenbank. Für eine [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Datenbank, es wird empfohlen, dass Sie FILESTREAM zum Streamen von Daten in die Datenbank verwenden, wenn die Binärdaten größer als 1 MB ist.  
+    -   Um die Leistung bei einem großen binären Datenstrom zu verbessern, empfiehlt es sich, eine benutzerdefinierte Datenstromklasse zu erstellen, um Binärdaten in der Datenbank zu speichern. Diese Klasse wird von der <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>-Implementierung zurückgegeben und sendet die Binärdaten in Blöcken an die Datenbank. Für eine SQL Server-Datenbank wird empfohlen, dass Sie FILESTREAM zum Streamen von Daten in die Datenbank verwenden, wenn die Binärdaten größer als 1 MB ist.  
   
     -   Stellen Sie sicher, dass die Datenbank zum Speichern großer binärer Datenströme entworfen wurde, die vom Datendienst empfangen werden sollen.  
   

@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Definieren mehrerer Versionen einer Prozedur (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Gewusst wie: Definieren mehrerer Versionen einer Prozedur (Visual Basic)
 Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , es mit dem gleichen Namen, aber eine andere Parameterliste für die einzelnen Versionen. Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur definieren, ohne sie anhand des Namens zu unterscheiden.  
@@ -34,7 +35,7 @@ Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , e
   
 2.  Vorausgehen der `Sub` oder `Function` Schlüsselwort in jeder Deklaration mit der [überlädt](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort. Sie können optional weglassen `Overloads` in den Deklarationen, aber, wenn Sie es in einer der Deklarationen einschließen, müssen Sie es in jeder Deklaration einschließen.  
   
-3.  Jede Deklaration-Anweisung folgt schreiben Sie Prozedurcode, um bestimmte Fälle zu behandeln, in denen der aufrufende Code Argumente Abgleich Parameterliste für diese Version bereitstellt. Sie müssen keinen test für die Parameter der aufrufende Code bereitgestellt wurde. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]übergibt die Steuerung an die passende Version der Prozedur.  
+3.  Jede Deklaration-Anweisung folgt schreiben Sie Prozedurcode, um bestimmte Fälle zu behandeln, in denen der aufrufende Code Argumente Abgleich Parameterliste für diese Version bereitstellt. Sie müssen keinen test für die Parameter der aufrufende Code bereitgestellt wurde. Visual Basic übergibt die Steuerung an die passende Version der Prozedur.  
   
 4.  Beenden Sie jede Version der Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   

@@ -20,17 +20,17 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-services"></a>XAML-Dienste
 Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framework-XAML-Dienste bezeichnet. Die meisten Dienste und der beschriebenen APIs befinden sich in der Assembly "System.xaml", also eine Assembly eingeführt wird, mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Satz von .NET Core-Assemblys. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributierung von Klassen, systeminterne Unterstützung von XAML-Sprache und anderen Features der XAML-Sprache.  
   
 ## <a name="about-this-documentation"></a>Informationen zu dieser Dokumentation  
- Konzeptionelle Dokumentation für .NET Framework XAML Services wird vorausgesetzt, dass Sie bereits Erfahrung mit XAML-Sprache und wie es für ein bestimmtes Framework, z. B. möglicherweise gelten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] oder [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)], oder eine bestimmte Technologie Bereich für Funktion Beispiel für die Buildanpassung-in Funktionen <xref:Microsoft.Build.Framework.XamlTypes>. In dieser Dokumentation versucht nicht, die Grundlagen von XAML als Markup Language, XAML-Syntax Terminologie oder andere einführendes Material zu erläutern. Stattdessen konzentriert sich dieser Dokumentation auf die Verwendung der .NET Framework-XAML-Dienste, die aktiviert sind in der System.Xaml-Assembly-Bibliothek. Die meisten dieser APIs sind für Szenarien mit der Verwendung von XAML-Sprache-Integration und Erweiterbarkeit. Dies kann Folgendes umfassen:  
+ Konzeptionelle Dokumentation für .NET Framework XAML Services wird vorausgesetzt, dass Sie bereits Erfahrung mit XAML-Sprache und wie es für ein bestimmtes Framework, z. B. möglicherweise gelten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] oder Windows Workflow Foundation oder eine bestimmte Technologie-Funktion Bereich, z. B. die Buildanpassung-Funktionen in <xref:Microsoft.Build.Framework.XamlTypes>. In dieser Dokumentation versucht nicht, die Grundlagen von XAML als Markup Language, XAML-Syntax Terminologie oder andere einführendes Material zu erläutern. Stattdessen konzentriert sich dieser Dokumentation auf die Verwendung der .NET Framework-XAML-Dienste, die aktiviert sind in der System.Xaml-Assembly-Bibliothek. Die meisten dieser APIs sind für Szenarien mit der Verwendung von XAML-Sprache-Integration und Erweiterbarkeit. Dies kann Folgendes umfassen:  
   
 -   Erweitern Sie die Funktionen der grundlegenden XAML-Reader oder XAML-Writer (verarbeiten direkt im XAML-Knotenstream; ableiten eigene XAML-Reader oder XAML-Writer).  
   
@@ -49,7 +49,7 @@ Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framewor
  Wenn Sie einführende Informationen zu XAML als Sprache suchen, Sie könnten versuchen [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Dieses Thema erläutert XAML für eine Zielgruppe die neuen sowohl auf [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] und auch für die Verwendung von XAML-Markup und XAML-Sprachfeatures. Eine andere nützliches Dokument ist die einleitenden Informationen in den [XAML-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET Framework-XAML-Dienste und "System.xaml" in der .NET-Architektur  
- In früheren Versionen von [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], Unterstützung für die Verwendung von XAML-Sprachfunktionen von Frameworks, die auf implementiert wurde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] und [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]), und daher variiert in ihr Verhalten und je nachdem, welche verwendete API bestimmten Frameworks, die Sie verwendet haben. Diese enthalten die XAML-Parser und der Objektdiagramm Erstellungsmechanismus, systeminterne XAML-Sprachelemente, Serialisierungsunterstützung und So weiter.  
+ In früheren Versionen von [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], Unterstützung für die Verwendung von XAML-Sprachfunktionen von Frameworks, die auf implementiert wurde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation und [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]), und daher variiert in ihr Verhalten und der verwendeten API Je nachdem welche bestimmten Frameworks Sie verwendet haben. Diese enthalten die XAML-Parser und der Objektdiagramm Erstellungsmechanismus, systeminterne XAML-Sprachelemente, Serialisierungsunterstützung und So weiter.  
   
  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework-XAML-Dienste und der System.Xaml-Assembly definieren Großteil zur Unterstützung von XAML-Sprachfeatures benötigt wird. Dies schließt die Basisklassen für XAML-Readern und XAML-Writern. Die wichtigste Funktion hinzugefügt, die nicht in keiner der Framework-spezifischen XAML-Implementierungen war .NET Framework XAML Services ist eine Darstellung für die Verwendung von XAML-System. Die Typ-Darstellung System stellt XAML auf objektorientierte Weise, die Funktionen der XAML-Rechenzentren ohne Abhängigkeiten auf bestimmte Funktionen des Frameworks.  
   
@@ -68,11 +68,11 @@ Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framewor
   
 -   Beginnen Sie mit einer XAML-Darstellung in UTF-codierte XML-Format und als Textdatei gespeichert.  
   
--   Laden Sie diese XAML in <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>ist eine <xref:System.Xaml.XamlReader> Unterklasse.  
+-   Laden Sie diese XAML in <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> ist eine <xref:System.Xaml.XamlReader> Unterklasse.  
   
 -   Das Ergebnis ist ein XAML-Knotenstream. Sie können einzelne Knoten der XAML-Knoten Datenstrom mit zugreifen <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. Hier die am häufigsten verwendete Vorgang ist zum Fortsetzen der Verarbeitung der XAML-Knotenstream wird die Verarbeitung der einzelnen Knoten mit "aktuellen Datensatz" Metapher.  
   
--   Übergeben Sie die daraus resultierenden Knoten aus dem XAML-Knotenstream auf einem <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter>ist eine <xref:System.Xaml.XamlWriter> Unterklasse.  
+-   Übergeben Sie die daraus resultierenden Knoten aus dem XAML-Knotenstream auf einem <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> ist eine <xref:System.Xaml.XamlWriter> Unterklasse.  
   
 -   Die <xref:System.Xaml.XamlObjectWriter> Objektdiagramm, ein Objekt zu einem Zeitpunkt unter Verwendung von Gerätepixeln Fortschritt über die Quelle von XAML-Knotenstream schreibt. Dies erfolgt mit der Unterstützung von einem XAML-Schemakontext und eine Implementierung, die die Assemblys und Typen von einem Unterstützungstypsystem und Framework zugreifen kann.  
   
@@ -82,11 +82,11 @@ Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framewor
   
 -   Beginnen Sie mit dem Objektdiagramm eine Zeit für die gesamte Anwendung ausführen, UI-Inhalt und Status einer Laufzeit oder ein kleiner Teil objektdarstellung zur Laufzeit eine allgemeine Anwendung.  
   
--   Aus einem logischen Startobjekt, z. B. ein Anwendungsstamm oder Dokumentstamm, laden Sie die Objekte in <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader>ist eine <xref:System.Xaml.XamlReader> Unterklasse.  
+-   Aus einem logischen Startobjekt, z. B. ein Anwendungsstamm oder Dokumentstamm, laden Sie die Objekte in <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> ist eine <xref:System.Xaml.XamlReader> Unterklasse.  
   
 -   Das Ergebnis ist ein XAML-Knotenstream. Sie können einzelne Knoten der XAML-Knoten Datenstrom mit zugreifen <xref:System.Xaml.XamlObjectReader> und <xref:System.Xaml.XamlReader> API. Hier die am häufigsten verwendete Vorgang ist zum Fortsetzen der Verarbeitung der XAML-Knotenstream wird die Verarbeitung der einzelnen Knoten mit "aktuellen Datensatz" Metapher.  
   
--   Übergeben Sie die daraus resultierenden Knoten aus dem XAML-Knotenstream auf einem <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter>ist eine <xref:System.Xaml.XamlWriter> Unterklasse.  
+-   Übergeben Sie die daraus resultierenden Knoten aus dem XAML-Knotenstream auf einem <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> ist eine <xref:System.Xaml.XamlWriter> Unterklasse.  
   
 -   Die <xref:System.Xaml.XamlXmlWriter> schreibt XAML in einer XML-UTF-Codierung. Sie können dies als eine Textdatei, die als Datenstrom oder in anderen Formen speichern.  
   
@@ -101,16 +101,16 @@ Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framewor
   
 -   Verschiedene Signaturen von <xref:System.Xaml.XamlServices.Save%2A> Objektdiagramm speichern und erstellen die Ausgabe als Stream, Datei oder <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> Instanz.  
   
--   <xref:System.Xaml.XamlServices.Transform%2A>konvertiert XAML, indem Sie einen Ladepfad und einen Speicherpfad als einzelnen Vorgang. Ein anderer Schemakontext oder ein anderes Unterstützungstypsystem kann für verwendet werden <xref:System.Xaml.XamlReader> und <xref:System.Xaml.XamlWriter>, also in was beeinflusst, wie das resultierende XAML transformiert wird.  
+-   <xref:System.Xaml.XamlServices.Transform%2A> konvertiert XAML, indem Sie einen Ladepfad und einen Speicherpfad als einzelnen Vorgang. Ein anderer Schemakontext oder ein anderes Unterstützungstypsystem kann für verwendet werden <xref:System.Xaml.XamlReader> und <xref:System.Xaml.XamlWriter>, also in was beeinflusst, wie das resultierende XAML transformiert wird.  
   
  Weitere Informationen zur Verwendung von <xref:System.Xaml.XamlServices>, finden Sie unter [XamlServices-Klasse und grundlegende XAML Lesen oder Schreiben von](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   
 ## <a name="xaml-type-system"></a>XAML-Typsystem  
  Das XAML-Typsystem stellt die APIs, die erforderlich sind, um einen bestimmten einzelnen Knoten eines XAML-Knotenstreams zu arbeiten.  
   
- <xref:System.Xaml.XamlType>ist die Darstellung für ein Objekt – was Sie zwischen einem Startobjektknoten und End-Objektknoten verarbeiten.  
+ <xref:System.Xaml.XamlType> ist die Darstellung für ein Objekt – was Sie zwischen einem Startobjektknoten und End-Objektknoten verarbeiten.  
   
- <xref:System.Xaml.XamlMember>ist die Darstellung für ein Element eines Objektes – was Sie zwischen einem Memberknotens Start und Ende Memberknotens verarbeiten.  
+ <xref:System.Xaml.XamlMember> ist die Darstellung für ein Element eines Objektes – was Sie zwischen einem Memberknotens Start und Ende Memberknotens verarbeiten.  
   
  APIs, wie z. B. <xref:System.Xaml.XamlType.GetAllMembers%2A> und <xref:System.Xaml.XamlType.GetMember%2A> und <xref:System.Xaml.XamlMember.DeclaringType%2A> melden die Beziehungen zwischen einem <xref:System.Xaml.XamlType> und <xref:System.Xaml.XamlMember>.  
   

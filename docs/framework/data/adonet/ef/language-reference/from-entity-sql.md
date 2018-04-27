@@ -1,24 +1,26 @@
 ---
 title: FROM (Entity SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Gibt die Auflistung in verwendet [wählen](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) Anweisungen.  
@@ -107,7 +109,7 @@ LOB.Customers
 >  Im Unterschied zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ist in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kein unnest-Schritt erforderlich.  
   
 > [!NOTE]
->  `CROSS`- und `OUTER APPLY`-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]-Versionen, die älter sind als [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, können solche Abfragen auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+>  `CROSS`- und `OUTER APPLY`-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen vor [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
 >   
 >  Typische Szenarios, in denen `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren in der Ausgabeabfrage vorhanden sein können, sind beispielsweise korrelierte Unterabfragen mit Paging, AnyElement über einer korrelierten Unterabfrage oder über einer durch Navigation erzeugten Auflistung, LINQ-Abfragen, die Elementselektoren akzeptierende Gruppierungsmethoden verwenden, Abfragen, für die ein `CROSS APPLY` oder ein `OUTER APPLY` explizit angegeben wurden oder Abfragen, die ein `DEREF`-Konstrukt über einem `REF`-Konstrukt enthalten.  
   

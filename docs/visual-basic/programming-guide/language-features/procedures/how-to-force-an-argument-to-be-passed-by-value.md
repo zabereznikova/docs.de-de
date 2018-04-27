@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fdb2df7e114f49c23db9f5b322ca9dd32135ac88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30f5e5fe7b9c92f90673dc99a0e299136a38305b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)
-In der Prozedurdeklaration des Übergabemechanismus. Wenn ein deklarierter Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erwartet, dass das entsprechende Argument als Verweis zu übergeben. Dadurch wird das Verfahren zum Ändern des Werts, der das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Die Klammern sind zusätzlich zu der Klammern, die die Argumentliste im Aufruf einschließen.  
+In der Prozedurdeklaration des Übergabemechanismus. Wenn ein deklarierter Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic erwartet, dass das entsprechende Argument als Verweis zu übergeben. Dadurch wird das Verfahren zum Ändern des Werts, der das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Die Klammern sind zusätzlich zu der Klammern, die die Argumentliste im Aufruf einschließen.  
   
  Der aufrufende Code kann nicht überschrieben werden eine [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Mechanismus.  
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>So erzwingen ein Argument als Wert übergeben werden  
   
--   Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur Sie brauchen keine zusätzlichen Schritte ausführen. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]bereits erwartet, dass das Argument als Wert übergeben.  
+-   Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur Sie brauchen keine zusätzlichen Schritte ausführen. Visual Basic erwartet bereits das Argument als Wert übergeben.  
   
 -   Wenn der entsprechende Parameter deklariert wird `ByRef` setzen Sie in der Prozedur das Argument in Klammern in dem Prozeduraufruf.  
   
@@ -52,7 +53,7 @@ In der Prozedurdeklaration des Übergabemechanismus. Wenn ein deklarierter Param
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Wenn Sie keine Variable nach Verweis übergeben, müssen Sie mithilfe der `ByRef` Schlüsselwort dieser Mechanismus angeben.  
   
- Die Standardeinstellung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Argumenten als Wert übergeben wird. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
+ Der Standardwert in Visual Basic ist Argumenten als Wert übergeben. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Wenn eine Prozedur einen Parameter deklariert [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), die korrekte Ausführung des Codes abhängen, wird das zugrunde liegende Element im aufrufenden Code ändern können. Wenn der aufrufende Code diese Aufrufmechanismus überschreibt, indem das Argument in Klammern einschließen oder übergibt ein Argument nicht veränderbaren, kann nicht das Verfahren der zugrunde liegenden Elemente ändern. Dies kann unerwartete Ergebnisse im aufrufenden Code erzeugen.  

@@ -1,11 +1,12 @@
 ---
 title: Fehlertypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>Fehlertypen (Visual Basic)
-In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und logische Fehler.  
+In Visual Basic Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und logische Fehler.  
   
 ## <a name="syntax-errors"></a>Syntaxfehler  
- *Syntaxfehler* sind diejenigen, die angezeigt werden, während Sie Code schreiben. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]überprüft den Code, wie Sie ihn in die **Code-Editor** Fenster und benachrichtigt Sie, falls zu tun, wie z. B. Rechtschreibfehler, oder verwenden ein Sprachelement falsch ist. Syntaxfehler sind die am häufigsten verwendete Typ von Fehlern. Sie können beheben diese einfach in der Codierung Umgebung, sobald sie auftreten.  
+ *Syntaxfehler* sind diejenigen, die angezeigt werden, während Sie Code schreiben. Visual Basic überprüft den Code aus, wie Sie ihn in die **Code-Editor** Fenster und benachrichtigt Sie, falls zu tun, wie z. B. Rechtschreibfehler, oder verwenden ein Sprachelement falsch ist. Syntaxfehler sind die am häufigsten verwendete Typ von Fehlern. Sie können beheben diese einfach in der Codierung Umgebung, sobald sie auftreten.  
   
 > [!NOTE]
 >  Die `Option Explicit` -Anweisung ist eine Methode zur Vermeidung von Syntaxfehlern. Er erzwingt, dass Sie im voraus, dass alle Variablen in der Anwendung zu verwendende deklarieren. Daher, wenn diese Variablen im Code verwendet werden, typografische Fehler sofort und behoben werden können.  

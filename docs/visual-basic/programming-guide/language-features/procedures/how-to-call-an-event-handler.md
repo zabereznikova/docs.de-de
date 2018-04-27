@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 52b4b6ca8b03d8301535d6aeedc3bd0190d8527f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b8a35459fdeb7cce0b494a9b3024a79bd4173cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic
 Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken oder ein Kreditlimit überschritten –, wird von einigen Programmkomponente, und für die Sie Code schreiben können reagieren erkannt. Ein *Ereignishandler* ist der Code, die Sie schreiben, um auf ein Ereignis zu reagieren.  
   
- Ein Ereignishandler in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine `Sub` Prozedur. Allerdings rufen Sie nicht normalerweise es die gleiche Weise wie andere `Sub` Prozeduren. Stattdessen geben Sie die Prozedur als Handler für das Ereignis. Hierzu können Sie entweder mit einer [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) Klausel und eine [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Variablen, oder mit einer [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Mit einem `Handles` -Klausel ist die Standardmethode zum Deklarieren eines ereignishandlers in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Dies ist die Möglichkeit, die der Ereignishandler wird, die geschrieben werden, wenn Sie in der integrierten Entwicklungsumgebung (IDE) programmieren. Die `AddHandler` Anweisung eignet sich zum Auslösen von Ereignissen dynamisch zur Laufzeit.  
+ Ein Ereignishandler in Visual Basic ist ein `Sub` Verfahren. Allerdings rufen Sie nicht normalerweise es die gleiche Weise wie andere `Sub` Prozeduren. Stattdessen geben Sie die Prozedur als Handler für das Ereignis. Hierzu können Sie entweder mit einer [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) Klausel und eine [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Variablen, oder mit einer [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Mit einem `Handles` -Klausel ist die Standardmethode, um einen Ereignishandler in Visual Basic deklarieren. Dies ist die Möglichkeit, die der Ereignishandler wird, die geschrieben werden, wenn Sie in der integrierten Entwicklungsumgebung (IDE) programmieren. Die `AddHandler` Anweisung eignet sich zum Auslösen von Ereignissen dynamisch zur Laufzeit.  
   
- Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch die Ereignis-Handler-Prozedur aufruft. Jeglicher Code, der Zugriff auf das Ereignis kann dazu führen, dass durch die Ausführung einer [RaiseEvent-Anweisung](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
+ Wenn das Ereignis tritt auf, ruft Visual Basic automatisch die Ereignisprozedur Handler. Jeglicher Code, der Zugriff auf das Ereignis kann dazu führen, dass durch die Ausführung einer [RaiseEvent-Anweisung](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
   
  Sie können das gleiche Ereignis mehrere Ereignishandler zuordnen. In einigen Fällen können Sie einen Ereignishandler von einem Ereignis trennen. Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
@@ -40,7 +41,7 @@ Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken od
   
 3.  In der Deklaration eines der Ereignisbehandlung `Sub` Prozedur, hinzufügen eine [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) -Klausel, der `WithEvents` Variable und den Namen des Ereignisses.  
   
-4.  Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft automatisch den `Sub` Prozedur. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
+4.  Wenn das Ereignis auftritt, ruft Visual Basic automatisch die `Sub` Prozedur. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
   
      Im folgende Beispiel wird ein Ereignis definiert und eine `WithEvents` Variable, die auf die Klasse verweist, die das Ereignis auslöst. Der Ereignisbehandlung `Sub` Beispielprozedur verwendet eine `Handles` -Klausel zur Angabe der Klasse und das Ereignis verarbeitet.  
   
@@ -52,7 +53,7 @@ Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken od
   
 2.  Führen Sie eine [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) die Ereignisbehandlung dynamisch Verbindung `Sub` Prozedur mit dem Ereignis.  
   
-3.  Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft automatisch den `Sub` Prozedur. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
+3.  Wenn das Ereignis auftritt, ruft Visual Basic automatisch die `Sub` Prozedur. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
   
      Das folgende Beispiel definiert eine `Sub` Prozedur zum Behandeln der <xref:System.Windows.Forms.Form.Closing> -Ereignis für ein Formular. Es verwendet dann die [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) zum Zuordnen der `catchClose` Prozedur als ein Ereignishandler für <xref:System.Windows.Forms.Form.Closing>.  
   

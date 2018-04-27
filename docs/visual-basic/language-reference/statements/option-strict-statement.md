@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Implizite datentypkonvertierungen nur erweiterungskonvertierungen beschränkt, lässt spätes Binden und lässt keine implizite Typisierung, die in einem `Object` Typ.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Implizite einschränkende Konvertierungsfehler  
  Implizite Eingrenzungskonvertierungsfehler treten auf, wenn eine implizite Datentypkonvertierung vorhanden ist, die eine Eingrenzungskonvertierung ist.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Viele Datentypen können in andere Datentypen konvertiert werden. Es können Datenverluste auftreten, wenn der Wert von einem Datentyp in einen Datentyp konvertiert wird, die weniger genau ist oder eine kleinere Kapazität aufweist. Ein Laufzeitfehler tritt auf, wenn so eine einschränkende Konvertierung ein Fehler auftritt. `Option Strict`wird sichergestellt, dass während der Kompilierung Benachrichtigung dieser einschränkende Konvertierungen, damit Sie sie vermeiden können. Weitere Informationen finden Sie unter [implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) und [Widening und einschränkende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic kann viele Datentypen in andere Datentypen konvertiert werden. Es können Datenverluste auftreten, wenn der Wert von einem Datentyp in einen Datentyp konvertiert wird, die weniger genau ist oder eine kleinere Kapazität aufweist. Ein Laufzeitfehler tritt auf, wenn so eine einschränkende Konvertierung ein Fehler auftritt. `Option Strict` wird sichergestellt, dass während der Kompilierung Benachrichtigung dieser einschränkende Konvertierungen, damit Sie sie vermeiden können. Weitere Informationen finden Sie unter [implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) und [Widening und einschränkende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Konvertierungen, die Fehler verursachen können einbinden implizite Konvertierungen, die auftreten, in den Ausdrücken. Weitere Informationen finden Sie unter den folgenden Themen:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  Auf der **Kompilieren** Registerkarte, legen Sie den Wert der **Option Strict** Feld.  
   
-###  <a name="conditions"></a>Warnungskonfigurationen in der IDE festlegen  
+###  <a name="conditions"></a> Warnungskonfigurationen in der IDE festlegen  
  Bei Verwendung der [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anstelle von einer `Option Strict` -Anweisung, haben Sie zusätzliche Kontrolle über die Bedingungen, die Fehler generieren. Die **Warnungskonfigurationen** Teil der **Seite "Kompilieren"** verfügt über Einstellungen, die drei Bedingungen entsprechen, die dazu führen, einen Fehler während der Kompilierung dass, beim `Option Strict` befindet sich auf. Die drei Einstellungen sind die folgenden:  
   
 -   **Implizite Konvertierung**  

@@ -1,28 +1,28 @@
 ---
 title: Konfigurieren der Ablaufverfolgung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -66,7 +66,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 ```  
   
 > [!NOTE]
->  So bearbeiten Sie die Konfigurationsdatei von einer [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienstprojekt in [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], klicken Sie mit der mit der rechten Maustaste auf die Konfigurationsdatei der Anwendung – entweder Web.config für im Web gehostete Anwendungen oder Appname.exe.config für selbst gehostete Anwendung in  **Projektmappen-Explorer**. Wählen Sie dann die **WCF-Konfiguration bearbeiten** Kontextmenüelement. Dadurch wird die [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), können Sie zum Ändern der Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche.  
+>  So bearbeiten Sie die Konfigurationsdatei von einem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Dienstprojekt in Visual Studio, klicken Sie mit der mit der rechten Maustaste auf die Konfigurationsdatei der Anwendung – entweder Web.config für im Web gehostete Anwendungen oder Appname.exe.config für selbst gehostete Anwendung in  **Projektmappen-Explorer**. Wählen Sie dann die **WCF-Konfiguration bearbeiten** Kontextmenüelement. Dadurch wird die [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), können Sie zum Ändern der Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] definiert eine Ablaufverfolgungsquelle für jede Assembly. Innerhalb einer Assembly generierte Ablaufverfolgungen werden von den Listenern verwendet, die für diese Quelle definiert sind. Folgende Ablaufverfolgungsquellen sind definiert:  
@@ -146,7 +146,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Erstellen eine benutzerdefinierte Ablaufverfolgungsquellen, finden Sie unter [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Erstellen eine benutzerdefinierte Ablaufverfolgungsquellen, finden Sie unter [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurieren von Ablaufverfolgungslistenern zur Verwendung von Ablaufverfolgungen  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] übergibt während der Laufzeit Ablaufverfolgungsdaten an die Listener, die die Daten verarbeiten. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stellt verschiedene vordefinierte Listener für <xref:System.Diagnostics> bereit. Diese Listener unterscheiden sich im Format, das für die Ausgabe verwendet wird. Sie können auch benutzerdefinierte Listenertypen hinzufügen.  
@@ -155,7 +155,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Sie können einen benutzerdefinierten Ablaufverfolgungslistener konfigurieren, um Ablaufverfolgungen zu übertragen, z. B. an eine Remotedatenbank. Stellen Sie beim Bereitstellen von Anwendungen eine ordnungsgemäße Zugriffsteuerung für die Protokolle auf dem Remotecomputer sicher.  
   
- Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](http://go.microsoft.com/fwlink/?LinkId=94648) und [erstellen einen benutzerdefinierten TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](http://go.microsoft.com/fwlink/?LinkId=94648) und [erstellen einen benutzerdefinierten TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Da `System.Diagnostics.XmlWriterTraceListener` nicht threadsicher ist, werden Ressourcen durch die Ablaufverfolgungsquelle bei der Ausgabe von Ablaufverfolgungen möglicherweise exklusiv gesperrt. Wenn viele Threads Ablaufverfolgungen an eine Ablaufverfolgungsquelle ausgeben, die für die Verwendung dieses Listeners konfiguriert ist, treten möglicherweise Ressourcenkonflikte auf. Das kann die Leistung erheblich beeinträchtigen. Implementieren Sie einen threadsicheren benutzerdefinierten Listener, um dieses Problem zu beheben.  
@@ -187,7 +187,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Das `propagateActivity`-Attribut gibt an, ob die Aktivität an andere Endpunkte weitergegeben werden soll, die an dem Nachrichtenaustausch teilnehmen. Wenn Sie diesen Wert auf `true` festlegen, können Sie anhand von Ablaufverfolgungsdateien, die durch zwei Endpunkte generiert wurden, feststellen, wie eine Reihe von Ablaufverfolgungen an einem Endpunkt zu einer Reihe von Ablaufverfolgungen an einem anderen Endpunkt übergegangen sind.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]aktivitätsablaufverfolgung und Weitergabe, finden Sie unter [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] aktivitätsablaufverfolgung und Weitergabe, finden Sie unter [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Beide `propagateActivity` und `ActivityTracing` boolesche Werte gelten für die System.ServiceModel TraceSource. Die `ActivityTracing` Wert gilt auch für jede Ablaufverfolgungsquelle einschließlich [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oder eine benutzerdefinierte Pakete.  
   

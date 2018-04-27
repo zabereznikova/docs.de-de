@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Aufrufen einer Operatorprozedur (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Operatorprozedur (Visual Basic)
 Sie aufrufen mit dem Symbol "Operator" in einem Ausdruck eine Operatorprozedur. Im Fall eines Konvertierungsoperators rufen Sie die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) um einen Wert von einem Datentyp in einen anderen zu konvertieren.  
   
- Operatorprozeduren werden nicht explizit aufrufen. Verwenden Sie nur den Operator, oder die `CType` -Funktion in einer zuweisungsanweisung oder einen Ausdruck ein, die gleiche Weise, die Sie in der Regel einen Operator verwenden. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Führt den Aufruf an die Operatorprozedur.  
+ Operatorprozeduren werden nicht explizit aufrufen. Verwenden Sie nur den Operator, oder die `CType` -Funktion in einer zuweisungsanweisung oder einen Ausdruck ein, die gleiche Weise, die Sie in der Regel einen Operator verwenden. Visual Basic führt der Aufruf die Operatorprozedur an.  
   
  Definieren eines Operators in einer Klasse oder Struktur ist so genannte *überladen* den Operator.  
   
@@ -47,7 +48,7 @@ Sie aufrufen mit dem Symbol "Operator" in einem Ausdruck eine Operatorprozedur. 
   
 2.  Achten Sie darauf, dass die Datentypen der Operanden für die Konvertierung an, und in der richtigen Reihenfolge sind.  
   
-3.  `CType`Ruft die Konvertierungsoperatorprozedur auf und gibt den konvertierten Wert zurück.  
+3.  `CType` Ruft die Konvertierungsoperatorprozedur auf und gibt den konvertierten Wert zurück.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt zwei <xref:System.TimeSpan> Strukturen, diese zusammenfügt und speichert das Ergebnis in einer dritten <xref:System.TimeSpan> Struktur. Die <xref:System.TimeSpan> Struktur definiert Operatorprozeduren mehrere Standardoperatoren überladen.  

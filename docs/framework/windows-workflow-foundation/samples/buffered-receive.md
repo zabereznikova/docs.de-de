@@ -1,23 +1,24 @@
 ---
 title: Gepuffertes Empfangen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Gepuffertes Empfangen
 In diesem Beispiel wird veranschaulicht, wie die gepufferte Empfangsfunktion in [!INCLUDE[wf](../../../../includes/wf-md.md)] eingerichtet und konfiguriert wird. Die gepufferte Empfangsfunktion ermöglicht es dem Workflowautor, einen Workflow zu erstellen, ohne sich Gedanken über die Reihenfolge zu machen, in der Nachrichten empfangen werden. Die gepufferte Empfangsfunktion puffert Nachrichten lokal und übermittelt sie, wenn der Workflow zum Empfang bereit ist.  
@@ -47,7 +48,7 @@ In diesem Beispiel wird veranschaulicht, wie die gepufferte Empfangsfunktion in 
   
  Der Dienst macht mithilfe von <xref:System.ServiceModel.Description.ServiceMetadataBehavior> außerdem Metadaten für den Dienst verfügbar.  
   
- Auf ähnliche Weise wird der Clientendpunkt mit <xref:System.ServiceModel.NetMsmqBinding> konfiguriert. Der Clientcode und-Konfiguration generiert, indem die **Hinzufügen eines Dienstverweises** Feature von [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Das folgende Beispiel stellt den generierten Clientendpunkt in der Datei App.config dar.  
+ Auf ähnliche Weise wird der Clientendpunkt mit <xref:System.ServiceModel.NetMsmqBinding> konfiguriert. Der Clientcode und-Konfiguration generiert, indem die **Hinzufügen eines Dienstverweises** Funktion von Visual Studio. Das folgende Beispiel stellt den generierten Clientendpunkt in der Datei App.config dar.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ In diesem Beispiel wird veranschaulicht, wie die gepufferte Empfangsfunktion in 
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Wechseln Sie zu http://localhost/private/loanservice/service1.xamlx, um sicherzustellen, dass der Dienst ausgeführt wird.  
+1.  Navigieren Sie zu http://localhost/private/loanservice/service1.xamlx um sicherzustellen, dass der Dienst ausgeführt wird.  
   
 2.  Drücken Sie F5, um die LoanClient-Anwendung auszuführen. Sobald der Workflow abgeschlossen ist, wird eine out.txt-Datei unter C:\Inbox gespeichert, die das Ergebnis des Nachrichtenaustauschs enthält.  
   

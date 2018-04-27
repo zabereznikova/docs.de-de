@@ -1,28 +1,28 @@
 ---
 title: Entwerfen und Implementieren von Diensten
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt wird veranschaulicht, wie definieren und implementieren [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
@@ -68,7 +68,7 @@ In diesem Abschnitt wird veranschaulicht, wie definieren und implementieren [!IN
  Weitere Informationen zum Entwerfen von Verträgen finden Sie unter [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md). Weitere Informationen zum Implementieren von Verträgen finden Sie unter [implementieren Dienstverträge](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 ### <a name="messages-up-front-and-center"></a>Nachrichten im Mittelpunkt  
- Die Verwendung verwalteter Schnittstellen, Klassen und Methoden zur Modellierung von Dienstvorgängen ist unkompliziert, wenn Sie mit Methodensignaturen im RPC-Stil (Remote Procedure Call) vertraut sind. Bei dieser Methode stellt die Übergabe von Parametern an eine Methode und der Empfang der Rückgabewerte die normale Form dar, Funktionen von einem Objekt oder einem anderen Codetyp anzufordern. Programmierer, die beispielsweise verwaltete Sprachen wie [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] und C++ COM verwenden, wenden ihre Kenntnisse des RPC-ähnlichen Ansatzes (egal ob sie Objekte oder Schnittstellen verwenden) auf die Erstellung von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstverträgen an, ohne auf die Probleme zu stoßen, die in verteilten RPC-Objektsystemen bekannt sind. Die Dienstausrichtung bietet den Vorteil lose gekoppelter, nachrichtenorientierter Programmierung, während gleichzeitig die Leichtigkeit und Vertrautheit der RPC-Programmiererfahrung erhalten bleibt.  
+ Die Verwendung verwalteter Schnittstellen, Klassen und Methoden zur Modellierung von Dienstvorgängen ist unkompliziert, wenn Sie mit Methodensignaturen im RPC-Stil (Remote Procedure Call) vertraut sind. Bei dieser Methode stellt die Übergabe von Parametern an eine Methode und der Empfang der Rückgabewerte die normale Form dar, Funktionen von einem Objekt oder einem anderen Codetyp anzufordern. Z. B. mit verwalteten Sprachen wie Visual Basic und C++-COM-ihre Kenntnisse des RPC-Formats wenden können Programmierer eine Methode (unabhängig davon, ob Objekte oder Schnittstellen) die Erstellung von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienstverträge, ohne auf die Probleme RPC-Stil innewohnende verteilt Objekt Systeme. Die Dienstausrichtung bietet den Vorteil lose gekoppelter, nachrichtenorientierter Programmierung, während gleichzeitig die Leichtigkeit und Vertrautheit der RPC-Programmiererfahrung erhalten bleibt.  
   
  Viele Programmierer fühlen sich mit nachrichtenorientierten Anwendungsprogrammierschnittstellen, beispielsweise mit Nachrichtenwarteschlangen wie Microsoft MSMQ, den <xref:System.Messaging>-Namespaces im .NET Framework oder dem Senden unstrukturierter XML in HTTP-Anforderungen wohler. Weitere Informationen zur Programmierung auf Nachrichtenebene finden Sie unter [Verwendung von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md), [Programmierung auf Kanalebene Dienst](../../../docs/framework/wcf/extending/service-channel-level-programming.md), und [Interoperabilität mit POX-Anwendungen](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   

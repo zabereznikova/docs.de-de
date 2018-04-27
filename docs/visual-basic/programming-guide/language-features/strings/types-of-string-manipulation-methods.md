@@ -1,30 +1,31 @@
 ---
 title: Verschiedene Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b437be4a6f4a0cc9d5a4d21291a80c9cb8fffcd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3677c8a23e956716af4357fe79041fc96f4014f2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Verschiedene Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic
-Es gibt verschiedene Möglichkeiten, analysieren und Bearbeiten von Zeichenfolgen. Einige der Methoden sind Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Sprache und andere sind Bestandteil der `String` Klasse.  
+Es gibt verschiedene Möglichkeiten, analysieren und Bearbeiten von Zeichenfolgen. Einige der Methoden sind Teil der Sprache Visual Basic und andere sind Bestandteil der `String` Klasse.  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Sprache Visual Basic und .NET Framework  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Methoden werden als inhärente Funktionen der Sprache verwendet. Sie können ohne Qualifizierung in Ihrem Code verwendet werden. Das folgende Beispiel zeigt die typische Verwendung von einem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zeichenfolgenbearbeitung Befehl:  
+ Visual Basic-Methoden werden als inhärenten Funktionen der Sprache verwendet. Sie können ohne Qualifizierung in Ihrem Code verwendet werden. Das folgende Beispiel zeigt die typische Verwendung eines Visual Basic zeichenfolgenbearbeitung Befehls:  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   

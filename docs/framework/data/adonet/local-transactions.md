@@ -1,27 +1,29 @@
 ---
 title: Lokale Transaktionen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
 Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
@@ -40,7 +42,7 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
 > [!NOTE]
 >  Die `EnlistDistributedTransaction`-Methode darf nicht für eine lokale Transaktion verwendet werden.  
   
- Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production.ScrapReason-Tabelle in der AdventureWorks-Beispieldatenbank von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] aus. Für die Anweisungen wird ein Commit ausgeführt, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
+ Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production.ScrapReason-Tabelle in der SQL Server AdventureWorks-Beispieldatenbank, die ein Commit ausgeführt werden, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Führen Sie diese Schritte aus, um eine Transaktion auszuführen:  

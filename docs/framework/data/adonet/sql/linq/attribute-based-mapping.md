@@ -1,31 +1,33 @@
 ---
 title: Attributbasiertes Zuordnen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>Attributbasiertes Zuordnen
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Ordnet eine SQL Server-Datenbank eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell mithilfe von Attributen oder mit einer externen Zuordnungsdatei. Dieser Abschnitt befasst sich mit dem attributbasierten Ansatz.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ordnet eine SQL Server-Datenbank eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell mithilfe von Attributen oder mit einer externen Zuordnungsdatei. Dieser Abschnitt befasst sich mit dem attributbasierten Ansatz.  
   
  In der einfachsten Form weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Datenbank einem <xref:System.Data.Linq.DataContext>, eine Tabelle einer Klasse und Spalten/Beziehungen den Eigenschaften dieser Klassen zu. Sie können auch Attribute verwenden, um im Objektmodell eine Vererbungshierarchie zuzuordnen. Weitere Informationen finden Sie unter [wie: Generieren des Objektmodells in Visual Basic oder C#-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Entwickler mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] attributbasierte Zuordnung in der Regel ausführen, indem die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [wie: Generieren des Objektmodells in Visual Basic oder C#-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Entwickler, die in der Regel mithilfe von Visual Studio führen attributbasierte Zuordnung mithilfe der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [wie: Generieren des Objektmodells in Visual Basic oder C#-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Sie können die Zuordnung auch mit einer externen XML-Datei vornehmen. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen, auch für diejenigen, bei denen die Groß- und Kleinschreibung nicht beachtet wird, darunter [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen,, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute-Attribut  
  Mit diesem Attribut legen Sie eine Eigenschaft für die Darstellung der Zuordnung in einer Datenbank dar, z. B. die Beziehung zwischen einem Fremdschlüssel und einem Primärschlüssel. Weitere Informationen zu Beziehungen finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen, auch für diejenigen, bei denen die Groß- und Kleinschreibung nicht beachtet wird, darunter [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen,, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute-Attribut  
  Verwenden Sie dieses Attribut, um eine Vererbungshierarchie zuzuordnen.  

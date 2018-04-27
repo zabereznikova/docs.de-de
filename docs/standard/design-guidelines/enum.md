@@ -1,12 +1,12 @@
 ---
 title: Enum-Entwurf
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumerationen: Einfache Enumerationen und Flags-Enumerationen.  
@@ -77,7 +77,7 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  **X nicht** erweitern <xref:System.Enum?displayProperty=nameWithType> direkt.  
   
- <xref:System.Enum?displayProperty=nameWithType>eine besondere Art ist von der CLR zum Erstellen von benutzerdefinierten Enumerationen verwendet werden. Die meisten Programmiersprachen bieten ein Programmierelement, das Ihnen den Zugriff auf diese Funktionalität bietet. Beispielsweise ist in c# die `enum` Schlüsselwort wird verwendet, um eine Enumeration zu definieren.  
+ <xref:System.Enum?displayProperty=nameWithType> eine besondere Art ist von der CLR zum Erstellen von benutzerdefinierten Enumerationen verwendet werden. Die meisten Programmiersprachen bieten ein Programmierelement, das Ihnen den Zugriff auf diese Funktionalität bietet. Beispielsweise ist in c# die `enum` Schlüsselwort wird verwendet, um eine Enumeration zu definieren.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Entwerfen von Flags-Enumerationen  
@@ -87,7 +87,7 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  **✓ GGF.** Kombinationen der Flags verwendet spezielle Enumerationswerte für häufig bereitstellen.  
   
- Bitweise Operationen sollte sind ein Konzept, das erweitert und nicht für einfache Aufgaben erforderlich. <xref:System.IO.FileAccess.ReadWrite>ist ein Beispiel eines speziellen Werts.  
+ Bitweise Operationen sollte sind ein Konzept, das erweitert und nicht für einfache Aufgaben erforderlich. <xref:System.IO.FileAccess.ReadWrite> ist ein Beispiel eines speziellen Werts.  
   
  **X vermeiden** Erstellen von Flags-Enumerationen, in denen bestimmte Kombinationen von Werten ungültig sind.  
   
@@ -105,7 +105,7 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  

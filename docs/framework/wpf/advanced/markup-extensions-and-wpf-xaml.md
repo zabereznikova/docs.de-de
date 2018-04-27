@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zweck und des zugrunde liegenden Klassenobjektmodels. Markuperweiterungen sind eine allgemeine Funktion der XAML-Sprache und der .NET-Implementierung von XAML-Diensten. In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF XAML beschrieben.  
@@ -64,7 +64,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 -   `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax, wenn die Auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet wird. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispiel: die [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]-Vorlagen für WPF-Anwendungen initiieren mit dieser `x:`-Zuordnung eine XAML-Datei. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
+>  Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispielsweise initiieren die Visual Studio-Vorlagen für WPF-Anwendungen eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF-spezifische Markuperweiterungen  
@@ -112,7 +112,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Escapesequenzen und Markuperweiterungen  
- Bei der Attributbehandlung in einem XAML-Prozessor werden geschweifte Klammern als Bezeichner für Markuperweiterungssequenzen verwendet. Falls erforderlich, können Sie geschweifte Klammern als Literalzeichen angeben, indem Sie eine Escapesequenz in Form eines leeren Paars geschweifter Klammern gefolgt von der literalen geschweiften Klammer angeben. Finden Sie unter [{}-Escapesequenz - Markuperweiterung](../../xaml-services/escape-sequence-markup-extension.md).  
+ Bei der Attributbehandlung in einem XAML-Prozessor werden geschweifte Klammern als Bezeichner für Markuperweiterungssequenzen verwendet. Falls erforderlich, können Sie geschweifte Klammern als Literalzeichen angeben, indem Sie eine Escapesequenz in Form eines leeren Paars geschweifter Klammern gefolgt von der literalen geschweiften Klammer angeben. Finden Sie unter [ {} Escapesequenz - Markuperweiterung](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Schachtelung von Markuperweiterungen in der XAML-Verwendung  

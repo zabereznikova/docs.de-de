@@ -1,34 +1,36 @@
 ---
 title: Schwache Ereignismuster
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
-Bei Anwendungen ist es möglich, dass ein Handler, die auf Ereignisquellen angefügt sind nicht in Abstimmung mit dem Listenerobjekt zerstört werden, die die Quelle den Handler angefügt. Diese Situation kann zu Speicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, stellen Sie eine dedizierte Managerklasse für bestimmte Ereignisse bereit, und Implementieren einer Schnittstelle zum Listener für dieses Ereignis an. Dieses Entwurfsmusters heißt die *schwacher Ereignismuster*.  
+Bei Anwendungen ist es möglich, dass ein Handler, die auf Ereignisquellen angefügt sind nicht in Abstimmung mit dem Listenerobjekt zerstört werden, die die Quelle den Handler angefügt. Diese Situation kann zu Speicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, stellen Sie eine dedizierte Managerklasse für bestimmte Ereignisse bereit, und Implementieren einer Schnittstelle zum Listener für dieses Ereignis an. Dieses Entwurfsmusters heißt die *schwacher Ereignismuster*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>Gründe für das Implementieren der schwacher Ereignismuster  
- Überwachung der Ereignisse kann zu Speicherverlusten führen. Das typische Verfahren für die Überwachung eines Ereignisses wird die sprachspezifische Syntax verwenden, die einen Handler an ein Ereignis in der Quelle angefügt wird. Beispielsweise ist in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], dass die Syntax lautet: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ Überwachung der Ereignisse kann zu Speicherverlusten führen. Das typische Verfahren für die Überwachung eines Ereignisses wird die sprachspezifische Syntax verwenden, die einen Handler an ein Ereignis in der Quelle angefügt wird. In C# geschrieben ist, dass die Syntax: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Diese Technik wird einen starken Verweis von der Ereignisquelle um der Ereignislistener erstellt. Normalerweise führt dazu, dass einen Ereignishandler für einen Listener anfügen den Listener eine Lebensdauer eines Objekts haben, die von der Lebensdauer eines Objekts in der Quelle beeinflusst wird, (es sei denn, die der Ereignishandler explizit entfernt ist). Allerdings in bestimmten Fällen sollten Sie die Lebensdauer eines Objekts in den Listener durch andere Faktoren gesteuert werden, z. B., ob es derzeit der visuellen Struktur der Anwendung und nicht von der Lebensdauer der Quelle gehört. Sobald die Objektlebensdauer Quelle über die Lebensdauer des Listeners hinausgeht, führt das normale Ereignismuster zu einem Speicherverlust: der Listener wird aufrechterhalten länger als vorgesehen.  
   

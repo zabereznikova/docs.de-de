@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53362c2eb5517d9230ea88975745315d6db7f1ba
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5a25755bcbb8d42124cde531f641a611202ae5a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Gibt den Speicherort der Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll" an.  
@@ -36,10 +36,10 @@ Gibt den Speicherort der Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll" an
  Das Verzeichnis mit den Versionen von "mscorlib.dll" und "Microsoft.VisualBasic.dll" zum Kompilieren verwendet. Dieser Pfad wird nicht überprüft werden, bis es geladen wird. Setzen Sie den Namen des Verzeichnisses in Anführungszeichen (""), wenn es sich um ein Leerzeichen enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Option weist die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler an, die Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll"-Dateien aus einer nicht standardmäßigen Speicherort zu laden. Die `-sdkpath` wurde bei Verwendung der Option mit [- Netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). Die [!INCLUDE[Compact](~/includes/compact-md.md)] verwendet verschiedene Versionen dieser unterstützen, Bibliotheken, um die Verwendung von Datentypen und Sprachfunktionen, die nicht gefunden wird, auf den Geräten zu vermeiden.  
+ Diese Option weist den Visual Basic-Compiler die Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll" Dateien von einem nicht standardmäßigen Speicherort zu laden. Die `-sdkpath` wurde bei Verwendung der Option mit [- Netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). Die [!INCLUDE[Compact](~/includes/compact-md.md)] verwendet verschiedene Versionen dieser unterstützen, Bibliotheken, um die Verwendung von Datentypen und Sprachfunktionen, die nicht gefunden wird, auf den Geräten zu vermeiden.  
   
 > [!NOTE]
->  Die `-sdkpath` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren. Die `-sdkpath` Option wird festgelegt, wenn ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Geräteprojekt geladen ist.  
+>  Die `-sdkpath` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren. Die `-sdkpath` Option wird festgelegt, wenn ein Gerät Visual Basic-Projekt geladen wird.  
   
  Sie können angeben, dass der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek, mithilfe kompilieren soll der `-vbruntime` -Compileroption. Weitere Informationen finden Sie unter [- Vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   

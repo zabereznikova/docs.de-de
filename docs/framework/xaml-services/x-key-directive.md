@@ -1,12 +1,13 @@
 ---
 title: x:Key-Anweisung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - xKey
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c73cf28905e1dd0f3056ab0eed953d6f05b0a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f28ed1e4077a48016ddd8d9b5eeb45d6ba25d8e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xkey-directive"></a>x:Key-Anweisung
 Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erstellt und referenziert werden. Einem XAML-Objektelement einen `x:Key`-Wert hinzuzufügen, ist der üblichste Weg, um eine Ressource in einem Ressourcenwörterbuch, beispielsweise in einem WPF- <xref:System.Windows.ResourceDictionary> zu identifizieren.  
@@ -56,7 +58,7 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
 |||  
 |-|-|  
 |`stringKeyValue`|Eine Textzeichenfolge, die als Schlüssel verwendet werden soll. Die Textzeichenfolge entsprechen den [XamlName-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
-|`markupExtensionUsage`|Innerhalb der Markuperweiterungstrennzeichen {}, eine Markuperweiterungsverwendung, die ein Objekt bereitstellt, das als Schlüssel verwendet werden soll. Siehe Hinweise.|  
+|`markupExtensionUsage`|Innerhalb der Markup Extension Trennzeichen {}, eine Markuperweiterungsverwendung, die ein Objekt bereitstellt, als Schlüssel verwendet werden. Siehe Hinweise.|  
   
 ## <a name="remarks"></a>Hinweise  
  `x:Key` unterstützt das XAML-Ressourcenwörterbuchkonzept. XAML als Sprache definiert keine Ressourcenwörterbuchimplementierung, die spezifischen Benutzeroberflächen-Frameworks vorbehalten bleibt. Weitere Informationen zu von Ressourcenverzeichnis XAML in WPF Implementierung finden Sie unter [XAML-Ressourcen](../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -76,7 +78,7 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
   
 -   WPF unterstützt das Konzept zusammengeführter Ressourcenwörterbücher. Schlüssel können zwischen den zusammengeführten Wörterbüchern freigegeben sein, und auf das Verhalten der freigegebenen Schlüssel kann mit <xref:System.Windows.FrameworkContentElement.FindResource%2A> zugegriffen werden. Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   
- In der gesamten WPF-XAML-Implementierung und im Anwendungsmodell wird die Eindeutigkeit der Schlüssel nicht vom XAML-Markupcompiler überprüft. Stattdessen führen fehlende oder nicht eindeutige `x:Key`-Werte zu XAML-Parser-Ladezeitfehlern. Allerdings [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] -Behandlung von Wörterbüchern für WPF solche Fehler häufig in der Entwurfsphase notieren kann.  
+ In der gesamten WPF-XAML-Implementierung und im Anwendungsmodell wird die Eindeutigkeit der Schlüssel nicht vom XAML-Markupcompiler überprüft. Stattdessen führen fehlende oder nicht eindeutige `x:Key`-Werte zu XAML-Parser-Ladezeitfehlern. Allerdings kann Visual Studio-Behandlung von Wörterbüchern für WPF solche Fehler häufig in der Entwurfsphase beachten.  
   
  Beachten Sie, dass in der angegebenen Syntax bei der Erzeugung einer Auflistung durch den WPF-XAML-Prozessor, um eine <xref:System.Windows.ResourceDictionary>-Auflistung aufzufüllen, das <xref:System.Windows.FrameworkElement.Resources%2A>-Objekt implizit ist. Ein <xref:System.Windows.ResourceDictionary> wird in der Regel nicht explizit als Element im Markup bereitgestellt, obwohl dies in einigen Fällen aus Gründen der Anschaulichkeit möglich ist (hierbei würde es sich um ein Eigenschaftenelement der Auflistung zwischen dem <xref:System.Windows.FrameworkElement.Resources%2A>-Eigenschaftenelement und den darin enthaltenen Elementen handeln, von denen das Wörterbuch gefüllt wird). Informationen darüber, warum ein Auflistungsobjekt fast immer ein implizites Element im Markup ist, finden Sie unter [XAML-Syntax im Detail](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   

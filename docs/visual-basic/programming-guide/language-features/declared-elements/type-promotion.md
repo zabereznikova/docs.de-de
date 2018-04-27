@@ -1,11 +1,12 @@
 ---
-title: "Typerweiterung (Visual Basic)"
-ms.custom: 
+title: Typerweiterung (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>Typerweiterung (Visual Basic)
-Wenn Sie ein Programmierelement in einem Modul deklarieren [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stuft den Gültigkeitsbereich auf den Namespace, die das Modul enthält. Dies bezeichnet man *heraufstufung geben*.  
+Wenn Sie ein Programmierelement in einem Modul deklarieren, stuft Visual Basic den Gültigkeitsbereich auf den Namespace, die das Modul enthält. Dies bezeichnet man *heraufstufung geben*.  
   
  Das folgende Beispiel zeigt eine rumpfdefinition eines Moduls und zwei Member des Moduls.  
   
@@ -46,7 +47,7 @@ Wenn Sie ein Programmierelement in einem Modul deklarieren [!INCLUDE[vbprvb](~/i
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- Im vorherigen Beispiel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann nicht höher gestuft Klasse `abc` auf `thisNameSpace` weil bereits eine Enumeration mit dem gleichen Namen auf Namespaceebene vorhanden ist. Für den Zugriff auf `abcSub`, müssen Sie den vollständigen Qualifizierungspfad verwenden `thisNamespace.thisModule.abc.abcSub`. Allerdings-Klasse `xyz` noch höher gestuft, und Sie können den `xyzSub` mit den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub`.  
+ Im vorherigen Beispiel Visual Basic keine Klasse hochstufen `abc` auf `thisNameSpace` weil bereits eine Enumeration mit dem gleichen Namen auf Namespaceebene vorhanden ist. Für den Zugriff auf `abcSub`, müssen Sie den vollständigen Qualifizierungspfad verwenden `thisNamespace.thisModule.abc.abcSub`. Allerdings-Klasse `xyz` noch höher gestuft, und Sie können den `xyzSub` mit den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub`.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Entschärfen der Typerweiterung für partielle Typen  
  Wenn eine Klasse oder Struktur innerhalb eines Moduls verwendet die [partielle](../../../../visual-basic/language-reference/modifiers/partial.md) Schlüsselwort typerweiterung ist für diese Klasse oder Struktur automatisch wird außer Kraft gesetzt, und zwar unabhängig davon, ob der Namespace ein Element mit dem gleichen Namen hat. Andere Elemente im Modul sind weiterhin für typerweiterung geeignet.  

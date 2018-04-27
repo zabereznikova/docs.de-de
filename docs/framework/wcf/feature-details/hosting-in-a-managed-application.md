@@ -1,29 +1,31 @@
 ---
 title: Hosten in einer verwalteten Anwendung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienste können in jeder [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Anwendung gehostet werden. Die Selbsthosting-Option ist die flexibelste Option, da sie für die Bereitstellung die geringsten Anforderungen an die Infrastruktur stellt. Sie ist jedoch auch die am wenigsten robuste Hostingoption, weil verwaltete Anwendungen nicht die erweiterten Hosting- und Verwaltungsfunktionen bereitstellen wie die anderen Hostingoptionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], z.&amp;#160;B. Internetinformationsdienste (IIS) und Windows-Dienste.  
   
- Zur Erstellung eines selbst gehosteten Diensts erstellen und öffnen Sie eine Instanz von <xref:System.ServiceModel.ServiceHost>, der die Dienstüberwachung für Nachrichten startet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wie: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Zur Erstellung eines selbst gehosteten Diensts erstellen und öffnen Sie eine Instanz von <xref:System.ServiceModel.ServiceHost>, der die Dienstüberwachung für Nachrichten startet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Ein vollständiges Beispiel zum Definieren eines Dienstvertrags, den Vertrag zu implementieren und Hosten eines Diensts innerhalb einer verwalteten Anwendung finden Sie unter der [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md) und [Selbsthosting](../../../../docs/framework/wcf/samples/self-host.md).  
   
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Allgemeine, für das Selbsthosting geeignete Szenarien sind [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste, die in Konsolenanwendungen ausgeführt werden. Das Hosten eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts in einer Konsolenanwendung ist in der Regel während der Entwicklungsphase der Anwendung nützlich. Die Anwendung lässt sich dann einfach debuggen. Ablaufverfolgungsinformationen über die Anwendung lassen sich leichter ermitteln, um herauszufinden, was intern in der Anwendung vor sich geht. Zudem lässt sich die Anwendung dann einfacher an andere Speicherorte kopieren.  
   
 ## <a name="rich-client-applications"></a>Rich Client-Anwendungen  
- Andere, für das Selbsthosting geeignete allgemeine Szenarien sind Rich&amp;#160;Client-Anwendungen wie jene, die auf [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] oder Windows&amp;#160;Forms (WinForms) basieren. Diese Hostingoption erleichtert es Rich&amp;#160;Client-Anwendungen, wie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] - und WinForms-Anwendungen, mit der Außenwelt zu kommunizieren. Ein Beispiel dafür ist ein Peer-to-Peer-Kollaborationsclient, der [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] als Benutzeroberfläche nutzt und darüber hinaus als Host für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst fungiert, der es anderen Clients ermöglicht, eine Verbindung mit ihm herzustellen und Daten auszutauschen.  
+ Weitere häufige Szenarien sind Selbsthosting rich Client-Anwendungen wie jene auf Grundlage von Windows Presentation Foundation (WPF) oder Windows Forms (WinForms). Diese Hostingoption erleichtert es Rich&amp;#160;Client-Anwendungen, wie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] - und WinForms-Anwendungen, mit der Außenwelt zu kommunizieren. Ein Beispiel dafür ist ein Peer-to-Peer-Kollaborationsclient, der [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] als Benutzeroberfläche nutzt und darüber hinaus als Host für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst fungiert, der es anderen Clients ermöglicht, eine Verbindung mit ihm herzustellen und Daten auszutauschen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)  

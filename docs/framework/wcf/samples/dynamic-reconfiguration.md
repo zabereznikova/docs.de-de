@@ -1,24 +1,26 @@
 ---
 title: Dynamische Neukonfiguration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Dynamische Neukonfiguration
 In diesem Beispiel wird der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Routingdienst veranschaulicht. Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht. In diesem Beispiel wird das standardmäßige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie der Routingdienst während der Laufzeit dynamisch neu konfiguriert werden kann.  
@@ -43,7 +45,7 @@ In diesem Beispiel wird der [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
 2.  So öffnen **Projektmappen-Explorer**wählen **Projektmappen-Explorer** aus der **Ansicht** Menü.  
   
-3.  Drücken Sie **F5** oder **STRG + UMSCHALT + B** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Drücken Sie **F5** oder **STRG + UMSCHALT + B** in Visual Studio.  
   
     1.  Wenn Sie möchten, um die erforderlichen Projekte automatisch gestartet, wenn Sie durch Drücken **F5**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte haben die **starten** Aktion.  
   

@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>Delegaten (Visual Basic)
-Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=nameWithType>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
+Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern, Visual Basic-Delegaten ein Verweistyp, basierend auf der Klasse sind jedoch <xref:System.Delegate?displayProperty=nameWithType>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
   
 ## <a name="delegates-and-events"></a>Delegaten und Ereignisse  
- Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht die dynamische Zuordnung von Ereignishandlern zu Ereignissen, indem ein Delegat für Sie erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.  
+ Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. Visual Basic können Sie dynamisch zuordnen Ereignishandlern mit Ereignissen durch das Erstellen eines Delegaten für die Sie bei der Verwendung der `AddHandler` Anweisung. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.  
   
- Sie können zwar auch eigene Delegaten erstellen, doch in den meisten Fällen generiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Delegaten und verarbeitet die Details. Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis. Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist. Die folgenden beiden Codezeilen sind gleichwertig. In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird. Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.  
+ Obwohl Sie Ihre eigenen Delegaten in den meisten Fällen erstellen können, die Visual Basic wird der Delegat erstellt und der Details für Sie übernimmt. Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis. Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist. Die folgenden beiden Codezeilen sind gleichwertig. In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird. Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

@@ -1,24 +1,26 @@
 ---
 title: Erweiterte Filter
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Erweiterte Filter
 In diesem Beispiel wird ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Routingdienst veranschaulicht. Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht. In diesem Beispiel wird das standardmäßige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Der dritte Filter ist ein <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Dieser Filter ergibt für jede Nachricht eine Übereinstimmung, die an einem Endpunkt mit einer Adresse angezeigt wurde, die mit dem angegebenen Adresspräfix (oder dem Anfang) übereinstimmt. In diesem Beispiel wird das Adresspräfix als "http://localhost/routingservice/router/rounding/" definiert. Dies bedeutet, dass dieser Filter für alle eingehenden Nachrichten, die an "http://localhost/routingservice/router/rounding/*" adressiert sind, eine Übereinstimmung ergibt. In diesem Fall sind es Nachrichten, die am Rundungsrechnerendpunkt mit der Adresse "http://localhost/routingservice/router/rounding/calculator" angezeigt werden.  
+ Der dritte Filter ist ein <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Dieser Filter ergibt für jede Nachricht eine Übereinstimmung, die an einem Endpunkt mit einer Adresse angezeigt wurde, die mit dem angegebenen Adresspräfix (oder dem Anfang) übereinstimmt. In diesem Beispiel wird das Adresspräfix als definiert "http://localhost/routingservice/router/rounding/". Dies bedeutet, dass alle eingehenden Nachrichten, die an adressiert sind "http://localhost/routingservice/router/rounding/*", die von diesem Filter abgeglichen werden. In diesem Fall ist es Nachrichten, die auf den rundungsrechnerendpunkt angezeigt werden, werden die hat der Adresse des "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  So öffnen **Projektmappen-Explorer**wählen **Projektmappen-Explorer** aus der **Ansicht** Menü.  
   
-3.  Drücken Sie in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] F5 oder STRG+UMSCHALT+B.  
+3.  Drücken Sie F5 oder STRG + UMSCHALT + B in Visual Studio aus.  
   
     1.  Möchten Sie die notwendigen Projekte automatisch gestartet, wenn Sie F5 drücken, Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte haben die **starten** Aktion.  
   

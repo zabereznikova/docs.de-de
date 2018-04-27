@@ -1,24 +1,26 @@
 ---
 title: Typische Schritte bei der Verwendung von LINQ to SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typische Schritte bei der Verwendung von LINQ to SQL
 Zur Implementierung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendung führen Sie die weiter unten beschriebenen Schritte aus. Beachten Sie, dass viele Schritte optional sind. Es ist gut möglich, dass Sie das Objektmodell in seinem Standardzustand verwenden können.  
@@ -33,7 +35,7 @@ Zur Implementierung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtec
   
 -   Der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     Dieser Designer stellt eine umfangreiche Benutzeroberfläche zum Erstellen eines Objektmodells aus einer vorhandenen Datenbank bereit. Dieses Tool ist Bestandteil der [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-IDE und eignet sich am besten für kleine oder mittelgroße Datenbanken.  
+     Dieser Designer stellt eine umfangreiche Benutzeroberfläche zum Erstellen eines Objektmodells aus einer vorhandenen Datenbank bereit. Dieses Tool ist Teil der Visual Studio-IDE und eignet sich am besten für kleine oder mittelgroße Datenbanken.  
   
 -   Das SQLMetal-Tool zur Codeerstellung  
   
@@ -41,13 +43,13 @@ Zur Implementierung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtec
   
 -   Ein Code-Editor  
   
-     Sie können Ihren eigenen Code schreiben, indem Sie entweder den [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-Code-Editor oder einen anderen Editor verwenden. Dieser Ansatz wird nicht empfohlen, da hierbei Fehler auftreten können. Wenn Sie über eine Datenbank verfügen, verwenden Sie entweder [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] oder das SQLMetal-Tool . Der Code-Editor kann sich jedoch beim Verfeinern und Ändern von bereits erzeugtem Code als nützlich erweisen. Weitere Informationen finden Sie unter [wie: Anpassen von Entitätsklassen mithilfe des Code-Editors](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Sie können Ihren eigenen Code schreiben, mit Visual Studio Code-Editor oder einem anderen Editor. Dieser Ansatz wird nicht empfohlen, da hierbei Fehler auftreten können. Wenn Sie über eine Datenbank verfügen, verwenden Sie entweder [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] oder das SQLMetal-Tool . Der Code-Editor kann sich jedoch beim Verfeinern und Ändern von bereits erzeugtem Code als nützlich erweisen. Weitere Informationen finden Sie unter [wie: Anpassen von Entitätsklassen mithilfe des Code-Editors](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Wählen Sie die Art von Code aus, die Sie erzeugen möchten.  
   
--   Eine C#-Quellcodedatei oder eine [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Quellcodedatei für attributbasierte Zuordnung.  
+-   Eine C#- oder Visual Basic Quellcodedatei für attributbasierte Zuordnung.  
   
-     Sie schließen dann diese Codedatei ins [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-Projekt ein. Weitere Informationen finden Sie unter [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Sie werden dann diese Codedatei im Visual Studio-Projekt enthalten. Weitere Informationen finden Sie unter [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Eine XML-Datei für externe Zuordnung.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben"
+title: Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem C#-Fehler
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem C#-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:  
   
  [Visual C# Language](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Sprachsyntax und -Compiler.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Visual C#-Sprachsyntax und des Compilers.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Umgebung.  
   
  [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)], die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme mit Visual c#, die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Bietet ein Forum für Fragen und Probleme mit Visual c#.  
   
  Siehe auch:  
  [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  

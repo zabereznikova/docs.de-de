@@ -1,30 +1,32 @@
 ---
 title: Code-Behind und XAML in WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-Behind und XAML in WPF
-<a name="introduction"></a>Code-Behind-ist ein Begriff Beschreiben des Codes, der mit Markup-definierten Objekten verknüpft ist, wenn eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist Markupkompilierte. In diesem Thema wird beschrieben, Anforderungen für die Code-Behind sowie einen alternativen Inline-Code-Mechanismus, um Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+<a name="introduction"></a> Code-Behind-ist ein Begriff Beschreiben des Codes, der mit Markup-definierten Objekten verknüpft ist, wenn eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist Markupkompilierte. In diesem Thema wird beschrieben, Anforderungen für die Code-Behind sowie einen alternativen Inline-Code-Mechanismus, um Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Der Handler muss der Delegat für das entsprechende Ereignis Unterstützungstypsystem entsprechen.  
   
--   Für die [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] Sprache insbesondere können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Allerdings muss diese Technik einige Einschränkungen verfügen, da die `Handles` Schlüsselwort nicht unterstützt, der die bestimmten Funktionen des die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügte Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Für die Microsoft Visual Basic-Sprache insbesondere können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Allerdings muss diese Technik einige Einschränkungen verfügen, da die `Handles` Schlüsselwort nicht unterstützt, der die bestimmten Funktionen des die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügte Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>X: Code  
- [X: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) ist in einem Anweisungselement definiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ein `x:Code` Richtlinie Element kann Inline-Programmcode enthalten. Der Code Inline definiert interagieren kann die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf derselben Seite. Das folgende Beispiel veranschaulicht die Inline [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] Code. Beachten Sie, dass der Code innerhalb der `x:Code` -Element, sodass der Code eingeschlossen werden muss `<CDATA[`... `]]>` als Escapesequenz für den Inhalt für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], sodass eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor (entweder die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema oder die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Schema) wird nicht versuchen, Interpretieren des Inhalts buchstäblich als [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [X: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) ist in einem Anweisungselement definiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ein `x:Code` Richtlinie Element kann Inline-Programmcode enthalten. Der Code Inline definiert interagieren kann die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf derselben Seite. Das folgende Beispiel veranschaulicht die C#-Inlinecode. Beachten Sie, dass der Code innerhalb der `x:Code` -Element, sodass der Code eingeschlossen werden muss `<CDATA[`... `]]>` als Escapesequenz für den Inhalt für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], sodass eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor (entweder die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema oder die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Schema) wird nicht versuchen, Interpretieren des Inhalts buchstäblich als [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

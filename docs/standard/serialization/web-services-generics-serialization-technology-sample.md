@@ -8,21 +8,21 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: aa4e54a1085e3e5713004c489051e54b0fc8ee9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Technologiebeispiel für die Generikaserialisierung in Webdiensten
-[Beispiel herunterladen](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[Beispiel herunterladen](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  In diesem Beispiel wird die Verwendung und Steuerung der Generikaserialisierung in ASP.NET-Webdiensten veranschaulicht.  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 03/23/2018
   
 1.  Öffnen Sie ein Browserfenster, und wählen Sie die Adressleiste aus.  
   
-2.  Geben Sie **http://localhost/[virtuelles Verzeichnis]/Service.asmx** ein, wobei [virtuelles Verzeichnis] das virtuelle Verzeichnis darstellt, das Sie beim Erstellen des Beispiels angelegt haben.  
+2.  Typ  **http://localhost/[virtuellen directory]/Service.asmx**, wobei [virtuelles Verzeichnis] das virtuelle Verzeichnis Sie erstellt stellt, wenn Sie das Beispiel erstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Im Beispiel wird eine Standard-ASP.NET-Seite angezeigt, die Links zur Definition des Webdiensts enthält. Sie können den Quellcode für den Webdienst ändern und zusätzlich die Anzeige anpassen. Weitere Informationen finden Sie unter [Erstellen von XML-Webdienstclients](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Im Beispiel wird eine Standard-ASP.NET-Seite angezeigt, die Links zur Definition des Webdiensts enthält. Sie können den Quellcode für den Webdienst ändern und zusätzlich die Anzeige anpassen. Weitere Informationen finden Sie unter [Erstellen von XML-Webdienstclients](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serialisierung](../../../docs/standard/serialization/index.md)  
- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

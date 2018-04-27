@@ -1,27 +1,29 @@
 ---
 title: Bereitstellen von WPF-Anwendungen (WPF)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf0c5383728648d46427ce8fe2f5a97a736ab00
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bereitstellen von WPF-Anwendungen (WPF)
 Nach dem Erstellen müssen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendungen bereitgestellt werden. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] bieten verschiedene Bereitstellungstechnologien. Die für die Bereitstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung eingesetzte Technologie ist abhängig vom Anwendungstyp. Dieses Thema bietet eine kurze Übersicht über die einzelnen Bereitstellungstechnologien. Außerdem erfahren Sie, wie diese Bereitstellungstechnologien im Zusammenhang mit den Bereitstellungsvoraussetzungen für die verschiedenen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungstypen verwendet werden.  
@@ -93,7 +95,7 @@ Nach dem Erstellen müssen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
  Weitere Informationen zur Sicherheit von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen finden Sie unter [Sicherheit](../../../../docs/framework/wpf/security-wpf.md).  
   
- Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten können mit XCopy oder [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] im lokalen Dateisystem installiert werden. Diese Seiten können mit [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] oder [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]-Explorer angezeigt werden.  
+ Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten können mit XCopy oder [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] im lokalen Dateisystem installiert werden. Diese Seiten können angezeigt werden, mithilfe von [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] oder Windows-Explorer.  
   
  Weitere Informationen über XAML finden Sie unter [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
@@ -124,7 +126,7 @@ Nach dem Erstellen müssen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installieren von .NET Framework  
- Damit eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung ausgeführt werden kann, muss [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]k auf dem Client installiert sein. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] erkennt automatisch, ob auf den Clients [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist, wenn im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen angezeigt werden. Falls [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nicht installiert ist, zeigt [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] eine Installationsaufforderung an.  
+ Zum Ausführen einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Anwendung einsetzen möchten, muss Microsoft .NET Framework auf dem Client installiert werden. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] erkennt automatisch, ob auf den Clients [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist, wenn im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen angezeigt werden. Falls [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nicht installiert ist, zeigt [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] eine Installationsaufforderung an.  
   
  Um ermitteln zu können, ob [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist, enthält [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] eine Bootstrapper-Anwendung, die als Fallback-[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]-Handler für Inhaltsdateien mit den Erweiterungen .xaml, .xps, .xbap und .application registriert wird. Wenn Sie zu diesen Dateiformaten navigieren, ohne dass [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] auf dem Client installiert ist, fordert die Bootstrapper-Anwendung die Erlaubnis zur Installation an. Wird dieser Anforderung nicht stattgegeben, wird weder [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] noch die Anwendung installiert.  
   

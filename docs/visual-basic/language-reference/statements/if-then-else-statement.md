@@ -1,11 +1,12 @@
 ---
 title: If...Then...Else-Anweisung (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/16/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.topic: conceptual
 f1_keywords:
 - vb.ElseIf
 - vb.Then
@@ -26,14 +27,14 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 898b72055345e88ca35f805de211c0c57cd74200
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1080a17cfcc493175c1e2f3527837030b4254bc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else-Anweisung (Visual Basic)
 Führt bedingt eine Gruppe von Anweisungen aus, abhängig vom Wert eines Ausdrucks.  
@@ -41,7 +42,7 @@ Führt bedingt eine Gruppe von Anweisungen aus, abhängig vom Wert eines Ausdruc
 ## <a name="syntax"></a>Syntax  
   
 ```  
-' Multiple-line syntax:  
+' Multiline syntax:  
 If condition [ Then ]  
     [ statements ]  
 [ ElseIf elseifcondition [ Then ]  
@@ -53,15 +54,23 @@ End If
 ' Single-line syntax:  
 If condition Then [ statements ] [ Else [ elsestatements ] ]  
 ```  
-  
+
+## <a name="quick-links-to-example-code"></a>Links zu Beispielcode
+
+Dieser Artikel enthält mehrere Beispiele, die Verwendungen der veranschaulichen die `If`... `Then`... `Else` Anweisung:
+
+* [Mehrzeilige Syntaxbeispiel](#multi-line)
+* [Geschachtelte Syntaxbeispiel](#nested)
+* [Einzeilige Syntaxbeispiel](#single-line)
+
 ## <a name="parts"></a>Teile  
  `condition`  
  Erforderlich. Ausdruck. Muss ergeben `True` oder `False`, oder in einen Datentyp, der implizit in `Boolean`.  
   
- Wenn der Ausdruck ist eine [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` Variable, der ergibt [nichts](../../../visual-basic/language-reference/nothing.md), die Bedingung wird behandelt, als ob der Ausdruck ist `True`, und die `Else` -Block ausgeführt.  
+ Wenn der Ausdruck ist ein [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` Variable, der ergibt [nichts](../../../visual-basic/language-reference/nothing.md), die Bedingung wird behandelt, als ob der Ausdruck ist `False` und die `Else` Block ausgeführt wird.  
   
  `Then`  
- In der Syntax für einzeilige erforderlich; Dies ist optional in der Syntax mehrere Zeilen.  
+ In der Syntax für einzeilige erforderlich; in mehrzeiligen Syntax optional.  
   
  `statements`  
  Dies ist optional. Eine oder mehrere Anweisungen nach `If`... `Then` , die ausgeführt werden, wenn `condition` ergibt `True`.  
@@ -76,41 +85,48 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  Dies ist optional. Eine oder mehrere Anweisungen, die ausgeführt werden, wenn kein vorheriges `condition` oder `elseifcondition` Ausdruck wird zu `True`.  
   
  `End If`  
- Beendet die `If`... `Then`... `Else` Block.  
+ Beendet die mehrzeilige Version des `If`... `Then`... `Else` Block.  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="multiple-line-syntax"></a>Mehrzeilige Syntax  
- Wenn ein `If`... `Then`... `Else` Anweisung festgestellt wird, `condition` getestet wird. Wenn `condition` ist `True`, die nachfolgenden Anweisungen `Then` ausgeführt werden. Wenn `condition` ist `False`, die jeweils `ElseIf` Anweisung (sofern vorhanden) wird in der Reihenfolge ausgewertet. Wenn eine `True``elseifcondition` gefunden wird, werden die Anweisungen, die direkt nach der zugeordneten `ElseIf` ausgeführt werden. Wenn kein `elseifcondition` ergibt `True`, oder es sind keine `ElseIf` -Anweisungen, die nachfolgenden Anweisungen `Else` ausgeführt werden. Nach dem Ausführen der folgenden Anweisungen `Then`, `ElseIf`, oder `Else`, die Ausführung wird fortgeführt, mit der folgenden Anweisung `End If`.  
+### <a name="multiline-syntax"></a>Multiline-syntax  
+ Wenn ein `If`... `Then`... `Else` Anweisung festgestellt wird, `condition` getestet wird. Wenn `condition` ist `True`, die nachfolgenden Anweisungen `Then` ausgeführt werden. Wenn `condition` ist `False`, die jeweils `ElseIf` Anweisung (sofern vorhanden) wird in der Reihenfolge ausgewertet. Wenn eine `True` `elseifcondition` gefunden wird, werden die Anweisungen, die direkt nach der zugeordneten `ElseIf` ausgeführt werden. Wenn kein `elseifcondition` ergibt `True`, oder es sind keine `ElseIf` -Anweisungen, die nachfolgenden Anweisungen `Else` ausgeführt werden. Nach dem Ausführen der folgenden Anweisungen `Then`, `ElseIf`, oder `Else`, die Ausführung wird fortgeführt, mit der folgenden Anweisung `End If`.  
   
  Die `ElseIf` und `Else` Klauseln sind optional. Sie können beliebig viele `ElseIf` Klauseln, wie Sie möchten, dass in einer `If`... `Then`... `Else` -Anweisung, jedoch keine `ElseIf` -Klausel kann angezeigt werden, nachdem ein `Else` Klausel. `If`... `Then`... `Else` -Anweisungen können ineinander geschachtelt werden.  
   
- In der Syntax mehrere Zeilen der `If` Anweisung muss die einzige Anweisung in der ersten Zeile sein. Die `ElseIf`, `Else`, und `End If` Anweisungen können nur von einer zeilenbezeichnung vorangestellt werden. Die `If`... `Then`... `Else` Block mit Enden einer `End If` Anweisung.  
+ In der Syntax von mehrzeiligen der `If` Anweisung muss die einzige Anweisung in der ersten Zeile sein. Die `ElseIf`, `Else`, und `End If` Anweisungen können nur von einer zeilenbezeichnung vorangestellt werden. Die `If`... `Then`... `Else` Block mit Enden einer `End If` Anweisung.  
   
 > [!TIP]
 >  Die [auswählen... Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md) kann nützlicher sein, wenn Sie einen einzelnen Ausdruck auswerten, die mehrere mögliche Werte hat.  
   
-## <a name="single-line-syntax"></a>Einzeilige-Syntax  
- Sie können die einzeilige Syntax für kurze, einfache Tests verwenden. Allerdings wird die Syntax mehrere Zeilen Struktur und flexibler und ist in der Regel einfacher zu lesen, zu verwalten und zu debuggen.  
+### <a name="single-line-syntax"></a>Einzeilige-syntax  
+ Können die einzeilige Syntax für eine einzelne Bedingung mit dem Code ausgeführt werden, wenn dieser Wert true ist. Allerdings wird die Syntax mehrere Zeilen Struktur und flexibler und ist einfacher zu lesen, verwalten und Debuggen.  
   
  Welche folgt die `Then` Schlüsselwort wird untersucht, um zu bestimmen, ob eine Anweisung eine einzeilige `If`. Wenn etwas anderes als ein Kommentar, nach dem angezeigt `Then` in der gleichen Zeile wird die Anweisung als eine einzeilige behandelt `If` Anweisung. Wenn `Then` nicht vorhanden ist, muss er den Anfang einer mehrzeiligen `If`... `Then`... `Else`.  
   
  In der Syntax einzeilige können mehrere Anweisungen, die als Ergebnis der Ausführung einer `If`... `Then` Entscheidung. Alle Anweisungen müssen in der gleichen Zeile und durch Doppelpunkte getrennt werden.  
+
+## <a name="multiline-syntax-example"></a>Mehrzeilige Syntaxbeispiel
+
+<a name="multi-line"></a>
+ 
+ Das folgende Beispiel veranschaulicht die Verwendung der mehrzeiligen Syntax für die `If`... `Then`... `Else` Anweisung.  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung der Syntax mehrere Zeilen für die `If`... `Then`... `Else` Anweisung.  
-  
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb)]  
-  
-## <a name="example"></a>Beispiel  
+ [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
+
+## <a name="nested-syntax-example"></a>Geschachtelte Syntaxbeispiel
+
+<a name="nested"></a>
+
  Das folgende Beispiel enthält geschachtelte `If`... `Then`... `Else` Anweisungen.  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb?highlight=14,15,17,19,20,21,23,25,26,28)]
+
+## <a name="single-line-syntax-example"></a>Einzeilige Syntaxbeispiel
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung der Syntax einzeilige.  
+<a name="single-line"></a> Das folgende Beispiel veranschaulicht die Verwendung der Syntax einzeilige.  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  

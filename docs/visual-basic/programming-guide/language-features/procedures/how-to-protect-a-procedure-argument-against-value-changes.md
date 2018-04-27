@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7975cbbc38c39223a4af5c87ac6bb090be548f2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen (Visual Basic)
-Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt der Prozedur einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Dies ermöglicht das Verfahren zum Ändern des Werts, der dem Argument im aufrufenden Code zugrunde liegt. In einigen Fällen kann der aufrufende Code eine solche Änderung schützen möchten.  
+Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic Code der Prozedur bietet einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Dies ermöglicht das Verfahren zum Ändern des Werts, der dem Argument im aufrufenden Code zugrunde liegt. In einigen Fällen kann der aufrufende Code eine solche Änderung schützen möchten.  
   
  Sie können ein Argument immer vor Änderung schützen, indem der entsprechende Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in der Prozedur. Wenn Sie ein bestimmtes Argument in einigen Fällen ändern möchten, deklarieren Sie es `ByRef` , sodass den aufrufenden Code, der den Übergabemechanismus bei jedem Aufruf zu bestimmen. Dies geschieht durch das entsprechende Argument in Klammern für die Übergabe nach Wert einschließen oder schließen Sie es nicht in Klammern einschließen, um ihn als Verweis übergeben. Weitere Informationen finden Sie unter [wie: erzwingen, dass ein Argument als Wert übergeben werden](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
@@ -48,7 +49,7 @@ Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language
  Die zweite `MsgBox` -Aufruf zeigt "After replace(n):: 11, 21, 31, 41". Da `n` übergeben `ByVal`, `replace` die Variable kann nicht geändert werden `n` im aufrufenden Code, indem Sie ein neues Array zuweisen. Wenn `replace` die Instanz des neuen Arrays erstellt `k` und weist sie auf die lokale Variable `a`, geht den Verweis auf `n` vom aufrufenden Code übergeben. Wenn sie die Mitglieder der ändert `a`, nur die lokale Array `k` betroffen ist. Aus diesem Grund `replace` erhöht sich die Werte des Arrays nicht `n` im aufrufenden Code.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Die Standardeinstellung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Argumenten als Wert übergeben wird. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
+ Der Standardwert in Visual Basic ist Argumenten als Wert übergeben. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verfahren](./index.md)  

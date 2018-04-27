@@ -1,31 +1,32 @@
 ---
-title: "Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic"
-ms.custom: 
+title: Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic
 In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke mit konvertiert die <xref:System.Windows.Forms.MaskedTextBox> Steuerelement.  
   
 ## <a name="description-of-the-masking-language"></a>Beschreibung der Maskierungssprache  
- Der Standard <xref:System.Windows.Forms.MaskedTextBox> maskiert Sprache basiert auf von verwendet wird die `Masked Edit` steuern [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 und sollte für Benutzer, die von dieser Plattform migrieren vertraut sein.  
+ Der Standard <xref:System.Windows.Forms.MaskedTextBox> maskiert Sprache basiert auf von verwendet die `Masked Edit` steuern in Visual Basic 6.0 und sollte für Benutzer, die von dieser Plattform migrieren vertraut sein.  
   
  Die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft von der <xref:System.Windows.Forms.MaskedTextBox> Steuerelement gibt an, welche Eingabeformat verwenden. Die Maske muss eine Zeichenfolge besteht aus einem oder mehreren der Maskierung Elemente aus der folgenden Tabelle sein.  
   
@@ -37,9 +38,9 @@ In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke mit k
 |L|ASCII-Buchstaben. Eintrag erforderlich.|[a-zA-Z]|  
 |?|ASCII-Buchstaben. Die Eingabe ist optional.|[a-zA-Z]?|  
 |&|Zeichen Eintrag erforderlich.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|A|Zeichen Die Eingabe ist optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|C|Zeichen Die Eingabe ist optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|Alphanumerisch ist. Die Eingabe ist optional.|\W|  
-|.|Kultur entsprechende dezimalplatzhalter.|Nicht verfügbar.|  
+|sein.|Kultur entsprechende dezimalplatzhalter.|Nicht verfügbar.|  
 |,|Kultur entsprechende Tausende Platzhalter.|Nicht verfügbar.|  
 |:|Kultur entsprechende Zeittrennzeichen.|Nicht verfügbar.|  
 |/|Kultur entsprechende Datumstrennzeichen.|Nicht verfügbar.|  

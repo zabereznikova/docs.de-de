@@ -2,27 +2,27 @@
 title: Merkmale von "My" auf Grundlage des Projekttyps (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Merkmale von "My" auf Grundlage des Projekttyps (Visual Basic)
-`My`verfügbar nur die Objekte, die durch einen bestimmten Projekttyp erforderlich macht. Z. B. die `My.Forms` Objekt ist in einer Windows Forms-Anwendung verfügbar, aber nicht in einer Konsolenanwendung verfügbar. In diesem Thema wird beschrieben, welche `My` Objekte in anderen Projekttypen verfügbar sind.  
+`My` verfügbar nur die Objekte, die durch einen bestimmten Projekttyp erforderlich macht. Z. B. die `My.Forms` Objekt ist in einer Windows Forms-Anwendung verfügbar, aber nicht in einer Konsolenanwendung verfügbar. In diesem Thema wird beschrieben, welche `My` Objekte in anderen Projekttypen verfügbar sind.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>In Windows-Anwendungen und Websites  
- `My`Stellt nur Objekte, die im aktuellen Projekttyp hilfreich sind; Unterdrückt die Objekte, die nicht angewendet werden. Z. B. die folgende Abbildung zeigt die `My` -Objektmodell in ein Windows Forms-Projekt.  
+ `My` Stellt nur Objekte, die im aktuellen Projekttyp hilfreich sind; Unterdrückt die Objekte, die nicht angewendet werden. Z. B. die folgende Abbildung zeigt die `My` -Objektmodell in ein Windows Forms-Projekt.  
   
  ![Form des Meine in einer Windows Forms-Anwendung](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>7</sup>|**Ja** <sup>6</sup>|Nein|**Ja** <sup>7</sup>|  
 |`My.WebServices`|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|Nein|Nein|  
   
- <sup>1</sup> Windows Forms-Version des `My.Application`. Leitet sich von der Konsolenversion (siehe Hinweis 3). Fügt Unterstützung für die Interaktion mit der Anwendung Windows und stellt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anwendungsmodell.  
+ <sup>1</sup> Windows Forms-Version des `My.Application`. Leitet sich von der Konsolenversion (siehe Hinweis 3). Fügt Unterstützung für die Interaktion mit der Anwendung Windows und stellt das Visual Basic-Anwendungsmodell.  
   
  <sup>2</sup> Library-Version von `My.Application`. Stellt die grundlegende Funktionalität, die von einer Anwendung benötigt: bereitgestellt werden Member zum Schreiben in das Anwendungsprotokoll und den Zugriff auf Informationen zur Anwendung.  
   

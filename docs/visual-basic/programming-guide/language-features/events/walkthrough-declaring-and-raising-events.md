@@ -1,11 +1,12 @@
 ---
-title: "Deklarieren und Auslösen von Ereignissen (Visual Basic)"
-ms.custom: 
+title: Deklarieren und Auslösen von Ereignissen (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht, wie deklarieren und Auslösen von Ereignissen für eine Klasse mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, möglicherweise möchten die Begleit-Thema zu lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), die zeigt, wie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  
@@ -36,7 +37,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie deklarieren und Auslöse
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Das Codebeispiel in diesem Thema erstellen  
   
-1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows-Anwendung und erstellen Sie ein Formular mit dem Namen `Form1`.  
+1.  Öffnen Sie ein neues Visual Basic Windows-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
   
 2.  Fügen Sie zwei Schaltflächen und eine Bezeichnung für die `Form1`.  
   
@@ -61,7 +62,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie deklarieren und Auslöse
 > [!NOTE]
 >  Sie können Ereignisargumente deklarieren, ebenso wie die Argumente von Prozeduren mit den folgenden Ausnahmen: Ereignisse sind keine `Optional` oder `ParamArray` Argumente und Ereignisse müssen keine Werte zurückgeben.  
   
- Die `PercentDone` Ereignis wird ausgelöst, durch die `LongTask` Methode der `Widget` Klasse. `LongTask`akzeptiert zwei Argumente: die Zeitspanne arbeiten und die minimale Zeitintervall vor dem Ausführen der Methode vorgegeben `LongTask` Pausen zum Auslösen der `PercentDone` Ereignis.  
+ Die `PercentDone` Ereignis wird ausgelöst, durch die `LongTask` Methode der `Widget` Klasse. `LongTask` akzeptiert zwei Argumente: die Zeitspanne arbeiten und die minimale Zeitintervall vor dem Ausführen der Methode vorgegeben `LongTask` Pausen zum Auslösen der `PercentDone` Ereignis.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Zum Auslösen des Ereignisses PercentDone  
   

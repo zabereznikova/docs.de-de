@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler gemeldet werden sollen.  
+Gibt an, wie interne Compilerfehler von der Visual Basic-Compiler gemeldet werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,7 +29,7 @@ Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.m
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Option bietet eine einfache Möglichkeit, den Bericht ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] interner Compilerfehler (ICE) auf die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Team bei Microsoft. Standardmäßig sendet der Compiler keine Informationen an Microsoft. Jedoch, wenn einen interner Compilerfehler auftreten, mit dieser Option können Sie den Fehler an Microsoft senden. Diese Informationen helfen Microsoft-Experten, die die Ursache zu identifizieren und möglicherweise verbessern die nächste Version von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Diese Option bietet eine komfortable Möglichkeit, einen internen Compilerfehler (ICE) von Visual Basic, Visual Basic-Team bei Microsoft. Standardmäßig sendet der Compiler keine Informationen an Microsoft. Jedoch, wenn einen interner Compilerfehler auftreten, mit dieser Option können Sie den Fehler an Microsoft senden. Diese Informationen helfen Microsoft-Experten, die die Ursache zu identifizieren und die nächste Version von Visual Basic zu verbessern.  
   
  Die Fähigkeit eines Benutzers zum Senden von Berichten, hängt von Computer- und Richtlinienberechtigungen ab.  
   

@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben eines Parameters in der Prozedur definiert. In einigen Fällen kann der Code die Prozedur den Wert, der ein Argument im aufrufenden Code zugrunde liegt, ändern. In anderen Fällen kann die Prozedur nur die lokale Kopie eines Arguments ändern.  
   
- Wenn Sie die Prozedur aufrufen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird eine lokale Kopie jedes Argument, das übergeben wird [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Für jedes Argument übergebenen [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt der Prozedur einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt.  
+ Wenn Sie die Prozedur aufrufen, Visual Basic ermöglicht eine lokale Kopie jeder übergebene Argument [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Für jedes Argument übergebenen [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic Code der Prozedur bietet einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt.  
   
  Wenn das zugrunde liegende Element im aufrufenden Code ein Element geändert werden kann wird und das Argument übergeben `ByRef`, Code der Prozedur mithilfe der direkten Verweis um der Wert des Elements im aufrufenden Code zu ändern.  
   
@@ -58,7 +59,7 @@ Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben eine
   
      - oder -   
   
-     Setzen Sie in den aufrufenden Code das Argument in Klammern in der Argumentliste. Dies zwingt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] das Argument anhand des Werts übergeben werden, auch wenn der entsprechende Parameter gibt `ByRef`.  
+     Setzen Sie in den aufrufenden Code das Argument in Klammern in der Argumentliste. Dies zwingt Visual Basic, um das Argument als Wert übergeben, auch wenn der entsprechende Parameter gibt `ByRef`.  
   
 2.  Verwenden Sie im Code Prozedur der Name des Parameters, um die lokale Kopie des Arguments einen Wert zuzuweisen. Der zugrunde liegenden Wert im aufrufenden Code wird nicht geändert.  
   
@@ -80,7 +81,7 @@ Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben eine
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Wenn Sie keine Variable nach Verweis übergeben, müssen Sie mithilfe der `ByRef` Schlüsselwort dieser Mechanismus angeben.  
   
- Die Standardeinstellung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Argumenten als Wert übergeben wird. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
+ Der Standardwert in Visual Basic ist Argumenten als Wert übergeben. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  In einer Prozedur zum Ändern des Werts, der ein Argument im aufrufenden Code zugrunde liegt, ist immer ein Sicherheitsrisiko dar. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und es auf Gültigkeit zu überprüfen, vor der Verwendung vorbereitet werden.  

@@ -1,9 +1,9 @@
 ---
-title: Klasse &#39; &lt;Classname&gt;&#39; kann nicht gefunden werden
+title: Klasse &#39; &lt;Classname&gt; &#39; wurde nicht gefunden
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aed0bc5643d0714e5994abce09b04b1910f2becc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasse &#39; &lt;Classname&gt;&#39; kann nicht gefunden werden
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasse &#39; &lt;Classname&gt; &#39; wurde nicht gefunden
 Klasse\<Klassenname >' kann nicht gefunden werden. Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
   
  Ein definierter Member wurde nicht gefunden.  
@@ -35,7 +35,7 @@ Klasse\<Klassenname >' kann nicht gefunden werden. Diese Bedingung ist in der Re
   
 2.  Wenn der Fehler erneut auftritt, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]erneut.  
   
-3.  Wenn der Fehler weiterhin besteht, installieren Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]neu.  
+3.  Wenn der Fehler weiterhin auftritt, installieren Sie Visual Basic.  
   
 4.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   

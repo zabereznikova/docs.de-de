@@ -1,30 +1,32 @@
 ---
 title: Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
-In dieser Aufgabe starten Sie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aus [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] und deaktivieren optional das Lesen von Feeds im Webbrowser. Sie werden dann Dienstdokuments Definition abrufen sowie greifen auf datendienstressourcen von HTTP-GET-Anforderungen über einen Webbrowser auf die verfügbar gemachten Ressourcen senden.  
+In dieser Aufgabe starten Sie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aus Visual Studio und deaktivieren optional das Feedlesen im Webbrowser. Sie werden dann Dienstdokuments Definition abrufen sowie greifen auf datendienstressourcen von HTTP-GET-Anforderungen über einen Webbrowser auf die verfügbar gemachten Ressourcen senden.  
   
 > [!NOTE]
->  Standardmäßig weist [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]wie Sie eine bestimmte Portnummer festlegen, der [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Projekt finden Sie unter [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Standardmäßig weist Visual Studio dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] wie in der Visual Studio-Projekt finden Sie eine bestimmte Portnummer festlegen [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>So fordern Sie das Standarddienstdokument mithilfe von Internet Explorer an  
   
@@ -35,7 +37,7 @@ In dieser Aufgabe starten Sie [!INCLUDE[ssAstoria](../../../../includes/ssastori
     > [!NOTE]
     >  Wenn der Browser den Feed nicht als unformatierte XML-Daten anzeigen kann, sollten es dennoch möglich sein, den Feed als Quellcode der Seite anzuzeigen.  
   
-2.  Drücken Sie in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] die F5-TASTE, um die Anwendung zu debuggen.  
+2.  Drücken Sie in Visual Studio die F5-TASTE, um die Anwendung zu debuggen.  
   
 3.  Öffnen Sie auf dem lokalen Computer einen Webbrowser. Geben Sie in der Adressleiste den folgenden URI ein:  
   

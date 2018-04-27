@@ -1,27 +1,29 @@
 ---
-title: "Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients"
-ms.custom: 
+title: Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>Aktivieren von CacheRequest  
  Ein Zwischenspeichern wird nur ausgeführt, wenn <xref:System.Windows.Automation.AutomationElement> -Objekte abgerufen werden, während für den aktuellen Thread ein <xref:System.Windows.Automation.CacheRequest> aktiv ist. Es gibt zwei Möglichkeiten, ein <xref:System.Windows.Automation.CacheRequest>-Objekt zu aktivieren.  
   
- Die übliche Methode besteht darin, <xref:System.Windows.Automation.CacheRequest.Activate%2A>aufzurufen. Diese Methode gibt ein Objekt zurück, das <xref:System.IDisposable>implementiert. Die Anforderung bleibt aktiv, solange das <xref:System.IDisposable> -Objekt vorhanden ist. Am einfachsten können Sie die Lebensdauer des Objekts steuern, indem Sie den Aufruf in einen `using` -Block ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) bzw. einen `Using` -Block ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) einschließen. Dadurch wird sichergestellt, dass die Anforderung selbst dann aus dem Stapel entfernt wird, wenn eine Ausnahme ausgelöst wird.  
+ Die übliche Methode besteht darin, <xref:System.Windows.Automation.CacheRequest.Activate%2A>aufzurufen. Diese Methode gibt ein Objekt zurück, das <xref:System.IDisposable>implementiert. Die Anforderung bleibt aktiv, solange das <xref:System.IDisposable> -Objekt vorhanden ist. Die einfachste Möglichkeit zur Steuerung der Lebensdauer des Objekts ist, schließen Sie den Aufruf in einer `using` (c#) oder `Using` (Visual Basic)-Block. Dadurch wird sichergestellt, dass die Anforderung selbst dann aus dem Stapel entfernt wird, wenn eine Ausnahme ausgelöst wird.  
   
  Eine weitere Möglichkeit, die nützlich ist, wenn Sie Cacheanforderungen schachteln möchten, besteht darin, <xref:System.Windows.Automation.CacheRequest.Push%2A>aufzurufen. Dadurch wird die Anforderung auf einem Stapel abgelegt und aktiviert. Die Anforderung bleibt aktiv, bis sie mit <xref:System.Windows.Automation.CacheRequest.Pop%2A>aus dem Stapel entfernt wird. Die Anforderung wird vorübergehend inaktiv, wenn eine andere Anforderung auf dem Stapel abgelegt wurde. Nur die oberste Anforderung auf dem Stapel ist aktiv.  
   

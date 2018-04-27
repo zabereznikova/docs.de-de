@@ -1,33 +1,34 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Funktionen verbessern die Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox.  
   
 > [!NOTE]
->  Dieses Thema enthält eine schrittweise Anleitung zum Erstellen eines Vertrag zuerst-Workflowdiensts. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Vertrag zuerst-Entwicklung finden Sie unter [Vertrag zuerst-Workflowdienstentwicklung](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Dieses Thema enthält eine schrittweise Anleitung zum Erstellen eines Vertrag zuerst-Workflowdiensts. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Vertrag zuerst-Entwicklung finden Sie unter [Vertrag zuerst-Workflowdienstentwicklung](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Erstellen des Workflowprojekts  
   
-1.  In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]Option **Datei**, **neues Projekt**. Wählen Sie die **WCF** unter den Knoten der **c#** Knoten in der **Vorlagen** Struktur, und wählen Sie die **WCF-Workflowdienstanwendung** Vorlage.  
+1.  Wählen Sie in Visual Studio **Datei**, **neues Projekt**. Wählen Sie die **WCF** unter den Knoten der **c#** Knoten in der **Vorlagen** Struktur, und wählen Sie die **WCF-Workflowdienstanwendung** Vorlage.  
   
 2.  Nennen Sie das neue Projekt `ContractFirst` , und klicken Sie auf **Ok**.  
   

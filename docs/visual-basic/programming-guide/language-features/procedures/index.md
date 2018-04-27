@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
-Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden. Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen sich in einer Prozedur befinden.  
+Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und ein entsprechender `End` Deklaration. Alle ausführbaren Anweisungen in Visual Basic müssen innerhalb einer Prozedur sein.  
   
 ## <a name="calling-a-procedure"></a>Aufrufen einer Prozedur  
  Sie rufen eine Prozedur an einer anderen Stelle im Code auf. Dies wird als *Prozeduraufruf* bezeichnet. Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet. Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.  
@@ -43,7 +43,7 @@ Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-An
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
   
 ## <a name="types-of-procedures"></a>Prozedurtypen  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet mehrere Prozedurtypen:  
+ Visual Basic verwendet mehrere Typen von Prozeduren:  
   
 -   [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   

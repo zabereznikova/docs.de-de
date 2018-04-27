@@ -1,27 +1,29 @@
 ---
 title: Datenablaufverfolgung in ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
-ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Datenanbietern für [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB und ODBC sowie ADO.NET <xref:System.Data.DataSet> und den [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Netzwerkprotokollen unterstützt werden.  
+ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Datenanbietern für SQL Server, Oracle, OLE DB und ODBC sowie ADO.NET unterstützt wird <xref:System.Data.DataSet>, und die SQL Server-Netzwerkprotokolle.  
   
  Die Ablaufverfolgung von Aufrufen der Datenzugriffs-API kann bei der Diagnose der folgenden Probleme helfen:  
   
@@ -40,7 +42,7 @@ ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Da
  Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverfolgung in ADO.NET finden Sie unter [Tracing Data Access](http://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse  
- In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Datenzugriffs-Ablaufverfolgung ([Datenzugriffsablaufverfolgung](http://msdn.microsoft.com/library/hh880086.aspx)) wurde aktualisiert, um einfacher mit Diagnoseinformationen, z. B. Verbindungsfehlern, korreliert vereinfachen aus dem Server konnektivitätsringpuffer und den anwendungsbezogenen Leistungsinformationen in das Protokoll für erweiterte Ereignisse. Informationen zum Auswerten der erweiterten Ereignisprotokolle finden Sie unter [View Event Session Data](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffsablaufverfolgung](http://msdn.microsoft.com/library/hh880086.aspx)) wurde aktualisiert, um einfacher mit Diagnoseinformationen, z. B. Verbindungsfehlern, aus korreliert erleichtern die Serverzertifikat konnektivitätsringpuffer und den anwendungsbezogenen Leistungsinformationen in das Protokoll für erweiterte Ereignisse. Informationen zum Auswerten der erweiterten Ereignisprotokolle finden Sie unter [View Event Session Data](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
  Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie dem konnektivitätsringpuffer zugreifen ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie nach der `ClientConnectionID` Feld und Abrufen von Diagnoseinformationen über die Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung fehlschlägt, bevor das Voranmeldungspaket gesendet wird, wird keine Clientverbindungs-ID generiert). Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.  
   

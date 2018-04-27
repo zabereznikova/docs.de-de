@@ -1,26 +1,28 @@
 ---
-title: Verweis
-ms.custom: 
+title: Referenz
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 13950af006ff756dfb5daa874ac5ca3c0f5dac0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8906c02395531685d732c55b2baf03e492fca615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="reference"></a>Verweis
+# <a name="reference"></a>Referenz
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
   
  Sie können auch Microsoft Docs nach speziellen Themen suchen und insbesondere zur Teilnahme an der [LINQ-Forum](http://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Darüber hinaus steht Ihnen ein White Paper zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie zur Verfügung. Dieses enthält auch Codebeispiele zu Visual Basic und C#. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).  
@@ -42,7 +44,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  Bietet Antworten auf gängige Fragen zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Beschreibt, wie sich [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] von [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] unterscheidet (in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen).  
+ Beschreibt, wie [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] unterscheidet sich von SQL Server- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen.  
   
  [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standardabfrageoperatoren zu SQL-Befehlen übersetzt.  

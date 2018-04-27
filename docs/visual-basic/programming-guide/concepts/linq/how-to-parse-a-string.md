@@ -1,30 +1,31 @@
 ---
 title: 'Vorgehensweise: Parsen einer Zeichenfolge (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0fd7c7adcfbd7e2136d1a652017d470634016b9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Parsen einer Zeichenfolge (Visual Basic)
 In diesem Thema wird das Erstellen einer XML-Struktur in c# veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
- Sie können eine Zeichenfolge analysieren [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mithilfe der `XElement.Parse` Methode. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
+ Sie können eine Zeichenfolge in Visual Basic analysieren, mit der `XElement.Parse` Methode. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
- Bei der Verwendung von XML-Literalen können Sie Ihr XML durch einfaches Kopieren und Einfügen in Ihr [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programm einfügen.  
+ Mithilfe von XML-Literalen können Sie einfach kopieren und fügen Sie den XML-Code in Visual Basic-Programms.  
   
 > [!NOTE]
 >  Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  

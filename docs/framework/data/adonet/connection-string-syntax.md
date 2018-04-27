@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>-Eigenschaft von `SqlConnectionStringBuilder` auf den Instanznamen festlegen. Die <xref:System.Data.SqlClient.SqlConnection.DataSource%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnection>-Objekts ist schreibgeschützt.  
   
 ### <a name="type-system-version-changes"></a>Änderungen an der Typsystemversion  
- Das `Type System Version`-Schlüsselwort in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> gibt die clientseitige Darstellung von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Typen an. Weitere Informationen zum <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Schlüsselwort finden Sie unter `Type System Version`.  
+ Die `Type System Version` -Schlüsselwort in einer <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> gibt an, die die clientseitige Darstellung von SQL Server-Typen. Weitere Informationen zum <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Schlüsselwort finden Sie unter `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Herstellen einer Verbindung mit und Anfügen an SQL Server Express-Benutzerinstanzen  
  Benutzerinstanzen sind eine Funktion in SQL Server Express. Mit ihrer Hilfe können Benutzer, die mit einem lokalen Windows-Konto der untersten Berechtigungsebene (LUA) arbeiten, eine SQL Server-Datenbank anfügen und ausführen, ohne dass dafür Administratorrechte erforderlich sind. Eine Benutzerinstanz wird mit den Windows-Anmeldeinformationen des Benutzers und nicht als Dienst ausgeführt.  
@@ -106,7 +106,7 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
  Weitere Informationen zum Arbeiten mit Benutzerinstanzen finden Sie unter [SQL Server Express-Benutzerinstanzen](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Verwenden von "TrustServerCertificate"  
- Das `TrustServerCertificate`-Schlüsselwort ist nur gültig, wenn unter Verwendung eines gültigen Zertifikats eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Instanz hergestellt wird. Wenn `TrustServerCertificate` auf `true` gesetzt wird, verwendet die Transportschicht zum Verschlüsseln des Kanals SSL und umgeht beim Validieren der Vertrauenswürdigkeit die Zertifikatkette.  
+ Die `TrustServerCertificate` Schlüsselwort gilt nur, wenn eine Verbindung mit SQL Server-Instanz mit einem gültigen Zertifikat herstellen. Wenn `TrustServerCertificate` auf `true` gesetzt wird, verwendet die Transportschicht zum Verschlüsseln des Kanals SSL und umgeht beim Validieren der Vertrauenswürdigkeit die Zertifikatkette.  
   
 ```  
 "TrustServerCertificate=true;"   

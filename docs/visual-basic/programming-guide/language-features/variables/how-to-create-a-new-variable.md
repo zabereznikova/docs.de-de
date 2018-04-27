@@ -1,25 +1,26 @@
 ---
 title: 'Gewusst wie: Erstellen einer neuen Variablen (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6806dcbe9e00cbae77181b79d74ddb9a1e1493f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aff160584d3d1fe382020d5b8c25ac57dab66d92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Gewusst wie: Erstellen einer neuen Variablen (Visual Basic)
 Erstellen Sie eine Variable mit einem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -40,7 +41,7 @@ Erstellen Sie eine Variable mit einem [Dim-Anweisung](../../../../visual-basic/l
   
      Sie müssen nicht die `Dim` Schlüsselwort, wenn Sie andere Schlüsselwörter in der Deklaration verwenden.  
   
-3.  Führen Sie die Spezifikationen mit dem Variablennamen, die folgen müssen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Regeln und Konventionen. Weitere Informationen finden Sie unter [deklarierte Elementnamen](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+3.  Führen Sie die Spezifikationen mit dem Variablennamen, die Visual Basic-Regeln und Konventionen folgen müssen. Weitere Informationen finden Sie unter [deklarierte Elementnamen](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
     ```  
     Public Static newCustomer  
@@ -56,7 +57,7 @@ Erstellen Sie eine Variable mit einem [Dim-Anweisung](../../../../visual-basic/l
   
 5.  Führen Sie die `As` -Klausel mit einem Gleichheitszeichen (`=`), und führen Sie das Gleichheitszeichen Anfangswert der Variablen.  
   
-     [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]weist den angegebenen Wert der Variablen zu jeder Ausführung der `Dim` Anweisung. Wenn Sie keinen Anfangswert angeben [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] der anfängliche Standardwert für den Datentyp der Variablen zugewiesen, wenn zunächst den Code eingegeben werden, die enthält die `Dim` Anweisung.  
+     Visual Basic weist den angegebenen Wert der Variablen, jeder Ausführung der `Dim` Anweisung. Wenn Sie keinen Anfangswert angeben, weist Visual Basic der anfängliche Standardwert für den Datentyp der Variablen an, wenn er zuerst enthält den Code wird die `Dim` Anweisung.  
   
      Wenn die Variable ein Verweistyp ist, können Sie eine Instanz der Klasse erstellen, indem Sie z. B. die [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md) -Schlüsselwort in der `As` Klausel. Wenn Sie nicht verwenden `New`, ist der Anfangswert der Variablen [nichts](../../../../visual-basic/language-reference/nothing.md).  
   

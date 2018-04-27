@@ -1,29 +1,30 @@
 ---
-title: "Einführung in XML-Literalen in Visual Basic2"
-ms.custom: 
+title: Einführung in XML-Literalen in Visual Basic2
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 112c1d898c3cdf14b52d843dee8f5a51002be858
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Einführung in XML-Literale in Visual Basic
-Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in Visual Basic.  
   
  Informationen zur Verwendung der Ergebnisse der LINQ-Abfragen als Inhalt für eine XML-Struktur finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Weitere Informationen zu XML-Literalen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], finden Sie unter [Übersicht über die von LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Weitere Informationen zu XML-Literalen in Visual Basic, finden Sie unter [Übersicht über die von LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Erstellen von XML-Strukturen  
  Im folgenden Beispiel wird gezeigt, wie Sie ein <xref:System.Xml.Linq.XElement>, in diesem Fall `contacts`, erstellen können.  

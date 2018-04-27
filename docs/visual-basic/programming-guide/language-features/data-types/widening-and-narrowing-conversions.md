@@ -1,11 +1,12 @@
 ---
 title: Erweiternde und eingrenzende Konvertierungen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Erweiternde und eingrenzende Konvertierungen (Visual Basic)
 Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Zieltyps Daten ist.  
@@ -59,7 +60,7 @@ Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertier
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Alle Aufzählungstyp ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Die zugrunde liegenden Ganzzahltyp und beliebigen Typs, der der zugrunde liegenden Typ erweitert werden kann.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char`-Array|`Char`Array,`String`|  
+|`Char`-Array|`Char` Array, `String`|  
 |Beliebiger Typ|[Objekt](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Alle abgeleiteten Typ|Alle Basistypen, die von der sie abgeleitet ist <sup>3</sup>.|  
 |Beliebiger Typ|Eine beliebige Schnittstelle implementiert.|  
@@ -97,11 +98,11 @@ Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertier
 ## <a name="exceptions-during-conversion"></a>Ausnahmen während der Konvertierung  
  Da immer erweiternde Konvertierungen erfolgreich ausgeführt werden, lösen sie keine Ausnahmen. Die folgenden Ausnahmen einschränkende Konvertierungen, wenn diese nicht am häufigsten ausgelöst werden:  
   
--   <xref:System.InvalidCastException>– Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
+-   <xref:System.InvalidCastException> – Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
   
--   <xref:System.OverflowException>– (nur bei ganzzahligen Typen) Wenn der konvertierte Wert für den Zieltyp zu groß ist.  
+-   <xref:System.OverflowException> – (nur bei ganzzahligen Typen) Wenn der konvertierte Wert für den Zieltyp zu groß ist.  
   
- Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als ein Konvertierungsoperator zu oder von dieser Klasse oder Struktur, dienen, `CType` geeignete Ausnahmen auslösen können. Darüber hinaus, `CType` aufrufen möglicherweise [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Funktionen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
+ Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als ein Konvertierungsoperator zu oder von dieser Klasse oder Struktur, dienen, `CType` geeignete Ausnahmen auslösen können. Darüber hinaus, `CType` möglicherweise Visual Basic-Funktionen aufrufen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Änderungen bei Verweis Typkonvertierungen  
  Eine Konvertierung von einem *Verweistyp* kopiert nur die Zeiger auf den Wert. Der Wert selbst wird weder kopiert noch in keiner Weise geändert. Das einzige, das sich ändern kann ist den Datentyp der Variablen den Zeiger. Im folgenden Beispiel der Datentyp wird von der abgeleiteten Klasse von deren Basisklasse umgewandelt, aber das Objekt, das beide Variablen jetzt auf bleibt unverändert.  

@@ -1,12 +1,13 @@
 ---
-title: "REF-Rückgabewerte (Visual Basic)"
-ms.custom: 
+title: REF-Rückgabewerte (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Unterstützung für Rückgabewerte, Referenz (Visual Basic)
 
-C#-7 ab, die C#-Sprache unterstützt *verweisen Rückgabewerte*. Eine Möglichkeit, Rückgabewerte Verweis zu verstehen ist, sind das Gegenteil von Argumenten, die als Verweis an eine Methode übergeben werden. Wenn ein als Verweis übergebenes Argument geändert wird, werden die Änderungen im Wert der Variablen für den Aufrufer berücksichtigt. Wenn eine Methode einen Rückgabewert Verweis an einem Aufrufer bereitstellt, sind Änderungen an den der Rückgabewert der Verweis vom Aufrufer in der aufgerufenen Methode Daten widergespiegelt.
+C#-7.0 ab, die C#-Sprache unterstützt *verweisen Rückgabewerte*. Eine Möglichkeit, Rückgabewerte Verweis zu verstehen ist, sind das Gegenteil von Argumenten, die als Verweis an eine Methode übergeben werden. Wenn ein als Verweis übergebenes Argument geändert wird, werden die Änderungen im Wert der Variablen für den Aufrufer berücksichtigt. Wenn eine Methode einen Rückgabewert Verweis an einem Aufrufer bereitstellt, sind Änderungen an den der Rückgabewert der Verweis vom Aufrufer in der aufgerufenen Methode Daten widergespiegelt.
 
 Visual Basic lässt nicht zu, Sie auf Autor Methoden mit Verweis Rückgabewerte, aber ermöglicht es Ihnen, Reference-Rückgabewerte zu nutzen. Das heißt, können Sie eine Methode mit einem Rückgabewert Verweis aufrufen und ändern Sie diesen Rückgabewert und Änderungen an der Rückgabewert der Verweis in der aufgerufenen Methode Daten wiedergegeben werden.
 

@@ -1,12 +1,13 @@
 ---
 title: Importieren von Schemas zum Generieren von Klassen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genutzt werden können, verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractImporter>-Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -77,7 +79,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- Im folgenden Beispiel wird die `Namespaces`-Eigenschaft verwendet, um den http://schemas.contoso.com/carSchema-Namespace "Contoso.Cars" zuzuordnen.  
+ Im folgenden Beispiel wird die `Namespaces` zuzuordnenden Eigenschaft der "http://schemas.contoso.com/carSchema" Namespace "Contoso.cars".  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Hinzufügen von Datenbindungsunterstützung (EnableDataBinding oder der Schalter „/enableDataBinding“)  
  Dies entspricht der **/enableDataBinding** auf das Tool Svcutil.exe wechseln.  
   
- In einigen Fällen kann es ratsam sein, die aus dem Schema generierten Typen an Komponenten der grafischen Benutzeroberfläche zu binden, damit die Aktualisierungen der Instanzen dieser Typen automatisch auf der Benutzeroberfläche widergespiegelt werden. Der `XsdDataContractImporter` kann Typen generieren, die die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle so implementieren, dass alle Änderungen von Eigenschaften ein Ereignis auslösen. Wenn Sie Typen für die Verwendung mit einer Programmierumgebung für die Clientbenutzeroberfläche generieren, die diese Schnittstelle unterstützt (zum Beispiel [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]), legen Sie die <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>-Eigenschaft zum Aktivieren dieser Funktion auf `true` fest.  
+ In einigen Fällen kann es ratsam sein, die aus dem Schema generierten Typen an Komponenten der grafischen Benutzeroberfläche zu binden, damit die Aktualisierungen der Instanzen dieser Typen automatisch auf der Benutzeroberfläche widergespiegelt werden. Der `XsdDataContractImporter` kann Typen generieren, die die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle so implementieren, dass alle Änderungen von Eigenschaften ein Ereignis auslösen. Wenn Sie Typen für die Verwendung mit einer Programmierumgebung für UI, die diese Schnittstelle (z. B. Windows Presentation Foundation (WPF)) unterstützt generieren, legen Sie die <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> Eigenschaft `true` zum Aktivieren dieser Funktion.  
   
  Das folgende Beispiel zeigt die `Vehicle`-Klasse, bei deren Generierung <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> auf `true` festgelegt ist.  
   
@@ -112,7 +114,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Jede Zuordnung kann auch als Liste angesehen werden. Sie können die oben angegebene Zuordnung zum Beispiel als Liste mit komplexen `city`-Objekten ansehen, die zwei Felder aufweisen (ein Zeichenfolgenfeld und ein Ganzzahlfeld). Beide Muster verfügen im XSD-Schema über eine Darstellung. Es ist nicht möglich, zwischen einer Liste und einer Zuordnung zu unterscheiden. Aus diesem Grund werden Muster dieser Art immer wie Listen behandelt, es sei denn, das Schema enthält eine bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifische Anmerkung. Die Anmerkung gibt an, dass ein bestimmtes Muster eine Zuordnung darstellt. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Jede Zuordnung kann auch als Liste angesehen werden. Sie können die oben angegebene Zuordnung zum Beispiel als Liste mit komplexen `city`-Objekten ansehen, die zwei Felder aufweisen (ein Zeichenfolgenfeld und ein Ganzzahlfeld). Beide Muster verfügen im XSD-Schema über eine Darstellung. Es ist nicht möglich, zwischen einer Liste und einer Zuordnung zu unterscheiden. Aus diesem Grund werden Muster dieser Art immer wie Listen behandelt, es sei denn, das Schema enthält eine bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifische Anmerkung. Die Anmerkung gibt an, dass ein bestimmtes Muster eine Zuordnung darstellt. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  In der Regel wird eine Liste als Auflistungsdatenvertrag importiert, der von einer generischen Liste oder einem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Array abgeleitet ist. Dies hängt davon ab, ob das Schema das standardmäßige Namensmuster für Auflistungen verwendet. Dies wird ausführlicher beschrieben [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Zuordnungen werden normalerweise entweder als <xref:System.Collections.Generic.Dictionary%602> oder als Auflistungsdatenvertrag importiert, der vom Wörterbuchobjekt abgeleitet ist. Betrachten Sie zum Beispiel das folgende Schema:  
   
@@ -159,7 +161,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
   
 ##### <a name="design-considerations"></a>Entwurfsüberlegungen  
   
--   Es kann schwierig sein, direkt mit der schwach typisierten XML-Darstellung zu arbeiten. Sie sollten erwägen, ein alternatives Serialisierungsmodul zu verwenden, beispielsweise <xref:System.Xml.Serialization.XmlSerializer>, um mit Schemas arbeiten zu können, die mit stark typisierten Datenverträgen nicht kompatibel sind. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Es kann schwierig sein, direkt mit der schwach typisierten XML-Darstellung zu arbeiten. Sie sollten erwägen, ein alternatives Serialisierungsmodul zu verwenden, beispielsweise <xref:System.Xml.Serialization.XmlSerializer>, um mit Schemas arbeiten zu können, die mit stark typisierten Datenverträgen nicht kompatibel sind. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Einige Schemakonstrukte können über <xref:System.Runtime.Serialization.XsdDataContractImporter> nicht importiert werden. Dies ist auch dann nicht möglich, wenn die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` festgelegt ist. Sie sollten auch hierfür erwägen, <xref:System.Xml.Serialization.XmlSerializer> zu verwenden.  
   
@@ -188,7 +190,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

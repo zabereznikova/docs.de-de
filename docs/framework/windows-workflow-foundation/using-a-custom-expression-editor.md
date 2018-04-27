@@ -1,30 +1,31 @@
 ---
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
   
 -   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.  
   
--   Zur Vereinfachung der Ausdrucksbearbeitungsumgebung z. B. für Wirtschaftsanalysten, sodass diese nicht die Arbeit mit [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] oder [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Ausdrücken lernen müssen.  
+-   Vereinfachen Sie den Ausdruck Ihnen Bearbeitungsfunktionen für Wirtschaftsanalysten, sodass sie nicht, z. B. beim Erlernen von Visual Basic oder Visual Basic-Ausdrücke behandeln benötigt werden.  
   
  Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:  
   

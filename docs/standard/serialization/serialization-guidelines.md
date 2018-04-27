@@ -10,18 +10,18 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 60ae369bcf3d1e874c01c9daa8db097b3c1aee5f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer API zu berücksichtigen sind, welche für die Serialisierung vorgesehen ist.  
@@ -151,6 +151,6 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
  [Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  [Vom Datenvertragsserialisierer unterstützte Typen](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
  [Binäre Serialisierung](binary-serialization.md)  
- [Remoteobjekte](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Remoteobjekte](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
  [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)

@@ -1,26 +1,27 @@
 ---
-title: "Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz"
-ms.custom: 
+title: 'Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieser Schritt im Lernprogramm veranschaulicht, wie dynamische Updates zum Ändern der persistenter Instanzen verwenden den `v1` Anzahl erraten Workflow entsprechend der neue Funktionen, eingeführt in [Vorgehensweise: Host mehrere Versionen einer Workflow-Seite-an-Seite ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
   
 -   [Starten von Vorgängerversionen der Workflows aktivieren](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>So erstellen Sie die CreateUpdateMaps-Projekt  
+###  <a name="BKMK_CreateProject"></a> So erstellen Sie die CreateUpdateMaps-Projekt  
   
 1.  Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.  
   
@@ -234,7 +235,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>So aktualisieren Sie StateMachineNumberGuessWorkflow  
+###  <a name="BKMK_StateMachine"></a> So aktualisieren Sie StateMachineNumberGuessWorkflow  
   
 1.  Fügen Sie der `CreateStateMachineUpdateMap`-Klasse (bzw. `Program`) eine `Module1` hinzu.  
   
@@ -427,7 +428,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>So aktualisieren Sie FlowchartNumberGuessWorkflow  
+###  <a name="BKMK_Flowchart"></a> So aktualisieren Sie FlowchartNumberGuessWorkflow  
   
 1.  Fügen Sie der `CreateFlowchartUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu. Diese Methode ist vergleichbar mit `CreateStateMachineUpdateMap`. Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des Flussdiagrammworkflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.  
   
@@ -541,7 +542,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>So aktualisieren Sie SequentialNumberGuessWorkflow  
+###  <a name="BKMK_Sequential"></a> So aktualisieren Sie SequentialNumberGuessWorkflow  
   
 1.  Fügen Sie der `CreateSequentialUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu. Diese Methode ist vergleichbar mit den anderen beiden Methoden. Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des sequenziellen Workflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.  
   
@@ -621,7 +622,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>So erstellen und führen die CreateUpdateMaps-Anwendung  
+###  <a name="BKMK_CreateUpdateMaps"></a> So erstellen und führen die CreateUpdateMaps-Anwendung  
   
 1.  Aktualisieren Sie die `Main`-Methode, und fügen Sie die folgenden drei Methodenaufrufe hinzu. Diese Methoden werden in den folgenden Abschnitten hinzugefügt. Durch jede Methode wird der entsprechende Workflow für das Schätzen von Zahlen aktualisiert und eine `DynamicUpdateMap` erstellt, die die Updates beschreibt.  
   
@@ -655,7 +656,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
   
      Sobald die Updatezuordnungen erstellt und die Workflowdefinitionen aktualisiert sind, besteht der nächste Schritt darin, eine aktualisierte Workflowassembly zu erstellen, in der die aktualisierten Definitionen enthalten sind.  
   
-###  <a name="BKMK_BuildAssembly"></a>Um die aktualisierte Workflowassembly zu erstellen.  
+###  <a name="BKMK_BuildAssembly"></a> Um die aktualisierte Workflowassembly zu erstellen.  
   
 1.  Öffnen Sie eine zweite Instanz von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -680,13 +681,13 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
   
 9. Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.  
   
-10. Wählen Sie **Projektmappe schließen** aus der **Datei** Menü. Eine Projektmappendatei für das Projekt ist nicht erforderlich ist, klicken Sie also **keine** schließen [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] ohne Speichern einer Projektmappendatei. Wählen Sie **beenden** aus der **Datei** Menü schließen [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+10. Wählen Sie **Projektmappe schließen** aus der **Datei** Menü. Eine Projektmappendatei für das Projekt ist nicht erforderlich ist, klicken Sie also **keine** zu Visual Studio zu schließen, ohne Speichern einer Projektmappendatei. Wählen Sie **beenden** aus der **Datei** Menü zu Visual Studio zu schließen.  
   
 11. Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowActivities_du\bin\Debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen).  
   
 12. Benennen Sie **NumberGuessWorkflowActivities.dll** auf **NumberGuessWorkflowActivities_v15.dll**, und kopieren Sie sie in der **PreviousVersions** in neuerstelltenOrdner[Wie: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen  
   
 1.  Wechseln Sie zur ursprünglichen Instanz von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] zurück.  
   
@@ -1073,7 +1074,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
   
 5.  Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.  
   
-###  <a name="BKMK_ApplyUpdate"></a>Die dynamische Updates  
+###  <a name="BKMK_ApplyUpdate"></a> Die dynamische Updates  
   
 1.  Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.  
   
@@ -1448,7 +1449,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
 **Überprüfen: SequentialNumberGuessWorkflow; Version = 2.0.0.0**   
 **Drücken Sie eine beliebige Taste, um den Vorgang fortzusetzen...**  
   
-###  <a name="BKMK_BuildAndRun"></a>Um die Anwendung mit der aktualisierten Workflows auszuführen.  
+###  <a name="BKMK_BuildAndRun"></a> Um die Anwendung mit der aktualisierten Workflows auszuführen.  
   
 1.  Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.  
   
@@ -1483,7 +1484,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
 **Bitte geben Sie eine Zahl zwischen 1 und 10**   
 **6 ist richtig konfiguriert. Sie können Sie erraten, 4 wiederum.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>Starten von Vorgängerversionen der Workflows aktivieren  
+###  <a name="BKMK_StartPreviousVersions"></a> Starten von Vorgängerversionen der Workflows aktivieren  
  Wenn keine zu aktualisierenden Workflows mehr verfügbar sind, können Sie die `NumberGuessWorkflowHost`-Anwendung ändern, um das Starten früherer Workflowversionen zu aktivieren.  
   
 1.  Doppelklicken Sie auf **WorkflowHostForm** in **Projektmappen-Explorer**, und wählen Sie die **WorkflowType** Kombinationsfeld.  

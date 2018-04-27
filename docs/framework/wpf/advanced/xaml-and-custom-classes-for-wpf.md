@@ -1,28 +1,30 @@
 ---
-title: "XAML- und benutzerdefinierte Klassen für WPF"
-ms.custom: 
+title: XAML- und benutzerdefinierte Klassen für WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML- und benutzerdefinierte Klassen für WPF
 Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Frameworks unterstützt die Möglichkeit zum Definieren einer benutzerdefinierten Klasse oder Struktur in einer beliebigen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Sprache und den anschließenden Zugriff auf diese Klasse unter Verwendung von XAML-Markup. Sie können eine Mischung aus [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Typen und ihren benutzerdefinierten Typen innerhalb derselben Markupdatei verwenden. Die übliche Vorgehensweise hierbei ist, Ihren benutzerdefinierten Typen ein XAML-Namespace-Präfix zuzuordnen. Dieses Thema beschreibt die Anforderungen, die eine benutzerdefinierte Klasse erfüllen muss, um als XAML-Element verwendet werden zu können.  
@@ -70,7 +72,7 @@ Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
  Beispiele für Eigenschaften, in denen die Attributsyntax ist zulässig, jedoch Eigenschaftenelementsyntax, die einem Objektelement enthält ist nicht zulässig, über XAML, sind verschiedene Eigenschaften, die <xref:System.Windows.Input.Cursor> Typ. Die <xref:System.Windows.Input.Cursor> -Klasse verfügt über einen dedizierten Typkonverter <xref:System.Windows.Input.CursorConverter>, jedoch nicht über einen Standardkonstruktor macht daher die <xref:System.Windows.FrameworkElement.Cursor%2A> Eigenschaft kann nur festgelegt werden über die Attributsyntax, obwohl die tatsächlichen <xref:System.Windows.Input.Cursor> Typ ein Verweistyp ist.  
   
 ### <a name="per-property-type-converters"></a>Typkonverter auf Eigenschaftenebene  
- Alternativ kann die Eigenschaft selbst auf der Eigenschaftenebene einen Typkonverter deklarieren. Dies ermöglicht eine Mini "Sprache", die Objekte vom Typ der Eigenschaft Inline instanziiert, indem eingehende Zeichenfolgenwerte des Attributs als Eingabe für die Verarbeitung einer <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> Vorgang basierend auf dem entsprechenden Typ. Dies erfolgt in der Regel, um einen zweckmäßigen Accessor bereitzustellen und nicht als alleiniges Mittel zum Festlegen einer Eigenschaft in XAML. Es ist jedoch auch möglich, Typkonverter für Attribute dort einzusetzen, wo Sie vorhandene [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Typen verwenden möchten, die entweder keinen Standardkonstruktor oder keinen attribuierten Typkonverter bereitstellen. Beispiele über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -API sind bestimmte Eigenschaften mit den <xref:System.Globalization.CultureInfo> Typ. In diesem Fall [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet den vorhandenen [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> Typ, um eine bessere Kompatibilität und Migration von Szenarien zu adressieren, die in früheren Versionen des Frameworks verwendet wurden, aber die <xref:System.Globalization.CultureInfo> Typ hat die erforderlichen Konstruktoren nicht unterstützt oder auf Typebene-typkonvertierung als einen Eigenschaftswert für die Verwendung von XAML-direkt verwendet werden.  
+ Alternativ kann die Eigenschaft selbst auf der Eigenschaftenebene einen Typkonverter deklarieren. Dies ermöglicht eine Mini "Sprache", die Objekte vom Typ der Eigenschaft Inline instanziiert, indem eingehende Zeichenfolgenwerte des Attributs als Eingabe für die Verarbeitung einer <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> Vorgang basierend auf dem entsprechenden Typ. Dies erfolgt in der Regel, um einen zweckmäßigen Accessor bereitzustellen und nicht als alleiniges Mittel zum Festlegen einer Eigenschaft in XAML. Es ist jedoch auch möglich, Typkonverter für Attribute dort einzusetzen, wo Sie vorhandene [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Typen verwenden möchten, die entweder keinen Standardkonstruktor oder keinen attribuierten Typkonverter bereitstellen. Beispiele über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -API sind bestimmte Eigenschaften mit den <xref:System.Globalization.CultureInfo> Typ. In diesem Fall [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet den vorhandenen Microsoft .NET Framework <xref:System.Globalization.CultureInfo> Typ, um eine bessere Kompatibilität und Migration von Szenarien zu adressieren, die in früheren Versionen des Frameworks verwendet wurden, aber die <xref:System.Globalization.CultureInfo> Typ hat nicht die erforderlichen unterstützt Konstruktoren oder Typebene typkonvertierung als einen Eigenschaftswert für die Verwendung von XAML-direkt verwendet werden.  
   
  Wenn Sie eine Eigenschaft verfügbar machen, die in XAML Verwendung findet, insbesondere dann, wenn Sie Autor eines Steuerelements sind, sollten Sie unbedingt die Eigenschaft durch eine Abhängigkeitseigenschaft unterstützen. Dies ist insbesondere dann, wenn die vorhandene [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor, da Sie mithilfe von verbessern können <xref:System.Windows.DependencyProperty> sichern. Eine Abhängigkeitseigenschaft wird für Ihre Eigenschaft Funktionen des Eigenschaftensystems verfügbar machen, die Benutzer von einer XAML-zugänglichen Eigenschaft erwarten. Zu diesen Funktionen gehören z.B. Animationen, Datenbindungen und die Unterstützung von Stilen. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Laden von XAML und Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md).  
   

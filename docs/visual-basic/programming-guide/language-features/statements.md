@@ -1,11 +1,12 @@
 ---
 title: Anweisungen in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Anweisungen in Visual Basic
-Eine Anweisung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine vollständige Anweisung. Sie können Schlüsselwörter, Operatoren, Variablen, Konstanten und Ausdrücke enthalten. Jede Anweisung gehört zu einer der folgenden Kategorien:  
+Eine Anweisung in Visual Basic ist eine vollständige Anweisung. Sie können Schlüsselwörter, Operatoren, Variablen, Konstanten und Ausdrücke enthalten. Jede Anweisung gehört zu einer der folgenden Kategorien:  
   
 -   **Deklarationsanweisungen**, die eine Variable, Konstante oder Prozedur benennen und können auch einen Datentyp angeben.  
   
@@ -53,7 +54,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine vollstän
  Die dritte Deklaration ist die `Dim` -Anweisung, die die Variable deklariert `thisWidget`. Der Datentyp ist ein bestimmtes Objekt, d. h. ein Objekt erstellt, aus der `Widget` Klasse. Sie können eine Variable eines beliebigen elementaren Datentyp oder einen beliebigen Objekttyp, der in der Anwendung verfügbar gemacht wird, die Sie verwenden, deklarieren.  
   
 ### <a name="initial-values"></a>Anfangswerte  
- Beim Ausführen des Codes mit einer deklarationsanweisung [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reserviert den erforderlichen Speicher für das deklarierte Element. Wenn das Element einen Wert enthält [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf den Standardwert für seinen Datentyp initialisiert. Weitere Informationen finden Sie unter "Verhalten" in [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Wenn der Code mit einer deklarationsanweisung ausgeführt wird, reserviert Visual Basic den erforderlichen Speicher für das deklarierte Element. Wenn das Element einen Wert enthält, von Visual Basic auf den Standardwert für seinen Datentyp initialisiert. Weitere Informationen finden Sie unter "Verhalten" in [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Sie können eine Variable als Teil der Deklaration einen Anfangswert zuweisen, wie im folgenden Beispiel veranschaulicht.  
   
@@ -121,7 +122,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine vollstän
 ### <a name="type-conversions-in-assignment-statements"></a>Konvertierungen in Zuweisungsanweisungen  
  Der Wert, den Sie auf eine Variable, eine Eigenschaft oder ein Arrayelement zuweisen muss mit einem Zielelement entsprechenden Datentyp sein. Im Allgemeinen sollten Sie einen Wert des gleichen Datentyps wie für das Zielelement zu generieren. Einige Typen können jedoch bei der Zuordnung in andere Typen konvertiert werden.  
   
- Informationen zum Konvertieren zwischen Datentypen finden Sie unter [Konvertierungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). In Kürze [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch konvertiert einen Wert eines bestimmten Typs in einen anderen Typ, der erweitert werden kann. Ein *erweiternde Konvertierung* ist eine in, das immer zur Laufzeit erfolgreich ist und keine Daten zu verlieren. Beispielsweise [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konvertiert ein `Integer` Wert `Double` Wenn geeignet, da `Integer` erweitert wird, um `Double`. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Informationen zum Konvertieren zwischen Datentypen finden Sie unter [Konvertierungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Kurz gesagt, konvertiert Visual Basic automatisch einen Wert eines bestimmten Typs in einen anderen Typ, den erweitert werden kann. Ein *erweiternde Konvertierung* ist eine in, das immer zur Laufzeit erfolgreich ist und keine Daten zu verlieren. Beispielsweise konvertiert Visual Basic ein `Integer` Wert `Double` Wenn geeignet, da `Integer` erweitert wird, um `Double`. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Einschränkende Konvertierungen* (diejenigen, die keine erweiternde sind) ein Risiko für Fehler bei der Ausführung oder Verlust von Daten ausführen. Sie können eine einschränkende Konvertierung explizit ausführen, mit der eine Typkonvertierungsfunktion, oder Sie können den Compiler an, führen alle Konvertierungen implizit durch Festlegen von verweisen `Option Strict Off`. Weitere Informationen finden Sie unter [implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine vollstän
 |Nach der `From` -Schlüsselwort in einem Auflistungsinitialisierer.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Hinzufügen von Kommentaren  
- Quellcode ist nicht immer selbsterklärend, auch für den Programmierer, der geschrieben wurde. Damit ihren Code zu dokumentieren, müssen daher die meisten Programmierer mit der großzügigen Verwendung von eingebetteten Kommentaren. Kommentare im Code erläutert eine Prozedur oder eine bestimmte Anweisung lesen oder zu einem späteren Zeitpunkt mit der Arbeit. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Kommentare werden während der Kompilierung ignoriert und haben sie den kompilierten Code keine Auswirkungen.  
+ Quellcode ist nicht immer selbsterklärend, auch für den Programmierer, der geschrieben wurde. Damit ihren Code zu dokumentieren, müssen daher die meisten Programmierer mit der großzügigen Verwendung von eingebetteten Kommentaren. Kommentare im Code erläutert eine Prozedur oder eine bestimmte Anweisung lesen oder zu einem späteren Zeitpunkt mit der Arbeit. Visual Basic Kommentare während der Kompilierung ignoriert und haben sie den kompilierten Code keine Auswirkungen.  
   
  Kommentarzeilen beginnen mit einem Apostroph (`'`) oder `REM` gefolgt von einem Leerzeichen. Sie können eine beliebige Stelle im Code, mit Ausnahme von innerhalb einer Zeichenfolge hinzugefügt werden. Um einen Kommentar an eine Anweisung angefügt werden soll, fügen Sie ein Apostroph oder `REM` nach der Anweisung, gefolgt von den Kommentar. Kommentare können auch auf eine separate Zeile wechseln. Das folgende Beispiel zeigt diese Möglichkeiten.  
   

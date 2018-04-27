@@ -1,12 +1,13 @@
 ---
-title: "Benutzeroberflächenautomatisierung und Microsoft Active Accessibility"
-ms.custom: 
+title: Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>Programmiersprachen  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] basiert auf der [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] mit Unterstützung für duale Schnittstellen und kann daher in C/C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]und Skriptsprachen programmiert werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (einschließlich der clientseitigen Anbieterbibliothek für Standardsteuerelemente) wurde in verwaltetem Code geschrieben und Benutzeroberflächenautomatisierungs-Clientanwendungen werden am einfachsten mit [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] oder [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]programmiert. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] basiert auf der [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] mit Unterstützung für duale Schnittstellen und ist daher in C/C++ programmierbar [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)], und Skriptsprachen. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (einschließlich der clientseitigen Anbieterbibliothek für Standardsteuerelemente) wird in verwaltetem Code geschrieben und Benutzeroberflächenautomatisierungs-Clientanwendungen am einfachsten mithilfe von c# oder Visual Basic programmiert. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Unterstützung in der Windows Presentation Foundation  
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
 |EVENT_OBJECT_SELECTIONWITHIN|Keine Entsprechung|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Verschiedene durch geänderte Eigenschaften ausgelöste Ereignisse|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>und <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> geändert|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> und <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> geändert|  
 |EVENT_SYSTEM_ALERT|Keine Entsprechung|  
 |EVENT_SYSTEM_CAPTUREEND|Keine Entsprechung|  
 |EVENT_SYSTEM_CAPTURESTART|Keine Entsprechung|  

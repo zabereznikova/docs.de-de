@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
 Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als eine Reihe von Prozeduren vorstellen, die nacheinander ausgeführt werden, doch sind die meisten Programme tatsächlich ereignisgesteuert. Das bedeutet, dass der Ausführungsablauf von externen Vorkommnissen bestimmt wird, die als *Ereignisse* bezeichnet werden.  
@@ -27,7 +27,7 @@ Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als ein
  Ein Ereignis ist ein Signal, das eine Anwendung darüber informiert, dass etwas Wichtiges geschehen ist. Wenn ein Benutzer beispielsweise auf ein Steuerelement in einem Formular klickt, löst das Formular ein `Click`-Ereignis aus und ruft eine Prozedur auf, die das Ereignis behandelt. Ereignisse ermöglichen zudem die Kommunikation zwischen separaten Tasks. Beispiel: Die Anwendung führt separat von der Hauptanwendung einen Sortiertask aus. Wenn ein Benutzer den Sortiervorgang abbricht, kann die Anwendung ein Cancel-Ereignis senden, das den Abbruch des Sortiervorgangs veranlasst.  
   
 ## <a name="event-terms-and-concepts"></a>Ereignisse – Begriffe und Konzepte  
- In diesem Abschnitt werden die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] im Zusammenhang mit Ereignissen verwendeten Begriffe und Konzepte erläutert.  
+ Dieser Abschnitt beschreibt die Begriffe und Konzepte, die mit Ereignissen in Visual Basic verwendet.  
   
 ### <a name="declaring-events"></a>Deklarieren von Ereignissen  
  Ereignisse werden innerhalb von Klassen, Strukturen, Modulen und Schnittstellen mithilfe des `Event`-Schlüsselworts deklariert, wie im folgenden Beispiel dargestellt:  
@@ -35,7 +35,7 @@ Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als ein
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Auslösen von Ereignissen  
- Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lösen Sie Ereignisse mit der `RaiseEvent`-Anweisung aus, wie im folgenden Beispiel veranschaulicht:  
+ Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In Visual Basic, lösen Sie Ereignisse mit der `RaiseEvent` Anweisung, wie im folgenden Beispiel gezeigt:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als ein
 ### <a name="event-handlers"></a>Ereignishandler  
  *Ereignishandler* sind Prozeduren, die aufgerufen werden, wenn ein entsprechendes Ereignis eintritt. Jede gültige Unterroutine mit einer übereinstimmenden Signatur kann als Ereignishandler verwendet werden. Funktionen können jedoch nicht als Ereignishandler verwendet werden, da sie keinen Wert an die Ereignisquelle zurückgeben können.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet eine standardmäßige Benennungskonvention für Ereignishandler, die den Namen des Ereignissenders, einen Unterstrich und dem Namen des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
+ Visual Basic verwendet eine standardmäßige Benennungskonvention für Ereignishandler, die den Namen des den Absender des Ereignisses, einem Unterstrich und der Name des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
   
 > [!NOTE]
 >  Beim Definieren von Ereignishandlern für Ihre Ereignisse empfiehlt sich die Verwendung dieser Benennungskonvention, sie ist jedoch nicht erforderlich. Sie können stattdessen auch jeden gültigen Unterroutinennamen verwenden.  
@@ -72,7 +72,7 @@ Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als ein
   
  Die `Handles`-Klausel ist zwar das Standardverfahren zum Verknüpfen eines Ereignisses mit einem Ereignishandler, ist aber auf das Verknüpfen von Ereignissen mit Ereignishandlern zur Kompilierzeit beschränkt.  
   
- In einigen Fällen, z.B. bei Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch einen Stub für einen leeren Ereignishandler und ordnet ihn einem Ereignis zu. Wenn Sie z.B. im Entwurfsmodus auf eine Befehlsschaltfläche doppelklicken, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen leeren Ereignishandler und eine `WithEvents`-Variable für die Befehlsschaltfläche, wie im folgenden Code veranschaulicht:  
+ In einigen Fällen z. B. Ereignisse im Zusammenhang mit Formularen oder Steuerelementen, Visual Basic automatisch versieht einen leeren Ereignishandler und ordnet es einem Ereignis. Beispielsweise, wenn Sie eine Befehlsschaltfläche auf einem Formular im Entwurfsmodus doppelklicken, Visual Basic erstellt einen leeren Ereignishandler und eine `WithEvents` -Variable für die Befehlsschaltfläche, wie im folgenden Code:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

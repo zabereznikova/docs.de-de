@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
 Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zahlreiche Features, die schnelle Entwicklung von bidirektionalen Inhalt unterstützen, z. B. Links gemischten links nach rechts und mit der rechten Maustaste auf die Daten im selben Dokument. Zur gleichen Zeit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erstellt eine ausgezeichnete Erfahrung für Benutzer, die bidirektionalen Funktionen wie Arabisch und Hebräisch sprechen Benutzer erfordern.  
   
- In den folgenden Abschnitten werden bidirektionale Funktionen sowie Beispiele erklärt, die zeigen, wie die beste Anzeige von bidirektionalem Inhalts erreicht werden kann. Die meisten der Beispiele verwenden [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], obwohl Sie einfach die Konzepte, die Sie anwenden können [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] oder [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] Code.  
+ In den folgenden Abschnitten werden bidirektionale Funktionen sowie Beispiele erklärt, die zeigen, wie die beste Anzeige von bidirektionalem Inhalts erreicht werden kann. Die meisten der Beispiele verwenden [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], obwohl Sie einfach die Konzepte in c# oder Microsoft Visual Basic-Code anwenden können.  
   
 
   
@@ -72,7 +72,7 @@ Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../.
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> ist eine vielseitige [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Element, das eine Kombination von Text, Tabellen, Bilder und andere Elemente hosten kann. Die Beispiele in den folgenden Abschnitten verwenden dieses Element.  
   
- Hinzufügen von Text zu einem <xref:System.Windows.Documents.FlowDocument> kann mehrere Methoden erfolgen. Eine einfache Möglichkeit hierzu ist, über eine <xref:System.Windows.Documents.Paragraph> ist ein Block-Level-Element, das verwendet zum Gruppieren von Inhalten z. B. Text. Hinzufügen von Text zu Inline-Level-Elementen die Beispiele verwenden <xref:System.Windows.Documents.Span> und <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>ist ein Element der Inlineebene Inhalt zum Gruppieren anderer Inlineelemente verwendet während einer <xref:System.Windows.Documents.Run> ein Inlineebene Content Element vorgesehen, um eine Ausführung von nicht formatiertem Text enthalten ist. Ein <xref:System.Windows.Documents.Span> kann mehrere enthalten <xref:System.Windows.Documents.Run> Elemente.  
+ Hinzufügen von Text zu einem <xref:System.Windows.Documents.FlowDocument> kann mehrere Methoden erfolgen. Eine einfache Möglichkeit hierzu ist, über eine <xref:System.Windows.Documents.Paragraph> ist ein Block-Level-Element, das verwendet zum Gruppieren von Inhalten z. B. Text. Hinzufügen von Text zu Inline-Level-Elementen die Beispiele verwenden <xref:System.Windows.Documents.Span> und <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> ist ein Element der Inlineebene Inhalt zum Gruppieren anderer Inlineelemente verwendet während einer <xref:System.Windows.Documents.Run> ein Inlineebene Content Element vorgesehen, um eine Ausführung von nicht formatiertem Text enthalten ist. Ein <xref:System.Windows.Documents.Span> kann mehrere enthalten <xref:System.Windows.Documents.Run> Elemente.  
   
  Im erste Dokumentbeispiel enthält ein Dokument, das eine Reihe von Namen aufweisen. z. B. `\\server1\folder\file.ext`. Egal, ob Sie diesen Netzwerklink in einem arabischen oder einem englischen Dokument haben, Sie möchten, dass es immer auf die gleiche Weise angezeigt wird. Die folgende Abbildung zeigt den Link in einem arabischen <xref:System.Windows.FlowDirection.RightToLeft> Dokument.  
   
@@ -133,7 +133,7 @@ Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../.
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>FlowDirection mit Nicht-Text-Elementen  
- <xref:System.Windows.FlowDirection>definiert, nicht nur in einem Text-Element, sondern auch die flussrichtung von fast allen anderen Textfluss [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Element. Die folgende Grafik zeigt eine <xref:System.Windows.Controls.ToolBar> , verwendet eine horizontale <xref:System.Windows.Media.LinearGradientBrush> Hintergrund gezeichnet werden soll.  
+ <xref:System.Windows.FlowDirection> definiert, nicht nur in einem Text-Element, sondern auch die flussrichtung von fast allen anderen Textfluss [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Element. Die folgende Grafik zeigt eine <xref:System.Windows.Controls.ToolBar> , verwendet eine horizontale <xref:System.Windows.Media.LinearGradientBrush> Hintergrund gezeichnet werden soll.  
   
  **Grafik, die eine ToolBar mit einem Farbverlauf von rechts nach links zeigt**  
   
@@ -253,7 +253,7 @@ Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../.
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- In der entsprechenden [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] code, legen Sie die `Language` Eigenschaft z. B. zum `"ar-SA"`.  
+ Legen Sie im entsprechenden C#-Code, der `Language` Eigenschaft z. B. zum `"ar-SA"`.  
   
 ||  
 |-|  
@@ -265,13 +265,13 @@ Im Gegensatz zu anderen Entwicklungsplattform [!INCLUDE[TLA2#tla_winclient](../.
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>Stellt die aktuelle Kultur, die vom aktuellen Thread zur Laufzeit verwendet.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Stellt die aktuelle Kultur, die vom aktuellen Thread zur Laufzeit verwendet.  
   
  Die fertige [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] Beispiel sollte ähnlich wie im folgenden Beispiel werden.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- Die fertige [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] Beispiel sollte etwa wie folgt sein.  
+ Die abschließenden C#-Beispiel sollte etwa wie folgt sein.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

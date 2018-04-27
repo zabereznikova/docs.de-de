@@ -1,11 +1,12 @@
 ---
-title: "Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern (Visual Basic)
 Wenn eine Prozedur besitzt einen [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter keine überladene Version ein eindimensionales Array für das Parameterarray definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für ein ParamArray-Parameter" in [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
@@ -53,7 +54,7 @@ Wenn eine Prozedur besitzt einen [ParamArray](../../../../visual-basic/language-
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- Der Code der überladenen Versionen muss keine testen, ob der aufrufende Code eine oder mehrere Werte für bereitgestellt der `ParamArray` Parameter, oder wenn dies der Fall ist, wie viele. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]übergibt die Steuerung an die Version der aufrufenden Argumentliste entspricht.  
+ Der Code der überladenen Versionen muss keine testen, ob der aufrufende Code eine oder mehrere Werte für bereitgestellt der `ParamArray` Parameter, oder wenn dies der Fall ist, wie viele. Visual Basic übergibt die Steuerung an die Version der aufrufenden Argumentliste entspricht.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Da eine Prozedur mit einem `ParamArray` Parameter entspricht einem Satz von überladenen Versionen, eine solche Prozedur mit einer Parameterliste entspricht einem beliebigen diese implizite Überladungen können nicht überladen werden können. Weitere Informationen finden Sie unter [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  

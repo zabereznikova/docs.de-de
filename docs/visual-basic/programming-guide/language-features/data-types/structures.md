@@ -1,11 +1,12 @@
 ---
 title: Strukturen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de99d67ee31d8fb8e92e0a351142b30f622bf5f0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: d1f537b25a405548816ab3d356a18f693a5d0006
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
-Ein *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs (UDT) unterstützt, die von früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können einzelne Zugriffsebenen für jedes Feld deklarieren.  
+Ein *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs (UDT) von früheren Versionen von Visual Basic unterstützt. Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können einzelne Zugriffsebenen für jedes Feld deklarieren.  
   
  Sie können Datenelemente verschiedener Typen zum Erstellen einer Struktur kombinieren. Ordnet eine Struktur, eine oder mehrere *Elemente* untereinander und mit der Struktur selbst. Wenn Sie eine Struktur zu deklarieren, es wird eine *zusammengesetzten Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
   
@@ -46,7 +47,7 @@ Ein *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs (UDT) unt
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Führt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Datentypen und beschreibt deren Verwendung.  
+ Führt das Visual Basic-Datentypen und beschreibt deren Verwendung.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Listet die elementare Datentypen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+ Listet die elementaren Datentypen von Visual Basic.

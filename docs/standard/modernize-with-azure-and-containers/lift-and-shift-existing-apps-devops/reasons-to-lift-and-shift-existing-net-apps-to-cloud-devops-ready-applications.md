@@ -1,18 +1,19 @@
 ---
-title: "Gründe für die Lift- and -Shift vorhandenen .NET apps Cloud DevOps einsatzfähige Anwendungen"
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Gründe für die Lift- and -Shift vorhandenen .NET apps Cloud DevOps einsatzfähige Anwendungen"
+title: Gründe für die Lift- and -Shift vorhandenen .NET apps Cloud DevOps einsatzfähige Anwendungen
+description: .NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Gründe für die Lift- and -Shift vorhandenen .NET apps Cloud DevOps einsatzfähige Anwendungen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>Gründe für die Lift- and -Shift vorhandenen .NET apps Cloud DevOps einsatzfähige Anwendungen
 
@@ -48,7 +49,7 @@ Abbildung 4 – 2 zeigt die wichtigsten optionalen Säulen einer Cloud DevOps-f�
 
 > ![Main Säulen eine cloudfähige DevOps-Anwendung](./media/image2.png)
 >
-> **Abbildung 4-2.** Main Säulen eine cloudfähige DevOps-Anwendung
+> **Abbildung 4-2**. Main Säulen eine cloudfähige DevOps-Anwendung
 
 Kurz gesagt, ist eine Cloudfähige DevOps-Anwendung eine Methode zum Erstellen und Verwalten von Anwendungen, die von der Cloud computing-Modell, beim Einsatz einer Kombination von Containern, verwaltete Cloudinfrastruktur, robusten anwendungstechniken nutzt, Überwachung, fortlaufende Übermittlung und DevOps, ohne die Notwendigkeit zum Umgestalten und umschreiben zu müssen Ihre vorhandenen Anwendungen.
 

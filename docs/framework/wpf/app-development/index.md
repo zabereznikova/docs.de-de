@@ -19,15 +19,15 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]ist ein zu testendes Präsentationsframework, die verwendet werden kann, um die folgenden Typen von Anwendungen zu entwickeln:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ist ein zu testendes Präsentationsframework, die verwendet werden kann, um die folgenden Typen von Anwendungen zu entwickeln:  
   
 -   Eigenständige Anwendungen: Herkömmliche [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Anwendungen, die als ausführbare Assemblys erstellt, auf dem Clientcomputer installiert und von dort ausgeführt werden.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erweitert die in [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] verfügbare Basisunterstützung für eingebettete Ressourcen und unterstützt drei weitere Arten von nicht ausführbaren Datendateien: Ressourcen, Inhalt und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Erweitert die Core-Unterstützung in Microsoft .NET Framework für eingebettete Ressourcen mit Unterstützung für drei Arten von nicht ausführbare Datendateien: Ressource, Inhalt und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
  Ein wesentlicher Faktor der Unterstützung von nicht ausführbaren WPF-Datendateien ist die Möglichkeit, diese mit einem eindeutigen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zu identifizieren und zu laden. Weitere Informationen finden Sie unter [Paket-URI in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/29/2018
   
  <xref:System.Windows.Window> unterstützt die Erstellung einer besonderen Art von Fenster, nämlich von Dialogfeldern. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
   
- Aus Gründen der Benutzerfreundlichkeit, der Wiederverwendbarkeit und einer anwendungsübergreifed konsistenten Benutzeroberfläche stellt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] drei der gängigen [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]-Dialogfelder zur Verfügung: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> und <xref:System.Windows.Controls.PrintDialog>.  
+ Zur Vereinfachung und die Vorteile der Wiederverwendung und eine konsistente benutzerumgebung für Anwendungen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] macht drei allgemeine Windows-Dialogfelder: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, und <xref:System.Windows.Controls.PrintDialog>.  
   
  Ein Meldungsfeld ist eine besondere Art von Dialogfeld, in dem Benutzern wichtige Informationen angezeigt und einfache Ja/Nein/OK/Abbrechen-Fragen gestellt werden. Sie verwenden die <xref:System.Windows.MessageBox>-Klasse zum Erstellen und Anzeigen von Meldungsfeldern.  
   

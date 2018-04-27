@@ -17,11 +17,11 @@ ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="development-with-my-visual-basic"></a>Entwicklung mit "My" (Visual Basic)
 Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit, die die Produktivität und die Benutzerfreundlichkeit erhöhen und zugleich Leistung liefern. Eines dieser Features, das den Namen `My` trägt, stellt den Zugriff auf Informationen und Standardobjektinstanzen bereit, die mit der Anwendung und seiner Laufzeitumgebung verwandt sind. Diese Informationen werden in einem Format organisiert, das durch IntelliSense erkannt werden kann, und gemäß ihrer Verwendung logisch beschrieben.  
@@ -43,7 +43,7 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
  Beschreibt die Objekte `My.Resources` und `My.Settings`, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung ermöglichen  
   
  [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Beschreibt das Modell zum Starten/Herunterfahren der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anwendung  
+ Beschreibt das Visual Basic-Anwendung Starten/Herunterfahren-Modell.  
   
  [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen  

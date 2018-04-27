@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
 Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
@@ -170,7 +170,7 @@ Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
   
 ### <a name="to-verify-the-service-is-working"></a>So überprüfen Sie, ob der Dienst funktioniert  
   
-1.  Führen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] die GettingStartedHost-Konsolenanwendung aus. Beim Ausführen unter [!INCLUDE[wv](../../../includes/wv-md.md)] und höher muss der Dienst mit Administratorrechten ausgeführt werden. Da [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] mit Administratorrechten ausgeführt wurde, wird auch GettingStartedHost mit Administratorrechten ausgeführt. Sie können auch eine neue Eingabeaufforderung mit Administratorrechten starten und "service.exe" damit ausführen.  
+1.  Führen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] die GettingStartedHost-Konsolenanwendung aus. Beim Ausführen unter [!INCLUDE[wv](../../../includes/wv-md.md)] und höher muss der Dienst mit Administratorrechten ausgeführt werden. Da Visual Studio mit Administratorrechten ausgeführt wurde, wird "gettingstartedhost" auch mit Administratorrechten ausführen. Sie können auch eine neue Eingabeaufforderung mit Administratorrechten starten und "service.exe" damit ausführen.  
   
 2.  Öffnen Sie Internet Explorer, und navigieren Sie unter `http://localhost:8000/GettingStarted/CalculatorService` zur Debuggingseite des Diensts.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Dienste wie dieser müssen dazu berechtigt sein, HTTP-Adressen auf dem Computer zum Überwachen zu registrieren. Administratorkonten verfügen über diese Berechtigung, anderen Konten muss jedoch die Berechtigung für HTTP-Namespaces erteilt werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Wird der Dienst unter [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] ausgeführt, muss "service.exe" über Administratorrechte verfügen.  
+>  Dienste wie dieser müssen dazu berechtigt sein, HTTP-Adressen auf dem Computer zum Überwachen zu registrieren. Administratorkonten verfügen über diese Berechtigung, anderen Konten muss jedoch die Berechtigung für HTTP-Namespaces erteilt werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Bei Ausführung in Visual Studio muss die service.exe mit Administratorrechten ausgeführt werden.  
   
  Der Dienst wird nun ausgeführt. Fahren Sie mit [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Informationen zur Problembehandlung finden Sie unter [Problembehandlung für das Lernprogramm für erste Schritte](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

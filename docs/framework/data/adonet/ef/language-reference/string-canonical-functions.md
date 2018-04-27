@@ -1,24 +1,26 @@
 ---
 title: Kanonische Zeichenfolgefunktionen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>Kanonische Zeichenfolgefunktionen
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] enthält kanonische Zeichenfolgenfunktionen.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|Gibt eine Zeichenfolge zurück, die `string2` enthält und an `string1` angehängt ist.<br /><br /> **Argumente**<br /><br /> `string1`: Die Zeichenfolge, an die `string2` angefügt wird.<br /><br /> `string2`: Die Zeichenfolge, die `string1` angefügt wird.<br /><br /> **Rückgabewert**<br /><br /> Ein `String`. Wenn die Länge der zurückgegebenen Wertzeichenfolge die zulässige Höchstlänge überschreitet, wird ein Fehler ausgegeben.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|Gibt `true` zurück, wenn `target` in `string` enthalten ist.<br /><br /> **Argumente**<br /><br /> `string`: Die Zeichenfolge, die gesucht wird.<br /><br /> `target`: Die Zielzeichenfolge, nach der gesucht wird.<br /><br /> **Rückgabewert**<br /><br /> `true`, wenn `target` in `string` enthalten ist, andernfalls `false`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|Gibt `true` zurück, wenn `target` mit `string` endet.<br /><br /> **Argumente**<br /><br /> `string`: Die Zeichenfolge, die gesucht wird.<br /><br /> `target`: Die Zielzeichenfolge, nach der am Ende der Zeichenfolge gesucht `string` wird.<br /><br /> **Rückgabewert**<br /><br /> `True` wenn `string` mit `target` endet, anderenfalls `false`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**Hinweis:** bei Verwendung der [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] Datenanbieter, um diese Funktion gibt `false` , wenn die Zeichenfolge in einer Zeichenfolgenspalte mit fester Länge gespeichert wird und `target` ist eine Konstante. In diesem Fall wird die ganze Zeichenfolge gesucht, einschließlich aller Auffüllleerzeichen. Eine mögliche Problemumgehung stellt die Kürzung der Daten in der Zeichenfolge mit fester Länge dar. Beispiel: `EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|Gibt `true` zurück, wenn `target` mit `string` endet.<br /><br /> **Argumente**<br /><br /> `string`: Die Zeichenfolge, die gesucht wird.<br /><br /> `target`: Die Zielzeichenfolge, nach der am Ende der Zeichenfolge gesucht `string` wird.<br /><br /> **Rückgabewert**<br /><br /> `True` wenn `string` mit `target` endet, anderenfalls `false`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **Hinweis:** bei Verwendung von SQL Server Data-Anbieter diese Funktion gibt `false` , wenn die Zeichenfolge in einer Zeichenfolgenspalte mit fester Länge gespeichert wird und `target` ist eine Konstante. In diesem Fall wird die ganze Zeichenfolge gesucht, einschließlich aller Auffüllleerzeichen. Eine mögliche Problemumgehung stellt die Kürzung der Daten in der Zeichenfolge mit fester Länge dar. Beispiel: `EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|Gibt die Position von `target` in `string` oder, wenn nicht vorhanden, den Wert 0 zurück. Gibt 1 zurück, um den Anfang des `string` anzugeben. Indexbezifferung beginnt mit der Zahl 1.<br /><br /> **Argumente**<br /><br /> `target`: Die Zeichenfolge, nach der gesucht wird.<br /><br /> `string`: Die Zeichenfolge, die gesucht wird.<br /><br /> **Rückgabewert**<br /><br /> Eine `Int32`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|Gibt die ersten `length`-Zeichen von der linken Seite der `string` zurück. Wenn die Länge von `string` kleiner als `length` ist, wird die gesamte Zeichenfolge zurückgegeben.<br /><br /> **Argumente**<br /><br /> `string`: `String`<br /><br /> `length`: `Int16`,`Int32`, `Int64` oder `Byte`. `length` darf nicht kleiner 0 (Null) sein.<br /><br /> **Rückgabewert**<br /><br /> Ein `String`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|Gibt die (`Int32`-)Länge der Zeichenfolge in Zeichen zurück.<br /><br /> **Argumente**<br /><br /> `string`: `String`<br /><br /> **Rückgabewert**<br /><br /> Eine `Int32`.<br /><br /> **Beispiel**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

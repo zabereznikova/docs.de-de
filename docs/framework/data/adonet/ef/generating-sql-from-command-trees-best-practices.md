@@ -1,24 +1,26 @@
 ---
-title: "Generieren von SQL aus Befehlsstrukturen – Best Practices"
-ms.custom: 
+title: Generieren von SQL aus Befehlsstrukturen – Best Practices
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 Mit Befehlsstrukturen für Ausgabeabfragen werden Abfragen so modelliert, dass diese in SQL ausgedrückt werden können. Beim Generieren von SQL anhand einer Ausgabebefehlsstruktur treten für die Anbieterwriter jedoch bestimmte allgemeine Probleme auf. Diese Probleme werden im Rahmen dieses Themas erläutert. Im nächsten Thema wird anhand des Beispielanbieters aufgezeigt, wie diese Probleme gelöst werden können.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Ausdrücke werden möglicherweise in der von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] übergebenen Abfragebefehlsstruktur wiederverwendet. Es sollte nicht davon ausgegangen werden, dass die einzelnen Ausdrücke in der Abfragebefehlsstruktur nur einmal vorhanden sind.  
   
 ## <a name="mapping-primitive-types"></a>Zuordnen von primitiven Typen  
- Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie zudem, Typen zuzuordnen, die nur für wenige Vorgänge verwendet werden können, wie etwa BLOB-Typen (z. B. `ntext` in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die für viele Vorgänge, wie BLOB-Typen verwendet werden kann (z. B. `ntext` in SQL Server).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; Element'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,17 +19,17 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
   
  \<configuration>  
- \<runtime>  
+ \<Common Language Runtime >  
 \<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Syntax  
@@ -80,12 +80,13 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Steuert, ob die Leistung der <xref:System.Windows.Forms.PrintPreviewDialog> für Netzwerkdrucker optimiert ist. Weitere Informationen finden Sie unter [Übersicht über das PrintPreviewDialog-Steuerelement](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Steuert, ob asynchrone Vorgänge nicht aus dem Kontext des aufrufenden Threads übergeben. Weitere Informationen finden Sie unter [CurrentCulture und CurrentUICulture fließen, mehrere Vorgänge](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Steuert, ob die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> Methode versucht, den Anspruchstyp nur mit den letzten DNS-Eintrag übereinstimmen. Weitere Informationen finden Sie unter [Entschärfung: X509CertificateClaimSet.FindClaims-Methode](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|Steuert, ob AuthorizationContext.Empty ein änderbares Objekt zurückgeben können.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|Steuert, ob Pfade mit mehr als `MAX_PATH` (260 Zeichen) Auslösen einer <xref:System.IO.PathTooLongException>. Weitere Informationen finden Sie unter [Unterstützung für lange Pfad](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Verwendet den umgekehrten Schrägstrich ("\\") anstelle der Schrägstrich ("/") als Pfadtrennzeichen für den in der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> Eigenschaft. Weitere Informationen finden Sie unter [Entschärfung: ZipArchiveEntry.FullName Pfadtrennzeichen](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Steuert, ob Systemausnahmen ausgeführt, die in Hintergrundthreads mit erstellt ausgelöst werden <xref:System.IO.Ports.SerialPort> Streams beenden den Prozess.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Steuert, ob die legacy-Pfad-Normalisierung verwendet, und die URI-Pfade werden unterstützt, indem Sie die <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> und <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> Methoden. Weitere Informationen finden Sie unter [Entschärfung: Pfad Normalisierung](~/docs/framework/migration-guide/mitigation-path-normalization.md) und [Entschärfung: Pfad Doppelpunkt überprüft](~/docs/framework/migration-guide/mitigation-path-colon-checks.md).|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Steuert, ob ein Test auf Gleichheit vergleicht die <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> Eigenschaft eines Objekts mit der <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> -Eigenschaft des zweiten Objekts. Weitere Informationen finden Sie unter [falschen Implementierung von MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
- `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Deaktiviert die zertifikatüberprüfung erweiterte Schlüsselverwendung (EKU)-Objekt-ID (OID). Eine erweiterte Schlüsselverwendung (EKU)-Erweiterung ist eine Auflistung von Objektbezeichnern (OIDs), die angeben, die Anwendungen, die den Schlüssel zu verwenden.|.NET Framework 4.6|
+ `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Deaktiviert die zertifikatüberprüfung erweiterte Schlüsselverwendung (EKU)-Objekt-ID (OID). Eine EKU-Erweiterung ist eine Sammlung von OIDs, die Anwendungen kennzeichnen, die den Schlüssel verwenden.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Deaktiviert die Minderung TLS1. 0 Browser ausnutzen für SSL/TLS (BEAST) durch die Verwendung des SCH_SEND_AUX_RECORD deaktivieren.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Steuert, ob die <xref:System.Net.ServicePointManager?displayProperty=nameWithType> und <xref:System.Net.Security.SslStream?displayProperty=nameWithType> Klassen können das SSL 3.0-Protokoll verwenden. Weitere Informationen finden Sie unter [Entschärfung: TLS-Protokolle](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Zurücksetzen auf den Standardwert Tls12, Tls11, Tls SystemDefault TLS-Versionen wird deaktiviert.|.NET Framework 4.7|
@@ -100,10 +101,13 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Bestimmt, ob die `TransportWithMessageCredential` Sicherheitsmodus kann Nachrichten einen nicht signierten "to"-Header. Dies ist ein Opt-in-Schalter. Weitere Informationen finden Sie unter [Laufzeitänderungen in .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Steuert, ob die <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> löst der Konstruktor ein <xref:System.ArgumentException> Wenn eines der Elemente ist `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Bestimmt, ob der Versuch, verwenden Sie X509 mit Zertifikaten ein CSG softwareschlüsselspeicher-Anbieter eine Ausnahme auslöst. Weitere Informationen finden Sie unter [Sicherheit für WCF-Transport unterstützt Zertifikate mit CNG gespeichert](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Wenn Sie den HTTP-Transport mit einem selbst gehosteten Dienst zu verwenden, wenn dieser Wert auf `true` bewirkt, dass WCF ignorieren einer Anwendung hinzufügen der `Connection: close` Header in die Antwortheader für eine Anforderung. Wenn dieser Wert auf `false` kann durch das Hinzufügen der `Connection: close` Header in die Antwortheader, dies führt die Anforderung Socket schließen, nachdem eine Antwort gesendet wurde.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Handles-Deadlocks, die aus Instanzen eines Diensts wiedereintrittsfähig auf einen einzelnen Thread der Ausführung zu einem Zeitpunkt einschränken.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Zusammen mit `Switch.System.Net.DontEnableSchUseStrongCrypto`, bestimmt, ob WCF-nachrichtensicherheit TLS 1.1 und TLS 1.2 verwendet.|.NET Framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|Der Wert `false` legt die Standardkonfiguration, um das Betriebssystem auswählen des Protokolls zu ermöglichen. Der Wert `true` legt den Standardwert des höchsten Protokolls verfügbar. (Auch auf servicing Branch von früheren Framework-Versionen verfügbar)|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Bestimmt, ob die Standardnachricht Signaturalgorithmus für MSMQ-Nachrichten in WCF SHA1 oder SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Steuert, ob WCF ein SHA1- oder eine SHA256-Hash verwendet, um zufällige Namen für named Pipes zu generieren.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Steuert, ob das Auslösen einer [NullReferenceException](xref:System.NullReferenceException) Wenn die Ausnahmemeldung null ist.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Steuert, ob beim Start des Diensts ausgelöste Ausnahmen an den Aufrufer des weitergegeben werden die <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> Methode.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Bestimmt, ob Windows Presentation Foundation einen alte-Algorithmus wendet (`true`) oder einen neuen Algorithmus (`false`) beim Reservieren von Speicherplatz für \*-Spalten. Weitere Informationen finden Sie unter [Entschärfung: Platzzuweisung an mit Stern gekennzeichnete Spalten durch das Rastersteuerelement](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Steuert, ob ein Selektor oder Tabstopp steuern immer den Wert der seine ausgewählte Value-Eigenschaft, die vor dem Auslösen der Auswahl aktualisiert das geänderte Ereignis.|.NET Framework 4.7.1|

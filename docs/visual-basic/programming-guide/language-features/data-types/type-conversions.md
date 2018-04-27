@@ -1,11 +1,12 @@
 ---
 title: Typkonvertierung in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b46d813b4fcadd975d87b235e9f3350a365949fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: f1487d98f37e7ef00982de365d0d164435f84567
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-conversions-in-visual-basic"></a>Typkonvertierung in Visual Basic
 Der Prozess zum Ändern eines Werts von einem Datentyp in einen anderen Typ wird aufgerufen, *Konvertierung*. Konvertierungen sind entweder *erweiternde* oder *einschränkende*, abhängig von der Datenkapazität der beteiligten Typen. Außerdem sind Sie *implizite* oder *explizite*, abhängig von der Syntax in den Quellcode einfügen.  
@@ -33,7 +34,7 @@ Der Prozess zum Ändern eines Werts von einem Datentyp in einen anderen Typ wird
  Erläutert die Konvertierungen klassifiziert, indem Sie, ob der Zieltyp für die Daten aufnehmen kann.  
   
  [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Erläutert die Konvertierungen von, ob das Geschäft klassifiziert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sie automatisch ausgeführt werden.  
+ Erläutert die Konvertierungen, die klassifiziert, indem Sie, ob Visual Basic automatisch ausführt.  
   
  [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Konvertieren zwischen Zeichenfolgen und numerische, veranschaulicht `Boolean`, oder Datum/Uhrzeit-Werte.  
@@ -46,10 +47,10 @@ Der Prozess zum Ändern eines Werts von einem Datentyp in einen anderen Typ wird
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Führt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Datentypen und beschreibt deren Verwendung.  
+ Führt das Visual Basic-Datentypen und beschreibt deren Verwendung.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Listet die elementare Datentypen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Listet die elementaren Datentypen von Visual Basic.  
   
  [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  Beschreibt einige allgemeine Probleme, die beim Arbeiten mit Datentypen auftreten können.

@@ -2,9 +2,10 @@
 title: For Each...Next-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next-Anweisung (Visual Basic)
 Wird eine Gruppe von Anweisungen für jedes Element in einer Auflistung wiederholt.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Sie können eine beliebige Anzahl von einfügen `Exit For` Anweisungen in einem `For Each` Schleife. Bei Verwendung in geschachtelten `For Each` Schleifen `Exit For` führt zum Beenden der innersten Schleife und überträgt die Steuerung auf der nächsthöheren Ebene der Schachtelung.  
   
- `Exit For`wird häufig verwendet, nachdem eine Auswertung einer Bedingung, z. B. in einer `If`... `Then`... `Else` Struktur. Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
+ `Exit For` wird häufig verwendet, nachdem eine Auswertung einer Bedingung, z. B. in einer `If`... `Then`... `Else` Struktur. Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
   
 -   Durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich. Dies kann durch einen fehlerhaften Wert oder eine Anforderung zum Beenden verursacht werden.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  Der Datentyp des `element` sein muss, sodass der Datentyp der Elemente des `group` können konvertiert werden kann.  
   
- Der Datentyp des `group` muss ein Verweistyp, der bezieht sich auf eine Auflistung oder ein Array, das aufzählbar ist. Meist bedeutet dies, dass `group` bezieht sich auf ein Objekt, implementiert die <xref:System.Collections.IEnumerable> -Schnittstelle des der `System.Collections` Namespace oder die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle der `System.Collections.Generic` Namespace. `System.Collections.IEnumerable`definiert die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode, die ein Enumeratorobjekt für die Auflistung zurückgibt. Das Enumeratorobjekt implementiert die `System.Collections.IEnumerator` -Schnittstelle des der `System.Collections` Namespace und macht die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft und die <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.MoveNext%2A> Methoden. Visual Basic verwendet diese, um die Auflistung zu durchlaufen.  
+ Der Datentyp des `group` muss ein Verweistyp, der bezieht sich auf eine Auflistung oder ein Array, das aufzählbar ist. Meist bedeutet dies, dass `group` bezieht sich auf ein Objekt, implementiert die <xref:System.Collections.IEnumerable> -Schnittstelle des der `System.Collections` Namespace oder die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle der `System.Collections.Generic` Namespace. `System.Collections.IEnumerable` definiert die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode, die ein Enumeratorobjekt für die Auflistung zurückgibt. Das Enumeratorobjekt implementiert die `System.Collections.IEnumerator` -Schnittstelle des der `System.Collections` Namespace und macht die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft und die <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.MoveNext%2A> Methoden. Visual Basic verwendet diese, um die Auflistung zu durchlaufen.  
   
 ### <a name="narrowing-conversions"></a>Eingrenzungskonvertierungen  
  Wenn `Option Strict` festgelegt ist, um `On`, einschränkende Konvertierungen normalerweise Compilerfehlern führen. In einer `For Each` -Anweisung jedoch Konvertierungen von den Elementen im `group` auf `element` ausgewertet werden und zur Laufzeit ausgeführt wird und Compilerfehler durch einschränkende Konvertierungen werden unterdrückt.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Ändern der Auflistung.** Das Enumeratorobjekt zurückgegebenes <xref:System.Collections.IEnumerable.GetEnumerator%2A> normalerweise nicht können Sie die Auflistung zu ändern, indem Sie hinzufügen, löschen, ersetzen oder Neuordnen von Elementen. Wenn Sie die Auflistung ändern, nachdem Sie initiiert eine `For Each`... `Next` Schleife, das Enumeratorobjekt wird ungültig und bewirkt, dass der nächste Versuch, ein Element zuzugreifen ein <xref:System.InvalidOperationException> Ausnahme.  
   
- Allerdings diese Blockierung der Änderung ist nicht gemäß [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], sondern durch die Implementierung der <xref:System.Collections.IEnumerable> Schnittstelle. Es ist möglich, implementieren `IEnumerable` auf eine Weise, die Änderung während der Iteration zulässt. Wenn Sie auf diese Weise solche dynamische Änderung erwägen, stellen Sie sicher, dass Sie wissen, dass die Merkmale der `IEnumerable` Implementierung für die Auflistung, die Sie verwenden.  
+ Jedoch diese Blockierung der Änderung ist nicht bestimmt von Visual Basic sondern durch die Implementierung der <xref:System.Collections.IEnumerable> Schnittstelle. Es ist möglich, implementieren `IEnumerable` auf eine Weise, die Änderung während der Iteration zulässt. Wenn Sie auf diese Weise solche dynamische Änderung erwägen, stellen Sie sicher, dass Sie wissen, dass die Merkmale der `IEnumerable` Implementierung für die Auflistung, die Sie verwenden.  
   
  **Ändern die Elemente der Auflistung.** Die <xref:System.Collections.IEnumerator.Current%2A> -Eigenschaft des Enumerationsobjekts ist [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), und gibt eine lokale Kopie jedes Elements der Auflistung zurück. Dies bedeutet, dass die Elemente selbst zu ändern, kann nicht in einem `For Each`... `Next` Schleife. Jede Änderung, die Sie vornehmen, wirkt sich auf nur die lokale Kopie von `Current` und ist nicht in der zugrunde liegenden Auflistung übernommen. Allerdings können ein Element ein Verweistyp ist, Sie die Elemente der Instanz ändern, auf denen er zeigt. Im folgende Beispiel ändert die `BackColor` Mitglied aller `thisControl` Element. Sie nicht möglich ist, jedoch ändern, `thisControl` selbst.  
   

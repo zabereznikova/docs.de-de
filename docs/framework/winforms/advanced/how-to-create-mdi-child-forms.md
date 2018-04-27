@@ -1,12 +1,13 @@
 ---
 title: 'Gewusst wie: Erstellen von untergeordneten MDI-Formularen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Gewusst wie: Erstellen von untergeordneten MDI-Formularen
 Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), wie diese Formulare den Mittelpunkt der Benutzerinteraktion sind.  
@@ -47,7 +49,7 @@ Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Documen
   
 4.  In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, zeigen Sie auf **hinzufügen**, und wählen Sie dann **neues Element hinzufügen**.  
   
-5.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] oder im [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) oder **Windows Forms-Anwendung (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) aus der **Vorlagen** Bereich. In der **Namen** Feld, nennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** Schaltfläche, um das Formular zum Projekt hinzuzufügen.  
+5.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in Visual Basic oder Visual c#) oder **Windows Forms-Anwendung (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) aus der  **Vorlagen** Bereich. In der **Namen** Feld, nennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** Schaltfläche, um das Formular zum Projekt hinzuzufügen.  
   
     > [!NOTE]
     >  Das untergeordnete MDI-Formular, das Sie in diesem Schritt erstellten haben, ist ein Standard-Windows Form. Als solches besitzt es eine Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A>, mit der Sie die Transparenz des Formulars steuern können. Allerdings wurde die Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A> für Fenster der obersten Ebene entwickelt. Verwenden Sie sie nicht mit untergeordneten MDI-Formularen, da Darstellungsprobleme auftreten können.  

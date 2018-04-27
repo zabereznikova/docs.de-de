@@ -1,34 +1,34 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen einer animierten Schaltfläche für die Verwendung in einer [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Anwendung. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von Schaltfläche Logik aus der Schaltflächendeklaration ermöglicht. Diese exemplarische Vorgehensweise ist vollständig in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Diese exemplarische Vorgehensweise führt Sie durch die Schritte zum Erstellen der Anwendung durch eingeben bzw. kopieren und Einfügen von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] in Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Wenn Sie erfahren lieber, wie einem Entwurfstool (Microsoft Expression Blend) verwenden, um dieselbe Anwendung zu erstellen, finden Sie unter [erstellen Sie eine Schaltfläche mithilfe von Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Diese exemplarische Vorgehensweise führt Sie durch die Schritte zum Erstellen der Anwendung durch eingeben bzw. kopieren und Einfügen von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] in Microsoft Visual Studio. Wenn Sie erfahren lieber, wie einem Entwurfstool (Microsoft Expression Blend) verwenden, um dieselbe Anwendung zu erstellen, finden Sie unter [erstellen Sie eine Schaltfläche mithilfe von Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  Die folgende Abbildung zeigt die Schaltflächen fertig.  
   
@@ -39,7 +39,7 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen e
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Erstellen eines neuen WPF-Projekts und Hinzufügen von Schaltflächen zum Fenster  
   
-1.  Starten Sie[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Starten Sie Visual Studio.  
   
 2.  **Erstellen Sie ein neues WPF-Projekt:** auf die **Datei** Sie im Menü **neu**, und klicken Sie dann auf **Projekt**. Suchen der **Windows-Anwendung (WPF)** Vorlage, und nennen Sie das Projekt "den Namen AnimatedButton". Dadurch wird das Gerüst für die Anwendung erstellt.  
   
@@ -332,7 +332,7 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, Informationen zum Erstellen e
   
      Drücken Sie F5, um die Anwendung auszuführen, und klicken auf eine der Schaltflächen. Beachten Sie, dass die Schaltfläche "" markierten bleibt, nachdem Sie darauf klicken, da er weiterhin den Fokus besitzt. Wenn Sie eine weitere Schaltfläche klicken, im die Schaltfläche "Neu" den Fokus erhält, während das letzte Lesezeichen geht verloren.  
   
-4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** als Nächstes fügen wir einige Animationen, die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
+4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** als Nächstes fügen wir einige Animationen, die Trigger hinzu.   Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

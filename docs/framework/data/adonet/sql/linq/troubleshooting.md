@@ -1,24 +1,26 @@
 ---
 title: Problembehandlung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Problembehandlung
 Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen auftreten können, und enthalten Vorschläge dazu, wie diese Probleme vermieden bzw. deren Auswirkungen auf andere Weise verringert werden können.  
@@ -57,7 +59,7 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
   
 -   Sie müssen über einen Verweis auf `System.Core.dll` und `System.Data.Linq.dll` verfügen.  
   
--   Sie müssen über eine `Imports`-Direktive ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) oder `using`-Direktive (C#) für <xref:System.Linq> und <xref:System.Data.Linq> verfügen.  
+-   Sie haben eine `Imports` (Visual Basic) oder `using` -Direktive (c#) für <xref:System.Linq> und <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Beim Debuggen einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Projekt können Sie die Beziehungen einer Entität durchlaufen. Auf diese Weise werden diese Elemente in den Cache und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ihr Vorhandensein bekannt wird. Wenn Sie dann versuchen, <xref:System.Data.Linq.Table%601.Attach%2A> oder <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> bzw. eine ähnliche Methode auszuführen, durch die mehrere Zeilen mit demselben Schlüssel generiert werden, wird eine <xref:System.Data.Linq.DuplicateKeyException> ausgelöst.  

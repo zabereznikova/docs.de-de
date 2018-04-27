@@ -1,24 +1,26 @@
 ---
 title: Entity Framework-Terminologie
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework-Terminologie
 In diesem Thema werden Begriffe, die häufig in verwiesen wird definiert, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Dokumentation. Zu relevanten Themen stehen Links zu weiteren Informationen zur Verfügung.  
@@ -55,7 +57,7 @@ In diesem Thema werden Begriffe, die häufig in verwiesen wird definiert, [!INCL
 |unabhängige Zuordnung|Eine Zuordnung zwischen Entitäten, die von einem unabhängigen Objekt dargestellt und nachverfolgt wird.|  
 |Key|Das Attribut eines Entitätstyps, das festlegt, mit welcher Eigenschaft oder welchem Eigenschaftensatz eindeutige Instanzen des Entitätstyps identifiziert werden. Auf der Objektebene durch die <xref:System.Data.EntityKey>-Klasse dargestellt.<br /><br /> Weitere Informationen finden Sie unter [Key-Element (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) und [Entitätsschlüssel](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |Träges Laden|Wenn eine Abfrage Objekte zurückgibt, werden verknüpfte Objekte nicht zur gleichen Zeit geladen. Sie werden stattdessen automatisch geladen, sobald auf die Navigationseigenschaft zugegriffen wird.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Eine Abfragesyntax zum Definieren eines Satzes von Abfrageoperatoren, mit denen Überquerungs-, Filter- und Projektionsvorgänge in [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] und [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] direkt und deklarativ ausgedrückt werden können.<br /><br /> Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Eine Abfragesyntax, die eine Gruppe von Abfrageoperatoren definiert, mit denen Durchlauf, Filter- und projektionsvorgänge Vorgänge in Visual c# und Visual Basic so direkt und deklarativ ausgedrückt werden können.<br /><br /> Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |Zuordnen|Eine Spezifikation der Entsprechungen zwischen Elementen in einem konzeptionellen Modell und Elementen in einem Speichermodell.<br /><br /> Weitere Informationen finden Sie unter [MSL-Spezifikation](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |MSL-Datei|Eine XML-Datei, die die in MSL ausgedrückte Zuordnung des konzeptionellen Modells zu dem Speichermodell enthält.|  
 |MSL (Mapping Specification Language)|Eine XML-basierte Sprache, die zum Zuordnen von in einem Konzeptmodell definierten Elementen zu Elementen in einem Speichermodell verwendet wird.<br /><br /> Weitere Informationen finden Sie unter [MSL-Spezifikation](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ In diesem Thema werden Begriffe, die häufig in verwiesen wird definiert, [!INCL
 |Mehrere Entitätenmengen pro Typ|Die Fähigkeit eines Entitätstyps, in mehreren Entitätenmengen definiert zu sein.<br /><br /> Weitere Informationen finden Sie unter [EntitySet-Element (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) und [wie: Definieren eines Modells mit mehrere Entitätenmengen pro Typ](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |Navigationseigenschaft|Eine Eigenschaft eines Entitätstyps, die gemäß der Definition durch eine Zuordnung eine Beziehung zu einem anderen Entitätstyp darstellt. Mit Navigationseigenschaften werden verwandte Objekte abhängig von der Multiplizität am anderen Ende der Zuordnung als <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> zurückgegeben.<br /><br /> Weitere Informationen finden Sie unter [NavigationProperty-Element (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) und [Navigationseigenschaft](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |Abfragepfad|Eine Zeichenfolgendarstellung eines Pfads, der angibt, welche verwandten Objekte bei Ausführung einer Objektabfrage zurückgegeben werden. Ein Abfragepfad wird definiert, indem die <xref:System.Data.Objects.ObjectQuery%601.Include%2A>-Methode in einer <xref:System.Data.Objects.ObjectQuery%601> aufgerufen wird.<br /><br /> Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|Objektkontext|Stellt den im konzeptionellen Modell definierten Entitätencontainer dar. Er enthält eine Verbindung mit der zugrunde liegenden Datenquelle und stellt Dienste wie Änderungsnachverfolgung und Identitätsauflösung zur Verfügung. Ein Objektkontext wird durch eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse oder der `DbContext`-Klasse dargestellt.<br /><br /> `DbContext`ist Teil der [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 ist nicht Bestandteil von .NET Framework, setzt jedoch auf .NET Framework 4.5 auf. Entity Framework 5.0 ist als die ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) Paket. Weitere Informationen finden Sie unter [Entity Framework-Versionen und Versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|Objektkontext|Stellt den im konzeptionellen Modell definierten Entitätencontainer dar. Er enthält eine Verbindung mit der zugrunde liegenden Datenquelle und stellt Dienste wie Änderungsnachverfolgung und Identitätsauflösung zur Verfügung. Ein Objektkontext wird durch eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse oder der `DbContext`-Klasse dargestellt.<br /><br /> `DbContext` ist Teil der [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 ist nicht Bestandteil von .NET Framework, setzt jedoch auf .NET Framework 4.5 auf. Entity Framework 5.0 ist als die ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) Paket. Weitere Informationen finden Sie unter [Entity Framework-Versionen und Versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |Objektebene|Die Entitätstypen und Objektkontextdefinitionen, die vom Entity Framework verwendet werden.|  
 |Objektabfrage|Eine Abfrage, die in einem konzeptionellen Modell innerhalb eines Objektkontexts ausgeführt wird und Daten als Objekte zurückgibt.<br /><br /> Weitere Informationen finden Sie unter [Objektabfragen](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |Objektrelationales Mapping|Eine Technik für die Umwandlung von Daten einer relationalen Datenbank in Datentypen, die in objektorientierten Softwareanwendungen verwendet werden können.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stellt objektrelationale Zuordnungsdienste bereit, indem die im Speichermodell definierten relationalen Daten den im konzeptionellen Modell definierten Datentypen zugeordnet werden.<br /><br /> Weitere Informationen finden Sie unter [modellieren und Zuordnen von](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

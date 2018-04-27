@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>Schnittstellen (Visual Basic)
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können. Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden. Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
@@ -46,13 +46,13 @@ ms.lasthandoff: 10/22/2017
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
- Das [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reservierte Wort `Implements` wird in zwei Arten verwendet. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
+ Visual Basic reservierten Wort `Implements` wird auf zwei Arten verwendet. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
   
 ### <a name="implements-statement"></a>Implements-Anweisung  
  Wenn eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, muss die `Implements` Anweisung unmittelbar nach der `Class` oder `Structure` Anweisung erfolgen. Die `Implements` Anweisung erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellen, die von einer Klasse implementiert werden. Die Klasse oder Struktur muss alle Schnittstellenmember mit dem `Implements` Schlüsselwort implementieren.  
   
 ### <a name="implements-keyword"></a>Implements-Schlüsselwort  
- Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name des Members, der ein Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden; und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet wurde.  
+ Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name eines Elements, das einen Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden, und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von Visual Basic verwendet.  
   
  Der folgende Code zeigt z. B. das Deklarieren einer Unterroutine namens `Sub1`, die eine Methode einer Schnittstelle implementiert:  
   

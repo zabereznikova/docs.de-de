@@ -1,11 +1,12 @@
 ---
 title: Operatorprozeduren (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Operatorprozeduren (Visual Basic)
-Eine Operatorprozedur ist eine Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Anweisungen, die das Verhalten eines standard-Operators definieren (z. B. `*`, `<>`, oder `And`) für eine Klasse oder Struktur, die Sie definiert haben. Dies wird auch bezeichnet *operatorüberladung*.  
+Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die das Verhalten eines standard-Operators definieren (z. B. `*`, `<>`, oder `And`) für eine Klasse oder Struktur, die Sie definiert haben. Dies wird auch bezeichnet *operatorüberladung*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Beim Definieren von Operatorprozeduren  
  Wenn Sie eine Klasse oder Struktur definiert haben, können Sie Variablen des Typs der betreffenden Klasse oder Struktur deklarieren. In einigen Fällen muss eine solche Variable zur Teilnahme an eines Vorgangs als Teil eines Ausdrucks ein. Zu diesem Zweck müssen sie ein Operand eines Operators sein.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Operatoren definiert nur die grundlegenden Datentypen. Sie können das Verhalten eines Operators, wenn bei mindestens einem definieren oder beide Operanden vom Typ der Klasse oder Struktur sind.  
+ Visual Basic definiert nur die grundlegenden Datentypen von Operatoren. Sie können das Verhalten eines Operators, wenn bei mindestens einem definieren oder beide Operanden vom Typ der Klasse oder Struktur sind.  
   
  Weitere Informationen finden Sie unter [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   

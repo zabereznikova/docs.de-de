@@ -2,8 +2,8 @@
 title: Erweiterungsindexereigenschaft (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Erweiterungsindexereigenschaft (Visual Basic)
 Bietet Zugriff auf einzelne Elemente in einer Auflistung.  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>Hinweise  
  Sie können die Erweiterungsindexereigenschaft Zugriff auf einzelne Elemente in einer Auflistung verwenden. Diese Indexereigenschaft wird in der Regel auf die Ausgabe der XML-Achseneigenschaften verwendet. Die untergeordnete XML- und die untergeordnete XML-Achseneigenschaften zurückgeben Auflistungen von <xref:System.Xml.Linq.XElement> Objekte oder ein Attributwert.  
   
- Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert Indexer Erweiterungseigenschaften in Aufrufe an die `ElementAtOrDefault` Methode. Im Gegensatz zu einer konstantenarrayindizierung der `ElementAtOrDefault` -Methode zurückkehrt `Nothing` , wenn der Index außerhalb des gültigen Bereichs liegt. Dieses Verhalten ist nützlich, wenn Sie einfach die Anzahl der Elemente in einer Auflistung nicht bestimmen können.  
+ Visual Basic-Compiler konvertiert Indexer Erweiterungseigenschaften in Aufrufe an die `ElementAtOrDefault` Methode. Im Gegensatz zu einer konstantenarrayindizierung der `ElementAtOrDefault` -Methode zurückkehrt `Nothing` , wenn der Index außerhalb des gültigen Bereichs liegt. Dieses Verhalten ist nützlich, wenn Sie einfach die Anzahl der Elemente in einer Auflistung nicht bestimmen können.  
   
  Diese Indexereigenschaft ist wie eine Erweiterungseigenschaft für Auflistungen, implementieren <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601>: wird verwendet, nur, wenn die Auflistung nicht über einen Indexer oder eine Standardeigenschaft verfügt.  
   

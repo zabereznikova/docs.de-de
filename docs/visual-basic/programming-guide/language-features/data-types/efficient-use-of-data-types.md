@@ -1,11 +1,12 @@
 ---
 title: Effiziente Verwendung von Datentypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
 Nicht deklarierte Variablen und Variablen, die ohne ein Datentyp zugewiesen sind die `Object` -Datentyp. Dies erleichtert es schnell Programme zu schreiben, aber es kann dazu führen, dass sie langsamer ausgeführt.  
@@ -41,7 +42,7 @@ Nicht deklarierte Variablen und Variablen, die ohne ein Datentyp zugewiesen sind
 -   Es führt zu einer schnelleren Ausführung des Codes.  
   
 ## <a name="most-efficient-data-types"></a>Die effizienteste-Datentypen  
- Für Variablen, die nie Addieren von Brüchen enthalten, sind die ganzzahlige Datentypen effizienter als die nicht ganzzahligen Typen. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Integer` und `UInteger` sind die effizientesten numerischen Typen.  
+ Für Variablen, die nie Addieren von Brüchen enthalten, sind die ganzzahlige Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` und `UInteger` sind die effizientesten numerischen Typen.  
   
  Bei Bruchzahlen `Double` ist der effizienteste Datentyp aus, da die Prozessoren auf den aktuellen Plattformen Operationen mit Gleitkommazahlen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
   

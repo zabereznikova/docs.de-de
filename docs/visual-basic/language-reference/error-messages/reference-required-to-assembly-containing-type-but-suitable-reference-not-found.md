@@ -1,9 +1,9 @@
 ---
-title: Ein Verweis auf Assembly &#39;erforderlich; &lt;Assemblyidentity&gt;&#39; enthaltenden Typ &#39;&lt; TypeName&gt;&#39; aber kein geeigneter Verweis konnte nicht gefunden werden, aufgrund einer Mehrdeutigkeit zwischen Projekten &#39;&lt; projektname1&gt;&#39; und &#39;&lt; projektname2&gt;&#39;
+title: Ein Verweis auf Assembly erforderlich &#39; &lt;Assemblyidentity&gt; &#39; mit Typ &#39; &lt;Typename&gt;&#39;, jedoch kein geeigneter Verweis konnte aufgrund einer Mehrdeutigkeit zwischen nicht gefunden werden Projekte &#39; &lt;projektname1&gt; &#39; und &#39; &lt;projektname2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 69b1184d47e427bd985c3b18135d4a0ac4d91410
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Ein Verweis auf Assembly &#39;erforderlich; &lt;Assemblyidentity&gt;&#39; enthaltenden Typ &#39;&lt; TypeName&gt;&#39; aber kein geeigneter Verweis konnte nicht gefunden werden, aufgrund einer Mehrdeutigkeit zwischen Projekten &#39;&lt; projektname1&gt;&#39; und &#39;&lt; projektname2&gt;&#39;
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Ein Verweis auf Assembly erforderlich &#39; &lt;Assemblyidentity&gt; &#39; mit Typ &#39; &lt;Typename&gt;&#39;, jedoch kein geeigneter Verweis konnte aufgrund einer Mehrdeutigkeit zwischen nicht gefunden werden Projekte &#39; &lt;projektname1&gt; &#39; und &#39; &lt;projektname2&gt;&#39;
 Ein Ausdruck verwendet einen Typ (z. B. eine Klasse, eine Struktur, eine Schnittstelle, eine Enumeration oder einen Delegaten), der außerhalb des Projekts definiert ist. Sie haben jedoch Projektverweise auf mehr als eine Assembly, die diesen Typ definiert.  
   
  Die genannten Projekte erzeugen Assemblys mit demselben Namen. Daher kann der Compiler nicht bestimmen, welche Assembly für den Typ, auf den Sie zugreifen, verwendet werden soll.  
   
- Für den Zugriff auf einen Typ in einer anderen Assembly benötigt der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Compiler einen Verweis auf diese Assembly. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
+ Für den Zugriff auf einen Typ in einer anderen Assembly definiert, muss Visual Basic-Compiler einen Verweis auf diese Assembly verfügen. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
   
  **Fehler-ID:** BC30969  
   

@@ -1,28 +1,30 @@
 ---
-title: "Übersicht über Bindungsquellen"
-ms.custom: 
+title: Übersicht über Bindungsquellen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
@@ -55,7 +57,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 ### <a name="other-characteristics"></a>Weitere Merkmale  
  In der folgenden Liste finden Sie weitere zu beachtende Punkte:  
   
--   Wenn Sie das Objekt mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellen möchten, muss die Klasse über einen Standardkonstruktor verfügen. In einigen [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]-Sprachen wie [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] wird der Standardkonstruktor eventuell automatisch erstellt.  
+-   Wenn Sie das Objekt mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellen möchten, muss die Klasse über einen Standardkonstruktor verfügen. In einigen [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] Sprachen wie c# ist der Standardkonstruktor möglicherweise für Sie erstellt.  
   
 -   Die als Bindungsquelleigenschaften für eine Bindung verwendeten Eigenschaften müssen öffentliche Eigenschaften der Klasse sein. Explizit definierte Schnittstelleneigenschaften sowie geschützte, private, interne und virtuelle Eigenschaften können nicht für eine Bindung herangezogen werden.  
   
@@ -79,7 +81,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
   
  WPF wird nie direkt an eine Auflistung gebunden. Wenn Sie eine Auflistung als Bindungsquelle angeben, wird WPF an die Standardansicht der Auflistung gebunden. Weitere Informationen zu Standardansichten finden Sie in der [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Wenn Sie ein erweiterten Szenario haben, und Sie eine eigene Auflistung implementieren möchten, können Sie verwenden die <xref:System.Collections.IList> Schnittstelle. <xref:System.Collections.IList>Stellt eine nicht generische Auflistung von Objekten, die einzeln nach Index zugegriffen werden kann, kann die Leistung verbessert werden kann.  
+ Wenn Sie ein erweiterten Szenario haben, und Sie eine eigene Auflistung implementieren möchten, können Sie verwenden die <xref:System.Collections.IList> Schnittstelle. <xref:System.Collections.IList> Stellt eine nicht generische Auflistung von Objekten, die einzeln nach Index zugegriffen werden kann, kann die Leistung verbessert werden kann.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Berechtigungsanforderungen bei der Datenbindung  

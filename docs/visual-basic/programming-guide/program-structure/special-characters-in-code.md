@@ -1,11 +1,12 @@
 ---
 title: Sonderzeichen in Code (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Sonderzeichen in Code (Visual Basic)
-In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Interpunktion und Sonderzeichen in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Zeichensatz haben verschiedene Funktionen reichen von der Strukturierung Programmtext zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
+In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Interpunktion und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Funktionen, reichen von der Strukturierung Programmtext zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
   
 ## <a name="parentheses"></a>Klammern  
  Verwenden Sie Klammern, wenn Sie eine Prozedur, wie z. B. definieren eine `Sub` oder `Function`. Sie müssen alle Prozedur Argumentlisten in Klammern einschließen. Sie verwenden auch Klammern für das zusammensetzen von Variablen oder Argumente in logischen Gruppen, insbesondere, um die Standardreihenfolge der Rangfolge von Operatoren in einem komplexen Ausdruck zu überschreiben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
@@ -56,7 +57,7 @@ In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwen
  Nach der Ausführung des vorherigen Code den Wert der `d` "8.225" und der Wert des `e` ist 3. Die Berechnung von `d` verwendet der Standardvorrang gilt der `/` über `+` und entspricht dem `d = b + (c / a)`. Die Klammern in die Berechnung von `e` außer Kraft setzen der Standardvorrang gilt.  
   
 ## <a name="separators"></a>Trennzeichen  
- Trennzeichen sind, was ihre Name schon sagt: Trennen Sie Abschnitte des Codes. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], das Trennzeichen ist der Doppelpunkt (`:`). Verwenden Sie als Trennzeichen, wenn mehrere Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen enthalten sein sollen. Dies spart Platz und verbessert die Lesbarkeit des Codes. Das folgende Beispiel zeigt drei Anweisungen, die durch Doppelpunkte getrennt werden.  
+ Trennzeichen sind, was ihre Name schon sagt: Trennen Sie Abschnitte des Codes. In Visual Basic ist das Trennzeichen der Doppelpunkt (`:`). Verwenden Sie als Trennzeichen, wenn mehrere Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen enthalten sein sollen. Dies spart Platz und verbessert die Lesbarkeit des Codes. Das folgende Beispiel zeigt drei Anweisungen, die durch Doppelpunkte getrennt werden.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

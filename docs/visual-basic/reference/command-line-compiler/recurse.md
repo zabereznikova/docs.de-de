@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-Recurse
 Kompiliert Quellcode Dateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnis oder das Projektverzeichnis.  
@@ -42,13 +42,13 @@ Kompiliert Quellcode Dateien in allen untergeordneten Verzeichnissen des angegeb
 >  Die `-recurse` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Befehl kompiliert alle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Dateien im aktuellen Verzeichnis.  
+ Der folgende Befehl kompiliert alle Visual Basic-Dateien im aktuellen Verzeichnis.  
   
 ```console
 vbc *.vb  
 ```  
   
- Der folgende Befehl kompiliert alle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Dateien in der `Test\ABC` Verzeichnis und alle Verzeichnisse darunter und generiert dann `Test.ABC.dll`.  
+ Der folgende Befehl kompiliert alle Visual Basic-Dateien in den `Test\ABC` Verzeichnis und alle Verzeichnisse darunter und generiert dann `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

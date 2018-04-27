@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (v1.0)
 
@@ -28,7 +29,7 @@ Copyright © 2017 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieser Veröffentlichung dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert werden.
 
-Dieses Handbuch steht kostenlos in Form einer elektronischen Buch (e-Book) über mehrere Kanäle bei Microsoft z. B. http://dot.net/architecture verfügbar.
+Dieses Handbuch steht kostenlos in Form einer elektronischen Buch (e-Book) über mehrere Kanäle bei Microsoft zur Verfügung wie z. B. http://dot.net/architecture.
 
 Wenn Sie Fragen im Zusammenhang mit dieser Veröffentlichung haben, senden Sie eine E-Mail an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
@@ -36,7 +37,7 @@ Dieses Buch wird unverändert bereitgestellt und drückt die Ansichten und Meinu
 
 Einige der hier dargestellten Beispiele dienen nur zu Illustrationszwecken und sind fiktiv. Keinerlei Zuordnung oder Verbindung zu realen Gegebenheiten ist beabsichtigt oder sollte gefolgert werden.
 
-Microsoft und die auf der Webseite „Marken“ unter http://www.microsoft.com aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe. Alle anderen Marken sind Eigentum der jeweiligen Besitzer.
+Microsoft und die Marken am http://www.microsoft.com auf der Webseite "Marken" sind Marken der Microsoft-Unternehmensgruppe. Alle anderen Marken sind Eigentum der jeweiligen Besitzer.
 
 Autor:
 > **Cesar de la Torre**, Sr. PM, .NET-Produktteam, Microsoft Corp.
@@ -172,11 +173,11 @@ Dieses Handbuch ist nicht zum Arbeiten mit systemeigenen Cloud-Anwendungen, z. B
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Containerisierter Docker-Anwendungslebenszyklus mit Microsoft-Plattform und -Tools** (herunterladbares E-Book): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Lebenszyklus der Docker-Anwendung mit Microsoft-Webplattform und Tools in Containern** (herunterladbares e-Book): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **.NET Microservices: Architektur für containerisierte .NET-Anwendungen** (herunterladbares E-Book): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Microservices: Architektur für .NET Sammelartikeleinheit** (herunterladbares e-Book): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **Architektur moderner Webanwendungen mit ASP.NET Core und Azure** (downloadbares E-Book): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **Innovative Webanwendungen mit ASP.NET Core und Azure Architektur** (herunterladbares e-Book): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 

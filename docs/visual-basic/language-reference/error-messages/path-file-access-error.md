@@ -2,22 +2,22 @@
 title: Pfad-Dateizugriffsfehler
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>Pfad-/Dateizugriffsfehler
 Während eines Datei- oder Datenträgerzugriffs womöglich des Betriebssystems eine Verbindung zwischen den Pfad und den Dateinamen nicht.  
@@ -30,7 +30,7 @@ Während eines Datei- oder Datenträgerzugriffs womöglich des Betriebssystems e
   
 3.  Stellen Sie sicher, dass Sie nicht versucht haben, öffnen Sie eine schreibgeschützte Datei in sequenziellen `Output` oder `Append` Modus. Wenn dies der Fall ist, öffnen Sie die Datei im `Input` Modus, oder ändern Sie das Schreibschutzattribut der Datei.  
   
-4.  Stellen Sie sicher, dass Sie wurde nicht versucht, so ändern Sie eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projekt innerhalb einer Datenbank oder das Dokument.  
+4.  Stellen Sie sicher, dass Sie nicht versuchen, ein Visual Basic-Projekt in einer Datenbank oder das Dokument zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -2,8 +2,9 @@
 title: 'Gewusst wie: Lokalisieren einer Anwendung'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Gewusst wie: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -88,7 +90,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Erstellen des LocBaml-Tools  
   
-1.  Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Herunterladen der [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] Dateien aus dem [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Laden Sie die C#-Dateien aus dem [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Führen Sie über die Befehlszeile die Projektdatei (locbaml.csproj) aus, um das Tool zu erstellen:  
   
@@ -195,7 +197,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 7.  Um die neue Satellitenassembly zu testen, müssen Sie die Kultur ändern, unter der Ihre Anwendung ausgeführt wird. Dazu haben Sie zwei Möglichkeiten:  
   
-    -   Ändern von regionalen Einstellungen des Betriebssystems (**starten** &#124; **In der Systemsteuerung** &#124; **Regions- und Sprachoptionen**).  
+    -   Ändern von regionalen Einstellungen des Betriebssystems (**starten** &#124; **Systemsteuerung** &#124; **Regions- und Sprachoptionen**).  
   
     -   Fügen Sie in Ihrer Anwendung den folgenden Code in "App.xaml.cs" hinzu:  
   

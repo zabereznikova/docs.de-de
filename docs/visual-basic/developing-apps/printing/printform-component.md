@@ -12,14 +12,14 @@ ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3269a980d19466205e6c67a18f22dded9301ec59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm-Komponente (Visual Basic)
-Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht Ihnen, ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic-Versionen.  
+Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente für Visual Basic können Sie ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic-Versionen.  
   
  Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169)herunterladen.  
   

@@ -1,11 +1,12 @@
 ---
 title: Namen deklarierter Elemente (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
 Jedem deklariertes Element hat einen Namen, so genannte ein *Bezeichner*, wird der Code dazu verwendet wird, um darauf zu verweisen.  
   
 ## <a name="rules"></a>Regeln  
- Ein Elementname in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen die folgenden Regeln beachten:  
+ Ein Elementname in Visual Basic muss die folgenden Regeln beachten:  
   
 -   Er muss mit einem alphabetischen Zeichen oder einem Unterstrich beginnen (`_`).  
   
@@ -79,18 +80,18 @@ Jedem deklariertes Element hat einen Namen, so genannte ein *Bezeichner*, wird d
  Andererseits, sollte Ihr Name nicht so kurz sein, dass es nicht angemessen beschrieben werden, was das Element darstellt, und wie Sie im Code verwendet. Dies ist wichtig für die Lesbarkeit des Codes. Wenn eine andere Person versucht wird, zu verstehen, oder wenn Sie selbst an ihn sind sehr lange, nachdem Sie ihn geschrieben haben, können geeignete Elementnamen eine erhebliche Zeit speichern.  
   
 ## <a name="escaped-names"></a>Namen mit Escapesequenz  
- Im allgemeinen Namen eines Elements darf nicht entsprechen einem reservierten Schlüsselwort [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], wie z. B. `Case` oder `Friend`. Allerdings können Sie definieren eine *mit Escapezeichen versehen Namen*, die durch Klammern eingeschlossen wird (`[ ]`). Ein Namen mit Escapezeichen kann keinem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Schlüsselwort, da jegliche Mehrdeutigkeit durch die Klammern. Die Klammern wird auch bei auf den Namen später in Ihrem Code verweisen verwenden.  
+ Im allgemeinen Namen eines Elements darf nicht entsprechen keines wie z. B. von Visual Basic reservierten Schlüsselwörter `Case` oder `Friend`. Allerdings können Sie definieren eine *mit Escapezeichen versehen Namen*, die durch Klammern eingeschlossen wird (`[ ]`). Ein Namen mit Escapezeichen kann alle Visual Basic-Schlüsselwort übereinstimmen, da jegliche Mehrdeutigkeit durch die Klammern. Die Klammern wird auch bei auf den Namen später in Ihrem Code verweisen verwenden.  
   
  Im Allgemeinen sollten Sie Namen mit Escapesequenz verwenden nur, wenn:  
   
--   Ihr Code wurde von einer früheren Version von migriert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , die nicht das Schlüsselwort verwendet wird, als ein Name reserviert oder  
+-   Code wurde von einer früheren Version von Visual Basic migriert, nicht das Schlüsselwort verwendet wird, als einen Namen reserviert; oder  
   
 -   Sie arbeiten mit Code in einer anderen Sprache, in dem das angegebene Schlüsselwort nicht reserviert ist.  
   
  Andernfalls sollten Sie das Element umbenennen, wenn dessen Name mit einem Schlüsselwort einen Konflikt verursacht. Die integrierte Entwicklungsumgebung (IDE) bietet eine einfache Möglichkeit hierzu. Weitere Informationen finden Sie unter [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   
 ## <a name="case-sensitivity-in-names"></a>Groß-/Kleinschreibung in Namen  
- Elementnamen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Groß-/Kleinschreibung unterschieden. Dies bedeutet, dass wenn der Compiler zwei Namen verglichen werden, die nur Groß-und Kleinschreibung unterscheiden, werden mit demselben Namen interpretiert. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
+ Elementnamen in Visual Basic Groß-/Kleinschreibung unterschieden. Dies bedeutet, dass wenn der Compiler zwei Namen verglichen werden, die nur Groß-und Kleinschreibung unterscheiden, werden mit demselben Namen interpretiert. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
   
  Allerdings verwendet die common Language Runtime (CLR) Bindung Groß-/Kleinschreibung beachtet. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. Wenn Sie danach die Klasse erneut kompilieren und ändern den Namen des Elements um `abc`, die andere Assemblys, die Ihre Klasse verwenden können nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
   

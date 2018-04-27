@@ -1,12 +1,13 @@
 ---
-title: "Synchrone und asynchrone Vorgänge"
-ms.custom: 
+title: Synchrone und asynchrone Vorgänge
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -53,7 +55,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
   
 -   Verwenden Sie asynchrone Seiten, wenn Sie Vorgänge innerhalb einer ASP.NET-Seite aufrufen.  
   
--   Wenn Sie Vorgänge von einer Singlethread-Anwendung aufrufen, etwa einer Windows Forms- oder [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]-Anwendung. Bei Verwendung des ereignisgesteuerten asynchronen Aufrufmodells wird das resultierende Ereignis im UI-Thread ausgelöst. Dies erhöht die Ansprechempfindlichkeit der Anwendung gegenüber Benutzeraktivitäten, ohne dass Sie selbst mehrere Threads verwalten müssen.  
+-   Wenn Sie Vorgänge aus einer beliebigen Anwendung aufrufen, die Singlethread, z. B. Windows Forms oder Windows Presentation Foundation (WPF). Bei Verwendung des ereignisgesteuerten asynchronen Aufrufmodells wird das resultierende Ereignis im UI-Thread ausgelöst. Dies erhöht die Ansprechempfindlichkeit der Anwendung gegenüber Benutzeraktivitäten, ohne dass Sie selbst mehrere Threads verwalten müssen.  
   
 -   Im Allgemeinen gilt: Haben Sie die Wahl zwischen einem synchronen oder einem asynchronen Aufruf, dann wählen Sie den asynchronen Aufruf.  
   

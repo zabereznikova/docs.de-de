@@ -1,11 +1,12 @@
 ---
 title: Function-Prozeduren (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Function-Prozeduren (Visual Basic)
-Ein `Function` Verfahren besteht aus einer Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anweisungen, die durch die `Function` und `End Function` Anweisungen. Die `Function` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben. Wenn er die Steuerung zurückgibt, gibt es auch einen Wert an den aufrufenden Code zurück.  
+Ein `Function` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Function` und `End Function` Anweisungen. Die `Function` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben. Wenn er die Steuerung zurückgibt, gibt es auch einen Wert an den aufrufenden Code zurück.  
   
  Jedes Mal, die die Prozedur aufgerufen wird, werden die Anweisungen ausgeführt werden, beginnend mit der ersten ausführbaren Anweisung nach der `Function` -Anweisung und endet mit dem ersten `End Function`, `Exit Function`, oder `Return` Anweisung wurde gefunden.  
   
@@ -91,11 +92,11 @@ End Function
   
  Die Syntax für einen Aufruf einer `Function` Prozedur lautet wie folgt:  
   
- *Lvalue*`=`*Funktionsname* `[(` *Argumentlist*    `)]`  
+ *Lvalue*`=`*Funktionsname* `[(` *Argumentlist*  `)]`  
   
- `If ((`*Funktionsname* `[(` *Argumentlist* `)] / 3) <=` *Ausdruck*  `) Then`  
+ `If ((` *Funktionsname* `[(` *Argumentlist* `)] / 3) <=` *Ausdruck*  `) Then`  
   
- Beim Aufruf einer `Function` Prozedur, Sie müssen nicht den Rückgabewert verwenden. Wenn Sie nicht alle Aktionen, die sich von der Funktion ausgeführt werden, aber der Rückgabewert wird ignoriert. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>auf diese Weise wird häufig aufgerufen werden.  
+ Beim Aufruf einer `Function` Prozedur, Sie müssen nicht den Rückgabewert verwenden. Wenn Sie nicht alle Aktionen, die sich von der Funktion ausgeführt werden, aber der Rückgabewert wird ignoriert. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> auf diese Weise wird häufig aufgerufen werden.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
  Die folgenden `Function` Prozedur berechnet die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  

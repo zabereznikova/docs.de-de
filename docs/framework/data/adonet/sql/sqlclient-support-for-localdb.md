@@ -1,30 +1,32 @@
 ---
-title: "SqlClient-Unterstützung für LocalDB"
-ms.custom: 
+title: SqlClient-Unterstützung für LocalDB
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient-Unterstützung für LocalDB
-Ab [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Codename "Denali" ist eine vereinfachte Version von [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]mit dem Namen LocalDB verfügbar. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
+Ab SQL Server Codename Denali, wird eine vereinfachte Version von SQL Server, dem Namen LocalDB verfügbar sein. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu LocalDB, z. B. wie Sie LocalDB installieren und eine LocalDB-Instanz konfigurieren, finden Sie in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Weitere Informationen zu LocalDB, z. B. wie Sie LocalDB installieren und Konfigurieren der LocalDB-Instanz finden Sie in der SQL Server-Onlinedokumentation.  
   
  Zusammenfassung der Verwendungsmöglichkeiten für LocalDB:  
   
@@ -42,7 +44,7 @@ Ab [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Codename "
   
  `User Instance=True` ist bei einer Verbindung mit einer LocalDB-Datenbank nicht zulässig.  
   
- Sie können LocalDB aus dem [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065)herunterladen. Wenn Sie "sqlcmd.exe" verwenden, um Daten in der LocalDB-Instanz zu ändern, benötigen Sie "sqlcmd" von [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, das auch aus dem [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack abrufbar ist.  
+ Sie können LocalDB aus dem [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065)herunterladen. Wenn Sie sqlcmd.exe verwenden, um Daten in der LocalDB-Instanz zu ändern, benötigen Sie Sqlcmd aus SQL Server 2012, die Sie auch aus der SQL Server 2012 Feature Pack abrufen können.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Programmgesteuertes Erstellen einer benannten Instanz  
  Eine Anwendung kann eine benannte Instanz erstellen und eine Datenbank wie folgt angeben:  

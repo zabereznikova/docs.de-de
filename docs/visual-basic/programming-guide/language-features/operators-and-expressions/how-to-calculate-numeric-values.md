@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Berechnen von numerischen Werten (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Gewusst wie: Berechnen von numerischen Werten (Visual Basic)
 Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken berechnen. Ein *numerischen Ausdrucks* ist ein Ausdruck, Literalen, Konstanten und Variablen, die numerische Werte enthält, und Operatoren, die für diese Werte fungieren.  
@@ -45,7 +46,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
      Die ersten drei Zeilen anzeigen ein Literal, eine Konstante und einer Variablen. Jeweils bildet einen gültigen numerischen Ausdruck selbst. Die letzte Zeile zeigt eine Kombination einer Variablen mit zwei Literalen.  
   
-     Beachten Sie, dass ein numerisches Ausdrucks keine vollständige bilden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anweisung selbst. Sie müssen den Ausdruck im Rahmen einer vollständigen-Anweisung verwenden.  
+     Beachten Sie, dass ein numerisches Ausdrucks eine vollständige Visual Basic-Anweisung nicht allein Formular ist. Sie müssen den Ausdruck im Rahmen einer vollständigen-Anweisung verwenden.  
   
 #### <a name="to-store-a-numeric-value"></a>Um einen numerischen Wert zu speichern.  
   

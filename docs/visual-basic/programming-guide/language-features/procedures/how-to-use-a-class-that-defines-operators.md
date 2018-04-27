@@ -1,11 +1,12 @@
 ---
 title: 'Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic)
-Wenn Sie eine Klasse oder Struktur, die ihre eigenen Operatoren definiert verwenden, können Sie diese Operatoren aus zugreifen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Wenn Sie eine Klasse oder Struktur, die ihre eigenen Operatoren definiert verwenden, können Sie diese Operatoren in Visual Basic zugreifen.  
   
  Definieren eines Operators in einer Klasse oder Struktur ist so genannte *überladen* den Operator.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel greift auf die SQL-Struktur <xref:System.Data.SqlTypes.SqlString>, die die Konvertierungsoperatoren definiert ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) in beide Richtungen zwischen einer SQL-Zeichenfolge und ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Zeichenfolge. Verwenden `CType(` *SQL-Zeichenfolgenausdruck*, `String)` zum Konvertieren einer SQL-Zeichenfolge auf eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Zeichenfolge, und `CType(` *Visual Basic-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString> `)` in die andere Richtung konvertiert.  
+ Das folgende Beispiel greift auf die SQL-Struktur <xref:System.Data.SqlTypes.SqlString>, die die Konvertierungsoperatoren definiert ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) in beide Richtungen zwischen einer SQL-Zeichenfolge und eine Visual Basic-Zeichenfolge. Verwendung `CType(` *SQL-Zeichenfolgenausdruck*, `String)` zum Konvertieren einer SQL-Zeichenfolge in eine Visual Basic-Zeichenfolge und `CType(` *Visual Basic-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString> `)` in die andere Richtung konvertiert.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   

@@ -18,14 +18,14 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a8e1f06e1f32baacd494339a561a363f5d81c9d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keywords-visual-basic"></a>Schlüsselwörter (Visual Basic)
-In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache aufgeführt.  
+Die folgenden Tabellen sind alle Schlüsselwörter von Visual Basic.  
   
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie nicht als Namen von Programmierelementen wie Variablen oder Prozeduren verwenden können. Sie können diese Beschränkung umgehen, indem Sie den Namen in eckige Klammern (`[]`) einschließen. Weitere Informationen finden Sie unter „Escaped Names“ (Namen mit Escapezeichen) in [Declared Element Names (Deklarierte Elementnamen)](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -84,7 +84,7 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/in
 |[>>-Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>=-Operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant` und `Wend` sind reservierte Schlüsselwörter, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allerdings nicht mehr verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../../../visual-basic/language-reference/queries/let-clause.md).  
+>  `EndIf`, `GoSub`, `Variant`, und `Wend` werden als reservierte Schlüsselwörter, beibehalten, auch wenn sie nicht mehr in Visual Basic verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Nicht reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind nicht reserviert. Das bedeutet, dass Sie sie als Namen von Programmierelementen verwenden können. Dieses Vorgehen wird jedoch nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  

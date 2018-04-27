@@ -1,24 +1,26 @@
 ---
 title: Lernen durch exemplarische Vorgehensweisen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
@@ -41,20 +43,20 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 ## <a name="general"></a>Allgemein  
  Die folgenden Informationen betreffen diese exemplarischen Vorgehensweisen im Allgemeinen:  
   
--   Umgebung: Jede exemplarische Vorgehensweise in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] als integrierte Entwicklungsumgebung (IDE).  
+-   Umgebung: Jede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweise verwendet Visual Studio als die integrierte Entwicklungsumgebung (IDE).  
   
 -   SQL-Module: Diese exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  Exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Die Dialogfelder und Befehle in exemplarischen Vorgehensweisen können von jenen in der Online-Hilfe abweichen (je nach Ihren aktiven Einstellungen oder der [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-Edition). Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Die angezeigten Dialogfelder und Menübefehle in exemplarischen Vorgehensweisen angezeigten unterscheiden sich von den in der Hilfe beschriebenen, je nach den aktiven Einstellungen oder der Visual Studio-Edition. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Für exemplarische Vorgehensweisen, die sich auf Szenarien mit mehreren Ebenen beziehen, muss sich ein Server auf einem Computer befinden, der sich vom Entwicklungscomputer unterscheidet. Außerdem müssen Sie über die entsprechenden Zugriffsrechte für den Server verfügen.  
   
--   Der Name der Klasse, die in der Regel für die Orders-Tabelle in der Beispieldatenbank Northwind steht, lautet `[Order]`. Das Escaping ist erforderlich, da `Order` ein Schlüsselwort in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] ist.  
+-   Der Name der Klasse, die in der Regel für die Orders-Tabelle in der Beispieldatenbank Northwind steht, lautet `[Order]`. Das escaping ist erforderlich, da `Order` ist ein Schlüsselwort in Visual Basic.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Laufzeitfehler können auftreten, da Sie nicht über ausreichende Berechtigungen für den Zugriff auf die Datenbanken verfügen, die in diesen exemplarischen Vorgehensweisen verwendet werden. Die folgenden Schritte unterstützen Sie bei der Behebung der gängigsten Probleme.  

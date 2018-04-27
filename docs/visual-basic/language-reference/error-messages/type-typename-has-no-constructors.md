@@ -1,9 +1,9 @@
 ---
-title: "Geben Sie &#39; &lt;Typename&gt;&#39; verfügt über keine Konstruktoren"
+title: Typ &#39; &lt;Typename&gt; &#39; verfügt über keine Konstruktoren
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d2c1bfcc4af928fff6a10ca3d97957e75cbd7355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03f8c0d958696abdb6043b65f8f1359897dcf5fd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Geben Sie &#39; &lt;Typename&gt;&#39; verfügt über keine Konstruktoren
+# <a name="type-39lttypenamegt39-has-no-constructors"></a>Typ &#39; &lt;Typename&gt; &#39; verfügt über keine Konstruktoren
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
  **Fehler-ID:** BC30251  
@@ -33,7 +33,7 @@ Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache is
   
 2.  Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.  
   
-3.  Wenn der Fehler erneut auftritt, installieren Sie den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler neu.  
+3.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler.  
   
 4.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   

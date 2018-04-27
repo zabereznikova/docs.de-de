@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
 Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die mit dem Umwandlungsoperator in Microsoft Outlook mit verwendet wird eine **Ordner** Liste eine **Nachrichten** Bereich und einer **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
@@ -175,7 +177,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die mit
     }  
     ```  
   
-3.  In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], fügen Sie einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Prozedur. In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], fügen Sie diese Codezeile an den Konstruktor für die Formularklasse hinzu.  
+3.  Fügen Sie in Visual Basic einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Prozedur. Fügen Sie in Visual c# diese Codezeile an den Konstruktor für die Klasse.  
   
     ```vb  
     ' Add this to the New procedure.  

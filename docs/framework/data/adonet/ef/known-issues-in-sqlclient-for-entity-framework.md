@@ -1,38 +1,40 @@
 ---
-title: "Bekannte Probleme in SqlClient für Entity Framework"
-ms.custom: 
+title: Bekannte Probleme in SqlClient für Entity Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Nachfolgende Leerzeichen in Zeichenfolgenfunktionen  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] ignoriert nachfolgende Leerzeichen in Zeichenfolgenwerten. Deshalb kann die Übergabe von nachfolgenden Leerzeichen in der Zeichenfolge zu unvorhersehbaren Ergebnissen und sogar zu Fehlern führen.  
+ SQL Server ignoriert nachfolgende Leerzeichen in Zeichenfolgenwerten. Deshalb kann die Übergabe von nachfolgenden Leerzeichen in der Zeichenfolge zu unvorhersehbaren Ergebnissen und sogar zu Fehlern führen.  
   
- Wenn nachfolgende Leerzeichen in der Zeichenfolge unumgänglich sind, sollten Sie am Ende ein Leerstellenzeichen hinzufügen, sodass [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] die Zeichenfolge nicht abtrennt. Wenn die nachfolgenden Leerzeichen nicht benötigt werden, sollten sie vor der Übergabe an die Abfragepipeline abgetrennt werden.  
+ Wenn Sie nachfolgende Leerzeichen in der Zeichenfolge haben müssen, sollten Sie ein Leerzeichen am Ende anfügen, damit SQL Server die Zeichenfolge nicht abtrennt. Wenn die nachfolgenden Leerzeichen nicht benötigt werden, sollten sie vor der Übergabe an die Abfragepipeline abgetrennt werden.  
   
 ## <a name="right-function"></a>RIGHT-Funktion  
  Wenn ein Wert, der nicht `null` ist, als erstes Argument und 0 als zweites Argument an `RIGHT(nvarchar(max)`, 0`)` oder `RIGHT(varchar(max)`, 0`)` übergeben wird, wird der Wert `NULL` anstelle einer Zeichenfolge, die `empty` ist, zurückgegeben.  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS- und OUTER APPLY-Operatoren  
- CROSS- und OUTER APPLY-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen liefert die Abfragepipeline möglicherweise eine Transact-SQL-Anweisung, die CROSS APPLY- und/oder OUTER APPLY-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Versionen, die älter sind als [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, können solche Abfragen auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+ CROSS- und OUTER APPLY-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen liefert die Abfragepipeline möglicherweise eine Transact-SQL-Anweisung, die CROSS APPLY- und/oder OUTER APPLY-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen vor [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
   
  Dies sind einige typische Szenarios, die möglicherweise zum Auftreten von CROSS APPLY- und/oder OUTER APPLY-Operatoren in der Ausgabeabfrage führen:  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Servergenerierte GUID-Identitätswerte  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt servergenerierte GUID-Typidentitätswerte, aber der Anbieter muss die Rückgabe von servergenerierten Identitätswerten nach dem Einfügen einer Zeile unterstützen. Beginnend mit [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, Sie können in dem vom Server generierte GUID-Datentyp zurückgeben einer [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Datenbank über die [OUTPUT-Klausel](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt servergenerierte GUID-Typidentitätswerte, aber der Anbieter muss die Rückgabe von servergenerierten Identitätswerten nach dem Einfügen einer Zeile unterstützen. Beginnend mit SQL Server 2005, können Sie den servergenerierten GUID-Typ in einer SQL Server-Datenbank durch Zurückgeben der [OUTPUT-Klausel](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Siehe auch  
  [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

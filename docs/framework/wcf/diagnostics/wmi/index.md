@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügbar.  
   
 ## <a name="enabling-wmi"></a>Aktivieren von WMI  
- Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]der WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
+ Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] der WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
   
  Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] macht Attribute von Diensten (wie Adressen, Bindungen, Verhaltensweisen und Listener) verfügbar.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  Mit diesem Konfigurationseintrag wird eine WMI-Schnittstelle verfügbar gemacht. Über diese Schnittstelle kann nun von Verwaltungsanwendungen eine Verbindung hergestellt und auf die Verwaltungsinstrumentation der Anwendung zugegriffen werden.  
   
 ## <a name="accessing-wmi-data"></a>Zugreifen auf WMI-Daten  
- Der Zugriff auf WMI-Daten kann auf mehrere Arten erfolgen. Von Microsoft werden WMI-APIs für Skripts, [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)]-Anwendungen, C++-Anwendungen sowie [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] bereitgestellt. Weitere Informationen finden Sie unter [mit WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ Der Zugriff auf WMI-Daten kann auf mehrere Arten erfolgen. Microsoft stellt WMI-APIs für Skripts, Visual Basic-Anwendungen, C++-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Weitere Informationen finden Sie unter [mit WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Bei Verwendung der von .NET Framework bereitgestellten Methoden zum programmgesteuerten Zugreifen auf WMI-Daten ist darauf zu achten, dass von solchen Methoden bei hergestellter Verbindung möglicherweise Ausnahmen ausgelöst werden. Die Verbindung ist zwar beim Erstellen der <xref:System.Management.ManagementObject>-Instanz nicht hergestellt, dies ändert sich jedoch bei der ersten Anforderung, die einen tatsächlichen Austausch von Daten erfordert. Verwenden Sie deshalb zum Abfangen möglicher Ausnahmen einen `try..catch`-Block.  
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) -tool aus dem [Windows 2000 Resource Kit-Tools für administrative Aufgaben](http://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Bekannte SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) -tool aus dem [Windows 2000 Resource Kit-Tools für administrative Aufgaben](http://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Bekannte SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Zugreifen auf Remote-WMI-Objektinstanzen  
  Zum Zugreifen auf die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-WMI-Instanzen eines Remotecomputers muss für die zum Zugreifen verwendeten Tools die Paketsicherheit aktiviert werden. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentation und .NET SDK 2.0 beschrieben.  

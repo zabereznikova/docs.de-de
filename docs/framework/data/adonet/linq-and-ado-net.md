@@ -1,33 +1,35 @@
 ---
 title: LINQ und ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: be91650c7c06a3bdb5410166cc560ffc9a65d542
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ und ADO.NET
-Unter den heutigen Bedingungen müssen viele Entwickler von Geschäftsanwendungen mit zwei (oder mehr) Programmiersprachen arbeiten: mit einer allgemeinen Programmiersprache für die Geschäftslogik- und die Darstellungsschicht (wie [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] oder [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) und einer Abfragesprache für die Interaktion mit der Datenbank (z. B. [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage ist jedoch für den Compiler nicht lesbar und wird nicht auf Fehler (Syntaxfehler, tatsächliche Existenz der Spalten oder Zeilen, auf die verwiesen wird, usw.) geprüft. Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
+Heute müssen viele Entwickler von Geschäftsanwendungen zwei (oder mehr) Programmiersprachen verwenden: einer allgemeinen Programmiersprache für die Geschäftsschichten und die Darstellungsschicht (z. B. Visual c# oder Visual Basic) und einer Abfragesprache für die Interaktion mit der Datenbank (z. B. [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage ist jedoch für den Compiler nicht lesbar und wird nicht auf Fehler (Syntaxfehler, tatsächliche Existenz der Spalten oder Zeilen, auf die verwiesen wird, usw.) geprüft. Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
   
  In [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] können Entwickler in ihrem Anwendungscode mengenbasierte Abfragen unterbringen, ohne dazu auf eine separate Abfragesprache zurückgreifen zu müssen. Sie können [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfragen für die verschiedensten aufzählbaren Datenquellen (also Datenquellen, die die <xref:System.Collections.IEnumerable>-Schnittstelle implementieren) schreiben, wie Datenstrukturen, XML-Dokumente, SQL-Datenbanken und <xref:System.Data.DataSet>-Objekte im Arbeitsspeicher. Auch wenn diese aufzählbaren Datenquellen auf unterschiedliche Art und Weise implementiert sind, weisen sie doch alle dieselben Syntax- und Sprachkonstrukte auf. Da Abfragen direkt in der Programmiersprache formuliert werden können, benötigen Sie keine andere Abfragesprache, mit der Abfragen als Zeichenfolgenliterale eingebettet werden, die vom Compiler weder gelesen noch geprüft werden können. Durch die Integration von Abfragen in die Programmiersprache werden [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]-Programmierer auch in die Lage versetzt, durch Typ- und Syntaxprüfungen während der Kompilierung sowie `IntelliSense`-Unterstützung produktiver zu arbeiten. Mit diesen Funktionen wird der für die Beseitigung von Abfragefehlern erforderliche Aufwand beträchtlich reduziert.  
   
  Das Übertragen von Daten aus SQL-Tabellen in Objekte im Arbeitsspeicher ist häufig nervenaufreibend und fehleranfällig. Der von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] und [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] implementierte [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]-Anbieter konvertiert die Quelldaten in <xref:System.Collections.IEnumerable>-basierte Objektauflistungen. Dem Programmierer werden die Daten stets als <xref:System.Collections.IEnumerable>-Auflistung angezeigt, gleich ob bei einer Abfrage oder bei einem Update. Für das Schreiben von Abfragen für diese Auflistungen steht uneingeschränkte `IntelliSense`-Unterstützung zur Verfügung.  
   
- Es gibt drei separate ADO.NET-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]-Technologien: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] und [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ermöglicht umfangreichere, optimierte Abfragen der <xref:System.Data.DataSet>-Daten, mit [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] können Sie [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Datenbankschemas direkt abfragen, und mit [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] können Sie ein [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] abfragen.  
+ Es gibt drei separate ADO.NET-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]-Technologien: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] und [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bietet umfangreichere, optimierte Abfragen über die <xref:System.Data.DataSet> und [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] können Sie direkt auf SQL Server-Datenbankschemas, Abfragen und [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] können Sie Abfragen eine [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
   
  Das folgende Diagramm ermöglicht eine Einordnung der ADO.NET LINQ-Technologien im Kontext von allgemeinen Programmiersprachen und anderen LINQ-fähigen Datenquellen.  
   

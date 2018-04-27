@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>Strukturentwurf
 Der allgemeine Typ wird am häufigsten als eine Struktur, die C#-Schlüsselwort bezeichnet. Dieser Abschnitt enthält Richtlinien für den Entwurf der allgemeinen Struktur.  
@@ -47,7 +47,7 @@ Der allgemeine Typ wird am häufigsten als eine Struktur, die C#-Schlüsselwort 
   
  **Führen Sie ✓** implementieren <xref:System.IEquatable%601> für Werttypen.  
   
- Die <xref:System.Object.Equals%2A?displayProperty=nameWithType> -Methode für Werttypen wird der Boxing, und die standardmäßige Implementierung ist nicht sehr effizient, da Reflektion verwendet wird. <xref:System.IEquatable%601.Equals%2A>können viel bessere Leistung und können implementiert werden, damit er keine Boxing entstehen.  
+ Die <xref:System.Object.Equals%2A?displayProperty=nameWithType> -Methode für Werttypen wird der Boxing, und die standardmäßige Implementierung ist nicht sehr effizient, da Reflektion verwendet wird. <xref:System.IEquatable%601.Equals%2A> können viel bessere Leistung und können implementiert werden, damit er keine Boxing entstehen.  
   
  **X nicht** explizit erweitern <xref:System.ValueType>. Tatsächlich werden in den meisten Sprachen dies verhindern.  
   
@@ -55,7 +55,7 @@ Der allgemeine Typ wird am häufigsten als eine Struktur, die C#-Schlüsselwort 
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  

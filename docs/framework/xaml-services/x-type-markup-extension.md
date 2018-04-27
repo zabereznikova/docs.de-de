@@ -1,12 +1,13 @@
 ---
 title: x:Type-Markuperweiterung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type-Markuperweiterung
 Die CLR stellt <xref:System.Type> Objekt, das den zugrunde liegenden Typ für einen angegebenen XAML-Typ ist.  
@@ -55,7 +57,7 @@ Die CLR stellt <xref:System.Type> Objekt, das den zugrunde liegenden Typ für ei
 |`typeNameValue`|Erforderlich. Ein Typname der aktuellen XAML-Standardnamespace; oder das angegebene Präfix Wenn `prefix` angegeben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `x:Type` Markuperweiterung hat eine ähnliche Funktion, die `typeof()` Operator in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] oder `GetType` Operator in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ Die `x:Type` Markuperweiterung hat eine ähnliche Funktion, die `typeof()` Operator in c# oder der `GetType` Operator in Microsoft Visual Basic.  
   
  Die `x:Type` Markuperweiterung gibt das Konvertierungsverhalten from-Zeichenfolgen für Eigenschaften, die der Typ akzeptieren <xref:System.Type>. Die Eingabe ist ein XAML-Typ. Die Beziehung zwischen der Verwendung von XAML-Typ der Eingabe und die Ausgabe CLR <xref:System.Type> ist, die die Ausgabe <xref:System.Type> ist die <xref:System.Xaml.XamlType.UnderlyingType%2A> der Eingabe <xref:System.Xaml.XamlType>, nach der Suche nach den erforderlichen <xref:System.Xaml.XamlType> basierend auf XAML-Schemakontext und die <xref:System.Windows.Markup.IXamlTypeResolver>Dienst, der den Kontext bereitstellt.  
   
@@ -67,7 +69,7 @@ Die CLR stellt <xref:System.Type> Objekt, das den zugrunde liegenden Typ für ei
   
  Die `x:Type` Markuperweiterung in die Syntax der Object-Element verwendet werden kann. In diesem Fall geben Sie den Wert der <xref:System.Windows.Markup.TypeExtension.TypeName%2A> Eigenschaft ist erforderlich, um die Erweiterung zu initialisieren.  
   
- Die `x:Type` Markuperweiterung kann auch als verbose-Attribut verwendet werden; diese Verwendung ist jedoch nicht typisch: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ Die `x:Type` Markuperweiterung kann auch als verbose-Attribut verwendet werden; diese Verwendung ist jedoch nicht typisch: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
   
@@ -82,7 +84,7 @@ Die CLR stellt <xref:System.Type> Objekt, das den zugrunde liegenden Typ für ei
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 bietet zusätzliche Unterstützung für generische Typen und das Funktionsverhalten von ändert `x:TypeArguments` und `x:Type` zur Bereitstellung dieser Unterstützung.  
   
--   `x:TypeArguments`und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" von [X: TypeArguments-Direktive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" von [X: TypeArguments-Direktive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 unterstützt eine Syntax zum Angeben von Einschränkung eines generischen Typs in Markup. Dies kann verwendet werden, durch `x:TypeArguments`, von `x:Type`, oder indem Sie die beiden Funktionen sollten in Kombination.  
   

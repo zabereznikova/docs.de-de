@@ -1,18 +1,19 @@
 ---
 title: Migrieren Sie zu Hybrid Cloud-Szenarien
-description: ".NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Migrieren Sie zu Hybrid Cloud-Szenarien"
+description: .NET Microservices Architektur für Datenvolumes .NET-Anwendungen | Migrieren Sie zu Hybrid Cloud-Szenarien
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6216068786745ac4ebc00263a14b4afe247193f5
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: a2fc5a2118736d3491a5a0731e47c697edd674f1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren Sie zu Hybrid Cloud-Szenarien
 
@@ -24,7 +25,7 @@ Bei der Sicherheit, können Sie die Verwaltungs- und Sicherheitsfunktionen über
 
 Sie können schließlich verteilen und nahtlos Analysieren von Daten, Abfragesprachen für Cloud- und lokalen Ressourcen verwenden und Anwenden von Analysen und umfassende learning in Azure, um Ihre Daten, unabhängig von der Updatequelle optimal zu nutzen.
 
-## <a name="azure-stack"></a>Azure Stack
+## <a name="azure-stack"></a>Azure-Stapel
 
 Azure Stapel ist ein Hybrid-Cloud-Plattform, mit der Azure-Dienste von Ihrer Organisation Datacenter übermitteln kann. Azure-Stapel dient zur Unterstützung der neuer Optionen für modernen Anwendungen in der wichtigsten Szenarien, z. B. Rand und nicht verbundenen Umgebungen oder Besprechung bestimmte Sicherheits- und Compliance-Anforderungen.
 

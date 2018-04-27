@@ -1,24 +1,26 @@
 ---
 title: Server- und Datenbankrollen in SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Server- und Datenbankrollen in SQL Server
 Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie einer Rolle, also einer ganzen Gruppe von Benutzern, Berechtigungen zuweisen können, statt Berechtigungen individuell für jeden Benutzer einzeln festzulegen. Feste Server- und feste Datenbankrollen besitzen einen festen Satz von ihnen übertragenen Berechtigungen.  
@@ -29,7 +31,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
 > [!IMPORTANT]
 >  Die feste Serverrolle `sysadmin` schließt alle anderen Rollen ein und kennt keine Einschränkungen. Fügen Sie dieser Rolle keine Prinzipale hinzu, außer wenn ihre Vertrauenswürdigkeit sehr hoch ist. Mitglieder der Rolle `sysadmin` verfügen über unwiderrufliche Administratorberechtigungen für alle Serverdatenbanken und -ressourcen.  
   
- Gehen Sie beim Hinzufügen von Benutzern zu festen Serverrollen mit großer Sorgfalt vor. So können z. B. Benutzer mit der Rolle `bulkadmin` den Inhalt einer beliebigen lokalen Datei in eine Tabelle einfügen, wodurch die Datenintegrität gefährdet werden könnte. Eine vollständige Liste der festen Serverrollen und Berechtigungen finden Sie in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Gehen Sie beim Hinzufügen von Benutzern zu festen Serverrollen mit großer Sorgfalt vor. So können z. B. Benutzer mit der Rolle `bulkadmin` den Inhalt einer beliebigen lokalen Datei in eine Tabelle einfügen, wodurch die Datenintegrität gefährdet werden könnte. Die vollständige Liste der festen Serverrollen und Berechtigungen finden Sie in der SQL Server-Onlinedokumentation.  
   
 ## <a name="fixed-database-roles"></a>Feste Datenbankrollen  
  Feste Datenbankrollen besitzen einen vordefinierten Satz von Berechtigungen, mit denen Sie problemlos ganze Berechtigungsgruppen verwalten können. Member der Rolle `db_owner` können alle Konfigurations- und Wartungsaktivitäten an der Datenbank ausführen.  
@@ -38,8 +40,8 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Rollen auf Serverebene](http://msdn.microsoft.com/library/ms188659.aspx) und [Berechtigungen fester Serverrollen](http://msdn.microsoft.com/library/ms175892.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] -Onlinedokumentation|Beschreibt die in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] vorhandenen festen Serverrollen und die mit ihnen verknüpften Berechtigungen.|  
-|[Rollen auf Datenbankebene](http://msdn.microsoft.com/library/ms189121.aspx) und [Berechtigungen fester Datenbankrollen](http://msdn.microsoft.com/library/ms189612.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] -Onlinedokumentation|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
+|[Rollen auf Serverebene](http://msdn.microsoft.com/library/ms188659.aspx) und [Berechtigungen fester Serverrollen](http://msdn.microsoft.com/library/ms175892.aspx) in SQL Server-Onlinedokumentation|Beschreibt feste Serverrollen und die Berechtigungen in SQL Server zugeordnet.|  
+|[Rollen auf Datenbankebene](http://msdn.microsoft.com/library/ms189121.aspx) und [Berechtigungen fester Datenbankrollen](http://msdn.microsoft.com/library/ms189612.aspx) in SQL Server-Onlinedokumentation|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
   
 ## <a name="database-roles-and-users"></a>Datenbankrollen und Benutzer  
  Anmeldungen müssen Datenbankbenutzerkonten zugeordnet werden, damit das Arbeiten mit den Datenbankobjekten funktioniert. Anschließend können den Datenbankrollen Datenbankbenutzer hinzugefügt werden, die alle Berechtigungssätze erben, die mit diesen Rollen verknüpft sind. Alle Berechtigungen können erteilt werden.  
@@ -53,7 +55,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
  `dbo` (Database Owner, Datenbankbesitzer) ist ein Benutzerkonto, das implizite Berechtigungen zum Ausführen aller Aktivitäten in der Datenbank besitzt. Member der festen Serverrolle `sysadmin` werden automatisch dem `dbo`-Benutzerkonto zugeordnet.  
   
 > [!NOTE]
->  `dbo`ist auch der Name eines Schemas, wie beschrieben in [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` ist auch der Name eines Schemas, wie beschrieben in [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  Das `dbo`-Benutzerkonto wird häufig mit der festen Datenbankrolle `db_owner` verwechselt. Der Gültigkeitsbereich von `db_owner` umfasst eine Datenbank, während serverweit `sysadmin` gültig ist. Die Zugehörigkeit zur Rolle `db_owner` verleiht keine `dbo`-Benutzerrechte.  
   
@@ -70,7 +72,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Identität und Zugriffssteuerung](http://msdn.microsoft.com/library/bb510418.aspx) in SQL Server-Onlinedokumentation|Enthält Links zu Themen, in denen Prinzipale, Rollen, Anmeldeinformationen, sicherungsfähige Elemente und Berechtigungen beschrieben werden.|  
-|[Prinzipale](http://msdn.microsoft.com/library/ms181127.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] -Onlinedokumentation|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
+|[Prinzipale](http://msdn.microsoft.com/library/ms181127.aspx) in SQL Server-Onlinedokumentation|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

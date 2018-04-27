@@ -1,11 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Aufrufen von Windows-APIs (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Exemplarische Vorgehensweise: Aufrufen von Windows-APIs (Visual Basic)
 Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssystems sind. Sie verwenden, um Aufgaben durchzuführen, wenn es schwierig zu entsprechende Verfahren Ihrer Wahl zu schreiben. Windows stellt z. B. eine Funktion namens `FlashWindowEx` , mit der Sie die Titelleiste für eine Anwendung wechseln Sie zwischen dem hellen und dunklen Schatten vornehmen.  
   
  Der Vorteil der Verwendung von Windows-APIs in Ihrem Code ist, dass sie Entwicklungszeit speichern können, da sie Dutzende von nützlichen Funktionen, die bereits geschrieben werden, die darauf warten, zu verwendende enthalten. Der Nachteil ist, dass die Windows-APIs arbeiten mit und fehleranfällig, wenn etwas schief geht schwierig sein kann.  
   
- Windows-APIs stellen eine besondere Kategorie der Interoperabilität dar. Windows-APIs verwenden nicht verwalteten Code, verfügen nicht über integrierte Typbibliotheken und verwenden die Datentypen unterscheiden, die mit Visual Studio verwendet. Aufgrund dieser Unterschiede und da Windows-APIs keine COM-Objekten, die Interoperabilität mit Windows-APIs sind und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erfolgt mithilfe der Plattform aufrufen, oder PInvoke. Plattformaufruf ist ein Dienst, verwaltetem Code zum Aufrufen von nicht verwalteten Funktionen in DLLs implementiert werden können. Weitere Informationen finden Sie unter [nicht verwaltete DLL-Funktionen nutzen](../../../framework/interop/consuming-unmanaged-dll-functions.md). Können Sie PInvoke in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] entweder die `Declare` -Anweisung oder durch Anwenden der `DllImport` -Attribut auf eine leere Prozedur.  
+ Windows-APIs stellen eine besondere Kategorie der Interoperabilität dar. Windows-APIs verwenden nicht verwalteten Code, verfügen nicht über integrierte Typbibliotheken und verwenden die Datentypen unterscheiden, die mit Visual Studio verwendet. Aufgrund dieser Unterschiede und da Windows-APIs keine COM-Objekten, die Interoperabilität mit Windows-APIs sind und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erfolgt mithilfe der Plattform aufrufen, oder PInvoke. Plattformaufruf ist ein Dienst, verwaltetem Code zum Aufrufen von nicht verwalteten Funktionen in DLLs implementiert werden können. Weitere Informationen finden Sie unter [nicht verwaltete DLL-Funktionen nutzen](../../../framework/interop/consuming-unmanaged-dll-functions.md). Sie können PInvoke in Visual Basic verwenden, indem Sie entweder die `Declare` -Anweisung oder durch Anwenden der `DllImport` -Attribut auf eine leere Prozedur.  
   
- Windows-API-Aufrufe sind ein wichtiger Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programmierung in der Vergangenheit liegen, jedoch sind nur selten notwendig mit Visual Basic .NET. Wann immer möglich, sollten Sie verwalteten Code aus verwenden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Aufgaben anstelle von Windows-API-Aufrufe. Diese exemplarische Vorgehensweise enthält Informationen für die Situationen, in denen die Verwendung Windows-APIs erforderlich ist.  
+ Windows-API-Aufrufe werden selten mit Visual Basic .NET jedoch ein wichtiger Teil der Visual Basic-Programmierung in der Vergangenheit wurden. Wann immer möglich, sollten Sie verwalteten Code aus verwenden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Aufgaben anstelle von Windows-API-Aufrufe. Diese exemplarische Vorgehensweise enthält Informationen für die Situationen, in denen die Verwendung Windows-APIs erforderlich ist.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -49,7 +50,7 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
   
 2.  Öffnen Sie ein neues Windows-Anwendungsprojekt, indem Sie auf **neu** auf die **Datei** Menü, und klicken Sie dann auf **Projekt**. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Wählen Sie **Windows-Anwendung** aus der Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Projektvorlagen. Das neue Projekt wird angezeigt.  
+3.  Wählen Sie **Windows-Anwendung** aus der Liste der Projektvorlagen für Visual Basic. Das neue Projekt wird angezeigt.  
   
 4.  Fügen Sie die folgenden `Declare` Funktion entweder an die Klasse oder das Modul, in dem Sie die DLL verwenden möchten:  
   
@@ -66,13 +67,13 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
   
  Geben Sie die `Lib` Schlüsselwort, gefolgt von den Namen und Speicherort der DLL, die die Funktion enthält Sie aufrufen. Sie müssen nicht den Pfad in den Verzeichnissen der Windows-System-Dateien anzugeben.  
   
- Verwenden der `Alias` Schlüsselwort, wenn der Name der Funktion, die Sie aufrufen kein gültiger ist [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Prozedurnamen oder steht in Konflikt mit dem Namen anderer Elemente in der Anwendung. `Alias`Gibt den eigentlichen Namen der aufgerufenen Funktion an.  
+ Verwenden der `Alias` Schlüsselwort, wenn der Name der Funktion, die Sie aufrufen, ist kein gültiger Visual Basic Prozedurname oder steht in Konflikt mit den Namen anderer Elemente in der Anwendung. `Alias` Gibt den eigentlichen Namen der aufgerufenen Funktion an.  
   
 #### <a name="argument-and-data-type-declarations"></a>Argument und der Deklarationen von Typen  
- Deklarieren Sie die Argumente und deren Datentypen. Dieser Teil kann schwierig sein, da die Datentypen, die von Windows verwendet in Visual Studio-Datentypen nicht übereinstimmen. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wird einen Großteil der Arbeit für Sie durch Konvertieren von Argumenten zu kompatiblen Datentypen einen so genannten *Marshalling*. Sie können explizit steuern, wie für das Marshalling von Argumenten mit der <xref:System.Runtime.InteropServices.MarshalAsAttribute> -Attribut definiert, der <xref:System.Runtime.InteropServices> Namespace.  
+ Deklarieren Sie die Argumente und deren Datentypen. Dieser Teil kann schwierig sein, da die Datentypen, die von Windows verwendet in Visual Studio-Datentypen nicht übereinstimmen. Visual Basic wird einen Großteil der Arbeit für Sie durch Konvertieren von Argumenten zu kompatiblen Datentypen einen so genannten *Marshalling*. Sie können explizit steuern, wie für das Marshalling von Argumenten mit der <xref:System.Runtime.InteropServices.MarshalAsAttribute> -Attribut definiert, der <xref:System.Runtime.InteropServices> Namespace.  
   
 > [!NOTE]
->  Frühere Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erlaubt Ihnen, Parameter zu deklarieren `As Any`, d. h. diese Daten eines beliebigen Datentyps verwendet werden konnten. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]erfordert die Verwendung von eines bestimmten Datentyps für alle `Declare` Anweisungen.  
+>  Frühere Versionen von Visual Basic konnten Sie Parameter zu deklarieren `As Any`, d. h. diese Daten eines beliebigen Datentyps verwendet werden konnten. Visual Basic erfordert, dass Sie einen bestimmten Datentyp für alle verwenden `Declare` Anweisungen.  
   
 #### <a name="windows-api-constants"></a>Windows-API-Konstanten  
  Einige Argumente sind Kombinationen aus Konstanten. Z. B. die `MessageBox` in dieser exemplarischen Vorgehensweise gezeigten API akzeptiert ein ganzzahliges Argument aufgerufen `Typ` , die steuert, wie das Meldungsfeld angezeigt wird. Sie können den numerischen Wert dieser Konstanten bestimmen, indem Sie untersuchen die `#define` Anweisungen in der Datei WinUser.h. Die numerischen Werte werden im Hexadezimalformat, in der Regel angezeigt, daher sollten Sie mithilfe eines Rechners hinzufügen und Konvertieren in eine Dezimalzahl. Angenommen, Sie die Konstanten für das Format Ausrufezeichen kombinieren möchten `MB_ICONEXCLAMATION` 0x00000030 und die Ja/keine Formatvorlage `MB_YESNO` 0 x 00000004, können Sie addieren der Zahlen und erhalten ein Ergebnis, 0 x 00000034 bzw. 52 Dezimalformat. Decimal Ergebnis direkt verwenden können, es ist besser, deklarieren Sie diese Werte als Konstanten in der Anwendung und kombiniert sie mit der `Or` Operator.  
@@ -100,7 +101,7 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
 3.  Drücken Sie F5, um führen Sie das Projekt aus. Das Meldungsfeld wird angezeigt, mit beiden **Ja** und **keine** Antwort Schaltflächen. Klicken Sie auf eine.  
   
 #### <a name="data-marshaling"></a>Datenmarshalling  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]automatisch konvertiert die Datentypen der Parameter und Rückgabewerte für die Windows-API-Aufrufe, aber Sie können die `MarshalAs` Attribut explizit nicht verwaltete Datentypen angeben, die eine API erwartet. Weitere Informationen zum Interop-Marshalling finden Sie unter [Interop-Marshalling](../../../framework/interop/interop-marshaling.md).  
+ Visual Basic automatisch konvertiert die Datentypen der Parameter und Rückgabewerte für Windows-API-Aufrufe, jedoch können Sie die `MarshalAs` Attribut explizit nicht verwaltete Datentypen angeben, die eine API erwartet. Weitere Informationen zum Interop-Marshalling finden Sie unter [Interop-Marshalling](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Deklarieren und MarshalAs in einen API-Aufruf verwenden  
   
@@ -115,7 +116,7 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
      [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## <a name="api-calls-using-dllimport"></a>API-Aufrufe mit DllImport  
- Die `DllImport` Attribut bietet eine zweite Möglichkeit zum Aufruf von Funktionen in DLLs ohne Typbibliotheken. `DllImport`ist weitgehend mit einem `Declare` Anweisung bietet jedoch besser steuern, wie Funktionen aufgerufen werden.  
+ Die `DllImport` Attribut bietet eine zweite Möglichkeit zum Aufruf von Funktionen in DLLs ohne Typbibliotheken. `DllImport` ist weitgehend mit einem `Declare` Anweisung bietet jedoch besser steuern, wie Funktionen aufgerufen werden.  
   
  Sie können `DllImport` mit den meisten Windows-API aufruft, solange der Aufruf an einen freigegebenen verweist (bezeichnet *statische*) Methode. Sie können keine Methoden, die eine Instanz einer Klasse zu erfordern. Im Gegensatz zu `Declare` Anweisungen `DllImport` können keine Aufrufe der `MarshalAs` Attribut.  
   
@@ -123,7 +124,7 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
   
 1.  Öffnen Sie ein neues Windows-Anwendungsprojekt, indem Sie auf **neu** auf die **Datei** Menü, und klicken Sie dann auf **Projekt**. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Wählen Sie **Windows-Anwendung** aus der Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Projektvorlagen. Das neue Projekt wird angezeigt.  
+2.  Wählen Sie **Windows-Anwendung** aus der Liste der Projektvorlagen für Visual Basic. Das neue Projekt wird angezeigt.  
   
 3.  Fügen Sie eine Schaltfläche mit dem Namen `Button2` auf das Startformular.  
   

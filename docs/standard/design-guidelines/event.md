@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-design"></a>Ereignisentwurf
 Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die das Framework zum Aufrufen von Benutzercode zu ermöglichen). Andere Rückrufmechanismen enthalten Elemente und Delegaten, virtuelle Member und schnittstellenbasierten-Plug-ins. Daten aus der Verwendbarkeit Studien anzugeben, dass die meisten Entwickler sind nachrichtenorientierten Ereignisse verwenden, als sie die anderen Rückrufmechanismen verwenden. Ereignisse sind gut mit Visual Studio und vielen Sprachen integriert.  
@@ -79,7 +79,7 @@ Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  

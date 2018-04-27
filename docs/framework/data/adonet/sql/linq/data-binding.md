@@ -1,36 +1,38 @@
 ---
 title: Datenbindung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8308700a35bdd2aec2d66f4edd8a89c128e07d7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding"></a>Datenbindung
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt das Binden an allgemeine Steuerelemente, z. B. an Rastersteuerelemente. Insbesondere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert das Grundmuster für die Bindung an ein Datenraster und Behandeln von Master / Detail-Bindung, die im Hinblick auf Anzeige und Aktualisierung.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt das Binden an allgemeine Steuerelemente, z. B. an Rastersteuerelemente. Insbesondere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert das Grundmuster für die Bindung an ein Datenraster und Behandeln von Master / Detail-Bindung, die im Hinblick auf Anzeige und Aktualisierung.  
   
 ## <a name="underlying-principle"></a>Zugrunde liegendes Prinzip  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]übersetzt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL für die Ausführung auf einer Datenbank Abfragen. Die Ergebnisse sind `IEnumerable` mit strikter Typbindung. Da es sich hierbei um gewöhnliche Common Language Runtime (CLR)-Objekte handelt, lassen sich die Ergebnisse mithilfe von gewöhnlicher Objektdatenbindung darstellen. Andererseits erfordern Änderungsoperationen (Einfügungen, Aktualisieren, Löschen) zusätzliche Schritte.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL für die Ausführung auf einer Datenbank Abfragen. Die Ergebnisse sind `IEnumerable` mit strikter Typbindung. Da es sich hierbei um gewöhnliche Common Language Runtime (CLR)-Objekte handelt, lassen sich die Ergebnisse mithilfe von gewöhnlicher Objektdatenbindung darstellen. Andererseits erfordern Änderungsoperationen (Einfügungen, Aktualisieren, Löschen) zusätzliche Schritte.  
   
 ## <a name="operation"></a>Vorgang  
- Die implizite Bindung an Windows Forms-Steuerelemente erfolgt durch Implementierung von <xref:System.ComponentModel.IListSource>. Generische Datenquellen für <xref:System.Data.Linq.Table%601> (`Table<T>` in C# oder `Table(Of T)` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und generische `DataQuery` wurden aktualisiert, um <xref:System.ComponentModel.IListSource> zu implementieren. Datenbindungsmodule der Benutzeroberfläche (UI) (Windows Forms und Windows Presentation Foundation) prüfen, ob ihre Datenquelle <xref:System.ComponentModel.IListSource> implementiert. Aus diesem Grund direkten Einflusses einer Abfrage an eine Datenquelle eines Steuerelements implizit Aufrufe schreiben [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Collection-Generationen, wie im folgenden Beispiel gezeigt:  
+ Die implizite Bindung an Windows Forms-Steuerelemente erfolgt durch Implementierung von <xref:System.ComponentModel.IListSource>. Generische Datenquellen <xref:System.Data.Linq.Table%601> (`Table<T>` in c# oder `Table(Of T)` in Visual Basic) und generisch `DataQuery` wurden aktualisiert, um implementieren <xref:System.ComponentModel.IListSource>. Datenbindungsmodule der Benutzeroberfläche (UI) (Windows Forms und Windows Presentation Foundation) prüfen, ob ihre Datenquelle <xref:System.ComponentModel.IListSource> implementiert. Aus diesem Grund direkten Einflusses einer Abfrage an eine Datenquelle eines Steuerelements implizit Aufrufe schreiben [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Collection-Generationen, wie im folgenden Beispiel gezeigt:  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  Auflistungsgenerierungen werden von generischem <xref:System.Data.Linq.Table%601> und generischem `DataQuery` in <xref:System.ComponentModel.IListSource.GetList%2A> implementiert.  
   
 ## <a name="ilistsource-implementation"></a>IListSource-Implementierung  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]implementiert <xref:System.ComponentModel.IListSource> an zwei Orten:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert <xref:System.ComponentModel.IListSource> an zwei Orten:  
   
 -   Die Datenquelle ist eine <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Tabelle zum Auffüllen einer `DataBindingList` -Auflistung, die einen Verweis auf die Tabelle beibehält.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
   
     -   Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sucht nach den zugrunde liegenden <xref:System.Data.Linq.Table%601> aus der <xref:System.Linq.IQueryable%601>, ermöglicht die Quelle für die Edition und die Situation ist im ersten Punkt identisch.  
   
-    -   Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht gefunden, die zugrunde liegende <xref:System.Data.Linq.Table%601>, ermöglicht die Quelle nicht für die Edition (z. B. `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]durchsucht die Abfrage um eine generische füllen `SortableBindingList`, also eine einfache <xref:System.ComponentModel.BindingList%601> , das die Sortierfunktion für T-Entitäten einer gegebenen Eigenschaft implementiert.  
+    -   Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht gefunden, die zugrunde liegende <xref:System.Data.Linq.Table%601>, ermöglicht die Quelle nicht für die Edition (z. B. `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Abfrage um eine generische füllen `SortableBindingList`, also eine einfache <xref:System.ComponentModel.BindingList%601> , das die Sortierfunktion für T-Entitäten einer gegebenen Eigenschaft implementiert.  
   
 ## <a name="specialized-collections"></a>Spezialisierte Auflistungen  
  Bei vielen zuvor in diesem Dokument beschriebenen Funktionen wurde <xref:System.ComponentModel.BindingList%601> auf abweichende Klassen spezialisiert. Diese Klassen sind generische `SortableBindingList` und generische `DataBindingList`. Beide werden als intern deklariert.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/17/2018
  Diese Klasse erbt von der generischen `SortableBindingLIst`. Die generische `DataBindingList` behält einen Verweis auf die zugrunde liegende generische `Table` der generischen `IQueryable` bei, die für das erste Füllen der Auflistung verwendet wurde. Die generische `DatabindingList` fügt die Verfolgung für das Hinzufügen/Entfernen von Elementen hinzu, indem Sie `InsertItem`() und `RemoveItem`() überschreiben. Außerdem wird die abstrakte Funktion zur Unterbrechung/Wiederaufnahme der Verfolgung implementiert, um eine bedingte Verfolgung zu ermöglichen. Mit dieser Funktion nutzt die generische `DataBindingList` die Vorteile der polymorphen Verwendung der Verfolgungsfunktion für übergeordnete Klassen.  
   
 ## <a name="binding-to-entitysets"></a>Binden an EntitySets  
- Eine Bindung an `EntitySet` ist ein Sonderfall, da `EntitySet` bereits eine Auflistung ist, die <xref:System.ComponentModel.IBindingList> implementiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Fügt der Sortierung und das Abbrechen (<xref:System.ComponentModel.ICancelAddNew>) unterstützen. Eine `EntitySet`-Klasse verwendet eine interne Liste, um Entitäten zu speichern. Diese Liste ist eine Auflistung auf niedriger Ebene, die auf einem generischen Array, der generischen `ItemList`-Klasse, basiert.  
+ Eine Bindung an `EntitySet` ist ein Sonderfall, da `EntitySet` bereits eine Auflistung ist, die <xref:System.ComponentModel.IBindingList> implementiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Fügt der Sortierung und das Abbrechen (<xref:System.ComponentModel.ICancelAddNew>) unterstützen. Eine `EntitySet`-Klasse verwendet eine interne Liste, um Entitäten zu speichern. Diese Liste ist eine Auflistung auf niedriger Ebene, die auf einem generischen Array, der generischen `ItemList`-Klasse, basiert.  
   
 ### <a name="adding-a-sorting-feature"></a>Hinzufügen einer Sortierungsfunktion  
  Arrays bieten eine Sortiermethode (`Array.Sort()`), die Sie zusammen mit einem `Comparer` von T verwenden können. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet die weiter oben in diesem Thema beschriebene generische `SortableBindingList.PropertyComparer`-Klasse, um diesen `Comparer` für die Eigenschaft und die Sortierrichtung zu erhalten. Eine `ApplySort`-Methode wird der generischen `ItemList` hinzugefügt, um diese Funktion aufzurufen.  
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/17/2018
  Wenn Sie eine System.Windows.Forms.BindingSource verwenden und die BindingSource.DataMember-Eigenschaft festgelegt und BindingSource.DataSource festgelegt haben, eine Klasse, die verfügt über eine Eigenschaft mit dem Namen in der BindingSource.DataMember, der die EntitySet verfügbar macht\<TEntity >, Sie müssen Sie nicht EntitySet\<Tentity >. GetNewBindingList Sie jedoch die BindingSource.List zu aktualisieren verloren.  
   
 ## <a name="caching"></a>Zwischenspeicherung  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Implementieren von Abfragen <xref:System.ComponentModel.IListSource.GetList%2A>. Trifft die Windows Forms-BindingSource-Klasse auf diese Schnittstelle, wird GetList() für eine Verbindung dreimal aufgerufen. So umgehen Sie diese Situation [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert einen Cache je Instanz zum Speichern und stets die gleiche erzeugte Auflistung.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Implementieren von Abfragen <xref:System.ComponentModel.IListSource.GetList%2A>. Trifft die Windows Forms-BindingSource-Klasse auf diese Schnittstelle, wird GetList() für eine Verbindung dreimal aufgerufen. So umgehen Sie diese Situation [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert einen Cache je Instanz zum Speichern und stets die gleiche erzeugte Auflistung.  
   
 ## <a name="cancellation"></a>Abbruch  
  <xref:System.ComponentModel.IBindingList> definiert eine <xref:System.ComponentModel.IBindingList.AddNew%2A>-Methode, die von Steuerelementen genutzt wird, um ein neues Element aus einer Bindungsauflistung zu erstellen. Das `DataGridView`-Steuerelement zeigt diese Funktion sehr gut, wenn die letzte sichtbare Zeile ein Sternchen in der Überschrift enthält. Das Sternchen zeigt an, dass Sie ein neues Element hinzufügen können.  

@@ -1,11 +1,12 @@
 ---
 title: Numerische Datentypen (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -29,19 +30,19 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numerische Datentypen (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]stellt mehrere *numerische Datentypen* für die Behandlung von Zahlen in verschiedenen Darstellungen bereit. *Ganzzahlige* Typen darstellen, nur ganze Zahlen (Positive und negative und 0 (null)), und *Nonintegral* Typen darstellen von Zahlen mit Nachkommastellen und ganze Zahl.  
+Visual Basic stellt mehrere *numerische Datentypen* für die Behandlung von Zahlen in verschiedenen Darstellungen bereit. *Ganzzahlige* Typen darstellen, nur ganze Zahlen (Positive und negative und 0 (null)), und *Nonintegral* Typen darstellen von Zahlen mit Nachkommastellen und ganze Zahl.  
   
- Für eine Tabelle mit einer Seite-an-Seite-Vergleich, der die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Datentypen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Tabelle mit einer Seite-an-Seite-Vergleich der Visual Basic-Datentypen, finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="integral-numeric-types"></a>Ganzzahlige numerische Typen  
  *Ganzzahlige Datentypen* sind solche, die nur Zahlen ohne Nachkommastellen darstellen.  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  Die *ohne Vorzeichen* ganzzahlige Typen sind [Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-Bit), [UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-Bit), [UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-Bit) und [ ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-Bit). Wenn eine Variable binäre Daten, oder unbekannten Typs enthält, deklarieren Sie sie als einen dieser Typen an.  
   
 ### <a name="performance"></a>Leistung  
- Arithmetische Operationen sind mit Ganzzahltypen mit anderen Datentypen als schneller. Am schnellsten mit werden die `Integer` und `UInteger` Typen im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Arithmetische Operationen sind mit Ganzzahltypen mit anderen Datentypen als schneller. Am schnellsten mit werden die `Integer` und `UInteger` Typen in Visual Basic.  
   
 ### <a name="large-integers"></a>Große ganze Zahlen  
- Wenn Sie eine ganze Zahl größer als halten müssen die `Integer` Datentyp aufnehmen kann, können Sie mithilfe der `Long` Datentyp stattdessen. `Long`Variablen können Zahlen von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten. Vorgänge mit `Long` sind etwas langsamer als bei `Integer`.  
+ Wenn Sie eine ganze Zahl größer als halten müssen die `Integer` Datentyp aufnehmen kann, können Sie mithilfe der `Long` Datentyp stattdessen. `Long` Variablen können Zahlen von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten. Vorgänge mit `Long` sind etwas langsamer als bei `Integer`.  
   
  Wenn Sie noch größere Werte benötigen, können Sie die [Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). Sie können Zahlen von-79.228.162.514.264.337.593.543.950.335 bis Wert 79,228,162,514,264,337,593,543,950,335 in enthalten eine `Decimal` Variable, wenn Sie Dezimalstellen nicht verwendet werden. Allerdings Vorgänge mit `Decimal` Zahlen sind erheblich langsamer als bei einem beliebigen anderen numerischen Datentyp.  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  Die nicht integrale numerische Datentypen sind `Decimal` (128-Bit-Festkommazahl) [Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-Bit-Gleitkommazahl), und [Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-Bit-Gleitkommazahl). Sie sind alle signierten Typen. Wenn eine Variable einen Bruch enthalten kann, deklarieren Sie sie als einen dieser Typen an.  
   
- `Decimal`ist kein Typ Gleitkommadaten. `Decimal`Zahlen haben einen binären ganzzahligen Wert und eine ganze Zahl Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimalbruch ist.  
+ `Decimal` ist kein Typ Gleitkommadaten. `Decimal` Zahlen haben einen binären ganzzahligen Wert und eine ganze Zahl Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimalbruch ist.  
   
  Sie können `Decimal` Variablen für Währungswerte. Der Vorteil ist die Genauigkeit der Werte. Die `Double` -Datentyp ist schneller und weniger Speicher benötigt, aber es Rundungsfehler unterliegt. Die `Decimal` Datentyp behält vollständige Genauigkeit mit 28 Dezimalstellen an.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  Nicht ganzzahlige in ausgedrückt werden können als MmmEeee mmm also die *Mantisse* (die signifikante Stellen) und Eee ist die *Exponenten* (eine Potenz von 10). Die höchste positive Werte die Ganzzahltypen sind 7.9228162514264337593543950335E + 28 für `Decimal`, 3,4028235E + 38 für `Single`, und 1.79769313486231570E + 308 für `Double`.  
   
 ### <a name="performance"></a>Leistung  
- `Double`ist der effizienteste die Datentypen mit Nachkommastellen, da die Prozessoren auf den aktuellen Plattformen Operationen mit Gleitkommazahlen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
+ `Double` ist der effizienteste die Datentypen mit Nachkommastellen, da die Prozessoren auf den aktuellen Plattformen Operationen mit Gleitkommazahlen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
   
 ### <a name="small-magnitudes"></a>Kleine Magnituden  
  Zahlen mit der kleinstmöglichen Größe (nahe 0) `Double` können Variablen Zahlen so klein wie - 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 für positive Werte zulässig sind.  

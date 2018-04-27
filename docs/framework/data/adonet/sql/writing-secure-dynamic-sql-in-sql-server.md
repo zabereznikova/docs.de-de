@@ -1,24 +1,26 @@
 ---
 title: Schreiben von sicherem dynamischen SQL in SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Schreiben von sicherem dynamischen SQL in SQL Server
 Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit, Anwendungen anzugreifen. Dabei werden anstelle einer gültigen Eingabe Transact-SQL-Anweisungen in den Code eingeschleust. Wenn die Eingabe direkt und ohne Validierung an den Server weitergeleitet wird und die Anwendung den eingeschleusten Code ausführt, können Daten beschädigt oder sogar zerstört werden.  
@@ -68,7 +70,7 @@ Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit
  Bei der Ausführung einer mit einem Zertifikat signierten gespeicherten Prozedur werden die dem Zertifikatsbenutzer gewährten Berechtigungen mit den Berechtigungen des Aufrufers zusammengeführt. Der Ausführungskontext bleibt identisch. Der Zertifikatsbenutzer nimmt nicht die Identität des Aufrufers an. Für das Signieren gespeicherter Prozeduren müssen verschiedene Schritte ausgeführt werden. Jedes Mal, wenn die Prozedur geändert wird, muss sie neu signiert werden.  
   
 ### <a name="cross-database-access"></a>Datenbankübergreifender Zugriff  
- Bei der Ausführung dynamisch erstellter SQL-Anweisungen funktioniert die datenbankübergreifende Besitzverkettung nicht. Dieses Problem können Sie in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist. Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
+ Bei der Ausführung dynamisch erstellter SQL-Anweisungen funktioniert die datenbankübergreifende Besitzverkettung nicht. Sie können dieses Problem umgehen in SQL Server durch Erstellen einer gespeicherten Prozedur, die Daten in einer anderen Datenbank zugreift, und Signieren die Prozedur mit einem Zertifikat, das in beiden Datenbanken vorhanden ist. Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  

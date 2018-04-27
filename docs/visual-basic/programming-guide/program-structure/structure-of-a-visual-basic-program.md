@@ -1,11 +1,12 @@
 ---
-title: "Struktur von Visual Basic-Programmen"
-ms.custom: 
+title: Struktur von Visual Basic-Programmen
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
@@ -13,35 +14,35 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
-Ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm aus Standardbausteinen aufgebaut ist. Ein *Lösung* umfasst eine oder mehrere Projekte. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* , die über eine oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letztendlich den gesamten Code enthalten.  
+Visual Basic-Programm ist aus Standardbausteinen erstellt. Ein *Lösung* umfasst eine oder mehrere Projekte. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* , die über eine oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letztendlich den gesamten Code enthalten.  
   
- Weitere Informationen zu diesen Bausteinen von einem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programmieren, finden Sie unter [Projektmappen und Projekten](/visualstudio/ide/solutions-and-projects-in-visual-studio) und [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Weitere Informationen über diese Bausteine eines Visual Basic-Programms finden Sie unter [Projektmappen und Projekten](/visualstudio/ide/solutions-and-projects-in-visual-studio) und [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Programmierelemente auf Dateiebene  
  Wenn Sie ein Projekt oder eine Datei starten und im Code-Editor zu öffnen, sehen Sie einige Code bereits an Ort und in der richtigen Reihenfolge. Jeglicher Code, den Sie schreiben, sollte die folgende Sequenz folgen:  
   
-1.  `Option`Anweisungen  
+1.  `Option` Anweisungen  
   
-2.  `Imports`Anweisungen  
+2.  `Imports` Anweisungen  
   
-3.  `Namespace`Anweisungen und Namespace-Level-Elementen  
+3.  `Namespace` Anweisungen und Namespace-Level-Elementen  
   
  Wenn Sie die Anweisungen in einer anderen Reihenfolge eingeben, können Kompilierungsfehler führen.  
   
  Ein Programm kann auch Anweisungen für die bedingte Kompilierung enthalten. Sie können diese in der Quelldatei zwischen der Anweisungen von der oben dargestellten Reihenfolge einzufügen.  
   
 ### <a name="option-statements"></a>Optionsanweisungen  
- `Option`Anweisungen richten Grundregeln bei nachfolgenden Code hilft zu verhindern, dass die Syntax und logische Fehler. Die [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md) wird sichergestellt, dass alle Variablen deklariert und richtig geschrieben Debuggen Zeit verringert wird. Die [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md) hilft Ihnen bei der logischen Fehlern und Datenverlust zu minimieren, die auftreten können, wenn Sie zwischen Variablen mit unterschiedlichen Datentypen arbeiten. Die [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md) gibt an, wie Zeichenfolgen verglichen werden, miteinander, basierend auf deren `Binary` oder `Text` Werte.  
+ `Option` Anweisungen richten Grundregeln bei nachfolgenden Code hilft zu verhindern, dass die Syntax und logische Fehler. Die [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md) wird sichergestellt, dass alle Variablen deklariert und richtig geschrieben Debuggen Zeit verringert wird. Die [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md) hilft Ihnen bei der logischen Fehlern und Datenverlust zu minimieren, die auftreten können, wenn Sie zwischen Variablen mit unterschiedlichen Datentypen arbeiten. Die [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md) gibt an, wie Zeichenfolgen verglichen werden, miteinander, basierend auf deren `Binary` oder `Text` Werte.  
   
 ### <a name="imports-statements"></a>Imports-Anweisungen  
  Sie können einschließen, eine [Imports-Anweisung (.NET Namespace und Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) zum Importieren von Namen, die außerhalb des Projekts definiert. Ein `Imports` -Anweisung können Sie den Code zum Verweisen auf Klassen und anderen Typen in den importierten Namespaces definiert wird, ohne sie zu qualifizieren. Sie können beliebig viele `Imports` Anweisungen nach Bedarf. Weitere Informationen finden Sie unter [Verweise und die Imports-Anweisung](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
@@ -88,7 +89,7 @@ Ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm aus Standardbausteinen 
  Datenelemente auf Prozedurebene sind auf lokale Variablen und Konstanten beschränkt.  
   
 ## <a name="the-main-procedure"></a>Die Main-Prozedur  
- Die `Main` Prozedur ist der erste Code ausführen, wenn die Anwendung geladen wurde. `Main`Dient als Ausgangspunkt und gesamtsteuerung für Ihre Anwendung. Es gibt vier Arten von `Main`:  
+ Die `Main` Prozedur ist der erste Code ausführen, wenn die Anwendung geladen wurde. `Main` Dient als Ausgangspunkt und gesamtsteuerung für Ihre Anwendung. Es gibt vier Arten von `Main`:  
   
 -   `Sub Main()`  
   

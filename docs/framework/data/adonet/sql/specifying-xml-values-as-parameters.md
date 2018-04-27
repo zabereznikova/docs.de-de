@@ -1,36 +1,38 @@
 ---
 title: Angeben von XML-Werten als Parameter
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Angeben von XML-Werten als Parameter
-Wenn eine Abfrage einen Parameter erfordert, dessen Wert eine XML-Zeichenfolge ist, können Entwickler den Wert mithilfe einer Instanz von geben die **SqlXml** -Datentyp. XML-Spalten in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] akzeptieren Parameterwerte ohne zusätzlichen Aufwand genauso wie andere Datentypen.  
+Wenn eine Abfrage einen Parameter erfordert, dessen Wert eine XML-Zeichenfolge ist, können Entwickler den Wert mithilfe einer Instanz von geben die **SqlXml** -Datentyp. Es gibt tatsächlich ohne zusätzlichen Aufwand. XML-Spalten in SQL Server werden die Parameterwerte auf genau die gleiche Weise wie andere Datentypen annehmen.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Konsolenanwendung erstellt eine neue Tabelle in der **AdventureWorks** Datenbank. Die neue Tabelle enthält eine Spalte namens **SalesID** und eine XML-Spalte namens **SalesInfo**.  
   
 > [!NOTE]
->  Die **AdventureWorks** -Beispieldatenbank ist nicht standardmäßig installiert, bei der Installation [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Sie kann jedoch durch Ausführen des Setups von SQL Server installiert werden.  
+>  Die **AdventureWorks** Beispieldatenbank ist bei der Installation von SQL Server nicht standardmäßig installiert. Sie kann jedoch durch Ausführen des Setups von SQL Server installiert werden.  
   
  In dem Beispiel wird ein <xref:System.Data.SqlClient.SqlCommand>-Objekt vorbereitet, um eine Zeile in der neuen Tabelle einzufügen. Eine gespeicherte Datei stellt die XML-Daten für die **SalesInfo** Spalte.  
   

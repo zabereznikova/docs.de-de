@@ -1,11 +1,12 @@
 ---
 title: Sub-Prozeduren (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
-Ein `Sub` Verfahren besteht aus einer Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anweisungen, die durch die `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.  
+Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.  
   
  Jedes Mal, die die Prozedur aufgerufen wird, die Anweisungen werden ausgeführt, beginnend mit der ersten ausführbaren Anweisung nach der `Sub` -Anweisung und endet mit dem ersten `End Sub`, `Exit Sub`, oder `Return` Anweisung wurde gefunden.  
   
@@ -38,7 +39,7 @@ Ein `Sub` Verfahren besteht aus einer Reihe von [!INCLUDE[vbprvb](~/includes/vbp
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
  Die Syntax zum Deklarieren einer `Sub` Prozedur lautet wie folgt:  
   
- `[`*Modifizierer* `] Sub` *Subname* `[(` *Parameterlist*  `)]`  
+ `[` *Modifizierer* `] Sub` *Subname* `[(` *Parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -65,7 +66,7 @@ Ein `Sub` Verfahren besteht aus einer Reihe von [!INCLUDE[vbprvb](~/includes/vbp
   
  Die Syntax für einen Aufruf einer `Sub` Prozedur lautet wie folgt:  
   
- `[Call]`  *Subname* `[(` *Argumentlist*`)]`  
+ `[Call]`  *Subname* `[(` *Argumentlist* `)]`  
   
  Sie erreichen eine `Sub` Methode von außerhalb der Klasse, die ihn definiert. Zunächst müssen Sie die `New` Schlüsselwort erstellen Sie eine Instanz der Klasse oder eine Methode aufrufen, gibt eine Instanz der Klasse zurück. Weitere Informationen finden Sie unter [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Anschließend können die folgende Syntax zum Aufrufen der `Sub` -Methode für das Instance-Objekt:  
   

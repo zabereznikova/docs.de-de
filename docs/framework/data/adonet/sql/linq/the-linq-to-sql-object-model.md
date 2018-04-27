@@ -1,27 +1,29 @@
 ---
 title: Das LINQ to SQL-Objektmodell
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bfaf7b08b3725f1c1cc2f0985c7612aa47a6cb4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc05166cffdd7254c657f0c490afaaac4cf08fcb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-linq-to-sql-object-model"></a>Das LINQ to SQL-Objektmodell
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in der Programmiersprache des Entwicklers ausgedrücktes Objektmodell dem Datenmodell einer relationalen Datenbank zugeordnet ist. Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.  
@@ -83,7 +85,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in d
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen den Methoden durch Verwendung des <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut und des <xref:System.Data.Linq.Mapping.ParameterAttribute>-Attribut zu. Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen. Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar. Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
   
 > [!NOTE]
->  Wenn Sie [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Sie mit [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Methoden erstellen, die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet werden.  
+>  Wenn Sie Visual Studio verwenden, können Sie mithilfe der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Erstellen von Methoden, die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

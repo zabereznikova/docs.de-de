@@ -1,11 +1,12 @@
 ---
 title: Problembehandlung bei Prozeduren (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Problembehandlung bei Prozeduren (Visual Basic)
 Auf dieser Seite sind einige allgemeine Probleme, die beim Arbeiten mit Prozeduren auftreten können.  
@@ -83,11 +84,11 @@ Auf dieser Seite sind einige allgemeine Probleme, die beim Arbeiten mit Prozedur
   
  Die folgenden Elemente sind, obwohl sie die Parameterliste gehören keine Komponenten der Signatur einer Prozedur:  
   
--   Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und`Static`  
+-   Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und `Static`  
   
 -   Parameternamen  
   
--   Parametermodifiziererschlüsselwörter, wie z. B. `ByRef` und`Optional`  
+-   Parametermodifiziererschlüsselwörter, wie z. B. `ByRef` und `Optional`  
   
 -   Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
   
@@ -99,7 +100,7 @@ Auf dieser Seite sind einige allgemeine Probleme, die beim Arbeiten mit Prozedur
  Wenn Sie eine Prozedur mit einem oder mehreren überladen werden [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter oder eine [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter müssen vermeiden Duplizieren eines der *implizite Überladungen*. Informationen finden Sie unter [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Eine falsche Version einer überladenen Prozedur aufrufen  
- Wenn eine Prozedur mehrere überladene Versionen aufweist, sollten Sie mit ihren Parameterlisten vertraut sein und zu verstehen wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst Aufrufe zwischen Überladungen. Andernfalls können Sie eine Überladung als der vorgesehene aufrufen.  
+ Wenn eine Prozedur mehrere überladene Versionen aufweist, sollten Sie mit ihren Parameterlisten vertraut sein und verstehen, wie Visual Basic Aufrufe zwischen Überladungen aufgelöst. Andernfalls können Sie eine Überladung als der vorgesehene aufrufen.  
   
  Wenn Sie die Überladung, die für Sie aufrufen möchten bestimmt haben, achten Sie darauf, dass Sie die folgenden Regeln beachten:  
   
