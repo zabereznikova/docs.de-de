@@ -1,1 +1,1 @@
-unabhängiger Softwarehersteller (independent software vendor, ISV)
+<span data-ttu-id="390bd-101">unabhängiger Softwarehersteller (independent software vendor, ISV)</span><span class="sxs-lookup"><span data-stu-id="390bd-101">independent software vendor (ISV)</span></span>

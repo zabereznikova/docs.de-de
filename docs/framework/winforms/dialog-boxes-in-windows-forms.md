@@ -1,58 +1,60 @@
 ---
-title: "Dialogfelder in Windows Forms"
-ms.custom: 
+title: Dialogfelder in Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 423f8e83290d46b1f49a34517f67ddaef398b3b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="dialog-boxes-in-windows-forms"></a><span data-ttu-id="a7421-102">Dialogfelder in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a7421-102">Dialog Boxes in Windows Forms</span></span>
-<span data-ttu-id="a7421-103">Dialogfelder werden für die Interaktion mit dem Benutzer und zum Abrufen von Informationen verwendet.</span><span class="sxs-lookup"><span data-stu-id="a7421-103">Dialog boxes are used to interact with the user and retrieve information.</span></span> <span data-ttu-id="a7421-104">Einfach ausgedrückt handelt es sich bei einem Dialogfeld um ein Formular mit einem eigenen <xref:System.Windows.Forms.FormBorderStyle>-Enumerationseigenschaftensatz, der auf `FixedDialog` festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="a7421-104">In simple terms, a dialog box is a form with its <xref:System.Windows.Forms.FormBorderStyle> enumeration property set to `FixedDialog`.</span></span> <span data-ttu-id="a7421-105">Sie können eigene benutzerdefinierte Dialogfelder mithilfe des Windows Forms-Designer in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] erstellen.</span><span class="sxs-lookup"><span data-stu-id="a7421-105">You can construct your own custom dialog boxes by using the Windows Forms Designer in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span> <span data-ttu-id="a7421-106">Fügen Sie Steuerelemente wie `Label`, `Textbox` und `Button` hinzu, um die Dialogfelder an Ihre speziellen Anforderungen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="a7421-106">Add controls such as `Label`, `Textbox`, and `Button` to customize dialog boxes to your specific needs.</span></span> <span data-ttu-id="a7421-107">Die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält ebenfalls vordefinierte Dialogfelder wie z. B. **Datei öffnen** und Meldungsfelder, die Sie für Ihre eigenen Anwendungen anpassen können.</span><span class="sxs-lookup"><span data-stu-id="a7421-107">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also includes predefined dialog boxes, such as **File Open** and message boxes, which you can adapt for your own applications.</span></span> <span data-ttu-id="a7421-108">Weitere Informationen finden Sie unter [Dialogfeld-Steuerelemente und-Komponenten](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a7421-108">For more information, see [Dialog-Box Controls and Components](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span></span>  
+# <a name="dialog-boxes-in-windows-forms"></a><span data-ttu-id="7c3ef-102">Dialogfelder in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7c3ef-102">Dialog Boxes in Windows Forms</span></span>
+<span data-ttu-id="7c3ef-103">Dialogfelder werden für die Interaktion mit dem Benutzer und zum Abrufen von Informationen verwendet.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-103">Dialog boxes are used to interact with the user and retrieve information.</span></span> <span data-ttu-id="7c3ef-104">Einfach ausgedrückt handelt es sich bei einem Dialogfeld um ein Formular mit einem eigenen <xref:System.Windows.Forms.FormBorderStyle>-Enumerationseigenschaftensatz, der auf `FixedDialog` festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-104">In simple terms, a dialog box is a form with its <xref:System.Windows.Forms.FormBorderStyle> enumeration property set to `FixedDialog`.</span></span> <span data-ttu-id="7c3ef-105">Sie können eigene benutzerdefinierte Dialogfelder mithilfe von Windows Forms-Designer in Visual Studio erstellen.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-105">You can construct your own custom dialog boxes by using the Windows Forms Designer in Visual Studio.</span></span> <span data-ttu-id="7c3ef-106">Fügen Sie Steuerelemente wie `Label`, `Textbox` und `Button` hinzu, um die Dialogfelder an Ihre speziellen Anforderungen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-106">Add controls such as `Label`, `Textbox`, and `Button` to customize dialog boxes to your specific needs.</span></span> <span data-ttu-id="7c3ef-107">Die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält ebenfalls vordefinierte Dialogfelder wie z. B. **Datei öffnen** und Meldungsfelder, die Sie für Ihre eigenen Anwendungen anpassen können.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-107">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also includes predefined dialog boxes, such as **File Open** and message boxes, which you can adapt for your own applications.</span></span> <span data-ttu-id="7c3ef-108">Weitere Informationen finden Sie unter [Dialogfeld-Steuerelemente und-Komponenten](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="7c3ef-108">For more information, see [Dialog-Box Controls and Components](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a7421-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a7421-109">In This Section</span></span>  
- [<span data-ttu-id="a7421-110">Gewusst wie: Anzeigen von Dialogfeldern für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a7421-110">How to: Display Dialog Boxes for Windows Forms</span></span>](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
- <span data-ttu-id="a7421-111">Enthält Anweisungen für das Anzeigen von Dialogfeldern.</span><span class="sxs-lookup"><span data-stu-id="a7421-111">Gives directions for showing dialog boxes.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="7c3ef-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7c3ef-109">In This Section</span></span>  
+ [<span data-ttu-id="7c3ef-110">Gewusst wie: Anzeigen von Dialogfeldern für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7c3ef-110">How to: Display Dialog Boxes for Windows Forms</span></span>](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ <span data-ttu-id="7c3ef-111">Enthält Anweisungen für das Anzeigen von Dialogfeldern.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-111">Gives directions for showing dialog boxes.</span></span>  
   
--   <span data-ttu-id="a7421-112">[Vorgehensweise: Abrufen von Dialogfeldinformationen mithilfe mehrerer Eigenschaften](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-112">[How to: Retrieve Dialog Box Information Selectively Using Multiple Properties](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-112">[Vorgehensweise: Abrufen von Dialogfeldinformationen mithilfe mehrerer Eigenschaften](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-112">[How to: Retrieve Dialog Box Information Selectively Using Multiple Properties](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-113">[Vorgehensweise: Abrufen von Informationen aus dem übergeordneten Formular eines Dialogfelds](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-113">[How to: Retrieve Information from the Parent Form of a Dialog Box](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-113">[Vorgehensweise: Abrufen von Informationen aus dem übergeordneten Formular eines Dialogfelds](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-113">[How to: Retrieve Information from the Parent Form of a Dialog Box](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-114">[Benutzereingaben in Dialogfelder](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-114">[User Input to Dialog Boxes](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-114">[Benutzereingaben in Dialogfelder](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-114">[User Input to Dialog Boxes](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-115">[Vorgehensweise: Abrufen des Ergebnisses für Dialogfelder](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-115">[How to: Retrieve the Result for Dialog Boxes](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-115">[Vorgehensweise: Abrufen des Ergebnisses für Dialogfelder](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-115">[How to: Retrieve the Result for Dialog Boxes](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-116">[Exemplarische Vorgehensweise: Sammelabruf von Dialogfeldinformationen Dialogfeldinformationen mithilfe von Objekten](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-116">[Walkthrough: Retrieving Dialog Box Information Collectively Using Objects](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-116">[Exemplarische Vorgehensweise: Sammelabruf von Dialogfeldinformationen Dialogfeldinformationen mithilfe von Objekten](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-116">[Walkthrough: Retrieving Dialog Box Information Collectively Using Objects](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-117">[Vorgehensweise: Schließen von Dialogfeldern und Speichern von Benutzereingaben](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-117">[How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-117">[Vorgehensweise: Schließen von Dialogfeldern und Speichern von Benutzereingaben](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-117">[How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-118">[Vorgehensweise: Erstellen von Dialogfeldern zur Entwurfszeit](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-118">[How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-118">[Vorgehensweise: Erstellen von Dialogfeldern zur Entwurfszeit](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-118">[How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="a7421-119">[Vorgehensweise: Anzeigen von Meldungsfeldern](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="a7421-119">[How to: Display Message Boxes](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="7c3ef-119">[Vorgehensweise: Anzeigen von Meldungsfeldern](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="7c3ef-119">[How to: Display Message Boxes](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="a7421-120">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a7421-120">Related Sections</span></span>  
- [<span data-ttu-id="a7421-121">Dialogfeld-Steuerelemente und -Komponenten</span><span class="sxs-lookup"><span data-stu-id="a7421-121">Dialog-Box Controls and Components</span></span>](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- <span data-ttu-id="a7421-122">Listet die vordefinierten Dialogfeld-Steuerelemente auf.</span><span class="sxs-lookup"><span data-stu-id="a7421-122">Lists the predefined dialog box controls.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="7c3ef-120">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7c3ef-120">Related Sections</span></span>  
+ [<span data-ttu-id="7c3ef-121">Dialogfeld-Steuerelemente und -Komponenten</span><span class="sxs-lookup"><span data-stu-id="7c3ef-121">Dialog-Box Controls and Components</span></span>](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="7c3ef-122">Listet die vordefinierten Dialogfeld-Steuerelemente auf.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-122">Lists the predefined dialog box controls.</span></span>  
   
- [<span data-ttu-id="a7421-123">Ändern der Darstellung von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a7421-123">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- <span data-ttu-id="a7421-124">Enthält Links zu Themen, in denen beschrieben wird, wie die Darstellung von Windows Forms-Anwendungen geändert wird.</span><span class="sxs-lookup"><span data-stu-id="a7421-124">Contains links to topics that describe how to change the appearance of Windows Forms applications.</span></span>  
+ [<span data-ttu-id="7c3ef-123">Ändern der Darstellung von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7c3ef-123">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="7c3ef-124">Enthält Links zu Themen, in denen beschrieben wird, wie die Darstellung von Windows Forms-Anwendungen geändert wird.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-124">Contains links to topics that describe how to change the appearance of Windows Forms applications.</span></span>  
   
- [<span data-ttu-id="a7421-125">Übersicht über das TabControl-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="a7421-125">TabControl Control Overview</span></span>](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- <span data-ttu-id="a7421-126">Erläutert, wie Sie ein TabControl-Steuerelement in ein Dialogfeld integrieren.</span><span class="sxs-lookup"><span data-stu-id="a7421-126">Explains how you incorporate the tab control into a dialog box.</span></span>
+ [<span data-ttu-id="7c3ef-125">Übersicht über das TabControl-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="7c3ef-125">TabControl Control Overview</span></span>](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ <span data-ttu-id="7c3ef-126">Erläutert, wie Sie ein TabControl-Steuerelement in ein Dialogfeld integrieren.</span><span class="sxs-lookup"><span data-stu-id="7c3ef-126">Explains how you incorporate the tab control into a dialog box.</span></span>

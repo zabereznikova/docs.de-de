@@ -1,1 +1,1 @@
-Komponentenerweiterungen für Visual C++
+<span data-ttu-id="77071-101">Komponentenerweiterungen für Visual C++</span><span class="sxs-lookup"><span data-stu-id="77071-101">Visual C++ component extensions</span></span>

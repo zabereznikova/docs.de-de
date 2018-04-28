@@ -1,2 +1,2 @@
 > [!WARNING]
-> Dieses Thema gilt für das .NET Core SDK 2.0 Vorschau 2.
+> <span data-ttu-id="b3385-101">Dieses Thema gilt für das .NET Core SDK 2.0 Vorschau 2.</span><span class="sxs-lookup"><span data-stu-id="b3385-101">This topic applies to .NET Core SDK 2.0 Preview 2.</span></span>

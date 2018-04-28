@@ -1,1 +1,1 @@
-Serialisiertes Freihandformat (Ink Serialized Format; ISF)
+<span data-ttu-id="d5df6-101">Serialisiertes Freihandformat (Ink Serialized Format; ISF)</span><span class="sxs-lookup"><span data-stu-id="d5df6-101">Ink Serialized Format (ISF)</span></span>

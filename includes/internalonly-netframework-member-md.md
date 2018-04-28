@@ -1,1 +1,1 @@
-Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.
+<span data-ttu-id="38a46-101">Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="38a46-101">This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

@@ -1,0 +1,10 @@
+### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a><span data-ttu-id="919fc-101">EntityFramework 6.0 wird in Apps, die über Visual Studio gestartet wurden, sehr langsam geladen</span><span class="sxs-lookup"><span data-stu-id="919fc-101">EntityFramework 6.0 loads very slowly in apps launched from Visual Studio</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="919fc-102">Details</span><span class="sxs-lookup"><span data-stu-id="919fc-102">Details</span></span>|<span data-ttu-id="919fc-103">Das Starten einer App, die EntityFramework 6.0 verwendet, kann über Visual Studio 2013 sehr langsam sein.</span><span class="sxs-lookup"><span data-stu-id="919fc-103">Launching an app from Visual Studio 2013 that uses EntityFramework 6.0 can be very slow.</span></span>|
+|<span data-ttu-id="919fc-104">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="919fc-104">Suggestion</span></span>|<span data-ttu-id="919fc-105">Dieses Problem wurde in EntityFramework 6.0.2 behoben.</span><span class="sxs-lookup"><span data-stu-id="919fc-105">This issue is fixed in EntityFramework 6.0.2.</span></span> <span data-ttu-id="919fc-106">Aktualisieren Sie EntityFramework, um die Leistungsprobleme zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="919fc-106">Please update EntityFramework to avoid the performance issue.</span></span>|
+|<span data-ttu-id="919fc-107">Bereich</span><span class="sxs-lookup"><span data-stu-id="919fc-107">Scope</span></span>|<span data-ttu-id="919fc-108">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="919fc-108">Edge</span></span>|
+|<span data-ttu-id="919fc-109">Version</span><span class="sxs-lookup"><span data-stu-id="919fc-109">Version</span></span>|<span data-ttu-id="919fc-110">4.5</span><span class="sxs-lookup"><span data-stu-id="919fc-110">4.5</span></span>|
+|<span data-ttu-id="919fc-111">Typ</span><span class="sxs-lookup"><span data-stu-id="919fc-111">Type</span></span>|<span data-ttu-id="919fc-112">Laufzeit</span><span class="sxs-lookup"><span data-stu-id="919fc-112">Runtime</span></span>|
+
