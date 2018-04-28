@@ -10,6 +10,5 @@
 ## [Generische Delegate](generic-delegates.md)
 ## [Unterschiede zwischen C++-Vorlagen und C#-Generika](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Generika zur Laufzeit](generics-in-the-run-time.md)
-## [Generika in der .NET Framework-Klassenbibliothek](generics-in-the-net-framework-class-library.md)
 ## [Generika und Reflexion](generics-and-reflection.md)
 ## [Generische Typen und Attribute](generics-and-attributes.md)

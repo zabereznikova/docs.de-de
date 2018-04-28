@@ -1,106 +1,106 @@
 ---
-title: "dotnet nuget push-Befehl – .NET Core-CLI"
-description: "Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es."
+title: dotnet nuget push-Befehl – .NET Core-CLI
+description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: a0f872ae930d17638e018cdd204cc08a773a3df5
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 29bc05c42bff9ace3fac2328ba44e15e4746e10e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="3cdfe-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="3cdfe-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="e0aed-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="e0aed-103">dotnet nuget push</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="3cdfe-104">name</span><span class="sxs-lookup"><span data-stu-id="3cdfe-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="e0aed-104">name</span><span class="sxs-lookup"><span data-stu-id="e0aed-104">Name</span></span>
 
-<span data-ttu-id="3cdfe-105">`dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="e0aed-105">`dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.</span><span class="sxs-lookup"><span data-stu-id="e0aed-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="3cdfe-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="3cdfe-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="e0aed-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="e0aed-106">Synopsis</span></span>
 
 `dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="3cdfe-107">description</span><span class="sxs-lookup"><span data-stu-id="3cdfe-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="e0aed-107">description</span><span class="sxs-lookup"><span data-stu-id="e0aed-107">Description</span></span>
 
-<span data-ttu-id="3cdfe-108">Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffentlicht es.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-108">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="3cdfe-109">Der Pushbefehl verwendet Details zum Server und den Anmeldeinformationen aus der NuGet-Konfigurationsdatei oder der Kette von Konfigurationsdateien des Systems.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-109">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="3cdfe-110">Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet).</span><span class="sxs-lookup"><span data-stu-id="3cdfe-110">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="3cdfe-111">Die NuGet-Standardkonfiguration wird abgerufen, indem *%AppData%\NuGet\NuGet.config* (Windows) oder *$HOME/.local/share* (Linux/macOS) geladen wird. Anschließend wird eine beliebige Datei *nuget.config* oder *.nuget\nuget.config* geladen (beginnend mit dem Stamm des Laufwerks und endend im aktuellen Verzeichnis).</span><span class="sxs-lookup"><span data-stu-id="3cdfe-111">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="e0aed-108">Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffentlicht es.</span><span class="sxs-lookup"><span data-stu-id="e0aed-108">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="e0aed-109">Der Pushbefehl verwendet Details zum Server und den Anmeldeinformationen aus der NuGet-Konfigurationsdatei oder der Kette von Konfigurationsdateien des Systems.</span><span class="sxs-lookup"><span data-stu-id="e0aed-109">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="e0aed-110">Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet).</span><span class="sxs-lookup"><span data-stu-id="e0aed-110">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="e0aed-111">Die NuGet-Standardkonfiguration wird abgerufen, indem *%AppData%\NuGet\NuGet.config* (Windows) oder *$HOME/.local/share* (Linux/macOS) geladen wird. Anschließend wird eine beliebige Datei *nuget.config* oder *.nuget\nuget.config* geladen (beginnend mit dem Stamm des Laufwerks und endend im aktuellen Verzeichnis).</span><span class="sxs-lookup"><span data-stu-id="e0aed-111">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="3cdfe-112">Argumente</span><span class="sxs-lookup"><span data-stu-id="3cdfe-112">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="e0aed-112">Argumente</span><span class="sxs-lookup"><span data-stu-id="e0aed-112">Arguments</span></span>
 
 `ROOT`
 
-<span data-ttu-id="3cdfe-113">Gibt den Dateipfad des Pakets an, das per Push übertragen werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-113">Specifies the file path to the package to be pushed.</span></span>
+<span data-ttu-id="e0aed-113">Gibt den Dateipfad des Pakets an, das per Push übertragen werden soll.</span><span class="sxs-lookup"><span data-stu-id="e0aed-113">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="3cdfe-114">Optionen</span><span class="sxs-lookup"><span data-stu-id="3cdfe-114">Options</span></span>
+## <a name="options"></a><span data-ttu-id="e0aed-114">Optionen</span><span class="sxs-lookup"><span data-stu-id="e0aed-114">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="3cdfe-115">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-115">Prints out a short help for the command.</span></span>
+<span data-ttu-id="e0aed-115">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="e0aed-115">Prints out a short help for the command.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="3cdfe-116">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-116">Specifies the server URL.</span></span> <span data-ttu-id="3cdfe-117">Diese Option ist erforderlich, es sei denn, der `DefaultPushSource`-Konfigurationswert wurde in der NuGet-Konfigurationsdatei festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-117">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+<span data-ttu-id="e0aed-116">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="e0aed-116">Specifies the server URL.</span></span> <span data-ttu-id="e0aed-117">Diese Option ist erforderlich, es sei denn, der `DefaultPushSource`-Konfigurationswert wurde in der NuGet-Konfigurationsdatei festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e0aed-117">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 `--symbol-source <SOURCE>`
 
-<span data-ttu-id="3cdfe-118">Gibt die Symbolserver-URL an.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-118">Specifies the symbol server URL.</span></span>
+<span data-ttu-id="e0aed-118">Gibt die Symbolserver-URL an.</span><span class="sxs-lookup"><span data-stu-id="e0aed-118">Specifies the symbol server URL.</span></span>
 
 `-t|--timeout <TIMEOUT>`
 
-<span data-ttu-id="3cdfe-119">Gibt das Timeout für die Übertragung auf einen Server in Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-119">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="3cdfe-120">Der Standardwert ist 300 Sekunden (5 Minuten).</span><span class="sxs-lookup"><span data-stu-id="3cdfe-120">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="3cdfe-121">Wenn 0 (null Sekunden) angegeben wird, gilt der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-121">Specifying 0 (zero seconds) applies the default value.</span></span>
+<span data-ttu-id="e0aed-119">Gibt das Timeout für die Übertragung auf einen Server in Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="e0aed-119">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="e0aed-120">Der Standardwert ist 300 Sekunden (5 Minuten).</span><span class="sxs-lookup"><span data-stu-id="e0aed-120">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="e0aed-121">Wenn 0 (null Sekunden) angegeben wird, gilt der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="e0aed-121">Specifying 0 (zero seconds) applies the default value.</span></span>
 
 `-k|--api-key <API_KEY>`
 
-<span data-ttu-id="3cdfe-122">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-122">The API key for the server.</span></span>
+<span data-ttu-id="e0aed-122">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="e0aed-122">The API key for the server.</span></span>
 
 `--symbol-api-key <API_KEY>`
 
-<span data-ttu-id="3cdfe-123">Der API-Schlüssel für den Symbolserver.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-123">The API key for the symbol server.</span></span>
+<span data-ttu-id="e0aed-123">Der API-Schlüssel für den Symbolserver.</span><span class="sxs-lookup"><span data-stu-id="e0aed-123">The API key for the symbol server.</span></span>
 
 `-d|--disable-buffering`
 
-<span data-ttu-id="3cdfe-124">Deaktiviert die Pufferung bei Übertragungen an HTTP(S)-Server, um die Speicherauslastung zu verringern.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-124">Disables buffering when pushing to an HTTP(S) server to decrease memory usage.</span></span>
+<span data-ttu-id="e0aed-124">Deaktiviert die Pufferung bei Übertragungen an HTTP(S)-Server, um die Speicherauslastung zu verringern.</span><span class="sxs-lookup"><span data-stu-id="e0aed-124">Disables buffering when pushing to an HTTP(S) server to decrease memory usage.</span></span>
 
 `-n|--no-symbols`
 
-<span data-ttu-id="3cdfe-125">Überträgt keine Symbole (selbst wenn vorhanden).</span><span class="sxs-lookup"><span data-stu-id="3cdfe-125">Doesn't push symbols (even if present).</span></span>
+<span data-ttu-id="e0aed-125">Überträgt keine Symbole (selbst wenn vorhanden).</span><span class="sxs-lookup"><span data-stu-id="e0aed-125">Doesn't push symbols (even if present).</span></span>
 
 `--force-english-output`
 
-<span data-ttu-id="3cdfe-126">Erzwingt, dass alle protokollierten Ausgaben auf Englisch sein müssen.</span><span class="sxs-lookup"><span data-stu-id="3cdfe-126">Forces all logged output in English.</span></span>
+<span data-ttu-id="e0aed-126">Erzwingt, dass alle protokollierten Ausgaben auf Englisch sein müssen.</span><span class="sxs-lookup"><span data-stu-id="e0aed-126">Forces all logged output in English.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="3cdfe-127">Beispiele</span><span class="sxs-lookup"><span data-stu-id="3cdfe-127">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="e0aed-127">Beispiele</span><span class="sxs-lookup"><span data-stu-id="e0aed-127">Examples</span></span>
 
-<span data-ttu-id="3cdfe-128">Überträgt *foo.nupkg* an die standardmäßige Pushquelle und stellt einen API-Schlüssel bereit:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-128">Pushes *foo.nupkg* to the default push source, providing an API key:</span></span>
+<span data-ttu-id="e0aed-128">Überträgt *foo.nupkg* an die standardmäßige Pushquelle und stellt einen API-Schlüssel bereit:</span><span class="sxs-lookup"><span data-stu-id="e0aed-128">Pushes *foo.nupkg* to the default push source, providing an API key:</span></span>
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-<span data-ttu-id="3cdfe-129">Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `http://customsource` und stellt einen API-Schlüssel bereit:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-129">Push *foo.nupkg* to the custom push source `http://customsource`, providing an API key:</span></span>
+<span data-ttu-id="e0aed-129">Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `http://customsource` und stellt einen API-Schlüssel bereit:</span><span class="sxs-lookup"><span data-stu-id="e0aed-129">Push *foo.nupkg* to the custom push source `http://customsource`, providing an API key:</span></span>
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
-<span data-ttu-id="3cdfe-130">Überträgt *foo.nupkg* an die standardmäßige Pushquelle:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-130">Pushes *foo.nupkg* to the default push source:</span></span>
+<span data-ttu-id="e0aed-130">Überträgt *foo.nupkg* an die standardmäßige Pushquelle:</span><span class="sxs-lookup"><span data-stu-id="e0aed-130">Pushes *foo.nupkg* to the default push source:</span></span>
 
 `dotnet nuget push foo.nupkg`
 
-<span data-ttu-id="3cdfe-131">Überträgt *foo.symbols.nupkg* an die standardmäßige Symbolquelle:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-131">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+<span data-ttu-id="e0aed-131">Überträgt *foo.symbols.nupkg* an die standardmäßige Symbolquelle:</span><span class="sxs-lookup"><span data-stu-id="e0aed-131">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
 
 `dotnet nuget push foo.symbols.nupkg`
 
-<span data-ttu-id="3cdfe-132">Überträgt *foo.nupkg* an die standardmäßige Pushquelle und gibt ein Timeout von 360 Sekunden an:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-132">Pushes *foo.nupkg* to the default push source, specifying a 360 second timeout:</span></span>
+<span data-ttu-id="e0aed-132">Überträgt *foo.nupkg* an die standardmäßige Pushquelle und gibt ein Timeout von 360 Sekunden an:</span><span class="sxs-lookup"><span data-stu-id="e0aed-132">Pushes *foo.nupkg* to the default push source, specifying a 360 second timeout:</span></span>
 
 `dotnet nuget push foo.nupkg --timeout 360`
 
-<span data-ttu-id="3cdfe-133">Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-133">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+<span data-ttu-id="e0aed-133">Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle:</span><span class="sxs-lookup"><span data-stu-id="e0aed-133">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
 
 `dotnet nuget push *.nupkg`
 
-<span data-ttu-id="3cdfe-134">Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle und gibt die benutzerdefinierte Konfigurationsdatei *./config/My.Config* an:</span><span class="sxs-lookup"><span data-stu-id="3cdfe-134">Pushes all *.nupkg* files in the current directory to the default push source, specifying a custom config file *./config/My.Config*:</span></span>
+<span data-ttu-id="e0aed-134">Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle und gibt die benutzerdefinierte Konfigurationsdatei *./config/My.Config* an:</span><span class="sxs-lookup"><span data-stu-id="e0aed-134">Pushes all *.nupkg* files in the current directory to the default push source, specifying a custom config file *./config/My.Config*:</span></span>
 
 `dotnet nuget push *.nupkg --config-file ./config/My.Config`
