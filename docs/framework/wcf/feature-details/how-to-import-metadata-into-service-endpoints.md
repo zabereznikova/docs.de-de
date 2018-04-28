@@ -1,24 +1,26 @@
 ---
 title: 'Vorgehensweise: Importieren von Metadaten in Dienstendpunkte'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Vorgehensweise: Importieren von Metadaten in Dienstendpunkte
 In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Auflistung von Dienstendpunkten und verwenden Sie den Dienst definiert, der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Im Thema wird gezeigt, wie Sie eine Clientanwendung erstellen, die Metadaten aus dem Dienst importiert und anschließend die`Add`-Methode für den Dienst aufruft.  
@@ -38,7 +40,7 @@ In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Aufli
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Nachdem Sie die Metadaten importiert haben, können Sie keinen Clientkanal mehr erstellen oder die Metadaten exportieren. Dies liegt daran, dass an diesem Punkt keine Typinformationen verfügbar sind. Typinformationen sind erforderlich, um direkt mit dem Dienst zu interagieren oder Metadaten zu exportieren. Um die Typinformationen zu erzeugen, müssen Sie den in den Schritten 4 und 5 gezeigten Code generieren. Alternativ dazu können Sie auch die <xref:System.ServiceModel.Description.MetadataResolver>-Hilfsklasse verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wie: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Nachdem Sie die Metadaten importiert haben, können Sie keinen Clientkanal mehr erstellen oder die Metadaten exportieren. Dies liegt daran, dass an diesem Punkt keine Typinformationen verfügbar sind. Typinformationen sind erforderlich, um direkt mit dem Dienst zu interagieren oder Metadaten zu exportieren. Um die Typinformationen zu erzeugen, müssen Sie den in den Schritten 4 und 5 gezeigten Code generieren. Alternativ dazu können Sie auch die <xref:System.ServiceModel.Description.MetadataResolver>-Hilfsklasse verwenden. Weitere Informationen finden Sie unter [wie: Verwenden von MetadataResolver, erhalten Dynamisches Binden von Metadaten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Generieren Sie Typinformationen für jeden Vertrag.  
   

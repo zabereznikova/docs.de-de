@@ -1,20 +1,17 @@
 ---
-title: "Schlüsselwortreferenz (F#)"
-description: "Suchen Sie Links zu Informationen über alle f#-Schlüsselwörter."
-keywords: Visual F#, F#, funktionale Programmierung
+title: Schlüsselwortreferenz (F#)
+description: Suchen Sie Links zu Informationen über alle f#-Schlüsselwörter.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -27,7 +24,7 @@ Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfol
 |Stichwort|Link|Beschreibung|
 |-------|----|-----------|
 |`abstract`|[Mitglieder](members/index.md)<br /><br />[Abstrakte Klassen](abstract-classes.md)|Gibt eine Methode, die keine Implementierung entweder im Typ aufweist, in dem sie deklariert ist, oder die ist virtuell und einer standardmäßigen Implementierung.|
-|`and`|[`let`Bindungen](functions/let-bindings.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wechselseitig rekursive Bindungen in Eigenschaftendeklarationen sowie mit mehrere Einschränkungen für generische Parameter verwendet.|
+|`and`|[`let` Bindungen](functions/let-bindings.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wechselseitig rekursive Bindungen in Eigenschaftendeklarationen sowie mit mehrere Einschränkungen für generische Parameter verwendet.|
 |`as`|[Klassen](classes.md)<br /><br />[Mustervergleich](Pattern-Matching.md)|Verwendet, um dem aktuelle Klassenobjekt ein Objekt benennen. Auch verwendet zum Benennen einer gesamten Muster in einem Mustervergleich.|
 |`assert`|[Assertionen](assertions.md)|Zum Überprüfen von Code während des Debuggens verwendet.|
 |`base`|[Klassen](classes.md)<br /><br />[Vererbung](inheritance.md)|Als Name des Objekts Basisklasse verwendet.|
@@ -46,7 +43,7 @@ Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfol
 |`extern`|[Externe Funktionen](functions/external-functions.md)|Gibt an, dass ein Programmelement deklariert in einem anderen binären oder Assembly definiert ist.|
 |`false`|[Primitive Typen](primitive-types.md)|Als ein boolesches Literal verwendet.|
 |`finally`|[Ausnahmen: Der `try...finally`-Ausdruck](exception-handling/the-try-finally-expression.md)|Zusammen mit `try` einen Codeblock einführen, die ausgeführt wird, unabhängig davon, ob eine Ausnahme auftritt.|
-|`fixed`|[Feste](fixed.md)|Verwendet einen Zeiger auf den Stapel, um zu verhindern, dass der Garbage Collection "anheften".|
+|`fixed`|[feste](fixed.md)|Verwendet einen Zeiger auf den Stapel, um zu verhindern, dass der Garbage Collection "anheften".|
 |`for`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)<br /><br />[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)|Verwendet in Schleifenkonstrukte.|
 |`fun`|[Lambda-Ausdrücke: Das `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|In Lambda-Ausdrücke, auch bekannt als anonyme Funktionen verwendet.|
 |`function`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Lambda-Ausdrücke: Das Fun-Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|Als Alternative zu kürzeren verwendet die `fun` Schlüsselwort und ein `match` Ausdruck in einem Lambda-Ausdruck, der einen Mustervergleich für ein einzelnes Argument verfügt.|
@@ -58,7 +55,7 @@ Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfol
 |`interface`|[Schnittstellen](interfaces.md)|Deklarieren und Implementieren von Schnittstellen verwendet.|
 |`internal`|[Zugriffssteuerung](access-control.md)|Verwendet, um anzugeben, dass ein Element sichtbar ist innerhalb einer Assembly, aber nicht außerhalb davon.|
 |`lazy`|[Verzögerte Berechnungen](lazy-computations.md)|Wird verwendet, um eine Berechnung anzugeben, die ausgeführt werden soll, nur, wenn ein Ergebnis benötigt wird.|
-|`let`|[`let`Bindungen](functions/let-bindings.md)|Zum zuordnen, oder binden Sie einen Namen auf einen Wert oder eine Funktion verwendet.|
+|`let`|[`let` Bindungen](functions/let-bindings.md)|Zum zuordnen, oder binden Sie einen Namen auf einen Wert oder eine Funktion verwendet.|
 |`let!`|[Asynchrone Workflows](asynchronous-workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Verwendet in asynchrone Workflows einen Namen für das Ergebnis von eine asynchrone Berechnung zu binden oder in anderen Berechnungsausdrücke verwendet, um einen Namen zu einem Ergebnis zu binden, die Berechnung Typ aufweist.|
 |`match`|[Vergleichsausdrücke](match-expressions.md)|Verwendet zum Verzweigen durch Vergleichen eines Werts mit einem Muster.|
 |`member`|[Mitglieder](members/index.md)|Wird verwendet, um einer Eigenschaft oder Methode in einen Typ deklarieren.|

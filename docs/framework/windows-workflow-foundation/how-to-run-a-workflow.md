@@ -1,26 +1,27 @@
 ---
-title: "Vorgehensweise: Ausführen eines Workflows"
-ms.custom: 
+title: 'Vorgehensweise: Ausführen eines Workflows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 88c8adc74b707891a93e34aa135db82715da968e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
 Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: Erste Schritte“. Hierin wird beschrieben, wie Sie einen Workflowhost erstellen und den im vorherigen Thema [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) definierten Workflow ausführen.  
@@ -40,7 +41,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
     > [!TIP]
     >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.  
   
-3.  Wählen Sie im Knoten **Installiert** die Option **Visual C#**und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.  
+3.  Wählen Sie im Knoten **Installiert** die Option **Visual C#** und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.  
   
     > [!NOTE]
     >  Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .  
@@ -133,7 +134,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      Immer wenn der Workflow dann in den Leerlaufzustand eintritt und auf den nächsten Lösungsversuch wartet, wird dieser Handler aufgerufen und `idleAction` <xref:System.Threading.AutoResetEvent> festgelegt. Der Code im folgenden Schritt verwendet `idleEvent` und `syncEvent` , um zu ermitteln, ob der Workflow auf den nächsten Lösungsversuch wartet oder abgeschlossen ist.  
   
     > [!NOTE]
-    >  In diesem Beispiel verwendet die Hostanwendung AutoReset-Ereignisse in den Handlern <xref:System.Activities.WorkflowApplication.Completed%2A> und <xref:System.Activities.WorkflowApplication.Idle%2A> , um die Hostanwendung mit dem Status des Workflows zu synchronisieren. Das Blockieren und das Warten auf den Eintritt des Workflows in den Leerlaufzustand ist nicht erforderlich, bevor ein Lesezeichen wiederaufgenommen wird. In diesem Beispiel sind die Synchronisierungsereignisse jedoch erforderlich, damit der Host weiß, ob der Workflow abgeschlossen ist oder ob dieser mithilfe von <xref:System.Activities.Bookmark>auf weitere Benutzereingaben wartet. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Bookmarks](../../../docs/framework/windows-workflow-foundation/bookmarks.md)durcharbeiten und abschließen.  
+    >  In diesem Beispiel verwendet die Hostanwendung AutoReset-Ereignisse in den Handlern <xref:System.Activities.WorkflowApplication.Completed%2A> und <xref:System.Activities.WorkflowApplication.Idle%2A> , um die Hostanwendung mit dem Status des Workflows zu synchronisieren. Das Blockieren und das Warten auf den Eintritt des Workflows in den Leerlaufzustand ist nicht erforderlich, bevor ein Lesezeichen wiederaufgenommen wird. In diesem Beispiel sind die Synchronisierungsereignisse jedoch erforderlich, damit der Host weiß, ob der Workflow abgeschlossen ist oder ob dieser mithilfe von <xref:System.Activities.Bookmark>auf weitere Benutzereingaben wartet. Weitere Informationen finden Sie unter [Lesezeichen](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
 3.  Entfernen Sie den Aufruf von `WaitOne`, und ersetzen Sie diesen durch Code zum Erfassen der Eingabe des Benutzers und zum Wiederaufnehmen von <xref:System.Activities.Bookmark>.  
   

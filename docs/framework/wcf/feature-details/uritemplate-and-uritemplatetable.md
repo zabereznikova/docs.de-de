@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.  
@@ -51,7 +51,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
  Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind. Weitere Informationen finden Sie unter dem Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.  
   
  <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI-Schema entwickelt, das der HTTP URI-Grammatik entspricht. Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:  
   
@@ -100,13 +100,13 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 -   "Schuh / {Bereitschaftsboots} / *"  
   
--   "shoe/boat?x=2"  
+-   "Schuh Boot /? X = 2"  
   
 -   "Schuh / {Bereitschaftsboots}? x = {Bett}"  
   
 -   "Schuh/{Boot}?x={Bett}&y=band"  
   
--   "?x={shoe}"  
+-   "? x = {Schuh}"  
   
 -   "Schuh?x=3&y={var}  
   
@@ -137,7 +137,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
  Im Folgenden finden Sie Beispiele für ungültige Pfadsegmente:  
   
--   /{} – Variablen müssen benannt werden.  
+-   /{} -Variablen müssen benannt sein.  
   
 -   /{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Der URI "http://localhost:8000///" entspricht nicht der im vorhergehenden Code enthaltenen Vorlage, der URI "http://localhost:8000/" dagegen schon.  
+>  Ein URI, z. B. http://localhost:8000/// entspricht nicht die Vorlage, die im vorangehenden Code aufgeführt sind, jedoch einen URI wie z. B. http://localhost:8000/ ist.  
   
  Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht:  
   

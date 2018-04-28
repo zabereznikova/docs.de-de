@@ -1,20 +1,17 @@
 ---
 title: Primitive Typen (F#)
 description: Ermitteln Sie die grundlegenden primitiven Typen, die in der Programmiersprache f# verwendet werden.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f23d98b-551b-4fd2-9f4f-0fd7254288ed
-ms.openlocfilehash: b493cdf7116d94f66940d03b86e584bcecbbb0f1
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 7832151ee211f56547ecad98fc31f1454cb18870
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="primitive-types"></a>Primitive Typen
 
@@ -45,7 +42,7 @@ In der folgenden Tabelle werden die Eigenschaften von primitiven f#-Typen zusamm
 |`float, double`|`System.Double`|Eine 64-Bit-Gleitkommatyp.|
 
 >[!NOTE]
-Sie können Berechnungen mit ganzen Zahlen zu groß für den 64-Bit-Ganzzahl-Typ ausführen, mit der ["bigint"](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) Typ. `bigint`einen primitiven Typ ist nicht berücksichtigt werden; Es ist eine Abkürzung für `System.Numerics.BigInteger`.
+Sie können Berechnungen mit ganzen Zahlen zu groß für den 64-Bit-Ganzzahl-Typ ausführen, mit der ["bigint"](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) Typ. `bigint` einen primitiven Typ ist nicht berücksichtigt werden; Es ist eine Abkürzung für `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Siehe auch
 [F#-Sprachreferenz](index.md)

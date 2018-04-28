@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: ''
+caps.latest.revision: 42
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] integrierten Bindungen bieten eine schnelle Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen zu programmieren. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
@@ -56,7 +56,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   Standardsicherheitsprofil gemäß der Definition in WS-I.  
   
- Standardmäßig ist diese Bindung nicht sicher. Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten. Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Digest und integrierte Windows-Sicherheit. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Diese Bindung unterstützt Folgendes:  
+ Standardmäßig ist diese Bindung nicht sicher. Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten. Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Digest und integrierte Windows-Sicherheit. Weitere Informationen finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Diese Bindung unterstützt Folgendes:  
   
 -   HTTPS-Transportsicherheit.  
   
@@ -64,7 +64,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   WS-Sicherheit.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.WSHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -77,7 +77,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   HTTPS-Transportschutz mit SOAP-Nachrichten-Anmeldeinformationen-Sicherheit zur Authentifizierung des Anrufers.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType> und <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, und <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.WSDualHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -102,7 +102,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
     -   die Bereitstellung von vom Dienst als Teil des Kanal-Setups ausgehandelten Dienstanmeldeinformationen.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> und <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.WSDualHttpSecurity> und <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.NetTcpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -125,7 +125,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   Transportsicherheit mit Nachrichtenanmeldeinformationen: Vertraulichkeit und Integrität werden über Transport Layer Security (TLS) über TCP geboten und die Anmeldeinformationen für die Authentifizierung über WS-Sicherheit.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp> und <xref:System.ServiceModel.MessageCredentialType>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, und <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.NetNamedPipeBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
@@ -144,7 +144,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   Authentifizierung über Windows-Sicherheit.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> und <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> und <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
@@ -157,7 +157,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
 -   MSMQ-Transportsicherheit (Transport).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> und <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetMsmqSecurity> und <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.NetMsmqBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -178,17 +178,17 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
   
  Die <xref:System.ServiceModel.MessageCredentialType.Certificate>-Anmeldeinformationen werden nur unterstützt, wenn der Sicherheitsmodus entweder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Both> oder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Message> festgelegt ist.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> und <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.MessageSecurityOverMsmq> und <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.WSFederationHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Standardmäßig verwendet diese Bindung WS-Sicherheit (Nachrichtenebenen-Sicherheit).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verbund](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, und <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ Weitere Informationen finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, und <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Benutzerdefinierte Bindungen  
- Wenn keine der vom System bereitgestellten Bindungen Ihre Anforderungen erfüllt, können Sie eine benutzerdefinierte Bindung mit einem benutzerdefinierten Sicherheitsbindungselement erstellen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Wenn keine der vom System bereitgestellten Bindungen Ihre Anforderungen erfüllt, können Sie eine benutzerdefinierte Bindung mit einem benutzerdefinierten Sicherheitsbindungselement erstellen. Weitere Informationen finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Bindungsmöglichkeiten  
  In der folgenden Tabelle werden die Funktionen aufgeführt, die in der Sicherheitsmoduseinstellung geboten werden, d. h. die Funktionen werden aufgeführt, die bei Festlegung des Sicherheitsmodus auf `Transport`, `Message` oder `TransportWithMessageCredential` verfügbar sind. Verwenden Sie diese Tabelle, um die Sicherheitsfunktionen zu finden, die von der Anwendung benötigt werden.  
@@ -218,12 +218,12 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
 |Typ|Beschreibung|  
 |----------|-----------------|  
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
-|Standard|Standardauthentifizierung. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung, verfügbar unter [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Hashwertauthentifizierung. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung, verfügbar unter [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Standard|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Basic and Digest Authentication, verfügbar unter [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Hashwertauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Basic and Digest Authentication, verfügbar unter [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|NT-LAN-Manager (NTLM)-Authentifizierung.|  
 |Windows|Windows-Authentifizierung.|  
 |Zertifikat|Die Authentifizierung fand über ein Zertifikat statt.|  
-|IssuedToken|Ermöglicht dem Dienst die Forderung, dass der Client über ein Token, das von einem Sicherheitstokendienst oder von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellt wurde, authentifiziert werden muss. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Ermöglicht dem Dienst die Forderung, dass der Client über ein Token, das von einem Sicherheitstokendienst oder von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellt wurde, authentifiziert werden muss. Weitere Informationen finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Clientanmeldeinformationen für Nachrichten in Bindungen  
  In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung einer Bindung im Nachrichtensicherheitsmodus zur Verfügung stehen.  

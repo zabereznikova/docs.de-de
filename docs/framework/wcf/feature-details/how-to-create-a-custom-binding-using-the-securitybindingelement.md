@@ -1,13 +1,13 @@
 ---
 title: 'Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthält diverse, vom System bereitgestellte und konfigurierbare Bindungen, die jedoch in Bezug auf die Konfiguration aller Optionen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt, nicht die volle Flexibilität aufweisen. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellung benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthält diverse, vom System bereitgestellte und konfigurierbare Bindungen, die jedoch in Bezug auf die Konfiguration aller Optionen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt, nicht die volle Flexibilität aufweisen. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Erstellung benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die <xref:System.ServiceModel.Channels.IDuplexSessionChannel>-Kanalform nicht, die der standardmäßig vom TCP-Transport verwendeten Kanalform entspricht, wenn <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Buffered> festgelegt ist. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Beachten Sie, dass für SecurityBindingElements eine Vielzahl konfigurierbarer Einstellungen zur Verfügung stehen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Beachten Sie, dass für SecurityBindingElements eine Vielzahl konfigurierbarer Einstellungen zur Verfügung stehen. Weitere Informationen finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sichere Unterhaltungen und sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Weitere Informationen finden Sie unter [sicheren Konversationen und sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Verfahren  
   

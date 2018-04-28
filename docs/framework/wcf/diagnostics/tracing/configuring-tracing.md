@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -155,7 +155,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Sie können einen benutzerdefinierten Ablaufverfolgungslistener konfigurieren, um Ablaufverfolgungen zu übertragen, z. B. an eine Remotedatenbank. Stellen Sie beim Bereitstellen von Anwendungen eine ordnungsgemäße Zugriffsteuerung für die Protokolle auf dem Remotecomputer sicher.  
   
- Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](http://go.microsoft.com/fwlink/?LinkId=94648) und [erstellen einen benutzerdefinierten TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](http://go.microsoft.com/fwlink/?LinkId=94648) und [erstellen einen benutzerdefinierten TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Da `System.Diagnostics.XmlWriterTraceListener` nicht threadsicher ist, werden Ressourcen durch die Ablaufverfolgungsquelle bei der Ausgabe von Ablaufverfolgungen möglicherweise exklusiv gesperrt. Wenn viele Threads Ablaufverfolgungen an eine Ablaufverfolgungsquelle ausgeben, die für die Verwendung dieses Listeners konfiguriert ist, treten möglicherweise Ressourcenkonflikte auf. Das kann die Leistung erheblich beeinträchtigen. Implementieren Sie einen threadsicheren benutzerdefinierten Listener, um dieses Problem zu beheben.  

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-generated-client-code"></a>Grundlagen des generierten Clientcodes
 Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) werden Clientcode und eine Clientanwendungs-Konfigurationsdatei zum Erstellen von Clientanwendungen generiert. Dieses Thema bietet Beispiele für generierten Code für standardmäßige Dienstvertragszenarien. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Erstellen einer Clientanwendung mit dem generierten Code finden Sie unter [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -52,14 +52,14 @@ Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/fram
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Sie können die generierte Dienstvertragschnittstelle zusammen mit der <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>-Klasse zum Erstellen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalobjekts für das Aufrufen von Dienstvorgängen verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Sie können die generierte Dienstvertragschnittstelle zusammen mit der <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>-Klasse zum Erstellen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalobjekts für das Aufrufen von Dienstvorgängen verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Suchen von WCF-Clientklassen  
  Suchen Sie bei der Suche nach der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientklasse, die den zu verwendenden Dienstvertrag implementiert, nach einer Erweiterung von <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, wobei der Typparameter die Dienstvertragschnittstelle ist, die Sie zuvor gefunden haben und die diese Schnittstelle erweitert. Im folgenden Codebeispiel wird die <xref:System.ServiceModel.ClientBase%601> -Klasse vom Typ `ISampleService`gezeigt.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Sie können diese [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Clientklasse verwenden, indem Sie eine neue Instanz davon erstellen und die Methoden aufrufen, die sie implementiert. Diese Methoden rufen den Dienstvorgang auf, der für die Interaktion mit ihr konzipiert und konfiguriert ist. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Übersicht über den WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Sie können diese [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Clientklasse verwenden, indem Sie eine neue Instanz davon erstellen und die Methoden aufrufen, die sie implementiert. Diese Methoden rufen den Dienstvorgang auf, der für die Interaktion mit ihr konzipiert und konfiguriert ist. Weitere Informationen finden Sie unter [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  Wenn SvcUtil.exe eine WCF-Clientklasse generiert, wird ihr ein <xref:System.Diagnostics.DebuggerStepThroughAttribute> hinzugefügt, das die schrittweise Ausführung der WCF-Clientklasse durch Debugger verhindert.  

@@ -1,31 +1,32 @@
 ---
-title: "Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste"
-ms.custom: 
+title: 'Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste
 In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Persistenz für Workflows und Workflowdienste sowohl programmgesteuert als auch mithilfe einer Konfigurationsdatei zu aktivieren.  
   
- Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][AppFabric Persistenz-Konfiguration](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [App Fabric Persistenz-Konfiguration](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Erstellen Sie vor dem Verwenden der Funktion „SQL-Workflowinstanzspeicher“ eine Datenbank erstellen, die die Funktion zum Beibehalten von Workflowinstanzen verwendet. Das [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Setupprogramm kopiert die SQL-Skriptdateien, die der Funktion "SQL-Workflowinstanzspeicher" zugeordnet sind, in den Ordner "%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN". Führen Sie diese Skriptdateien für eine SQL Server 2005- oder SQL Server 2008-Datenbank aus, die der SQL-Workflowinstanzspeicher zum Beibehalten von Workflowinstanzen verwenden soll. Führen Sie zuerst die Datei "SqlWorkflowInstanceStoreSchema.sql" und dann die Datei "SqlWorkflowInstanceStoreLogic.sql" aus.  
   
@@ -40,7 +41,7 @@ In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspe
 >   
 >  System.Data.SqlClient.SqlException: Die gespeicherte Prozedur "System.Activities.DurableInstancing.CreateLockOwner" wurde nicht gefunden.  
   
- In den folgenden Abschnitten wird beschrieben, wie Sie die Persistenz für Workflows und Workflowdienste mithilfe des SQL-Workflowinstanzspeichers aktivieren. [!INCLUDE[crabout](../../../includes/crabout-md.md)]sehen Sie die Eigenschaften der SQL-Workflowinstanzspeicher [Eigenschaften des SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ In den folgenden Abschnitten wird beschrieben, wie Sie die Persistenz für Workflows und Workflowdienste mithilfe des SQL-Workflowinstanzspeichers aktivieren. [!INCLUDE[crabout](../../../includes/crabout-md.md)] sehen Sie die Eigenschaften der SQL-Workflowinstanzspeicher [Eigenschaften des SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Aktivieren der Persistenz für selbst gehostete Workflows, die WorkflowApplication verwenden  
  Sie können die Persistenz für selbst gehostete Workflows aktivieren, die <xref:System.Activities.WorkflowApplication> programmgesteuert nutzen, indem Sie das <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Objektmodell verwenden. Die folgende Vorgehensweise enthält die dafür erforderlichen Schritte.  

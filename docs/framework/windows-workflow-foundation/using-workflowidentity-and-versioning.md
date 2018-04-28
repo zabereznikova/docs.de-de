@@ -1,23 +1,24 @@
 ---
 title: Verwenden von WorkflowIdentity und Versionsverwaltung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02620abf421256b53fb5919b39f441f7346a2e7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc527fe59468544cf94256d100a1f90dd3cd44dd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Verwenden von WorkflowIdentity und Versionsverwaltung
 <xref:System.Activities.WorkflowIdentity> bietet Entwicklern von Workflowanwendungen die Möglichkeit, einer Workflowdefinition einen Namen und eine <xref:System.Version> zuzuweisen und diese Informationen einer persistenten Workflowinstanz zuzuordnen. Entwickler von Workflowanwendungen können diese Identitätsinformationen verwenden, um Szenarien wie die parallele Ausführung mehrerer Versionen einer Workflowdefinition umzusetzen. Darüber hinaus bilden sie die Grundlage für andere Funktionen wie dynamische Updates. Dieses Thema bietet eine Übersicht über die Verwendung von <xref:System.Activities.WorkflowIdentity> mit <xref:System.Activities.WorkflowApplication>-Hosting. Informationen auf der Seite-an-Seite-Ausführung von workflowdefinitionen in einem Workflowdienst finden Sie unter [parallele Versionsverwaltung in WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Informationen zu dynamischen Update finden Sie unter [dynamisches Update](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [So aktualisieren Sie das Datenbankschema](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
   
-##  <a name="UsingWorkflowIdentity"></a>Verwenden von WorkflowIdentity  
+##  <a name="UsingWorkflowIdentity"></a> Verwenden von WorkflowIdentity  
  Um <xref:System.Activities.WorkflowIdentity> zu verwenden, erstellen Sie eine Instanz, konfigurieren diese und ordnen sie einer <xref:System.Activities.WorkflowApplication>-Instanz zu. Eine <xref:System.Activities.WorkflowIdentity>-Instanz enthält drei identifizierende Informationen. <xref:System.Activities.WorkflowIdentity.Name%2A> und <xref:System.Activities.WorkflowIdentity.Version%2A> enthalten einen Namen und eine <xref:System.Version> und sind erforderlich. <xref:System.Activities.WorkflowIdentity.Package%2A> ist optional und kann verwendet werden, um eine zusätzliche Zeichenfolge anzugeben, die Informationen wie den Assemblynamen oder andere gewünschte Informationen enthält. <xref:System.Activities.WorkflowIdentity> ist eindeutig, wenn jede ihrer drei Eigenschaften sich von einer anderen <xref:System.Activities.WorkflowIdentity> unterscheidet.  
   
 > [!IMPORTANT]
@@ -87,13 +88,13 @@ wfApp.Load(instanceId);
  Beim Ausführen des vorangehenden Codes wird folgende <xref:System.Activities.VersionMismatchException> ausgelöst.  
   
  **Die WorkflowIdentity ('MortgageWorkflow v1; Version = 1.0.0.0') der geladenen Instanz stimmt nicht mit der WorkflowIdentity ('MortgageWorkflow v2; Version = 2.0.0.0') der angegebenen Workflowdefinition. Die Instanz kann mit einer anderen Definition geladen werden oder mit dynamischen Updates aktualisiert.**  
-###  <a name="SxS"></a>Seite-an-Seite-Ausführung mit WorkflowIdentity  
+###  <a name="SxS"></a> Seite-an-Seite-Ausführung mit WorkflowIdentity  
  <xref:System.Activities.WorkflowIdentity> kann verwendet werden, um die parallele Ausführung mehrerer Workflowversionen zu erleichtern. Ein häufiges Szenario besteht darin, die Geschäftsanforderungen in einem Workflow mit langer Laufzeit zu ändern. Bei der Bereitstellung einer aktualisierten Version können viele Instanzen eines Workflows ausgeführt werden. Die Hostanwendung kann so konfiguriert werden, dass die aktualisierte Workflowdefinition beim Starten neuer Instanzen verwendet wird, und sie muss dafür sorgen, beim Fortsetzen von Instanzen die richtige Workflowdefinition bereitzustellen. <xref:System.Activities.WorkflowIdentity> kann verwendet werden, um beim Fortsetzen von Workflowinstanzen die entsprechende Workflowdefinition zu identifizieren und bereitzustellen.  
   
  Um die <xref:System.Activities.WorkflowIdentity> einer persistenten Workflowinstanz abzurufen, wird die <xref:System.Activities.WorkflowApplication.GetInstance%2A>-Methode verwendet. Die <xref:System.Activities.WorkflowApplication.GetInstance%2A>-Methode verwendet die <xref:System.Activities.WorkflowApplication.Id%2A> der persistenten Workflowinstanz und den <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, der die persistente Instanz enthält und <xref:System.Activities.WorkflowApplicationInstance> zurückgibt. <xref:System.Activities.WorkflowApplicationInstance> enthält Informationen über eine persistente Workflowinstanz, einschließlich der zugeordneten <xref:System.Activities.WorkflowIdentity>. Diese zugeordnete <xref:System.Activities.WorkflowIdentity> kann vom Host verwendet werden, um die richtige Workflowdefinition bereitzustellen, wenn die Workflowinstanz geladen und fortgesetzt wird.  
   
 > [!NOTE]
->  Eine leere <xref:System.Activities.WorkflowIdentity> ist gültig und kann vom Host verwendet werden, um Instanzen, die ohne zugeordnete <xref:System.Activities.WorkflowIdentity> gespeichert wurden, der richtigen Workflowdefinition zuzuordnen. Dieses Szenario tritt auf, wenn eine Workflowanwendung zunächst ohne Workflowversionsverwaltung geschrieben wurde oder wenn eine Anwendung von [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] aktualisiert wird. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflowversionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+>  Eine leere <xref:System.Activities.WorkflowIdentity> ist gültig und kann vom Host verwendet werden, um Instanzen, die ohne zugeordnete <xref:System.Activities.WorkflowIdentity> gespeichert wurden, der richtigen Workflowdefinition zuzuordnen. Dieses Szenario tritt auf, wenn eine Workflowanwendung zunächst ohne Workflowversionsverwaltung geschrieben wurde oder wenn eine Anwendung von [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] aktualisiert wird. Weitere Informationen finden Sie unter [Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung Workflowversionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
  Im folgenden Beispiel ein `Dictionary<WorkflowIdentity, Activity>` dient zum Zuordnen <xref:System.Activities.WorkflowIdentity> Instanzen mit die entsprechenden workflowdefinitionen sowie einen Workflow gestartet wird, mithilfe der `MortgageWorkflow` Workflowdefinition, zugeordnet ist die `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   
@@ -148,13 +149,13 @@ wfApp.Load(instance);
 // Resume the workflow...  
 ```  
   
-##  <a name="UpdatingWF4PersistenceDatabases"></a>Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflowversionsverwaltung  
+##  <a name="UpdatingWF4PersistenceDatabases"></a> Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflowversionsverwaltung  
  Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Durch dieses Skript werden die Datenbanken aktualisiert, um die neuen mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten Versionsverwaltungsfunktionen zu unterstützen. Den persistenten Workflowinstanzen in den Datenbanken werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein.  
   
  Wenn eine [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Workflowanwendung versucht, einen beliebigen Persistenzvorgang auszuführen, der die neuen Versionsverwaltungsfunktionen für eine Persistenzdatenbank verwendet, die nicht mithilfe des bereitgestellten Skripts aktualisiert wurde, wird eine <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> mit etwa folgender Meldung ausgelöst.  
   
  **Der SqlWorkflowInstanceStore weist die Datenbankversion "'4.0.0.0". InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' kann nicht für diese Datenbankversion ausgeführt werden.  Aktualisieren Sie die Datenbank auf "4.5.0.0".**  
-###  <a name="ToUpgrade"></a>So aktualisieren Sie das Datenbankschema  
+###  <a name="ToUpgrade"></a> So aktualisieren Sie das Datenbankschema  
   
 1.  Öffnen Sie SQL Server Management Studio und Verbinden mit dem Persistenzdatenbank-Server, z. B. **. \SQLEXPRESS**.  
   

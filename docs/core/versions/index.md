@@ -4,17 +4,16 @@ description: Informationen zur Versionierung in .NET Core
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 437bea33f26c9ae445cf412657f4d23fcce18873
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
 
@@ -121,7 +120,7 @@ Eine allgemeine Namenskonvention für ein Dockertag ist das Platzieren der Versi
 * 2.1.1-runtime
 * 2.1.1-sdk
 
-Die SDK-Tags sollten aktualisiert werden, sodass sie die Version des SDK statt der Runtime widerspiegeln.
+Die SDK Tags sollten aktualisiert werden, sodass sie die Version des SDK statt der Runtime widerspiegeln.
 
 Es besteht die Möglichkeit, dass die .NET Core-Tools (einschließlich SDK) repariert, aber mit einer vorhandenen Runtime erneut bereitgestellt werden. In diesem Fall wird die SDK-Version erhöht (z.B. auf 2.1.2), und die Runtime schließt auf, wenn sie das nächste Mal ausgeliefert wird (z.B. werden die Runtime und das SDK das nächste Mal in Version 2.1.3 geliefert).
 

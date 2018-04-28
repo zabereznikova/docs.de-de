@@ -1,20 +1,17 @@
 ---
 title: 'Ausnahmen: Der try...with-Ausdruck (F#)'
-description: "Erfahren Sie, wie der F#-\"try...with\" Ausdruck für die Ausnahmebehandlung zu verwenden."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Erfahren Sie, wie der F#-"try...with" Ausdruck für die Ausnahmebehandlung zu verwenden.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Ausnahmen: Der try...with-Ausdruck
 
@@ -49,7 +46,7 @@ Eine Vielzahl von Mustern können Sie den Ausnahmetyp und andere Bedingungen gef
 |:? *Typ der Ausnahme*|Entspricht den angegebenen .NET Ausnahmetyp an.|
 |:? *Ausnahmetyp* als *Bezeichner*|Entspricht den angegebenen .NET Ausnahmetyp, aber bietet der Ausnahme einen benannten Wert.|
 |*Name des Ausnahmefehlers*(*Argumente*)|Einen f#-Ausnahmetyp entspricht, und bindet die Argumente.|
-|*identifier*|Entspricht einer beliebigen Ausnahme und bindet den Namen an das Ausnahmeobjekt. Entspricht **:? System.Exception als***Bezeichner*|
+|*identifier*|Entspricht einer beliebigen Ausnahme und bindet den Namen an das Ausnahmeobjekt. Entspricht **:? System.Exception als *** Bezeichner*|
 |*Bezeichner* Wenn *Bedingung*|Entspricht einer beliebigen Ausnahme aus, wenn die Bedingung "true" ergibt.|
 
 ## <a name="examples"></a>Beispiele

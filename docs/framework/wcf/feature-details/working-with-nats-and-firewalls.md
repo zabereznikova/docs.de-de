@@ -1,27 +1,29 @@
 ---
 title: Arbeiten mit NATs und Firewalls
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
 Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und verändert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  
@@ -43,7 +45,7 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
  Private Firewalls sind häufig so konfiguriert, dass eingehende Verbindungen unterbunden werden, es sei denn, es wurde zuvor eine ausgehende Verbindung zum entsprechenden Computer hergestellt. Geschäftliche Firewalls sind häufig so konfiguriert, dass zunächst einmal eingehende Verbindungen auf allen Anschlüssen unterbunden und anschließend Ausnahmen festgelegt werden. Beispielsweise kann eine Firewall alle Verbindungen mit Ausnahme von Verbindungen über den Anschluss 80 und den Anschluss 443 blockieren, um HTTP- und HTTPS-Dienste zu ermöglichen. Sowohl für private als auch für geschäftliche Benutzer gibt es verwaltete Firewalls, die es einem vertrauenswürdigen Benutzer oder einem vertrauenswürdigen Prozess ermöglichen, die Konfiguration der Firewall anzupassen. Verwaltete Firewalls sind häufiger in privaten Umgebungen zu finden, da die Netzwerkverwendung dort i. d. R. keinen spezifischen Richtlinien unterliegt.  
   
 ## <a name="using-teredo"></a>Verwenden von Teredo  
- Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Damit Teredo von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt wird, müssen im Betriebssystem die entsprechenden Einstellungen für IPv6 und Teredo vorgenommen werden. Teredo wird von [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und nachfolgenden Betriebssystemen unterstützt. [!INCLUDE[wv](../../../../includes/wv-md.md)] und nachfolgende Betriebssysteme unterstützen IPv6 standardmäßig und erfordern lediglich eine entsprechende Aktivierung durch den Benutzer. Unter [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] müssen IPv6 und Teredo vom Benutzer aktiviert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]die [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Damit Teredo von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt wird, müssen im Betriebssystem die entsprechenden Einstellungen für IPv6 und Teredo vorgenommen werden. Teredo wird von [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und nachfolgenden Betriebssystemen unterstützt. [!INCLUDE[wv](../../../../includes/wv-md.md)] und nachfolgende Betriebssysteme unterstützen IPv6 standardmäßig und erfordern lediglich eine entsprechende Aktivierung durch den Benutzer. Unter [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] müssen IPv6 und Teredo vom Benutzer aktiviert werden. Weitere Informationen finden Sie unter der [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Auswählen eines Transports und eines Nachrichtenaustauschmusters  
  Das Verfahren zum Auswählen eines Transports und eines Nachrichtenaustauschmusters besteht aus drei Schritten:  

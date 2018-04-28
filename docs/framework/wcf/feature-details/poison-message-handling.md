@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
 Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl der Zustellversuche an die Anwendung überschritten hat. Diese Situation kann auftreten, wenn eine warteschlangenbasierte Anwendung aufgrund der Fehler keine Nachricht verarbeiten kann. Um Zuverlässigkeitsforderungen zu erfüllen, empfängt eine in der Warteschlange stehende Anwendung Nachrichten unter einer Transaktion. Beim Abbrechen der Transaktion, in der eine in der Warteschlange stehende Nachricht empfangen wurde, bleibt die Nachricht in der Warteschlange und wird dann unter einer neuen Transaktion wiederholt. Wenn das Problem, das zum Abbrechen der Transaktion geführt hat, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellversuche überschritten ist. Auf diese Weise entsteht eine nicht verarbeitbare Nachricht.  
@@ -75,7 +75,7 @@ Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl 
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Empfohlene Vorgehensweise: Behandlung MsmqPoisonMessageException  
  Wenn der Dienst feststellt, dass eine Nachricht nicht verarbeitbar ist, löst der Warteschlangentransport eine <xref:System.ServiceModel.MsmqPoisonMessageException> aus, die die `LookupId` der nicht verarbeitbaren Nachricht enthält.  
   
- Eine empfangende Anwendung kann die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle implementieren, um alle Fehler zu behandeln, die die Anwendung erfordert. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Erweitern der Kontrolle über Fehlerbehandlung und-Meldung](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Eine empfangende Anwendung kann die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle implementieren, um alle Fehler zu behandeln, die die Anwendung erfordert. Weitere Informationen finden Sie unter [erweitern Steuerelement über Fehlerbehandlung und Berichterstattung](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Die Anwendung erfordert möglicherweise eine bestimmte automatische Behandlung von nicht verarbeitbaren Nachrichten, mit der die nicht verarbeitbaren Nachrichten in eine entsprechende Warteschlange verschoben werden, sodass der Dienst auf die restlichen Nachrichten in der Warteschlange zugreifen kann. Das einzige Szenario, in dem der Fehlerbehandlungsmechanismus zum Abhören auf Ausnahmen für nicht verarbeitbare Nachrichten verwendet werden kann, liegt vor, wenn die <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A>-Einstellung auf <xref:System.ServiceModel.ReceiveErrorHandling.Fault> festgelegt ist. Das Beispiel der nicht verarbeitbaren Nachricht für Message Queuing 3.0 veranschaulicht dieses Verhalten. Im Folgenden werden die Schritte zur Behandlung nicht verarbeitbarer Nachrichten, einschließlich empfohlener Vorgehensweisen, umrissen:  
   

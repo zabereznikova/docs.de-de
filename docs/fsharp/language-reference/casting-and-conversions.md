@@ -1,20 +1,17 @@
 ---
 title: Umwandlung und Konvertierungen (F#)
 description: Hier erfahren Sie, wie der Programmiersprache f# Konvertierungsoperatoren für arithmetische Konvertierungen zwischen verschiedenen primitiven Typen.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: db30db67-da21-4206-bf0c-9211bd3cb22f
-ms.openlocfilehash: df8352b0dd8651f1480515311454a218ea79b971
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 410c7da2b7ae8a09c58e8c89b24d0093a7f33a5c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="casting-and-conversions-f"></a>Umwandlung und Konvertierungen (F#)
 

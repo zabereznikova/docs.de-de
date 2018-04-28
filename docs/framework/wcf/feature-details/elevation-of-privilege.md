@@ -1,27 +1,29 @@
 ---
 title: Angriffe durch Rechteerweiterung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
 *Ausweitung von Berechtigungen* ergibt, wenn eine Autorisierung Angreifer Berechtigungen über die ihm ursprünglich gewährten hinaus erteilen. Dies ist zum Beispiel der Fall, wenn einem Angreifer mit einem Berechtigungssatz von "Nur-Lesen"-Berechtigungen es irgendwie gelingt, "Lesen-und-Schreiben"-Berechtigungen in seinen Berechtigungssatz aufzunehmen.  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Vertrauenswürdige STS sollten SAML-Tokenansprüche signieren  
  Ein SAML (Security Assertions Markup Language)-Token ist ein generisches XML-Token, das den Standardtyp für ausgestellte Token darstellt. SAML-Token können von einem Sicherheitstokendienst (Security Token Service, STS) erstellt werden, der für den empfangenden Webdienst in einem typischen Datenaustausch als vertrauenswürdig gilt. SAML-Token enthalten Ansprüche in Form von Anweisungen. Ein Angreifer kann die Ansprüche aus einem gültigen Token kopieren, ein neues SAML-Token erstellen und mit einem anderen Aussteller signieren. Das Ziel ist hierbei, festzustellen, ob der Server Aussteller validiert, und wenn nicht, diese Schwäche zum Erstellen von SAML-Token auszunutzen, die Berechtigungen über die von einem vertrauenswürdigen STS beabsichtigten hinaus gewähren.  
   
- Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Wechseln der Identität ohne Sicherheitskontext  
  Die nachfolgenden Ausführungen gelten nur für [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa561e5019bcf90e93da669f93cbce51d02e89dc
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fd08dca74ddb3f77e37a3aa4d67cf6d495bf5d16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten
 So konfigurieren Sie einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstendpunkt, sodass er mit [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webdienstclients interoperabel ist:  
@@ -42,7 +42,7 @@ So konfigurieren Sie einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-
   
 -   Meldungssicherheit, die vom <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>-Wert gesteuert wird, stellt WS-Sicherheit bereit, die mit WS-I Basic Security Profile 1.0 kompatibel ist. Behalten Sie für diese Eigenschaft den Standardwert <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> bei, d. h. es wird keine WS-Sicherheit verwendet.  
   
- Die Metadaten vornehmen, damit eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst zur Verfügung [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], verwenden Sie die Web-Dienst-Clienttools: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [(Web Services Discovery Tool DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), und die `Add Web Reference` Features in Visual Studio ";" müssen Sie die Veröffentlichung von Metadaten aktivieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadatenendpunkte veröffentlichen](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Die Metadaten vornehmen, damit eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst zur Verfügung [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], verwenden Sie die Web-Dienst-Clienttools: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [(Web Services Discovery Tool DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), und die `Add Web Reference` Features in Visual Studio ";" müssen Sie die Veröffentlichung von Metadaten aktivieren. Weitere Informationen finden Sie unter [Veröffentlichen von Metadatenendpunkten](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Beispiel  
   

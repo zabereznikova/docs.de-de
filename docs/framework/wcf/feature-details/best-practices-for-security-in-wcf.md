@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Best Practices für Sicherheit in WCF
 In den folgenden Abschnitten werden die Best Practices aufgeführt, die beim Erstellen sicherer Anwendungen mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zu berücksichtigen sind. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Sicherheit, finden Sie unter [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), und [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ In den folgenden Abschnitten werden die Best Practices aufgeführt, die beim Ers
  Stellen Sie sicher, dass die Metadatenquelle vertrauenswürdig ist und dass die Metadaten nicht manipuliert wurden. Über das HTTP-Protokoll abgerufene Metadaten werden im Klartext gesendet und können manipuliert werden. Wenn der Dienst die Eigenschaften <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> und <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> nutzt, verwenden Sie die URL, die der Dienstersteller zum Herunterladen der Daten über das HTTPS-Protokoll angegeben hat.  
   
 ## <a name="publish-metadata-using-security"></a>Veröffentlichen von Metadaten unter Verwendung von Sicherheitsfeatures  
- Damit die veröffentlichten Metadaten eines Diensts nicht manipuliert werden können, schützen Sie den Endpunkt für den Metadatenaustausch mit Sicherheitsfeatures auf Transport- oder Nachrichtenebene. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Metadatenendpunkte veröffentlichen](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) und [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Damit die veröffentlichten Metadaten eines Diensts nicht manipuliert werden können, schützen Sie den Endpunkt für den Metadatenaustausch mit Sicherheitsfeatures auf Transport- oder Nachrichtenebene. Weitere Informationen finden Sie unter [Veröffentlichen von Metadatenendpunkten](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) und [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Sicherstellen der Verwendung eines lokalen Ausstellers  
  Wenn für eine bestimmte Bindung eine Ausstelleradresse und eine Bindung angegeben werden, wird der lokale Aussteller nicht für Endpunkte genutzt, die diese Bindung verwenden. Clients, die immer den lokalen Aussteller verwenden möchten, sollten sicherstellen, dass keine solche Bindung verwendet wird oder dass die Bindung so geändert wird, dass die Ausstelleradresse NULL lautet.  

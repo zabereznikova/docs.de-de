@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 Dieses Beispiel veranschaulicht, wie die Messagingaktivitäten <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> verwendet werden können, um in einem Workflowdienst eine vorhandene benutzerdefinierte Aktivität als Vorgang verfügbar zu machen. Dieses Beispiel umfasst eine neue benutzerdefinierte Aktivität, die als `OperationScope` bezeichnet wird. Sie ist dazu vorgesehen, die Entwicklung eines Workflowdiensts zu vereinfachen, indem Benutzer den Textkörper der Vorgänge als benutzerdefinierte Aktivitäten getrennt erstellen können und sie dann einfach als Dienstvorgänge mit der `OperationScope`-Aktivität verfügbar machen können. Eine benutzerdefinierte `Add`-Aktivität, die zwei `in`-Argumente annimmt und ein `out`-Argument zurückgibt, könnte z. B. als `Add`-Vorgang mit dem Workflowdienst verfügbar gemacht werden, indem es in einer `OperationScope`-Aktivität abgelegt wird.  
   
  Der Bereich funktioniert, indem er die als Textkörper bereitgestellte Aktivität überprüft. Alle ungebundenen `in`-Argumente werden als Eingaben von der eingehenden Nachricht betrachtet. Alle `out`-Argumente, unabhängig davon, ob sie gebunden sind, werden als Ausgaben in der nachfolgenden Antwortnachricht betrachtet. Der Name des verfügbar gemachten Vorgangs wird dem Anzeigenamen der `OperationScope`-Aktivität entnommen. Das Endergebnis ist, dass die Textaktivität mit den Parametern aus den Nachrichten, die an die Argumente der Aktivität gebunden sind, von <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> umschlossen wird.  
   
- Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Für die Ausführung müssen richtige URL-ACLs hinzugefügt werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Konfigurieren von HTTP und HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten fügt die entsprechenden ACLs hinzu (Stellen Sie sicher, dass die Domäne und den Benutzernamen, für die Domäne ersetzt werden %\\%UserName%).  
+ Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Für die Ausführung müssen richtige URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten fügt die entsprechenden ACLs hinzu (Stellen Sie sicher, dass die Domäne und den Benutzernamen, für die Domäne ersetzt werden %\\%UserName%).  
   
- **Netsh http Urlacl Url hinzufügen = http: / / +: 8000 / Benutzer = "% Domäne"\\%UserName%**  
+ **Netsh http Urlacl Url hinzufügen =http://+:8000/ Benutzer = "% Domäne"\\%UserName%**  
   
 ### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   

@@ -1,23 +1,24 @@
 ---
 title: Ausnahmen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Ausnahmen
 Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows durch eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler behandeln von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  
@@ -58,7 +59,7 @@ Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung 
 -   Die Ausnahme wird nicht von <xref:System.Activities.Statements.TryCatch> auf einer höheren Ebene behandelt, schützt den Stamm des Workflows mit Escapezeichen, und der Workflow wird so konfiguriert, dass er abgebrochen wird, anstatt beendet oder abgebrochen zu werden. Workflows, die mithilfe von <xref:System.Activities.WorkflowApplication> gehostet werden, können diese Konfiguration vornehmen, indem sie <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> behandeln und <xref:System.Activities.UnhandledExceptionAction.Cancel> zurückgeben. Ein Beispiel für die Behandlung von <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> wurde zuvor in diesem Thema bereitgestellt. Workflowdienste können diese Konfiguration vornehmen, indem sie <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> verwenden und <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> angeben. Ein Beispiel für das Konfigurieren von <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, finden Sie unter [Erweiterbarkeit des Workflowdiensthosts](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Ausnahmebehandlung und Kompensierung  
- Der Unterschied zwischen Ausnahmebehandlung und Kompensierung besteht darin, dass die Ausnahmebehandlung während der Ausführung einer Aktivität erfolgt. Die Kompensierung erfolgt, nachdem eine Aktivität erfolgreich abgeschlossen wurde. Die Ausnahmebehandlung bietet eine Möglichkeit, nach dem Auslösen der Ausnahme durch die Aktivität eine Bereinigung durchzuführen. Die Kompensierung dagegen stellt einen Mechanismus bereit, mit dem die erfolgreich abgeschlossene Arbeit einer zuvor abgeschlossenen Aktivität rückgängig gemacht werden kann. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Kompensierung](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ Der Unterschied zwischen Ausnahmebehandlung und Kompensierung besteht darin, dass die Ausnahmebehandlung während der Ausführung einer Aktivität erfolgt. Die Kompensierung erfolgt, nachdem eine Aktivität erfolgreich abgeschlossen wurde. Die Ausnahmebehandlung bietet eine Möglichkeit, nach dem Auslösen der Ausnahme durch die Aktivität eine Bereinigung durchzuführen. Die Kompensierung dagegen stellt einen Mechanismus bereit, mit dem die erfolgreich abgeschlossene Arbeit einer zuvor abgeschlossenen Aktivität rückgängig gemacht werden kann. Weitere Informationen finden Sie unter [Kompensierung](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Activities.Statements.TryCatch>  

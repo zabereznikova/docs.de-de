@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Gewusst wie: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen
 Sie können eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendung über die meisten Webserver bereitstellen, solange diese mit den erforderlichen [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]-Typen konfiguriert werden. Standardmäßig wird [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] mit diesen [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]-Typen konfiguriert, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] und [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] jedoch nicht.  
@@ -40,7 +40,7 @@ Sie können eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
   
   
 > [!NOTE]
->  Sie können die *UserAgent*-Zeichenfolge in der Registrierung überprüfen, um zu ermitteln, ob auf einem System [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist. Ausführliche Informationen und ein Skript, das die *UserAgent*-Zeichenfolge überprüft, um zu ermitteln, ob auf einem System [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist, finden Sie unter [Gewusst wie: Erkennen einer .NET Framework 3.0-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  Sehen Sie sich die *UserAgent* Zeichenfolge in der Registrierung, um zu bestimmen, ob ein System .NET Framework installiert ist. Weitere Informationen und ein Skript, überprüft der *UserAgent* Zeichenfolge zu bestimmen, ob .NET Framework auf einem System installiert ist, finden Sie unter [erkennen, ob die .NET Framework 3.0 installiert ist](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>Anpassen der Einstellung für die Gültigkeitsdauer des Inhalts  

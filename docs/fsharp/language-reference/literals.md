@@ -1,20 +1,17 @@
 ---
 title: Literale (F#)
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache f#.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Literale
 
@@ -47,7 +44,7 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |Zeichenfolge|Unicode-Zeichenfolge|Keine|`"text\n"`<br /><br />oder<br /><br />`@"c:\filename"`<br /><br />oder<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />oder<br /><br />`"string1" + "string2"`<br /><br />Siehe auch [Zeichenfolgen](Strings.md).|
 |byte|ASCII-Zeichen|B|`'a'B`|
 |byte[]|ASCII-Zeichenfolge|B|`"text"B`|
-|String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Hinweise
 Unicode-Zeichenfolgen darf explizite Codierungen, bei denen Sie angeben können, indem Sie mit `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, bei denen Sie angeben können, indem Sie mit `\U` gefolgt von einer 32-Bit-Hexadezimalcode, der eine Unicode-darstellt Ersatzzeichenpaar.

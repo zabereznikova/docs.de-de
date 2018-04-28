@@ -1,26 +1,26 @@
 ---
-title: "Wählen eines Typs von Anmeldeinformationen"
-ms.custom: 
+title: Wählen eines Typs von Anmeldeinformationen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Anmeldeinformationen viele Formate haben, zum Beispiel Benutzernamentoken und X.509-Zertifikate. In diesem Thema werden Anmeldeinformationen, ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und die richtige Auswahl von Anmeldeinformationen für Ihre Anwendung beschrieben.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|Ermöglicht unter dem mit Windows-Anmeldeinformationen eingerichteten Sicherheitskontext den Austausch von SOAP-Nachrichten.|  
 |Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine kryptografischen Vorgänge mit den Benutzernamen wie das Erzeugen einer Signatur oder das Verschlüsseln von Daten zulässig sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.|  
 |Zertifikat|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
-|Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. Weitere Informationen finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Aushandlungsmodell von Dienstanmeldeinformationen  
  *Aushandlung* versteht man das Einrichten von Vertrauensstellungen zwischen einem Client und einem Dienst durch den Austausch von Anmeldeinformationen. Der Prozess wird iterativ zwischen dem Client und dem Dienst durchgeführt, damit jeweils nur die Informationen offengelegt werden, die für den nächsten Schritt des Aushandlungsprozesses erforderlich sind. In der Praxis ist das Endergebnis die Zustellung der Anmeldeinformationen eines Dienstes an den Client, damit diese bei nachfolgenden Vorgängen verwendet werden können.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Die Methode zum Festlegen des Werts der Anmeldeinformationen unterscheidet sich in Abhängigkeit davon leicht, ob Sie einen Dienst oder einen Client programmieren.  
   
 ### <a name="setting-service-credentials"></a>Festlegen von Dienstanmeldeinformationen  
- Wenn Sie den Transportmodus verwenden und HTTP als Transportart nutzen, müssen Sie entweder Internetinformationsdienste (IIS) verwenden oder den Anschluss mit einem Zertifikat konfigurieren. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) und [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Wenn Sie den Transportmodus verwenden und HTTP als Transportart nutzen, müssen Sie entweder Internetinformationsdienste (IIS) verwenden oder den Anschluss mit einem Zertifikat konfigurieren. Weitere Informationen finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) und [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Um einen Dienst im Code mit Anmeldeinformationen auszustatten, erstellen Sie eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse und geben die geeigneten Anmeldeinformationen an, indem Sie die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse verwenden, auf die mithilfe der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft zugegriffen wird.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über Workflowdienste"
-ms.custom: 
+title: Übersicht über Workflowdienste
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflowdienste
-Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basieren und mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die Messagingaktivitäten zum Senden und Empfangen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichten verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]messagingaktivitäten und wie sie verwendet werden können, zum Implementieren verschiedener Nachrichtenaustauschmuster finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basieren und mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die Messagingaktivitäten zum Senden und Empfangen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichten verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] messagingaktivitäten und wie sie verwendet werden können, zum Implementieren verschiedener Nachrichtenaustauschmuster finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Vorteile der Verwendung von Workflowdiensten  
  Da Anwendungen immer stärker dezentral verwendet werden, sind häufiger einzelne Dienste für das Aufrufen anderer Dienste zuständig, um einige Arbeitsaufgaben zu verteilen. Das Implementieren dieser Aufrufe als asynchrone Vorgänge führt zu einem höheren Maß an Komplexität im Code. Zuusätzliche Komplexität ergibt sich aus der Fehlerbehandlung aufgrund der Behandlung von Ausnahmen und der Bereitstellung ausführlicher Nachverfolgungsinformationen. Einige Dienste verfügen häufig über eine lange Ausführungszeit und können beim Warten auf Eingaben wertvolle Systemressourcen binden. Aufgrund dieser Probleme sind verteilte Anwendungen häufig sehr komplex und schwierig zu schreiben und zu verwalten. Workflows sind eine natürliche Möglichkeit, die Koordination asynchroner Arbeit auszudrücken, besonders Aufrufe externer Dienste. Workflows sind auch effektiv, wenn es um die Darstellung Geschäftsprozesse mit langer Laufzeit geht. Diese Qualitäten machen den Workflow zu einem nützlichen Instrument beim Erstellen von Diensten in einer verteilten Umgebung.  
@@ -69,7 +71,7 @@ Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../.
   
  Unter einer verwalteten [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Anwendung oder einem verwalteten Windows-Dienst gehostete Workflowdienste erstellen eine Instanz der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse und übergeben an diese eine Instanz von <xref:System.ServiceModel.Activities.WorkflowService>, worin die Workflowdefinition innerhalb der <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>-Eigenschaft enthalten ist. Eine Workflowdefinition, die Messagingaktivitäten enthält, wird als Workflowdienst verfügbar gemacht.  
   
- Um einen Workflowdienst unter IIS zu hosten, fügen Sie die XAMLX-Datei mit der Workflowdienstdefinition in ein virtuelles Verzeichnis ein. Ein Standardendpunkt (mit <xref:System.ServiceModel.BasicHttpBinding>) wird automatisch erstellt, [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md). Sie können auch eine Web.config-Datei in das virtuelle Verzeichnis einfügen, um eigene Endpunkte anzugeben. Wenn sich die Workflowdefinition in einer Assembly befindet, können Sie eine SVC-Datei in das virtuelle Verzeichnis und die Workflowassembly in das Verzeichnis "App_Code" einfügen. In der SVC-Datei muss die Diensthostfactory und die Klasse angegeben sein, die den Workflowdienst implementiert. Das folgende Beispiel zeigt, wie Sie die Diensthostfactory und die Klasse angeben, die den Workflowdienst implementiert.  
+ Um einen Workflowdienst unter IIS zu hosten, fügen Sie die XAMLX-Datei mit der Workflowdienstdefinition in ein virtuelles Verzeichnis ein. Ein Standardendpunkt (mit <xref:System.ServiceModel.BasicHttpBinding>) wird automatisch erstellt, Weitere Informationen, finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md). Sie können auch eine Web.config-Datei in das virtuelle Verzeichnis einfügen, um eigene Endpunkte anzugeben. Wenn sich die Workflowdefinition in einer Assembly befindet, können Sie eine SVC-Datei in das virtuelle Verzeichnis und die Workflowassembly in das Verzeichnis "App_Code" einfügen. In der SVC-Datei muss die Diensthostfactory und die Klasse angegeben sein, die den Workflowdienst implementiert. Das folgende Beispiel zeigt, wie Sie die Diensthostfactory und die Klasse angeben, die den Workflowdienst implementiert.  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  

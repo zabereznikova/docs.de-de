@@ -1,27 +1,29 @@
 ---
 title: Net.TCP-Anschlussfreigabe
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet ein neues, TCP-basiertes Netzwerkprotokoll (net.tcp://) für Hochleistungskommunikation. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] führt außerdem eine neue Systemkomponente ein, den TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  Wenn ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der net.tcp://-Anschlussfreigabe verwendet, geöffnet wird, öffnet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP-Transportinfrastruktur nicht direkt einen TCP-Socket im Anwendungsprozess. Stattdessen registriert die Transportinfrastruktur den Basisadressen-URI (Uniform Resource Identifier) des Dienstes mit dem Net.TCP-Portfreigabedienst und wartet darauf, dass der Portfreigabedienst in ihrem Namen den Eingang von Nachrichten abhört.  Der Portfreigabedienst leitet an den Anwendungsdienst adressierte Nachrichten bei Eingang weiter.  
   
 ## <a name="installing-port-sharing"></a>Installieren der Anschlussfreigabe  
- Der Net.TCP-Portfreigabedienst steht auf allen Betriebssystemen, die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] unterstützen zur Verfügung, aber der Dienst ist nicht standardmäßig aktiviert. Als Sicherheitsmaßnahme muss der Net.TCP-Portfreigabedienst vor der ersten Verwendung manuell von einem Administrator aktiviert werden. Der Net.TCP-Portfreigabedienst stellt Konfigurationsoptionen zur Verfügung, mit denen Sie einige Merkmale der dem Portfreigabedienst gehörenden Netzwerksockets ändern können. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Aktivieren der Net.TCP-Portfreigabedienst](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Der Net.TCP-Portfreigabedienst steht auf allen Betriebssystemen, die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] unterstützen zur Verfügung, aber der Dienst ist nicht standardmäßig aktiviert. Als Sicherheitsmaßnahme muss der Net.TCP-Portfreigabedienst vor der ersten Verwendung manuell von einem Administrator aktiviert werden. Der Net.TCP-Portfreigabedienst stellt Konfigurationsoptionen zur Verfügung, mit denen Sie einige Merkmale der dem Portfreigabedienst gehörenden Netzwerksockets ändern können. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Net.TCP-Portfreigabedienst](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Verwenden der Net.tcp-Anschlussfreigabe in einer Anwendung  
  Der einfachste Weg, um die net.tcp://-Anschlussfreigabe in Ihrer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung zu verwenden, besteht darin, einen Dienst mit der <xref:System.ServiceModel.NetTcpBinding> verfügbar zu machen, und dann den Net.TCP-Portfreigabedienst mithilfe der <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft zu aktivieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vorgehensweise hierzu finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Vorgehensweise hierzu finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Sicherheitsauswirkungen der Anschlussfreigabe  
  Obwohl der Net.TCP-Portfreigabedienst eine Verarbeitungsschicht zwischen Anwendungen und dem Netzwerk bereitstellt, sollten Anwendungen, die die Anschlussfreigabe nutzen, zusätzlich so gesichert werden, als würden sie das Netzwerk direkt überwachen. Insbesondere sollten Anwendungen, die die Anschlussfreigabe nutzen, die Prozessprivilegien auswerten, unter denen sie ausgeführt werden. Ziehen Sie in Betracht, die Anwendung unter dem integrierten Netzwerkdienstkonto auszuführen, das mit der minimalen Gruppe der zur Netzwerkkommunikation erforderlichen Privilegien ausgeführt wird.  

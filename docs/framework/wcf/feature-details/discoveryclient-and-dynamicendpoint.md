@@ -1,24 +1,26 @@
 ---
 title: DiscoveryClient und DynamicEndpoint
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient und DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> und <xref:System.ServiceModel.Discovery.DynamicEndpoint> sind zwei Klassen, die auf der Clientseite zum Suchen nach Diensten verwendet werden. <xref:System.ServiceModel.Discovery.DiscoveryClient> stellt eine Liste der Dienste bereit, die bestimmten Kriterien entsprechen, und ermöglicht Ihnen das Herstellen einer Verbindung mit den Diensten. <xref:System.ServiceModel.Discovery.DynamicEndpoint> führt den gleichen Vorgang aus und stellt zusätzlich eine Verbindung mit einem der gefundenen Dienste her. Jeder Endpunkt kann als <xref:System.ServiceModel.Discovery.DynamicEndpoint> festgelegt werden, und die Suchkriterien können auch in der Konfiguration hinzugefügt werden. <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist hilfreich, wenn Sie die Suche in der Projektmappe benötigen, die Clientlogik jedoch nicht ändern möchten – Sie müssen nur die Endpunkte ändern. <xref:System.ServiceModel.Discovery.DiscoveryClient> bietet Ihnen jedoch eine präzisere Steuerung des Suchvorgangs. Die Verwendungsmöglichkeiten und Vorteile der Klassen werden unten näher beschrieben.  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]asynchrone Aufrufe suchen, finden Sie unter [asynchrone suchen](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] asynchrone Aufrufe suchen, finden Sie unter [asynchrone suchen](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Verwenden Sie die Methoden <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> und <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29>, um anhand der Endpunktadresse nach einem Dienst zu suchen. Dies ist hilfreich, wenn die Endpunktadresse im Netzwerk nicht adressierbar ist. Die Resolve-Methoden verwenden eine Instanz von <xref:System.ServiceModel.Discovery.ResolveCriteria>. Damit können Sie die Endpunktadresse des Diensts, den Sie auflösen, die Höchstdauer des Auflösungsvorgangs und eine Gruppe von Erweiterungen angeben. Das folgende Beispiel zeigt, wie Sie die <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A>-Methode zum Auflösen eines Diensts verwenden.  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>ist ein Standardendpunkt ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) die Erkennung und wählt automatisch einen übereinstimmenden Dienst. Erstellen Sie einfach einen <xref:System.ServiceModel.Discovery.DynamicEndpoint>, über den der zu suchende Vertrag und die zu verwendende Bindung übergeben werden, und übergeben Sie die <xref:System.ServiceModel.Discovery.DynamicEndpoint>-Instanz an den WCF-Client. Das folgende Beispiel veranschaulicht, wie Sie einen <xref:System.ServiceModel.Discovery.DynamicEndpoint> erstellen und verwenden, um den Rechnerdienst aufzurufen. Die Suche wird jeweils ausgeführt, wenn der Client geöffnet wird. Jeder Endpunkt in der Konfiguration definierte kann ebenfalls aktiviert werden, in einer <xref:System.ServiceModel.Discovery.DynamicEndpoint> durch Hinzufügen der `kind ="dynamicEndpoint"` -Attribut auf die Endpunkt-Konfigurationselement.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist ein Standardendpunkt (Weitere Informationen finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) die Erkennung und wählt automatisch einen übereinstimmenden Dienst. Erstellen Sie einfach einen <xref:System.ServiceModel.Discovery.DynamicEndpoint>, über den der zu suchende Vertrag und die zu verwendende Bindung übergeben werden, und übergeben Sie die <xref:System.ServiceModel.Discovery.DynamicEndpoint>-Instanz an den WCF-Client. Das folgende Beispiel veranschaulicht, wie Sie einen <xref:System.ServiceModel.Discovery.DynamicEndpoint> erstellen und verwenden, um den Rechnerdienst aufzurufen. Die Suche wird jeweils ausgeführt, wenn der Client geöffnet wird. Jeder Endpunkt in der Konfiguration definierte kann ebenfalls aktiviert werden, in einer <xref:System.ServiceModel.Discovery.DynamicEndpoint> durch Hinzufügen der `kind ="dynamicEndpoint"` -Attribut auf die Endpunkt-Konfigurationselement.  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

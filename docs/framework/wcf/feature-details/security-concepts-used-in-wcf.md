@@ -1,24 +1,26 @@
 ---
 title: In WCF verwendete Sicherheitsbegriffe
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 142de63c3d61ae2ff7f89b1d602f2a48c739f53a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72712e0934646a39c1e03a38716179384051003a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>In WCF verwendete Sicherheitsbegriffe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheit baut auf Begriffen auf, die bereits in Gebrauch sind und in diversen Sicherheitsinfrastrukturen eingesetzt werden.  
@@ -31,13 +33,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="industry-wide-security-specifications"></a>Branchenweite Sicherheitsspezifikationen  
   
 ### <a name="public-key-infrastructure"></a>Public Key-Infrastruktur  
- Die Public Key-Infrastruktur (PKI) ist ein System von digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, von dem jede an einer elektronischen Transaktion beteiligte Partei mittels Verschlüsselung mit öffentlichem Schlüssel überprüft und authentifiziert wird. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Server 2008 R2-Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=210211).  
+ Die Public Key-Infrastruktur (PKI) ist ein System von digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, von dem jede an einer elektronischen Transaktion beteiligte Partei mittels Verschlüsselung mit öffentlichem Schlüssel überprüft und authentifiziert wird. Weitere Informationen finden Sie unter [Windows Server 2008 R2-Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=210211).  
   
 ### <a name="kerberos-protocol"></a>Kerberos-Protokoll  
- Die *Kerberos-Protokoll* ist eine Spezifikation für das Erstellen eines Sicherheitsmechanismus, die Benutzer in einer Windows-Domäne authentifiziert. Es ermöglicht es einem Benutzer, in einer Domäne einen sicheren Kontext mit anderen Entitäten zu erstellen. Windows 2000-Plattformen und höher verwenden das Kerberos-Protokoll standardmäßig. Das Verständnis der Mechanismen dieses Systems ist bei der Erstellung eines Diensts hilfreich, der mit Intranetclients interagiert. Da die *Web Services Security-Kerberos-Bindung* weit wird veröffentlicht, können Sie das Kerberos-Protokoll um mit Internetclients zu kommunizieren (d. h. das Kerberos-Protokoll ist interoperabel). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]das Kerberos-Protokoll in Windows implementiert ist, finden Sie unter [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+ Die *Kerberos-Protokoll* ist eine Spezifikation für das Erstellen eines Sicherheitsmechanismus, die Benutzer in einer Windows-Domäne authentifiziert. Es ermöglicht es einem Benutzer, in einer Domäne einen sicheren Kontext mit anderen Entitäten zu erstellen. Windows 2000-Plattformen und höher verwenden das Kerberos-Protokoll standardmäßig. Das Verständnis der Mechanismen dieses Systems ist bei der Erstellung eines Diensts hilfreich, der mit Intranetclients interagiert. Da die *Web Services Security-Kerberos-Bindung* weit wird veröffentlicht, können Sie das Kerberos-Protokoll um mit Internetclients zu kommunizieren (d. h. das Kerberos-Protokoll ist interoperabel). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] das Kerberos-Protokoll in Windows implementiert ist, finden Sie unter [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
   
 ### <a name="x509-certificates"></a>X.509-Zertifikate  
- Bei X.509-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird. Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://go.microsoft.com/fwlink/?LinkId=210213). X.509-Zertifikate werden in einem Zertifikatspeicher gespeichert. Ein Computer mit Windows-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkID=87787).  
+ Bei X.509-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird. Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://go.microsoft.com/fwlink/?LinkId=210213). X.509-Zertifikate werden in einem Zertifikatspeicher gespeichert. Ein Computer mit Windows-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Sicherheitsspezifikationen für Webdienste  
  Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste. Eine vollständige Liste der vom System bereitgestellte Bindungen und die Webdienstspezifikationen, die sie unterstützen finden Sie unter: [unterstützte Webdienstprotokolle vom sicherheitsbindungsarten Interoperabilitätsbindungen](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

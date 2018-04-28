@@ -1,24 +1,26 @@
 ---
 title: Beispiel zur schwach typisierten JSON-Serialisierung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Beispiel zur schwach typisierten JSON-Serialisierung
 Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus wird auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten verwendet, wie im Thema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)beschrieben.  
@@ -121,7 +123,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- Der `JsonObject` -Konstruktor nimmt einen <xref:System.Xml.XmlDictionaryReader>an, der durch die <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> -Methode abgerufen wird. Der Reader enthält eine XML-Darstellung der vom Client empfangenen JSON-Nachricht. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Thema [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)beschrieben.  
+ Der `JsonObject` -Konstruktor nimmt einen <xref:System.Xml.XmlDictionaryReader>an, der durch die <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> -Methode abgerufen wird. Der Reader enthält eine XML-Darstellung der vom Client empfangenen JSON-Nachricht. Weitere Informationen finden Sie im Thema [Zuordnung zwischen JSON und XML-](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
  Das Programm erzeugt die folgende Ausgabe:  
   

@@ -1,27 +1,29 @@
 ---
 title: 'Gewusst wie: Angeben der Clientanmeldeinformationswerte'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Gewusst wie: Angeben der Clientanmeldeinformationswerte
 Wenn Sie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] verwenden, kann der Dienst angeben, wie ein Client für den Dienst authentifiziert wird. Ein Dienst kann beispielsweise festlegen, dass der Client mit einem Zertifikat authentifiziert wird.  
@@ -32,7 +34,7 @@ Wenn Sie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] verwenden, kann de
   
 2.  Öffnen Sie die XML-Konfigurationsdatei. Wenn Sie das Tool "Svcutil.exe" verwenden, lautet der Standardname der Datei "Output.config".  
   
-3.  Suchen der  **\<Sicherheit >** Element mit dem **Modus** Attribut (**< Sicherheitsmodus =** `MessageOrTransport`  **>**  , in dem `MessageOrTransport` auf einen der Sicherheitsmodi festgelegt ist.  
+3.  Suchen der  **\<Sicherheit >** Element mit dem **Modus** Attribut (**< Sicherheitsmodus =** `MessageOrTransport` **>** , in dem `MessageOrTransport` auf einen der Sicherheitsmodi festgelegt ist.  
   
 4.  Suchen Sie nach dem untergeordneten Element, das dem Moduswert entspricht. Wenn der Modus festgelegt ist z. B. **Nachricht**, suchen die  **\<Nachricht >** in enthaltenen Elementen der  **\<Sicherheit >** Element.  
   
@@ -50,7 +52,7 @@ Wenn Sie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] verwenden, kann de
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Beispiel: TCP-Transportmodus mit einem Zertifikat als Clientanmeldeinformationen  
- In diesem Beispiel wird der Sicherheitsmodus auf "Transport" und der Clientanmeldeinformationswert auf ein X.509-Zertifikat festgelegt. Die folgenden Vorgänge zeigen, wie Sie den Clientanmeldeinformationswert für den Client im Code und in der Konfiguration festlegen können. Dabei wird vorausgesetzt, dass Sie verwendet haben, die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) die Metadaten (Code und Konfiguration) vom Dienst zurückgegeben. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ In diesem Beispiel wird der Sicherheitsmodus auf "Transport" und der Clientanmeldeinformationswert auf ein X.509-Zertifikat festgelegt. Die folgenden Vorgänge zeigen, wie Sie den Clientanmeldeinformationswert für den Client im Code und in der Konfiguration festlegen können. Dabei wird vorausgesetzt, dass Sie verwendet haben, die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) die Metadaten (Code und Konfiguration) vom Dienst zurückgegeben. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>So legen Sie den Clientanmeldeinformationswert für den Client im Code fest  
   
@@ -73,7 +75,7 @@ Wenn Sie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] verwenden, kann de
   
 3.  Hinzufügen einer [ \<ClientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) Element an der [ \<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element.  
   
-4.  Legen Sie für die folgenden Attribute geeignete Werte fest: `storeLocation`, `storeName`, `x509FindType` und `findValue`, wie im folgenden Code dargestellt. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Zertifikate, finden Sie unter [arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Legen Sie für die folgenden Attribute geeignete Werte fest: `storeLocation`, `storeName`, `x509FindType` und `findValue`, wie im folgenden Code dargestellt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zertifikate, finden Sie unter [arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -113,10 +115,10 @@ Wenn Sie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] verwenden, kann de
  [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<NetTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<Sicherheit >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<Meldung >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
- [\<Verhalten >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
- [\<Verhalten >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+ [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<ClientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

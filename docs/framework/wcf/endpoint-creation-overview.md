@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über die Endpunkterstellung"
-ms.custom: 
+title: Übersicht über die Endpunkterstellung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f7e12f3a6c5d722b2eda1eaaeb390ee3284a70e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoint-creation-overview"></a>Übersicht über die Endpunkterstellung
 Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst verläuft über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst bereitstellt. In diesem Abschnitt wird die Struktur eines Endpunkts beschrieben und dargestellt, wie ein Endpunkt in einer Konfiguration oder im Code definiert wird.  
@@ -33,11 +33,11 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="the-structure-of-an-endpoint"></a>Die Struktur eines Endpunkts  
  Jeder Endpunkt beinhaltet eine Adresse, die angibt, wo sich der Endpunkt befindet, eine Bindung, die angibt, wie ein Client mit dem Endpunkt kommunizieren kann und einen Vertrag angibt, der die verfügbaren Methoden identifiziert.  
   
--   **Adresse**. Die Adresse gewährleistet eine eindeutige Identifizierung des Endpunkts und teilt potenziellen Consumern den Standort des Diensts mit. Die Adresse wird im [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress>-Adresse dargestellt, die einen Uniform Resource Identifier (URI) und Adresseigenschaften beinhaltet, die wiederum eine Identität, einige Web Services Description Language (WSDL)-Elemente und eine Auflistung der optionalen Header enthalten. Die optionalen Header stellen zusätzliche ausführliche Adressinformationen bereit, um den Endpunkt zu identifizieren oder damit zu interagieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adresse**. Die Adresse gewährleistet eine eindeutige Identifizierung des Endpunkts und teilt potenziellen Consumern den Standort des Diensts mit. Die Adresse wird im [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress>-Adresse dargestellt, die einen Uniform Resource Identifier (URI) und Adresseigenschaften beinhaltet, die wiederum eine Identität, einige Web Services Description Language (WSDL)-Elemente und eine Auflistung der optionalen Header enthalten. Die optionalen Header stellen zusätzliche ausführliche Adressinformationen bereit, um den Endpunkt zu identifizieren oder damit zu interagieren. Weitere Informationen finden Sie unter [angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Binden von**. Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Die Bindung gibt an, wie der Endpunkt mit der Außenwelt kommuniziert (einschließlich des zu verwendenden Transportprotokolls, beispielsweise TCP oder HTTP), welche Codierung für die Nachrichten zu verwenden ist (beispielsweise Text- oder Binärcodierung) und welche Sicherheitsanforderungen erforderlich sind (beispielsweise Secure Sockets Layer [SSL] oder SOAP-Nachrichtensicherheit). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Verwenden von Bindungen, um Dienste und Clients konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+-   **Binden von**. Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Die Bindung gibt an, wie der Endpunkt mit der Außenwelt kommuniziert (einschließlich des zu verwendenden Transportprotokolls, beispielsweise TCP oder HTTP), welche Codierung für die Nachrichten zu verwenden ist (beispielsweise Text- oder Binärcodierung) und welche Sicherheitsanforderungen erforderlich sind (beispielsweise Secure Sockets Layer [SSL] oder SOAP-Nachrichtensicherheit). Weitere Informationen finden Sie unter [Bindungen verwenden, und Konfigurieren von Diensten und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Dienstvertrag**. Der Dienstvertrag zeigt, welche Funktionen der Endpunkt dem Client zur Verfügung stellt. In einem Vertrag wird Folgendes angegeben: die Vorgänge, die ein Client aufrufen kann, die Form der Nachricht und der Typ der Eingabeparameter oder die Daten, die zum Aufrufen des Vorgangs erforderlich sind, sowie die Art der Verarbeitung oder die Antwortnachricht, die der Client erwarten kann. Drei grundlegende Vertragstypen entsprechen grundlegenden Nachrichtenaustauschmustern: Datagramm (unidirektional), Anforderung/Antwort und Duplex (bidirektional). Für den Dienstvertrag können zudem Daten- und Nachrichtenverträge verwendet werden, um beim Zugriff bestimmte Datentypen und Nachrichtenformate zu fordern. [!INCLUDE[crabout](../../../includes/crabout-md.md)]zum Definieren eines Dienstvertrags finden Sie unter [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md). Ein Client kann ggf. auch dazu aufgefordert werden, einen vom Dienst definierten Vertrag zu implementieren (wird als Rückrufvertrag bezeichnet), um vom Dienst in einem Duplexnachrichten-Austauschmuster Nachrichten zu empfangen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Dienstvertrag**. Der Dienstvertrag zeigt, welche Funktionen der Endpunkt dem Client zur Verfügung stellt. In einem Vertrag wird Folgendes angegeben: die Vorgänge, die ein Client aufrufen kann, die Form der Nachricht und der Typ der Eingabeparameter oder die Daten, die zum Aufrufen des Vorgangs erforderlich sind, sowie die Art der Verarbeitung oder die Antwortnachricht, die der Client erwarten kann. Drei grundlegende Vertragstypen entsprechen grundlegenden Nachrichtenaustauschmustern: Datagramm (unidirektional), Anforderung/Antwort und Duplex (bidirektional). Für den Dienstvertrag können zudem Daten- und Nachrichtenverträge verwendet werden, um beim Zugriff bestimmte Datentypen und Nachrichtenformate zu fordern. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Definieren eines Dienstvertrags finden Sie unter [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md). Ein Client kann ggf. auch dazu aufgefordert werden, einen vom Dienst definierten Vertrag zu implementieren (wird als Rückrufvertrag bezeichnet), um vom Dienst in einem Duplexnachrichten-Austauschmuster Nachrichten zu empfangen. Weitere Informationen finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Der Endpunkt für einen Dienst kann entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angegeben werden. Wenn keine Endpunkte angegeben sind, stellt die Runtime Standardendpunkte bereit, indem ein Standardendpunkt für alle Basisadressen in jedem Dienstvertrag, der vom Dienst implementiert wird, hinzugefügt wird. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren. Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung und erneute Bereitstellung der Anwendung möglich.  
   
@@ -51,7 +51,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
   
 -   Implementieren Sie einen `Echo`-Dienst des Typs, der durch den `IEcho`-Vertrag definiert wird.  
   
--   Geben Sie für den Dienst die Endpunktadresse http://localhost:8000/Echo an.  
+-   Angeben eine Endpunktadresse von http://localhost:8000/Echo für den Dienst.  
   
 -   Konfigurieren Sie den `Echo`-Dienst mithilfe einer <xref:System.ServiceModel.WSHttpBinding>-Bindung.  
   
@@ -209,7 +209,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Standardendpunkte, finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Standardendpunkte, finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

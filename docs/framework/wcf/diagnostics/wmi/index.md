@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügbar.  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) -tool aus dem [Windows 2000 Resource Kit-Tools für administrative Aufgaben](http://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Bekannte SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) -tool aus dem [Windows 2000 Resource Kit-Tools für administrative Aufgaben](http://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. Weitere Informationen finden Sie unter [Well-Known SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Zugreifen auf Remote-WMI-Objektinstanzen  
  Zum Zugreifen auf die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-WMI-Instanzen eines Remotecomputers muss für die zum Zugreifen verwendeten Tools die Paketsicherheit aktiviert werden. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentation und .NET SDK 2.0 beschrieben.  

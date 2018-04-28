@@ -1,50 +1,50 @@
 ---
-title: "Vom Datenvertragsserialisierer unterstützte Typen"
-ms.custom: 
+title: Vom Datenvertragsserialisierer unterstützte Typen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Vom Datenvertragsserialisierer unterstützte Typen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet <xref:System.Runtime.Serialization.DataContractSerializer> als Standardserialisierungsmodul, um Daten in XML und XML in Daten umzuwandeln. <xref:System.Runtime.Serialization.DataContractSerializer> ist für die Serialisierung von *Datenvertragstypen* konzipiert. Es unterstützt jedoch viele andere Typen, die Sie sich als Typen mit einem impliziten Datenvertrag vorstellen können. Die folgende Liste enthält alle Typen, die serialisiert werden können:  
   
 -   Alle öffentlich sichtbaren Typen, die über einen Konstruktor ohne Parameter verfügen.  
   
--   Datenvertragstypen. Hierbei handelt es sich um Typen, auf die das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut angewendet wurde. Neue benutzerdefinierte Typen, die Geschäftsobjekte darstellen, sollten normalerweise als Datenvertragstypen erstellt werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) und [serialisierbaren Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+-   Datenvertragstypen. Hierbei handelt es sich um Typen, auf die das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut angewendet wurde. Neue benutzerdefinierte Typen, die Geschäftsobjekte darstellen, sollten normalerweise als Datenvertragstypen erstellt werden. Weitere Informationen finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) und [serialisierbaren Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
--   Auflistungstypen. Hierbei handelt es sich um Typen, die Datenlisten darstellen. Diese Typen können reguläre Arrays von Typen oder Auflistungstypen sein, z.&amp;#160;B. <xref:System.Collections.ArrayList> und <xref:System.Collections.Generic.Dictionary%602>. Das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut kann verwendet werden, um die Serialisierung dieser Typen anzupassen, es ist jedoch nicht erforderlich. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+-   Auflistungstypen. Hierbei handelt es sich um Typen, die Datenlisten darstellen. Diese Typen können reguläre Arrays von Typen oder Auflistungstypen sein, z.&amp;#160;B. <xref:System.Collections.ArrayList> und <xref:System.Collections.Generic.Dictionary%602>. Das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut kann verwendet werden, um die Serialisierung dieser Typen anzupassen, es ist jedoch nicht erforderlich. Weitere Informationen finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
   
--   Enumerationstypen. Enumerationen, einschließlich Flagenumerationen, sind serialisierbar. Optional können Enumerationstypen mit dem <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut gekennzeichnet werden. In diesem Fall muss jeder Member, der an der Serialisierung teilnimmt, mit dem <xref:System.Runtime.Serialization.EnumMemberAttribute> -Attribut gekennzeichnet sein. Nicht gekennzeichnete Member werden nicht serialisiert. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+-   Enumerationstypen. Enumerationen, einschließlich Flagenumerationen, sind serialisierbar. Optional können Enumerationstypen mit dem <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut gekennzeichnet werden. In diesem Fall muss jeder Member, der an der Serialisierung teilnimmt, mit dem <xref:System.Runtime.Serialization.EnumMemberAttribute> -Attribut gekennzeichnet sein. Nicht gekennzeichnete Member werden nicht serialisiert. Weitere Informationen finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Primitive Typen von .NET&#160;Framework. Die folgenden in .NET&amp;#160;Framework integrierten Typen sind serialisierbar und werden als primitive Typen betrachtet: <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Boolean>, <xref:System.Char>, <xref:System.Decimal>, <xref:System.Object>und <xref:System.String>.  
   
 -   Andere primitive Typen. Diese Typen sind in .NET&#160;Framework keine primitiven Typen, werden im serialisierten XML-Formular jedoch als primitive Typen behandelt. Diese Typen sind <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>sowie Arrays von <xref:System.Byte>.  
   
     > [!NOTE]
-    >  Im Gegensatz zu anderen primitiven Typen ist <xref:System.DateTimeOffset> standardmäßig kein bekannter Typ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
+    >  Im Gegensatz zu anderen primitiven Typen ist <xref:System.DateTimeOffset> standardmäßig kein bekannter Typ. Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
 -   Mit dem <xref:System.SerializableAttribute> -Attribut gekennzeichnete Typen. Viele Typen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Basisklassenbibliothek fallen unter diese Kategorie. <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt dieses Serialisierungs-Programmiermodell, das von .NET&amp;#160;Framework-Remoting verwendet wurde, sowie <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>nicht nur vollständig, sondern bietet darüber hinaus Unterstützung für die <xref:System.Runtime.Serialization.ISerializable> -Schnittstelle.  
   
--   Typen, die unformatiertes XML darstellen, oder Typen, die relationale [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] -Daten darstellen. <xref:System.Xml.XmlElement> und das Array von <xref:System.Xml.XmlNode> -Typen werden als Methoden unterstützt, um XML direkt darzustellen. Außerdem werden Typen unterstützt, die die <xref:System.Xml.Serialization.IXmlSerializable> -Schnittstelle implementieren, einschließlich dem zugehörigen <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> -Attribut sowie dem <xref:System.Xml.Linq.XDocument> -Typ und dem <xref:System.Xml.Linq.XElement> -Typ. Das [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> -Typ und der <xref:System.Data.DataSet> -Typ (sowie seine typisierten abgeleiteten Klassen) implementieren die <xref:System.Xml.Serialization.IXmlSerializable> -Schnittstelle und fallen daher unter dieser Kategorie. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][XML- und ADO.NET-Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Typen, die unformatiertes XML darstellen, oder Typen, die relationale [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] -Daten darstellen. <xref:System.Xml.XmlElement> und das Array von <xref:System.Xml.XmlNode> -Typen werden als Methoden unterstützt, um XML direkt darzustellen. Außerdem werden Typen unterstützt, die die <xref:System.Xml.Serialization.IXmlSerializable> -Schnittstelle implementieren, einschließlich dem zugehörigen <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> -Attribut sowie dem <xref:System.Xml.Linq.XDocument> -Typ und dem <xref:System.Xml.Linq.XElement> -Typ. Das [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> -Typ und der <xref:System.Data.DataSet> -Typ (sowie seine typisierten abgeleiteten Klassen) implementieren die <xref:System.Xml.Serialization.IXmlSerializable> -Schnittstelle und fallen daher unter dieser Kategorie. Weitere Informationen finden Sie unter [XML- und ADO.NET-Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Einschränkungen bei der Verwendung bestimmter Typen im teilweise vertrauenswürdigen Modus  
  In der folgenden Liste sind die Einschränkungen aufgeführt, die bei Verwendung bestimmter Typen in Szenarien im teilweise vertrauenswürdigen Modus gelten:  

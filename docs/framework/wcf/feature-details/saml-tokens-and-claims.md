@@ -1,12 +1,13 @@
 ---
-title: "SAML-Token und SAML-Ansprüche"
-ms.custom: 
+title: SAML-Token und SAML-Ansprüche
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
 Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. Standardmäßig werden von SAML-Token [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet in verbundsicherheitsszenarien werden *ausgestellte Token*.  
@@ -48,7 +50,7 @@ Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von An
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  Wenn SAML-Token in Nachrichten serialisiert werden, z. B. wenn sie von einem Sicherheitstokendienst ausgestellt werden oder von Clients im Rahmen der Authentifizierung an Dienste gegeben werden, muss das Kontingent für die maximale Nachrichtengröße groß genug sein, um das SAML-Token und die anderen Teile der Nachricht aufnehmen zu können. Normalerweise ist das Kontingent für Nachrichten in Standardgröße ausreichend. Wenn jedoch ein SAML-Token sehr groß ist, da es mehrere Hundert Ansprüche enthält, müssen Sie u. U. das Kontingent vergrößern, um das serialisierte Token aufnehmen zu können. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+>  Wenn SAML-Token in Nachrichten serialisiert werden, z. B. wenn sie von einem Sicherheitstokendienst ausgestellt werden oder von Clients im Rahmen der Authentifizierung an Dienste gegeben werden, muss das Kontingent für die maximale Nachrichtengröße groß genug sein, um das SAML-Token und die anderen Teile der Nachricht aufnehmen zu können. Normalerweise ist das Kontingent für Nachrichten in Standardgröße ausreichend. Wenn jedoch ein SAML-Token sehr groß ist, da es mehrere Hundert Ansprüche enthält, müssen Sie u. U. das Kontingent vergrößern, um das serialisierte Token aufnehmen zu können. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>Von SamlAttributes zu Ansprüchen  
  Wenn SAML-Token in Nachrichten empfangen werden, werden die unterschiedlichen Anweisungen im SAML-Token in <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Objekte umgewandelt, die in den <xref:System.IdentityModel.Policy.AuthorizationContext> gesetzt werden. Die Ansprüche aus jeder SAML-Anweisung werden von der <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>-Eigenschaft des <xref:System.IdentityModel.Policy.AuthorizationContext> zurückgegeben und können überprüft werden, um zu bestimmen, ob der Benutzer authentifiziert und autorisiert werden soll  

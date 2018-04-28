@@ -1,24 +1,26 @@
 ---
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 Das Entwickeln und Bereitstellen eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Diensts, der in Internetinformationsdienste (IIS) gehostet wird, umfasst die folgenden Aufgaben:  
@@ -46,7 +48,7 @@ Das Entwickeln und Bereitstellen eines [!INCLUDE[indigo1](../../../../includes/i
   
 -   Windows 7:  
   
- Abschließend müssen Sie sich sicherstellen, dass ASP.NET für die Verwendung von .NET Framework Version 4 konfiguriert ist. Führen Sie hierzu das Tool ASPNET_Regiis mit der Option –i aus. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ASP.NET IIS-Registrierungstool](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ Abschließend müssen Sie sich sicherstellen, dass ASP.NET für die Verwendung von .NET Framework Version 4 konfiguriert ist. Führen Sie hierzu das Tool ASPNET_Regiis mit der Option –i aus. Weitere Informationen finden Sie unter [ASP.NET IIS-Registrierungstool](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen ASP.NET-Anwendung  
  IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste müssen sich innerhalb einer IIS-Anwendung befinden. Sie können eine neue IIS-Anwendung erstellen, um ausschließlich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste zu hosten. Alternativ können Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst in einer vorhandenen Anwendung bereitstellen, die bereits [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Inhalt hostet (z. B. ASPX-Seiten und ASP.NET-Webdienste [ASMX]). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] über diese Optionen finden Sie in den Abschnitten „Paralleles Hosten in WCF und in ASP.NET“ und „Hosten von WCF-Diensten im ASP.NET-Kompatibilitätsmodus“ unter [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   Hosten von Anwendungen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienste außerhalb von IIS können die Basisadresse der Dienste, die sie hosten, indem Sie übergeben ein Satz Basisadressen-URIs zum Steuern der <xref:System.ServiceModel.ServiceHost> Konstruktor oder durch Bereitstellen einer [ \<Host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) Element in der Konfiguration des Diensts. Dienste, die in IIS gehostet werden, können ihre Basisadressen nicht steuern. Die Basisadresse eines IIS-gehosteten Diensts ist die Adresse seiner SVC-Datei.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Endpunktadressen für IIS-gehostete Dienste  
- Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Beispiel: Die Basisadresse eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts ist http://localhost/Application1/MyService.svc und die Endpunktkonfiguration folgendermaßen:  
+ Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Z. B. wenn die Basisadresse des eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst http://localhost/Application1/MyService.svc mit Endpunktkonfiguration.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- Dadurch wird ein Endpunkt bereitgestellt, der unter http://localhost/Application1/MyService.svc/anotherEndpoint erreichbar ist.  
+ Dies bietet einen Endpunkt, der am erreicht werden kann "http://localhost/Application1/MyService.svc/anotherEndpoint".  
   
- Ähnlich stellt das Endpunktkonfigurationselement, das eine leere Zeichenfolge als relative Adresse verwendet, einen Endpunkt bereit, der unter http://localhost/Application1/MyService.svc (der Basisadresse) erreichbar ist.  
+ Auf ähnliche Weise die Endpunkt-Konfigurationselement, das eine leere Zeichenfolge verwendet wird, wie die relative Adresse erreichbar am Endpunkt stellt http://localhost/Application1/MyService.svc, dies ist die Basisadresse.  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Durch die Angabe einer vollständig qualifizierten Endpunktadresse (z.&#160;B. http://localhost/MyService.svc) kann es zu Fehlern bei der Bereitstellung des Diensts kommen, wenn die Endpunktadresse nicht auf die IIS-Anwendung verweist, die den Dienst hostet, der den Endpunkt verfügbar macht. Durch die Verwendung relativer Endpunktadressen für gehostete Dienste werden diese potenziellen Konflikte vermieden.  
+ Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Eine vollständig qualifizierten Endpunktadresse angeben (z. B. http://localhost/MyService.svc) kann zu Fehlern bei der Bereitstellung des Diensts führen, wenn die Endpunktadresse nicht auf die IIS-Anwendung verweist, der den Endpunkt verfügbar macht Dienst hostet. Durch die Verwendung relativer Endpunktadressen für gehostete Dienste werden diese potenziellen Konflikte vermieden.  
   
 ### <a name="available-transports"></a>Verfügbare Transporte  
  In IIS&#160;5.1 und[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gehostete [!INCLUDE[iis601](../../../../includes/iis601-md.md)] -Dienste sind auf die Verwendung der HTTP-basierten Kommunikation beschränkt. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.  

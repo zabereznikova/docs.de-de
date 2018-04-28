@@ -1,13 +1,13 @@
 ---
-title: "Datenübertragungsarchitektur - Übersicht"
-ms.custom: 
+title: Datenübertragungsarchitektur - Übersicht
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>Datenübertragungsarchitektur - Übersicht
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann als Messaginginfrastruktur betrachtet werden. Damit können Nachrichten empfangen, verarbeitet und für weitere Aktionen an Benutzercode verteilt werden, oder es können Nachrichten anhand von Daten des Benutzercodes erstellt und an ein Ziel übergeben werden. In diesem Thema, das sich an fortgeschrittene Entwickler richtet, wird die Architektur zur Verarbeitung von Nachrichten und der darin enthaltenen Daten beschrieben. Eine einfachere, funktionsbezogene Betrachtung zum Senden und Empfangen von Daten finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -97,14 +97,14 @@ ms.lasthandoff: 12/22/2017
 |Eingehend von Streamingkanalstapel|Ein `Stream` -Objekt, das die Daten darstellt, die über das Netzwerk mit einem darauf angewendeten <xref:System.Xml.XmlReader> eingehen|Ausschreiben des Inhalts aus dem gespeicherten `XmlReader` mit `WriteNode`|Gibt den gespeicherten `XmlReader`zurück|  
 |Eingehend von nicht per Streaming übertragenem Kanalstapel|Ein Puffer, der Textdaten enthält, mit einem darauf angewendeten `XmlReader`|Schreibt den Inhalt des gespeicherten `XmlReader` mit `WriteNode`aus|Gibt die gespeicherte Sprache zurück|  
   
- \*Diese Elemente werden nicht direkt im implementiert `Message` Unterklassen, sondern in Unterklassen der der <xref:System.ServiceModel.Channels.BodyWriter> Klasse. Weitere Informationen zum <xref:System.ServiceModel.Channels.BodyWriter>finden Sie unter [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ \* Diese Elemente werden nicht direkt im implementiert `Message` Unterklassen, sondern in Unterklassen der der <xref:System.ServiceModel.Channels.BodyWriter> Klasse. Weitere Informationen zum <xref:System.ServiceModel.Channels.BodyWriter>finden Sie unter [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-headers"></a>Nachrichtenheader  
  Eine Nachricht enthält möglicherweise Header. Ein Header besteht logisch aus einem XML-Infoset, der einem Namen, einem Namespace und einigen anderen Eigenschaften zugeordnet ist. Auf Nachrichtenheader wird mit der `Headers` -Eigenschaft auf <xref:System.ServiceModel.Channels.Message>zugegriffen. Jeder Header wird durch eine <xref:System.ServiceModel.Channels.MessageHeader> -Klasse dargestellt. In der Regel sind Nachrichtenheader SOAP-Nachrichtenheadern zugeordnet, wenn ein Kanalstapel verwendet wird, der für SOAP-Nachrichten konfiguriert ist.  
   
  Das Einfügen von Informationen in einen Nachrichtenheader und das Extrahieren von Daten daraus ähnelt der Verwendung des Nachrichtentexts. Der Prozess wird ein wenig vereinfacht, da das Streaming nicht unterstützt wird. Es ist möglich, auf den Inhalt desselben Headers mehr als einmal zuzugreifen. Auf die Header kann auch in willkürlicher Reihenfolge zugegriffen werden. Die Header werden dadurch gezwungen, immer gepuffert zu sein. Es gibt keinen Mechanismus für allgemeine Zwecke, um einen XML-Lesers über einen Header laufen zu lassen. Es ist jedoch eine `MessageHeader` -Unterklasse in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar, die einen lesbaren Header mit einer solchen Funktion darstellt. Diese Art von `MessageHeader` wird vom Kanalstapel erstellt, wenn eine Nachricht mit benutzerdefinierten Anwendungsheadern eingeht. So kann das Dienstframework ein Deserialisierungsmodul, z. B. den <xref:System.Runtime.Serialization.DataContractSerializer>, zum Interpretieren dieser Header verwenden.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Weitere Informationen finden Sie unter [verwenden der Meldungsklasse](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-properties"></a>Nachrichteneigenschaften  
  Eine Nachricht kann Eigenschaften enthalten. Eine *Eigenschaft* ist ein beliebiges [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekt, das einem Zeichenfolgennamen zugeordnet ist. Der Zugriff erfolgt über die `Properties` -Eigenschaft von `Message`.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  So kann der als Bestandteil von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthaltene HTTP-Transportkanal verschiedene HTTP-Statuscodes, wie "404 (nicht gefunden)" und "500 (interner Serverfehler)", generieren, wenn Antworten an Clients gesendet werden. Vor dem Senden einer Antwortnachricht wird geprüft, ob die `Properties` von der `Message` enthalten eine Eigenschaft mit dem Namen "HttpResponse", die ein Objekt des Typs enthält <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>. Wird eine solche Eigenschaft gefunden, wird die <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> -Eigenschaft geprüft und dieser Statuscode verwendet. Andernfalls wird der Standardcode "200 (OK)" verwendet.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Weitere Informationen finden Sie unter [verwenden der Meldungsklasse](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ### <a name="the-message-as-a-whole"></a>Die Nachricht als Ganzes  
  Bis jetzt wurden Methoden für den Zugriff auf die verschiedenen Bestandteile der Nachricht isoliert erläutert. Die <xref:System.ServiceModel.Channels.Message> -Klasse stellt jedoch auch Methoden bereit, die mit der Nachricht als Ganzes ausgeführt werden. Die folgende `WriteMessage` -Methode schreibt z.&amp;#160;B. die gesamte Nachricht in einen XML-Writer.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- Für die Serialisierung (mit dem Attribut <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>oder anderen verwandten Attributen) gekennzeichnete Elemente müssen serialisierbar sein, um an einem Nachrichtenvertrag teilzunehmen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Serialisierung" weiter unten in diesem Thema.  
+ Für die Serialisierung (mit dem Attribut <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>oder anderen verwandten Attributen) gekennzeichnete Elemente müssen serialisierbar sein, um an einem Nachrichtenvertrag teilzunehmen. Weitere Informationen finden Sie unter dem Abschnitt "Serialisierung" weiter unten in diesem Thema.  
   
 ### <a name="4-parameters"></a>4. Parameter  
  Häufig benötigt ein Entwickler, der einen Vorgang beschreiben möchte, der für mehrere Datenpakete gilt, nicht den Steuerungsgrad, den Nachrichtenverträge bieten. So muss z.&#160;B. beim Erstellen von neuen Diensten keine Entscheidung zwischen leer und eingeschlossen getroffen und kein Name für ein Wrapperelement festgelegt werden. Diese Entscheidungen setzen häufig eine tief greifende Kenntnis von Webdiensten und SOAP voraus.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  Die Beschreibung der Informationen, die als einfache Liste mit Vorgangsvertragsparametern gesendet oder empfangen werden, ist die empfohlene Methode, falls keine besonderen Gründe für einen Wechsel zu dem komplexeren Nachrichtenvertrag oder `Message`-basierten Programmiermodell vorliegen.  
   
 ### <a name="5-stream"></a>5. Stream  
- Die Verwendung eines `Stream` oder einer seiner Unterklassen in einem Vorgangsvertrag oder als einzelner Nachrichtentextteil in einem Nachrichtenvertrag kann als separates Programmiermodell im Gegensatz zu den oben beschriebenen betrachtet werden. Die Verwendung eines `Stream` auf diese Weise ist die einzige Möglichkeit, zu gewährleisten, dass Ihr Vertrag für ein Streamingmodell verwendet werden kann, fast so, als ob Sie eine eigene Streaming-kompatible `Message` -Unterklasse schreiben würden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Die Verwendung eines `Stream` oder einer seiner Unterklassen in einem Vorgangsvertrag oder als einzelner Nachrichtentextteil in einem Nachrichtenvertrag kann als separates Programmiermodell im Gegensatz zu den oben beschriebenen betrachtet werden. Die Verwendung eines `Stream` auf diese Weise ist die einzige Möglichkeit, zu gewährleisten, dass Ihr Vertrag für ein Streamingmodell verwendet werden kann, fast so, als ob Sie eine eigene Streaming-kompatible `Message` -Unterklasse schreiben würden. Weitere Informationen finden Sie unter [umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
  Wenn der `Stream` oder eine seiner Unterklassen auf diese Art verwendet wird, wird das Serialisierungsprogramm nicht aufgerufen. Für ausgehende Nachrichten wird eine besondere `Message` -Streaming-Unterklasse erstellt, und der Stream wird ausgeschrieben, wie im Abschnitt über die <xref:System.Xml.IStreamProvider> -Schnittstelle beschrieben. Für eingehende Nachrichten erstellt das Dienstframework eine `Stream`-Unterklasse über der eingehenden Nachricht und übergibt sie an den Vorgang.  
   

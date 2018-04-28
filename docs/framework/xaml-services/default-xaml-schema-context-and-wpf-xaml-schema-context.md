@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 Ein XAML-Schemakontext ist eine konzeptionelle Entität, die kennzeichnet, wie eine XAML-Produktion, die ein bestimmtes XAML-Vokabular verwendet interagiert mit dem Schreiben von Verhalten, z. B. wie Typmapping aufgelöst wird, wie Assemblys geladen werden, wie bestimmte Reader- und Writer-Objekt Einstellungen werden interpretiert. Dieses Thema beschreibt die Funktionen von .NET Framework-XAML-Dienste und die zugeordneten XAML-Standardschemakontext, die auf CLR-Typsystem basiert. Dieses Thema beschreibt auch das XAML-Schemakontext, der für WPF verwendet wird.  
@@ -70,7 +70,7 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die kennzeichnet, wie e
     -   Wenn der Name in der Zuordnung nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` wird zum [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] und Windows Workflow Foundation.  
+ `XamlBuildTask` wird für Windows Communication Foundation (WCF) und Windows Workflow Foundation verwendet werden.  
   
  Beachten Sie, die über Assemblyverweise `XamlBuildTask` immer vollständig qualifiziert sind.  
   

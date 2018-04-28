@@ -1,30 +1,32 @@
 ---
-title: "Vorgehensweise: Erstellen unterstützender Anmeldeinformationen"
-ms.custom: 
+title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
 Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*. In diesem Thema wird beschrieben, wie Sie solche Anmeldeinformationen in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client implementieren.  
   
 > [!NOTE]
->  Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicherheitsspezifikationen für Webdienste](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Sicherheitsspezifikationen für Webdienste](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Unterstützende Token  
  In Kürze: bei Verwendung von nachrichtensicherheit eine *primären Anmeldeinformationen* wird immer verwendet, um die Nachricht (z. B. ein x. 509-Zertifikat oder ein Kerberos-Ticket) sichern.  
@@ -46,7 +48,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
 |Signiert und verschlüsselnd|Signierte, verschlüsselte unterstützende Token sind signierte unterstützende Token, die beim Anzeigen im `wsse:SecurityHeader` auch verschlüsselt werden.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmieren von unterstützenden Anmeldeinformationen  
- Zum Erstellen eines Diensts, die unterstützende Token wird verwendet, müssen Sie erstellen, eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Zum Erstellen eines Diensts, die unterstützende Token wird verwendet, müssen Sie erstellen, eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:  
   

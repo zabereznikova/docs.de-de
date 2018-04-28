@@ -1,12 +1,13 @@
 ---
 title: Import und Export von Schemas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm umfasst [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zugeordnete Mechanismen zum Schemaimport und -export. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die die Serialisierung erstellt oder auf die das Deserialisierungsprogramm zugreifen kann. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die vom World Wide Web Consortium (W3C) definierte Sprache XML Schema Definition (XSD) zur Schemadarstellung. Diese Sprache ist mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  Beachten Sie, dass der generierte Typ mehreren empfohlenen Vorgehensweisen für Datenverträge folgt (gefunden [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   Der Typ implementiert die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+-   Der Typ implementiert die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 -   Datenmember werden als öffentliche Eigenschaften implementiert, die private Felder umschließen.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Wenn ein Schema den Datenvertragsregeln nicht entspricht, verwenden Sie ein anderes Serialisierungsmodul. <xref:System.Xml.Serialization.XmlSerializer> verwendet z. B. einen eigenen separaten Schemaimportmechanismus. Außerdem gibt es einen speziellen Importmodus, der die Bandbreite unterstützter Schemata erweitert. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]im Abschnitt zum Generieren von <xref:System.Xml.Serialization.IXmlSerializable> Typen im [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Weitere Informationen finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Wenn ein Schema den Datenvertragsregeln nicht entspricht, verwenden Sie ein anderes Serialisierungsmodul. <xref:System.Xml.Serialization.XmlSerializer> verwendet z. B. einen eigenen separaten Schemaimportmechanismus. Außerdem gibt es einen speziellen Importmodus, der die Bandbreite unterstützter Schemata erweitert. Weitere Informationen finden Sie im Abschnitt zum Generieren von <xref:System.Xml.Serialization.IXmlSerializable> Typen im [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- `XsdDataContractExporter` unterstützt alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen, die mit `DataContractSerializer` serialisiert werden können. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Beachten Sie, dass mit `XsdDataContractExporter` generierte Schemas normalerweise gültige Daten sind, die von `XsdDataContractImporter` verwendet werden können (sofern <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> nicht zur Anpassung des Schemas verwendet wird).  
+ `XsdDataContractExporter` unterstützt alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen, die mit `DataContractSerializer` serialisiert werden können. Weitere Informationen finden Sie unter [Typen unterstützt, durch den Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Beachten Sie, dass mit `XsdDataContractExporter` generierte Schemas normalerweise gültige Daten sind, die von `XsdDataContractImporter` verwendet werden können (sofern <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> nicht zur Anpassung des Schemas verwendet wird).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe der <xref:System.Runtime.Serialization.XsdDataContractImporter>, finden Sie unter [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe der <xref:System.Runtime.Serialization.XsdDataContractImporter>, finden Sie unter [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe der <xref:System.Runtime.Serialization.XsdDataContractExporter>, finden Sie unter [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe der <xref:System.Runtime.Serialization.XsdDataContractExporter>, finden Sie unter [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

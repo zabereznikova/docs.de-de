@@ -1,12 +1,13 @@
 ---
-title: "Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen"
-ms.custom: 
+title: 'Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen
-In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Datenverträgen finden Sie in die Themen in [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Datenverträgen finden Sie in die Themen in [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Hinweis zur Schemavalidierung  
  Beim Beschreiben der Versionsverwaltung von Datenverträgen ist es wichtig zu wissen, dass das von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] exportierte Datenvertragsschema nicht über Unterstützung für die Versionsverwaltung verfügt. Die Elemente sind standardmäßig lediglich als optional gekennzeichnet.  
@@ -46,7 +48,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
  Obwohl in diesen Beispielen Namen geändert werden (indem eine "2" angefügt wird), ist es empfehlenswert, anstelle von Namen Namespaces zu ändern, indem neue Namespaces mit einer Versionsnummer oder einem Datum angefügt werden. Der `http://schemas.contoso.com/2005/05/21/PurchaseOrder`-Datenvertrag würde beispielsweise eine Änderung des `http://schemas.contoso.com/2005/10/14/PurchaseOrder`-Datenvertrags bewirken.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Bewährte Methoden: [Dienstversionsverwaltung](../../../docs/framework/wcf/service-versioning.md).  
+ Weitere Informationen finden Sie bewährte Methoden: [Dienstversionsverwaltung](../../../docs/framework/wcf/service-versioning.md).  
   
  In einigen Fällen müssen Sie die genaue Einhaltung für Nachrichten sicherstellen, die von Ihrer Anwendung gesendet werden, können sich jedoch nicht darauf verlassen, dass die eingehenden Nachrichten die Vorgaben des Schemas genau einhalten. In diesem Fall besteht die Gefahr, dass eine eingehende Nachricht fremde Daten enthält. Die fremden Werte werden gespeichert und von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zurückgegeben, wodurch sich Fehlermeldungen mit dem Hinweis auf ungültige Schemas ergeben. Um dieses Problem zu vermeiden, sollten Sie die Roundtripfunktion deaktivieren. Hierfür gibt es zwei Möglichkeiten.  
   
@@ -54,7 +56,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
 -   Wenden Sie ein <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attribut auf Ihren Dienstvertrag an, und legen Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>-Eigenschaft dabei auf `true` fest.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Round-Tripping, finden Sie unter [aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Round-Tripping, finden Sie unter [aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Versionsverwaltung, wenn eine Schemavalidierung nicht erforderlich ist  
  Die genaue Schemakompatibilität ist nur selten erforderlich. Viele Plattformen tolerieren zusätzliche Elemente, die von einem Schema nicht beschrieben werden. Solange diese toleriert wird, der vollständige Satz von Funktionen in der beschriebenen [Datenvertragsversionsverwaltung](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) und [aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) kann verwendet werden. Die folgenden Richtlinien sind zu empfehlen.  
@@ -65,9 +67,9 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
 2.  Die Verwendung der Vererbung im Zusammenhang mit Datenverträgen ist zulässig, vorausgesetzt, die Vererbung wird nicht als Mechanismus für die Versionsverwaltung verwendet und bestimmte Regeln werden befolgt. Wenn ein Typ von einem bestimmten Basistyp abgeleitet ist, sollten Sie diese Ableitung in einer zukünftigen Version nicht in einen anderen Basistyp ändern (es sei denn, dieser verfügt über denselben Datenvertrag). Dabei gilt eine Ausnahme: Sie können einen Typ in die Hierarchie zwischen einem Datenvertragstyp und seinem Basistyp einfügen, jedoch nur dann, wenn dieser keine Datenmember mit demselben Namen wie andere Member in beliebigen Versionen der anderen Typen der Hierarchie enthält. Im Allgemeinen kann die Verwendung von Datenmembern mit demselben Namen auf verschiedenen Ebenen einer Vererbungshierarchie zu ernsthaften Problemen bei der Versionsverwaltung führen. Dies sollte daher vermieden werden.  
   
-3.  Implementieren Sie immer das <xref:System.Runtime.Serialization.IExtensibleDataObject>, indem Sie mit der ersten Version eines Datenvertrags beginnen, um Roundtrips zu aktivieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Wenn Sie eine oder mehrere Versionen eines Typs veröffentlicht haben, ohne diese Schnittstelle zu implementieren, sollten Sie sie in der nächsten Version des Typs implementieren.  
+3.  Implementieren Sie immer das <xref:System.Runtime.Serialization.IExtensibleDataObject>, indem Sie mit der ersten Version eines Datenvertrags beginnen, um Roundtrips zu aktivieren. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Wenn Sie eine oder mehrere Versionen eines Typs veröffentlicht haben, ohne diese Schnittstelle zu implementieren, sollten Sie sie in der nächsten Version des Typs implementieren.  
   
-4.  Ändern Sie den Datenvertragsnamen oder den Namespace in höheren Versionen nicht. Wenn Sie den Namen oder Namespace des Typs ändern, der dem Datenvertrag zugrunde liegt, müssen Sie darauf achten, den Datenvertragsnamen und Namespace beizubehalten, indem Sie die entsprechenden Mechanismen verwenden, zum Beispiel die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Benennung, finden Sie unter [Datenvertragsnamen](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Ändern Sie den Datenvertragsnamen oder den Namespace in höheren Versionen nicht. Wenn Sie den Namen oder Namespace des Typs ändern, der dem Datenvertrag zugrunde liegt, müssen Sie darauf achten, den Datenvertragsnamen und Namespace beizubehalten, indem Sie die entsprechenden Mechanismen verwenden, zum Beispiel die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Benennung, finden Sie unter [Datenvertragsnamen](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  Nehmen Sie in höheren Versionen keine Änderungen an den Namen von Datenmembern vor. Wenn Sie den Namen des Felds, der Eigenschaft oder des Ereignisses ändern, das bzw. die dem Datenmember zugrunde liegt, können Sie die `Name`-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> verwenden, um den vorhandenen Datenmembernamen beizubehalten.  
   
@@ -79,7 +81,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
     1.  Die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>-Eigenschaft muss immer auf ihrem Standardwert `false` belassen werden.  
   
-    2.  Wenn der Standardwert `null` bzw. "0" für den Member nicht akzeptabel ist, muss mithilfe von <xref:System.Runtime.Serialization.OnDeserializingAttribute> eine Rückrufmethode bereitgestellt werden, um einen geeigneten Standardwert anzugeben, falls der Member im eingehenden Stream nicht enthalten ist. [!INCLUDE[crabout](../../../includes/crabout-md.md)]der Rückruf finden Sie unter [versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Wenn der Standardwert `null` bzw. "0" für den Member nicht akzeptabel ist, muss mithilfe von <xref:System.Runtime.Serialization.OnDeserializingAttribute> eine Rückrufmethode bereitgestellt werden, um einen geeigneten Standardwert anzugeben, falls der Member im eingehenden Stream nicht enthalten ist. [!INCLUDE[crabout](../../../includes/crabout-md.md)] der Rückruf finden Sie unter [versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  Sie sollten die `Order`-Eigenschaft des `DataMemberAttribute` verwenden, um sicherzustellen, dass alle neu hinzugefügten Datenmember nach den vorhandenen Datenmembern stehen. Die empfohlene Vorgehensweise lautet wie folgt: Für keinen Datenmember der ersten Version eines Datenvertrags sollte die `Order`-Eigenschaft festgelegt sein. Sie sollten für alle Datenmember, die Sie in Version 2 des Datenvertrags hinzugefügt haben, die `Order`-Eigenschaft auf "2" festlegen. Ebenso sollten Sie die `Order`-Eigenschaft für in Version 3 des Datenvertrags hinzugefügte Datenmember auf "3" festlegen usw. Es ist zulässig, mehrere Datenmember auf die gleiche `Order`-Nummer festzulegen.  
   

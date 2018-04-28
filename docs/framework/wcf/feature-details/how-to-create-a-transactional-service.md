@@ -1,24 +1,26 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Transaktionsdiensts'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Vorgehensweise: Erstellen eines Transaktionsdiensts
 In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiensts und die Nutzung einer von einem Client initiierten Transaktion für die Koordinierung von Dienstvorgängen veranschaulicht.  
@@ -76,7 +78,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
     }  
     ```  
   
-3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
+3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. Weitere Informationen finden Sie unter [ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
   
     ```xml  
     <service name="CalculatorService">  

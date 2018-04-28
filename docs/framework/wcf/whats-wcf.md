@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist ein Framework zur Erstellung dienstorientierter Anwendungen. Mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  Zwar konnten solche Anwendung bereits vor [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]erstellt werden, allerdings ist mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] die Entwicklung von Endpunkten einfacher als je zuvor. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wurde im Grunde entwickelt, um Benutzern einen leichten Zugang zur Entwicklung von Webdiensten und Webdienstclients zu ermöglichen.  
   
 ## <a name="features-of-wcf"></a>Funktionen von WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthält die folgenden Funktionen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthält die folgenden Funktionen. Weitere Informationen finden Sie unter [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Dienstausrichtung**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **Dienstmetadaten**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt das Veröffentlichen von Metadaten in den Formaten der Branchenstandards, z. B. WSDL, XML-Schema und WS-Richtlinie. Diese Metadaten können verwendet werden, um Clients für den Zugriff auf [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste automatisch zu erstellen und zu konfigurieren. Metadaten können per HTTP und HTTPS oder mit dem Austauschstandard für Webdienstmetadaten veröffentlicht werden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt das Veröffentlichen von Metadaten in den Formaten der Branchenstandards, z. B. WSDL, XML-Schema und WS-Richtlinie. Diese Metadaten können verwendet werden, um Clients für den Zugriff auf [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienste automatisch zu erstellen und zu konfigurieren. Metadaten können per HTTP und HTTPS oder mit dem Austauschstandard für Webdienstmetadaten veröffentlicht werden. Weitere Informationen finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Datenverträge**  
   
-     Da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]erstellt wird, enthält es auch codefreundliche Methoden für die Bereitstellung der Verträge, die erzwungen werden sollen. Einer der universalen Vertragstypen ist der Datenvertrag. Beim Codieren des Diensts mit Visual C# oder Visual Basic lassen sich Daten am einfachsten durch das Erstellen von Klassen verwalten, die eine Datenentität mit zur Datenentität gehörenden Eigenschaften darstellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthält ein umfassendes System für das einfache Arbeiten mit Daten. Nachdem Sie die Klassen erstellt haben, die Daten darstellen, werden vom Dienst automatisch die Metadaten erstellt, mit denen Clients die von Ihnen entworfenen Datentypen verarbeiten können. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]erstellt wird, enthält es auch codefreundliche Methoden für die Bereitstellung der Verträge, die erzwungen werden sollen. Einer der universalen Vertragstypen ist der Datenvertrag. Beim Codieren des Diensts mit Visual C# oder Visual Basic lassen sich Daten am einfachsten durch das Erstellen von Klassen verwalten, die eine Datenentität mit zur Datenentität gehörenden Eigenschaften darstellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthält ein umfassendes System für das einfache Arbeiten mit Daten. Nachdem Sie die Klassen erstellt haben, die Daten darstellen, werden vom Dienst automatisch die Metadaten erstellt, mit denen Clients die von Ihnen entworfenen Datentypen verarbeiten können. Weitere Informationen finden Sie unter [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Sicherheit**  
   
-     Nachrichten können zu Datenschutzzwecken verschlüsselt werden, und die Benutzer können zur Authentifizierung aufgefordert werden, bevor Sie Berechtigung zum Empfangen von Nachrichten erhalten. Sicherheit kann mit bekannten Standards wie SSL oder WS-SecureConversation implementiert werden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Sicherheit](../../../docs/framework/wcf/feature-details/security.md).  
+     Nachrichten können zu Datenschutzzwecken verschlüsselt werden, und die Benutzer können zur Authentifizierung aufgefordert werden, bevor Sie Berechtigung zum Empfangen von Nachrichten erhalten. Sicherheit kann mit bekannten Standards wie SSL oder WS-SecureConversation implementiert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Mehrfache Transporte und Codierungen**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **Permanente Nachrichten**  
   
-     Bei einer permanenten Nachricht handelt es sich um eine Nachricht, die niemals aufgrund einer Unterbrechung der Kommunikation verloren geht. Die Nachrichten in einem Muster für permanente Nachrichten werden immer in einer Datenbank gespeichert. Wird die Verbindung unterbrochen, kann mit der Datenbank der Nachrichtenaustausch nach der erneuten Herstellung der Verbindung fortgesetzt werden. Sie können auch eine permanente Meldung mithilfe der Windows Workflow Foundation (WF) erstellen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Bei einer permanenten Nachricht handelt es sich um eine Nachricht, die niemals aufgrund einer Unterbrechung der Kommunikation verloren geht. Die Nachrichten in einem Muster für permanente Nachrichten werden immer in einer Datenbank gespeichert. Wird die Verbindung unterbrochen, kann mit der Datenbank der Nachrichtenaustausch nach der erneuten Herstellung der Verbindung fortgesetzt werden. Sie können auch eine permanente Meldung mithilfe der Windows Workflow Foundation (WF) erstellen. Weitere Informationen finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transaktionen**  
   

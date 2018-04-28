@@ -1,20 +1,17 @@
 ---
 title: Funktionen (F#)
 description: Informationen Sie zu Funktionen in F# erläutert werden und wie f# üblichen Konstrukte der funktionalen Programmierung unterstützt.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>Funktionen
 
@@ -115,7 +112,7 @@ Sie geben dann das zusätzliche Argument an, das für unterschiedliche Längen d
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Rekursive Funktionen
-*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet den  *n* te Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
+*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet die *n*te Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

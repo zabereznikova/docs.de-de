@@ -1,13 +1,13 @@
 ---
 title: Verwenden von Sitzungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft eine *Sitzung* eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
@@ -75,13 +75,13 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] stellt die folgenden Typen eines sitzungsbasierten Verhaltens bereit:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sichern von Diensten](../../../docs/framework/wcf/securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>-Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. Weitere Informationen finden Sie unter [Sichern von Services](../../../docs/framework/wcf/securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>-Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
   
 -   Die <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>-Bindung unterstützt TCP/IP-basierte Sitzungen, um sicherzustellen, dass alle Nachrichten von der Verbindung auf Socketebene miteinander in Beziehung gesetzt werden.  
   
--   Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>-Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+-   Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>-Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType>-Bindung stellt MSMQ-Datagrammsitzungen bereit. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+-   Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType>-Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird nicht der vom Vertrag angeforderte Typ der Sitzung angegeben, sondern nur, dass eine Sitzung erforderlich ist.  
   
@@ -130,7 +130,7 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
   
 -   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> zurückgegeben wurde.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>auf der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Clientobjekt, das generiert wird, indem Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> auf der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Clientobjekt, das generiert wird, indem Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 -   Einen Initiierungsvorgang an einem Typ eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Clientobjekts (standardmäßig sind alle Vorgänge Initiierungsvorgänge). Wenn der erste Vorgang aufgerufen wird, öffnet das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Clientobjekt den Kanal automatisch und initiiert eine Sitzung.  
   
@@ -144,10 +144,10 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
   
  Beispiele finden Sie unter [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) sowie unter [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) und [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Clients und Sitzungen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Clients und Sitzungen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Interaktion von Sitzungen und InstanceContext-Einstellungen  
- Zwischen der <xref:System.ServiceModel.SessionMode>-Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sitzungen, Instanziierung und Parallelität](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Zwischen der <xref:System.ServiceModel.SessionMode>-Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. Weitere Informationen finden Sie unter [Sitzungen, Instancing und Parallelität](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Freigeben von InstanceContext-Objekten  
  Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. Ein vollständiges Beispiel finden Sie unter [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  

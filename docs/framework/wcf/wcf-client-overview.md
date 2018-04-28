@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 In diesem Abschnitt werden die von Clientanwendungen ausgeführten Aktionen sowie das Konfigurieren, Erstellen und Verwenden eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Clients und das Sichern von Clientanwendungen erläutert.  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Diese Klasse kann als lokales Objekt mithilfe eines der Konstruktoren erstellt, konfiguriert und anschließend zum Herstellen einer Verbindung zu einem Dienst vom Typ `ISampleService` verwendet werden.  
   
- Es wird empfohlen, zuerst das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekt zu erstellen, es anschließend zu verwenden und in einem einzelnen try/catch-Block zu schließen. Verwenden Sie nicht die `using` Anweisung (`Using` in Visual Basic) da Ausnahmen in bestimmten Fehlermodi möglicherweise. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] den folgenden Abschnitten werden auch als [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Es wird empfohlen, zuerst das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekt zu erstellen, es anschließend zu verwenden und in einem einzelnen try/catch-Block zu schließen. Verwenden Sie nicht die `using` Anweisung (`Using` in Visual Basic) da Ausnahmen in bestimmten Fehlermodi möglicherweise. Weitere Informationen finden Sie unter den folgenden Abschnitten sowie [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Verträge, Bindungen und Adressen  
  Bevor ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekt erstellt werden kann, ist eine Konfiguration des Clientobjekts erforderlich. Insbesondere benötigen sie einen Dienst *Endpunkt* verwenden. Ein Endpunkt ist die Kombination eines Dienstvertrags, einer Bindung und einer Adresse. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] Endpunkte finden Sie unter [Endpunkte: Adressen, Bindungen und Verträge](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) In der Regel befindet sich diese Informationen den [ \<Endpunkt >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Element in einer Konfigurationsdatei der Clientanwendung, beispielsweise das Tool "Svcutil.exe" generiert und wird automatisch geladen, wenn Sie Ihren Client erstellen -Objekt. Beide [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clienttypen verfügen auch über Überladungen, die das programmgesteuerte Angeben dieser Informationen ermöglichen.  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Sie können Vorgänge durch Erstellen eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekts und durch Aufrufen der Methoden aufrufen (siehe folgendes Beispiel). Das Öffnen, Aufrufen und Schließen des [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekts erfolgt innerhalb eines einzelnen try/catch-Blocks. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) und [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Sie können Vorgänge durch Erstellen eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekts und durch Aufrufen der Methoden aufrufen (siehe folgendes Beispiel). Das Öffnen, Aufrufen und Schließen des [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekts erfolgt innerhalb eines einzelnen try/catch-Blocks. Weitere Informationen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) und [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  Duplex-[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientobjekte funktionieren wie ihre Gegenstücke ohne Duplex, mit der Einschränkung, dass sie zur Unterstützung von Rückrufen erforderliche Funktionen verfügbar machen (einschließlich der Konfiguration des Rückrufdiensts).  
   
- Beispielsweise können verschiedene Aspekte des Laufzeitverhaltens des Rückrufobjekts mithilfe der Eigenschaften des <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>-Attributs in der Rückrufklasse gesteuert werden. Ein weiteres Beispiel ist die Verwendung der <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType>-Klasse, um die Rückgabe von Ausnahmeinformationen an Dienste, die das Rückrufobjekt aufrufen, zu ermöglichen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md). Ein vollständiges Beispiel finden Sie unter [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
+ Beispielsweise können verschiedene Aspekte des Laufzeitverhaltens des Rückrufobjekts mithilfe der Eigenschaften des <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>-Attributs in der Rückrufklasse gesteuert werden. Ein weiteres Beispiel ist die Verwendung der <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType>-Klasse, um die Rückgabe von Ausnahmeinformationen an Dienste, die das Rückrufobjekt aufrufen, zu ermöglichen. Weitere Informationen finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md). Ein vollständiges Beispiel finden Sie unter [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
   
  Auf Windows XP-Computern, auf denen Internetinformationsdienste (IIS) 5.1 ausgeführt wird, muss von Duplexclients eine Clientbasisadresse mithilfe der <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>-Klasse angegeben werden, da andernfalls eine Ausnahme ausgelöst wird. Im folgenden Codebeispiel wird die entsprechende Umsetzung in Code veranschaulicht.  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Asynchrones Aufrufen von Diensten  
- Die Art und Weise eines Vorgangsaufrufs ist ausschließlich Angelegenheit des Cliententwicklers. Dies liegt daran, dass die Nachrichten, aus denen sich ein Vorgang zusammensetzt, bei der Darstellung in verwaltetem Code entweder synchronen oder asynchronen Methoden zugeordnet werden können. Wenn Sie einen Client erstellen möchten, mit dem Vorgänge asynchron aufgerufen werden, können Sie daher mit Svcutil.exe und der Option `/async` asynchronen Clientcode generieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Vorgehensweise: Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Die Art und Weise eines Vorgangsaufrufs ist ausschließlich Angelegenheit des Cliententwicklers. Dies liegt daran, dass die Nachrichten, aus denen sich ein Vorgang zusammensetzt, bei der Darstellung in verwaltetem Code entweder synchronen oder asynchronen Methoden zugeordnet werden können. Wenn Sie einen Client erstellen möchten, mit dem Vorgänge asynchron aufgerufen werden, können Sie daher mit Svcutil.exe und der Option `/async` asynchronen Clientcode generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Aufrufen von Diensten mithilfe der WCF-Clientkanäle.  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clienttypen erweitern <xref:System.ServiceModel.ClientBase%601>, die wiederum von der <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>-Schnittstelle abgeleitet wird, um das zugrunde liegende Kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Clientarchitektur](../../../docs/framework/wcf/feature-details/client-architecture.md).  

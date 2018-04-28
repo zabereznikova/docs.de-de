@@ -1,12 +1,13 @@
 ---
 title: Debuggen von Windows-Authentifizierungsfehlern
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debuggen von Windows-Authentifizierungsfehlern
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn Sicherheitsfehler auf der SSPI-Schicht auftreten, werden sie von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] festgestellt. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
@@ -73,11 +75,11 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
 ### <a name="kerberos-protocol"></a>Kerberos-Protokoll  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>SPN-/UPN-Probleme mit dem Kerberos-Protokoll  
- Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dabei wird vorausgesetzt, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den (Standard-) Dienstprinzipalnamen (SPN) Dienstschlüssel, die erstellt wird hat, wenn der Computer der Active Directory-Domäne, der am häufigsten hinzugefügt wurde durch Ausführen des Dienstes unter erfolgt die Netzwerkdienstkonto. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit SPN- und UPN, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dabei wird vorausgesetzt, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den (Standard-) Dienstprinzipalnamen (SPN) Dienstschlüssel, die erstellt wird hat, wenn der Computer der Active Directory-Domäne, der am häufigsten hinzugefügt wurde durch Ausführen des Dienstes unter erfolgt die Netzwerkdienstkonto. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit SPN- und UPN, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Eine gängige Praxis für Lastenausgleichszenarien (beispielsweise bei Webfarmen und Webgärten) ist das Definieren eines eindeutigen Kontos für die einzelnen Anwendungen. Anschließend wird dem Konto ein SPN zugewiesen und sichergestellt, dass alle Dienste der Anwendung in diesem Konto ausgeführt werden.  
   
- Zum Erhalten eines SPN für das Konto des Diensts müssen Sie Active Directory-Domänenadministrator sein. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kerberos – technische Ergänzungfür Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Zum Erhalten eines SPN für das Konto des Diensts müssen Sie Active Directory-Domänenadministrator sein. Weitere Informationen finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos-Protokoll Direct erfordert, dass der Dienst unter einem Domänencomputerkonto ausgeführt wird  
  Dieser Fehler tritt auf, wenn die `ClientCredentialType`-Eigenschaft auf `Windows` und die <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>-Eigenschaft auf `false` festgelegt ist, wie im folgenden Code dargestellt.  
@@ -132,7 +134,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Identitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Identitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternativ wird der Client als Windows-Dienst ausgeführt und verwendet das integrierte Konto-SYSTEM.  
   

@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
@@ -60,13 +60,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/language:\<language>**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [CodeDom-Anbieters ab Klasse](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<Language >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDom-Anbieters ab Klasse](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Auswählen eines Namespace für den Client  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Wird vom Zielnamespace des Schemadokuments für `DataContracts` abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
+|**/ Namespace:\<Zeichenfolge, Zeichenfolge >**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Wird vom Zielnamespace des Schemadokuments für `DataContracts` abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
   
 ## <a name="choosing-a-data-binding"></a>Auswählen einer Datenbindung  
   

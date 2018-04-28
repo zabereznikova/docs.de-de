@@ -1,24 +1,26 @@
 ---
 title: Grundlagen der HTTP-Authentifizierung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-http-authentication"></a>Grundlagen der HTTP-Authentifizierung
 Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen. Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.  
@@ -35,7 +37,7 @@ Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt i
 |Digest|Die Hashwertauthentifizierung ist ein Abfrage/Rückmeldungsschema, das die Basic-Authentifizierung ersetzen soll. Der Server sendet eine Zeichenfolge zufälliger Daten bezeichnet eine *Nonce* als eine Aufforderung an den Client. Der Client reagiert mit einem Hash, das neben anderen Informationen den Benutzernamen, das Kennwort und die Nonce enthält. Die Komplexität dieses Austauschs und der Datenhash erschweren die Wiederverwendung der Benutzeranmeldeinformationen mit diesem Authentifizierungsschema.<br /><br /> Für die Hashwertauthentifizierung ist die Verwendung von Windows-Domänenkonten erforderlich. Der Digest *Bereich* ist der Windows-Domänenname. Aus diesem Grund können Sie keinen Server unter einem Betriebssystem, das keine Windows-Domänen, z. B. Windows XP Home Edition mit Digest-Authentifizierung unterstützt. Umgekehrt muss ein Domänenkonto explizit während der Authentifizierung angegeben werden, wenn der Client unter einem Betriebssystem ausgeführt wird, das keine Windows-Domänen unterstützt.|  
 |NTLM|Die NT LAN Manager (NTLM)-Authentifizierung ist ein Abfrage/Rückmeldungsschema, das eine sicherere Variante der Digest-Authentifizierung darstellt. NTLM verwendet die Windows-Anmeldeinformationen, um die Abfragedaten anstelle des unverschlüsselten Benutzernamens und Kennworts zu transformieren. Die NTLM-Authentifizierung erfordert mehrere Austausche zwischen dem Client und dem Server. Der Server sowie dazwischen liegende Proxys müssen beständige Verbindungen unterstützen, um die Authentifizierung erfolgreich abzuschließen.|  
 |Negotiate|Beim Aushandeln der Authentifizierung wird automatisch, je nach Verfügbarkeit, zwischen dem Kerberos-Protokoll und der NTLM-Authentifizierung gewählt. Das Kerberos-Protokoll wird verwendet, wenn es zur Verfügung steht, anderenfalls wird versucht NTML zu verwenden. Die Kerberos-Authentifizierung stellt eine wesentliche Verbesserung der NTLM-Authentifizierung dar. Die Kerberos-Authentifizierung ist schneller als NTLM und ermöglicht den Einsatz einer gegenseitigen Authentifizierung und die Weiterleitung der Anmeldeinformationen an Remote-Computer.|  
-|Windows Live ID|Der zugrunde liegende Windows-HTTP-Dienst umfasst die Authentifizierung mit Verbundprotokollen. Die Standard-HTTP-Transporte in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützen jedoch nicht die Verwendung von Verbundauthentifizierungsschemen wie Microsoft Windows Live ID. Support für diese Funktion steht derzeit durch die Verwendung der Nachrichtensicherheit zur Verfügung. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|Der zugrunde liegende Windows-HTTP-Dienst umfasst die Authentifizierung mit Verbundprotokollen. Die Standard-HTTP-Transporte in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützen jedoch nicht die Verwendung von Verbundauthentifizierungsschemen wie Microsoft Windows Live ID. Support für diese Funktion steht derzeit durch die Verwendung der Nachrichtensicherheit zur Verfügung. Weitere Informationen finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Auswählen eines Authentifizierungsschemas  
  Bei potenziellen Authentifizierungsschemen für einen HTTP-Server müssen u. a. die folgenden Aspekte beachtet werden:  

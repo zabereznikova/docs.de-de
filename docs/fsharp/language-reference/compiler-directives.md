@@ -1,20 +1,17 @@
 ---
 title: Compileranweisungen (F#)
-description: "Informationen Sie zu F#-Sprache Präprozessordirektiven, bedingten Kompilierungsdirektiven, Line-Direktiven und Compiler-Direktiven."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Informationen Sie zu F#-Sprache Präprozessordirektiven, bedingten Kompilierungsdirektiven, Line-Direktiven und Compiler-Direktiven.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -29,10 +26,10 @@ In der folgenden Tabelle werden die Präprozessordirektiven aufgelistet, die in 
 
 |Direktive|Beschreibung|
 |---------|-----------|
-|`#if` *symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` liegt vor, wenn die *Symbol* definiert ist.|
+|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` liegt vor, wenn die *Symbol* definiert ist.|
 |`#else`|Unterstützt die bedingte Kompilierung. Markiert einen einzubeziehenden Codeabschnitt, wenn das mit dem vorherigen verwendeten `#if` nicht definiert ist.|
 |`#endif`|Unterstützt die bedingte Kompilierung. Markiert das Ende eines bedingten Codeabschnitts.|
-|`#`[line] *int*,<br/>`#`[Zeile] *Int* *Zeichenfolge*,<br/>`#`[line] *int* *verbatim-string*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
+|`#`[Zeile] *Int*,<br/>`#`[Zeile] *Int* *Zeichenfolge*,<br/>`#`[Zeile] *Int* *wörtliche Zeichenfolge*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
 |`#nowarn` *warningcode*|Deaktiviert eine Compilerwarnung oder Warnungen. Suchen Sie zum Deaktivieren einer Warnung nach ihrer Nummer in der Compilerausgabe, und setzen Sie sie in Anführungszeichen. Lassen Sie das Präfix „FS“ weg. Zum Deaktivieren von mehreren Warnnummern in derselben Zeile müssen Sie jede Nummer in Anführungszeichen setzen und jede Zeichenfolge durch ein Leerzeichen abtrennen. Zum Beispiel:
 
 `#nowarn "9" "40"`

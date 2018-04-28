@@ -1,12 +1,13 @@
 ---
 title: Grundlagen der Schutzebene
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. Dieses Thema erklärt die [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Funktion und wie diese funktioniert.  
@@ -84,7 +86,7 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
  Zum Programmieren von `ProtectionLevel` an einem beliebigen Punkt der Hierarchie legen Sie die Eigenschaft beim Anwenden des Attributs einfach auf einen entsprechenden Wert fest. Beispiele finden Sie unter [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  Um die Eigenschaft für Fehler- und Nachrichtenverträge festlegen zu können, müssen Sie die Funktionsweise dieser Funktionen verstehen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) und [Nachrichtenverträge](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  Um die Eigenschaft für Fehler- und Nachrichtenverträge festlegen zu können, müssen Sie die Funktionsweise dieser Funktionen verstehen. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) und [Verwendung von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>WS-Adressierungsabhängigkeit  
  In den meisten Fällen verwenden die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren eines Clients wird sichergestellt, dass der Client und Dienst Verträge identisch sind. Scheinbar identische Verträge können jedoch den Client veranlassen, eine Ausnahme auszulösen. Dies ist der Fall, wenn eine Bindung die WS-Adressierungsspezifikation nicht unterstützt und mehrere Schutzebenen für den Vertrag festgelegt sind. Beispielsweise unterstützt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse die Spezifikation nicht oder wenn Sie eine benutzerdefinierte Bindung erstellen, die die WS-Adressierung nicht unterstützt. Die `ProtectionLevel`-Funktion ist von der WS-Adressierungsspezifikation abhängig, um andere Schutzebenen für einen einzelnen Vertrag zu aktivieren. Wenn die Bindung die WS-Adressierungsspezifikation nicht unterstützt, werden alle Ebenen auf dieselbe Schutzebene festgelegt. Die effektive Schutzebene für alle Bereiche des Vertrags wird auf die höchste Schutzebene festgelegt, die für den Vertrag verwendet wird.  

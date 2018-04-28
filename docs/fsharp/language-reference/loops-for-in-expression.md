@@ -1,20 +1,17 @@
 ---
 title: 'Schleifen: for...in-Ausdruck (F#)'
-description: "Finden Sie unter wie die f#-for... in Ausdruck Schleifenkonstrukt wird verwendet, um die Übereinstimmungen eines Musters in einer aufzählbaren Auflistung zu durchlaufen."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Finden Sie unter wie die f#-for... in Ausdruck Schleifenkonstrukt wird verwendet, um die Übereinstimmungen eines Musters in einer aufzählbaren Auflistung zu durchlaufen.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>Schleifen: for...in-Ausdruck
 
@@ -138,7 +135,7 @@ Die Ausgabe lautet wie folgt.
 Number of elements in list1: 5
 ```
 
-`Note`Können Sie `for...in` in Sequenzausdrücken und andere Berechnungsausdrücke in diesem Fall, dass eine angepasste Version von den `for...in` Ausdruck verwendet wird. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
+`Note` Können Sie `for...in` in Sequenzausdrücken und andere Berechnungsausdrücke in diesem Fall, dass eine angepasste Version von den `for...in` Ausdruck verwendet wird. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
 
 
 ## <a name="see-also"></a>Siehe auch

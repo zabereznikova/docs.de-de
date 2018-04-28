@@ -1,28 +1,28 @@
 ---
-title: "Wählen eines Transports"
-ms.custom: 
+title: Wählen eines Transports
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten erläutert, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthalten sind: HTTP, TCP und Named Pipes. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält außerdem einen Message Queuing-Transport (wird auch als MSMQ bezeichnet), jedoch wird Message Queuing nicht in diesem Dokument behandelt.  
@@ -33,17 +33,17 @@ In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten e
   
  Wenn Sie eine Verbindung zu einem vorhandenen Client oder Server herstellen möchten, haben Sie ggf. keine Wahl, welchen Transport Sie verwenden. Sie können jedoch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste über mehrere Endpunkte bereitstellen, die jeweils einen anderen Transport verwenden. Wenn ein einzelner Transport für die beabsichtigten Nutzer des Dienstes nicht ausreicht, können Sie in Erwägung ziehen, den Dienst über mehrere Endpunkte hinweg offenzulegen. Clientanwendungen können dann den Endpunkt verwenden, der am besten für sie geeignet ist.  
   
- Nachdem Sie einen Transport gewählt haben, müssen Sie eine Bindung auswählen, die den Transport verwendet. Sie können eine vom System bereitgestellte Bindung auswählen (finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)), oder Sie können eine eigene benutzerdefinierte Bindung erstellen (finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Sie können auch eine eigene Bindung anlegen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Erstellen von benutzerdefinierten Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Nachdem Sie einen Transport gewählt haben, müssen Sie eine Bindung auswählen, die den Transport verwendet. Sie können eine vom System bereitgestellte Bindung auswählen (finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)), oder Sie können eine eigene benutzerdefinierte Bindung erstellen (finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Sie können auch eine eigene Bindung anlegen. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="advantages-of-each-transport"></a>Vorteile der einzelnen Transporte  
  In diesem Abschnitt sind die Hauptgründe für die Wahl einer der drei wichtigsten Transportarten beschrieben. Er enthält auch ein ausführliches Diagramm als Hilfe bei der Auswahl.  
   
 ### <a name="when-to-use-http-transport"></a>Verwenden des HTTP-Transports  
- HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die HTTP-Protokoll finden Sie unter [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die HTTP-Protokoll finden Sie unter [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  Das HTTP-Protokoll basiert nicht auf einer Verbindung. Nachdem die Antwort gesendet wurde, wird kein entsprechender Zustand beibehalten. Die Anwendung muss jeden erforderlichen Zustand beibehalten, um Transaktionen mit mehreren Seiten verarbeiten zu können.  
   
- Unter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird die HTTP-Transportbindung aus Gründen der Interoperabilität mit älteren Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Systemen optimiert. Wenn alle kommunizierenden Parteien [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwenden, sind auf TCP oder Named Pipes basierende Bindungen schneller. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding>.  
+ Unter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird die HTTP-Transportbindung aus Gründen der Interoperabilität mit älteren Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Systemen optimiert. Wenn alle kommunizierenden Parteien [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwenden, sind auf TCP oder Named Pipes basierende Bindungen schneller. Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding>.  
   
 ### <a name="when-to-use-the-tcp-transport"></a>Verwenden des TCP-Transports  
  TCP ist ein verbindungsbasierter, datenstromorientierter Zustellungsdienst mit End-to-End-Fehlererkennung und -behebung. *Verbindungsbasiert* bedeutet, dass eine kommunikationssitzung zwischen Hosts eingerichtet wird, vor dem Austauschen von Daten. Ein Host ist ein Gerät in einem TCP/IP-Netzwerk, das über eine logische IP-Adresse verfügt.  
@@ -66,10 +66,10 @@ In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten e
 |Attribut|Beschreibung|Häufig verwendete Transporte|  
 |---------------|-----------------|------------------------|  
 |Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keiner|  
-|Hosting|Alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur Hostanwendungen, die den HTTP-Transport verwenden. [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt das Hosten von allen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporten, auch von TCP und Named Pipes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][In Internetinformationsdienste (IIS) hosten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Hosting|Alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur Hostanwendungen, die den HTTP-Transport verwenden. [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt das Hosten von allen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporten, auch von TCP und Named Pipes. Weitere Informationen finden Sie unter [in Internetinformationsdienste (IIS) hosten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspektion|Die Inspektion ist die Fähigkeit, während der Übertragung Informationen aus Nachrichten zu extrahieren und zu verarbeiten. Das HTTP-Protokoll trennt Routing- und Steuerungsinformationen von den Daten, um das Erstellen von Tools zu vereinfachen, die Nachrichten untersuchen und analysieren. Transporte, die leicht zu überprüfen sind, erfordern ggf. auch weniger Verarbeitungsleistung in Netzwerkeinrichtungen. Die verwendete Sicherheitsebene wirkt sich darauf aus, ob Nachrichten überprüft werden können.|HTTP|  
 |Wartezeit|Die Wartezeit ist die Mindestmenge an Zeit, die erforderlich ist, um einen Austausch von Nachrichten durchzuführen. Alle Netzwerkvorgänge weisen je nach gewähltem Transport mehr oder weniger Wartezeit (Latenz) auf. Das Verwenden der Duplexkommunikation oder unidirektionalen Kommunikation mit einem Transport, der das systemeigene Nachrichtenaustauschmuster Anforderung/Antwort verwendet, zum Beispiel HTTP, kann zu einer längeren Wartezeit führen, da die Korrelation von Nachrichten erforderlich ist. Erwägen Sie in dieser Situation, einen Transport zu verwenden, der als systemeigenes Nachrichtenaustauschmuster Duplex verwendet, zum Beispiel TCP.|TCP, Named<br /><br /> Pipe|  
-|Reichweite|Die Reichweite eines Transports gibt an, in welchem Umfang der Transport eine Verbindung zu anderen Systemen herstellen kann. Der Transport mittels benannter Pipes besitzt nur eine geringe Reichweite. Er kann nur eine Verbindung zu Diensten herstellen, die auf dem gleichen Computer ausgeführt werden. Die Transportarten TCP und HTTP verfügen jeweils über eine ausgezeichnete Reichweite und können auch einige NAT- und Firewallkonfigurationen durchdringen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Arbeiten mit NATs und Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
+|Reichweite|Die Reichweite eines Transports gibt an, in welchem Umfang der Transport eine Verbindung zu anderen Systemen herstellen kann. Der Transport mittels benannter Pipes besitzt nur eine geringe Reichweite. Er kann nur eine Verbindung zu Diensten herstellen, die auf dem gleichen Computer ausgeführt werden. Die Transportarten TCP und HTTP verfügen jeweils über eine ausgezeichnete Reichweite und können auch einige NAT- und Firewallkonfigurationen durchdringen. Weitere Informationen finden Sie unter [arbeiten mit NATs und Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
 |Sicherheit|Die Sicherheit ist die Fähigkeit, während der Übertragung Nachrichten zu schützen, indem die Vertraulichkeit, Integrität oder Authentifizierung sichergestellt wird. Die Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, die Integrität schützt eine Nachricht davor, geändert zu werden, und die Authentifizierung liefert zuverlässige Informationen zum Absender oder Empfänger der Nachricht.<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Übertragungssicherheit auf der Nachrichtenebene und auf der Transportebene. Die Nachrichtensicherheit wird mit einem Transport verknüpft, wenn der Transport einen gepufferten Übertragungsmodus unterstützt. Die Unterstützung für die Transportsicherheit ändert sich in Abhängigkeit vom gewählten Transport. Die Transportarten HTTP, TCP und benannte Pipe verfügen in Bezug auf die Unterstützung der Transportsicherheit über eine angemessene Parität.|Alle|  
 |Durchsatz|Der Durchsatz misst die Datenmenge, die in einem bestimmten Zeitraum übertragen und verarbeitet werden kann. Wie die Wartezeit auch, kann der gewählte Transport sich auf den Durchsatz für Dienstvorgänge auswirken. Die Maximierung des Durchsatzes für einen Transport erfordert sowohl die Minimierung des Mehraufwands für die Übertragung von Inhalten als auch die Reduzierung des Wartezeitraums für den Abschluss des Nachrichtenaustauschs. Sowohl der TCP-Transport als auch der Transport mittels benannter Pipes fügen dem Nachrichtentext wenig Mehraufwand hinzu und unterstützen eine systemeigene Duplexform, die die Wartezeit auf Antworten für Nachrichten reduziert.|TCP, benannte Pipe|  
 |Tools|Die Tools umfassen die Unterstützung für Drittanbieteranwendungen für ein Protokoll, mit dem die Entwicklung, die Diagnose, das Hosten und andere Aktivitäten durchgeführt werden können. Entwicklungstools und Softwareanwendungen, die in Verbindung mit dem HTTP-Protokoll verwendet werden können, stellen eine besonders hohe Investition dar.|HTTP|  

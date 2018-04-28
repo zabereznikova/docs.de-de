@@ -1,20 +1,17 @@
 ---
-title: "Ressourcenverwaltung: Das use-Schlüsselwort (F#)"
-description: "Informationen Sie zu F#-Schlüsselwort \"Use\" und die 'using'-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann."
-keywords: Visual F#, F#, funktionale Programmierung
+title: 'Ressourcenverwaltung: Das use-Schlüsselwort (F#)'
+description: Informationen Sie zu F#-Schlüsselwort "Use" und die 'using'-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Ressourcenverwaltung: Das use-Schlüsselwort
 
@@ -44,7 +41,7 @@ Können Sie `use` im Berechnungsausdrücke, in diesem Fall, dass eine angepasste
 ## <a name="using-function"></a>Mithilfe der Funktion
 Die `using` Funktion weist folgende Form:
 
-`using`(*expression1*) *-Funktion oder Lambda*
+`using` (*expression1*) *-Funktion oder Lambda*
 
 In einem `using` Ausdruck *expression1* erstellt das Objekt, das freigegeben werden muss. Das Ergebnis des *expression1* (das Objekt, das freigegeben werden muss), wird ein Argument *Wert*in *-Funktion oder Lambda*, dies ist entweder eine Funktion, die ein einzelnes erwartet von erzeugten verbleibende Argument des Typs, der den Wert entspricht *expression1*, oder einen Lambda-Ausdruck, der ein Argument dieses Typs erwartet. Am Ende der Ausführung der Funktion ruft die Runtime `Dispose` und die Ressourcen freigegeben werden (es sei denn, der Wert ist `null`, in diesem Fall der Aufruf von Dispose nicht versucht wird).
 
@@ -56,7 +53,7 @@ Das folgende Beispiel zeigt die `using` Ausdruck mit einer Funktion.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Beachten Sie, dass die Funktion eine Funktion handeln, die bereits einige Argumente angewendet wurde. Dies wird im folgenden Codebeispiel wird veranschaulicht. Erstellt eine Datei mit der Zeichenfolge `XYZ`.
+Beachten Sie, dass die Funktion eine Funktion handeln, die bereits einige Argumente angewendet wurde. Dies wird im folgenden Codebeispiel veranschaulicht. Erstellt eine Datei mit der Zeichenfolge `XYZ`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

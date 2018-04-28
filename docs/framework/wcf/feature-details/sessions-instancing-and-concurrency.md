@@ -1,24 +1,26 @@
 ---
-title: "Sitzungen, Instanziierung und Parallelität"
-ms.custom: 
+title: Sitzungen, Instanziierung und Parallelität
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d.&amp;#160;h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienstinstanz verarbeitet jeweils nur eine Nachricht, akzeptiert jedoch eintrittsinvariante Aufrufe. Der Dienst akzeptiert diese Aufrufe nur dann, wenn der Aufruf über ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Clientobjekt erfolgt.  
   
 > [!NOTE]
->  Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  Die Parallelität steht mit dem Instanziierungsmodus in Beziehung. In <xref:System.ServiceModel.InstanceContextMode.PerCall> Instanziierung ist Parallelität ist nicht relevant, da die Verarbeitung jeder Meldung von einem neuen <xref:System.ServiceModel.InstanceContext> und daher nie mehr als einem Thread in aktiv ist die <xref:System.ServiceModel.InstanceContext>.  
   

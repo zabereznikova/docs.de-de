@@ -1,28 +1,28 @@
 ---
-title: "Übersicht über die analytische Ablaufverfolgung"
-ms.custom: 
+title: Übersicht über die analytische Ablaufverfolgung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>Übersicht über die analytische Ablaufverfolgung
 Die analytische Ablaufverfolgung in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] ist eine Ablaufverfolgungsfunktion mit hoher Leistung und geringer Ausführlichkeit, die auf ETW (Ereignisablaufverfolgung für Windows) aufbaut. ETW wird auf Kernelebene ausgeführt, um den Mehraufwand durch Ablaufverfolgungsvorgänge so weit wie möglich zu reduzieren. Dabei werden Benutzer- und Kernelmodusereignisse auf effiziente Weise gepuffert, und das dynamische Aktivieren ist ohne Neustarts des Diensts möglich. Die Ablaufverfolgungsdaten sind in den Ereignisprotokollen verfügbar, nachdem sie ausgegeben und empfangen wurden.  
@@ -54,10 +54,10 @@ Die analytische Ablaufverfolgung in [!INCLUDE[netfx_current_long](../../../../..
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>Dynamische Konfiguration  
- Die ETW-Infrastruktur ermöglicht das dynamische Aktivieren und Konfigurieren der Ablaufverfolgung mit Windows-Standardtools. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+ Die ETW-Infrastruktur ermöglicht das dynamische Aktivieren und Konfigurieren der Ablaufverfolgung mit Windows-Standardtools. Weitere Informationen finden Sie unter [dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Ablaufverfolgung des Nachrichtenflusses  
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] zur Aktivierung der Ablaufverfolgung des Nachrichtenflusses finden Sie unter [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Stichwörter  
- Schlüsselwörter werden verwendet, um Ablaufverfolgungsnachrichten zu filtern und zu definieren, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Schlüsselwörter werden verwendet, um Ablaufverfolgungsnachrichten zu filtern und zu definieren, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat. Weitere Informationen finden Sie unter [dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

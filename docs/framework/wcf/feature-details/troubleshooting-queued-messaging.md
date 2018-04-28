@@ -1,24 +1,26 @@
 ---
 title: Problembehandlung bei Nachrichtenwarteschlangen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung bei der Verwendung von Warteschlangen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -34,7 +36,7 @@ Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung b
   
  **F:** habe ich MSMQ zu verwenden, Aktualisieren der <xref:System.ServiceModel.NetMsmqBinding> und `MsmqIntegration` Bindungen?  
   
- **A:** No. Beide Bindungen funktionieren mit MSMQ 3.0 unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie in [!INCLUDE[wv](../../../../includes/wv-md.md)] ein Upgrade auf MSMQ 4.0 ausführen.  
+ **A:** "Nein". Beide Bindungen funktionieren mit MSMQ 3.0 unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie in [!INCLUDE[wv](../../../../includes/wv-md.md)] ein Upgrade auf MSMQ 4.0 ausführen.  
   
  **F:** welche Funktionen von der <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> -Bindung sind in MSMQ 4.0 jedoch nicht in MSMQ 3.0 verfügbar?  
   
@@ -46,7 +48,7 @@ Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung b
   
 -   Nur MSMQ 4.0 unterstützt remote durchgeführte Lesevorgänge.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Unterschiede in den Warteschlangenfunktionen in Windows Vista, WindowsServer 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Weitere Informationen finden Sie unter [Unterschiede in Queuing-Funktionen in Windows Vista, Windows Server 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **F:** kann ich MSMQ 3.0 auf einer Seite der warteschlangenkommunikation und MSMQ 4.0 auf der anderen Seite verwenden?  
   
@@ -54,7 +56,7 @@ Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung b
   
  **F:** ich möchte vorhandene MSMQ-Anwendungen mit den neuen integrieren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clients oder Server. Muss ich beide Seiten der MSMQ-Infrastruktur aktualisieren?  
   
- **A:** No. Sie müssen keine Seite auf MSMQ 4.0 aktualisieren.  
+ **A:** "Nein". Sie müssen keine Seite auf MSMQ 4.0 aktualisieren.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Dieser Abschnitt enthält Informationen zur Behandlung der häufigsten Probleme. Bei einigen Fragen handelt es sich um bekannte Einschränkungen, die auch in den Releasehinweisen erläutert werden.  

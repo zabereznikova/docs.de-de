@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienste können in jeder [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Anwendung gehostet werden. Die Selbsthosting-Option ist die flexibelste Option, da sie für die Bereitstellung die geringsten Anforderungen an die Infrastruktur stellt. Sie ist jedoch auch die am wenigsten robuste Hostingoption, weil verwaltete Anwendungen nicht die erweiterten Hosting- und Verwaltungsfunktionen bereitstellen wie die anderen Hostingoptionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], z.&amp;#160;B. Internetinformationsdienste (IIS) und Windows-Dienste.  
   
- Zur Erstellung eines selbst gehosteten Diensts erstellen und öffnen Sie eine Instanz von <xref:System.ServiceModel.ServiceHost>, der die Dienstüberwachung für Nachrichten startet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Zur Erstellung eines selbst gehosteten Diensts erstellen und öffnen Sie eine Instanz von <xref:System.ServiceModel.ServiceHost>, der die Dienstüberwachung für Nachrichten startet. Weitere Informationen finden Sie unter [wie: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Ein vollständiges Beispiel zum Definieren eines Dienstvertrags, den Vertrag zu implementieren und Hosten eines Diensts innerhalb einer verwalteten Anwendung finden Sie unter der [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md) und [Selbsthosting](../../../../docs/framework/wcf/samples/self-host.md).  
   

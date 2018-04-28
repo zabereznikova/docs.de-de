@@ -1,30 +1,32 @@
 ---
 title: Erkennen einer Transaktionsanwendung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
 Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zum Beheben von Fehlern in der Transaktionsanwendung.  
   
 ## <a name="performance-counters"></a>Leistungsindikatoren  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt einen Standardsatz von Leistungsindikatoren bereit, damit Sie die Leistung der Transaktionsanwendung messen können. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt einen Standardsatz von Leistungsindikatoren bereit, damit Sie die Leistung der Transaktionsanwendung messen können. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Leistungsindikatoren werden in drei verschiedene Stufen unterteilt: Dienst, Endpunkt und Vorgang, gemäß folgender Tabellen.  
   
@@ -56,7 +58,7 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
 |Übergegangene Transaktionen pro Sekunde|Die Anzahl der Transaktionen, die innerhalb von einer Sekunde an diesem Endpunkt in Vorgänge übergegangen sind. Dieser Indikator wird jedes Mal gesteigert, wenn eine Nachricht, die an den Endpunkt gesendet wird, eine Transaktion enthält.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows-Verwaltungsinstrumentation (Windows Management Instrumentation)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Einige schreibgeschützte WMI-Eigenschaften geben die angewendeten Transaktionseinstellungen für einen Dienst an. In der folgenden Tabelle sind alle diese Einstellungen aufgeführt.  
   
@@ -100,7 +102,7 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
   
 -   Standard-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Ablaufverfolgung  
   
-     Dieser Typ der Ablaufverfolgung entspricht der Ablaufverfolgung in jeder beliebigen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Konfigurieren der Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Dieser Typ der Ablaufverfolgung entspricht der Ablaufverfolgung in jeder beliebigen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   WS-AtomicTransaction-Ablaufverfolgung  
   

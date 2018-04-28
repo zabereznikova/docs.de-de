@@ -1,30 +1,32 @@
 ---
 title: Nachrichtensicherheit durch einem Zertifikatclient
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Nachrichtensicherheit durch einem Zertifikatclient
-Das folgende Szenario zeigt, wie ein Client und ein Dienst von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mit dem Nachrichtensicherheitsmodus gesichert werden. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+Das folgende Szenario zeigt, wie ein Client und ein Dienst von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mit dem Nachrichtensicherheitsmodus gesichert werden. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Eine beispielanwendung finden Sie unter [Nachrichtensicherheitszertifikat](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -112,7 +114,7 @@ Das folgende Szenario zeigt, wie ein Client und ein Dienst von [!INCLUDE[indigo1
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Konfiguration  
- Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Der Code verwendet zudem eine <`identity`> Element, um einen DNS Domain Name System () der Serveridentität des erwarteten anzugeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Identität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Der Code verwendet zudem eine <`identity`> Element, um einen DNS Domain Name System () der Serveridentität des erwarteten anzugeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Identität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

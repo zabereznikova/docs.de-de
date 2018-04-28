@@ -1,22 +1,20 @@
 ---
 title: Erstellen einer „Hallo Welt“-Anwendung mit .NET Core und C# in Visual Studio 2017
 description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung mit C# erstellen.
-keywords: .NET Core, .NET Core-Konsolenanwendung, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 7abc0cc087553e2cac10c8cc1da560a048b8e323
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
 

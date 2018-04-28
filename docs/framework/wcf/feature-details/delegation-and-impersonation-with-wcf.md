@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegierung und Identitätswechsel mit WCF
 Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um den Clientzugriff auf die Ressourcen einer Dienstdomäne zu beschränken. Dienstdomänenressourcen können entweder Computerressourcen, wie lokale Dateien (Identitätswechsel), oder eine Ressource auf einem anderen Computer, z. B. eine Dateifreigabe (Delegierung), sein. Eine Beispielanwendung finden Sie unter [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Ein Beispiel zur Verwendung von Identitätswechsel finden Sie unter [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -84,7 +84,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
  Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Infrastruktur kann die Identität des Aufrufers nur annehmen, wenn der Aufrufer mit Anmeldeinformationen authentifiziert wird, die einem Windows-Benutzerkonto zugeordnet werden können. Wenn der Dienst für die Authentifizierung mit Anmeldeinformationen konfiguriert ist, die keinem Windows-Konto zugeordnet werden können, wird die Dienstmethode nicht ausgeführt.  
   
 > [!NOTE]
->  Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]schlägt der Identitätswechsel beim Erstellen eines zustandsbehafteten SCT fehl, was zu einer <xref:System.InvalidOperationException>führt. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]schlägt der Identitätswechsel beim Erstellen eines zustandsbehafteten SCT fehl, was zu einer <xref:System.InvalidOperationException>führt. Weitere Informationen finden Sie unter [nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Identitätswechsel in einer Dienstmethode: Imperatives Modell  
  Mitunter benötigt ein Aufrufer nicht die gesamte Dienstmethode für den Identitätswechsel, sondern nur einen Teil der Methode. In diesem Fall rufen Sie die Windows-Identität des Aufrufers innerhalb der Dienstmethode ab, und führen Sie den Identitätswechsel imperativ durch. Verwenden Sie dazu die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> -Eigenschaft des <xref:System.ServiceModel.ServiceSecurityContext> , um eine Instanz der <xref:System.Security.Principal.WindowsIdentity> -Klasse zurückzugeben und die <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> -Methode vor dem Verwenden der Instanz aufzurufen.  

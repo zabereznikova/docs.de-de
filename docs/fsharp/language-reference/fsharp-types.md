@@ -1,20 +1,17 @@
 ---
 title: F#-Typen
-description: "Erfahren Sie, bis die Typen, die verwendet werden, in F# erläutert werden und wie f#-Typen mit dem Namen beschrieben werden."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Erfahren Sie, bis die Typen, die verwendet werden, in F# erläutert werden und wie f#-Typen mit dem Namen beschrieben werden.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>F#-Typen
 
@@ -51,12 +48,12 @@ Die folgende Tabelle zeigt die Aspekte der Type-Syntax für f#-Typen.
 |array|*Typname*[] oder<br /><br />*Typname* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |zweidimensionales array|*Typname*[,]|`int[,]`<br /><br />`float[,]`|
 |dreidimensionale array|*Typname*[,]|`float[,,]`|
-|tuple|*Typ-name1* &#42; *Typ name2* ...|Beispielsweise `(1,'b',3)` weist den Typ`int * char * int`|
+|tuple|*Typ-name1* &#42; *Typ name2* ...|Beispielsweise `(1,'b',3)` weist den Typ `int * char * int`|
 |generischer Typ|*Typparameter* *generische-Type-Name*<br /><br />oder<br /><br />*generische Typnamen*&lt;*Typparameterliste*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |konstruierter Typ (ein generischer Typ, die ein bestimmten angegebene Typargument aufweist)|*Argument vom Typ* *generische-Type-Name*<br /><br />oder<br /><br />*generische Typnamen*&lt;*Typargumentliste*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|Typ der Funktion, die einen einzelnen Parameter verfügt.|*Parameter-Typ1*  - &gt; *Return-Type*|Eine Funktion, übernimmt ein `int` und gibt eine `string` weist den Typ`int -> string`|
-|Funktionstyp, der mehrere Parameter verfügt|*Parameter-Typ1*  - &gt; *Parameter Typ2*  - &gt; ... -&gt; *Return-Type*|Eine Funktion, übernimmt ein `int` und ein `float` und gibt eine `string` weist den Typ`int -> float -> string`|
-|Funktion höherer Ordnung als parameter|(*Funktionstyp*)|`List.map`weist den Typ`('a -> 'b) -> 'a list -> 'b list`|
+|Typ der Funktion, die einen einzelnen Parameter verfügt.|*Parameter-Typ1*  - &gt; *Return-Type*|Eine Funktion, übernimmt ein `int` und gibt eine `string` weist den Typ `int -> string`|
+|Funktionstyp, der mehrere Parameter verfügt|*Parameter-Typ1*  - &gt; *Parameter Typ2*  - &gt; ... -&gt; *Return-Type*|Eine Funktion, übernimmt ein `int` und ein `float` und gibt eine `string` weist den Typ `int -> float -> string`|
+|Funktion höherer Ordnung als parameter|(*Funktionstyp*)|`List.map` weist den Typ `('a -> 'b) -> 'a list -> 'b list`|
 |delegate|Delegieren von *Funktionstyp*|`delegate of unit -> int`|
 |Flexible Typ|#*Typname*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 

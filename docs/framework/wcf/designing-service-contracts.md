@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
@@ -65,7 +65,7 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
   
  Ein Beispiel zum Erstellen eines Dienstvertrags eine Benutzeroberfläche verwenden, finden Sie unter [Vorgehensweise: Erstellen eines Diensts mit einer Vertragsschnittstelle](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- Sie können allerdings eine Klasse verwenden, um einen Dienstvertrag zu definieren und gleichzeitig zu implementieren. Der Vorteil des Erstellens Ihrer Dienste durch direktes Anwenden von <xref:System.ServiceModel.ServiceContractAttribute> und <xref:System.ServiceModel.OperationContractAttribute> auf die Klasse und die Methoden der Klasse liegen in der Geschwindigkeit und der Einfachheit. Die Nachteile liegen darin begründet, dass verwaltete Klassen keine mehrfache Vererbung unterstützen. Als Ergebnis kann immer nur ein Dienstvertrag gleichzeitig implementiert werden. Außerdem ändern alle Modifikationen der Klasse oder Methode den öffentlichen Vertrag für diesen Dienst, der unveränderte Clients daran hindern kann, Ihren Dienst zu verwenden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Sie können allerdings eine Klasse verwenden, um einen Dienstvertrag zu definieren und gleichzeitig zu implementieren. Der Vorteil des Erstellens Ihrer Dienste durch direktes Anwenden von <xref:System.ServiceModel.ServiceContractAttribute> und <xref:System.ServiceModel.OperationContractAttribute> auf die Klasse und die Methoden der Klasse liegen in der Geschwindigkeit und der Einfachheit. Die Nachteile liegen darin begründet, dass verwaltete Klassen keine mehrfache Vererbung unterstützen. Als Ergebnis kann immer nur ein Dienstvertrag gleichzeitig implementiert werden. Außerdem ändern alle Modifikationen der Klasse oder Methode den öffentlichen Vertrag für diesen Dienst, der unveränderte Clients daran hindern kann, Ihren Dienst zu verwenden. Weitere Informationen finden Sie unter [implementieren Dienstverträge](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
  Ein Beispiel, verwendet eine Klasse, um einen Dienstvertrag zu erstellen und es gleichzeitig implementiert werden, finden Sie unter [Vorgehensweise: Erstellen eines Diensts mit einer Vertragsklasse](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
@@ -193,7 +193,7 @@ End Interface
  Die Schutzebene ist ein Wert, der angibt, ob die Meldungen (oder Meldungsteile), die einen Dienst unterstützen, signiert, signiert und verschlüsselt oder ohne Signaturen und Verschlüsselung gesendet werden. Die Schutzebene kann in unterschiedlichem Umfang festgelegt werden: auf Dienstebene, für einen bestimmten Vorgang, für eine Meldung innerhalb dieses Vorgangs oder für einen Meldungsteil. Auf einen Bereich festgelegte Werte werden zum Standardwert für kleinere Bereiche, außer wenn diese explizit außer Kraft gesetzt werden. Wenn eine Bindungskonfiguration die erforderliche Mindestschutzebene für den Vertrag nicht bereitstellen kann, wird eine Ausnahme ausgegeben. Wenn für den Vertrag keine Schutzebenenwerte explizit festgelegt sind, steuert die Bindungskonfiguration die Schutzebene für alle Meldungen, sofern die Bindung über Meldungssicherheit verfügt. Dies ist das Standardverhalten.  
   
 > [!IMPORTANT]
->  Die Entscheidung über das explizite Festlegen verschiedener Umfänge eines Vertrags auf weniger als die vollständige Schutzebene von <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> ist normalerweise eine Entscheidung, die die Leistung verbessert, während die Sicherheit reduziert wird. In diesen Fällen hängen Ihre Entscheidungen von den Vorgängen und dem Wert der ausgetauschten Daten ab. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md).  
+>  Die Entscheidung über das explizite Festlegen verschiedener Umfänge eines Vertrags auf weniger als die vollständige Schutzebene von <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> ist normalerweise eine Entscheidung, die die Leistung verbessert, während die Sicherheit reduziert wird. In diesen Fällen hängen Ihre Entscheidungen von den Vorgängen und dem Wert der ausgetauschten Daten ab. Weitere Informationen finden Sie unter [Sichern von Services](../../../docs/framework/wcf/securing-services.md).  
   
  Im folgenden Codebeispiel wird weder die <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A>- noch die <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A>-Eigenschaft für den Vertrag festgelegt.  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Schutzebenen und deren Verwendung finden Sie in [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Sicherheit, finden Sie unter [Sichern von Services](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Andere Vorgangssignaturanforderungen  
- Einige Anwendungsfunktionen erfordern eine besondere Art von Vorgangssignatur. Die <xref:System.ServiceModel.NetMsmqBinding>-Bindung unterstützt beispielsweise permanente Dienste und Clients, in denen eine Anwendung während der Kommunikation neu gestartet und ohne Meldungsverlust genau dort fortgesetzt werden kann, wo sie angehalten wurde. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Permanente Vorgänge dürfen allerdings nur einen `in`-Parameter verwenden und haben keinen Rückgabewert.  
+ Einige Anwendungsfunktionen erfordern eine besondere Art von Vorgangssignatur. Die <xref:System.ServiceModel.NetMsmqBinding>-Bindung unterstützt beispielsweise permanente Dienste und Clients, in denen eine Anwendung während der Kommunikation neu gestartet und ohne Meldungsverlust genau dort fortgesetzt werden kann, wo sie angehalten wurde. (Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Permanente Vorgänge dürfen allerdings nur einen `in`-Parameter verwenden und haben keinen Rückgabewert.  
   
  Ein anderes Beispiel ist die Verwendung von <xref:System.IO.Stream>-Typen in Vorgängen. Da der <xref:System.IO.Stream>-Parameter den gesamten Textinhalt einschließt, muss es sich bei einer Ein- oder Ausgabe mit den Parametern `ref`, `out` oder einem Rückgabewert vom Typ <xref:System.IO.Stream> um die einzigen im Vorgang angegebenen Ein- und Ausgaben handeln. Außerdem muss es sich bei dem Parameter oder dem Rückgabetyp um <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> oder <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> handeln. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Streams, finden Sie unter [umfangreiche Daten und Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   

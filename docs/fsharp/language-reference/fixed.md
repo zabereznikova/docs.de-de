@@ -1,20 +1,17 @@
 ---
-title: "Fixed-Schlüsselwort (f#)"
-description: "Erfahren Sie, wie \"angeheftet werden können\" wird eine lokale im Stapel, um zu verhindern, dass die Auflistung mit den f# \"-Schlüsselwort fest\"."
-keywords: Visual F#, F#, funktionale Programmierung
+title: Fixed-Schlüsselwort (f#)
+description: Erfahren Sie, wie "angeheftet werden können" wird eine lokale im Stapel, um zu verhindern, dass die Auflistung mit den f# "-Schlüsselwort fest".
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed-Schlüsselwort
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 Dies erweitert die Syntax von Ausdrücken, um einen Zeiger zu extrahieren und binden Sie ihn in einen Namen verhindert gesammelt oder während der Garbage Collection verschoben wird, zu ermöglichen.  
 
-Ist ein Zeiger von einem Ausdruck fest, über die `fixed` Schlüsselwort gebunden ist, um einen Bezeichner über die `use` Schlüsselwort.  Die Semantik dieser ähneln ressourcenverwaltung über die `use` Schlüsselwort.  Der Zeiger wird festgelegt, während er befindet sich im Bereich, und sobald sie außerhalb des gültigen Bereichs ist, ist es nicht mehr fest.  `fixed`kann nicht verwendet werden, außerhalb des Kontexts einer `use` Bindung.  Sie müssen den Zeiger in einen Namen mit binden `use`.
+Ist ein Zeiger von einem Ausdruck fest, über die `fixed` Schlüsselwort gebunden ist, um einen Bezeichner über die `use` Schlüsselwort.  Die Semantik dieser ähneln ressourcenverwaltung über die `use` Schlüsselwort.  Der Zeiger wird festgelegt, während er befindet sich im Bereich, und sobald sie außerhalb des gültigen Bereichs ist, ist es nicht mehr fest.  `fixed` kann nicht verwendet werden, außerhalb des Kontexts einer `use` Bindung.  Sie müssen den Zeiger in einen Namen mit binden `use`.
 
 Verwenden von `fixed` muss innerhalb eines Ausdrucks in einer Funktion oder eine Methode erfolgen.  Es kann nicht in einem Bereich Skriptebene oder Modulebene verwendet werden.
 
@@ -70,4 +67,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Siehe auch
 
-[NativePtr Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+[NativePtr-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

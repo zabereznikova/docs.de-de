@@ -1,27 +1,29 @@
 ---
 title: 'Vorgehensweise: Erstellen eines grundlegenden RS-Feeds'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79e5bc1bedbe6fd0911931c83878ed20bc4bd17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730bb0087ecfa396442dedf48fb64b1ab3ac512
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Vorgehensweise: Erstellen eines grundlegenden RS-Feeds
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Syndication-Feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst, der einen RSS Syndication-Feed verfügbar macht, erstellt wird.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Alle Dienstvorgänge, die das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut übernehmen, werden HTTP GET-Anforderungen zugeordnet. Wenn Sie den Vorgang einer anderen HTTP-Methode zuordnen möchten, verwenden Sie stattdessen <xref:System.ServiceModel.Web.WebInvokeAttribute>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Alle Dienstvorgänge, die das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut übernehmen, werden HTTP GET-Anforderungen zugeordnet. Wenn Sie den Vorgang einer anderen HTTP-Methode zuordnen möchten, verwenden Sie stattdessen <xref:System.ServiceModel.Web.WebInvokeAttribute>. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implementieren Sie den Dienstvertrag.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>So rufen Sie GetBlog() mit HTTP GET auf  
   
-1.  Öffnen Sie den Internet Explorer, geben Sie die folgende URL ein, und drücken Sie die EINGABETASTE: http://localhost:8000/BlogService/GetBlog Die URL enthält die Basisadresse des Diensts (http://localhost:8000/BlogService), die relative Adresse des Endpunkts und den aufzurufenden Dienstvorgang.  
+1.  Öffnen Sie Internet Explorer, geben Sie die folgende URL, und drücken Sie die EINGABETASTE: http://localhost:8000/BlogService/GetBlog. Die URL enthält die Basisadresse des Diensts (http://localhost:8000/BlogService), die relative Adresse des Endpunkts und den aufzurufenden Dienstvorgang.  
   
 ### <a name="to-call-getblog-from-code"></a>So rufen Sie GetBlog() aus dem Code auf  
   

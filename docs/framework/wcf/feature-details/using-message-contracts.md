@@ -1,13 +1,13 @@
 ---
-title: "Verwendung von Nachrichtenverträgen"
-ms.custom: 
+title: Verwendung von Nachrichtenverträgen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
-Üblicherweise achten Entwickler bei der Erstellung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen streng auf die Datenstrukturen und Serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Üblicherweise achten Entwickler bei der Erstellung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen streng auf die Datenstrukturen und Serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Allerdings ist zuweilen die vollständige Kontrolle über die Struktur einer SOAP-Nachricht wichtiger als die Kontrolle über dessen Inhalte. Dies gilt insbesondere, wenn Interoperabilität wichtig ist oder um Sicherheitsprobleme speziell auf der Ebene der Nachricht oder des Nachrichtenteils zu kontrollieren. In diesen Fällen erstellen Sie eine *Nachrichtenvertrag* mit der Sie die Struktur der benötigten SOAP-Nachricht erforderlich angeben.  
   
  Dieses Thema beschreibt, wie die unterschiedlichen Attribute für Nachrichtenverträge zur Erstellung eines spezifischen Nachrichtenvertrags für Ihren Vorgang verwendet werden.  
   
 ## <a name="using-message-contracts-in-operations"></a>Verwenden von Nachrichtenverträgen in Vorgängen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]unterstützt Vorgänge, die entweder die *Remoteprozeduraufruf Remoteprozeduraufruf (RPC) Stil* oder *messagingstil*. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Art der Serialisierung die Struktur der Daten in den zugrunde liegenden Nachrichten, und die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit erstellt die Nachrichten, um den Vorgang zu unterstützen. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt Vorgänge, die entweder die *Remoteprozeduraufruf Remoteprozeduraufruf (RPC) Stil* oder *messagingstil*. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Art der Serialisierung die Struktur der Daten in den zugrunde liegenden Nachrichten, und die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit erstellt die Nachrichten, um den Vorgang zu unterstützen. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
   
  Das folgende Codebeispiel zeigt einen im RPC-Stil erstellten Dienstvorgang.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Datenverträge, finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Datenverträge, finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Zuweilen ist es allerdings notwendig, die Struktur der übertragenen SOAP-Nachricht genau zu steuern. Das gängigste Szenario hierfür besteht aus dem Einfügen von benutzerdefinierten SOAP-Headern. Ein weiteres übliches Szenario ist die Definition von Sicherheitseigenschaften für Nachrichtenheader und -text, das heißt, die Entscheidung, ob diese Elemente digital signiert und verschlüsselt werden. Schließlich erfordern eine Reihe von Drittanbieter-SOAP-Stapeln Nachrichten in einem bestimmten Format. Vorgänge im Messagingstil bieten diese Kontrolle.  
   
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  Das Vorhandensein von mehr als einem Nachrichtentextteil in nicht umbrochenen Nachrichten ist nicht mit dem WS-I Basic Profile 1.1 kompatibel und wird bei der Gestaltung neuer Nachrichtenverträge nicht empfohlen. Allerdings kann es bei spezifischen Interoperabilitätsszenarien notwendig sein, mehr als einen nicht umbrochenen Nachrichtentextteil zu haben. Wenn Sie mehrere Daten in einem Nachrichtentext übertragen möchten, wird die Verwendung des Standardumbruchmodus empfohlen. Mehr als einen Nachrichtenheader in nicht umbrochenen Nachrichten zu haben, ist vollkommen akzeptabel.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Verwendung von benutzerdefinierten Typen innerhalb von Nachrichtenverträgen  
- Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe des ausgewählten Serialisierungsmoduls für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Das Standardserialisierungsmodul, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe des ausgewählten Serialisierungsmoduls für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Das Standardserialisierungsmodul, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Im vorangehenden Beispiel müssen die Typen `Operation` und `BankingTransactionData` über einen Datenvertrag verfügen, und `transactionDate` ist serialisierbar, da <xref:System.DateTime> primitiv ist (und über einen impliziten Datenvertrag verfügt).  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Wenn eine Nachricht empfangen und dann zurückgesendet wird, werden die SOAP-Attributeinstellungen nur für Header des <xref:System.ServiceModel.MessageHeader%601>-Typs wiederhergestellt.  
   
 ## <a name="order-of-soap-body-parts"></a>Reihenfolge von SOAP-Textteilen  
- In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Im folgenden Beispiel käme `amount` normalerweise zuerst, da es alphabetisch an erster Stelle steht. Die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A>-Eigenschaft setzt es jedoch an die dritte Position.  
   

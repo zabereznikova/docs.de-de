@@ -1,26 +1,26 @@
 ---
 title: Umfangreiche Daten und Streaming
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf XML basierende Kommunikationsinfrastruktur. Da XML-Daten häufig in im definierten standard-Text-Format codiert ist die [XML 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=94838), verbundene Systeme Entwicklern und Architekten sind in der Regel besorgt Wire Ressourcenbedarf (oder der Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML-dürfen besondere Herausforderung dar, für die effiziente Übertragung binärer Daten.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Somit ist die Entscheidung zwischen Text- oder Binärformat nicht ganz so einfach wie die Annahme, dass binäre Nachrichten immer kleiner sind als XML-Textnachrichten.  
   
- Ein eindeutiger Vorteil von XML-Textnachrichten besteht jedoch darin, dass sie auf Standards basieren und eine breite Palette an Interoperabilitätsoptionen und Plattformunterstützung bieten. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Codierungen" weiter unten in diesem Thema.  
+ Ein eindeutiger Vorteil von XML-Textnachrichten besteht jedoch darin, dass sie auf Standards basieren und eine breite Palette an Interoperabilitätsoptionen und Plattformunterstützung bieten. Weitere Informationen finden Sie unter dem Abschnitt "Codierungen" weiter unten in diesem Thema.  
   
 ### <a name="binary-content"></a>Binärer Inhalt  
  Es gibt einen Bereich, in dem binäre Codierungen textbasierten Codierungen in Hinblick auf die resultierende Nachrichtengröße überlegen sind, und zwar bei großen binären Datenelementen. Dazu gehören Bilder, Videos, Soundclips und jede sonstige Form von nicht transparenten, binären Daten, die zwischen einem Dienst und seinem Consumer ausgetauscht werden. Damit diese Typen in XML-Text passen, werden sie in der Regel mit Base64 codiert.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Eine MTOM-SOAP-Nachricht wird in ihrer uncodierten Version geändert. Dabei ersetzen spezielle Elementtags, die sich auf die jeweiligen MIME-Teile beziehen, die ursprünglichen Elemente in der Nachricht, die binäre Daten enthielten. Als Ergebnis bezieht sich die SOAP-Nachricht auf binären Inhalt, indem auf die mit ihr gesendeten MIME-Teile verwiesen wird, ansonsten jedoch nur XML-Textdaten enthalten sind. Da dieses Model eng an das weit verbreiteten SMTP-Modell anlehnt, gibt es ein breites Angebot an Tools zur Codierung und Decodierung von MTOM-Nachrichten für viele Pattformen, was eine hohe Interoperabilität gewährleistet.  
   
- Doch wie bei Base64 ist auch bei MTOM ein gewisser Mehraufwand für das MIME-Format erforderlich, sodass sich die Vorteile von MTOM nur dann bemerkbar machen, wenn die Größe eines binären Datenelements ungefähr 1 KB überschreitet. Aufgrund dieses Mehraufwands sind MTOM-codierte Nachrichten möglicherweise größer als Nachrichten, die eine Base64-Codierung für binäre Daten verwenden, wenn die binäre Nutzlast diese Schwelle nicht überschreitet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Codierungen" weiter unten in diesem Thema.  
+ Doch wie bei Base64 ist auch bei MTOM ein gewisser Mehraufwand für das MIME-Format erforderlich, sodass sich die Vorteile von MTOM nur dann bemerkbar machen, wenn die Größe eines binären Datenelements ungefähr 1 KB überschreitet. Aufgrund dieses Mehraufwands sind MTOM-codierte Nachrichten möglicherweise größer als Nachrichten, die eine Base64-Codierung für binäre Daten verwenden, wenn die binäre Nutzlast diese Schwelle nicht überschreitet. Weitere Informationen finden Sie unter dem Abschnitt "Codierungen" weiter unten in diesem Thema.  
   
 ### <a name="large-data-content"></a>Inhalte mit umfangreichen Daten  
  Abgesehen von der Übertragungsgröße stellt die oben erwähnte 500-MB-Nutzlast für den Dienst und den Client auch lokal ein nicht unerhebliches Problem dar. Standardmäßig [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verarbeitet die Nachrichten in *Puffermodus*. Dabei befindet sich der gesamte Inhalt vor dem Senden oder nach dem Empfang im Arbeitsspeicher. In den meisten Szenarien ist das zwar eine gute Strategie, und für Messagingfunktionen wie digitale Signaturen sowie für eine zuverlässige Zustellung ist das sogar eine Notwendigkeit, doch bei großen Nachrichten erschöpfen sich dadurch leicht die Systemressourcen.  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   Die Objekte sind noch nicht vollständig verfügbar, wenn die Übertragung beginnt.  
   
- Bei Daten, die diesen Einschränkungen nicht unterliegen, ist es in der Regel besser, anstatt einer großen Nachricht Sequenzen der Nachrichten im Rahmen einer Sitzung zu senden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Streaming von Daten" weiter unten in diesem Thema.  
+ Bei Daten, die diesen Einschränkungen nicht unterliegen, ist es in der Regel besser, anstatt einer großen Nachricht Sequenzen der Nachrichten im Rahmen einer Sitzung zu senden. Weitere Informationen finden Sie im Abschnitt "Streaming von Daten" weiter unten in diesem Thema.  
   
  Beim Senden von großer Mengen von Daten müssen Sie festlegen der `maxAllowedContentLength` IIS-Einstellung (Weitere Informationen finden Sie unter [Konfigurieren von IIS Anforderungslimits](http://go.microsoft.com/fwlink/?LinkId=253165)) und die `maxReceivedMessageSize` binden Einstellung (z. B. [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) oder <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Die `maxAllowedContentLength` -Eigenschaft hat den Standardwert 28,6 MB und der `maxReceivedMessageSize` -Eigenschaft standardmäßig auf 64 KB.  
   
 ## <a name="encodings"></a>Codierungen  
  Ein *Codierung* definiert einen Satz von Regeln dazu, wie Nachrichten bei der Übertragung zu präsentieren. Ein *Encoder* implementiert diese Codierung und sorgt auf der Absenderseite eingeräumt eine <xref:System.ServiceModel.Channels.Message> in-Memory-Nachricht in einen Bytestream oder Bytepuffer, der über das Netzwerk gesendet werden kann. Auf der Empfängerseite wandelt der Encoder die Bytesequenz wieder in eine Nachricht im Arbeitsspeicher um.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält drei Encoder und ermöglicht Ihnen das Schreiben und schließen Sie eine eigene Encoder bei Bedarf.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält drei Encoder. Sie können jedoch gegebenenfalls auch eigene Encoder schreiben und integrieren.  
   
  Jede der Standardbindungen schließt einen vorkonfigurierten Encoder ein. Dabei verwenden standardmäßig die Bindungen mit dem Präfix Net* den binären Encoder (indem die <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>-Klasse eingeschlossen wird), und die Klassen <xref:System.ServiceModel.BasicHttpBinding> und <xref:System.ServiceModel.WSHttpBinding> verwenden den Textnachrichtenencoder (anhand der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse).  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Deshalb reicht es in diesem Fall nicht aus, die maximale Größe eingehender Nachrichten einzuschränken. Die von `MaxBufferSize` gepufferte Menge des Arbeitsspeichers muss mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Eigenschaft eingeschränkt werden. Legen Sie beim Streaming dafür einen sicheren Wert fest (oder behalten Sie den Standardwert bei). Angenommen, der Dienst muss Dateien bis zu einer Größe von 4 GB empfangen und auf der lokalen Festplatte speichern. Der Arbeitsspeicher ist in diesem Szenario so eingeschränkt, dass immer nur 64 KB gepuffert werden können. Sie würden dann `MaxReceivedMessageSize` auf 4 GB und `MaxBufferSize` auf 64 KB festlegen. Außerdem müssen Sie in der Dienstimplementierung sicherstellen, dass nur aus dem eingehenden Stream in 64-KB-Segmenten gelesen wird und das nächste Segment erst gelesen wird, nachdem das vorherige auf die Festplatte geschrieben wurde und es dann aus dem Arbeitspeicher gelöscht wird.  
   
- Beachten Sie, dass dieses Kontingent nur die Pufferung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einschränkt, jedoch keinen Schutz bietet, wenn Sie eine Pufferung in einem eigenen Dienst oder der Clientimplementierung ausführen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Weitere Überlegungen zur Sicherheit, finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Beachten Sie, dass dieses Kontingent nur die Pufferung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einschränkt, jedoch keinen Schutz bietet, wenn Sie eine Pufferung in einem eigenen Dienst oder der Clientimplementierung ausführen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Weitere Überlegungen zur Sicherheit, finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Die Entscheidung über die Verwendung der gepufferten oder der Streamingübertragung wird lokal am Endpunkt getroffen. Bei HTTP-Übertragungen wird der Übertragungsmodus nicht über Verbindungen oder an Proxyserver oder andere Vermittler weitergegeben. Das Festlegen des Übertragungsmodus spiegelt sich nicht in der Beschreibung der Dienstschnittstelle wider. Nachdem Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client für einen Dienst erstellt haben, müssen Sie die Konfigurationsdatei für Dienste bearbeiten, die mit Streamingübertragungen verwendet werden sollen, um den Modus festzulegen. Bei TCP und Named Pipe-Transporten wird der Übertragungsmodus als Richtlinienassertion weitergegeben.  

@@ -1,12 +1,13 @@
 ---
 title: Datenvertragsversionsverwaltung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
   
  Viele der Änderungen, die als "non-breaking" gelten, sind tatsächlich "breaking", wenn eine strenge Einhaltung des Schemas erforderlich ist. Im vorherigen Beispiel würde eine `CarV1`-Instanz, die nur das Element `Model`  enthält, gegen das `CarV2`-Schema (das sowohl über `Model` als auch `Horsepower` verfügt, die aber beide optional sind) positiv geprüft werden. Das Gegenteil stimmt aber nicht: eine `CarV2`-Instanz würde keine Validierung gegen das `CarV1`-Schema bestehen.  
   
- Round-Tripping bringt auch einige zusätzliche Überlegungen mit sich. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Abschnitt "Schemaüberlegungen" [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Round-Tripping bringt auch einige zusätzliche Überlegungen mit sich. Weitere Informationen finden Sie im Abschnitt "Schemaüberlegungen" [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Andere zulässige Änderungen  
- Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ist ein "Non-Breaking Change". Es besteht jedoch kein Round-Tripping-Support für Versionen des Typs vor der Version, in der <xref:System.Runtime.Serialization.IExtensibleDataObject> implementiert wurde. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ist ein "Non-Breaking Change". Es besteht jedoch kein Round-Tripping-Support für Versionen des Typs vor der Version, in der <xref:System.Runtime.Serialization.IExtensibleDataObject> implementiert wurde. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Enumerationen  
- Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAtttribute` der gleiche wie in der alten Version geblieben ist. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAtttribute` der gleiche wie in der alten Version geblieben ist. Weitere Informationen finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Auflistungen  
- Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   
 ## <a name="see-also"></a>Siehe auch  

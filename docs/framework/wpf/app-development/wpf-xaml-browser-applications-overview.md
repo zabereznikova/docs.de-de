@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über WPF-XAML-Browseranwendungen"
-ms.custom: 
+title: Übersicht über WPF-XAML-Browseranwendungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]kombiniert die Funktionen von Webanwendungen und Rich-Client-Anwendungen. Wie Webanwendungen können XBAPs auf einem Webserver bereitgestellt werden und aus Internet Explorer oder Firefox gestartet werden. XBAPs können von den Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] profitieren, genau wie Rich Client-Anwendungen. Auch die Entwicklung von XBAPs ähnelt der Rich Client-Entwicklung. Dieses Thema bietet eine allgemeine einfache Einführung in die XBAP-Entwicklung und beschreibt die Unterschiede zwischen der Entwicklung von XBAP und standardmäßigen Rich Client-Anwendungen.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] kombiniert die Funktionen von Webanwendungen und Rich-Client-Anwendungen. Wie Webanwendungen können XBAPs auf einem Webserver bereitgestellt werden und aus Internet Explorer oder Firefox gestartet werden. XBAPs können von den Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] profitieren, genau wie Rich Client-Anwendungen. Auch die Entwicklung von XBAPs ähnelt der Rich Client-Entwicklung. Dieses Thema bietet eine allgemeine einfache Einführung in die XBAP-Entwicklung und beschreibt die Unterschiede zwischen der Entwicklung von XBAP und standardmäßigen Rich Client-Anwendungen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |Anwendungsmanifest (.manifest)|Dieses enthält die der Anwendung zugeordneten Metadaten und hat die Erweiterung MANIFEST.|  
 |Bereitstellungsmanifest (.xbap)|Dieses enthält die Informationen, die [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] zum Bereitstellen der Anwendung verwendet. Sie hat die Erweiterung XBAP.|  
   
- Sie stellen XBAPs auf einem Webserver, z.B. [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] oder höheren Versionen, bereit. Sie müssen [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nicht auf dem Webserver installieren, müssen aber die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]-Typen und -Dateierweiterungen registrieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Sie stellen XBAPs auf einem Webserver, z.B. [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] oder höheren Versionen, bereit. Sie keine .NET Framework auf dem Webserver zu installieren, aber Sie müssen zum Registrieren der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] Dateinamenerweiterungen für Typen und den Dateinamen. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Zum Vorbereiten der XBAP für die Bereitstellung kopieren Sie die EXE-Datei und die zugeordneten Manifeste auf den Webserver. Erstellen Sie eine HTML-Seite, die einen Link enthält, um das Bereitstellungsmanifest zu öffnen. Dabei handelt es sich um die Datei mit der Erweiterung XBAP. Wenn ein Benutzer auf den Link zur XBAP-Datei klickt, wird das Herunterladen und Starten der Anwendung automatisch von [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] erledigt. Im folgenden Beispielcode wird eine HTML-Seite dargestellt, die einen Link enthält, der auf eine XBAP zeigt.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Ein benutzerdefiniertes ActiveX-Steuerelement hat möglicherweise Probleme mit Kommunikation, da die WPF-Anwendung in einem separaten Thread ausgeführt wird.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Prozess oder Thread ausgeführt wird.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Prozess oder Thread ausgeführt wird.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Erstellen einer XBAP mit voller Vertrauenswürdigkeit  
  Wenn die XBAP volle Vertrauenswürdigkeit erfordert, können Sie das Projekt ändern, um diese Berechtigung zu aktivieren. Die folgenden Schritte beschreiben, wie volle Vertrauenswürdigkeit aktiviert wird:  

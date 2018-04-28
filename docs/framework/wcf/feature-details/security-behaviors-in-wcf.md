@@ -1,24 +1,26 @@
 ---
 title: Sicherheitsverhalten in WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalten das Laufzeitverhalten auf Dienstebene bzw. auf Endpunktebene. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verhalten im Allgemeinen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Sicherheitsverhalten* Ihnen die Kontrolle über die Anmeldeinformationen, Authentifizierung und Autorisierung und über Überwachungsprotokolle. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
@@ -64,10 +66,10 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
 ### <a name="servicecertificate-element"></a>\<ServiceCertificate >-Element  
  Geben Sie mit diesem Element ein X.509-Zertifikat an, mit dem der Dienst bei den Clients im Modus für die Nachrichtensicherheit authentifiziert wird. Falls Sie ein Zertifikat verwenden, das immer wieder erneuert wird, ändert sich sein Fingerabdruck. Verwenden Sie in diesem Fall den Antragstellernamen als `X509FindType`, da das Zertifikat erneut mit demselben Antragstellernamen ausgestellt werden kann.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe des-Elements finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe des-Elements finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<Zertifikat > der \<ClientCertificate >-Element  
- Verwenden der [ \<Zertifikat >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) Element, wenn der Dienst das Zertifikat des Clients im voraus, zur sicheren Kommunikation mit dem Client verfügen muss. Dies ist bei der Duplexkommunikation der Fall. Bei der üblicheren Kommunikation mit Anforderung und Antwort fügt der Client das Zertifikat in die Anforderung ein, das dann wiederum vom Dienst zum Schutz seiner Antwort an den Client verwendet wird. Bei der Duplexkommunikation gibt es keine Anforderungen und Antworten. Der Dienst kann das Zertifikat des Clients nicht aus der Kommunikation ableiten. Daher muss der Dienst bereits im Voraus über das Clientzertifikat verfügen, um seine Nachricht an den Client schützen zu können. Sie müssen das Zertifikat des Clients in einem Out-of-Band-Verfahren beziehen und das Zertifikat mit diesem Element angeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]duplexdienste, finden Sie unter [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Verwenden der [ \<Zertifikat >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) Element, wenn der Dienst das Zertifikat des Clients im voraus, zur sicheren Kommunikation mit dem Client verfügen muss. Dies ist bei der Duplexkommunikation der Fall. Bei der üblicheren Kommunikation mit Anforderung und Antwort fügt der Client das Zertifikat in die Anforderung ein, das dann wiederum vom Dienst zum Schutz seiner Antwort an den Client verwendet wird. Bei der Duplexkommunikation gibt es keine Anforderungen und Antworten. Der Dienst kann das Zertifikat des Clients nicht aus der Kommunikation ableiten. Daher muss der Dienst bereits im Voraus über das Clientzertifikat verfügen, um seine Nachricht an den Client schützen zu können. Sie müssen das Zertifikat des Clients in einem Out-of-Band-Verfahren beziehen und das Zertifikat mit diesem Element angeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] duplexdienste, finden Sie unter [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<Authentication > des \<ClientCertificate >-Element  
  Die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) Element können Sie anpassen, wie Clients authentifiziert werden. Sie können als Wert für das `CertificateValidationMode`-Attribut `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` oder `Custom` festlegen. Wird standardmäßig die Ebene festgelegt ist, um `ChainTrust`, was bedeutet, dass jedes Zertifikat in einer Hierarchie in mündet gefunden werden, muss eine *Stammzertifizierungsstelle* am Anfang der Kette. Dies ist der sicherste Modus. Sie können auch den Wert `PeerOrChainTrust` verwenden, der vorgibt, dass neben den Zertifikaten in einer Vertrauenskette auch selbst ausgestellte Zertifikate (Peervertrauen) akzeptiert werden. Sie können diesen Wert beim Entwickeln und Debuggen von Clients und Diensten verwenden, da selbst ausgestellte Zertifikate nicht von einer vertrauenswürdigen Zertifizierungsstelle bezogen werden müssen. Verwenden Sie beim Bereitstellen eines Clients jedoch den Wert `ChainTrust`. Sie können den Wert auch auf `Custom` setzen. Wenn Sie den Wert `Custom` verwenden, müssen Sie für das `CustomCertificateValidatorType`-Attribut zudem ein Assembly und einen Typ, mit dem das Zertifikat überprüft wird, festlegen. Wenn Sie Ihre eigene Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben.  
@@ -93,9 +95,9 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
   
 -   Geben Sie den Satz gültiger URIs an, indem Sie die URIs dieser Auflistung hinzufügen. Fügen Sie zu diesem Zweck ein [ \<hinzufügen >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) für jeden URI  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Weitere Informationen finden Sie unter <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Zulassen anonymer CardSpace-Benutzer  
  Wenn Sie das `AllowUntrustedRsaIssuers`-Attribut des `<IssuedTokenAuthentication>`-Elements auf `true` setzen, dürfen alle Clients ein selbst ausgestelltes und mit einem beliebigen RSA-Schlüsselpaar signiertes Token vorweisen. Der Aussteller ist *nicht vertrauenswürdigen* , da der Schlüssel keine Aussteller Daten zugeordnet ist. [!INCLUDE[infocard](../../../../includes/infocard-md.md)]-Benutzer können eine selbst ausgestellte Karte mit von ihnen selbst bereitgestellten Identitätsansprüchen erstellen. Daher sollte diese Funktion nur mit Vorsicht verwendet werden. Falls Sie diese Funktion verwenden möchten, stellen Sie sich den öffentlichen RSA-Schlüssel als sichereres Kennwort vor, das mit dem Benutzernamen in einer Datenbank gespeichert werden sollte. Überprüfen Sie den vom Client vorgelegten öffentlichen RSA-Schlüssel, indem Sie ihn mit dem für diesen Benutzernamen gespeicherten öffentlichen Schlüssel vergleichen, bevor Sie einem Client Zugriff auf den Dienst gewähren. Dies setzt voraus, dass Sie einen Registrierungsvorgang eingerichtet haben, bei dem Benutzer ihre Benutzernamen registrieren und diesen die selbst ausgestellten öffentlichen RSA-Schlüssel zuordnen können.  
@@ -103,7 +105,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
 ## <a name="client-credentials"></a>Clientanmeldeinformationen  
  Durch die Clientanmeldeinformationen wird der Client bei den Diensten authentifiziert, wenn eine gegenseitige Authentifizierung erforderlich ist. Sie können den Abschnitt zur Angabe von Dienstzertifikaten in Szenarien verwenden, bei denen der Client seine Nachrichten an einen Dienst mithilfe des Dienstzertifikats schützen muss.  
   
- Sie können einen Client auch als Teil eines Verbundszenarien konfigurieren, in dem die Token eines Sicherheitstokendiensts oder eines lokalen Tokenausstellers verwendet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]in Verbundszenarien finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Anmeldeinformationen für alle Clients befinden sich unter dem [ \<EndpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), wie im folgenden Code gezeigt.  
+ Sie können einen Client auch als Teil eines Verbundszenarien konfigurieren, in dem die Token eines Sicherheitstokendiensts oder eines lokalen Tokenausstellers verwendet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] in Verbundszenarien finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Anmeldeinformationen für alle Clients befinden sich unter dem [ \<EndpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), wie im folgenden Code gezeigt.  
   
 ```xml  
 <behaviors>  
@@ -126,16 +128,16 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<ClientCertifictate >-Element  
- Legen Sie mit diesem Element das Zertifikat fest, mit dem der Client authentifiziert wird. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Legen Sie mit diesem Element das Zertifikat fest, mit dem der Client authentifiziert wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<HttpDigest >  
- Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Digest-Authentifizierung in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. Weitere Informationen finden Sie unter [Digestauthentifizierung in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<IssuedToken >-Element  
  Die [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) enthält die Elemente, die zum Konfigurieren eines lokalen Tokenausstellers Token oder mit einem Sicherheitstokendienst verwendeten Verhalten verwendet. Anweisungen zum Konfigurieren eines Clients für einen lokalen Aussteller verwenden, finden Sie unter [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 #### <a name="localissueraddress"></a>\<localissueraddress-Eigenschaft >  
- Gibt eine Standardadresse für den Sicherheitstokendienst an. Diese Adresse wird verwendet, wenn die <xref:System.ServiceModel.WSFederationHttpBinding> keine URL für den Sicherheitstokendienst bereitstellt oder wenn die Ausstelleradresse einer Verbundbindung http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous bzw. `null` lautet. In diesem Fall muss <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfiguriert werden.  
+ Gibt eine Standardadresse für den Sicherheitstokendienst an. Wird verwendet, wenn die <xref:System.ServiceModel.WSFederationHttpBinding> stellt keine URL für den Sicherheitstokendienst oder wenn die Ausstelleradresse einer verbundbindung http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous oder `null`. In diesem Fall muss <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfiguriert werden.  
   
 #### <a name="issuerchannelbehaviors"></a>\<IssuerChannelBehaviors >  
  Verwenden der [ \<IssuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) hinzuzufügende [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clientverhalten bei der Kommunikation mit einem Sicherheitstokendienst verwendet. Definieren von Clientverhalten in der [ \<EndpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) Abschnitt. Um einen definierten Verhalten verwenden, fügen eine <`add`>-Element der `<issuerChannelBehaviors>` Element mit zwei Attribute. Verwenden Sie für `issuerAddress` die URL des Sicherheitstokendiensts, und verwenden Sie für das `behaviorConfiguration`-Attribut den Namen des definierten Endpunktverhaltens, wie im folgenden Beispiel gezeigt:  
@@ -155,9 +157,9 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
   
  Verwenden der [ \<ScopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) und [ \<hinzufügen >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) Dienstzertifikate festlegen, bestimmte Dienste zugeordnet sind. Das `<add>`-Element beinhaltet ein `targetUri`-Attribut, mit dem das Zertifikat dem Dienst zugeordnet wird.  
   
- Die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) Element gibt die Ebene der Vertrauenswürdigkeit verwendet, um Zertifikate zu authentifizieren. Standardmäßig wird die Stufe "ChainTrust" verwendet, die angibt, dass jedes Zertifikat in einer Zertifizierungshierarchie zu finden sein muss, die in eine vertrauenswürdige Zertifizierungsstelle am Anfang der Kette mündet. Dies ist der sicherste Modus. Sie können auch den Wert "PeerOrChainTrust" verwenden, der vorgibt, dass neben den Zertifikaten in einer Vertrauenskette auch selbst ausgestellte Zertifikate (Peervertrauen) akzeptiert werden. Sie können diesen Wert beim Entwickeln und Debuggen von Clients und Diensten verwenden, da selbst ausgestellte Zertifikate nicht von einer vertrauenswürdigen Zertifizierungsstelle bezogen werden müssen. Verwenden Sie beim Bereitstellen eines Clients jedoch den Wert "ChainTrust". Sie können auch den Wert "Custom" bzw. "None" verwenden. Wenn Sie "Custom" verwenden möchten, müssen Sie für das `CustomCertificateValidatorType`-Attribut zudem ein Assembly und einen Typ, mit dem das Zertifikat überprüft wird, festlegen. Wenn Sie Ihre eigene Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: erstellen ein Diensts, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) Element gibt die Ebene der Vertrauenswürdigkeit verwendet, um Zertifikate zu authentifizieren. Standardmäßig wird die Stufe "ChainTrust" verwendet, die angibt, dass jedes Zertifikat in einer Zertifizierungshierarchie zu finden sein muss, die in eine vertrauenswürdige Zertifizierungsstelle am Anfang der Kette mündet. Dies ist der sicherste Modus. Sie können auch den Wert "PeerOrChainTrust" verwenden, der vorgibt, dass neben den Zertifikaten in einer Vertrauenskette auch selbst ausgestellte Zertifikate (Peervertrauen) akzeptiert werden. Sie können diesen Wert beim Entwickeln und Debuggen von Clients und Diensten verwenden, da selbst ausgestellte Zertifikate nicht von einer vertrauenswürdigen Zertifizierungsstelle bezogen werden müssen. Verwenden Sie beim Bereitstellen eines Clients jedoch den Wert "ChainTrust". Sie können auch den Wert "Custom" bzw. "None" verwenden. Wenn Sie "Custom" verwenden möchten, müssen Sie für das `CustomCertificateValidatorType`-Attribut zudem ein Assembly und einen Typ, mit dem das Zertifikat überprüft wird, festlegen. Wenn Sie Ihre eigene Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben. Weitere Informationen finden Sie unter [Vorgehensweise: erstellen ein Diensts, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
- Die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) Element enthält eine `RevocationMode` Attribut, das angibt, wie Zertifikate auf eine Sperre hin überprüft werden. Der Standardwert ist "online", wodurch angegeben wird, dass Zertifikate automatisch auf eine Sperre hin überprüft werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) Element enthält eine `RevocationMode` Attribut, das angibt, wie Zertifikate auf eine Sperre hin überprüft werden. Der Standardwert ist "online", wodurch angegeben wird, dass Zertifikate automatisch auf eine Sperre hin überprüft werden. Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="serviceauthorization"></a>ServiceAuthorization  
  Die [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) -Element enthält Elemente, die Autorisierung, benutzerspezifische Rollenanbieter und den Identitätswechsel beeinflussen.  
@@ -199,7 +201,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
 ```  
   
 ## <a name="configuring-security-audits"></a>Konfigurieren der Sicherheitsüberwachung  
- Verwenden der [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) an das Protokoll geschrieben, und welche Arten von zu protokollierende Ereignisse. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Verwenden der [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) an das Protokoll geschrieben, und welche Arten von zu protokollierende Ereignisse. Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -215,7 +217,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beeinflussen Verhalte
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Sicherer Metadatenaustausch  
- Das Exportieren von Metadaten auf Clients ist hilfreich für Dienst- und Cliententwickler, da so das Herunterladen von Konfigurations- und Clientcode möglich wird. Damit der Dienst möglichst gut vor böswilligen Benutzern geschützt wird, können Sie für die Übertragung den HTTPS-Mechanismus (SSL über HTTP) verwenden. Hierfür müssen Sie zunächst ein geeignetes X.509-Zertifikat an einen bestimmten Port des Computers, auf dem der Dienst gehostet wird, binden. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Zweitens, Hinzufügen einer [ \<ServiceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) auf der Dienstkonfiguration und die `HttpsGetEnabled` -Attribut auf `true`. Setzen Sie abschließend wie im folgenden Beispiel gezeigt das `HttpsGetUrl`-Attribut auf den URL des Dienstmetadaten-Endpunkts:  
+ Das Exportieren von Metadaten auf Clients ist hilfreich für Dienst- und Cliententwickler, da so das Herunterladen von Konfigurations- und Clientcode möglich wird. Damit der Dienst möglichst gut vor böswilligen Benutzern geschützt wird, können Sie für die Übertragung den HTTPS-Mechanismus (SSL über HTTP) verwenden. Hierfür müssen Sie zunächst ein geeignetes X.509-Zertifikat an einen bestimmten Port des Computers, auf dem der Dienst gehostet wird, binden. (Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Zweitens, Hinzufügen einer [ \<ServiceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) auf der Dienstkonfiguration und die `HttpsGetEnabled` -Attribut auf `true`. Setzen Sie abschließend wie im folgenden Beispiel gezeigt das `HttpsGetUrl`-Attribut auf den URL des Dienstmetadaten-Endpunkts:  
   
 ```xml  
 <behaviors>  

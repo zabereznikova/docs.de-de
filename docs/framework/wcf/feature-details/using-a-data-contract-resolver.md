@@ -1,24 +1,26 @@
 ---
 title: Verwenden eines Datenvertragsresolvers
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Verwenden eines Datenvertragsresolvers
 Mithilfe eines Datenvertragsresolver können Sie bekannte Typen dynamisch konfigurieren. Bekannte Typen sind erforderlich, wenn ein Typ serialisiert oder deserialisiert wird, der von einem Datenvertrag nicht erwartet wird. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)exportiert werden. Bekannte Typen werden in der Regel statisch angegeben. Das bedeutet, dass Sie beim Implementieren eines Vorgangs alle möglichen Typen kennen müssen, die der Vorgang erhalten kann. In einigen Szenarios trifft dies nicht zu, und es ist wichtig, bekannte Typen dynamisch angeben zu können.  
@@ -96,7 +98,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Sie können einen Datenvertragsresolver deklarativ angeben, indem Sie ein Attribut implementieren, das auf einen Dienst angewendet werden kann.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]die [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) Beispiel. Diesem Beispiel wird ein Attribut mit dem Namen "KnownAssembly" implementiert, das Verhalten des Diensts einen benutzerdefinierten datenvertragsresolver hinzufügt.  
+ Sie können einen Datenvertragsresolver deklarativ angeben, indem Sie ein Attribut implementieren, das auf einen Dienst angewendet werden kann.  Weitere Informationen finden Sie unter der [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) Beispiel. Diesem Beispiel wird ein Attribut mit dem Namen "KnownAssembly" implementiert, das Verhalten des Diensts einen benutzerdefinierten datenvertragsresolver hinzufügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  

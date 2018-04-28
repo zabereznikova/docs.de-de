@@ -1,29 +1,31 @@
 ---
 title: 'Vorgehensweise: Endpunkte im Unternehmen sperren'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Endpunkte im Unternehmen sperren
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. In diesem Thema wird behandelt, wie eine Clientendpunktbestätigung entwickelt und installiert wird, die zur Validierung aller auf Computern installierten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientanwendungen verwendet werden kann.  
   
- In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lädt gemeinsames Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für Dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]die [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
+ In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lädt gemeinsames Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für Dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
   
 > [!IMPORTANT]
 >  Dienst- oder Endpunktverhaltensweisen nicht gekennzeichnet werden, mit der <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), die hinzugefügt werden, die [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt einer Konfigurationsdatei werden nicht ausgeführt, wenn in einer teilweise vertrauenswürdigen Anwendung ausgeführt wird Umgebung und keine Ausnahme wird ausgelöst, wenn in diesem Fall. Um die Ausführung gemeinsamer Verhalten, wie z.&#160;B. Bestätigungen, zu erzwingen, müssen Sie einen der beiden folgenden Schritte ausführen:  

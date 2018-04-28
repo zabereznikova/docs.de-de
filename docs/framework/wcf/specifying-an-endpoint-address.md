@@ -1,13 +1,13 @@
 ---
 title: Angeben einer Endpunktadresse
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Angeben einer Endpunktadresse
 Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst erfolgt über dessen Endpunkte. Jeder <xref:System.ServiceModel.Description.ServiceEndpoint> enthält eine <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, eine <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> und einen <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Der Vertrag gibt an, welche Vorgänge verfügbar sind. Die Bindung gibt an, wie eine Kommunikation mit dem Dienst stattfindet, und die Adresse gibt an, wo sich der Dienst befindet. Jeder Endpunkt muss eine eindeutige Adresse haben. Die Endpunktadresse wird durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die einen Uniform Resource Identifier (URI) enthält, der die Adresse des Diensts darstellt, eine <xref:System.ServiceModel.EndpointAddress.Identity%2A>, die die Sicherheitsidentität des Diensts darstellt, und eine Auflistung der optionalen <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Die optionalen Header stellen zusätzliche, ausführlichere Adressinformationen bereit, um den Endpunkt zu identifizieren oder mit ihm zu interagieren. Die Header können beispielsweise angeben, wie eine eingehende Nachricht zu bearbeiten ist, wohin der Endpunkt eine Antwortnachricht senden sollte, oder welche Instanz eines Diensts für die Bearbeitung einer eingehenden Nachricht verwendet werden soll, wenn mehrere Instanzen verfügbar sind.  
@@ -33,7 +33,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="definition-of-an-endpoint-address"></a>Definition einer Endpunktadresse  
  In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gestaltet eine <xref:System.ServiceModel.EndpointAddress> einen Endpunktverweis (Endpoint Reference, EPR), wie im WS-Adressierungsstandard definiert.  
   
- Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Der URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" setzt sich beispielsweise aus folgenden vier Teilen zusammen:  
+ Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Beispielsweise diese URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" besteht aus den folgenden vier Teilen:  
   
 -   Schema: http:  
   
@@ -49,7 +49,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
   
  Es gibt in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zwei Möglichkeiten, Endpunktadressen für einen Dienst anzugeben. Sie können eine absolute Adresse für jeden dem Dienst zugeordneten Endpunkt angeben, oder Sie können eine Basisadresse für den <xref:System.ServiceModel.ServiceHost> eines Diensts bereitstellen und dann eine relativ zu dieser Basisadresse definierte Adresse für jeden dem Dienst zugeordneten Endpunkt angeben. Sie können mit jedem dieser Verfahren entweder im Code oder in der Konfiguration die Endpunktadressen für einen Dienst angeben. Wenn Sie keine relative Adresse angeben, verwendet der Dienst die Basisadresse. Sie können für einen Dienst auch mehrere Adressen angeben, jedoch ist für jeden Dienst nur eine Basisadresse für jeden Transport zulässig. Wenn Sie mehrere Endpunkte haben, von denen jeder mit einer anderen Bindung konfiguriert ist, müssen deren Adressen eindeutig sein. Endpunkte, die die gleiche Bindung, aber verschiedene Verträge verwenden, können die gleiche Adresse verwenden.  
   
- Wenn Sie in IIS hosten, verwalten Sie die <xref:System.ServiceModel.ServiceHost>-Instanz nicht selbst. Für einen in IIS gehosteten Dienst ist die Basisadresse immer die in der SVC-Datei angegebene Adresse. Daher müssen Sie relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Die Angabe einer voll qualifizierten Endpunktadresse kann zu Fehlern bei der Bereitstellung des Diensts führen. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Bereitstellen eines IIS-gehosteten WCF-Diensts](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Wenn Sie in IIS hosten, verwalten Sie die <xref:System.ServiceModel.ServiceHost>-Instanz nicht selbst. Für einen in IIS gehosteten Dienst ist die Basisadresse immer die in der SVC-Datei angegebene Adresse. Daher müssen Sie relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Die Angabe einer voll qualifizierten Endpunktadresse kann zu Fehlern bei der Bereitstellung des Diensts führen. Weitere Informationen finden Sie unter [Bereitstellen eines WCF-Diensts (englischsprachig)](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definieren von Endpunktadressen in der Konfiguration  
  Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei der [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
@@ -58,7 +58,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
   
  Bei der <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> -Methode aufgerufen wird, (d. h., wenn die Hostinganwendung versucht, den Dienst zu starten), sucht das System für eine [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element mit einem Namensattribut, der angibt, "UE. Samples.HelloService". Wenn die [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element gefunden wird, das System lädt die angegebene Klasse und Endpunkte, die bereitgestellt werden, in der Konfigurationsdatei Endpunktdefinitionen erstellt. Dieser Mechanismus erlaubt Ihnen, mit nur zwei Zeilen Code einen Dienst zu laden und zu starten, ohne dass die Bindungs- und Adressierungsinformationen im Code enthalten sein müssen. Der Vorteil dieses Ansatzes zeigt sich darin, dass diese Änderungen ohne Neukompilierung oder erneute Bereitstellung der Anwendung durchgeführt werden können.  
   
- Die optionalen Header in deklariert eine [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Das folgende Beispiel veranschaulicht die Elemente, die verwendet werden, um Endpunkte in einer Konfigurationsdatei für einen Dienst anzugeben, der zwischen zwei Headern unterscheidet: "Gold"-Clients von http://tempuri1.org/ und "Standard"-Clients von http://tempuri2.org/. Der Client Aufrufen dieses Diensts benötigen die entsprechenden [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in der Konfigurationsdatei.  
+ Die optionalen Header in deklariert eine [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Im folgenden ist ein Beispiel für die Elemente verwendet, um die Endpunkte für einen Dienst in einer Konfigurationsdatei angeben, die zwischen zwei Headern unterscheidet: "Gold"-Clients von http://tempuri1.org/ und "Standard"-Clients von http://tempuri2.org/. Der Client Aufrufen dieses Diensts benötigen die entsprechenden [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in der Konfigurationsdatei.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   

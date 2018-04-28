@@ -1,12 +1,13 @@
 ---
 title: Exportieren von Schemas aus Klassen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF, schema import and export
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9e63223fce7f86b0cf2a64ba4e7aa2e54ca6219
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportieren von Schemas aus Klassen
 Verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter> -Klasse, um XML-XSD-Schemas (Schema Definition Language) aus Klassen zu generieren, die im Datenvertragsmodell verwendet werden. In diesem Thema ist das Verfahren zum Erstellen von Schemas beschrieben.  
@@ -54,9 +56,9 @@ Verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter> -K
 ## <a name="export-options"></a>Exportoptionen  
  Sie können die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> -Eigenschaft des <xref:System.Runtime.Serialization.XsdDataContractExporter> auf eine Instanz der <xref:System.Runtime.Serialization.ExportOptions> -Klasse festlegen, um verschiedene Aspekte des Exportprozesses zu steuern. Dabei können Sie die folgenden Optionen festlegen:  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Diese `Type` -Auflistung stellt die bekannten Typen für die zu exportierenden Typen dar. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Diese bekannten Typen werden bei jedem `Export`-Aufruf zusätzlich zu den Typen exportiert, die an die `Export`-Methode übergeben werden.  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Diese `Type` -Auflistung stellt die bekannten Typen für die zu exportierenden Typen dar. (Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Diese bekannten Typen werden bei jedem `Export`-Aufruf zusätzlich zu den Typen exportiert, die an die `Export`-Methode übergeben werden.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> Über diese Eigenschaft kann auch ein <xref:System.Runtime.Serialization.IDataContractSurrogate> -Element übergeben werden, das den Exportprozess anpasst. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> Über diese Eigenschaft kann auch ein <xref:System.Runtime.Serialization.IDataContractSurrogate> -Element übergeben werden, das den Exportprozess anpasst. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
 ## <a name="helper-methods"></a>Hilfsmethoden  
  Zusätzlich zu seiner Hauptaufgabe, dem Exportieren des Schemas, bietet `XsdDataContractExporter` auch mehrere nützliche Hilfsmethoden, die Informationen zu Typen liefern. Dazu gehören:  

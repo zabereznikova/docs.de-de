@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer-Zuordnungen  
- Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Datenvertrags-Serialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. Weitere Informationen finden Sie unter [Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
   
@@ -51,7 +51,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Alle Anmerkungen (außer den in diesem Dokument beschriebenen) werden ignoriert.  
   
-### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
+### <a name="xsschema-attributes"></a>\<xs: Schema >: Attribute  
   
 |Attribut|DataContract|  
 |---------------|------------------|  
@@ -63,7 +63,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht mit der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Ignoriert.|  
   
-### <a name="xsschema-contents"></a>\<xs:schema>: contents  
+### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -83,7 +83,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 ### <a name="general-information"></a>Allgemeine Informationen  
  Jeder komplexe Typ \<xs: complexType > wird einem Datenvertrag zugeordnet.  
   
-### <a name="xscomplextype-attributes"></a>\<xs:complexType>: attributes  
+### <a name="xscomplextype-attributes"></a>\<xs: complexType >: Attribute  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -94,7 +94,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`mixed`|Muss den Wert false aufweisen (Standardwert)|  
 |`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A`ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&amp;#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
   
-### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
+### <a name="xscomplextype-contents"></a>\<xs: complexType >: Inhalt  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -231,7 +231,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`id`|Ignoriert.|  
 |`name`|Unterstützt, wird dem Namen des Datenvertrags zugeordnet.|  
   
-### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
+### <a name="xssimpletype-contents"></a>\<simpleType >: Inhalt  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -247,7 +247,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
   
-### <a name="xsrestriction-attributes"></a>\<xs:restriction>: attributes  
+### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -345,14 +345,14 @@ public enum MyEnum
 ### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu. Andere `xs:list` -Variationen werden nicht unterstützt.  
   
-### <a name="xslist-attributes"></a>\<xs:list>: attributes  
+### <a name="xslist-attributes"></a>\<xs: List >: Attribute  
   
 |Attribut|Schema|  
 |---------------|------------|  
 |`itemType`|Unzulässig.|  
 |`id`|Ignoriert.|  
   
-### <a name="xslist-contents"></a>\<xs:list>: contents  
+### <a name="xslist-contents"></a>\<xs: List >: Inhalt  
   
 |Inhalt|Schema|  
 |--------------|------------|  

@@ -1,24 +1,26 @@
 ---
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei der Verwendung von <xref:System.ServiceModel.NetMsmqBinding> erläutert.  
@@ -52,7 +54,7 @@ In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../
   
  Da im Fall von Warteschlangen nicht immer eine Verbindung hergestellt ist, sind der Client und der Dienst möglicherweise nicht zur selben Zeit online. Daher müssen der Client und der Dienst Zertifikate out-of-band austauschen. Insbesondere der Client, bei dem sich das Dienstzertifikat (das mit einer Zertifizierungsstelle verkettet sein kann) im vertrauenswürdigen Speicher befindet, muss verlässlich mit dem richtigen Dienst kommunizieren. Zur Authentifizierung des Clients gleicht der Dienst das X.509-Zertifikat, das an die Nachricht angehängt ist, mit dem Zertifikat in seinem Speicher ab, um die Echtzeit des Clients zu überprüfen. Auch hier muss das Zertifikat mit einer Zertifizierungsstelle verkettet sein.  
   
- Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Der Windows-Anmeldeinformationstyp für Nachrichten verwendet das Kerberos-Protokoll.  
@@ -63,7 +65,7 @@ In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../
   
  Wenn dieser Anmeldeinformationstyp verwendet wird, muss der Dienst unter dem SERVICE-Konto ausgeführt werden.  
   
- Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Untersuchen, Kerberos, das Protokoll für verteilte Sicherheit in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet. Weitere Informationen finden Sie unter [Kerberos untersuchen, das Protokoll für verteilte Sicherheit in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Benutzernamenkennwort (Username Password)  
  Mit dieser Eigenschaft kann sich der Client beim Server durch Angabe eines Benutzernamenkennworts im Sicherheitsheader der Nachricht authentifizieren.  

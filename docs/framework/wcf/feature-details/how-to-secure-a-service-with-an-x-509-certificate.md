@@ -1,36 +1,38 @@
 ---
 title: 'Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
 Die Sicherung eines Diensts mithilfe eines X.509-Zertifikats ist eine grundlegende Technik, die von den meisten Bindungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
   
- Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code  
   
-1.  Erstellen Sie den Dienstvertrag und den implementierten Dienst. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Erstellen Sie den Dienstvertrag und den implementierten Dienst. Weitere Informationen finden Sie unter [entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
 2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode.Message> fest. Dies wird im folgenden Code veranschaulicht.  
   

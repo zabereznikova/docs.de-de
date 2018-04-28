@@ -1,28 +1,30 @@
 ---
-title: "Endpunkte: Adressen, Bindungen und Verträge"
-ms.custom: 
+title: 'Endpunkte: Adressen, Bindungen und Verträge'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpunkte: Adressen, Bindungen und Verträge
 Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst verläuft über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst anbietet.  
@@ -48,7 +50,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../../includes/indi
   
     -   Eine <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft, die die Sicherheits-ID des Diensts und eine Auflistung optionaler Nachrichtenheader darstellt. Die optionalen Nachrichtenheader werden verwendet, um zusätzliche und ausführlichere Adressinformationen bereitzustellen, um den Endpunkt zu identifizieren oder damit zu interagieren.  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+     Weitere Informationen finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   Bindung: Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Dies umfasst Folgendes:  
   
@@ -58,7 +60,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../../includes/indi
   
     -   Die erforderlichen Sicherheitsanforderungen (z.&#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Objektmodell durch die abstrakte Basisklasse <xref:System.ServiceModel.Channels.Binding> dargestellt. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Weitere Informationen finden Sie unter [WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Objektmodell durch die abstrakte Basisklasse <xref:System.ServiceModel.Channels.Binding> dargestellt. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Verträge: Der Dienstvertrag zeigt, welche Funktionen der Endpunkt dem Client zur Verfügung stellt. Ein Vertrag gibt Folgendes an:  
   
@@ -72,10 +74,10 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../../includes/indi
   
      Weitere Informationen zum Definieren eines Vertrags finden Sie unter [Entwerfen von Dienstverträgen](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Verhaltensweisen: Sie können das lokale Verhalten des Dienstendpunkts mithilfe von Endpunktverhaltensweisen anpassen. Endpunktverhaltensweisen erreichen dies durch Erstellen von teilnehmen eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Common Language Runtime. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Verhaltensweisen: Sie können das lokale Verhalten des Dienstendpunkts mithilfe von Endpunktverhaltensweisen anpassen. Endpunktverhaltensweisen erreichen dies durch Erstellen von teilnehmen eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Common Language Runtime. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. Weitere Informationen finden Sie unter [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definieren von Endpunkten  
- Sie können den Endpunkt für einen Dienst entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angeben. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) und [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+ Sie können den Endpunkt für einen Dienst entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angeben. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) und [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In diesem Abschnitt wird der Zweck von Bindungen, Endpunkten und Adressen erläutert. Darüber hinaus wird gezeigt, wie Sie eine Bindung und einen Endpunkt konfigurieren und wie Sie das `ClientVia`-Verhalten und die `ListenUri`-Eigenschaft verwenden.  

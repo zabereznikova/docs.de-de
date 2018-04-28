@@ -1,9 +1,7 @@
 ---
 title: Operator Mod(Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="mod-operator-visual-basic"></a>Operator Mod(Visual Basic)
+# <a name="mod-operator-visual-basic"></a>MOD-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt nur den Restwert zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -46,9 +43,31 @@ number1 Mod number2
 ## <a name="supported-types"></a>Unterstützte Typen  
  Alle numerischen Typen. Dazu gehören auch die Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
   
-## <a name="result"></a>Ergebnis  
- Das Ergebnis wird im weiteren Verlauf nach `number1` wird geteilt durch `number2`. Z. B. der Ausdruck `14 Mod 4` 2 ergibt.  
-  
+## <a name="result"></a>Ergebnis
+
+Das Ergebnis wird im weiteren Verlauf nach `number1` wird geteilt durch `number2`. Z. B. der Ausdruck `14 Mod 4` 2 ergibt.  
+
+> [!NOTE]
+> Es gibt einen Unterschied zwischen *Rest* und *Modulo* in der Mathematik mit verschiedenen Ergebnissen für negative Zahlen. Die `Mod` Operator in Visual Basic .NET Framework `op_Modulus` Operator und der zugrunde liegenden [Rem]<xref:System.Reflection.Emit.OpCodes.Rem> IL-Anweisung, die alle einen Remainder-Vorgang auszuführen.
+
+Das Ergebnis einer `Mod` Vorgang behält die Vorzeichen des Divisors, `number1`, und daher ist es möglicherweise positiv oder negativ sein. Das Ergebnis wird immer im Bereich (-`number2`, `number2`), exklusiv. Zum Beispiel:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Hinweise  
  Wenn entweder `number1` oder `number2` ist der Wert ein Gleitkommazahl der Gleitkommarest der Division wird zurückgegeben. Der Datentyp des Ergebnisses ist der kleinste Datentyp, die alle möglichen Werte enthalten kann, die aus der Division mit den Datentypen der resultieren `number1` und `number2`.  
   
@@ -71,7 +90,7 @@ number1 Mod number2
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>Gleitkomma Ungenauigkeit  
- Wenn Sie mit Gleitkommazahlen arbeiten, denken Sie daran, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Beim Arbeiten mit Gleitkommazahlen, denken Sie daran, dass sie nicht immer eine genaue dezimaldarstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Überladen  
  Die `Mod` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann. Wenn Ihr Code wendet `Mod` mit einer Instanz einer Klasse oder Struktur, die eine Überladung verwendet wird, werden Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

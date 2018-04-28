@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das WEB-HTTP-Programmiermodell in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt die grundlegenden Elemente zur Erstellung von WEB-HTTP-Diensten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereit. WEB-HTTP-Dienste in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wurden für den Zugriff von vielen möglichen Clients aus entwickelt, einschließlich Webbrowsern, und weisen folgende eindeutige Anforderungen auf:  
@@ -33,13 +33,13 @@ Das WEB-HTTP-Programmiermodell in [!INCLUDE[indigo1](../../../../includes/indigo
   
  Das WEB-HTTP-Programmiermodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erweitert den Einsatzbereich von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] um Webszenarien, wie beispielsweise WEB-HTTP-Dienste, AJAX- und JSON-Dienste sowie Syndication-Feeds (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX- und JSON-Dienste finden Sie unter [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Syndication finden Sie unter [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Welche Typen standardmäßig unterstützt werden weitere Informationen finden Sie unter der **UriTemplate-Abfragezeichenfolgenparameter und URLs** Abschnitt weiter unten. Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Welche Typen standardmäßig unterstützt werden weitere Informationen finden Sie unter der **UriTemplate-Abfragezeichenfolgenparameter und URLs** Abschnitt weiter unten. Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  Im WEB-HTTP-Programmiermodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Sicherheitsfunktionen nicht genutzt werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS und WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. Weitere Informationen finden Sie unter [IIS und WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>URI-Verarbeitung mit UriTemplate und UriTemplateTable  
  URI-Vorlagen stellen eine rationelle Syntax zur Angabe großer Sätze strukturell ähnlicher URIs bereit. Beispielsweise wird mit der folgenden Vorlage der Satz aller aus drei Segmenten bestehenden URIs angegeben, die mit "a" beginnen, mit "c" enden und im mittleren Segment einen beliebigen Wert enthalten können: a/{segment}/c  

@@ -1,33 +1,35 @@
 ---
 title: '&lt;clientCertificate&gt; des &lt;clientCredentials&gt;-Elements'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; des &lt;clientCredentials&gt;-Elements
 Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
 \<Verhalten >  
-\<EndpointBehaviors >  
-\<Verhalten >  
-\<ClientCredentials >  
+\<clientCredentials>  
 \<ClientCertificate >  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,7 +52,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |`findValue`|Eine Zeichenfolge, die den Wert angibt, nach dem im X.509-Zertifikatspeicher gesucht werden soll. Der im Attribut enthaltene Typ muss den Anforderungen des `X509FindType`-Attributwerts entsprechen. Der Standardwert ist eine leere Zeichenfolge.|  
 |`storeLocation`|Gibt den Speicherort des zum Authentifizieren des Clients am Dienst verwendeten X.509-Zertifikats an. Folgende Werte sind gültig:<br /><br /> -LocalMachine: der auf dem lokalen Computer zugewiesene Zertifikatspeicher.<br />-CurrentUser: der für den aktuellen Benutzer zugewiesene Zertifikatspeicher.<br /><br /> Die Standardeinstellung ist LocalMachine. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
 |`storeName`|Gibt den Namen des X.509-Zertifikatspeichers an, der durchsucht werden soll. Folgende Werte sind gültig:<br /><br /> -AddressBook: Zertifikatspeicher für andere Benutzer.<br />-AuthRoot: Der Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).<br />-CertificateAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen (CAs).<br />-Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.<br />-My: Der Zertifikatspeicher für persönliche Zertifikate.<br />-Root: Der Zertifikatspeicher für vertrauenswürdige Stamm-Zertifizierungsstelle (CA).<br />-TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Der im `findValue`-Attribut enthaltene Typ muss den Anforderungen dieses Attributs entsprechen. Folgende Werte sind gültig:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|X509FindType|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Der im `findValue`-Attribut enthaltene Typ muss den Anforderungen dieses Attributs entsprechen. Folgende Werte sind gültig:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -59,10 +61,10 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Konfigurationselement gibt das Zertifikat an, das verwendet wird, um den Client mit diesem Element zu authentifizieren. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Dieses Konfigurationselement gibt das Zertifikat an, das verwendet wird, um den Client mit diesem Element zu authentifizieren. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

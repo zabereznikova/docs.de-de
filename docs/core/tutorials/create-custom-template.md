@@ -1,21 +1,19 @@
 ---
 title: Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 description: In diesem interessanten Tutorial erfahren Sie, wie Sie eine benutzerdefinierte Vorlage für den dotnet new-Befehl erstellen.
-keywords: .NET, .NET Core, vorlage, vorlagen, tutorial, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -74,7 +72,7 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
 
 1. Fügen Sie im **\<packageTypes>**-Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
 
-   | Element            | Typ   | Beschreibung |
+   | Element            | Typ   | description |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
    | **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |

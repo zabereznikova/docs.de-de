@@ -1,12 +1,13 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Sicherheitstokendiensts'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,33 +16,34 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Vorgehensweise: Erstellen eines Sicherheitstokendiensts
 Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation definierte Protokoll. Dieses Protokoll definiert Meldungsformate und Meldungsaustauschmuster zum Herausgeben, Erneuern, Abbrechen und Überprüfen von Sicherheitstoken. Ein angegebener Sicherheitstokendienst stellt eine oder mehrere dieser Fähigkeiten zur Verfügung. Dieses Thema behandelt das am häufigsten verwendete Szenario: das Implementieren der Tokenausstellung.  
   
 ## <a name="issuing-tokens"></a>Ausstellen von Token  
- WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Der `RequestSecurityToken`-Meldung ist der Aktions-URI "http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue" zugeordnet. Der `RequestSecurityTokenResponse`-Meldung ist der Aktions-URI "http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue" zugeordnet.  
+ WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Der Aktions-URI mit der `RequestSecurityToken` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Der Aktions-URI mit der `RequestSecurityTokenResponse` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Anforderungsmeldungsstruktur  
  Die Anforderungsmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
   
--   Ein Anforderungstyp-URI mit dem Wert "http://schemas.xmlsoap.org/ws/2005/02/trust/Issue"  
+-   Geben Sie eine Anforderung URI mit einem Wert von http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Ein Tokentyp-URI Für die Token der Sicherheitsassertions-Markupsprache 1.1 (Security Assertions Markup Language, SAML) lautet der Wert dieses URIs "http://docs.oasis-open.org/wss/oasis-wss SAML #SAMLV1.1".  
+-   Ein Tokentyp-URI Für Security Assertions Markup Language (SAML) 1.1-Token ist der Wert dieses URIs http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Ein Schlüsselgrößenwert, der die Anzahl der Bits im Schlüssel angibt, der dem ausgestellten Token zugeordnet werden soll.  
   
--   Ein Schlüsseltyp-URI Für symmetrische Schlüssel lautet der Wert dieses URIs "http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey".  
+-   Ein Schlüsseltyp-URI Für symmetrische Schlüssel ist der Wert dieses URIs http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
   
  Außerdem könnten ein paar andere Elemente vorhanden sein:  
   
@@ -109,7 +111,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Weitere Informationen finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Erstellen von Antwortmeldungen  
  Sobald der Sicherheitstokendienst die Problemanforderung verarbeitet und das auszustellende Token zusammen mit dem Prüfschlüssel erstellt, muss die Antwortmeldung erstellt werden, die mindestens das angeforderte Token, das Prüftoken und die ausgestellten Tokenverweise enthalten muss. Das ausgestellte Token ist normalerweise ein aus der <xref:System.IdentityModel.Tokens.SamlSecurityToken> erstelltes <xref:System.IdentityModel.Tokens.SamlAssertion>, wie im folgenden Beispiel gezeigt.  
@@ -122,7 +124,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]wie das Prüftoken erstellt, wenn der Client und der Sicherheitstoken-sowohl Schlüsselmaterial für den gemeinsam verwendeten Schlüssel bieten, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] wie das Prüftoken erstellt, wenn der Client und der Sicherheitstoken-sowohl Schlüsselmaterial für den gemeinsam verwendeten Schlüssel bieten, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Die ausgestellten Tokenverweise werden durch Erstellen von Instanzen der <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>-Klasse erstellt.  
   

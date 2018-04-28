@@ -1,27 +1,29 @@
 ---
 title: Verwenden der Message-Klasse
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Verwenden der Message-Klasse
 Die <xref:System.ServiceModel.Channels.Message>-Klasse ist für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wesentlich. Die gesamte Kommunikation zwischen Clients und Diensten führt letztlich zu gesendeten und empfangenen <xref:System.ServiceModel.Channels.Message>-Instanzen.  
@@ -172,7 +174,7 @@ Die <xref:System.ServiceModel.Channels.Message>-Klasse ist für [!INCLUDE[indigo
   
  Rufen Sie mit der <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A>-Methode einen bestimmten Header ab. Diese Methode nimmt den Namen und Namespace des zu suchenden Headers an, und gibt seinen Index zurück. Wenn der Header mehrmals auftritt, wird eine Ausnahme ausgelöst. Wenn der Header nicht gefunden wurde, wird -1 zurückgegeben.  
   
- Im SOAP-Headermodell können Header einen `Actor`-Wert aufweisen, der den gewünschten Empfänger des Headers angibt. Die grundlegendste `FindHeader`-Überladung sucht nur Header, die für den letzten Empfänger der Nachricht vorgesehen sind. Mit einer anderen Überladung können Sie jedoch angeben, welche `Actor`-Werte in der Suche enthalten sind. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] zur SOAP-Spezifikation.  
+ Im SOAP-Headermodell können Header einen `Actor`-Wert aufweisen, der den gewünschten Empfänger des Headers angibt. Die grundlegendste `FindHeader`-Überladung sucht nur Header, die für den letzten Empfänger der Nachricht vorgesehen sind. Mit einer anderen Überladung können Sie jedoch angeben, welche `Actor`-Werte in der Suche enthalten sind. Weitere Informationen finden Sie in der SOAP-Spezifikation.  
   
  Eine <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>-Methode wird für das Kopieren von Headern aus einer <xref:System.ServiceModel.Channels.MessageHeaders>-Auflistung zu einem Array von <xref:System.ServiceModel.Channels.MessageHeaderInfo>-Objekten bereitgestellt.  
   

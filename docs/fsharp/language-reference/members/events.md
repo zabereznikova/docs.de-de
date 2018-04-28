@@ -1,20 +1,17 @@
 ---
 title: Ereignisse (F#)
 description: Erfahren Sie, wie die f#-Ereignisse aktivieren Sie Benutzeraktionen Funktionsaufrufe Zuordnen der GUI-Programmierung wichtig sind.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>Ereignisse
 
@@ -33,7 +30,7 @@ Der Typ der `Add`-Methode ist `('a -> unit) -> unit`. Daher akzeptiert die Ereig
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>Erstellen von benutzerdefinierten Ereignissen
-F#-Ereignisse werden durch die f# dargestellt [Ereignis](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) Klasse implementiert die [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) Schnittstelle. `IEvent`ist eine Schnittstelle, die die Funktionalität zweier anderer Schnittstellen kombiniert `System.IObservable<'T>` und [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Daher verfügen `Event`s über die gleiche Funktionalität wie Delegaten in anderen Sprachen und zusätzlich über die Funktionen von `IObservable`. F#-Ereignisse unterstützen somit die Ereignisfilterung und das Verwenden von F#-Funktionen der ersten Klasse und von Lambda-Ausdrücken als Ereignishandler. Diese Funktionalität wird bereitgestellt, der [-Ereignismodul](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F#-Ereignisse werden durch die f# dargestellt [Ereignis](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) Klasse implementiert die [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) Schnittstelle. `IEvent` ist eine Schnittstelle, die die Funktionalität zweier anderer Schnittstellen kombiniert `System.IObservable<'T>` und [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Daher verfügen `Event`s über die gleiche Funktionalität wie Delegaten in anderen Sprachen und zusätzlich über die Funktionen von `IObservable`. F#-Ereignisse unterstützen somit die Ereignisfilterung und das Verwenden von F#-Funktionen der ersten Klasse und von Lambda-Ausdrücken als Ereignishandler. Diese Funktionalität wird bereitgestellt, der [-Ereignismodul](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Zum Erstellen eines Ereignisses für eine Klasse, das sich wie ein beliebiges anderes .NET Framework-Ereignis verhält, fügen Sie der Klasse eine `let`-Bindung hinzu, die ein `Event` als Feld in einer Klasse definiert. Sie können den gewünschten Ereignisargumenttyp als Typargument angeben oder den Wert freilassen und einen geeigneten Wert durch den Compiler bestimmen lassen. Sie müssen außerdem einen Ereignismember definieren, der das Ereignis als CLI-Ereignis verfügbar macht. Bei diesem Member müssen die [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) Attribut. Er wird ähnlich wie eine Eigenschaft deklariert, und seine Implementierung ist nur ein Aufruf an die [veröffentlichen](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) -Eigenschaft des Ereignisses. Benutzer der Klasse können die `Add`-Methode des veröffentlichten Ereignisses verwenden, um einen Handler hinzuzufügen. Das Argument für die `Add`-Methode kann ein Lambda-Ausdruck sein. Sie können die `Trigger`-Eigenschaft des Ereignisses verwenden, um das Ereignis auszulösen und das Argument an die Handlerfunktion zu übergeben. Dies wird im folgenden Codebeispiel veranschaulicht. In diesem Beispiel ist das abgeleitete Typargument für das Ereignis ein Tupel, das die Argumente für den Lambda-Ausdruck darstellt.
 
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Control.Event-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control.Event &#60; " T &#62; Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control.Event&#60;' t&#62; Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control.Event &#60; " -Delegaten "Args &#62; Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control.Event&#60;'Delegat', Args&#62; Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

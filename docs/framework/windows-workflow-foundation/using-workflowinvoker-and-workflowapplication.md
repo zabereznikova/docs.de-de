@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Verwenden von WorkflowInvoker und WorkflowApplication
 Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md) und [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflow
 > [!NOTE]
 >  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
   
- <xref:System.Activities.WorkflowInvoker> stellt auch asynchrone Versionen der Aufrufmethode bereit. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> und <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> stellt auch asynchrone Versionen der Aufrufmethode bereit. Weitere Informationen finden Sie unter <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> und <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Festlegen der Eingabeargumente eines Workflows  
  Daten können mit einem Wörterbuch von Eingabeparametern, die nach Argumentname sortiert sind und so den Eingabeargumenten des Workflows zugeordnet werden können, in einen Workflow übergeben werden. In diesem Beispiel wird ein <xref:System.Activities.Statements.WriteLine>-Objekt aufgerufen, und der Wert für das zugehörige <xref:System.Activities.Statements.WriteLine.Text%2A>-Argument wird mit dem Wörterbuch von Eingabeparametern angegeben.  

@@ -1,28 +1,28 @@
 ---
 title: Datenvertrag-Ersatzzeichen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
@@ -75,7 +75,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem daten
   
  Der `targetType`-Parameter verweist auf den deklarierten Typ des Members. Dieser Parameter ist der Ersatzzeichentyp, der durch die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode zurückgegeben wird. Vom Serialisierungsprogramm wird nicht erzwungen, dass das zurückgegebene Objekt diesem Typ zugeordnet werden kann. Die `obj` -Parameter ist das Objekt zu serialisieren, und wird in sein Ersatzzeichen konvertiert werden, falls erforderlich. Diese Methode muss den Eingabeobjekttyp zurückgeben, wenn das Ersatzzeichen das Objekt nicht behandelt. Andernfalls wird das neue Ersatzzeichenobjekt zurückgegeben. Das Ersatzzeichen wird nicht aufgerufen, wenn das Objekt NULL ist. Innerhalb dieser Methode werden möglicherweise zahlreiche Ersatzzeichenzuordnungen für verschiedene Instanzen definiert.  
   
- Wenn Sie ein <xref:System.Runtime.Serialization.DataContractSerializer> erstellen, können Sie es anweisen, Objektverweise beizubehalten. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Dazu wird der `preserveObjectReferences`-Parameter in seinem Konstruktor auf `true` festlegt. In diesem Fall wird das Ersatzzeichen für ein Objekt nur ein einziges Mal aufgerufen, weil alle nachfolgenden Serialisierungen lediglich den Verweis in den Stream schreiben. Wenn `preserveObjectReferences` auf `false` festgelegt wird, dann wird das Ersatzzeichen jedes Mal aufgerufen, wenn eine Instanz gefunden wird.  
+ Wenn Sie ein <xref:System.Runtime.Serialization.DataContractSerializer> erstellen, können Sie es anweisen, Objektverweise beizubehalten. (Weitere Informationen finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Dazu wird der `preserveObjectReferences`-Parameter in seinem Konstruktor auf `true` festlegt. In diesem Fall wird das Ersatzzeichen für ein Objekt nur ein einziges Mal aufgerufen, weil alle nachfolgenden Serialisierungen lediglich den Verweis in den Stream schreiben. Wenn `preserveObjectReferences` auf `false` festgelegt wird, dann wird das Ersatzzeichen jedes Mal aufgerufen, wenn eine Instanz gefunden wird.  
   
  Wenn der Typ der serialisierten Instanz vom deklarierten Typ abweicht, werden Typinformationen in den Stream geschrieben, z. B. `xsi:type`, um die Deserialisierung der Instanz am anderen Ende zu ermöglichen. Dieser Prozess tritt unabhängig davon auf, ob das Objekt ersetzt wurde oder nicht.  
   
@@ -144,7 +144,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem daten
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes-Methode  
  Diese Methode gewinnt aus dem Schema definierte benutzerdefinierte Datentypen. Die Methode ist für den Import von Schemas optional.  
   
- Die Methode wird zu Beginn des Schemaexports und -imports aufgerufen. Die Methode gibt die benutzerdefinierten Datentypen zurück, die im exportierten oder importierten Schema verwendet werden. An die Methode wird ein <xref:System.Collections.ObjectModel.Collection%601> übergeben (der `customDataTypes`), wobei es sich um eine Sammlung von Typen handelt. Die Methode sollte dieser Sammlung zusätzliche bekannte Typen hinzufügen. Die bekannten benutzerdefinierten Datentypen werden benötigt, um die Serialisierung und Deserialisierung von benutzerdefinierten Daten mit dem <xref:System.Runtime.Serialization.DataContractSerializer> zu ermöglichen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Die Methode wird zu Beginn des Schemaexports und -imports aufgerufen. Die Methode gibt die benutzerdefinierten Datentypen zurück, die im exportierten oder importierten Schema verwendet werden. An die Methode wird ein <xref:System.Collections.ObjectModel.Collection%601> übergeben (der `customDataTypes`), wobei es sich um eine Sammlung von Typen handelt. Die Methode sollte dieser Sammlung zusätzliche bekannte Typen hinzufügen. Die bekannten benutzerdefinierten Datentypen werden benötigt, um die Serialisierung und Deserialisierung von benutzerdefinierten Daten mit dem <xref:System.Runtime.Serialization.DataContractSerializer> zu ermöglichen. Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementieren eines Ersatzzeichens  
  Um das Datenvertrag-Ersatzzeichen innerhalb von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, müssen Sie einigen besonderen Prozeduren folgen.  

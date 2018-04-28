@@ -1,20 +1,17 @@
 ---
 title: Funktionen der F#-Entwicklungsumgebung
-description: "Erfahren Sie, welche Funktionen von Visual Studio 2012 in f# unterstützt werden."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Erfahren Sie, welche Funktionen von Visual Studio 2012 in f# unterstützt werden.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Funktionen der Visual F#-Entwicklungsumgebung
 
@@ -36,7 +33,7 @@ Weitere Informationen zu den Vorlagen für den Datenzugriff, finden Sie unter [T
 
 In der folgenden Tabelle werden die Projekteigenschaften Funktionen unterstützt und nicht in f# unterstützt zusammengefasst. Weitere Informationen finden Sie unter [Konfigurieren von Projekten](configuring-projects.md) und [Einführung in den Projekt-Designer](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7).
 
-|Projekteinstellung|In f# unterstützt?|Notizen|
+|Projekteinstellung|In f# unterstützt?|Hinweise|
 |---------------|----------------|-----|
 |Ressourcendateien|Ja||
 |Erstellen, Debuggen und Einstellungen für attributverweise|Ja||
@@ -52,7 +49,7 @@ In der folgenden Tabelle werden die Projekteigenschaften Funktionen unterstützt
 ## <a name="code-and-text-editor-features"></a>Code und Text-Editor-Funktionen
 Die folgenden Funktionen von Visual Studiocode und Text-Editoren werden in f# unterstützt. Allgemeine Informationen zum Bearbeiten von Code in Visual Studio und der Text-Editor-Funktionen finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
-|Funktion|Beschreibung|In f# unterstützt?|
+|Feature|Beschreibung|In f# unterstützt?|
 |-------|-----------|----------------|
 |Kommentieren Sie automatisch|Ermöglicht es Ihnen, den Kommentar zu kennzeichnen oder auszukommentieren Codeabschnitte.|Ja|
 |Automatisch formatieren|Formatiert den Code mit Standardeinzug und Stil.|Nein|
@@ -71,7 +68,7 @@ Die folgenden Funktionen von Visual Studiocode und Text-Editoren werden in f# un
 ## <a name="intellisense-features"></a>IntelliSense-Funktionen
 In der folgenden Tabelle werden die IntelliSense-Funktionen unterstützt und nicht in f# unterstützt zusammengefasst. Allgemeine Informationen zu IntelliSense finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense).
 
-|Funktion|Beschreibung|In f# unterstützt?|
+|Feature|Beschreibung|In f# unterstützt?|
 |-------|-----------|----------------|
 |Automatisches Implementieren von Schnittstellen|Generiert Codestubs für Schnittstellenmethoden.|Nein|
 |Codeausschnitte|Wird Code aus einer Bibliothek mit üblichen Konstrukte der Codierung in Themen eingefügt.|Nein|
@@ -87,7 +84,7 @@ Die Umgestaltung von f#-Code wird in Visual Studio 2012 nicht unterstützt.
 ## <a name="debugging-features"></a>Debugfunktionen
 In der folgenden Tabelle sind die Funktionen, die verfügbar, beim Debuggen von F#-Code sind zusammengefasst. Allgemeine Informationen zu Visual Studio-Debugger, finden Sie unter [Debuggen in Visual Studio](https://msdn.microsoft.com/library/sc65sadd.aspx).
 
-|Funktion|Beschreibung|In f# unterstützt?|
+|Feature|Beschreibung|In f# unterstützt?|
 |-------|-----------|----------------|
 |Fenster |Enthält die automatische oder temporäre Variablen.|Nein|
 |Haltepunkte|Ermöglicht das Anhalten der Ausführung von Code zu bestimmten Zeitpunkten während des Debuggens.|Ja|
@@ -106,7 +103,7 @@ In der folgenden Tabelle werden die Unterstützung für f# in Visual Studio-Tool
 |Tool|Beschreibung|In f# unterstützt?|
 |----|-----------|----------------|
 |Aufrufhierarchie|Zeigt Aufrufe die geschachtelte Struktur der Funktion im Code.|Nein|
-|Codemetrik|Sammelt Informationen zu Ihrem Code, z. B. Zeilenanzahl an.|Nein|
+|Codemetriken|Sammelt Informationen zu Ihrem Code, z. B. Zeilenanzahl an.|Nein|
 |Klassenansicht|Stellt eine basierende Ansicht des Codes in einem Projekt.|Nein|
 |[Fenster „Fehlerliste“](/visualstudio/ide/reference/error-list-window)|Zeigt eine Liste von Fehlern im Code.|Ja|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|Ermöglicht es, Ihnen (oder kopieren und Einfügen) F#-code und führen Sie es sofort, unabhängig von der Erstellung des Projekts. F# Interactive-Fenster wird eine Read, Evaluate, Print Loop (REPL).|Ja|

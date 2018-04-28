@@ -1,20 +1,17 @@
 ---
 title: Konfigurieren von Projekten (f#)
 description: Erfahren Sie, wie die Projekt-Designer verwenden, bei der Arbeit mit F#-Projekten in Visual Studio.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Konfigurieren von Projekten in Visual Studio
 
@@ -28,9 +25,9 @@ Die **Projekt-Designer** und Allgemeine Verwendungsmöglichkeiten sind vollstän
 
 |Projekt-Designer-Seite|Verwandte links|Beschreibung|
 |---------------------|-------------|-----------|
-|`Application`|[Seite "Anwendung", Projekt-Designer &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Ermöglicht es Ihnen anzugeben, auf Anwendungsebene Einstellungen und Eigenschaften, z. B., ob Sie erstellen eine Bibliothek oder eine ausführbare Datei, welche Version von .NET Framework die Anwendung abzielt und Informationen zu, in dem die Ressource, die Dateien der Anwendung verwendet werden gespeichert.|
-|`Build`|[Erstellen Sie die Seite, Projekt-Designer &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Können Sie steuern, wie der Code kompiliert wird.|
-|`Build Events`|[Erstellen Sie die Seite "Ereignisse", Projekt-Designer &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Können Sie Befehle zum Ausführen vor oder nach der Kompilierung angeben.|
+|`Application`|[Seite "Anwendung", Projekt-Designer &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Ermöglicht es Ihnen anzugeben, auf Anwendungsebene Einstellungen und Eigenschaften, z. B., ob Sie erstellen eine Bibliothek oder eine ausführbare Datei, welche Version von .NET Framework die Anwendung abzielt und Informationen zu, in dem die Ressource, die Dateien der Anwendung verwendet werden gespeichert.|
+|`Build`|[Seite "erstellen", Projekt-Designer &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Können Sie steuern, wie der Code kompiliert wird.|
+|`Build Events`|[Seite "Buildereignisse", Projekt-Designer &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Können Sie Befehle zum Ausführen vor oder nach der Kompilierung angeben.|
 |`Debug`|[Seite „Debuggen“, Projekt-Designer](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Können Sie steuern, wie die Anwendung während des Debuggens ausgeführt wird. Dazu gehören, was zu übergebende Befehlszeile verwenden und Neuigkeiten in das Verzeichnis der Anwendung ab, und alle speziellen Modi werden z. B. systemeigenem Code und SQL, soll-Debuggen.|
 |`Reference Paths`|[Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)|Ermöglicht es Ihnen anzugeben, wo nach Assemblys suchen soll, von denen der Code abhängt.|
 

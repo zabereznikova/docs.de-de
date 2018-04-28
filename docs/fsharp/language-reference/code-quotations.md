@@ -1,20 +1,17 @@
 ---
 title: Zitieren von Code (F#)
-description: "Erfahren Sie mehr über f# Zitieren von Code, eine Sprachfunktion, die zum Generieren von und Arbeiten mit f#-Code-Ausdrücke programmgesteuert ermöglicht."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Erfahren Sie mehr über f# Zitieren von Code, eine Sprachfunktion, die zum Generieren von und Arbeiten mit f#-Code-Ausdrücke programmgesteuert ermöglicht.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>Zitieren von Code
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
-Sie können auch die drei aktive Muster in den [ExprShape-Modul](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) um Ausdrucksbaumstrukturen mit weniger aktiven Mustern zu durchlaufen. Diese mit aktiven Mustern können nützlich sein, wenn Durchlaufen einer Struktur verwendet werden sollen, aber nicht alle Informationen in den meisten Knoten erforderlich. Wenn Sie diese Muster verwenden, alle f#-Ausdruck übereinstimmt, eines der folgenden drei Muster: `ShapeVar` , wenn der Ausdruck eine Variable ist `ShapeLambda` ist der Ausdruck einen Lambda-Ausdruck oder `ShapeCombination` , wenn der Ausdruck etwas anderes ist. Wenn Sie mithilfe der aktive Muster wie im vorherigen Codebeispiel eine Ausdrucksbaumstruktur zu durchlaufen, müssen Sie viele weitere Muster verwenden, um alle möglichen f# Ausdruckstypen zu behandeln, und wird der Code komplexer sein. Weitere Informationen finden Sie unter [ExprShape.ShapeVar &#124; ShapeLambda &#124; Aktives ShapeCombination-Muster](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+Sie können auch die drei aktive Muster in den [ExprShape-Modul](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) um Ausdrucksbaumstrukturen mit weniger aktiven Mustern zu durchlaufen. Diese mit aktiven Mustern können nützlich sein, wenn Durchlaufen einer Struktur verwendet werden sollen, aber nicht alle Informationen in den meisten Knoten erforderlich. Wenn Sie diese Muster verwenden, alle f#-Ausdruck übereinstimmt, eines der folgenden drei Muster: `ShapeVar` , wenn der Ausdruck eine Variable ist `ShapeLambda` ist der Ausdruck einen Lambda-Ausdruck oder `ShapeCombination` , wenn der Ausdruck etwas anderes ist. Wenn Sie mithilfe der aktive Muster wie im vorherigen Codebeispiel eine Ausdrucksbaumstruktur zu durchlaufen, müssen Sie viele weitere Muster verwenden, um alle möglichen f# Ausdruckstypen zu behandeln, und wird der Code komplexer sein. Weitere Informationen finden Sie unter [ExprShape.ShapeVar&#124;ShapeLambda&#124;aktives ShapeCombination-Muster](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 Das folgende Codebeispiel kann als Grundlage für komplexere Durchläufe verwendet werden. In diesem Code wird eine Ausdrucksbaumstruktur für einen Ausdruck, der einen Funktionsaufruf umfasst erstellt `add`. Die [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) aktives Muster dient zum Erkennen von jeder Aufruf von `add` in der Ausdrucksbaumstruktur. Dieses aktive Muster weist die Argumenten des Aufrufs an die `exprList` Wert. In diesem Fall fallen nur zwei, sodass diese herausziehen und die Funktion ist für die Argumente rekursiv aufgerufen. Die Ergebnisse werden in einer codequotation, die einen Aufruf darstellt eingefügt `mul` mithilfe des Operators Splice (`%%`). Die `println` Funktion aus dem vorherigen Beispiel wird verwendet, um die Ergebnisse anzuzeigen.
 

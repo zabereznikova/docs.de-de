@@ -1,27 +1,29 @@
 ---
 title: Hosten von Workflowdiensten
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9f8d38b97a422d2d59e2dea05d53cf6f9684d99
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-workflow-services"></a>Hosten von Workflowdiensten
-Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste auch, können Workflowdienste in allen verwalteten Anwendungen, unter Internetinformationsdienste (IIS) oder unter Windows Process Activation Services (WAS) gehostet werden. Außerdem können Workflowdienste unter Windows Server AppFabric gehostet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=196494), und [AppFabric-Hostingkonzepte](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die verschiedenen Methoden zum Host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Services Siehe [Hostingdienste](../../../../docs/framework/wcf/hosting-services.md).  
+Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste auch, können Workflowdienste in allen verwalteten Anwendungen, unter Internetinformationsdienste (IIS) oder unter Windows Process Activation Services (WAS) gehostet werden. Außerdem können Workflowdienste unter Windows Server AppFabric gehostet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=196494), und [AppFabric-Hostingkonzepte](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die verschiedenen Methoden zum Host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Services Siehe [Hostingdienste](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung  
  Verwenden Sie die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse, um einen Workflowdienst in einer verwalteten Anwendung zu hosten. Mit dem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Konstruktor können Sie eine Singleton-Workflowdienstinstanz, eine Workflowdienstdefinition oder eine Aktivität angeben, die die Workflowmessagingaktivitäten verwendet. Aufrufen von <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> bewirkt, dass den Dienst mit dem eingehende Nachrichten überwachen.  
@@ -56,13 +58,13 @@ Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagi
  Eine xamlx-Datei, die einen Workflowdienst definiert, darf ein <`Service`>-Stammelements oder ein Stammelement, das jeden von abgeleiteten Typ enthält <xref:System.Workflow.ComponentModel.Activity>. Beim Verwenden der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Aktivitätsvorlage wird eine XAMLX-Datei erstellt. Beim Verwenden der Vorlage "WCF-Workflowdienst" wird eine XAMLX-Datei erstellt.  
   
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hosten eines Workflowdiensts unter Windows Server AppFabric  
- Das Hosten eines Workflowdiensts unter Windows Server App Fabric erfolgt auf dieselbe Weise wie das Hosten unter IIS/WAS. Der einzige Unterschied besteht darin, dass Windows Server App Fabric installiert wird. Windows Server App Fabric stellt Tools bereit, die dem Internetinformationsdienste-Manager sowie PowerShell-Commandlets hinzugefügt werden. Diese Tools vereinfachen das Bereitstellen, Verwalten und Nachverfolgen von Workflowdiensten und WCF-Diensten. sein. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric finden Sie unter [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
+ Das Hosten eines Workflowdiensts unter Windows Server App Fabric erfolgt auf dieselbe Weise wie das Hosten unter IIS/WAS. Der einzige Unterschied besteht darin, dass Windows Server App Fabric installiert wird. Windows Server App Fabric stellt Tools bereit, die dem Internetinformationsdienste-Manager sowie PowerShell-Commandlets hinzugefügt werden. Diese Tools vereinfachen das Bereitstellen, Verwalten und Nachverfolgen von Workflowdiensten und WCF-Diensten. sein. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Server AppFabric finden Sie unter [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
   
 ## <a name="referencing-custom-activities"></a>Verweisen auf benutzerdefinierte Aktivitäten  
  Verweise auf benutzerdefinierte Aktivitäten müssen hinzugefügt werden, um die <`Assemblies`> Handlerbereich unter dem <`System.Web.Compilation`>, damit sie in die Anwendungsdomäne geladen werden und die Verwendung von XAML-Deserialisierer wird nach Typen suchen können. Diese Einstellungen können auf Anwendungsebene oder in der Web.config-Stammdatei vorgenommen werden, falls die Einstellungen für alle Anwendungen auf dem Computer übernommen werden sollen.  
   
 ## <a name="deployment"></a>Bereitstellung  
- Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][MS-Bereitstellungstool](http://go.microsoft.com/fwlink/?LinkId=178690)  
+ Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. Weitere Informationen finden Sie unter [MS-Bereitstellungstool](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Interne Funktionsweise des Workflowdiensthosts](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  

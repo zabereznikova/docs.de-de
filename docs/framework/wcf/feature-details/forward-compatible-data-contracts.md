@@ -1,13 +1,13 @@
 ---
-title: "Aufwärtskompatible Datenverträge"
-ms.custom: 
+title: Aufwärtskompatible Datenverträge
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>Aufwärtskompatible Datenverträge
-Ein Merkmal des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenvertragssystems ist, dass sich Verträge im Laufe der Zeit ohne Unterbrechung weiterentwickeln können. Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweisen: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Ein Merkmal des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenvertragssystems ist, dass sich Verträge im Laufe der Zeit ohne Unterbrechung weiterentwickeln können. Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann. Weitere Informationen finden Sie unter [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
  Sie können beim Erstellen neuer Versionen eines bestehenden Datenvertrags die meisten Versionsverwaltungsfunktionen nach Bedarf verwenden. Allerdings eine Versionsverwaltungsfunktion, *Round-Tripping*, muss in den Typ der ersten Version erstellt werden, damit Sie richtig funktioniert.  
   

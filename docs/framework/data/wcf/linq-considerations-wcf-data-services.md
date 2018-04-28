@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verfassen und Ausführen von Abfragen für eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst, finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfrag
  LINQ ermöglicht es Ihnen, Abfragen für eine Auflistung von Objekten zu verfassen, die <xref:System.Collections.Generic.IEnumerable%601> implementiert. Sowohl die **Hinzufügen eines Dienstverweises** in Visual Studio im Dialogfeld und das Tool DataSvcUtil.exe dienen zum Generieren einer Darstellung eines ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Diensts als entitätscontainerklasse, die von erben <xref:System.Data.Services.Client.DataServiceContext>, als auch Objekte, die die zurückgegebenen Entitäten im Feeds darstellen. Diese Tools generieren auch Eigenschaften der Entitätscontainerklasse für die Auflistungen, die als Feeds vom Dienst verfügbar gemacht werden. Jede Eigenschaft der Klasse, die den Datendienst kapselt, gibt eine <xref:System.Data.Services.Client.DataServiceQuery%601> zurück. Da die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse die von LINQ definierte <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert, können Sie eine LINQ-Abfrage für vom Datendienst verfügbar gemachte Feeds verfassen. Diese Abfrage wird von der Clientbibliothek in einen Abfrageanforderungs-URI übersetzt, der bei der Ausführung an den Datendienst gesendet wird.  
   
 > [!IMPORTANT]
->  In der LINQ-Syntax können mehr Abfragen ausgedrückt werden als in der von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensten verwendeten URI-Syntax. Wenn die Abfrage keinem URI im Zieldatendienst zugeordnet werden kann, wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] die [nicht unterstützte LINQ-Methoden](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) in diesem Thema.  
+>  In der LINQ-Syntax können mehr Abfragen ausgedrückt werden als in der von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensten verwendeten URI-Syntax. Wenn die Abfrage keinem URI im Zieldatendienst zugeordnet werden kann, wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst. Weitere Informationen finden Sie unter der [nicht unterstützte LINQ-Methoden](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) in diesem Thema.  
   
  Das folgende Beispiel zeigt eine LINQ-Abfrage, die `Orders` mit Frachtkosten über $30 zurückgibt und die Ergebnisse nach dem Lieferdatum sortiert (beginnend mit dem aktuellsten Lieferdatum):  
   

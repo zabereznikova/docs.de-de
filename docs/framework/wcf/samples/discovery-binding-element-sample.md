@@ -1,24 +1,26 @@
 ---
-title: "Beispiel für Ermittlungsbindungselement"
-ms.custom: 
+title: Beispiel für Ermittlungsbindungselement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Beispiel für Ermittlungsbindungselement
 In diesem Beispiel wird gezeigt, wie das Ermittlungsclient-Bindungselement verwendet wird, um einen Dienst zu ermitteln. Diese Funktion ermöglicht es Entwicklern, ihrem vorhandenen Clientkanalstapel einen Ermittlungsclientkanal hinzuzufügen. Dadurch wird das Programmiermodell sehr intuitiv. Wenn der zugeordnete Kanal geöffnet wird, wird die Adresse des Diensts mit der Ermittlung aufgelöst. Dieses Beispiel besteht aus den folgenden Projekten:  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Nachdem das <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> instanziiert wurde, gibt der Entwickler die Kriterien an, die bei der Suche nach einem Dienst verwendet werden sollen. In diesem Fall ist das Ermittlungssuchkriterium der `ICalculatorService`-Typ. Darüber hinaus gibt der Entwickler einen <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> an, der einen <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> zurückgibt, mit dem angegeben wird, wo nach den Diensten gesucht werden soll. Der <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> gibt eine neue <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>-Instanz zurück. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Mit einer benutzerdefinierten Bindung mit der Discovery-Clientchannel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Nachdem das <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> instanziiert wurde, gibt der Entwickler die Kriterien an, die bei der Suche nach einem Dienst verwendet werden sollen. In diesem Fall ist das Ermittlungssuchkriterium der `ICalculatorService`-Typ. Darüber hinaus gibt der Entwickler einen <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> an, der einen <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> zurückgibt, mit dem angegeben wird, wo nach den Diensten gesucht werden soll. Der <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> gibt eine neue <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>-Instanz zurück. Weitere Informationen finden Sie unter [verwenden eine benutzerdefinierte Bindung, mit der Discovery-Clientchannel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

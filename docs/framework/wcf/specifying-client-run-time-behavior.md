@@ -1,13 +1,13 @@
 ---
 title: Angeben des Clientlaufzeitverhaltens
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Angeben des Clientlaufzeitverhaltens
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Clients wie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste können so konfiguriert werden, dass sie das Laufzeitverhalten der Clientanwendung anpassen. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Run-Time-Dienstverhalten angegeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Clients wie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste können so konfiguriert werden, dass sie das Laufzeitverhalten der Clientanwendung anpassen. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Verwenden des CallbackBehaviorAttribute  
  Sie können das Ausführungsverhalten einer Rückrufvertragsimplementierung in einer Clientanwendung mit der <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse konfigurieren oder erweitern. Dieses Attribut führt eine ähnliche Funktion für die Rückrufklasse wie die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Klasse aus, das Instanziieren von Verhaltens- und Transaktionseinstellungen ausgenommen.  

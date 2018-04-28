@@ -1,33 +1,35 @@
 ---
 title: '&lt;httpDigest&gt;-Element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt;-Element
 Gibt Anmeldeinformationen vom Typ Hashwert an, die bei der Authentifizierung des Clients bei einem Dienst verwendet werden.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
 \<Verhalten >  
-\<EndpointBehaviors >  
-\<Verhalten >  
-\<ClientCredentials >  
+\<clientCredentials>  
 \<HttpDigest >  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,12 +54,12 @@ Gibt Anmeldeinformationen vom Typ Hashwert an, die bei der Authentifizierung des
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Hashwert ist ein Hash, der mit einem Algorithmus und einer Reihe von Eingaben ermittelt wird. Der Authentifizierer und der Authentifizierte verständigen sich über einen Algorithmus und tauschen die für die Eingabe verwendeten Daten aus. Der Client kann den Hash berechnen und an den Dienst senden. Der Dienst berechnet den Hash ebenfalls und vergleicht die Werte. Bei einer Übereinstimmung ist die Überprüfung des Clients erfolgreich.  
   
- Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Digest-Authentifizierung in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. Weitere Informationen finden Sie unter [Digestauthentifizierung in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

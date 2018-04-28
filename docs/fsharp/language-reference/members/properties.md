@@ -1,20 +1,17 @@
 ---
 title: Eigenschaften (F#)
 description: Informationen Sie zu F#-Eigenschaften, die Elemente sind, die einem Objekt zugeordneten Werte darstellen.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -74,7 +71,7 @@ Für Lese-/Schreibeigenschaften, die beide verfügen über eine `get` und `set` 
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Private Werte, die Daten für Eigenschaften heißen, Aufbewahrungspflicht *Sicherungsspeicher*. Damit den Compiler den Sicherungsspeicher automatisch zu erstellen, verwenden Sie die Schlüsselwörter `member val`, lassen Sie die Self-Bezeichner, und geben Sie einen Ausdruck, um die Eigenschaft zu initialisieren. Wenn die Eigenschaft auf änderbare werden, enthalten `with get, set`. Beispielsweise enthält die folgenden Klassentyp zwei automatisch implementierte Eigenschaften. `Property1`ist schreibgeschützt und wird an das Argument bereitgestellt, um den primären Konstruktor initialisiert und `Property2` eine festlegbare Eigenschaft auf eine leere Zeichenfolge initialisiert wird:
+Private Werte, die Daten für Eigenschaften heißen, Aufbewahrungspflicht *Sicherungsspeicher*. Damit den Compiler den Sicherungsspeicher automatisch zu erstellen, verwenden Sie die Schlüsselwörter `member val`, lassen Sie die Self-Bezeichner, und geben Sie einen Ausdruck, um die Eigenschaft zu initialisieren. Wenn die Eigenschaft auf änderbare werden, enthalten `with get, set`. Beispielsweise enthält die folgenden Klassentyp zwei automatisch implementierte Eigenschaften. `Property1` ist schreibgeschützt und wird an das Argument bereitgestellt, um den primären Konstruktor initialisiert und `Property2` eine festlegbare Eigenschaft auf eine leere Zeichenfolge initialisiert wird:
 
 ```fsharp
 type MyClass(property1 : int) =

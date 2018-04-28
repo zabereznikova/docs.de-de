@@ -1,22 +1,19 @@
 ---
 title: Member (F#)
 description: Erfahren Sie Member des Objekts in der Programmiersprache f#.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a37f14d138cc017cf78e3a0ff1d5b5bba2f09020
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="members"></a>Mitglieder
+# <a name="members"></a>Member
 
 Dieser Abschnitt beschreibt Member von F#-Objekttypen.
 

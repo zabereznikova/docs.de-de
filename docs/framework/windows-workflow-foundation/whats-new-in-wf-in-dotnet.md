@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Was&#39;s neu in Windows Workflow Foundation in .NET 4.5
 Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verfügt über viele neue Funktionen wie neue Aktivitäten, Designer-Funktionen und Modelle für die Workflowentwicklung. Viele, aber nicht alle der neuen mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten Workflowfunktionen werden im neu gehosteten Workflow-Designer unterstützt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] die neuen Funktionen, die unterstützt werden, finden Sie unter [Unterstützung für neue Workflow Foundation 4.5-Funktionen im Workflow-Designer neu gehostet](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Dieses Thema bietet eine Übersicht über die neuen Workflowfunktionen, die mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden.  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
 -   Dynamische Updates werden eingeführt, die einen Mechanismus zum Aktualisieren der Definition einer persistenten Workflowinstanz bereitstellen. Weitere Informationen finden Sie unter [dynamisches Update](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) und [Vorgehensweise: Aktualisieren Sie die Definition einer Workflowinstanz ausgeführt](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
--   Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Dieses Skript aktualisiert [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Persistenzdatenbanken, um die neuen Versionsverwaltungsfunktionen zu unterstützen, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden. Den persistenten Workflowinstanzen in der Datenbank werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflowversionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+-   Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Dieses Skript aktualisiert [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Persistenzdatenbanken, um die neuen Versionsverwaltungsfunktionen zu unterstützen, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden. Den persistenten Workflowinstanzen in der Datenbank werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein. Weitere Informationen finden Sie unter [Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung Workflowversionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
 ##  <a name="BKMK_NewActivities"></a> Aktivitäten  
  Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten.  

@@ -1,20 +1,17 @@
 ---
-title: "Explizite Felder: Das val-Schlüsselwort (F#)"
-description: "Erfahren Sie mehr über die F#-\"Val\" Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren."
-keywords: Visual F#, F#, funktionale Programmierung
+title: 'Explizite Felder: Das val-Schlüsselwort (F#)'
+description: Erfahren Sie mehr über die F#-"Val" Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das val-Schlüsselwort
 
@@ -49,7 +46,7 @@ Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Fel
 
 
 >[!WARNING] 
-`Note`.NET Framework-Namespaces `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
+`Note` .NET Framework-Namespaces `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
 
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.

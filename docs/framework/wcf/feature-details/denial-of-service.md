@@ -1,28 +1,28 @@
 ---
 title: Dienstverweigerung (Denial of Service)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -57,7 +57,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
   
- Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mithilfe der Ereignisanzeige anzeigen und Verwalten von Ereignisprotokollen finden Sie unter [Ereignisanzeige](http://go.microsoft.com/fwlink/?LinkId=186123). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe der Ereignisanzeige anzeigen und Verwalten von Ereignisprotokollen finden Sie unter [Ereignisanzeige](http://go.microsoft.com/fwlink/?LinkId=186123). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Ungültige Implementierungen von IAuthorizationPolicy können zu Dienstfehlern führen  
  Das Aufrufen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle kann Dienstfehler verursachen.  
@@ -74,7 +74,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
   
  Um dies abzuschwächen, verweisen Sie Zertifikat zu verwenden, indem Sie eine feiner abgestimmte Suchkriterium auf die [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Registrierungsfunktion finden Sie unter [automatischen Registrierung von Zertifikaten in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Registrierungsfunktion finden Sie unter [automatischen Registrierung von Zertifikaten in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Der letzte von mehreren für die Autorisierung verwendeten alternativen Antragstellernamen  
  In dem seltenen Fall, dass ein X.509-Zertifikat mehrere alternative Antragstellernamen enthält und Sie die Verwendung des alternativen Antragstellernamens autorisieren, kann die Autorisierung fehlschlagen.  
@@ -88,7 +88,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
  Wenn ein Client erfolgreich durch einen Dienst authentifiziert wird und eine sichere Verbindung mit dem Dienst eingerichtet wird, verfolgt der Dienst die Sitzung, bis sie vom Client abgebrochen wird oder abläuft. Jede eingerichtete Sitzung wird auf den Grenzwert für die maximale Anzahl gleichzeitiger aktiver Sitzungen mit dem Dienst angerechnet. Wenn dieser Grenzwert erreicht wird, werden Clients abgelehnt, die versuchen, eine neue Sitzung mit diesem Dienst zu erstellen, bis eine oder mehrere aktive Sitzungen ablaufen oder vom Client abgebrochen werden. Ein Client kann über mehrere Sitzungen mit einem Dienst verfügen, und jede dieser Sitzungen wird auf den Grenzwert angerechnet.  
   
 > [!NOTE]
->  Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zustandsbehaftete Sitzungen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zustandsbehaftete Sitzungen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Legen Sie den Grenzwert für die maximale Anzahl aktiver Sitzungen und die maximale Lebensdauer für eine Sitzung über die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse fest, wenn Sie dieses Sicherheitsproblem vermeiden möchten.  
   
