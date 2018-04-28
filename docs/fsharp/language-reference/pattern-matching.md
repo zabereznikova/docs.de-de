@@ -1,20 +1,17 @@
 ---
 title: Musterabgleich (F#)
 description: Erfahren Sie, wie Muster werden in f# verwendet zum Vergleichen von Daten mit logischen Strukturen, Daten in einzelne Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.
-keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -36,7 +33,7 @@ Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausd
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
-|Name|Beschreibung|Beispiel|
+|name|Beschreibung|Beispiel|
 |----|-----------|-------|
 |Konstantenmuster|Ein beliebiges numerisches Literal, Zeichenliteral oder Zeichenfolgenliteral, eine Enumerationskonstante oder ein definierter Literalbezeichner.|`1.0`, `"test"`, `30`, `Color.Red`|
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
@@ -87,7 +84,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-Sie können die benannten Felder in einem Mustervergleichsausdruck wie folgt verwenden.
+Sie können die benannten Felder in einem Musterabgleichsausdruck wie folgt verwenden.
 
 ```fsharp
 let matchShape shape =

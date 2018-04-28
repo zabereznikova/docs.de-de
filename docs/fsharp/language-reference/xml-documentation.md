@@ -1,20 +1,17 @@
 ---
 title: XML-Dokumentation (F#)
-description: "Erfahren Sie mehr über Unterstützung in F# erläutert werden, zum Generieren von Dokumentation aus Kommentaren."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Erfahren Sie mehr über Unterstützung in F# erläutert werden, zum Generieren von Dokumentation aus Kommentaren.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d99ab1b6-e170-4ec2-a543-43ea7ab15bb2
-ms.openlocfilehash: 20768a7d4ea17c926318043f658691819a3d7d2f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c9514532904f81030752bf7a4044f70a18222cab
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-documentation"></a>XML-Dokumentation
 
@@ -24,7 +21,7 @@ Können Sie Dokumentation vom Triple-Schrägstrich (/ / /) erzeugt code in f#. X
 ## <a name="generating-documentation-from-comments"></a>Generieren von Dokumentation aus Kommentaren
 Die Unterstützung in f# zum Generieren von Dokumentation aus Kommentaren ist dieselbe wie in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen enthält, die Sie in der Dokumentation mit einem Tool wie z. B. Sandburg konvertieren können. Die Dokumentation mithilfe der Tools, die entwickelt wurden für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben sind generiert erzeugen einen Überblick über die APIs, die auf der kompilierten Form von F#-Konstrukten basiert. Sofern nicht ausdrücklich F#-Supporttools, entspricht Dokumentation, die von diesen Tools generierten f#-Ansicht einer API nicht.
 
-Weitere Informationen zum Generieren von Dokumentation aus XML finden Sie unter [XML-Dokumentationskommentare &#40; C &#35; Programmierhandbuch &#41; ](https://msdn.microsoft.com/library/b2s063f7).
+Weitere Informationen zum Generieren von Dokumentation aus XML finden Sie unter [XML-Dokumentationskommentare &#40;C&#35; Programmierhandbuch&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 
 ## <a name="recommended-tags"></a>Empfohlene Tags
@@ -34,14 +31,14 @@ Es gibt zwei Möglichkeiten zum Schreiben von XML-Dokumentationskommentare. Eine
 
 |Tagsyntax|Beschreibung|
 |----------|-----------|
-|**&lt;c&gt;***Text* **&lt; /c&gt;**|Gibt an, dass *Text* Code ist. Dieses Tag kann durch Dokumentationsgeneratoren verwendet werden, um Text in einer Schriftart anzuzeigen, die für Code geeignet ist.|
-|**&lt;Zusammenfassung&gt;***Text* **&lt; /summary&gt;**|Gibt an, dass *Text* ist eine kurze Beschreibung der das Programmelement. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
-|**&lt;"Hinweise"&gt;***Text* **&lt; /remarks&gt;**|Gibt an, dass *Text* enthält zusätzliche Informationen über das Programmelement.|
+|**&lt;c&gt;***Text*** &lt; /c&gt;**|Gibt an, dass *Text* Code ist. Dieses Tag kann durch Dokumentationsgeneratoren verwendet werden, um Text in einer Schriftart anzuzeigen, die für Code geeignet ist.|
+|**&lt;Zusammenfassung&gt;***Text*** &lt; /summary&gt;**|Gibt an, dass *Text* ist eine kurze Beschreibung der das Programmelement. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
+|**&lt;"Hinweise"&gt;***Text*** &lt; /remarks&gt;**|Gibt an, dass *Text* enthält zusätzliche Informationen über das Programmelement.|
 |**&lt;Param Name = "***Namen***"&gt;***Beschreibung***&lt;/param&gt;**|Gibt den Namen und eine Beschreibung für eine Funktion oder Methode Parameter.|
 |**&lt;Typeparam Name = "***Namen***"&gt;***Beschreibung***&lt;/typeparam&gt;**|Gibt den Namen und eine Beschreibung für einen Typparameter darstellt.|
-|**&lt;Gibt&gt;***Text* **&lt; /returns&gt;**|Gibt an, dass *Text* beschreibt den Rückgabewert einer Funktion oder Methode.|
+|**&lt;Gibt&gt;***Text*** &lt; /returns&gt;**|Gibt an, dass *Text* beschreibt den Rückgabewert einer Funktion oder Methode.|
 |**&lt;Ausnahme Cref = "***Typ***"&gt;***Beschreibung***&lt;/exception&gt;**|Gibt den Typ der Ausnahme, die generiert werden kann und die Umstände, unter denen sie ausgelöst wird.|
-|**&lt;Siehe Cref = "***Verweis***"&gt;***Text* **&lt; /finden Sie unter&gt;**|Gibt einen Inlinelink auf ein anderes Programmelement. Die *Verweis* ist der Name, wie er in der XML-Dokumentationsdatei angezeigt wird. Die *Text* ist der Text im Link dargestellt.|
+|**&lt;Siehe Cref = "***Verweis***"&gt;***Text*** &lt; /finden Sie unter&gt;**|Gibt einen Inlinelink auf ein anderes Programmelement. Die *Verweis* ist der Name, wie er in der XML-Dokumentationsdatei angezeigt wird. Die *Text* ist der Text im Link dargestellt.|
 |**&lt;Seealso Cref = "***Verweis***" /&gt;**|Gibt einen Link Siehe auch in der Dokumentation für einen anderen Typ. Die *Verweis* ist der Name, wie er in der XML-Dokumentationsdatei angezeigt wird. Siehe auch Links, die in der Regel am unteren Rand einer Dokumentationsseite angezeigt werden.|
 |**&lt;Para&gt;***Text***&lt;/para&gt;**|Gibt einen Textabsatz an. Dies dient zum Trennen von Text in der **"Hinweise"** Tag.|
 

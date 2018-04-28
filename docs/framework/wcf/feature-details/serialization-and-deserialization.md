@@ -1,27 +1,29 @@
 ---
 title: Serialisierung und Deserialisierung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekte in XML (und umgekehrt). In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  Diese Werte können als Zeichenfolgen oder als Instanzen der <xref:System.Xml.XmlDictionaryString> -Klasse übergeben werden, damit sie unter Verwendung des binären XML-Formats optimiert werden können.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>Festlegen des maximalen Objektkontingents  
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `maxItemsInObjectGraph` -Parameter. Dieser Parameter legt die maximale Anzahl von Objekten fest, die das Serialisierungsprogramm in einem <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methodenaufruf serialisieren oder deserialisieren kann. (Die Methode liest immer ein Stammobjekt, aber dieses Objekt kann in seinen Datenmembern andere Objekte enthalten. Diese Objekte können wiederum andere Objekte enthalten usw.) Der Standard ist 65536. Beachten Sie, dass beim Serialisieren und Deserialisieren von Arrays jeder Arrayeintrag als separates Objekt betrachtet wird. Beachten Sie zudem, dass einige Objekte über eine große Speicherdarstellung verfügen und dass dieses Kontingent allein daher möglicherweise nicht ausreicht, um einen Denial-of-Service-Angriff zu verhindern. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Wenn Sie das Kontingent über die Standardeinstellung hinaus erhöhen müssen, müssen Sie dies unbedingt sowohl auf der sendenden (serialisierenden) als auch der empfangenden (deserialisierenden) Seite tun, da das Kontingent sowohl für das Lesen als auch das Schreiben von Daten gilt.  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `maxItemsInObjectGraph` -Parameter. Dieser Parameter legt die maximale Anzahl von Objekten fest, die das Serialisierungsprogramm in einem <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methodenaufruf serialisieren oder deserialisieren kann. (Die Methode liest immer ein Stammobjekt, aber dieses Objekt kann in seinen Datenmembern andere Objekte enthalten. Diese Objekte können wiederum andere Objekte enthalten usw.) Der Standard ist 65536. Beachten Sie, dass beim Serialisieren und Deserialisieren von Arrays jeder Arrayeintrag als separates Objekt betrachtet wird. Beachten Sie zudem, dass einige Objekte über eine große Speicherdarstellung verfügen und dass dieses Kontingent allein daher möglicherweise nicht ausreicht, um einen Denial-of-Service-Angriff zu verhindern. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Wenn Sie das Kontingent über die Standardeinstellung hinaus erhöhen müssen, müssen Sie dies unbedingt sowohl auf der sendenden (serialisierenden) als auch der empfangenden (deserialisierenden) Seite tun, da das Kontingent sowohl für das Lesen als auch das Schreiben von Daten gilt.  
   
 ### <a name="round-trips"></a>Roundtrips  
  Ein *Roundtrip* tritt auf, wenn ein Objekt in einem Vorgang deserialisiert und erneut serialisiert wird. Das heißt, Daten werden aus XML in eine Objektinstanz und wieder zurück in einen XML-Stream umgewandelt.  
   
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `ignoreExtensionDataObject` -Parameter, der standardmäßig auf `false` festgelegt ist. In diesem Standardmodus können Daten von einer neueren Version des Datenvertrags zu einer älteren Datenvertragsversion und wieder zurück zur neueren Version geschickt werden, ohne dass Datenverluste auftreten, sofern der Datenvertrag die <xref:System.Runtime.Serialization.IExtensibleDataObject> -Schnittstelle implementiert. Nehmen wir beispielsweise an, Version&amp;#160;1 des `Person` -Datenvertrags enthält die Datenmember `Name` und `PhoneNumber` , und in Version&amp;#160;2 wurde der Member `Nickname` hinzugefügt. Wenn `IExtensibleDataObject` implementiert wurde, dann werden beim Senden der Daten von Version 2 an Version 1 die `Nickname` -Daten gespeichert und beim erneuten Serialisieren der Daten wieder ausgegeben. Daher gehen in Roundtrips keine Daten verloren. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) und [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `ignoreExtensionDataObject` -Parameter, der standardmäßig auf `false` festgelegt ist. In diesem Standardmodus können Daten von einer neueren Version des Datenvertrags zu einer älteren Datenvertragsversion und wieder zurück zur neueren Version geschickt werden, ohne dass Datenverluste auftreten, sofern der Datenvertrag die <xref:System.Runtime.Serialization.IExtensibleDataObject> -Schnittstelle implementiert. Nehmen wir beispielsweise an, Version&amp;#160;1 des `Person` -Datenvertrags enthält die Datenmember `Name` und `PhoneNumber` , und in Version&amp;#160;2 wurde der Member `Nickname` hinzugefügt. Wenn `IExtensibleDataObject` implementiert wurde, dann werden beim Senden der Daten von Version 2 an Version 1 die `Nickname` -Daten gespeichert und beim erneuten Serialisieren der Daten wieder ausgegeben. Daher gehen in Roundtrips keine Daten verloren. Weitere Informationen finden Sie unter [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) und [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Bedenken hinsichtlich der Sicherheit und Schemavalidierung bei Roundtrips  
  Roundtrips beeinträchtigen möglicherweise die Sicherheit. Beispielsweise kann das Deserialisieren und Speichern von großen Mengen externer Daten ein Sicherheitsrisiko darstellen. Es kann Sicherheitsbedenken in Bezug auf die erneute Ausgabe dieser Daten geben, weil sich diese nicht verifizieren lassen, insbesondere wenn sie digital signiert sind. Beispielsweise könnte im obigen Szenario der Endpunkt mit Version&amp;#160;1 einen `Nickname` -Wert signieren, der bösartige Daten enthält. Schließlich kann es Bedenken hinsichtlich der Schemavalidierung geben: Es kann wünschenswert sein, dass ein Endpunkt nur Daten, die genau dem angegebenen Datenvertrag entsprechen, und keine zusätzlichen Werte ausgibt. Im vorigen Beispiel besagt der Datenvertrag des Endpunkts mit Version&amp;#160;1, dass dieser nur `Name` und `PhoneNumber`ausgibt, und bei Verwendung einer Schemavalidierung verursacht die Ausgabe des zusätzlichen `Nickname` -Werts einen Fehler.  
@@ -135,7 +137,7 @@ ms.lasthandoff: 12/22/2017
 </PurchaseOrder>  
 ```  
   
- Der Namespace "ser" verweist auf den Standardserialisierungsnamespace http://schemas.microsoft.com/2003/10/Serialization/. Jedes Datenelement wird nur einmal serialisiert und erhält eine ID-Nummer. Bei nachfolgender Verwendung wird ein Verweis auf die bereits serialisierten Daten erzeugt.  
+ Der Namespace "Ser" verweist auf den standardserialisierungsnamespace http://schemas.microsoft.com/2003/10/Serialization/. Jedes Datenelement wird nur einmal serialisiert und erhält eine ID-Nummer. Bei nachfolgender Verwendung wird ein Verweis auf die bereits serialisierten Daten erzeugt.  
   
 > [!IMPORTANT]
 >  Ist sowohl das Attribut "id" als auch das Attribut "ref" im `XMLElement`des Datenvertrags vorhanden, wird das Attribut "ref" berücksichtigt, und das Attribut "id" wird ignoriert.  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  Wenn der `preserveObjectReferences` -Modus aktiviert ist, muss der `maxItemsInObjectGraph` -Wert unbedingt auf das richtige Kontingent festgelegt werden. Aufgrund der Art und Weise, wie Arrays in diesem Modus behandelt werden, ist es für Angreifer einfach, eine kleine bösartige Nachricht zu erstellen, die in zu einem hohen Speicherverbrauch führt, der nur durch das `maxItemsInObjectGraph` -Kontingent begrenzt wird.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Angeben eines Datenvertrag-Ersatzzeichens  
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `dataContractSurrogate` -Parameter, der möglicherweise auf `null`festgelegt ist. Andernfalls können Sie mit diesem Parameter ein *Datenvertrag-Ersatzzeichen*festlegen, d.&amp;#160;h. einen Typ, der die <xref:System.Runtime.Serialization.IDataContractSurrogate> -Schnittstelle implementiert. Sie können dann mithilfe dieser Schnittstelle die Serialisierung und Deserialisierung anpassen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `dataContractSurrogate` -Parameter, der möglicherweise auf `null`festgelegt ist. Andernfalls können Sie mit diesem Parameter ein *Datenvertrag-Ersatzzeichen*festlegen, d.&amp;#160;h. einen Typ, der die <xref:System.Runtime.Serialization.IDataContractSurrogate> -Schnittstelle implementiert. Sie können dann mithilfe dieser Schnittstelle die Serialisierung und Deserialisierung anpassen. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Serialisierung  
  Die folgenden Ausführungen gelten für alle von <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleiteten Klassen, einschließlich der <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse und der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse.  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Die <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> -Methode und die <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> -Methode sind Aliase für die <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> -Methode bzw. die <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methode. Sie sollen ein konsistenteres Programmiermodell für die binäre Serialisierung oder SOAP-Serialisierung bereitstellen.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Diese Funktionen finden Sie unter [Binärserialisierung](../../../../docs/standard/serialization/binary-serialization.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Diese Funktionen finden Sie unter [Binärserialisierung](../../../../docs/standard/serialization/binary-serialization.md).  
   
  Die von der `NetDataContractSerializer` -Klasse und der `DataContractSerializer` -Klasse verwendeten XML-Formate sind normalerweise nicht kompatibel. Das heißt, es ist nicht möglich, Daten mit einem dieser Serialisierungsprogramme zu serialisieren und sie mit dem anderen Serialisierungsprogramm zu deserialisieren.  
   

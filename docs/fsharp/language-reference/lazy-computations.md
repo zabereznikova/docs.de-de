@@ -1,20 +1,17 @@
 ---
-title: "Verzögerte Berechnungen (F#)"
-description: "Erfahren Sie, wie die Leistung Ihrer apps und Bibliotheken von f# verzögerte Berechnungen verbessert werden können."
-keywords: Visual F#, F#, funktionale Programmierung
+title: Verzögerte Berechnungen (F#)
+description: Erfahren Sie, wie die Leistung Ihrer apps und Bibliotheken von f# verzögerte Berechnungen verbessert werden können.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Verzögerte Berechnungen
 
@@ -32,7 +29,7 @@ In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn ei
 
 Verzögerte Berechnungen ermöglichen es Ihnen, Verbessern der Leistung durch Einschränken der Ausführung einer Berechnung auf nur die Fälle, in denen ein Ergebnis benötigt wird.
 
-Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`. `Force`bewirkt, dass die Ausführung nur einmal ausgeführt werden. Nachfolgende Aufrufe `Force` zurückgeben identisch zu, wobei jedoch keinen Code nicht ausgeführt.
+Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`. `Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden. Nachfolgende Aufrufe `Force` zurückgeben identisch zu, wobei jedoch keinen Code nicht ausgeführt.
 
 Der folgende Code veranschaulicht die Verwendung der verzögerten Berechnung und die Verwendung von `Force`. In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.
 

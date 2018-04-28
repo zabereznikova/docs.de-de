@@ -1,20 +1,17 @@
 ---
-title: "Datensätze (F#)"
-description: "Erfahren Sie, wie einfache Aggregate benannter Werte, optional mit Mitgliedern von f#-Datensätzen darstellen."
-keywords: Visual F#, F#, funktionale Programmierung
+title: Datensätze (F#)
+description: Erfahren Sie, wie einfache Aggregate benannter Werte, optional mit Mitgliedern von f#-Datensätzen darstellen.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Datensätze
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>Unterschiede zwischen Datensätzen und Klassen
 Datensatzfelder unterscheiden sich von Klassen, sie werden automatisch als Eigenschaften verfügbar gemacht, und es handelt sich bei der Erstellung verwendet und Kopieren von Datensätzen. Datensatz Konstruktion unterscheidet sich auch von der Klassenkonstruktion. Einen Konstruktor kann nicht definieren, in einen Datensatztyp. Stattdessen gilt die Konstruktionssyntax, die in diesem Thema beschrieben. Klassen verfügen über keine direkte Beziehung zwischen Konstruktorparameter, Felder und Eigenschaften.
 
-Wie Union "und" Struktur weisen Datensätze strukturelle Gleichheitssemantik auf. Klassen verfügen über Gleichheitssemantik auf. Dies wird im folgenden Codebeispiel wird veranschaulicht.
+Wie Union "und" Struktur weisen Datensätze strukturelle Gleichheitssemantik auf. Klassen verfügen über Gleichheitssemantik auf. Dies wird im folgenden Codebeispiel veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 

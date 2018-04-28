@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Was&#39;s neu in Windows Workflow Foundation
 Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zahlreiche Entwicklungsmuster ändert sich von früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/ne
 -   Neue Messagingaktivitäten, z. B. <xref:System.ServiceModel.Activities.SendContent> und <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Explizites Aktivitätsdatenmodell  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] umfasst neue Optionen zum Speichern und Verschieben von Daten. Daten können mit <xref:System.Activities.Variable> in einer Aktivität gespeichert werden. Beim Verschieben von Daten in und aus einer Aktivität wird mittels spezialisierter Argumenttypen die Verschieberichtung bestimmt. Dies sind die Typen <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> und <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Workflow Foundation-Datenmodell](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] umfasst neue Optionen zum Speichern und Verschieben von Daten. Daten können mit <xref:System.Activities.Variable> in einer Aktivität gespeichert werden. Beim Verschieben von Daten in und aus einer Aktivität wird mittels spezialisierter Argumenttypen die Verschieberichtung bestimmt. Dies sind die Typen <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> und <xref:System.Activities.OutArgument>. Weitere Informationen finden Sie unter [Windows Workflow Foundation-Datenmodell](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Verbesserte Hosting-, Persistenz- und Nachverfolgungsoptionen  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bietet Erweiterungen der Persistenz, wie beispielsweise:  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/ne
 -   Das Fortsetzen ausstehender Workflows kann jetzt mit dem <xref:System.Activities.Bookmark>-Objekt verwaltet werden.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Vereinfachte Erweiterung der WF-Designer-Umgebung  
- Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zu verwenden, wenn die WF-Designer außerhalb von Visual Studio erneutes hosten und bietet auch einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zu verwenden, wenn die WF-Designer außerhalb von Visual Studio erneutes hosten und bietet auch einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. Weitere Informationen finden Sie unter [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

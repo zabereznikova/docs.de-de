@@ -1,23 +1,24 @@
 ---
-title: "Empfohlene Vorgehensweisen für die Persistenz"
-ms.custom: 
+title: Empfohlene Vorgehensweisen für die Persistenz
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Empfohlene Vorgehensweisen für die Persistenz
 In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfiguration von Workflows bezüglich der Workflowpersistenz behandelt.  
@@ -31,7 +32,7 @@ In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfigurat
   
  Bei Workflows, die über einen langen Zeitraum ausgelastet sind, wird empfohlen, die Workflowinstanz in diesem Zeitraum regelmäßig persistent zu speichern. Hierzu können Sie <xref:System.Activities.Statements.Persist>-Aktivitäten in der Abfolge von Aktivitäten einfügen, durch die die Workflowinstanz ausgelastet ist. Bei einer Wiederherstellung der Anwendungsdomäne oder einem Ausfall des Hosts oder Computers wird das System dann nicht wieder auf den Anfang des Auslastungszeitraums zurückgesetzt. Bedenken Sie, dass das Hinzufügen von <xref:System.Activities.Statements.Persist>-Aktivitäten zum Workflow zu Leistungseinbußen führen kann.  
   
- Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server AppFabric-Persistenz](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Konfiguration von Skalierbarkeitsparametern  
  Die Einstellungen der folgenden Parameter hängen von den Anforderungen an die Skalierbarkeit und Leistung ab:  

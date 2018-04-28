@@ -1,20 +1,17 @@
 ---
 title: F#-Auflistungstypen
-description: "Informationen Sie zu f#-Auflistungstypen und Unterschieden gegenüber Auflistungstypen in .NET Framework."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Informationen Sie zu f#-Auflistungstypen und Unterschieden gegenüber Auflistungstypen in .NET Framework.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>F#-Auflistungstypen
 
@@ -62,9 +59,9 @@ In diesem Abschnitt vergleicht die Funktionen, die für f#-Auflistungstypen verf
 |Erstellen|O(N)|-|-|-|-|Erstellt ein Array von ganzen Elementen, die alle dem angegebenen Wert haben.|
 |Verzögerung|-|-|O(1)|-|-|Gibt eine Sequenz, die erstellt wird aus der angegebenen verzögerten Spezifikation einer Sequenz zurück.|
 |Unterschied|-|-|-|-|O (M &#42; Log N)|Gibt einen neuen Satz mit den Elementen des zweiten Satzes aus dem ersten Satz entfernt.|
-|DISTINCT|||O(1)-EINFÜGE- &#42;|||Gibt eine Sequenz, die keine doppelten Einträge entsprechend generischen Hash- und Gleichheitsvergleichen Vergleiche für die Einträge enthält. Wenn ein Element in der Sequenz mehrfach auftritt, werden nachfolgende Vorkommen verworfen.|
-|distinctBy|||O(1)-EINFÜGE- &#42;|||Gibt eine Sequenz, die keine doppelten Einträge entsprechend die generischen Hash- und Gleichheitsvergleichen Vergleiche auf die Schlüssel enthält, die die angegebene Funktion zurückgibt. Wenn ein Element in der Sequenz mehrfach auftritt, werden nachfolgende Vorkommen verworfen.|
-|empty|O(1)|O(1)|O(1)|O(1)|O(1)|Erstellt eine leere Auflistung.|
+|DISTINCT|||O(1)&AMP;#42;|||Gibt eine Sequenz, die keine doppelten Einträge entsprechend generischen Hash- und Gleichheitsvergleichen Vergleiche für die Einträge enthält. Wenn ein Element in der Sequenz mehrfach auftritt, werden nachfolgende Vorkommen verworfen.|
+|distinctBy|||O(1)&AMP;#42;|||Gibt eine Sequenz, die keine doppelten Einträge entsprechend die generischen Hash- und Gleichheitsvergleichen Vergleiche auf die Schlüssel enthält, die die angegebene Funktion zurückgibt. Wenn ein Element in der Sequenz mehrfach auftritt, werden nachfolgende Vorkommen verworfen.|
+|Leer|O(1)|O(1)|O(1)|O(1)|O(1)|Erstellt eine leere Auflistung.|
 |exists|O(N)|O(N)|O(N)|O (Log N)|O (Log N)|Testet, ob ein Element der Sequenz das angegebene Prädikat erfüllt.|
 |exists2|O(min(N,M))|-|O(min(N,M))|||Testet, ob ein beliebiges Paar entsprechender Elemente der Eingabesequenzen das angegebene Prädikat erfüllt.|
 |fill|O(N)|||||Legt einen Bereich von Elementen im Array auf den angegebenen Wert fest.|
@@ -82,8 +79,8 @@ In diesem Abschnitt vergleicht die Funktionen, die für f#-Auflistungstypen verf
 |Kopf|-|O(1)|O(1)|-|-|Gibt das erste Element der Auflistung zurück.|
 |init|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, erhält der Dimension und einer Generatorfunktion, mit die Elemente berechnet.|
 |initInfinite|-|-|O(1)|-|-|Generiert eine Sequenz, die beim Durchlaufen aufeinander folgende Elemente zurückgibt, durch die angegebene Funktion aufrufen.|
-|Intersect|-|-|-|-|O (Log N &#42; Log M)|Berechnet die Schnittmenge zweier Mengen.|
-|intersectMany|-|-|-|-|O (N1 &#42; N2...)|Berechnet die Schnittmenge einer Sequenz von Sätzen. Die Sequenz darf nicht leer sein.|
+|Intersect|-|-|-|-|O (Log N &#42; Protokoll M)|Berechnet die Schnittmenge zweier Mengen.|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Berechnet die Schnittmenge einer Sequenz von Sätzen. Die Sequenz darf nicht leer sein.|
 |IsEmpty|O(1)|O(1)|O(1)|O(1)|-|Gibt `true` , wenn die Auflistung leer ist.|
 |isProperSubset|-|-|-|-|O (M &#42; Log N)|Gibt `true` , wenn alle Elemente der ersten Menge in der zweiten Menge enthalten sind und mindestens ein Element der zweiten Menge nicht in der ersten Menge.|
 |isProperSuperset|-|-|-|-|O (M &#42; Log N)|Gibt `true` , wenn alle Elemente der zweiten Menge in der ersten Menge enthalten sind und mindestens ein Element der ersten Menge nicht in der zweiten Menge.|
@@ -93,7 +90,7 @@ In diesem Abschnitt vergleicht die Funktionen, die für f#-Auflistungstypen verf
 |iteri|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf jedes Element der Auflistung an. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index des Elements an.|
 |iteri2|O(N)|O(N)|-|-|-|Wendet die angegebene Funktion auf ein Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index der Elemente an. Beide Arrays müssen dieselbe Länge haben.|
 |iter2|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf ein Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Beide Arrays müssen dieselbe Länge haben.|
-|length|O(1)|O(N)|O(N)|-|-|Gibt die Anzahl der Elemente in der Auflistung zurück.|
+|Länge|O(1)|O(N)|O(N)|-|-|Gibt die Anzahl der Elemente in der Auflistung zurück.|
 |Zuordnung|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der wendet die angegebene Funktion auf jedes Element des Arrays sind.|
 |map2|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der paarweise wendet die angegebene Funktion auf die entsprechenden Elemente der beiden Auflistungen sind. Die zwei Eingabearrays müssen dieselbe Länge haben.|
 |map3|-|O(N)|-|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der gleichzeitig wendet die angegebene Funktion auf die entsprechenden Elemente der drei Auflistungen sind.|
@@ -102,7 +99,7 @@ In diesem Abschnitt vergleicht die Funktionen, die für f#-Auflistungstypen verf
 |max|O(N)|O(N)|O(N)|-|-|Gibt das größte Element in der Auflistung, die im Vergleich mit der [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) Operator.|
 |maxBy|O(N)|O(N)|O(N)|-|-|Gibt das größte Element in der Auflistung, die im Vergleich mit [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) auf das Ergebnis der Funktion.|
 |maxElement|-|-|-|-|O (Log N)|Gibt das größte Element im Satz entsprechend der Sortierung, das für die Gruppe verwendet wird.|
-|min|O(N)|O(N)|O(N)|-|-|Gibt den geringsten Element zurück, in der Auflistung, die im Vergleich mit der [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) Operator.|
+|Min.|O(N)|O(N)|O(N)|-|-|Gibt den geringsten Element zurück, in der Auflistung, die im Vergleich mit der [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) Operator.|
 |minBy|O(N)|O(N)|O(N)|-|-|Gibt den geringsten Element zurück, in der Auflistung, die im Vergleich mit der [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) Operator das Ergebnis der Funktion.|
 |minElement|-|-|-|-|O (Log N)|Gibt das niedrigste Element im Satz entsprechend der Sortierung, das für die Gruppe verwendet wird.|
 |ofArray|-|O(N)|O(1)|O(N)|O(N)|Erstellt eine Auflistung, die die gleichen Elemente wie das angegebene Array enthält.|
@@ -146,7 +143,7 @@ In diesem Abschnitt vergleicht die Funktionen, die für f#-Auflistungstypen verf
 |tryPick|O(N)|O(N)|O(N)|O (Log N)|-|Wendet die angegebene Funktion auf aufeinander folgenden Elementen, gibt das erste Ergebnis zurück, die Funktion `Some` für einen entsprechenden Wert. Wenn kein solches Element vorhanden ist, gibt der Vorgang `None`.|
 |Erweitern|-|-|O(N)|-|-|Gibt eine Sequenz, die Elemente enthält, die die angegebene Berechnung generiert.|
 |union|-|-|-|-|O (M &#42; Log N)|Berechnet die Union der beiden Sätze.|
-|unionMany|-|-|-|-|O (N1 &#42; N2...)|Berechnet die Union einer Sequenz von Sätzen.|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Berechnet die Union einer Sequenz von Sätzen.|
 |unzip|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Paaren in zwei Listen.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Tripeln in drei Listen.|
 |Fensterfunktionen|-|-|O(N)|-|-|Gibt eine Sequenz, die liefert gleitende Fenster mit Elementen, die aus der Eingabesequenz gezeichnet werden. Jedes Fenster wird als neues Array zurückgegeben.|

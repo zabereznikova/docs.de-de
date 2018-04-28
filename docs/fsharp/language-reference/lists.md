@@ -1,20 +1,17 @@
 ---
 title: Listen (F#)
-description: "Informationen Sie zu F#-Listen, eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs."
-keywords: Visual F#, F#, funktionale Programmierung
+description: Informationen Sie zu F#-Listen, eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>Listen
 
@@ -71,7 +68,7 @@ Der Listentyp unterstützt die folgenden Eigenschaften:
 |Eigenschaft|Typ|Beschreibung|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Das erste Element.|
-|[Leere](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Eine statische Eigenschaft, die eine leere Liste des entsprechenden Typs zurückgibt.|
+|[leere](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Eine statische Eigenschaft, die eine leere Liste des entsprechenden Typs zurückgibt.|
 |[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|Ergibt `true`, wenn die Liste keine Elemente enthält.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Das Element am angegebenen (nullbasierten) Index.|
 |[Länge](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Die Anzahl der Elemente.|
@@ -411,7 +408,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von `List.fold2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`und [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) unterscheiden, die sich `List.fold` den endgültigen Wert des zusätzlichen Parameters zurückgibt, aber `List.scan` gibt die Liste der Zwischenwerte (zusammen mit dem Endwert) des zusätzlichen Parameters zurück.
+`List.fold` und [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) unterscheiden, die sich `List.fold` den endgültigen Wert des zusätzlichen Parameters zurückgibt, aber `List.scan` gibt die Liste der Zwischenwerte (zusammen mit dem Endwert) des zusätzlichen Parameters zurück.
 
 Jede dieser Funktionen umfasst eine umkehrvariante, z. B. [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), die sich unterscheidet, in der Reihenfolge, in der die Liste durchlaufen wird und die Reihenfolge der Argumente. Darüber hinaus `List.fold` und `List.foldBack` Variationen, [List. fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) und [List. foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), die zwei Listen gleicher Länge dauern. Die Funktion, die für die einzelnen Elemente ausgeführt wird, kann entsprechende Elemente beider Listen verwenden, um Aktionen durchzuführen. Die Elementtypen beider Listen können wie im folgenden Beispiel unterschiedlich sein, in dem eine Liste Transaktionsbeträge für ein Bankkonto und die andere Liste den Typ der Transaktion enthält: Einzahlung oder Auszahlung.
 

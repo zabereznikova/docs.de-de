@@ -1,24 +1,26 @@
 ---
-title: "Nicht unterstützte Szenarien"
-ms.custom: 
+title: Nicht unterstützte Szenarien
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] einige bestimmte Sicherheitsszenarien nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht, weshalb [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch die Ausführung eines Diensts mit der Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, beispielsweise Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung, werden beim Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unter Windows&#160;XP Home Edition unterstützt.  
@@ -39,7 +41,7 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
   
 -   Ein statusbasiertes Sicherheitszustandskontexttoken (SCT) wird erstellt. (Standardmäßig ist die Erstellung deaktiviert.)  
   
- Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein Sicherheitsbindungselement erstellt wird (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>), wobei die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode verwendet wird und der `requireCancellation`-Parameter auf `false` festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
+ Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein Sicherheitsbindungselement erstellt wird (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>), wobei die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode verwendet wird und der `requireCancellation`-Parameter auf `false` festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
   
  Alternativ können Sie in der Konfiguration, das Token aktiviert, durch das Erstellen einer <`customBinding`>, dann hinzufügen eine <`security`>-Element und das Festlegen der `authenticationMode` SecureConversation-Attribut und die `requireSecurityContextCancellation` -Attribut auf `true`.  
   
@@ -53,10 +55,10 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
  Wenn der Identitätswechselkontext keine Zugriffsberechtigungen zum Laden einer Assembly hat und es das erste Mal ist, dass die Common Language Runtime (CLR) versucht, die Assembly für diese Anwendungsdomäne zu laden, speichert die <xref:System.AppDomain> den Fehler zwischen. Nachfolgende Versuche, diese Assembly(s) zu laden, schlagen fehl, selbst nach dem Zurücksetzen des Identitätswechsels und sogar wenn der zurückgesetzte Kontext die Zugriffsberechtigungen hat, die Assembly zu laden. Die Ursache dafür ist, dass die CLR nach der Änderung des Benutzerkontextes keinen weiteren Ladeversuch unternimmt. Sie müssen die Anwendungsdomäne neu starten, um nach dem Fehler wiederhergestellt zu werden.  
   
 > [!NOTE]
->  Der Standardwert für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential>-Klasse ist <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. In den meisten Fällen hat ein Identitätswechsel auf Identifizierungsebene nicht die Berechtigung, zusätzliche Assemblys zu laden. Dies ist der Standardwert. Es handelt sich somit um eine sehr übliche Bedingung, derer Sie sich bewusst sein sollten. Der Identitätswechsel auf Identifizierungsebene kann auch dann auftreten, wenn der Identitätswechselvorgang nicht die `SeImpersonate`-Berechtigung hat. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+>  Der Standardwert für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential>-Klasse ist <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. In den meisten Fällen hat ein Identitätswechsel auf Identifizierungsebene nicht die Berechtigung, zusätzliche Assemblys zu laden. Dies ist der Standardwert. Es handelt sich somit um eine sehr übliche Bedingung, derer Sie sich bewusst sein sollten. Der Identitätswechsel auf Identifizierungsebene kann auch dann auftreten, wenn der Identitätswechselvorgang nicht die `SeImpersonate`-Berechtigung hat. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Delegierung erfordert eine Anmeldeinformationen-Aushandlung  
- Um das Kerberos-Authentifizierungsprotokoll mit Delegierung zu verwenden, müssen Sie das Kerberos-Protokoll mit Anmeldeinformationen-Aushandlung (mitunter als bilaterales oder mehrstufiges Kerberos bezeichnet) implementieren. Wenn Sie die Kerberos-Authentifizierung ohne Anmeldeinformationen-Aushandlung (mitunter als One-Shot-Kerberos bezeichnet) implementieren, wird eine Ausnahme ausgelöst. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Implementieren von Anmeldeinformationen-Aushandlung finden Sie unter [Debuggen von Windows-Authentifizierungsfehlern](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Um das Kerberos-Authentifizierungsprotokoll mit Delegierung zu verwenden, müssen Sie das Kerberos-Protokoll mit Anmeldeinformationen-Aushandlung (mitunter als bilaterales oder mehrstufiges Kerberos bezeichnet) implementieren. Wenn Sie die Kerberos-Authentifizierung ohne Anmeldeinformationen-Aushandlung (mitunter als One-Shot-Kerberos bezeichnet) implementieren, wird eine Ausnahme ausgelöst. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Implementieren von Anmeldeinformationen-Aushandlung finden Sie unter [Debuggen von Windows-Authentifizierungsfehlern](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Kryptografie  
   
@@ -81,18 +83,18 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
   
 -   Führen Sie `p/invoke` für die `CertGetCertificateContextProperty` aus, und überprüfen Sie `dwProvType` in der zurückgegebenen `CertGetCertificateContextProperty`.  
   
--   Verwenden der `certutil` Befehl über die Befehlszeile zum Abfragen von Zertifikaten. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Aufgaben von Certutil für die Problembehandlung bei Zertifikaten](http://go.microsoft.com/fwlink/?LinkId=120056).  
+-   Verwenden der `certutil` Befehl über die Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [Aufgaben von Certutil für die Problembehandlung bei Zertifikaten](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die folgende Kombination an Einstellungen, da sie die Durchführung der Clientauthentifizierung verhindern können:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechsel ist aktiviert. Dazu wird in der Datei "Web.config" Festlegen der `impersonate` Attribut von der <`identity`>-Element `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut von der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) auf `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut von der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) auf `true`.  
   
 -   Die Nachrichtenmodussicherheit wird verwendet.  
   
- Sie können alternativ auch den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus deaktivieren. Oder wenn der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus erforderlich ist, können Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechselfunktion deaktivieren und stattdessen den von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Identitätswechsel verwenden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Sie können alternativ auch den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus deaktivieren. Oder wenn der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus erforderlich ist, können Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechselfunktion deaktivieren und stattdessen den von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Identitätswechsel verwenden. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6-Literal-Adressfehler  
  Bei Sicherheitsanforderungen tritt ein Fehler auf, wenn sich Client und Dienst auf dem gleichen Computer befinden und für den Dienst IPv6-Literaladressen verwendet werden.  
@@ -104,11 +106,11 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
   
  Ein Beispiel für diese Situation ist ein Dienst mit den folgenden drei Endpunktadressen:  
   
--   "http://localhost/CalculatorService/service" (der Dienst)  
+-   http://localhost/CalculatorService/service (Dienst)  
   
--   "http://localhost/CalculatorService/issue_ticket" (der STS)  
+-   http://localhost/CalculatorService/issue_ticket (STS)  
   
--   "http://localhost/CalculatorService/mex" (der Metadatenendpunkt)  
+-   http://localhost/CalculatorService/mex (der Metadatenendpunkt)  
   
  Dadurch wird eine Ausnahme ausgelöst.  
   

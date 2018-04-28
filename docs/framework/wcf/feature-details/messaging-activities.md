@@ -1,24 +1,26 @@
 ---
-title: "Messagingaktivitäten"
-ms.custom: 
+title: Messagingaktivitäten
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>Messagingaktivitäten
 Messagingaktivitäten ermöglichen Workflows das Senden und Empfangen von WCF-Nachrichten. Indem Sie einem Workflow Messagingaktivitäten hinzufügen, können Sie beliebige komplexe Nachrichtenaustauschmuster (MEPs) modellieren.  
@@ -48,7 +50,7 @@ Messagingaktivitäten ermöglichen Workflows das Senden und Empfangen von WCF-Na
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>Messagingaktivitäten und Nachrichtenaustauschmuster  
  Ein Datagramm-Nachrichtenaustauschmuster umfasst einen Client, der eine Nachricht sendet, und einen Dienst, der die Nachricht empfängt. Verwenden Sie eine <xref:System.ServiceModel.Activities.Send>-Aktivität zum Senden der Nachricht, wenn der Client ein Workflow ist. Um diese Nachricht in einem Workflow zu empfangen, verwenden Sie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität. Die Aktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> verfügen jeweils über eine Eigenschaft mit dem Namen `Content`. Diese Eigenschaft enthält die Daten, die gesendet oder empfangen werden. Beim Implementieren des Anforderung-Antwort-Nachrichtenaustauschmusters verwendet sowohl der Client als auch der Dienst Aktivitätspaare. Der Client verwendet eine <xref:System.ServiceModel.Activities.Send>-Aktivität, um die Nachricht zu senden, und eine <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität, um die Antwort vom Dienst zu empfangen. Diese zwei Aktivitäten sind einander über die <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A>-Eigenschaft zugeordnet. Diese Eigenschaft wird auf die <xref:System.ServiceModel.Activities.Send>-Aktivität festgelegt, die die ursprüngliche Nachricht gesendet hat. Der Dienst verwendet ebenfalls ein Paar zugeordneter Aktivitäten: <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply>. Diese beiden Aktivitäten werden von der <xref:System.ServiceModel.Activities.SendReply.Request%2A>-Eigenschaft zugeordnet. Diese Eigenschaft wird auf die <xref:System.ServiceModel.Activities.Receive>-Aktivität festgelegt, die die ursprüngliche Nachricht empfangen hat. Die Aktivitäten <xref:System.ServiceModel.Activities.ReceiveReply> und <xref:System.ServiceModel.Activities.SendReply> ermöglichen Ihnen wie <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> das Senden einer <xref:System.ServiceModel.Channels.Message>-Instanz oder eines Nachrichtenvertragstyps.  
   
- Aufgrund der langen Ausführungsdauer von Workflows ist es für das Duplexmuster der Kommunikation wichtig, dass es auch Konversationen mit langer Laufzeit unterstützt. Um Konversationen mit langer Laufzeit zu unterstützen, müssen Clients, die die Konversation initiieren, dem Dienst die Möglichkeit eines Rückrufs zu einem späteren Zeitpunkt geben, sobald die Daten verfügbar sind. Eine Auftragsanforderung wird z. B. zur Genehmigung durch den Manager eingereicht. Sie wird ggf. jedoch erst nach einem Tag, einer Woche oder sogar einem Jahr verarbeitet. Der Workflow, der die Genehmigung von Bestellungen verwaltet, muss den Vorgang wiederaufnehmen können, nachdem die Genehmigung erteilt wurde. Dieses Muster der Duplexkommunikation wird in Workflows unterstützt, die die Korrelation verwenden. Um ein Duplexmuster zu implementieren, verwenden Sie die Aktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive>. Auf der <xref:System.ServiceModel.Activities.Receive> Aktivität initialisieren eine Korrelation mit den speziellen Schlüsselwert <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. Legen Sie dieses Korrelationshandle für die <xref:System.ServiceModel.Activities.Send>-Aktivität als <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>-Eigenschaftswert fest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Permanenter Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
+ Aufgrund der langen Ausführungsdauer von Workflows ist es für das Duplexmuster der Kommunikation wichtig, dass es auch Konversationen mit langer Laufzeit unterstützt. Um Konversationen mit langer Laufzeit zu unterstützen, müssen Clients, die die Konversation initiieren, dem Dienst die Möglichkeit eines Rückrufs zu einem späteren Zeitpunkt geben, sobald die Daten verfügbar sind. Eine Auftragsanforderung wird z. B. zur Genehmigung durch den Manager eingereicht. Sie wird ggf. jedoch erst nach einem Tag, einer Woche oder sogar einem Jahr verarbeitet. Der Workflow, der die Genehmigung von Bestellungen verwaltet, muss den Vorgang wiederaufnehmen können, nachdem die Genehmigung erteilt wurde. Dieses Muster der Duplexkommunikation wird in Workflows unterstützt, die die Korrelation verwenden. Um ein Duplexmuster zu implementieren, verwenden Sie die Aktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive>. Auf der <xref:System.ServiceModel.Activities.Receive> Aktivität initialisieren eine Korrelation mit den speziellen Schlüsselwert <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. Legen Sie dieses Korrelationshandle für die <xref:System.ServiceModel.Activities.Send>-Aktivität als <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>-Eigenschaftswert fest. Weitere Informationen finden Sie unter [permanenter Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
   
 > [!NOTE]
 >  Die dupleximplementierung des Workflows des mithilfe einer rückrufkorrelation ("permanenter Duplex") Dient zur langer Konversationen. Dies ist nicht das Gleiche wie WCF-Duplex mit Rückrufverträgen, wo die Konversation nur über eine kurze Ausführungsdauer verfügt (die Lebensdauer des Kanals).  
@@ -112,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>Messagingaktivitäten und Transaktionen  
- Wenn einen Aufruf an einen Workflowdienst ausgeführt wird, kann es ratsam sein, eine Transaktion zum Dienstvorgang auszuführen. Platzieren Sie dazu die <xref:System.ServiceModel.Activities.Receive>-Aktivität innerhalb einer <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität enthält eine `Receive`-Aktivität und einen Textteil. Die für den Dienst ausgeführte Transaktion wird während der Ausführung des Textteils von <xref:System.ServiceModel.Activities.TransactedReceiveScope> in der Umgebung beibehalten. Die Transaktion ist abgeschlossen, wenn die Ausführung des Textteils beendet ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Workflows und Transaktionen finden Sie unter [Workflowtransaktionen](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
+ Wenn einen Aufruf an einen Workflowdienst ausgeführt wird, kann es ratsam sein, eine Transaktion zum Dienstvorgang auszuführen. Platzieren Sie dazu die <xref:System.ServiceModel.Activities.Receive>-Aktivität innerhalb einer <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität enthält eine `Receive`-Aktivität und einen Textteil. Die für den Dienst ausgeführte Transaktion wird während der Ausführung des Textteils von <xref:System.ServiceModel.Activities.TransactedReceiveScope> in der Umgebung beibehalten. Die Transaktion ist abgeschlossen, wenn die Ausführung des Textteils beendet ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Workflows und Transaktionen finden Sie unter [Workflowtransaktionen](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zum Senden und Empfangen von Fehlern in Workflowdiensten](http://go.microsoft.com/fwlink/?LinkId=189151)  

@@ -1,27 +1,29 @@
 ---
 title: Sicherheit Overview1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf SOAP-Nachrichten basierende verteilte Programmierplattform. Das Sichern von Nachrichten zwischen Clients und Diensten ist für den Datenschutz außerordentlich wichtig. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 -   *Nachrichtensicherheitsmodus*, auf der anderen Seite, WS-Security-verwendet (und andere Spezifikationen) zum Implementieren von übertragungssicherheit. Da die Nachrichtensicherheit direkt für die SOAP-Nachrichten übernommen wird und zusammen mit den Anwendungsdaten in den SOAP-Umschlägen enthalten ist, besitzt sie den Vorteil der Unabhängigkeit von Transportprotokollen, der größeren Erweiterbarkeit und der Gewährleistung von End-to-End-Sicherheit (im Vergleich zu Point-to-Point); der Modus hat den Nachteil deutlich langsamer als der Transportsicherheitsmodus zu sein, da das XML-Format der SOAP-Nachrichten verarbeitet werden muss.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Diese Unterschiede finden Sie unter [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Diese Unterschiede finden Sie unter [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Ein dritter Sicherheitsmodus verwendet beide zuvor beschriebenen Modi und vereint deren Vorteile. Dieser Modus wird als `TransportWithMessageCredential` bezeichnet. In diesem Modus wird die Nachrichtensicherheit zum Authentifizieren des Clients verwendet, wohingegen die Transportsicherheit zum Authentifizieren des Servers und zum Sicherstellen von Nachrichtenvertraulichkeit und -integrität dient. Daher ist der `TransportWithMessageCredential`-Sicherheitsmodus beinahe so schnell wie der Transportsicherheitsmodus und ermöglicht die Erweiterbarkeit der Clientauthentifizierung auf dieselbe Weise wie die Nachrichtensicherheit. Im Gegensatz zum Nachrichtensicherheitsmodus bietet dieser Modus keine vollständige End-to-End-Sicherheit.  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Zugriffssteuerungsfunktionen durch Integration in die common Language Runtime (CLR) bereitgestellt werden <xref:System.Security.Permissions.PrincipalPermissionAttribute> und durch einen Satz von APIs, die als bezeichnet den *Identitätsmodell*. Weitere Informationen zu Access Control und anspruchsbasierte Autorisierung, finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Überwachung  
- *Überwachung* ist die Protokollierung von Sicherheitsereignissen in das Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programmierdetails, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Überwachung* ist die Protokollierung von Sicherheitsereignissen in das Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programmierdetails, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

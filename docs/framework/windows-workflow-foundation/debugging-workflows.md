@@ -14,20 +14,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8fa22db7fe613279fcf8487abaf57691250b7d80
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-workflows"></a>Debuggen von Workflows
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bietet mehrere Optionen für das Debuggen ausgeführter Workflows über die Entwicklungsumgebung. Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.  
   
 ## <a name="debugging-in-the-workflow-designer"></a>Debuggen des Workflow-Designers  
- Haltepunkte können für Aktivitäten im Workflow-Designer festgelegt werden, indem Sie entweder die Aktivität markiert, und drücken **F9** oder mithilfe der Aktivität-Kontextmenü. Die Ausführung des Workflows wird daraufhin unterbrochen, wenn der Workflowhost im Debugmodus ausgeführt wird. In der folgenden Bildschirmabbildung wird die Ausführung des Workflows an einem Haltepunkt angehalten. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Debuggen von Workflows mit dem Workflow-Designer](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).  
+ Haltepunkte können für Aktivitäten im Workflow-Designer festgelegt werden, indem Sie entweder die Aktivität markiert, und drücken **F9** oder mithilfe der Aktivität-Kontextmenü. Die Ausführung des Workflows wird daraufhin unterbrochen, wenn der Workflowhost im Debugmodus ausgeführt wird. In der folgenden Bildschirmabbildung wird die Ausführung des Workflows an einem Haltepunkt angehalten. Weitere Informationen finden Sie unter [Debuggen von Workflows mit dem Workflow-Designer](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).  
   
 ## <a name="debugging-in-xaml"></a>Debugging in XAML  
- Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen. Wählen Sie zum Anzeigen des Ausführungspunkts in XAML **XAML-Ansicht** im Workflow-Designer bei der Ausführung des Workflows angehalten wird. Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen-Explorer erneut im Designer geöffnet wird. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Vorgehensweise: Debuggen von XAML mit dem Workflow-Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).  
+ Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen. Wählen Sie zum Anzeigen des Ausführungspunkts in XAML **XAML-Ansicht** im Workflow-Designer bei der Ausführung des Workflows angehalten wird. Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen-Explorer erneut im Designer geöffnet wird. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von XAML-Workflow-Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).  
   
 ## <a name="debugging-in-code"></a>Debugging in Code  
  Codehaltepunkte können in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] auf die gleiche Weise verwendet werden wie in anderen imperativen Anwendungen. Klicken Sie auf den linken Rand der Codebereich, um einen codehaltepunkt zu erstellen, oder drücken Sie **F9** um einen Haltepunkt an der Cursorposition zu platzieren.  
@@ -42,4 +42,4 @@ ms.lasthandoff: 04/27/2018
 >  Wenn die workflowanwendung für die X86 diejenige Architektur und auf einem Computer unter einem 64-Bit-Betriebssystem gehostet wird, Remotedebuggen nicht verwendet werden, es sei denn, die Visual Studio auf dem Remotecomputer installiert ist oder das Ziel für die workflowanwendung in geändert wird **Beliebige CPU**.  
   
 ## <a name="extending-the-workflow-debugging-service"></a>Erweitern der Debugdienste für Workflows  
- Der Debugdienst für Workflows ist jetzt öffentlich und kann zum Erstellen benutzerdefinierter Anwendungen wie Überwachung, Simulation und Debugging in einem erneut gehosteten Designer verwendet werden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] dem folgenden Thema: <xref:System.Activities.Presentation.Debug.DebuggerService>.
+ Der Debugdienst für Workflows ist jetzt öffentlich und kann zum Erstellen benutzerdefinierter Anwendungen wie Überwachung, Simulation und Debugging in einem erneut gehosteten Designer verwendet werden. Weitere Informationen finden Sie im Thema <xref:System.Activities.Presentation.Debug.DebuggerService>.
