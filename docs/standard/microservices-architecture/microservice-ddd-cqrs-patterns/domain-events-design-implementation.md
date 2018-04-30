@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -76,7 +76,7 @@ Wie Abbildung 9-15 zeigt, können Sie ausgehend vom selben Domänenereignis mehr
 
 **Abbildung 9-15**. Behandlung mehrerer Aktionen pro Domäne
 
-Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur 0-mal oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
+Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
 
 Dank der Möglichkeit einer offenen Anzahl von Handlern pro Domänenereignis können Sie ohne Auswirkungen auf den aktuellen Code viele weitere Domänenregeln hinzufügen. Das Implementieren der folgenden Geschäftsregel, die unmittelbar nach einem Ereignis ausgeführt werden muss, kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen wenigen oder auch nur einem Ereignishandler:
 
@@ -209,7 +209,7 @@ Die Frage, ob eine einzelne Transaktion über Aggregate ausgeführt oder „Even
 
 Es kann nicht davon ausgegangen werden, dass jede Regel, die Aggregate umfasst, jederzeit auf dem neuesten Stand ist. Durch die Ereignisverarbeitung, Batchverarbeitung oder andere Aktualisierungsmechanismen können andere Abhängigkeiten innerhalb einer bestimmten Zeit aufgelöst werden. (Seite 128)
 
-Vaughn Vernon erklärt Folgendes in [Effective Aggregate Design. Part II: Making Aggregates Work Together (Effektives Aggregatdesign. Teil II: So arbeiten Aggregate zusammen)](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon erklärt Folgendes in [Effective Aggregate Design. Part II: Making Aggregates Work Together (Effektives Aggregatdesign. Teil II: So arbeiten Aggregate zusammen)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
 Wenn die Ausführung eines Befehls auf einer Aggregatinstanz erfordert, dass zusätzliche Geschäftsregeln auf einem oder mehreren Aggregaten ausgeführt werden, sollte „Eventual Consistency“ verwendet werden\[...\] Es gibt eine praktische Möglichkeit, „Eventual Consistency“ in einem DDD-Modell zu unterstützen. Eine Aggregatmethode veröffentlicht ein Domänenereignis, das rechtzeitig an einen oder mehrere asynchrone Abonnenten übermittelt wird.
 
@@ -347,13 +347,13 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Strengthening your domain: Domain Events (Erweiterung des Domänenmodells durch Domänenereignisse)**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*
 
 -   **Tony Truong. Domain Events Pattern Example (Beispiel für das Domänenereignismuster)**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

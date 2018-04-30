@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
-Komponenten der Datenpersistenz bieten Zugriff auf die Daten, die innerhalb der Grenzen eines Microservices gehostet werden (d.h. in der Datenbank eines Microservices). Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Arbeitseinheits](http://martinfowler.com/eaaCatalog/unitOfWork.html)-Klassen wie benutzerdefinierte EF-DBContexts.
+Komponenten der Datenpersistenz bieten Zugriff auf die Daten, die innerhalb der Grenzen eines Microservices gehostet werden (d.h. in der Datenbank eines Microservices). Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Arbeitseinheits](https://martinfowler.com/eaaCatalog/unitOfWork.html)-Klassen wie benutzerdefinierte EF-DBContexts.
 
 ## <a name="the-repository-pattern"></a>Das Repositorymuster
 
@@ -90,7 +90,7 @@ Ein Datenzugriffsobjekt führt direkt Datenzugriffs- und Persistenzvorgänge fü
 
 Eine Arbeitseinheit wird als einzelne Transaktion bezeichnet, die mehrere INSERT-, UPDATE- oder DELETE-Vorgänge umfasst. Einfach ausgedrückt bedeutet dies, dass alle INSERT-, UPDATE- und DELETE-Transaktionen für eine bestimmte Benutzeraktion (z.B. die Registrierung auf einer Website) in einer einzelnen Transaktion verarbeitet werden. Dies ist effizienter als mehrere Datenbanktransaktionen auf umständlichere Weise zu verarbeiten.
 
-Diese Persistenzvorgänge werden zu einem späteren Zeitpunkt in einer einzelnen Aktion durchgeführt, wenn Ihr Code aus der Anwendungsebene dies anordnet. Die Entscheidung, ob die im Speicher vorgenommenen Änderungen am tatsächlichen Datenbankspeicher angewendet werden sollen, basiert in der Regel auf dem [Arbeitseinheitsmuster](http://martinfowler.com/eaaCatalog/unitOfWork.html). In EF wird das Arbeitseinheitsmuster als DBContext implementiert.
+Diese Persistenzvorgänge werden zu einem späteren Zeitpunkt in einer einzelnen Aktion durchgeführt, wenn Ihr Code aus der Anwendungsebene dies anordnet. Die Entscheidung, ob die im Speicher vorgenommenen Änderungen am tatsächlichen Datenbankspeicher angewendet werden sollen, basiert in der Regel auf dem [Arbeitseinheitsmuster](https://martinfowler.com/eaaCatalog/unitOfWork.html). In EF wird das Arbeitseinheitsmuster als DBContext implementiert.
 
 In vielen Fällen kann dieses Muster bzw. diese Methode zum Anwenden von Vorgängen im Speicher die Anwendungsleistung erhöhen und die Gefahr von Inkonsistenzen verringern. Zudem können Transaktionsblockierungen in den Datenbanktabellen verringert werden, da alle vorgesehenen Vorgänge im Rahmen einer Transaktion zugesichert werden. Im Vergleich zur Ausführung vieler isolierter Vorgänge in der Datenbank ist dies der effizientere Weg. Daher kann die ausgewählte ORM die Ausführung in der Datenbank optimieren, indem statt der Ausführung vieler kleiner und separater Transaktionen mehrere Updateaktionen innerhalb derselben Transaktion gruppiert werden.
 
@@ -138,21 +138,21 @@ In den nächsten Abschnitten wird erläutert, wie das Spezifikationsmuster mit E
 
 ### <a name="the-repository-pattern"></a>Das Repositorymuster
 
--   **Edward Hieatt und Rob Mee. Repositorymuster.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt und Rob Mee. Repository pattern (Repositorymuster).**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **Das Repositorymuster**
+-   **The Repository Pattern (Das Repositorymuster)**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repositorymuster: Eine Daten persistenzabstraktion**
+-   **Repository Pattern: A data persistence abstraction (Repositorymuster: Eine Datenpersistenzabstraktion)**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Book; enthält eine Erläuterung der des Repositorymusters) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Buch; enthält eine Diskussion des Repositorymusters) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Arbeitseinheitsmuster
 
--   **Martin Fowler. Die Einheit der Arbeit Muster.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Unit of Work pattern (Arbeitseinheitsmuster).**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,12 +161,12 @@ In den nächsten Abschnitten wird erläutert, wie das Spezifikationsmuster mit E
 
 ### <a name="the-specification-pattern"></a>Das Spezifikationsmuster
 
--   **Die Spezifikation-Muster.**
+-   **The Specification pattern (Das Spezifikationsmuster)**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain-Driven Design. Addison-Wesley. S. 224.**
 
--   **Specifications (Spezifikationen). Smell**
+-   **Specifications (Spezifikationen). Martin Fowler**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]

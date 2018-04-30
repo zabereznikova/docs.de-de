@@ -1,6 +1,6 @@
 ---
 title: '* Operator (C#-Referenz)'
-ms.date: 07/20/2015
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -14,18 +14,18 @@ ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07d06d668ba43ebc3f4fae394d7b6641b122f4a6
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="-operator-c-reference"></a>Operator * (C#-Referenz)
-Der Multiplikationsoperator (`*`) berechnet das Produkt seiner Operanden.  Darüber hinaus ermöglicht der Dereferenzierungsoperator das Lesen und Schreiben in einen Zeiger.  
+Der Multiplikationsoperator (`*`) berechnet das Produkt seiner Operanden. Alle numerischen Typen besitzen vordefinierte Multiplikationsoperatoren.  
+
+`*` dient auch als Dereferenzierungsoperator, der das Lesen und Schreiben in einen Zeiger ermöglicht.
   
 ## <a name="remarks"></a>Hinweise  
- Alle numerischen Typen besitzen vordefinierte Multiplikationsoperatoren.  
-  
  Der `*`-Operator wird auch verwendet, um Zeigertypen zu deklarieren und Zeiger zu dereferenzieren. Dieser Operator kann nur in nicht sicheren Kontexten verwendet werden, gekennzeichnet durch die Verwendung des [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Schlüsselworts und erfordert die Compileroption [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  Die englischen Begriffe „dereference operator“ und „indirection operator“ bezeichnen beide den Dereferenzierungsoperator.  
   
  Benutzerdefinierte Typen können den binären `*`-Operator überladen (weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md)). Wenn ein binärer Operator überladen ist, wird der zugehörige Zuweisungsoperator, sofern er vorhanden ist, auch implizit überladen.  

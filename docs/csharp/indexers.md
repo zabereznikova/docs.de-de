@@ -1,6 +1,6 @@
 ---
 title: Indexer
-description: "Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenschaften, d.h. Eigenschaften, auf die mit mindestens einem Argument verwiesen wird, implementieren."
+description: Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenschaften, d.h. Eigenschaften, auf die mit mindestens einem Argument verwiesen wird, implementieren.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>Indexer
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Dieses erste Beispiel veranschaulicht die Beziehung zwischen der Syntax der Eigenschaften und der Indexer. Diese Analogie wirkt sich auf die meisten Syntaxregeln für Indexer auf. Indexer können keine gültigen Zugriffsmodifizierer haben (öffentliche, geschützte interne, geschützte, interne, private oder private geschützte). Sie können versiegelt, virtuell oder abstrakt sein. Bei Eigenschaften können Sie verschiedene Zugriffsmodifizierer für die get- und set-Zugriffsmethoden eines Indexers angeben.
+Dieses erste Beispiel veranschaulicht die Beziehung zwischen der Syntax der Eigenschaften und der Indexer. Diese Analogie wirkt sich auf die meisten Syntaxregeln für Indexer auf. Indexer können beliebige gültige Zugriffsmodifizierer aufweisen (public, protected internal, protected, internal, private oder private protected). Sie können versiegelt, virtuell oder abstrakt sein. Bei Eigenschaften können Sie verschiedene Zugriffsmodifizierer für die get- und set-Zugriffsmethoden eines Indexers angeben.
 Außerdem können Sie schreibgeschützte Indexer (indem Sie die set-Zugriffsmethode auslassen) oder lesegeschützte Indexer (indem Sie die get-Zugriffsmethode auslassen) angeben.
 
 Fast alles, was Sie von der Arbeit mit Eigenschaften kennen, können sie auch für Indexer anwenden. Die einzige Ausnahme von dieser Regel sind *automatisch implementierte Eigenschaften*. Der Compiler kann nicht immer angemessenen Speicher für einen Indexer generieren.
@@ -51,7 +51,7 @@ Indexer unterscheiden sich durch das Vorhandensein von Argumenten, die auf ein E
 Sie definieren *Indexer* in Ihrem Typ, wenn dessen API eine Auflistung modelliert, in der Sie die Argumente der Auflistung definieren. Ihre Indexer ordnen möglicherweise direkt zu Ihren Auflistungstypen zu, die Teil des .NET Core Frameworks sind. Ihr Typ hat möglicherweise andere Verpflichtungen als nur das Modellieren einer Auflistung.
 Mit Indexern können Sie die API bereitstellen, die mit der Abstraktion Ihres Typs übereinstimmt, ohne die inneren Details offen zu legen, wie die Werte dieser Abstraktion gespeichert oder berechnet werden.
 
-Die häufigsten Szenarios für das Verwenden von *Indexern*. Sie können auf den [Beispielordner für Indexer](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) zugreifen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Die häufigsten Szenarios für das Verwenden von *Indexern*. Sie können auf den [Beispielordner für Indexer](https://github.com/dotnet/samples/tree/master/csharp/indexers) zugreifen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Arrays und Vektoren
 

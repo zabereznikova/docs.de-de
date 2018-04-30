@@ -1,21 +1,32 @@
 ---
 title: NULL-bedingte Operatoren (C# und Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/03/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- null-conditional operators [C#]
+- null-conditional operators [Visual Basic]
+- ?. operator [C#]
+- ?. operator [Visual Basic]
+- ?[] operator [C#]
+- ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c95b4079cf4e71c0ef9cd436ec230337f512229a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ffeaa3c2088d0bb2c000704cfe312b0f9453b68
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="null-conditional-operators-c-and-visual-basic"></a>NULL-bedingte Operatoren (C# und Visual Basic)
-Wird für eine Prüfung auf null verwendet, bevor Sie eine Operation für den Memberzugriff (`?.`) oder die Indizierung (`?[`) ausführen.  Mithilfe dieser Operatoren müssen Sie für die Prüfung auf null weniger Code schreiben, insbesondere beim tieferen Eindringen in Datenstrukturen.  
+# <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. und ?[]: NULL-bedingte Operatoren (C# und Visual Basic)
+Wird für eine Prüfung auf null verwendet, bevor Sie eine Operation für den Memberzugriff (`?.`) oder die Indizierung (`?[]`) ausführen.  Mithilfe dieser Operatoren müssen Sie für die Prüfung auf null weniger Code schreiben, insbesondere beim tieferen Eindringen in Datenstrukturen.  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -29,16 +40,16 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Im letzten Beispiel wird veranschaulicht, dass die Null-Bedingungsoperatoren Kurzschlussoperatoren sind.  Wenn ein Vorgang in einer Kette von bedingten Memberzugriffs- und Indexvorgängen null zurückgibt, wird die restliche Ausführung der Kette angehalten.  Andere Vorgänge mit niedrigerer Rangfolge im Ausdruck werden fortgesetzt.  Beispielsweise wird im folgenden Codebeispiel `E` in der zweiten Zeile ausgeführt, und die Operatoren `??` und `==` werden ausgeführt.  In der ersten Zeile ruft `??` einen Kurzschluss hervor, und `E` wird nicht ausgeführt, wenn die linke Seite ungleich NULL ist.
+ Die NULL-bedingten Operatoren sind Kurzschlussoperatoren.  Wenn ein Vorgang in einer Kette von bedingten Memberzugriffs- und Indexvorgängen null zurückgibt, wird die restliche Ausführung der Kette angehalten.  Im folgenden Beispiel wird `E` nicht ausgeführt, wenn das Ergebnis der Auswertung von `A`, `B` oder `C` NULL ist.
   
 ```csharp
-A?.B?.C?[0] ?? E  
-A?.B?.C?[0] == E  
+A?.B?.C?.Do(E);
+A?.B?.C?[E];
 ```
 
 ```vb
-A?.B?.C?(0) ?? E  
-A?.B?.C?(0) == E  
+A?.B?.C?.Do(E);
+A?.B?.C?(E);
 ```  
   
  Ein weiterer Verwendungszweck für den Null-Bedingungsmemberzugriff ist das Aufrufen von Delegaten auf threadsichere Weise mit viel weniger Code.  Die bisherige Methode erfordert Code wie den folgenden:  
@@ -67,7 +78,7 @@ PropertyChanged?.Invoke(e)
   
  Die neue Methode ist threadsicher, da der Compiler Code zum Auswerten von `PropertyChanged` nur einmal generiert und das Ergebnis in einer temporären Variablen behält.  
   
- Sie müssen die `Invoke`-Methode explizit aufrufen, da es keine Aufrufsyntax für Null-Bedingungsdelegate gibt `PropertyChanged?(e)`.  Es gab zu viele mehrdeutige Analysesituationen.  
+ Sie müssen die `Invoke`-Methode explizit aufrufen, da es keine Aufrufsyntax für Null-Bedingungsdelegate gibt `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Sprachspezifikationen  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -75,7 +86,7 @@ PropertyChanged?.Invoke(e)
  Weitere Informationen finden Sie in der [Sprachreferenz für Visual Basic](../../../visual-basic/language-reference/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [?? (Null-Sammeloperator)](null-conditional-operator.md)  
+ [?? (NULL-Sammeloperator)](null-conditional-operator.md)  
  [C#-Referenz](../../../csharp/language-reference/index.md)  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  

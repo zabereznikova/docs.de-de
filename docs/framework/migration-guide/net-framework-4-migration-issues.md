@@ -2,21 +2,23 @@
 title: Migrationsprobleme in .NET Framework 4
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
-ms.author: mariaw
+ms.author: ronpet
 manager: wpickett
-ms.workload: mariaw
-ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- mariaw
+ms.openlocfilehash: 05c86759b16fa4e1cbf31b7409601cb6b91cd08e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-framework-4-migration-issues"></a>Migrationsprobleme in .NET Framework 4
 
@@ -46,7 +48,7 @@ Informationen zu neuen Funktionen finden Sie unter [Neuigkeiten in .NET Framewor
 
 Namespaces: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>; Assembly: System.Web (in „System.Web.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Browserdefinitionsdateien** | Die Browserdefinitionsdateien wurden aktualisiert und enthalten jetzt Informationen zu neuen und aktualisierten Browsern und Geräten. Ältere Browser und Geräte wie Netscape Navigator wurden entfernt und neuere Browser und Geräte wie Google Chrome und Apple iPhone hinzugefügt.<br><br>Wenn Ihre Anwendung benutzerdefinierte Browserdefinitionen enthält, die von einer der entfernten Browserdefinitionen erben, wird ein Fehler angezeigt.<br><br>Das <xref:System.Web.HttpBrowserCapabilities>-Objekt (von der `Request.Browse`-Eigenschaft der Seite verfügbar gemacht) wird durch die Browserdefinitionsdateien gesteuert. Aus diesem Grund können die Informationen, die durch den Zugriff auf eine Eigenschaft dieses Objekts in ASP.NET 4 zurückgegeben werden, von den Informationen abweichen, die in einer früheren Version von ASP.NET zurückgegeben wurden. | Wenn Ihre Anwendung auf den alten Browserdefinitionsdateien basiert, können Sie diese aus dem folgenden Ordner kopieren:<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browser*<br><br>Kopieren Sie die Dateien in den entsprechenden Ordner *\\CONFIG\\Browser* für ASP.NET 4. Führen Sie nach dem Kopieren der Dateien das Befehlszeilentool [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx) aus. Weitere Informationen finden Sie auf der Website [http://www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkId=182900). |
 | **Untergeordnete Anwendungen werden unter Mischversionen von ASP.NET ausgeführt** | ASP.NET 4-Anwendungen, die als untergeordnete Anwendungen konfiguriert wurden, die frühere Versionen von ASP.NET ausführen, können möglicherweise aufgrund von Konfigurations- oder Kompilierungsfehlern nicht starten. Der genauen Fehler, der auftritt, hängt davon ab, ob die Anwendung unter IIS 6.0 oder unter IIS 7 oder IIS 7.5 ausgeführt wird. | An den Konfigurationsdateien der betroffenen Anwendungen lassen sich Änderungen vornehmen, damit das Konfigurationssystem die ASP.NET 4-Anwendung ordnungsgemäß erkennt. Informationen zu den Änderungen, die Sie vornehmen müssen, finden Sie auf der ASP.NET-Website im Dokument [ASP.NET 4 Breaking Changes (Grundlegende Änderungen in ASP.NET 4 )](http://go.microsoft.com/fwlink/?LinkId=182908) im Abschnitt „ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications“ (Untergeordnete ASP.NET 4-Anwendungen können unter ASP.NET 2.0 oder ASP.NET 3.5-Anwendungen nicht gestartet werden). |
@@ -87,7 +89,7 @@ Namespaces: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Securi
 
 Namespace: <xref:System>; Assembly: mscorlib (in „mscorlib.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Sommerzeit** | Um Abweichungen von der Systemuhr zu vermeiden, verwenden Zeiteigenschaften (wie <xref:System.TimeZoneInfo.Local> und <xref:System.DateTime.Now>) nun Betriebssystemregeln anstelle von anderen .NET Framework-Daten für Vorgänge hinsichtlich Sommerzeit. | Keine |
 | **Formatierungszeichenfolge** | Um die kulturabhängige Formatierung zu unterstützen, enthält die <xref:System.TimeSpan>-Struktur neue Überladungen der Methoden `ToString`, `Parse` und `TryParse` sowie `ParseExact` und `TryParseExact`. | Keine |
@@ -99,7 +101,7 @@ Eine Liste der neuen neutralen und spezifischen Kulturen finden Sie unter [Neues
 
 Namespace: <xref:System.Globalization>; Assembly: mscorlib (in „mscorlib.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Namen von Kulturen** | Die folgenden Namensänderungen wirken sich auf die deutsch- und Divehi-sprachigen sowie auf die afrikanischen Kulturen aus:<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: Der Name der Währung der Kultur „Deutsch (Schweiz)“ (de-CH) wurde von „sFr.“ in „Fr.“ geändert.<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: Das lange Datumsmuster für die Kultur „Divehi (Malediven)“ (dv-MV) wurde von „dd/MMMM/yyyy“ in „dd/MM/yyyy“ geändert.<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: Der PM- Kennzeichner der Kultur „Afrikaans (Südafrika)“ wurde von „nm“ in „PM“ geändert. | Beachten Sie die Namensänderungen für Kulturen. |
 | **LICD-Parameter** | Damit das erwartete Verhalten in den Einstellungen des Automatisierungsserver auftritt, übergibt die CLR die aktuelle Kultur für den `LCID`-Parameter nicht mehr an nicht verwaltete COM-basierte Anwendungen. Stattdessen wird 1033 (en-US) für die Kultur übergeben. | Mit Ausnahme der nativen Anwendungen, die eine angegebene Kultur erfordern,sind keine Änderungen erforderlich. |
@@ -111,7 +113,7 @@ Namespace: <xref:System.Globalization>; Assembly: mscorlib (in „mscorlib.dll�
 
 Namespace: <xref:System>, <xref:System.Runtime.ExceptionServices>; Assembly: mscorlib (in „mscorlib.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Ausnahmen für beschädigte Prozessstatus** | Die CLR übergibt keine Ausnahmen mehr für beschädigte Prozessstatus an Ausnahmehandler in verwaltetem Code. | Diese Ausnahmen deuten darauf hin, dass der Status eines Prozesses beschädigt wurde. Eine Ausführung Ihrer Anwendung in diesem Zustand ist nicht empfehlenswert.<br><br>Weitere Informationen finden Sie unter <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> und im Blogeintrag [Handling Corrupted State Exceptions (Behandeln beschädigter Statusausnahmen)](http://go.microsoft.com/fwlink/?LinkID=179681) im englischsprachigen Blog zur CLR. |
 | **Ausnahmen des Ausführungsmoduls** | <xref:System.ExecutionEngineException> ist jetzt veraltet, da der Prozess aufgrund einer abfangbaren Ausnahme weiterhin ausgeführt wird. Diese Änderung verbessert die Vorhersagbarkeit und Zuverlässigkeit in der Laufzeit. | Verwenden Sie <xref:System.InvalidOperationException>, um die Bedingung zu signalisieren. |
@@ -120,7 +122,7 @@ Namespace: <xref:System>, <xref:System.Runtime.ExceptionServices>; Assembly: msc
 
 Namespace: <xref:System.Reflection>; Assembly: mscorlib (in „mscorlib.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Assembly-Hashalgorithmen** | Die Eigenschaft <xref:System.Reflection.AssemblyName.HashAlgorithm> gibt jetzt <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm> zurück, da die Laufzeit den Hashalgorithmus der Assembly, auf die verwiesen wird, nicht kennt, wenn die Assembly nicht geladen wurde. (Dies bezieht sich auf die Verwendung der Eigenschaft für eine Assembly, auf die verwiesen wird, z.B. die von der <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A>-Methode zurückgegebene.) | Keine |
 | **Laden von Assemblys** | Um das redundante Laden von Assemblys zu vermeiden und den virtuellen Adressraum zu speichern, lädt die CLR nun Assemblys nur mit der Win32-`MapViewOfFile`-Funktion. Die `LoadLibrary`-Funktion wird nicht mehr zusätzlich aufgerufen.<br><br>Diese Änderung betrifft Diagnoseanwendungen auf die folgende Art und Weise:<br><br>* <xref:System.Diagnostics.ProcessModuleCollection> enthält keine Module aus einer Klassenbibliothek (DLL-Datei) mehr, wie aus einem Aufruf von `Process.GetCurrentProcess().Modules` abgerufen.<br>* Für Win32-Anwendungen, die die `EnumProcessModules`-Funktion verwenden, werden nicht alle verwalteten Module aufgeführt. | Keine |
@@ -133,7 +135,7 @@ Namespace: <xref:System.Reflection>; Assembly: mscorlib (in „mscorlib.dll“)
 
 Namespace: <xref:System.Runtime.InteropServices>; Assembly: mscorlib (in „mscorlib.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Pufferlänge** (nicht verwaltete API) | Um Arbeitsspeicher zu sparen, wurde die Funktionalität des `pBufferLengthOffset`-Parameters für die [ICorProfilerInfo2::GetStringLayout](/dotnet/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method)-Methode geändert und entspricht jetzt dem `pStringLengthOffset`-Parameter. Beide Parameter zeigen jetzt auf die Offsetposition der Länge der Zeichenfolge. Die Pufferlänge wurde aus der Darstellung der Zeichenfolgenklasse entfernt. | Entfernen Sie alle Abhängigkeiten von der Pufferlänge. |
 | **JIT-Debuggen** | Um die Registrierung für das Just-in-Time-Debuggen (JIT) zu vereinfachen, verwendet der .NET Framework-Debugger jetzt nur den AeDebug-Registrierungsschlüssel, der das JIT-Debuggingverhalten für nativen Code steuert. Diese Änderung hat folgende Auswirkungen:<br><br>* Sie können keine zwei verschiedenen Debugger mehr für verwalteten und nativen Code registrieren.<br>* Sie können den Debugger nicht mehr automatisch bei einem nicht interaktiven Prozess starten. Sie können Benutzer aber zu einem interaktiven Prozess auffordern.<br>* Sie werden nicht mehr benachrichtigt, wenn der Debugger nicht gestartet werden kann oder wenn es ist keinen registrierten Debugger gibt, der gestartet werden soll.<br>* Automatisch gestartete Richtlinien, die von der Interaktivität von der Anwendung abhängig sind, werden nicht mehr unterstützt. | Passen Sie Debuggingvorgänge nach Bedarf an. |
@@ -150,7 +152,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespaces: <xref:System.Data>, <xref:System.Data.Objects.DataClasses>, <xref:System.Data.SqlClient>; Assemblys: System.Data (in „System.Data.dll“), System.Data.Entity (in „System.Data.Entity.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **POCO-Szenarios** | Die <xref:System.Data.Objects.DataClasses.IRelatedEnd>-Schnittstelle verfügt über neue Methoden, um die Benutzerfreundlichkeit in Plain Old CLR Object-Szenarios (POCO) zu verbessern. Diese neuen Methoden akzeptiert ein <xref:System.Object> statt einer <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>-Entität als Parameter. |
 | **Bearbeiten von Zeilen** | Die <xref:System.Collections.IList.IndexOf%2A>-Methode, wie von der <xref:System.Data.DataView>-Klasse implementiert, gibt den Wert einer bearbeiteten Zeile jetzt richtig zurück, statt -1 zurückzugeben. |
@@ -165,7 +167,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespaces: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.Data.Objects.DataClasses>; Assembly: System.Data.Entity (in „System.Data.Entity.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Entitätsobjekte** | Es gibt nun Parität zwischen der <xref:System.Data.Objects.ObjectContext.Detach%2A>-Methode und der Status des Entitätsobjekts, wenn der <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Methode aufgerufen wird. Diese verbesserte Konsistenz verhindert, dass unerwartete Ausnahmen ausgelöst werden. |
 | **Entity SQL** | Die Regeln für die Auflösung von Bezeichnern in Entity SQL wurden verbessert.<br><br>Die Logik des Entity SQL-Parsers wurde für das Auflösen von mehrteiligen Bezeichnern verbessert. |
@@ -178,7 +180,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespace: <xref:System.Data.Linq>; Assembly: System.Data.Linq (in „System.Data.Linq.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Ereignisse** | Eine <xref:System.Data.Linq.EntitySet%601>-Sammlung löst jetzt das Ereignis <xref:System.Data.Linq.EntitySet%601.ListChanged> für die Vorgänge „Hinzufügen“ und „Entfernen“ aus, wenn <xref:System.Data.Linq.EntitySet%601> entladen und die Sammlung geladen wird. |
 | **Abfragen** | `Skip(0)` wird in LINQ to SQL-Abfragen nicht mehr ignoriert. Abfragen, die diese Methode verwenden, können sich daher anders verhalten. In einigen Fällen ist eine `OrderBy`-Klausel mit `Skip(0)` erforderlich, und die Abfrage löst jetzt eine <xref:System.NotSupportedException>-Ausnahme aus, wenn die `OrderBy`-Klausel nicht enthalten war. |
@@ -189,7 +191,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespaces: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>; Assemblys: System.Data.Services (in „System.Data.Services.dll“), System.Data.Services.Client (in „System.Data.Services.Client.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Binärer Batchinhalt** | WCF Data Services unterstützt jetzt binären Batchinhalt in Anforderungen und-Antworten. |
 | **Change-Interceptors** | Change-Interceptors werden nun für eine DELETE-Anforderung ausgeführt.<br><br>Ein Change-Interceptor ist eine Methode, die immer ausgeführt wird, wenn der Server die Anforderung empfängt, eine Entität in der Entitätenmenge zu ändern. Er wird ausgeführt, bevor die eingehende Anforderung ausgeführt wird. Der Change-Interceptor ermöglicht den Zugriff auf die Entität, die geändert wird, und den Vorgang, der ausgeführt wird. |
@@ -205,7 +207,7 @@ Namespaces: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <xr
 
 Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschränkungen oder andere Probleme hatten.
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Konfigurationsdateien** | Um die Vererbung von Verhalten über die Hierarchie der Konfigurationsdatei zu aktivieren, unterstützt WCF jetzt das konfigurationsdateiübergreifende Zusammenführen.<br><br>Das Vererbungsmodell für die Konfiguration wurde erweitert, sodass Benutzer Verhalten definieren können, die auf alle Dienste auf dem Computer angewendet werden.<br><br>Es kann zu Verhaltensänderungen kommen, wenn es auf unterschiedlichen Hierarchieebenen Verhalten mit demselben Namen gibt. |
 | **Diensthosting** | Sie können das Konfigurationselement `<serviceHostingEnvironment>` nicht mehr auf Dienstebene angeben, indem Sie der Elementdefinition das Attribut `allowDefinition="MachineToApplication"` hinzufügen.<br><br>Das Element `<serviceHostingEnvironment>` auf Dienstebene anzugeben, ist technisch falsch und führt zu inkonsistentem Verhalten. |
@@ -216,7 +218,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>; Assembly: PresentationFramework (in „PresentationFramework.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Ausnahmebehandlung** | Damit Fehler früher erkannt werden können, löst WPF eine <xref:System.Reflection.TargetInvocationException> aus und legt die Eigenschaft <xref:System.Exception.InnerException> auf kritische Ausnahmen wie <xref:System.NullReferenceException>, <xref:System.OutOfMemoryException>, <xref:System.StackOverflowException> und <xref:System.Security.SecurityException> fest, anstatt die ursprüngliche Ausnahme abzufangen. | Keine |
 | **Verknüpfte Ressourcen** | Um das Verknüpfen zu vereinfachen, verwenden Ressourcendateien (z.B. Images), die sich an einem anderen Speicherort als der Ordnerstruktur des Projekts befinden, bei der Erstellung der Anwendung den vollständigen Pfad der Ressourcendatei anstelle des Dateinamens als Ressourcen-ID. So kann die Anwendung die Dateien zur Laufzeit finden. | Keine |
@@ -230,7 +232,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>; Assembly: Pre
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; Assemblys: PresentationFramework (in „PresentationFramework.dll“), PresentationCore (in „PresentationCore.dll“), WindowsBase (in „WindowsBase.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Dialogfelder** | Zur Verbesserung der Zuverlässigkeit wird die Methode <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> im gleichen Thread aufgerufen, der erstellt das <xref:Microsoft.Win32.FileDialog>-Steuerelement erstellt hat. | Achten Sie darauf, ein <xref:Microsoft.Win32.FileDialog>-Steuerelement zu erstellen, und rufen Sie die Methode <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> im gleichen Thread auf. |
 | **Unverankerte Fenster** | Um die Logik für die Fokuswiederherstellung zu beheben, die fälschlicherweise kontinuierlich ein unverankertes Fenster reaktiviert (und es wie ein modales Dialogfeld anzeigt), wird sie jetzt an der Wiederherstellung gehindert, wenn der Kandidat kein untergeordnetes Element des Fensters ist. | Keine |
@@ -246,7 +248,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Media.Effects>; Assemblys: PresentationFramework (in „PresentationFramework.dll“), PresentationCore (in „PresentationCore.dll“), WindowsBase (in „WindowsBase.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Bitmapeffekte** | Zur Verbesserung der Leistung wurden die <xref:System.Windows.Media.Effects.BitmapEffect>-Klasse und die Klassen, die von der <xref:System.Windows.Media.Effects.BitmapEffect>-Klasse erben, deaktiviert, obwohl sie weiterhin vorhanden sind. Der Effekt wird mit der hardwarebeschleunigten Renderingpipeline gerendert, wenn Folgendes zutrifft:<br><br>* Die Anwendung verwendet einen <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> oder einen <xref:System.Windows.Media.Effects.BlurBitmapEffect>, dessen Radius-Eigenschaft auf weniger als 100 DIU festgelegt ist.<br>* Die Grafikkarte dieses Computers, auf dem die Anwendung ausgeführt wird, unterstützt Pixelshader 2.0.<br><br>Wenn diese Bedingungen nicht erfüllt werden, hat das <xref:System.Windows.Media.Effects.BitmapEffect>-Objekt keine Auswirkungen.<br><br>Außerdem erzeugt Visual Studio 2010 eine Compilerwarnung, wenn das <xref:System.Windows.Media.Effects.BitmapEffect>-Objekt oder eine Unterklasse erkannt wird.<br><br>Die <xref:System.Windows.Media.DrawingContext.PushEffect%2A>-Methode ist als veraltet markiert. | Stellen Sie die Verwendung der Vorgängerversion <xref:System.Windows.Media.Effects.BitmapEffect> und der abgeleitete Klassen ein, und verwenden Sie stattdessen die neuen, von <xref:System.Windows.Media.Effects.Effect> abgeleiteten Klassen: <xref:System.Windows.Media.Effects.BlurEffect>, <xref:System.Windows.Media.Effects.DropShadowEffect>, und <xref:System.Windows.Media.Effects.ShaderEffect>.<br><br>Sie können durch Erben von der <xref:System.Windows.Media.Effects.ShaderEffect>-Klasse auch eigene Effekte erstellen. |
 | **Bitmapframes** | Geklonte <xref:System.Windows.Media.Imaging.BitmapFrame>-Objekte empfangen jetzt die Ereignisse <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>, <xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> und <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed>. Dadurch funktionieren Images, die aus dem Web heruntergeladen und auf das <xref:System.Windows.Controls.Image>-Steuerelement angewendet werden, über einen <xref:System.Windows.Style> ordnungsgemäß.<br><br>Änderung am Verhalten kommen nur vor, wenn alle der folgenden Aussagen zutreffen:<br><br>* Sie abonnieren das Ereignis <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>, <xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> oder <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed>.<br>* Die Quelle des <xref:System.Windows.Media.Imaging.BitmapFrame> stammt aus dem Web.<br>* Das <xref:System.Windows.Media.Imaging.BitmapFrame> wird geklont, während der Download immer noch ausgeführt wird. | Überprüfen Sie den Absender im Ereignishandler, und ergreifen Sie nur Maßnahmen, wenn der Absender der ursprüngliche <xref:System.Windows.Media.Imaging.BitmapFrame> ist. |
@@ -256,7 +258,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; Assemblys: PresentationFramework (in „PresentationFramework.dll“), PresentationCore (in „PresentationCore.dll“), WindowsBase (in „WindowsBase.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Binden von Befehlsinstanzen** | Um einen Mechanismus für das Binden von auf dem Ansichtsmodell basierten Befehlsinstanzen an ansichtsbasierte Eingabegesten bereitzustellen, erbt die <xref:System.Windows.Input.InputBinding>-Klasse jetzt von <xref:System.Windows.Freezable> statt von <xref:System.Windows.DependencyObject>. Die folgenden Eigenschaften sind jetzt Abhängigkeitseigenschaften:<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>Diese Änderung hat folgende Auswirkungen:<br><br>* Ein <xref:System.Windows.Input.InputBinding>-Objekt wird jetzt gesperrt, wenn es registriert wird, statt veränderbar zu bleiben.<br>* Sie können aufgrund der Einschränkungen für die <xref:System.Windows.DependencyObject>-Klasse nicht von mehreren Threads aus auf <xref:System.Windows.Input.InputBinding>-Objekte auf Instanzebene zugreifen.<br>* Sie können aufgrund der Einschränkungen der <xref:System.Windows.Freezable>-Klasse keine Eingabebindungen auf Klassenebene nach deren Registrierung mutieren.<br>* Sie können keine Eingabebindungen auf Befehlsinstanzen angeben, die in einem Ansichtsmodell erstellt werden. | Erstellen Sie separate Instanzen einer <xref:System.Windows.Input.InputBinding>-Klasse in separaten Threads, wenn Bindungen mutierbar bleiben sollen. Sperren Sie die sie andernfalls. Mutieren Sie kein statisches <xref:System.Windows.Input.InputBinding> auf Klassenebene, nachdem es registriert wurde. |
 | **Browseranwendungen** | WPF-Webbrowseranwendungen (.XBAP) verarbeiten jetzt Tastenereignisse wie eigenständige WPF-Anwendungen, sodass Objekte geroutete Tastenereignisse in der richtigen Reihenfolge empfangen. | Keine |
@@ -267,7 +269,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Automation.Peers>, <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; Assemblys: PresentationFramework (in „PresentationFramework.dll“), PresentationCore (in „PresentationCore.dll“), UIAutomationProvider (in „UIAutomationProvider.dll“), WindowsBase (in „WindowsBase.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Klassenhierarchie von Ansichten** | Die Klasse <xref:System.Windows.Automation.Peers.TreeViewAutomationPeer> und <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer> erben von <xref:System.Windows.Automation.Peers.ItemsControlAutomationPeer> statt von <xref:System.Windows.Automation.Peers.FrameworkElementAutomationPeer>. | Wenn von der <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer>-Klasse geerbt und die <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer.GetChildrenCore%2A>-Methode überschrieben wird, empfiehlt es sich, ein Objekt zurückzugeben, das von der neuen <xref:System.Windows.Automation.Peers.TreeViewDataItemAutomationPeer>-Klasse erbt. |
 | **Container außerhalb des Bildschirms** | Um einen falschen Rückgabewert zu korrigieren, gibt die <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.IsOffscreenCore%2A>-Methode jetzt ordnungsgemäß `false` für Elementcontainer zurück, die außerhalb der Ansicht gescrollt werden. Darüber hinaus ist der Wert der Methode nicht durch Okklusion anderer Fenster oder davon betroffen, ob das Element auf einen bestimmten Monitor angezeigt wird. | Keine |
@@ -280,7 +282,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Automation.Peers>, <xref
 
 Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Markup>; Assemblys: PresentationFramework (in „PresentationFramework.dll“), PresentationCore (in „PresentationCore.dll“), WindowsBase (in „WindowsBase.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
+| Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Markuperweiterung** | WPF verwendet jetzt ordnungsgemäß immer den Wert der <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>-Methode, statt in bestimmten Fällen das <xref:System.Windows.Markup.MarkupExtension>-Objekt zurückzugeben, wenn mit einer Markuperweiterung Eigenschaften festgelegt oder ein Element in einer Auflistung erstellt wird. Eine Markuperweiterung kann sich in einigen Fällen selbst zurückgeben. | Wenn Ihre Anwendung auf eine Ressource zugreift, die in einer früheren Version ein <xref:System.Windows.Markup.MarkupExtension>-Objekt zurückgegeben hat, verweisen Sie nicht auf das <xref:System.Windows.Markup.MarkupExtension>-Objekt, sondern auf das von <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> zurückgegebene Objekt. |
 | **Analyseattribute** | Attribute dürfen in XAML jetzt nur einen Punkt haben. Alle folgenden Attribute sind z.B. gültig:<br><br>`<Button Background="Red"/>` (keine Punkte)<br><br>`<Button Button.Background = "Red"/>` (ein Punkt)<br><br>Das folgende Attribut ist nicht mehr gültig:<br><br>`<Button Control.Button.Background = "Red"/>` (mehr als ein Punkt) | Richtige XAML-Attribute mit mehr als einem Punkt |
@@ -293,7 +295,7 @@ Die folgende Tabelle beschreibt die verbesserten Funktionen, die zuvor Einschrä
 
 Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; Assemblys: System.xml (in „System.Xml.dll“), System.Xml.Linq (in „System.Xml.Linq.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Chamäleonschemas** | Um Datenbeschädigung zu verhindern, werden Chamäleonschemas jetzt ordnungsgemäß geklont, wenn sie in mehreren Schemas enthalten sind.<br><br>Chamäleonschemas sind Schemas ohne Zielnamespace, und wenn sie in einem anderen XSD-Schema eingeschlossen werden, übernehmen sie den Zielnamespace des importierenden Schemas. Sie werden häufig dazu verwendet, um allgemeine Typen in einem Schema einzuschließen. |
 | **ID-Funktionen** | Die XSLT-[id-Funktion](/sql/xquery/functions-on-sequences-id) gibt nun den richtigen Wert statt NULL zurück, wenn ein <xref:System.Xml.XmlReader>-Objekt an eine XSL-Transformation übergeben wird.<br><br>Wenn der Benutzer aus einer LINQ to XML-Klasse mit der <xref:System.Xml.Linq.XNode.CreateReader%2A>-Methode ein <xref:System.Xml.XmlReader>-Objekt erstellt hat, und dieses <xref:System.Xml.XmlReader>-Objekt an eine XSL-Transformation übergeben wurde, haben alle Instanzen der `id`-Funktion in XSLT zuvor NULL zurückgegeben. Dies ist kein zulässiger Rückgabewert für die `id`-Funktion. |
@@ -307,7 +309,7 @@ Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.X
 
 Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; Assemblys: System.xml (in „System.Xml.dll“), System.Xml.Linq (in „System.Xml.Linq.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Namespace-Resolver** | Die <xref:System.Xml.XmlReader.ReadContentAs%2A>-Methode ignoriert nicht mehr den empfangenen<xref:System.Xml.IXmlNamespaceResolver>-Resolver.<br><br>In früheren Versionen wurde der angegebene Namespace-Resolver ignoriert, und stattdessen wurde <xref:System.Xml.XmlReader> verwendet. |
 | **Leerraum** | Um beim Erstellen eines Readers Datenverluste zu vermeiden, verwirft die <xref:System.Xml.XmlReader.Create%2A>-Methode keinen signifikanten Leerraum mehr.<br><br>Die XML-Validierung erkennt den Modus mit gemischtem Inhalt, in dem Text mit XML-Markup gemischt werden kann. Im gemischten Modus sind jeder Leerraum wichtig und muss gemeldet werden. |
@@ -316,14 +318,14 @@ Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.X
 
 Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; Assemblys: System.xml (in „System.Xml.dll“), System.Xml.Linq (in „System.Xml.Linq.dll“)
 
-| Funktion | Unterschiede zu 3.5 SP1 |
+| Feature | Unterschiede zu 3.5 SP1 |
 | ------- | ------------------------ |
 | **Entitätsverweise** | Um Datenbeschädigung zu verhindern, werden Entitätsverweise in XML-Attribute nicht mehr zweimal in Entitäten geändert.<br><br>Wenn der Benutzer versucht hat, eine Entität in ein `xmlns`-Attribut oder mit der <xref:System.Xml.XmlWriter.WriteEntityRef%2A>-Methode in ein `xml:lang`- oder `xml:space`-Attribut zu schreiben, wird die Entität zweimal in der Ausgabe in Entitäten geändert. Dabei werden die Daten beschädigt. |
 | **Neue Zeilenbehandlung** | Um Datenbeschädigung zu verhindern, berücksichtigen <xref:System.Xml.XmlWriter>-Objekte nun die Option <xref:System.Xml.NewLineHandling>. |
 
 ## <a name="see-also"></a>Siehe auch
 
-### <a name="reference"></a>Verweis
+### <a name="reference"></a>Referenz
 
 [Neue Typen und Member in .NET Framework 4](https://msdn.microsoft.com/library/ff641764(v=vs.100).aspx)
 

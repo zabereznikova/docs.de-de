@@ -3,16 +3,16 @@ title: Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)
 description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 01/23/2017
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -20,21 +20,21 @@ Ab C# 7 unterstützt C# Verweisrückgabewerte (ref-Rückgaben). Mit einem Verwei
 
 ## <a name="what-is-a-reference-return-value"></a>Was ist ein Verweisrückgabewert?
 
-Die meisten Entwickler sind mit dem Übergeben eines Arguments *als Verweis* an eine aufgerufene Methode vertraut. Die Argumentliste einer aufgerufenen Methode umfasst eine als Verweis übergebene Variable, und alle durch die aufgerufene Methode am Wert vorgenommenen Änderungen werden von der aufrufenden Funktion überwacht. Ein *Verweisrückgabewert* bedeutet, dass eine Methode einen *Verweis* (oder Alias) an einige Variablen zurückgibt, deren Geltungsbereich die Methode umfasst und deren Lebensdauer über die Rückgabe der Methode hinausgehen muss. Änderungen am Methodenrückgabewert durch die aufrufende Funktion werden auf die Variable angewendet, die von der Methode zurückgegeben wird.
+Die meisten Entwickler sind mit dem Übergeben eines Arguments *als Verweis* an eine aufgerufene Methode vertraut. Die Argumentliste einer aufgerufenen Methode enthält eine Variable, die als Verweis übergeben wird. Änderungen, die an diesem Wert von der aufgerufenen Methode vorgenommen werden, werden vom Aufrufer überwacht. Ein *Verweisrückgabewert* bedeutet, dass eine Methode einen *Verweis* (oder Alias) an einige Variablen zurückgibt. Der Geltungsbereich der Variable muss die Methode enthalten. Die Lebensdauer dieser Variable muss über die Rückgabe der Methode hinausgehen. Änderungen am Methodenrückgabewert durch die aufrufende Funktion werden auf die Variable angewendet, die von der Methode zurückgegeben wird.
 
 Die Deklaration der Rückgabe eines *Verweisrückgabewerts* durch eine Methode weist darauf hin, dass die Methode einen Alias an eine Variable zurückgibt. Das Entwurfsziel dahinter besteht häufig darin, dem aufrufenden Code über den Alias Zugriff auf diese Variable sowie die Möglichkeit zu deren Änderung zu gewähren. Daraus folgt, dass vom Verweis zurückgegebene Methoden nicht den Rückgabetyp `void` aufweisen dürfen.
 
-Es gibt einige Einschränkungen für den Ausdruck, den eine Methode als Verweisrückgabewert zurückgeben kann. Dazu gehören:
+Es gibt einige Einschränkungen für den Ausdruck, den eine Methode als Verweisrückgabewert zurückgeben kann. Es gelten folgende Beschränkungen:
 
 - Der Rückgabewert muss eine Lebensdauer aufweisen, die über die Ausführung der Methode hinausgeht. Mit anderen Worten: Er darf in der Methode, die diesen zurückgibt, keine lokale Variable sein. Es kann sich dabei um eine Instanz oder ein statisches Feld einer Klasse oder um ein Argument handeln, das an die Methode übergeben wurde. Beim Versuch, eine lokale Variable zurückzugeben, tritt der Compilerfehler CS8168 „Cannot return local 'obj' by reference because it is not a ref local.“ (Der lokale Wert „obj“ kann nicht als Verweis zurückgegeben werden, da er kein lokaler ref-Wert ist.) auf.
 
-- Der Rückgabewert darf nicht das `null`-Literal sein. Beim Versuch, `null` zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
+- Der Rückgabewert darf nicht das `null`-Literal sein. Bei der Rückgabe von `null` tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
    Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit null ist (nicht instanziiert) oder ein [Nullable-Typ](../nullable-types/index.md) für einen Werttyp darstellt.
  
-- Der Rückgabewert darf keine Konstante, kein Enumerationsmember, nicht der by-value-Rückgabewert einer Eigenschaft und keine Methode einer `class` oder `struct` sein. Beim Versuch, diese zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
+- Der Rückgabewert darf keine Konstante, kein Enumerationsmember, nicht der by-value-Rückgabewert einer Eigenschaft und keine Methode einer `class` oder `struct` sein. Wenn gegen diese Regel verstoßen wird, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
-Darüber hinaus sind Verweisrückgabewerte bei asynchronen Methoden nicht erlaubt, da eine asynchrone Methode etwas zurückgeben könnte, bevor die Ausführung abgeschlossen und ihr Rückgabewert bekannt ist.
+Zusätzlich sind Verweisrückgabewerte nicht für asynchrone Methoden zulässig. Eine asynchrone Methode wird möglicherweise zurückgegeben, bevor die Ausführung abgeschlossen ist, wobei der Rückgabewert noch unbekannt ist.
  
 ## <a name="defining-a-ref-return-value"></a>Definieren eines ref-Rückgabewerts
 
@@ -85,7 +85,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 Die nachfolgende Verwendung von `p` ist mit der Verwendung der von `GetContactInformation` zurückgegebenen Variable identisch, da `p` ein Alias für diese Variable darstellt. Durch Änderungen an `p` wird auch die von `GetContactInformation` zurückgegebene Variable geändert.
 
-Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet wird. 
+Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet. 
 
 Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht dies die Leistung, da ein möglicherweise aufwendiger Kopiervorgang vermieden wird. In der folgenden Anweisung wird z.B. gezeigt, wie ein lokaler Verweiswert definiert wird, mit dem auf einen Wert verwiesen wird.
 
@@ -93,20 +93,35 @@ Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht die
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Beachten Sie, dass das Schlüsselwort `ref` sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Wert im zweiten Beispiel verwendet wird. Wenn nicht in beiden Beispielen beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden) auf. 
- 
+Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Wert im zweiten Beispiel verwendet. Wenn nicht in beiden Beispielen beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden) auf. 
+
+Vor C# 7.3 konnten lokalen ref-Variablen nach der Initialisierung nicht neu zugewiesen werden, um auf einen anderen Speicher zu verweisen. Diese Einschränkung wurde entfernt. Im folgenden Beispiel wird eine Neuzuweisung veranschaulicht:
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct; // initialization
+refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
+```
+
+ Lokale ref-Variablen müssen noch immer initialisiert werden, wenn sie deklariert werden.
+
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref-Rückgaben und lokale ref-Variablen: ein Beispiel
 
 Das folgende Beispiel definiert eine `NumberStore`-Klasse, die ein Array von Integer-Werten speichert. Die `FindNumber`-Methode gibt die erste Anzahl, die größer als oder gleich der Anzahl ist, die als Argument übergeben wurde, als Verweis zurück. Wenn keine Anzahl größer als oder gleich dem Argument ist, gibt die Methode die Anzahl im Index 0 zurück. 
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-Im folgenden Beispiel wird die `NumberStore.FindNumber`-Methode aufgerufen, um den ersten Wert abzurufen, der größer als oder gleich 16 ist. Die aufrufende Funktion verdoppelt dann den von der Methode zurückgegebenen Wert. Wie die Ausgabe aus dem Beispiel zeigt, wird diese Änderung im Wert der Arrayelemente der `NumberStore`-Instanz wiedergegeben.
+Im folgenden Beispiel wird die `NumberStore.FindNumber`-Methode aufgerufen, um den ersten Wert abzurufen, der größer als oder gleich 16 ist. Die aufrufende Funktion verdoppelt dann den von der Methode zurückgegebenen Wert. Die Ausgabe aus dem Beispiel zeigt die Änderung, die im Wert der Arrayelemente der `NumberStore`-Instanz wiedergegeben wird.
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-Ohne Unterstützung für Verweisrückgabewerte wird ein solcher Vorgang in der Regel durchgeführt, indem der Index des Arrayelements zusammen mit seinem Wert zurückgegeben wird. Die aufrufende Funktion kann diesen Index dann dazu verwenden, den Wert in einem separaten Methodenaufruf zu ändern. Die aufrufende Funktion kann den Index jedoch auch ändern, um auf andere Arraywerte zuzugreifen und diese zu bearbeiten.  
- 
+Ohne Unterstützung für Verweisrückgabewerte wird ein solcher Vorgang durchgeführt, indem der Index des Arrayelements zusammen mit seinem Wert zurückgegeben wird. Die aufrufende Funktion kann diesen Index dann dazu verwenden, den Wert in einem separaten Methodenaufruf zu ändern. Die aufrufende Funktion kann den Index jedoch auch ändern, um auf andere Arraywerte zuzugreifen und diese zu bearbeiten.  
+
+Im folgenden Beispiel wird gezeigt, wie die `FindNumber`-Methode nach C# 7.3 neu geschrieben werden kann, damit sie die lokale ref-Neuzuweisung verwendet:
+
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStoreUpdated.cs#1)]
+
+Diese zweite Version ist durch längere Sequenzen in Szenarios, in denen die gesuchte Zahl am Ende des Arrays liegt, effizienter.
+
 ## <a name="see-also"></a>Siehe auch
 
 [ref (C#-Referenz)](../../language-reference/keywords/ref.md)  

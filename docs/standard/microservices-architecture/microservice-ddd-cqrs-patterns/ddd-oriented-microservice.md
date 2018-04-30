@@ -1,6 +1,6 @@
 ---
 title: Entwerfen eines DDD-orientierten Microservices
-description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen eines DDD-orientierten Microservices"
+description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen eines DDD-orientierten Microservices
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Entwerfen eines DDD-orientierten Microservices
 
@@ -57,7 +57,7 @@ Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmte
 
 ### <a name="the-domain-model-layer"></a>Die Domänenmodellebene
 
-Im Buch [Domain-Driven Design](http://domainlanguage.com/ddd/) von Eric Evan steht Folgendes über die Domänenmodellebene und die Anwendungsebene.
+Im Buch [Domain-Driven Design](https://domainlanguage.com/ddd/) von Eric Evan steht Folgendes über die Domänenmodellebene und die Anwendungsebene.
 
 **Domänenmodellebene**: verantwortlich für die Darstellung von Konzepten des Geschäfts, Informationen zur Geschäftslage und Geschäftsregeln Der Zustand, der die Geschäftslage widerspiegelt, wird hier gesteuert und verwendet, auch wenn die technischen Details zur Speicherung an die Infrastruktur delegiert werden. Diese Ebene stellt das Kernstück von Geschäftssoftware dar.
 
@@ -75,7 +75,7 @@ Dies bedeutet aber auch nicht, dass Sie ein Modell auswählen können, das für 
 
 ### <a name="the-application-layer"></a>Die Anwendungsebene
 
-Wir fahren nun mit der Anwendungsebene fort und können erneut aus dem Buch [Domain-Driven Design](http://domainlanguage.com/ddd/) von Eric Evan zitieren:
+Wir fahren nun mit der Anwendungsebene fort und können erneut aus dem Buch [Domain-Driven Design](https://domainlanguage.com/ddd/) von Eric Evan zitieren:
 
 **Anwendungsebene:** definiert die Aufträge, die von der Software ausgeführt werden sollen, und leitet die ausdrucksstarken Domänenobjekte zur Bewältigung von Problemen weiter Die Aufgaben, für die diese Ebene verantwortlich ist, sind für das Geschäft von Bedeutung bzw. für die Interaktion mit den Anwendungsebenen anderer Systeme erforderlich. Diese Ebene wird dünn gehalten. Sie enthält keine Geschäftsregeln oder Wissen, sondern koordiniert nur Aufgaben und delegiert Arbeit an Kollaborationen von Domänenobjekten auf der darunterliegenden Ebene. Sie enthält keinen Zustand, der die Geschäftslage widerspiegelt, kann aber einen Zustand aufweisen, der dem Benutzer oder dem Programm den Fortschritt einer Aufgabe anzeigt.
 
@@ -101,13 +101,13 @@ Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie ber
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **DevIQ. Persistence Ignorance principle (Grundsatz „Ignorieren der Persistenz“)**
+-   **DevIQ. Persistence Ignorance principle (Das Prinzip „Ignorieren der Persistenz“)**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur) **
+-   **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Layered Architecture In Domain-Driven Design (Ebenenarchitektur im domänengesteuerten Design)**
+-   **Angel Lopez. Layered Architecture In Domain-Driven Design (Architektur mit Ebenen im domänengesteuerten Design)**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

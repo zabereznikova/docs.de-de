@@ -1,6 +1,6 @@
 ---
-title: "Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde"
-description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde"
+title: Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde
+description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde
 
@@ -47,20 +47,20 @@ Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Composite UI using ASP.NET (Particular’s Workshop) (Zusammengesetzte Benutzeroberfläche mithilfe von ASP.NET (Workshop))**
+-   **Composite UI using ASP.NET (Particular’s Workshop) (Zusammengesetzte Benutzeroberfläche von ASP.NET (Workshop))**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservicesarchitektur)**
+-   **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservices-Architektur)**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti. The secret of better UI composition (Das Geheimnis einer besseren Benutzeroberflächenkomposition)**
+-   **Mauro Servienti. The secret of better UI composition (Das Geheimnis besserer UI-Zusammenstellung)**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic. Including Front-End Web Components Into Microservices (Verwenden von Front-End-Webkomponenten in Microservices)**
+-   **Viktor Farcic. Including Front-End Web Components Into Microservices (Einschließen von Front-End-Webkomponenten in Microservices)**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Managing Frontend in the Microservices Architecture (Verwalten des Front-Ends in der Microservicesarchitektur)**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

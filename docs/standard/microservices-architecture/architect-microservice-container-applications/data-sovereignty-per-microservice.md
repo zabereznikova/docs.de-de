@@ -1,6 +1,6 @@
 ---
-title: "Datensouveränität pro Microservice"
-description: ".NET Microservices-Architektur für .NET-Containeranwendungen | Datensouveränität pro Microservice"
+title: Datensouveränität pro Microservice
+description: .NET Microservices-Architektur für .NET-Containeranwendungen | Datensouveränität pro Microservice
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76265490d7cb0d53686b43b88cb797cf887d578a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f5d782a70123a66c1579a64a37bc612ccda9c1a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
@@ -37,13 +37,13 @@ Eine monolithische Anwendung mit einer einzelnen relationalen Datenbank hat in d
 
 Der Datenzugriff wird jedoch beim Wechsel zu einer Microservicesarchitektur wesentlich komplexer. Aber selbst wenn ACID-Transaktionen innerhalb eines Microservices oder eines begrenzten Kontexts verwendet werden können oder sollen, sind die Daten im Besitz jedes Microservices für diesen Microservice privat und es kann nur über seine Microservice-API auf sie zugegriffen werden. Kapseln von Daten stellt sicher, dass die Microservices locker gekoppelt sind und sich unabhängig voneinander weiterentwickeln können. Wenn mehrere Dienste auf die gleichen Daten zugreifen, benötigen Schemaupdates koordinierte Updates für alle Dienste. Dadurch würde die Autonomie des Lebenszyklus der Microservices unterbrochen. Aber verteilte Datenstrukturen bedeuten, dass Sie keine einzelne ACID-Transaktion über Microservices vornehmen können. Dies bedeutet wiederum, dass Sie die letztliche Konsistenz verwenden müssen, wenn ein Geschäftsprozess mehrere Microservices umfasst. Dies ist viel schwieriger zu implementieren als einfache SQL-Joins. Auf ähnliche Weise sind viele weitere relationale Features der Datenbank nicht in mehreren Microservices verfügbar.
 
-Darüber hinaus verwenden verschiedene Microservices häufig unterschiedliche *Arten* von Datenbanken. Moderne Anwendungen speichern und verarbeiten verschiedene Arten von Daten. Eine relationale Datenbank ist nicht immer die beste Wahl. In einigen Anwendungsfällen verfügt eine NoSQL-Datenbank wie Azure DocumentDB oder MongoDB über ein praktischeres Datenmodell und bietet eine bessere Leistung und Skalierbarkeit als eine SQL-Datenbank wie SQL Server oder Azure SQL-Datenbank. In anderen Fällen ist eine relationale Datenbank immer noch die beste Herangehensweise. Aus diesem Grund verwenden auf Microservices basierende Anwendungen häufig eine Mischung aus SQL- und NoSQL-Datenbanken, was in einigen Fällen auch [Polyglot-Persistence](http://martinfowler.com/bliki/PolyglotPersistence.html)-Ansatz genannt wird.
+Darüber hinaus verwenden verschiedene Microservices häufig unterschiedliche *Arten* von Datenbanken. Moderne Anwendungen speichern und verarbeiten verschiedene Arten von Daten. Eine relationale Datenbank ist nicht immer die beste Wahl. In einigen Anwendungsfällen verfügt eine NoSQL-Datenbank wie Azure DocumentDB oder MongoDB über ein praktischeres Datenmodell und bietet eine bessere Leistung und Skalierbarkeit als eine SQL-Datenbank wie SQL Server oder Azure SQL-Datenbank. In anderen Fällen ist eine relationale Datenbank immer noch die beste Herangehensweise. Aus diesem Grund verwenden auf Microservices basierende Anwendungen häufig eine Mischung aus SQL- und NoSQL-Datenbanken, was in einigen Fällen auch [Polyglot-Persistence](https://martinfowler.com/bliki/PolyglotPersistence.html)-Ansatz genannt wird.
 
 Eine partitionierte, polyglotte, persistente Architektur für die Datenspeicherung weist viele Vorteile auf. Dazu gehören lose miteinander verknüpfte Dienste und eine bessere Leistung, Skalierbarkeit, Kosten und Verwaltbarkeit. Allerdings kann dies einige Herausforderungen für die verteilte Datenverwaltung hervorrufen, wie wir unter [Identifizieren von Domänenmodellgrenzen](#identifying-domain-model-boundaries-for-each-microservice) weiter unten in diesem Kapitel erläutern werden.
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Die Beziehung zwischen Microservices und dem BC-Muster
 
-Das Konzept der Microservice leitet sich vom [BC-Muster (Begrenzter Kontext)](http://martinfowler.com/bliki/BoundedContext.html) in [domänengesteuertem Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) ab. DDD arbeitet mit großen Modellen, unterteilt diese in mehrere BCs und definiert explizite Umrisslinien. Jeder BC benötigt sein eigenes Modell und seine eigene Datenbank. Ebenso besitzt jeder Microservice seine verwandten Daten. Darüber hinaus verfügt jede BC in der Regel über eine eigene [ubiquitäre Sprache](http://martinfowler.com/bliki/UbiquitousLanguage.html) zur vereinfachten Kommunikation zwischen Softwareentwickler und Domänenexperten.
+Das Konzept der Microservice leitet sich vom [BC-Muster (Begrenzter Kontext)](https://martinfowler.com/bliki/BoundedContext.html) in [domänengesteuertem Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) ab. DDD arbeitet mit großen Modellen, unterteilt diese in mehrere BCs und definiert explizite Umrisslinien. Jeder BC benötigt sein eigenes Modell und seine eigene Datenbank. Ebenso besitzt jeder Microservice seine verwandten Daten. Darüber hinaus verfügt jede BC in der Regel über eine eigene [ubiquitäre Sprache](https://martinfowler.com/bliki/UbiquitousLanguage.html) zur vereinfachten Kommunikation zwischen Softwareentwickler und Domänenexperten.
 
 Diese Begriffe (hauptsächlich Domänenentitäten) in der ubiquitären Sprache können unterschiedliche Namen in unterschiedlichen begrenzten Kontexten besitzen, selbst wenn die verschiedenen Domänenentitäten die gleiche Identität teilen (d.h. die eindeutige ID, die verwendet wird, um die Entität aus dem Speicher zu lesen). In einem begrenzten Kontext in einem Benutzerprofil verfügt die Entität „User domain“ beispielsweise über die gleiche Identität wie die Entität „Buyer domain“ im begrenzten Bestellkontext.
 
@@ -55,14 +55,14 @@ DDD profitiert von Microservices durch echte Grenzen in Form von verteilten Micr
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Chris Richardson. Pattern: Database per service (Das Datenbank-pro-Dienst-Muster)**
-    [*http://microservices.io/patterns/data/database-per-service.html*](http://microservices.io/patterns/data/database-per-service.html)
+-   **Chris Richardson. Pattern: Database per service (Muster: Datenbank pro Dienst)**
+    [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
--   **Martin Fowler. BoundedContext (Begrenzter Kontext)**
-    [*http://martinfowler.com/bliki/BoundedContext.html*](http://martinfowler.com/bliki/BoundedContext.html)
+-   **Martin Fowler. BoundedContext**
+    [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
 
--   **Martin Fowler. Polyglot Persistence**
-    [*http://martinfowler.com/bliki/PolyglotPersistence.html*](http://martinfowler.com/bliki/PolyglotPersistence.html)
+-   **Martin Fowler. PolyglotPersistence**
+    [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 -   **Alberto Brandolini. Strategic Domain Driven Design with Context Mapping (Strategisches domänengesteuertes Design mithilfe der Kontextzuordnung)**
     [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)

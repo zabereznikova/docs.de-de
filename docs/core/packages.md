@@ -1,6 +1,6 @@
 ---
 title: Pakete, Metapakete und Frameworks
-description: "Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks."
+description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -78,6 +78,7 @@ Das .NET-Standard-Metapaket lautet:
 Das sind die .NET Core-Hauptmetapakete:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – beschreibt die Bibliotheken, die Teil der .NET Core Verteilung sind. Richtet das[`.NETCoreApp` Framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj) ein. Dies ist abhängig von der kleineren `NETStandard.Library`.
+- [Microsoft.AspNetCore.All:](https://www.nuget.org/packages/Microsoft.AspNetCore.All) Enthält alle unterstützten Pakete von ASP.NET Core, Entity Framework Core und interne Abhängigkeiten sowie Drittanbieterabhängigkeiten, die von ASP.NET Core und Entity Framework Core verwendet werden. Weitere Informationen finden Sie unter [Das Metapaket „Microsoft.AspNetCore.All“ für ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – eine Reihe von Kompatibilitätsfassaden, mit denen mscorlib-basierte Portable Klassenbibliotheken (Portable Class Libraries, PCLs) auf .NET Core ausgeführt werden können.
 
 ## <a name="frameworks"></a>Frameworks

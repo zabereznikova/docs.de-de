@@ -6,16 +6,17 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 911935379fd126ccbafe825a6ce4049c2e9b5cde
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-#<a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
+# <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
 > „Wenn Sie denken, dass eine gute Architektur viel Geld kostet, dann haben Sie noch nicht mit einer schlechten gearbeitet.“  
 > _– Brian Foote und Joseph Yoder_
@@ -176,7 +177,7 @@ Die UI-Schicht in einer ASP.NET Core MVC-Anwendung stellt den Einstiegspunkt fü
 > -   Filter
 > -   Ansichten
 > -   ViewModels
-> -   Startup
+> -   Start
 
 Die Startup-Klasse ist für das Konfigurieren von Anwendungen und für das Verknüpfen von Implementierungstypen mit Schnittstellen zuständig. Dadurch kann zur Laufzeit erfolgreich Dependency Injection angewendet werden.
 
@@ -226,7 +227,7 @@ Docker kann sich im Hinblick auf monolithische Apps zwar als sinnvoll erweisen. 
 > <http://deviq.com/repository-pattern/>
 > - **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **E-Book zum Entwerfen von Microservices** <http://aka.ms/MicroservicesEbook>
+> - **E-Book „Architecting Microservices“ (Architektur von Microservices)** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Zurück] (architectural-principles.md) [Weiter] (common-client-side-web-technologies.md)

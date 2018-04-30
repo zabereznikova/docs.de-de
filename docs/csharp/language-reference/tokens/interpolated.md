@@ -16,17 +16,17 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6873c3b419323fa9f5523143ad607289b6fd6e2
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: cabb40c9c449780c8c2a504aad3e53938e2ed957
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
-Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält. Wenn die interpolierte Zeichenfolge beispielsweise in einer Zuweisungsanweisung oder in einem Methodenaufruf aufgelöst wird, werden interpolierten Ausdrücke durch die resultierenden Zeichenfolgendarstellungen ersetzt, aus denen dann die Ergebniszeichenfolge erstellt wird. Dieses Feature ist in C# 6 und höher verfügbar.
+Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält. Wenn die interpolierte Zeichenfolge in die Ergebniszeichenfolge aufgelöst wird, werden Elemente mit interpolierten Ausdrücken durch die Zeichenfolgendarstellungen der Ausdrucksergebnisse ersetzt. Dieses Feature ist in C# 6 und höher verfügbar.
 
-Mit der Zeichenfolgeninterpolation lassen sich formatierte Zeichenfolgen durch eine Syntax erstellen, die besser lesbar und praktischer ist als beim Feature für die [zusammengesetzte Formatierung von Zeichenfolgen](../../../standard/base-types/composite-formatting.md). Im folgenden Beispiel wird mit beiden Features die gleiche Ausgabe erzeugt:
+Die Zeichenfolgeninterpolation bietet eine Syntax, die besser lesbar und praktischer beim Erstellen formatierter Zeichenfolgen ist als ein Feature für die [kombinierte Formatierung von Zeichenfolgen](../../../standard/base-types/composite-formatting.md). Im folgenden Beispiel wird mit beiden Features die gleiche Ausgabe erzeugt:
 
 [!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
@@ -47,7 +47,7 @@ Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes 
 |`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des interpolierten Ausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Eine Standardformatierungszeichenfolge oder benutzerdefinierte Formatierungszeichenfolge, die durch den Typ des Ausdrucksergebnisses unterstützt wird. Weitere Informationen finden Sie unter [Formatzeichenfolgen-Komponente](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
-Im folgenden Beispiel werden die in der obigen Tabelle beschriebenen Formatierungskomponenten verwendet:
+Im folgenden Beispiel werden die oben beschriebenen Formatierungskomponenten verwendet:
 
 [!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
@@ -55,7 +55,7 @@ Wenn eine geschweifte Klammer („{“ oder „}“) im Text angezeigt werden so
 
 Da der Doppelpunkt (:) im Element eines interpolierten Ausdrucks eine besondere Funktion einnimmt, müssen Sie zur Verwendung eines [Bedingungsoperators](../operators/conditional-operator.md) in einem interpolierten Ausdruck diesen Ausdruck in runde Klammern einschließen.
 
-Im folgende Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in die Ergebniszeichenfolge einschließen und einen Bedingungsoperator in einem interpolierten Ausdruck verwenden:
+Im folgenden Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in die Ergebniszeichenfolge einschließen und einen Bedingungsoperator in einem interpolierten Ausdruck verwenden:
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -64,27 +64,23 @@ In wörtlichen interpolierten Zeichenfolgen wird das `$`-Zeichen und ein darauff
 > [!NOTE]
 > Das `$`-Token muss in einer wörtlichen interpolierten Zeichenfolge vor dem `@`-Token stehen.
 
-## <a name="implicit-conversions"></a>Implizite Konvertierungen
-
-Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
+Es gibt drei implizite Konvertierungen aus einer interpolierten Zeichenfolge:
 
 1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.String>-Instanz, die das Ergebnis der Auflösung einer interpolierten Zeichenfolge ist, wobei Elemente der interpolierten Zeichenfolge durch die formatierten Zeichenfolgendarstellungen der Ergebnisse ersetzt werden. Für diese Konvertierung wird die aktuelle Kultur verwendet.
 
-1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Variable, die eine zusammengesetzte Formatzeichenfolge mit den zu formatierenden Ausdrucksergebnissen darstellt. Dadurch können Sie aus einer einzigen <xref:System.FormattableString>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen. Hierzu können Sie eine der folgenden Methoden aufrufen:
+1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Instanz, die eine zusammengesetzte Formatzeichenfolge mit den zu formatierenden Ausdrucksergebnissen darstellt. Dadurch können Sie aus einer einzigen <xref:System.FormattableString>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen. Hierzu können Sie eine der folgenden Methoden aufrufen:
 
       - Eine Überladung von <xref:System.FormattableString.ToString>, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.CurrentCulture>-Element erzeugt.
       - Eine <xref:System.FormattableString.Invariant%2A>-Methode, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.InvariantCulture>-Element erzeugt.
       - Eine <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode, die eine Ergebniszeichenfolge für eine bestimmte Kultur erzeugt.
 
-1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Variable, mit der Sie ebenfalls aus einer einzigen <xref:System.IFormattable>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen können.
+1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Instanz, die Ihnen das Erstellen mehrerer Ergebniszeichenfolgen mit kulturspezifischem Inhalt aus einer einzigen <xref:System.IFormattable>-Instanz ermöglicht.
 
-Im folgenden Beispiel wird die implizite Konvertierung in <xref:System.FormattableString> zur Erstellung kulturspezifischer Ergebniszeichenfolgen verwendet:
+Im folgenden Beispiel wird die implizite Konvertierung in <xref:System.FormattableString> zum Erstellen kulturspezifischer Ergebniszeichenfolgen verwendet:
 
 [!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
-## <a name="additional-reading"></a>Weiterführende Literatur
-
-Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie unter [Schnellstart: interpolierte Zeichenfolgen](../../quick-starts//interpolated-strings.yml) weitere Informationen. Weitere Beispiele finden Sie im [Tutorial zur Zeichenfolgeninterpolation](../../tutorials/string-interpolation.md).
+Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie weitere Informationen im Schnellstart [Interpolierte Zeichenfolgen in C#](../../quick-starts/interpolated-strings.yml). Weitere Beispiele finden Sie im [Tutorial zur Zeichenfolgeninterpolation](../../tutorials/string-interpolation.md).
 
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  

@@ -1,6 +1,6 @@
 ---
 title: Asynchrone nachrichtenbasierte Kommunikation
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Asynchrone nachrichtenbasierte Kommunikation"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Asynchrone nachrichtenbasierte Kommunikation
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -59,7 +59,7 @@ Wenn ein System letztliche Konsistenz verwendet, die durch Integrationsereigniss
 
 Wie bereits unter [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für die verteilte Datenverwaltung)](#challenges-and-solutions-for-distributed-data-management) beschrieben wurde, können Sie Integrationsereignisse dazu nutzen, microserviceübergreifende Geschäftsaufgaben zu implementieren. Dadurch kommt es zu letztlicher Konsistenz zwischen diesen Diensten. Eine letztlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der zugehörige Microservice eine Domänenentität und veröffentlicht ein weiteres Integrationsereignis, das die nächste Aktion innerhalb derselben End-to-End-Geschäftsaufgabe auslöst.
 
-Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizieren müssen, die für dasselbe Ereignis abonniert sind. Dazu können Sie das Veröffentlichen/Abonnieren-Messaging verwenden, das auf ereignisgesteuerter Kommunikation basiert, wie in Abbildung 4-19 gezeigt wird. Dieser Veröffentlichen/Abonnieren-Ansatz kann nicht nur für die Microservicearchitektur genutzt werden. Vergleichbar ist die Funktionsweise dieses Ansatzes damit, wie [begrenzte Kontexte](http://martinfowler.com/bliki/BoundedContext.html) in DDD kommunizieren sollten oder wie Änderungen von der Schreibdatenbank zur Lesedatenbank im Architekturmuster [CQRS (Command and Query Responsibility Segregation; Zuständigkeitstrennung für Befehle und Abfragen)](http://martinfowler.com/bliki/CQRS.html) weitergegeben werden. Das Ziel ist letztliche Konsistenz zwischen mehreren Datenquellen im verteilten System.
+Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizieren müssen, die für dasselbe Ereignis abonniert sind. Dazu können Sie das Veröffentlichen/Abonnieren-Messaging verwenden, das auf ereignisgesteuerter Kommunikation basiert, wie in Abbildung 4-19 gezeigt wird. Dieser Veröffentlichen/Abonnieren-Ansatz kann nicht nur für die Microservicearchitektur genutzt werden. Vergleichbar ist die Funktionsweise dieses Ansatzes damit, wie [begrenzte Kontexte](https://martinfowler.com/bliki/BoundedContext.html) in DDD kommunizieren sollten oder wie Änderungen von der Schreibdatenbank zur Lesedatenbank im Architekturmuster [CQRS (Command and Query Responsibility Segregation; Zuständigkeitstrennung für Befehle und Abfragen)](https://martinfowler.com/bliki/CQRS.html) weitergegeben werden. Das Ziel ist letztliche Konsistenz zwischen mehreren Datenquellen im verteilten System.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur f
 
 -   Verwenden einer Transaktionswarteschlange wie MSMQ, die auf DTC basiert (dieser Ansatz ist allerdings bereits älter und wird nicht mehr empfohlen).
 
--   Verwenden von [Transaktionsprotokollmining](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Verwenden des [Musters „Ereignissourcing“](https://msdn.microsoft.com/library/dn589792.aspx).
 
@@ -94,16 +94,16 @@ Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Ide
 -   **Event Driven Messaging (Ereignisgesteuertes Messaging)**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish-Subscribe channel (Kanal „Veröffentlichen-Abonnieren“)**
+-   **Publish/Subscribe Channel (Veröffentlichungs-/Abonnementkanal)**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Muster „CQRS“ (Command and Query Responsibility Segregation)**
+-   **Command and Query Responsibility Segregation (CQRS) (Zuständigkeitstrennung für Befehle und Abfragen (CQRS))**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts (Kommunikation zwischen Kontextgrenzen)**
+-   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Eventual consistency (Letztliche Konsistenz)**

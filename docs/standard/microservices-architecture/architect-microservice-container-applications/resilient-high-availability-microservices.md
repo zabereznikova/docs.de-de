@@ -1,6 +1,6 @@
 ---
-title: "Resilienz und Hochverfügbarkeit bei Microservices"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Resilienz und Hochverfügbarkeit bei Microservices"
+title: Resilienz und Hochverfügbarkeit bei Microservices
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Resilienz und Hochverfügbarkeit bei Microservices
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -43,7 +43,7 @@ Protokolle geben mithilfe von Ausnahmen, Warnungen und einfachen Informationsmel
 
 Bei monolithischen serverbasierten Anwendungen können Protokolle einfach in eine Datei auf der Festplatte (also in eine Protokolldatei) geschrieben und anschließend mit einem beliebigen Tool analysiert werden. Da die Anwendungsausführung auf einen bestimmten Server oder einen bestimmten virtuellen Computer beschränkt ist, ist die Analyse des Ereignisflusses meist nicht allzu komplex. Bei einer verteilten Anwendung, bei der mehrere Dienste auf verschiedenen Knoten in einem Orchestratorcluster ausgeführt werden, stellt die Korrelation von verteilten Ereignissen dagegen eine Herausforderung dar.
 
-Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabedatenstrom von Ereignissen oder Protokolldateien selbst zu speichern oder gar das Routing der Ereignisse an einer zentrale Stelle zu verwalten. Sie sollte transparent sein, d.h., alle Prozesse sollen jeweils nur ihren eigenen Ereignisdatenstrom in eine Standardausgabe schreiben, die darunter von der Infrastruktur der Ausführungsumgebung erfasst wird, in der die Prozesse ausgeführt werden. Ein Beispiel für diese Ereignisdatenstromrouter ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow). Dieser Router erfasst Ereignisdatenströme aus verschiedenen Quellen und veröffentlicht diese in Ausgabesystemen. Hierzu zählen einfache Standardausgaben für eine Entwicklungsumgebung oder für Cloudsysteme wie [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (für lokale Anwendungen) und [Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Es gibt auch von Drittanbietern gute Plattformen und Tools zur Analyse von Protokollen, mit denen Protokolle durchsucht und überwacht, Anwender gewarnt und Berichte gesendet werden können, auch in Echtzeit. Ein Beispiel hierfür ist [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabedatenstrom von Ereignissen oder Protokolldateien selbst zu speichern oder gar das Routing der Ereignisse an einer zentrale Stelle zu verwalten. Sie sollte transparent sein, d.h., alle Prozesse sollen jeweils nur ihren eigenen Ereignisdatenstrom in eine Standardausgabe schreiben, die darunter von der Infrastruktur der Ausführungsumgebung erfasst wird, in der die Prozesse ausgeführt werden. Ein Beispiel für diese Ereignisdatenstromrouter ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow). Dieser Router erfasst Ereignisdatenströme aus verschiedenen Quellen und veröffentlicht diese in Ausgabesystemen. Hierzu zählen einfache Standardausgaben für eine Entwicklungsumgebung oder für Cloudsysteme wie [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (für lokale Anwendungen) und [Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Es gibt auch von Drittanbietern gute Plattformen und Tools zur Analyse von Protokollen, mit denen Protokolle durchsucht und überwacht, Anwender gewarnt und Berichte gesendet werden können, auch in Echtzeit. Ein Beispiel hierfür ist [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestratoren zum Verwalten von Integritäts- und Diagnoseinformationen
 
@@ -59,10 +59,10 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **The Twelve-Factor App. XI. Logs: Treat logs as event streams (Die Twelve-Factor-App. XI. Protokolle: Behandeln von Protokollen als Ereignisdatenströme)**
+-   **The Twelve-Factor App. XI. Protokolle: Protokolle als Strom von Ereignissen behandeln**
     [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft.Diagnostics.EventFlow-Bibliothek.** GitHub-Repository.
+-   **Microsoft.Diagnostics.EventFlow-Bibliothek.** GitHub repo (Scrutor. GitHub-Reporitory).
 
     [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
@@ -72,13 +72,13 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 -   **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren, was Sie meinen: Verwenden des Semantic Logging Application Block)**
+-   **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren: Verwenden des Semantic Logging Application Block)**
     [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Offizielle Website.
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **EventSource-Klasse**. API für die Ereignisablaufverfolgung für Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+-   **EventSource-Klasse**. API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))[*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

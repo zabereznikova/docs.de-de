@@ -18,25 +18,23 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 304522aa791e78dda6a67ed4f4e9b6cc33505dff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>Weitere Themen (Parallele Programmierung)
 Die folgenden Ressourcen enthalten zusätzliche Informationen zur parallelen Programmierung in .NET Framework:  
   
--   Das [Parallel Computing Developer Center](http://go.microsoft.com/fwlink/?LinkID=160570) auf der MSDN-Website bietet Links zu aktuellen Inhalten und Forumbeiträgen zur parallelen Programmierung in .NET Framework und nativem C++.  
+-   Das [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701) auf der MSDN-Website bietet Links zu Inhalten und Forenbeiträgen zur parallelen Programmierung in .NET Framework und nativem C++.  
   
--   Der Blog [Parallel Programming with .NET (Parallele Programmierung mit .NET)](http://go.microsoft.com/fwlink/?LinkID=169627) auf der MSDN-Blogwebsite enthält zahlreiche detaillierte Artikel zur parallelen Programmierung in .NET Framework.  
+-   Der Blog [Parallel Programming with .NET (Parallele Programmierung mit .NET)](https://blogs.msdn.microsoft.com/pfxteam/) auf der MSDN-Blogwebsite enthält zahlreiche detaillierte Artikel zur parallelen Programmierung in .NET Framework.  
   
--   Der Blog [Concurrency Visualizer](http://go.microsoft.com/fwlink/?LinkID=169630) der MSDN-Blogwebsite umfasst das neue Leistungsprofilerstellungstool, das in einigen Editionen von [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] enthalten ist.  
+-   Im [Forum zu Parallelerweiterungen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions) auf der MSDN-Forenwebsite werden Fragen zur parallelen Programmierung gestellt und beantwortet.  
   
--   Im [Forum zu Parallelerweiterungen](http://go.microsoft.com/fwlink/?LinkID=169628) auf der MSDN-Forenwebsite werden Fragen zur parallelen Programmierung gestellt und beantwortet.  
-  
--   Die Seite [Samples for Parallel Programming with the .NET Framework (Beispiele zur parallelen Programmierung mit .NET Framework)](http://go.microsoft.com/fwlink/?LinkID=165717) auf der MSDN-Codegalerie-Website enthält viele Beispiele, die fortgeschrittene und erweiterte Techniken zur parallelen Programmierung veranschaulichen.  
+-   Die Seite [Samples for Parallel Programming with the .NET Framework (Beispiele zur parallelen Programmierung mit .NET Framework)](https://code.msdn.microsoft.com/ParExtSamples) auf der MSDN-Codegalerie-Website enthält viele Beispiele, die fortgeschrittene und erweiterte Techniken zur parallelen Programmierung veranschaulichen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222)

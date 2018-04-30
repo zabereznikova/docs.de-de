@@ -1,6 +1,6 @@
 ---
-title: "Tutorial „Branches und Schleifen“: Lokale C#-Schnellstarts"
-description: "In diesem Schnellstart zu Branches und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Branches und Schleifen zur wiederholten Ausführung von Anweisungen unterstützt."
+title: 'Tutorial „Branches und Schleifen“: Lokale C#-Schnellstarts'
+description: In diesem Schnellstart zu Branches und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Branches und Schleifen zur wiederholten Ausführung von Anweisungen unterstützt.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>Verzweigungen und Schleifen
 
@@ -249,11 +249,11 @@ Nachdem Sie nun die `if`-Anweisung und die Schleifenkonstrukte in der Programmie
 - Die `if`-Anweisung ermittelt die Bedingung, um festzustellen, ob eine Zahl in der Summe berücksichtigt werden soll.
 - Die `for`-Schleife ermöglicht es, eine Reihe von Schritten für alle Zahlen von 1 bis 20 zu wiederholen.
 
-Probieren Sie es selbst aus. Prüfen Sie dann, wie Sie abgeschnitten haben. Sie sollten 63 als Antwort erhalten. Sie können eine mögliche Antwort sehen, indem Sie sich [den fertig gestellten Code auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54) ansehen.
+Probieren Sie es selbst aus. Prüfen Sie dann, wie Sie abgeschnitten haben. Sie sollten 63 als Antwort erhalten. Sie können eine mögliche Antwort sehen, indem Sie sich [den fertig gestellten Code auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54) ansehen.
 
 Sie haben den Schnellstart „Branches und Schleifen“ abgeschlossen.
 
-Sie können mit dem Schnellstart [Interpolierte Zeichenfolgen](interpolated-strings-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
+Sie können mit dem Schnellstart [Zeichenfolgeninterpolation](interpolated-strings-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zu diesen Begriffen finden Sie unter folgenden Themen:
 

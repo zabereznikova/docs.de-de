@@ -1,20 +1,19 @@
 ---
-title: "Voraussetzungen für .NET Core unter Mac"
-description: "Unterstützte Versionen von macOS-Versionen und .NET Core-Abhängigkeiten, um .NET Core-Anwendungen auf macOS-Computern zu entwickeln, bereitzustellen und auszuführen."
-keywords: .NET, .NET Core, macOS, Mac
+title: Voraussetzungen für .NET Core unter Mac
+description: Unterstützte Versionen von macOS-Versionen und .NET Core-Abhängigkeiten, um .NET Core-Anwendungen auf macOS-Computern zu entwickeln, bereitzustellen und auszuführen.
 author: guardrex
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2644cd491d1d3ba07f48f57fd9416ec84316f7d8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Erforderliche Komponenten für .NET Core unter macOS
 
@@ -65,9 +64,9 @@ Laden Sie das .NET Core SDK von [.NET Downloads](https://www.microsoft.com/net/d
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>Erhöhen des Limits für die maximale Anzahl von geöffneten Dateien
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Erhöhen des Limits für die maximale Anzahl von geöffneten Dateien (.NET Core Versionen vor .NET Core SDK 2.0.2) 
 
-Das Standardlimit für geöffnete Dateien unter macOS ist für einige .NET Core-Workloads möglicherweise nicht ausreichend, z.B. für das Wiederherstellen von Projekten oder das Ausführen von Komponententests.
+In früheren Versionen von .NET Core (vor .NET Core SDK 2.0.2) ist das Standardlimit für geöffnete Dateien unter macOS für einige .NET Core-Workloads möglicherweise nicht ausreichend, z.B. für das Wiederherstellen von Projekten oder das Ausführen von Komponententests.
 
 Sie können dieses Limit erhöhen, indem Sie diese Schritte befolgen:
 

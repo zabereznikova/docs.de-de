@@ -1,6 +1,6 @@
 ---
-title: "Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit"
+title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -124,7 +124,7 @@ ACS steht derzeit für virtuelle Linux-Computer des Standardtyps für die Größ
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Introduction to Docker container hosting solutions with Azure Container Service (Einführung in Docker-Container-Hostinglösungen für Azure Container Service)**
+-   **Einführung in Docker-Container-Hostinglösungen mit Azure Container Service**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
 -   **Docker Swarm overview (Übersicht über Docker Swarm)**
@@ -137,7 +137,7 @@ ACS steht derzeit für virtuelle Linux-Computer des Standardtyps für die Größ
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Offizielle Website.
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

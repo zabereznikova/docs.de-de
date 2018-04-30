@@ -1,6 +1,6 @@
 ---
-title: "Ausführen von Konsolenanwendungen in Docker"
-description: "Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwendung in einem Windows Docker-Container ausführen können."
+title: Ausführen von Konsolenanwendungen in Docker
+description: Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwendung in einem Windows Docker-Container ausführen können.
 author: spboyer
 keywords: .NET, Container, Konsole, Anwendungen
 ms.date: 09/28/2016
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
@@ -25,7 +25,7 @@ Als Beispiel dient eine einfache Konsolenanwendung, die ein Argument akzeptiert 
 
 Zusätzlich zur Antwort wurde der Antwort auch der `Environment.MachineName` hinzugefügt, um den Unterschied zwischen der Ausführung der Anwendung im lokalen System oder in einem Windows-Container zu zeigen. Wenn die Anwendung lokal ausgeführt wird, wird der Name des lokalen Computers zurückgegeben. Bei Ausführung in einem Windows-Container wird die ID der Containersitzung zurückgegeben.
 
-Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im „dotnet/samples“-Repository auf GitHub. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Sie müssen sich mit einigen Docker-Begriffen vertraut machen, bevor Sie damit beginnen, Ihre Anwendung in einen Container zu verlagern.
 

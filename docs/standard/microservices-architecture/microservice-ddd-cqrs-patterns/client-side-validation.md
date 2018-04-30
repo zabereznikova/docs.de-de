@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2057609c7f5c26668eac49cecce522135545e7dd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
@@ -35,27 +35,27 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
--   **Validieren von Text Eingabe- und Fehler anzeigen**
-    [*https://developer.xamarin.com/recipes/ios/standard\_Steuerelemente/Text\_Feld/Überprüfen von\_Eingabe-/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validate Text Input and Show Errors (Überprüfen von Texteingabe und Anzeigen von Fehlern)**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validierungsrückruf**
+-   **Validation Callback (Überprüfungsrückruf)**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Prüfung in ASP.NET Core-Apps
 
--   **Rick Anderson. Hinzufügen einer Validierung**
+-   **Rick Anderson. Adding validation (Hinzufügen der Überprüfung)**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Formularvalidierung** **
+-   **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Formularvalidierung**
+-   **Form Validation (Überprüfung von Formularen)**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Prüfung** Breeze-Dokumentation
-    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
+    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 

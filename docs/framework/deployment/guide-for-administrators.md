@@ -1,7 +1,7 @@
 ---
 title: Handbuch für die Bereitstellung von .NET Framework für Administratoren
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -230,11 +230,16 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ## <a name="troubleshooting"></a>Problembehandlung  
   
 ### <a name="log-file-locations"></a>Protokolldateispeicherorte  
- Beim [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup werden die folgenden Protokolldateien generiert:  
+ Beim Setup von .NET Framework werden die folgenden Protokolldateien generiert:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *version*\*.txt  
+ %temp%\Microsoft .NET Framework *version*\*.html,  
   
- Mit dem [Protokollerfassungstool (Log Collection Tool)](http://www.microsoft.com/download/details.aspx?id=12493) können Sie die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Protokolldateien erfassen und eine komprimierte CAB-Datei erstellen, um die Größe der Dateien zu reduzieren.  
+ wobei *version* der .NET Framework-Version entspricht, die Sie installieren, z.B. 4.5 oder 4.7.2.  
+ 
+ Sie können ebenso das Verzeichnis angeben, in das Protokolldateien geschrieben werden. Verwenden Sie hierzu die Befehlszeilenoption `/log` im Installationsbefehl von .NET Framework. Weitere Informationen finden Sie im [Leitfaden für die Bereitstellung von .NET Framework für Entwickler](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Mit dem [Protokollerfassungstool (Log Collection Tool)](https://www.microsoft.com/download/details.aspx?id=12493) können Sie die .NET Framework-Protokolldateien erfassen und eine komprimierte CAB-Datei erstellen, um die Größe der Dateien zu reduzieren.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Rückgabecodes  

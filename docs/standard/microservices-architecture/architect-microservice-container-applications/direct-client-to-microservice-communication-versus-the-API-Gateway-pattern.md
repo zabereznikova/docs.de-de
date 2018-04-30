@@ -1,6 +1,6 @@
 ---
 title: Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster
 keywords: Docker, Microservices, ASP.NET, Container, API-Gateway
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Direkte Kommunikation zwischen Client und Microservice im Vergleich zum API-Gatewaymuster
 
@@ -57,7 +57,7 @@ Es kann sein, dass die API für mehrere Microservices nicht an die Anforderungen
 
 ## <a name="using-an-api-gateway"></a>Verwenden eines API-Gateways
 
-Wenn Sie große bzw. komplexe auf einem Microservice basierende Anwendungen mit mehreren Client-Apps entwerfen und erstellen, sollten Sie darüber nachdenken, ob ein [API-Gateway](http://microservices.io/patterns/apigateway.html) hilfreich sein kann. Dabei handelt es sich um einen Dienst, der genau einen Endpunkt für bestimmte Gruppen von Microservices bereitstellt. Dieser Dienst ähnelt zwar dem [Fassadenmuster](https://en.wikipedia.org/wiki/Facade_pattern) des objektorientierten Designs, jedoch ist er in diesem Fall Teil eines verteilten Systems. Das API-Gatewaymuster ist außerdem unter der Bezeichnung „Backend for Frontend“ [(BFF)](http://samnewman.io/patterns/architectural/bff/) (Back-End für Front-End) bekannt, da Sie es erstellen, während Sie entscheiden, welche Anforderungen Ihre App haben soll.
+Wenn Sie große bzw. komplexe auf einem Microservice basierende Anwendungen mit mehreren Client-Apps entwerfen und erstellen, sollten Sie darüber nachdenken, ob ein [API-Gateway](https://microservices.io/patterns/apigateway.html) hilfreich sein kann. Dabei handelt es sich um einen Dienst, der genau einen Endpunkt für bestimmte Gruppen von Microservices bereitstellt. Dieser Dienst ähnelt zwar dem [Fassadenmuster](https://en.wikipedia.org/wiki/Facade_pattern) des objektorientierten Designs, jedoch ist er in diesem Fall Teil eines verteilten Systems. Das API-Gatewaymuster ist außerdem unter der Bezeichnung „Backend for Frontend“ [(BFF)](https://samnewman.io/patterns/architectural/bff/) (Back-End für Front-End) bekannt, da Sie es erstellen, während Sie entscheiden, welche Anforderungen Ihre App haben soll.
 
 In Abbildung 4-13 wird dargestellt, wie ein benutzerdefiniertes API-Gateway in eine auf einem Microservice basierende Architektur eingefügt werden kann.
 Es sollte hervorgehoben werden, dass in diesem Diagramm genau ein benutzerdefinierter API-Gatewaydienst verwendet wird, der auf mehrere verschiedene Client-Apps ausgerichtet ist. Dies kann ein wichtiges Risiko darstellen, da ihr API-Gatewaydienst anhand vieler verschiedener Anforderungen aus den Client-Apps größer und weiterentwickelt wird. Aufgrund dieser verschiedenen Anforderungen kann es zu einer Überfrachtung kommen, und letztendlich kann dies einer monolithischen Anwendung oder einem monolithischen Dienst ähneln. Daher wird dringend empfohlen, das API-Gateway in mehrere Dienste oder mehrere kleinere API-Gateways aufzuteilen – z.B. eins pro Formularfaktor.
@@ -110,8 +110,8 @@ In diesem Handbuch und in der Referenzbeispielanwendung (eShopOnContainers) wird
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Charles Richardson. Muster: API Gateway / Backend for Front-End (API-Gateway / Back-End für Front-End)**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. Pattern: API Gateway / Backend for Front-End (Muster: API-Gateway/-Back-End für Front-End)**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Azure API Management**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ In diesem Handbuch und in der Referenzbeispielanwendung (eShopOnContainers) wird
 -   **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaging und Microservices)** (Video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaging und Microservice auf der GOTO 2016)** (Video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]
