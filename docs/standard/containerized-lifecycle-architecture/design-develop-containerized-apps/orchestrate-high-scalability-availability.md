@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92bfd4516866fe82408dd3dd341a13db0ee216c0
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 59c03755bebce98e018f56fc7213b00a0d3eae38
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Microservices und multicontainer Anwendungen für die hohe Skalierbarkeit und Verfügbarkeit orchestriert
 
@@ -104,7 +105,7 @@ Folgendes sind die Speicherorte, in denen Sie weitere Informationen finden:
     <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (die offizielle Website):  
-    <http://kubernetes.io/>
+    <https://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Verwenden von Service Fabric
 
@@ -178,7 +179,7 @@ Zustandslose und zustandsbehaftete Dienste ergänzen sich gegenseitig. Beispiels
 
 Zustandsbehaftete Dienste haben einige Nachteile. Sie geben ein Maß an Komplexität, die zur horizontalen Skalierung ermöglicht. Für Funktionalitäten, die üblicherweise durch externe Datenbanksysteme implementiert würden, müssen bestimmte Aufgaben berücksichtigt werden, wie etwa die Datenreplikation in zustandsbehafteten Microservices und die Datenpartitionierung. Dies ist jedoch einer der Bereiche, in denen eine Orchestrator wie [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) mit seiner [statusbehaftete zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) können die meisten – indem vereinfacht die Entwicklung und der Lebenszyklus eines zustandsbehafteten Microservices mithilfe der [zuverlässige Dienste-API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Andere Microserviceframeworks, die zustandsbehaftete Dienste zulassen, die das Actor-Muster unterstützen und die Fehlertoleranz sowie die Wartezeit zwischen Geschäftslogik und Daten verbessern, sind Microsoft [Orleans](https://github.com/dotnet/orleans) von Microsoft Research und [Akka.NET](http://getakka.net/). Bei beiden Frameworks wird derzeit die Unterstützung für Docker verbessert.
+Andere Microserviceframeworks, die zustandsbehaftete Dienste zulassen, die das Actor-Muster unterstützen und die Fehlertoleranz sowie die Wartezeit zwischen Geschäftslogik und Daten verbessern, sind Microsoft [Orleans](https://github.com/dotnet/orleans) von Microsoft Research und [Akka.NET](https://getakka.net/). Bei beiden Frameworks wird derzeit die Unterstützung für Docker verbessert.
 
 Beachten Sie, dass Docker-Container selbst zustandslos sind. Wenn Sie einen zustandsbehafteten Dienst implementieren möchten, benötigen Sie eines der bereits erwähnten zusätzlich reglementierenden Frameworks auf höherer Ebene. Allerdings werden Verfassung dieses Dokuments zustandsbehaftete Dienste im Fabric-Dienst nicht als Container, die nur als einfache Microservices unterstützt. Zuverlässige Dienste-Unterstützung in Containern wird in zukünftigen Versionen von Service Fabric verfügbar sein.
 

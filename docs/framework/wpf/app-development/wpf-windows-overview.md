@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über WPF-Fenster"
-ms.custom: 
+title: Übersicht über WPF-Fenster
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendungen. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen ihre eigenen Windows bereitstellen, indem Sie mit der <xref:System.Windows.Window> Klasse. Dieses Thema enthält <xref:System.Windows.Window> vor die Grundlagen zum Erstellen und Verwalten von Windows in eigenständigen Anwendungen abdecken.  
@@ -282,7 +282,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Während ein Fensters über Mechanismen, die in den Bereichen clientfremden und Client explizit geschlossen werden kann, ein Fenster kann implizit geschlossen werden als Ergebnis Verhalten in anderen Teilen der Anwendung oder [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], u. a. folgende:  
   
--   Ein Benutzer abmeldet oder heruntergefahren [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Ein Benutzer abmeldet oder Windows heruntergefahren.  
   
 -   Der Besitzer eines Fensters geschlossen wird (siehe <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Wenn die Startposition, als angegeben wird <xref:System.Windows.WindowStartupLocation.Manual>, und die <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften wurden nicht festgelegt wurde, <xref:System.Windows.Window> fragt [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] für einen Standort in angezeigt werden.  
+ Wenn die Startposition, als angegeben wird <xref:System.Windows.WindowStartupLocation.Manual>, und die <xref:System.Windows.Window.Left%2A> und <xref:System.Windows.Window.Top%2A> Eigenschaften wurden nicht festgelegt wurde, <xref:System.Windows.Window> fragt Windows nach einem Speicherort im angezeigt werden.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Oberstes Fenster und Z-Reihenfolge  

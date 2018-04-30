@@ -1,12 +1,12 @@
 ---
 title: Parameterentwurf
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>Parameterentwurf
 Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschließlich Abschnitte mit Richtlinien für die Überprüfung der Argumente. Sie sollten darüber hinaus finden Sie in der beschriebenen Richtlinien [Benennung von Parametern](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -82,9 +82,9 @@ Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschl
   
  Wenn ein Argument durch einen Parameter nach Wert übergeben wird, erhält das Element eine Kopie des tatsächlichen Arguments übergeben. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Verweistyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Am häufigsten verwendete CLR-Sprachen wie c#, VB.NET und C++-Standard zum Übergeben von Parametern durch einen Wert.  
   
- Wenn ein Argument übergeben wird, über eine `ref` Parameter, das Element erhält einen Verweis auf das tatsächliche Argument übergeben. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn das Argument ein Verweistyp ist, wird ein Verweis auf den Verweis auf dem Stapel abgelegt. `Ref`Parameter können verwendet werden, um das Element so ändern Sie die vom Aufrufer übergegebene Argumente zu ermöglichen.  
+ Wenn ein Argument übergeben wird, über eine `ref` Parameter, das Element erhält einen Verweis auf das tatsächliche Argument übergeben. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn das Argument ein Verweistyp ist, wird ein Verweis auf den Verweis auf dem Stapel abgelegt. `Ref` Parameter können verwendet werden, um das Element so ändern Sie die vom Aufrufer übergegebene Argumente zu ermöglichen.  
   
- `Out`Parameter sind ähnlich `ref` Parameter, mit einige geringfügige Unterschiede. Der Parameter ist anfänglich betrachtet werden, nicht zugewiesen und kann im Hauptteil Elements gelesen werden, bevor ihr einen Wert zugewiesen wird. Außerdem muss der Parameter einen Wert zugewiesen werden, bevor das Element zurückgibt.  
+ `Out` Parameter sind ähnlich `ref` Parameter, mit einige geringfügige Unterschiede. Der Parameter ist anfänglich betrachtet werden, nicht zugewiesen und kann im Hauptteil Elements gelesen werden, bevor ihr einen Wert zugewiesen wird. Außerdem muss der Parameter einen Wert zugewiesen werden, bevor das Element zurückgibt.  
   
  **X vermeiden** mit `out` oder `ref` Parameter.  
   
@@ -164,7 +164,7 @@ public class String {
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
