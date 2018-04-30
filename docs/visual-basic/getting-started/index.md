@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
@@ -64,7 +64,7 @@ Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen
  Erläutert, wie Sie Support erhalten und Feedback geben können  
   
  [Visual Studio](/visualstudio/)  
- Links zur [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Dokumentation.  
+ Enthält Links zur Dokumentation für Visual Studio.  
   
  [C#](../../csharp/index.md): Listet Links zur Dokumentation der Anwendungsentwicklung mit Visual Basic auf.  
   
@@ -72,4 +72,4 @@ Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen
  Enthält Links zur Visual C++-Dokumentation  
   
  [Office- und SharePoint-Entwicklung](https://msdn.microsoft.com/library/d2tx7z6d)  
- Bietet Informationen zur Verwendung von Microsoft Office und [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] als Bestandteil einer Geschäftsanwendung.
+ Bietet Informationen zur Verwendung von Microsoft Office und Visual Studio als Bestandteil einer Geschäftsanwendung.
